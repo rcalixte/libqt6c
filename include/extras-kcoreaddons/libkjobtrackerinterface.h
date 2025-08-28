@@ -40,7 +40,7 @@ int32_t k_jobtrackerinterface_metacall(void* self, int32_t param1, int param2, v
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback int32_t fn(KJobTrackerInterface*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KJobTrackerInterface* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_jobtrackerinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ void k_jobtrackerinterface_register_job(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_register_job(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#registerJob)
@@ -91,7 +91,7 @@ void k_jobtrackerinterface_unregister_job(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_unregister_job(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#unregisterJob)
@@ -113,7 +113,7 @@ void k_jobtrackerinterface_finished(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_finished(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#finished)
@@ -135,7 +135,7 @@ void k_jobtrackerinterface_suspended(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_suspended(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#suspended)
@@ -157,7 +157,7 @@ void k_jobtrackerinterface_resumed(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#resumed)
@@ -182,7 +182,7 @@ void k_jobtrackerinterface_description(void* self, void* job, const char* title,
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_jobtrackerinterface_on_description(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#description)
@@ -208,7 +208,7 @@ void k_jobtrackerinterface_info_message(void* self, void* job, const char* messa
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, const char*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, const char* message)
 void k_jobtrackerinterface_on_info_message(void* self, void (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#infoMessage)
@@ -232,7 +232,7 @@ void k_jobtrackerinterface_warning(void* self, void* job, const char* message);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, const char*)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, const char* message)
 void k_jobtrackerinterface_on_warning(void* self, void (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#warning)
@@ -257,7 +257,7 @@ void k_jobtrackerinterface_total_amount(void* self, void* job, int32_t unit, uin
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_jobtrackerinterface_on_total_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#totalAmount)
@@ -283,7 +283,7 @@ void k_jobtrackerinterface_processed_amount(void* self, void* job, int32_t unit,
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_jobtrackerinterface_on_processed_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#processedAmount)
@@ -308,7 +308,7 @@ void k_jobtrackerinterface_percent(void* self, void* job, uint64_t percent);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, uint64_t)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, uint64_t percent)
 void k_jobtrackerinterface_on_percent(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#percent)
@@ -332,7 +332,7 @@ void k_jobtrackerinterface_speed(void* self, void* job, uint64_t value);
 /// Allows for overriding the related default method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, KJob*, uint64_t)
+/// @param callback void func(KJobTrackerInterface* self, KJob* job, uint64_t value)
 void k_jobtrackerinterface_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#speed)
@@ -587,7 +587,7 @@ void k_jobtrackerinterface_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*)
+/// @param callback void func(KJobTrackerInterface* self)
 void k_jobtrackerinterface_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -665,7 +665,7 @@ void k_jobtrackerinterface_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, QObject*)
+/// @param callback void func(KJobTrackerInterface* self, QObject* param1)
 void k_jobtrackerinterface_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -695,7 +695,7 @@ bool k_jobtrackerinterface_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback bool fn(KJobTrackerInterface*, QEvent*)
+/// @param callback bool func(KJobTrackerInterface* self, QEvent* event)
 void k_jobtrackerinterface_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -727,7 +727,7 @@ bool k_jobtrackerinterface_qbase_event_filter(void* self, void* watched, void* e
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback bool fn(KJobTrackerInterface*, QObject*, QEvent*)
+/// @param callback bool func(KJobTrackerInterface* self, QObject* watched, QEvent* event)
 void k_jobtrackerinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -757,7 +757,7 @@ void k_jobtrackerinterface_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, QTimerEvent*)
+/// @param callback void func(KJobTrackerInterface* self, QTimerEvent* event)
 void k_jobtrackerinterface_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -787,7 +787,7 @@ void k_jobtrackerinterface_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, QChildEvent*)
+/// @param callback void func(KJobTrackerInterface* self, QChildEvent* event)
 void k_jobtrackerinterface_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -817,7 +817,7 @@ void k_jobtrackerinterface_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, QEvent*)
+/// @param callback void func(KJobTrackerInterface* self, QEvent* event)
 void k_jobtrackerinterface_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -847,7 +847,7 @@ void k_jobtrackerinterface_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, QMetaMethod*)
+/// @param callback void func(KJobTrackerInterface* self, QMetaMethod* signal)
 void k_jobtrackerinterface_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -877,7 +877,7 @@ void k_jobtrackerinterface_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, QMetaMethod*)
+/// @param callback void func(KJobTrackerInterface* self, QMetaMethod* signal)
 void k_jobtrackerinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -905,7 +905,7 @@ QObject* k_jobtrackerinterface_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_jobtrackerinterface_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -933,7 +933,7 @@ int32_t k_jobtrackerinterface_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_jobtrackerinterface_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -963,7 +963,7 @@ int32_t k_jobtrackerinterface_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback int32_t fn(KJobTrackerInterface*, const char*)
+/// @param callback int32_t func(KJobTrackerInterface* self, const char* signal)
 void k_jobtrackerinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -993,7 +993,7 @@ bool k_jobtrackerinterface_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback bool fn(KJobTrackerInterface*, QMetaMethod*)
+/// @param callback bool func(KJobTrackerInterface* self, QMetaMethod* signal)
 void k_jobtrackerinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1003,7 +1003,7 @@ void k_jobtrackerinterface_on_is_signal_connected(void* self, bool (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJobTrackerInterface*
-/// @param callback void fn(KJobTrackerInterface*, const char*)
+/// @param callback void func(KJobTrackerInterface* self, const char* objectName)
 void k_jobtrackerinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#dtor.KJobTrackerInterface)

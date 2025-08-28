@@ -40,7 +40,7 @@ int32_t q_graphicsitemanimation_metacall(void* self, int32_t param1, int param2,
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback int32_t fn(QGraphicsItemAnimation*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QGraphicsItemAnimation* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_graphicsitemanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -219,7 +219,7 @@ void q_graphicsitemanimation_before_animation_step(void* self, double step);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, double)
+/// @param callback void func(QGraphicsItemAnimation* self, double step)
 void q_graphicsitemanimation_on_before_animation_step(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#beforeAnimationStep)
@@ -241,7 +241,7 @@ void q_graphicsitemanimation_after_animation_step(void* self, double step);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, double)
+/// @param callback void func(QGraphicsItemAnimation* self, double step)
 void q_graphicsitemanimation_on_after_animation_step(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#afterAnimationStep)
@@ -495,7 +495,7 @@ void q_graphicsitemanimation_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*)
+/// @param callback void func(QGraphicsItemAnimation* self)
 void q_graphicsitemanimation_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -573,7 +573,7 @@ void q_graphicsitemanimation_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, QObject*)
+/// @param callback void func(QGraphicsItemAnimation* self, QObject* param1)
 void q_graphicsitemanimation_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -603,7 +603,7 @@ bool q_graphicsitemanimation_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback bool fn(QGraphicsItemAnimation*, QEvent*)
+/// @param callback bool func(QGraphicsItemAnimation* self, QEvent* event)
 void q_graphicsitemanimation_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -635,7 +635,7 @@ bool q_graphicsitemanimation_qbase_event_filter(void* self, void* watched, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback bool fn(QGraphicsItemAnimation*, QObject*, QEvent*)
+/// @param callback bool func(QGraphicsItemAnimation* self, QObject* watched, QEvent* event)
 void q_graphicsitemanimation_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -665,7 +665,7 @@ void q_graphicsitemanimation_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, QTimerEvent*)
+/// @param callback void func(QGraphicsItemAnimation* self, QTimerEvent* event)
 void q_graphicsitemanimation_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -695,7 +695,7 @@ void q_graphicsitemanimation_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, QChildEvent*)
+/// @param callback void func(QGraphicsItemAnimation* self, QChildEvent* event)
 void q_graphicsitemanimation_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -725,7 +725,7 @@ void q_graphicsitemanimation_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, QEvent*)
+/// @param callback void func(QGraphicsItemAnimation* self, QEvent* event)
 void q_graphicsitemanimation_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -755,7 +755,7 @@ void q_graphicsitemanimation_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, QMetaMethod*)
+/// @param callback void func(QGraphicsItemAnimation* self, QMetaMethod* signal)
 void q_graphicsitemanimation_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -785,7 +785,7 @@ void q_graphicsitemanimation_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, QMetaMethod*)
+/// @param callback void func(QGraphicsItemAnimation* self, QMetaMethod* signal)
 void q_graphicsitemanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -813,7 +813,7 @@ QObject* q_graphicsitemanimation_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_graphicsitemanimation_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -841,7 +841,7 @@ int32_t q_graphicsitemanimation_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicsitemanimation_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -871,7 +871,7 @@ int32_t q_graphicsitemanimation_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback int32_t fn(QGraphicsItemAnimation*, const char*)
+/// @param callback int32_t func(QGraphicsItemAnimation* self, const char* signal)
 void q_graphicsitemanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -901,7 +901,7 @@ bool q_graphicsitemanimation_qbase_is_signal_connected(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback bool fn(QGraphicsItemAnimation*, QMetaMethod*)
+/// @param callback bool func(QGraphicsItemAnimation* self, QMetaMethod* signal)
 void q_graphicsitemanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -911,7 +911,7 @@ void q_graphicsitemanimation_on_is_signal_connected(void* self, bool (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGraphicsItemAnimation*
-/// @param callback void fn(QGraphicsItemAnimation*, const char*)
+/// @param callback void func(QGraphicsItemAnimation* self, const char* objectName)
 void q_graphicsitemanimation_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitemanimation.html#dtor.QGraphicsItemAnimation)

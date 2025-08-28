@@ -40,7 +40,7 @@ int32_t q_audiodecoder_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioDecoder*
-/// @param callback int32_t fn(QAudioDecoder*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAudioDecoder* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_audiodecoder_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -439,7 +439,7 @@ void q_audiodecoder_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*)
+/// @param callback void func(QAudioDecoder* self)
 void q_audiodecoder_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -517,7 +517,7 @@ void q_audiodecoder_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, QObject*)
+/// @param callback void func(QAudioDecoder* self, QObject* param1)
 void q_audiodecoder_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -547,7 +547,7 @@ bool q_audiodecoder_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback bool fn(QAudioDecoder*, QEvent*)
+/// @param callback bool func(QAudioDecoder* self, QEvent* event)
 void q_audiodecoder_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -579,7 +579,7 @@ bool q_audiodecoder_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback bool fn(QAudioDecoder*, QObject*, QEvent*)
+/// @param callback bool func(QAudioDecoder* self, QObject* watched, QEvent* event)
 void q_audiodecoder_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -609,7 +609,7 @@ void q_audiodecoder_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, QTimerEvent*)
+/// @param callback void func(QAudioDecoder* self, QTimerEvent* event)
 void q_audiodecoder_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -639,7 +639,7 @@ void q_audiodecoder_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, QChildEvent*)
+/// @param callback void func(QAudioDecoder* self, QChildEvent* event)
 void q_audiodecoder_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -669,7 +669,7 @@ void q_audiodecoder_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, QEvent*)
+/// @param callback void func(QAudioDecoder* self, QEvent* event)
 void q_audiodecoder_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -699,7 +699,7 @@ void q_audiodecoder_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, QMetaMethod*)
+/// @param callback void func(QAudioDecoder* self, QMetaMethod* signal)
 void q_audiodecoder_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -729,7 +729,7 @@ void q_audiodecoder_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, QMetaMethod*)
+/// @param callback void func(QAudioDecoder* self, QMetaMethod* signal)
 void q_audiodecoder_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -757,7 +757,7 @@ QObject* q_audiodecoder_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_audiodecoder_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -785,7 +785,7 @@ int32_t q_audiodecoder_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_audiodecoder_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -815,7 +815,7 @@ int32_t q_audiodecoder_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback int32_t fn(QAudioDecoder*, const char*)
+/// @param callback int32_t func(QAudioDecoder* self, const char* signal)
 void q_audiodecoder_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -845,7 +845,7 @@ bool q_audiodecoder_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioDecoder*
-/// @param callback bool fn(QAudioDecoder*, QMetaMethod*)
+/// @param callback bool func(QAudioDecoder* self, QMetaMethod* signal)
 void q_audiodecoder_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -855,7 +855,7 @@ void q_audiodecoder_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAudioDecoder*
-/// @param callback void fn(QAudioDecoder*, const char*)
+/// @param callback void func(QAudioDecoder* self, const char* objectName)
 void q_audiodecoder_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiodecoder.html#dtor.QAudioDecoder)

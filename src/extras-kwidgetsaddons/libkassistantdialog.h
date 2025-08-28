@@ -46,7 +46,7 @@ int32_t k_assistantdialog_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn(KAssistantDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KAssistantDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_assistantdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -115,7 +115,7 @@ void k_assistantdialog_back(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_back(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#back)
@@ -135,7 +135,7 @@ void k_assistantdialog_next(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_next(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#next)
@@ -156,7 +156,7 @@ void k_assistantdialog_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QShowEvent*)
+/// @param callback void func(KAssistantDialog* self, QShowEvent* event)
 void k_assistantdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#showEvent)
@@ -308,7 +308,7 @@ void k_assistantdialog_current_page_changed(void* self, void* current, void* bef
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, KPageWidgetItem*, KPageWidgetItem*)
+/// @param callback void func(KAssistantDialog* self, KPageWidgetItem* current, KPageWidgetItem* before)
 void k_assistantdialog_on_current_page_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from KPageDialog
@@ -324,7 +324,7 @@ void k_assistantdialog_page_removed(void* self, void* page);
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, KPageWidgetItem*)
+/// @param callback void func(KAssistantDialog* self, KPageWidgetItem* page)
 void k_assistantdialog_on_page_removed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -378,7 +378,7 @@ void k_assistantdialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, int)
+/// @param callback void func(KAssistantDialog* self, int result)
 void k_assistantdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -393,7 +393,7 @@ void k_assistantdialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*)
+/// @param callback void func(KAssistantDialog* self)
 void k_assistantdialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -408,7 +408,7 @@ void k_assistantdialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*)
+/// @param callback void func(KAssistantDialog* self)
 void k_assistantdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2348,7 +2348,7 @@ void k_assistantdialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, const char*)
+/// @param callback void func(KAssistantDialog* self, const char* title)
 void k_assistantdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2364,7 +2364,7 @@ void k_assistantdialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QIcon*)
+/// @param callback void func(KAssistantDialog* self, QIcon* icon)
 void k_assistantdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2380,7 +2380,7 @@ void k_assistantdialog_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, const char*)
+/// @param callback void func(KAssistantDialog* self, const char* iconText)
 void k_assistantdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2396,7 +2396,7 @@ void k_assistantdialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QPoint*)
+/// @param callback void func(KAssistantDialog* self, QPoint* pos)
 void k_assistantdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2773,7 +2773,7 @@ void k_assistantdialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*)
+/// @param callback void func(KAssistantDialog* self)
 void k_assistantdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2851,7 +2851,7 @@ void k_assistantdialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QObject*)
+/// @param callback void func(KAssistantDialog* self, QObject* param1)
 void k_assistantdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2972,7 +2972,7 @@ void k_assistantdialog_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, bool)
+/// @param callback void func(KAssistantDialog* self, bool visible)
 void k_assistantdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -3000,7 +3000,7 @@ QSize* k_assistantdialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_assistantdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3028,7 +3028,7 @@ QSize* k_assistantdialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_assistantdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3056,7 +3056,7 @@ void k_assistantdialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3084,7 +3084,7 @@ int32_t k_assistantdialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_assistantdialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3114,7 +3114,7 @@ void k_assistantdialog_qbase_done(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, int)
+/// @param callback void func(KAssistantDialog* self, int param1)
 void k_assistantdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -3142,7 +3142,7 @@ void k_assistantdialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3170,7 +3170,7 @@ void k_assistantdialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3200,7 +3200,7 @@ void k_assistantdialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QKeyEvent*)
+/// @param callback void func(KAssistantDialog* self, QKeyEvent* param1)
 void k_assistantdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3230,7 +3230,7 @@ void k_assistantdialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QCloseEvent*)
+/// @param callback void func(KAssistantDialog* self, QCloseEvent* param1)
 void k_assistantdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3260,7 +3260,7 @@ void k_assistantdialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QResizeEvent*)
+/// @param callback void func(KAssistantDialog* self, QResizeEvent* param1)
 void k_assistantdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3290,7 +3290,7 @@ void k_assistantdialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QContextMenuEvent*)
+/// @param callback void func(KAssistantDialog* self, QContextMenuEvent* param1)
 void k_assistantdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3322,7 +3322,7 @@ bool k_assistantdialog_qbase_event_filter(void* self, void* param1, void* param2
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn(KAssistantDialog*, QObject*, QEvent*)
+/// @param callback bool func(KAssistantDialog* self, QObject* param1, QEvent* param2)
 void k_assistantdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3350,7 +3350,7 @@ int32_t k_assistantdialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_assistantdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3380,7 +3380,7 @@ int32_t k_assistantdialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn(KAssistantDialog*, int)
+/// @param callback int32_t func(KAssistantDialog* self, int param1)
 void k_assistantdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3408,7 +3408,7 @@ bool k_assistantdialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_assistantdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3436,7 +3436,7 @@ QPaintEngine* k_assistantdialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_assistantdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3466,7 +3466,7 @@ bool k_assistantdialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn(KAssistantDialog*, QEvent*)
+/// @param callback bool func(KAssistantDialog* self, QEvent* event)
 void k_assistantdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3496,7 +3496,7 @@ void k_assistantdialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMouseEvent*)
+/// @param callback void func(KAssistantDialog* self, QMouseEvent* event)
 void k_assistantdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3526,7 +3526,7 @@ void k_assistantdialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMouseEvent*)
+/// @param callback void func(KAssistantDialog* self, QMouseEvent* event)
 void k_assistantdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3556,7 +3556,7 @@ void k_assistantdialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMouseEvent*)
+/// @param callback void func(KAssistantDialog* self, QMouseEvent* event)
 void k_assistantdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3586,7 +3586,7 @@ void k_assistantdialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMouseEvent*)
+/// @param callback void func(KAssistantDialog* self, QMouseEvent* event)
 void k_assistantdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3616,7 +3616,7 @@ void k_assistantdialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QWheelEvent*)
+/// @param callback void func(KAssistantDialog* self, QWheelEvent* event)
 void k_assistantdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3646,7 +3646,7 @@ void k_assistantdialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QKeyEvent*)
+/// @param callback void func(KAssistantDialog* self, QKeyEvent* event)
 void k_assistantdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3676,7 +3676,7 @@ void k_assistantdialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QFocusEvent*)
+/// @param callback void func(KAssistantDialog* self, QFocusEvent* event)
 void k_assistantdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3706,7 +3706,7 @@ void k_assistantdialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QFocusEvent*)
+/// @param callback void func(KAssistantDialog* self, QFocusEvent* event)
 void k_assistantdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3736,7 +3736,7 @@ void k_assistantdialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QEnterEvent*)
+/// @param callback void func(KAssistantDialog* self, QEnterEvent* event)
 void k_assistantdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3766,7 +3766,7 @@ void k_assistantdialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QEvent*)
+/// @param callback void func(KAssistantDialog* self, QEvent* event)
 void k_assistantdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3796,7 +3796,7 @@ void k_assistantdialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QPaintEvent*)
+/// @param callback void func(KAssistantDialog* self, QPaintEvent* event)
 void k_assistantdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3826,7 +3826,7 @@ void k_assistantdialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMoveEvent*)
+/// @param callback void func(KAssistantDialog* self, QMoveEvent* event)
 void k_assistantdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3856,7 +3856,7 @@ void k_assistantdialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QTabletEvent*)
+/// @param callback void func(KAssistantDialog* self, QTabletEvent* event)
 void k_assistantdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3886,7 +3886,7 @@ void k_assistantdialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QActionEvent*)
+/// @param callback void func(KAssistantDialog* self, QActionEvent* event)
 void k_assistantdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3916,7 +3916,7 @@ void k_assistantdialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QDragEnterEvent*)
+/// @param callback void func(KAssistantDialog* self, QDragEnterEvent* event)
 void k_assistantdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3946,7 +3946,7 @@ void k_assistantdialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QDragMoveEvent*)
+/// @param callback void func(KAssistantDialog* self, QDragMoveEvent* event)
 void k_assistantdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3976,7 +3976,7 @@ void k_assistantdialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QDragLeaveEvent*)
+/// @param callback void func(KAssistantDialog* self, QDragLeaveEvent* event)
 void k_assistantdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4006,7 +4006,7 @@ void k_assistantdialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QDropEvent*)
+/// @param callback void func(KAssistantDialog* self, QDropEvent* event)
 void k_assistantdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4036,7 +4036,7 @@ void k_assistantdialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QHideEvent*)
+/// @param callback void func(KAssistantDialog* self, QHideEvent* event)
 void k_assistantdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4070,7 +4070,7 @@ bool k_assistantdialog_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn(KAssistantDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(KAssistantDialog* self, const char* eventType, void* message, intptr_t* result)
 void k_assistantdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4100,7 +4100,7 @@ void k_assistantdialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QEvent*)
+/// @param callback void func(KAssistantDialog* self, QEvent* param1)
 void k_assistantdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4130,7 +4130,7 @@ int32_t k_assistantdialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn(KAssistantDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KAssistantDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_assistantdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4160,7 +4160,7 @@ void k_assistantdialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QPainter*)
+/// @param callback void func(KAssistantDialog* self, QPainter* painter)
 void k_assistantdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4190,7 +4190,7 @@ QPaintDevice* k_assistantdialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QPaintDevice* fn(KAssistantDialog*, QPoint*)
+/// @param callback QPaintDevice* func(KAssistantDialog* self, QPoint* offset)
 void k_assistantdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4218,7 +4218,7 @@ QPainter* k_assistantdialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_assistantdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4248,7 +4248,7 @@ void k_assistantdialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QInputMethodEvent*)
+/// @param callback void func(KAssistantDialog* self, QInputMethodEvent* param1)
 void k_assistantdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4278,7 +4278,7 @@ QVariant* k_assistantdialog_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QVariant* fn(KAssistantDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KAssistantDialog* self, enum Qt__InputMethodQuery param1)
 void k_assistantdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4308,7 +4308,7 @@ bool k_assistantdialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn(KAssistantDialog*, bool)
+/// @param callback bool func(KAssistantDialog* self, bool next)
 void k_assistantdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4338,7 +4338,7 @@ void k_assistantdialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QTimerEvent*)
+/// @param callback void func(KAssistantDialog* self, QTimerEvent* event)
 void k_assistantdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4368,7 +4368,7 @@ void k_assistantdialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QChildEvent*)
+/// @param callback void func(KAssistantDialog* self, QChildEvent* event)
 void k_assistantdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4398,7 +4398,7 @@ void k_assistantdialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QEvent*)
+/// @param callback void func(KAssistantDialog* self, QEvent* event)
 void k_assistantdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4428,7 +4428,7 @@ void k_assistantdialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMetaMethod*)
+/// @param callback void func(KAssistantDialog* self, QMetaMethod* signal)
 void k_assistantdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4458,7 +4458,7 @@ void k_assistantdialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QMetaMethod*)
+/// @param callback void func(KAssistantDialog* self, QMetaMethod* signal)
 void k_assistantdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KPageDialog
@@ -4486,7 +4486,7 @@ KPageWidget* k_assistantdialog_qbase_page_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback KPageWidget* fn()
+/// @param callback KPageWidget* func()
 void k_assistantdialog_on_page_widget(void* self, KPageWidget* (*callback)());
 
 /// Inherited from KPageDialog
@@ -4516,7 +4516,7 @@ void k_assistantdialog_qbase_set_page_widget(void* self, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, KPageWidget*)
+/// @param callback void func(KAssistantDialog* self, KPageWidget* widget)
 void k_assistantdialog_on_set_page_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KPageDialog
@@ -4544,7 +4544,7 @@ QDialogButtonBox* k_assistantdialog_qbase_button_box(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QDialogButtonBox* fn()
+/// @param callback QDialogButtonBox* func()
 void k_assistantdialog_on_button_box(void* self, QDialogButtonBox* (*callback)());
 
 /// Inherited from KPageDialog
@@ -4574,7 +4574,7 @@ void k_assistantdialog_qbase_set_button_box(void* self, void* box);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QDialogButtonBox*)
+/// @param callback void func(KAssistantDialog* self, QDialogButtonBox* box)
 void k_assistantdialog_on_set_button_box(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4604,7 +4604,7 @@ void k_assistantdialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, QWidget*)
+/// @param callback void func(KAssistantDialog* self, QWidget* param1)
 void k_assistantdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4632,7 +4632,7 @@ void k_assistantdialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4660,7 +4660,7 @@ void k_assistantdialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4688,7 +4688,7 @@ void k_assistantdialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_assistantdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4716,7 +4716,7 @@ bool k_assistantdialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_assistantdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4744,7 +4744,7 @@ bool k_assistantdialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_assistantdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4772,7 +4772,7 @@ QObject* k_assistantdialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_assistantdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4800,7 +4800,7 @@ int32_t k_assistantdialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_assistantdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4830,7 +4830,7 @@ int32_t k_assistantdialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback int32_t fn(KAssistantDialog*, const char*)
+/// @param callback int32_t func(KAssistantDialog* self, const char* signal)
 void k_assistantdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4860,7 +4860,7 @@ bool k_assistantdialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback bool fn(KAssistantDialog*, QMetaMethod*)
+/// @param callback bool func(KAssistantDialog* self, QMetaMethod* signal)
 void k_assistantdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4892,7 +4892,7 @@ double k_assistantdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAssistantDialog*
-/// @param callback double fn(KAssistantDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KAssistantDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_assistantdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4902,7 +4902,7 @@ void k_assistantdialog_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KAssistantDialog*
-/// @param callback void fn(KAssistantDialog*, const char*)
+/// @param callback void func(KAssistantDialog* self, const char* objectName)
 void k_assistantdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#dtor.KAssistantDialog)

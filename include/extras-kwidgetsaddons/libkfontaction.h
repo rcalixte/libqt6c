@@ -55,7 +55,7 @@ int32_t k_fontaction_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KFontAction*
-/// @param callback int32_t fn(KFontAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KFontAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_fontaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -97,7 +97,7 @@ QWidget* k_fontaction_create_widget(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KFontAction*
-/// @param callback QWidget* fn(KFontAction*, QWidget*)
+/// @param callback QWidget* func(KFontAction* self, QWidget* parent)
 void k_fontaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kfontaction.html#createWidget)
@@ -367,7 +367,7 @@ void k_fontaction_action_triggered(void* self, void* action);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QAction*)
+/// @param callback void func(KFontAction* self, QAction* action)
 void k_fontaction_on_action_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -383,7 +383,7 @@ void k_fontaction_index_triggered(void* self, int index);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, int)
+/// @param callback void func(KFontAction* self, int index)
 void k_fontaction_on_index_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from KSelectAction
@@ -399,7 +399,7 @@ void k_fontaction_text_triggered(void* self, const char* text);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, const char*)
+/// @param callback void func(KFontAction* self, const char* text)
 void k_fontaction_on_text_triggered(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from KSelectAction
@@ -860,7 +860,7 @@ void k_fontaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*)
+/// @param callback void func(KFontAction* self)
 void k_fontaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -876,7 +876,7 @@ void k_fontaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, bool)
+/// @param callback void func(KFontAction* self, bool enabled)
 void k_fontaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -892,7 +892,7 @@ void k_fontaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, bool)
+/// @param callback void func(KFontAction* self, bool checkable)
 void k_fontaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -907,7 +907,7 @@ void k_fontaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*)
+/// @param callback void func(KFontAction* self)
 void k_fontaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -922,7 +922,7 @@ void k_fontaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*)
+/// @param callback void func(KFontAction* self)
 void k_fontaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -937,7 +937,7 @@ void k_fontaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*)
+/// @param callback void func(KFontAction* self)
 void k_fontaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -953,7 +953,7 @@ void k_fontaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, bool)
+/// @param callback void func(KFontAction* self, bool param1)
 void k_fontaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -977,7 +977,7 @@ void k_fontaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, bool)
+/// @param callback void func(KFontAction* self, bool checked)
 void k_fontaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -1206,7 +1206,7 @@ void k_fontaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*)
+/// @param callback void func(KFontAction* self)
 void k_fontaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1284,7 +1284,7 @@ void k_fontaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QObject*)
+/// @param callback void func(KFontAction* self, QObject* param1)
 void k_fontaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1314,7 +1314,7 @@ QAction* k_fontaction_qbase_remove_action(void* self, void* action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback QAction* fn(KFontAction*, QAction*)
+/// @param callback QAction* func(KFontAction* self, QAction* action)
 void k_fontaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1346,7 +1346,7 @@ void k_fontaction_qbase_insert_action(void* self, void* before, void* action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QAction*, QAction*)
+/// @param callback void func(KFontAction* self, QAction* before, QAction* action)
 void k_fontaction_on_insert_action(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from KSelectAction
@@ -1376,7 +1376,7 @@ void k_fontaction_qbase_slot_action_triggered(void* self, void* action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QAction*)
+/// @param callback void func(KFontAction* self, QAction* action)
 void k_fontaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1406,7 +1406,7 @@ void k_fontaction_qbase_delete_widget(void* self, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QWidget*)
+/// @param callback void func(KFontAction* self, QWidget* widget)
 void k_fontaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1436,7 +1436,7 @@ bool k_fontaction_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback bool fn(KFontAction*, QEvent*)
+/// @param callback bool func(KFontAction* self, QEvent* event)
 void k_fontaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1468,7 +1468,7 @@ bool k_fontaction_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback bool fn(KFontAction*, QObject*, QEvent*)
+/// @param callback bool func(KFontAction* self, QObject* watched, QEvent* event)
 void k_fontaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1498,7 +1498,7 @@ void k_fontaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QTimerEvent*)
+/// @param callback void func(KFontAction* self, QTimerEvent* event)
 void k_fontaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1528,7 +1528,7 @@ void k_fontaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QChildEvent*)
+/// @param callback void func(KFontAction* self, QChildEvent* event)
 void k_fontaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1558,7 +1558,7 @@ void k_fontaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QEvent*)
+/// @param callback void func(KFontAction* self, QEvent* event)
 void k_fontaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1588,7 +1588,7 @@ void k_fontaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QMetaMethod*)
+/// @param callback void func(KFontAction* self, QMetaMethod* signal)
 void k_fontaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1618,7 +1618,7 @@ void k_fontaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, QMetaMethod*)
+/// @param callback void func(KFontAction* self, QMetaMethod* signal)
 void k_fontaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1648,7 +1648,7 @@ void k_fontaction_qbase_slot_toggled(void* self, bool param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, bool)
+/// @param callback void func(KFontAction* self, bool param1)
 void k_fontaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidgetAction
@@ -1676,7 +1676,7 @@ libqt_list /* of QWidget* */ k_fontaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void k_fontaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// Inherited from QObject
@@ -1704,7 +1704,7 @@ QObject* k_fontaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_fontaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1732,7 +1732,7 @@ int32_t k_fontaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_fontaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1762,7 +1762,7 @@ int32_t k_fontaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback int32_t fn(KFontAction*, const char*)
+/// @param callback int32_t func(KFontAction* self, const char* signal)
 void k_fontaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1792,7 +1792,7 @@ bool k_fontaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontAction*
-/// @param callback bool fn(KFontAction*, QMetaMethod*)
+/// @param callback bool func(KFontAction* self, QMetaMethod* signal)
 void k_fontaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1802,7 +1802,7 @@ void k_fontaction_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KFontAction*
-/// @param callback void fn(KFontAction*, const char*)
+/// @param callback void func(KFontAction* self, const char* objectName)
 void k_fontaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kfontaction.html#dtor.KFontAction)

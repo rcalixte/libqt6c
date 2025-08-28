@@ -46,7 +46,7 @@ int32_t q_graphicswidget_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback int32_t fn(QGraphicsWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QGraphicsWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_graphicswidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -171,7 +171,7 @@ void q_graphicswidget_set_geometry(void* self, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QRectF*)
+/// @param callback void func(QGraphicsWidget* self, QRectF* rect)
 void q_graphicswidget_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
@@ -225,7 +225,7 @@ void q_graphicswidget_get_contents_margins(void* self, double* left, double* top
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, double*, double*, double*, double*)
+/// @param callback void func(QGraphicsWidget* self, double* left, double* top, double* right, double* bottom)
 void q_graphicswidget_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getContentsMargins)
@@ -423,7 +423,7 @@ int32_t q_graphicswidget_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicswidget_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
@@ -446,7 +446,7 @@ void q_graphicswidget_paint(void* self, void* painter, void* option, void* widge
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+/// @param callback void func(QGraphicsWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 void q_graphicswidget_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paint)
@@ -472,7 +472,7 @@ void q_graphicswidget_paint_window_frame(void* self, void* painter, void* option
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+/// @param callback void func(QGraphicsWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 void q_graphicswidget_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#paintWindowFrame)
@@ -495,7 +495,7 @@ QRectF* q_graphicswidget_bounding_rect(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QRectF* fn()
+/// @param callback QRectF* func()
 void q_graphicswidget_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#boundingRect)
@@ -515,7 +515,7 @@ QPainterPath* q_graphicswidget_shape(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QPainterPath* fn()
+/// @param callback QPainterPath* func()
 void q_graphicswidget_on_shape(void* self, QPainterPath* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#shape)
@@ -533,7 +533,7 @@ void q_graphicswidget_geometry_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_geometry_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
@@ -544,7 +544,7 @@ void q_graphicswidget_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_layout_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#close)
@@ -563,7 +563,7 @@ void q_graphicswidget_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QStyleOption*)
+/// @param callback void func(QGraphicsWidget* self, QStyleOption* option)
 void q_graphicswidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#initStyleOption)
@@ -586,7 +586,7 @@ QSizeF* q_graphicswidget_size_hint(void* self, int32_t which, void* constraint);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QSizeF* fn(QGraphicsWidget*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QGraphicsWidget* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
@@ -608,7 +608,7 @@ void q_graphicswidget_update_geometry(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicswidget_on_update_geometry(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
@@ -630,7 +630,7 @@ QVariant* q_graphicswidget_item_change(void* self, int32_t change, void* value);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QVariant* fn(QGraphicsWidget*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
+/// @param callback QVariant* func(QGraphicsWidget* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
 void q_graphicswidget_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
@@ -654,7 +654,7 @@ QVariant* q_graphicswidget_property_change(void* self, const char* propertyName,
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QVariant* fn(QGraphicsWidget*, const char*, QVariant*)
+/// @param callback QVariant* func(QGraphicsWidget* self, const char* propertyName, QVariant* value)
 void q_graphicswidget_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
@@ -677,7 +677,7 @@ bool q_graphicswidget_scene_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QEvent*)
+/// @param callback bool func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_scene_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sceneEvent)
@@ -699,7 +699,7 @@ bool q_graphicswidget_window_frame_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QEvent*)
+/// @param callback bool func(QGraphicsWidget* self, QEvent* e)
 void q_graphicswidget_on_window_frame_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameEvent)
@@ -723,7 +723,7 @@ int32_t q_graphicswidget_window_frame_section_at(void* self, void* pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback int32_t fn(QGraphicsWidget*, QPointF*)
+/// @param callback int32_t func(QGraphicsWidget* self, QPointF* pos)
 void q_graphicswidget_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
@@ -747,7 +747,7 @@ bool q_graphicswidget_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QEvent*)
+/// @param callback bool func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
@@ -769,7 +769,7 @@ void q_graphicswidget_change_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QEvent*)
+/// @param callback void func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#changeEvent)
@@ -791,7 +791,7 @@ void q_graphicswidget_close_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QCloseEvent*)
+/// @param callback void func(QGraphicsWidget* self, QCloseEvent* event)
 void q_graphicswidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#closeEvent)
@@ -813,7 +813,7 @@ void q_graphicswidget_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QFocusEvent*)
+/// @param callback void func(QGraphicsWidget* self, QFocusEvent* event)
 void q_graphicswidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusInEvent)
@@ -835,7 +835,7 @@ bool q_graphicswidget_focus_next_prev_child(void* self, bool next);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, bool)
+/// @param callback bool func(QGraphicsWidget* self, bool next)
 void q_graphicswidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusNextPrevChild)
@@ -857,7 +857,7 @@ void q_graphicswidget_focus_out_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QFocusEvent*)
+/// @param callback void func(QGraphicsWidget* self, QFocusEvent* event)
 void q_graphicswidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusOutEvent)
@@ -879,7 +879,7 @@ void q_graphicswidget_hide_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QHideEvent*)
+/// @param callback void func(QGraphicsWidget* self, QHideEvent* event)
 void q_graphicswidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hideEvent)
@@ -901,7 +901,7 @@ void q_graphicswidget_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneMoveEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneMoveEvent* event)
 void q_graphicswidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#moveEvent)
@@ -922,7 +922,7 @@ void q_graphicswidget_polish_event(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicswidget_on_polish_event(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#polishEvent)
@@ -943,7 +943,7 @@ void q_graphicswidget_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneResizeEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneResizeEvent* event)
 void q_graphicswidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resizeEvent)
@@ -965,7 +965,7 @@ void q_graphicswidget_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QShowEvent*)
+/// @param callback void func(QGraphicsWidget* self, QShowEvent* event)
 void q_graphicswidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#showEvent)
@@ -987,7 +987,7 @@ void q_graphicswidget_hover_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneHoverEvent* event)
 void q_graphicswidget_on_hover_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverMoveEvent)
@@ -1009,7 +1009,7 @@ void q_graphicswidget_hover_leave_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneHoverEvent* event)
 void q_graphicswidget_on_hover_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#hoverLeaveEvent)
@@ -1031,7 +1031,7 @@ void q_graphicswidget_grab_mouse_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QEvent*)
+/// @param callback void func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_grab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabMouseEvent)
@@ -1053,7 +1053,7 @@ void q_graphicswidget_ungrab_mouse_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QEvent*)
+/// @param callback void func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_ungrab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabMouseEvent)
@@ -1075,7 +1075,7 @@ void q_graphicswidget_grab_keyboard_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QEvent*)
+/// @param callback void func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_grab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabKeyboardEvent)
@@ -1097,7 +1097,7 @@ void q_graphicswidget_ungrab_keyboard_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QEvent*)
+/// @param callback void func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_ungrab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#ungrabKeyboardEvent)
@@ -1181,7 +1181,7 @@ void q_graphicswidget_parent_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_parent_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1196,7 +1196,7 @@ void q_graphicswidget_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1211,7 +1211,7 @@ void q_graphicswidget_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1226,7 +1226,7 @@ void q_graphicswidget_enabled_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_enabled_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1241,7 +1241,7 @@ void q_graphicswidget_x_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_x_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1256,7 +1256,7 @@ void q_graphicswidget_y_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_y_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1271,7 +1271,7 @@ void q_graphicswidget_z_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_z_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1286,7 +1286,7 @@ void q_graphicswidget_rotation_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1301,7 +1301,7 @@ void q_graphicswidget_scale_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_scale_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1316,7 +1316,7 @@ void q_graphicswidget_children_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_children_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1331,7 +1331,7 @@ void q_graphicswidget_width_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_width_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1346,7 +1346,7 @@ void q_graphicswidget_height_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_height_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1584,7 +1584,7 @@ void q_graphicswidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*)
+/// @param callback void func(QGraphicsWidget* self)
 void q_graphicswidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1662,7 +1662,7 @@ void q_graphicswidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QObject*)
+/// @param callback void func(QGraphicsWidget* self, QObject* param1)
 void q_graphicswidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3284,7 +3284,7 @@ bool q_graphicswidget_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QObject*, QEvent*)
+/// @param callback bool func(QGraphicsWidget* self, QObject* watched, QEvent* event)
 void q_graphicswidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3314,7 +3314,7 @@ void q_graphicswidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QTimerEvent*)
+/// @param callback void func(QGraphicsWidget* self, QTimerEvent* event)
 void q_graphicswidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3344,7 +3344,7 @@ void q_graphicswidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QChildEvent*)
+/// @param callback void func(QGraphicsWidget* self, QChildEvent* event)
 void q_graphicswidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3374,7 +3374,7 @@ void q_graphicswidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QEvent*)
+/// @param callback void func(QGraphicsWidget* self, QEvent* event)
 void q_graphicswidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3404,7 +3404,7 @@ void q_graphicswidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QMetaMethod*)
+/// @param callback void func(QGraphicsWidget* self, QMetaMethod* signal)
 void q_graphicswidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3434,7 +3434,7 @@ void q_graphicswidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QMetaMethod*)
+/// @param callback void func(QGraphicsWidget* self, QMetaMethod* signal)
 void q_graphicswidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3464,7 +3464,7 @@ void q_graphicswidget_qbase_advance(void* self, int phase);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, int)
+/// @param callback void func(QGraphicsWidget* self, int phase)
 void q_graphicswidget_on_advance(void* self, void (*callback)(void*, int));
 
 /// Inherited from QGraphicsItem
@@ -3494,7 +3494,7 @@ bool q_graphicswidget_qbase_contains(void* self, void* point);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QPointF*)
+/// @param callback bool func(QGraphicsWidget* self, QPointF* point)
 void q_graphicswidget_on_contains(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3526,7 +3526,7 @@ bool q_graphicswidget_qbase_collides_with_item(void* self, void* other, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QGraphicsItem*, enum Qt__ItemSelectionMode)
+/// @param callback bool func(QGraphicsWidget* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 void q_graphicswidget_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -3558,7 +3558,7 @@ bool q_graphicswidget_qbase_collides_with_path(void* self, void* path, int32_t m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QPainterPath*, enum Qt__ItemSelectionMode)
+/// @param callback bool func(QGraphicsWidget* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 void q_graphicswidget_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -3588,7 +3588,7 @@ bool q_graphicswidget_qbase_is_obscured_by(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QGraphicsItem*)
+/// @param callback bool func(QGraphicsWidget* self, QGraphicsItem* item)
 void q_graphicswidget_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3616,7 +3616,7 @@ QPainterPath* q_graphicswidget_qbase_opaque_area(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QPainterPath* fn()
+/// @param callback QPainterPath* func()
 void q_graphicswidget_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -3648,7 +3648,7 @@ bool q_graphicswidget_qbase_scene_event_filter(void* self, void* watched, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QGraphicsItem*, QEvent*)
+/// @param callback bool func(QGraphicsWidget* self, QGraphicsItem* watched, QEvent* event)
 void q_graphicswidget_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3678,7 +3678,7 @@ void q_graphicswidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneContextMenuEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneContextMenuEvent* event)
 void q_graphicswidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3708,7 +3708,7 @@ void q_graphicswidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicswidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3738,7 +3738,7 @@ void q_graphicswidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicswidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3768,7 +3768,7 @@ void q_graphicswidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicswidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3798,7 +3798,7 @@ void q_graphicswidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicswidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3828,7 +3828,7 @@ void q_graphicswidget_qbase_hover_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneHoverEvent* event)
 void q_graphicswidget_on_hover_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3858,7 +3858,7 @@ void q_graphicswidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QKeyEvent*)
+/// @param callback void func(QGraphicsWidget* self, QKeyEvent* event)
 void q_graphicswidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3888,7 +3888,7 @@ void q_graphicswidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QKeyEvent*)
+/// @param callback void func(QGraphicsWidget* self, QKeyEvent* event)
 void q_graphicswidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3918,7 +3918,7 @@ void q_graphicswidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneMouseEvent* event)
 void q_graphicswidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3948,7 +3948,7 @@ void q_graphicswidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneMouseEvent* event)
 void q_graphicswidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3978,7 +3978,7 @@ void q_graphicswidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneMouseEvent* event)
 void q_graphicswidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4008,7 +4008,7 @@ void q_graphicswidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneMouseEvent* event)
 void q_graphicswidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4038,7 +4038,7 @@ void q_graphicswidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsSceneWheelEvent*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsSceneWheelEvent* event)
 void q_graphicswidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4068,7 +4068,7 @@ void q_graphicswidget_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QInputMethodEvent*)
+/// @param callback void func(QGraphicsWidget* self, QInputMethodEvent* event)
 void q_graphicswidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4098,7 +4098,7 @@ QVariant* q_graphicswidget_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QVariant* fn(QGraphicsWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QGraphicsWidget* self, enum Qt__InputMethodQuery query)
 void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
@@ -4128,7 +4128,7 @@ bool q_graphicswidget_qbase_supports_extension(void* self, int64_t extension);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, enum QGraphicsItem__Extension)
+/// @param callback bool func(QGraphicsWidget* self, enum QGraphicsItem__Extension extension)
 void q_graphicswidget_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
@@ -4160,7 +4160,7 @@ void q_graphicswidget_qbase_set_extension(void* self, int64_t extension, void* v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, enum QGraphicsItem__Extension, QVariant*)
+/// @param callback void func(QGraphicsWidget* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 void q_graphicswidget_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
 
 /// Inherited from QGraphicsItem
@@ -4190,7 +4190,7 @@ QVariant* q_graphicswidget_qbase_extension(void* self, void* variant);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QVariant* fn(QGraphicsWidget*, QVariant*)
+/// @param callback QVariant* func(QGraphicsWidget* self, QVariant* variant)
 void q_graphicswidget_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -4218,7 +4218,7 @@ bool q_graphicswidget_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_graphicswidget_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsObject
@@ -4246,7 +4246,7 @@ void q_graphicswidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicswidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -4274,7 +4274,7 @@ QObject* q_graphicswidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_graphicswidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4302,7 +4302,7 @@ int32_t q_graphicswidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicswidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4332,7 +4332,7 @@ int32_t q_graphicswidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback int32_t fn(QGraphicsWidget*, const char*)
+/// @param callback int32_t func(QGraphicsWidget* self, const char* signal)
 void q_graphicswidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4362,7 +4362,7 @@ bool q_graphicswidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback bool fn(QGraphicsWidget*, QMetaMethod*)
+/// @param callback bool func(QGraphicsWidget* self, QMetaMethod* signal)
 void q_graphicswidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4390,7 +4390,7 @@ void q_graphicswidget_qbase_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicswidget_on_add_to_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -4418,7 +4418,7 @@ void q_graphicswidget_qbase_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicswidget_on_remove_from_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -4446,7 +4446,7 @@ void q_graphicswidget_qbase_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicswidget_on_prepare_geometry_change(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayoutItem
@@ -4476,7 +4476,7 @@ void q_graphicswidget_qbase_set_graphics_item(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, QGraphicsItem*)
+/// @param callback void func(QGraphicsWidget* self, QGraphicsItem* item)
 void q_graphicswidget_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -4506,7 +4506,7 @@ void q_graphicswidget_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, bool)
+/// @param callback void func(QGraphicsWidget* self, bool ownedByLayout)
 void q_graphicswidget_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4516,7 +4516,7 @@ void q_graphicswidget_on_set_owned_by_layout(void* self, void (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGraphicsWidget*
-/// @param callback void fn(QGraphicsWidget*, const char*)
+/// @param callback void func(QGraphicsWidget* self, const char* objectName)
 void q_graphicswidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#dtor.QGraphicsWidget)

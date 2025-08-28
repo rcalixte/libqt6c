@@ -36,7 +36,7 @@ int32_t k_listopenfilesjob_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback int32_t fn(KListOpenFilesJob*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KListOpenFilesJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_listopenfilesjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -64,7 +64,7 @@ void k_listopenfilesjob_start(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_listopenfilesjob_on_start(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#start)
@@ -251,7 +251,7 @@ void k_listopenfilesjob_description(void* self, void* job, const char* title);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, const char*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* title)
 void k_listopenfilesjob_on_description(void* self, void (*callback)(void*, void*, const char*));
 
 /// Inherited from KJob
@@ -268,7 +268,7 @@ void k_listopenfilesjob_info_message(void* self, void* job, const char* message)
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, const char*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* message)
 void k_listopenfilesjob_on_info_message(void* self, void (*callback)(void*, void*, const char*));
 
 /// Inherited from KJob
@@ -285,7 +285,7 @@ void k_listopenfilesjob_warning(void* self, void* job, const char* message);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, const char*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* message)
 void k_listopenfilesjob_on_warning(void* self, void (*callback)(void*, void*, const char*));
 
 /// Inherited from KJob
@@ -302,7 +302,7 @@ void k_listopenfilesjob_total_size(void* self, void* job, uint64_t size);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t size)
 void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from KJob
@@ -319,7 +319,7 @@ void k_listopenfilesjob_processed_size(void* self, void* job, uint64_t size);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t size)
 void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from KJob
@@ -336,7 +336,7 @@ void k_listopenfilesjob_speed(void* self, void* job, uint64_t speed);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t speed)
 void k_listopenfilesjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from KJob
@@ -370,7 +370,7 @@ void k_listopenfilesjob_description3(void* self, void* job, const char* title, l
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_listopenfilesjob_on_description3(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */));
 
 /// Inherited from KJob
@@ -389,7 +389,7 @@ void k_listopenfilesjob_description4(void* self, void* job, const char* title, l
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_listopenfilesjob_on_description4(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
 
 /// Inherited from QObject
@@ -618,7 +618,7 @@ void k_listopenfilesjob_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*)
+/// @param callback void func(KListOpenFilesJob* self)
 void k_listopenfilesjob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -696,7 +696,7 @@ void k_listopenfilesjob_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, QObject*)
+/// @param callback void func(KListOpenFilesJob* self, QObject* param1)
 void k_listopenfilesjob_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -724,7 +724,7 @@ bool k_listopenfilesjob_qbase_do_kill(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_listopenfilesjob_on_do_kill(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -752,7 +752,7 @@ bool k_listopenfilesjob_qbase_do_suspend(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_listopenfilesjob_on_do_suspend(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -780,7 +780,7 @@ bool k_listopenfilesjob_qbase_do_resume(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -812,7 +812,7 @@ const char* k_listopenfilesjob_qbase_error_string(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void k_listopenfilesjob_on_error_string(void* self, const char* (*callback)());
 
 /// Inherited from QObject
@@ -842,7 +842,7 @@ bool k_listopenfilesjob_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn(KListOpenFilesJob*, QEvent*)
+/// @param callback bool func(KListOpenFilesJob* self, QEvent* event)
 void k_listopenfilesjob_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -874,7 +874,7 @@ bool k_listopenfilesjob_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn(KListOpenFilesJob*, QObject*, QEvent*)
+/// @param callback bool func(KListOpenFilesJob* self, QObject* watched, QEvent* event)
 void k_listopenfilesjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -904,7 +904,7 @@ void k_listopenfilesjob_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, QTimerEvent*)
+/// @param callback void func(KListOpenFilesJob* self, QTimerEvent* event)
 void k_listopenfilesjob_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -934,7 +934,7 @@ void k_listopenfilesjob_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, QChildEvent*)
+/// @param callback void func(KListOpenFilesJob* self, QChildEvent* event)
 void k_listopenfilesjob_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -964,7 +964,7 @@ void k_listopenfilesjob_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, QEvent*)
+/// @param callback void func(KListOpenFilesJob* self, QEvent* event)
 void k_listopenfilesjob_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -994,7 +994,7 @@ void k_listopenfilesjob_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, QMetaMethod*)
+/// @param callback void func(KListOpenFilesJob* self, QMetaMethod* signal)
 void k_listopenfilesjob_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1024,7 +1024,7 @@ void k_listopenfilesjob_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, QMetaMethod*)
+/// @param callback void func(KListOpenFilesJob* self, QMetaMethod* signal)
 void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1054,7 +1054,7 @@ void k_listopenfilesjob_qbase_set_capabilities(void* self, int64_t capabilities)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, flag of enum KJob__Capability)
+/// @param callback void func(KListOpenFilesJob* self, flag of enum KJob__Capability capabilities)
 void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from KJob
@@ -1082,7 +1082,7 @@ bool k_listopenfilesjob_qbase_is_finished(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_listopenfilesjob_on_is_finished(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -1112,7 +1112,7 @@ void k_listopenfilesjob_qbase_set_error(void* self, int errorCode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, int)
+/// @param callback void func(KListOpenFilesJob* self, int errorCode)
 void k_listopenfilesjob_on_set_error(void* self, void (*callback)(void*, int));
 
 /// Inherited from KJob
@@ -1142,7 +1142,7 @@ void k_listopenfilesjob_qbase_set_error_text(void* self, const char* errorText);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, const char*)
+/// @param callback void func(KListOpenFilesJob* self, const char* errorText)
 void k_listopenfilesjob_on_set_error_text(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from KJob
@@ -1174,7 +1174,7 @@ void k_listopenfilesjob_qbase_set_processed_amount(void* self, int32_t unit, uin
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit, uint64_t amount)
 void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1206,7 +1206,7 @@ void k_listopenfilesjob_qbase_set_total_amount(void* self, int32_t unit, uint64_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit, uint64_t amount)
 void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1236,7 +1236,7 @@ void k_listopenfilesjob_qbase_set_progress_unit(void* self, int32_t unit);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, enum KJob__Unit)
+/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit)
 void k_listopenfilesjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from KJob
@@ -1266,7 +1266,7 @@ void k_listopenfilesjob_qbase_set_percent(void* self, uint64_t percentage);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, uint64_t percentage)
 void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from KJob
@@ -1294,7 +1294,7 @@ void k_listopenfilesjob_qbase_emit_result(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_listopenfilesjob_on_emit_result(void* self, void (*callback)());
 
 /// Inherited from KJob
@@ -1326,7 +1326,7 @@ void k_listopenfilesjob_qbase_emit_percent(void* self, uint64_t processedAmount,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, uint64_t, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, uint64_t processedAmount, uint64_t totalAmount)
 void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t));
 
 /// Inherited from KJob
@@ -1356,7 +1356,7 @@ void k_listopenfilesjob_qbase_emit_speed(void* self, uint64_t speed);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, uint64_t speed)
 void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from KJob
@@ -1384,7 +1384,7 @@ void k_listopenfilesjob_qbase_start_elapsed_timer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_listopenfilesjob_on_start_elapsed_timer(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1412,7 +1412,7 @@ QObject* k_listopenfilesjob_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_listopenfilesjob_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1440,7 +1440,7 @@ int32_t k_listopenfilesjob_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_listopenfilesjob_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1470,7 +1470,7 @@ int32_t k_listopenfilesjob_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback int32_t fn(KListOpenFilesJob*, const char*)
+/// @param callback int32_t func(KListOpenFilesJob* self, const char* signal)
 void k_listopenfilesjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1500,7 +1500,7 @@ bool k_listopenfilesjob_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback bool fn(KListOpenFilesJob*, QMetaMethod*)
+/// @param callback bool func(KListOpenFilesJob* self, QMetaMethod* signal)
 void k_listopenfilesjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1510,7 +1510,7 @@ void k_listopenfilesjob_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job)
 void k_listopenfilesjob_on_finished(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1520,7 +1520,7 @@ void k_listopenfilesjob_on_finished(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job)
 void k_listopenfilesjob_on_suspended(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1530,7 +1530,7 @@ void k_listopenfilesjob_on_suspended(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job)
 void k_listopenfilesjob_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1540,7 +1540,7 @@ void k_listopenfilesjob_on_resumed(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job)
 void k_listopenfilesjob_on_result(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1550,7 +1550,7 @@ void k_listopenfilesjob_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1560,7 +1560,7 @@ void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1570,7 +1570,7 @@ void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, KJob*, uint64_t)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t percent)
 void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from QObject
@@ -1580,7 +1580,7 @@ void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void fn(KListOpenFilesJob*, const char*)
+/// @param callback void func(KListOpenFilesJob* self, const char* objectName)
 void k_listopenfilesjob_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#dtor.KListOpenFilesJob)

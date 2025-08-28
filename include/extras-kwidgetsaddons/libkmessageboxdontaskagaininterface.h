@@ -29,7 +29,7 @@ bool k_messageboxdontaskagaininterface_should_be_shown_two_actions(void* self, c
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback bool fn(KMessageBoxDontAskAgainInterface*, const char*, enum KMessageBox__ButtonCode*)
+/// @param callback bool func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName, enum KMessageBox__ButtonCode* result)
 void k_messageboxdontaskagaininterface_on_should_be_shown_two_actions(void* self, bool (*callback)(void*, const char*, int32_t*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownTwoActions)
@@ -52,7 +52,7 @@ bool k_messageboxdontaskagaininterface_should_be_shown_continue(void* self, cons
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback bool fn(KMessageBoxDontAskAgainInterface*, const char*)
+/// @param callback bool func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
 void k_messageboxdontaskagaininterface_on_should_be_shown_continue(void* self, bool (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
@@ -75,7 +75,7 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_two_actions(void* se
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback void fn(KMessageBoxDontAskAgainInterface*, const char*, enum KMessageBox__ButtonCode)
+/// @param callback void func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName, enum KMessageBox__ButtonCode result)
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
@@ -98,7 +98,7 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_continue(void* self,
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback void fn(KMessageBoxDontAskAgainInterface*, const char*)
+/// @param callback void func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_continue(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
@@ -119,7 +119,7 @@ void k_messageboxdontaskagaininterface_enable_all_messages(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback void fn()
+/// @param callback void func()
 void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
@@ -140,7 +140,7 @@ void k_messageboxdontaskagaininterface_enable_message(void* self, const char* do
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback void fn(KMessageBoxDontAskAgainInterface*, const char*)
+/// @param callback void func(KMessageBoxDontAskAgainInterface* self, const char* dontShowAgainName)
 void k_messageboxdontaskagaininterface_on_enable_message(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
@@ -162,7 +162,7 @@ void k_messageboxdontaskagaininterface_set_config(void* self, void* config);
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback void fn(KMessageBoxDontAskAgainInterface*, KConfig*)
+/// @param callback void func(KMessageBoxDontAskAgainInterface* self, KConfig* config)
 void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxdontaskagaininterface.html#setConfig)

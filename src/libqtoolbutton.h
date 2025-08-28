@@ -40,7 +40,7 @@ int32_t q_toolbutton_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback int32_t fn(QToolButton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QToolButton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_toolbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -68,7 +68,7 @@ QSize* q_toolbutton_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_toolbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#sizeHint)
@@ -88,7 +88,7 @@ QSize* q_toolbutton_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_toolbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#minimumSizeHint)
@@ -184,7 +184,7 @@ void q_toolbutton_triggered(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#triggered)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QAction*)
+/// @param callback void func(QToolButton* self, QAction* param1)
 void q_toolbutton_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#event)
@@ -198,7 +198,7 @@ bool q_toolbutton_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn(QToolButton*, QEvent*)
+/// @param callback bool func(QToolButton* self, QEvent* e)
 void q_toolbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#event)
@@ -220,7 +220,7 @@ void q_toolbutton_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMouseEvent*)
+/// @param callback void func(QToolButton* self, QMouseEvent* param1)
 void q_toolbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#mousePressEvent)
@@ -242,7 +242,7 @@ void q_toolbutton_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMouseEvent*)
+/// @param callback void func(QToolButton* self, QMouseEvent* param1)
 void q_toolbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#mouseReleaseEvent)
@@ -264,7 +264,7 @@ void q_toolbutton_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QPaintEvent*)
+/// @param callback void func(QToolButton* self, QPaintEvent* param1)
 void q_toolbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#paintEvent)
@@ -286,7 +286,7 @@ void q_toolbutton_action_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QActionEvent*)
+/// @param callback void func(QToolButton* self, QActionEvent* param1)
 void q_toolbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#actionEvent)
@@ -308,7 +308,7 @@ void q_toolbutton_enter_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QEnterEvent*)
+/// @param callback void func(QToolButton* self, QEnterEvent* param1)
 void q_toolbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#enterEvent)
@@ -330,7 +330,7 @@ void q_toolbutton_leave_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QEvent*)
+/// @param callback void func(QToolButton* self, QEvent* param1)
 void q_toolbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#leaveEvent)
@@ -352,7 +352,7 @@ void q_toolbutton_timer_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QTimerEvent*)
+/// @param callback void func(QToolButton* self, QTimerEvent* param1)
 void q_toolbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#timerEvent)
@@ -374,7 +374,7 @@ void q_toolbutton_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QEvent*)
+/// @param callback void func(QToolButton* self, QEvent* param1)
 void q_toolbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#changeEvent)
@@ -396,7 +396,7 @@ bool q_toolbutton_hit_button(void* self, void* pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn(QToolButton*, QPoint*)
+/// @param callback bool func(QToolButton* self, QPoint* pos)
 void q_toolbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#hitButton)
@@ -417,7 +417,7 @@ void q_toolbutton_check_state_set(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_toolbutton_on_check_state_set(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#checkStateSet)
@@ -437,7 +437,7 @@ void q_toolbutton_next_check_state(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_toolbutton_on_next_check_state(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#nextCheckState)
@@ -458,7 +458,7 @@ void q_toolbutton_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QStyleOptionToolButton*)
+/// @param callback void func(QToolButton* self, QStyleOptionToolButton* option)
 void q_toolbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#initStyleOption)
@@ -693,7 +693,7 @@ void q_toolbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*)
+/// @param callback void func(QToolButton* self)
 void q_toolbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -708,7 +708,7 @@ void q_toolbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*)
+/// @param callback void func(QToolButton* self)
 void q_toolbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -723,7 +723,7 @@ void q_toolbutton_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*)
+/// @param callback void func(QToolButton* self)
 void q_toolbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -739,7 +739,7 @@ void q_toolbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, bool)
+/// @param callback void func(QToolButton* self, bool checked)
 void q_toolbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -755,7 +755,7 @@ void q_toolbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, bool)
+/// @param callback void func(QToolButton* self, bool checked)
 void q_toolbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2695,7 +2695,7 @@ void q_toolbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, const char*)
+/// @param callback void func(QToolButton* self, const char* title)
 void q_toolbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2711,7 +2711,7 @@ void q_toolbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QIcon*)
+/// @param callback void func(QToolButton* self, QIcon* icon)
 void q_toolbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2727,7 +2727,7 @@ void q_toolbutton_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, const char*)
+/// @param callback void func(QToolButton* self, const char* iconText)
 void q_toolbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2743,7 +2743,7 @@ void q_toolbutton_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QPoint*)
+/// @param callback void func(QToolButton* self, QPoint* pos)
 void q_toolbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3120,7 +3120,7 @@ void q_toolbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*)
+/// @param callback void func(QToolButton* self)
 void q_toolbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3198,7 +3198,7 @@ void q_toolbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QObject*)
+/// @param callback void func(QToolButton* self, QObject* param1)
 void q_toolbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3319,7 +3319,7 @@ void q_toolbutton_qbase_key_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QKeyEvent*)
+/// @param callback void func(QToolButton* self, QKeyEvent* e)
 void q_toolbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3349,7 +3349,7 @@ void q_toolbutton_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QKeyEvent*)
+/// @param callback void func(QToolButton* self, QKeyEvent* e)
 void q_toolbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3379,7 +3379,7 @@ void q_toolbutton_qbase_mouse_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMouseEvent*)
+/// @param callback void func(QToolButton* self, QMouseEvent* e)
 void q_toolbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3409,7 +3409,7 @@ void q_toolbutton_qbase_focus_in_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QFocusEvent*)
+/// @param callback void func(QToolButton* self, QFocusEvent* e)
 void q_toolbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3439,7 +3439,7 @@ void q_toolbutton_qbase_focus_out_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QFocusEvent*)
+/// @param callback void func(QToolButton* self, QFocusEvent* e)
 void q_toolbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ int32_t q_toolbutton_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_toolbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void q_toolbutton_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, bool)
+/// @param callback void func(QToolButton* self, bool visible)
 void q_toolbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ int32_t q_toolbutton_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback int32_t fn(QToolButton*, int)
+/// @param callback int32_t func(QToolButton* self, int param1)
 void q_toolbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3555,7 +3555,7 @@ bool q_toolbutton_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_toolbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3583,7 +3583,7 @@ QPaintEngine* q_toolbutton_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_toolbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3613,7 +3613,7 @@ void q_toolbutton_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMouseEvent*)
+/// @param callback void func(QToolButton* self, QMouseEvent* event)
 void q_toolbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3643,7 +3643,7 @@ void q_toolbutton_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QWheelEvent*)
+/// @param callback void func(QToolButton* self, QWheelEvent* event)
 void q_toolbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3673,7 +3673,7 @@ void q_toolbutton_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMoveEvent*)
+/// @param callback void func(QToolButton* self, QMoveEvent* event)
 void q_toolbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3703,7 +3703,7 @@ void q_toolbutton_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QResizeEvent*)
+/// @param callback void func(QToolButton* self, QResizeEvent* event)
 void q_toolbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3733,7 +3733,7 @@ void q_toolbutton_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QCloseEvent*)
+/// @param callback void func(QToolButton* self, QCloseEvent* event)
 void q_toolbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3763,7 +3763,7 @@ void q_toolbutton_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QContextMenuEvent*)
+/// @param callback void func(QToolButton* self, QContextMenuEvent* event)
 void q_toolbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3793,7 +3793,7 @@ void q_toolbutton_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QTabletEvent*)
+/// @param callback void func(QToolButton* self, QTabletEvent* event)
 void q_toolbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3823,7 +3823,7 @@ void q_toolbutton_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QDragEnterEvent*)
+/// @param callback void func(QToolButton* self, QDragEnterEvent* event)
 void q_toolbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3853,7 +3853,7 @@ void q_toolbutton_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QDragMoveEvent*)
+/// @param callback void func(QToolButton* self, QDragMoveEvent* event)
 void q_toolbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3883,7 +3883,7 @@ void q_toolbutton_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QDragLeaveEvent*)
+/// @param callback void func(QToolButton* self, QDragLeaveEvent* event)
 void q_toolbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3913,7 +3913,7 @@ void q_toolbutton_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QDropEvent*)
+/// @param callback void func(QToolButton* self, QDropEvent* event)
 void q_toolbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3943,7 +3943,7 @@ void q_toolbutton_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QShowEvent*)
+/// @param callback void func(QToolButton* self, QShowEvent* event)
 void q_toolbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3973,7 +3973,7 @@ void q_toolbutton_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QHideEvent*)
+/// @param callback void func(QToolButton* self, QHideEvent* event)
 void q_toolbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4007,7 +4007,7 @@ bool q_toolbutton_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn(QToolButton*, const char*, void*, intptr_t*)
+/// @param callback bool func(QToolButton* self, const char* eventType, void* message, intptr_t* result)
 void q_toolbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4037,7 +4037,7 @@ int32_t q_toolbutton_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback int32_t fn(QToolButton*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QToolButton* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_toolbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4067,7 +4067,7 @@ void q_toolbutton_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QPainter*)
+/// @param callback void func(QToolButton* self, QPainter* painter)
 void q_toolbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4097,7 +4097,7 @@ QPaintDevice* q_toolbutton_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback QPaintDevice* fn(QToolButton*, QPoint*)
+/// @param callback QPaintDevice* func(QToolButton* self, QPoint* offset)
 void q_toolbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4125,7 +4125,7 @@ QPainter* q_toolbutton_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_toolbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4155,7 +4155,7 @@ void q_toolbutton_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QInputMethodEvent*)
+/// @param callback void func(QToolButton* self, QInputMethodEvent* param1)
 void q_toolbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4185,7 +4185,7 @@ QVariant* q_toolbutton_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback QVariant* fn(QToolButton*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QToolButton* self, enum Qt__InputMethodQuery param1)
 void q_toolbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4215,7 +4215,7 @@ bool q_toolbutton_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn(QToolButton*, bool)
+/// @param callback bool func(QToolButton* self, bool next)
 void q_toolbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4247,7 +4247,7 @@ bool q_toolbutton_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn(QToolButton*, QObject*, QEvent*)
+/// @param callback bool func(QToolButton* self, QObject* watched, QEvent* event)
 void q_toolbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4277,7 +4277,7 @@ void q_toolbutton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QChildEvent*)
+/// @param callback void func(QToolButton* self, QChildEvent* event)
 void q_toolbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4307,7 +4307,7 @@ void q_toolbutton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QEvent*)
+/// @param callback void func(QToolButton* self, QEvent* event)
 void q_toolbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4337,7 +4337,7 @@ void q_toolbutton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMetaMethod*)
+/// @param callback void func(QToolButton* self, QMetaMethod* signal)
 void q_toolbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4367,7 +4367,7 @@ void q_toolbutton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, QMetaMethod*)
+/// @param callback void func(QToolButton* self, QMetaMethod* signal)
 void q_toolbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4395,7 +4395,7 @@ void q_toolbutton_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_toolbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4423,7 +4423,7 @@ void q_toolbutton_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_toolbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4451,7 +4451,7 @@ void q_toolbutton_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_toolbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4479,7 +4479,7 @@ bool q_toolbutton_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_toolbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4507,7 +4507,7 @@ bool q_toolbutton_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_toolbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4535,7 +4535,7 @@ QObject* q_toolbutton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_toolbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4563,7 +4563,7 @@ int32_t q_toolbutton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_toolbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4593,7 +4593,7 @@ int32_t q_toolbutton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback int32_t fn(QToolButton*, const char*)
+/// @param callback int32_t func(QToolButton* self, const char* signal)
 void q_toolbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4623,7 +4623,7 @@ bool q_toolbutton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback bool fn(QToolButton*, QMetaMethod*)
+/// @param callback bool func(QToolButton* self, QMetaMethod* signal)
 void q_toolbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4655,7 +4655,7 @@ double q_toolbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QToolButton*
-/// @param callback double fn(QToolButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QToolButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_toolbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4665,7 +4665,7 @@ void q_toolbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QToolButton*
-/// @param callback void fn(QToolButton*, const char*)
+/// @param callback void func(QToolButton* self, const char* objectName)
 void q_toolbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#dtor.QToolButton)

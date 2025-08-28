@@ -40,7 +40,7 @@ int32_t q_abstractitemdelegate_metacall(void* self, int32_t param1, int param2, 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback int32_t fn(QAbstractItemDelegate*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAbstractItemDelegate* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_abstractitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -71,7 +71,7 @@ void q_abstractitemdelegate_paint(void* self, void* painter, void* option, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QPainter*, QStyleOptionViewItem*, QModelIndex*)
+/// @param callback void func(QAbstractItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 void q_abstractitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
@@ -96,7 +96,7 @@ QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback QSize* fn(QAbstractItemDelegate*, QStyleOptionViewItem*, QModelIndex*)
+/// @param callback QSize* func(QAbstractItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
@@ -121,7 +121,7 @@ QWidget* q_abstractitemdelegate_create_editor(void* self, void* parent, void* op
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback QWidget* fn(QAbstractItemDelegate*, QWidget*, QStyleOptionViewItem*, QModelIndex*)
+/// @param callback QWidget* func(QAbstractItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
@@ -146,7 +146,7 @@ void q_abstractitemdelegate_destroy_editor(void* self, void* editor, void* index
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*, QModelIndex*)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index)
 void q_abstractitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
@@ -170,7 +170,7 @@ void q_abstractitemdelegate_set_editor_data(void* self, void* editor, void* inde
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*, QModelIndex*)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index)
 void q_abstractitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
@@ -195,7 +195,7 @@ void q_abstractitemdelegate_set_model_data(void* self, void* editor, void* model
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*, QAbstractItemModel*, QModelIndex*)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 void q_abstractitemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
@@ -221,7 +221,7 @@ void q_abstractitemdelegate_update_editor_geometry(void* self, void* editor, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*, QStyleOptionViewItem*, QModelIndex*)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
@@ -248,7 +248,7 @@ bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, v
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback bool fn(QAbstractItemDelegate*, QEvent*, QAbstractItemModel*, QStyleOptionViewItem*, QModelIndex*)
+/// @param callback bool func(QAbstractItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index)
 void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
@@ -276,7 +276,7 @@ bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback bool fn(QAbstractItemDelegate*, QHelpEvent*, QAbstractItemView*, QStyleOptionViewItem*, QModelIndex*)
+/// @param callback bool func(QAbstractItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index)
 void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
@@ -300,7 +300,7 @@ libqt_list /* of int */ q_abstractitemdelegate_painting_roles(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback int* fn()
+/// @param callback int* func()
 void q_abstractitemdelegate_on_painting_roles(void* self, int* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
@@ -319,7 +319,7 @@ void q_abstractitemdelegate_commit_data(void* self, void* editor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor)
 void q_abstractitemdelegate_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
@@ -331,7 +331,7 @@ void q_abstractitemdelegate_close_editor(void* self, void* editor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor)
 void q_abstractitemdelegate_on_close_editor(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
@@ -343,7 +343,7 @@ void q_abstractitemdelegate_size_hint_changed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QModelIndex*)
+/// @param callback void func(QAbstractItemDelegate* self, QModelIndex* param1)
 void q_abstractitemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -373,7 +373,7 @@ void q_abstractitemdelegate_close_editor2(void* self, void* editor, int32_t hint
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
+/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
 void q_abstractitemdelegate_on_close_editor2(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QObject
@@ -602,7 +602,7 @@ void q_abstractitemdelegate_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*)
+/// @param callback void func(QAbstractItemDelegate* self)
 void q_abstractitemdelegate_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -680,7 +680,7 @@ void q_abstractitemdelegate_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QObject*)
+/// @param callback void func(QAbstractItemDelegate* self, QObject* param1)
 void q_abstractitemdelegate_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -710,7 +710,7 @@ bool q_abstractitemdelegate_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback bool fn(QAbstractItemDelegate*, QEvent*)
+/// @param callback bool func(QAbstractItemDelegate* self, QEvent* event)
 void q_abstractitemdelegate_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -742,7 +742,7 @@ bool q_abstractitemdelegate_qbase_event_filter(void* self, void* watched, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback bool fn(QAbstractItemDelegate*, QObject*, QEvent*)
+/// @param callback bool func(QAbstractItemDelegate* self, QObject* watched, QEvent* event)
 void q_abstractitemdelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -772,7 +772,7 @@ void q_abstractitemdelegate_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QTimerEvent*)
+/// @param callback void func(QAbstractItemDelegate* self, QTimerEvent* event)
 void q_abstractitemdelegate_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -802,7 +802,7 @@ void q_abstractitemdelegate_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QChildEvent*)
+/// @param callback void func(QAbstractItemDelegate* self, QChildEvent* event)
 void q_abstractitemdelegate_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -832,7 +832,7 @@ void q_abstractitemdelegate_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QEvent*)
+/// @param callback void func(QAbstractItemDelegate* self, QEvent* event)
 void q_abstractitemdelegate_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -862,7 +862,7 @@ void q_abstractitemdelegate_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QMetaMethod*)
+/// @param callback void func(QAbstractItemDelegate* self, QMetaMethod* signal)
 void q_abstractitemdelegate_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -892,7 +892,7 @@ void q_abstractitemdelegate_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, QMetaMethod*)
+/// @param callback void func(QAbstractItemDelegate* self, QMetaMethod* signal)
 void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -920,7 +920,7 @@ QObject* q_abstractitemdelegate_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_abstractitemdelegate_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -948,7 +948,7 @@ int32_t q_abstractitemdelegate_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -978,7 +978,7 @@ int32_t q_abstractitemdelegate_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback int32_t fn(QAbstractItemDelegate*, const char*)
+/// @param callback int32_t func(QAbstractItemDelegate* self, const char* signal)
 void q_abstractitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1008,7 +1008,7 @@ bool q_abstractitemdelegate_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback bool fn(QAbstractItemDelegate*, QMetaMethod*)
+/// @param callback bool func(QAbstractItemDelegate* self, QMetaMethod* signal)
 void q_abstractitemdelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1018,7 +1018,7 @@ void q_abstractitemdelegate_on_is_signal_connected(void* self, bool (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractItemDelegate*
-/// @param callback void fn(QAbstractItemDelegate*, const char*)
+/// @param callback void func(QAbstractItemDelegate* self, const char* objectName)
 void q_abstractitemdelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#dtor.QAbstractItemDelegate)

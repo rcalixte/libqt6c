@@ -40,7 +40,7 @@ int32_t q_accessibleplugin_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback int32_t fn(QAccessiblePlugin*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAccessiblePlugin* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_accessibleplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ QAccessibleInterface* q_accessibleplugin_create(void* self, const char* key, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback QAccessibleInterface* fn(QAccessiblePlugin*, const char*, QObject*)
+/// @param callback QAccessibleInterface* func(QAccessiblePlugin* self, const char* key, QObject* object)
 void q_accessibleplugin_on_create(void* self, QAccessibleInterface* (*callback)(void*, const char*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleplugin.html#create)
@@ -325,7 +325,7 @@ void q_accessibleplugin_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*)
+/// @param callback void func(QAccessiblePlugin* self)
 void q_accessibleplugin_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -403,7 +403,7 @@ void q_accessibleplugin_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, QObject*)
+/// @param callback void func(QAccessiblePlugin* self, QObject* param1)
 void q_accessibleplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -433,7 +433,7 @@ bool q_accessibleplugin_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback bool fn(QAccessiblePlugin*, QEvent*)
+/// @param callback bool func(QAccessiblePlugin* self, QEvent* event)
 void q_accessibleplugin_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -465,7 +465,7 @@ bool q_accessibleplugin_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback bool fn(QAccessiblePlugin*, QObject*, QEvent*)
+/// @param callback bool func(QAccessiblePlugin* self, QObject* watched, QEvent* event)
 void q_accessibleplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -495,7 +495,7 @@ void q_accessibleplugin_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, QTimerEvent*)
+/// @param callback void func(QAccessiblePlugin* self, QTimerEvent* event)
 void q_accessibleplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -525,7 +525,7 @@ void q_accessibleplugin_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, QChildEvent*)
+/// @param callback void func(QAccessiblePlugin* self, QChildEvent* event)
 void q_accessibleplugin_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -555,7 +555,7 @@ void q_accessibleplugin_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, QEvent*)
+/// @param callback void func(QAccessiblePlugin* self, QEvent* event)
 void q_accessibleplugin_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -585,7 +585,7 @@ void q_accessibleplugin_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, QMetaMethod*)
+/// @param callback void func(QAccessiblePlugin* self, QMetaMethod* signal)
 void q_accessibleplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -615,7 +615,7 @@ void q_accessibleplugin_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, QMetaMethod*)
+/// @param callback void func(QAccessiblePlugin* self, QMetaMethod* signal)
 void q_accessibleplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -643,7 +643,7 @@ QObject* q_accessibleplugin_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_accessibleplugin_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -671,7 +671,7 @@ int32_t q_accessibleplugin_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_accessibleplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -701,7 +701,7 @@ int32_t q_accessibleplugin_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback int32_t fn(QAccessiblePlugin*, const char*)
+/// @param callback int32_t func(QAccessiblePlugin* self, const char* signal)
 void q_accessibleplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -731,7 +731,7 @@ bool q_accessibleplugin_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback bool fn(QAccessiblePlugin*, QMetaMethod*)
+/// @param callback bool func(QAccessiblePlugin* self, QMetaMethod* signal)
 void q_accessibleplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -741,7 +741,7 @@ void q_accessibleplugin_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAccessiblePlugin*
-/// @param callback void fn(QAccessiblePlugin*, const char*)
+/// @param callback void func(QAccessiblePlugin* self, const char* objectName)
 void q_accessibleplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleplugin.html#dtor.QAccessiblePlugin)

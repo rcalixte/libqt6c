@@ -42,7 +42,7 @@ int32_t q_rubberband_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback int32_t fn(QRubberBand*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QRubberBand* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_rubberband_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -119,7 +119,7 @@ bool q_rubberband_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn(QRubberBand*, QEvent*)
+/// @param callback bool func(QRubberBand* self, QEvent* e)
 void q_rubberband_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#event)
@@ -141,7 +141,7 @@ void q_rubberband_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QPaintEvent*)
+/// @param callback void func(QRubberBand* self, QPaintEvent* param1)
 void q_rubberband_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#paintEvent)
@@ -163,7 +163,7 @@ void q_rubberband_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QEvent*)
+/// @param callback void func(QRubberBand* self, QEvent* param1)
 void q_rubberband_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#changeEvent)
@@ -185,7 +185,7 @@ void q_rubberband_show_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QShowEvent*)
+/// @param callback void func(QRubberBand* self, QShowEvent* param1)
 void q_rubberband_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#showEvent)
@@ -207,7 +207,7 @@ void q_rubberband_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QResizeEvent*)
+/// @param callback void func(QRubberBand* self, QResizeEvent* param1)
 void q_rubberband_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#resizeEvent)
@@ -229,7 +229,7 @@ void q_rubberband_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMoveEvent*)
+/// @param callback void func(QRubberBand* self, QMoveEvent* param1)
 void q_rubberband_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#moveEvent)
@@ -251,7 +251,7 @@ void q_rubberband_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QStyleOptionRubberBand*)
+/// @param callback void func(QRubberBand* self, QStyleOptionRubberBand* option)
 void q_rubberband_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#initStyleOption)
@@ -2163,7 +2163,7 @@ void q_rubberband_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, const char*)
+/// @param callback void func(QRubberBand* self, const char* title)
 void q_rubberband_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2179,7 +2179,7 @@ void q_rubberband_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QIcon*)
+/// @param callback void func(QRubberBand* self, QIcon* icon)
 void q_rubberband_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2195,7 +2195,7 @@ void q_rubberband_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, const char*)
+/// @param callback void func(QRubberBand* self, const char* iconText)
 void q_rubberband_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2211,7 +2211,7 @@ void q_rubberband_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QPoint*)
+/// @param callback void func(QRubberBand* self, QPoint* pos)
 void q_rubberband_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2588,7 +2588,7 @@ void q_rubberband_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*)
+/// @param callback void func(QRubberBand* self)
 void q_rubberband_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2666,7 +2666,7 @@ void q_rubberband_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QObject*)
+/// @param callback void func(QRubberBand* self, QObject* param1)
 void q_rubberband_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2785,7 +2785,7 @@ int32_t q_rubberband_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_rubberband_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2815,7 +2815,7 @@ void q_rubberband_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, bool)
+/// @param callback void func(QRubberBand* self, bool visible)
 void q_rubberband_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2843,7 +2843,7 @@ QSize* q_rubberband_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_rubberband_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2871,7 +2871,7 @@ QSize* q_rubberband_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_rubberband_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2901,7 +2901,7 @@ int32_t q_rubberband_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback int32_t fn(QRubberBand*, int)
+/// @param callback int32_t func(QRubberBand* self, int param1)
 void q_rubberband_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2929,7 +2929,7 @@ bool q_rubberband_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_rubberband_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2957,7 +2957,7 @@ QPaintEngine* q_rubberband_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_rubberband_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2987,7 +2987,7 @@ void q_rubberband_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMouseEvent*)
+/// @param callback void func(QRubberBand* self, QMouseEvent* event)
 void q_rubberband_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3017,7 +3017,7 @@ void q_rubberband_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMouseEvent*)
+/// @param callback void func(QRubberBand* self, QMouseEvent* event)
 void q_rubberband_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3047,7 +3047,7 @@ void q_rubberband_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMouseEvent*)
+/// @param callback void func(QRubberBand* self, QMouseEvent* event)
 void q_rubberband_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3077,7 +3077,7 @@ void q_rubberband_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMouseEvent*)
+/// @param callback void func(QRubberBand* self, QMouseEvent* event)
 void q_rubberband_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3107,7 +3107,7 @@ void q_rubberband_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QWheelEvent*)
+/// @param callback void func(QRubberBand* self, QWheelEvent* event)
 void q_rubberband_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void q_rubberband_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QKeyEvent*)
+/// @param callback void func(QRubberBand* self, QKeyEvent* event)
 void q_rubberband_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3167,7 +3167,7 @@ void q_rubberband_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QKeyEvent*)
+/// @param callback void func(QRubberBand* self, QKeyEvent* event)
 void q_rubberband_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3197,7 +3197,7 @@ void q_rubberband_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QFocusEvent*)
+/// @param callback void func(QRubberBand* self, QFocusEvent* event)
 void q_rubberband_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3227,7 +3227,7 @@ void q_rubberband_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QFocusEvent*)
+/// @param callback void func(QRubberBand* self, QFocusEvent* event)
 void q_rubberband_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3257,7 +3257,7 @@ void q_rubberband_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QEnterEvent*)
+/// @param callback void func(QRubberBand* self, QEnterEvent* event)
 void q_rubberband_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3287,7 +3287,7 @@ void q_rubberband_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QEvent*)
+/// @param callback void func(QRubberBand* self, QEvent* event)
 void q_rubberband_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3317,7 +3317,7 @@ void q_rubberband_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QCloseEvent*)
+/// @param callback void func(QRubberBand* self, QCloseEvent* event)
 void q_rubberband_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3347,7 +3347,7 @@ void q_rubberband_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QContextMenuEvent*)
+/// @param callback void func(QRubberBand* self, QContextMenuEvent* event)
 void q_rubberband_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3377,7 +3377,7 @@ void q_rubberband_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QTabletEvent*)
+/// @param callback void func(QRubberBand* self, QTabletEvent* event)
 void q_rubberband_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3407,7 +3407,7 @@ void q_rubberband_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QActionEvent*)
+/// @param callback void func(QRubberBand* self, QActionEvent* event)
 void q_rubberband_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3437,7 +3437,7 @@ void q_rubberband_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QDragEnterEvent*)
+/// @param callback void func(QRubberBand* self, QDragEnterEvent* event)
 void q_rubberband_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ void q_rubberband_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QDragMoveEvent*)
+/// @param callback void func(QRubberBand* self, QDragMoveEvent* event)
 void q_rubberband_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void q_rubberband_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QDragLeaveEvent*)
+/// @param callback void func(QRubberBand* self, QDragLeaveEvent* event)
 void q_rubberband_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void q_rubberband_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QDropEvent*)
+/// @param callback void func(QRubberBand* self, QDropEvent* event)
 void q_rubberband_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void q_rubberband_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QHideEvent*)
+/// @param callback void func(QRubberBand* self, QHideEvent* event)
 void q_rubberband_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3591,7 +3591,7 @@ bool q_rubberband_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn(QRubberBand*, const char*, void*, intptr_t*)
+/// @param callback bool func(QRubberBand* self, const char* eventType, void* message, intptr_t* result)
 void q_rubberband_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3621,7 +3621,7 @@ int32_t q_rubberband_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback int32_t fn(QRubberBand*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QRubberBand* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_rubberband_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3651,7 +3651,7 @@ void q_rubberband_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QPainter*)
+/// @param callback void func(QRubberBand* self, QPainter* painter)
 void q_rubberband_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3681,7 +3681,7 @@ QPaintDevice* q_rubberband_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QPaintDevice* fn(QRubberBand*, QPoint*)
+/// @param callback QPaintDevice* func(QRubberBand* self, QPoint* offset)
 void q_rubberband_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3709,7 +3709,7 @@ QPainter* q_rubberband_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_rubberband_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3739,7 +3739,7 @@ void q_rubberband_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QInputMethodEvent*)
+/// @param callback void func(QRubberBand* self, QInputMethodEvent* param1)
 void q_rubberband_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3769,7 +3769,7 @@ QVariant* q_rubberband_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QVariant* fn(QRubberBand*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QRubberBand* self, enum Qt__InputMethodQuery param1)
 void q_rubberband_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3799,7 +3799,7 @@ bool q_rubberband_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn(QRubberBand*, bool)
+/// @param callback bool func(QRubberBand* self, bool next)
 void q_rubberband_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3831,7 +3831,7 @@ bool q_rubberband_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn(QRubberBand*, QObject*, QEvent*)
+/// @param callback bool func(QRubberBand* self, QObject* watched, QEvent* event)
 void q_rubberband_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3861,7 +3861,7 @@ void q_rubberband_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QTimerEvent*)
+/// @param callback void func(QRubberBand* self, QTimerEvent* event)
 void q_rubberband_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3891,7 +3891,7 @@ void q_rubberband_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QChildEvent*)
+/// @param callback void func(QRubberBand* self, QChildEvent* event)
 void q_rubberband_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3921,7 +3921,7 @@ void q_rubberband_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QEvent*)
+/// @param callback void func(QRubberBand* self, QEvent* event)
 void q_rubberband_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3951,7 +3951,7 @@ void q_rubberband_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMetaMethod*)
+/// @param callback void func(QRubberBand* self, QMetaMethod* signal)
 void q_rubberband_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3981,7 +3981,7 @@ void q_rubberband_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, QMetaMethod*)
+/// @param callback void func(QRubberBand* self, QMetaMethod* signal)
 void q_rubberband_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4009,7 +4009,7 @@ void q_rubberband_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn()
+/// @param callback void func()
 void q_rubberband_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4037,7 +4037,7 @@ void q_rubberband_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn()
+/// @param callback void func()
 void q_rubberband_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4065,7 +4065,7 @@ void q_rubberband_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback void fn()
+/// @param callback void func()
 void q_rubberband_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4093,7 +4093,7 @@ bool q_rubberband_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_rubberband_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4121,7 +4121,7 @@ bool q_rubberband_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_rubberband_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4149,7 +4149,7 @@ QObject* q_rubberband_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_rubberband_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4177,7 +4177,7 @@ int32_t q_rubberband_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_rubberband_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4207,7 +4207,7 @@ int32_t q_rubberband_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback int32_t fn(QRubberBand*, const char*)
+/// @param callback int32_t func(QRubberBand* self, const char* signal)
 void q_rubberband_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4237,7 +4237,7 @@ bool q_rubberband_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback bool fn(QRubberBand*, QMetaMethod*)
+/// @param callback bool func(QRubberBand* self, QMetaMethod* signal)
 void q_rubberband_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4269,7 +4269,7 @@ double q_rubberband_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRubberBand*
-/// @param callback double fn(QRubberBand*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QRubberBand* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_rubberband_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4279,7 +4279,7 @@ void q_rubberband_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QRubberBand*
-/// @param callback void fn(QRubberBand*, const char*)
+/// @param callback void func(QRubberBand* self, const char* objectName)
 void q_rubberband_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#dtor.QRubberBand)

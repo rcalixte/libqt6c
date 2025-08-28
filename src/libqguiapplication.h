@@ -44,7 +44,7 @@ int32_t q_guiapplication_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QGuiApplication*
-/// @param callback int32_t fn(QGuiApplication*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QGuiApplication* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_guiapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -284,7 +284,7 @@ bool q_guiapplication_notify(void* self, void* param1, void* param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QGuiApplication*
-/// @param callback bool fn(QGuiApplication*, QObject*, QEvent*)
+/// @param callback bool func(QGuiApplication* self, QObject* param1, QEvent* param2)
 void q_guiapplication_on_notify(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#notify)
@@ -332,7 +332,7 @@ void* q_guiapplication_resolve_interface(void* self, const char* name, int revis
 /// Allows for overriding the related default method
 ///
 /// @param self QGuiApplication*
-/// @param callback void* fn(QGuiApplication*, const char*, int)
+/// @param callback void* func(QGuiApplication* self, const char* name, int revision)
 void q_guiapplication_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#resolveInterface)
@@ -356,7 +356,7 @@ void q_guiapplication_font_database_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_font_database_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
@@ -368,7 +368,7 @@ void q_guiapplication_screen_added(void* self, void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QScreen*)
+/// @param callback void func(QGuiApplication* self, QScreen* screen)
 void q_guiapplication_on_screen_added(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
@@ -380,7 +380,7 @@ void q_guiapplication_screen_removed(void* self, void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QScreen*)
+/// @param callback void func(QGuiApplication* self, QScreen* screen)
 void q_guiapplication_on_screen_removed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
@@ -392,7 +392,7 @@ void q_guiapplication_primary_screen_changed(void* self, void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QScreen*)
+/// @param callback void func(QGuiApplication* self, QScreen* screen)
 void q_guiapplication_on_primary_screen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
@@ -403,7 +403,7 @@ void q_guiapplication_last_window_closed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_last_window_closed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
@@ -415,7 +415,7 @@ void q_guiapplication_focus_object_changed(void* self, void* focusObject);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QObject*)
+/// @param callback void func(QGuiApplication* self, QObject* focusObject)
 void q_guiapplication_on_focus_object_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
@@ -427,7 +427,7 @@ void q_guiapplication_focus_window_changed(void* self, void* focusWindow);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QWindow*)
+/// @param callback void func(QGuiApplication* self, QWindow* focusWindow)
 void q_guiapplication_on_focus_window_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
@@ -439,7 +439,7 @@ void q_guiapplication_application_state_changed(void* self, int32_t state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, enum Qt__ApplicationState)
+/// @param callback void func(QGuiApplication* self, enum Qt__ApplicationState state)
 void q_guiapplication_on_application_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
@@ -451,7 +451,7 @@ void q_guiapplication_layout_direction_changed(void* self, int32_t direction);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, enum Qt__LayoutDirection)
+/// @param callback void func(QGuiApplication* self, enum Qt__LayoutDirection direction)
 void q_guiapplication_on_layout_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
@@ -463,7 +463,7 @@ void q_guiapplication_commit_data_request(void* self, void* sessionManager);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QSessionManager*)
+/// @param callback void func(QGuiApplication* self, QSessionManager* sessionManager)
 void q_guiapplication_on_commit_data_request(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
@@ -475,7 +475,7 @@ void q_guiapplication_save_state_request(void* self, void* sessionManager);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QSessionManager*)
+/// @param callback void func(QGuiApplication* self, QSessionManager* sessionManager)
 void q_guiapplication_on_save_state_request(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
@@ -486,7 +486,7 @@ void q_guiapplication_application_display_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_application_display_name_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
@@ -498,7 +498,7 @@ void q_guiapplication_palette_changed(void* self, void* pal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QPalette*)
+/// @param callback void func(QGuiApplication* self, QPalette* pal)
 void q_guiapplication_on_palette_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
@@ -510,7 +510,7 @@ void q_guiapplication_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QFont*)
+/// @param callback void func(QGuiApplication* self, QFont* font)
 void q_guiapplication_on_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#event)
@@ -524,7 +524,7 @@ bool q_guiapplication_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QGuiApplication*
-/// @param callback bool fn(QGuiApplication*, QEvent*)
+/// @param callback bool func(QGuiApplication* self, QEvent* param1)
 void q_guiapplication_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#event)
@@ -827,7 +827,7 @@ void q_guiapplication_install_native_event_filter(void* self, void* filterObj);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QAbstractNativeEventFilter*)
+/// @param callback void func(QGuiApplication* self, QAbstractNativeEventFilter* filterObj)
 void q_guiapplication_on_install_native_event_filter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
@@ -843,7 +843,7 @@ void q_guiapplication_remove_native_event_filter(void* self, void* filterObj);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QAbstractNativeEventFilter*)
+/// @param callback void func(QGuiApplication* self, QAbstractNativeEventFilter* filterObj)
 void q_guiapplication_on_remove_native_event_filter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
@@ -883,7 +883,7 @@ void q_guiapplication_organization_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_organization_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
@@ -898,7 +898,7 @@ void q_guiapplication_organization_domain_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_organization_domain_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
@@ -913,7 +913,7 @@ void q_guiapplication_application_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_application_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
@@ -928,7 +928,7 @@ void q_guiapplication_application_version_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_application_version_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
@@ -1234,7 +1234,7 @@ void q_guiapplication_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1312,7 +1312,7 @@ void q_guiapplication_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QObject*)
+/// @param callback void func(QGuiApplication* self, QObject* param1)
 void q_guiapplication_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1344,7 +1344,7 @@ bool q_guiapplication_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback bool fn(QGuiApplication*, QObject*, QEvent*)
+/// @param callback bool func(QGuiApplication* self, QObject* watched, QEvent* event)
 void q_guiapplication_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1374,7 +1374,7 @@ void q_guiapplication_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QTimerEvent*)
+/// @param callback void func(QGuiApplication* self, QTimerEvent* event)
 void q_guiapplication_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1404,7 +1404,7 @@ void q_guiapplication_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QChildEvent*)
+/// @param callback void func(QGuiApplication* self, QChildEvent* event)
 void q_guiapplication_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1434,7 +1434,7 @@ void q_guiapplication_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QEvent*)
+/// @param callback void func(QGuiApplication* self, QEvent* event)
 void q_guiapplication_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1464,7 +1464,7 @@ void q_guiapplication_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QMetaMethod*)
+/// @param callback void func(QGuiApplication* self, QMetaMethod* signal)
 void q_guiapplication_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1494,7 +1494,7 @@ void q_guiapplication_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, QMetaMethod*)
+/// @param callback void func(QGuiApplication* self, QMetaMethod* signal)
 void q_guiapplication_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1522,7 +1522,7 @@ QObject* q_guiapplication_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_guiapplication_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1550,7 +1550,7 @@ int32_t q_guiapplication_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_guiapplication_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1580,7 +1580,7 @@ int32_t q_guiapplication_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback int32_t fn(QGuiApplication*, const char*)
+/// @param callback int32_t func(QGuiApplication* self, const char* signal)
 void q_guiapplication_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1610,7 +1610,7 @@ bool q_guiapplication_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGuiApplication*
-/// @param callback bool fn(QGuiApplication*, QMetaMethod*)
+/// @param callback bool func(QGuiApplication* self, QMetaMethod* signal)
 void q_guiapplication_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
@@ -1620,7 +1620,7 @@ void q_guiapplication_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*)
+/// @param callback void func(QGuiApplication* self)
 void q_guiapplication_on_about_to_quit(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1630,7 +1630,7 @@ void q_guiapplication_on_about_to_quit(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGuiApplication*
-/// @param callback void fn(QGuiApplication*, const char*)
+/// @param callback void func(QGuiApplication* self, const char* objectName)
 void q_guiapplication_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#dtor.QGuiApplication)

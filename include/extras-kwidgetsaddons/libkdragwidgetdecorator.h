@@ -40,7 +40,7 @@ int32_t k_dragwidgetdecoratorbase_metacall(void* self, int32_t param1, int param
 /// Allows for overriding the related default method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback int32_t fn(KDragWidgetDecoratorBase*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDragWidgetDecoratorBase* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_dragwidgetdecoratorbase_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -79,7 +79,7 @@ QWidget* k_dragwidgetdecoratorbase_decorated_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void k_dragwidgetdecoratorbase_on_decorated_widget(void* self, QWidget* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
@@ -99,7 +99,7 @@ QDrag* k_dragwidgetdecoratorbase_drag_object(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback QDrag* fn()
+/// @param callback QDrag* func()
 void k_dragwidgetdecoratorbase_on_drag_object(void* self, QDrag* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#dragObject)
@@ -121,7 +121,7 @@ bool k_dragwidgetdecoratorbase_event_filter(void* self, void* watched, void* eve
 /// Allows for overriding the related default method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback bool fn(KDragWidgetDecoratorBase*, QObject*, QEvent*)
+/// @param callback bool func(KDragWidgetDecoratorBase* self, QObject* watched, QEvent* event)
 void k_dragwidgetdecoratorbase_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
@@ -143,7 +143,7 @@ void k_dragwidgetdecoratorbase_start_drag(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn()
+/// @param callback void func()
 void k_dragwidgetdecoratorbase_on_start_drag(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#startDrag)
@@ -396,7 +396,7 @@ void k_dragwidgetdecoratorbase_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*)
+/// @param callback void func(KDragWidgetDecoratorBase* self)
 void k_dragwidgetdecoratorbase_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -474,7 +474,7 @@ void k_dragwidgetdecoratorbase_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, QObject*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, QObject* param1)
 void k_dragwidgetdecoratorbase_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -504,7 +504,7 @@ bool k_dragwidgetdecoratorbase_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback bool fn(KDragWidgetDecoratorBase*, QEvent*)
+/// @param callback bool func(KDragWidgetDecoratorBase* self, QEvent* event)
 void k_dragwidgetdecoratorbase_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -534,7 +534,7 @@ void k_dragwidgetdecoratorbase_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, QTimerEvent*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, QTimerEvent* event)
 void k_dragwidgetdecoratorbase_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -564,7 +564,7 @@ void k_dragwidgetdecoratorbase_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, QChildEvent*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, QChildEvent* event)
 void k_dragwidgetdecoratorbase_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -594,7 +594,7 @@ void k_dragwidgetdecoratorbase_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, QEvent*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, QEvent* event)
 void k_dragwidgetdecoratorbase_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -624,7 +624,7 @@ void k_dragwidgetdecoratorbase_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, QMetaMethod*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, QMetaMethod* signal)
 void k_dragwidgetdecoratorbase_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -654,7 +654,7 @@ void k_dragwidgetdecoratorbase_qbase_disconnect_notify(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, QMetaMethod*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, QMetaMethod* signal)
 void k_dragwidgetdecoratorbase_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -682,7 +682,7 @@ QObject* k_dragwidgetdecoratorbase_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_dragwidgetdecoratorbase_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -710,7 +710,7 @@ int32_t k_dragwidgetdecoratorbase_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_dragwidgetdecoratorbase_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -740,7 +740,7 @@ int32_t k_dragwidgetdecoratorbase_qbase_receivers(void* self, const char* signal
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback int32_t fn(KDragWidgetDecoratorBase*, const char*)
+/// @param callback int32_t func(KDragWidgetDecoratorBase* self, const char* signal)
 void k_dragwidgetdecoratorbase_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -770,7 +770,7 @@ bool k_dragwidgetdecoratorbase_qbase_is_signal_connected(void* self, void* signa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback bool fn(KDragWidgetDecoratorBase*, QMetaMethod*)
+/// @param callback bool func(KDragWidgetDecoratorBase* self, QMetaMethod* signal)
 void k_dragwidgetdecoratorbase_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -780,7 +780,7 @@ void k_dragwidgetdecoratorbase_on_is_signal_connected(void* self, bool (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDragWidgetDecoratorBase*
-/// @param callback void fn(KDragWidgetDecoratorBase*, const char*)
+/// @param callback void func(KDragWidgetDecoratorBase* self, const char* objectName)
 void k_dragwidgetdecoratorbase_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#dtor.KDragWidgetDecoratorBase)

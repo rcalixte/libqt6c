@@ -40,7 +40,7 @@ int32_t q_formlayout_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn(QFormLayout*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QFormLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_formlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -142,7 +142,7 @@ int32_t q_formlayout_spacing(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_formlayout_on_spacing(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#spacing)
@@ -163,7 +163,7 @@ void q_formlayout_set_spacing(void* self, int spacing);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, int)
+/// @param callback void func(QFormLayout* self, int spacing)
 void q_formlayout_on_set_spacing(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setSpacing)
@@ -389,7 +389,7 @@ void q_formlayout_add_item(void* self, void* item);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QLayoutItem*)
+/// @param callback void func(QFormLayout* self, QLayoutItem* item)
 void q_formlayout_on_add_item(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#addItem)
@@ -411,7 +411,7 @@ QLayoutItem* q_formlayout_item_at2(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback QLayoutItem* fn(QFormLayout*, int)
+/// @param callback QLayoutItem* func(QFormLayout* self, int index)
 void q_formlayout_on_item_at2(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
@@ -433,7 +433,7 @@ QLayoutItem* q_formlayout_take_at(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback QLayoutItem* fn(QFormLayout*, int)
+/// @param callback QLayoutItem* func(QFormLayout* self, int index)
 void q_formlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeAt)
@@ -455,7 +455,7 @@ void q_formlayout_set_geometry(void* self, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QRect*)
+/// @param callback void func(QFormLayout* self, QRect* rect)
 void q_formlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setGeometry)
@@ -476,7 +476,7 @@ QSize* q_formlayout_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_formlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#minimumSize)
@@ -496,7 +496,7 @@ QSize* q_formlayout_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_formlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#sizeHint)
@@ -516,7 +516,7 @@ void q_formlayout_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_formlayout_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#invalidate)
@@ -536,7 +536,7 @@ bool q_formlayout_has_height_for_width(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_formlayout_on_has_height_for_width(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#hasHeightForWidth)
@@ -557,7 +557,7 @@ int32_t q_formlayout_height_for_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn(QFormLayout*, int)
+/// @param callback int32_t func(QFormLayout* self, int width)
 void q_formlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#heightForWidth)
@@ -580,7 +580,7 @@ int64_t q_formlayout_expanding_directions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_formlayout_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#expandingDirections)
@@ -602,7 +602,7 @@ int32_t q_formlayout_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_formlayout_on_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#count)
@@ -795,7 +795,7 @@ int32_t q_formlayout_index_of2(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn(QFormLayout*, QLayoutItem*)
+/// @param callback int32_t func(QFormLayout* self, QLayoutItem* param1)
 void q_formlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1094,7 +1094,7 @@ void q_formlayout_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*)
+/// @param callback void func(QFormLayout* self)
 void q_formlayout_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1172,7 +1172,7 @@ void q_formlayout_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QObject*)
+/// @param callback void func(QFormLayout* self, QObject* param1)
 void q_formlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1209,7 +1209,7 @@ QRect* q_formlayout_qbase_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_formlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -1237,7 +1237,7 @@ QSize* q_formlayout_qbase_maximum_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_formlayout_on_maximum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QLayout
@@ -1267,7 +1267,7 @@ int32_t q_formlayout_qbase_index_of(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn(QFormLayout*, QWidget*)
+/// @param callback int32_t func(QFormLayout* self, QWidget* param1)
 void q_formlayout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1295,7 +1295,7 @@ bool q_formlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_formlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QLayout
@@ -1327,7 +1327,7 @@ int64_t q_formlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_formlayout_on_control_types(void* self, int64_t (*callback)());
 
 /// Inherited from QLayout
@@ -1361,7 +1361,7 @@ QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QLayoutItem* fn(QFormLayout*, QWidget*, QWidget*, flag of enum Qt__FindChildOption)
+/// @param callback QLayoutItem* func(QFormLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
 void q_formlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
 
 /// Inherited from QLayout
@@ -1389,7 +1389,7 @@ QLayout* q_formlayout_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_formlayout_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayout
@@ -1419,7 +1419,7 @@ void q_formlayout_qbase_child_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QChildEvent*)
+/// @param callback void func(QFormLayout* self, QChildEvent* e)
 void q_formlayout_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1449,7 +1449,7 @@ bool q_formlayout_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback bool fn(QFormLayout*, QEvent*)
+/// @param callback bool func(QFormLayout* self, QEvent* event)
 void q_formlayout_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1481,7 +1481,7 @@ bool q_formlayout_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback bool fn(QFormLayout*, QObject*, QEvent*)
+/// @param callback bool func(QFormLayout* self, QObject* watched, QEvent* event)
 void q_formlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1511,7 +1511,7 @@ void q_formlayout_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QTimerEvent*)
+/// @param callback void func(QFormLayout* self, QTimerEvent* event)
 void q_formlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1541,7 +1541,7 @@ void q_formlayout_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QEvent*)
+/// @param callback void func(QFormLayout* self, QEvent* event)
 void q_formlayout_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1571,7 +1571,7 @@ void q_formlayout_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QMetaMethod*)
+/// @param callback void func(QFormLayout* self, QMetaMethod* signal)
 void q_formlayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1601,7 +1601,7 @@ void q_formlayout_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QMetaMethod*)
+/// @param callback void func(QFormLayout* self, QMetaMethod* signal)
 void q_formlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1631,7 +1631,7 @@ int32_t q_formlayout_qbase_minimum_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn(QFormLayout*, int)
+/// @param callback int32_t func(QFormLayout* self, int param1)
 void q_formlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QLayoutItem
@@ -1659,7 +1659,7 @@ QWidget* q_formlayout_qbase_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_formlayout_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1687,7 +1687,7 @@ QSpacerItem* q_formlayout_qbase_spacer_item(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_formlayout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// Inherited from QLayout
@@ -1717,7 +1717,7 @@ void q_formlayout_qbase_widget_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QEvent*)
+/// @param callback void func(QFormLayout* self, QEvent* param1)
 void q_formlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1747,7 +1747,7 @@ void q_formlayout_qbase_add_child_layout(void* self, void* l);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QLayout*)
+/// @param callback void func(QFormLayout* self, QLayout* l)
 void q_formlayout_on_add_child_layout(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1777,7 +1777,7 @@ void q_formlayout_qbase_add_child_widget(void* self, void* w);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, QWidget*)
+/// @param callback void func(QFormLayout* self, QWidget* w)
 void q_formlayout_on_add_child_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1807,7 +1807,7 @@ bool q_formlayout_qbase_adopt_layout(void* self, void* layout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback bool fn(QFormLayout*, QLayout*)
+/// @param callback bool func(QFormLayout* self, QLayout* layout)
 void q_formlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1837,7 +1837,7 @@ QRect* q_formlayout_qbase_alignment_rect(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QRect* fn(QFormLayout*, QRect*)
+/// @param callback QRect* func(QFormLayout* self, QRect* param1)
 void q_formlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1865,7 +1865,7 @@ QObject* q_formlayout_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_formlayout_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1893,7 +1893,7 @@ int32_t q_formlayout_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_formlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1923,7 +1923,7 @@ int32_t q_formlayout_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback int32_t fn(QFormLayout*, const char*)
+/// @param callback int32_t func(QFormLayout* self, const char* signal)
 void q_formlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1953,7 +1953,7 @@ bool q_formlayout_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback bool fn(QFormLayout*, QMetaMethod*)
+/// @param callback bool func(QFormLayout* self, QMetaMethod* signal)
 void q_formlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1963,7 +1963,7 @@ void q_formlayout_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFormLayout*
-/// @param callback void fn(QFormLayout*, const char*)
+/// @param callback void func(QFormLayout* self, const char* objectName)
 void q_formlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#dtor.QFormLayout)

@@ -336,7 +336,7 @@ void q_webengineurlrequestjob_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param callback void fn(QWebEngineUrlRequestJob*)
+/// @param callback void func(QWebEngineUrlRequestJob* self)
 void q_webengineurlrequestjob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -414,7 +414,7 @@ void q_webengineurlrequestjob_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param callback void fn(QWebEngineUrlRequestJob*, QObject*)
+/// @param callback void func(QWebEngineUrlRequestJob* self, QObject* param1)
 void q_webengineurlrequestjob_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -424,7 +424,7 @@ void q_webengineurlrequestjob_on_destroyed1(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param callback void fn(QWebEngineUrlRequestJob*, const char*)
+/// @param callback void func(QWebEngineUrlRequestJob* self, const char* objectName)
 void q_webengineurlrequestjob_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#dtor.QWebEngineUrlRequestJob)

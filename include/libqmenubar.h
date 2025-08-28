@@ -40,7 +40,7 @@ int32_t q_menubar_metacall(void* self, int32_t param1, int param2, void* param3)
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback int32_t fn(QMenuBar*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMenuBar* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_menubar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -132,7 +132,7 @@ QSize* q_menubar_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_menubar_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#sizeHint)
@@ -152,7 +152,7 @@ QSize* q_menubar_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_menubar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#minimumSizeHint)
@@ -173,7 +173,7 @@ int32_t q_menubar_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback int32_t fn(QMenuBar*, int)
+/// @param callback int32_t func(QMenuBar* self, int param1)
 void q_menubar_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#heightForWidth)
@@ -229,7 +229,7 @@ void q_menubar_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, bool)
+/// @param callback void func(QMenuBar* self, bool visible)
 void q_menubar_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#setVisible)
@@ -249,7 +249,7 @@ void q_menubar_triggered(void* self, void* action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#triggered)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QAction*)
+/// @param callback void func(QMenuBar* self, QAction* action)
 void q_menubar_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#hovered)
@@ -261,7 +261,7 @@ void q_menubar_hovered(void* self, void* action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#hovered)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QAction*)
+/// @param callback void func(QMenuBar* self, QAction* action)
 void q_menubar_on_hovered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#changeEvent)
@@ -275,7 +275,7 @@ void q_menubar_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QEvent*)
+/// @param callback void func(QMenuBar* self, QEvent* param1)
 void q_menubar_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#changeEvent)
@@ -297,7 +297,7 @@ void q_menubar_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QKeyEvent*)
+/// @param callback void func(QMenuBar* self, QKeyEvent* param1)
 void q_menubar_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#keyPressEvent)
@@ -319,7 +319,7 @@ void q_menubar_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMouseEvent*)
+/// @param callback void func(QMenuBar* self, QMouseEvent* param1)
 void q_menubar_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#mouseReleaseEvent)
@@ -341,7 +341,7 @@ void q_menubar_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMouseEvent*)
+/// @param callback void func(QMenuBar* self, QMouseEvent* param1)
 void q_menubar_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#mousePressEvent)
@@ -363,7 +363,7 @@ void q_menubar_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMouseEvent*)
+/// @param callback void func(QMenuBar* self, QMouseEvent* param1)
 void q_menubar_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#mouseMoveEvent)
@@ -385,7 +385,7 @@ void q_menubar_leave_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QEvent*)
+/// @param callback void func(QMenuBar* self, QEvent* param1)
 void q_menubar_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#leaveEvent)
@@ -407,7 +407,7 @@ void q_menubar_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QPaintEvent*)
+/// @param callback void func(QMenuBar* self, QPaintEvent* param1)
 void q_menubar_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#paintEvent)
@@ -429,7 +429,7 @@ void q_menubar_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QResizeEvent*)
+/// @param callback void func(QMenuBar* self, QResizeEvent* param1)
 void q_menubar_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#resizeEvent)
@@ -451,7 +451,7 @@ void q_menubar_action_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QActionEvent*)
+/// @param callback void func(QMenuBar* self, QActionEvent* param1)
 void q_menubar_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#actionEvent)
@@ -473,7 +473,7 @@ void q_menubar_focus_out_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QFocusEvent*)
+/// @param callback void func(QMenuBar* self, QFocusEvent* param1)
 void q_menubar_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#focusOutEvent)
@@ -495,7 +495,7 @@ void q_menubar_focus_in_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QFocusEvent*)
+/// @param callback void func(QMenuBar* self, QFocusEvent* param1)
 void q_menubar_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#focusInEvent)
@@ -517,7 +517,7 @@ void q_menubar_timer_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QTimerEvent*)
+/// @param callback void func(QMenuBar* self, QTimerEvent* param1)
 void q_menubar_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#timerEvent)
@@ -540,7 +540,7 @@ bool q_menubar_event_filter(void* self, void* param1, void* param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn(QMenuBar*, QObject*, QEvent*)
+/// @param callback bool func(QMenuBar* self, QObject* param1, QEvent* param2)
 void q_menubar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#eventFilter)
@@ -563,7 +563,7 @@ bool q_menubar_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn(QMenuBar*, QEvent*)
+/// @param callback bool func(QMenuBar* self, QEvent* param1)
 void q_menubar_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#event)
@@ -586,7 +586,7 @@ void q_menubar_init_style_option(void* self, void* option, void* action);
 /// Allows for overriding the related default method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QStyleOptionMenuItem*, QAction*)
+/// @param callback void func(QMenuBar* self, QStyleOptionMenuItem* option, QAction* action)
 void q_menubar_on_init_style_option(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#initStyleOption)
@@ -2565,7 +2565,7 @@ void q_menubar_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, const char*)
+/// @param callback void func(QMenuBar* self, const char* title)
 void q_menubar_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2581,7 +2581,7 @@ void q_menubar_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QIcon*)
+/// @param callback void func(QMenuBar* self, QIcon* icon)
 void q_menubar_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2597,7 +2597,7 @@ void q_menubar_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, const char*)
+/// @param callback void func(QMenuBar* self, const char* iconText)
 void q_menubar_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2613,7 +2613,7 @@ void q_menubar_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QPoint*)
+/// @param callback void func(QMenuBar* self, QPoint* pos)
 void q_menubar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2990,7 +2990,7 @@ void q_menubar_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*)
+/// @param callback void func(QMenuBar* self)
 void q_menubar_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3068,7 +3068,7 @@ void q_menubar_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QObject*)
+/// @param callback void func(QMenuBar* self, QObject* param1)
 void q_menubar_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3187,7 +3187,7 @@ int32_t q_menubar_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_menubar_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3215,7 +3215,7 @@ bool q_menubar_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_menubar_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3243,7 +3243,7 @@ QPaintEngine* q_menubar_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_menubar_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3273,7 +3273,7 @@ void q_menubar_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMouseEvent*)
+/// @param callback void func(QMenuBar* self, QMouseEvent* event)
 void q_menubar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3303,7 +3303,7 @@ void q_menubar_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QWheelEvent*)
+/// @param callback void func(QMenuBar* self, QWheelEvent* event)
 void q_menubar_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3333,7 +3333,7 @@ void q_menubar_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QKeyEvent*)
+/// @param callback void func(QMenuBar* self, QKeyEvent* event)
 void q_menubar_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3363,7 +3363,7 @@ void q_menubar_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QEnterEvent*)
+/// @param callback void func(QMenuBar* self, QEnterEvent* event)
 void q_menubar_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3393,7 +3393,7 @@ void q_menubar_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMoveEvent*)
+/// @param callback void func(QMenuBar* self, QMoveEvent* event)
 void q_menubar_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3423,7 +3423,7 @@ void q_menubar_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QCloseEvent*)
+/// @param callback void func(QMenuBar* self, QCloseEvent* event)
 void q_menubar_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3453,7 +3453,7 @@ void q_menubar_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QContextMenuEvent*)
+/// @param callback void func(QMenuBar* self, QContextMenuEvent* event)
 void q_menubar_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3483,7 +3483,7 @@ void q_menubar_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QTabletEvent*)
+/// @param callback void func(QMenuBar* self, QTabletEvent* event)
 void q_menubar_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3513,7 +3513,7 @@ void q_menubar_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QDragEnterEvent*)
+/// @param callback void func(QMenuBar* self, QDragEnterEvent* event)
 void q_menubar_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3543,7 +3543,7 @@ void q_menubar_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QDragMoveEvent*)
+/// @param callback void func(QMenuBar* self, QDragMoveEvent* event)
 void q_menubar_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3573,7 +3573,7 @@ void q_menubar_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QDragLeaveEvent*)
+/// @param callback void func(QMenuBar* self, QDragLeaveEvent* event)
 void q_menubar_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3603,7 +3603,7 @@ void q_menubar_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QDropEvent*)
+/// @param callback void func(QMenuBar* self, QDropEvent* event)
 void q_menubar_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3633,7 +3633,7 @@ void q_menubar_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QShowEvent*)
+/// @param callback void func(QMenuBar* self, QShowEvent* event)
 void q_menubar_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3663,7 +3663,7 @@ void q_menubar_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QHideEvent*)
+/// @param callback void func(QMenuBar* self, QHideEvent* event)
 void q_menubar_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3697,7 +3697,7 @@ bool q_menubar_qbase_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn(QMenuBar*, const char*, void*, intptr_t*)
+/// @param callback bool func(QMenuBar* self, const char* eventType, void* message, intptr_t* result)
 void q_menubar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3727,7 +3727,7 @@ int32_t q_menubar_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback int32_t fn(QMenuBar*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QMenuBar* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_menubar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3757,7 +3757,7 @@ void q_menubar_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QPainter*)
+/// @param callback void func(QMenuBar* self, QPainter* painter)
 void q_menubar_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3787,7 +3787,7 @@ QPaintDevice* q_menubar_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback QPaintDevice* fn(QMenuBar*, QPoint*)
+/// @param callback QPaintDevice* func(QMenuBar* self, QPoint* offset)
 void q_menubar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3815,7 +3815,7 @@ QPainter* q_menubar_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_menubar_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3845,7 +3845,7 @@ void q_menubar_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QInputMethodEvent*)
+/// @param callback void func(QMenuBar* self, QInputMethodEvent* param1)
 void q_menubar_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3875,7 +3875,7 @@ QVariant* q_menubar_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback QVariant* fn(QMenuBar*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QMenuBar* self, enum Qt__InputMethodQuery param1)
 void q_menubar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3905,7 +3905,7 @@ bool q_menubar_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn(QMenuBar*, bool)
+/// @param callback bool func(QMenuBar* self, bool next)
 void q_menubar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3935,7 +3935,7 @@ void q_menubar_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QChildEvent*)
+/// @param callback void func(QMenuBar* self, QChildEvent* event)
 void q_menubar_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3965,7 +3965,7 @@ void q_menubar_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QEvent*)
+/// @param callback void func(QMenuBar* self, QEvent* event)
 void q_menubar_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3995,7 +3995,7 @@ void q_menubar_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMetaMethod*)
+/// @param callback void func(QMenuBar* self, QMetaMethod* signal)
 void q_menubar_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4025,7 +4025,7 @@ void q_menubar_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, QMetaMethod*)
+/// @param callback void func(QMenuBar* self, QMetaMethod* signal)
 void q_menubar_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4053,7 +4053,7 @@ void q_menubar_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_menubar_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4081,7 +4081,7 @@ void q_menubar_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_menubar_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4109,7 +4109,7 @@ void q_menubar_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_menubar_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4137,7 +4137,7 @@ bool q_menubar_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_menubar_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4165,7 +4165,7 @@ bool q_menubar_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_menubar_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4193,7 +4193,7 @@ QObject* q_menubar_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_menubar_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4221,7 +4221,7 @@ int32_t q_menubar_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_menubar_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4251,7 +4251,7 @@ int32_t q_menubar_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback int32_t fn(QMenuBar*, const char*)
+/// @param callback int32_t func(QMenuBar* self, const char* signal)
 void q_menubar_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4281,7 +4281,7 @@ bool q_menubar_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback bool fn(QMenuBar*, QMetaMethod*)
+/// @param callback bool func(QMenuBar* self, QMetaMethod* signal)
 void q_menubar_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4313,7 +4313,7 @@ double q_menubar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMenuBar*
-/// @param callback double fn(QMenuBar*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QMenuBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_menubar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4323,7 +4323,7 @@ void q_menubar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMenuBar*
-/// @param callback void fn(QMenuBar*, const char*)
+/// @param callback void func(QMenuBar* self, const char* objectName)
 void q_menubar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenubar.html#dtor.QMenuBar)

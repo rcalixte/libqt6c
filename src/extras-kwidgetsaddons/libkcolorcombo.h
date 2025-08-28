@@ -40,7 +40,7 @@ int32_t k_colorcombo_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KColorCombo*
-/// @param callback int32_t fn(KColorCombo*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KColorCombo* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_colorcombo_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -99,7 +99,7 @@ void k_colorcombo_activated(void* self, void* col);
 /// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#activated)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QColor*)
+/// @param callback void func(KColorCombo* self, QColor* col)
 void k_colorcombo_on_activated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#highlighted)
@@ -111,7 +111,7 @@ void k_colorcombo_highlighted(void* self, void* col);
 /// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#highlighted)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QColor*)
+/// @param callback void func(KColorCombo* self, QColor* col)
 void k_colorcombo_on_highlighted(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#paintEvent)
@@ -125,7 +125,7 @@ void k_colorcombo_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QPaintEvent*)
+/// @param callback void func(KColorCombo* self, QPaintEvent* event)
 void k_colorcombo_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#paintEvent)
@@ -649,7 +649,7 @@ void k_colorcombo_edit_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* param1)
 void k_colorcombo_on_edit_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -665,7 +665,7 @@ void k_colorcombo_text_activated(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* param1)
 void k_colorcombo_on_text_activated(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -681,7 +681,7 @@ void k_colorcombo_text_highlighted(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* param1)
 void k_colorcombo_on_text_highlighted(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -697,7 +697,7 @@ void k_colorcombo_current_index_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, int)
+/// @param callback void func(KColorCombo* self, int index)
 void k_colorcombo_on_current_index_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -713,7 +713,7 @@ void k_colorcombo_current_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* param1)
 void k_colorcombo_on_current_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -2748,7 +2748,7 @@ void k_colorcombo_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* title)
 void k_colorcombo_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2764,7 +2764,7 @@ void k_colorcombo_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QIcon*)
+/// @param callback void func(KColorCombo* self, QIcon* icon)
 void k_colorcombo_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2780,7 +2780,7 @@ void k_colorcombo_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* iconText)
 void k_colorcombo_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2796,7 +2796,7 @@ void k_colorcombo_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QPoint*)
+/// @param callback void func(KColorCombo* self, QPoint* pos)
 void k_colorcombo_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3173,7 +3173,7 @@ void k_colorcombo_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*)
+/// @param callback void func(KColorCombo* self)
 void k_colorcombo_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3251,7 +3251,7 @@ void k_colorcombo_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QObject*)
+/// @param callback void func(KColorCombo* self, QObject* param1)
 void k_colorcombo_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3372,7 +3372,7 @@ void k_colorcombo_qbase_set_model(void* self, void* model);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QAbstractItemModel*)
+/// @param callback void func(KColorCombo* self, QAbstractItemModel* model)
 void k_colorcombo_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3400,7 +3400,7 @@ QSize* k_colorcombo_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_colorcombo_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -3428,7 +3428,7 @@ QSize* k_colorcombo_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_colorcombo_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -3456,7 +3456,7 @@ void k_colorcombo_qbase_show_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorcombo_on_show_popup(void* self, void (*callback)());
 
 /// Inherited from QComboBox
@@ -3484,7 +3484,7 @@ void k_colorcombo_qbase_hide_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorcombo_on_hide_popup(void* self, void (*callback)());
 
 /// Inherited from QComboBox
@@ -3514,7 +3514,7 @@ bool k_colorcombo_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn(KColorCombo*, QEvent*)
+/// @param callback bool func(KColorCombo* self, QEvent* event)
 void k_colorcombo_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3544,7 +3544,7 @@ QVariant* k_colorcombo_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QVariant* fn(KColorCombo*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KColorCombo* self, enum Qt__InputMethodQuery param1)
 void k_colorcombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QComboBox
@@ -3574,7 +3574,7 @@ void k_colorcombo_qbase_focus_in_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QFocusEvent*)
+/// @param callback void func(KColorCombo* self, QFocusEvent* e)
 void k_colorcombo_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3604,7 +3604,7 @@ void k_colorcombo_qbase_focus_out_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QFocusEvent*)
+/// @param callback void func(KColorCombo* self, QFocusEvent* e)
 void k_colorcombo_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3634,7 +3634,7 @@ void k_colorcombo_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QEvent*)
+/// @param callback void func(KColorCombo* self, QEvent* e)
 void k_colorcombo_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3664,7 +3664,7 @@ void k_colorcombo_qbase_resize_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QResizeEvent*)
+/// @param callback void func(KColorCombo* self, QResizeEvent* e)
 void k_colorcombo_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3694,7 +3694,7 @@ void k_colorcombo_qbase_show_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QShowEvent*)
+/// @param callback void func(KColorCombo* self, QShowEvent* e)
 void k_colorcombo_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3724,7 +3724,7 @@ void k_colorcombo_qbase_hide_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QHideEvent*)
+/// @param callback void func(KColorCombo* self, QHideEvent* e)
 void k_colorcombo_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3754,7 +3754,7 @@ void k_colorcombo_qbase_mouse_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMouseEvent*)
+/// @param callback void func(KColorCombo* self, QMouseEvent* e)
 void k_colorcombo_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3784,7 +3784,7 @@ void k_colorcombo_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMouseEvent*)
+/// @param callback void func(KColorCombo* self, QMouseEvent* e)
 void k_colorcombo_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3814,7 +3814,7 @@ void k_colorcombo_qbase_key_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QKeyEvent*)
+/// @param callback void func(KColorCombo* self, QKeyEvent* e)
 void k_colorcombo_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3844,7 +3844,7 @@ void k_colorcombo_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QKeyEvent*)
+/// @param callback void func(KColorCombo* self, QKeyEvent* e)
 void k_colorcombo_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3874,7 +3874,7 @@ void k_colorcombo_qbase_wheel_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QWheelEvent*)
+/// @param callback void func(KColorCombo* self, QWheelEvent* e)
 void k_colorcombo_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3904,7 +3904,7 @@ void k_colorcombo_qbase_context_menu_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QContextMenuEvent*)
+/// @param callback void func(KColorCombo* self, QContextMenuEvent* e)
 void k_colorcombo_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3934,7 +3934,7 @@ void k_colorcombo_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QInputMethodEvent*)
+/// @param callback void func(KColorCombo* self, QInputMethodEvent* param1)
 void k_colorcombo_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3964,7 +3964,7 @@ void k_colorcombo_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QStyleOptionComboBox*)
+/// @param callback void func(KColorCombo* self, QStyleOptionComboBox* option)
 void k_colorcombo_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3992,7 +3992,7 @@ int32_t k_colorcombo_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_colorcombo_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4022,7 +4022,7 @@ void k_colorcombo_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, bool)
+/// @param callback void func(KColorCombo* self, bool visible)
 void k_colorcombo_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -4052,7 +4052,7 @@ int32_t k_colorcombo_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback int32_t fn(KColorCombo*, int)
+/// @param callback int32_t func(KColorCombo* self, int param1)
 void k_colorcombo_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -4080,7 +4080,7 @@ bool k_colorcombo_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_colorcombo_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4108,7 +4108,7 @@ QPaintEngine* k_colorcombo_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_colorcombo_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -4138,7 +4138,7 @@ void k_colorcombo_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMouseEvent*)
+/// @param callback void func(KColorCombo* self, QMouseEvent* event)
 void k_colorcombo_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4168,7 +4168,7 @@ void k_colorcombo_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMouseEvent*)
+/// @param callback void func(KColorCombo* self, QMouseEvent* event)
 void k_colorcombo_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4198,7 +4198,7 @@ void k_colorcombo_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QEnterEvent*)
+/// @param callback void func(KColorCombo* self, QEnterEvent* event)
 void k_colorcombo_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4228,7 +4228,7 @@ void k_colorcombo_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QEvent*)
+/// @param callback void func(KColorCombo* self, QEvent* event)
 void k_colorcombo_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4258,7 +4258,7 @@ void k_colorcombo_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMoveEvent*)
+/// @param callback void func(KColorCombo* self, QMoveEvent* event)
 void k_colorcombo_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4288,7 +4288,7 @@ void k_colorcombo_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QCloseEvent*)
+/// @param callback void func(KColorCombo* self, QCloseEvent* event)
 void k_colorcombo_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4318,7 +4318,7 @@ void k_colorcombo_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QTabletEvent*)
+/// @param callback void func(KColorCombo* self, QTabletEvent* event)
 void k_colorcombo_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4348,7 +4348,7 @@ void k_colorcombo_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QActionEvent*)
+/// @param callback void func(KColorCombo* self, QActionEvent* event)
 void k_colorcombo_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4378,7 +4378,7 @@ void k_colorcombo_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QDragEnterEvent*)
+/// @param callback void func(KColorCombo* self, QDragEnterEvent* event)
 void k_colorcombo_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4408,7 +4408,7 @@ void k_colorcombo_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QDragMoveEvent*)
+/// @param callback void func(KColorCombo* self, QDragMoveEvent* event)
 void k_colorcombo_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4438,7 +4438,7 @@ void k_colorcombo_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QDragLeaveEvent*)
+/// @param callback void func(KColorCombo* self, QDragLeaveEvent* event)
 void k_colorcombo_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4468,7 +4468,7 @@ void k_colorcombo_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QDropEvent*)
+/// @param callback void func(KColorCombo* self, QDropEvent* event)
 void k_colorcombo_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4502,7 +4502,7 @@ bool k_colorcombo_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn(KColorCombo*, const char*, void*, intptr_t*)
+/// @param callback bool func(KColorCombo* self, const char* eventType, void* message, intptr_t* result)
 void k_colorcombo_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4532,7 +4532,7 @@ int32_t k_colorcombo_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback int32_t fn(KColorCombo*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KColorCombo* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_colorcombo_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4562,7 +4562,7 @@ void k_colorcombo_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QPainter*)
+/// @param callback void func(KColorCombo* self, QPainter* painter)
 void k_colorcombo_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4592,7 +4592,7 @@ QPaintDevice* k_colorcombo_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QPaintDevice* fn(KColorCombo*, QPoint*)
+/// @param callback QPaintDevice* func(KColorCombo* self, QPoint* offset)
 void k_colorcombo_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4620,7 +4620,7 @@ QPainter* k_colorcombo_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_colorcombo_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4650,7 +4650,7 @@ bool k_colorcombo_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn(KColorCombo*, bool)
+/// @param callback bool func(KColorCombo* self, bool next)
 void k_colorcombo_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4682,7 +4682,7 @@ bool k_colorcombo_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn(KColorCombo*, QObject*, QEvent*)
+/// @param callback bool func(KColorCombo* self, QObject* watched, QEvent* event)
 void k_colorcombo_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4712,7 +4712,7 @@ void k_colorcombo_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QTimerEvent*)
+/// @param callback void func(KColorCombo* self, QTimerEvent* event)
 void k_colorcombo_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4742,7 +4742,7 @@ void k_colorcombo_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QChildEvent*)
+/// @param callback void func(KColorCombo* self, QChildEvent* event)
 void k_colorcombo_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4772,7 +4772,7 @@ void k_colorcombo_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QEvent*)
+/// @param callback void func(KColorCombo* self, QEvent* event)
 void k_colorcombo_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4802,7 +4802,7 @@ void k_colorcombo_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMetaMethod*)
+/// @param callback void func(KColorCombo* self, QMetaMethod* signal)
 void k_colorcombo_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4832,7 +4832,7 @@ void k_colorcombo_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, QMetaMethod*)
+/// @param callback void func(KColorCombo* self, QMetaMethod* signal)
 void k_colorcombo_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4860,7 +4860,7 @@ void k_colorcombo_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorcombo_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4888,7 +4888,7 @@ void k_colorcombo_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorcombo_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4916,7 +4916,7 @@ void k_colorcombo_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorcombo_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4944,7 +4944,7 @@ bool k_colorcombo_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_colorcombo_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4972,7 +4972,7 @@ bool k_colorcombo_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_colorcombo_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5000,7 +5000,7 @@ QObject* k_colorcombo_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_colorcombo_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5028,7 +5028,7 @@ int32_t k_colorcombo_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_colorcombo_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5058,7 +5058,7 @@ int32_t k_colorcombo_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback int32_t fn(KColorCombo*, const char*)
+/// @param callback int32_t func(KColorCombo* self, const char* signal)
 void k_colorcombo_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5088,7 +5088,7 @@ bool k_colorcombo_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback bool fn(KColorCombo*, QMetaMethod*)
+/// @param callback bool func(KColorCombo* self, QMetaMethod* signal)
 void k_colorcombo_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5120,7 +5120,7 @@ double k_colorcombo_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorCombo*
-/// @param callback double fn(KColorCombo*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KColorCombo* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_colorcombo_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5130,7 +5130,7 @@ void k_colorcombo_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KColorCombo*
-/// @param callback void fn(KColorCombo*, const char*)
+/// @param callback void func(KColorCombo* self, const char* objectName)
 void k_colorcombo_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#dtor.KColorCombo)

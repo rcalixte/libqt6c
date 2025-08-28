@@ -37,7 +37,7 @@ int32_t q_abstractsocket_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback int32_t fn(QAbstractSocket*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAbstractSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_abstractsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -65,7 +65,7 @@ void q_abstractsocket_resume(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractsocket_on_resume(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#resume)
@@ -101,7 +101,7 @@ bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int64
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, QHostAddress*, unsigned short, flag of enum QAbstractSocket__BindFlag)
+/// @param callback bool func(QAbstractSocket* self, QHostAddress* address, unsigned short port, flag of enum QAbstractSocket__BindFlag mode)
 void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
@@ -133,7 +133,7 @@ void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, const char*, unsigned short, flag of enum QIODeviceBase__OpenModeFlag, enum QAbstractSocket__NetworkLayerProtocol)
+/// @param callback void func(QAbstractSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
 void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
@@ -164,7 +164,7 @@ void q_abstractsocket_disconnect_from_host(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractsocket_on_disconnect_from_host(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnectFromHost)
@@ -189,7 +189,7 @@ long long q_abstractsocket_bytes_available(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_abstractsocket_on_bytes_available(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bytesAvailable)
@@ -209,7 +209,7 @@ long long q_abstractsocket_bytes_to_write(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_abstractsocket_on_bytes_to_write(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bytesToWrite)
@@ -262,7 +262,7 @@ void q_abstractsocket_set_read_buffer_size(void* self, long long size);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, long long)
+/// @param callback void func(QAbstractSocket* self, long long size)
 void q_abstractsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setReadBufferSize)
@@ -288,7 +288,7 @@ intptr_t q_abstractsocket_socket_descriptor(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback intptr_t fn()
+/// @param callback intptr_t func()
 void q_abstractsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketDescriptor)
@@ -311,7 +311,7 @@ bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescripto
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, intptr_t, enum QAbstractSocket__SocketState, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QAbstractSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
@@ -336,7 +336,7 @@ void q_abstractsocket_set_socket_option(void* self, int32_t option, void* value)
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketOption, QVariant*)
+/// @param callback void func(QAbstractSocket* self, enum QAbstractSocket__SocketOption option, QVariant* value)
 void q_abstractsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
@@ -359,7 +359,7 @@ QVariant* q_abstractsocket_socket_option(void* self, int32_t option);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback QVariant* fn(QAbstractSocket*, enum QAbstractSocket__SocketOption)
+/// @param callback QVariant* func(QAbstractSocket* self, enum QAbstractSocket__SocketOption option)
 void q_abstractsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketOption)
@@ -401,7 +401,7 @@ void q_abstractsocket_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractsocket_on_close(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#close)
@@ -421,7 +421,7 @@ bool q_abstractsocket_is_sequential(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractsocket_on_is_sequential(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#isSequential)
@@ -447,7 +447,7 @@ bool q_abstractsocket_wait_for_connected(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, int)
+/// @param callback bool func(QAbstractSocket* self, int msecs)
 void q_abstractsocket_on_wait_for_connected(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForConnected)
@@ -469,7 +469,7 @@ bool q_abstractsocket_wait_for_ready_read(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, int)
+/// @param callback bool func(QAbstractSocket* self, int msecs)
 void q_abstractsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForReadyRead)
@@ -491,7 +491,7 @@ bool q_abstractsocket_wait_for_bytes_written(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, int)
+/// @param callback bool func(QAbstractSocket* self, int msecs)
 void q_abstractsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForBytesWritten)
@@ -513,7 +513,7 @@ bool q_abstractsocket_wait_for_disconnected(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, int)
+/// @param callback bool func(QAbstractSocket* self, int msecs)
 void q_abstractsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#waitForDisconnected)
@@ -556,7 +556,7 @@ void q_abstractsocket_host_found(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_host_found(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
@@ -567,7 +567,7 @@ void q_abstractsocket_connected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_connected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
@@ -578,7 +578,7 @@ void q_abstractsocket_disconnected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_disconnected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
@@ -590,7 +590,7 @@ void q_abstractsocket_state_changed(void* self, int32_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketState)
+/// @param callback void func(QAbstractSocket* self, enum QAbstractSocket__SocketState param1)
 void q_abstractsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
@@ -602,7 +602,7 @@ void q_abstractsocket_error_occurred(void* self, int32_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QAbstractSocket* self, enum QAbstractSocket__SocketError param1)
 void q_abstractsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
@@ -615,7 +615,7 @@ void q_abstractsocket_proxy_authentication_required(void* self, void* proxy, voi
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QNetworkProxy*, QAuthenticator*)
+/// @param callback void func(QAbstractSocket* self, QNetworkProxy* proxy, QAuthenticator* authenticator)
 void q_abstractsocket_on_proxy_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readData)
@@ -630,7 +630,7 @@ long long q_abstractsocket_read_data(void* self, char* data, long long maxlen);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn(QAbstractSocket*, char*, long long)
+/// @param callback long long func(QAbstractSocket* self, char* data, long long maxlen)
 void q_abstractsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readData)
@@ -654,7 +654,7 @@ long long q_abstractsocket_read_line_data(void* self, char* data, long long maxl
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn(QAbstractSocket*, char*, long long)
+/// @param callback long long func(QAbstractSocket* self, char* data, long long maxlen)
 void q_abstractsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#readLineData)
@@ -677,7 +677,7 @@ long long q_abstractsocket_skip_data(void* self, long long maxSize);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn(QAbstractSocket*, long long)
+/// @param callback long long func(QAbstractSocket* self, long long maxSize)
 void q_abstractsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#skipData)
@@ -700,7 +700,7 @@ long long q_abstractsocket_write_data(void* self, const char* data, long long le
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn(QAbstractSocket*, const char*, long long)
+/// @param callback long long func(QAbstractSocket* self, const char* data, long long lenVal)
 void q_abstractsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
@@ -723,7 +723,7 @@ void q_abstractsocket_set_socket_state(void* self, int32_t state);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketState)
+/// @param callback void func(QAbstractSocket* self, enum QAbstractSocket__SocketState state)
 void q_abstractsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
@@ -745,7 +745,7 @@ void q_abstractsocket_set_socket_error(void* self, int32_t socketError);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QAbstractSocket* self, enum QAbstractSocket__SocketError socketError)
 void q_abstractsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
@@ -767,7 +767,7 @@ void q_abstractsocket_set_local_port(void* self, unsigned short port);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, unsigned short)
+/// @param callback void func(QAbstractSocket* self, unsigned short port)
 void q_abstractsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalPort)
@@ -789,7 +789,7 @@ void q_abstractsocket_set_local_address(void* self, void* address);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QHostAddress*)
+/// @param callback void func(QAbstractSocket* self, QHostAddress* address)
 void q_abstractsocket_on_set_local_address(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalAddress)
@@ -811,7 +811,7 @@ void q_abstractsocket_set_peer_port(void* self, unsigned short port);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, unsigned short)
+/// @param callback void func(QAbstractSocket* self, unsigned short port)
 void q_abstractsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerPort)
@@ -833,7 +833,7 @@ void q_abstractsocket_set_peer_address(void* self, void* address);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QHostAddress*)
+/// @param callback void func(QAbstractSocket* self, QHostAddress* address)
 void q_abstractsocket_on_set_peer_address(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerAddress)
@@ -855,7 +855,7 @@ void q_abstractsocket_set_peer_name(void* self, const char* name);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, const char*)
+/// @param callback void func(QAbstractSocket* self, const char* name)
 void q_abstractsocket_on_set_peer_name(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerName)
@@ -1164,7 +1164,7 @@ void q_abstractsocket_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1180,7 +1180,7 @@ void q_abstractsocket_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, int)
+/// @param callback void func(QAbstractSocket* self, int channel)
 void q_abstractsocket_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1196,7 +1196,7 @@ void q_abstractsocket_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, long long)
+/// @param callback void func(QAbstractSocket* self, long long bytes)
 void q_abstractsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1213,7 +1213,7 @@ void q_abstractsocket_channel_bytes_written(void* self, int channel, long long b
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, int, long long)
+/// @param callback void func(QAbstractSocket* self, int channel, long long bytes)
 void q_abstractsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -1228,7 +1228,7 @@ void q_abstractsocket_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1243,7 +1243,7 @@ void q_abstractsocket_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1482,7 +1482,7 @@ void q_abstractsocket_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*)
+/// @param callback void func(QAbstractSocket* self)
 void q_abstractsocket_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1560,7 +1560,7 @@ void q_abstractsocket_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QObject*)
+/// @param callback void func(QAbstractSocket* self, QObject* param1)
 void q_abstractsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1590,7 +1590,7 @@ bool q_abstractsocket_qbase_open(void* self, int64_t mode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QAbstractSocket* self, flag of enum QIODeviceBase__OpenModeFlag mode)
 void q_abstractsocket_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -1618,7 +1618,7 @@ long long q_abstractsocket_qbase_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_abstractsocket_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1646,7 +1646,7 @@ long long q_abstractsocket_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_abstractsocket_on_size(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1676,7 +1676,7 @@ bool q_abstractsocket_qbase_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, long long)
+/// @param callback bool func(QAbstractSocket* self, long long pos)
 void q_abstractsocket_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1704,7 +1704,7 @@ bool q_abstractsocket_qbase_at_end(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractsocket_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1732,7 +1732,7 @@ bool q_abstractsocket_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractsocket_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1760,7 +1760,7 @@ bool q_abstractsocket_qbase_can_read_line(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractsocket_on_can_read_line(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -1790,7 +1790,7 @@ bool q_abstractsocket_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, QEvent*)
+/// @param callback bool func(QAbstractSocket* self, QEvent* event)
 void q_abstractsocket_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1822,7 +1822,7 @@ bool q_abstractsocket_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, QObject*, QEvent*)
+/// @param callback bool func(QAbstractSocket* self, QObject* watched, QEvent* event)
 void q_abstractsocket_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1852,7 +1852,7 @@ void q_abstractsocket_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QTimerEvent*)
+/// @param callback void func(QAbstractSocket* self, QTimerEvent* event)
 void q_abstractsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1882,7 +1882,7 @@ void q_abstractsocket_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QChildEvent*)
+/// @param callback void func(QAbstractSocket* self, QChildEvent* event)
 void q_abstractsocket_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1912,7 +1912,7 @@ void q_abstractsocket_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QEvent*)
+/// @param callback void func(QAbstractSocket* self, QEvent* event)
 void q_abstractsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1942,7 +1942,7 @@ void q_abstractsocket_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QMetaMethod*)
+/// @param callback void func(QAbstractSocket* self, QMetaMethod* signal)
 void q_abstractsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1972,7 +1972,7 @@ void q_abstractsocket_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, QMetaMethod*)
+/// @param callback void func(QAbstractSocket* self, QMetaMethod* signal)
 void q_abstractsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -2002,7 +2002,7 @@ void q_abstractsocket_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QAbstractSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_abstractsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -2032,7 +2032,7 @@ void q_abstractsocket_qbase_set_error_string(void* self, const char* errorString
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, const char*)
+/// @param callback void func(QAbstractSocket* self, const char* errorString)
 void q_abstractsocket_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2060,7 +2060,7 @@ QObject* q_abstractsocket_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_abstractsocket_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2088,7 +2088,7 @@ int32_t q_abstractsocket_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2118,7 +2118,7 @@ int32_t q_abstractsocket_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback int32_t fn(QAbstractSocket*, const char*)
+/// @param callback int32_t func(QAbstractSocket* self, const char* signal)
 void q_abstractsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2148,7 +2148,7 @@ bool q_abstractsocket_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool fn(QAbstractSocket*, QMetaMethod*)
+/// @param callback bool func(QAbstractSocket* self, QMetaMethod* signal)
 void q_abstractsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2158,7 +2158,7 @@ void q_abstractsocket_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractSocket*
-/// @param callback void fn(QAbstractSocket*, const char*)
+/// @param callback void func(QAbstractSocket* self, const char* objectName)
 void q_abstractsocket_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#dtor.QAbstractSocket)

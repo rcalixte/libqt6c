@@ -40,7 +40,7 @@ int32_t q_abstractslider_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn(QAbstractSlider*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAbstractSlider* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_abstractslider_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -203,7 +203,7 @@ void q_abstractslider_value_changed(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, int)
+/// @param callback void func(QAbstractSlider* self, int value)
 void q_abstractslider_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
@@ -214,7 +214,7 @@ void q_abstractslider_slider_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*)
+/// @param callback void func(QAbstractSlider* self)
 void q_abstractslider_on_slider_pressed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
@@ -226,7 +226,7 @@ void q_abstractslider_slider_moved(void* self, int position);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, int)
+/// @param callback void func(QAbstractSlider* self, int position)
 void q_abstractslider_on_slider_moved(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
@@ -237,7 +237,7 @@ void q_abstractslider_slider_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*)
+/// @param callback void func(QAbstractSlider* self)
 void q_abstractslider_on_slider_released(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
@@ -250,7 +250,7 @@ void q_abstractslider_range_changed(void* self, int min, int max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, int, int)
+/// @param callback void func(QAbstractSlider* self, int min, int max)
 void q_abstractslider_on_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
@@ -262,7 +262,7 @@ void q_abstractslider_action_triggered(void* self, int action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, int)
+/// @param callback void func(QAbstractSlider* self, int action)
 void q_abstractslider_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#event)
@@ -276,7 +276,7 @@ bool q_abstractslider_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn(QAbstractSlider*, QEvent*)
+/// @param callback bool func(QAbstractSlider* self, QEvent* e)
 void q_abstractslider_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#event)
@@ -298,7 +298,7 @@ void q_abstractslider_set_repeat_action(void* self, int32_t action);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderAction)
+/// @param callback void func(QAbstractSlider* self, enum QAbstractSlider__SliderAction action)
 void q_abstractslider_on_set_repeat_action(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
@@ -321,7 +321,7 @@ int32_t q_abstractslider_repeat_action(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractslider_on_repeat_action(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
@@ -344,7 +344,7 @@ void q_abstractslider_slider_change(void* self, int32_t change);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderChange)
+/// @param callback void func(QAbstractSlider* self, enum QAbstractSlider__SliderChange change)
 void q_abstractslider_on_slider_change(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderChange)
@@ -366,7 +366,7 @@ void q_abstractslider_key_press_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QKeyEvent*)
+/// @param callback void func(QAbstractSlider* self, QKeyEvent* ev)
 void q_abstractslider_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
@@ -388,7 +388,7 @@ void q_abstractslider_timer_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QTimerEvent*)
+/// @param callback void func(QAbstractSlider* self, QTimerEvent* param1)
 void q_abstractslider_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
@@ -410,7 +410,7 @@ void q_abstractslider_wheel_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QWheelEvent*)
+/// @param callback void func(QAbstractSlider* self, QWheelEvent* e)
 void q_abstractslider_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#wheelEvent)
@@ -432,7 +432,7 @@ void q_abstractslider_change_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QEvent*)
+/// @param callback void func(QAbstractSlider* self, QEvent* e)
 void q_abstractslider_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
@@ -472,7 +472,7 @@ void q_abstractslider_set_repeat_action2(void* self, int32_t action, int thresho
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderAction, int)
+/// @param callback void func(QAbstractSlider* self, enum QAbstractSlider__SliderAction action, int thresholdTime)
 void q_abstractslider_on_set_repeat_action2(void* self, void (*callback)(void*, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
@@ -497,7 +497,7 @@ void q_abstractslider_set_repeat_action3(void* self, int32_t action, int thresho
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderAction, int, int)
+/// @param callback void func(QAbstractSlider* self, enum QAbstractSlider__SliderAction action, int thresholdTime, int repeatTime)
 void q_abstractslider_on_set_repeat_action3(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
@@ -2447,7 +2447,7 @@ void q_abstractslider_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, const char*)
+/// @param callback void func(QAbstractSlider* self, const char* title)
 void q_abstractslider_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2463,7 +2463,7 @@ void q_abstractslider_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QIcon*)
+/// @param callback void func(QAbstractSlider* self, QIcon* icon)
 void q_abstractslider_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2479,7 +2479,7 @@ void q_abstractslider_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, const char*)
+/// @param callback void func(QAbstractSlider* self, const char* iconText)
 void q_abstractslider_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2495,7 +2495,7 @@ void q_abstractslider_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QPoint*)
+/// @param callback void func(QAbstractSlider* self, QPoint* pos)
 void q_abstractslider_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2872,7 +2872,7 @@ void q_abstractslider_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*)
+/// @param callback void func(QAbstractSlider* self)
 void q_abstractslider_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2950,7 +2950,7 @@ void q_abstractslider_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QObject*)
+/// @param callback void func(QAbstractSlider* self, QObject* param1)
 void q_abstractslider_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3069,7 +3069,7 @@ int32_t q_abstractslider_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractslider_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3099,7 +3099,7 @@ void q_abstractslider_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, bool)
+/// @param callback void func(QAbstractSlider* self, bool visible)
 void q_abstractslider_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3127,7 +3127,7 @@ QSize* q_abstractslider_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractslider_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3155,7 +3155,7 @@ QSize* q_abstractslider_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractslider_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3185,7 +3185,7 @@ int32_t q_abstractslider_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn(QAbstractSlider*, int)
+/// @param callback int32_t func(QAbstractSlider* self, int param1)
 void q_abstractslider_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3213,7 +3213,7 @@ bool q_abstractslider_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractslider_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3241,7 +3241,7 @@ QPaintEngine* q_abstractslider_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_abstractslider_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3271,7 +3271,7 @@ void q_abstractslider_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+/// @param callback void func(QAbstractSlider* self, QMouseEvent* event)
 void q_abstractslider_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3301,7 +3301,7 @@ void q_abstractslider_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+/// @param callback void func(QAbstractSlider* self, QMouseEvent* event)
 void q_abstractslider_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3331,7 +3331,7 @@ void q_abstractslider_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+/// @param callback void func(QAbstractSlider* self, QMouseEvent* event)
 void q_abstractslider_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3361,7 +3361,7 @@ void q_abstractslider_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+/// @param callback void func(QAbstractSlider* self, QMouseEvent* event)
 void q_abstractslider_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3391,7 +3391,7 @@ void q_abstractslider_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QKeyEvent*)
+/// @param callback void func(QAbstractSlider* self, QKeyEvent* event)
 void q_abstractslider_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3421,7 +3421,7 @@ void q_abstractslider_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QFocusEvent*)
+/// @param callback void func(QAbstractSlider* self, QFocusEvent* event)
 void q_abstractslider_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3451,7 +3451,7 @@ void q_abstractslider_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QFocusEvent*)
+/// @param callback void func(QAbstractSlider* self, QFocusEvent* event)
 void q_abstractslider_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3481,7 +3481,7 @@ void q_abstractslider_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QEnterEvent*)
+/// @param callback void func(QAbstractSlider* self, QEnterEvent* event)
 void q_abstractslider_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3511,7 +3511,7 @@ void q_abstractslider_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QEvent*)
+/// @param callback void func(QAbstractSlider* self, QEvent* event)
 void q_abstractslider_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3541,7 +3541,7 @@ void q_abstractslider_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QPaintEvent*)
+/// @param callback void func(QAbstractSlider* self, QPaintEvent* event)
 void q_abstractslider_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3571,7 +3571,7 @@ void q_abstractslider_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMoveEvent*)
+/// @param callback void func(QAbstractSlider* self, QMoveEvent* event)
 void q_abstractslider_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3601,7 +3601,7 @@ void q_abstractslider_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QResizeEvent*)
+/// @param callback void func(QAbstractSlider* self, QResizeEvent* event)
 void q_abstractslider_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3631,7 +3631,7 @@ void q_abstractslider_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QCloseEvent*)
+/// @param callback void func(QAbstractSlider* self, QCloseEvent* event)
 void q_abstractslider_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3661,7 +3661,7 @@ void q_abstractslider_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QContextMenuEvent*)
+/// @param callback void func(QAbstractSlider* self, QContextMenuEvent* event)
 void q_abstractslider_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3691,7 +3691,7 @@ void q_abstractslider_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QTabletEvent*)
+/// @param callback void func(QAbstractSlider* self, QTabletEvent* event)
 void q_abstractslider_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3721,7 +3721,7 @@ void q_abstractslider_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QActionEvent*)
+/// @param callback void func(QAbstractSlider* self, QActionEvent* event)
 void q_abstractslider_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3751,7 +3751,7 @@ void q_abstractslider_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QDragEnterEvent*)
+/// @param callback void func(QAbstractSlider* self, QDragEnterEvent* event)
 void q_abstractslider_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3781,7 +3781,7 @@ void q_abstractslider_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QDragMoveEvent*)
+/// @param callback void func(QAbstractSlider* self, QDragMoveEvent* event)
 void q_abstractslider_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3811,7 +3811,7 @@ void q_abstractslider_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QDragLeaveEvent*)
+/// @param callback void func(QAbstractSlider* self, QDragLeaveEvent* event)
 void q_abstractslider_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3841,7 +3841,7 @@ void q_abstractslider_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QDropEvent*)
+/// @param callback void func(QAbstractSlider* self, QDropEvent* event)
 void q_abstractslider_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3871,7 +3871,7 @@ void q_abstractslider_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QShowEvent*)
+/// @param callback void func(QAbstractSlider* self, QShowEvent* event)
 void q_abstractslider_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3901,7 +3901,7 @@ void q_abstractslider_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QHideEvent*)
+/// @param callback void func(QAbstractSlider* self, QHideEvent* event)
 void q_abstractslider_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3935,7 +3935,7 @@ bool q_abstractslider_qbase_native_event(void* self, const char* eventType, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn(QAbstractSlider*, const char*, void*, intptr_t*)
+/// @param callback bool func(QAbstractSlider* self, const char* eventType, void* message, intptr_t* result)
 void q_abstractslider_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3965,7 +3965,7 @@ int32_t q_abstractslider_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn(QAbstractSlider*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QAbstractSlider* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_abstractslider_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3995,7 +3995,7 @@ void q_abstractslider_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QPainter*)
+/// @param callback void func(QAbstractSlider* self, QPainter* painter)
 void q_abstractslider_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4025,7 +4025,7 @@ QPaintDevice* q_abstractslider_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QPaintDevice* fn(QAbstractSlider*, QPoint*)
+/// @param callback QPaintDevice* func(QAbstractSlider* self, QPoint* offset)
 void q_abstractslider_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4053,7 +4053,7 @@ QPainter* q_abstractslider_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_abstractslider_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4083,7 +4083,7 @@ void q_abstractslider_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QInputMethodEvent*)
+/// @param callback void func(QAbstractSlider* self, QInputMethodEvent* param1)
 void q_abstractslider_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4113,7 +4113,7 @@ QVariant* q_abstractslider_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QVariant* fn(QAbstractSlider*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QAbstractSlider* self, enum Qt__InputMethodQuery param1)
 void q_abstractslider_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4143,7 +4143,7 @@ bool q_abstractslider_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn(QAbstractSlider*, bool)
+/// @param callback bool func(QAbstractSlider* self, bool next)
 void q_abstractslider_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4175,7 +4175,7 @@ bool q_abstractslider_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn(QAbstractSlider*, QObject*, QEvent*)
+/// @param callback bool func(QAbstractSlider* self, QObject* watched, QEvent* event)
 void q_abstractslider_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4205,7 +4205,7 @@ void q_abstractslider_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QChildEvent*)
+/// @param callback void func(QAbstractSlider* self, QChildEvent* event)
 void q_abstractslider_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4235,7 +4235,7 @@ void q_abstractslider_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QEvent*)
+/// @param callback void func(QAbstractSlider* self, QEvent* event)
 void q_abstractslider_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4265,7 +4265,7 @@ void q_abstractslider_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMetaMethod*)
+/// @param callback void func(QAbstractSlider* self, QMetaMethod* signal)
 void q_abstractslider_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4295,7 +4295,7 @@ void q_abstractslider_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, QMetaMethod*)
+/// @param callback void func(QAbstractSlider* self, QMetaMethod* signal)
 void q_abstractslider_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4323,7 +4323,7 @@ void q_abstractslider_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractslider_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4351,7 +4351,7 @@ void q_abstractslider_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractslider_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4379,7 +4379,7 @@ void q_abstractslider_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractslider_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4407,7 +4407,7 @@ bool q_abstractslider_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractslider_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4435,7 +4435,7 @@ bool q_abstractslider_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractslider_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4463,7 +4463,7 @@ QObject* q_abstractslider_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_abstractslider_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4491,7 +4491,7 @@ int32_t q_abstractslider_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractslider_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4521,7 +4521,7 @@ int32_t q_abstractslider_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback int32_t fn(QAbstractSlider*, const char*)
+/// @param callback int32_t func(QAbstractSlider* self, const char* signal)
 void q_abstractslider_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4551,7 +4551,7 @@ bool q_abstractslider_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback bool fn(QAbstractSlider*, QMetaMethod*)
+/// @param callback bool func(QAbstractSlider* self, QMetaMethod* signal)
 void q_abstractslider_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4583,7 +4583,7 @@ double q_abstractslider_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSlider*
-/// @param callback double fn(QAbstractSlider*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QAbstractSlider* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_abstractslider_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4593,7 +4593,7 @@ void q_abstractslider_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractSlider*
-/// @param callback void fn(QAbstractSlider*, const char*)
+/// @param callback void func(QAbstractSlider* self, const char* objectName)
 void q_abstractslider_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#dtor.QAbstractSlider)

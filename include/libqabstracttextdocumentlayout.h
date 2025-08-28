@@ -36,7 +36,7 @@ int32_t q_abstracttextdocumentlayout_metacall(void* self, int32_t param1, int pa
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback int32_t fn(QAbstractTextDocumentLayout*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAbstractTextDocumentLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_abstracttextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -66,7 +66,7 @@ void q_abstracttextdocumentlayout_draw(void* self, void* painter, void* context)
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QPainter*, QAbstractTextDocumentLayout__PaintContext*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QPainter* painter, QAbstractTextDocumentLayout__PaintContext* context)
 void q_abstracttextdocumentlayout_on_draw(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#draw)
@@ -90,7 +90,7 @@ int32_t q_abstracttextdocumentlayout_hit_test(void* self, void* point, int32_t a
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback int32_t fn(QAbstractTextDocumentLayout*, QPointF*, enum Qt__HitTestAccuracy)
+/// @param callback int32_t func(QAbstractTextDocumentLayout* self, QPointF* point, enum Qt__HitTestAccuracy accuracy)
 void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#hitTest)
@@ -140,7 +140,7 @@ int32_t q_abstracttextdocumentlayout_page_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstracttextdocumentlayout_on_page_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#pageCount)
@@ -160,7 +160,7 @@ QSizeF* q_abstracttextdocumentlayout_document_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback QSizeF* fn()
+/// @param callback QSizeF* func()
 void q_abstracttextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSize)
@@ -181,7 +181,7 @@ QRectF* q_abstracttextdocumentlayout_frame_bounding_rect(void* self, void* frame
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback QRectF* fn(QAbstractTextDocumentLayout*, QTextFrame*)
+/// @param callback QRectF* func(QAbstractTextDocumentLayout* self, QTextFrame* frame)
 void q_abstracttextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#frameBoundingRect)
@@ -203,7 +203,7 @@ QRectF* q_abstracttextdocumentlayout_block_bounding_rect(void* self, void* block
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback QRectF* fn(QAbstractTextDocumentLayout*, QTextBlock*)
+/// @param callback QRectF* func(QAbstractTextDocumentLayout* self, QTextBlock* block)
 void q_abstracttextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#blockBoundingRect)
@@ -257,7 +257,7 @@ void q_abstracttextdocumentlayout_update(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#update)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*)
+/// @param callback void func(QAbstractTextDocumentLayout* self)
 void q_abstracttextdocumentlayout_on_update(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#updateBlock)
@@ -269,7 +269,7 @@ void q_abstracttextdocumentlayout_update_block(void* self, void* block);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#updateBlock)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QTextBlock*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QTextBlock* block)
 void q_abstracttextdocumentlayout_on_update_block(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSizeChanged)
@@ -281,7 +281,7 @@ void q_abstracttextdocumentlayout_document_size_changed(void* self, void* newSiz
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSizeChanged)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QSizeF*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QSizeF* newSize)
 void q_abstracttextdocumentlayout_on_document_size_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#pageCountChanged)
@@ -293,7 +293,7 @@ void q_abstracttextdocumentlayout_page_count_changed(void* self, int newPages);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#pageCountChanged)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, int)
+/// @param callback void func(QAbstractTextDocumentLayout* self, int newPages)
 void q_abstracttextdocumentlayout_on_page_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentChanged)
@@ -309,7 +309,7 @@ void q_abstracttextdocumentlayout_document_changed(void* self, int from, int cha
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, int, int, int)
+/// @param callback void func(QAbstractTextDocumentLayout* self, int from, int charsRemoved, int charsAdded)
 void q_abstracttextdocumentlayout_on_document_changed(void* self, void (*callback)(void*, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentChanged)
@@ -335,7 +335,7 @@ void q_abstracttextdocumentlayout_resize_inline_object(void* self, void* item, i
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QTextInlineObject*, int, QTextFormat*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format)
 void q_abstracttextdocumentlayout_on_resize_inline_object(void* self, void (*callback)(void*, void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#resizeInlineObject)
@@ -361,7 +361,7 @@ void q_abstracttextdocumentlayout_position_inline_object(void* self, void* item,
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QTextInlineObject*, int, QTextFormat*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QTextInlineObject* item, int posInDocument, QTextFormat* format)
 void q_abstracttextdocumentlayout_on_position_inline_object(void* self, void (*callback)(void*, void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#positionInlineObject)
@@ -389,7 +389,7 @@ void q_abstracttextdocumentlayout_draw_inline_object(void* self, void* painter, 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QPainter*, QRectF*, QTextInlineObject*, int, QTextFormat*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QPainter* painter, QRectF* rect, QTextInlineObject* object, int posInDocument, QTextFormat* format)
 void q_abstracttextdocumentlayout_on_draw_inline_object(void* self, void (*callback)(void*, void*, void*, void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#drawInlineObject)
@@ -415,7 +415,7 @@ int32_t q_abstracttextdocumentlayout_format_index(void* self, int pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback int32_t fn(QAbstractTextDocumentLayout*, int)
+/// @param callback int32_t func(QAbstractTextDocumentLayout* self, int pos)
 void q_abstracttextdocumentlayout_on_format_index(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#formatIndex)
@@ -437,7 +437,7 @@ QTextCharFormat* q_abstracttextdocumentlayout_format(void* self, int pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback QTextCharFormat* fn(QAbstractTextDocumentLayout*, int)
+/// @param callback QTextCharFormat* func(QAbstractTextDocumentLayout* self, int pos)
 void q_abstracttextdocumentlayout_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#format)
@@ -481,7 +481,7 @@ void q_abstracttextdocumentlayout_update1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#update)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QRectF*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QRectF* param1)
 void q_abstracttextdocumentlayout_on_update1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -710,7 +710,7 @@ void q_abstracttextdocumentlayout_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*)
+/// @param callback void func(QAbstractTextDocumentLayout* self)
 void q_abstracttextdocumentlayout_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -788,7 +788,7 @@ void q_abstracttextdocumentlayout_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QObject*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QObject* param1)
 void q_abstracttextdocumentlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -818,7 +818,7 @@ bool q_abstracttextdocumentlayout_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback bool fn(QAbstractTextDocumentLayout*, QEvent*)
+/// @param callback bool func(QAbstractTextDocumentLayout* self, QEvent* event)
 void q_abstracttextdocumentlayout_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -850,7 +850,7 @@ bool q_abstracttextdocumentlayout_qbase_event_filter(void* self, void* watched, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback bool fn(QAbstractTextDocumentLayout*, QObject*, QEvent*)
+/// @param callback bool func(QAbstractTextDocumentLayout* self, QObject* watched, QEvent* event)
 void q_abstracttextdocumentlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -880,7 +880,7 @@ void q_abstracttextdocumentlayout_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QTimerEvent*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QTimerEvent* event)
 void q_abstracttextdocumentlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -910,7 +910,7 @@ void q_abstracttextdocumentlayout_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QChildEvent*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QChildEvent* event)
 void q_abstracttextdocumentlayout_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -940,7 +940,7 @@ void q_abstracttextdocumentlayout_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QEvent*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QEvent* event)
 void q_abstracttextdocumentlayout_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -970,7 +970,7 @@ void q_abstracttextdocumentlayout_qbase_connect_notify(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QMetaMethod*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QMetaMethod* signal)
 void q_abstracttextdocumentlayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1000,7 +1000,7 @@ void q_abstracttextdocumentlayout_qbase_disconnect_notify(void* self, void* sign
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, QMetaMethod*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, QMetaMethod* signal)
 void q_abstracttextdocumentlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1028,7 +1028,7 @@ QObject* q_abstracttextdocumentlayout_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_abstracttextdocumentlayout_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1056,7 +1056,7 @@ int32_t q_abstracttextdocumentlayout_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstracttextdocumentlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1086,7 +1086,7 @@ int32_t q_abstracttextdocumentlayout_qbase_receivers(void* self, const char* sig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback int32_t fn(QAbstractTextDocumentLayout*, const char*)
+/// @param callback int32_t func(QAbstractTextDocumentLayout* self, const char* signal)
 void q_abstracttextdocumentlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1116,7 +1116,7 @@ bool q_abstracttextdocumentlayout_qbase_is_signal_connected(void* self, void* si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback bool fn(QAbstractTextDocumentLayout*, QMetaMethod*)
+/// @param callback bool func(QAbstractTextDocumentLayout* self, QMetaMethod* signal)
 void q_abstracttextdocumentlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1126,7 +1126,7 @@ void q_abstracttextdocumentlayout_on_is_signal_connected(void* self, bool (*call
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractTextDocumentLayout*
-/// @param callback void fn(QAbstractTextDocumentLayout*, const char*)
+/// @param callback void func(QAbstractTextDocumentLayout* self, const char* objectName)
 void q_abstracttextdocumentlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#dtor.QAbstractTextDocumentLayout)

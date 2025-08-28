@@ -43,7 +43,7 @@ int32_t k_dualaction_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KDualAction*
-/// @param callback int32_t fn(KDualAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDualAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_dualaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -194,7 +194,7 @@ void k_dualaction_active_changed(void* self, bool param1);
 /// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChanged)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, bool)
+/// @param callback void func(KDualAction* self, bool param1)
 void k_dualaction_on_active_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChangedByUser)
@@ -206,7 +206,7 @@ void k_dualaction_active_changed_by_user(void* self, bool param1);
 /// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChangedByUser)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, bool)
+/// @param callback void func(KDualAction* self, bool param1)
 void k_dualaction_on_active_changed_by_user(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -650,7 +650,7 @@ void k_dualaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*)
+/// @param callback void func(KDualAction* self)
 void k_dualaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -666,7 +666,7 @@ void k_dualaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, bool)
+/// @param callback void func(KDualAction* self, bool enabled)
 void k_dualaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -682,7 +682,7 @@ void k_dualaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, bool)
+/// @param callback void func(KDualAction* self, bool checkable)
 void k_dualaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -697,7 +697,7 @@ void k_dualaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*)
+/// @param callback void func(KDualAction* self)
 void k_dualaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -712,7 +712,7 @@ void k_dualaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*)
+/// @param callback void func(KDualAction* self)
 void k_dualaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -727,7 +727,7 @@ void k_dualaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*)
+/// @param callback void func(KDualAction* self)
 void k_dualaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -743,7 +743,7 @@ void k_dualaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, bool)
+/// @param callback void func(KDualAction* self, bool param1)
 void k_dualaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -767,7 +767,7 @@ void k_dualaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, bool)
+/// @param callback void func(KDualAction* self, bool checked)
 void k_dualaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -996,7 +996,7 @@ void k_dualaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*)
+/// @param callback void func(KDualAction* self)
 void k_dualaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1074,7 +1074,7 @@ void k_dualaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, QObject*)
+/// @param callback void func(KDualAction* self, QObject* param1)
 void k_dualaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAction
@@ -1104,7 +1104,7 @@ bool k_dualaction_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback bool fn(KDualAction*, QEvent*)
+/// @param callback bool func(KDualAction* self, QEvent* param1)
 void k_dualaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1136,7 +1136,7 @@ bool k_dualaction_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback bool fn(KDualAction*, QObject*, QEvent*)
+/// @param callback bool func(KDualAction* self, QObject* watched, QEvent* event)
 void k_dualaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1166,7 +1166,7 @@ void k_dualaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, QTimerEvent*)
+/// @param callback void func(KDualAction* self, QTimerEvent* event)
 void k_dualaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1196,7 +1196,7 @@ void k_dualaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, QChildEvent*)
+/// @param callback void func(KDualAction* self, QChildEvent* event)
 void k_dualaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1226,7 +1226,7 @@ void k_dualaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, QEvent*)
+/// @param callback void func(KDualAction* self, QEvent* event)
 void k_dualaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1256,7 +1256,7 @@ void k_dualaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, QMetaMethod*)
+/// @param callback void func(KDualAction* self, QMetaMethod* signal)
 void k_dualaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1286,7 +1286,7 @@ void k_dualaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, QMetaMethod*)
+/// @param callback void func(KDualAction* self, QMetaMethod* signal)
 void k_dualaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1314,7 +1314,7 @@ QObject* k_dualaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_dualaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1342,7 +1342,7 @@ int32_t k_dualaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_dualaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1372,7 +1372,7 @@ int32_t k_dualaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback int32_t fn(KDualAction*, const char*)
+/// @param callback int32_t func(KDualAction* self, const char* signal)
 void k_dualaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1402,7 +1402,7 @@ bool k_dualaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDualAction*
-/// @param callback bool fn(KDualAction*, QMetaMethod*)
+/// @param callback bool func(KDualAction* self, QMetaMethod* signal)
 void k_dualaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1412,7 +1412,7 @@ void k_dualaction_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDualAction*
-/// @param callback void fn(KDualAction*, const char*)
+/// @param callback void func(KDualAction* self, const char* objectName)
 void k_dualaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdualaction.html#dtor.KDualAction)

@@ -43,7 +43,7 @@ int32_t k_windowstatesaver_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback int32_t fn(KWindowStateSaver*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KWindowStateSaver* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_windowstatesaver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -94,7 +94,7 @@ bool k_windowstatesaver_event_filter(void* self, void* watched, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback bool fn(KWindowStateSaver*, QObject*, QEvent*)
+/// @param callback bool func(KWindowStateSaver* self, QObject* watched, QEvent* event)
 void k_windowstatesaver_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -334,7 +334,7 @@ void k_windowstatesaver_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*)
+/// @param callback void func(KWindowStateSaver* self)
 void k_windowstatesaver_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -412,7 +412,7 @@ void k_windowstatesaver_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*, QObject*)
+/// @param callback void func(KWindowStateSaver* self, QObject* param1)
 void k_windowstatesaver_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -442,7 +442,7 @@ bool k_windowstatesaver_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback bool fn(KWindowStateSaver*, QEvent*)
+/// @param callback bool func(KWindowStateSaver* self, QEvent* event)
 void k_windowstatesaver_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -472,7 +472,7 @@ void k_windowstatesaver_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*, QChildEvent*)
+/// @param callback void func(KWindowStateSaver* self, QChildEvent* event)
 void k_windowstatesaver_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -502,7 +502,7 @@ void k_windowstatesaver_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*, QEvent*)
+/// @param callback void func(KWindowStateSaver* self, QEvent* event)
 void k_windowstatesaver_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -532,7 +532,7 @@ void k_windowstatesaver_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*, QMetaMethod*)
+/// @param callback void func(KWindowStateSaver* self, QMetaMethod* signal)
 void k_windowstatesaver_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -562,7 +562,7 @@ void k_windowstatesaver_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*, QMetaMethod*)
+/// @param callback void func(KWindowStateSaver* self, QMetaMethod* signal)
 void k_windowstatesaver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -590,7 +590,7 @@ QObject* k_windowstatesaver_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_windowstatesaver_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -618,7 +618,7 @@ int32_t k_windowstatesaver_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_windowstatesaver_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -648,7 +648,7 @@ int32_t k_windowstatesaver_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback int32_t fn(KWindowStateSaver*, const char*)
+/// @param callback int32_t func(KWindowStateSaver* self, const char* signal)
 void k_windowstatesaver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -678,7 +678,7 @@ bool k_windowstatesaver_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KWindowStateSaver*
-/// @param callback bool fn(KWindowStateSaver*, QMetaMethod*)
+/// @param callback bool func(KWindowStateSaver* self, QMetaMethod* signal)
 void k_windowstatesaver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -688,7 +688,7 @@ void k_windowstatesaver_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self KWindowStateSaver*
-/// @param callback void fn(KWindowStateSaver*, const char*)
+/// @param callback void func(KWindowStateSaver* self, const char* objectName)
 void k_windowstatesaver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kwindowstatesaver.html#dtor.KWindowStateSaver)

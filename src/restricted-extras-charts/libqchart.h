@@ -46,7 +46,7 @@ int32_t q_chart_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QChart*
-/// @param callback int32_t fn(QChart*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QChart* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_chart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -415,7 +415,7 @@ void q_chart_plot_area_changed(void* self, void* plotArea);
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#plotAreaChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QRectF*)
+/// @param callback void func(QChart* self, QRectF* plotArea)
 void q_chart_on_plot_area_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -915,7 +915,7 @@ void q_chart_geometry_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_geometry_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -930,7 +930,7 @@ void q_chart_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -1004,7 +1004,7 @@ void q_chart_parent_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_parent_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1019,7 +1019,7 @@ void q_chart_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1034,7 +1034,7 @@ void q_chart_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1049,7 +1049,7 @@ void q_chart_enabled_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_enabled_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1064,7 +1064,7 @@ void q_chart_x_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_x_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1079,7 +1079,7 @@ void q_chart_y_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_y_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1094,7 +1094,7 @@ void q_chart_z_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_z_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1109,7 +1109,7 @@ void q_chart_rotation_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1124,7 +1124,7 @@ void q_chart_scale_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_scale_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1139,7 +1139,7 @@ void q_chart_children_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_children_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1154,7 +1154,7 @@ void q_chart_width_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_width_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1169,7 +1169,7 @@ void q_chart_height_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_height_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1407,7 +1407,7 @@ void q_chart_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*)
+/// @param callback void func(QChart* self)
 void q_chart_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1485,7 +1485,7 @@ void q_chart_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QObject*)
+/// @param callback void func(QChart* self, QObject* param1)
 void q_chart_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3096,7 +3096,7 @@ void q_chart_qbase_set_geometry(void* self, void* rect);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QRectF*)
+/// @param callback void func(QChart* self, QRectF* rect)
 void q_chart_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3132,7 +3132,7 @@ void q_chart_qbase_get_contents_margins(void* self, double* left, double* top, d
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, double*, double*, double*, double*)
+/// @param callback void func(QChart* self, double* left, double* top, double* right, double* bottom)
 void q_chart_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsWidget
@@ -3160,7 +3160,7 @@ int32_t q_chart_qbase_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_chart_on_type(void* self, int32_t (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3194,7 +3194,7 @@ void q_chart_qbase_paint(void* self, void* painter, void* option, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+/// @param callback void func(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 void q_chart_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3228,7 +3228,7 @@ void q_chart_qbase_paint_window_frame(void* self, void* painter, void* option, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+/// @param callback void func(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 void q_chart_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3256,7 +3256,7 @@ QRectF* q_chart_qbase_bounding_rect(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QRectF* fn()
+/// @param callback QRectF* func()
 void q_chart_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3284,7 +3284,7 @@ QPainterPath* q_chart_qbase_shape(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QPainterPath* fn()
+/// @param callback QPainterPath* func()
 void q_chart_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3314,7 +3314,7 @@ void q_chart_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QStyleOption*)
+/// @param callback void func(QChart* self, QStyleOption* option)
 void q_chart_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3346,7 +3346,7 @@ QSizeF* q_chart_qbase_size_hint(void* self, int32_t which, void* constraint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QSizeF* fn(QChart*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QChart* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_chart_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3374,7 +3374,7 @@ void q_chart_qbase_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_chart_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3406,7 +3406,7 @@ QVariant* q_chart_qbase_item_change(void* self, int32_t change, void* value);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QVariant* fn(QChart*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
+/// @param callback QVariant* func(QChart* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
 void q_chart_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3438,7 +3438,7 @@ QVariant* q_chart_qbase_property_change(void* self, const char* propertyName, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QVariant* fn(QChart*, const char*, QVariant*)
+/// @param callback QVariant* func(QChart* self, const char* propertyName, QVariant* value)
 void q_chart_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3468,7 +3468,7 @@ bool q_chart_qbase_scene_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QEvent*)
+/// @param callback bool func(QChart* self, QEvent* event)
 void q_chart_on_scene_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3498,7 +3498,7 @@ bool q_chart_qbase_window_frame_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QEvent*)
+/// @param callback bool func(QChart* self, QEvent* e)
 void q_chart_on_window_frame_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3532,7 +3532,7 @@ int32_t q_chart_qbase_window_frame_section_at(void* self, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback int32_t fn(QChart*, QPointF*)
+/// @param callback int32_t func(QChart* self, QPointF* pos)
 void q_chart_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3562,7 +3562,7 @@ bool q_chart_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QEvent*)
+/// @param callback bool func(QChart* self, QEvent* event)
 void q_chart_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3592,7 +3592,7 @@ void q_chart_qbase_change_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QEvent*)
+/// @param callback void func(QChart* self, QEvent* event)
 void q_chart_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3622,7 +3622,7 @@ void q_chart_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QCloseEvent*)
+/// @param callback void func(QChart* self, QCloseEvent* event)
 void q_chart_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3652,7 +3652,7 @@ void q_chart_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QFocusEvent*)
+/// @param callback void func(QChart* self, QFocusEvent* event)
 void q_chart_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3682,7 +3682,7 @@ bool q_chart_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, bool)
+/// @param callback bool func(QChart* self, bool next)
 void q_chart_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QGraphicsWidget
@@ -3712,7 +3712,7 @@ void q_chart_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QFocusEvent*)
+/// @param callback void func(QChart* self, QFocusEvent* event)
 void q_chart_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3742,7 +3742,7 @@ void q_chart_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QHideEvent*)
+/// @param callback void func(QChart* self, QHideEvent* event)
 void q_chart_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3772,7 +3772,7 @@ void q_chart_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneMoveEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneMoveEvent* event)
 void q_chart_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3800,7 +3800,7 @@ void q_chart_qbase_polish_event(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_chart_on_polish_event(void* self, void (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3830,7 +3830,7 @@ void q_chart_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneResizeEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneResizeEvent* event)
 void q_chart_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3860,7 +3860,7 @@ void q_chart_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QShowEvent*)
+/// @param callback void func(QChart* self, QShowEvent* event)
 void q_chart_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3890,7 +3890,7 @@ void q_chart_qbase_hover_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneHoverEvent* event)
 void q_chart_on_hover_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3920,7 +3920,7 @@ void q_chart_qbase_hover_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneHoverEvent* event)
 void q_chart_on_hover_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3950,7 +3950,7 @@ void q_chart_qbase_grab_mouse_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QEvent*)
+/// @param callback void func(QChart* self, QEvent* event)
 void q_chart_on_grab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3980,7 +3980,7 @@ void q_chart_qbase_ungrab_mouse_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QEvent*)
+/// @param callback void func(QChart* self, QEvent* event)
 void q_chart_on_ungrab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4010,7 +4010,7 @@ void q_chart_qbase_grab_keyboard_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QEvent*)
+/// @param callback void func(QChart* self, QEvent* event)
 void q_chart_on_grab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4040,7 +4040,7 @@ void q_chart_qbase_ungrab_keyboard_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QEvent*)
+/// @param callback void func(QChart* self, QEvent* event)
 void q_chart_on_ungrab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4072,7 +4072,7 @@ bool q_chart_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QObject*, QEvent*)
+/// @param callback bool func(QChart* self, QObject* watched, QEvent* event)
 void q_chart_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4102,7 +4102,7 @@ void q_chart_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QTimerEvent*)
+/// @param callback void func(QChart* self, QTimerEvent* event)
 void q_chart_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4132,7 +4132,7 @@ void q_chart_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QChildEvent*)
+/// @param callback void func(QChart* self, QChildEvent* event)
 void q_chart_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4162,7 +4162,7 @@ void q_chart_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QEvent*)
+/// @param callback void func(QChart* self, QEvent* event)
 void q_chart_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4192,7 +4192,7 @@ void q_chart_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QMetaMethod*)
+/// @param callback void func(QChart* self, QMetaMethod* signal)
 void q_chart_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4222,7 +4222,7 @@ void q_chart_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QMetaMethod*)
+/// @param callback void func(QChart* self, QMetaMethod* signal)
 void q_chart_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4252,7 +4252,7 @@ void q_chart_qbase_advance(void* self, int phase);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, int)
+/// @param callback void func(QChart* self, int phase)
 void q_chart_on_advance(void* self, void (*callback)(void*, int));
 
 /// Inherited from QGraphicsItem
@@ -4282,7 +4282,7 @@ bool q_chart_qbase_contains(void* self, void* point);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QPointF*)
+/// @param callback bool func(QChart* self, QPointF* point)
 void q_chart_on_contains(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4314,7 +4314,7 @@ bool q_chart_qbase_collides_with_item(void* self, void* other, int32_t mode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QGraphicsItem*, enum Qt__ItemSelectionMode)
+/// @param callback bool func(QChart* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 void q_chart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -4346,7 +4346,7 @@ bool q_chart_qbase_collides_with_path(void* self, void* path, int32_t mode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QPainterPath*, enum Qt__ItemSelectionMode)
+/// @param callback bool func(QChart* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 void q_chart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -4376,7 +4376,7 @@ bool q_chart_qbase_is_obscured_by(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QGraphicsItem*)
+/// @param callback bool func(QChart* self, QGraphicsItem* item)
 void q_chart_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4404,7 +4404,7 @@ QPainterPath* q_chart_qbase_opaque_area(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QPainterPath* fn()
+/// @param callback QPainterPath* func()
 void q_chart_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -4436,7 +4436,7 @@ bool q_chart_qbase_scene_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QGraphicsItem*, QEvent*)
+/// @param callback bool func(QChart* self, QGraphicsItem* watched, QEvent* event)
 void q_chart_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4466,7 +4466,7 @@ void q_chart_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneContextMenuEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneContextMenuEvent* event)
 void q_chart_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4496,7 +4496,7 @@ void q_chart_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneDragDropEvent* event)
 void q_chart_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4526,7 +4526,7 @@ void q_chart_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneDragDropEvent* event)
 void q_chart_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4556,7 +4556,7 @@ void q_chart_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneDragDropEvent* event)
 void q_chart_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4586,7 +4586,7 @@ void q_chart_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneDragDropEvent* event)
 void q_chart_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4616,7 +4616,7 @@ void q_chart_qbase_hover_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneHoverEvent* event)
 void q_chart_on_hover_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4646,7 +4646,7 @@ void q_chart_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QKeyEvent*)
+/// @param callback void func(QChart* self, QKeyEvent* event)
 void q_chart_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4676,7 +4676,7 @@ void q_chart_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QKeyEvent*)
+/// @param callback void func(QChart* self, QKeyEvent* event)
 void q_chart_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4706,7 +4706,7 @@ void q_chart_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneMouseEvent* event)
 void q_chart_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4736,7 +4736,7 @@ void q_chart_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneMouseEvent* event)
 void q_chart_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4766,7 +4766,7 @@ void q_chart_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneMouseEvent* event)
 void q_chart_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4796,7 +4796,7 @@ void q_chart_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneMouseEvent* event)
 void q_chart_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4826,7 +4826,7 @@ void q_chart_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsSceneWheelEvent*)
+/// @param callback void func(QChart* self, QGraphicsSceneWheelEvent* event)
 void q_chart_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4856,7 +4856,7 @@ void q_chart_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QInputMethodEvent*)
+/// @param callback void func(QChart* self, QInputMethodEvent* event)
 void q_chart_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4886,7 +4886,7 @@ QVariant* q_chart_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QVariant* fn(QChart*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QChart* self, enum Qt__InputMethodQuery query)
 void q_chart_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
@@ -4916,7 +4916,7 @@ bool q_chart_qbase_supports_extension(void* self, int64_t extension);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, enum QGraphicsItem__Extension)
+/// @param callback bool func(QChart* self, enum QGraphicsItem__Extension extension)
 void q_chart_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
@@ -4948,7 +4948,7 @@ void q_chart_qbase_set_extension(void* self, int64_t extension, void* variant);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, enum QGraphicsItem__Extension, QVariant*)
+/// @param callback void func(QChart* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 void q_chart_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
 
 /// Inherited from QGraphicsItem
@@ -4978,7 +4978,7 @@ QVariant* q_chart_qbase_extension(void* self, void* variant);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QVariant* fn(QChart*, QVariant*)
+/// @param callback QVariant* func(QChart* self, QVariant* variant)
 void q_chart_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -5006,7 +5006,7 @@ bool q_chart_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_chart_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsObject
@@ -5034,7 +5034,7 @@ void q_chart_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_chart_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -5062,7 +5062,7 @@ QObject* q_chart_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_chart_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5090,7 +5090,7 @@ int32_t q_chart_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_chart_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5120,7 +5120,7 @@ int32_t q_chart_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback int32_t fn(QChart*, const char*)
+/// @param callback int32_t func(QChart* self, const char* signal)
 void q_chart_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5150,7 +5150,7 @@ bool q_chart_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback bool fn(QChart*, QMetaMethod*)
+/// @param callback bool func(QChart* self, QMetaMethod* signal)
 void q_chart_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -5178,7 +5178,7 @@ void q_chart_qbase_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_chart_on_add_to_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -5206,7 +5206,7 @@ void q_chart_qbase_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_chart_on_remove_from_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -5234,7 +5234,7 @@ void q_chart_qbase_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_chart_on_prepare_geometry_change(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayoutItem
@@ -5264,7 +5264,7 @@ void q_chart_qbase_set_graphics_item(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, QGraphicsItem*)
+/// @param callback void func(QChart* self, QGraphicsItem* item)
 void q_chart_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -5294,7 +5294,7 @@ void q_chart_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, bool)
+/// @param callback void func(QChart* self, bool ownedByLayout)
 void q_chart_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -5304,7 +5304,7 @@ void q_chart_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QChart*
-/// @param callback void fn(QChart*, const char*)
+/// @param callback void func(QChart* self, const char* objectName)
 void q_chart_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#dtor.QChart)

@@ -64,7 +64,7 @@ int32_t q_audiosink_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioSink*
-/// @param callback int32_t fn(QAudioSink*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAudioSink* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_audiosink_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -183,7 +183,7 @@ void q_audiosink_state_changed(void* self, int32_t state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosink.html#stateChanged)
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, enum QAudio__State)
+/// @param callback void func(QAudioSink* self, enum QAudio__State state)
 void q_audiosink_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -429,7 +429,7 @@ void q_audiosink_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*)
+/// @param callback void func(QAudioSink* self)
 void q_audiosink_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -507,7 +507,7 @@ void q_audiosink_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, QObject*)
+/// @param callback void func(QAudioSink* self, QObject* param1)
 void q_audiosink_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -537,7 +537,7 @@ bool q_audiosink_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback bool fn(QAudioSink*, QEvent*)
+/// @param callback bool func(QAudioSink* self, QEvent* event)
 void q_audiosink_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -569,7 +569,7 @@ bool q_audiosink_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback bool fn(QAudioSink*, QObject*, QEvent*)
+/// @param callback bool func(QAudioSink* self, QObject* watched, QEvent* event)
 void q_audiosink_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -599,7 +599,7 @@ void q_audiosink_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, QTimerEvent*)
+/// @param callback void func(QAudioSink* self, QTimerEvent* event)
 void q_audiosink_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -629,7 +629,7 @@ void q_audiosink_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, QChildEvent*)
+/// @param callback void func(QAudioSink* self, QChildEvent* event)
 void q_audiosink_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -659,7 +659,7 @@ void q_audiosink_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, QEvent*)
+/// @param callback void func(QAudioSink* self, QEvent* event)
 void q_audiosink_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -689,7 +689,7 @@ void q_audiosink_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, QMetaMethod*)
+/// @param callback void func(QAudioSink* self, QMetaMethod* signal)
 void q_audiosink_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -719,7 +719,7 @@ void q_audiosink_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, QMetaMethod*)
+/// @param callback void func(QAudioSink* self, QMetaMethod* signal)
 void q_audiosink_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -747,7 +747,7 @@ QObject* q_audiosink_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_audiosink_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -775,7 +775,7 @@ int32_t q_audiosink_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_audiosink_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -805,7 +805,7 @@ int32_t q_audiosink_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback int32_t fn(QAudioSink*, const char*)
+/// @param callback int32_t func(QAudioSink* self, const char* signal)
 void q_audiosink_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -835,7 +835,7 @@ bool q_audiosink_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSink*
-/// @param callback bool fn(QAudioSink*, QMetaMethod*)
+/// @param callback bool func(QAudioSink* self, QMetaMethod* signal)
 void q_audiosink_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -845,7 +845,7 @@ void q_audiosink_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAudioSink*
-/// @param callback void fn(QAudioSink*, const char*)
+/// @param callback void func(QAudioSink* self, const char* objectName)
 void q_audiosink_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosink.html#dtor.QAudioSink)

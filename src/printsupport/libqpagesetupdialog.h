@@ -51,7 +51,7 @@ int32_t q_pagesetupdialog_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn(QPageSetupDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPageSetupDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pagesetupdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -79,7 +79,7 @@ int32_t q_pagesetupdialog_exec(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pagesetupdialog_on_exec(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#exec)
@@ -100,7 +100,7 @@ void q_pagesetupdialog_done(void* self, int result);
 /// Allows for overriding the related default method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, int)
+/// @param callback void func(QPageSetupDialog* self, int result)
 void q_pagesetupdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#done)
@@ -184,7 +184,7 @@ void q_pagesetupdialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, int)
+/// @param callback void func(QPageSetupDialog* self, int result)
 void q_pagesetupdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -199,7 +199,7 @@ void q_pagesetupdialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*)
+/// @param callback void func(QPageSetupDialog* self)
 void q_pagesetupdialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -214,7 +214,7 @@ void q_pagesetupdialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*)
+/// @param callback void func(QPageSetupDialog* self)
 void q_pagesetupdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2154,7 +2154,7 @@ void q_pagesetupdialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, const char*)
+/// @param callback void func(QPageSetupDialog* self, const char* title)
 void q_pagesetupdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2170,7 +2170,7 @@ void q_pagesetupdialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QIcon*)
+/// @param callback void func(QPageSetupDialog* self, QIcon* icon)
 void q_pagesetupdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2186,7 +2186,7 @@ void q_pagesetupdialog_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, const char*)
+/// @param callback void func(QPageSetupDialog* self, const char* iconText)
 void q_pagesetupdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2202,7 +2202,7 @@ void q_pagesetupdialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QPoint*)
+/// @param callback void func(QPageSetupDialog* self, QPoint* pos)
 void q_pagesetupdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2579,7 +2579,7 @@ void q_pagesetupdialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*)
+/// @param callback void func(QPageSetupDialog* self)
 void q_pagesetupdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2657,7 +2657,7 @@ void q_pagesetupdialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QObject*)
+/// @param callback void func(QPageSetupDialog* self, QObject* param1)
 void q_pagesetupdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2778,7 +2778,7 @@ void q_pagesetupdialog_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, bool)
+/// @param callback void func(QPageSetupDialog* self, bool visible)
 void q_pagesetupdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -2806,7 +2806,7 @@ QSize* q_pagesetupdialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pagesetupdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2834,7 +2834,7 @@ QSize* q_pagesetupdialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pagesetupdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2862,7 +2862,7 @@ void q_pagesetupdialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pagesetupdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2890,7 +2890,7 @@ void q_pagesetupdialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pagesetupdialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2918,7 +2918,7 @@ void q_pagesetupdialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pagesetupdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2948,7 +2948,7 @@ void q_pagesetupdialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QKeyEvent*)
+/// @param callback void func(QPageSetupDialog* self, QKeyEvent* param1)
 void q_pagesetupdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -2978,7 +2978,7 @@ void q_pagesetupdialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QCloseEvent*)
+/// @param callback void func(QPageSetupDialog* self, QCloseEvent* param1)
 void q_pagesetupdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3008,7 +3008,7 @@ void q_pagesetupdialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QShowEvent*)
+/// @param callback void func(QPageSetupDialog* self, QShowEvent* param1)
 void q_pagesetupdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3038,7 +3038,7 @@ void q_pagesetupdialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QResizeEvent*)
+/// @param callback void func(QPageSetupDialog* self, QResizeEvent* param1)
 void q_pagesetupdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3068,7 +3068,7 @@ void q_pagesetupdialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QContextMenuEvent*)
+/// @param callback void func(QPageSetupDialog* self, QContextMenuEvent* param1)
 void q_pagesetupdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3100,7 +3100,7 @@ bool q_pagesetupdialog_qbase_event_filter(void* self, void* param1, void* param2
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn(QPageSetupDialog*, QObject*, QEvent*)
+/// @param callback bool func(QPageSetupDialog* self, QObject* param1, QEvent* param2)
 void q_pagesetupdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3128,7 +3128,7 @@ int32_t q_pagesetupdialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pagesetupdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3158,7 +3158,7 @@ int32_t q_pagesetupdialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn(QPageSetupDialog*, int)
+/// @param callback int32_t func(QPageSetupDialog* self, int param1)
 void q_pagesetupdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3186,7 +3186,7 @@ bool q_pagesetupdialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pagesetupdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3214,7 +3214,7 @@ QPaintEngine* q_pagesetupdialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_pagesetupdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3244,7 +3244,7 @@ bool q_pagesetupdialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn(QPageSetupDialog*, QEvent*)
+/// @param callback bool func(QPageSetupDialog* self, QEvent* event)
 void q_pagesetupdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3274,7 +3274,7 @@ void q_pagesetupdialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMouseEvent*)
+/// @param callback void func(QPageSetupDialog* self, QMouseEvent* event)
 void q_pagesetupdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3304,7 +3304,7 @@ void q_pagesetupdialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMouseEvent*)
+/// @param callback void func(QPageSetupDialog* self, QMouseEvent* event)
 void q_pagesetupdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3334,7 +3334,7 @@ void q_pagesetupdialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMouseEvent*)
+/// @param callback void func(QPageSetupDialog* self, QMouseEvent* event)
 void q_pagesetupdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3364,7 +3364,7 @@ void q_pagesetupdialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMouseEvent*)
+/// @param callback void func(QPageSetupDialog* self, QMouseEvent* event)
 void q_pagesetupdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3394,7 +3394,7 @@ void q_pagesetupdialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QWheelEvent*)
+/// @param callback void func(QPageSetupDialog* self, QWheelEvent* event)
 void q_pagesetupdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3424,7 +3424,7 @@ void q_pagesetupdialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QKeyEvent*)
+/// @param callback void func(QPageSetupDialog* self, QKeyEvent* event)
 void q_pagesetupdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3454,7 +3454,7 @@ void q_pagesetupdialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QFocusEvent*)
+/// @param callback void func(QPageSetupDialog* self, QFocusEvent* event)
 void q_pagesetupdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3484,7 +3484,7 @@ void q_pagesetupdialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QFocusEvent*)
+/// @param callback void func(QPageSetupDialog* self, QFocusEvent* event)
 void q_pagesetupdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3514,7 +3514,7 @@ void q_pagesetupdialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QEnterEvent*)
+/// @param callback void func(QPageSetupDialog* self, QEnterEvent* event)
 void q_pagesetupdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3544,7 +3544,7 @@ void q_pagesetupdialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QEvent*)
+/// @param callback void func(QPageSetupDialog* self, QEvent* event)
 void q_pagesetupdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3574,7 +3574,7 @@ void q_pagesetupdialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QPaintEvent*)
+/// @param callback void func(QPageSetupDialog* self, QPaintEvent* event)
 void q_pagesetupdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3604,7 +3604,7 @@ void q_pagesetupdialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMoveEvent*)
+/// @param callback void func(QPageSetupDialog* self, QMoveEvent* event)
 void q_pagesetupdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3634,7 +3634,7 @@ void q_pagesetupdialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QTabletEvent*)
+/// @param callback void func(QPageSetupDialog* self, QTabletEvent* event)
 void q_pagesetupdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3664,7 +3664,7 @@ void q_pagesetupdialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QActionEvent*)
+/// @param callback void func(QPageSetupDialog* self, QActionEvent* event)
 void q_pagesetupdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3694,7 +3694,7 @@ void q_pagesetupdialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QDragEnterEvent*)
+/// @param callback void func(QPageSetupDialog* self, QDragEnterEvent* event)
 void q_pagesetupdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3724,7 +3724,7 @@ void q_pagesetupdialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QDragMoveEvent*)
+/// @param callback void func(QPageSetupDialog* self, QDragMoveEvent* event)
 void q_pagesetupdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3754,7 +3754,7 @@ void q_pagesetupdialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QDragLeaveEvent*)
+/// @param callback void func(QPageSetupDialog* self, QDragLeaveEvent* event)
 void q_pagesetupdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3784,7 +3784,7 @@ void q_pagesetupdialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QDropEvent*)
+/// @param callback void func(QPageSetupDialog* self, QDropEvent* event)
 void q_pagesetupdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3814,7 +3814,7 @@ void q_pagesetupdialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QHideEvent*)
+/// @param callback void func(QPageSetupDialog* self, QHideEvent* event)
 void q_pagesetupdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3848,7 +3848,7 @@ bool q_pagesetupdialog_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn(QPageSetupDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(QPageSetupDialog* self, const char* eventType, void* message, intptr_t* result)
 void q_pagesetupdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3878,7 +3878,7 @@ void q_pagesetupdialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QEvent*)
+/// @param callback void func(QPageSetupDialog* self, QEvent* param1)
 void q_pagesetupdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3908,7 +3908,7 @@ int32_t q_pagesetupdialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn(QPageSetupDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPageSetupDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_pagesetupdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3938,7 +3938,7 @@ void q_pagesetupdialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QPainter*)
+/// @param callback void func(QPageSetupDialog* self, QPainter* painter)
 void q_pagesetupdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3968,7 +3968,7 @@ QPaintDevice* q_pagesetupdialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QPaintDevice* fn(QPageSetupDialog*, QPoint*)
+/// @param callback QPaintDevice* func(QPageSetupDialog* self, QPoint* offset)
 void q_pagesetupdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3996,7 +3996,7 @@ QPainter* q_pagesetupdialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_pagesetupdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4026,7 +4026,7 @@ void q_pagesetupdialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QInputMethodEvent*)
+/// @param callback void func(QPageSetupDialog* self, QInputMethodEvent* param1)
 void q_pagesetupdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4056,7 +4056,7 @@ QVariant* q_pagesetupdialog_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QVariant* fn(QPageSetupDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPageSetupDialog* self, enum Qt__InputMethodQuery param1)
 void q_pagesetupdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4086,7 +4086,7 @@ bool q_pagesetupdialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn(QPageSetupDialog*, bool)
+/// @param callback bool func(QPageSetupDialog* self, bool next)
 void q_pagesetupdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4116,7 +4116,7 @@ void q_pagesetupdialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QTimerEvent*)
+/// @param callback void func(QPageSetupDialog* self, QTimerEvent* event)
 void q_pagesetupdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4146,7 +4146,7 @@ void q_pagesetupdialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QChildEvent*)
+/// @param callback void func(QPageSetupDialog* self, QChildEvent* event)
 void q_pagesetupdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4176,7 +4176,7 @@ void q_pagesetupdialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QEvent*)
+/// @param callback void func(QPageSetupDialog* self, QEvent* event)
 void q_pagesetupdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4206,7 +4206,7 @@ void q_pagesetupdialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMetaMethod*)
+/// @param callback void func(QPageSetupDialog* self, QMetaMethod* signal)
 void q_pagesetupdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4236,7 +4236,7 @@ void q_pagesetupdialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QMetaMethod*)
+/// @param callback void func(QPageSetupDialog* self, QMetaMethod* signal)
 void q_pagesetupdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4266,7 +4266,7 @@ void q_pagesetupdialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, QWidget*)
+/// @param callback void func(QPageSetupDialog* self, QWidget* param1)
 void q_pagesetupdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4294,7 +4294,7 @@ void q_pagesetupdialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pagesetupdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4322,7 +4322,7 @@ void q_pagesetupdialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pagesetupdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4350,7 +4350,7 @@ void q_pagesetupdialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pagesetupdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4378,7 +4378,7 @@ bool q_pagesetupdialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pagesetupdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4406,7 +4406,7 @@ bool q_pagesetupdialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pagesetupdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4434,7 +4434,7 @@ QObject* q_pagesetupdialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pagesetupdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4462,7 +4462,7 @@ int32_t q_pagesetupdialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pagesetupdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4492,7 +4492,7 @@ int32_t q_pagesetupdialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback int32_t fn(QPageSetupDialog*, const char*)
+/// @param callback int32_t func(QPageSetupDialog* self, const char* signal)
 void q_pagesetupdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4522,7 +4522,7 @@ bool q_pagesetupdialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback bool fn(QPageSetupDialog*, QMetaMethod*)
+/// @param callback bool func(QPageSetupDialog* self, QMetaMethod* signal)
 void q_pagesetupdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4554,7 +4554,7 @@ double q_pagesetupdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPageSetupDialog*
-/// @param callback double fn(QPageSetupDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPageSetupDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_pagesetupdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4564,7 +4564,7 @@ void q_pagesetupdialog_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPageSetupDialog*
-/// @param callback void fn(QPageSetupDialog*, const char*)
+/// @param callback void func(QPageSetupDialog* self, const char* objectName)
 void q_pagesetupdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesetupdialog.html#dtor.QPageSetupDialog)

@@ -46,7 +46,7 @@ int32_t k_treewidgetsearchlinewidget_metacall(void* self, int32_t param1, int pa
 /// Allows for overriding the related default method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback int32_t fn(KTreeWidgetSearchLineWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KTreeWidgetSearchLineWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_treewidgetsearchlinewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -79,7 +79,7 @@ void k_treewidgetsearchlinewidget_create_widgets(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_treewidgetsearchlinewidget_on_create_widgets(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
@@ -100,7 +100,7 @@ KTreeWidgetSearchLine* k_treewidgetsearchlinewidget_create_search_line(void* sel
 /// Allows for overriding the related default method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback KTreeWidgetSearchLine* fn(KTreeWidgetSearchLineWidget*, QTreeWidget*)
+/// @param callback KTreeWidgetSearchLine* func(KTreeWidgetSearchLineWidget* self, QTreeWidget* treeWidget)
 void k_treewidgetsearchlinewidget_on_create_search_line(void* self, KTreeWidgetSearchLine* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
@@ -2065,7 +2065,7 @@ void k_treewidgetsearchlinewidget_window_title_changed(void* self, const char* t
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, const char*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, const char* title)
 void k_treewidgetsearchlinewidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2081,7 +2081,7 @@ void k_treewidgetsearchlinewidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QIcon*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QIcon* icon)
 void k_treewidgetsearchlinewidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2097,7 +2097,7 @@ void k_treewidgetsearchlinewidget_window_icon_text_changed(void* self, const cha
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, const char*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, const char* iconText)
 void k_treewidgetsearchlinewidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2113,7 +2113,7 @@ void k_treewidgetsearchlinewidget_custom_context_menu_requested(void* self, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QPoint*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QPoint* pos)
 void k_treewidgetsearchlinewidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2490,7 +2490,7 @@ void k_treewidgetsearchlinewidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self)
 void k_treewidgetsearchlinewidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2568,7 +2568,7 @@ void k_treewidgetsearchlinewidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QObject*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QObject* param1)
 void k_treewidgetsearchlinewidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2687,7 +2687,7 @@ int32_t k_treewidgetsearchlinewidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_treewidgetsearchlinewidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2717,7 +2717,7 @@ void k_treewidgetsearchlinewidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, bool)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, bool visible)
 void k_treewidgetsearchlinewidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2745,7 +2745,7 @@ QSize* k_treewidgetsearchlinewidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_treewidgetsearchlinewidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2773,7 +2773,7 @@ QSize* k_treewidgetsearchlinewidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_treewidgetsearchlinewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2803,7 +2803,7 @@ int32_t k_treewidgetsearchlinewidget_qbase_height_for_width(void* self, int para
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback int32_t fn(KTreeWidgetSearchLineWidget*, int)
+/// @param callback int32_t func(KTreeWidgetSearchLineWidget* self, int param1)
 void k_treewidgetsearchlinewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2831,7 +2831,7 @@ bool k_treewidgetsearchlinewidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_treewidgetsearchlinewidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2859,7 +2859,7 @@ QPaintEngine* k_treewidgetsearchlinewidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_treewidgetsearchlinewidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2889,7 +2889,7 @@ bool k_treewidgetsearchlinewidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn(KTreeWidgetSearchLineWidget*, QEvent*)
+/// @param callback bool func(KTreeWidgetSearchLineWidget* self, QEvent* event)
 void k_treewidgetsearchlinewidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2919,7 +2919,7 @@ void k_treewidgetsearchlinewidget_qbase_mouse_press_event(void* self, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMouseEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMouseEvent* event)
 void k_treewidgetsearchlinewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2949,7 +2949,7 @@ void k_treewidgetsearchlinewidget_qbase_mouse_release_event(void* self, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMouseEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMouseEvent* event)
 void k_treewidgetsearchlinewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2979,7 +2979,7 @@ void k_treewidgetsearchlinewidget_qbase_mouse_double_click_event(void* self, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMouseEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMouseEvent* event)
 void k_treewidgetsearchlinewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3009,7 +3009,7 @@ void k_treewidgetsearchlinewidget_qbase_mouse_move_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMouseEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMouseEvent* event)
 void k_treewidgetsearchlinewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3039,7 +3039,7 @@ void k_treewidgetsearchlinewidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QWheelEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QWheelEvent* event)
 void k_treewidgetsearchlinewidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3069,7 +3069,7 @@ void k_treewidgetsearchlinewidget_qbase_key_press_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QKeyEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QKeyEvent* event)
 void k_treewidgetsearchlinewidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3099,7 +3099,7 @@ void k_treewidgetsearchlinewidget_qbase_key_release_event(void* self, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QKeyEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QKeyEvent* event)
 void k_treewidgetsearchlinewidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3129,7 +3129,7 @@ void k_treewidgetsearchlinewidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QFocusEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QFocusEvent* event)
 void k_treewidgetsearchlinewidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3159,7 +3159,7 @@ void k_treewidgetsearchlinewidget_qbase_focus_out_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QFocusEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QFocusEvent* event)
 void k_treewidgetsearchlinewidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3189,7 +3189,7 @@ void k_treewidgetsearchlinewidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QEnterEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QEnterEvent* event)
 void k_treewidgetsearchlinewidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3219,7 +3219,7 @@ void k_treewidgetsearchlinewidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QEvent* event)
 void k_treewidgetsearchlinewidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3249,7 +3249,7 @@ void k_treewidgetsearchlinewidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QPaintEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QPaintEvent* event)
 void k_treewidgetsearchlinewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3279,7 +3279,7 @@ void k_treewidgetsearchlinewidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMoveEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMoveEvent* event)
 void k_treewidgetsearchlinewidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3309,7 +3309,7 @@ void k_treewidgetsearchlinewidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QResizeEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QResizeEvent* event)
 void k_treewidgetsearchlinewidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3339,7 +3339,7 @@ void k_treewidgetsearchlinewidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QCloseEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QCloseEvent* event)
 void k_treewidgetsearchlinewidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3369,7 +3369,7 @@ void k_treewidgetsearchlinewidget_qbase_context_menu_event(void* self, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QContextMenuEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QContextMenuEvent* event)
 void k_treewidgetsearchlinewidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3399,7 +3399,7 @@ void k_treewidgetsearchlinewidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QTabletEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QTabletEvent* event)
 void k_treewidgetsearchlinewidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3429,7 +3429,7 @@ void k_treewidgetsearchlinewidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QActionEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QActionEvent* event)
 void k_treewidgetsearchlinewidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3459,7 +3459,7 @@ void k_treewidgetsearchlinewidget_qbase_drag_enter_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QDragEnterEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QDragEnterEvent* event)
 void k_treewidgetsearchlinewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3489,7 +3489,7 @@ void k_treewidgetsearchlinewidget_qbase_drag_move_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QDragMoveEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QDragMoveEvent* event)
 void k_treewidgetsearchlinewidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3519,7 +3519,7 @@ void k_treewidgetsearchlinewidget_qbase_drag_leave_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QDragLeaveEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QDragLeaveEvent* event)
 void k_treewidgetsearchlinewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3549,7 +3549,7 @@ void k_treewidgetsearchlinewidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QDropEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QDropEvent* event)
 void k_treewidgetsearchlinewidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3579,7 +3579,7 @@ void k_treewidgetsearchlinewidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QShowEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QShowEvent* event)
 void k_treewidgetsearchlinewidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3609,7 +3609,7 @@ void k_treewidgetsearchlinewidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QHideEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QHideEvent* event)
 void k_treewidgetsearchlinewidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3643,7 +3643,7 @@ bool k_treewidgetsearchlinewidget_qbase_native_event(void* self, const char* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn(KTreeWidgetSearchLineWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(KTreeWidgetSearchLineWidget* self, const char* eventType, void* message, intptr_t* result)
 void k_treewidgetsearchlinewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3673,7 +3673,7 @@ void k_treewidgetsearchlinewidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QEvent* param1)
 void k_treewidgetsearchlinewidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3703,7 +3703,7 @@ int32_t k_treewidgetsearchlinewidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback int32_t fn(KTreeWidgetSearchLineWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KTreeWidgetSearchLineWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_treewidgetsearchlinewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3733,7 +3733,7 @@ void k_treewidgetsearchlinewidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QPainter*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QPainter* painter)
 void k_treewidgetsearchlinewidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3763,7 +3763,7 @@ QPaintDevice* k_treewidgetsearchlinewidget_qbase_redirected(void* self, void* of
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QPaintDevice* fn(KTreeWidgetSearchLineWidget*, QPoint*)
+/// @param callback QPaintDevice* func(KTreeWidgetSearchLineWidget* self, QPoint* offset)
 void k_treewidgetsearchlinewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3791,7 +3791,7 @@ QPainter* k_treewidgetsearchlinewidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_treewidgetsearchlinewidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3821,7 +3821,7 @@ void k_treewidgetsearchlinewidget_qbase_input_method_event(void* self, void* par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QInputMethodEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QInputMethodEvent* param1)
 void k_treewidgetsearchlinewidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3851,7 +3851,7 @@ QVariant* k_treewidgetsearchlinewidget_qbase_input_method_query(void* self, int6
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QVariant* fn(KTreeWidgetSearchLineWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KTreeWidgetSearchLineWidget* self, enum Qt__InputMethodQuery param1)
 void k_treewidgetsearchlinewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3881,7 +3881,7 @@ bool k_treewidgetsearchlinewidget_qbase_focus_next_prev_child(void* self, bool n
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn(KTreeWidgetSearchLineWidget*, bool)
+/// @param callback bool func(KTreeWidgetSearchLineWidget* self, bool next)
 void k_treewidgetsearchlinewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3913,7 +3913,7 @@ bool k_treewidgetsearchlinewidget_qbase_event_filter(void* self, void* watched, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn(KTreeWidgetSearchLineWidget*, QObject*, QEvent*)
+/// @param callback bool func(KTreeWidgetSearchLineWidget* self, QObject* watched, QEvent* event)
 void k_treewidgetsearchlinewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3943,7 +3943,7 @@ void k_treewidgetsearchlinewidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QTimerEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QTimerEvent* event)
 void k_treewidgetsearchlinewidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3973,7 +3973,7 @@ void k_treewidgetsearchlinewidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QChildEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QChildEvent* event)
 void k_treewidgetsearchlinewidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4003,7 +4003,7 @@ void k_treewidgetsearchlinewidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QEvent*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QEvent* event)
 void k_treewidgetsearchlinewidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4033,7 +4033,7 @@ void k_treewidgetsearchlinewidget_qbase_connect_notify(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMetaMethod*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMetaMethod* signal)
 void k_treewidgetsearchlinewidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4063,7 +4063,7 @@ void k_treewidgetsearchlinewidget_qbase_disconnect_notify(void* self, void* sign
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, QMetaMethod*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, QMetaMethod* signal)
 void k_treewidgetsearchlinewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4091,7 +4091,7 @@ void k_treewidgetsearchlinewidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_treewidgetsearchlinewidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4119,7 +4119,7 @@ void k_treewidgetsearchlinewidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_treewidgetsearchlinewidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4147,7 +4147,7 @@ void k_treewidgetsearchlinewidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_treewidgetsearchlinewidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4175,7 +4175,7 @@ bool k_treewidgetsearchlinewidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_treewidgetsearchlinewidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4203,7 +4203,7 @@ bool k_treewidgetsearchlinewidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_treewidgetsearchlinewidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4231,7 +4231,7 @@ QObject* k_treewidgetsearchlinewidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_treewidgetsearchlinewidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4259,7 +4259,7 @@ int32_t k_treewidgetsearchlinewidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_treewidgetsearchlinewidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4289,7 +4289,7 @@ int32_t k_treewidgetsearchlinewidget_qbase_receivers(void* self, const char* sig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback int32_t fn(KTreeWidgetSearchLineWidget*, const char*)
+/// @param callback int32_t func(KTreeWidgetSearchLineWidget* self, const char* signal)
 void k_treewidgetsearchlinewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4319,7 +4319,7 @@ bool k_treewidgetsearchlinewidget_qbase_is_signal_connected(void* self, void* si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback bool fn(KTreeWidgetSearchLineWidget*, QMetaMethod*)
+/// @param callback bool func(KTreeWidgetSearchLineWidget* self, QMetaMethod* signal)
 void k_treewidgetsearchlinewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4351,7 +4351,7 @@ double k_treewidgetsearchlinewidget_qbase_get_decoded_metric_f(void* self, int32
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback double fn(KTreeWidgetSearchLineWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KTreeWidgetSearchLineWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_treewidgetsearchlinewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4361,7 +4361,7 @@ void k_treewidgetsearchlinewidget_on_get_decoded_metric_f(void* self, double (*c
 /// Wrapper to allow calling private signal
 ///
 /// @param self KTreeWidgetSearchLineWidget*
-/// @param callback void fn(KTreeWidgetSearchLineWidget*, const char*)
+/// @param callback void func(KTreeWidgetSearchLineWidget* self, const char* objectName)
 void k_treewidgetsearchlinewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#dtor.KTreeWidgetSearchLineWidget)

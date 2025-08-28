@@ -284,7 +284,7 @@ int32_t q_graphicsgridlayout_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicsgridlayout_on_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#count)
@@ -305,7 +305,7 @@ QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback QGraphicsLayoutItem* fn(QGraphicsGridLayout*, int)
+/// @param callback QGraphicsLayoutItem* func(QGraphicsGridLayout* self, int index)
 void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
@@ -327,7 +327,7 @@ void q_graphicsgridlayout_remove_at(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, int)
+/// @param callback void func(QGraphicsGridLayout* self, int index)
 void q_graphicsgridlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#removeAt)
@@ -354,7 +354,7 @@ void q_graphicsgridlayout_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicsgridlayout_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#invalidate)
@@ -375,7 +375,7 @@ void q_graphicsgridlayout_set_geometry(void* self, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, QRectF*)
+/// @param callback void func(QGraphicsGridLayout* self, QRectF* rect)
 void q_graphicsgridlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setGeometry)
@@ -398,7 +398,7 @@ QSizeF* q_graphicsgridlayout_size_hint(void* self, int32_t which, void* constrai
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback QSizeF* fn(QGraphicsGridLayout*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QGraphicsGridLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_graphicsgridlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
@@ -764,7 +764,7 @@ void q_graphicsgridlayout_qbase_get_contents_margins(void* self, double* left, d
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, double*, double*, double*, double*)
+/// @param callback void func(QGraphicsGridLayout* self, double* left, double* top, double* right, double* bottom)
 void q_graphicsgridlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
@@ -792,7 +792,7 @@ void q_graphicsgridlayout_qbase_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicsgridlayout_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayout
@@ -822,7 +822,7 @@ void q_graphicsgridlayout_qbase_widget_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, QEvent*)
+/// @param callback void func(QGraphicsGridLayout* self, QEvent* e)
 void q_graphicsgridlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -850,7 +850,7 @@ bool q_graphicsgridlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_graphicsgridlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsLayout
@@ -880,7 +880,7 @@ void q_graphicsgridlayout_qbase_add_child_layout_item(void* self, void* layoutIt
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, QGraphicsLayoutItem*)
+/// @param callback void func(QGraphicsGridLayout* self, QGraphicsLayoutItem* layoutItem)
 void q_graphicsgridlayout_on_add_child_layout_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -910,7 +910,7 @@ void q_graphicsgridlayout_qbase_set_graphics_item(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, QGraphicsItem*)
+/// @param callback void func(QGraphicsGridLayout* self, QGraphicsItem* item)
 void q_graphicsgridlayout_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -940,7 +940,7 @@ void q_graphicsgridlayout_qbase_set_owned_by_layout(void* self, bool ownedByLayo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void fn(QGraphicsGridLayout*, bool)
+/// @param callback void func(QGraphicsGridLayout* self, bool ownedByLayout)
 void q_graphicsgridlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#dtor.QGraphicsGridLayout)

@@ -40,7 +40,7 @@ int32_t q_fileselector_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSelector*
-/// @param callback int32_t fn(QFileSelector*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QFileSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_fileselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -335,7 +335,7 @@ void q_fileselector_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*)
+/// @param callback void func(QFileSelector* self)
 void q_fileselector_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -413,7 +413,7 @@ void q_fileselector_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, QObject*)
+/// @param callback void func(QFileSelector* self, QObject* param1)
 void q_fileselector_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -443,7 +443,7 @@ bool q_fileselector_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback bool fn(QFileSelector*, QEvent*)
+/// @param callback bool func(QFileSelector* self, QEvent* event)
 void q_fileselector_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -475,7 +475,7 @@ bool q_fileselector_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback bool fn(QFileSelector*, QObject*, QEvent*)
+/// @param callback bool func(QFileSelector* self, QObject* watched, QEvent* event)
 void q_fileselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -505,7 +505,7 @@ void q_fileselector_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, QTimerEvent*)
+/// @param callback void func(QFileSelector* self, QTimerEvent* event)
 void q_fileselector_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -535,7 +535,7 @@ void q_fileselector_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, QChildEvent*)
+/// @param callback void func(QFileSelector* self, QChildEvent* event)
 void q_fileselector_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -565,7 +565,7 @@ void q_fileselector_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, QEvent*)
+/// @param callback void func(QFileSelector* self, QEvent* event)
 void q_fileselector_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -595,7 +595,7 @@ void q_fileselector_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, QMetaMethod*)
+/// @param callback void func(QFileSelector* self, QMetaMethod* signal)
 void q_fileselector_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -625,7 +625,7 @@ void q_fileselector_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, QMetaMethod*)
+/// @param callback void func(QFileSelector* self, QMetaMethod* signal)
 void q_fileselector_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -653,7 +653,7 @@ QObject* q_fileselector_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_fileselector_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -681,7 +681,7 @@ int32_t q_fileselector_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_fileselector_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -711,7 +711,7 @@ int32_t q_fileselector_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback int32_t fn(QFileSelector*, const char*)
+/// @param callback int32_t func(QFileSelector* self, const char* signal)
 void q_fileselector_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -741,7 +741,7 @@ bool q_fileselector_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSelector*
-/// @param callback bool fn(QFileSelector*, QMetaMethod*)
+/// @param callback bool func(QFileSelector* self, QMetaMethod* signal)
 void q_fileselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -751,7 +751,7 @@ void q_fileselector_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSelector*
-/// @param callback void fn(QFileSelector*, const char*)
+/// @param callback void func(QFileSelector* self, const char* objectName)
 void q_fileselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileselector.html#dtor.QFileSelector)

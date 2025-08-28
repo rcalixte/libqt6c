@@ -36,7 +36,7 @@ int32_t q_ambientsound_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QAmbientSound*
-/// @param callback int32_t fn(QAmbientSound*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAmbientSound* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_ambientsound_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -111,7 +111,7 @@ void q_ambientsound_source_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#sourceChanged)
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*)
+/// @param callback void func(QAmbientSound* self)
 void q_ambientsound_on_source_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#loopsChanged)
@@ -122,7 +122,7 @@ void q_ambientsound_loops_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#loopsChanged)
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*)
+/// @param callback void func(QAmbientSound* self)
 void q_ambientsound_on_loops_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#autoPlayChanged)
@@ -133,7 +133,7 @@ void q_ambientsound_auto_play_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#autoPlayChanged)
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*)
+/// @param callback void func(QAmbientSound* self)
 void q_ambientsound_on_auto_play_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#volumeChanged)
@@ -144,7 +144,7 @@ void q_ambientsound_volume_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#volumeChanged)
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*)
+/// @param callback void func(QAmbientSound* self)
 void q_ambientsound_on_volume_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#play)
@@ -405,7 +405,7 @@ void q_ambientsound_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*)
+/// @param callback void func(QAmbientSound* self)
 void q_ambientsound_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -483,7 +483,7 @@ void q_ambientsound_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, QObject*)
+/// @param callback void func(QAmbientSound* self, QObject* param1)
 void q_ambientsound_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -513,7 +513,7 @@ bool q_ambientsound_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback bool fn(QAmbientSound*, QEvent*)
+/// @param callback bool func(QAmbientSound* self, QEvent* event)
 void q_ambientsound_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -545,7 +545,7 @@ bool q_ambientsound_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback bool fn(QAmbientSound*, QObject*, QEvent*)
+/// @param callback bool func(QAmbientSound* self, QObject* watched, QEvent* event)
 void q_ambientsound_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -575,7 +575,7 @@ void q_ambientsound_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, QTimerEvent*)
+/// @param callback void func(QAmbientSound* self, QTimerEvent* event)
 void q_ambientsound_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -605,7 +605,7 @@ void q_ambientsound_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, QChildEvent*)
+/// @param callback void func(QAmbientSound* self, QChildEvent* event)
 void q_ambientsound_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -635,7 +635,7 @@ void q_ambientsound_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, QEvent*)
+/// @param callback void func(QAmbientSound* self, QEvent* event)
 void q_ambientsound_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -665,7 +665,7 @@ void q_ambientsound_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, QMetaMethod*)
+/// @param callback void func(QAmbientSound* self, QMetaMethod* signal)
 void q_ambientsound_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -695,7 +695,7 @@ void q_ambientsound_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, QMetaMethod*)
+/// @param callback void func(QAmbientSound* self, QMetaMethod* signal)
 void q_ambientsound_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -723,7 +723,7 @@ QObject* q_ambientsound_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_ambientsound_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -751,7 +751,7 @@ int32_t q_ambientsound_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_ambientsound_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -781,7 +781,7 @@ int32_t q_ambientsound_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback int32_t fn(QAmbientSound*, const char*)
+/// @param callback int32_t func(QAmbientSound* self, const char* signal)
 void q_ambientsound_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -811,7 +811,7 @@ bool q_ambientsound_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAmbientSound*
-/// @param callback bool fn(QAmbientSound*, QMetaMethod*)
+/// @param callback bool func(QAmbientSound* self, QMetaMethod* signal)
 void q_ambientsound_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -821,7 +821,7 @@ void q_ambientsound_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAmbientSound*
-/// @param callback void fn(QAmbientSound*, const char*)
+/// @param callback void func(QAmbientSound* self, const char* objectName)
 void q_ambientsound_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qambientsound.html#dtor.QAmbientSound)

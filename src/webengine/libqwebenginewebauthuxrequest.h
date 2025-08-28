@@ -77,7 +77,7 @@ void q_webenginewebauthuxrequest_state_changed(void* self, int32_t state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#stateChanged)
 ///
 /// @param self QWebEngineWebAuthUxRequest*
-/// @param callback void fn(QWebEngineWebAuthUxRequest*, enum QWebEngineWebAuthUxRequest__WebAuthUxState)
+/// @param callback void func(QWebEngineWebAuthUxRequest* self, enum QWebEngineWebAuthUxRequest__WebAuthUxState state)
 void q_webenginewebauthuxrequest_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#cancel)
@@ -362,7 +362,7 @@ void q_webenginewebauthuxrequest_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineWebAuthUxRequest*
-/// @param callback void fn(QWebEngineWebAuthUxRequest*)
+/// @param callback void func(QWebEngineWebAuthUxRequest* self)
 void q_webenginewebauthuxrequest_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -440,7 +440,7 @@ void q_webenginewebauthuxrequest_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineWebAuthUxRequest*
-/// @param callback void fn(QWebEngineWebAuthUxRequest*, QObject*)
+/// @param callback void func(QWebEngineWebAuthUxRequest* self, QObject* param1)
 void q_webenginewebauthuxrequest_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -450,7 +450,7 @@ void q_webenginewebauthuxrequest_on_destroyed1(void* self, void (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineWebAuthUxRequest*
-/// @param callback void fn(QWebEngineWebAuthUxRequest*, const char*)
+/// @param callback void func(QWebEngineWebAuthUxRequest* self, const char* objectName)
 void q_webenginewebauthuxrequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#dtor.QWebEngineWebAuthUxRequest)

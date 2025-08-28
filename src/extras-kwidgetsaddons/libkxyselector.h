@@ -40,7 +40,7 @@ int32_t k_xyselector_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback int32_t fn(KXYSelector*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KXYSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_xyselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -117,7 +117,7 @@ QSize* k_xyselector_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_xyselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#minimumSizeHint)
@@ -137,7 +137,7 @@ void k_xyselector_value_changed(void* self, int x, int y);
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valueChanged)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, int, int)
+/// @param callback void func(KXYSelector* self, int x, int y)
 void k_xyselector_on_value_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawContents)
@@ -151,7 +151,7 @@ void k_xyselector_draw_contents(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QPainter*)
+/// @param callback void func(KXYSelector* self, QPainter* param1)
 void k_xyselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawContents)
@@ -175,7 +175,7 @@ void k_xyselector_draw_marker(void* self, void* p, int xp, int yp);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QPainter*, int, int)
+/// @param callback void func(KXYSelector* self, QPainter* p, int xp, int yp)
 void k_xyselector_on_draw_marker(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawMarker)
@@ -199,7 +199,7 @@ void k_xyselector_paint_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QPaintEvent*)
+/// @param callback void func(KXYSelector* self, QPaintEvent* e)
 void k_xyselector_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#paintEvent)
@@ -221,7 +221,7 @@ void k_xyselector_mouse_press_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMouseEvent*)
+/// @param callback void func(KXYSelector* self, QMouseEvent* e)
 void k_xyselector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mousePressEvent)
@@ -243,7 +243,7 @@ void k_xyselector_mouse_move_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMouseEvent*)
+/// @param callback void func(KXYSelector* self, QMouseEvent* e)
 void k_xyselector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mouseMoveEvent)
@@ -265,7 +265,7 @@ void k_xyselector_wheel_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QWheelEvent*)
+/// @param callback void func(KXYSelector* self, QWheelEvent* param1)
 void k_xyselector_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#wheelEvent)
@@ -290,7 +290,7 @@ void k_xyselector_values_from_position(void* self, int x, int y, int* xVal, int*
 /// Allows for overriding the related default method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, int, int, int*, int*)
+/// @param callback void func(KXYSelector* self, int x, int y, int* xVal, int* yVal)
 void k_xyselector_on_values_from_position(void* self, void (*callback)(void*, int, int, int*, int*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valuesFromPosition)
@@ -2251,7 +2251,7 @@ void k_xyselector_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, const char*)
+/// @param callback void func(KXYSelector* self, const char* title)
 void k_xyselector_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2267,7 +2267,7 @@ void k_xyselector_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QIcon*)
+/// @param callback void func(KXYSelector* self, QIcon* icon)
 void k_xyselector_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2283,7 +2283,7 @@ void k_xyselector_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, const char*)
+/// @param callback void func(KXYSelector* self, const char* iconText)
 void k_xyselector_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2299,7 +2299,7 @@ void k_xyselector_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QPoint*)
+/// @param callback void func(KXYSelector* self, QPoint* pos)
 void k_xyselector_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2676,7 +2676,7 @@ void k_xyselector_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*)
+/// @param callback void func(KXYSelector* self)
 void k_xyselector_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2754,7 +2754,7 @@ void k_xyselector_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QObject*)
+/// @param callback void func(KXYSelector* self, QObject* param1)
 void k_xyselector_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2873,7 +2873,7 @@ int32_t k_xyselector_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_xyselector_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2903,7 +2903,7 @@ void k_xyselector_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, bool)
+/// @param callback void func(KXYSelector* self, bool visible)
 void k_xyselector_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2931,7 +2931,7 @@ QSize* k_xyselector_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_xyselector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2961,7 +2961,7 @@ int32_t k_xyselector_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback int32_t fn(KXYSelector*, int)
+/// @param callback int32_t func(KXYSelector* self, int param1)
 void k_xyselector_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2989,7 +2989,7 @@ bool k_xyselector_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_xyselector_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3017,7 +3017,7 @@ QPaintEngine* k_xyselector_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_xyselector_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3047,7 +3047,7 @@ bool k_xyselector_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn(KXYSelector*, QEvent*)
+/// @param callback bool func(KXYSelector* self, QEvent* event)
 void k_xyselector_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3077,7 +3077,7 @@ void k_xyselector_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMouseEvent*)
+/// @param callback void func(KXYSelector* self, QMouseEvent* event)
 void k_xyselector_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3107,7 +3107,7 @@ void k_xyselector_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMouseEvent*)
+/// @param callback void func(KXYSelector* self, QMouseEvent* event)
 void k_xyselector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void k_xyselector_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QKeyEvent*)
+/// @param callback void func(KXYSelector* self, QKeyEvent* event)
 void k_xyselector_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3167,7 +3167,7 @@ void k_xyselector_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QKeyEvent*)
+/// @param callback void func(KXYSelector* self, QKeyEvent* event)
 void k_xyselector_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3197,7 +3197,7 @@ void k_xyselector_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QFocusEvent*)
+/// @param callback void func(KXYSelector* self, QFocusEvent* event)
 void k_xyselector_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3227,7 +3227,7 @@ void k_xyselector_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QFocusEvent*)
+/// @param callback void func(KXYSelector* self, QFocusEvent* event)
 void k_xyselector_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3257,7 +3257,7 @@ void k_xyselector_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QEnterEvent*)
+/// @param callback void func(KXYSelector* self, QEnterEvent* event)
 void k_xyselector_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3287,7 +3287,7 @@ void k_xyselector_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QEvent*)
+/// @param callback void func(KXYSelector* self, QEvent* event)
 void k_xyselector_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3317,7 +3317,7 @@ void k_xyselector_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMoveEvent*)
+/// @param callback void func(KXYSelector* self, QMoveEvent* event)
 void k_xyselector_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3347,7 +3347,7 @@ void k_xyselector_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QResizeEvent*)
+/// @param callback void func(KXYSelector* self, QResizeEvent* event)
 void k_xyselector_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3377,7 +3377,7 @@ void k_xyselector_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QCloseEvent*)
+/// @param callback void func(KXYSelector* self, QCloseEvent* event)
 void k_xyselector_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3407,7 +3407,7 @@ void k_xyselector_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QContextMenuEvent*)
+/// @param callback void func(KXYSelector* self, QContextMenuEvent* event)
 void k_xyselector_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3437,7 +3437,7 @@ void k_xyselector_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QTabletEvent*)
+/// @param callback void func(KXYSelector* self, QTabletEvent* event)
 void k_xyselector_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ void k_xyselector_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QActionEvent*)
+/// @param callback void func(KXYSelector* self, QActionEvent* event)
 void k_xyselector_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void k_xyselector_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QDragEnterEvent*)
+/// @param callback void func(KXYSelector* self, QDragEnterEvent* event)
 void k_xyselector_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void k_xyselector_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QDragMoveEvent*)
+/// @param callback void func(KXYSelector* self, QDragMoveEvent* event)
 void k_xyselector_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void k_xyselector_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QDragLeaveEvent*)
+/// @param callback void func(KXYSelector* self, QDragLeaveEvent* event)
 void k_xyselector_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3587,7 +3587,7 @@ void k_xyselector_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QDropEvent*)
+/// @param callback void func(KXYSelector* self, QDropEvent* event)
 void k_xyselector_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3617,7 +3617,7 @@ void k_xyselector_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QShowEvent*)
+/// @param callback void func(KXYSelector* self, QShowEvent* event)
 void k_xyselector_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3647,7 +3647,7 @@ void k_xyselector_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QHideEvent*)
+/// @param callback void func(KXYSelector* self, QHideEvent* event)
 void k_xyselector_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3681,7 +3681,7 @@ bool k_xyselector_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn(KXYSelector*, const char*, void*, intptr_t*)
+/// @param callback bool func(KXYSelector* self, const char* eventType, void* message, intptr_t* result)
 void k_xyselector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3711,7 +3711,7 @@ void k_xyselector_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QEvent*)
+/// @param callback void func(KXYSelector* self, QEvent* param1)
 void k_xyselector_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3741,7 +3741,7 @@ int32_t k_xyselector_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback int32_t fn(KXYSelector*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KXYSelector* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_xyselector_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3771,7 +3771,7 @@ void k_xyselector_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QPainter*)
+/// @param callback void func(KXYSelector* self, QPainter* painter)
 void k_xyselector_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3801,7 +3801,7 @@ QPaintDevice* k_xyselector_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback QPaintDevice* fn(KXYSelector*, QPoint*)
+/// @param callback QPaintDevice* func(KXYSelector* self, QPoint* offset)
 void k_xyselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3829,7 +3829,7 @@ QPainter* k_xyselector_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_xyselector_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3859,7 +3859,7 @@ void k_xyselector_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QInputMethodEvent*)
+/// @param callback void func(KXYSelector* self, QInputMethodEvent* param1)
 void k_xyselector_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3889,7 +3889,7 @@ QVariant* k_xyselector_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback QVariant* fn(KXYSelector*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KXYSelector* self, enum Qt__InputMethodQuery param1)
 void k_xyselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3919,7 +3919,7 @@ bool k_xyselector_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn(KXYSelector*, bool)
+/// @param callback bool func(KXYSelector* self, bool next)
 void k_xyselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3951,7 +3951,7 @@ bool k_xyselector_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn(KXYSelector*, QObject*, QEvent*)
+/// @param callback bool func(KXYSelector* self, QObject* watched, QEvent* event)
 void k_xyselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3981,7 +3981,7 @@ void k_xyselector_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QTimerEvent*)
+/// @param callback void func(KXYSelector* self, QTimerEvent* event)
 void k_xyselector_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4011,7 +4011,7 @@ void k_xyselector_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QChildEvent*)
+/// @param callback void func(KXYSelector* self, QChildEvent* event)
 void k_xyselector_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4041,7 +4041,7 @@ void k_xyselector_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QEvent*)
+/// @param callback void func(KXYSelector* self, QEvent* event)
 void k_xyselector_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4071,7 +4071,7 @@ void k_xyselector_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMetaMethod*)
+/// @param callback void func(KXYSelector* self, QMetaMethod* signal)
 void k_xyselector_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4101,7 +4101,7 @@ void k_xyselector_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, QMetaMethod*)
+/// @param callback void func(KXYSelector* self, QMetaMethod* signal)
 void k_xyselector_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4129,7 +4129,7 @@ void k_xyselector_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_xyselector_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4157,7 +4157,7 @@ void k_xyselector_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_xyselector_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4185,7 +4185,7 @@ void k_xyselector_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_xyselector_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4213,7 +4213,7 @@ bool k_xyselector_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_xyselector_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4241,7 +4241,7 @@ bool k_xyselector_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_xyselector_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4269,7 +4269,7 @@ QObject* k_xyselector_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_xyselector_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4297,7 +4297,7 @@ int32_t k_xyselector_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_xyselector_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4327,7 +4327,7 @@ int32_t k_xyselector_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback int32_t fn(KXYSelector*, const char*)
+/// @param callback int32_t func(KXYSelector* self, const char* signal)
 void k_xyselector_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4357,7 +4357,7 @@ bool k_xyselector_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback bool fn(KXYSelector*, QMetaMethod*)
+/// @param callback bool func(KXYSelector* self, QMetaMethod* signal)
 void k_xyselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4389,7 +4389,7 @@ double k_xyselector_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KXYSelector*
-/// @param callback double fn(KXYSelector*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KXYSelector* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_xyselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4399,7 +4399,7 @@ void k_xyselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KXYSelector*
-/// @param callback void fn(KXYSelector*, const char*)
+/// @param callback void func(KXYSelector* self, const char* objectName)
 void k_xyselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kxyselector.html#dtor.KXYSelector)

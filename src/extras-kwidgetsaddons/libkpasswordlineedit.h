@@ -40,7 +40,7 @@ int32_t k_passwordlineedit_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback int32_t fn(KPasswordLineEdit*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPasswordLineEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_passwordlineedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -154,7 +154,7 @@ void k_passwordlineedit_echo_mode_changed(void* self, int32_t echoMode);
 /// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#echoModeChanged)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, enum QLineEdit__EchoMode)
+/// @param callback void func(KPasswordLineEdit* self, enum QLineEdit__EchoMode echoMode)
 void k_passwordlineedit_on_echo_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#passwordChanged)
@@ -166,7 +166,7 @@ void k_passwordlineedit_password_changed(void* self, const char* password);
 /// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#passwordChanged)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, const char*)
+/// @param callback void func(KPasswordLineEdit* self, const char* password)
 void k_passwordlineedit_on_password_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -2123,7 +2123,7 @@ void k_passwordlineedit_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, const char*)
+/// @param callback void func(KPasswordLineEdit* self, const char* title)
 void k_passwordlineedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2139,7 +2139,7 @@ void k_passwordlineedit_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QIcon*)
+/// @param callback void func(KPasswordLineEdit* self, QIcon* icon)
 void k_passwordlineedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2155,7 +2155,7 @@ void k_passwordlineedit_window_icon_text_changed(void* self, const char* iconTex
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, const char*)
+/// @param callback void func(KPasswordLineEdit* self, const char* iconText)
 void k_passwordlineedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2171,7 +2171,7 @@ void k_passwordlineedit_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QPoint*)
+/// @param callback void func(KPasswordLineEdit* self, QPoint* pos)
 void k_passwordlineedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2548,7 +2548,7 @@ void k_passwordlineedit_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*)
+/// @param callback void func(KPasswordLineEdit* self)
 void k_passwordlineedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2626,7 +2626,7 @@ void k_passwordlineedit_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QObject*)
+/// @param callback void func(KPasswordLineEdit* self, QObject* param1)
 void k_passwordlineedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2745,7 +2745,7 @@ int32_t k_passwordlineedit_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_passwordlineedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2775,7 +2775,7 @@ void k_passwordlineedit_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, bool)
+/// @param callback void func(KPasswordLineEdit* self, bool visible)
 void k_passwordlineedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2803,7 +2803,7 @@ QSize* k_passwordlineedit_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_passwordlineedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2831,7 +2831,7 @@ QSize* k_passwordlineedit_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_passwordlineedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2861,7 +2861,7 @@ int32_t k_passwordlineedit_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback int32_t fn(KPasswordLineEdit*, int)
+/// @param callback int32_t func(KPasswordLineEdit* self, int param1)
 void k_passwordlineedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2889,7 +2889,7 @@ bool k_passwordlineedit_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passwordlineedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2917,7 +2917,7 @@ QPaintEngine* k_passwordlineedit_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_passwordlineedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2947,7 +2947,7 @@ bool k_passwordlineedit_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn(KPasswordLineEdit*, QEvent*)
+/// @param callback bool func(KPasswordLineEdit* self, QEvent* event)
 void k_passwordlineedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2977,7 +2977,7 @@ void k_passwordlineedit_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMouseEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QMouseEvent* event)
 void k_passwordlineedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3007,7 +3007,7 @@ void k_passwordlineedit_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMouseEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QMouseEvent* event)
 void k_passwordlineedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3037,7 +3037,7 @@ void k_passwordlineedit_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMouseEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QMouseEvent* event)
 void k_passwordlineedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3067,7 +3067,7 @@ void k_passwordlineedit_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMouseEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QMouseEvent* event)
 void k_passwordlineedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3097,7 +3097,7 @@ void k_passwordlineedit_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QWheelEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QWheelEvent* event)
 void k_passwordlineedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3127,7 +3127,7 @@ void k_passwordlineedit_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QKeyEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QKeyEvent* event)
 void k_passwordlineedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3157,7 +3157,7 @@ void k_passwordlineedit_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QKeyEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QKeyEvent* event)
 void k_passwordlineedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3187,7 +3187,7 @@ void k_passwordlineedit_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QFocusEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QFocusEvent* event)
 void k_passwordlineedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3217,7 +3217,7 @@ void k_passwordlineedit_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QFocusEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QFocusEvent* event)
 void k_passwordlineedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3247,7 +3247,7 @@ void k_passwordlineedit_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QEnterEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QEnterEvent* event)
 void k_passwordlineedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3277,7 +3277,7 @@ void k_passwordlineedit_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QEvent* event)
 void k_passwordlineedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3307,7 +3307,7 @@ void k_passwordlineedit_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QPaintEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QPaintEvent* event)
 void k_passwordlineedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3337,7 +3337,7 @@ void k_passwordlineedit_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMoveEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QMoveEvent* event)
 void k_passwordlineedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3367,7 +3367,7 @@ void k_passwordlineedit_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QResizeEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QResizeEvent* event)
 void k_passwordlineedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3397,7 +3397,7 @@ void k_passwordlineedit_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QCloseEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QCloseEvent* event)
 void k_passwordlineedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3427,7 +3427,7 @@ void k_passwordlineedit_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QContextMenuEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QContextMenuEvent* event)
 void k_passwordlineedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3457,7 +3457,7 @@ void k_passwordlineedit_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QTabletEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QTabletEvent* event)
 void k_passwordlineedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3487,7 +3487,7 @@ void k_passwordlineedit_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QActionEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QActionEvent* event)
 void k_passwordlineedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3517,7 +3517,7 @@ void k_passwordlineedit_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QDragEnterEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QDragEnterEvent* event)
 void k_passwordlineedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3547,7 +3547,7 @@ void k_passwordlineedit_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QDragMoveEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QDragMoveEvent* event)
 void k_passwordlineedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3577,7 +3577,7 @@ void k_passwordlineedit_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QDragLeaveEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QDragLeaveEvent* event)
 void k_passwordlineedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3607,7 +3607,7 @@ void k_passwordlineedit_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QDropEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QDropEvent* event)
 void k_passwordlineedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3637,7 +3637,7 @@ void k_passwordlineedit_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QShowEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QShowEvent* event)
 void k_passwordlineedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3667,7 +3667,7 @@ void k_passwordlineedit_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QHideEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QHideEvent* event)
 void k_passwordlineedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3701,7 +3701,7 @@ bool k_passwordlineedit_qbase_native_event(void* self, const char* eventType, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn(KPasswordLineEdit*, const char*, void*, intptr_t*)
+/// @param callback bool func(KPasswordLineEdit* self, const char* eventType, void* message, intptr_t* result)
 void k_passwordlineedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3731,7 +3731,7 @@ void k_passwordlineedit_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QEvent* param1)
 void k_passwordlineedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3761,7 +3761,7 @@ int32_t k_passwordlineedit_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback int32_t fn(KPasswordLineEdit*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KPasswordLineEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_passwordlineedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3791,7 +3791,7 @@ void k_passwordlineedit_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QPainter*)
+/// @param callback void func(KPasswordLineEdit* self, QPainter* painter)
 void k_passwordlineedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3821,7 +3821,7 @@ QPaintDevice* k_passwordlineedit_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QPaintDevice* fn(KPasswordLineEdit*, QPoint*)
+/// @param callback QPaintDevice* func(KPasswordLineEdit* self, QPoint* offset)
 void k_passwordlineedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3849,7 +3849,7 @@ QPainter* k_passwordlineedit_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_passwordlineedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3879,7 +3879,7 @@ void k_passwordlineedit_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QInputMethodEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QInputMethodEvent* param1)
 void k_passwordlineedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3909,7 +3909,7 @@ QVariant* k_passwordlineedit_qbase_input_method_query(void* self, int64_t param1
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QVariant* fn(KPasswordLineEdit*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KPasswordLineEdit* self, enum Qt__InputMethodQuery param1)
 void k_passwordlineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3939,7 +3939,7 @@ bool k_passwordlineedit_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn(KPasswordLineEdit*, bool)
+/// @param callback bool func(KPasswordLineEdit* self, bool next)
 void k_passwordlineedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3971,7 +3971,7 @@ bool k_passwordlineedit_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn(KPasswordLineEdit*, QObject*, QEvent*)
+/// @param callback bool func(KPasswordLineEdit* self, QObject* watched, QEvent* event)
 void k_passwordlineedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4001,7 +4001,7 @@ void k_passwordlineedit_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QTimerEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QTimerEvent* event)
 void k_passwordlineedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4031,7 +4031,7 @@ void k_passwordlineedit_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QChildEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QChildEvent* event)
 void k_passwordlineedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4061,7 +4061,7 @@ void k_passwordlineedit_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QEvent*)
+/// @param callback void func(KPasswordLineEdit* self, QEvent* event)
 void k_passwordlineedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4091,7 +4091,7 @@ void k_passwordlineedit_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMetaMethod*)
+/// @param callback void func(KPasswordLineEdit* self, QMetaMethod* signal)
 void k_passwordlineedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4121,7 +4121,7 @@ void k_passwordlineedit_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, QMetaMethod*)
+/// @param callback void func(KPasswordLineEdit* self, QMetaMethod* signal)
 void k_passwordlineedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4149,7 +4149,7 @@ void k_passwordlineedit_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passwordlineedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4177,7 +4177,7 @@ void k_passwordlineedit_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passwordlineedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4205,7 +4205,7 @@ void k_passwordlineedit_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passwordlineedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4233,7 +4233,7 @@ bool k_passwordlineedit_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passwordlineedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4261,7 +4261,7 @@ bool k_passwordlineedit_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passwordlineedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4289,7 +4289,7 @@ QObject* k_passwordlineedit_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_passwordlineedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4317,7 +4317,7 @@ int32_t k_passwordlineedit_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_passwordlineedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4347,7 +4347,7 @@ int32_t k_passwordlineedit_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback int32_t fn(KPasswordLineEdit*, const char*)
+/// @param callback int32_t func(KPasswordLineEdit* self, const char* signal)
 void k_passwordlineedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4377,7 +4377,7 @@ bool k_passwordlineedit_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback bool fn(KPasswordLineEdit*, QMetaMethod*)
+/// @param callback bool func(KPasswordLineEdit* self, QMetaMethod* signal)
 void k_passwordlineedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4409,7 +4409,7 @@ double k_passwordlineedit_qbase_get_decoded_metric_f(void* self, int32_t metricA
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback double fn(KPasswordLineEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KPasswordLineEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_passwordlineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4419,7 +4419,7 @@ void k_passwordlineedit_on_get_decoded_metric_f(void* self, double (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPasswordLineEdit*
-/// @param callback void fn(KPasswordLineEdit*, const char*)
+/// @param callback void func(KPasswordLineEdit* self, const char* objectName)
 void k_passwordlineedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#dtor.KPasswordLineEdit)

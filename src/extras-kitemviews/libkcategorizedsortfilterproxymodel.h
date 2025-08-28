@@ -40,7 +40,7 @@ int32_t k_categorizedsortfilterproxymodel_metacall(void* self, int32_t param1, i
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int32_t fn(KCategorizedSortFilterProxyModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_categorizedsortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ void k_categorizedsortfilterproxymodel_sort(void* self, int column, int32_t orde
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, int, enum Qt__SortOrder)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, int column, enum Qt__SortOrder order)
 void k_categorizedsortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sort)
@@ -128,7 +128,7 @@ bool k_categorizedsortfilterproxymodel_less_than(void* self, void* left, void* r
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
@@ -152,7 +152,7 @@ bool k_categorizedsortfilterproxymodel_sub_sort_less_than(void* self, void* left
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
@@ -176,7 +176,7 @@ int32_t k_categorizedsortfilterproxymodel_compare_categories(void* self, void* l
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int32_t fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelIndex*)
+/// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
@@ -403,7 +403,7 @@ void k_categorizedsortfilterproxymodel_dynamic_sort_filter_changed(void* self, b
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, bool)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, bool dynamicSortFilter)
 void k_categorizedsortfilterproxymodel_on_dynamic_sort_filter_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QSortFilterProxyModel
@@ -419,7 +419,7 @@ void k_categorizedsortfilterproxymodel_filter_case_sensitivity_changed(void* sel
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, enum Qt__CaseSensitivity)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, enum Qt__CaseSensitivity filterCaseSensitivity)
 void k_categorizedsortfilterproxymodel_on_filter_case_sensitivity_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QSortFilterProxyModel
@@ -435,7 +435,7 @@ void k_categorizedsortfilterproxymodel_sort_case_sensitivity_changed(void* self,
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, enum Qt__CaseSensitivity)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, enum Qt__CaseSensitivity sortCaseSensitivity)
 void k_categorizedsortfilterproxymodel_on_sort_case_sensitivity_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QSortFilterProxyModel
@@ -451,7 +451,7 @@ void k_categorizedsortfilterproxymodel_sort_locale_aware_changed(void* self, boo
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, bool)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, bool sortLocaleAware)
 void k_categorizedsortfilterproxymodel_on_sort_locale_aware_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QSortFilterProxyModel
@@ -467,7 +467,7 @@ void k_categorizedsortfilterproxymodel_sort_role_changed(void* self, int sortRol
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRoleChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, int sortRole)
 void k_categorizedsortfilterproxymodel_on_sort_role_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -483,7 +483,7 @@ void k_categorizedsortfilterproxymodel_filter_role_changed(void* self, int filte
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRoleChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, int filterRole)
 void k_categorizedsortfilterproxymodel_on_filter_role_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -499,7 +499,7 @@ void k_categorizedsortfilterproxymodel_recursive_filtering_enabled_changed(void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, bool)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, bool recursiveFilteringEnabled)
 void k_categorizedsortfilterproxymodel_on_recursive_filtering_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QSortFilterProxyModel
@@ -515,7 +515,7 @@ void k_categorizedsortfilterproxymodel_auto_accept_child_rows_changed(void* self
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRowsChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, bool)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, bool autoAcceptChildRows)
 void k_categorizedsortfilterproxymodel_on_auto_accept_child_rows_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractProxyModel
@@ -610,7 +610,7 @@ void k_categorizedsortfilterproxymodel_data_changed(void* self, void* topLeft, v
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void k_categorizedsortfilterproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -628,7 +628,7 @@ void k_categorizedsortfilterproxymodel_header_data_changed(void* self, int32_t o
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, enum Qt__Orientation orientation, int first, int last)
 void k_categorizedsortfilterproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -643,7 +643,7 @@ void k_categorizedsortfilterproxymodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self)
 void k_categorizedsortfilterproxymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -658,7 +658,7 @@ void k_categorizedsortfilterproxymodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self)
 void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -731,7 +731,7 @@ void k_categorizedsortfilterproxymodel_data_changed3(void* self, void* topLeft, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void k_categorizedsortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -747,7 +747,7 @@ void k_categorizedsortfilterproxymodel_layout_changed1(void* self, libqt_list pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void k_categorizedsortfilterproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -764,7 +764,7 @@ void k_categorizedsortfilterproxymodel_layout_changed2(void* self, libqt_list pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void k_categorizedsortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -780,7 +780,7 @@ void k_categorizedsortfilterproxymodel_layout_about_to_be_changed1(void* self, l
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -797,7 +797,7 @@ void k_categorizedsortfilterproxymodel_layout_about_to_be_changed2(void* self, l
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void k_categorizedsortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -1026,7 +1026,7 @@ void k_categorizedsortfilterproxymodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self)
 void k_categorizedsortfilterproxymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1097,7 +1097,7 @@ void k_categorizedsortfilterproxymodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QObject*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QObject* param1)
 void k_categorizedsortfilterproxymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1127,7 +1127,7 @@ void k_categorizedsortfilterproxymodel_qbase_set_source_model(void* self, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QAbstractItemModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QAbstractItemModel* sourceModel)
 void k_categorizedsortfilterproxymodel_on_set_source_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1157,7 +1157,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_map_to_source(void* self, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* proxyIndex)
 void k_categorizedsortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1187,7 +1187,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_map_from_source(void* self,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceIndex)
 void k_categorizedsortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1217,7 +1217,7 @@ QItemSelection* k_categorizedsortfilterproxymodel_qbase_map_selection_to_source(
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QItemSelection* fn(KCategorizedSortFilterProxyModel*, QItemSelection*)
+/// @param callback QItemSelection* func(KCategorizedSortFilterProxyModel* self, QItemSelection* proxySelection)
 void k_categorizedsortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1247,7 +1247,7 @@ QItemSelection* k_categorizedsortfilterproxymodel_qbase_map_selection_from_sourc
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QItemSelection* fn(KCategorizedSortFilterProxyModel*, QItemSelection*)
+/// @param callback QItemSelection* func(KCategorizedSortFilterProxyModel* self, QItemSelection* sourceSelection)
 void k_categorizedsortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1279,7 +1279,7 @@ bool k_categorizedsortfilterproxymodel_qbase_filter_accepts_row(void* self, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int source_row, QModelIndex* source_parent)
 void k_categorizedsortfilterproxymodel_on_filter_accepts_row(void* self, bool (*callback)(void*, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1311,7 +1311,7 @@ bool k_categorizedsortfilterproxymodel_qbase_filter_accepts_column(void* self, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int source_column, QModelIndex* source_parent)
 void k_categorizedsortfilterproxymodel_on_filter_accepts_column(void* self, bool (*callback)(void*, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1345,7 +1345,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_index(void* self, int row, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1375,7 +1375,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_parent(void* self, void* ch
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* child)
 void k_categorizedsortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1409,7 +1409,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_sibling(void* self, int row
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
 void k_categorizedsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1439,7 +1439,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_row_count(void* self, void* pare
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int32_t fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1469,7 +1469,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_column_count(void* self, void* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int32_t fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1499,7 +1499,7 @@ bool k_categorizedsortfilterproxymodel_qbase_has_children(void* self, void* pare
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1531,7 +1531,7 @@ QVariant* k_categorizedsortfilterproxymodel_qbase_data(void* self, void* index, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QVariant* fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int)
+/// @param callback QVariant* func(KCategorizedSortFilterProxyModel* self, QModelIndex* index, int role)
 void k_categorizedsortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -1565,7 +1565,7 @@ bool k_categorizedsortfilterproxymodel_qbase_set_data(void* self, void* index, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* index, QVariant* value, int role)
 void k_categorizedsortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -1599,7 +1599,7 @@ QVariant* k_categorizedsortfilterproxymodel_qbase_header_data(void* self, int se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QVariant* fn(KCategorizedSortFilterProxyModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(KCategorizedSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 void k_categorizedsortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -1635,7 +1635,7 @@ bool k_categorizedsortfilterproxymodel_qbase_set_header_data(void* self, int sec
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void k_categorizedsortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -1665,7 +1665,7 @@ QMimeData* k_categorizedsortfilterproxymodel_qbase_mime_data(void* self, libqt_l
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QMimeData* fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void k_categorizedsortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QSortFilterProxyModel
@@ -1703,7 +1703,7 @@ bool k_categorizedsortfilterproxymodel_qbase_drop_mime_data(void* self, void* da
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1737,7 +1737,7 @@ bool k_categorizedsortfilterproxymodel_qbase_insert_rows(void* self, int row, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int row, int count, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1771,7 +1771,7 @@ bool k_categorizedsortfilterproxymodel_qbase_insert_columns(void* self, int colu
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int column, int count, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1805,7 +1805,7 @@ bool k_categorizedsortfilterproxymodel_qbase_remove_rows(void* self, int row, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int row, int count, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1839,7 +1839,7 @@ bool k_categorizedsortfilterproxymodel_qbase_remove_columns(void* self, int colu
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int column, int count, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1869,7 +1869,7 @@ void k_categorizedsortfilterproxymodel_qbase_fetch_more(void* self, void* parent
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1899,7 +1899,7 @@ bool k_categorizedsortfilterproxymodel_qbase_can_fetch_more(void* self, void* pa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1933,7 +1933,7 @@ int64_t k_categorizedsortfilterproxymodel_qbase_flags(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int64_t fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback int64_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
 void k_categorizedsortfilterproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1963,7 +1963,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_buddy(void* self, void* ind
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
 void k_categorizedsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -2001,7 +2001,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_match(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(KCategorizedSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void k_categorizedsortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QSortFilterProxyModel
@@ -2031,7 +2031,7 @@ QSize* k_categorizedsortfilterproxymodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QSize* fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback QSize* func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
 void k_categorizedsortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -2063,7 +2063,7 @@ const char** k_categorizedsortfilterproxymodel_qbase_mime_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void k_categorizedsortfilterproxymodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QSortFilterProxyModel
@@ -2095,7 +2095,7 @@ int64_t k_categorizedsortfilterproxymodel_qbase_supported_drop_actions(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void k_categorizedsortfilterproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
@@ -2123,7 +2123,7 @@ bool k_categorizedsortfilterproxymodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_categorizedsortfilterproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractProxyModel
@@ -2151,7 +2151,7 @@ void k_categorizedsortfilterproxymodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractProxyModel
@@ -2181,7 +2181,7 @@ libqt_map /* of int to QVariant* */ k_categorizedsortfilterproxymodel_qbase_item
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
 void k_categorizedsortfilterproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2213,7 +2213,7 @@ bool k_categorizedsortfilterproxymodel_qbase_set_item_data(void* self, void* ind
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void k_categorizedsortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractProxyModel
@@ -2243,7 +2243,7 @@ bool k_categorizedsortfilterproxymodel_qbase_clear_item_data(void* self, void* i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
 void k_categorizedsortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2281,7 +2281,7 @@ bool k_categorizedsortfilterproxymodel_qbase_can_drop_mime_data(void* self, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void k_categorizedsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2313,7 +2313,7 @@ int64_t k_categorizedsortfilterproxymodel_qbase_supported_drag_actions(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
@@ -2341,7 +2341,7 @@ libqt_map /* of int to char* */ k_categorizedsortfilterproxymodel_qbase_role_nam
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void k_categorizedsortfilterproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2379,7 +2379,7 @@ bool k_categorizedsortfilterproxymodel_qbase_move_rows(void* self, void* sourceP
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void k_categorizedsortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2417,7 +2417,7 @@ bool k_categorizedsortfilterproxymodel_qbase_move_columns(void* self, void* sour
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void k_categorizedsortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2449,7 +2449,7 @@ void k_categorizedsortfilterproxymodel_qbase_multi_data(void* self, void* index,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void k_categorizedsortfilterproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2477,7 +2477,7 @@ void k_categorizedsortfilterproxymodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2507,7 +2507,7 @@ bool k_categorizedsortfilterproxymodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QEvent*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QEvent* event)
 void k_categorizedsortfilterproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2539,7 +2539,7 @@ bool k_categorizedsortfilterproxymodel_qbase_event_filter(void* self, void* watc
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QObject*, QEvent*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QObject* watched, QEvent* event)
 void k_categorizedsortfilterproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2569,7 +2569,7 @@ void k_categorizedsortfilterproxymodel_qbase_timer_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QTimerEvent*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QTimerEvent* event)
 void k_categorizedsortfilterproxymodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2599,7 +2599,7 @@ void k_categorizedsortfilterproxymodel_qbase_child_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QChildEvent*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QChildEvent* event)
 void k_categorizedsortfilterproxymodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2629,7 +2629,7 @@ void k_categorizedsortfilterproxymodel_qbase_custom_event(void* self, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QEvent*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QEvent* event)
 void k_categorizedsortfilterproxymodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2659,7 +2659,7 @@ void k_categorizedsortfilterproxymodel_qbase_connect_notify(void* self, void* si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QMetaMethod*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QMetaMethod* signal)
 void k_categorizedsortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2689,7 +2689,7 @@ void k_categorizedsortfilterproxymodel_qbase_disconnect_notify(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QMetaMethod*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QMetaMethod* signal)
 void k_categorizedsortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -2717,7 +2717,7 @@ void k_categorizedsortfilterproxymodel_qbase_invalidate_filter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_invalidate_filter(void* self, void (*callback)());
 
 /// Inherited from QSortFilterProxyModel
@@ -2745,7 +2745,7 @@ void k_categorizedsortfilterproxymodel_qbase_invalidate_rows_filter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_invalidate_rows_filter(void* self, void (*callback)());
 
 /// Inherited from QSortFilterProxyModel
@@ -2773,7 +2773,7 @@ void k_categorizedsortfilterproxymodel_qbase_invalidate_columns_filter(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_invalidate_columns_filter(void* self, void (*callback)());
 
 /// Inherited from QAbstractProxyModel
@@ -2807,7 +2807,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_create_source_index(void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, int, int, void*)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int col, void* internalPtr)
 void k_categorizedsortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2839,7 +2839,7 @@ QModelIndex* k_categorizedsortfilterproxymodel_qbase_create_index(void* self, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QModelIndex* fn(KCategorizedSortFilterProxyModel*, int, int)
+/// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int column)
 void k_categorizedsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2871,7 +2871,7 @@ void k_categorizedsortfilterproxymodel_qbase_encode_data(void* self, libqt_list 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void k_categorizedsortfilterproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2907,7 +2907,7 @@ bool k_categorizedsortfilterproxymodel_qbase_decode_data(void* self, int row, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void k_categorizedsortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2941,7 +2941,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_insert_rows(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2969,7 +2969,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3003,7 +3003,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_remove_rows(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3031,7 +3031,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3069,7 +3069,7 @@ bool k_categorizedsortfilterproxymodel_qbase_begin_move_rows(void* self, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void k_categorizedsortfilterproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3097,7 +3097,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3131,7 +3131,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_insert_columns(void* self, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3159,7 +3159,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3193,7 +3193,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_remove_columns(void* self, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3221,7 +3221,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3259,7 +3259,7 @@ bool k_categorizedsortfilterproxymodel_qbase_begin_move_columns(void* self, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void k_categorizedsortfilterproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3287,7 +3287,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3315,7 +3315,7 @@ void k_categorizedsortfilterproxymodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3343,7 +3343,7 @@ void k_categorizedsortfilterproxymodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedsortfilterproxymodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3375,7 +3375,7 @@ void k_categorizedsortfilterproxymodel_qbase_change_persistent_index(void* self,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* from, QModelIndex* to)
 void k_categorizedsortfilterproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3407,7 +3407,7 @@ void k_categorizedsortfilterproxymodel_qbase_change_persistent_index_list(void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void k_categorizedsortfilterproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -3435,7 +3435,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_persist
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void k_categorizedsortfilterproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -3463,7 +3463,7 @@ QObject* k_categorizedsortfilterproxymodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_categorizedsortfilterproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3491,7 +3491,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedsortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3521,7 +3521,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_receivers(void* self, const char
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int32_t fn(KCategorizedSortFilterProxyModel*, const char*)
+/// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, const char* signal)
 void k_categorizedsortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3551,7 +3551,7 @@ bool k_categorizedsortfilterproxymodel_qbase_is_signal_connected(void* self, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback bool fn(KCategorizedSortFilterProxyModel*, QMetaMethod*)
+/// @param callback bool func(KCategorizedSortFilterProxyModel* self, QMetaMethod* signal)
 void k_categorizedsortfilterproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -3561,7 +3561,7 @@ void k_categorizedsortfilterproxymodel_on_is_signal_connected(void* self, bool (
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self)
 void k_categorizedsortfilterproxymodel_on_source_model_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3571,7 +3571,7 @@ void k_categorizedsortfilterproxymodel_on_source_model_changed(void* self, void 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3581,7 +3581,7 @@ void k_categorizedsortfilterproxymodel_on_rows_about_to_be_inserted(void* self, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3591,7 +3591,7 @@ void k_categorizedsortfilterproxymodel_on_rows_inserted(void* self, void (*callb
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3601,7 +3601,7 @@ void k_categorizedsortfilterproxymodel_on_rows_about_to_be_removed(void* self, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3611,7 +3611,7 @@ void k_categorizedsortfilterproxymodel_on_rows_removed(void* self, void (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3621,7 +3621,7 @@ void k_categorizedsortfilterproxymodel_on_columns_about_to_be_inserted(void* sel
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3631,7 +3631,7 @@ void k_categorizedsortfilterproxymodel_on_columns_inserted(void* self, void (*ca
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3641,7 +3641,7 @@ void k_categorizedsortfilterproxymodel_on_columns_about_to_be_removed(void* self
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 void k_categorizedsortfilterproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3651,7 +3651,7 @@ void k_categorizedsortfilterproxymodel_on_columns_removed(void* self, void (*cal
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self)
 void k_categorizedsortfilterproxymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3661,7 +3661,7 @@ void k_categorizedsortfilterproxymodel_on_model_about_to_be_reset(void* self, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self)
 void k_categorizedsortfilterproxymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3671,7 +3671,7 @@ void k_categorizedsortfilterproxymodel_on_model_reset(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void k_categorizedsortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3681,7 +3681,7 @@ void k_categorizedsortfilterproxymodel_on_rows_about_to_be_moved(void* self, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void k_categorizedsortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3691,7 +3691,7 @@ void k_categorizedsortfilterproxymodel_on_rows_moved(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void k_categorizedsortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3701,7 +3701,7 @@ void k_categorizedsortfilterproxymodel_on_columns_about_to_be_moved(void* self, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void k_categorizedsortfilterproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3711,7 +3711,7 @@ void k_categorizedsortfilterproxymodel_on_columns_moved(void* self, void (*callb
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback void fn(KCategorizedSortFilterProxyModel*, const char*)
+/// @param callback void func(KCategorizedSortFilterProxyModel* self, const char* objectName)
 void k_categorizedsortfilterproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#dtor.KCategorizedSortFilterProxyModel)

@@ -40,7 +40,7 @@ int32_t q_iodevice_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback int32_t fn(QIODevice*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QIODevice* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_iodevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -101,7 +101,7 @@ bool q_iodevice_is_sequential(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_iodevice_on_is_sequential(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isSequential)
@@ -154,7 +154,7 @@ bool q_iodevice_open(void* self, int64_t mode);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QIODevice* self, flag of enum QIODeviceBase__OpenModeFlag mode)
 void q_iodevice_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
@@ -175,7 +175,7 @@ void q_iodevice_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback void fn()
+/// @param callback void func()
 void q_iodevice_on_close(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#close)
@@ -195,7 +195,7 @@ long long q_iodevice_pos(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_iodevice_on_pos(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#pos)
@@ -215,7 +215,7 @@ long long q_iodevice_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_iodevice_on_size(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#size)
@@ -236,7 +236,7 @@ bool q_iodevice_seek(void* self, long long pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, long long)
+/// @param callback bool func(QIODevice* self, long long pos)
 void q_iodevice_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#seek)
@@ -257,7 +257,7 @@ bool q_iodevice_at_end(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_iodevice_on_at_end(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
@@ -277,7 +277,7 @@ bool q_iodevice_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_iodevice_on_reset(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
@@ -297,7 +297,7 @@ long long q_iodevice_bytes_available(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_iodevice_on_bytes_available(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
@@ -317,7 +317,7 @@ long long q_iodevice_bytes_to_write(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_iodevice_on_bytes_to_write(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
@@ -373,7 +373,7 @@ bool q_iodevice_can_read_line(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_iodevice_on_can_read_line(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
@@ -454,7 +454,7 @@ bool q_iodevice_wait_for_ready_read(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, int)
+/// @param callback bool func(QIODevice* self, int msecs)
 void q_iodevice_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
@@ -476,7 +476,7 @@ bool q_iodevice_wait_for_bytes_written(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, int)
+/// @param callback bool func(QIODevice* self, int msecs)
 void q_iodevice_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
@@ -520,7 +520,7 @@ void q_iodevice_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*)
+/// @param callback void func(QIODevice* self)
 void q_iodevice_on_ready_read(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
@@ -532,7 +532,7 @@ void q_iodevice_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, int)
+/// @param callback void func(QIODevice* self, int channel)
 void q_iodevice_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
@@ -544,7 +544,7 @@ void q_iodevice_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, long long)
+/// @param callback void func(QIODevice* self, long long bytes)
 void q_iodevice_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
@@ -557,7 +557,7 @@ void q_iodevice_channel_bytes_written(void* self, int channel, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, int, long long)
+/// @param callback void func(QIODevice* self, int channel, long long bytes)
 void q_iodevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
@@ -568,7 +568,7 @@ void q_iodevice_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*)
+/// @param callback void func(QIODevice* self)
 void q_iodevice_on_about_to_close(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
@@ -579,7 +579,7 @@ void q_iodevice_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*)
+/// @param callback void func(QIODevice* self)
 void q_iodevice_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readData)
@@ -594,7 +594,7 @@ long long q_iodevice_read_data(void* self, char* data, long long maxlen);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn(QIODevice*, char*, long long)
+/// @param callback long long func(QIODevice* self, char* data, long long maxlen)
 void q_iodevice_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readData)
@@ -618,7 +618,7 @@ long long q_iodevice_read_line_data(void* self, char* data, long long maxlen);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn(QIODevice*, char*, long long)
+/// @param callback long long func(QIODevice* self, char* data, long long maxlen)
 void q_iodevice_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
@@ -641,7 +641,7 @@ long long q_iodevice_skip_data(void* self, long long maxSize);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn(QIODevice*, long long)
+/// @param callback long long func(QIODevice* self, long long maxSize)
 void q_iodevice_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skipData)
@@ -664,7 +664,7 @@ long long q_iodevice_write_data(void* self, const char* data, long long lenVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long fn(QIODevice*, const char*, long long)
+/// @param callback long long func(QIODevice* self, const char* data, long long lenVal)
 void q_iodevice_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#writeData)
@@ -687,7 +687,7 @@ void q_iodevice_set_open_mode(void* self, int64_t openMode);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QIODevice* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
@@ -709,7 +709,7 @@ void q_iodevice_set_error_string(void* self, const char* errorString);
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, const char*)
+/// @param callback void func(QIODevice* self, const char* errorString)
 void q_iodevice_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -971,7 +971,7 @@ void q_iodevice_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*)
+/// @param callback void func(QIODevice* self)
 void q_iodevice_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1049,7 +1049,7 @@ void q_iodevice_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, QObject*)
+/// @param callback void func(QIODevice* self, QObject* param1)
 void q_iodevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1079,7 +1079,7 @@ bool q_iodevice_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, QEvent*)
+/// @param callback bool func(QIODevice* self, QEvent* event)
 void q_iodevice_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1111,7 +1111,7 @@ bool q_iodevice_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, QObject*, QEvent*)
+/// @param callback bool func(QIODevice* self, QObject* watched, QEvent* event)
 void q_iodevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1141,7 +1141,7 @@ void q_iodevice_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, QTimerEvent*)
+/// @param callback void func(QIODevice* self, QTimerEvent* event)
 void q_iodevice_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1171,7 +1171,7 @@ void q_iodevice_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, QChildEvent*)
+/// @param callback void func(QIODevice* self, QChildEvent* event)
 void q_iodevice_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1201,7 +1201,7 @@ void q_iodevice_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, QEvent*)
+/// @param callback void func(QIODevice* self, QEvent* event)
 void q_iodevice_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1231,7 +1231,7 @@ void q_iodevice_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, QMetaMethod*)
+/// @param callback void func(QIODevice* self, QMetaMethod* signal)
 void q_iodevice_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1261,7 +1261,7 @@ void q_iodevice_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, QMetaMethod*)
+/// @param callback void func(QIODevice* self, QMetaMethod* signal)
 void q_iodevice_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1289,7 +1289,7 @@ QObject* q_iodevice_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_iodevice_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1317,7 +1317,7 @@ int32_t q_iodevice_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_iodevice_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1347,7 +1347,7 @@ int32_t q_iodevice_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback int32_t fn(QIODevice*, const char*)
+/// @param callback int32_t func(QIODevice* self, const char* signal)
 void q_iodevice_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1377,7 +1377,7 @@ bool q_iodevice_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QIODevice*
-/// @param callback bool fn(QIODevice*, QMetaMethod*)
+/// @param callback bool func(QIODevice* self, QMetaMethod* signal)
 void q_iodevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1387,7 +1387,7 @@ void q_iodevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QIODevice*
-/// @param callback void fn(QIODevice*, const char*)
+/// @param callback void func(QIODevice* self, const char* objectName)
 void q_iodevice_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#dtor.QIODevice)

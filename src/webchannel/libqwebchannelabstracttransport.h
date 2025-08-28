@@ -40,7 +40,7 @@ int32_t q_webchannelabstracttransport_metacall(void* self, int32_t param1, int p
 /// Allows for overriding the related default method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback int32_t fn(QWebChannelAbstractTransport*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWebChannelAbstractTransport* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_webchannelabstracttransport_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ void q_webchannelabstracttransport_send_message(void* self, void* message);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QJsonObject*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QJsonObject* message)
 void q_webchannelabstracttransport_on_send_message(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebchannelabstracttransport.html#sendMessage)
@@ -90,7 +90,7 @@ void q_webchannelabstracttransport_message_received(void* self, void* message, v
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebchannelabstracttransport.html#messageReceived)
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QJsonObject*, QWebChannelAbstractTransport*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QJsonObject* message, QWebChannelAbstractTransport* transport)
 void q_webchannelabstracttransport_on_message_received(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -336,7 +336,7 @@ void q_webchannelabstracttransport_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*)
+/// @param callback void func(QWebChannelAbstractTransport* self)
 void q_webchannelabstracttransport_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -414,7 +414,7 @@ void q_webchannelabstracttransport_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QObject*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QObject* param1)
 void q_webchannelabstracttransport_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -444,7 +444,7 @@ bool q_webchannelabstracttransport_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback bool fn(QWebChannelAbstractTransport*, QEvent*)
+/// @param callback bool func(QWebChannelAbstractTransport* self, QEvent* event)
 void q_webchannelabstracttransport_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -476,7 +476,7 @@ bool q_webchannelabstracttransport_qbase_event_filter(void* self, void* watched,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback bool fn(QWebChannelAbstractTransport*, QObject*, QEvent*)
+/// @param callback bool func(QWebChannelAbstractTransport* self, QObject* watched, QEvent* event)
 void q_webchannelabstracttransport_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -506,7 +506,7 @@ void q_webchannelabstracttransport_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QTimerEvent*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QTimerEvent* event)
 void q_webchannelabstracttransport_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -536,7 +536,7 @@ void q_webchannelabstracttransport_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QChildEvent*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QChildEvent* event)
 void q_webchannelabstracttransport_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -566,7 +566,7 @@ void q_webchannelabstracttransport_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QEvent*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QEvent* event)
 void q_webchannelabstracttransport_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -596,7 +596,7 @@ void q_webchannelabstracttransport_qbase_connect_notify(void* self, void* signal
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QMetaMethod*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QMetaMethod* signal)
 void q_webchannelabstracttransport_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -626,7 +626,7 @@ void q_webchannelabstracttransport_qbase_disconnect_notify(void* self, void* sig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, QMetaMethod*)
+/// @param callback void func(QWebChannelAbstractTransport* self, QMetaMethod* signal)
 void q_webchannelabstracttransport_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -654,7 +654,7 @@ QObject* q_webchannelabstracttransport_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_webchannelabstracttransport_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -682,7 +682,7 @@ int32_t q_webchannelabstracttransport_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_webchannelabstracttransport_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -712,7 +712,7 @@ int32_t q_webchannelabstracttransport_qbase_receivers(void* self, const char* si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback int32_t fn(QWebChannelAbstractTransport*, const char*)
+/// @param callback int32_t func(QWebChannelAbstractTransport* self, const char* signal)
 void q_webchannelabstracttransport_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -742,7 +742,7 @@ bool q_webchannelabstracttransport_qbase_is_signal_connected(void* self, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback bool fn(QWebChannelAbstractTransport*, QMetaMethod*)
+/// @param callback bool func(QWebChannelAbstractTransport* self, QMetaMethod* signal)
 void q_webchannelabstracttransport_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -752,7 +752,7 @@ void q_webchannelabstracttransport_on_is_signal_connected(void* self, bool (*cal
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebChannelAbstractTransport*
-/// @param callback void fn(QWebChannelAbstractTransport*, const char*)
+/// @param callback void func(QWebChannelAbstractTransport* self, const char* objectName)
 void q_webchannelabstracttransport_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebchannelabstracttransport.html#dtor.QWebChannelAbstractTransport)

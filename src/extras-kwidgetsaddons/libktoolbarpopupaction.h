@@ -38,7 +38,7 @@ int32_t k_toolbarpopupaction_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback int32_t fn(KToolBarPopupAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KToolBarPopupAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_toolbarpopupaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -85,7 +85,7 @@ QWidget* k_toolbarpopupaction_create_widget(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback QWidget* fn(KToolBarPopupAction*, QWidget*)
+/// @param callback QWidget* func(KToolBarPopupAction* self, QWidget* parent)
 void k_toolbarpopupaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#createWidget)
@@ -568,7 +568,7 @@ void k_toolbarpopupaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*)
+/// @param callback void func(KToolBarPopupAction* self)
 void k_toolbarpopupaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -584,7 +584,7 @@ void k_toolbarpopupaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, bool)
+/// @param callback void func(KToolBarPopupAction* self, bool enabled)
 void k_toolbarpopupaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -600,7 +600,7 @@ void k_toolbarpopupaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, bool)
+/// @param callback void func(KToolBarPopupAction* self, bool checkable)
 void k_toolbarpopupaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -615,7 +615,7 @@ void k_toolbarpopupaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*)
+/// @param callback void func(KToolBarPopupAction* self)
 void k_toolbarpopupaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -630,7 +630,7 @@ void k_toolbarpopupaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*)
+/// @param callback void func(KToolBarPopupAction* self)
 void k_toolbarpopupaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -645,7 +645,7 @@ void k_toolbarpopupaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*)
+/// @param callback void func(KToolBarPopupAction* self)
 void k_toolbarpopupaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -661,7 +661,7 @@ void k_toolbarpopupaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, bool)
+/// @param callback void func(KToolBarPopupAction* self, bool param1)
 void k_toolbarpopupaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -685,7 +685,7 @@ void k_toolbarpopupaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, bool)
+/// @param callback void func(KToolBarPopupAction* self, bool checked)
 void k_toolbarpopupaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -914,7 +914,7 @@ void k_toolbarpopupaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*)
+/// @param callback void func(KToolBarPopupAction* self)
 void k_toolbarpopupaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -992,7 +992,7 @@ void k_toolbarpopupaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QObject*)
+/// @param callback void func(KToolBarPopupAction* self, QObject* param1)
 void k_toolbarpopupaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1022,7 +1022,7 @@ bool k_toolbarpopupaction_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback bool fn(KToolBarPopupAction*, QEvent*)
+/// @param callback bool func(KToolBarPopupAction* self, QEvent* param1)
 void k_toolbarpopupaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1054,7 +1054,7 @@ bool k_toolbarpopupaction_qbase_event_filter(void* self, void* param1, void* par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback bool fn(KToolBarPopupAction*, QObject*, QEvent*)
+/// @param callback bool func(KToolBarPopupAction* self, QObject* param1, QEvent* param2)
 void k_toolbarpopupaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1084,7 +1084,7 @@ void k_toolbarpopupaction_qbase_delete_widget(void* self, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QWidget*)
+/// @param callback void func(KToolBarPopupAction* self, QWidget* widget)
 void k_toolbarpopupaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1114,7 +1114,7 @@ void k_toolbarpopupaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QTimerEvent*)
+/// @param callback void func(KToolBarPopupAction* self, QTimerEvent* event)
 void k_toolbarpopupaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1144,7 +1144,7 @@ void k_toolbarpopupaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QChildEvent*)
+/// @param callback void func(KToolBarPopupAction* self, QChildEvent* event)
 void k_toolbarpopupaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1174,7 +1174,7 @@ void k_toolbarpopupaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QEvent*)
+/// @param callback void func(KToolBarPopupAction* self, QEvent* event)
 void k_toolbarpopupaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1204,7 +1204,7 @@ void k_toolbarpopupaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QMetaMethod*)
+/// @param callback void func(KToolBarPopupAction* self, QMetaMethod* signal)
 void k_toolbarpopupaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1234,7 +1234,7 @@ void k_toolbarpopupaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, QMetaMethod*)
+/// @param callback void func(KToolBarPopupAction* self, QMetaMethod* signal)
 void k_toolbarpopupaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1262,7 +1262,7 @@ libqt_list /* of QWidget* */ k_toolbarpopupaction_qbase_created_widgets(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void k_toolbarpopupaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// Inherited from QObject
@@ -1290,7 +1290,7 @@ QObject* k_toolbarpopupaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_toolbarpopupaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1318,7 +1318,7 @@ int32_t k_toolbarpopupaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_toolbarpopupaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1348,7 +1348,7 @@ int32_t k_toolbarpopupaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback int32_t fn(KToolBarPopupAction*, const char*)
+/// @param callback int32_t func(KToolBarPopupAction* self, const char* signal)
 void k_toolbarpopupaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1378,7 +1378,7 @@ bool k_toolbarpopupaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback bool fn(KToolBarPopupAction*, QMetaMethod*)
+/// @param callback bool func(KToolBarPopupAction* self, QMetaMethod* signal)
 void k_toolbarpopupaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1388,7 +1388,7 @@ void k_toolbarpopupaction_on_is_signal_connected(void* self, bool (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KToolBarPopupAction*
-/// @param callback void fn(KToolBarPopupAction*, const char*)
+/// @param callback void func(KToolBarPopupAction* self, const char* objectName)
 void k_toolbarpopupaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#dtor.KToolBarPopupAction)

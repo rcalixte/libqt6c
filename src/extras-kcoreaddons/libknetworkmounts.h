@@ -397,7 +397,7 @@ void k_networkmounts_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KNetworkMounts*
-/// @param callback void fn(KNetworkMounts*)
+/// @param callback void func(KNetworkMounts* self)
 void k_networkmounts_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -475,7 +475,7 @@ void k_networkmounts_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KNetworkMounts*
-/// @param callback void fn(KNetworkMounts*, QObject*)
+/// @param callback void func(KNetworkMounts* self, QObject* param1)
 void k_networkmounts_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -485,7 +485,7 @@ void k_networkmounts_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KNetworkMounts*
-/// @param callback void fn(KNetworkMounts*, const char*)
+/// @param callback void func(KNetworkMounts* self, const char* objectName)
 void k_networkmounts_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://api-staging.kde.org/knetworkmounts.html#types

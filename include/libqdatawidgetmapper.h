@@ -40,7 +40,7 @@ int32_t q_datawidgetmapper_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback int32_t fn(QDataWidgetMapper*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QDataWidgetMapper* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_datawidgetmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -209,7 +209,7 @@ void q_datawidgetmapper_set_current_index(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, int)
+/// @param callback void func(QDataWidgetMapper* self, int index)
 void q_datawidgetmapper_on_set_current_index(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setCurrentIndex)
@@ -235,7 +235,7 @@ void q_datawidgetmapper_current_index_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#currentIndexChanged)
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, int)
+/// @param callback void func(QDataWidgetMapper* self, int index)
 void q_datawidgetmapper_on_current_index_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -481,7 +481,7 @@ void q_datawidgetmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*)
+/// @param callback void func(QDataWidgetMapper* self)
 void q_datawidgetmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -559,7 +559,7 @@ void q_datawidgetmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, QObject*)
+/// @param callback void func(QDataWidgetMapper* self, QObject* param1)
 void q_datawidgetmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -589,7 +589,7 @@ bool q_datawidgetmapper_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback bool fn(QDataWidgetMapper*, QEvent*)
+/// @param callback bool func(QDataWidgetMapper* self, QEvent* event)
 void q_datawidgetmapper_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -621,7 +621,7 @@ bool q_datawidgetmapper_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback bool fn(QDataWidgetMapper*, QObject*, QEvent*)
+/// @param callback bool func(QDataWidgetMapper* self, QObject* watched, QEvent* event)
 void q_datawidgetmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -651,7 +651,7 @@ void q_datawidgetmapper_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, QTimerEvent*)
+/// @param callback void func(QDataWidgetMapper* self, QTimerEvent* event)
 void q_datawidgetmapper_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -681,7 +681,7 @@ void q_datawidgetmapper_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, QChildEvent*)
+/// @param callback void func(QDataWidgetMapper* self, QChildEvent* event)
 void q_datawidgetmapper_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -711,7 +711,7 @@ void q_datawidgetmapper_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, QEvent*)
+/// @param callback void func(QDataWidgetMapper* self, QEvent* event)
 void q_datawidgetmapper_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -741,7 +741,7 @@ void q_datawidgetmapper_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, QMetaMethod*)
+/// @param callback void func(QDataWidgetMapper* self, QMetaMethod* signal)
 void q_datawidgetmapper_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -771,7 +771,7 @@ void q_datawidgetmapper_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, QMetaMethod*)
+/// @param callback void func(QDataWidgetMapper* self, QMetaMethod* signal)
 void q_datawidgetmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -799,7 +799,7 @@ QObject* q_datawidgetmapper_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_datawidgetmapper_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -827,7 +827,7 @@ int32_t q_datawidgetmapper_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_datawidgetmapper_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -857,7 +857,7 @@ int32_t q_datawidgetmapper_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback int32_t fn(QDataWidgetMapper*, const char*)
+/// @param callback int32_t func(QDataWidgetMapper* self, const char* signal)
 void q_datawidgetmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -887,7 +887,7 @@ bool q_datawidgetmapper_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback bool fn(QDataWidgetMapper*, QMetaMethod*)
+/// @param callback bool func(QDataWidgetMapper* self, QMetaMethod* signal)
 void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -897,7 +897,7 @@ void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QDataWidgetMapper*
-/// @param callback void fn(QDataWidgetMapper*, const char*)
+/// @param callback void func(QDataWidgetMapper* self, const char* objectName)
 void q_datawidgetmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#dtor.QDataWidgetMapper)

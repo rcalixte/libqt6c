@@ -79,7 +79,7 @@ int32_t k_ruler_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn(KRuler*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KRuler* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_ruler_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -325,7 +325,7 @@ void k_ruler_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QPaintEvent*)
+/// @param callback void func(KRuler* self, QPaintEvent* param1)
 void k_ruler_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kruler.html#paintEvent)
@@ -562,7 +562,7 @@ void k_ruler_value_changed(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, int)
+/// @param callback void func(KRuler* self, int value)
 void k_ruler_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -577,7 +577,7 @@ void k_ruler_slider_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*)
+/// @param callback void func(KRuler* self)
 void k_ruler_on_slider_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
@@ -593,7 +593,7 @@ void k_ruler_slider_moved(void* self, int position);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, int)
+/// @param callback void func(KRuler* self, int position)
 void k_ruler_on_slider_moved(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -608,7 +608,7 @@ void k_ruler_slider_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*)
+/// @param callback void func(KRuler* self)
 void k_ruler_on_slider_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
@@ -625,7 +625,7 @@ void k_ruler_range_changed(void* self, int min, int max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, int, int)
+/// @param callback void func(KRuler* self, int min, int max)
 void k_ruler_on_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractSlider
@@ -641,7 +641,7 @@ void k_ruler_action_triggered(void* self, int action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, int)
+/// @param callback void func(KRuler* self, int action)
 void k_ruler_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2581,7 +2581,7 @@ void k_ruler_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, const char*)
+/// @param callback void func(KRuler* self, const char* title)
 void k_ruler_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2597,7 +2597,7 @@ void k_ruler_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QIcon*)
+/// @param callback void func(KRuler* self, QIcon* icon)
 void k_ruler_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2613,7 +2613,7 @@ void k_ruler_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, const char*)
+/// @param callback void func(KRuler* self, const char* iconText)
 void k_ruler_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2629,7 +2629,7 @@ void k_ruler_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QPoint*)
+/// @param callback void func(KRuler* self, QPoint* pos)
 void k_ruler_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3006,7 +3006,7 @@ void k_ruler_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*)
+/// @param callback void func(KRuler* self)
 void k_ruler_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3084,7 +3084,7 @@ void k_ruler_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QObject*)
+/// @param callback void func(KRuler* self, QObject* param1)
 void k_ruler_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3205,7 +3205,7 @@ bool k_ruler_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn(KRuler*, QEvent*)
+/// @param callback bool func(KRuler* self, QEvent* e)
 void k_ruler_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3235,7 +3235,7 @@ void k_ruler_qbase_slider_change(void* self, int32_t change);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, enum QAbstractSlider__SliderChange)
+/// @param callback void func(KRuler* self, enum QAbstractSlider__SliderChange change)
 void k_ruler_on_slider_change(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
@@ -3265,7 +3265,7 @@ void k_ruler_qbase_key_press_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QKeyEvent*)
+/// @param callback void func(KRuler* self, QKeyEvent* ev)
 void k_ruler_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3295,7 +3295,7 @@ void k_ruler_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QTimerEvent*)
+/// @param callback void func(KRuler* self, QTimerEvent* param1)
 void k_ruler_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3325,7 +3325,7 @@ void k_ruler_qbase_wheel_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QWheelEvent*)
+/// @param callback void func(KRuler* self, QWheelEvent* e)
 void k_ruler_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3355,7 +3355,7 @@ void k_ruler_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QEvent*)
+/// @param callback void func(KRuler* self, QEvent* e)
 void k_ruler_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3383,7 +3383,7 @@ int32_t k_ruler_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_ruler_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3413,7 +3413,7 @@ void k_ruler_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, bool)
+/// @param callback void func(KRuler* self, bool visible)
 void k_ruler_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3441,7 +3441,7 @@ QSize* k_ruler_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_ruler_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3469,7 +3469,7 @@ QSize* k_ruler_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_ruler_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3499,7 +3499,7 @@ int32_t k_ruler_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn(KRuler*, int)
+/// @param callback int32_t func(KRuler* self, int param1)
 void k_ruler_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ bool k_ruler_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_ruler_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3555,7 +3555,7 @@ QPaintEngine* k_ruler_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_ruler_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3585,7 +3585,7 @@ void k_ruler_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMouseEvent*)
+/// @param callback void func(KRuler* self, QMouseEvent* event)
 void k_ruler_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3615,7 +3615,7 @@ void k_ruler_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMouseEvent*)
+/// @param callback void func(KRuler* self, QMouseEvent* event)
 void k_ruler_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3645,7 +3645,7 @@ void k_ruler_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMouseEvent*)
+/// @param callback void func(KRuler* self, QMouseEvent* event)
 void k_ruler_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3675,7 +3675,7 @@ void k_ruler_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMouseEvent*)
+/// @param callback void func(KRuler* self, QMouseEvent* event)
 void k_ruler_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3705,7 +3705,7 @@ void k_ruler_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QKeyEvent*)
+/// @param callback void func(KRuler* self, QKeyEvent* event)
 void k_ruler_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3735,7 +3735,7 @@ void k_ruler_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QFocusEvent*)
+/// @param callback void func(KRuler* self, QFocusEvent* event)
 void k_ruler_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3765,7 +3765,7 @@ void k_ruler_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QFocusEvent*)
+/// @param callback void func(KRuler* self, QFocusEvent* event)
 void k_ruler_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3795,7 +3795,7 @@ void k_ruler_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QEnterEvent*)
+/// @param callback void func(KRuler* self, QEnterEvent* event)
 void k_ruler_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3825,7 +3825,7 @@ void k_ruler_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QEvent*)
+/// @param callback void func(KRuler* self, QEvent* event)
 void k_ruler_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3855,7 +3855,7 @@ void k_ruler_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMoveEvent*)
+/// @param callback void func(KRuler* self, QMoveEvent* event)
 void k_ruler_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3885,7 +3885,7 @@ void k_ruler_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QResizeEvent*)
+/// @param callback void func(KRuler* self, QResizeEvent* event)
 void k_ruler_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3915,7 +3915,7 @@ void k_ruler_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QCloseEvent*)
+/// @param callback void func(KRuler* self, QCloseEvent* event)
 void k_ruler_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3945,7 +3945,7 @@ void k_ruler_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QContextMenuEvent*)
+/// @param callback void func(KRuler* self, QContextMenuEvent* event)
 void k_ruler_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3975,7 +3975,7 @@ void k_ruler_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QTabletEvent*)
+/// @param callback void func(KRuler* self, QTabletEvent* event)
 void k_ruler_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4005,7 +4005,7 @@ void k_ruler_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QActionEvent*)
+/// @param callback void func(KRuler* self, QActionEvent* event)
 void k_ruler_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4035,7 +4035,7 @@ void k_ruler_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QDragEnterEvent*)
+/// @param callback void func(KRuler* self, QDragEnterEvent* event)
 void k_ruler_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4065,7 +4065,7 @@ void k_ruler_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QDragMoveEvent*)
+/// @param callback void func(KRuler* self, QDragMoveEvent* event)
 void k_ruler_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4095,7 +4095,7 @@ void k_ruler_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QDragLeaveEvent*)
+/// @param callback void func(KRuler* self, QDragLeaveEvent* event)
 void k_ruler_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4125,7 +4125,7 @@ void k_ruler_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QDropEvent*)
+/// @param callback void func(KRuler* self, QDropEvent* event)
 void k_ruler_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4155,7 +4155,7 @@ void k_ruler_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QShowEvent*)
+/// @param callback void func(KRuler* self, QShowEvent* event)
 void k_ruler_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4185,7 +4185,7 @@ void k_ruler_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QHideEvent*)
+/// @param callback void func(KRuler* self, QHideEvent* event)
 void k_ruler_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4219,7 +4219,7 @@ bool k_ruler_qbase_native_event(void* self, const char* eventType, void* message
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn(KRuler*, const char*, void*, intptr_t*)
+/// @param callback bool func(KRuler* self, const char* eventType, void* message, intptr_t* result)
 void k_ruler_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4249,7 +4249,7 @@ int32_t k_ruler_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn(KRuler*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KRuler* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_ruler_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4279,7 +4279,7 @@ void k_ruler_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QPainter*)
+/// @param callback void func(KRuler* self, QPainter* painter)
 void k_ruler_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4309,7 +4309,7 @@ QPaintDevice* k_ruler_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QPaintDevice* fn(KRuler*, QPoint*)
+/// @param callback QPaintDevice* func(KRuler* self, QPoint* offset)
 void k_ruler_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4337,7 +4337,7 @@ QPainter* k_ruler_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_ruler_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4367,7 +4367,7 @@ void k_ruler_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QInputMethodEvent*)
+/// @param callback void func(KRuler* self, QInputMethodEvent* param1)
 void k_ruler_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4397,7 +4397,7 @@ QVariant* k_ruler_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QVariant* fn(KRuler*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KRuler* self, enum Qt__InputMethodQuery param1)
 void k_ruler_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4427,7 +4427,7 @@ bool k_ruler_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn(KRuler*, bool)
+/// @param callback bool func(KRuler* self, bool next)
 void k_ruler_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4459,7 +4459,7 @@ bool k_ruler_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn(KRuler*, QObject*, QEvent*)
+/// @param callback bool func(KRuler* self, QObject* watched, QEvent* event)
 void k_ruler_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4489,7 +4489,7 @@ void k_ruler_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QChildEvent*)
+/// @param callback void func(KRuler* self, QChildEvent* event)
 void k_ruler_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4519,7 +4519,7 @@ void k_ruler_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QEvent*)
+/// @param callback void func(KRuler* self, QEvent* event)
 void k_ruler_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4549,7 +4549,7 @@ void k_ruler_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMetaMethod*)
+/// @param callback void func(KRuler* self, QMetaMethod* signal)
 void k_ruler_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4579,7 +4579,7 @@ void k_ruler_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, QMetaMethod*)
+/// @param callback void func(KRuler* self, QMetaMethod* signal)
 void k_ruler_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -4609,7 +4609,7 @@ void k_ruler_qbase_set_repeat_action(void* self, int32_t action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, enum QAbstractSlider__SliderAction)
+/// @param callback void func(KRuler* self, enum QAbstractSlider__SliderAction action)
 void k_ruler_on_set_repeat_action(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
@@ -4641,7 +4641,7 @@ int32_t k_ruler_qbase_repeat_action(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_ruler_on_repeat_action(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4669,7 +4669,7 @@ void k_ruler_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn()
+/// @param callback void func()
 void k_ruler_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4697,7 +4697,7 @@ void k_ruler_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn()
+/// @param callback void func()
 void k_ruler_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4725,7 +4725,7 @@ void k_ruler_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback void fn()
+/// @param callback void func()
 void k_ruler_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4753,7 +4753,7 @@ bool k_ruler_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_ruler_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4781,7 +4781,7 @@ bool k_ruler_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_ruler_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4809,7 +4809,7 @@ QObject* k_ruler_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_ruler_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4837,7 +4837,7 @@ int32_t k_ruler_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_ruler_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4867,7 +4867,7 @@ int32_t k_ruler_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback int32_t fn(KRuler*, const char*)
+/// @param callback int32_t func(KRuler* self, const char* signal)
 void k_ruler_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4897,7 +4897,7 @@ bool k_ruler_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback bool fn(KRuler*, QMetaMethod*)
+/// @param callback bool func(KRuler* self, QMetaMethod* signal)
 void k_ruler_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4929,7 +4929,7 @@ double k_ruler_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRuler*
-/// @param callback double fn(KRuler*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KRuler* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_ruler_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4939,7 +4939,7 @@ void k_ruler_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32
 /// Wrapper to allow calling private signal
 ///
 /// @param self KRuler*
-/// @param callback void fn(KRuler*, const char*)
+/// @param callback void func(KRuler* self, const char* objectName)
 void k_ruler_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kruler.html#dtor.KRuler)

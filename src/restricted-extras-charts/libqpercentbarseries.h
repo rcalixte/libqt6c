@@ -40,7 +40,7 @@ int32_t q_percentbarseries_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback int32_t fn(QPercentBarSeries*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPercentBarSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_percentbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_percentbarseries_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_percentbarseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpercentbarseries-qtcharts.html#type)
@@ -268,7 +268,7 @@ void q_percentbarseries_clicked(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, int, QBarSet*)
+/// @param callback void func(QPercentBarSeries* self, int index, QBarSet* barset)
 void q_percentbarseries_on_clicked(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -286,7 +286,7 @@ void q_percentbarseries_hovered(void* self, bool status, int index, void* barset
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, bool, int, QBarSet*)
+/// @param callback void func(QPercentBarSeries* self, bool status, int index, QBarSet* barset)
 void q_percentbarseries_on_hovered(void* self, void (*callback)(void*, bool, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -303,7 +303,7 @@ void q_percentbarseries_pressed(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, int, QBarSet*)
+/// @param callback void func(QPercentBarSeries* self, int index, QBarSet* barset)
 void q_percentbarseries_on_pressed(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -320,7 +320,7 @@ void q_percentbarseries_released(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, int, QBarSet*)
+/// @param callback void func(QPercentBarSeries* self, int index, QBarSet* barset)
 void q_percentbarseries_on_released(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -337,7 +337,7 @@ void q_percentbarseries_double_clicked(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, int, QBarSet*)
+/// @param callback void func(QPercentBarSeries* self, int index, QBarSet* barset)
 void q_percentbarseries_on_double_clicked(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -352,7 +352,7 @@ void q_percentbarseries_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_count_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -367,7 +367,7 @@ void q_percentbarseries_labels_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_labels_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -383,7 +383,7 @@ void q_percentbarseries_labels_format_changed(void* self, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, const char*)
+/// @param callback void func(QPercentBarSeries* self, const char* format)
 void q_percentbarseries_on_labels_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractBarSeries
@@ -399,7 +399,7 @@ void q_percentbarseries_labels_position_changed(void* self, int32_t position);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, enum QAbstractBarSeries__LabelsPosition)
+/// @param callback void func(QPercentBarSeries* self, enum QAbstractBarSeries__LabelsPosition position)
 void q_percentbarseries_on_labels_position_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractBarSeries
@@ -415,7 +415,7 @@ void q_percentbarseries_labels_angle_changed(void* self, double angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, double)
+/// @param callback void func(QPercentBarSeries* self, double angle)
 void q_percentbarseries_on_labels_angle_changed(void* self, void (*callback)(void*, double));
 
 /// Inherited from QAbstractBarSeries
@@ -431,7 +431,7 @@ void q_percentbarseries_labels_precision_changed(void* self, int precision);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, int)
+/// @param callback void func(QPercentBarSeries* self, int precision)
 void q_percentbarseries_on_labels_precision_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractBarSeries
@@ -447,7 +447,7 @@ void q_percentbarseries_barsets_added(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, libqt_list /* of QBarSet* */)
+/// @param callback void func(QPercentBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
 void q_percentbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -463,7 +463,7 @@ void q_percentbarseries_barsets_removed(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, libqt_list /* of QBarSet* */)
+/// @param callback void func(QPercentBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
 void q_percentbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -590,7 +590,7 @@ void q_percentbarseries_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -605,7 +605,7 @@ void q_percentbarseries_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -620,7 +620,7 @@ void q_percentbarseries_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -635,7 +635,7 @@ void q_percentbarseries_use_open_g_l_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -880,7 +880,7 @@ void q_percentbarseries_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*)
+/// @param callback void func(QPercentBarSeries* self)
 void q_percentbarseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -958,7 +958,7 @@ void q_percentbarseries_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, QObject*)
+/// @param callback void func(QPercentBarSeries* self, QObject* param1)
 void q_percentbarseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -988,7 +988,7 @@ bool q_percentbarseries_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback bool fn(QPercentBarSeries*, QEvent*)
+/// @param callback bool func(QPercentBarSeries* self, QEvent* event)
 void q_percentbarseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1020,7 +1020,7 @@ bool q_percentbarseries_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback bool fn(QPercentBarSeries*, QObject*, QEvent*)
+/// @param callback bool func(QPercentBarSeries* self, QObject* watched, QEvent* event)
 void q_percentbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1050,7 +1050,7 @@ void q_percentbarseries_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, QTimerEvent*)
+/// @param callback void func(QPercentBarSeries* self, QTimerEvent* event)
 void q_percentbarseries_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1080,7 +1080,7 @@ void q_percentbarseries_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, QChildEvent*)
+/// @param callback void func(QPercentBarSeries* self, QChildEvent* event)
 void q_percentbarseries_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1110,7 +1110,7 @@ void q_percentbarseries_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, QEvent*)
+/// @param callback void func(QPercentBarSeries* self, QEvent* event)
 void q_percentbarseries_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1140,7 +1140,7 @@ void q_percentbarseries_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, QMetaMethod*)
+/// @param callback void func(QPercentBarSeries* self, QMetaMethod* signal)
 void q_percentbarseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1170,7 +1170,7 @@ void q_percentbarseries_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, QMetaMethod*)
+/// @param callback void func(QPercentBarSeries* self, QMetaMethod* signal)
 void q_percentbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1198,7 +1198,7 @@ QObject* q_percentbarseries_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_percentbarseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1226,7 +1226,7 @@ int32_t q_percentbarseries_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_percentbarseries_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1256,7 +1256,7 @@ int32_t q_percentbarseries_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback int32_t fn(QPercentBarSeries*, const char*)
+/// @param callback int32_t func(QPercentBarSeries* self, const char* signal)
 void q_percentbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1286,7 +1286,7 @@ bool q_percentbarseries_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPercentBarSeries*
-/// @param callback bool fn(QPercentBarSeries*, QMetaMethod*)
+/// @param callback bool func(QPercentBarSeries* self, QMetaMethod* signal)
 void q_percentbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1296,7 +1296,7 @@ void q_percentbarseries_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void fn(QPercentBarSeries*, const char*)
+/// @param callback void func(QPercentBarSeries* self, const char* objectName)
 void q_percentbarseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpercentbarseries-qtcharts.html#dtor.QPercentBarSeries)

@@ -177,7 +177,7 @@ void q_graphicslayoutitem_set_geometry(void* self, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback void fn(QGraphicsLayoutItem*, QRectF*)
+/// @param callback void func(QGraphicsLayoutItem* self, QRectF* rect)
 void q_graphicslayoutitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGeometry)
@@ -207,7 +207,7 @@ void q_graphicslayoutitem_get_contents_margins(void* self, double* left, double*
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback void fn(QGraphicsLayoutItem*, double*, double*, double*, double*)
+/// @param callback void func(QGraphicsLayoutItem* self, double* left, double* top, double* right, double* bottom)
 void q_graphicslayoutitem_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#getContentsMargins)
@@ -242,7 +242,7 @@ void q_graphicslayoutitem_update_geometry(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicslayoutitem_on_update_geometry(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#updateGeometry)
@@ -262,7 +262,7 @@ bool q_graphicslayoutitem_is_empty(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_graphicslayoutitem_on_is_empty(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
@@ -309,7 +309,7 @@ void q_graphicslayoutitem_set_graphics_item(void* self, void* item);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback void fn(QGraphicsLayoutItem*, QGraphicsItem*)
+/// @param callback void func(QGraphicsLayoutItem* self, QGraphicsItem* item)
 void q_graphicslayoutitem_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
@@ -331,7 +331,7 @@ void q_graphicslayoutitem_set_owned_by_layout(void* self, bool ownedByLayout);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback void fn(QGraphicsLayoutItem*, bool)
+/// @param callback void func(QGraphicsLayoutItem* self, bool ownedByLayout)
 void q_graphicslayoutitem_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
@@ -354,7 +354,7 @@ QSizeF* q_graphicslayoutitem_size_hint(void* self, int32_t which, void* constrai
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLayoutItem*
-/// @param callback QSizeF* fn(QGraphicsLayoutItem*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QGraphicsLayoutItem* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizeHint)

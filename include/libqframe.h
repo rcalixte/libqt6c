@@ -46,7 +46,7 @@ int32_t q_frame_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback int32_t fn(QFrame*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QFrame* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_frame_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -90,7 +90,7 @@ QSize* q_frame_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_frame_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#sizeHint)
@@ -170,7 +170,7 @@ bool q_frame_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback bool fn(QFrame*, QEvent*)
+/// @param callback bool func(QFrame* self, QEvent* e)
 void q_frame_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#event)
@@ -192,7 +192,7 @@ void q_frame_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QPaintEvent*)
+/// @param callback void func(QFrame* self, QPaintEvent* param1)
 void q_frame_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#paintEvent)
@@ -214,7 +214,7 @@ void q_frame_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QEvent*)
+/// @param callback void func(QFrame* self, QEvent* param1)
 void q_frame_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -236,7 +236,7 @@ void q_frame_draw_frame(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QPainter*)
+/// @param callback void func(QFrame* self, QPainter* param1)
 void q_frame_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -258,7 +258,7 @@ void q_frame_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QStyleOptionFrame*)
+/// @param callback void func(QFrame* self, QStyleOptionFrame* option)
 void q_frame_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -2223,7 +2223,7 @@ void q_frame_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, const char*)
+/// @param callback void func(QFrame* self, const char* title)
 void q_frame_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2239,7 +2239,7 @@ void q_frame_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QIcon*)
+/// @param callback void func(QFrame* self, QIcon* icon)
 void q_frame_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2255,7 +2255,7 @@ void q_frame_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, const char*)
+/// @param callback void func(QFrame* self, const char* iconText)
 void q_frame_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2271,7 +2271,7 @@ void q_frame_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QPoint*)
+/// @param callback void func(QFrame* self, QPoint* pos)
 void q_frame_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2648,7 +2648,7 @@ void q_frame_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*)
+/// @param callback void func(QFrame* self)
 void q_frame_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2726,7 +2726,7 @@ void q_frame_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QObject*)
+/// @param callback void func(QFrame* self, QObject* param1)
 void q_frame_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2845,7 +2845,7 @@ int32_t q_frame_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_frame_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2875,7 +2875,7 @@ void q_frame_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, bool)
+/// @param callback void func(QFrame* self, bool visible)
 void q_frame_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2903,7 +2903,7 @@ QSize* q_frame_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_frame_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2933,7 +2933,7 @@ int32_t q_frame_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback int32_t fn(QFrame*, int)
+/// @param callback int32_t func(QFrame* self, int param1)
 void q_frame_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2961,7 +2961,7 @@ bool q_frame_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_frame_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2989,7 +2989,7 @@ QPaintEngine* q_frame_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_frame_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3019,7 +3019,7 @@ void q_frame_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMouseEvent*)
+/// @param callback void func(QFrame* self, QMouseEvent* event)
 void q_frame_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3049,7 +3049,7 @@ void q_frame_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMouseEvent*)
+/// @param callback void func(QFrame* self, QMouseEvent* event)
 void q_frame_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3079,7 +3079,7 @@ void q_frame_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMouseEvent*)
+/// @param callback void func(QFrame* self, QMouseEvent* event)
 void q_frame_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3109,7 +3109,7 @@ void q_frame_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMouseEvent*)
+/// @param callback void func(QFrame* self, QMouseEvent* event)
 void q_frame_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3139,7 +3139,7 @@ void q_frame_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QWheelEvent*)
+/// @param callback void func(QFrame* self, QWheelEvent* event)
 void q_frame_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3169,7 +3169,7 @@ void q_frame_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QKeyEvent*)
+/// @param callback void func(QFrame* self, QKeyEvent* event)
 void q_frame_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3199,7 +3199,7 @@ void q_frame_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QKeyEvent*)
+/// @param callback void func(QFrame* self, QKeyEvent* event)
 void q_frame_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3229,7 +3229,7 @@ void q_frame_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QFocusEvent*)
+/// @param callback void func(QFrame* self, QFocusEvent* event)
 void q_frame_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3259,7 +3259,7 @@ void q_frame_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QFocusEvent*)
+/// @param callback void func(QFrame* self, QFocusEvent* event)
 void q_frame_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3289,7 +3289,7 @@ void q_frame_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QEnterEvent*)
+/// @param callback void func(QFrame* self, QEnterEvent* event)
 void q_frame_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3319,7 +3319,7 @@ void q_frame_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QEvent*)
+/// @param callback void func(QFrame* self, QEvent* event)
 void q_frame_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3349,7 +3349,7 @@ void q_frame_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMoveEvent*)
+/// @param callback void func(QFrame* self, QMoveEvent* event)
 void q_frame_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3379,7 +3379,7 @@ void q_frame_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QResizeEvent*)
+/// @param callback void func(QFrame* self, QResizeEvent* event)
 void q_frame_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3409,7 +3409,7 @@ void q_frame_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QCloseEvent*)
+/// @param callback void func(QFrame* self, QCloseEvent* event)
 void q_frame_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3439,7 +3439,7 @@ void q_frame_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QContextMenuEvent*)
+/// @param callback void func(QFrame* self, QContextMenuEvent* event)
 void q_frame_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3469,7 +3469,7 @@ void q_frame_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QTabletEvent*)
+/// @param callback void func(QFrame* self, QTabletEvent* event)
 void q_frame_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3499,7 +3499,7 @@ void q_frame_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QActionEvent*)
+/// @param callback void func(QFrame* self, QActionEvent* event)
 void q_frame_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3529,7 +3529,7 @@ void q_frame_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QDragEnterEvent*)
+/// @param callback void func(QFrame* self, QDragEnterEvent* event)
 void q_frame_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3559,7 +3559,7 @@ void q_frame_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QDragMoveEvent*)
+/// @param callback void func(QFrame* self, QDragMoveEvent* event)
 void q_frame_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3589,7 +3589,7 @@ void q_frame_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QDragLeaveEvent*)
+/// @param callback void func(QFrame* self, QDragLeaveEvent* event)
 void q_frame_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3619,7 +3619,7 @@ void q_frame_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QDropEvent*)
+/// @param callback void func(QFrame* self, QDropEvent* event)
 void q_frame_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3649,7 +3649,7 @@ void q_frame_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QShowEvent*)
+/// @param callback void func(QFrame* self, QShowEvent* event)
 void q_frame_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3679,7 +3679,7 @@ void q_frame_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QHideEvent*)
+/// @param callback void func(QFrame* self, QHideEvent* event)
 void q_frame_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3713,7 +3713,7 @@ bool q_frame_qbase_native_event(void* self, const char* eventType, void* message
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn(QFrame*, const char*, void*, intptr_t*)
+/// @param callback bool func(QFrame* self, const char* eventType, void* message, intptr_t* result)
 void q_frame_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3743,7 +3743,7 @@ int32_t q_frame_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback int32_t fn(QFrame*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QFrame* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_frame_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3773,7 +3773,7 @@ void q_frame_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QPainter*)
+/// @param callback void func(QFrame* self, QPainter* painter)
 void q_frame_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3803,7 +3803,7 @@ QPaintDevice* q_frame_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback QPaintDevice* fn(QFrame*, QPoint*)
+/// @param callback QPaintDevice* func(QFrame* self, QPoint* offset)
 void q_frame_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3831,7 +3831,7 @@ QPainter* q_frame_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_frame_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3861,7 +3861,7 @@ void q_frame_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QInputMethodEvent*)
+/// @param callback void func(QFrame* self, QInputMethodEvent* param1)
 void q_frame_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3891,7 +3891,7 @@ QVariant* q_frame_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback QVariant* fn(QFrame*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QFrame* self, enum Qt__InputMethodQuery param1)
 void q_frame_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3921,7 +3921,7 @@ bool q_frame_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn(QFrame*, bool)
+/// @param callback bool func(QFrame* self, bool next)
 void q_frame_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3953,7 +3953,7 @@ bool q_frame_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn(QFrame*, QObject*, QEvent*)
+/// @param callback bool func(QFrame* self, QObject* watched, QEvent* event)
 void q_frame_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3983,7 +3983,7 @@ void q_frame_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QTimerEvent*)
+/// @param callback void func(QFrame* self, QTimerEvent* event)
 void q_frame_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4013,7 +4013,7 @@ void q_frame_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QChildEvent*)
+/// @param callback void func(QFrame* self, QChildEvent* event)
 void q_frame_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4043,7 +4043,7 @@ void q_frame_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QEvent*)
+/// @param callback void func(QFrame* self, QEvent* event)
 void q_frame_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4073,7 +4073,7 @@ void q_frame_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMetaMethod*)
+/// @param callback void func(QFrame* self, QMetaMethod* signal)
 void q_frame_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4103,7 +4103,7 @@ void q_frame_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, QMetaMethod*)
+/// @param callback void func(QFrame* self, QMetaMethod* signal)
 void q_frame_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4131,7 +4131,7 @@ void q_frame_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn()
+/// @param callback void func()
 void q_frame_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4159,7 +4159,7 @@ void q_frame_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn()
+/// @param callback void func()
 void q_frame_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4187,7 +4187,7 @@ void q_frame_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback void fn()
+/// @param callback void func()
 void q_frame_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4215,7 +4215,7 @@ bool q_frame_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_frame_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4243,7 +4243,7 @@ bool q_frame_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_frame_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4271,7 +4271,7 @@ QObject* q_frame_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_frame_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4299,7 +4299,7 @@ int32_t q_frame_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_frame_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4329,7 +4329,7 @@ int32_t q_frame_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback int32_t fn(QFrame*, const char*)
+/// @param callback int32_t func(QFrame* self, const char* signal)
 void q_frame_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4359,7 +4359,7 @@ bool q_frame_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback bool fn(QFrame*, QMetaMethod*)
+/// @param callback bool func(QFrame* self, QMetaMethod* signal)
 void q_frame_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4391,7 +4391,7 @@ double q_frame_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFrame*
-/// @param callback double fn(QFrame*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QFrame* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_frame_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4401,7 +4401,7 @@ void q_frame_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFrame*
-/// @param callback void fn(QFrame*, const char*)
+/// @param callback void func(QFrame* self, const char* objectName)
 void q_frame_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#dtor.QFrame)

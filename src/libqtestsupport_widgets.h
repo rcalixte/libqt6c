@@ -50,7 +50,7 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_stationary(v
 /// Allows for overriding the related default method
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
-/// @param callback QTest__QTouchEventWidgetSequence* fn(QTest__QTouchEventWidgetSequence*, int)
+/// @param callback QTest__QTouchEventWidgetSequence* func(QTest__QTouchEventWidgetSequence* self, int touchId)
 void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEventWidgetSequence* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#stationary)
@@ -72,7 +72,7 @@ bool q_test__qtoucheventwidgetsequence_commit(void* self, bool processEvents);
 /// Allows for overriding the related default method
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
-/// @param callback bool fn(QTest__QTouchEventWidgetSequence*, bool)
+/// @param callback bool func(QTest__QTouchEventWidgetSequence* self, bool processEvents)
 void q_test__qtoucheventwidgetsequence_on_commit(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventwidgetsequence.html#commit)
@@ -134,7 +134,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point(void* self, int touch
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
-/// @param callback QEventPoint* fn(QTest__QTouchEventWidgetSequence*, int)
+/// @param callback QEventPoint* func(QTest__QTouchEventWidgetSequence* self, int touchId)
 void q_test__qtoucheventwidgetsequence_on_point(void* self, QEventPoint* (*callback)(void*, int));
 
 /// Inherited from QTest::QTouchEventSequence
@@ -164,7 +164,7 @@ QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
-/// @param callback QEventPoint* fn(QTest__QTouchEventWidgetSequence*, int)
+/// @param callback QEventPoint* func(QTest__QTouchEventWidgetSequence* self, int touchId)
 void q_test__qtoucheventwidgetsequence_on_point_or_previous_point(void* self, QEventPoint* (*callback)(void*, int));
 
 /// Delete this object from C++ memory.

@@ -47,7 +47,7 @@ int32_t k_contextualhelpbutton_metacall(void* self, int32_t param1, int param2, 
 /// Allows for overriding the related default method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback int32_t fn(KContextualHelpButton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KContextualHelpButton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_contextualhelpbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -99,7 +99,7 @@ QSize* k_contextualhelpbutton_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_contextualhelpbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#sizeHint)
@@ -118,7 +118,7 @@ void k_contextualhelpbutton_contextual_help_text_changed(void* self, const char*
 /// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#contextualHelpTextChanged)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, const char*)
+/// @param callback void func(KContextualHelpButton* self, const char* newContextualHelpText)
 void k_contextualhelpbutton_on_contextual_help_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -254,7 +254,7 @@ void k_contextualhelpbutton_triggered(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#triggered)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QAction*)
+/// @param callback void func(KContextualHelpButton* self, QAction* param1)
 void k_contextualhelpbutton_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -464,7 +464,7 @@ void k_contextualhelpbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*)
+/// @param callback void func(KContextualHelpButton* self)
 void k_contextualhelpbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -479,7 +479,7 @@ void k_contextualhelpbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*)
+/// @param callback void func(KContextualHelpButton* self)
 void k_contextualhelpbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -494,7 +494,7 @@ void k_contextualhelpbutton_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*)
+/// @param callback void func(KContextualHelpButton* self)
 void k_contextualhelpbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -510,7 +510,7 @@ void k_contextualhelpbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, bool)
+/// @param callback void func(KContextualHelpButton* self, bool checked)
 void k_contextualhelpbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -526,7 +526,7 @@ void k_contextualhelpbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, bool)
+/// @param callback void func(KContextualHelpButton* self, bool checked)
 void k_contextualhelpbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2466,7 +2466,7 @@ void k_contextualhelpbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, const char*)
+/// @param callback void func(KContextualHelpButton* self, const char* title)
 void k_contextualhelpbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2482,7 +2482,7 @@ void k_contextualhelpbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QIcon*)
+/// @param callback void func(KContextualHelpButton* self, QIcon* icon)
 void k_contextualhelpbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2498,7 +2498,7 @@ void k_contextualhelpbutton_window_icon_text_changed(void* self, const char* ico
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, const char*)
+/// @param callback void func(KContextualHelpButton* self, const char* iconText)
 void k_contextualhelpbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2514,7 +2514,7 @@ void k_contextualhelpbutton_custom_context_menu_requested(void* self, void* pos)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QPoint*)
+/// @param callback void func(KContextualHelpButton* self, QPoint* pos)
 void k_contextualhelpbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2891,7 +2891,7 @@ void k_contextualhelpbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*)
+/// @param callback void func(KContextualHelpButton* self)
 void k_contextualhelpbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2969,7 +2969,7 @@ void k_contextualhelpbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QObject*)
+/// @param callback void func(KContextualHelpButton* self, QObject* param1)
 void k_contextualhelpbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3088,7 +3088,7 @@ QSize* k_contextualhelpbutton_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_contextualhelpbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QToolButton
@@ -3118,7 +3118,7 @@ bool k_contextualhelpbutton_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn(KContextualHelpButton*, QEvent*)
+/// @param callback bool func(KContextualHelpButton* self, QEvent* e)
 void k_contextualhelpbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3148,7 +3148,7 @@ void k_contextualhelpbutton_qbase_mouse_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMouseEvent*)
+/// @param callback void func(KContextualHelpButton* self, QMouseEvent* param1)
 void k_contextualhelpbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3178,7 +3178,7 @@ void k_contextualhelpbutton_qbase_mouse_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMouseEvent*)
+/// @param callback void func(KContextualHelpButton* self, QMouseEvent* param1)
 void k_contextualhelpbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3208,7 +3208,7 @@ void k_contextualhelpbutton_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QPaintEvent*)
+/// @param callback void func(KContextualHelpButton* self, QPaintEvent* param1)
 void k_contextualhelpbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3238,7 +3238,7 @@ void k_contextualhelpbutton_qbase_action_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QActionEvent*)
+/// @param callback void func(KContextualHelpButton* self, QActionEvent* param1)
 void k_contextualhelpbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3268,7 +3268,7 @@ void k_contextualhelpbutton_qbase_enter_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QEnterEvent*)
+/// @param callback void func(KContextualHelpButton* self, QEnterEvent* param1)
 void k_contextualhelpbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3298,7 +3298,7 @@ void k_contextualhelpbutton_qbase_leave_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QEvent*)
+/// @param callback void func(KContextualHelpButton* self, QEvent* param1)
 void k_contextualhelpbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3328,7 +3328,7 @@ void k_contextualhelpbutton_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QTimerEvent*)
+/// @param callback void func(KContextualHelpButton* self, QTimerEvent* param1)
 void k_contextualhelpbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3358,7 +3358,7 @@ void k_contextualhelpbutton_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QEvent*)
+/// @param callback void func(KContextualHelpButton* self, QEvent* param1)
 void k_contextualhelpbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3388,7 +3388,7 @@ bool k_contextualhelpbutton_qbase_hit_button(void* self, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn(KContextualHelpButton*, QPoint*)
+/// @param callback bool func(KContextualHelpButton* self, QPoint* pos)
 void k_contextualhelpbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3416,7 +3416,7 @@ void k_contextualhelpbutton_qbase_check_state_set(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_contextualhelpbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QToolButton
@@ -3444,7 +3444,7 @@ void k_contextualhelpbutton_qbase_next_check_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_contextualhelpbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QToolButton
@@ -3474,7 +3474,7 @@ void k_contextualhelpbutton_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QStyleOptionToolButton*)
+/// @param callback void func(KContextualHelpButton* self, QStyleOptionToolButton* option)
 void k_contextualhelpbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3504,7 +3504,7 @@ void k_contextualhelpbutton_qbase_key_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QKeyEvent*)
+/// @param callback void func(KContextualHelpButton* self, QKeyEvent* e)
 void k_contextualhelpbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3534,7 +3534,7 @@ void k_contextualhelpbutton_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QKeyEvent*)
+/// @param callback void func(KContextualHelpButton* self, QKeyEvent* e)
 void k_contextualhelpbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3564,7 +3564,7 @@ void k_contextualhelpbutton_qbase_mouse_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMouseEvent*)
+/// @param callback void func(KContextualHelpButton* self, QMouseEvent* e)
 void k_contextualhelpbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3594,7 +3594,7 @@ void k_contextualhelpbutton_qbase_focus_in_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QFocusEvent*)
+/// @param callback void func(KContextualHelpButton* self, QFocusEvent* e)
 void k_contextualhelpbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3624,7 +3624,7 @@ void k_contextualhelpbutton_qbase_focus_out_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QFocusEvent*)
+/// @param callback void func(KContextualHelpButton* self, QFocusEvent* e)
 void k_contextualhelpbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3652,7 +3652,7 @@ int32_t k_contextualhelpbutton_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_contextualhelpbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3682,7 +3682,7 @@ void k_contextualhelpbutton_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, bool)
+/// @param callback void func(KContextualHelpButton* self, bool visible)
 void k_contextualhelpbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3712,7 +3712,7 @@ int32_t k_contextualhelpbutton_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback int32_t fn(KContextualHelpButton*, int)
+/// @param callback int32_t func(KContextualHelpButton* self, int param1)
 void k_contextualhelpbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3740,7 +3740,7 @@ bool k_contextualhelpbutton_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_contextualhelpbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3768,7 +3768,7 @@ QPaintEngine* k_contextualhelpbutton_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_contextualhelpbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3798,7 +3798,7 @@ void k_contextualhelpbutton_qbase_mouse_double_click_event(void* self, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMouseEvent*)
+/// @param callback void func(KContextualHelpButton* self, QMouseEvent* event)
 void k_contextualhelpbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3828,7 +3828,7 @@ void k_contextualhelpbutton_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QWheelEvent*)
+/// @param callback void func(KContextualHelpButton* self, QWheelEvent* event)
 void k_contextualhelpbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3858,7 +3858,7 @@ void k_contextualhelpbutton_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMoveEvent*)
+/// @param callback void func(KContextualHelpButton* self, QMoveEvent* event)
 void k_contextualhelpbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3888,7 +3888,7 @@ void k_contextualhelpbutton_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QResizeEvent*)
+/// @param callback void func(KContextualHelpButton* self, QResizeEvent* event)
 void k_contextualhelpbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3918,7 +3918,7 @@ void k_contextualhelpbutton_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QCloseEvent*)
+/// @param callback void func(KContextualHelpButton* self, QCloseEvent* event)
 void k_contextualhelpbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3948,7 +3948,7 @@ void k_contextualhelpbutton_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QContextMenuEvent*)
+/// @param callback void func(KContextualHelpButton* self, QContextMenuEvent* event)
 void k_contextualhelpbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3978,7 +3978,7 @@ void k_contextualhelpbutton_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QTabletEvent*)
+/// @param callback void func(KContextualHelpButton* self, QTabletEvent* event)
 void k_contextualhelpbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4008,7 +4008,7 @@ void k_contextualhelpbutton_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QDragEnterEvent*)
+/// @param callback void func(KContextualHelpButton* self, QDragEnterEvent* event)
 void k_contextualhelpbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4038,7 +4038,7 @@ void k_contextualhelpbutton_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QDragMoveEvent*)
+/// @param callback void func(KContextualHelpButton* self, QDragMoveEvent* event)
 void k_contextualhelpbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4068,7 +4068,7 @@ void k_contextualhelpbutton_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QDragLeaveEvent*)
+/// @param callback void func(KContextualHelpButton* self, QDragLeaveEvent* event)
 void k_contextualhelpbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4098,7 +4098,7 @@ void k_contextualhelpbutton_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QDropEvent*)
+/// @param callback void func(KContextualHelpButton* self, QDropEvent* event)
 void k_contextualhelpbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4128,7 +4128,7 @@ void k_contextualhelpbutton_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QShowEvent*)
+/// @param callback void func(KContextualHelpButton* self, QShowEvent* event)
 void k_contextualhelpbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4158,7 +4158,7 @@ void k_contextualhelpbutton_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QHideEvent*)
+/// @param callback void func(KContextualHelpButton* self, QHideEvent* event)
 void k_contextualhelpbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4192,7 +4192,7 @@ bool k_contextualhelpbutton_qbase_native_event(void* self, const char* eventType
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn(KContextualHelpButton*, const char*, void*, intptr_t*)
+/// @param callback bool func(KContextualHelpButton* self, const char* eventType, void* message, intptr_t* result)
 void k_contextualhelpbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4222,7 +4222,7 @@ int32_t k_contextualhelpbutton_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback int32_t fn(KContextualHelpButton*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KContextualHelpButton* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_contextualhelpbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4252,7 +4252,7 @@ void k_contextualhelpbutton_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QPainter*)
+/// @param callback void func(KContextualHelpButton* self, QPainter* painter)
 void k_contextualhelpbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4282,7 +4282,7 @@ QPaintDevice* k_contextualhelpbutton_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QPaintDevice* fn(KContextualHelpButton*, QPoint*)
+/// @param callback QPaintDevice* func(KContextualHelpButton* self, QPoint* offset)
 void k_contextualhelpbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4310,7 +4310,7 @@ QPainter* k_contextualhelpbutton_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_contextualhelpbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4340,7 +4340,7 @@ void k_contextualhelpbutton_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QInputMethodEvent*)
+/// @param callback void func(KContextualHelpButton* self, QInputMethodEvent* param1)
 void k_contextualhelpbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4370,7 +4370,7 @@ QVariant* k_contextualhelpbutton_qbase_input_method_query(void* self, int64_t pa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QVariant* fn(KContextualHelpButton*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KContextualHelpButton* self, enum Qt__InputMethodQuery param1)
 void k_contextualhelpbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4400,7 +4400,7 @@ bool k_contextualhelpbutton_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn(KContextualHelpButton*, bool)
+/// @param callback bool func(KContextualHelpButton* self, bool next)
 void k_contextualhelpbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4432,7 +4432,7 @@ bool k_contextualhelpbutton_qbase_event_filter(void* self, void* watched, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn(KContextualHelpButton*, QObject*, QEvent*)
+/// @param callback bool func(KContextualHelpButton* self, QObject* watched, QEvent* event)
 void k_contextualhelpbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4462,7 +4462,7 @@ void k_contextualhelpbutton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QChildEvent*)
+/// @param callback void func(KContextualHelpButton* self, QChildEvent* event)
 void k_contextualhelpbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4492,7 +4492,7 @@ void k_contextualhelpbutton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QEvent*)
+/// @param callback void func(KContextualHelpButton* self, QEvent* event)
 void k_contextualhelpbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4522,7 +4522,7 @@ void k_contextualhelpbutton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMetaMethod*)
+/// @param callback void func(KContextualHelpButton* self, QMetaMethod* signal)
 void k_contextualhelpbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4552,7 +4552,7 @@ void k_contextualhelpbutton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, QMetaMethod*)
+/// @param callback void func(KContextualHelpButton* self, QMetaMethod* signal)
 void k_contextualhelpbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4580,7 +4580,7 @@ void k_contextualhelpbutton_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_contextualhelpbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4608,7 +4608,7 @@ void k_contextualhelpbutton_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_contextualhelpbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4636,7 +4636,7 @@ void k_contextualhelpbutton_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_contextualhelpbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4664,7 +4664,7 @@ bool k_contextualhelpbutton_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_contextualhelpbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4692,7 +4692,7 @@ bool k_contextualhelpbutton_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_contextualhelpbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4720,7 +4720,7 @@ QObject* k_contextualhelpbutton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_contextualhelpbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4748,7 +4748,7 @@ int32_t k_contextualhelpbutton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_contextualhelpbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4778,7 +4778,7 @@ int32_t k_contextualhelpbutton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback int32_t fn(KContextualHelpButton*, const char*)
+/// @param callback int32_t func(KContextualHelpButton* self, const char* signal)
 void k_contextualhelpbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4808,7 +4808,7 @@ bool k_contextualhelpbutton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback bool fn(KContextualHelpButton*, QMetaMethod*)
+/// @param callback bool func(KContextualHelpButton* self, QMetaMethod* signal)
 void k_contextualhelpbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4840,7 +4840,7 @@ double k_contextualhelpbutton_qbase_get_decoded_metric_f(void* self, int32_t met
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KContextualHelpButton*
-/// @param callback double fn(KContextualHelpButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KContextualHelpButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_contextualhelpbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4850,7 +4850,7 @@ void k_contextualhelpbutton_on_get_decoded_metric_f(void* self, double (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self KContextualHelpButton*
-/// @param callback void fn(KContextualHelpButton*, const char*)
+/// @param callback void func(KContextualHelpButton* self, const char* objectName)
 void k_contextualhelpbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#dtor.KContextualHelpButton)

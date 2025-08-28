@@ -917,7 +917,7 @@ void q_paintdevicewindow_screen_changed(void* self, void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, QScreen*)
+/// @param callback void func(QPaintDeviceWindow* self, QScreen* screen)
 void q_paintdevicewindow_on_screen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -933,7 +933,7 @@ void q_paintdevicewindow_modality_changed(void* self, int32_t modality);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, enum Qt__WindowModality)
+/// @param callback void func(QPaintDeviceWindow* self, enum Qt__WindowModality modality)
 void q_paintdevicewindow_on_modality_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -949,7 +949,7 @@ void q_paintdevicewindow_window_state_changed(void* self, int32_t windowState);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, enum Qt__WindowState)
+/// @param callback void func(QPaintDeviceWindow* self, enum Qt__WindowState windowState)
 void q_paintdevicewindow_on_window_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -965,7 +965,7 @@ void q_paintdevicewindow_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, const char*)
+/// @param callback void func(QPaintDeviceWindow* self, const char* title)
 void q_paintdevicewindow_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWindow
@@ -981,7 +981,7 @@ void q_paintdevicewindow_x_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_x_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -997,7 +997,7 @@ void q_paintdevicewindow_y_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_y_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1013,7 +1013,7 @@ void q_paintdevicewindow_width_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1029,7 +1029,7 @@ void q_paintdevicewindow_height_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1045,7 +1045,7 @@ void q_paintdevicewindow_minimum_width_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_minimum_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1061,7 +1061,7 @@ void q_paintdevicewindow_minimum_height_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_minimum_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1077,7 +1077,7 @@ void q_paintdevicewindow_maximum_width_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_maximum_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1093,7 +1093,7 @@ void q_paintdevicewindow_maximum_height_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, int)
+/// @param callback void func(QPaintDeviceWindow* self, int arg)
 void q_paintdevicewindow_on_maximum_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1109,7 +1109,7 @@ void q_paintdevicewindow_visible_changed(void* self, bool arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, bool)
+/// @param callback void func(QPaintDeviceWindow* self, bool arg)
 void q_paintdevicewindow_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWindow
@@ -1125,7 +1125,7 @@ void q_paintdevicewindow_visibility_changed(void* self, int32_t visibility);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, enum QWindow__Visibility)
+/// @param callback void func(QPaintDeviceWindow* self, enum QWindow__Visibility visibility)
 void q_paintdevicewindow_on_visibility_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -1140,7 +1140,7 @@ void q_paintdevicewindow_active_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*)
+/// @param callback void func(QPaintDeviceWindow* self)
 void q_paintdevicewindow_on_active_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QWindow
@@ -1156,7 +1156,7 @@ void q_paintdevicewindow_content_orientation_changed(void* self, int32_t orienta
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, enum Qt__ScreenOrientation)
+/// @param callback void func(QPaintDeviceWindow* self, enum Qt__ScreenOrientation orientation)
 void q_paintdevicewindow_on_content_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -1172,7 +1172,7 @@ void q_paintdevicewindow_focus_object_changed(void* self, void* object);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, QObject*)
+/// @param callback void func(QPaintDeviceWindow* self, QObject* object)
 void q_paintdevicewindow_on_focus_object_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -1188,7 +1188,7 @@ void q_paintdevicewindow_opacity_changed(void* self, double opacity);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, double)
+/// @param callback void func(QPaintDeviceWindow* self, double opacity)
 void q_paintdevicewindow_on_opacity_changed(void* self, void (*callback)(void*, double));
 
 /// Inherited from QWindow
@@ -1204,7 +1204,7 @@ void q_paintdevicewindow_transient_parent_changed(void* self, void* transientPar
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, QWindow*)
+/// @param callback void func(QPaintDeviceWindow* self, QWindow* transientParent)
 void q_paintdevicewindow_on_transient_parent_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -1460,7 +1460,7 @@ void q_paintdevicewindow_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*)
+/// @param callback void func(QPaintDeviceWindow* self)
 void q_paintdevicewindow_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1531,7 +1531,7 @@ void q_paintdevicewindow_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, QObject*)
+/// @param callback void func(QPaintDeviceWindow* self, QObject* param1)
 void q_paintdevicewindow_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSurface
@@ -1655,7 +1655,7 @@ int32_t q_paintdevicewindow_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPaintDeviceWindow*
-/// @param callback void fn(QPaintDeviceWindow*, const char*)
+/// @param callback void func(QPaintDeviceWindow* self, const char* objectName)
 void q_paintdevicewindow_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#dtor.QPaintDeviceWindow)

@@ -465,7 +465,7 @@ void q_abstractnetworkcache_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractNetworkCache*
-/// @param callback void fn(QAbstractNetworkCache*)
+/// @param callback void func(QAbstractNetworkCache* self)
 void q_abstractnetworkcache_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -543,7 +543,7 @@ void q_abstractnetworkcache_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractNetworkCache*
-/// @param callback void fn(QAbstractNetworkCache*, QObject*)
+/// @param callback void func(QAbstractNetworkCache* self, QObject* param1)
 void q_abstractnetworkcache_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -553,7 +553,7 @@ void q_abstractnetworkcache_on_destroyed1(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractNetworkCache*
-/// @param callback void fn(QAbstractNetworkCache*, const char*)
+/// @param callback void func(QAbstractNetworkCache* self, const char* objectName)
 void q_abstractnetworkcache_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#dtor.QAbstractNetworkCache)

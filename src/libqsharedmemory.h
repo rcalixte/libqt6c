@@ -62,7 +62,7 @@ int32_t q_sharedmemory_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QSharedMemory*
-/// @param callback int32_t fn(QSharedMemory*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSharedMemory* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sharedmemory_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -472,7 +472,7 @@ void q_sharedmemory_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*)
+/// @param callback void func(QSharedMemory* self)
 void q_sharedmemory_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -550,7 +550,7 @@ void q_sharedmemory_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, QObject*)
+/// @param callback void func(QSharedMemory* self, QObject* param1)
 void q_sharedmemory_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -580,7 +580,7 @@ bool q_sharedmemory_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback bool fn(QSharedMemory*, QEvent*)
+/// @param callback bool func(QSharedMemory* self, QEvent* event)
 void q_sharedmemory_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -612,7 +612,7 @@ bool q_sharedmemory_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback bool fn(QSharedMemory*, QObject*, QEvent*)
+/// @param callback bool func(QSharedMemory* self, QObject* watched, QEvent* event)
 void q_sharedmemory_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -642,7 +642,7 @@ void q_sharedmemory_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, QTimerEvent*)
+/// @param callback void func(QSharedMemory* self, QTimerEvent* event)
 void q_sharedmemory_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -672,7 +672,7 @@ void q_sharedmemory_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, QChildEvent*)
+/// @param callback void func(QSharedMemory* self, QChildEvent* event)
 void q_sharedmemory_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -702,7 +702,7 @@ void q_sharedmemory_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, QEvent*)
+/// @param callback void func(QSharedMemory* self, QEvent* event)
 void q_sharedmemory_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -732,7 +732,7 @@ void q_sharedmemory_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, QMetaMethod*)
+/// @param callback void func(QSharedMemory* self, QMetaMethod* signal)
 void q_sharedmemory_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -762,7 +762,7 @@ void q_sharedmemory_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, QMetaMethod*)
+/// @param callback void func(QSharedMemory* self, QMetaMethod* signal)
 void q_sharedmemory_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -790,7 +790,7 @@ QObject* q_sharedmemory_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sharedmemory_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -818,7 +818,7 @@ int32_t q_sharedmemory_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sharedmemory_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -848,7 +848,7 @@ int32_t q_sharedmemory_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback int32_t fn(QSharedMemory*, const char*)
+/// @param callback int32_t func(QSharedMemory* self, const char* signal)
 void q_sharedmemory_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -878,7 +878,7 @@ bool q_sharedmemory_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSharedMemory*
-/// @param callback bool fn(QSharedMemory*, QMetaMethod*)
+/// @param callback bool func(QSharedMemory* self, QMetaMethod* signal)
 void q_sharedmemory_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -888,7 +888,7 @@ void q_sharedmemory_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSharedMemory*
-/// @param callback void fn(QSharedMemory*, const char*)
+/// @param callback void func(QSharedMemory* self, const char* objectName)
 void q_sharedmemory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#dtor.QSharedMemory)

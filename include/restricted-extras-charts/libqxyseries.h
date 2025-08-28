@@ -479,7 +479,7 @@ void q_xyseries_clicked(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clicked)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPointF*)
+/// @param callback void func(QXYSeries* self, QPointF* point)
 void q_xyseries_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#hovered)
@@ -492,7 +492,7 @@ void q_xyseries_hovered(void* self, void* point, bool state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#hovered)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPointF*, bool)
+/// @param callback void func(QXYSeries* self, QPointF* point, bool state)
 void q_xyseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pressed)
@@ -504,7 +504,7 @@ void q_xyseries_pressed(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pressed)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPointF*)
+/// @param callback void func(QXYSeries* self, QPointF* point)
 void q_xyseries_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#released)
@@ -516,7 +516,7 @@ void q_xyseries_released(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#released)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPointF*)
+/// @param callback void func(QXYSeries* self, QPointF* point)
 void q_xyseries_on_released(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#doubleClicked)
@@ -528,7 +528,7 @@ void q_xyseries_double_clicked(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPointF*)
+/// @param callback void func(QXYSeries* self, QPointF* point)
 void q_xyseries_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointReplaced)
@@ -540,7 +540,7 @@ void q_xyseries_point_replaced(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointReplaced)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, int)
+/// @param callback void func(QXYSeries* self, int index)
 void q_xyseries_on_point_replaced(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointRemoved)
@@ -552,7 +552,7 @@ void q_xyseries_point_removed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointRemoved)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, int)
+/// @param callback void func(QXYSeries* self, int index)
 void q_xyseries_on_point_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointAdded)
@@ -564,7 +564,7 @@ void q_xyseries_point_added(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointAdded)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, int)
+/// @param callback void func(QXYSeries* self, int index)
 void q_xyseries_on_point_added(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#colorChanged)
@@ -576,7 +576,7 @@ void q_xyseries_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#colorChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QColor*)
+/// @param callback void func(QXYSeries* self, QColor* color)
 void q_xyseries_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColorChanged)
@@ -588,7 +588,7 @@ void q_xyseries_selected_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedColorChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QColor*)
+/// @param callback void func(QXYSeries* self, QColor* color)
 void q_xyseries_on_selected_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsReplaced)
@@ -599,7 +599,7 @@ void q_xyseries_points_replaced(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsReplaced)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_points_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFormatChanged)
@@ -611,7 +611,7 @@ void q_xyseries_point_labels_format_changed(void* self, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFormatChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, const char*)
+/// @param callback void func(QXYSeries* self, const char* format)
 void q_xyseries_on_point_labels_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsVisibilityChanged)
@@ -623,7 +623,7 @@ void q_xyseries_point_labels_visibility_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsVisibilityChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, bool)
+/// @param callback void func(QXYSeries* self, bool visible)
 void q_xyseries_on_point_labels_visibility_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFontChanged)
@@ -635,7 +635,7 @@ void q_xyseries_point_labels_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsFontChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QFont*)
+/// @param callback void func(QXYSeries* self, QFont* font)
 void q_xyseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColorChanged)
@@ -647,7 +647,7 @@ void q_xyseries_point_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QColor*)
+/// @param callback void func(QXYSeries* self, QColor* color)
 void q_xyseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClippingChanged)
@@ -659,7 +659,7 @@ void q_xyseries_point_labels_clipping_changed(void* self, bool clipping);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointLabelsClippingChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, bool)
+/// @param callback void func(QXYSeries* self, bool clipping)
 void q_xyseries_on_point_labels_clipping_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsRemoved)
@@ -672,7 +672,7 @@ void q_xyseries_points_removed(void* self, int index, int count);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsRemoved)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, int, int)
+/// @param callback void func(QXYSeries* self, int index, int count)
 void q_xyseries_on_points_removed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#penChanged)
@@ -684,7 +684,7 @@ void q_xyseries_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#penChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPen*)
+/// @param callback void func(QXYSeries* self, QPen* pen)
 void q_xyseries_on_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPointsChanged)
@@ -695,7 +695,7 @@ void q_xyseries_selected_points_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedPointsChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_selected_points_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarkerChanged)
@@ -707,7 +707,7 @@ void q_xyseries_light_marker_changed(void* self, void* lightMarker);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#lightMarkerChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QImage*)
+/// @param callback void func(QXYSeries* self, QImage* lightMarker)
 void q_xyseries_on_light_marker_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarkerChanged)
@@ -719,7 +719,7 @@ void q_xyseries_selected_light_marker_changed(void* self, void* selectedLightMar
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#selectedLightMarkerChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QImage*)
+/// @param callback void func(QXYSeries* self, QImage* selectedLightMarker)
 void q_xyseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisibilityChanged)
@@ -731,7 +731,7 @@ void q_xyseries_best_fit_line_visibility_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineVisibilityChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, bool)
+/// @param callback void func(QXYSeries* self, bool visible)
 void q_xyseries_on_best_fit_line_visibility_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePenChanged)
@@ -743,7 +743,7 @@ void q_xyseries_best_fit_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLinePenChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QPen*)
+/// @param callback void func(QXYSeries* self, QPen* pen)
 void q_xyseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColorChanged)
@@ -755,7 +755,7 @@ void q_xyseries_best_fit_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#bestFitLineColorChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QColor*)
+/// @param callback void func(QXYSeries* self, QColor* color)
 void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
@@ -767,7 +767,7 @@ void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
+/// @param callback void func(QXYSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
 void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSizeChanged)
@@ -779,7 +779,7 @@ void q_xyseries_marker_size_changed(void* self, double size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSizeChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, double)
+/// @param callback void func(QXYSeries* self, double size)
 void q_xyseries_on_marker_size_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -955,7 +955,7 @@ void q_xyseries_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -970,7 +970,7 @@ void q_xyseries_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -985,7 +985,7 @@ void q_xyseries_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -1000,7 +1000,7 @@ void q_xyseries_use_open_g_l_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -1262,7 +1262,7 @@ void q_xyseries_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*)
+/// @param callback void func(QXYSeries* self)
 void q_xyseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1340,7 +1340,7 @@ void q_xyseries_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, QObject*)
+/// @param callback void func(QXYSeries* self, QObject* param1)
 void q_xyseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1350,7 +1350,7 @@ void q_xyseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QXYSeries*
-/// @param callback void fn(QXYSeries*, const char*)
+/// @param callback void func(QXYSeries* self, const char* objectName)
 void q_xyseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#dtor.QXYSeries)

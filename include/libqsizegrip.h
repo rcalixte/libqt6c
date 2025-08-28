@@ -36,7 +36,7 @@ int32_t q_sizegrip_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback int32_t fn(QSizeGrip*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSizeGrip* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sizegrip_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -64,7 +64,7 @@ QSize* q_sizegrip_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_sizegrip_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#sizeHint)
@@ -85,7 +85,7 @@ void q_sizegrip_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, bool)
+/// @param callback void func(QSizeGrip* self, bool visible)
 void q_sizegrip_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#setVisible)
@@ -107,7 +107,7 @@ void q_sizegrip_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QPaintEvent*)
+/// @param callback void func(QSizeGrip* self, QPaintEvent* param1)
 void q_sizegrip_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#paintEvent)
@@ -129,7 +129,7 @@ void q_sizegrip_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMouseEvent*)
+/// @param callback void func(QSizeGrip* self, QMouseEvent* param1)
 void q_sizegrip_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#mousePressEvent)
@@ -151,7 +151,7 @@ void q_sizegrip_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMouseEvent*)
+/// @param callback void func(QSizeGrip* self, QMouseEvent* param1)
 void q_sizegrip_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#mouseMoveEvent)
@@ -173,7 +173,7 @@ void q_sizegrip_mouse_release_event(void* self, void* mouseEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMouseEvent*)
+/// @param callback void func(QSizeGrip* self, QMouseEvent* mouseEvent)
 void q_sizegrip_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#mouseReleaseEvent)
@@ -195,7 +195,7 @@ void q_sizegrip_move_event(void* self, void* moveEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMoveEvent*)
+/// @param callback void func(QSizeGrip* self, QMoveEvent* moveEvent)
 void q_sizegrip_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#moveEvent)
@@ -217,7 +217,7 @@ void q_sizegrip_show_event(void* self, void* showEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QShowEvent*)
+/// @param callback void func(QSizeGrip* self, QShowEvent* showEvent)
 void q_sizegrip_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#showEvent)
@@ -239,7 +239,7 @@ void q_sizegrip_hide_event(void* self, void* hideEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QHideEvent*)
+/// @param callback void func(QSizeGrip* self, QHideEvent* hideEvent)
 void q_sizegrip_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#hideEvent)
@@ -262,7 +262,7 @@ bool q_sizegrip_event_filter(void* self, void* param1, void* param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn(QSizeGrip*, QObject*, QEvent*)
+/// @param callback bool func(QSizeGrip* self, QObject* param1, QEvent* param2)
 void q_sizegrip_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#eventFilter)
@@ -285,7 +285,7 @@ bool q_sizegrip_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn(QSizeGrip*, QEvent*)
+/// @param callback bool func(QSizeGrip* self, QEvent* param1)
 void q_sizegrip_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#event)
@@ -2250,7 +2250,7 @@ void q_sizegrip_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, const char*)
+/// @param callback void func(QSizeGrip* self, const char* title)
 void q_sizegrip_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2266,7 +2266,7 @@ void q_sizegrip_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QIcon*)
+/// @param callback void func(QSizeGrip* self, QIcon* icon)
 void q_sizegrip_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2282,7 +2282,7 @@ void q_sizegrip_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, const char*)
+/// @param callback void func(QSizeGrip* self, const char* iconText)
 void q_sizegrip_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2298,7 +2298,7 @@ void q_sizegrip_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QPoint*)
+/// @param callback void func(QSizeGrip* self, QPoint* pos)
 void q_sizegrip_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2675,7 +2675,7 @@ void q_sizegrip_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*)
+/// @param callback void func(QSizeGrip* self)
 void q_sizegrip_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2753,7 +2753,7 @@ void q_sizegrip_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QObject*)
+/// @param callback void func(QSizeGrip* self, QObject* param1)
 void q_sizegrip_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2872,7 +2872,7 @@ int32_t q_sizegrip_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sizegrip_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2900,7 +2900,7 @@ QSize* q_sizegrip_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_sizegrip_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2930,7 +2930,7 @@ int32_t q_sizegrip_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback int32_t fn(QSizeGrip*, int)
+/// @param callback int32_t func(QSizeGrip* self, int param1)
 void q_sizegrip_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2958,7 +2958,7 @@ bool q_sizegrip_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sizegrip_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2986,7 +2986,7 @@ QPaintEngine* q_sizegrip_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_sizegrip_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3016,7 +3016,7 @@ void q_sizegrip_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMouseEvent*)
+/// @param callback void func(QSizeGrip* self, QMouseEvent* event)
 void q_sizegrip_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3046,7 +3046,7 @@ void q_sizegrip_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QWheelEvent*)
+/// @param callback void func(QSizeGrip* self, QWheelEvent* event)
 void q_sizegrip_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3076,7 +3076,7 @@ void q_sizegrip_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QKeyEvent*)
+/// @param callback void func(QSizeGrip* self, QKeyEvent* event)
 void q_sizegrip_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3106,7 +3106,7 @@ void q_sizegrip_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QKeyEvent*)
+/// @param callback void func(QSizeGrip* self, QKeyEvent* event)
 void q_sizegrip_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3136,7 +3136,7 @@ void q_sizegrip_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QFocusEvent*)
+/// @param callback void func(QSizeGrip* self, QFocusEvent* event)
 void q_sizegrip_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3166,7 +3166,7 @@ void q_sizegrip_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QFocusEvent*)
+/// @param callback void func(QSizeGrip* self, QFocusEvent* event)
 void q_sizegrip_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3196,7 +3196,7 @@ void q_sizegrip_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QEnterEvent*)
+/// @param callback void func(QSizeGrip* self, QEnterEvent* event)
 void q_sizegrip_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3226,7 +3226,7 @@ void q_sizegrip_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QEvent*)
+/// @param callback void func(QSizeGrip* self, QEvent* event)
 void q_sizegrip_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3256,7 +3256,7 @@ void q_sizegrip_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QResizeEvent*)
+/// @param callback void func(QSizeGrip* self, QResizeEvent* event)
 void q_sizegrip_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3286,7 +3286,7 @@ void q_sizegrip_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QCloseEvent*)
+/// @param callback void func(QSizeGrip* self, QCloseEvent* event)
 void q_sizegrip_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3316,7 +3316,7 @@ void q_sizegrip_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QContextMenuEvent*)
+/// @param callback void func(QSizeGrip* self, QContextMenuEvent* event)
 void q_sizegrip_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3346,7 +3346,7 @@ void q_sizegrip_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QTabletEvent*)
+/// @param callback void func(QSizeGrip* self, QTabletEvent* event)
 void q_sizegrip_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3376,7 +3376,7 @@ void q_sizegrip_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QActionEvent*)
+/// @param callback void func(QSizeGrip* self, QActionEvent* event)
 void q_sizegrip_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3406,7 +3406,7 @@ void q_sizegrip_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QDragEnterEvent*)
+/// @param callback void func(QSizeGrip* self, QDragEnterEvent* event)
 void q_sizegrip_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3436,7 +3436,7 @@ void q_sizegrip_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QDragMoveEvent*)
+/// @param callback void func(QSizeGrip* self, QDragMoveEvent* event)
 void q_sizegrip_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3466,7 +3466,7 @@ void q_sizegrip_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QDragLeaveEvent*)
+/// @param callback void func(QSizeGrip* self, QDragLeaveEvent* event)
 void q_sizegrip_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3496,7 +3496,7 @@ void q_sizegrip_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QDropEvent*)
+/// @param callback void func(QSizeGrip* self, QDropEvent* event)
 void q_sizegrip_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3530,7 +3530,7 @@ bool q_sizegrip_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn(QSizeGrip*, const char*, void*, intptr_t*)
+/// @param callback bool func(QSizeGrip* self, const char* eventType, void* message, intptr_t* result)
 void q_sizegrip_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3560,7 +3560,7 @@ void q_sizegrip_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QEvent*)
+/// @param callback void func(QSizeGrip* self, QEvent* param1)
 void q_sizegrip_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3590,7 +3590,7 @@ int32_t q_sizegrip_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback int32_t fn(QSizeGrip*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QSizeGrip* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_sizegrip_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3620,7 +3620,7 @@ void q_sizegrip_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QPainter*)
+/// @param callback void func(QSizeGrip* self, QPainter* painter)
 void q_sizegrip_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3650,7 +3650,7 @@ QPaintDevice* q_sizegrip_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback QPaintDevice* fn(QSizeGrip*, QPoint*)
+/// @param callback QPaintDevice* func(QSizeGrip* self, QPoint* offset)
 void q_sizegrip_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3678,7 +3678,7 @@ QPainter* q_sizegrip_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_sizegrip_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3708,7 +3708,7 @@ void q_sizegrip_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QInputMethodEvent*)
+/// @param callback void func(QSizeGrip* self, QInputMethodEvent* param1)
 void q_sizegrip_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3738,7 +3738,7 @@ QVariant* q_sizegrip_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback QVariant* fn(QSizeGrip*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QSizeGrip* self, enum Qt__InputMethodQuery param1)
 void q_sizegrip_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3768,7 +3768,7 @@ bool q_sizegrip_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn(QSizeGrip*, bool)
+/// @param callback bool func(QSizeGrip* self, bool next)
 void q_sizegrip_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3798,7 +3798,7 @@ void q_sizegrip_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QTimerEvent*)
+/// @param callback void func(QSizeGrip* self, QTimerEvent* event)
 void q_sizegrip_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3828,7 +3828,7 @@ void q_sizegrip_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QChildEvent*)
+/// @param callback void func(QSizeGrip* self, QChildEvent* event)
 void q_sizegrip_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3858,7 +3858,7 @@ void q_sizegrip_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QEvent*)
+/// @param callback void func(QSizeGrip* self, QEvent* event)
 void q_sizegrip_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3888,7 +3888,7 @@ void q_sizegrip_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMetaMethod*)
+/// @param callback void func(QSizeGrip* self, QMetaMethod* signal)
 void q_sizegrip_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3918,7 +3918,7 @@ void q_sizegrip_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, QMetaMethod*)
+/// @param callback void func(QSizeGrip* self, QMetaMethod* signal)
 void q_sizegrip_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3946,7 +3946,7 @@ void q_sizegrip_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sizegrip_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -3974,7 +3974,7 @@ void q_sizegrip_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sizegrip_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4002,7 +4002,7 @@ void q_sizegrip_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sizegrip_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4030,7 +4030,7 @@ bool q_sizegrip_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sizegrip_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4058,7 +4058,7 @@ bool q_sizegrip_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sizegrip_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4086,7 +4086,7 @@ QObject* q_sizegrip_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sizegrip_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4114,7 +4114,7 @@ int32_t q_sizegrip_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sizegrip_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4144,7 +4144,7 @@ int32_t q_sizegrip_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback int32_t fn(QSizeGrip*, const char*)
+/// @param callback int32_t func(QSizeGrip* self, const char* signal)
 void q_sizegrip_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4174,7 +4174,7 @@ bool q_sizegrip_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback bool fn(QSizeGrip*, QMetaMethod*)
+/// @param callback bool func(QSizeGrip* self, QMetaMethod* signal)
 void q_sizegrip_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4206,7 +4206,7 @@ double q_sizegrip_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSizeGrip*
-/// @param callback double fn(QSizeGrip*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QSizeGrip* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_sizegrip_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4216,7 +4216,7 @@ void q_sizegrip_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSizeGrip*
-/// @param callback void fn(QSizeGrip*, const char*)
+/// @param callback void func(QSizeGrip* self, const char* objectName)
 void q_sizegrip_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizegrip.html#dtor.QSizeGrip)

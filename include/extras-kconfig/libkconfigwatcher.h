@@ -45,7 +45,7 @@ void k_configwatcher_config_changed(void* self, void* group, const char* names[]
 /// [Qt documentation](https://api-staging.kde.org/kconfigwatcher.html#configChanged)
 ///
 /// @param self KConfigWatcher*
-/// @param callback void fn(KConfigWatcher*, KConfigGroup*, const char**)
+/// @param callback void func(KConfigWatcher* self, KConfigGroup* group, const char** names)
 void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -308,7 +308,7 @@ void k_configwatcher_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigWatcher*
-/// @param callback void fn(KConfigWatcher*)
+/// @param callback void func(KConfigWatcher* self)
 void k_configwatcher_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -386,7 +386,7 @@ void k_configwatcher_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigWatcher*
-/// @param callback void fn(KConfigWatcher*, QObject*)
+/// @param callback void func(KConfigWatcher* self, QObject* param1)
 void k_configwatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -396,7 +396,7 @@ void k_configwatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KConfigWatcher*
-/// @param callback void fn(KConfigWatcher*, const char*)
+/// @param callback void func(KConfigWatcher* self, const char* objectName)
 void k_configwatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigwatcher.html#dtor.KConfigWatcher)

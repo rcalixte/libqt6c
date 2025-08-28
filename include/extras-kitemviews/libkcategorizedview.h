@@ -40,7 +40,7 @@ int32_t k_categorizedview_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn(KCategorizedView*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KCategorizedView* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_categorizedview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ void k_categorizedview_set_model(void* self, void* model);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QAbstractItemModel*)
+/// @param callback void func(KCategorizedView* self, QAbstractItemModel* model)
 void k_categorizedview_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setModel)
@@ -103,7 +103,7 @@ QRect* k_categorizedview_visual_rect(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback QRect* fn(KCategorizedView*, QModelIndex*)
+/// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#visualRect)
@@ -181,7 +181,7 @@ QModelIndex* k_categorizedview_index_at(void* self, void* point);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback QModelIndex* fn(KCategorizedView*, QPoint*)
+/// @param callback QModelIndex* func(KCategorizedView* self, QPoint* point)
 void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#indexAt)
@@ -202,7 +202,7 @@ void k_categorizedview_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_reset(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#reset)
@@ -221,7 +221,7 @@ void k_categorizedview_category_spacing_changed(void* self, int spacing);
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#categorySpacingChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int)
+/// @param callback void func(KCategorizedView* self, int spacing)
 void k_categorizedview_on_category_spacing_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#alternatingBlockColorsChanged)
@@ -233,7 +233,7 @@ void k_categorizedview_alternating_block_colors_changed(void* self, bool enable)
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#alternatingBlockColorsChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, bool)
+/// @param callback void func(KCategorizedView* self, bool enable)
 void k_categorizedview_on_alternating_block_colors_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#collapsibleBlocksChanged)
@@ -245,7 +245,7 @@ void k_categorizedview_collapsible_blocks_changed(void* self, bool enable);
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#collapsibleBlocksChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, bool)
+/// @param callback void func(KCategorizedView* self, bool enable)
 void k_categorizedview_on_collapsible_blocks_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#paintEvent)
@@ -259,7 +259,7 @@ void k_categorizedview_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QPaintEvent*)
+/// @param callback void func(KCategorizedView* self, QPaintEvent* event)
 void k_categorizedview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#paintEvent)
@@ -281,7 +281,7 @@ void k_categorizedview_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QResizeEvent*)
+/// @param callback void func(KCategorizedView* self, QResizeEvent* event)
 void k_categorizedview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#resizeEvent)
@@ -304,7 +304,7 @@ void k_categorizedview_set_selection(void* self, void* rect, int64_t flags);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QRect*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(KCategorizedView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag flags)
 void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setSelection)
@@ -327,7 +327,7 @@ void k_categorizedview_mouse_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMouseEvent*)
+/// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseMoveEvent)
@@ -349,7 +349,7 @@ void k_categorizedview_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMouseEvent*)
+/// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mousePressEvent)
@@ -371,7 +371,7 @@ void k_categorizedview_mouse_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMouseEvent*)
+/// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseReleaseEvent)
@@ -393,7 +393,7 @@ void k_categorizedview_leave_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QEvent*)
+/// @param callback void func(KCategorizedView* self, QEvent* event)
 void k_categorizedview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#leaveEvent)
@@ -415,7 +415,7 @@ void k_categorizedview_start_drag(void* self, int64_t supportedActions);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, flag of enum Qt__DropAction)
+/// @param callback void func(KCategorizedView* self, flag of enum Qt__DropAction supportedActions)
 void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#startDrag)
@@ -437,7 +437,7 @@ void k_categorizedview_drag_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QDragMoveEvent*)
+/// @param callback void func(KCategorizedView* self, QDragMoveEvent* event)
 void k_categorizedview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragMoveEvent)
@@ -459,7 +459,7 @@ void k_categorizedview_drag_enter_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QDragEnterEvent*)
+/// @param callback void func(KCategorizedView* self, QDragEnterEvent* event)
 void k_categorizedview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragEnterEvent)
@@ -481,7 +481,7 @@ void k_categorizedview_drag_leave_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QDragLeaveEvent*)
+/// @param callback void func(KCategorizedView* self, QDragLeaveEvent* event)
 void k_categorizedview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragLeaveEvent)
@@ -503,7 +503,7 @@ void k_categorizedview_drop_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QDropEvent*)
+/// @param callback void func(KCategorizedView* self, QDropEvent* event)
 void k_categorizedview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dropEvent)
@@ -526,7 +526,7 @@ QModelIndex* k_categorizedview_move_cursor(void* self, int32_t cursorAction, int
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback QModelIndex* fn(KCategorizedView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
+/// @param callback QModelIndex* func(KCategorizedView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#moveCursor)
@@ -551,7 +551,7 @@ void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int st
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedView* self, QModelIndex* parent, int start, int end)
 void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
@@ -574,7 +574,7 @@ void k_categorizedview_update_geometries(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_update_geometries(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#updateGeometries)
@@ -596,7 +596,7 @@ void k_categorizedview_current_changed(void* self, void* current, void* previous
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* current, QModelIndex* previous)
 void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#currentChanged)
@@ -621,7 +621,7 @@ void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dataChanged)
@@ -647,7 +647,7 @@ void k_categorizedview_rows_inserted(void* self, void* parent, int start, int en
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*, int, int)
+/// @param callback void func(KCategorizedView* self, QModelIndex* parent, int start, int end)
 void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsInserted)
@@ -670,7 +670,7 @@ void k_categorizedview_slot_layout_changed(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#slotLayoutChanged)
@@ -948,7 +948,7 @@ void k_categorizedview_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, libqt_list /* of QModelIndex* */)
+/// @param callback void func(KCategorizedView* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
@@ -1413,7 +1413,7 @@ void k_categorizedview_pressed(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1429,7 +1429,7 @@ void k_categorizedview_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1445,7 +1445,7 @@ void k_categorizedview_double_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1461,7 +1461,7 @@ void k_categorizedview_activated(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_activated(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1477,7 +1477,7 @@ void k_categorizedview_entered(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_entered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1492,7 +1492,7 @@ void k_categorizedview_viewport_entered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*)
+/// @param callback void func(KCategorizedView* self)
 void k_categorizedview_on_viewport_entered(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1508,7 +1508,7 @@ void k_categorizedview_icon_size_changed(void* self, void* size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QSize*)
+/// @param callback void func(KCategorizedView* self, QSize* size)
 void k_categorizedview_on_icon_size_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3677,7 +3677,7 @@ void k_categorizedview_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, const char*)
+/// @param callback void func(KCategorizedView* self, const char* title)
 void k_categorizedview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3693,7 +3693,7 @@ void k_categorizedview_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QIcon*)
+/// @param callback void func(KCategorizedView* self, QIcon* icon)
 void k_categorizedview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3709,7 +3709,7 @@ void k_categorizedview_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, const char*)
+/// @param callback void func(KCategorizedView* self, const char* iconText)
 void k_categorizedview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3725,7 +3725,7 @@ void k_categorizedview_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QPoint*)
+/// @param callback void func(KCategorizedView* self, QPoint* pos)
 void k_categorizedview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4102,7 +4102,7 @@ void k_categorizedview_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*)
+/// @param callback void func(KCategorizedView* self)
 void k_categorizedview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4180,7 +4180,7 @@ void k_categorizedview_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QObject*)
+/// @param callback void func(KCategorizedView* self, QObject* param1)
 void k_categorizedview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4303,7 +4303,7 @@ void k_categorizedview_qbase_scroll_to(void* self, void* index, int32_t hint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 void k_categorizedview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QListView
@@ -4331,7 +4331,7 @@ void k_categorizedview_qbase_do_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_do_items_layout(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -4361,7 +4361,7 @@ void k_categorizedview_qbase_set_root_index(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_set_root_index(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4391,7 +4391,7 @@ bool k_categorizedview_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, QEvent*)
+/// @param callback bool func(KCategorizedView* self, QEvent* e)
 void k_categorizedview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4423,7 +4423,7 @@ void k_categorizedview_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int, int)
+/// @param callback void func(KCategorizedView* self, int dx, int dy)
 void k_categorizedview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
@@ -4453,7 +4453,7 @@ void k_categorizedview_qbase_wheel_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QWheelEvent*)
+/// @param callback void func(KCategorizedView* self, QWheelEvent* e)
 void k_categorizedview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4483,7 +4483,7 @@ void k_categorizedview_qbase_timer_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QTimerEvent*)
+/// @param callback void func(KCategorizedView* self, QTimerEvent* e)
 void k_categorizedview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4513,7 +4513,7 @@ void k_categorizedview_qbase_init_view_item_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QStyleOptionViewItem*)
+/// @param callback void func(KCategorizedView* self, QStyleOptionViewItem* option)
 void k_categorizedview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4541,7 +4541,7 @@ int32_t k_categorizedview_qbase_horizontal_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedview_on_horizontal_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
@@ -4569,7 +4569,7 @@ int32_t k_categorizedview_qbase_vertical_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedview_on_vertical_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
@@ -4599,7 +4599,7 @@ QRegion* k_categorizedview_qbase_visual_region_for_selection(void* self, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QRegion* fn(KCategorizedView*, QItemSelection*)
+/// @param callback QRegion* func(KCategorizedView* self, QItemSelection* selection)
 void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4627,7 +4627,7 @@ libqt_list /* of QModelIndex* */ k_categorizedview_qbase_selected_indexes(void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void k_categorizedview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QListView
@@ -4657,7 +4657,7 @@ bool k_categorizedview_qbase_is_index_hidden(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, QModelIndex*)
+/// @param callback bool func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4689,7 +4689,7 @@ void k_categorizedview_qbase_selection_changed(void* self, void* selected, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QItemSelection*, QItemSelection*)
+/// @param callback void func(KCategorizedView* self, QItemSelection* selected, QItemSelection* deselected)
 void k_categorizedview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
@@ -4717,7 +4717,7 @@ QSize* k_categorizedview_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_categorizedview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -4747,7 +4747,7 @@ void k_categorizedview_qbase_set_selection_model(void* self, void* selectionMode
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QItemSelectionModel*)
+/// @param callback void func(KCategorizedView* self, QItemSelectionModel* selectionModel)
 void k_categorizedview_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -4777,7 +4777,7 @@ void k_categorizedview_qbase_keyboard_search(void* self, const char* search);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, const char*)
+/// @param callback void func(KCategorizedView* self, const char* search)
 void k_categorizedview_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractItemView
@@ -4807,7 +4807,7 @@ int32_t k_categorizedview_qbase_size_hint_for_row(void* self, int row);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn(KCategorizedView*, int)
+/// @param callback int32_t func(KCategorizedView* self, int row)
 void k_categorizedview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -4837,7 +4837,7 @@ int32_t k_categorizedview_qbase_size_hint_for_column(void* self, int column);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn(KCategorizedView*, int)
+/// @param callback int32_t func(KCategorizedView* self, int column)
 void k_categorizedview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -4867,7 +4867,7 @@ QAbstractItemDelegate* k_categorizedview_qbase_item_delegate_for_index(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QAbstractItemDelegate* fn(KCategorizedView*, QModelIndex*)
+/// @param callback QAbstractItemDelegate* func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -4897,7 +4897,7 @@ QVariant* k_categorizedview_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QVariant* fn(KCategorizedView*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KCategorizedView* self, enum Qt__InputMethodQuery query)
 void k_categorizedview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -4925,7 +4925,7 @@ void k_categorizedview_qbase_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_select_all(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -4953,7 +4953,7 @@ void k_categorizedview_qbase_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_update_editor_data(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -4981,7 +4981,7 @@ void k_categorizedview_qbase_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_update_editor_geometries(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5011,7 +5011,7 @@ void k_categorizedview_qbase_vertical_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int)
+/// @param callback void func(KCategorizedView* self, int action)
 void k_categorizedview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5041,7 +5041,7 @@ void k_categorizedview_qbase_horizontal_scrollbar_action(void* self, int action)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int)
+/// @param callback void func(KCategorizedView* self, int action)
 void k_categorizedview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5071,7 +5071,7 @@ void k_categorizedview_qbase_vertical_scrollbar_value_changed(void* self, int va
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int)
+/// @param callback void func(KCategorizedView* self, int value)
 void k_categorizedview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5101,7 +5101,7 @@ void k_categorizedview_qbase_horizontal_scrollbar_value_changed(void* self, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int)
+/// @param callback void func(KCategorizedView* self, int value)
 void k_categorizedview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5133,7 +5133,7 @@ void k_categorizedview_qbase_close_editor(void* self, void* editor, int32_t hint
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
+/// @param callback void func(KCategorizedView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
 void k_categorizedview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -5163,7 +5163,7 @@ void k_categorizedview_qbase_commit_data(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QWidget*)
+/// @param callback void func(KCategorizedView* self, QWidget* editor)
 void k_categorizedview_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5193,7 +5193,7 @@ void k_categorizedview_qbase_editor_destroyed(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QObject*)
+/// @param callback void func(KCategorizedView* self, QObject* editor)
 void k_categorizedview_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5227,7 +5227,7 @@ bool k_categorizedview_qbase_edit2(void* self, void* index, int32_t trigger, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
+/// @param callback bool func(KCategorizedView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
@@ -5263,7 +5263,7 @@ int64_t k_categorizedview_qbase_selection_command(void* self, void* index, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int64_t fn(KCategorizedView*, QModelIndex*, QEvent*)
+/// @param callback int64_t func(KCategorizedView* self, QModelIndex* index, QEvent* event)
 void k_categorizedview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5293,7 +5293,7 @@ bool k_categorizedview_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, bool)
+/// @param callback bool func(KCategorizedView* self, bool next)
 void k_categorizedview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QAbstractItemView
@@ -5323,7 +5323,7 @@ bool k_categorizedview_qbase_viewport_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, QEvent*)
+/// @param callback bool func(KCategorizedView* self, QEvent* event)
 void k_categorizedview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5353,7 +5353,7 @@ void k_categorizedview_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMouseEvent*)
+/// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5383,7 +5383,7 @@ void k_categorizedview_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QFocusEvent*)
+/// @param callback void func(KCategorizedView* self, QFocusEvent* event)
 void k_categorizedview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5413,7 +5413,7 @@ void k_categorizedview_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QFocusEvent*)
+/// @param callback void func(KCategorizedView* self, QFocusEvent* event)
 void k_categorizedview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5443,7 +5443,7 @@ void k_categorizedview_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QKeyEvent*)
+/// @param callback void func(KCategorizedView* self, QKeyEvent* event)
 void k_categorizedview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5473,7 +5473,7 @@ void k_categorizedview_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QInputMethodEvent*)
+/// @param callback void func(KCategorizedView* self, QInputMethodEvent* event)
 void k_categorizedview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5505,7 +5505,7 @@ bool k_categorizedview_qbase_event_filter(void* self, void* object, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, QObject*, QEvent*)
+/// @param callback bool func(KCategorizedView* self, QObject* object, QEvent* event)
 void k_categorizedview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5533,7 +5533,7 @@ QSize* k_categorizedview_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5561,7 +5561,7 @@ QSize* k_categorizedview_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_categorizedview_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5591,7 +5591,7 @@ void k_categorizedview_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QWidget*)
+/// @param callback void func(KCategorizedView* self, QWidget* viewport)
 void k_categorizedview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5621,7 +5621,7 @@ void k_categorizedview_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QContextMenuEvent*)
+/// @param callback void func(KCategorizedView* self, QContextMenuEvent* param1)
 void k_categorizedview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -5651,7 +5651,7 @@ void k_categorizedview_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QEvent*)
+/// @param callback void func(KCategorizedView* self, QEvent* param1)
 void k_categorizedview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -5681,7 +5681,7 @@ void k_categorizedview_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QStyleOptionFrame*)
+/// @param callback void func(KCategorizedView* self, QStyleOptionFrame* option)
 void k_categorizedview_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5709,7 +5709,7 @@ int32_t k_categorizedview_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -5739,7 +5739,7 @@ void k_categorizedview_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, bool)
+/// @param callback void func(KCategorizedView* self, bool visible)
 void k_categorizedview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -5769,7 +5769,7 @@ int32_t k_categorizedview_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn(KCategorizedView*, int)
+/// @param callback int32_t func(KCategorizedView* self, int param1)
 void k_categorizedview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -5797,7 +5797,7 @@ bool k_categorizedview_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_categorizedview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5825,7 +5825,7 @@ QPaintEngine* k_categorizedview_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_categorizedview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -5855,7 +5855,7 @@ void k_categorizedview_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QKeyEvent*)
+/// @param callback void func(KCategorizedView* self, QKeyEvent* event)
 void k_categorizedview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5885,7 +5885,7 @@ void k_categorizedview_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QEnterEvent*)
+/// @param callback void func(KCategorizedView* self, QEnterEvent* event)
 void k_categorizedview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5915,7 +5915,7 @@ void k_categorizedview_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMoveEvent*)
+/// @param callback void func(KCategorizedView* self, QMoveEvent* event)
 void k_categorizedview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5945,7 +5945,7 @@ void k_categorizedview_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QCloseEvent*)
+/// @param callback void func(KCategorizedView* self, QCloseEvent* event)
 void k_categorizedview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5975,7 +5975,7 @@ void k_categorizedview_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QTabletEvent*)
+/// @param callback void func(KCategorizedView* self, QTabletEvent* event)
 void k_categorizedview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6005,7 +6005,7 @@ void k_categorizedview_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QActionEvent*)
+/// @param callback void func(KCategorizedView* self, QActionEvent* event)
 void k_categorizedview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6035,7 +6035,7 @@ void k_categorizedview_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QShowEvent*)
+/// @param callback void func(KCategorizedView* self, QShowEvent* event)
 void k_categorizedview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6065,7 +6065,7 @@ void k_categorizedview_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QHideEvent*)
+/// @param callback void func(KCategorizedView* self, QHideEvent* event)
 void k_categorizedview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6099,7 +6099,7 @@ bool k_categorizedview_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, const char*, void*, intptr_t*)
+/// @param callback bool func(KCategorizedView* self, const char* eventType, void* message, intptr_t* result)
 void k_categorizedview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -6129,7 +6129,7 @@ int32_t k_categorizedview_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn(KCategorizedView*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KCategorizedView* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_categorizedview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -6159,7 +6159,7 @@ void k_categorizedview_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QPainter*)
+/// @param callback void func(KCategorizedView* self, QPainter* painter)
 void k_categorizedview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6189,7 +6189,7 @@ QPaintDevice* k_categorizedview_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QPaintDevice* fn(KCategorizedView*, QPoint*)
+/// @param callback QPaintDevice* func(KCategorizedView* self, QPoint* offset)
 void k_categorizedview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6217,7 +6217,7 @@ QPainter* k_categorizedview_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_categorizedview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -6247,7 +6247,7 @@ void k_categorizedview_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QChildEvent*)
+/// @param callback void func(KCategorizedView* self, QChildEvent* event)
 void k_categorizedview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6277,7 +6277,7 @@ void k_categorizedview_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QEvent*)
+/// @param callback void func(KCategorizedView* self, QEvent* event)
 void k_categorizedview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6307,7 +6307,7 @@ void k_categorizedview_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMetaMethod*)
+/// @param callback void func(KCategorizedView* self, QMetaMethod* signal)
 void k_categorizedview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6337,7 +6337,7 @@ void k_categorizedview_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QMetaMethod*)
+/// @param callback void func(KCategorizedView* self, QMetaMethod* signal)
 void k_categorizedview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -6369,7 +6369,7 @@ void k_categorizedview_qbase_resize_contents(void* self, int width, int height);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int, int)
+/// @param callback void func(KCategorizedView* self, int width, int height)
 void k_categorizedview_on_resize_contents(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
@@ -6397,7 +6397,7 @@ QSize* k_categorizedview_qbase_contents_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_categorizedview_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
@@ -6427,7 +6427,7 @@ QRect* k_categorizedview_qbase_rect_for_index(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QRect* fn(KCategorizedView*, QModelIndex*)
+/// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -6459,7 +6459,7 @@ void k_categorizedview_qbase_set_position_for_index(void* self, void* position, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QPoint*, QModelIndex*)
+/// @param callback void func(KCategorizedView* self, QPoint* position, QModelIndex* index)
 void k_categorizedview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6491,7 +6491,7 @@ int32_t k_categorizedview_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedview_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6521,7 +6521,7 @@ void k_categorizedview_qbase_set_state(void* self, int32_t state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, enum QAbstractItemView__State)
+/// @param callback void func(KCategorizedView* self, enum QAbstractItemView__State state)
 void k_categorizedview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6549,7 +6549,7 @@ void k_categorizedview_qbase_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_schedule_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6577,7 +6577,7 @@ void k_categorizedview_qbase_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_execute_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6607,7 +6607,7 @@ void k_categorizedview_qbase_set_dirty_region(void* self, void* region);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QRegion*)
+/// @param callback void func(KCategorizedView* self, QRegion* region)
 void k_categorizedview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6639,7 +6639,7 @@ void k_categorizedview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int, int)
+/// @param callback void func(KCategorizedView* self, int dx, int dy)
 void k_categorizedview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -6667,7 +6667,7 @@ QPoint* k_categorizedview_qbase_dirty_region_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QPoint* fn()
+/// @param callback QPoint* func()
 void k_categorizedview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6695,7 +6695,7 @@ void k_categorizedview_qbase_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_start_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6723,7 +6723,7 @@ void k_categorizedview_qbase_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_stop_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6751,7 +6751,7 @@ void k_categorizedview_qbase_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_do_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6783,7 +6783,7 @@ int32_t k_categorizedview_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6819,7 +6819,7 @@ void k_categorizedview_qbase_set_viewport_margins(void* self, int left, int top,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, int, int, int, int)
+/// @param callback void func(KCategorizedView* self, int left, int top, int right, int bottom)
 void k_categorizedview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -6847,7 +6847,7 @@ QMargins* k_categorizedview_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void k_categorizedview_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -6877,7 +6877,7 @@ void k_categorizedview_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, QPainter*)
+/// @param callback void func(KCategorizedView* self, QPainter* param1)
 void k_categorizedview_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6905,7 +6905,7 @@ void k_categorizedview_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6933,7 +6933,7 @@ void k_categorizedview_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6961,7 +6961,7 @@ void k_categorizedview_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_categorizedview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -6989,7 +6989,7 @@ bool k_categorizedview_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_categorizedview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7017,7 +7017,7 @@ bool k_categorizedview_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_categorizedview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -7045,7 +7045,7 @@ QObject* k_categorizedview_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_categorizedview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -7073,7 +7073,7 @@ int32_t k_categorizedview_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_categorizedview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -7103,7 +7103,7 @@ int32_t k_categorizedview_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int32_t fn(KCategorizedView*, const char*)
+/// @param callback int32_t func(KCategorizedView* self, const char* signal)
 void k_categorizedview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -7133,7 +7133,7 @@ bool k_categorizedview_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback bool fn(KCategorizedView*, QMetaMethod*)
+/// @param callback bool func(KCategorizedView* self, QMetaMethod* signal)
 void k_categorizedview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7165,7 +7165,7 @@ double k_categorizedview_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback double fn(KCategorizedView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KCategorizedView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_categorizedview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -7175,7 +7175,7 @@ void k_categorizedview_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCategorizedView*
-/// @param callback void fn(KCategorizedView*, const char*)
+/// @param callback void func(KCategorizedView* self, const char* objectName)
 void k_categorizedview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dtor.KCategorizedView)

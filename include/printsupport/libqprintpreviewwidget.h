@@ -64,7 +64,7 @@ int32_t q_printpreviewwidget_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback int32_t fn(QPrintPreviewWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPrintPreviewWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_printpreviewwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -129,7 +129,7 @@ void q_printpreviewwidget_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, bool)
+/// @param callback void func(QPrintPreviewWidget* self, bool visible)
 void q_printpreviewwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setVisible)
@@ -234,7 +234,7 @@ void q_printpreviewwidget_paint_requested(void* self, void* printer);
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#paintRequested)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QPrinter*)
+/// @param callback void func(QPrintPreviewWidget* self, QPrinter* printer)
 void q_printpreviewwidget_on_paint_requested(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#previewChanged)
@@ -245,7 +245,7 @@ void q_printpreviewwidget_preview_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#previewChanged)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*)
+/// @param callback void func(QPrintPreviewWidget* self)
 void q_printpreviewwidget_on_preview_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -2214,7 +2214,7 @@ void q_printpreviewwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, const char*)
+/// @param callback void func(QPrintPreviewWidget* self, const char* title)
 void q_printpreviewwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2230,7 +2230,7 @@ void q_printpreviewwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QIcon*)
+/// @param callback void func(QPrintPreviewWidget* self, QIcon* icon)
 void q_printpreviewwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2246,7 +2246,7 @@ void q_printpreviewwidget_window_icon_text_changed(void* self, const char* iconT
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, const char*)
+/// @param callback void func(QPrintPreviewWidget* self, const char* iconText)
 void q_printpreviewwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2262,7 +2262,7 @@ void q_printpreviewwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QPoint*)
+/// @param callback void func(QPrintPreviewWidget* self, QPoint* pos)
 void q_printpreviewwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2639,7 +2639,7 @@ void q_printpreviewwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*)
+/// @param callback void func(QPrintPreviewWidget* self)
 void q_printpreviewwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2717,7 +2717,7 @@ void q_printpreviewwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QObject*)
+/// @param callback void func(QPrintPreviewWidget* self, QObject* param1)
 void q_printpreviewwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2836,7 +2836,7 @@ int32_t q_printpreviewwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_printpreviewwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2864,7 +2864,7 @@ QSize* q_printpreviewwidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_printpreviewwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2892,7 +2892,7 @@ QSize* q_printpreviewwidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_printpreviewwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2922,7 +2922,7 @@ int32_t q_printpreviewwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback int32_t fn(QPrintPreviewWidget*, int)
+/// @param callback int32_t func(QPrintPreviewWidget* self, int param1)
 void q_printpreviewwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2950,7 +2950,7 @@ bool q_printpreviewwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_printpreviewwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2978,7 +2978,7 @@ QPaintEngine* q_printpreviewwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_printpreviewwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3008,7 +3008,7 @@ bool q_printpreviewwidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn(QPrintPreviewWidget*, QEvent*)
+/// @param callback bool func(QPrintPreviewWidget* self, QEvent* event)
 void q_printpreviewwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3038,7 +3038,7 @@ void q_printpreviewwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QMouseEvent* event)
 void q_printpreviewwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3068,7 +3068,7 @@ void q_printpreviewwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QMouseEvent* event)
 void q_printpreviewwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3098,7 +3098,7 @@ void q_printpreviewwidget_qbase_mouse_double_click_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QMouseEvent* event)
 void q_printpreviewwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3128,7 +3128,7 @@ void q_printpreviewwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QMouseEvent* event)
 void q_printpreviewwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3158,7 +3158,7 @@ void q_printpreviewwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QWheelEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QWheelEvent* event)
 void q_printpreviewwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3188,7 +3188,7 @@ void q_printpreviewwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QKeyEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QKeyEvent* event)
 void q_printpreviewwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3218,7 +3218,7 @@ void q_printpreviewwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QKeyEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QKeyEvent* event)
 void q_printpreviewwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3248,7 +3248,7 @@ void q_printpreviewwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QFocusEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QFocusEvent* event)
 void q_printpreviewwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3278,7 +3278,7 @@ void q_printpreviewwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QFocusEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QFocusEvent* event)
 void q_printpreviewwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3308,7 +3308,7 @@ void q_printpreviewwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QEnterEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QEnterEvent* event)
 void q_printpreviewwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3338,7 +3338,7 @@ void q_printpreviewwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QEvent* event)
 void q_printpreviewwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3368,7 +3368,7 @@ void q_printpreviewwidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QPaintEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QPaintEvent* event)
 void q_printpreviewwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3398,7 +3398,7 @@ void q_printpreviewwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMoveEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QMoveEvent* event)
 void q_printpreviewwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3428,7 +3428,7 @@ void q_printpreviewwidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QResizeEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QResizeEvent* event)
 void q_printpreviewwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3458,7 +3458,7 @@ void q_printpreviewwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QCloseEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QCloseEvent* event)
 void q_printpreviewwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3488,7 +3488,7 @@ void q_printpreviewwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QContextMenuEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QContextMenuEvent* event)
 void q_printpreviewwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3518,7 +3518,7 @@ void q_printpreviewwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QTabletEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QTabletEvent* event)
 void q_printpreviewwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3548,7 +3548,7 @@ void q_printpreviewwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QActionEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QActionEvent* event)
 void q_printpreviewwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3578,7 +3578,7 @@ void q_printpreviewwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QDragEnterEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QDragEnterEvent* event)
 void q_printpreviewwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3608,7 +3608,7 @@ void q_printpreviewwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QDragMoveEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QDragMoveEvent* event)
 void q_printpreviewwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3638,7 +3638,7 @@ void q_printpreviewwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QDragLeaveEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QDragLeaveEvent* event)
 void q_printpreviewwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3668,7 +3668,7 @@ void q_printpreviewwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QDropEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QDropEvent* event)
 void q_printpreviewwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3698,7 +3698,7 @@ void q_printpreviewwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QShowEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QShowEvent* event)
 void q_printpreviewwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3728,7 +3728,7 @@ void q_printpreviewwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QHideEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QHideEvent* event)
 void q_printpreviewwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3762,7 +3762,7 @@ bool q_printpreviewwidget_qbase_native_event(void* self, const char* eventType, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn(QPrintPreviewWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QPrintPreviewWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_printpreviewwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3792,7 +3792,7 @@ void q_printpreviewwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QEvent* param1)
 void q_printpreviewwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3822,7 +3822,7 @@ int32_t q_printpreviewwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback int32_t fn(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPrintPreviewWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_printpreviewwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3852,7 +3852,7 @@ void q_printpreviewwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QPainter*)
+/// @param callback void func(QPrintPreviewWidget* self, QPainter* painter)
 void q_printpreviewwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3882,7 +3882,7 @@ QPaintDevice* q_printpreviewwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QPaintDevice* fn(QPrintPreviewWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QPrintPreviewWidget* self, QPoint* offset)
 void q_printpreviewwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3910,7 +3910,7 @@ QPainter* q_printpreviewwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_printpreviewwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3940,7 +3940,7 @@ void q_printpreviewwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QInputMethodEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QInputMethodEvent* param1)
 void q_printpreviewwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3970,7 +3970,7 @@ QVariant* q_printpreviewwidget_qbase_input_method_query(void* self, int64_t para
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QVariant* fn(QPrintPreviewWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPrintPreviewWidget* self, enum Qt__InputMethodQuery param1)
 void q_printpreviewwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4000,7 +4000,7 @@ bool q_printpreviewwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn(QPrintPreviewWidget*, bool)
+/// @param callback bool func(QPrintPreviewWidget* self, bool next)
 void q_printpreviewwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4032,7 +4032,7 @@ bool q_printpreviewwidget_qbase_event_filter(void* self, void* watched, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn(QPrintPreviewWidget*, QObject*, QEvent*)
+/// @param callback bool func(QPrintPreviewWidget* self, QObject* watched, QEvent* event)
 void q_printpreviewwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4062,7 +4062,7 @@ void q_printpreviewwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QTimerEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QTimerEvent* event)
 void q_printpreviewwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4092,7 +4092,7 @@ void q_printpreviewwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QChildEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QChildEvent* event)
 void q_printpreviewwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4122,7 +4122,7 @@ void q_printpreviewwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QEvent*)
+/// @param callback void func(QPrintPreviewWidget* self, QEvent* event)
 void q_printpreviewwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4152,7 +4152,7 @@ void q_printpreviewwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMetaMethod*)
+/// @param callback void func(QPrintPreviewWidget* self, QMetaMethod* signal)
 void q_printpreviewwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4182,7 +4182,7 @@ void q_printpreviewwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, QMetaMethod*)
+/// @param callback void func(QPrintPreviewWidget* self, QMetaMethod* signal)
 void q_printpreviewwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4210,7 +4210,7 @@ void q_printpreviewwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printpreviewwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4238,7 +4238,7 @@ void q_printpreviewwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printpreviewwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4266,7 +4266,7 @@ void q_printpreviewwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printpreviewwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4294,7 +4294,7 @@ bool q_printpreviewwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_printpreviewwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4322,7 +4322,7 @@ bool q_printpreviewwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_printpreviewwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4350,7 +4350,7 @@ QObject* q_printpreviewwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_printpreviewwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4378,7 +4378,7 @@ int32_t q_printpreviewwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_printpreviewwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4408,7 +4408,7 @@ int32_t q_printpreviewwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback int32_t fn(QPrintPreviewWidget*, const char*)
+/// @param callback int32_t func(QPrintPreviewWidget* self, const char* signal)
 void q_printpreviewwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4438,7 +4438,7 @@ bool q_printpreviewwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback bool fn(QPrintPreviewWidget*, QMetaMethod*)
+/// @param callback bool func(QPrintPreviewWidget* self, QMetaMethod* signal)
 void q_printpreviewwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4470,7 +4470,7 @@ double q_printpreviewwidget_qbase_get_decoded_metric_f(void* self, int32_t metri
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback double fn(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPrintPreviewWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4480,7 +4480,7 @@ void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPrintPreviewWidget*
-/// @param callback void fn(QPrintPreviewWidget*, const char*)
+/// @param callback void func(QPrintPreviewWidget* self, const char* objectName)
 void q_printpreviewwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#dtor.QPrintPreviewWidget)

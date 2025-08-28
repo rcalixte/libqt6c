@@ -40,7 +40,7 @@ int32_t k_timecombobox_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback int32_t fn(KTimeComboBox*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KTimeComboBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_timecombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -138,7 +138,7 @@ void k_timecombobox_time_entered(void* self, void* time);
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEntered)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QTime*)
+/// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_time_entered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeChanged)
@@ -150,7 +150,7 @@ void k_timecombobox_time_changed(void* self, void* time);
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QTime*)
+/// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_time_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEdited)
@@ -162,7 +162,7 @@ void k_timecombobox_time_edited(void* self, void* time);
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEdited)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QTime*)
+/// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_time_edited(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTime)
@@ -219,7 +219,7 @@ bool k_timecombobox_event_filter(void* self, void* object, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn(KTimeComboBox*, QObject*, QEvent*)
+/// @param callback bool func(KTimeComboBox* self, QObject* object, QEvent* event)
 void k_timecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#eventFilter)
@@ -241,7 +241,7 @@ void k_timecombobox_show_popup(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_timecombobox_on_show_popup(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#showPopup)
@@ -261,7 +261,7 @@ void k_timecombobox_hide_popup(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_timecombobox_on_hide_popup(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#hidePopup)
@@ -282,7 +282,7 @@ void k_timecombobox_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMouseEvent*)
+/// @param callback void func(KTimeComboBox* self, QMouseEvent* event)
 void k_timecombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#mousePressEvent)
@@ -304,7 +304,7 @@ void k_timecombobox_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QWheelEvent*)
+/// @param callback void func(KTimeComboBox* self, QWheelEvent* event)
 void k_timecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#wheelEvent)
@@ -326,7 +326,7 @@ void k_timecombobox_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QKeyEvent*)
+/// @param callback void func(KTimeComboBox* self, QKeyEvent* event)
 void k_timecombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#keyPressEvent)
@@ -348,7 +348,7 @@ void k_timecombobox_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QFocusEvent*)
+/// @param callback void func(KTimeComboBox* self, QFocusEvent* event)
 void k_timecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusInEvent)
@@ -370,7 +370,7 @@ void k_timecombobox_focus_out_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QFocusEvent*)
+/// @param callback void func(KTimeComboBox* self, QFocusEvent* event)
 void k_timecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusOutEvent)
@@ -392,7 +392,7 @@ void k_timecombobox_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QResizeEvent*)
+/// @param callback void func(KTimeComboBox* self, QResizeEvent* event)
 void k_timecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resizeEvent)
@@ -414,7 +414,7 @@ void k_timecombobox_assign_time(void* self, void* time);
 /// Allows for overriding the related default method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QTime*)
+/// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_assign_time(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#assignTime)
@@ -984,7 +984,7 @@ void k_timecombobox_edit_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* param1)
 void k_timecombobox_on_edit_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -1000,7 +1000,7 @@ void k_timecombobox_activated(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#activated)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, int)
+/// @param callback void func(KTimeComboBox* self, int index)
 void k_timecombobox_on_activated(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -1016,7 +1016,7 @@ void k_timecombobox_text_activated(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* param1)
 void k_timecombobox_on_text_activated(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -1032,7 +1032,7 @@ void k_timecombobox_highlighted(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, int)
+/// @param callback void func(KTimeComboBox* self, int index)
 void k_timecombobox_on_highlighted(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -1048,7 +1048,7 @@ void k_timecombobox_text_highlighted(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* param1)
 void k_timecombobox_on_text_highlighted(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -1064,7 +1064,7 @@ void k_timecombobox_current_index_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, int)
+/// @param callback void func(KTimeComboBox* self, int index)
 void k_timecombobox_on_current_index_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -1080,7 +1080,7 @@ void k_timecombobox_current_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* param1)
 void k_timecombobox_on_current_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -3115,7 +3115,7 @@ void k_timecombobox_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* title)
 void k_timecombobox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3131,7 +3131,7 @@ void k_timecombobox_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QIcon*)
+/// @param callback void func(KTimeComboBox* self, QIcon* icon)
 void k_timecombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3147,7 +3147,7 @@ void k_timecombobox_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* iconText)
 void k_timecombobox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3163,7 +3163,7 @@ void k_timecombobox_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QPoint*)
+/// @param callback void func(KTimeComboBox* self, QPoint* pos)
 void k_timecombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3540,7 +3540,7 @@ void k_timecombobox_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*)
+/// @param callback void func(KTimeComboBox* self)
 void k_timecombobox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3618,7 +3618,7 @@ void k_timecombobox_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QObject*)
+/// @param callback void func(KTimeComboBox* self, QObject* param1)
 void k_timecombobox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3739,7 +3739,7 @@ void k_timecombobox_qbase_set_model(void* self, void* model);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QAbstractItemModel*)
+/// @param callback void func(KTimeComboBox* self, QAbstractItemModel* model)
 void k_timecombobox_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3767,7 +3767,7 @@ QSize* k_timecombobox_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_timecombobox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -3795,7 +3795,7 @@ QSize* k_timecombobox_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_timecombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -3825,7 +3825,7 @@ bool k_timecombobox_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn(KTimeComboBox*, QEvent*)
+/// @param callback bool func(KTimeComboBox* self, QEvent* event)
 void k_timecombobox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3855,7 +3855,7 @@ QVariant* k_timecombobox_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QVariant* fn(KTimeComboBox*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KTimeComboBox* self, enum Qt__InputMethodQuery param1)
 void k_timecombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QComboBox
@@ -3885,7 +3885,7 @@ void k_timecombobox_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QEvent*)
+/// @param callback void func(KTimeComboBox* self, QEvent* e)
 void k_timecombobox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3915,7 +3915,7 @@ void k_timecombobox_qbase_paint_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QPaintEvent*)
+/// @param callback void func(KTimeComboBox* self, QPaintEvent* e)
 void k_timecombobox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3945,7 +3945,7 @@ void k_timecombobox_qbase_show_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QShowEvent*)
+/// @param callback void func(KTimeComboBox* self, QShowEvent* e)
 void k_timecombobox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3975,7 +3975,7 @@ void k_timecombobox_qbase_hide_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QHideEvent*)
+/// @param callback void func(KTimeComboBox* self, QHideEvent* e)
 void k_timecombobox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4005,7 +4005,7 @@ void k_timecombobox_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMouseEvent*)
+/// @param callback void func(KTimeComboBox* self, QMouseEvent* e)
 void k_timecombobox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4035,7 +4035,7 @@ void k_timecombobox_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QKeyEvent*)
+/// @param callback void func(KTimeComboBox* self, QKeyEvent* e)
 void k_timecombobox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4065,7 +4065,7 @@ void k_timecombobox_qbase_context_menu_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QContextMenuEvent*)
+/// @param callback void func(KTimeComboBox* self, QContextMenuEvent* e)
 void k_timecombobox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4095,7 +4095,7 @@ void k_timecombobox_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QInputMethodEvent*)
+/// @param callback void func(KTimeComboBox* self, QInputMethodEvent* param1)
 void k_timecombobox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4125,7 +4125,7 @@ void k_timecombobox_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QStyleOptionComboBox*)
+/// @param callback void func(KTimeComboBox* self, QStyleOptionComboBox* option)
 void k_timecombobox_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4153,7 +4153,7 @@ int32_t k_timecombobox_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_timecombobox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4183,7 +4183,7 @@ void k_timecombobox_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, bool)
+/// @param callback void func(KTimeComboBox* self, bool visible)
 void k_timecombobox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -4213,7 +4213,7 @@ int32_t k_timecombobox_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback int32_t fn(KTimeComboBox*, int)
+/// @param callback int32_t func(KTimeComboBox* self, int param1)
 void k_timecombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -4241,7 +4241,7 @@ bool k_timecombobox_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_timecombobox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4269,7 +4269,7 @@ QPaintEngine* k_timecombobox_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_timecombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -4299,7 +4299,7 @@ void k_timecombobox_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMouseEvent*)
+/// @param callback void func(KTimeComboBox* self, QMouseEvent* event)
 void k_timecombobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4329,7 +4329,7 @@ void k_timecombobox_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMouseEvent*)
+/// @param callback void func(KTimeComboBox* self, QMouseEvent* event)
 void k_timecombobox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4359,7 +4359,7 @@ void k_timecombobox_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QEnterEvent*)
+/// @param callback void func(KTimeComboBox* self, QEnterEvent* event)
 void k_timecombobox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4389,7 +4389,7 @@ void k_timecombobox_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QEvent*)
+/// @param callback void func(KTimeComboBox* self, QEvent* event)
 void k_timecombobox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4419,7 +4419,7 @@ void k_timecombobox_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMoveEvent*)
+/// @param callback void func(KTimeComboBox* self, QMoveEvent* event)
 void k_timecombobox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4449,7 +4449,7 @@ void k_timecombobox_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QCloseEvent*)
+/// @param callback void func(KTimeComboBox* self, QCloseEvent* event)
 void k_timecombobox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4479,7 +4479,7 @@ void k_timecombobox_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QTabletEvent*)
+/// @param callback void func(KTimeComboBox* self, QTabletEvent* event)
 void k_timecombobox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4509,7 +4509,7 @@ void k_timecombobox_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QActionEvent*)
+/// @param callback void func(KTimeComboBox* self, QActionEvent* event)
 void k_timecombobox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4539,7 +4539,7 @@ void k_timecombobox_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QDragEnterEvent*)
+/// @param callback void func(KTimeComboBox* self, QDragEnterEvent* event)
 void k_timecombobox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4569,7 +4569,7 @@ void k_timecombobox_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QDragMoveEvent*)
+/// @param callback void func(KTimeComboBox* self, QDragMoveEvent* event)
 void k_timecombobox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4599,7 +4599,7 @@ void k_timecombobox_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QDragLeaveEvent*)
+/// @param callback void func(KTimeComboBox* self, QDragLeaveEvent* event)
 void k_timecombobox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4629,7 +4629,7 @@ void k_timecombobox_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QDropEvent*)
+/// @param callback void func(KTimeComboBox* self, QDropEvent* event)
 void k_timecombobox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4663,7 +4663,7 @@ bool k_timecombobox_qbase_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn(KTimeComboBox*, const char*, void*, intptr_t*)
+/// @param callback bool func(KTimeComboBox* self, const char* eventType, void* message, intptr_t* result)
 void k_timecombobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4693,7 +4693,7 @@ int32_t k_timecombobox_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback int32_t fn(KTimeComboBox*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KTimeComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_timecombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4723,7 +4723,7 @@ void k_timecombobox_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QPainter*)
+/// @param callback void func(KTimeComboBox* self, QPainter* painter)
 void k_timecombobox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4753,7 +4753,7 @@ QPaintDevice* k_timecombobox_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QPaintDevice* fn(KTimeComboBox*, QPoint*)
+/// @param callback QPaintDevice* func(KTimeComboBox* self, QPoint* offset)
 void k_timecombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4781,7 +4781,7 @@ QPainter* k_timecombobox_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_timecombobox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4811,7 +4811,7 @@ bool k_timecombobox_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn(KTimeComboBox*, bool)
+/// @param callback bool func(KTimeComboBox* self, bool next)
 void k_timecombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4841,7 +4841,7 @@ void k_timecombobox_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QTimerEvent*)
+/// @param callback void func(KTimeComboBox* self, QTimerEvent* event)
 void k_timecombobox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4871,7 +4871,7 @@ void k_timecombobox_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QChildEvent*)
+/// @param callback void func(KTimeComboBox* self, QChildEvent* event)
 void k_timecombobox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4901,7 +4901,7 @@ void k_timecombobox_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QEvent*)
+/// @param callback void func(KTimeComboBox* self, QEvent* event)
 void k_timecombobox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4931,7 +4931,7 @@ void k_timecombobox_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMetaMethod*)
+/// @param callback void func(KTimeComboBox* self, QMetaMethod* signal)
 void k_timecombobox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4961,7 +4961,7 @@ void k_timecombobox_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, QMetaMethod*)
+/// @param callback void func(KTimeComboBox* self, QMetaMethod* signal)
 void k_timecombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4989,7 +4989,7 @@ void k_timecombobox_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_timecombobox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5017,7 +5017,7 @@ void k_timecombobox_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_timecombobox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5045,7 +5045,7 @@ void k_timecombobox_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_timecombobox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5073,7 +5073,7 @@ bool k_timecombobox_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_timecombobox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5101,7 +5101,7 @@ bool k_timecombobox_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_timecombobox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5129,7 +5129,7 @@ QObject* k_timecombobox_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_timecombobox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5157,7 +5157,7 @@ int32_t k_timecombobox_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_timecombobox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5187,7 +5187,7 @@ int32_t k_timecombobox_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback int32_t fn(KTimeComboBox*, const char*)
+/// @param callback int32_t func(KTimeComboBox* self, const char* signal)
 void k_timecombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5217,7 +5217,7 @@ bool k_timecombobox_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback bool fn(KTimeComboBox*, QMetaMethod*)
+/// @param callback bool func(KTimeComboBox* self, QMetaMethod* signal)
 void k_timecombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5249,7 +5249,7 @@ double k_timecombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTimeComboBox*
-/// @param callback double fn(KTimeComboBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KTimeComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_timecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5259,7 +5259,7 @@ void k_timecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KTimeComboBox*
-/// @param callback void fn(KTimeComboBox*, const char*)
+/// @param callback void func(KTimeComboBox* self, const char* objectName)
 void k_timecombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#dtor.KTimeComboBox)

@@ -51,7 +51,7 @@ int32_t q_lineedit_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback int32_t fn(QLineEdit*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QLineEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_lineedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -185,7 +185,7 @@ QSize* q_lineedit_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_lineedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#sizeHint)
@@ -205,7 +205,7 @@ QSize* q_lineedit_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_lineedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#minimumSizeHint)
@@ -488,7 +488,7 @@ void q_lineedit_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#textChanged)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, const char*)
+/// @param callback void func(QLineEdit* self, const char* param1)
 void q_lineedit_on_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#textEdited)
@@ -500,7 +500,7 @@ void q_lineedit_text_edited(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#textEdited)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, const char*)
+/// @param callback void func(QLineEdit* self, const char* param1)
 void q_lineedit_on_text_edited(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#cursorPositionChanged)
@@ -513,7 +513,7 @@ void q_lineedit_cursor_position_changed(void* self, int param1, int param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#cursorPositionChanged)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, int, int)
+/// @param callback void func(QLineEdit* self, int param1, int param2)
 void q_lineedit_on_cursor_position_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#returnPressed)
@@ -524,7 +524,7 @@ void q_lineedit_return_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#returnPressed)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*)
+/// @param callback void func(QLineEdit* self)
 void q_lineedit_on_return_pressed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#editingFinished)
@@ -535,7 +535,7 @@ void q_lineedit_editing_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#editingFinished)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*)
+/// @param callback void func(QLineEdit* self)
 void q_lineedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#selectionChanged)
@@ -546,7 +546,7 @@ void q_lineedit_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#selectionChanged)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*)
+/// @param callback void func(QLineEdit* self)
 void q_lineedit_on_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#inputRejected)
@@ -557,7 +557,7 @@ void q_lineedit_input_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#inputRejected)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*)
+/// @param callback void func(QLineEdit* self)
 void q_lineedit_on_input_rejected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#mousePressEvent)
@@ -571,7 +571,7 @@ void q_lineedit_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMouseEvent*)
+/// @param callback void func(QLineEdit* self, QMouseEvent* param1)
 void q_lineedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#mousePressEvent)
@@ -593,7 +593,7 @@ void q_lineedit_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMouseEvent*)
+/// @param callback void func(QLineEdit* self, QMouseEvent* param1)
 void q_lineedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#mouseMoveEvent)
@@ -615,7 +615,7 @@ void q_lineedit_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMouseEvent*)
+/// @param callback void func(QLineEdit* self, QMouseEvent* param1)
 void q_lineedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#mouseReleaseEvent)
@@ -637,7 +637,7 @@ void q_lineedit_mouse_double_click_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMouseEvent*)
+/// @param callback void func(QLineEdit* self, QMouseEvent* param1)
 void q_lineedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#mouseDoubleClickEvent)
@@ -659,7 +659,7 @@ void q_lineedit_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QKeyEvent*)
+/// @param callback void func(QLineEdit* self, QKeyEvent* param1)
 void q_lineedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#keyPressEvent)
@@ -681,7 +681,7 @@ void q_lineedit_key_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QKeyEvent*)
+/// @param callback void func(QLineEdit* self, QKeyEvent* param1)
 void q_lineedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#keyReleaseEvent)
@@ -703,7 +703,7 @@ void q_lineedit_focus_in_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QFocusEvent*)
+/// @param callback void func(QLineEdit* self, QFocusEvent* param1)
 void q_lineedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#focusInEvent)
@@ -725,7 +725,7 @@ void q_lineedit_focus_out_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QFocusEvent*)
+/// @param callback void func(QLineEdit* self, QFocusEvent* param1)
 void q_lineedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#focusOutEvent)
@@ -747,7 +747,7 @@ void q_lineedit_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QPaintEvent*)
+/// @param callback void func(QLineEdit* self, QPaintEvent* param1)
 void q_lineedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#paintEvent)
@@ -769,7 +769,7 @@ void q_lineedit_drag_enter_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QDragEnterEvent*)
+/// @param callback void func(QLineEdit* self, QDragEnterEvent* param1)
 void q_lineedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#dragEnterEvent)
@@ -791,7 +791,7 @@ void q_lineedit_drag_move_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QDragMoveEvent*)
+/// @param callback void func(QLineEdit* self, QDragMoveEvent* e)
 void q_lineedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#dragMoveEvent)
@@ -813,7 +813,7 @@ void q_lineedit_drag_leave_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QDragLeaveEvent*)
+/// @param callback void func(QLineEdit* self, QDragLeaveEvent* e)
 void q_lineedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#dragLeaveEvent)
@@ -835,7 +835,7 @@ void q_lineedit_drop_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QDropEvent*)
+/// @param callback void func(QLineEdit* self, QDropEvent* param1)
 void q_lineedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#dropEvent)
@@ -857,7 +857,7 @@ void q_lineedit_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QEvent*)
+/// @param callback void func(QLineEdit* self, QEvent* param1)
 void q_lineedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#changeEvent)
@@ -879,7 +879,7 @@ void q_lineedit_context_menu_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QContextMenuEvent*)
+/// @param callback void func(QLineEdit* self, QContextMenuEvent* param1)
 void q_lineedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#contextMenuEvent)
@@ -901,7 +901,7 @@ void q_lineedit_input_method_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QInputMethodEvent*)
+/// @param callback void func(QLineEdit* self, QInputMethodEvent* param1)
 void q_lineedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#inputMethodEvent)
@@ -923,7 +923,7 @@ void q_lineedit_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QStyleOptionFrame*)
+/// @param callback void func(QLineEdit* self, QStyleOptionFrame* option)
 void q_lineedit_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#initStyleOption)
@@ -945,7 +945,7 @@ QVariant* q_lineedit_input_method_query(void* self, int64_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback QVariant* fn(QLineEdit*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QLineEdit* self, enum Qt__InputMethodQuery param1)
 void q_lineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#inputMethodQuery)
@@ -974,7 +974,7 @@ void q_lineedit_timer_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QTimerEvent*)
+/// @param callback void func(QLineEdit* self, QTimerEvent* param1)
 void q_lineedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#timerEvent)
@@ -996,7 +996,7 @@ bool q_lineedit_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn(QLineEdit*, QEvent*)
+/// @param callback bool func(QLineEdit* self, QEvent* param1)
 void q_lineedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#event)
@@ -1017,7 +1017,7 @@ QRect* q_lineedit_cursor_rect(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLineEdit*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_lineedit_on_cursor_rect(void* self, QRect* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#cursorRect)
@@ -2979,7 +2979,7 @@ void q_lineedit_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, const char*)
+/// @param callback void func(QLineEdit* self, const char* title)
 void q_lineedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2995,7 +2995,7 @@ void q_lineedit_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QIcon*)
+/// @param callback void func(QLineEdit* self, QIcon* icon)
 void q_lineedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3011,7 +3011,7 @@ void q_lineedit_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, const char*)
+/// @param callback void func(QLineEdit* self, const char* iconText)
 void q_lineedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3027,7 +3027,7 @@ void q_lineedit_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QPoint*)
+/// @param callback void func(QLineEdit* self, QPoint* pos)
 void q_lineedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3404,7 +3404,7 @@ void q_lineedit_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*)
+/// @param callback void func(QLineEdit* self)
 void q_lineedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3482,7 +3482,7 @@ void q_lineedit_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QObject*)
+/// @param callback void func(QLineEdit* self, QObject* param1)
 void q_lineedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3601,7 +3601,7 @@ int32_t q_lineedit_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_lineedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3631,7 +3631,7 @@ void q_lineedit_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, bool)
+/// @param callback void func(QLineEdit* self, bool visible)
 void q_lineedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3661,7 +3661,7 @@ int32_t q_lineedit_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback int32_t fn(QLineEdit*, int)
+/// @param callback int32_t func(QLineEdit* self, int param1)
 void q_lineedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3689,7 +3689,7 @@ bool q_lineedit_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_lineedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3717,7 +3717,7 @@ QPaintEngine* q_lineedit_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_lineedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3747,7 +3747,7 @@ void q_lineedit_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QWheelEvent*)
+/// @param callback void func(QLineEdit* self, QWheelEvent* event)
 void q_lineedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3777,7 +3777,7 @@ void q_lineedit_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QEnterEvent*)
+/// @param callback void func(QLineEdit* self, QEnterEvent* event)
 void q_lineedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3807,7 +3807,7 @@ void q_lineedit_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QEvent*)
+/// @param callback void func(QLineEdit* self, QEvent* event)
 void q_lineedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3837,7 +3837,7 @@ void q_lineedit_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMoveEvent*)
+/// @param callback void func(QLineEdit* self, QMoveEvent* event)
 void q_lineedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3867,7 +3867,7 @@ void q_lineedit_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QResizeEvent*)
+/// @param callback void func(QLineEdit* self, QResizeEvent* event)
 void q_lineedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3897,7 +3897,7 @@ void q_lineedit_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QCloseEvent*)
+/// @param callback void func(QLineEdit* self, QCloseEvent* event)
 void q_lineedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3927,7 +3927,7 @@ void q_lineedit_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QTabletEvent*)
+/// @param callback void func(QLineEdit* self, QTabletEvent* event)
 void q_lineedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3957,7 +3957,7 @@ void q_lineedit_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QActionEvent*)
+/// @param callback void func(QLineEdit* self, QActionEvent* event)
 void q_lineedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3987,7 +3987,7 @@ void q_lineedit_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QShowEvent*)
+/// @param callback void func(QLineEdit* self, QShowEvent* event)
 void q_lineedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4017,7 +4017,7 @@ void q_lineedit_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QHideEvent*)
+/// @param callback void func(QLineEdit* self, QHideEvent* event)
 void q_lineedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4051,7 +4051,7 @@ bool q_lineedit_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn(QLineEdit*, const char*, void*, intptr_t*)
+/// @param callback bool func(QLineEdit* self, const char* eventType, void* message, intptr_t* result)
 void q_lineedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4081,7 +4081,7 @@ int32_t q_lineedit_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback int32_t fn(QLineEdit*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QLineEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_lineedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4111,7 +4111,7 @@ void q_lineedit_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QPainter*)
+/// @param callback void func(QLineEdit* self, QPainter* painter)
 void q_lineedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4141,7 +4141,7 @@ QPaintDevice* q_lineedit_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback QPaintDevice* fn(QLineEdit*, QPoint*)
+/// @param callback QPaintDevice* func(QLineEdit* self, QPoint* offset)
 void q_lineedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4169,7 +4169,7 @@ QPainter* q_lineedit_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_lineedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4199,7 +4199,7 @@ bool q_lineedit_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn(QLineEdit*, bool)
+/// @param callback bool func(QLineEdit* self, bool next)
 void q_lineedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4231,7 +4231,7 @@ bool q_lineedit_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn(QLineEdit*, QObject*, QEvent*)
+/// @param callback bool func(QLineEdit* self, QObject* watched, QEvent* event)
 void q_lineedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4261,7 +4261,7 @@ void q_lineedit_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QChildEvent*)
+/// @param callback void func(QLineEdit* self, QChildEvent* event)
 void q_lineedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4291,7 +4291,7 @@ void q_lineedit_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QEvent*)
+/// @param callback void func(QLineEdit* self, QEvent* event)
 void q_lineedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4321,7 +4321,7 @@ void q_lineedit_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMetaMethod*)
+/// @param callback void func(QLineEdit* self, QMetaMethod* signal)
 void q_lineedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4351,7 +4351,7 @@ void q_lineedit_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, QMetaMethod*)
+/// @param callback void func(QLineEdit* self, QMetaMethod* signal)
 void q_lineedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4379,7 +4379,7 @@ void q_lineedit_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_lineedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4407,7 +4407,7 @@ void q_lineedit_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_lineedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4435,7 +4435,7 @@ void q_lineedit_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_lineedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4463,7 +4463,7 @@ bool q_lineedit_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_lineedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4491,7 +4491,7 @@ bool q_lineedit_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_lineedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4519,7 +4519,7 @@ QObject* q_lineedit_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_lineedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4547,7 +4547,7 @@ int32_t q_lineedit_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_lineedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4577,7 +4577,7 @@ int32_t q_lineedit_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback int32_t fn(QLineEdit*, const char*)
+/// @param callback int32_t func(QLineEdit* self, const char* signal)
 void q_lineedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4607,7 +4607,7 @@ bool q_lineedit_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback bool fn(QLineEdit*, QMetaMethod*)
+/// @param callback bool func(QLineEdit* self, QMetaMethod* signal)
 void q_lineedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4639,7 +4639,7 @@ double q_lineedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLineEdit*
-/// @param callback double fn(QLineEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QLineEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4649,7 +4649,7 @@ void q_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QLineEdit*
-/// @param callback void fn(QLineEdit*, const char*)
+/// @param callback void func(QLineEdit* self, const char* objectName)
 void q_lineedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#dtor.QLineEdit)

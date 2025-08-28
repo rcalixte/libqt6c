@@ -82,7 +82,7 @@ QListWidgetItem* q_listwidgetitem_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidgetItem*
-/// @param callback QListWidgetItem* fn()
+/// @param callback QListWidgetItem* func()
 void q_listwidgetitem_on_clone(void* self, QListWidgetItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#clone)
@@ -286,7 +286,7 @@ QVariant* q_listwidgetitem_data(void* self, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidgetItem*
-/// @param callback QVariant* fn(QListWidgetItem*, int)
+/// @param callback QVariant* func(QListWidgetItem* self, int role)
 void q_listwidgetitem_on_data(void* self, QVariant* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#data)
@@ -309,7 +309,7 @@ void q_listwidgetitem_set_data(void* self, int role, void* value);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidgetItem*
-/// @param callback void fn(QListWidgetItem*, int, QVariant*)
+/// @param callback void func(QListWidgetItem* self, int role, QVariant* value)
 void q_listwidgetitem_on_set_data(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#setData)
@@ -332,7 +332,7 @@ bool q_listwidgetitem_operator_lesser(void* self, void* other);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidgetItem*
-/// @param callback bool fn(QListWidgetItem*, QListWidgetItem*)
+/// @param callback bool func(QListWidgetItem* self, QListWidgetItem* other)
 void q_listwidgetitem_on_operator_lesser(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
@@ -354,7 +354,7 @@ void q_listwidgetitem_read(void* self, void* in);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidgetItem*
-/// @param callback void fn(QListWidgetItem*, QDataStream*)
+/// @param callback void func(QListWidgetItem* self, QDataStream* in)
 void q_listwidgetitem_on_read(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#read)
@@ -376,7 +376,7 @@ void q_listwidgetitem_write(void* self, void* out);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidgetItem*
-/// @param callback void fn(QListWidgetItem*, QDataStream*)
+/// @param callback void func(QListWidgetItem* self, QDataStream* out)
 void q_listwidgetitem_on_write(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#write)
@@ -434,7 +434,7 @@ int32_t q_listwidget_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn(QListWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QListWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_listwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -463,7 +463,7 @@ void q_listwidget_set_selection_model(void* self, void* selectionModel);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QItemSelectionModel*)
+/// @param callback void func(QListWidget* self, QItemSelectionModel* selectionModel)
 void q_listwidget_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#setSelectionModel)
@@ -691,7 +691,7 @@ void q_listwidget_drop_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QDropEvent*)
+/// @param callback void func(QListWidget* self, QDropEvent* event)
 void q_listwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#dropEvent)
@@ -722,7 +722,7 @@ void q_listwidget_item_pressed(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemPressed)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* item)
 void q_listwidget_on_item_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemClicked)
@@ -734,7 +734,7 @@ void q_listwidget_item_clicked(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemClicked)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* item)
 void q_listwidget_on_item_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemDoubleClicked)
@@ -746,7 +746,7 @@ void q_listwidget_item_double_clicked(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemDoubleClicked)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* item)
 void q_listwidget_on_item_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemActivated)
@@ -758,7 +758,7 @@ void q_listwidget_item_activated(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemActivated)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* item)
 void q_listwidget_on_item_activated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemEntered)
@@ -770,7 +770,7 @@ void q_listwidget_item_entered(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemEntered)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* item)
 void q_listwidget_on_item_entered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemChanged)
@@ -782,7 +782,7 @@ void q_listwidget_item_changed(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* item)
 void q_listwidget_on_item_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#currentItemChanged)
@@ -795,7 +795,7 @@ void q_listwidget_current_item_changed(void* self, void* current, void* previous
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#currentItemChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QListWidgetItem*, QListWidgetItem*)
+/// @param callback void func(QListWidget* self, QListWidgetItem* current, QListWidgetItem* previous)
 void q_listwidget_on_current_item_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#currentTextChanged)
@@ -807,7 +807,7 @@ void q_listwidget_current_text_changed(void* self, const char* currentText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#currentTextChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, const char*)
+/// @param callback void func(QListWidget* self, const char* currentText)
 void q_listwidget_on_current_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#currentRowChanged)
@@ -819,7 +819,7 @@ void q_listwidget_current_row_changed(void* self, int currentRow);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#currentRowChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int)
+/// @param callback void func(QListWidget* self, int currentRow)
 void q_listwidget_on_current_row_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemSelectionChanged)
@@ -830,7 +830,7 @@ void q_listwidget_item_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#itemSelectionChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*)
+/// @param callback void func(QListWidget* self)
 void q_listwidget_on_item_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#event)
@@ -844,7 +844,7 @@ bool q_listwidget_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, QEvent*)
+/// @param callback bool func(QListWidget* self, QEvent* e)
 void q_listwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#event)
@@ -867,7 +867,7 @@ const char** q_listwidget_mime_types(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_listwidget_on_mime_types(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#mimeTypes)
@@ -888,7 +888,7 @@ QMimeData* q_listwidget_mime_data(void* self, libqt_list items);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback QMimeData* fn(QListWidget*, libqt_list /* of QListWidgetItem* */)
+/// @param callback QMimeData* func(QListWidget* self, libqt_list /* of QListWidgetItem* */ /* of QListWidgetItem* */)
 void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
@@ -912,7 +912,7 @@ bool q_listwidget_drop_mime_data(void* self, int index, void* data, int32_t acti
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, int, QMimeData*, enum Qt__DropAction)
+/// @param callback bool func(QListWidget* self, int index, QMimeData* data, enum Qt__DropAction action)
 void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
@@ -937,7 +937,7 @@ int64_t q_listwidget_supported_drop_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_listwidget_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#supportedDropActions)
@@ -1238,7 +1238,7 @@ void q_listwidget_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QListWidget* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
@@ -1256,7 +1256,7 @@ void q_listwidget_set_model(void* self, void* model);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QAbstractItemModel*)
+/// @param callback void func(QListWidget* self, QAbstractItemModel* model)
 void q_listwidget_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1707,7 +1707,7 @@ void q_listwidget_pressed(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1723,7 +1723,7 @@ void q_listwidget_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1739,7 +1739,7 @@ void q_listwidget_double_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1755,7 +1755,7 @@ void q_listwidget_activated(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_activated(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1771,7 +1771,7 @@ void q_listwidget_entered(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_entered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1786,7 +1786,7 @@ void q_listwidget_viewport_entered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*)
+/// @param callback void func(QListWidget* self)
 void q_listwidget_on_viewport_entered(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1802,7 +1802,7 @@ void q_listwidget_icon_size_changed(void* self, void* size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QSize*)
+/// @param callback void func(QListWidget* self, QSize* size)
 void q_listwidget_on_icon_size_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3971,7 +3971,7 @@ void q_listwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, const char*)
+/// @param callback void func(QListWidget* self, const char* title)
 void q_listwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3987,7 +3987,7 @@ void q_listwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QIcon*)
+/// @param callback void func(QListWidget* self, QIcon* icon)
 void q_listwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4003,7 +4003,7 @@ void q_listwidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, const char*)
+/// @param callback void func(QListWidget* self, const char* iconText)
 void q_listwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -4019,7 +4019,7 @@ void q_listwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QPoint*)
+/// @param callback void func(QListWidget* self, QPoint* pos)
 void q_listwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4396,7 +4396,7 @@ void q_listwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*)
+/// @param callback void func(QListWidget* self)
 void q_listwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4474,7 +4474,7 @@ void q_listwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QObject*)
+/// @param callback void func(QListWidget* self, QObject* param1)
 void q_listwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4595,7 +4595,7 @@ QRect* q_listwidget_qbase_visual_rect(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QRect* fn(QListWidget*, QModelIndex*)
+/// @param callback QRect* func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4627,7 +4627,7 @@ void q_listwidget_qbase_scroll_to(void* self, void* index, int32_t hint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*, enum QAbstractItemView__ScrollHint)
+/// @param callback void func(QListWidget* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QListView
@@ -4657,7 +4657,7 @@ QModelIndex* q_listwidget_qbase_index_at(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QModelIndex* fn(QListWidget*, QPoint*)
+/// @param callback QModelIndex* func(QListWidget* self, QPoint* p)
 void q_listwidget_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4685,7 +4685,7 @@ void q_listwidget_qbase_do_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_do_items_layout(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -4713,7 +4713,7 @@ void q_listwidget_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_reset(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -4743,7 +4743,7 @@ void q_listwidget_qbase_set_root_index(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_set_root_index(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4775,7 +4775,7 @@ void q_listwidget_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int, int)
+/// @param callback void func(QListWidget* self, int dx, int dy)
 void q_listwidget_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
@@ -4809,7 +4809,7 @@ void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QListWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QListView
@@ -4843,7 +4843,7 @@ void q_listwidget_qbase_rows_inserted(void* self, void* parent, int start, int e
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*, int, int)
+/// @param callback void func(QListWidget* self, QModelIndex* parent, int start, int end)
 void q_listwidget_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QListView
@@ -4877,7 +4877,7 @@ void q_listwidget_qbase_rows_about_to_be_removed(void* self, void* parent, int s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*, int, int)
+/// @param callback void func(QListWidget* self, QModelIndex* parent, int start, int end)
 void q_listwidget_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QListView
@@ -4907,7 +4907,7 @@ void q_listwidget_qbase_mouse_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMouseEvent*)
+/// @param callback void func(QListWidget* self, QMouseEvent* e)
 void q_listwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4937,7 +4937,7 @@ void q_listwidget_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMouseEvent*)
+/// @param callback void func(QListWidget* self, QMouseEvent* e)
 void q_listwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4967,7 +4967,7 @@ void q_listwidget_qbase_wheel_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QWheelEvent*)
+/// @param callback void func(QListWidget* self, QWheelEvent* e)
 void q_listwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4997,7 +4997,7 @@ void q_listwidget_qbase_timer_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QTimerEvent*)
+/// @param callback void func(QListWidget* self, QTimerEvent* e)
 void q_listwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5027,7 +5027,7 @@ void q_listwidget_qbase_resize_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QResizeEvent*)
+/// @param callback void func(QListWidget* self, QResizeEvent* e)
 void q_listwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5057,7 +5057,7 @@ void q_listwidget_qbase_drag_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QDragMoveEvent*)
+/// @param callback void func(QListWidget* self, QDragMoveEvent* e)
 void q_listwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5087,7 +5087,7 @@ void q_listwidget_qbase_drag_leave_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QDragLeaveEvent*)
+/// @param callback void func(QListWidget* self, QDragLeaveEvent* e)
 void q_listwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5117,7 +5117,7 @@ void q_listwidget_qbase_start_drag(void* self, int64_t supportedActions);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, flag of enum Qt__DropAction)
+/// @param callback void func(QListWidget* self, flag of enum Qt__DropAction supportedActions)
 void q_listwidget_on_start_drag(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QListView
@@ -5147,7 +5147,7 @@ void q_listwidget_qbase_init_view_item_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QStyleOptionViewItem*)
+/// @param callback void func(QListWidget* self, QStyleOptionViewItem* option)
 void q_listwidget_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5177,7 +5177,7 @@ void q_listwidget_qbase_paint_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QPaintEvent*)
+/// @param callback void func(QListWidget* self, QPaintEvent* e)
 void q_listwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5205,7 +5205,7 @@ int32_t q_listwidget_qbase_horizontal_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_listwidget_on_horizontal_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
@@ -5233,7 +5233,7 @@ int32_t q_listwidget_qbase_vertical_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_listwidget_on_vertical_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
@@ -5265,7 +5265,7 @@ QModelIndex* q_listwidget_qbase_move_cursor(void* self, int32_t cursorAction, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QModelIndex* fn(QListWidget*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
+/// @param callback QModelIndex* func(QListWidget* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 void q_listwidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// Inherited from QListView
@@ -5297,7 +5297,7 @@ void q_listwidget_qbase_set_selection(void* self, void* rect, int64_t command);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QRect*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(QListWidget* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 void q_listwidget_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
 
 /// Inherited from QListView
@@ -5327,7 +5327,7 @@ QRegion* q_listwidget_qbase_visual_region_for_selection(void* self, void* select
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QRegion* fn(QListWidget*, QItemSelection*)
+/// @param callback QRegion* func(QListWidget* self, QItemSelection* selection)
 void q_listwidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5355,7 +5355,7 @@ libqt_list /* of QModelIndex* */ q_listwidget_qbase_selected_indexes(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_listwidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QListView
@@ -5383,7 +5383,7 @@ void q_listwidget_qbase_update_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_update_geometries(void* self, void (*callback)());
 
 /// Inherited from QListView
@@ -5413,7 +5413,7 @@ bool q_listwidget_qbase_is_index_hidden(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, QModelIndex*)
+/// @param callback bool func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5445,7 +5445,7 @@ void q_listwidget_qbase_selection_changed(void* self, void* selected, void* dese
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QItemSelection*, QItemSelection*)
+/// @param callback void func(QListWidget* self, QItemSelection* selected, QItemSelection* deselected)
 void q_listwidget_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
@@ -5477,7 +5477,7 @@ void q_listwidget_qbase_current_changed(void* self, void* current, void* previou
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QModelIndex* current, QModelIndex* previous)
 void q_listwidget_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
@@ -5505,7 +5505,7 @@ QSize* q_listwidget_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_listwidget_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5535,7 +5535,7 @@ void q_listwidget_qbase_keyboard_search(void* self, const char* search);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, const char*)
+/// @param callback void func(QListWidget* self, const char* search)
 void q_listwidget_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractItemView
@@ -5565,7 +5565,7 @@ int32_t q_listwidget_qbase_size_hint_for_row(void* self, int row);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn(QListWidget*, int)
+/// @param callback int32_t func(QListWidget* self, int row)
 void q_listwidget_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5595,7 +5595,7 @@ int32_t q_listwidget_qbase_size_hint_for_column(void* self, int column);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn(QListWidget*, int)
+/// @param callback int32_t func(QListWidget* self, int column)
 void q_listwidget_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5625,7 +5625,7 @@ QAbstractItemDelegate* q_listwidget_qbase_item_delegate_for_index(void* self, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QAbstractItemDelegate* fn(QListWidget*, QModelIndex*)
+/// @param callback QAbstractItemDelegate* func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5655,7 +5655,7 @@ QVariant* q_listwidget_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QVariant* fn(QListWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QListWidget* self, enum Qt__InputMethodQuery query)
 void q_listwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -5683,7 +5683,7 @@ void q_listwidget_qbase_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_select_all(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5711,7 +5711,7 @@ void q_listwidget_qbase_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_update_editor_data(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5739,7 +5739,7 @@ void q_listwidget_qbase_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_update_editor_geometries(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5769,7 +5769,7 @@ void q_listwidget_qbase_vertical_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int)
+/// @param callback void func(QListWidget* self, int action)
 void q_listwidget_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5799,7 +5799,7 @@ void q_listwidget_qbase_horizontal_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int)
+/// @param callback void func(QListWidget* self, int action)
 void q_listwidget_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5829,7 +5829,7 @@ void q_listwidget_qbase_vertical_scrollbar_value_changed(void* self, int value);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int)
+/// @param callback void func(QListWidget* self, int value)
 void q_listwidget_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5859,7 +5859,7 @@ void q_listwidget_qbase_horizontal_scrollbar_value_changed(void* self, int value
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int)
+/// @param callback void func(QListWidget* self, int value)
 void q_listwidget_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5891,7 +5891,7 @@ void q_listwidget_qbase_close_editor(void* self, void* editor, int32_t hint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
+/// @param callback void func(QListWidget* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
 void q_listwidget_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -5921,7 +5921,7 @@ void q_listwidget_qbase_commit_data(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QWidget*)
+/// @param callback void func(QListWidget* self, QWidget* editor)
 void q_listwidget_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5951,7 +5951,7 @@ void q_listwidget_qbase_editor_destroyed(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QObject*)
+/// @param callback void func(QListWidget* self, QObject* editor)
 void q_listwidget_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5985,7 +5985,7 @@ bool q_listwidget_qbase_edit2(void* self, void* index, int32_t trigger, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
+/// @param callback bool func(QListWidget* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
@@ -6021,7 +6021,7 @@ int64_t q_listwidget_qbase_selection_command(void* self, void* index, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int64_t fn(QListWidget*, QModelIndex*, QEvent*)
+/// @param callback int64_t func(QListWidget* self, QModelIndex* index, QEvent* event)
 void q_listwidget_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6051,7 +6051,7 @@ bool q_listwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, bool)
+/// @param callback bool func(QListWidget* self, bool next)
 void q_listwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QAbstractItemView
@@ -6081,7 +6081,7 @@ bool q_listwidget_qbase_viewport_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, QEvent*)
+/// @param callback bool func(QListWidget* self, QEvent* event)
 void q_listwidget_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6111,7 +6111,7 @@ void q_listwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMouseEvent*)
+/// @param callback void func(QListWidget* self, QMouseEvent* event)
 void q_listwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6141,7 +6141,7 @@ void q_listwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMouseEvent*)
+/// @param callback void func(QListWidget* self, QMouseEvent* event)
 void q_listwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6171,7 +6171,7 @@ void q_listwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QDragEnterEvent*)
+/// @param callback void func(QListWidget* self, QDragEnterEvent* event)
 void q_listwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6201,7 +6201,7 @@ void q_listwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QFocusEvent*)
+/// @param callback void func(QListWidget* self, QFocusEvent* event)
 void q_listwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6231,7 +6231,7 @@ void q_listwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QFocusEvent*)
+/// @param callback void func(QListWidget* self, QFocusEvent* event)
 void q_listwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6261,7 +6261,7 @@ void q_listwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QKeyEvent*)
+/// @param callback void func(QListWidget* self, QKeyEvent* event)
 void q_listwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6291,7 +6291,7 @@ void q_listwidget_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QInputMethodEvent*)
+/// @param callback void func(QListWidget* self, QInputMethodEvent* event)
 void q_listwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6323,7 +6323,7 @@ bool q_listwidget_qbase_event_filter(void* self, void* object, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, QObject*, QEvent*)
+/// @param callback bool func(QListWidget* self, QObject* object, QEvent* event)
 void q_listwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -6351,7 +6351,7 @@ QSize* q_listwidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_listwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6379,7 +6379,7 @@ QSize* q_listwidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_listwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6409,7 +6409,7 @@ void q_listwidget_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QWidget*)
+/// @param callback void func(QListWidget* self, QWidget* viewport)
 void q_listwidget_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -6439,7 +6439,7 @@ void q_listwidget_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QContextMenuEvent*)
+/// @param callback void func(QListWidget* self, QContextMenuEvent* param1)
 void q_listwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -6469,7 +6469,7 @@ void q_listwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QEvent*)
+/// @param callback void func(QListWidget* self, QEvent* param1)
 void q_listwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -6499,7 +6499,7 @@ void q_listwidget_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QStyleOptionFrame*)
+/// @param callback void func(QListWidget* self, QStyleOptionFrame* option)
 void q_listwidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6527,7 +6527,7 @@ int32_t q_listwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_listwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -6557,7 +6557,7 @@ void q_listwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, bool)
+/// @param callback void func(QListWidget* self, bool visible)
 void q_listwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -6587,7 +6587,7 @@ int32_t q_listwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn(QListWidget*, int)
+/// @param callback int32_t func(QListWidget* self, int param1)
 void q_listwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -6615,7 +6615,7 @@ bool q_listwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_listwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -6643,7 +6643,7 @@ QPaintEngine* q_listwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_listwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -6673,7 +6673,7 @@ void q_listwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QKeyEvent*)
+/// @param callback void func(QListWidget* self, QKeyEvent* event)
 void q_listwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6703,7 +6703,7 @@ void q_listwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QEnterEvent*)
+/// @param callback void func(QListWidget* self, QEnterEvent* event)
 void q_listwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6733,7 +6733,7 @@ void q_listwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QEvent*)
+/// @param callback void func(QListWidget* self, QEvent* event)
 void q_listwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6763,7 +6763,7 @@ void q_listwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMoveEvent*)
+/// @param callback void func(QListWidget* self, QMoveEvent* event)
 void q_listwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6793,7 +6793,7 @@ void q_listwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QCloseEvent*)
+/// @param callback void func(QListWidget* self, QCloseEvent* event)
 void q_listwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6823,7 +6823,7 @@ void q_listwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QTabletEvent*)
+/// @param callback void func(QListWidget* self, QTabletEvent* event)
 void q_listwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6853,7 +6853,7 @@ void q_listwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QActionEvent*)
+/// @param callback void func(QListWidget* self, QActionEvent* event)
 void q_listwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6883,7 +6883,7 @@ void q_listwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QShowEvent*)
+/// @param callback void func(QListWidget* self, QShowEvent* event)
 void q_listwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6913,7 +6913,7 @@ void q_listwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QHideEvent*)
+/// @param callback void func(QListWidget* self, QHideEvent* event)
 void q_listwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6947,7 +6947,7 @@ bool q_listwidget_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QListWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_listwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -6977,7 +6977,7 @@ int32_t q_listwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn(QListWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QListWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_listwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -7007,7 +7007,7 @@ void q_listwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QPainter*)
+/// @param callback void func(QListWidget* self, QPainter* painter)
 void q_listwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7037,7 +7037,7 @@ QPaintDevice* q_listwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QPaintDevice* fn(QListWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QListWidget* self, QPoint* offset)
 void q_listwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7065,7 +7065,7 @@ QPainter* q_listwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_listwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -7095,7 +7095,7 @@ void q_listwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QChildEvent*)
+/// @param callback void func(QListWidget* self, QChildEvent* event)
 void q_listwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -7125,7 +7125,7 @@ void q_listwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QEvent*)
+/// @param callback void func(QListWidget* self, QEvent* event)
 void q_listwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -7155,7 +7155,7 @@ void q_listwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMetaMethod*)
+/// @param callback void func(QListWidget* self, QMetaMethod* signal)
 void q_listwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -7185,7 +7185,7 @@ void q_listwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QMetaMethod*)
+/// @param callback void func(QListWidget* self, QMetaMethod* signal)
 void q_listwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -7217,7 +7217,7 @@ void q_listwidget_qbase_resize_contents(void* self, int width, int height);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int, int)
+/// @param callback void func(QListWidget* self, int width, int height)
 void q_listwidget_on_resize_contents(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
@@ -7245,7 +7245,7 @@ QSize* q_listwidget_qbase_contents_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_listwidget_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
@@ -7275,7 +7275,7 @@ QRect* q_listwidget_qbase_rect_for_index(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QRect* fn(QListWidget*, QModelIndex*)
+/// @param callback QRect* func(QListWidget* self, QModelIndex* index)
 void q_listwidget_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -7307,7 +7307,7 @@ void q_listwidget_qbase_set_position_for_index(void* self, void* position, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QPoint*, QModelIndex*)
+/// @param callback void func(QListWidget* self, QPoint* position, QModelIndex* index)
 void q_listwidget_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -7339,7 +7339,7 @@ int32_t q_listwidget_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_listwidget_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7369,7 +7369,7 @@ void q_listwidget_qbase_set_state(void* self, int32_t state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, enum QAbstractItemView__State)
+/// @param callback void func(QListWidget* self, enum QAbstractItemView__State state)
 void q_listwidget_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -7397,7 +7397,7 @@ void q_listwidget_qbase_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_schedule_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7425,7 +7425,7 @@ void q_listwidget_qbase_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_execute_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7455,7 +7455,7 @@ void q_listwidget_qbase_set_dirty_region(void* self, void* region);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QRegion*)
+/// @param callback void func(QListWidget* self, QRegion* region)
 void q_listwidget_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -7487,7 +7487,7 @@ void q_listwidget_qbase_scroll_dirty_region(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int, int)
+/// @param callback void func(QListWidget* self, int dx, int dy)
 void q_listwidget_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -7515,7 +7515,7 @@ QPoint* q_listwidget_qbase_dirty_region_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QPoint* fn()
+/// @param callback QPoint* func()
 void q_listwidget_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7543,7 +7543,7 @@ void q_listwidget_qbase_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_start_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7571,7 +7571,7 @@ void q_listwidget_qbase_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_stop_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7599,7 +7599,7 @@ void q_listwidget_qbase_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_do_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7631,7 +7631,7 @@ int32_t q_listwidget_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_listwidget_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -7667,7 +7667,7 @@ void q_listwidget_qbase_set_viewport_margins(void* self, int left, int top, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, int, int, int, int)
+/// @param callback void func(QListWidget* self, int left, int top, int right, int bottom)
 void q_listwidget_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -7695,7 +7695,7 @@ QMargins* q_listwidget_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_listwidget_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -7725,7 +7725,7 @@ void q_listwidget_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QPainter*)
+/// @param callback void func(QListWidget* self, QPainter* param1)
 void q_listwidget_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7753,7 +7753,7 @@ void q_listwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7781,7 +7781,7 @@ void q_listwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7809,7 +7809,7 @@ void q_listwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_listwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7837,7 +7837,7 @@ bool q_listwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_listwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7865,7 +7865,7 @@ bool q_listwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_listwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -7893,7 +7893,7 @@ QObject* q_listwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_listwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -7921,7 +7921,7 @@ int32_t q_listwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_listwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -7951,7 +7951,7 @@ int32_t q_listwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback int32_t fn(QListWidget*, const char*)
+/// @param callback int32_t func(QListWidget* self, const char* signal)
 void q_listwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -7981,7 +7981,7 @@ bool q_listwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool fn(QListWidget*, QMetaMethod*)
+/// @param callback bool func(QListWidget* self, QMetaMethod* signal)
 void q_listwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8013,7 +8013,7 @@ double q_listwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback double fn(QListWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QListWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_listwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -8023,7 +8023,7 @@ void q_listwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, const char*)
+/// @param callback void func(QListWidget* self, const char* objectName)
 void q_listwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#dtor.QListWidget)

@@ -54,7 +54,7 @@ void k_signalhandler_signal_received(void* self, int signal);
 /// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#signalReceived)
 ///
 /// @param self KSignalHandler*
-/// @param callback void fn(KSignalHandler*, int)
+/// @param callback void func(KSignalHandler* self, int signal)
 void k_signalhandler_on_signal_received(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -317,7 +317,7 @@ void k_signalhandler_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSignalHandler*
-/// @param callback void fn(KSignalHandler*)
+/// @param callback void func(KSignalHandler* self)
 void k_signalhandler_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -395,7 +395,7 @@ void k_signalhandler_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSignalHandler*
-/// @param callback void fn(KSignalHandler*, QObject*)
+/// @param callback void func(KSignalHandler* self, QObject* param1)
 void k_signalhandler_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -405,7 +405,7 @@ void k_signalhandler_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KSignalHandler*
-/// @param callback void fn(KSignalHandler*, const char*)
+/// @param callback void func(KSignalHandler* self, const char* objectName)
 void k_signalhandler_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#dtor.KSignalHandler)

@@ -40,7 +40,7 @@ int32_t q_rasterwindow_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QRasterWindow*
-/// @param callback int32_t fn(QRasterWindow*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QRasterWindow* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ int32_t q_rasterwindow_metric(void* self, int32_t metric);
 /// Allows for overriding the related default method
 ///
 /// @param self QRasterWindow*
-/// @param callback int32_t fn(QRasterWindow*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metric)
 void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
@@ -91,7 +91,7 @@ QPaintDevice* q_rasterwindow_redirected(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QRasterWindow*
-/// @param callback QPaintDevice* fn(QRasterWindow*, QPoint*)
+/// @param callback QPaintDevice* func(QRasterWindow* self, QPoint* param1)
 void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
@@ -113,7 +113,7 @@ void q_rasterwindow_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QResizeEvent*)
+/// @param callback void func(QRasterWindow* self, QResizeEvent* event)
 void q_rasterwindow_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
@@ -975,7 +975,7 @@ void q_rasterwindow_screen_changed(void* self, void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QScreen*)
+/// @param callback void func(QRasterWindow* self, QScreen* screen)
 void q_rasterwindow_on_screen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -991,7 +991,7 @@ void q_rasterwindow_modality_changed(void* self, int32_t modality);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, enum Qt__WindowModality)
+/// @param callback void func(QRasterWindow* self, enum Qt__WindowModality modality)
 void q_rasterwindow_on_modality_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -1007,7 +1007,7 @@ void q_rasterwindow_window_state_changed(void* self, int32_t windowState);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, enum Qt__WindowState)
+/// @param callback void func(QRasterWindow* self, enum Qt__WindowState windowState)
 void q_rasterwindow_on_window_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -1023,7 +1023,7 @@ void q_rasterwindow_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, const char*)
+/// @param callback void func(QRasterWindow* self, const char* title)
 void q_rasterwindow_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWindow
@@ -1039,7 +1039,7 @@ void q_rasterwindow_x_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_x_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1055,7 +1055,7 @@ void q_rasterwindow_y_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_y_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1071,7 +1071,7 @@ void q_rasterwindow_width_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1087,7 +1087,7 @@ void q_rasterwindow_height_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1103,7 +1103,7 @@ void q_rasterwindow_minimum_width_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_minimum_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1119,7 +1119,7 @@ void q_rasterwindow_minimum_height_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_minimum_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1135,7 +1135,7 @@ void q_rasterwindow_maximum_width_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_maximum_width_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1151,7 +1151,7 @@ void q_rasterwindow_maximum_height_changed(void* self, int arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, int)
+/// @param callback void func(QRasterWindow* self, int arg)
 void q_rasterwindow_on_maximum_height_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWindow
@@ -1167,7 +1167,7 @@ void q_rasterwindow_visible_changed(void* self, bool arg);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, bool)
+/// @param callback void func(QRasterWindow* self, bool arg)
 void q_rasterwindow_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWindow
@@ -1183,7 +1183,7 @@ void q_rasterwindow_visibility_changed(void* self, int32_t visibility);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, enum QWindow__Visibility)
+/// @param callback void func(QRasterWindow* self, enum QWindow__Visibility visibility)
 void q_rasterwindow_on_visibility_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -1198,7 +1198,7 @@ void q_rasterwindow_active_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*)
+/// @param callback void func(QRasterWindow* self)
 void q_rasterwindow_on_active_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QWindow
@@ -1214,7 +1214,7 @@ void q_rasterwindow_content_orientation_changed(void* self, int32_t orientation)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, enum Qt__ScreenOrientation)
+/// @param callback void func(QRasterWindow* self, enum Qt__ScreenOrientation orientation)
 void q_rasterwindow_on_content_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
@@ -1230,7 +1230,7 @@ void q_rasterwindow_focus_object_changed(void* self, void* object);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QObject*)
+/// @param callback void func(QRasterWindow* self, QObject* object)
 void q_rasterwindow_on_focus_object_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -1246,7 +1246,7 @@ void q_rasterwindow_opacity_changed(void* self, double opacity);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, double)
+/// @param callback void func(QRasterWindow* self, double opacity)
 void q_rasterwindow_on_opacity_changed(void* self, void (*callback)(void*, double));
 
 /// Inherited from QWindow
@@ -1262,7 +1262,7 @@ void q_rasterwindow_transient_parent_changed(void* self, void* transientParent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QWindow*)
+/// @param callback void func(QRasterWindow* self, QWindow* transientParent)
 void q_rasterwindow_on_transient_parent_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -1509,7 +1509,7 @@ void q_rasterwindow_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*)
+/// @param callback void func(QRasterWindow* self)
 void q_rasterwindow_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1580,7 +1580,7 @@ void q_rasterwindow_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QObject*)
+/// @param callback void func(QRasterWindow* self, QObject* param1)
 void q_rasterwindow_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSurface
@@ -1717,7 +1717,7 @@ void q_rasterwindow_qbase_expose_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QExposeEvent*)
+/// @param callback void func(QRasterWindow* self, QExposeEvent* param1)
 void q_rasterwindow_on_expose_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDeviceWindow
@@ -1747,7 +1747,7 @@ void q_rasterwindow_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QPaintEvent*)
+/// @param callback void func(QRasterWindow* self, QPaintEvent* event)
 void q_rasterwindow_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDeviceWindow
@@ -1777,7 +1777,7 @@ bool q_rasterwindow_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback bool fn(QRasterWindow*, QEvent*)
+/// @param callback bool func(QRasterWindow* self, QEvent* event)
 void q_rasterwindow_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -1809,7 +1809,7 @@ int32_t q_rasterwindow_qbase_surface_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWindow
@@ -1837,7 +1837,7 @@ QSurfaceFormat* q_rasterwindow_qbase_format(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback QSurfaceFormat* fn()
+/// @param callback QSurfaceFormat* func()
 void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)());
 
 /// Inherited from QWindow
@@ -1865,7 +1865,7 @@ QSize* q_rasterwindow_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_rasterwindow_on_size(void* self, QSize* (*callback)());
 
 /// Inherited from QWindow
@@ -1893,7 +1893,7 @@ QAccessibleInterface* q_rasterwindow_qbase_accessible_root(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_rasterwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)());
 
 /// Inherited from QWindow
@@ -1921,7 +1921,7 @@ QObject* q_rasterwindow_qbase_focus_object(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_rasterwindow_on_focus_object(void* self, QObject* (*callback)());
 
 /// Inherited from QWindow
@@ -1951,7 +1951,7 @@ void q_rasterwindow_qbase_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMoveEvent*)
+/// @param callback void func(QRasterWindow* self, QMoveEvent* param1)
 void q_rasterwindow_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -1981,7 +1981,7 @@ void q_rasterwindow_qbase_focus_in_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QFocusEvent*)
+/// @param callback void func(QRasterWindow* self, QFocusEvent* param1)
 void q_rasterwindow_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2011,7 +2011,7 @@ void q_rasterwindow_qbase_focus_out_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QFocusEvent*)
+/// @param callback void func(QRasterWindow* self, QFocusEvent* param1)
 void q_rasterwindow_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2041,7 +2041,7 @@ void q_rasterwindow_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QShowEvent*)
+/// @param callback void func(QRasterWindow* self, QShowEvent* param1)
 void q_rasterwindow_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2071,7 +2071,7 @@ void q_rasterwindow_qbase_hide_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QHideEvent*)
+/// @param callback void func(QRasterWindow* self, QHideEvent* param1)
 void q_rasterwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2101,7 +2101,7 @@ void q_rasterwindow_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QCloseEvent*)
+/// @param callback void func(QRasterWindow* self, QCloseEvent* param1)
 void q_rasterwindow_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2131,7 +2131,7 @@ void q_rasterwindow_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QKeyEvent*)
+/// @param callback void func(QRasterWindow* self, QKeyEvent* param1)
 void q_rasterwindow_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2161,7 +2161,7 @@ void q_rasterwindow_qbase_key_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QKeyEvent*)
+/// @param callback void func(QRasterWindow* self, QKeyEvent* param1)
 void q_rasterwindow_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2191,7 +2191,7 @@ void q_rasterwindow_qbase_mouse_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMouseEvent*)
+/// @param callback void func(QRasterWindow* self, QMouseEvent* param1)
 void q_rasterwindow_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2221,7 +2221,7 @@ void q_rasterwindow_qbase_mouse_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMouseEvent*)
+/// @param callback void func(QRasterWindow* self, QMouseEvent* param1)
 void q_rasterwindow_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2251,7 +2251,7 @@ void q_rasterwindow_qbase_mouse_double_click_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMouseEvent*)
+/// @param callback void func(QRasterWindow* self, QMouseEvent* param1)
 void q_rasterwindow_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2281,7 +2281,7 @@ void q_rasterwindow_qbase_mouse_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMouseEvent*)
+/// @param callback void func(QRasterWindow* self, QMouseEvent* param1)
 void q_rasterwindow_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2311,7 +2311,7 @@ void q_rasterwindow_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QWheelEvent*)
+/// @param callback void func(QRasterWindow* self, QWheelEvent* param1)
 void q_rasterwindow_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2341,7 +2341,7 @@ void q_rasterwindow_qbase_touch_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QTouchEvent*)
+/// @param callback void func(QRasterWindow* self, QTouchEvent* param1)
 void q_rasterwindow_on_touch_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2371,7 +2371,7 @@ void q_rasterwindow_qbase_tablet_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QTabletEvent*)
+/// @param callback void func(QRasterWindow* self, QTabletEvent* param1)
 void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWindow
@@ -2405,7 +2405,7 @@ bool q_rasterwindow_qbase_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback bool fn(QRasterWindow*, const char*, void*, intptr_t*)
+/// @param callback bool func(QRasterWindow* self, const char* eventType, void* message, intptr_t* result)
 void q_rasterwindow_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QObject
@@ -2437,7 +2437,7 @@ bool q_rasterwindow_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback bool fn(QRasterWindow*, QObject*, QEvent*)
+/// @param callback bool func(QRasterWindow* self, QObject* watched, QEvent* event)
 void q_rasterwindow_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2467,7 +2467,7 @@ void q_rasterwindow_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QTimerEvent*)
+/// @param callback void func(QRasterWindow* self, QTimerEvent* event)
 void q_rasterwindow_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2497,7 +2497,7 @@ void q_rasterwindow_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QChildEvent*)
+/// @param callback void func(QRasterWindow* self, QChildEvent* event)
 void q_rasterwindow_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2527,7 +2527,7 @@ void q_rasterwindow_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QEvent*)
+/// @param callback void func(QRasterWindow* self, QEvent* event)
 void q_rasterwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2557,7 +2557,7 @@ void q_rasterwindow_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMetaMethod*)
+/// @param callback void func(QRasterWindow* self, QMetaMethod* signal)
 void q_rasterwindow_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2587,7 +2587,7 @@ void q_rasterwindow_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QMetaMethod*)
+/// @param callback void func(QRasterWindow* self, QMetaMethod* signal)
 void q_rasterwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2615,7 +2615,7 @@ int32_t q_rasterwindow_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_rasterwindow_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QPaintDevice
@@ -2645,7 +2645,7 @@ void q_rasterwindow_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, QPainter*)
+/// @param callback void func(QRasterWindow* self, QPainter* painter)
 void q_rasterwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2673,7 +2673,7 @@ QPainter* q_rasterwindow_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_rasterwindow_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWindow
@@ -2705,7 +2705,7 @@ void* q_rasterwindow_qbase_resolve_interface(void* self, const char* name, int r
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback void* fn(QRasterWindow*, const char*, int)
+/// @param callback void* func(QRasterWindow* self, const char* name, int revision)
 void q_rasterwindow_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
@@ -2733,7 +2733,7 @@ QObject* q_rasterwindow_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_rasterwindow_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2761,7 +2761,7 @@ int32_t q_rasterwindow_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_rasterwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2791,7 +2791,7 @@ int32_t q_rasterwindow_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback int32_t fn(QRasterWindow*, const char*)
+/// @param callback int32_t func(QRasterWindow* self, const char* signal)
 void q_rasterwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2821,7 +2821,7 @@ bool q_rasterwindow_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback bool fn(QRasterWindow*, QMetaMethod*)
+/// @param callback bool func(QRasterWindow* self, QMetaMethod* signal)
 void q_rasterwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2853,7 +2853,7 @@ double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback double fn(QRasterWindow*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -2863,7 +2863,7 @@ void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QRasterWindow*
-/// @param callback void fn(QRasterWindow*, const char*)
+/// @param callback void func(QRasterWindow* self, const char* objectName)
 void q_rasterwindow_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#dtor.QRasterWindow)

@@ -40,7 +40,7 @@ int32_t q_textbrowser_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback int32_t fn(QTextBrowser*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTextBrowser* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_textbrowser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -95,7 +95,7 @@ QVariant* q_textbrowser_load_resource(void* self, int typeVal, void* name);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback QVariant* fn(QTextBrowser*, int, QUrl*)
+/// @param callback QVariant* func(QTextBrowser* self, int typeVal, QUrl* name)
 void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
@@ -184,7 +184,7 @@ void q_textbrowser_backward(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_backward(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
@@ -204,7 +204,7 @@ void q_textbrowser_forward(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_forward(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
@@ -224,7 +224,7 @@ void q_textbrowser_home(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_home(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#home)
@@ -244,7 +244,7 @@ void q_textbrowser_reload(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_reload(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
@@ -263,7 +263,7 @@ void q_textbrowser_backward_available(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backwardAvailable)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, bool)
+/// @param callback void func(QTextBrowser* self, bool param1)
 void q_textbrowser_on_backward_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forwardAvailable)
@@ -275,7 +275,7 @@ void q_textbrowser_forward_available(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forwardAvailable)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, bool)
+/// @param callback void func(QTextBrowser* self, bool param1)
 void q_textbrowser_on_forward_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyChanged)
@@ -286,7 +286,7 @@ void q_textbrowser_history_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*)
+/// @param callback void func(QTextBrowser* self)
 void q_textbrowser_on_history_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#sourceChanged)
@@ -298,7 +298,7 @@ void q_textbrowser_source_changed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#sourceChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QUrl*)
+/// @param callback void func(QTextBrowser* self, QUrl* param1)
 void q_textbrowser_on_source_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#highlighted)
@@ -310,7 +310,7 @@ void q_textbrowser_highlighted(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#highlighted)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QUrl*)
+/// @param callback void func(QTextBrowser* self, QUrl* param1)
 void q_textbrowser_on_highlighted(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#anchorClicked)
@@ -322,7 +322,7 @@ void q_textbrowser_anchor_clicked(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#anchorClicked)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QUrl*)
+/// @param callback void func(QTextBrowser* self, QUrl* param1)
 void q_textbrowser_on_anchor_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
@@ -336,7 +336,7 @@ bool q_textbrowser_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, QEvent*)
+/// @param callback bool func(QTextBrowser* self, QEvent* e)
 void q_textbrowser_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
@@ -358,7 +358,7 @@ void q_textbrowser_key_press_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QKeyEvent*)
+/// @param callback void func(QTextBrowser* self, QKeyEvent* ev)
 void q_textbrowser_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
@@ -380,7 +380,7 @@ void q_textbrowser_mouse_move_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+/// @param callback void func(QTextBrowser* self, QMouseEvent* ev)
 void q_textbrowser_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
@@ -402,7 +402,7 @@ void q_textbrowser_mouse_press_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+/// @param callback void func(QTextBrowser* self, QMouseEvent* ev)
 void q_textbrowser_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
@@ -424,7 +424,7 @@ void q_textbrowser_mouse_release_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+/// @param callback void func(QTextBrowser* self, QMouseEvent* ev)
 void q_textbrowser_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
@@ -446,7 +446,7 @@ void q_textbrowser_focus_out_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QFocusEvent*)
+/// @param callback void func(QTextBrowser* self, QFocusEvent* ev)
 void q_textbrowser_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
@@ -468,7 +468,7 @@ bool q_textbrowser_focus_next_prev_child(void* self, bool next);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, bool)
+/// @param callback bool func(QTextBrowser* self, bool next)
 void q_textbrowser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
@@ -490,7 +490,7 @@ void q_textbrowser_paint_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QPaintEvent*)
+/// @param callback void func(QTextBrowser* self, QPaintEvent* e)
 void q_textbrowser_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
@@ -513,7 +513,7 @@ void q_textbrowser_do_set_source(void* self, void* name, int32_t typeVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QUrl*, enum QTextDocument__ResourceType)
+/// @param callback void func(QTextBrowser* self, QUrl* name, enum QTextDocument__ResourceType typeVal)
 void q_textbrowser_on_do_set_source(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
@@ -1247,7 +1247,7 @@ void q_textbrowser_text_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*)
+/// @param callback void func(QTextBrowser* self)
 void q_textbrowser_on_text_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
@@ -1263,7 +1263,7 @@ void q_textbrowser_undo_available(void* self, bool b);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undoAvailable)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, bool)
+/// @param callback void func(QTextBrowser* self, bool b)
 void q_textbrowser_on_undo_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1279,7 +1279,7 @@ void q_textbrowser_redo_available(void* self, bool b);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redoAvailable)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, bool)
+/// @param callback void func(QTextBrowser* self, bool b)
 void q_textbrowser_on_redo_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1295,7 +1295,7 @@ void q_textbrowser_current_char_format_changed(void* self, void* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormatChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QTextCharFormat*)
+/// @param callback void func(QTextBrowser* self, QTextCharFormat* format)
 void q_textbrowser_on_current_char_format_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -1311,7 +1311,7 @@ void q_textbrowser_copy_available(void* self, bool b);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copyAvailable)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, bool)
+/// @param callback void func(QTextBrowser* self, bool b)
 void q_textbrowser_on_copy_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1326,7 +1326,7 @@ void q_textbrowser_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*)
+/// @param callback void func(QTextBrowser* self)
 void q_textbrowser_on_selection_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
@@ -1341,7 +1341,7 @@ void q_textbrowser_cursor_position_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*)
+/// @param callback void func(QTextBrowser* self)
 void q_textbrowser_on_cursor_position_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
@@ -3563,7 +3563,7 @@ void q_textbrowser_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, const char*)
+/// @param callback void func(QTextBrowser* self, const char* title)
 void q_textbrowser_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3579,7 +3579,7 @@ void q_textbrowser_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QIcon*)
+/// @param callback void func(QTextBrowser* self, QIcon* icon)
 void q_textbrowser_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3595,7 +3595,7 @@ void q_textbrowser_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, const char*)
+/// @param callback void func(QTextBrowser* self, const char* iconText)
 void q_textbrowser_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3611,7 +3611,7 @@ void q_textbrowser_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QPoint*)
+/// @param callback void func(QTextBrowser* self, QPoint* pos)
 void q_textbrowser_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3988,7 +3988,7 @@ void q_textbrowser_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*)
+/// @param callback void func(QTextBrowser* self)
 void q_textbrowser_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4066,7 +4066,7 @@ void q_textbrowser_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QObject*)
+/// @param callback void func(QTextBrowser* self, QObject* param1)
 void q_textbrowser_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4187,7 +4187,7 @@ QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QVariant* fn(QTextBrowser*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QTextBrowser* self, enum Qt__InputMethodQuery property)
 void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QTextEdit
@@ -4217,7 +4217,7 @@ void q_textbrowser_qbase_timer_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QTimerEvent*)
+/// @param callback void func(QTextBrowser* self, QTimerEvent* e)
 void q_textbrowser_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4247,7 +4247,7 @@ void q_textbrowser_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QKeyEvent*)
+/// @param callback void func(QTextBrowser* self, QKeyEvent* e)
 void q_textbrowser_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4277,7 +4277,7 @@ void q_textbrowser_qbase_resize_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QResizeEvent*)
+/// @param callback void func(QTextBrowser* self, QResizeEvent* e)
 void q_textbrowser_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4307,7 +4307,7 @@ void q_textbrowser_qbase_mouse_double_click_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+/// @param callback void func(QTextBrowser* self, QMouseEvent* e)
 void q_textbrowser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4337,7 +4337,7 @@ void q_textbrowser_qbase_context_menu_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QContextMenuEvent*)
+/// @param callback void func(QTextBrowser* self, QContextMenuEvent* e)
 void q_textbrowser_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4367,7 +4367,7 @@ void q_textbrowser_qbase_drag_enter_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QDragEnterEvent*)
+/// @param callback void func(QTextBrowser* self, QDragEnterEvent* e)
 void q_textbrowser_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4397,7 +4397,7 @@ void q_textbrowser_qbase_drag_leave_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QDragLeaveEvent*)
+/// @param callback void func(QTextBrowser* self, QDragLeaveEvent* e)
 void q_textbrowser_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4427,7 +4427,7 @@ void q_textbrowser_qbase_drag_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QDragMoveEvent*)
+/// @param callback void func(QTextBrowser* self, QDragMoveEvent* e)
 void q_textbrowser_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4457,7 +4457,7 @@ void q_textbrowser_qbase_drop_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QDropEvent*)
+/// @param callback void func(QTextBrowser* self, QDropEvent* e)
 void q_textbrowser_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4487,7 +4487,7 @@ void q_textbrowser_qbase_focus_in_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QFocusEvent*)
+/// @param callback void func(QTextBrowser* self, QFocusEvent* e)
 void q_textbrowser_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4517,7 +4517,7 @@ void q_textbrowser_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QShowEvent*)
+/// @param callback void func(QTextBrowser* self, QShowEvent* param1)
 void q_textbrowser_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4547,7 +4547,7 @@ void q_textbrowser_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QEvent*)
+/// @param callback void func(QTextBrowser* self, QEvent* e)
 void q_textbrowser_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4577,7 +4577,7 @@ void q_textbrowser_qbase_wheel_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QWheelEvent*)
+/// @param callback void func(QTextBrowser* self, QWheelEvent* e)
 void q_textbrowser_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4605,7 +4605,7 @@ QMimeData* q_textbrowser_qbase_create_mime_data_from_selection(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QMimeData* fn()
+/// @param callback QMimeData* func()
 void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)());
 
 /// Inherited from QTextEdit
@@ -4635,7 +4635,7 @@ bool q_textbrowser_qbase_can_insert_from_mime_data(void* self, void* source);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, QMimeData*)
+/// @param callback bool func(QTextBrowser* self, QMimeData* source)
 void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4665,7 +4665,7 @@ void q_textbrowser_qbase_insert_from_mime_data(void* self, void* source);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMimeData*)
+/// @param callback void func(QTextBrowser* self, QMimeData* source)
 void q_textbrowser_on_insert_from_mime_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4695,7 +4695,7 @@ void q_textbrowser_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QInputMethodEvent*)
+/// @param callback void func(QTextBrowser* self, QInputMethodEvent* param1)
 void q_textbrowser_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -4727,7 +4727,7 @@ void q_textbrowser_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, int, int)
+/// @param callback void func(QTextBrowser* self, int dx, int dy)
 void q_textbrowser_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QTextEdit
@@ -4757,7 +4757,7 @@ void q_textbrowser_qbase_do_set_text_cursor(void* self, void* cursor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QTextCursor*)
+/// @param callback void func(QTextBrowser* self, QTextCursor* cursor)
 void q_textbrowser_on_do_set_text_cursor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4785,7 +4785,7 @@ QSize* q_textbrowser_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -4813,7 +4813,7 @@ QSize* q_textbrowser_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_textbrowser_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -4843,7 +4843,7 @@ void q_textbrowser_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QWidget*)
+/// @param callback void func(QTextBrowser* self, QWidget* viewport)
 void q_textbrowser_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4875,7 +4875,7 @@ bool q_textbrowser_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, QObject*, QEvent*)
+/// @param callback bool func(QTextBrowser* self, QObject* param1, QEvent* param2)
 void q_textbrowser_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4905,7 +4905,7 @@ bool q_textbrowser_qbase_viewport_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, QEvent*)
+/// @param callback bool func(QTextBrowser* self, QEvent* param1)
 void q_textbrowser_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4933,7 +4933,7 @@ QSize* q_textbrowser_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -4963,7 +4963,7 @@ void q_textbrowser_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QStyleOptionFrame*)
+/// @param callback void func(QTextBrowser* self, QStyleOptionFrame* option)
 void q_textbrowser_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4991,7 +4991,7 @@ int32_t q_textbrowser_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_textbrowser_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -5021,7 +5021,7 @@ void q_textbrowser_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, bool)
+/// @param callback void func(QTextBrowser* self, bool visible)
 void q_textbrowser_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -5051,7 +5051,7 @@ int32_t q_textbrowser_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback int32_t fn(QTextBrowser*, int)
+/// @param callback int32_t func(QTextBrowser* self, int param1)
 void q_textbrowser_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -5079,7 +5079,7 @@ bool q_textbrowser_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_textbrowser_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5107,7 +5107,7 @@ QPaintEngine* q_textbrowser_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -5137,7 +5137,7 @@ void q_textbrowser_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QEnterEvent*)
+/// @param callback void func(QTextBrowser* self, QEnterEvent* event)
 void q_textbrowser_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5167,7 +5167,7 @@ void q_textbrowser_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QEvent*)
+/// @param callback void func(QTextBrowser* self, QEvent* event)
 void q_textbrowser_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5197,7 +5197,7 @@ void q_textbrowser_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMoveEvent*)
+/// @param callback void func(QTextBrowser* self, QMoveEvent* event)
 void q_textbrowser_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5227,7 +5227,7 @@ void q_textbrowser_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QCloseEvent*)
+/// @param callback void func(QTextBrowser* self, QCloseEvent* event)
 void q_textbrowser_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5257,7 +5257,7 @@ void q_textbrowser_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QTabletEvent*)
+/// @param callback void func(QTextBrowser* self, QTabletEvent* event)
 void q_textbrowser_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5287,7 +5287,7 @@ void q_textbrowser_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QActionEvent*)
+/// @param callback void func(QTextBrowser* self, QActionEvent* event)
 void q_textbrowser_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5317,7 +5317,7 @@ void q_textbrowser_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QHideEvent*)
+/// @param callback void func(QTextBrowser* self, QHideEvent* event)
 void q_textbrowser_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5351,7 +5351,7 @@ bool q_textbrowser_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, const char*, void*, intptr_t*)
+/// @param callback bool func(QTextBrowser* self, const char* eventType, void* message, intptr_t* result)
 void q_textbrowser_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -5381,7 +5381,7 @@ int32_t q_textbrowser_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback int32_t fn(QTextBrowser*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_textbrowser_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -5411,7 +5411,7 @@ void q_textbrowser_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QPainter*)
+/// @param callback void func(QTextBrowser* self, QPainter* painter)
 void q_textbrowser_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5441,7 +5441,7 @@ QPaintDevice* q_textbrowser_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QPaintDevice* fn(QTextBrowser*, QPoint*)
+/// @param callback QPaintDevice* func(QTextBrowser* self, QPoint* offset)
 void q_textbrowser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5469,7 +5469,7 @@ QPainter* q_textbrowser_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_textbrowser_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -5499,7 +5499,7 @@ void q_textbrowser_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QChildEvent*)
+/// @param callback void func(QTextBrowser* self, QChildEvent* event)
 void q_textbrowser_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5529,7 +5529,7 @@ void q_textbrowser_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QEvent*)
+/// @param callback void func(QTextBrowser* self, QEvent* event)
 void q_textbrowser_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5559,7 +5559,7 @@ void q_textbrowser_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMetaMethod*)
+/// @param callback void func(QTextBrowser* self, QMetaMethod* signal)
 void q_textbrowser_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5589,7 +5589,7 @@ void q_textbrowser_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QMetaMethod*)
+/// @param callback void func(QTextBrowser* self, QMetaMethod* signal)
 void q_textbrowser_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -5619,7 +5619,7 @@ void q_textbrowser_qbase_zoom_in_f(void* self, float range);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, float)
+/// @param callback void func(QTextBrowser* self, float range)
 void q_textbrowser_on_zoom_in_f(void* self, void (*callback)(void*, float));
 
 /// Inherited from QAbstractScrollArea
@@ -5655,7 +5655,7 @@ void q_textbrowser_qbase_set_viewport_margins(void* self, int left, int top, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, int, int, int, int)
+/// @param callback void func(QTextBrowser* self, int left, int top, int right, int bottom)
 void q_textbrowser_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -5683,7 +5683,7 @@ QMargins* q_textbrowser_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_textbrowser_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -5713,7 +5713,7 @@ void q_textbrowser_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, QPainter*)
+/// @param callback void func(QTextBrowser* self, QPainter* param1)
 void q_textbrowser_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5741,7 +5741,7 @@ void q_textbrowser_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5769,7 +5769,7 @@ void q_textbrowser_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5797,7 +5797,7 @@ void q_textbrowser_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textbrowser_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5825,7 +5825,7 @@ bool q_textbrowser_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_textbrowser_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5853,7 +5853,7 @@ bool q_textbrowser_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_textbrowser_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5881,7 +5881,7 @@ QObject* q_textbrowser_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_textbrowser_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5909,7 +5909,7 @@ int32_t q_textbrowser_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_textbrowser_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5939,7 +5939,7 @@ int32_t q_textbrowser_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback int32_t fn(QTextBrowser*, const char*)
+/// @param callback int32_t func(QTextBrowser* self, const char* signal)
 void q_textbrowser_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5969,7 +5969,7 @@ bool q_textbrowser_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback bool fn(QTextBrowser*, QMetaMethod*)
+/// @param callback bool func(QTextBrowser* self, QMetaMethod* signal)
 void q_textbrowser_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -6001,7 +6001,7 @@ double q_textbrowser_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextBrowser*
-/// @param callback double fn(QTextBrowser*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_textbrowser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -6011,7 +6011,7 @@ void q_textbrowser_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTextBrowser*
-/// @param callback void fn(QTextBrowser*, const char*)
+/// @param callback void func(QTextBrowser* self, const char* objectName)
 void q_textbrowser_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#dtor.QTextBrowser)

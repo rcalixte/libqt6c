@@ -40,7 +40,7 @@ int32_t k_job_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback int32_t fn(KJob*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_job_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -91,7 +91,7 @@ void k_job_start(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_job_on_start(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#start)
@@ -126,7 +126,7 @@ bool k_job_do_kill(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_job_on_do_kill(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
@@ -146,7 +146,7 @@ bool k_job_do_suspend(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_job_on_do_suspend(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
@@ -166,7 +166,7 @@ bool k_job_do_resume(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_job_on_do_resume(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
@@ -187,7 +187,7 @@ void k_job_set_capabilities(void* self, int64_t capabilities);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, flag of enum KJob__Capability)
+/// @param callback void func(KJob* self, flag of enum KJob__Capability capabilities)
 void k_job_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
@@ -227,7 +227,7 @@ const char* k_job_error_string(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void k_job_on_error_string(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
@@ -295,7 +295,7 @@ void k_job_description(void* self, void* job, const char* title);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, const char*)
+/// @param callback void func(KJob* self, KJob* job, const char* title)
 void k_job_on_description(void* self, void (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
@@ -308,7 +308,7 @@ void k_job_info_message(void* self, void* job, const char* message);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, const char*)
+/// @param callback void func(KJob* self, KJob* job, const char* message)
 void k_job_on_info_message(void* self, void (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
@@ -321,7 +321,7 @@ void k_job_warning(void* self, void* job, const char* message);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, const char*)
+/// @param callback void func(KJob* self, KJob* job, const char* message)
 void k_job_on_warning(void* self, void (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
@@ -334,7 +334,7 @@ void k_job_total_size(void* self, void* job, uint64_t size);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, uint64_t)
+/// @param callback void func(KJob* self, KJob* job, uint64_t size)
 void k_job_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
@@ -347,7 +347,7 @@ void k_job_processed_size(void* self, void* job, uint64_t size);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, uint64_t)
+/// @param callback void func(KJob* self, KJob* job, uint64_t size)
 void k_job_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
@@ -360,7 +360,7 @@ void k_job_speed(void* self, void* job, uint64_t speed);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, uint64_t)
+/// @param callback void func(KJob* self, KJob* job, uint64_t speed)
 void k_job_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
@@ -373,7 +373,7 @@ bool k_job_is_finished(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_job_on_is_finished(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
@@ -394,7 +394,7 @@ void k_job_set_error(void* self, int errorCode);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, int)
+/// @param callback void func(KJob* self, int errorCode)
 void k_job_on_set_error(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
@@ -416,7 +416,7 @@ void k_job_set_error_text(void* self, const char* errorText);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, const char*)
+/// @param callback void func(KJob* self, const char* errorText)
 void k_job_on_set_error_text(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
@@ -439,7 +439,7 @@ void k_job_set_processed_amount(void* self, int32_t unit, uint64_t amount);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KJob* self, enum KJob__Unit unit, uint64_t amount)
 void k_job_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
@@ -463,7 +463,7 @@ void k_job_set_total_amount(void* self, int32_t unit, uint64_t amount);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KJob* self, enum KJob__Unit unit, uint64_t amount)
 void k_job_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
@@ -486,7 +486,7 @@ void k_job_set_progress_unit(void* self, int32_t unit);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, enum KJob__Unit)
+/// @param callback void func(KJob* self, enum KJob__Unit unit)
 void k_job_on_set_progress_unit(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
@@ -508,7 +508,7 @@ void k_job_set_percent(void* self, uint64_t percentage);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, uint64_t)
+/// @param callback void func(KJob* self, uint64_t percentage)
 void k_job_on_set_percent(void* self, void (*callback)(void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
@@ -529,7 +529,7 @@ void k_job_emit_result(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_job_on_emit_result(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
@@ -551,7 +551,7 @@ void k_job_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmou
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, uint64_t, uint64_t)
+/// @param callback void func(KJob* self, uint64_t processedAmount, uint64_t totalAmount)
 void k_job_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
@@ -574,7 +574,7 @@ void k_job_emit_speed(void* self, uint64_t speed);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, uint64_t)
+/// @param callback void func(KJob* self, uint64_t speed)
 void k_job_on_emit_speed(void* self, void (*callback)(void*, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
@@ -595,7 +595,7 @@ void k_job_start_elapsed_timer(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_job_on_start_elapsed_timer(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
@@ -645,7 +645,7 @@ void k_job_description3(void* self, void* job, const char* title, libqt_pair /* 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_job_on_description3(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
@@ -660,7 +660,7 @@ void k_job_description4(void* self, void* job, const char* title, libqt_pair /* 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_job_on_description4(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
 
 /// Inherited from QObject
@@ -889,7 +889,7 @@ void k_job_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*)
+/// @param callback void func(KJob* self)
 void k_job_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -967,7 +967,7 @@ void k_job_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, QObject*)
+/// @param callback void func(KJob* self, QObject* param1)
 void k_job_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -997,7 +997,7 @@ bool k_job_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback bool fn(KJob*, QEvent*)
+/// @param callback bool func(KJob* self, QEvent* event)
 void k_job_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1029,7 +1029,7 @@ bool k_job_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback bool fn(KJob*, QObject*, QEvent*)
+/// @param callback bool func(KJob* self, QObject* watched, QEvent* event)
 void k_job_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1059,7 +1059,7 @@ void k_job_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, QTimerEvent*)
+/// @param callback void func(KJob* self, QTimerEvent* event)
 void k_job_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1089,7 +1089,7 @@ void k_job_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, QChildEvent*)
+/// @param callback void func(KJob* self, QChildEvent* event)
 void k_job_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1119,7 +1119,7 @@ void k_job_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, QEvent*)
+/// @param callback void func(KJob* self, QEvent* event)
 void k_job_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1149,7 +1149,7 @@ void k_job_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, QMetaMethod*)
+/// @param callback void func(KJob* self, QMetaMethod* signal)
 void k_job_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1179,7 +1179,7 @@ void k_job_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, QMetaMethod*)
+/// @param callback void func(KJob* self, QMetaMethod* signal)
 void k_job_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1207,7 +1207,7 @@ QObject* k_job_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_job_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1235,7 +1235,7 @@ int32_t k_job_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_job_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1265,7 +1265,7 @@ int32_t k_job_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback int32_t fn(KJob*, const char*)
+/// @param callback int32_t func(KJob* self, const char* signal)
 void k_job_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1295,7 +1295,7 @@ bool k_job_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KJob*
-/// @param callback bool fn(KJob*, QMetaMethod*)
+/// @param callback bool func(KJob* self, QMetaMethod* signal)
 void k_job_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#finished)
@@ -1303,7 +1303,7 @@ void k_job_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*)
+/// @param callback void func(KJob* self, KJob* job)
 void k_job_on_finished(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#suspended)
@@ -1311,7 +1311,7 @@ void k_job_on_finished(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*)
+/// @param callback void func(KJob* self, KJob* job)
 void k_job_on_suspended(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#resumed)
@@ -1319,7 +1319,7 @@ void k_job_on_suspended(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*)
+/// @param callback void func(KJob* self, KJob* job)
 void k_job_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#result)
@@ -1327,7 +1327,7 @@ void k_job_on_resumed(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*)
+/// @param callback void func(KJob* self, KJob* job)
 void k_job_on_result(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#totalAmountChanged)
@@ -1335,7 +1335,7 @@ void k_job_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_job_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#processedAmountChanged)
@@ -1343,7 +1343,7 @@ void k_job_on_total_amount_changed(void* self, void (*callback)(void*, void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_job_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#percentChanged)
@@ -1351,7 +1351,7 @@ void k_job_on_processed_amount_changed(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, KJob*, uint64_t)
+/// @param callback void func(KJob* self, KJob* job, uint64_t percent)
 void k_job_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from QObject
@@ -1361,7 +1361,7 @@ void k_job_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void fn(KJob*, const char*)
+/// @param callback void func(KJob* self, const char* objectName)
 void k_job_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#dtor.KJob)

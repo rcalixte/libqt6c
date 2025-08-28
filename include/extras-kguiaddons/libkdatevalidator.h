@@ -40,7 +40,7 @@ int32_t k_datevalidator_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self KDateValidator*
-/// @param callback int32_t fn(KDateValidator*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDateValidator* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_datevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -72,7 +72,7 @@ int32_t k_datevalidator_validate(void* self, const char* text, int* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateValidator*
-/// @param callback int32_t fn(KDateValidator*, const char*, int*)
+/// @param callback int32_t func(KDateValidator* self, const char* text, int* e)
 void k_datevalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#validate)
@@ -97,7 +97,7 @@ void k_datevalidator_fixup(void* self, const char* input);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, const char*)
+/// @param callback void func(KDateValidator* self, const char* input)
 void k_datevalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#fixup)
@@ -161,7 +161,7 @@ void k_datevalidator_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*)
+/// @param callback void func(KDateValidator* self)
 void k_datevalidator_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -390,7 +390,7 @@ void k_datevalidator_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*)
+/// @param callback void func(KDateValidator* self)
 void k_datevalidator_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -468,7 +468,7 @@ void k_datevalidator_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, QObject*)
+/// @param callback void func(KDateValidator* self, QObject* param1)
 void k_datevalidator_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -498,7 +498,7 @@ bool k_datevalidator_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback bool fn(KDateValidator*, QEvent*)
+/// @param callback bool func(KDateValidator* self, QEvent* event)
 void k_datevalidator_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -530,7 +530,7 @@ bool k_datevalidator_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback bool fn(KDateValidator*, QObject*, QEvent*)
+/// @param callback bool func(KDateValidator* self, QObject* watched, QEvent* event)
 void k_datevalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -560,7 +560,7 @@ void k_datevalidator_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, QTimerEvent*)
+/// @param callback void func(KDateValidator* self, QTimerEvent* event)
 void k_datevalidator_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -590,7 +590,7 @@ void k_datevalidator_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, QChildEvent*)
+/// @param callback void func(KDateValidator* self, QChildEvent* event)
 void k_datevalidator_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -620,7 +620,7 @@ void k_datevalidator_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, QEvent*)
+/// @param callback void func(KDateValidator* self, QEvent* event)
 void k_datevalidator_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -650,7 +650,7 @@ void k_datevalidator_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, QMetaMethod*)
+/// @param callback void func(KDateValidator* self, QMetaMethod* signal)
 void k_datevalidator_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -680,7 +680,7 @@ void k_datevalidator_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, QMetaMethod*)
+/// @param callback void func(KDateValidator* self, QMetaMethod* signal)
 void k_datevalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -708,7 +708,7 @@ QObject* k_datevalidator_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_datevalidator_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -736,7 +736,7 @@ int32_t k_datevalidator_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datevalidator_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -766,7 +766,7 @@ int32_t k_datevalidator_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback int32_t fn(KDateValidator*, const char*)
+/// @param callback int32_t func(KDateValidator* self, const char* signal)
 void k_datevalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -796,7 +796,7 @@ bool k_datevalidator_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateValidator*
-/// @param callback bool fn(KDateValidator*, QMetaMethod*)
+/// @param callback bool func(KDateValidator* self, QMetaMethod* signal)
 void k_datevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -806,7 +806,7 @@ void k_datevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDateValidator*
-/// @param callback void fn(KDateValidator*, const char*)
+/// @param callback void func(KDateValidator* self, const char* objectName)
 void k_datevalidator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#dtor.KDateValidator)

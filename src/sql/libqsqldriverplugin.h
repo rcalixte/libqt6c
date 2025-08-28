@@ -40,7 +40,7 @@ int32_t q_sqldriverplugin_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback int32_t fn(QSqlDriverPlugin*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSqlDriverPlugin* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sqldriverplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ QSqlDriver* q_sqldriverplugin_create(void* self, const char* key);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback QSqlDriver* fn(QSqlDriverPlugin*, const char*)
+/// @param callback QSqlDriver* func(QSqlDriverPlugin* self, const char* key)
 void q_sqldriverplugin_on_create(void* self, QSqlDriver* (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriverplugin.html#create)
@@ -323,7 +323,7 @@ void q_sqldriverplugin_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*)
+/// @param callback void func(QSqlDriverPlugin* self)
 void q_sqldriverplugin_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -401,7 +401,7 @@ void q_sqldriverplugin_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, QObject*)
+/// @param callback void func(QSqlDriverPlugin* self, QObject* param1)
 void q_sqldriverplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -431,7 +431,7 @@ bool q_sqldriverplugin_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback bool fn(QSqlDriverPlugin*, QEvent*)
+/// @param callback bool func(QSqlDriverPlugin* self, QEvent* event)
 void q_sqldriverplugin_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -463,7 +463,7 @@ bool q_sqldriverplugin_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback bool fn(QSqlDriverPlugin*, QObject*, QEvent*)
+/// @param callback bool func(QSqlDriverPlugin* self, QObject* watched, QEvent* event)
 void q_sqldriverplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -493,7 +493,7 @@ void q_sqldriverplugin_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, QTimerEvent*)
+/// @param callback void func(QSqlDriverPlugin* self, QTimerEvent* event)
 void q_sqldriverplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -523,7 +523,7 @@ void q_sqldriverplugin_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, QChildEvent*)
+/// @param callback void func(QSqlDriverPlugin* self, QChildEvent* event)
 void q_sqldriverplugin_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -553,7 +553,7 @@ void q_sqldriverplugin_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, QEvent*)
+/// @param callback void func(QSqlDriverPlugin* self, QEvent* event)
 void q_sqldriverplugin_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -583,7 +583,7 @@ void q_sqldriverplugin_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, QMetaMethod*)
+/// @param callback void func(QSqlDriverPlugin* self, QMetaMethod* signal)
 void q_sqldriverplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -613,7 +613,7 @@ void q_sqldriverplugin_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, QMetaMethod*)
+/// @param callback void func(QSqlDriverPlugin* self, QMetaMethod* signal)
 void q_sqldriverplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -641,7 +641,7 @@ QObject* q_sqldriverplugin_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sqldriverplugin_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -669,7 +669,7 @@ int32_t q_sqldriverplugin_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sqldriverplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -699,7 +699,7 @@ int32_t q_sqldriverplugin_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback int32_t fn(QSqlDriverPlugin*, const char*)
+/// @param callback int32_t func(QSqlDriverPlugin* self, const char* signal)
 void q_sqldriverplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -729,7 +729,7 @@ bool q_sqldriverplugin_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback bool fn(QSqlDriverPlugin*, QMetaMethod*)
+/// @param callback bool func(QSqlDriverPlugin* self, QMetaMethod* signal)
 void q_sqldriverplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -739,7 +739,7 @@ void q_sqldriverplugin_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlDriverPlugin*
-/// @param callback void fn(QSqlDriverPlugin*, const char*)
+/// @param callback void func(QSqlDriverPlugin* self, const char* objectName)
 void q_sqldriverplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriverplugin.html#dtor.QSqlDriverPlugin)

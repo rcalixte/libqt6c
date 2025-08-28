@@ -83,7 +83,7 @@ int32_t q_pixmap_dev_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPixmap*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pixmap_on_dev_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#devType)
@@ -328,7 +328,7 @@ QPaintEngine* q_pixmap_paint_engine(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPixmap*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
@@ -354,7 +354,7 @@ int32_t q_pixmap_metric(void* self, int32_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QPixmap*
-/// @param callback int32_t fn(QPixmap*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPixmap* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#metric)
@@ -664,7 +664,7 @@ void q_pixmap_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPixmap*
-/// @param callback void fn(QPixmap*, QPainter*)
+/// @param callback void func(QPixmap* self, QPainter* painter)
 void q_pixmap_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -694,7 +694,7 @@ QPaintDevice* q_pixmap_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPixmap*
-/// @param callback QPaintDevice* fn(QPixmap*, QPoint*)
+/// @param callback QPaintDevice* func(QPixmap* self, QPoint* offset)
 void q_pixmap_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -722,7 +722,7 @@ QPainter* q_pixmap_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPixmap*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QPaintDevice
@@ -754,7 +754,7 @@ double q_pixmap_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPixmap*
-/// @param callback double fn(QPixmap*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPixmap* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#dtor.QPixmap)

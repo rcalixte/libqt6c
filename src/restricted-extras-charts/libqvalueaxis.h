@@ -40,7 +40,7 @@ int32_t q_valueaxis_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QValueAxis*
-/// @param callback int32_t fn(QValueAxis*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QValueAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_valueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_valueaxis_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QValueAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_valueaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#type)
@@ -195,7 +195,7 @@ void q_valueaxis_min_changed(void* self, double min);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#minChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, double)
+/// @param callback void func(QValueAxis* self, double min)
 void q_valueaxis_on_min_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#maxChanged)
@@ -207,7 +207,7 @@ void q_valueaxis_max_changed(void* self, double max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#maxChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, double)
+/// @param callback void func(QValueAxis* self, double max)
 void q_valueaxis_on_max_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#rangeChanged)
@@ -220,7 +220,7 @@ void q_valueaxis_range_changed(void* self, double min, double max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#rangeChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, double, double)
+/// @param callback void func(QValueAxis* self, double min, double max)
 void q_valueaxis_on_range_changed(void* self, void (*callback)(void*, double, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickCountChanged)
@@ -232,7 +232,7 @@ void q_valueaxis_tick_count_changed(void* self, int tickCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickCountChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, int)
+/// @param callback void func(QValueAxis* self, int tickCount)
 void q_valueaxis_on_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#minorTickCountChanged)
@@ -244,7 +244,7 @@ void q_valueaxis_minor_tick_count_changed(void* self, int tickCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#minorTickCountChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, int)
+/// @param callback void func(QValueAxis* self, int tickCount)
 void q_valueaxis_on_minor_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#labelFormatChanged)
@@ -256,7 +256,7 @@ void q_valueaxis_label_format_changed(void* self, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#labelFormatChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, const char*)
+/// @param callback void func(QValueAxis* self, const char* format)
 void q_valueaxis_on_label_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickIntervalChanged)
@@ -268,7 +268,7 @@ void q_valueaxis_tick_interval_changed(void* self, double interval);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickIntervalChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, double)
+/// @param callback void func(QValueAxis* self, double interval)
 void q_valueaxis_on_tick_interval_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickAnchorChanged)
@@ -280,7 +280,7 @@ void q_valueaxis_tick_anchor_changed(void* self, double anchor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickAnchorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, double)
+/// @param callback void func(QValueAxis* self, double anchor)
 void q_valueaxis_on_tick_anchor_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickTypeChanged)
@@ -292,7 +292,7 @@ void q_valueaxis_tick_type_changed(void* self, int32_t typeVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickTypeChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, enum QValueAxis__TickType)
+/// @param callback void func(QValueAxis* self, enum QValueAxis__TickType typeVal)
 void q_valueaxis_on_tick_type_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -761,7 +761,7 @@ void q_valueaxis_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -777,7 +777,7 @@ void q_valueaxis_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QPen*)
+/// @param callback void func(QValueAxis* self, QPen* pen)
 void q_valueaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -793,7 +793,7 @@ void q_valueaxis_line_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -809,7 +809,7 @@ void q_valueaxis_labels_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -825,7 +825,7 @@ void q_valueaxis_labels_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QBrush*)
+/// @param callback void func(QValueAxis* self, QBrush* brush)
 void q_valueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -841,7 +841,7 @@ void q_valueaxis_labels_font_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QFont*)
+/// @param callback void func(QValueAxis* self, QFont* pen)
 void q_valueaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -857,7 +857,7 @@ void q_valueaxis_labels_angle_changed(void* self, int angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, int)
+/// @param callback void func(QValueAxis* self, int angle)
 void q_valueaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -873,7 +873,7 @@ void q_valueaxis_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QPen*)
+/// @param callback void func(QValueAxis* self, QPen* pen)
 void q_valueaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -889,7 +889,7 @@ void q_valueaxis_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -905,7 +905,7 @@ void q_valueaxis_minor_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -921,7 +921,7 @@ void q_valueaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QPen*)
+/// @param callback void func(QValueAxis* self, QPen* pen)
 void q_valueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -937,7 +937,7 @@ void q_valueaxis_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QColor*)
+/// @param callback void func(QValueAxis* self, QColor* color)
 void q_valueaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -953,7 +953,7 @@ void q_valueaxis_minor_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QColor*)
+/// @param callback void func(QValueAxis* self, QColor* color)
 void q_valueaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -969,7 +969,7 @@ void q_valueaxis_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QColor*)
+/// @param callback void func(QValueAxis* self, QColor* color)
 void q_valueaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -985,7 +985,7 @@ void q_valueaxis_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QColor*)
+/// @param callback void func(QValueAxis* self, QColor* color)
 void q_valueaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1001,7 +1001,7 @@ void q_valueaxis_title_text_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, const char*)
+/// @param callback void func(QValueAxis* self, const char* title)
 void q_valueaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -1017,7 +1017,7 @@ void q_valueaxis_title_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QBrush*)
+/// @param callback void func(QValueAxis* self, QBrush* brush)
 void q_valueaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1033,7 +1033,7 @@ void q_valueaxis_title_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1049,7 +1049,7 @@ void q_valueaxis_title_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QFont*)
+/// @param callback void func(QValueAxis* self, QFont* font)
 void q_valueaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1065,7 +1065,7 @@ void q_valueaxis_shades_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool visible)
 void q_valueaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1081,7 +1081,7 @@ void q_valueaxis_shades_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QColor*)
+/// @param callback void func(QValueAxis* self, QColor* color)
 void q_valueaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1097,7 +1097,7 @@ void q_valueaxis_shades_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QColor*)
+/// @param callback void func(QValueAxis* self, QColor* color)
 void q_valueaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1113,7 +1113,7 @@ void q_valueaxis_shades_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QPen*)
+/// @param callback void func(QValueAxis* self, QPen* pen)
 void q_valueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1129,7 +1129,7 @@ void q_valueaxis_shades_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QBrush*)
+/// @param callback void func(QValueAxis* self, QBrush* brush)
 void q_valueaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1145,7 +1145,7 @@ void q_valueaxis_reverse_changed(void* self, bool reverse);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool reverse)
 void q_valueaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1161,7 +1161,7 @@ void q_valueaxis_labels_editable_changed(void* self, bool editable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool editable)
 void q_valueaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1177,7 +1177,7 @@ void q_valueaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool labelsTruncated)
 void q_valueaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1193,7 +1193,7 @@ void q_valueaxis_truncate_labels_changed(void* self, bool truncateLabels);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, bool)
+/// @param callback void func(QValueAxis* self, bool truncateLabels)
 void q_valueaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1502,7 +1502,7 @@ void q_valueaxis_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*)
+/// @param callback void func(QValueAxis* self)
 void q_valueaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1580,7 +1580,7 @@ void q_valueaxis_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QObject*)
+/// @param callback void func(QValueAxis* self, QObject* param1)
 void q_valueaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1610,7 +1610,7 @@ bool q_valueaxis_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback bool fn(QValueAxis*, QEvent*)
+/// @param callback bool func(QValueAxis* self, QEvent* event)
 void q_valueaxis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1642,7 +1642,7 @@ bool q_valueaxis_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback bool fn(QValueAxis*, QObject*, QEvent*)
+/// @param callback bool func(QValueAxis* self, QObject* watched, QEvent* event)
 void q_valueaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1672,7 +1672,7 @@ void q_valueaxis_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QTimerEvent*)
+/// @param callback void func(QValueAxis* self, QTimerEvent* event)
 void q_valueaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1702,7 +1702,7 @@ void q_valueaxis_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QChildEvent*)
+/// @param callback void func(QValueAxis* self, QChildEvent* event)
 void q_valueaxis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1732,7 +1732,7 @@ void q_valueaxis_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QEvent*)
+/// @param callback void func(QValueAxis* self, QEvent* event)
 void q_valueaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1762,7 +1762,7 @@ void q_valueaxis_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QMetaMethod*)
+/// @param callback void func(QValueAxis* self, QMetaMethod* signal)
 void q_valueaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1792,7 +1792,7 @@ void q_valueaxis_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, QMetaMethod*)
+/// @param callback void func(QValueAxis* self, QMetaMethod* signal)
 void q_valueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1820,7 +1820,7 @@ QObject* q_valueaxis_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_valueaxis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1848,7 +1848,7 @@ int32_t q_valueaxis_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_valueaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1878,7 +1878,7 @@ int32_t q_valueaxis_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback int32_t fn(QValueAxis*, const char*)
+/// @param callback int32_t func(QValueAxis* self, const char* signal)
 void q_valueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1908,7 +1908,7 @@ bool q_valueaxis_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QValueAxis*
-/// @param callback bool fn(QValueAxis*, QMetaMethod*)
+/// @param callback bool func(QValueAxis* self, QMetaMethod* signal)
 void q_valueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1918,7 +1918,7 @@ void q_valueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QValueAxis*
-/// @param callback void fn(QValueAxis*, const char*)
+/// @param callback void func(QValueAxis* self, const char* objectName)
 void q_valueaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#dtor.QValueAxis)

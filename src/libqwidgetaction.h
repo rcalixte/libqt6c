@@ -36,7 +36,7 @@ int32_t q_widgetaction_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback int32_t fn(QWidgetAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWidgetAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_widgetaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -88,7 +88,7 @@ bool q_widgetaction_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback bool fn(QWidgetAction*, QEvent*)
+/// @param callback bool func(QWidgetAction* self, QEvent* param1)
 void q_widgetaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#event)
@@ -111,7 +111,7 @@ bool q_widgetaction_event_filter(void* self, void* param1, void* param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback bool fn(QWidgetAction*, QObject*, QEvent*)
+/// @param callback bool func(QWidgetAction* self, QObject* param1, QEvent* param2)
 void q_widgetaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
@@ -134,7 +134,7 @@ QWidget* q_widgetaction_create_widget(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback QWidget* fn(QWidgetAction*, QWidget*)
+/// @param callback QWidget* func(QWidgetAction* self, QWidget* parent)
 void q_widgetaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createWidget)
@@ -156,7 +156,7 @@ void q_widgetaction_delete_widget(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QWidget*)
+/// @param callback void func(QWidgetAction* self, QWidget* widget)
 void q_widgetaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
@@ -177,7 +177,7 @@ libqt_list /* of QWidget* */ q_widgetaction_created_widgets(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void q_widgetaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -628,7 +628,7 @@ void q_widgetaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*)
+/// @param callback void func(QWidgetAction* self)
 void q_widgetaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -644,7 +644,7 @@ void q_widgetaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, bool)
+/// @param callback void func(QWidgetAction* self, bool enabled)
 void q_widgetaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -660,7 +660,7 @@ void q_widgetaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, bool)
+/// @param callback void func(QWidgetAction* self, bool checkable)
 void q_widgetaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -675,7 +675,7 @@ void q_widgetaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*)
+/// @param callback void func(QWidgetAction* self)
 void q_widgetaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -690,7 +690,7 @@ void q_widgetaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*)
+/// @param callback void func(QWidgetAction* self)
 void q_widgetaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -705,7 +705,7 @@ void q_widgetaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*)
+/// @param callback void func(QWidgetAction* self)
 void q_widgetaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -721,7 +721,7 @@ void q_widgetaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, bool)
+/// @param callback void func(QWidgetAction* self, bool param1)
 void q_widgetaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -745,7 +745,7 @@ void q_widgetaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, bool)
+/// @param callback void func(QWidgetAction* self, bool checked)
 void q_widgetaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -974,7 +974,7 @@ void q_widgetaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*)
+/// @param callback void func(QWidgetAction* self)
 void q_widgetaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1052,7 +1052,7 @@ void q_widgetaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QObject*)
+/// @param callback void func(QWidgetAction* self, QObject* param1)
 void q_widgetaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1082,7 +1082,7 @@ void q_widgetaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QTimerEvent*)
+/// @param callback void func(QWidgetAction* self, QTimerEvent* event)
 void q_widgetaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1112,7 +1112,7 @@ void q_widgetaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QChildEvent*)
+/// @param callback void func(QWidgetAction* self, QChildEvent* event)
 void q_widgetaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1142,7 +1142,7 @@ void q_widgetaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QEvent*)
+/// @param callback void func(QWidgetAction* self, QEvent* event)
 void q_widgetaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1172,7 +1172,7 @@ void q_widgetaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QMetaMethod*)
+/// @param callback void func(QWidgetAction* self, QMetaMethod* signal)
 void q_widgetaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1202,7 +1202,7 @@ void q_widgetaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, QMetaMethod*)
+/// @param callback void func(QWidgetAction* self, QMetaMethod* signal)
 void q_widgetaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1230,7 +1230,7 @@ QObject* q_widgetaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_widgetaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1258,7 +1258,7 @@ int32_t q_widgetaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_widgetaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1288,7 +1288,7 @@ int32_t q_widgetaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback int32_t fn(QWidgetAction*, const char*)
+/// @param callback int32_t func(QWidgetAction* self, const char* signal)
 void q_widgetaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1318,7 +1318,7 @@ bool q_widgetaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetAction*
-/// @param callback bool fn(QWidgetAction*, QMetaMethod*)
+/// @param callback bool func(QWidgetAction* self, QMetaMethod* signal)
 void q_widgetaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1328,7 +1328,7 @@ void q_widgetaction_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWidgetAction*
-/// @param callback void fn(QWidgetAction*, const char*)
+/// @param callback void func(QWidgetAction* self, const char* objectName)
 void q_widgetaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#dtor.QWidgetAction)

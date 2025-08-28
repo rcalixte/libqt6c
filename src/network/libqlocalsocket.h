@@ -40,7 +40,7 @@ int32_t q_localsocket_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback int32_t fn(QLocalSocket*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QLocalSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_localsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -109,7 +109,7 @@ bool q_localsocket_is_sequential(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_localsocket_on_is_sequential(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#isSequential)
@@ -129,7 +129,7 @@ long long q_localsocket_bytes_available(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_localsocket_on_bytes_available(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#bytesAvailable)
@@ -149,7 +149,7 @@ long long q_localsocket_bytes_to_write(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_localsocket_on_bytes_to_write(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#bytesToWrite)
@@ -169,7 +169,7 @@ bool q_localsocket_can_read_line(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_localsocket_on_can_read_line(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#canReadLine)
@@ -190,7 +190,7 @@ bool q_localsocket_open(void* self, int64_t openMode);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QLocalSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_localsocket_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#open)
@@ -211,7 +211,7 @@ void q_localsocket_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_localsocket_on_close(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#close)
@@ -291,7 +291,7 @@ bool q_localsocket_wait_for_bytes_written(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, int)
+/// @param callback bool func(QLocalSocket* self, int msecs)
 void q_localsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#waitForBytesWritten)
@@ -323,7 +323,7 @@ bool q_localsocket_wait_for_ready_read(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, int)
+/// @param callback bool func(QLocalSocket* self, int msecs)
 void q_localsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#waitForReadyRead)
@@ -342,7 +342,7 @@ void q_localsocket_connected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#connected)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*)
+/// @param callback void func(QLocalSocket* self)
 void q_localsocket_on_connected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#disconnected)
@@ -353,7 +353,7 @@ void q_localsocket_disconnected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#disconnected)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*)
+/// @param callback void func(QLocalSocket* self)
 void q_localsocket_on_disconnected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#errorOccurred)
@@ -365,7 +365,7 @@ void q_localsocket_error_occurred(void* self, int32_t socketError);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#errorOccurred)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, enum QLocalSocket__LocalSocketError)
+/// @param callback void func(QLocalSocket* self, enum QLocalSocket__LocalSocketError socketError)
 void q_localsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#stateChanged)
@@ -377,7 +377,7 @@ void q_localsocket_state_changed(void* self, int32_t socketState);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#stateChanged)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, enum QLocalSocket__LocalSocketState)
+/// @param callback void func(QLocalSocket* self, enum QLocalSocket__LocalSocketState socketState)
 void q_localsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#readData)
@@ -392,7 +392,7 @@ long long q_localsocket_read_data(void* self, char* param1, long long param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn(QLocalSocket*, char*, long long)
+/// @param callback long long func(QLocalSocket* self, char* param1, long long param2)
 void q_localsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#readData)
@@ -416,7 +416,7 @@ long long q_localsocket_read_line_data(void* self, char* data, long long maxSize
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn(QLocalSocket*, char*, long long)
+/// @param callback long long func(QLocalSocket* self, char* data, long long maxSize)
 void q_localsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#readLineData)
@@ -439,7 +439,7 @@ long long q_localsocket_skip_data(void* self, long long maxSize);
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn(QLocalSocket*, long long)
+/// @param callback long long func(QLocalSocket* self, long long maxSize)
 void q_localsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#skipData)
@@ -462,7 +462,7 @@ long long q_localsocket_write_data(void* self, const char* param1, long long par
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn(QLocalSocket*, const char*, long long)
+/// @param callback long long func(QLocalSocket* self, const char* param1, long long param2)
 void q_localsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#writeData)
@@ -791,7 +791,7 @@ void q_localsocket_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*)
+/// @param callback void func(QLocalSocket* self)
 void q_localsocket_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -807,7 +807,7 @@ void q_localsocket_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, int)
+/// @param callback void func(QLocalSocket* self, int channel)
 void q_localsocket_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -823,7 +823,7 @@ void q_localsocket_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, long long)
+/// @param callback void func(QLocalSocket* self, long long bytes)
 void q_localsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -840,7 +840,7 @@ void q_localsocket_channel_bytes_written(void* self, int channel, long long byte
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, int, long long)
+/// @param callback void func(QLocalSocket* self, int channel, long long bytes)
 void q_localsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -855,7 +855,7 @@ void q_localsocket_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*)
+/// @param callback void func(QLocalSocket* self)
 void q_localsocket_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -870,7 +870,7 @@ void q_localsocket_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*)
+/// @param callback void func(QLocalSocket* self)
 void q_localsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1109,7 +1109,7 @@ void q_localsocket_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*)
+/// @param callback void func(QLocalSocket* self)
 void q_localsocket_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1187,7 +1187,7 @@ void q_localsocket_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, QObject*)
+/// @param callback void func(QLocalSocket* self, QObject* param1)
 void q_localsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1215,7 +1215,7 @@ long long q_localsocket_qbase_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_localsocket_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1243,7 +1243,7 @@ long long q_localsocket_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_localsocket_on_size(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1273,7 +1273,7 @@ bool q_localsocket_qbase_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, long long)
+/// @param callback bool func(QLocalSocket* self, long long pos)
 void q_localsocket_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1301,7 +1301,7 @@ bool q_localsocket_qbase_at_end(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_localsocket_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1329,7 +1329,7 @@ bool q_localsocket_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_localsocket_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -1359,7 +1359,7 @@ bool q_localsocket_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, QEvent*)
+/// @param callback bool func(QLocalSocket* self, QEvent* event)
 void q_localsocket_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1391,7 +1391,7 @@ bool q_localsocket_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, QObject*, QEvent*)
+/// @param callback bool func(QLocalSocket* self, QObject* watched, QEvent* event)
 void q_localsocket_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1421,7 +1421,7 @@ void q_localsocket_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, QTimerEvent*)
+/// @param callback void func(QLocalSocket* self, QTimerEvent* event)
 void q_localsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1451,7 +1451,7 @@ void q_localsocket_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, QChildEvent*)
+/// @param callback void func(QLocalSocket* self, QChildEvent* event)
 void q_localsocket_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1481,7 +1481,7 @@ void q_localsocket_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, QEvent*)
+/// @param callback void func(QLocalSocket* self, QEvent* event)
 void q_localsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1511,7 +1511,7 @@ void q_localsocket_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, QMetaMethod*)
+/// @param callback void func(QLocalSocket* self, QMetaMethod* signal)
 void q_localsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1541,7 +1541,7 @@ void q_localsocket_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, QMetaMethod*)
+/// @param callback void func(QLocalSocket* self, QMetaMethod* signal)
 void q_localsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1571,7 +1571,7 @@ void q_localsocket_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QLocalSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -1601,7 +1601,7 @@ void q_localsocket_qbase_set_error_string(void* self, const char* errorString);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, const char*)
+/// @param callback void func(QLocalSocket* self, const char* errorString)
 void q_localsocket_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1629,7 +1629,7 @@ QObject* q_localsocket_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_localsocket_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1657,7 +1657,7 @@ int32_t q_localsocket_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_localsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1687,7 +1687,7 @@ int32_t q_localsocket_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback int32_t fn(QLocalSocket*, const char*)
+/// @param callback int32_t func(QLocalSocket* self, const char* signal)
 void q_localsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1717,7 +1717,7 @@ bool q_localsocket_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool fn(QLocalSocket*, QMetaMethod*)
+/// @param callback bool func(QLocalSocket* self, QMetaMethod* signal)
 void q_localsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1727,7 +1727,7 @@ void q_localsocket_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QLocalSocket*
-/// @param callback void fn(QLocalSocket*, const char*)
+/// @param callback void func(QLocalSocket* self, const char* objectName)
 void q_localsocket_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#dtor.QLocalSocket)

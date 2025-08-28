@@ -40,7 +40,7 @@ int32_t k_modifierkeyinfo_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback int32_t fn(KModifierKeyInfo*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KModifierKeyInfo* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_modifierkeyinfo_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -119,7 +119,7 @@ void k_modifierkeyinfo_key_pressed(void* self, int32_t key, bool pressed);
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyPressed)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, enum Qt__Key, bool)
+/// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key, bool pressed)
 void k_modifierkeyinfo_on_key_pressed(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLatched)
@@ -132,7 +132,7 @@ void k_modifierkeyinfo_key_latched(void* self, int32_t key, bool latched);
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLatched)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, enum Qt__Key, bool)
+/// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key, bool latched)
 void k_modifierkeyinfo_on_key_latched(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLocked)
@@ -145,7 +145,7 @@ void k_modifierkeyinfo_key_locked(void* self, int32_t key, bool locked);
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLocked)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, enum Qt__Key, bool)
+/// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key, bool locked)
 void k_modifierkeyinfo_on_key_locked(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#buttonPressed)
@@ -158,7 +158,7 @@ void k_modifierkeyinfo_button_pressed(void* self, int64_t button, bool pressed);
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, enum Qt__MouseButton, bool)
+/// @param callback void func(KModifierKeyInfo* self, enum Qt__MouseButton button, bool pressed)
 void k_modifierkeyinfo_on_button_pressed(void* self, void (*callback)(void*, int64_t, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyAdded)
@@ -170,7 +170,7 @@ void k_modifierkeyinfo_key_added(void* self, int32_t key);
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyAdded)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, enum Qt__Key)
+/// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key)
 void k_modifierkeyinfo_on_key_added(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyRemoved)
@@ -182,7 +182,7 @@ void k_modifierkeyinfo_key_removed(void* self, int32_t key);
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyRemoved)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, enum Qt__Key)
+/// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key)
 void k_modifierkeyinfo_on_key_removed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -428,7 +428,7 @@ void k_modifierkeyinfo_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*)
+/// @param callback void func(KModifierKeyInfo* self)
 void k_modifierkeyinfo_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -506,7 +506,7 @@ void k_modifierkeyinfo_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, QObject*)
+/// @param callback void func(KModifierKeyInfo* self, QObject* param1)
 void k_modifierkeyinfo_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -536,7 +536,7 @@ bool k_modifierkeyinfo_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback bool fn(KModifierKeyInfo*, QEvent*)
+/// @param callback bool func(KModifierKeyInfo* self, QEvent* event)
 void k_modifierkeyinfo_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -568,7 +568,7 @@ bool k_modifierkeyinfo_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback bool fn(KModifierKeyInfo*, QObject*, QEvent*)
+/// @param callback bool func(KModifierKeyInfo* self, QObject* watched, QEvent* event)
 void k_modifierkeyinfo_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -598,7 +598,7 @@ void k_modifierkeyinfo_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, QTimerEvent*)
+/// @param callback void func(KModifierKeyInfo* self, QTimerEvent* event)
 void k_modifierkeyinfo_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -628,7 +628,7 @@ void k_modifierkeyinfo_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, QChildEvent*)
+/// @param callback void func(KModifierKeyInfo* self, QChildEvent* event)
 void k_modifierkeyinfo_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -658,7 +658,7 @@ void k_modifierkeyinfo_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, QEvent*)
+/// @param callback void func(KModifierKeyInfo* self, QEvent* event)
 void k_modifierkeyinfo_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -688,7 +688,7 @@ void k_modifierkeyinfo_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, QMetaMethod*)
+/// @param callback void func(KModifierKeyInfo* self, QMetaMethod* signal)
 void k_modifierkeyinfo_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -718,7 +718,7 @@ void k_modifierkeyinfo_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, QMetaMethod*)
+/// @param callback void func(KModifierKeyInfo* self, QMetaMethod* signal)
 void k_modifierkeyinfo_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -746,7 +746,7 @@ QObject* k_modifierkeyinfo_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_modifierkeyinfo_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -774,7 +774,7 @@ int32_t k_modifierkeyinfo_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_modifierkeyinfo_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -804,7 +804,7 @@ int32_t k_modifierkeyinfo_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback int32_t fn(KModifierKeyInfo*, const char*)
+/// @param callback int32_t func(KModifierKeyInfo* self, const char* signal)
 void k_modifierkeyinfo_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -834,7 +834,7 @@ bool k_modifierkeyinfo_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback bool fn(KModifierKeyInfo*, QMetaMethod*)
+/// @param callback bool func(KModifierKeyInfo* self, QMetaMethod* signal)
 void k_modifierkeyinfo_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -844,7 +844,7 @@ void k_modifierkeyinfo_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KModifierKeyInfo*
-/// @param callback void fn(KModifierKeyInfo*, const char*)
+/// @param callback void func(KModifierKeyInfo* self, const char* objectName)
 void k_modifierkeyinfo_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#dtor.KModifierKeyInfo)

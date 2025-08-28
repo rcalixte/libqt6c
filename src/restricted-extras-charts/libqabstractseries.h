@@ -126,7 +126,7 @@ void q_abstractseries_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#nameChanged)
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*)
+/// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
@@ -137,7 +137,7 @@ void q_abstractseries_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#visibleChanged)
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*)
+/// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
@@ -148,7 +148,7 @@ void q_abstractseries_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacityChanged)
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*)
+/// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
@@ -159,7 +159,7 @@ void q_abstractseries_use_open_g_l_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGLChanged)
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*)
+/// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -434,7 +434,7 @@ void q_abstractseries_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*)
+/// @param callback void func(QAbstractSeries* self)
 void q_abstractseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -512,7 +512,7 @@ void q_abstractseries_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*, QObject*)
+/// @param callback void func(QAbstractSeries* self, QObject* param1)
 void q_abstractseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -522,7 +522,7 @@ void q_abstractseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractSeries*
-/// @param callback void fn(QAbstractSeries*, const char*)
+/// @param callback void func(QAbstractSeries* self, const char* objectName)
 void q_abstractseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#dtor.QAbstractSeries)

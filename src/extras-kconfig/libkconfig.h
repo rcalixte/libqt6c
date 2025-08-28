@@ -79,7 +79,7 @@ bool k_config_sync(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_config_on_sync(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#sync)
@@ -104,7 +104,7 @@ void k_config_mark_as_clean(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback void fn()
+/// @param callback void func()
 void k_config_on_mark_as_clean(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#markAsClean)
@@ -126,7 +126,7 @@ int32_t k_config_access_mode(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_config_on_access_mode(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#accessMode)
@@ -209,7 +209,7 @@ bool k_config_is_immutable(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_config_on_is_immutable(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#isImmutable)
@@ -231,7 +231,7 @@ const char** k_config_group_list(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void k_config_on_group_list(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#groupList)
@@ -268,7 +268,7 @@ bool k_config_has_group_impl(void* self, const char* groupName);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback bool fn(KConfig*, const char*)
+/// @param callback bool func(KConfig* self, const char* groupName)
 void k_config_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#hasGroupImpl)
@@ -290,7 +290,7 @@ KConfigGroup* k_config_group_impl(void* self, const char* groupName);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback KConfigGroup* fn(KConfig*, const char*)
+/// @param callback KConfigGroup* func(KConfig* self, const char* groupName)
 void k_config_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#groupImpl)
@@ -312,7 +312,7 @@ const KConfigGroup* k_config_group_impl2(void* self, const char* groupName);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback const KConfigGroup* fn(KConfig*, const char*)
+/// @param callback const KConfigGroup* func(KConfig* self, const char* groupName)
 void k_config_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#groupImpl)
@@ -335,7 +335,7 @@ void k_config_delete_group_impl(void* self, const char* groupName, int64_t flags
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback void fn(KConfig*, const char*, flag of enum KConfigBase__WriteConfigFlag)
+/// @param callback void func(KConfig* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
 void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#deleteGroupImpl)
@@ -358,7 +358,7 @@ bool k_config_is_group_immutable_impl(void* self, const char* groupName);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback bool fn(KConfig*, const char*)
+/// @param callback bool func(KConfig* self, const char* groupName)
 void k_config_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#isGroupImmutableImpl)
@@ -381,7 +381,7 @@ void k_config_virtual_hook(void* self, int id, void* data);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfig*
-/// @param callback void fn(KConfig*, int, void*)
+/// @param callback void func(KConfig* self, int id, void* data)
 void k_config_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#virtual_hook)

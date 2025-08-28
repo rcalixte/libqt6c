@@ -46,7 +46,7 @@ int32_t q_offscreensurface_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback int32_t fn(QOffscreenSurface*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QOffscreenSurface* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_offscreensurface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -76,7 +76,7 @@ int32_t q_offscreensurface_surface_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_offscreensurface_on_surface_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#surfaceType)
@@ -119,7 +119,7 @@ QSurfaceFormat* q_offscreensurface_format(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback QSurfaceFormat* fn()
+/// @param callback QSurfaceFormat* func()
 void q_offscreensurface_on_format(void* self, QSurfaceFormat* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#format)
@@ -144,7 +144,7 @@ QSize* q_offscreensurface_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_offscreensurface_on_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#size)
@@ -177,7 +177,7 @@ void* q_offscreensurface_resolve_interface(void* self, const char* name, int rev
 /// Allows for overriding the related default method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void* fn(QOffscreenSurface*, const char*, int)
+/// @param callback void* func(QOffscreenSurface* self, const char* name, int revision)
 void q_offscreensurface_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#resolveInterface)
@@ -198,7 +198,7 @@ void q_offscreensurface_screen_changed(void* self, void* screen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#screenChanged)
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QScreen*)
+/// @param callback void func(QOffscreenSurface* self, QScreen* screen)
 void q_offscreensurface_on_screen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -444,7 +444,7 @@ void q_offscreensurface_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*)
+/// @param callback void func(QOffscreenSurface* self)
 void q_offscreensurface_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -522,7 +522,7 @@ void q_offscreensurface_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QObject*)
+/// @param callback void func(QOffscreenSurface* self, QObject* param1)
 void q_offscreensurface_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QSurface
@@ -568,7 +568,7 @@ bool q_offscreensurface_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback bool fn(QOffscreenSurface*, QEvent*)
+/// @param callback bool func(QOffscreenSurface* self, QEvent* event)
 void q_offscreensurface_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -600,7 +600,7 @@ bool q_offscreensurface_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback bool fn(QOffscreenSurface*, QObject*, QEvent*)
+/// @param callback bool func(QOffscreenSurface* self, QObject* watched, QEvent* event)
 void q_offscreensurface_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -630,7 +630,7 @@ void q_offscreensurface_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QTimerEvent*)
+/// @param callback void func(QOffscreenSurface* self, QTimerEvent* event)
 void q_offscreensurface_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -660,7 +660,7 @@ void q_offscreensurface_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QChildEvent*)
+/// @param callback void func(QOffscreenSurface* self, QChildEvent* event)
 void q_offscreensurface_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -690,7 +690,7 @@ void q_offscreensurface_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QEvent*)
+/// @param callback void func(QOffscreenSurface* self, QEvent* event)
 void q_offscreensurface_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -720,7 +720,7 @@ void q_offscreensurface_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QMetaMethod*)
+/// @param callback void func(QOffscreenSurface* self, QMetaMethod* signal)
 void q_offscreensurface_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -750,7 +750,7 @@ void q_offscreensurface_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, QMetaMethod*)
+/// @param callback void func(QOffscreenSurface* self, QMetaMethod* signal)
 void q_offscreensurface_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -778,7 +778,7 @@ QObject* q_offscreensurface_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_offscreensurface_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -806,7 +806,7 @@ int32_t q_offscreensurface_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_offscreensurface_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -836,7 +836,7 @@ int32_t q_offscreensurface_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback int32_t fn(QOffscreenSurface*, const char*)
+/// @param callback int32_t func(QOffscreenSurface* self, const char* signal)
 void q_offscreensurface_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -866,7 +866,7 @@ bool q_offscreensurface_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QOffscreenSurface*
-/// @param callback bool fn(QOffscreenSurface*, QMetaMethod*)
+/// @param callback bool func(QOffscreenSurface* self, QMetaMethod* signal)
 void q_offscreensurface_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -876,7 +876,7 @@ void q_offscreensurface_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QOffscreenSurface*
-/// @param callback void fn(QOffscreenSurface*, const char*)
+/// @param callback void func(QOffscreenSurface* self, const char* objectName)
 void q_offscreensurface_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#dtor.QOffscreenSurface)

@@ -40,7 +40,7 @@ int32_t q_pdfview_metacall(void* self, int32_t param1, int param2, void* param3)
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback int32_t fn(QPdfView*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPdfView* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pdfview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -164,7 +164,7 @@ void q_pdfview_document_changed(void* self, void* document);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#documentChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QPdfDocument*)
+/// @param callback void func(QPdfView* self, QPdfDocument* document)
 void q_pdfview_on_document_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#pageModeChanged)
@@ -176,7 +176,7 @@ void q_pdfview_page_mode_changed(void* self, int32_t pageMode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#pageModeChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, enum QPdfView__PageMode)
+/// @param callback void func(QPdfView* self, enum QPdfView__PageMode pageMode)
 void q_pdfview_on_page_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#zoomModeChanged)
@@ -188,7 +188,7 @@ void q_pdfview_zoom_mode_changed(void* self, int32_t zoomMode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#zoomModeChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, enum QPdfView__ZoomMode)
+/// @param callback void func(QPdfView* self, enum QPdfView__ZoomMode zoomMode)
 void q_pdfview_on_zoom_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#zoomFactorChanged)
@@ -200,7 +200,7 @@ void q_pdfview_zoom_factor_changed(void* self, double zoomFactor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#zoomFactorChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, double)
+/// @param callback void func(QPdfView* self, double zoomFactor)
 void q_pdfview_on_zoom_factor_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#pageSpacingChanged)
@@ -212,7 +212,7 @@ void q_pdfview_page_spacing_changed(void* self, int pageSpacing);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#pageSpacingChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, int)
+/// @param callback void func(QPdfView* self, int pageSpacing)
 void q_pdfview_on_page_spacing_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#documentMarginsChanged)
@@ -224,7 +224,7 @@ void q_pdfview_document_margins_changed(void* self, void* documentMargins);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#documentMarginsChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMargins*)
+/// @param callback void func(QPdfView* self, QMargins* documentMargins)
 void q_pdfview_on_document_margins_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#searchModelChanged)
@@ -236,7 +236,7 @@ void q_pdfview_search_model_changed(void* self, void* searchModel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#searchModelChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QPdfSearchModel*)
+/// @param callback void func(QPdfView* self, QPdfSearchModel* searchModel)
 void q_pdfview_on_search_model_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#currentSearchResultIndexChanged)
@@ -248,7 +248,7 @@ void q_pdfview_current_search_result_index_changed(void* self, int currentResult
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#currentSearchResultIndexChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, int)
+/// @param callback void func(QPdfView* self, int currentResult)
 void q_pdfview_on_current_search_result_index_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#paintEvent)
@@ -262,7 +262,7 @@ void q_pdfview_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QPaintEvent*)
+/// @param callback void func(QPdfView* self, QPaintEvent* event)
 void q_pdfview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#paintEvent)
@@ -284,7 +284,7 @@ void q_pdfview_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QResizeEvent*)
+/// @param callback void func(QPdfView* self, QResizeEvent* event)
 void q_pdfview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#resizeEvent)
@@ -307,7 +307,7 @@ void q_pdfview_scroll_contents_by(void* self, int dx, int dy);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, int, int)
+/// @param callback void func(QPdfView* self, int dx, int dy)
 void q_pdfview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#scrollContentsBy)
@@ -330,7 +330,7 @@ void q_pdfview_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMouseEvent*)
+/// @param callback void func(QPdfView* self, QMouseEvent* event)
 void q_pdfview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mousePressEvent)
@@ -352,7 +352,7 @@ void q_pdfview_mouse_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMouseEvent*)
+/// @param callback void func(QPdfView* self, QMouseEvent* event)
 void q_pdfview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseMoveEvent)
@@ -374,7 +374,7 @@ void q_pdfview_mouse_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMouseEvent*)
+/// @param callback void func(QPdfView* self, QMouseEvent* event)
 void q_pdfview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#mouseReleaseEvent)
@@ -2575,7 +2575,7 @@ void q_pdfview_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, const char*)
+/// @param callback void func(QPdfView* self, const char* title)
 void q_pdfview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2591,7 +2591,7 @@ void q_pdfview_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QIcon*)
+/// @param callback void func(QPdfView* self, QIcon* icon)
 void q_pdfview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2607,7 +2607,7 @@ void q_pdfview_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, const char*)
+/// @param callback void func(QPdfView* self, const char* iconText)
 void q_pdfview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2623,7 +2623,7 @@ void q_pdfview_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QPoint*)
+/// @param callback void func(QPdfView* self, QPoint* pos)
 void q_pdfview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3000,7 +3000,7 @@ void q_pdfview_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*)
+/// @param callback void func(QPdfView* self)
 void q_pdfview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3078,7 +3078,7 @@ void q_pdfview_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QObject*)
+/// @param callback void func(QPdfView* self, QObject* param1)
 void q_pdfview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3197,7 +3197,7 @@ QSize* q_pdfview_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pdfview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -3225,7 +3225,7 @@ QSize* q_pdfview_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pdfview_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -3255,7 +3255,7 @@ void q_pdfview_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QWidget*)
+/// @param callback void func(QPdfView* self, QWidget* viewport)
 void q_pdfview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3287,7 +3287,7 @@ bool q_pdfview_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn(QPdfView*, QObject*, QEvent*)
+/// @param callback bool func(QPdfView* self, QObject* param1, QEvent* param2)
 void q_pdfview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3317,7 +3317,7 @@ bool q_pdfview_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn(QPdfView*, QEvent*)
+/// @param callback bool func(QPdfView* self, QEvent* param1)
 void q_pdfview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3347,7 +3347,7 @@ bool q_pdfview_qbase_viewport_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn(QPdfView*, QEvent*)
+/// @param callback bool func(QPdfView* self, QEvent* param1)
 void q_pdfview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3377,7 +3377,7 @@ void q_pdfview_qbase_mouse_double_click_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMouseEvent*)
+/// @param callback void func(QPdfView* self, QMouseEvent* param1)
 void q_pdfview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3407,7 +3407,7 @@ void q_pdfview_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QWheelEvent*)
+/// @param callback void func(QPdfView* self, QWheelEvent* param1)
 void q_pdfview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3437,7 +3437,7 @@ void q_pdfview_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QContextMenuEvent*)
+/// @param callback void func(QPdfView* self, QContextMenuEvent* param1)
 void q_pdfview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3467,7 +3467,7 @@ void q_pdfview_qbase_drag_enter_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QDragEnterEvent*)
+/// @param callback void func(QPdfView* self, QDragEnterEvent* param1)
 void q_pdfview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3497,7 +3497,7 @@ void q_pdfview_qbase_drag_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QDragMoveEvent*)
+/// @param callback void func(QPdfView* self, QDragMoveEvent* param1)
 void q_pdfview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3527,7 +3527,7 @@ void q_pdfview_qbase_drag_leave_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QDragLeaveEvent*)
+/// @param callback void func(QPdfView* self, QDragLeaveEvent* param1)
 void q_pdfview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3557,7 +3557,7 @@ void q_pdfview_qbase_drop_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QDropEvent*)
+/// @param callback void func(QPdfView* self, QDropEvent* param1)
 void q_pdfview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3587,7 +3587,7 @@ void q_pdfview_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QKeyEvent*)
+/// @param callback void func(QPdfView* self, QKeyEvent* param1)
 void q_pdfview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3615,7 +3615,7 @@ QSize* q_pdfview_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pdfview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -3645,7 +3645,7 @@ void q_pdfview_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QEvent*)
+/// @param callback void func(QPdfView* self, QEvent* param1)
 void q_pdfview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3675,7 +3675,7 @@ void q_pdfview_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QStyleOptionFrame*)
+/// @param callback void func(QPdfView* self, QStyleOptionFrame* option)
 void q_pdfview_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3703,7 +3703,7 @@ int32_t q_pdfview_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3733,7 +3733,7 @@ void q_pdfview_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, bool)
+/// @param callback void func(QPdfView* self, bool visible)
 void q_pdfview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3763,7 +3763,7 @@ int32_t q_pdfview_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback int32_t fn(QPdfView*, int)
+/// @param callback int32_t func(QPdfView* self, int param1)
 void q_pdfview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3791,7 +3791,7 @@ bool q_pdfview_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3819,7 +3819,7 @@ QPaintEngine* q_pdfview_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_pdfview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3849,7 +3849,7 @@ void q_pdfview_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QKeyEvent*)
+/// @param callback void func(QPdfView* self, QKeyEvent* event)
 void q_pdfview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3879,7 +3879,7 @@ void q_pdfview_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QFocusEvent*)
+/// @param callback void func(QPdfView* self, QFocusEvent* event)
 void q_pdfview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3909,7 +3909,7 @@ void q_pdfview_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QFocusEvent*)
+/// @param callback void func(QPdfView* self, QFocusEvent* event)
 void q_pdfview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3939,7 +3939,7 @@ void q_pdfview_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QEnterEvent*)
+/// @param callback void func(QPdfView* self, QEnterEvent* event)
 void q_pdfview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3969,7 +3969,7 @@ void q_pdfview_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QEvent*)
+/// @param callback void func(QPdfView* self, QEvent* event)
 void q_pdfview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3999,7 +3999,7 @@ void q_pdfview_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMoveEvent*)
+/// @param callback void func(QPdfView* self, QMoveEvent* event)
 void q_pdfview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4029,7 +4029,7 @@ void q_pdfview_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QCloseEvent*)
+/// @param callback void func(QPdfView* self, QCloseEvent* event)
 void q_pdfview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4059,7 +4059,7 @@ void q_pdfview_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QTabletEvent*)
+/// @param callback void func(QPdfView* self, QTabletEvent* event)
 void q_pdfview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4089,7 +4089,7 @@ void q_pdfview_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QActionEvent*)
+/// @param callback void func(QPdfView* self, QActionEvent* event)
 void q_pdfview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4119,7 +4119,7 @@ void q_pdfview_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QShowEvent*)
+/// @param callback void func(QPdfView* self, QShowEvent* event)
 void q_pdfview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4149,7 +4149,7 @@ void q_pdfview_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QHideEvent*)
+/// @param callback void func(QPdfView* self, QHideEvent* event)
 void q_pdfview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4183,7 +4183,7 @@ bool q_pdfview_qbase_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn(QPdfView*, const char*, void*, intptr_t*)
+/// @param callback bool func(QPdfView* self, const char* eventType, void* message, intptr_t* result)
 void q_pdfview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4213,7 +4213,7 @@ int32_t q_pdfview_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback int32_t fn(QPdfView*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPdfView* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_pdfview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4243,7 +4243,7 @@ void q_pdfview_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QPainter*)
+/// @param callback void func(QPdfView* self, QPainter* painter)
 void q_pdfview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4273,7 +4273,7 @@ QPaintDevice* q_pdfview_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QPaintDevice* fn(QPdfView*, QPoint*)
+/// @param callback QPaintDevice* func(QPdfView* self, QPoint* offset)
 void q_pdfview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4301,7 +4301,7 @@ QPainter* q_pdfview_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_pdfview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4331,7 +4331,7 @@ void q_pdfview_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QInputMethodEvent*)
+/// @param callback void func(QPdfView* self, QInputMethodEvent* param1)
 void q_pdfview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4361,7 +4361,7 @@ QVariant* q_pdfview_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QVariant* fn(QPdfView*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPdfView* self, enum Qt__InputMethodQuery param1)
 void q_pdfview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4391,7 +4391,7 @@ bool q_pdfview_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn(QPdfView*, bool)
+/// @param callback bool func(QPdfView* self, bool next)
 void q_pdfview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4421,7 +4421,7 @@ void q_pdfview_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QTimerEvent*)
+/// @param callback void func(QPdfView* self, QTimerEvent* event)
 void q_pdfview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4451,7 +4451,7 @@ void q_pdfview_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QChildEvent*)
+/// @param callback void func(QPdfView* self, QChildEvent* event)
 void q_pdfview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4481,7 +4481,7 @@ void q_pdfview_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QEvent*)
+/// @param callback void func(QPdfView* self, QEvent* event)
 void q_pdfview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4511,7 +4511,7 @@ void q_pdfview_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMetaMethod*)
+/// @param callback void func(QPdfView* self, QMetaMethod* signal)
 void q_pdfview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4541,7 +4541,7 @@ void q_pdfview_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QMetaMethod*)
+/// @param callback void func(QPdfView* self, QMetaMethod* signal)
 void q_pdfview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4577,7 +4577,7 @@ void q_pdfview_qbase_set_viewport_margins(void* self, int left, int top, int rig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, int, int, int, int)
+/// @param callback void func(QPdfView* self, int left, int top, int right, int bottom)
 void q_pdfview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -4605,7 +4605,7 @@ QMargins* q_pdfview_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_pdfview_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -4635,7 +4635,7 @@ void q_pdfview_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, QPainter*)
+/// @param callback void func(QPdfView* self, QPainter* param1)
 void q_pdfview_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4663,7 +4663,7 @@ void q_pdfview_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4691,7 +4691,7 @@ void q_pdfview_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4719,7 +4719,7 @@ void q_pdfview_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4747,7 +4747,7 @@ bool q_pdfview_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4775,7 +4775,7 @@ bool q_pdfview_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4803,7 +4803,7 @@ QObject* q_pdfview_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pdfview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4831,7 +4831,7 @@ int32_t q_pdfview_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4861,7 +4861,7 @@ int32_t q_pdfview_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback int32_t fn(QPdfView*, const char*)
+/// @param callback int32_t func(QPdfView* self, const char* signal)
 void q_pdfview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4891,7 +4891,7 @@ bool q_pdfview_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback bool fn(QPdfView*, QMetaMethod*)
+/// @param callback bool func(QPdfView* self, QMetaMethod* signal)
 void q_pdfview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4923,7 +4923,7 @@ double q_pdfview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfView*
-/// @param callback double fn(QPdfView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPdfView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_pdfview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4933,7 +4933,7 @@ void q_pdfview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfView*
-/// @param callback void fn(QPdfView*, const char*)
+/// @param callback void func(QPdfView* self, const char* objectName)
 void q_pdfview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#dtor.QPdfView)

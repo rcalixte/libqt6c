@@ -40,7 +40,7 @@ int32_t k_pageview_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self KPageView*
-/// @param callback int32_t fn(KPageView*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPageView* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pageview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -142,7 +142,7 @@ void k_pageview_current_page_changed(void* self, void* current, void* previous);
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#currentPageChanged)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QModelIndex*, QModelIndex*)
+/// @param callback void func(KPageView* self, QModelIndex* current, QModelIndex* previous)
 void k_pageview_on_current_page_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#createView)
@@ -155,7 +155,7 @@ QAbstractItemView* k_pageview_create_view(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageView*
-/// @param callback QAbstractItemView* fn()
+/// @param callback QAbstractItemView* func()
 void k_pageview_on_create_view(void* self, QAbstractItemView* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#createView)
@@ -175,7 +175,7 @@ bool k_pageview_show_page_header(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pageview_on_show_page_header(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#showPageHeader)
@@ -197,7 +197,7 @@ int64_t k_pageview_view_position(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageView*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void k_pageview_on_view_position(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#viewPosition)
@@ -2163,7 +2163,7 @@ void k_pageview_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, const char*)
+/// @param callback void func(KPageView* self, const char* title)
 void k_pageview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2179,7 +2179,7 @@ void k_pageview_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QIcon*)
+/// @param callback void func(KPageView* self, QIcon* icon)
 void k_pageview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2195,7 +2195,7 @@ void k_pageview_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, const char*)
+/// @param callback void func(KPageView* self, const char* iconText)
 void k_pageview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2211,7 +2211,7 @@ void k_pageview_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QPoint*)
+/// @param callback void func(KPageView* self, QPoint* pos)
 void k_pageview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2588,7 +2588,7 @@ void k_pageview_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*)
+/// @param callback void func(KPageView* self)
 void k_pageview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2666,7 +2666,7 @@ void k_pageview_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QObject*)
+/// @param callback void func(KPageView* self, QObject* param1)
 void k_pageview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2785,7 +2785,7 @@ int32_t k_pageview_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pageview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2815,7 +2815,7 @@ void k_pageview_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, bool)
+/// @param callback void func(KPageView* self, bool visible)
 void k_pageview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2843,7 +2843,7 @@ QSize* k_pageview_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pageview_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2871,7 +2871,7 @@ QSize* k_pageview_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pageview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2901,7 +2901,7 @@ int32_t k_pageview_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback int32_t fn(KPageView*, int)
+/// @param callback int32_t func(KPageView* self, int param1)
 void k_pageview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2929,7 +2929,7 @@ bool k_pageview_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pageview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2957,7 +2957,7 @@ QPaintEngine* k_pageview_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_pageview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2987,7 +2987,7 @@ bool k_pageview_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn(KPageView*, QEvent*)
+/// @param callback bool func(KPageView* self, QEvent* event)
 void k_pageview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3017,7 +3017,7 @@ void k_pageview_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMouseEvent*)
+/// @param callback void func(KPageView* self, QMouseEvent* event)
 void k_pageview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3047,7 +3047,7 @@ void k_pageview_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMouseEvent*)
+/// @param callback void func(KPageView* self, QMouseEvent* event)
 void k_pageview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3077,7 +3077,7 @@ void k_pageview_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMouseEvent*)
+/// @param callback void func(KPageView* self, QMouseEvent* event)
 void k_pageview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3107,7 +3107,7 @@ void k_pageview_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMouseEvent*)
+/// @param callback void func(KPageView* self, QMouseEvent* event)
 void k_pageview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void k_pageview_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QWheelEvent*)
+/// @param callback void func(KPageView* self, QWheelEvent* event)
 void k_pageview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3167,7 +3167,7 @@ void k_pageview_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QKeyEvent*)
+/// @param callback void func(KPageView* self, QKeyEvent* event)
 void k_pageview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3197,7 +3197,7 @@ void k_pageview_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QKeyEvent*)
+/// @param callback void func(KPageView* self, QKeyEvent* event)
 void k_pageview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3227,7 +3227,7 @@ void k_pageview_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QFocusEvent*)
+/// @param callback void func(KPageView* self, QFocusEvent* event)
 void k_pageview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3257,7 +3257,7 @@ void k_pageview_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QFocusEvent*)
+/// @param callback void func(KPageView* self, QFocusEvent* event)
 void k_pageview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3287,7 +3287,7 @@ void k_pageview_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QEnterEvent*)
+/// @param callback void func(KPageView* self, QEnterEvent* event)
 void k_pageview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3317,7 +3317,7 @@ void k_pageview_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QEvent*)
+/// @param callback void func(KPageView* self, QEvent* event)
 void k_pageview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3347,7 +3347,7 @@ void k_pageview_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QPaintEvent*)
+/// @param callback void func(KPageView* self, QPaintEvent* event)
 void k_pageview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3377,7 +3377,7 @@ void k_pageview_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMoveEvent*)
+/// @param callback void func(KPageView* self, QMoveEvent* event)
 void k_pageview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3407,7 +3407,7 @@ void k_pageview_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QResizeEvent*)
+/// @param callback void func(KPageView* self, QResizeEvent* event)
 void k_pageview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3437,7 +3437,7 @@ void k_pageview_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QCloseEvent*)
+/// @param callback void func(KPageView* self, QCloseEvent* event)
 void k_pageview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ void k_pageview_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QContextMenuEvent*)
+/// @param callback void func(KPageView* self, QContextMenuEvent* event)
 void k_pageview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void k_pageview_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QTabletEvent*)
+/// @param callback void func(KPageView* self, QTabletEvent* event)
 void k_pageview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void k_pageview_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QActionEvent*)
+/// @param callback void func(KPageView* self, QActionEvent* event)
 void k_pageview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void k_pageview_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QDragEnterEvent*)
+/// @param callback void func(KPageView* self, QDragEnterEvent* event)
 void k_pageview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3587,7 +3587,7 @@ void k_pageview_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QDragMoveEvent*)
+/// @param callback void func(KPageView* self, QDragMoveEvent* event)
 void k_pageview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3617,7 +3617,7 @@ void k_pageview_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QDragLeaveEvent*)
+/// @param callback void func(KPageView* self, QDragLeaveEvent* event)
 void k_pageview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3647,7 +3647,7 @@ void k_pageview_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QDropEvent*)
+/// @param callback void func(KPageView* self, QDropEvent* event)
 void k_pageview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3677,7 +3677,7 @@ void k_pageview_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QShowEvent*)
+/// @param callback void func(KPageView* self, QShowEvent* event)
 void k_pageview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3707,7 +3707,7 @@ void k_pageview_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QHideEvent*)
+/// @param callback void func(KPageView* self, QHideEvent* event)
 void k_pageview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3741,7 +3741,7 @@ bool k_pageview_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn(KPageView*, const char*, void*, intptr_t*)
+/// @param callback bool func(KPageView* self, const char* eventType, void* message, intptr_t* result)
 void k_pageview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3771,7 +3771,7 @@ void k_pageview_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QEvent*)
+/// @param callback void func(KPageView* self, QEvent* param1)
 void k_pageview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3801,7 +3801,7 @@ int32_t k_pageview_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback int32_t fn(KPageView*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KPageView* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_pageview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3831,7 +3831,7 @@ void k_pageview_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QPainter*)
+/// @param callback void func(KPageView* self, QPainter* painter)
 void k_pageview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3861,7 +3861,7 @@ QPaintDevice* k_pageview_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QPaintDevice* fn(KPageView*, QPoint*)
+/// @param callback QPaintDevice* func(KPageView* self, QPoint* offset)
 void k_pageview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3889,7 +3889,7 @@ QPainter* k_pageview_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_pageview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3919,7 +3919,7 @@ void k_pageview_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QInputMethodEvent*)
+/// @param callback void func(KPageView* self, QInputMethodEvent* param1)
 void k_pageview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3949,7 +3949,7 @@ QVariant* k_pageview_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QVariant* fn(KPageView*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KPageView* self, enum Qt__InputMethodQuery param1)
 void k_pageview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3979,7 +3979,7 @@ bool k_pageview_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn(KPageView*, bool)
+/// @param callback bool func(KPageView* self, bool next)
 void k_pageview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4011,7 +4011,7 @@ bool k_pageview_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn(KPageView*, QObject*, QEvent*)
+/// @param callback bool func(KPageView* self, QObject* watched, QEvent* event)
 void k_pageview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4041,7 +4041,7 @@ void k_pageview_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QTimerEvent*)
+/// @param callback void func(KPageView* self, QTimerEvent* event)
 void k_pageview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4071,7 +4071,7 @@ void k_pageview_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QChildEvent*)
+/// @param callback void func(KPageView* self, QChildEvent* event)
 void k_pageview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4101,7 +4101,7 @@ void k_pageview_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QEvent*)
+/// @param callback void func(KPageView* self, QEvent* event)
 void k_pageview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4131,7 +4131,7 @@ void k_pageview_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMetaMethod*)
+/// @param callback void func(KPageView* self, QMetaMethod* signal)
 void k_pageview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4161,7 +4161,7 @@ void k_pageview_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, QMetaMethod*)
+/// @param callback void func(KPageView* self, QMetaMethod* signal)
 void k_pageview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4189,7 +4189,7 @@ void k_pageview_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pageview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4217,7 +4217,7 @@ void k_pageview_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pageview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4245,7 +4245,7 @@ void k_pageview_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pageview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4273,7 +4273,7 @@ bool k_pageview_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pageview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4301,7 +4301,7 @@ bool k_pageview_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pageview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4329,7 +4329,7 @@ QObject* k_pageview_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pageview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4357,7 +4357,7 @@ int32_t k_pageview_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pageview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4387,7 +4387,7 @@ int32_t k_pageview_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback int32_t fn(KPageView*, const char*)
+/// @param callback int32_t func(KPageView* self, const char* signal)
 void k_pageview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4417,7 +4417,7 @@ bool k_pageview_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback bool fn(KPageView*, QMetaMethod*)
+/// @param callback bool func(KPageView* self, QMetaMethod* signal)
 void k_pageview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4449,7 +4449,7 @@ double k_pageview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageView*
-/// @param callback double fn(KPageView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KPageView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_pageview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4459,7 +4459,7 @@ void k_pageview_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageView*
-/// @param callback void fn(KPageView*, const char*)
+/// @param callback void func(KPageView* self, const char* objectName)
 void k_pageview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#dtor.KPageView)

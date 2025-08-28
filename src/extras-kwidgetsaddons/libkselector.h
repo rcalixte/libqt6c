@@ -51,7 +51,7 @@ int32_t k_selector_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn(KSelector*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_selector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -109,7 +109,7 @@ void k_selector_draw_contents(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QPainter*)
+/// @param callback void func(KSelector* self, QPainter* param1)
 void k_selector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#drawContents)
@@ -132,7 +132,7 @@ void k_selector_draw_arrow(void* self, void* painter, void* pos);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QPainter*, QPoint*)
+/// @param callback void func(KSelector* self, QPainter* painter, QPoint* pos)
 void k_selector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
@@ -155,7 +155,7 @@ void k_selector_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QPaintEvent*)
+/// @param callback void func(KSelector* self, QPaintEvent* param1)
 void k_selector_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
@@ -177,7 +177,7 @@ void k_selector_mouse_press_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMouseEvent*)
+/// @param callback void func(KSelector* self, QMouseEvent* e)
 void k_selector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
@@ -199,7 +199,7 @@ void k_selector_mouse_move_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMouseEvent*)
+/// @param callback void func(KSelector* self, QMouseEvent* e)
 void k_selector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
@@ -221,7 +221,7 @@ void k_selector_mouse_release_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMouseEvent*)
+/// @param callback void func(KSelector* self, QMouseEvent* e)
 void k_selector_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
@@ -243,7 +243,7 @@ void k_selector_wheel_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QWheelEvent*)
+/// @param callback void func(KSelector* self, QWheelEvent* param1)
 void k_selector_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
@@ -468,7 +468,7 @@ void k_selector_value_changed(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, int)
+/// @param callback void func(KSelector* self, int value)
 void k_selector_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -483,7 +483,7 @@ void k_selector_slider_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*)
+/// @param callback void func(KSelector* self)
 void k_selector_on_slider_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
@@ -499,7 +499,7 @@ void k_selector_slider_moved(void* self, int position);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, int)
+/// @param callback void func(KSelector* self, int position)
 void k_selector_on_slider_moved(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -514,7 +514,7 @@ void k_selector_slider_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*)
+/// @param callback void func(KSelector* self)
 void k_selector_on_slider_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
@@ -531,7 +531,7 @@ void k_selector_range_changed(void* self, int min, int max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, int, int)
+/// @param callback void func(KSelector* self, int min, int max)
 void k_selector_on_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractSlider
@@ -547,7 +547,7 @@ void k_selector_action_triggered(void* self, int action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, int)
+/// @param callback void func(KSelector* self, int action)
 void k_selector_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2480,7 +2480,7 @@ void k_selector_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, const char*)
+/// @param callback void func(KSelector* self, const char* title)
 void k_selector_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2496,7 +2496,7 @@ void k_selector_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QIcon*)
+/// @param callback void func(KSelector* self, QIcon* icon)
 void k_selector_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2512,7 +2512,7 @@ void k_selector_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, const char*)
+/// @param callback void func(KSelector* self, const char* iconText)
 void k_selector_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2528,7 +2528,7 @@ void k_selector_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QPoint*)
+/// @param callback void func(KSelector* self, QPoint* pos)
 void k_selector_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2905,7 +2905,7 @@ void k_selector_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*)
+/// @param callback void func(KSelector* self)
 void k_selector_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2983,7 +2983,7 @@ void k_selector_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QObject*)
+/// @param callback void func(KSelector* self, QObject* param1)
 void k_selector_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3104,7 +3104,7 @@ bool k_selector_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn(KSelector*, QEvent*)
+/// @param callback bool func(KSelector* self, QEvent* e)
 void k_selector_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3134,7 +3134,7 @@ void k_selector_qbase_slider_change(void* self, int32_t change);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, enum QAbstractSlider__SliderChange)
+/// @param callback void func(KSelector* self, enum QAbstractSlider__SliderChange change)
 void k_selector_on_slider_change(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
@@ -3164,7 +3164,7 @@ void k_selector_qbase_key_press_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QKeyEvent*)
+/// @param callback void func(KSelector* self, QKeyEvent* ev)
 void k_selector_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3194,7 +3194,7 @@ void k_selector_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QTimerEvent*)
+/// @param callback void func(KSelector* self, QTimerEvent* param1)
 void k_selector_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -3224,7 +3224,7 @@ void k_selector_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QEvent*)
+/// @param callback void func(KSelector* self, QEvent* e)
 void k_selector_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3252,7 +3252,7 @@ int32_t k_selector_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_selector_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3282,7 +3282,7 @@ void k_selector_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, bool)
+/// @param callback void func(KSelector* self, bool visible)
 void k_selector_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3310,7 +3310,7 @@ QSize* k_selector_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_selector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3338,7 +3338,7 @@ QSize* k_selector_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_selector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3368,7 +3368,7 @@ int32_t k_selector_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn(KSelector*, int)
+/// @param callback int32_t func(KSelector* self, int param1)
 void k_selector_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3396,7 +3396,7 @@ bool k_selector_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_selector_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3424,7 +3424,7 @@ QPaintEngine* k_selector_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_selector_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3454,7 +3454,7 @@ void k_selector_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMouseEvent*)
+/// @param callback void func(KSelector* self, QMouseEvent* event)
 void k_selector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3484,7 +3484,7 @@ void k_selector_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QKeyEvent*)
+/// @param callback void func(KSelector* self, QKeyEvent* event)
 void k_selector_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3514,7 +3514,7 @@ void k_selector_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QFocusEvent*)
+/// @param callback void func(KSelector* self, QFocusEvent* event)
 void k_selector_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3544,7 +3544,7 @@ void k_selector_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QFocusEvent*)
+/// @param callback void func(KSelector* self, QFocusEvent* event)
 void k_selector_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3574,7 +3574,7 @@ void k_selector_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QEnterEvent*)
+/// @param callback void func(KSelector* self, QEnterEvent* event)
 void k_selector_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3604,7 +3604,7 @@ void k_selector_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QEvent*)
+/// @param callback void func(KSelector* self, QEvent* event)
 void k_selector_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3634,7 +3634,7 @@ void k_selector_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMoveEvent*)
+/// @param callback void func(KSelector* self, QMoveEvent* event)
 void k_selector_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3664,7 +3664,7 @@ void k_selector_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QResizeEvent*)
+/// @param callback void func(KSelector* self, QResizeEvent* event)
 void k_selector_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3694,7 +3694,7 @@ void k_selector_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QCloseEvent*)
+/// @param callback void func(KSelector* self, QCloseEvent* event)
 void k_selector_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3724,7 +3724,7 @@ void k_selector_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QContextMenuEvent*)
+/// @param callback void func(KSelector* self, QContextMenuEvent* event)
 void k_selector_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3754,7 +3754,7 @@ void k_selector_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QTabletEvent*)
+/// @param callback void func(KSelector* self, QTabletEvent* event)
 void k_selector_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3784,7 +3784,7 @@ void k_selector_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QActionEvent*)
+/// @param callback void func(KSelector* self, QActionEvent* event)
 void k_selector_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3814,7 +3814,7 @@ void k_selector_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QDragEnterEvent*)
+/// @param callback void func(KSelector* self, QDragEnterEvent* event)
 void k_selector_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3844,7 +3844,7 @@ void k_selector_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QDragMoveEvent*)
+/// @param callback void func(KSelector* self, QDragMoveEvent* event)
 void k_selector_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3874,7 +3874,7 @@ void k_selector_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QDragLeaveEvent*)
+/// @param callback void func(KSelector* self, QDragLeaveEvent* event)
 void k_selector_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3904,7 +3904,7 @@ void k_selector_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QDropEvent*)
+/// @param callback void func(KSelector* self, QDropEvent* event)
 void k_selector_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3934,7 +3934,7 @@ void k_selector_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QShowEvent*)
+/// @param callback void func(KSelector* self, QShowEvent* event)
 void k_selector_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3964,7 +3964,7 @@ void k_selector_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QHideEvent*)
+/// @param callback void func(KSelector* self, QHideEvent* event)
 void k_selector_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3998,7 +3998,7 @@ bool k_selector_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn(KSelector*, const char*, void*, intptr_t*)
+/// @param callback bool func(KSelector* self, const char* eventType, void* message, intptr_t* result)
 void k_selector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4028,7 +4028,7 @@ int32_t k_selector_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn(KSelector*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KSelector* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_selector_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4058,7 +4058,7 @@ void k_selector_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QPainter*)
+/// @param callback void func(KSelector* self, QPainter* painter)
 void k_selector_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4088,7 +4088,7 @@ QPaintDevice* k_selector_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QPaintDevice* fn(KSelector*, QPoint*)
+/// @param callback QPaintDevice* func(KSelector* self, QPoint* offset)
 void k_selector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4116,7 +4116,7 @@ QPainter* k_selector_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_selector_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4146,7 +4146,7 @@ void k_selector_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QInputMethodEvent*)
+/// @param callback void func(KSelector* self, QInputMethodEvent* param1)
 void k_selector_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4176,7 +4176,7 @@ QVariant* k_selector_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QVariant* fn(KSelector*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KSelector* self, enum Qt__InputMethodQuery param1)
 void k_selector_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4206,7 +4206,7 @@ bool k_selector_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn(KSelector*, bool)
+/// @param callback bool func(KSelector* self, bool next)
 void k_selector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4238,7 +4238,7 @@ bool k_selector_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn(KSelector*, QObject*, QEvent*)
+/// @param callback bool func(KSelector* self, QObject* watched, QEvent* event)
 void k_selector_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4268,7 +4268,7 @@ void k_selector_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QChildEvent*)
+/// @param callback void func(KSelector* self, QChildEvent* event)
 void k_selector_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4298,7 +4298,7 @@ void k_selector_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QEvent*)
+/// @param callback void func(KSelector* self, QEvent* event)
 void k_selector_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4328,7 +4328,7 @@ void k_selector_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMetaMethod*)
+/// @param callback void func(KSelector* self, QMetaMethod* signal)
 void k_selector_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4358,7 +4358,7 @@ void k_selector_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, QMetaMethod*)
+/// @param callback void func(KSelector* self, QMetaMethod* signal)
 void k_selector_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -4388,7 +4388,7 @@ void k_selector_qbase_set_repeat_action(void* self, int32_t action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, enum QAbstractSlider__SliderAction)
+/// @param callback void func(KSelector* self, enum QAbstractSlider__SliderAction action)
 void k_selector_on_set_repeat_action(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
@@ -4420,7 +4420,7 @@ int32_t k_selector_qbase_repeat_action(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_selector_on_repeat_action(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4448,7 +4448,7 @@ void k_selector_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_selector_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4476,7 +4476,7 @@ void k_selector_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_selector_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4504,7 +4504,7 @@ void k_selector_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_selector_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4532,7 +4532,7 @@ bool k_selector_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_selector_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4560,7 +4560,7 @@ bool k_selector_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_selector_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4588,7 +4588,7 @@ QObject* k_selector_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_selector_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4616,7 +4616,7 @@ int32_t k_selector_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_selector_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4646,7 +4646,7 @@ int32_t k_selector_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback int32_t fn(KSelector*, const char*)
+/// @param callback int32_t func(KSelector* self, const char* signal)
 void k_selector_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4676,7 +4676,7 @@ bool k_selector_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback bool fn(KSelector*, QMetaMethod*)
+/// @param callback bool func(KSelector* self, QMetaMethod* signal)
 void k_selector_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4708,7 +4708,7 @@ double k_selector_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelector*
-/// @param callback double fn(KSelector*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KSelector* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_selector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4718,7 +4718,7 @@ void k_selector_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self KSelector*
-/// @param callback void fn(KSelector*, const char*)
+/// @param callback void func(KSelector* self, const char* objectName)
 void k_selector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselector.html#dtor.KSelector)
@@ -4768,7 +4768,7 @@ int32_t k_gradientselector_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn(KGradientSelector*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KGradientSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_gradientselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -4870,7 +4870,7 @@ void k_gradientselector_draw_contents(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QPainter*)
+/// @param callback void func(KGradientSelector* self, QPainter* param1)
 void k_gradientselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#drawContents)
@@ -4891,7 +4891,7 @@ QSize* k_gradientselector_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KGradientSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#minimumSize)
@@ -5154,7 +5154,7 @@ void k_gradientselector_value_changed(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, int)
+/// @param callback void func(KGradientSelector* self, int value)
 void k_gradientselector_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -5169,7 +5169,7 @@ void k_gradientselector_slider_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*)
+/// @param callback void func(KGradientSelector* self)
 void k_gradientselector_on_slider_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
@@ -5185,7 +5185,7 @@ void k_gradientselector_slider_moved(void* self, int position);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, int)
+/// @param callback void func(KGradientSelector* self, int position)
 void k_gradientselector_on_slider_moved(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -5200,7 +5200,7 @@ void k_gradientselector_slider_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*)
+/// @param callback void func(KGradientSelector* self)
 void k_gradientselector_on_slider_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
@@ -5217,7 +5217,7 @@ void k_gradientselector_range_changed(void* self, int min, int max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, int, int)
+/// @param callback void func(KGradientSelector* self, int min, int max)
 void k_gradientselector_on_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractSlider
@@ -5233,7 +5233,7 @@ void k_gradientselector_action_triggered(void* self, int action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, int)
+/// @param callback void func(KGradientSelector* self, int action)
 void k_gradientselector_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -7159,7 +7159,7 @@ void k_gradientselector_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, const char*)
+/// @param callback void func(KGradientSelector* self, const char* title)
 void k_gradientselector_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -7175,7 +7175,7 @@ void k_gradientselector_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QIcon*)
+/// @param callback void func(KGradientSelector* self, QIcon* icon)
 void k_gradientselector_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7191,7 +7191,7 @@ void k_gradientselector_window_icon_text_changed(void* self, const char* iconTex
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, const char*)
+/// @param callback void func(KGradientSelector* self, const char* iconText)
 void k_gradientselector_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -7207,7 +7207,7 @@ void k_gradientselector_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QPoint*)
+/// @param callback void func(KGradientSelector* self, QPoint* pos)
 void k_gradientselector_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7584,7 +7584,7 @@ void k_gradientselector_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*)
+/// @param callback void func(KGradientSelector* self)
 void k_gradientselector_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -7662,7 +7662,7 @@ void k_gradientselector_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QObject*)
+/// @param callback void func(KGradientSelector* self, QObject* param1)
 void k_gradientselector_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7785,7 +7785,7 @@ void k_gradientselector_qbase_draw_arrow(void* self, void* painter, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QPainter*, QPoint*)
+/// @param callback void func(KGradientSelector* self, QPainter* painter, QPoint* pos)
 void k_gradientselector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from KSelector
@@ -7815,7 +7815,7 @@ void k_gradientselector_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QPaintEvent*)
+/// @param callback void func(KGradientSelector* self, QPaintEvent* param1)
 void k_gradientselector_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelector
@@ -7845,7 +7845,7 @@ void k_gradientselector_qbase_mouse_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMouseEvent*)
+/// @param callback void func(KGradientSelector* self, QMouseEvent* e)
 void k_gradientselector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelector
@@ -7875,7 +7875,7 @@ void k_gradientselector_qbase_mouse_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMouseEvent*)
+/// @param callback void func(KGradientSelector* self, QMouseEvent* e)
 void k_gradientselector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelector
@@ -7905,7 +7905,7 @@ void k_gradientselector_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMouseEvent*)
+/// @param callback void func(KGradientSelector* self, QMouseEvent* e)
 void k_gradientselector_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelector
@@ -7935,7 +7935,7 @@ void k_gradientselector_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QWheelEvent*)
+/// @param callback void func(KGradientSelector* self, QWheelEvent* param1)
 void k_gradientselector_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -7965,7 +7965,7 @@ bool k_gradientselector_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn(KGradientSelector*, QEvent*)
+/// @param callback bool func(KGradientSelector* self, QEvent* e)
 void k_gradientselector_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -7995,7 +7995,7 @@ void k_gradientselector_qbase_slider_change(void* self, int32_t change);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, enum QAbstractSlider__SliderChange)
+/// @param callback void func(KGradientSelector* self, enum QAbstractSlider__SliderChange change)
 void k_gradientselector_on_slider_change(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
@@ -8025,7 +8025,7 @@ void k_gradientselector_qbase_key_press_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QKeyEvent*)
+/// @param callback void func(KGradientSelector* self, QKeyEvent* ev)
 void k_gradientselector_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -8055,7 +8055,7 @@ void k_gradientselector_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QTimerEvent*)
+/// @param callback void func(KGradientSelector* self, QTimerEvent* param1)
 void k_gradientselector_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -8085,7 +8085,7 @@ void k_gradientselector_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QEvent*)
+/// @param callback void func(KGradientSelector* self, QEvent* e)
 void k_gradientselector_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8113,7 +8113,7 @@ int32_t k_gradientselector_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_gradientselector_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -8143,7 +8143,7 @@ void k_gradientselector_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, bool)
+/// @param callback void func(KGradientSelector* self, bool visible)
 void k_gradientselector_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -8171,7 +8171,7 @@ QSize* k_gradientselector_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_gradientselector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -8199,7 +8199,7 @@ QSize* k_gradientselector_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_gradientselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -8229,7 +8229,7 @@ int32_t k_gradientselector_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn(KGradientSelector*, int)
+/// @param callback int32_t func(KGradientSelector* self, int param1)
 void k_gradientselector_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -8257,7 +8257,7 @@ bool k_gradientselector_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_gradientselector_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -8285,7 +8285,7 @@ QPaintEngine* k_gradientselector_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_gradientselector_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -8315,7 +8315,7 @@ void k_gradientselector_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMouseEvent*)
+/// @param callback void func(KGradientSelector* self, QMouseEvent* event)
 void k_gradientselector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8345,7 +8345,7 @@ void k_gradientselector_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QKeyEvent*)
+/// @param callback void func(KGradientSelector* self, QKeyEvent* event)
 void k_gradientselector_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8375,7 +8375,7 @@ void k_gradientselector_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QFocusEvent*)
+/// @param callback void func(KGradientSelector* self, QFocusEvent* event)
 void k_gradientselector_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8405,7 +8405,7 @@ void k_gradientselector_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QFocusEvent*)
+/// @param callback void func(KGradientSelector* self, QFocusEvent* event)
 void k_gradientselector_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8435,7 +8435,7 @@ void k_gradientselector_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QEnterEvent*)
+/// @param callback void func(KGradientSelector* self, QEnterEvent* event)
 void k_gradientselector_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8465,7 +8465,7 @@ void k_gradientselector_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QEvent*)
+/// @param callback void func(KGradientSelector* self, QEvent* event)
 void k_gradientselector_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8495,7 +8495,7 @@ void k_gradientselector_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMoveEvent*)
+/// @param callback void func(KGradientSelector* self, QMoveEvent* event)
 void k_gradientselector_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8525,7 +8525,7 @@ void k_gradientselector_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QResizeEvent*)
+/// @param callback void func(KGradientSelector* self, QResizeEvent* event)
 void k_gradientselector_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8555,7 +8555,7 @@ void k_gradientselector_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QCloseEvent*)
+/// @param callback void func(KGradientSelector* self, QCloseEvent* event)
 void k_gradientselector_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8585,7 +8585,7 @@ void k_gradientselector_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QContextMenuEvent*)
+/// @param callback void func(KGradientSelector* self, QContextMenuEvent* event)
 void k_gradientselector_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8615,7 +8615,7 @@ void k_gradientselector_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QTabletEvent*)
+/// @param callback void func(KGradientSelector* self, QTabletEvent* event)
 void k_gradientselector_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8645,7 +8645,7 @@ void k_gradientselector_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QActionEvent*)
+/// @param callback void func(KGradientSelector* self, QActionEvent* event)
 void k_gradientselector_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8675,7 +8675,7 @@ void k_gradientselector_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QDragEnterEvent*)
+/// @param callback void func(KGradientSelector* self, QDragEnterEvent* event)
 void k_gradientselector_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8705,7 +8705,7 @@ void k_gradientselector_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QDragMoveEvent*)
+/// @param callback void func(KGradientSelector* self, QDragMoveEvent* event)
 void k_gradientselector_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8735,7 +8735,7 @@ void k_gradientselector_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QDragLeaveEvent*)
+/// @param callback void func(KGradientSelector* self, QDragLeaveEvent* event)
 void k_gradientselector_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8765,7 +8765,7 @@ void k_gradientselector_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QDropEvent*)
+/// @param callback void func(KGradientSelector* self, QDropEvent* event)
 void k_gradientselector_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8795,7 +8795,7 @@ void k_gradientselector_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QShowEvent*)
+/// @param callback void func(KGradientSelector* self, QShowEvent* event)
 void k_gradientselector_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8825,7 +8825,7 @@ void k_gradientselector_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QHideEvent*)
+/// @param callback void func(KGradientSelector* self, QHideEvent* event)
 void k_gradientselector_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8859,7 +8859,7 @@ bool k_gradientselector_qbase_native_event(void* self, const char* eventType, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn(KGradientSelector*, const char*, void*, intptr_t*)
+/// @param callback bool func(KGradientSelector* self, const char* eventType, void* message, intptr_t* result)
 void k_gradientselector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -8889,7 +8889,7 @@ int32_t k_gradientselector_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn(KGradientSelector*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KGradientSelector* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_gradientselector_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -8919,7 +8919,7 @@ void k_gradientselector_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QPainter*)
+/// @param callback void func(KGradientSelector* self, QPainter* painter)
 void k_gradientselector_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8949,7 +8949,7 @@ QPaintDevice* k_gradientselector_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QPaintDevice* fn(KGradientSelector*, QPoint*)
+/// @param callback QPaintDevice* func(KGradientSelector* self, QPoint* offset)
 void k_gradientselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8977,7 +8977,7 @@ QPainter* k_gradientselector_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_gradientselector_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -9007,7 +9007,7 @@ void k_gradientselector_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QInputMethodEvent*)
+/// @param callback void func(KGradientSelector* self, QInputMethodEvent* param1)
 void k_gradientselector_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9037,7 +9037,7 @@ QVariant* k_gradientselector_qbase_input_method_query(void* self, int64_t param1
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QVariant* fn(KGradientSelector*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KGradientSelector* self, enum Qt__InputMethodQuery param1)
 void k_gradientselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -9067,7 +9067,7 @@ bool k_gradientselector_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn(KGradientSelector*, bool)
+/// @param callback bool func(KGradientSelector* self, bool next)
 void k_gradientselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -9099,7 +9099,7 @@ bool k_gradientselector_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn(KGradientSelector*, QObject*, QEvent*)
+/// @param callback bool func(KGradientSelector* self, QObject* watched, QEvent* event)
 void k_gradientselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -9129,7 +9129,7 @@ void k_gradientselector_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QChildEvent*)
+/// @param callback void func(KGradientSelector* self, QChildEvent* event)
 void k_gradientselector_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9159,7 +9159,7 @@ void k_gradientselector_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QEvent*)
+/// @param callback void func(KGradientSelector* self, QEvent* event)
 void k_gradientselector_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9189,7 +9189,7 @@ void k_gradientselector_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMetaMethod*)
+/// @param callback void func(KGradientSelector* self, QMetaMethod* signal)
 void k_gradientselector_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9219,7 +9219,7 @@ void k_gradientselector_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, QMetaMethod*)
+/// @param callback void func(KGradientSelector* self, QMetaMethod* signal)
 void k_gradientselector_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
@@ -9249,7 +9249,7 @@ void k_gradientselector_qbase_set_repeat_action(void* self, int32_t action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, enum QAbstractSlider__SliderAction)
+/// @param callback void func(KGradientSelector* self, enum QAbstractSlider__SliderAction action)
 void k_gradientselector_on_set_repeat_action(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
@@ -9281,7 +9281,7 @@ int32_t k_gradientselector_qbase_repeat_action(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_gradientselector_on_repeat_action(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -9309,7 +9309,7 @@ void k_gradientselector_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_gradientselector_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -9337,7 +9337,7 @@ void k_gradientselector_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_gradientselector_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -9365,7 +9365,7 @@ void k_gradientselector_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void k_gradientselector_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -9393,7 +9393,7 @@ bool k_gradientselector_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_gradientselector_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -9421,7 +9421,7 @@ bool k_gradientselector_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_gradientselector_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -9449,7 +9449,7 @@ QObject* k_gradientselector_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_gradientselector_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -9477,7 +9477,7 @@ int32_t k_gradientselector_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_gradientselector_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -9507,7 +9507,7 @@ int32_t k_gradientselector_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback int32_t fn(KGradientSelector*, const char*)
+/// @param callback int32_t func(KGradientSelector* self, const char* signal)
 void k_gradientselector_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -9537,7 +9537,7 @@ bool k_gradientselector_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback bool fn(KGradientSelector*, QMetaMethod*)
+/// @param callback bool func(KGradientSelector* self, QMetaMethod* signal)
 void k_gradientselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -9569,7 +9569,7 @@ double k_gradientselector_qbase_get_decoded_metric_f(void* self, int32_t metricA
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KGradientSelector*
-/// @param callback double fn(KGradientSelector*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KGradientSelector* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_gradientselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -9579,7 +9579,7 @@ void k_gradientselector_on_get_decoded_metric_f(void* self, double (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KGradientSelector*
-/// @param callback void fn(KGradientSelector*, const char*)
+/// @param callback void func(KGradientSelector* self, const char* objectName)
 void k_gradientselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#dtor.KGradientSelector)

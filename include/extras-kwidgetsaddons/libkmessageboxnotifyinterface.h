@@ -30,7 +30,7 @@ void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificat
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxNotifyInterface*
-/// @param callback void fn(KMessageBoxNotifyInterface*, enum QMessageBox__Icon, const char*, QWidget*)
+/// @param callback void func(KMessageBoxNotifyInterface* self, enum QMessageBox__Icon notificationType, const char* message, QWidget* parent)
 void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callback)(void*, int32_t, const char*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmessageboxnotifyinterface.html#sendNotification)

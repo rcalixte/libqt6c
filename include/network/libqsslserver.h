@@ -40,7 +40,7 @@ int32_t q_sslserver_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QSslServer*
-/// @param callback int32_t fn(QSslServer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSslServer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sslserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -90,7 +90,7 @@ void q_sslserver_ssl_errors(void* self, void* socket, libqt_list errors);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#sslErrors)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, libqt_list /* of QSslError* */)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, libqt_list /* of QSslError* */ /* of QSslError* */)
 void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#peerVerifyError)
@@ -103,7 +103,7 @@ void q_sslserver_peer_verify_error(void* self, void* socket, void* errorVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#peerVerifyError)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, QSslError*)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError* errorVal)
 void q_sslserver_on_peer_verify_error(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#errorOccurred)
@@ -116,7 +116,7 @@ void q_sslserver_error_occurred(void* self, void* socket, int32_t errorVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#errorOccurred)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, enum QAbstractSocket__SocketError errorVal)
 void q_sslserver_on_error_occurred(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#preSharedKeyAuthenticationRequired)
@@ -129,7 +129,7 @@ void q_sslserver_pre_shared_key_authentication_required(void* self, void* socket
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#preSharedKeyAuthenticationRequired)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, QSslPreSharedKeyAuthenticator*)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslPreSharedKeyAuthenticator* authenticator)
 void q_sslserver_on_pre_shared_key_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertSent)
@@ -144,7 +144,7 @@ void q_sslserver_alert_sent(void* self, void* socket, int32_t level, int32_t typ
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertSent)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, enum QSsl__AlertLevel level, enum QSsl__AlertType typeVal, const char* description)
 void q_sslserver_on_alert_sent(void* self, void (*callback)(void*, void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertReceived)
@@ -159,7 +159,7 @@ void q_sslserver_alert_received(void* self, void* socket, int32_t level, int32_t
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertReceived)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, enum QSsl__AlertLevel level, enum QSsl__AlertType typeVal, const char* description)
 void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#handshakeInterruptedOnError)
@@ -172,7 +172,7 @@ void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#handshakeInterruptedOnError)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*, QSslError*)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError* errorVal)
 void q_sslserver_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#startedEncryptionHandshake)
@@ -184,7 +184,7 @@ void q_sslserver_started_encryption_handshake(void* self, void* socket);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#startedEncryptionHandshake)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QSslSocket*)
+/// @param callback void func(QSslServer* self, QSslSocket* socket)
 void q_sslserver_on_started_encryption_handshake(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#incomingConnection)
@@ -198,7 +198,7 @@ void q_sslserver_incoming_connection(void* self, intptr_t socket);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, intptr_t)
+/// @param callback void func(QSslServer* self, intptr_t socket)
 void q_sslserver_on_incoming_connection(void* self, void (*callback)(void*, intptr_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#incomingConnection)
@@ -372,7 +372,7 @@ void q_sslserver_new_connection(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#newConnection)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*)
+/// @param callback void func(QSslServer* self)
 void q_sslserver_on_new_connection(void* self, void (*callback)(void*));
 
 /// Inherited from QTcpServer
@@ -388,7 +388,7 @@ void q_sslserver_accept_error(void* self, int32_t socketError);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#acceptError)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QSslServer* self, enum QAbstractSocket__SocketError socketError)
 void q_sslserver_on_accept_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QTcpServer
@@ -651,7 +651,7 @@ void q_sslserver_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*)
+/// @param callback void func(QSslServer* self)
 void q_sslserver_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -729,7 +729,7 @@ void q_sslserver_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QObject*)
+/// @param callback void func(QSslServer* self, QObject* param1)
 void q_sslserver_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -757,7 +757,7 @@ bool q_sslserver_qbase_has_pending_connections(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sslserver_on_has_pending_connections(void* self, bool (*callback)());
 
 /// Inherited from QTcpServer
@@ -785,7 +785,7 @@ QTcpSocket* q_sslserver_qbase_next_pending_connection(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback QTcpSocket* fn()
+/// @param callback QTcpSocket* func()
 void q_sslserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)());
 
 /// Inherited from QObject
@@ -815,7 +815,7 @@ bool q_sslserver_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback bool fn(QSslServer*, QEvent*)
+/// @param callback bool func(QSslServer* self, QEvent* event)
 void q_sslserver_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -847,7 +847,7 @@ bool q_sslserver_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback bool fn(QSslServer*, QObject*, QEvent*)
+/// @param callback bool func(QSslServer* self, QObject* watched, QEvent* event)
 void q_sslserver_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -877,7 +877,7 @@ void q_sslserver_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QTimerEvent*)
+/// @param callback void func(QSslServer* self, QTimerEvent* event)
 void q_sslserver_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -907,7 +907,7 @@ void q_sslserver_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QChildEvent*)
+/// @param callback void func(QSslServer* self, QChildEvent* event)
 void q_sslserver_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -937,7 +937,7 @@ void q_sslserver_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QEvent*)
+/// @param callback void func(QSslServer* self, QEvent* event)
 void q_sslserver_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -967,7 +967,7 @@ void q_sslserver_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QMetaMethod*)
+/// @param callback void func(QSslServer* self, QMetaMethod* signal)
 void q_sslserver_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -997,7 +997,7 @@ void q_sslserver_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QMetaMethod*)
+/// @param callback void func(QSslServer* self, QMetaMethod* signal)
 void q_sslserver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -1027,7 +1027,7 @@ void q_sslserver_qbase_add_pending_connection(void* self, void* socket);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, QTcpSocket*)
+/// @param callback void func(QSslServer* self, QTcpSocket* socket)
 void q_sslserver_on_add_pending_connection(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1055,7 +1055,7 @@ QObject* q_sslserver_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sslserver_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1083,7 +1083,7 @@ int32_t q_sslserver_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sslserver_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1113,7 +1113,7 @@ int32_t q_sslserver_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback int32_t fn(QSslServer*, const char*)
+/// @param callback int32_t func(QSslServer* self, const char* signal)
 void q_sslserver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1143,7 +1143,7 @@ bool q_sslserver_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslServer*
-/// @param callback bool fn(QSslServer*, QMetaMethod*)
+/// @param callback bool func(QSslServer* self, QMetaMethod* signal)
 void q_sslserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -1153,7 +1153,7 @@ void q_sslserver_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*)
+/// @param callback void func(QSslServer* self)
 void q_sslserver_on_pending_connection_available(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1163,7 +1163,7 @@ void q_sslserver_on_pending_connection_available(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSslServer*
-/// @param callback void fn(QSslServer*, const char*)
+/// @param callback void func(QSslServer* self, const char* objectName)
 void q_sslserver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#dtor.QSslServer)

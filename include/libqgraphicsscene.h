@@ -68,7 +68,7 @@ int32_t q_graphicsscene_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback int32_t fn(QGraphicsScene*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QGraphicsScene* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -403,7 +403,7 @@ QVariant* q_graphicsscene_input_method_query(void* self, int64_t query);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback QVariant* fn(QGraphicsScene*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QGraphicsScene* self, enum Qt__InputMethodQuery query)
 void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodQuery)
@@ -562,7 +562,7 @@ bool q_graphicsscene_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback bool fn(QGraphicsScene*, QEvent*)
+/// @param callback bool func(QGraphicsScene* self, QEvent* event)
 void q_graphicsscene_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#event)
@@ -585,7 +585,7 @@ bool q_graphicsscene_event_filter(void* self, void* watched, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback bool fn(QGraphicsScene*, QObject*, QEvent*)
+/// @param callback bool func(QGraphicsScene* self, QObject* watched, QEvent* event)
 void q_graphicsscene_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#eventFilter)
@@ -608,7 +608,7 @@ void q_graphicsscene_context_menu_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneContextMenuEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneContextMenuEvent* event)
 void q_graphicsscene_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#contextMenuEvent)
@@ -630,7 +630,7 @@ void q_graphicsscene_drag_enter_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicsscene_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#dragEnterEvent)
@@ -652,7 +652,7 @@ void q_graphicsscene_drag_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicsscene_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#dragMoveEvent)
@@ -674,7 +674,7 @@ void q_graphicsscene_drag_leave_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicsscene_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#dragLeaveEvent)
@@ -696,7 +696,7 @@ void q_graphicsscene_drop_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneDragDropEvent* event)
 void q_graphicsscene_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#dropEvent)
@@ -718,7 +718,7 @@ void q_graphicsscene_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QFocusEvent*)
+/// @param callback void func(QGraphicsScene* self, QFocusEvent* event)
 void q_graphicsscene_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#focusInEvent)
@@ -740,7 +740,7 @@ void q_graphicsscene_focus_out_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QFocusEvent*)
+/// @param callback void func(QGraphicsScene* self, QFocusEvent* event)
 void q_graphicsscene_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#focusOutEvent)
@@ -762,7 +762,7 @@ void q_graphicsscene_help_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneHelpEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneHelpEvent* event)
 void q_graphicsscene_on_help_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#helpEvent)
@@ -784,7 +784,7 @@ void q_graphicsscene_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QKeyEvent*)
+/// @param callback void func(QGraphicsScene* self, QKeyEvent* event)
 void q_graphicsscene_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#keyPressEvent)
@@ -806,7 +806,7 @@ void q_graphicsscene_key_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QKeyEvent*)
+/// @param callback void func(QGraphicsScene* self, QKeyEvent* event)
 void q_graphicsscene_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#keyReleaseEvent)
@@ -828,7 +828,7 @@ void q_graphicsscene_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneMouseEvent* event)
 void q_graphicsscene_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#mousePressEvent)
@@ -850,7 +850,7 @@ void q_graphicsscene_mouse_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneMouseEvent* event)
 void q_graphicsscene_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseMoveEvent)
@@ -872,7 +872,7 @@ void q_graphicsscene_mouse_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneMouseEvent* event)
 void q_graphicsscene_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseReleaseEvent)
@@ -894,7 +894,7 @@ void q_graphicsscene_mouse_double_click_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneMouseEvent* event)
 void q_graphicsscene_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseDoubleClickEvent)
@@ -916,7 +916,7 @@ void q_graphicsscene_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsSceneWheelEvent*)
+/// @param callback void func(QGraphicsScene* self, QGraphicsSceneWheelEvent* event)
 void q_graphicsscene_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#wheelEvent)
@@ -938,7 +938,7 @@ void q_graphicsscene_input_method_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QInputMethodEvent*)
+/// @param callback void func(QGraphicsScene* self, QInputMethodEvent* event)
 void q_graphicsscene_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodEvent)
@@ -961,7 +961,7 @@ void q_graphicsscene_draw_background(void* self, void* painter, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QPainter*, QRectF*)
+/// @param callback void func(QGraphicsScene* self, QPainter* painter, QRectF* rect)
 void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#drawBackground)
@@ -985,7 +985,7 @@ void q_graphicsscene_draw_foreground(void* self, void* painter, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QPainter*, QRectF*)
+/// @param callback void func(QGraphicsScene* self, QPainter* painter, QRectF* rect)
 void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#drawForeground)
@@ -1008,7 +1008,7 @@ bool q_graphicsscene_focus_next_prev_child(void* self, bool next);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
-/// @param callback bool fn(QGraphicsScene*, bool)
+/// @param callback bool func(QGraphicsScene* self, bool next)
 void q_graphicsscene_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#focusNextPrevChild)
@@ -1028,7 +1028,7 @@ void q_graphicsscene_changed(void* self, libqt_list region);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#changed)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, libqt_list /* of QRectF* */)
+/// @param callback void func(QGraphicsScene* self, libqt_list /* of QRectF* */ /* of QRectF* */)
 void q_graphicsscene_on_changed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#sceneRectChanged)
@@ -1040,7 +1040,7 @@ void q_graphicsscene_scene_rect_changed(void* self, void* rect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#sceneRectChanged)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QRectF*)
+/// @param callback void func(QGraphicsScene* self, QRectF* rect)
 void q_graphicsscene_on_scene_rect_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#selectionChanged)
@@ -1051,7 +1051,7 @@ void q_graphicsscene_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#selectionChanged)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*)
+/// @param callback void func(QGraphicsScene* self)
 void q_graphicsscene_on_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#focusItemChanged)
@@ -1065,7 +1065,7 @@ void q_graphicsscene_focus_item_changed(void* self, void* newFocus, void* oldFoc
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#focusItemChanged)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QGraphicsItem*, QGraphicsItem*, enum Qt__FocusReason)
+/// @param callback void func(QGraphicsScene* self, QGraphicsItem* newFocus, QGraphicsItem* oldFocus, enum Qt__FocusReason reason)
 void q_graphicsscene_on_focus_item_changed(void* self, void (*callback)(void*, void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -1623,7 +1623,7 @@ void q_graphicsscene_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*)
+/// @param callback void func(QGraphicsScene* self)
 void q_graphicsscene_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1701,7 +1701,7 @@ void q_graphicsscene_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QObject*)
+/// @param callback void func(QGraphicsScene* self, QObject* param1)
 void q_graphicsscene_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1731,7 +1731,7 @@ void q_graphicsscene_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QTimerEvent*)
+/// @param callback void func(QGraphicsScene* self, QTimerEvent* event)
 void q_graphicsscene_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1761,7 +1761,7 @@ void q_graphicsscene_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QChildEvent*)
+/// @param callback void func(QGraphicsScene* self, QChildEvent* event)
 void q_graphicsscene_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1791,7 +1791,7 @@ void q_graphicsscene_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QEvent*)
+/// @param callback void func(QGraphicsScene* self, QEvent* event)
 void q_graphicsscene_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1821,7 +1821,7 @@ void q_graphicsscene_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QMetaMethod*)
+/// @param callback void func(QGraphicsScene* self, QMetaMethod* signal)
 void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1851,7 +1851,7 @@ void q_graphicsscene_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, QMetaMethod*)
+/// @param callback void func(QGraphicsScene* self, QMetaMethod* signal)
 void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1879,7 +1879,7 @@ QObject* q_graphicsscene_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_graphicsscene_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1907,7 +1907,7 @@ int32_t q_graphicsscene_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicsscene_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1937,7 +1937,7 @@ int32_t q_graphicsscene_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback int32_t fn(QGraphicsScene*, const char*)
+/// @param callback int32_t func(QGraphicsScene* self, const char* signal)
 void q_graphicsscene_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1967,7 +1967,7 @@ bool q_graphicsscene_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsScene*
-/// @param callback bool fn(QGraphicsScene*, QMetaMethod*)
+/// @param callback bool func(QGraphicsScene* self, QMetaMethod* signal)
 void q_graphicsscene_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1977,7 +1977,7 @@ void q_graphicsscene_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGraphicsScene*
-/// @param callback void fn(QGraphicsScene*, const char*)
+/// @param callback void func(QGraphicsScene* self, const char* objectName)
 void q_graphicsscene_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#dtor.QGraphicsScene)

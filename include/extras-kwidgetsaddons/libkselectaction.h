@@ -49,7 +49,7 @@ int32_t k_selectaction_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback int32_t fn(KSelectAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KSelectAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_selectaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -180,7 +180,7 @@ QAction* k_selectaction_remove_action(void* self, void* action);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback QAction* fn(KSelectAction*, QAction*)
+/// @param callback QAction* func(KSelectAction* self, QAction* action)
 void k_selectaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
@@ -203,7 +203,7 @@ void k_selectaction_insert_action(void* self, void* before, void* action);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QAction*, QAction*)
+/// @param callback void func(KSelectAction* self, QAction* before, QAction* action)
 void k_selectaction_on_insert_action(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
@@ -293,7 +293,7 @@ void k_selectaction_action_triggered(void* self, void* action);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QAction*)
+/// @param callback void func(KSelectAction* self, QAction* action)
 void k_selectaction_on_action_triggered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
@@ -305,7 +305,7 @@ void k_selectaction_index_triggered(void* self, int index);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, int)
+/// @param callback void func(KSelectAction* self, int index)
 void k_selectaction_on_index_triggered(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
@@ -317,7 +317,7 @@ void k_selectaction_text_triggered(void* self, const char* text);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, const char*)
+/// @param callback void func(KSelectAction* self, const char* text)
 void k_selectaction_on_text_triggered(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
@@ -331,7 +331,7 @@ void k_selectaction_slot_action_triggered(void* self, void* action);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QAction*)
+/// @param callback void func(KSelectAction* self, QAction* action)
 void k_selectaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
@@ -353,7 +353,7 @@ void k_selectaction_slot_toggled(void* self, bool param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, bool)
+/// @param callback void func(KSelectAction* self, bool param1)
 void k_selectaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
@@ -375,7 +375,7 @@ QWidget* k_selectaction_create_widget(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback QWidget* fn(KSelectAction*, QWidget*)
+/// @param callback QWidget* func(KSelectAction* self, QWidget* parent)
 void k_selectaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
@@ -397,7 +397,7 @@ void k_selectaction_delete_widget(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QWidget*)
+/// @param callback void func(KSelectAction* self, QWidget* widget)
 void k_selectaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
@@ -419,7 +419,7 @@ bool k_selectaction_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback bool fn(KSelectAction*, QEvent*)
+/// @param callback bool func(KSelectAction* self, QEvent* event)
 void k_selectaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
@@ -442,7 +442,7 @@ bool k_selectaction_event_filter(void* self, void* watched, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KSelectAction*
-/// @param callback bool fn(KSelectAction*, QObject*, QEvent*)
+/// @param callback bool func(KSelectAction* self, QObject* watched, QEvent* event)
 void k_selectaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
@@ -940,7 +940,7 @@ void k_selectaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*)
+/// @param callback void func(KSelectAction* self)
 void k_selectaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -956,7 +956,7 @@ void k_selectaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, bool)
+/// @param callback void func(KSelectAction* self, bool enabled)
 void k_selectaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -972,7 +972,7 @@ void k_selectaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, bool)
+/// @param callback void func(KSelectAction* self, bool checkable)
 void k_selectaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -987,7 +987,7 @@ void k_selectaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*)
+/// @param callback void func(KSelectAction* self)
 void k_selectaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -1002,7 +1002,7 @@ void k_selectaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*)
+/// @param callback void func(KSelectAction* self)
 void k_selectaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -1017,7 +1017,7 @@ void k_selectaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*)
+/// @param callback void func(KSelectAction* self)
 void k_selectaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -1033,7 +1033,7 @@ void k_selectaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, bool)
+/// @param callback void func(KSelectAction* self, bool param1)
 void k_selectaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -1057,7 +1057,7 @@ void k_selectaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, bool)
+/// @param callback void func(KSelectAction* self, bool checked)
 void k_selectaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -1286,7 +1286,7 @@ void k_selectaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*)
+/// @param callback void func(KSelectAction* self)
 void k_selectaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1364,7 +1364,7 @@ void k_selectaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QObject*)
+/// @param callback void func(KSelectAction* self, QObject* param1)
 void k_selectaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1394,7 +1394,7 @@ void k_selectaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QTimerEvent*)
+/// @param callback void func(KSelectAction* self, QTimerEvent* event)
 void k_selectaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1424,7 +1424,7 @@ void k_selectaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QChildEvent*)
+/// @param callback void func(KSelectAction* self, QChildEvent* event)
 void k_selectaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1454,7 +1454,7 @@ void k_selectaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QEvent*)
+/// @param callback void func(KSelectAction* self, QEvent* event)
 void k_selectaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1484,7 +1484,7 @@ void k_selectaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QMetaMethod*)
+/// @param callback void func(KSelectAction* self, QMetaMethod* signal)
 void k_selectaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1514,7 +1514,7 @@ void k_selectaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, QMetaMethod*)
+/// @param callback void func(KSelectAction* self, QMetaMethod* signal)
 void k_selectaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1542,7 +1542,7 @@ libqt_list /* of QWidget* */ k_selectaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void k_selectaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// Inherited from QObject
@@ -1570,7 +1570,7 @@ QObject* k_selectaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_selectaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1598,7 +1598,7 @@ int32_t k_selectaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_selectaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1628,7 +1628,7 @@ int32_t k_selectaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback int32_t fn(KSelectAction*, const char*)
+/// @param callback int32_t func(KSelectAction* self, const char* signal)
 void k_selectaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1658,7 +1658,7 @@ bool k_selectaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KSelectAction*
-/// @param callback bool fn(KSelectAction*, QMetaMethod*)
+/// @param callback bool func(KSelectAction* self, QMetaMethod* signal)
 void k_selectaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1668,7 +1668,7 @@ void k_selectaction_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KSelectAction*
-/// @param callback void fn(KSelectAction*, const char*)
+/// @param callback void func(KSelectAction* self, const char* objectName)
 void k_selectaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#dtor.KSelectAction)

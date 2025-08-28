@@ -167,7 +167,7 @@ int32_t q_itemselectionmodel_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback int32_t fn(QItemSelectionModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QItemSelectionModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_itemselectionmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -273,7 +273,7 @@ void q_itemselectionmodel_set_current_index(void* self, void* index, int64_t com
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QModelIndex*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(QItemSelectionModel* self, QModelIndex* index, flag of enum QItemSelectionModel__SelectionFlag command)
 void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
@@ -297,7 +297,7 @@ void q_itemselectionmodel_select(void* self, void* index, int64_t command);
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QModelIndex*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(QItemSelectionModel* self, QModelIndex* index, flag of enum QItemSelectionModel__SelectionFlag command)
 void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
@@ -321,7 +321,7 @@ void q_itemselectionmodel_select2(void* self, void* selection, int64_t command);
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QItemSelection*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(QItemSelectionModel* self, QItemSelection* selection, flag of enum QItemSelectionModel__SelectionFlag command)
 void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
@@ -343,7 +343,7 @@ void q_itemselectionmodel_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_itemselectionmodel_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
@@ -363,7 +363,7 @@ void q_itemselectionmodel_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_itemselectionmodel_on_reset(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
@@ -388,7 +388,7 @@ void q_itemselectionmodel_clear_current_index(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_itemselectionmodel_on_clear_current_index(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearCurrentIndex)
@@ -408,7 +408,7 @@ void q_itemselectionmodel_selection_changed(void* self, void* selected, void* de
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectionChanged)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QItemSelection*, QItemSelection*)
+/// @param callback void func(QItemSelectionModel* self, QItemSelection* selected, QItemSelection* deselected)
 void q_itemselectionmodel_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentChanged)
@@ -421,7 +421,7 @@ void q_itemselectionmodel_current_changed(void* self, void* current, void* previ
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentChanged)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QItemSelectionModel* self, QModelIndex* current, QModelIndex* previous)
 void q_itemselectionmodel_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentRowChanged)
@@ -434,7 +434,7 @@ void q_itemselectionmodel_current_row_changed(void* self, void* current, void* p
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentRowChanged)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QItemSelectionModel* self, QModelIndex* current, QModelIndex* previous)
 void q_itemselectionmodel_on_current_row_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentColumnChanged)
@@ -447,7 +447,7 @@ void q_itemselectionmodel_current_column_changed(void* self, void* current, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentColumnChanged)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QItemSelectionModel* self, QModelIndex* current, QModelIndex* previous)
 void q_itemselectionmodel_on_current_column_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#modelChanged)
@@ -459,7 +459,7 @@ void q_itemselectionmodel_model_changed(void* self, void* model);
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#modelChanged)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QAbstractItemModel*)
+/// @param callback void func(QItemSelectionModel* self, QAbstractItemModel* model)
 void q_itemselectionmodel_on_model_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
@@ -474,7 +474,7 @@ void q_itemselectionmodel_emit_selection_changed(void* self, void* newSelection,
 /// Allows for overriding the related default method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QItemSelection*, QItemSelection*)
+/// @param callback void func(QItemSelectionModel* self, QItemSelection* newSelection, QItemSelection* oldSelection)
 void q_itemselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
@@ -769,7 +769,7 @@ void q_itemselectionmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*)
+/// @param callback void func(QItemSelectionModel* self)
 void q_itemselectionmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -847,7 +847,7 @@ void q_itemselectionmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QObject*)
+/// @param callback void func(QItemSelectionModel* self, QObject* param1)
 void q_itemselectionmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -877,7 +877,7 @@ bool q_itemselectionmodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback bool fn(QItemSelectionModel*, QEvent*)
+/// @param callback bool func(QItemSelectionModel* self, QEvent* event)
 void q_itemselectionmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -909,7 +909,7 @@ bool q_itemselectionmodel_qbase_event_filter(void* self, void* watched, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback bool fn(QItemSelectionModel*, QObject*, QEvent*)
+/// @param callback bool func(QItemSelectionModel* self, QObject* watched, QEvent* event)
 void q_itemselectionmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -939,7 +939,7 @@ void q_itemselectionmodel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QTimerEvent*)
+/// @param callback void func(QItemSelectionModel* self, QTimerEvent* event)
 void q_itemselectionmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -969,7 +969,7 @@ void q_itemselectionmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QChildEvent*)
+/// @param callback void func(QItemSelectionModel* self, QChildEvent* event)
 void q_itemselectionmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -999,7 +999,7 @@ void q_itemselectionmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QEvent*)
+/// @param callback void func(QItemSelectionModel* self, QEvent* event)
 void q_itemselectionmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1029,7 +1029,7 @@ void q_itemselectionmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QMetaMethod*)
+/// @param callback void func(QItemSelectionModel* self, QMetaMethod* signal)
 void q_itemselectionmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1059,7 +1059,7 @@ void q_itemselectionmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, QMetaMethod*)
+/// @param callback void func(QItemSelectionModel* self, QMetaMethod* signal)
 void q_itemselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1087,7 +1087,7 @@ QObject* q_itemselectionmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_itemselectionmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1115,7 +1115,7 @@ int32_t q_itemselectionmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_itemselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1145,7 +1145,7 @@ int32_t q_itemselectionmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback int32_t fn(QItemSelectionModel*, const char*)
+/// @param callback int32_t func(QItemSelectionModel* self, const char* signal)
 void q_itemselectionmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1175,7 +1175,7 @@ bool q_itemselectionmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QItemSelectionModel*
-/// @param callback bool fn(QItemSelectionModel*, QMetaMethod*)
+/// @param callback bool func(QItemSelectionModel* self, QMetaMethod* signal)
 void q_itemselectionmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1185,7 +1185,7 @@ void q_itemselectionmodel_on_is_signal_connected(void* self, bool (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QItemSelectionModel*
-/// @param callback void fn(QItemSelectionModel*, const char*)
+/// @param callback void func(QItemSelectionModel* self, const char* objectName)
 void q_itemselectionmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#dtor.QItemSelectionModel)

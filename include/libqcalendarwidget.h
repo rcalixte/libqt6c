@@ -40,7 +40,7 @@ int32_t q_calendarwidget_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback int32_t fn(QCalendarWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QCalendarWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_calendarwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -68,7 +68,7 @@ QSize* q_calendarwidget_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_calendarwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#sizeHint)
@@ -88,7 +88,7 @@ QSize* q_calendarwidget_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_calendarwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#minimumSizeHint)
@@ -293,7 +293,7 @@ bool q_calendarwidget_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn(QCalendarWidget*, QEvent*)
+/// @param callback bool func(QCalendarWidget* self, QEvent* event)
 void q_calendarwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#event)
@@ -316,7 +316,7 @@ bool q_calendarwidget_event_filter(void* self, void* watched, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn(QCalendarWidget*, QObject*, QEvent*)
+/// @param callback bool func(QCalendarWidget* self, QObject* watched, QEvent* event)
 void q_calendarwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#eventFilter)
@@ -339,7 +339,7 @@ void q_calendarwidget_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMouseEvent*)
+/// @param callback void func(QCalendarWidget* self, QMouseEvent* event)
 void q_calendarwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#mousePressEvent)
@@ -361,7 +361,7 @@ void q_calendarwidget_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QResizeEvent*)
+/// @param callback void func(QCalendarWidget* self, QResizeEvent* event)
 void q_calendarwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#resizeEvent)
@@ -383,7 +383,7 @@ void q_calendarwidget_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QKeyEvent*)
+/// @param callback void func(QCalendarWidget* self, QKeyEvent* event)
 void q_calendarwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#keyPressEvent)
@@ -407,7 +407,7 @@ void q_calendarwidget_paint_cell(void* self, void* painter, void* rect, void* da
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QPainter*, QRect*, QDate*)
+/// @param callback void func(QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date)
 void q_calendarwidget_on_paint_cell(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#paintCell)
@@ -431,7 +431,7 @@ void q_calendarwidget_update_cell(void* self, void* date);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDate*)
+/// @param callback void func(QCalendarWidget* self, QDate* date)
 void q_calendarwidget_on_update_cell(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#updateCell)
@@ -452,7 +452,7 @@ void q_calendarwidget_update_cells(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_calendarwidget_on_update_cells(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#updateCells)
@@ -532,7 +532,7 @@ void q_calendarwidget_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#selectionChanged)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*)
+/// @param callback void func(QCalendarWidget* self)
 void q_calendarwidget_on_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#clicked)
@@ -544,7 +544,7 @@ void q_calendarwidget_clicked(void* self, void* date);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#clicked)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDate*)
+/// @param callback void func(QCalendarWidget* self, QDate* date)
 void q_calendarwidget_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#activated)
@@ -556,7 +556,7 @@ void q_calendarwidget_activated(void* self, void* date);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#activated)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDate*)
+/// @param callback void func(QCalendarWidget* self, QDate* date)
 void q_calendarwidget_on_activated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#currentPageChanged)
@@ -569,7 +569,7 @@ void q_calendarwidget_current_page_changed(void* self, int year, int month);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#currentPageChanged)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, int, int)
+/// @param callback void func(QCalendarWidget* self, int year, int month)
 void q_calendarwidget_on_current_page_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -2526,7 +2526,7 @@ void q_calendarwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, const char*)
+/// @param callback void func(QCalendarWidget* self, const char* title)
 void q_calendarwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2542,7 +2542,7 @@ void q_calendarwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QIcon*)
+/// @param callback void func(QCalendarWidget* self, QIcon* icon)
 void q_calendarwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2558,7 +2558,7 @@ void q_calendarwidget_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, const char*)
+/// @param callback void func(QCalendarWidget* self, const char* iconText)
 void q_calendarwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2574,7 +2574,7 @@ void q_calendarwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QPoint*)
+/// @param callback void func(QCalendarWidget* self, QPoint* pos)
 void q_calendarwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2951,7 +2951,7 @@ void q_calendarwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*)
+/// @param callback void func(QCalendarWidget* self)
 void q_calendarwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3029,7 +3029,7 @@ void q_calendarwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QObject*)
+/// @param callback void func(QCalendarWidget* self, QObject* param1)
 void q_calendarwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3148,7 +3148,7 @@ int32_t q_calendarwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_calendarwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3178,7 +3178,7 @@ void q_calendarwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, bool)
+/// @param callback void func(QCalendarWidget* self, bool visible)
 void q_calendarwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3208,7 +3208,7 @@ int32_t q_calendarwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback int32_t fn(QCalendarWidget*, int)
+/// @param callback int32_t func(QCalendarWidget* self, int param1)
 void q_calendarwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3236,7 +3236,7 @@ bool q_calendarwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_calendarwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3264,7 +3264,7 @@ QPaintEngine* q_calendarwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_calendarwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3294,7 +3294,7 @@ void q_calendarwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMouseEvent*)
+/// @param callback void func(QCalendarWidget* self, QMouseEvent* event)
 void q_calendarwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3324,7 +3324,7 @@ void q_calendarwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMouseEvent*)
+/// @param callback void func(QCalendarWidget* self, QMouseEvent* event)
 void q_calendarwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3354,7 +3354,7 @@ void q_calendarwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMouseEvent*)
+/// @param callback void func(QCalendarWidget* self, QMouseEvent* event)
 void q_calendarwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3384,7 +3384,7 @@ void q_calendarwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QWheelEvent*)
+/// @param callback void func(QCalendarWidget* self, QWheelEvent* event)
 void q_calendarwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3414,7 +3414,7 @@ void q_calendarwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QKeyEvent*)
+/// @param callback void func(QCalendarWidget* self, QKeyEvent* event)
 void q_calendarwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3444,7 +3444,7 @@ void q_calendarwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QFocusEvent*)
+/// @param callback void func(QCalendarWidget* self, QFocusEvent* event)
 void q_calendarwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3474,7 +3474,7 @@ void q_calendarwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QFocusEvent*)
+/// @param callback void func(QCalendarWidget* self, QFocusEvent* event)
 void q_calendarwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3504,7 +3504,7 @@ void q_calendarwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QEnterEvent*)
+/// @param callback void func(QCalendarWidget* self, QEnterEvent* event)
 void q_calendarwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3534,7 +3534,7 @@ void q_calendarwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QEvent*)
+/// @param callback void func(QCalendarWidget* self, QEvent* event)
 void q_calendarwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3564,7 +3564,7 @@ void q_calendarwidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QPaintEvent*)
+/// @param callback void func(QCalendarWidget* self, QPaintEvent* event)
 void q_calendarwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3594,7 +3594,7 @@ void q_calendarwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMoveEvent*)
+/// @param callback void func(QCalendarWidget* self, QMoveEvent* event)
 void q_calendarwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3624,7 +3624,7 @@ void q_calendarwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QCloseEvent*)
+/// @param callback void func(QCalendarWidget* self, QCloseEvent* event)
 void q_calendarwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3654,7 +3654,7 @@ void q_calendarwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QContextMenuEvent*)
+/// @param callback void func(QCalendarWidget* self, QContextMenuEvent* event)
 void q_calendarwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3684,7 +3684,7 @@ void q_calendarwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QTabletEvent*)
+/// @param callback void func(QCalendarWidget* self, QTabletEvent* event)
 void q_calendarwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3714,7 +3714,7 @@ void q_calendarwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QActionEvent*)
+/// @param callback void func(QCalendarWidget* self, QActionEvent* event)
 void q_calendarwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3744,7 +3744,7 @@ void q_calendarwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDragEnterEvent*)
+/// @param callback void func(QCalendarWidget* self, QDragEnterEvent* event)
 void q_calendarwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3774,7 +3774,7 @@ void q_calendarwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDragMoveEvent*)
+/// @param callback void func(QCalendarWidget* self, QDragMoveEvent* event)
 void q_calendarwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3804,7 +3804,7 @@ void q_calendarwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDragLeaveEvent*)
+/// @param callback void func(QCalendarWidget* self, QDragLeaveEvent* event)
 void q_calendarwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3834,7 +3834,7 @@ void q_calendarwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QDropEvent*)
+/// @param callback void func(QCalendarWidget* self, QDropEvent* event)
 void q_calendarwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3864,7 +3864,7 @@ void q_calendarwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QShowEvent*)
+/// @param callback void func(QCalendarWidget* self, QShowEvent* event)
 void q_calendarwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3894,7 +3894,7 @@ void q_calendarwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QHideEvent*)
+/// @param callback void func(QCalendarWidget* self, QHideEvent* event)
 void q_calendarwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3928,7 +3928,7 @@ bool q_calendarwidget_qbase_native_event(void* self, const char* eventType, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn(QCalendarWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QCalendarWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_calendarwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3958,7 +3958,7 @@ void q_calendarwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QEvent*)
+/// @param callback void func(QCalendarWidget* self, QEvent* param1)
 void q_calendarwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3988,7 +3988,7 @@ int32_t q_calendarwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback int32_t fn(QCalendarWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QCalendarWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_calendarwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4018,7 +4018,7 @@ void q_calendarwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QPainter*)
+/// @param callback void func(QCalendarWidget* self, QPainter* painter)
 void q_calendarwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4048,7 +4048,7 @@ QPaintDevice* q_calendarwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QPaintDevice* fn(QCalendarWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QCalendarWidget* self, QPoint* offset)
 void q_calendarwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4076,7 +4076,7 @@ QPainter* q_calendarwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_calendarwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4106,7 +4106,7 @@ void q_calendarwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QInputMethodEvent*)
+/// @param callback void func(QCalendarWidget* self, QInputMethodEvent* param1)
 void q_calendarwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4136,7 +4136,7 @@ QVariant* q_calendarwidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QVariant* fn(QCalendarWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QCalendarWidget* self, enum Qt__InputMethodQuery param1)
 void q_calendarwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4166,7 +4166,7 @@ bool q_calendarwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn(QCalendarWidget*, bool)
+/// @param callback bool func(QCalendarWidget* self, bool next)
 void q_calendarwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4196,7 +4196,7 @@ void q_calendarwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QTimerEvent*)
+/// @param callback void func(QCalendarWidget* self, QTimerEvent* event)
 void q_calendarwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4226,7 +4226,7 @@ void q_calendarwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QChildEvent*)
+/// @param callback void func(QCalendarWidget* self, QChildEvent* event)
 void q_calendarwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4256,7 +4256,7 @@ void q_calendarwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QEvent*)
+/// @param callback void func(QCalendarWidget* self, QEvent* event)
 void q_calendarwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4286,7 +4286,7 @@ void q_calendarwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMetaMethod*)
+/// @param callback void func(QCalendarWidget* self, QMetaMethod* signal)
 void q_calendarwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4316,7 +4316,7 @@ void q_calendarwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, QMetaMethod*)
+/// @param callback void func(QCalendarWidget* self, QMetaMethod* signal)
 void q_calendarwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4344,7 +4344,7 @@ void q_calendarwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_calendarwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4372,7 +4372,7 @@ void q_calendarwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_calendarwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4400,7 +4400,7 @@ void q_calendarwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_calendarwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4428,7 +4428,7 @@ bool q_calendarwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_calendarwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4456,7 +4456,7 @@ bool q_calendarwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_calendarwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4484,7 +4484,7 @@ QObject* q_calendarwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_calendarwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4512,7 +4512,7 @@ int32_t q_calendarwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_calendarwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4542,7 +4542,7 @@ int32_t q_calendarwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback int32_t fn(QCalendarWidget*, const char*)
+/// @param callback int32_t func(QCalendarWidget* self, const char* signal)
 void q_calendarwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4572,7 +4572,7 @@ bool q_calendarwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback bool fn(QCalendarWidget*, QMetaMethod*)
+/// @param callback bool func(QCalendarWidget* self, QMetaMethod* signal)
 void q_calendarwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4604,7 +4604,7 @@ double q_calendarwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCalendarWidget*
-/// @param callback double fn(QCalendarWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QCalendarWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_calendarwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4614,7 +4614,7 @@ void q_calendarwidget_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QCalendarWidget*
-/// @param callback void fn(QCalendarWidget*, const char*)
+/// @param callback void func(QCalendarWidget* self, const char* objectName)
 void q_calendarwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#dtor.QCalendarWidget)

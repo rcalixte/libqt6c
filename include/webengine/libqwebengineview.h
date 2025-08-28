@@ -62,7 +62,7 @@ int32_t q_webengineview_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback int32_t fn(QWebEngineView*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWebEngineView* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -198,7 +198,7 @@ QSize* q_webengineview_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_webengineview_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#sizeHint)
@@ -263,7 +263,7 @@ void q_webengineview_load_started(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#loadStarted)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*)
+/// @param callback void func(QWebEngineView* self)
 void q_webengineview_on_load_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#loadProgress)
@@ -275,7 +275,7 @@ void q_webengineview_load_progress(void* self, int progress);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#loadProgress)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, int)
+/// @param callback void func(QWebEngineView* self, int progress)
 void q_webengineview_on_load_progress(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#loadFinished)
@@ -287,7 +287,7 @@ void q_webengineview_load_finished(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#loadFinished)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, bool)
+/// @param callback void func(QWebEngineView* self, bool param1)
 void q_webengineview_on_load_finished(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#titleChanged)
@@ -299,7 +299,7 @@ void q_webengineview_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#titleChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, const char*)
+/// @param callback void func(QWebEngineView* self, const char* title)
 void q_webengineview_on_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#selectionChanged)
@@ -310,7 +310,7 @@ void q_webengineview_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#selectionChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*)
+/// @param callback void func(QWebEngineView* self)
 void q_webengineview_on_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#urlChanged)
@@ -322,7 +322,7 @@ void q_webengineview_url_changed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#urlChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QUrl*)
+/// @param callback void func(QWebEngineView* self, QUrl* param1)
 void q_webengineview_on_url_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#iconUrlChanged)
@@ -334,7 +334,7 @@ void q_webengineview_icon_url_changed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#iconUrlChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QUrl*)
+/// @param callback void func(QWebEngineView* self, QUrl* param1)
 void q_webengineview_on_icon_url_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#iconChanged)
@@ -346,7 +346,7 @@ void q_webengineview_icon_changed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#iconChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QIcon*)
+/// @param callback void func(QWebEngineView* self, QIcon* param1)
 void q_webengineview_on_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#renderProcessTerminated)
@@ -359,7 +359,7 @@ void q_webengineview_render_process_terminated(void* self, int32_t terminationSt
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#renderProcessTerminated)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, enum QWebEnginePage__RenderProcessTerminationStatus, int)
+/// @param callback void func(QWebEngineView* self, enum QWebEnginePage__RenderProcessTerminationStatus terminationStatus, int exitCode)
 void q_webengineview_on_render_process_terminated(void* self, void (*callback)(void*, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#pdfPrintingFinished)
@@ -372,7 +372,7 @@ void q_webengineview_pdf_printing_finished(void* self, const char* filePath, boo
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#pdfPrintingFinished)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, const char*, bool)
+/// @param callback void func(QWebEngineView* self, const char* filePath, bool success)
 void q_webengineview_on_pdf_printing_finished(void* self, void (*callback)(void*, const char*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printRequested)
@@ -383,7 +383,7 @@ void q_webengineview_print_requested(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printRequested)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*)
+/// @param callback void func(QWebEngineView* self)
 void q_webengineview_on_print_requested(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printRequestedByFrame)
@@ -395,7 +395,7 @@ void q_webengineview_print_requested_by_frame(void* self, void* frame);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printRequestedByFrame)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QWebEngineFrame*)
+/// @param callback void func(QWebEngineView* self, QWebEngineFrame* frame)
 void q_webengineview_on_print_requested_by_frame(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printFinished)
@@ -407,7 +407,7 @@ void q_webengineview_print_finished(void* self, bool success);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printFinished)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, bool)
+/// @param callback void func(QWebEngineView* self, bool success)
 void q_webengineview_on_print_finished(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#createWindow)
@@ -421,7 +421,7 @@ QWebEngineView* q_webengineview_create_window(void* self, int32_t typeVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback QWebEngineView* fn(QWebEngineView*, enum QWebEnginePage__WebWindowType)
+/// @param callback QWebEngineView* func(QWebEngineView* self, enum QWebEnginePage__WebWindowType typeVal)
 void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#createWindow)
@@ -443,7 +443,7 @@ void q_webengineview_context_menu_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QContextMenuEvent*)
+/// @param callback void func(QWebEngineView* self, QContextMenuEvent* param1)
 void q_webengineview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#contextMenuEvent)
@@ -465,7 +465,7 @@ bool q_webengineview_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn(QWebEngineView*, QEvent*)
+/// @param callback bool func(QWebEngineView* self, QEvent* param1)
 void q_webengineview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#event)
@@ -487,7 +487,7 @@ void q_webengineview_show_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QShowEvent*)
+/// @param callback void func(QWebEngineView* self, QShowEvent* param1)
 void q_webengineview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#showEvent)
@@ -509,7 +509,7 @@ void q_webengineview_hide_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QHideEvent*)
+/// @param callback void func(QWebEngineView* self, QHideEvent* param1)
 void q_webengineview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#hideEvent)
@@ -531,7 +531,7 @@ void q_webengineview_close_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QCloseEvent*)
+/// @param callback void func(QWebEngineView* self, QCloseEvent* param1)
 void q_webengineview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#closeEvent)
@@ -553,7 +553,7 @@ void q_webengineview_drag_enter_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QDragEnterEvent*)
+/// @param callback void func(QWebEngineView* self, QDragEnterEvent* e)
 void q_webengineview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#dragEnterEvent)
@@ -575,7 +575,7 @@ void q_webengineview_drag_leave_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QDragLeaveEvent*)
+/// @param callback void func(QWebEngineView* self, QDragLeaveEvent* e)
 void q_webengineview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#dragLeaveEvent)
@@ -597,7 +597,7 @@ void q_webengineview_drag_move_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QDragMoveEvent*)
+/// @param callback void func(QWebEngineView* self, QDragMoveEvent* e)
 void q_webengineview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#dragMoveEvent)
@@ -619,7 +619,7 @@ void q_webengineview_drop_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QDropEvent*)
+/// @param callback void func(QWebEngineView* self, QDropEvent* e)
 void q_webengineview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#dropEvent)
@@ -2628,7 +2628,7 @@ void q_webengineview_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, const char*)
+/// @param callback void func(QWebEngineView* self, const char* title)
 void q_webengineview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2644,7 +2644,7 @@ void q_webengineview_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QIcon*)
+/// @param callback void func(QWebEngineView* self, QIcon* icon)
 void q_webengineview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2660,7 +2660,7 @@ void q_webengineview_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, const char*)
+/// @param callback void func(QWebEngineView* self, const char* iconText)
 void q_webengineview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2676,7 +2676,7 @@ void q_webengineview_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QPoint*)
+/// @param callback void func(QWebEngineView* self, QPoint* pos)
 void q_webengineview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3053,7 +3053,7 @@ void q_webengineview_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*)
+/// @param callback void func(QWebEngineView* self)
 void q_webengineview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3131,7 +3131,7 @@ void q_webengineview_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QObject*)
+/// @param callback void func(QWebEngineView* self, QObject* param1)
 void q_webengineview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3250,7 +3250,7 @@ int32_t q_webengineview_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_webengineview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3280,7 +3280,7 @@ void q_webengineview_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, bool)
+/// @param callback void func(QWebEngineView* self, bool visible)
 void q_webengineview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3308,7 +3308,7 @@ QSize* q_webengineview_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_webengineview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3338,7 +3338,7 @@ int32_t q_webengineview_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback int32_t fn(QWebEngineView*, int)
+/// @param callback int32_t func(QWebEngineView* self, int param1)
 void q_webengineview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3366,7 +3366,7 @@ bool q_webengineview_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_webengineview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3394,7 +3394,7 @@ QPaintEngine* q_webengineview_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_webengineview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3424,7 +3424,7 @@ void q_webengineview_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMouseEvent*)
+/// @param callback void func(QWebEngineView* self, QMouseEvent* event)
 void q_webengineview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3454,7 +3454,7 @@ void q_webengineview_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMouseEvent*)
+/// @param callback void func(QWebEngineView* self, QMouseEvent* event)
 void q_webengineview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3484,7 +3484,7 @@ void q_webengineview_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMouseEvent*)
+/// @param callback void func(QWebEngineView* self, QMouseEvent* event)
 void q_webengineview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3514,7 +3514,7 @@ void q_webengineview_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMouseEvent*)
+/// @param callback void func(QWebEngineView* self, QMouseEvent* event)
 void q_webengineview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3544,7 +3544,7 @@ void q_webengineview_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QWheelEvent*)
+/// @param callback void func(QWebEngineView* self, QWheelEvent* event)
 void q_webengineview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3574,7 +3574,7 @@ void q_webengineview_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QKeyEvent*)
+/// @param callback void func(QWebEngineView* self, QKeyEvent* event)
 void q_webengineview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3604,7 +3604,7 @@ void q_webengineview_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QKeyEvent*)
+/// @param callback void func(QWebEngineView* self, QKeyEvent* event)
 void q_webengineview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3634,7 +3634,7 @@ void q_webengineview_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QFocusEvent*)
+/// @param callback void func(QWebEngineView* self, QFocusEvent* event)
 void q_webengineview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3664,7 +3664,7 @@ void q_webengineview_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QFocusEvent*)
+/// @param callback void func(QWebEngineView* self, QFocusEvent* event)
 void q_webengineview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3694,7 +3694,7 @@ void q_webengineview_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QEnterEvent*)
+/// @param callback void func(QWebEngineView* self, QEnterEvent* event)
 void q_webengineview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3724,7 +3724,7 @@ void q_webengineview_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QEvent*)
+/// @param callback void func(QWebEngineView* self, QEvent* event)
 void q_webengineview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3754,7 +3754,7 @@ void q_webengineview_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QPaintEvent*)
+/// @param callback void func(QWebEngineView* self, QPaintEvent* event)
 void q_webengineview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3784,7 +3784,7 @@ void q_webengineview_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMoveEvent*)
+/// @param callback void func(QWebEngineView* self, QMoveEvent* event)
 void q_webengineview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3814,7 +3814,7 @@ void q_webengineview_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QResizeEvent*)
+/// @param callback void func(QWebEngineView* self, QResizeEvent* event)
 void q_webengineview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3844,7 +3844,7 @@ void q_webengineview_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QTabletEvent*)
+/// @param callback void func(QWebEngineView* self, QTabletEvent* event)
 void q_webengineview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3874,7 +3874,7 @@ void q_webengineview_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QActionEvent*)
+/// @param callback void func(QWebEngineView* self, QActionEvent* event)
 void q_webengineview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3908,7 +3908,7 @@ bool q_webengineview_qbase_native_event(void* self, const char* eventType, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn(QWebEngineView*, const char*, void*, intptr_t*)
+/// @param callback bool func(QWebEngineView* self, const char* eventType, void* message, intptr_t* result)
 void q_webengineview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3938,7 +3938,7 @@ void q_webengineview_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QEvent*)
+/// @param callback void func(QWebEngineView* self, QEvent* param1)
 void q_webengineview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3968,7 +3968,7 @@ int32_t q_webengineview_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback int32_t fn(QWebEngineView*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QWebEngineView* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_webengineview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3998,7 +3998,7 @@ void q_webengineview_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QPainter*)
+/// @param callback void func(QWebEngineView* self, QPainter* painter)
 void q_webengineview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4028,7 +4028,7 @@ QPaintDevice* q_webengineview_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback QPaintDevice* fn(QWebEngineView*, QPoint*)
+/// @param callback QPaintDevice* func(QWebEngineView* self, QPoint* offset)
 void q_webengineview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4056,7 +4056,7 @@ QPainter* q_webengineview_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_webengineview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4086,7 +4086,7 @@ void q_webengineview_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QInputMethodEvent*)
+/// @param callback void func(QWebEngineView* self, QInputMethodEvent* param1)
 void q_webengineview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4116,7 +4116,7 @@ QVariant* q_webengineview_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback QVariant* fn(QWebEngineView*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QWebEngineView* self, enum Qt__InputMethodQuery param1)
 void q_webengineview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4146,7 +4146,7 @@ bool q_webengineview_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn(QWebEngineView*, bool)
+/// @param callback bool func(QWebEngineView* self, bool next)
 void q_webengineview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4178,7 +4178,7 @@ bool q_webengineview_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn(QWebEngineView*, QObject*, QEvent*)
+/// @param callback bool func(QWebEngineView* self, QObject* watched, QEvent* event)
 void q_webengineview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4208,7 +4208,7 @@ void q_webengineview_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QTimerEvent*)
+/// @param callback void func(QWebEngineView* self, QTimerEvent* event)
 void q_webengineview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4238,7 +4238,7 @@ void q_webengineview_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QChildEvent*)
+/// @param callback void func(QWebEngineView* self, QChildEvent* event)
 void q_webengineview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4268,7 +4268,7 @@ void q_webengineview_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QEvent*)
+/// @param callback void func(QWebEngineView* self, QEvent* event)
 void q_webengineview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4298,7 +4298,7 @@ void q_webengineview_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMetaMethod*)
+/// @param callback void func(QWebEngineView* self, QMetaMethod* signal)
 void q_webengineview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4328,7 +4328,7 @@ void q_webengineview_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, QMetaMethod*)
+/// @param callback void func(QWebEngineView* self, QMetaMethod* signal)
 void q_webengineview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4356,7 +4356,7 @@ void q_webengineview_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_webengineview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4384,7 +4384,7 @@ void q_webengineview_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_webengineview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4412,7 +4412,7 @@ void q_webengineview_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_webengineview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4440,7 +4440,7 @@ bool q_webengineview_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_webengineview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4468,7 +4468,7 @@ bool q_webengineview_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_webengineview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4496,7 +4496,7 @@ QObject* q_webengineview_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_webengineview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4524,7 +4524,7 @@ int32_t q_webengineview_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_webengineview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4554,7 +4554,7 @@ int32_t q_webengineview_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback int32_t fn(QWebEngineView*, const char*)
+/// @param callback int32_t func(QWebEngineView* self, const char* signal)
 void q_webengineview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4584,7 +4584,7 @@ bool q_webengineview_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback bool fn(QWebEngineView*, QMetaMethod*)
+/// @param callback bool func(QWebEngineView* self, QMetaMethod* signal)
 void q_webengineview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4616,7 +4616,7 @@ double q_webengineview_qbase_get_decoded_metric_f(void* self, int32_t metricA, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineView*
-/// @param callback double fn(QWebEngineView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QWebEngineView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_webengineview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4626,7 +4626,7 @@ void q_webengineview_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineView*
-/// @param callback void fn(QWebEngineView*, const char*)
+/// @param callback void func(QWebEngineView* self, const char* objectName)
 void q_webengineview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#dtor.QWebEngineView)

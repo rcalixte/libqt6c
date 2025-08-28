@@ -45,7 +45,7 @@ int32_t q_proxystyle_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback int32_t fn(QProxyStyle*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QProxyStyle* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -88,7 +88,7 @@ void q_proxystyle_draw_primitive(void* self, int32_t element, void* option, void
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, enum QStyle__PrimitiveElement, QStyleOption*, QPainter*, QWidget*)
+/// @param callback void func(QProxyStyle* self, enum QStyle__PrimitiveElement element, QStyleOption* option, QPainter* painter, QWidget* widget)
 void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
@@ -116,7 +116,7 @@ void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, enum QStyle__ControlElement, QStyleOption*, QPainter*, QWidget*)
+/// @param callback void func(QProxyStyle* self, enum QStyle__ControlElement element, QStyleOption* option, QPainter* painter, QWidget* widget)
 void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
@@ -144,7 +144,7 @@ void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPainter*, QWidget*)
+/// @param callback void func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget)
 void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
@@ -175,7 +175,7 @@ void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flag
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QPainter*, QRect*, int, QPalette*, bool, const char*, enum QPalette__ColorRole)
+/// @param callback void func(QProxyStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole)
 void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
@@ -206,7 +206,7 @@ void q_proxystyle_draw_item_pixmap(void* self, void* painter, void* rect, int al
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QPainter*, QRect*, int, QPixmap*)
+/// @param callback void func(QProxyStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap)
 void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
@@ -234,7 +234,7 @@ QSize* q_proxystyle_size_from_contents(void* self, int64_t typeVal, void* option
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QSize* fn(QProxyStyle*, enum QStyle__ContentsType, QStyleOption*, QSize*, QWidget*)
+/// @param callback QSize* func(QProxyStyle* self, enum QStyle__ContentsType typeVal, QStyleOption* option, QSize* size, QWidget* widget)
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
@@ -261,7 +261,7 @@ QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QRect* fn(QProxyStyle*, enum QStyle__SubElement, QStyleOption*, QWidget*)
+/// @param callback QRect* func(QProxyStyle* self, enum QStyle__SubElement element, QStyleOption* option, QWidget* widget)
 void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
@@ -288,7 +288,7 @@ QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QRect* fn(QProxyStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, enum QStyle__SubControl, QWidget*)
+/// @param callback QRect* func(QProxyStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
 void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
@@ -317,7 +317,7 @@ QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, boo
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QRect* fn(QProxyStyle*, QFontMetrics*, QRect*, int, bool, const char*)
+/// @param callback QRect* func(QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
 void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
@@ -345,7 +345,7 @@ QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixma
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QRect* fn(QProxyStyle*, QRect*, int, QPixmap*)
+/// @param callback QRect* func(QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap)
 void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
@@ -374,7 +374,7 @@ int64_t q_proxystyle_hit_test_complex_control(void* self, int64_t control, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback int64_t fn(QProxyStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPoint*, QWidget*)
+/// @param callback int64_t func(QProxyStyle* self, enum QStyle__ComplexControl control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget)
 void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
@@ -404,7 +404,7 @@ int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* wi
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback int32_t fn(QProxyStyle*, enum QStyle__StyleHint, QStyleOption*, QWidget*, QStyleHintReturn*)
+/// @param callback int32_t func(QProxyStyle* self, enum QStyle__StyleHint hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData)
 void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
@@ -431,7 +431,7 @@ int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback int32_t fn(QProxyStyle*, enum QStyle__PixelMetric, QStyleOption*, QWidget*)
+/// @param callback int32_t func(QProxyStyle* self, enum QStyle__PixelMetric metric, QStyleOption* option, QWidget* widget)
 void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
@@ -459,7 +459,7 @@ int32_t q_proxystyle_layout_spacing(void* self, int32_t control1, int32_t contro
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback int32_t fn(QProxyStyle*, enum QSizePolicy__ControlType, enum QSizePolicy__ControlType, enum Qt__Orientation, QStyleOption*, QWidget*)
+/// @param callback int32_t func(QProxyStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget)
 void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
@@ -487,7 +487,7 @@ QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QIcon* fn(QProxyStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*)
+/// @param callback QIcon* func(QProxyStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
 void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
@@ -513,7 +513,7 @@ QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QPixmap* fn(QProxyStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*)
+/// @param callback QPixmap* func(QProxyStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
 void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
@@ -539,7 +539,7 @@ QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QPixmap* fn(QProxyStyle*, enum QIcon__Mode, QPixmap*, QStyleOption*)
+/// @param callback QPixmap* func(QProxyStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
 void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
@@ -562,7 +562,7 @@ QPalette* q_proxystyle_standard_palette(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QPalette* fn()
+/// @param callback QPalette* func()
 void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
@@ -583,7 +583,7 @@ void q_proxystyle_polish(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QWidget*)
+/// @param callback void func(QProxyStyle* self, QWidget* widget)
 void q_proxystyle_on_polish(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -605,7 +605,7 @@ void q_proxystyle_polish2(void* self, void* pal);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QPalette*)
+/// @param callback void func(QProxyStyle* self, QPalette* pal)
 void q_proxystyle_on_polish2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -627,7 +627,7 @@ void q_proxystyle_polish3(void* self, void* app);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QApplication*)
+/// @param callback void func(QProxyStyle* self, QApplication* app)
 void q_proxystyle_on_polish3(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
@@ -649,7 +649,7 @@ void q_proxystyle_unpolish(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QWidget*)
+/// @param callback void func(QProxyStyle* self, QWidget* widget)
 void q_proxystyle_on_unpolish(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
@@ -671,7 +671,7 @@ void q_proxystyle_unpolish2(void* self, void* app);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QApplication*)
+/// @param callback void func(QProxyStyle* self, QApplication* app)
 void q_proxystyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
@@ -693,7 +693,7 @@ bool q_proxystyle_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback bool fn(QProxyStyle*, QEvent*)
+/// @param callback bool func(QProxyStyle* self, QEvent* e)
 void q_proxystyle_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#event)
@@ -1076,7 +1076,7 @@ void q_proxystyle_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*)
+/// @param callback void func(QProxyStyle* self)
 void q_proxystyle_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1154,7 +1154,7 @@ void q_proxystyle_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QObject*)
+/// @param callback void func(QProxyStyle* self, QObject* param1)
 void q_proxystyle_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1186,7 +1186,7 @@ bool q_proxystyle_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback bool fn(QProxyStyle*, QObject*, QEvent*)
+/// @param callback bool func(QProxyStyle* self, QObject* watched, QEvent* event)
 void q_proxystyle_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1216,7 +1216,7 @@ void q_proxystyle_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QTimerEvent*)
+/// @param callback void func(QProxyStyle* self, QTimerEvent* event)
 void q_proxystyle_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1246,7 +1246,7 @@ void q_proxystyle_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QChildEvent*)
+/// @param callback void func(QProxyStyle* self, QChildEvent* event)
 void q_proxystyle_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1276,7 +1276,7 @@ void q_proxystyle_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QEvent*)
+/// @param callback void func(QProxyStyle* self, QEvent* event)
 void q_proxystyle_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1306,7 +1306,7 @@ void q_proxystyle_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QMetaMethod*)
+/// @param callback void func(QProxyStyle* self, QMetaMethod* signal)
 void q_proxystyle_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1336,7 +1336,7 @@ void q_proxystyle_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, QMetaMethod*)
+/// @param callback void func(QProxyStyle* self, QMetaMethod* signal)
 void q_proxystyle_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1364,7 +1364,7 @@ QObject* q_proxystyle_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_proxystyle_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1392,7 +1392,7 @@ int32_t q_proxystyle_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_proxystyle_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1422,7 +1422,7 @@ int32_t q_proxystyle_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback int32_t fn(QProxyStyle*, const char*)
+/// @param callback int32_t func(QProxyStyle* self, const char* signal)
 void q_proxystyle_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1452,7 +1452,7 @@ bool q_proxystyle_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QProxyStyle*
-/// @param callback bool fn(QProxyStyle*, QMetaMethod*)
+/// @param callback bool func(QProxyStyle* self, QMetaMethod* signal)
 void q_proxystyle_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1462,7 +1462,7 @@ void q_proxystyle_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QProxyStyle*
-/// @param callback void fn(QProxyStyle*, const char*)
+/// @param callback void func(QProxyStyle* self, const char* objectName)
 void q_proxystyle_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#dtor.QProxyStyle)

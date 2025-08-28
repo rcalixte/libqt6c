@@ -40,7 +40,7 @@ int32_t k_dirwatch_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self KDirWatch*
-/// @param callback int32_t fn(KDirWatch*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDirWatch* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_dirwatch_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -147,7 +147,7 @@ bool k_dirwatch_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDirWatch*
-/// @param callback bool fn(KDirWatch*, QEvent*)
+/// @param callback bool func(KDirWatch* self, QEvent* event)
 void k_dirwatch_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#event)
@@ -185,7 +185,7 @@ void k_dirwatch_dirty(void* self, const char* path);
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#dirty)
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, const char*)
+/// @param callback void func(KDirWatch* self, const char* path)
 void k_dirwatch_on_dirty(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#created)
@@ -197,7 +197,7 @@ void k_dirwatch_created(void* self, const char* path);
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#created)
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, const char*)
+/// @param callback void func(KDirWatch* self, const char* path)
 void k_dirwatch_on_created(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#deleted)
@@ -209,7 +209,7 @@ void k_dirwatch_deleted(void* self, const char* path);
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#deleted)
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, const char*)
+/// @param callback void func(KDirWatch* self, const char* path)
 void k_dirwatch_on_deleted(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -475,7 +475,7 @@ void k_dirwatch_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*)
+/// @param callback void func(KDirWatch* self)
 void k_dirwatch_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -553,7 +553,7 @@ void k_dirwatch_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, QObject*)
+/// @param callback void func(KDirWatch* self, QObject* param1)
 void k_dirwatch_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -585,7 +585,7 @@ bool k_dirwatch_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback bool fn(KDirWatch*, QObject*, QEvent*)
+/// @param callback bool func(KDirWatch* self, QObject* watched, QEvent* event)
 void k_dirwatch_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -615,7 +615,7 @@ void k_dirwatch_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, QTimerEvent*)
+/// @param callback void func(KDirWatch* self, QTimerEvent* event)
 void k_dirwatch_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -645,7 +645,7 @@ void k_dirwatch_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, QChildEvent*)
+/// @param callback void func(KDirWatch* self, QChildEvent* event)
 void k_dirwatch_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -675,7 +675,7 @@ void k_dirwatch_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, QEvent*)
+/// @param callback void func(KDirWatch* self, QEvent* event)
 void k_dirwatch_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -705,7 +705,7 @@ void k_dirwatch_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, QMetaMethod*)
+/// @param callback void func(KDirWatch* self, QMetaMethod* signal)
 void k_dirwatch_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -735,7 +735,7 @@ void k_dirwatch_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, QMetaMethod*)
+/// @param callback void func(KDirWatch* self, QMetaMethod* signal)
 void k_dirwatch_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -763,7 +763,7 @@ QObject* k_dirwatch_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_dirwatch_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -791,7 +791,7 @@ int32_t k_dirwatch_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_dirwatch_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -821,7 +821,7 @@ int32_t k_dirwatch_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback int32_t fn(KDirWatch*, const char*)
+/// @param callback int32_t func(KDirWatch* self, const char* signal)
 void k_dirwatch_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -851,7 +851,7 @@ bool k_dirwatch_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDirWatch*
-/// @param callback bool fn(KDirWatch*, QMetaMethod*)
+/// @param callback bool func(KDirWatch* self, QMetaMethod* signal)
 void k_dirwatch_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -861,7 +861,7 @@ void k_dirwatch_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDirWatch*
-/// @param callback void fn(KDirWatch*, const char*)
+/// @param callback void func(KDirWatch* self, const char* objectName)
 void k_dirwatch_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#dtor.KDirWatch)

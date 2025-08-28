@@ -40,7 +40,7 @@ int32_t q_genericplugin_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QGenericPlugin*
-/// @param callback int32_t fn(QGenericPlugin*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QGenericPlugin* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_genericplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ QObject* q_genericplugin_create(void* self, const char* name, const char* spec);
 /// Allows for overriding the related default method
 ///
 /// @param self QGenericPlugin*
-/// @param callback QObject* fn(QGenericPlugin*, const char*, const char*)
+/// @param callback QObject* func(QGenericPlugin* self, const char* name, const char* spec)
 void q_genericplugin_on_create(void* self, QObject* (*callback)(void*, const char*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgenericplugin.html#create)
@@ -325,7 +325,7 @@ void q_genericplugin_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*)
+/// @param callback void func(QGenericPlugin* self)
 void q_genericplugin_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -403,7 +403,7 @@ void q_genericplugin_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, QObject*)
+/// @param callback void func(QGenericPlugin* self, QObject* param1)
 void q_genericplugin_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -433,7 +433,7 @@ bool q_genericplugin_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback bool fn(QGenericPlugin*, QEvent*)
+/// @param callback bool func(QGenericPlugin* self, QEvent* event)
 void q_genericplugin_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -465,7 +465,7 @@ bool q_genericplugin_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback bool fn(QGenericPlugin*, QObject*, QEvent*)
+/// @param callback bool func(QGenericPlugin* self, QObject* watched, QEvent* event)
 void q_genericplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -495,7 +495,7 @@ void q_genericplugin_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, QTimerEvent*)
+/// @param callback void func(QGenericPlugin* self, QTimerEvent* event)
 void q_genericplugin_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -525,7 +525,7 @@ void q_genericplugin_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, QChildEvent*)
+/// @param callback void func(QGenericPlugin* self, QChildEvent* event)
 void q_genericplugin_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -555,7 +555,7 @@ void q_genericplugin_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, QEvent*)
+/// @param callback void func(QGenericPlugin* self, QEvent* event)
 void q_genericplugin_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -585,7 +585,7 @@ void q_genericplugin_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, QMetaMethod*)
+/// @param callback void func(QGenericPlugin* self, QMetaMethod* signal)
 void q_genericplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -615,7 +615,7 @@ void q_genericplugin_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, QMetaMethod*)
+/// @param callback void func(QGenericPlugin* self, QMetaMethod* signal)
 void q_genericplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -643,7 +643,7 @@ QObject* q_genericplugin_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_genericplugin_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -671,7 +671,7 @@ int32_t q_genericplugin_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_genericplugin_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -701,7 +701,7 @@ int32_t q_genericplugin_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback int32_t fn(QGenericPlugin*, const char*)
+/// @param callback int32_t func(QGenericPlugin* self, const char* signal)
 void q_genericplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -731,7 +731,7 @@ bool q_genericplugin_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGenericPlugin*
-/// @param callback bool fn(QGenericPlugin*, QMetaMethod*)
+/// @param callback bool func(QGenericPlugin* self, QMetaMethod* signal)
 void q_genericplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -741,7 +741,7 @@ void q_genericplugin_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGenericPlugin*
-/// @param callback void fn(QGenericPlugin*, const char*)
+/// @param callback void func(QGenericPlugin* self, const char* objectName)
 void q_genericplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgenericplugin.html#dtor.QGenericPlugin)

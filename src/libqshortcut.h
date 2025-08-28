@@ -96,7 +96,7 @@ int32_t q_shortcut_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QShortcut*
-/// @param callback int32_t fn(QShortcut*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QShortcut* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -203,7 +203,7 @@ void q_shortcut_activated(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#activated)
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*)
+/// @param callback void func(QShortcut* self)
 void q_shortcut_on_activated(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#activatedAmbiguously)
@@ -214,7 +214,7 @@ void q_shortcut_activated_ambiguously(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#activatedAmbiguously)
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*)
+/// @param callback void func(QShortcut* self)
 void q_shortcut_on_activated_ambiguously(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#event)
@@ -228,7 +228,7 @@ bool q_shortcut_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QShortcut*
-/// @param callback bool fn(QShortcut*, QEvent*)
+/// @param callback bool func(QShortcut* self, QEvent* e)
 void q_shortcut_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#event)
@@ -482,7 +482,7 @@ void q_shortcut_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*)
+/// @param callback void func(QShortcut* self)
 void q_shortcut_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -560,7 +560,7 @@ void q_shortcut_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, QObject*)
+/// @param callback void func(QShortcut* self, QObject* param1)
 void q_shortcut_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -592,7 +592,7 @@ bool q_shortcut_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback bool fn(QShortcut*, QObject*, QEvent*)
+/// @param callback bool func(QShortcut* self, QObject* watched, QEvent* event)
 void q_shortcut_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -622,7 +622,7 @@ void q_shortcut_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, QTimerEvent*)
+/// @param callback void func(QShortcut* self, QTimerEvent* event)
 void q_shortcut_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -652,7 +652,7 @@ void q_shortcut_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, QChildEvent*)
+/// @param callback void func(QShortcut* self, QChildEvent* event)
 void q_shortcut_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -682,7 +682,7 @@ void q_shortcut_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, QEvent*)
+/// @param callback void func(QShortcut* self, QEvent* event)
 void q_shortcut_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -712,7 +712,7 @@ void q_shortcut_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, QMetaMethod*)
+/// @param callback void func(QShortcut* self, QMetaMethod* signal)
 void q_shortcut_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -742,7 +742,7 @@ void q_shortcut_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, QMetaMethod*)
+/// @param callback void func(QShortcut* self, QMetaMethod* signal)
 void q_shortcut_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -770,7 +770,7 @@ QObject* q_shortcut_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_shortcut_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -798,7 +798,7 @@ int32_t q_shortcut_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_shortcut_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -828,7 +828,7 @@ int32_t q_shortcut_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback int32_t fn(QShortcut*, const char*)
+/// @param callback int32_t func(QShortcut* self, const char* signal)
 void q_shortcut_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -858,7 +858,7 @@ bool q_shortcut_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QShortcut*
-/// @param callback bool fn(QShortcut*, QMetaMethod*)
+/// @param callback bool func(QShortcut* self, QMetaMethod* signal)
 void q_shortcut_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -868,7 +868,7 @@ void q_shortcut_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QShortcut*
-/// @param callback void fn(QShortcut*, const char*)
+/// @param callback void func(QShortcut* self, const char* objectName)
 void q_shortcut_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#dtor.QShortcut)

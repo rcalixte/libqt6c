@@ -46,7 +46,7 @@ int32_t q_polarchart_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QPolarChart*
-/// @param callback int32_t fn(QPolarChart*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPolarChart* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_polarchart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -574,7 +574,7 @@ void q_polarchart_plot_area_changed(void* self, void* plotArea);
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotAreaChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QRectF*)
+/// @param callback void func(QPolarChart* self, QRectF* plotArea)
 void q_polarchart_on_plot_area_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QChart
@@ -1062,7 +1062,7 @@ void q_polarchart_geometry_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_geometry_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -1077,7 +1077,7 @@ void q_polarchart_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -1151,7 +1151,7 @@ void q_polarchart_parent_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_parent_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1166,7 +1166,7 @@ void q_polarchart_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1181,7 +1181,7 @@ void q_polarchart_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1196,7 +1196,7 @@ void q_polarchart_enabled_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_enabled_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1211,7 +1211,7 @@ void q_polarchart_x_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_x_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1226,7 +1226,7 @@ void q_polarchart_y_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_y_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1241,7 +1241,7 @@ void q_polarchart_z_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_z_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1256,7 +1256,7 @@ void q_polarchart_rotation_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1271,7 +1271,7 @@ void q_polarchart_scale_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_scale_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1286,7 +1286,7 @@ void q_polarchart_children_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_children_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1301,7 +1301,7 @@ void q_polarchart_width_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_width_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1316,7 +1316,7 @@ void q_polarchart_height_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_height_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1554,7 +1554,7 @@ void q_polarchart_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*)
+/// @param callback void func(QPolarChart* self)
 void q_polarchart_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1632,7 +1632,7 @@ void q_polarchart_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QObject*)
+/// @param callback void func(QPolarChart* self, QObject* param1)
 void q_polarchart_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3243,7 +3243,7 @@ void q_polarchart_qbase_set_geometry(void* self, void* rect);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QRectF*)
+/// @param callback void func(QPolarChart* self, QRectF* rect)
 void q_polarchart_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3279,7 +3279,7 @@ void q_polarchart_qbase_get_contents_margins(void* self, double* left, double* t
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, double*, double*, double*, double*)
+/// @param callback void func(QPolarChart* self, double* left, double* top, double* right, double* bottom)
 void q_polarchart_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsWidget
@@ -3307,7 +3307,7 @@ int32_t q_polarchart_qbase_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_polarchart_on_type(void* self, int32_t (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3341,7 +3341,7 @@ void q_polarchart_qbase_paint(void* self, void* painter, void* option, void* wid
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+/// @param callback void func(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 void q_polarchart_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3375,7 +3375,7 @@ void q_polarchart_qbase_paint_window_frame(void* self, void* painter, void* opti
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+/// @param callback void func(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 void q_polarchart_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3403,7 +3403,7 @@ QRectF* q_polarchart_qbase_bounding_rect(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QRectF* fn()
+/// @param callback QRectF* func()
 void q_polarchart_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3431,7 +3431,7 @@ QPainterPath* q_polarchart_qbase_shape(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QPainterPath* fn()
+/// @param callback QPainterPath* func()
 void q_polarchart_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3461,7 +3461,7 @@ void q_polarchart_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QStyleOption*)
+/// @param callback void func(QPolarChart* self, QStyleOption* option)
 void q_polarchart_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3493,7 +3493,7 @@ QSizeF* q_polarchart_qbase_size_hint(void* self, int32_t which, void* constraint
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QSizeF* fn(QPolarChart*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QPolarChart* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_polarchart_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3521,7 +3521,7 @@ void q_polarchart_qbase_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_polarchart_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3553,7 +3553,7 @@ QVariant* q_polarchart_qbase_item_change(void* self, int32_t change, void* value
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QVariant* fn(QPolarChart*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
+/// @param callback QVariant* func(QPolarChart* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
 void q_polarchart_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3585,7 +3585,7 @@ QVariant* q_polarchart_qbase_property_change(void* self, const char* propertyNam
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QVariant* fn(QPolarChart*, const char*, QVariant*)
+/// @param callback QVariant* func(QPolarChart* self, const char* propertyName, QVariant* value)
 void q_polarchart_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3615,7 +3615,7 @@ bool q_polarchart_qbase_scene_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QEvent*)
+/// @param callback bool func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_scene_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3645,7 +3645,7 @@ bool q_polarchart_qbase_window_frame_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QEvent*)
+/// @param callback bool func(QPolarChart* self, QEvent* e)
 void q_polarchart_on_window_frame_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3679,7 +3679,7 @@ int32_t q_polarchart_qbase_window_frame_section_at(void* self, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback int32_t fn(QPolarChart*, QPointF*)
+/// @param callback int32_t func(QPolarChart* self, QPointF* pos)
 void q_polarchart_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3709,7 +3709,7 @@ bool q_polarchart_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QEvent*)
+/// @param callback bool func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3739,7 +3739,7 @@ void q_polarchart_qbase_change_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QEvent*)
+/// @param callback void func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3769,7 +3769,7 @@ void q_polarchart_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QCloseEvent*)
+/// @param callback void func(QPolarChart* self, QCloseEvent* event)
 void q_polarchart_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3799,7 +3799,7 @@ void q_polarchart_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QFocusEvent*)
+/// @param callback void func(QPolarChart* self, QFocusEvent* event)
 void q_polarchart_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3829,7 +3829,7 @@ bool q_polarchart_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, bool)
+/// @param callback bool func(QPolarChart* self, bool next)
 void q_polarchart_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QGraphicsWidget
@@ -3859,7 +3859,7 @@ void q_polarchart_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QFocusEvent*)
+/// @param callback void func(QPolarChart* self, QFocusEvent* event)
 void q_polarchart_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3889,7 +3889,7 @@ void q_polarchart_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QHideEvent*)
+/// @param callback void func(QPolarChart* self, QHideEvent* event)
 void q_polarchart_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3919,7 +3919,7 @@ void q_polarchart_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneMoveEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneMoveEvent* event)
 void q_polarchart_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -3947,7 +3947,7 @@ void q_polarchart_qbase_polish_event(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_polarchart_on_polish_event(void* self, void (*callback)());
 
 /// Inherited from QGraphicsWidget
@@ -3977,7 +3977,7 @@ void q_polarchart_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneResizeEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneResizeEvent* event)
 void q_polarchart_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4007,7 +4007,7 @@ void q_polarchart_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QShowEvent*)
+/// @param callback void func(QPolarChart* self, QShowEvent* event)
 void q_polarchart_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4037,7 +4037,7 @@ void q_polarchart_qbase_hover_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneHoverEvent* event)
 void q_polarchart_on_hover_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4067,7 +4067,7 @@ void q_polarchart_qbase_hover_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneHoverEvent* event)
 void q_polarchart_on_hover_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4097,7 +4097,7 @@ void q_polarchart_qbase_grab_mouse_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QEvent*)
+/// @param callback void func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_grab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4127,7 +4127,7 @@ void q_polarchart_qbase_ungrab_mouse_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QEvent*)
+/// @param callback void func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_ungrab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4157,7 +4157,7 @@ void q_polarchart_qbase_grab_keyboard_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QEvent*)
+/// @param callback void func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_grab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
@@ -4187,7 +4187,7 @@ void q_polarchart_qbase_ungrab_keyboard_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QEvent*)
+/// @param callback void func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_ungrab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4219,7 +4219,7 @@ bool q_polarchart_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QObject*, QEvent*)
+/// @param callback bool func(QPolarChart* self, QObject* watched, QEvent* event)
 void q_polarchart_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4249,7 +4249,7 @@ void q_polarchart_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QTimerEvent*)
+/// @param callback void func(QPolarChart* self, QTimerEvent* event)
 void q_polarchart_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4279,7 +4279,7 @@ void q_polarchart_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QChildEvent*)
+/// @param callback void func(QPolarChart* self, QChildEvent* event)
 void q_polarchart_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4309,7 +4309,7 @@ void q_polarchart_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QEvent*)
+/// @param callback void func(QPolarChart* self, QEvent* event)
 void q_polarchart_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4339,7 +4339,7 @@ void q_polarchart_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QMetaMethod*)
+/// @param callback void func(QPolarChart* self, QMetaMethod* signal)
 void q_polarchart_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4369,7 +4369,7 @@ void q_polarchart_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QMetaMethod*)
+/// @param callback void func(QPolarChart* self, QMetaMethod* signal)
 void q_polarchart_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4399,7 +4399,7 @@ void q_polarchart_qbase_advance(void* self, int phase);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, int)
+/// @param callback void func(QPolarChart* self, int phase)
 void q_polarchart_on_advance(void* self, void (*callback)(void*, int));
 
 /// Inherited from QGraphicsItem
@@ -4429,7 +4429,7 @@ bool q_polarchart_qbase_contains(void* self, void* point);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QPointF*)
+/// @param callback bool func(QPolarChart* self, QPointF* point)
 void q_polarchart_on_contains(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4461,7 +4461,7 @@ bool q_polarchart_qbase_collides_with_item(void* self, void* other, int32_t mode
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QGraphicsItem*, enum Qt__ItemSelectionMode)
+/// @param callback bool func(QPolarChart* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 void q_polarchart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -4493,7 +4493,7 @@ bool q_polarchart_qbase_collides_with_path(void* self, void* path, int32_t mode)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QPainterPath*, enum Qt__ItemSelectionMode)
+/// @param callback bool func(QPolarChart* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 void q_polarchart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -4523,7 +4523,7 @@ bool q_polarchart_qbase_is_obscured_by(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QGraphicsItem*)
+/// @param callback bool func(QPolarChart* self, QGraphicsItem* item)
 void q_polarchart_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4551,7 +4551,7 @@ QPainterPath* q_polarchart_qbase_opaque_area(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QPainterPath* fn()
+/// @param callback QPainterPath* func()
 void q_polarchart_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -4583,7 +4583,7 @@ bool q_polarchart_qbase_scene_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QGraphicsItem*, QEvent*)
+/// @param callback bool func(QPolarChart* self, QGraphicsItem* watched, QEvent* event)
 void q_polarchart_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4613,7 +4613,7 @@ void q_polarchart_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneContextMenuEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneContextMenuEvent* event)
 void q_polarchart_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4643,7 +4643,7 @@ void q_polarchart_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneDragDropEvent* event)
 void q_polarchart_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4673,7 +4673,7 @@ void q_polarchart_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneDragDropEvent* event)
 void q_polarchart_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4703,7 +4703,7 @@ void q_polarchart_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneDragDropEvent* event)
 void q_polarchart_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4733,7 +4733,7 @@ void q_polarchart_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneDragDropEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneDragDropEvent* event)
 void q_polarchart_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4763,7 +4763,7 @@ void q_polarchart_qbase_hover_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneHoverEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneHoverEvent* event)
 void q_polarchart_on_hover_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4793,7 +4793,7 @@ void q_polarchart_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QKeyEvent*)
+/// @param callback void func(QPolarChart* self, QKeyEvent* event)
 void q_polarchart_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4823,7 +4823,7 @@ void q_polarchart_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QKeyEvent*)
+/// @param callback void func(QPolarChart* self, QKeyEvent* event)
 void q_polarchart_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4853,7 +4853,7 @@ void q_polarchart_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneMouseEvent* event)
 void q_polarchart_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4883,7 +4883,7 @@ void q_polarchart_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneMouseEvent* event)
 void q_polarchart_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4913,7 +4913,7 @@ void q_polarchart_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneMouseEvent* event)
 void q_polarchart_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4943,7 +4943,7 @@ void q_polarchart_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneMouseEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneMouseEvent* event)
 void q_polarchart_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4973,7 +4973,7 @@ void q_polarchart_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsSceneWheelEvent*)
+/// @param callback void func(QPolarChart* self, QGraphicsSceneWheelEvent* event)
 void q_polarchart_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -5003,7 +5003,7 @@ void q_polarchart_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QInputMethodEvent*)
+/// @param callback void func(QPolarChart* self, QInputMethodEvent* event)
 void q_polarchart_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -5033,7 +5033,7 @@ QVariant* q_polarchart_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QVariant* fn(QPolarChart*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPolarChart* self, enum Qt__InputMethodQuery query)
 void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
@@ -5063,7 +5063,7 @@ bool q_polarchart_qbase_supports_extension(void* self, int64_t extension);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, enum QGraphicsItem__Extension)
+/// @param callback bool func(QPolarChart* self, enum QGraphicsItem__Extension extension)
 void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
@@ -5095,7 +5095,7 @@ void q_polarchart_qbase_set_extension(void* self, int64_t extension, void* varia
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, enum QGraphicsItem__Extension, QVariant*)
+/// @param callback void func(QPolarChart* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
 
 /// Inherited from QGraphicsItem
@@ -5125,7 +5125,7 @@ QVariant* q_polarchart_qbase_extension(void* self, void* variant);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QVariant* fn(QPolarChart*, QVariant*)
+/// @param callback QVariant* func(QPolarChart* self, QVariant* variant)
 void q_polarchart_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -5153,7 +5153,7 @@ bool q_polarchart_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_polarchart_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsObject
@@ -5181,7 +5181,7 @@ void q_polarchart_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_polarchart_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -5209,7 +5209,7 @@ QObject* q_polarchart_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_polarchart_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5237,7 +5237,7 @@ int32_t q_polarchart_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_polarchart_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5267,7 +5267,7 @@ int32_t q_polarchart_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback int32_t fn(QPolarChart*, const char*)
+/// @param callback int32_t func(QPolarChart* self, const char* signal)
 void q_polarchart_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5297,7 +5297,7 @@ bool q_polarchart_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback bool fn(QPolarChart*, QMetaMethod*)
+/// @param callback bool func(QPolarChart* self, QMetaMethod* signal)
 void q_polarchart_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -5325,7 +5325,7 @@ void q_polarchart_qbase_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_polarchart_on_add_to_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -5353,7 +5353,7 @@ void q_polarchart_qbase_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_polarchart_on_remove_from_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -5381,7 +5381,7 @@ void q_polarchart_qbase_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn()
+/// @param callback void func()
 void q_polarchart_on_prepare_geometry_change(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayoutItem
@@ -5411,7 +5411,7 @@ void q_polarchart_qbase_set_graphics_item(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, QGraphicsItem*)
+/// @param callback void func(QPolarChart* self, QGraphicsItem* item)
 void q_polarchart_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -5441,7 +5441,7 @@ void q_polarchart_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, bool)
+/// @param callback void func(QPolarChart* self, bool ownedByLayout)
 void q_polarchart_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -5451,7 +5451,7 @@ void q_polarchart_on_set_owned_by_layout(void* self, void (*callback)(void*, boo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPolarChart*
-/// @param callback void fn(QPolarChart*, const char*)
+/// @param callback void func(QPolarChart* self, const char* objectName)
 void q_polarchart_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#dtor.QPolarChart)

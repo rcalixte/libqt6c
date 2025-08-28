@@ -152,7 +152,7 @@ void q_inputmethod_cursor_rectangle_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#cursorRectangleChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_cursor_rectangle_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#anchorRectangleChanged)
@@ -163,7 +163,7 @@ void q_inputmethod_anchor_rectangle_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#anchorRectangleChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_anchor_rectangle_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#keyboardRectangleChanged)
@@ -174,7 +174,7 @@ void q_inputmethod_keyboard_rectangle_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#keyboardRectangleChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_keyboard_rectangle_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputItemClipRectangleChanged)
@@ -185,7 +185,7 @@ void q_inputmethod_input_item_clip_rectangle_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputItemClipRectangleChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_input_item_clip_rectangle_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#visibleChanged)
@@ -196,7 +196,7 @@ void q_inputmethod_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#visibleChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_visible_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#animatingChanged)
@@ -207,7 +207,7 @@ void q_inputmethod_animating_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#animatingChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_animating_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#localeChanged)
@@ -218,7 +218,7 @@ void q_inputmethod_locale_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#localeChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_locale_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputDirectionChanged)
@@ -230,7 +230,7 @@ void q_inputmethod_input_direction_changed(void* self, int32_t newDirection);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputDirectionChanged)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*, enum Qt__LayoutDirection)
+/// @param callback void func(QInputMethod* self, enum Qt__LayoutDirection newDirection)
 void q_inputmethod_on_input_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -493,7 +493,7 @@ void q_inputmethod_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*)
+/// @param callback void func(QInputMethod* self)
 void q_inputmethod_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -571,7 +571,7 @@ void q_inputmethod_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*, QObject*)
+/// @param callback void func(QInputMethod* self, QObject* param1)
 void q_inputmethod_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -581,7 +581,7 @@ void q_inputmethod_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QInputMethod*
-/// @param callback void fn(QInputMethod*, const char*)
+/// @param callback void func(QInputMethod* self, const char* objectName)
 void q_inputmethod_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qinputmethod.html#types

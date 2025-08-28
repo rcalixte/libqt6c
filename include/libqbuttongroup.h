@@ -40,7 +40,7 @@ int32_t q_buttongroup_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QButtonGroup*
-/// @param callback int32_t fn(QButtonGroup*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QButtonGroup* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_buttongroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -124,7 +124,7 @@ void q_buttongroup_button_clicked(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonClicked)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QAbstractButton*)
+/// @param callback void func(QButtonGroup* self, QAbstractButton* param1)
 void q_buttongroup_on_button_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonPressed)
@@ -136,7 +136,7 @@ void q_buttongroup_button_pressed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonPressed)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QAbstractButton*)
+/// @param callback void func(QButtonGroup* self, QAbstractButton* param1)
 void q_buttongroup_on_button_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonReleased)
@@ -148,7 +148,7 @@ void q_buttongroup_button_released(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonReleased)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QAbstractButton*)
+/// @param callback void func(QButtonGroup* self, QAbstractButton* param1)
 void q_buttongroup_on_button_released(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonToggled)
@@ -161,7 +161,7 @@ void q_buttongroup_button_toggled(void* self, void* param1, bool param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#buttonToggled)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QAbstractButton*, bool)
+/// @param callback void func(QButtonGroup* self, QAbstractButton* param1, bool param2)
 void q_buttongroup_on_button_toggled(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idClicked)
@@ -173,7 +173,7 @@ void q_buttongroup_id_clicked(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idClicked)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, int)
+/// @param callback void func(QButtonGroup* self, int param1)
 void q_buttongroup_on_id_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idPressed)
@@ -185,7 +185,7 @@ void q_buttongroup_id_pressed(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idPressed)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, int)
+/// @param callback void func(QButtonGroup* self, int param1)
 void q_buttongroup_on_id_pressed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idReleased)
@@ -197,7 +197,7 @@ void q_buttongroup_id_released(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idReleased)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, int)
+/// @param callback void func(QButtonGroup* self, int param1)
 void q_buttongroup_on_id_released(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idToggled)
@@ -210,7 +210,7 @@ void q_buttongroup_id_toggled(void* self, int param1, bool param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#idToggled)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, int, bool)
+/// @param callback void func(QButtonGroup* self, int param1, bool param2)
 void q_buttongroup_on_id_toggled(void* self, void (*callback)(void*, int, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -463,7 +463,7 @@ void q_buttongroup_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*)
+/// @param callback void func(QButtonGroup* self)
 void q_buttongroup_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -541,7 +541,7 @@ void q_buttongroup_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QObject*)
+/// @param callback void func(QButtonGroup* self, QObject* param1)
 void q_buttongroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -571,7 +571,7 @@ bool q_buttongroup_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback bool fn(QButtonGroup*, QEvent*)
+/// @param callback bool func(QButtonGroup* self, QEvent* event)
 void q_buttongroup_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -603,7 +603,7 @@ bool q_buttongroup_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback bool fn(QButtonGroup*, QObject*, QEvent*)
+/// @param callback bool func(QButtonGroup* self, QObject* watched, QEvent* event)
 void q_buttongroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -633,7 +633,7 @@ void q_buttongroup_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QTimerEvent*)
+/// @param callback void func(QButtonGroup* self, QTimerEvent* event)
 void q_buttongroup_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -663,7 +663,7 @@ void q_buttongroup_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QChildEvent*)
+/// @param callback void func(QButtonGroup* self, QChildEvent* event)
 void q_buttongroup_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -693,7 +693,7 @@ void q_buttongroup_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QEvent*)
+/// @param callback void func(QButtonGroup* self, QEvent* event)
 void q_buttongroup_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -723,7 +723,7 @@ void q_buttongroup_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QMetaMethod*)
+/// @param callback void func(QButtonGroup* self, QMetaMethod* signal)
 void q_buttongroup_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -753,7 +753,7 @@ void q_buttongroup_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, QMetaMethod*)
+/// @param callback void func(QButtonGroup* self, QMetaMethod* signal)
 void q_buttongroup_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -781,7 +781,7 @@ QObject* q_buttongroup_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_buttongroup_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -809,7 +809,7 @@ int32_t q_buttongroup_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_buttongroup_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -839,7 +839,7 @@ int32_t q_buttongroup_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback int32_t fn(QButtonGroup*, const char*)
+/// @param callback int32_t func(QButtonGroup* self, const char* signal)
 void q_buttongroup_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -869,7 +869,7 @@ bool q_buttongroup_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QButtonGroup*
-/// @param callback bool fn(QButtonGroup*, QMetaMethod*)
+/// @param callback bool func(QButtonGroup* self, QMetaMethod* signal)
 void q_buttongroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -879,7 +879,7 @@ void q_buttongroup_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QButtonGroup*
-/// @param callback void fn(QButtonGroup*, const char*)
+/// @param callback void func(QButtonGroup* self, const char* objectName)
 void q_buttongroup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuttongroup.html#dtor.QButtonGroup)

@@ -44,7 +44,7 @@ int32_t q_coreapplication_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QCoreApplication*
-/// @param callback int32_t fn(QCoreApplication*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QCoreApplication* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_coreapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -197,7 +197,7 @@ bool q_coreapplication_notify(void* self, void* param1, void* param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QCoreApplication*
-/// @param callback bool fn(QCoreApplication*, QObject*, QEvent*)
+/// @param callback bool func(QCoreApplication* self, QObject* param1, QEvent* param2)
 void q_coreapplication_on_notify(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#notify)
@@ -292,7 +292,7 @@ void* q_coreapplication_resolve_interface(void* self, const char* name, int revi
 /// Allows for overriding the related default method
 ///
 /// @param self QCoreApplication*
-/// @param callback void* fn(QCoreApplication*, const char*, int)
+/// @param callback void* func(QCoreApplication* self, const char* name, int revision)
 void q_coreapplication_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#resolveInterface)
@@ -313,7 +313,7 @@ void q_coreapplication_install_native_event_filter(void* self, void* filterObj);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QAbstractNativeEventFilter*)
+/// @param callback void func(QCoreApplication* self, QAbstractNativeEventFilter* filterObj)
 void q_coreapplication_on_install_native_event_filter(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
@@ -325,7 +325,7 @@ void q_coreapplication_remove_native_event_filter(void* self, void* filterObj);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QAbstractNativeEventFilter*)
+/// @param callback void func(QCoreApplication* self, QAbstractNativeEventFilter* filterObj)
 void q_coreapplication_on_remove_native_event_filter(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#isQuitLockEnabled)
@@ -353,7 +353,7 @@ void q_coreapplication_organization_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*)
+/// @param callback void func(QCoreApplication* self)
 void q_coreapplication_on_organization_name_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
@@ -364,7 +364,7 @@ void q_coreapplication_organization_domain_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*)
+/// @param callback void func(QCoreApplication* self)
 void q_coreapplication_on_organization_domain_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
@@ -375,7 +375,7 @@ void q_coreapplication_application_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*)
+/// @param callback void func(QCoreApplication* self)
 void q_coreapplication_on_application_name_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
@@ -386,7 +386,7 @@ void q_coreapplication_application_version_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*)
+/// @param callback void func(QCoreApplication* self)
 void q_coreapplication_on_application_version_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#event)
@@ -400,7 +400,7 @@ bool q_coreapplication_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QCoreApplication*
-/// @param callback bool fn(QCoreApplication*, QEvent*)
+/// @param callback bool func(QCoreApplication* self, QEvent* param1)
 void q_coreapplication_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#event)
@@ -713,7 +713,7 @@ void q_coreapplication_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*)
+/// @param callback void func(QCoreApplication* self)
 void q_coreapplication_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -791,7 +791,7 @@ void q_coreapplication_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QObject*)
+/// @param callback void func(QCoreApplication* self, QObject* param1)
 void q_coreapplication_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -823,7 +823,7 @@ bool q_coreapplication_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback bool fn(QCoreApplication*, QObject*, QEvent*)
+/// @param callback bool func(QCoreApplication* self, QObject* watched, QEvent* event)
 void q_coreapplication_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -853,7 +853,7 @@ void q_coreapplication_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QTimerEvent*)
+/// @param callback void func(QCoreApplication* self, QTimerEvent* event)
 void q_coreapplication_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -883,7 +883,7 @@ void q_coreapplication_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QChildEvent*)
+/// @param callback void func(QCoreApplication* self, QChildEvent* event)
 void q_coreapplication_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -913,7 +913,7 @@ void q_coreapplication_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QEvent*)
+/// @param callback void func(QCoreApplication* self, QEvent* event)
 void q_coreapplication_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -943,7 +943,7 @@ void q_coreapplication_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QMetaMethod*)
+/// @param callback void func(QCoreApplication* self, QMetaMethod* signal)
 void q_coreapplication_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -973,7 +973,7 @@ void q_coreapplication_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, QMetaMethod*)
+/// @param callback void func(QCoreApplication* self, QMetaMethod* signal)
 void q_coreapplication_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1001,7 +1001,7 @@ QObject* q_coreapplication_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_coreapplication_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1029,7 +1029,7 @@ int32_t q_coreapplication_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_coreapplication_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1059,7 +1059,7 @@ int32_t q_coreapplication_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback int32_t fn(QCoreApplication*, const char*)
+/// @param callback int32_t func(QCoreApplication* self, const char* signal)
 void q_coreapplication_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1089,7 +1089,7 @@ bool q_coreapplication_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCoreApplication*
-/// @param callback bool fn(QCoreApplication*, QMetaMethod*)
+/// @param callback bool func(QCoreApplication* self, QMetaMethod* signal)
 void q_coreapplication_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#aboutToQuit)
@@ -1097,7 +1097,7 @@ void q_coreapplication_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*)
+/// @param callback void func(QCoreApplication* self)
 void q_coreapplication_on_about_to_quit(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1107,7 +1107,7 @@ void q_coreapplication_on_about_to_quit(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QCoreApplication*
-/// @param callback void fn(QCoreApplication*, const char*)
+/// @param callback void func(QCoreApplication* self, const char* objectName)
 void q_coreapplication_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#dtor.QCoreApplication)

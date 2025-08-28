@@ -40,7 +40,7 @@ int32_t q_vbarmodelmapper_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn(QVBarModelMapper*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QVBarModelMapper* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_vbarmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -132,7 +132,7 @@ void q_vbarmodelmapper_series_replaced(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#seriesReplaced)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_series_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#modelReplaced)
@@ -143,7 +143,7 @@ void q_vbarmodelmapper_model_replaced(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#modelReplaced)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_model_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#firstBarSetColumnChanged)
@@ -154,7 +154,7 @@ void q_vbarmodelmapper_first_bar_set_column_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#firstBarSetColumnChanged)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_first_bar_set_column_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#lastBarSetColumnChanged)
@@ -165,7 +165,7 @@ void q_vbarmodelmapper_last_bar_set_column_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#lastBarSetColumnChanged)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_last_bar_set_column_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#firstRowChanged)
@@ -176,7 +176,7 @@ void q_vbarmodelmapper_first_row_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#firstRowChanged)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_first_row_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#rowCountChanged)
@@ -187,7 +187,7 @@ void q_vbarmodelmapper_row_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#rowCountChanged)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_row_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -433,7 +433,7 @@ void q_vbarmodelmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*)
+/// @param callback void func(QVBarModelMapper* self)
 void q_vbarmodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -511,7 +511,7 @@ void q_vbarmodelmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, QObject*)
+/// @param callback void func(QVBarModelMapper* self, QObject* param1)
 void q_vbarmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -541,7 +541,7 @@ bool q_vbarmodelmapper_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback bool fn(QVBarModelMapper*, QEvent*)
+/// @param callback bool func(QVBarModelMapper* self, QEvent* event)
 void q_vbarmodelmapper_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -573,7 +573,7 @@ bool q_vbarmodelmapper_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback bool fn(QVBarModelMapper*, QObject*, QEvent*)
+/// @param callback bool func(QVBarModelMapper* self, QObject* watched, QEvent* event)
 void q_vbarmodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -603,7 +603,7 @@ void q_vbarmodelmapper_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, QTimerEvent*)
+/// @param callback void func(QVBarModelMapper* self, QTimerEvent* event)
 void q_vbarmodelmapper_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -633,7 +633,7 @@ void q_vbarmodelmapper_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, QChildEvent*)
+/// @param callback void func(QVBarModelMapper* self, QChildEvent* event)
 void q_vbarmodelmapper_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -663,7 +663,7 @@ void q_vbarmodelmapper_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, QEvent*)
+/// @param callback void func(QVBarModelMapper* self, QEvent* event)
 void q_vbarmodelmapper_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -693,7 +693,7 @@ void q_vbarmodelmapper_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, QMetaMethod*)
+/// @param callback void func(QVBarModelMapper* self, QMetaMethod* signal)
 void q_vbarmodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -723,7 +723,7 @@ void q_vbarmodelmapper_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, QMetaMethod*)
+/// @param callback void func(QVBarModelMapper* self, QMetaMethod* signal)
 void q_vbarmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QBarModelMapper
@@ -751,7 +751,7 @@ int32_t q_vbarmodelmapper_qbase_first(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vbarmodelmapper_on_first(void* self, int32_t (*callback)());
 
 /// Inherited from QBarModelMapper
@@ -781,7 +781,7 @@ void q_vbarmodelmapper_qbase_set_first(void* self, int first);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, int)
+/// @param callback void func(QVBarModelMapper* self, int first)
 void q_vbarmodelmapper_on_set_first(void* self, void (*callback)(void*, int));
 
 /// Inherited from QBarModelMapper
@@ -809,7 +809,7 @@ int32_t q_vbarmodelmapper_qbase_count(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vbarmodelmapper_on_count(void* self, int32_t (*callback)());
 
 /// Inherited from QBarModelMapper
@@ -839,7 +839,7 @@ void q_vbarmodelmapper_qbase_set_count(void* self, int count);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, int)
+/// @param callback void func(QVBarModelMapper* self, int count)
 void q_vbarmodelmapper_on_set_count(void* self, void (*callback)(void*, int));
 
 /// Inherited from QBarModelMapper
@@ -867,7 +867,7 @@ int32_t q_vbarmodelmapper_qbase_first_bar_set_section(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vbarmodelmapper_on_first_bar_set_section(void* self, int32_t (*callback)());
 
 /// Inherited from QBarModelMapper
@@ -897,7 +897,7 @@ void q_vbarmodelmapper_qbase_set_first_bar_set_section(void* self, int firstBarS
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, int)
+/// @param callback void func(QVBarModelMapper* self, int firstBarSetSection)
 void q_vbarmodelmapper_on_set_first_bar_set_section(void* self, void (*callback)(void*, int));
 
 /// Inherited from QBarModelMapper
@@ -925,7 +925,7 @@ int32_t q_vbarmodelmapper_qbase_last_bar_set_section(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vbarmodelmapper_on_last_bar_set_section(void* self, int32_t (*callback)());
 
 /// Inherited from QBarModelMapper
@@ -955,7 +955,7 @@ void q_vbarmodelmapper_qbase_set_last_bar_set_section(void* self, int lastBarSet
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, int)
+/// @param callback void func(QVBarModelMapper* self, int lastBarSetSection)
 void q_vbarmodelmapper_on_set_last_bar_set_section(void* self, void (*callback)(void*, int));
 
 /// Inherited from QBarModelMapper
@@ -987,7 +987,7 @@ int32_t q_vbarmodelmapper_qbase_orientation(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vbarmodelmapper_on_orientation(void* self, int32_t (*callback)());
 
 /// Inherited from QBarModelMapper
@@ -1017,7 +1017,7 @@ void q_vbarmodelmapper_qbase_set_orientation(void* self, int32_t orientation);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, enum Qt__Orientation)
+/// @param callback void func(QVBarModelMapper* self, enum Qt__Orientation orientation)
 void q_vbarmodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
@@ -1045,7 +1045,7 @@ QObject* q_vbarmodelmapper_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_vbarmodelmapper_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1073,7 +1073,7 @@ int32_t q_vbarmodelmapper_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vbarmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1103,7 +1103,7 @@ int32_t q_vbarmodelmapper_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback int32_t fn(QVBarModelMapper*, const char*)
+/// @param callback int32_t func(QVBarModelMapper* self, const char* signal)
 void q_vbarmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1133,7 +1133,7 @@ bool q_vbarmodelmapper_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBarModelMapper*
-/// @param callback bool fn(QVBarModelMapper*, QMetaMethod*)
+/// @param callback bool func(QVBarModelMapper* self, QMetaMethod* signal)
 void q_vbarmodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1143,7 +1143,7 @@ void q_vbarmodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QVBarModelMapper*
-/// @param callback void fn(QVBarModelMapper*, const char*)
+/// @param callback void func(QVBarModelMapper* self, const char* objectName)
 void q_vbarmodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html#dtor.QVBarModelMapper)

@@ -40,7 +40,7 @@ int32_t k_animatedbutton_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KAnimatedButton*
-/// @param callback int32_t fn(KAnimatedButton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KAnimatedButton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_animatedbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -214,7 +214,7 @@ void k_animatedbutton_triggered(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#triggered)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QAction*)
+/// @param callback void func(KAnimatedButton* self, QAction* param1)
 void k_animatedbutton_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -424,7 +424,7 @@ void k_animatedbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*)
+/// @param callback void func(KAnimatedButton* self)
 void k_animatedbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -439,7 +439,7 @@ void k_animatedbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*)
+/// @param callback void func(KAnimatedButton* self)
 void k_animatedbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -454,7 +454,7 @@ void k_animatedbutton_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*)
+/// @param callback void func(KAnimatedButton* self)
 void k_animatedbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -470,7 +470,7 @@ void k_animatedbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, bool)
+/// @param callback void func(KAnimatedButton* self, bool checked)
 void k_animatedbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -486,7 +486,7 @@ void k_animatedbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, bool)
+/// @param callback void func(KAnimatedButton* self, bool checked)
 void k_animatedbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2426,7 +2426,7 @@ void k_animatedbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, const char*)
+/// @param callback void func(KAnimatedButton* self, const char* title)
 void k_animatedbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2442,7 +2442,7 @@ void k_animatedbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QIcon*)
+/// @param callback void func(KAnimatedButton* self, QIcon* icon)
 void k_animatedbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2458,7 +2458,7 @@ void k_animatedbutton_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, const char*)
+/// @param callback void func(KAnimatedButton* self, const char* iconText)
 void k_animatedbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2474,7 +2474,7 @@ void k_animatedbutton_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QPoint*)
+/// @param callback void func(KAnimatedButton* self, QPoint* pos)
 void k_animatedbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2851,7 +2851,7 @@ void k_animatedbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*)
+/// @param callback void func(KAnimatedButton* self)
 void k_animatedbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2929,7 +2929,7 @@ void k_animatedbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QObject*)
+/// @param callback void func(KAnimatedButton* self, QObject* param1)
 void k_animatedbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3048,7 +3048,7 @@ QSize* k_animatedbutton_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_animatedbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QToolButton
@@ -3076,7 +3076,7 @@ QSize* k_animatedbutton_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_animatedbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QToolButton
@@ -3106,7 +3106,7 @@ bool k_animatedbutton_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn(KAnimatedButton*, QEvent*)
+/// @param callback bool func(KAnimatedButton* self, QEvent* e)
 void k_animatedbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3136,7 +3136,7 @@ void k_animatedbutton_qbase_mouse_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMouseEvent*)
+/// @param callback void func(KAnimatedButton* self, QMouseEvent* param1)
 void k_animatedbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3166,7 +3166,7 @@ void k_animatedbutton_qbase_mouse_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMouseEvent*)
+/// @param callback void func(KAnimatedButton* self, QMouseEvent* param1)
 void k_animatedbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3196,7 +3196,7 @@ void k_animatedbutton_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QPaintEvent*)
+/// @param callback void func(KAnimatedButton* self, QPaintEvent* param1)
 void k_animatedbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3226,7 +3226,7 @@ void k_animatedbutton_qbase_action_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QActionEvent*)
+/// @param callback void func(KAnimatedButton* self, QActionEvent* param1)
 void k_animatedbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3256,7 +3256,7 @@ void k_animatedbutton_qbase_enter_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QEnterEvent*)
+/// @param callback void func(KAnimatedButton* self, QEnterEvent* param1)
 void k_animatedbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3286,7 +3286,7 @@ void k_animatedbutton_qbase_leave_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QEvent*)
+/// @param callback void func(KAnimatedButton* self, QEvent* param1)
 void k_animatedbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3316,7 +3316,7 @@ void k_animatedbutton_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QTimerEvent*)
+/// @param callback void func(KAnimatedButton* self, QTimerEvent* param1)
 void k_animatedbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3346,7 +3346,7 @@ void k_animatedbutton_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QEvent*)
+/// @param callback void func(KAnimatedButton* self, QEvent* param1)
 void k_animatedbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3376,7 +3376,7 @@ bool k_animatedbutton_qbase_hit_button(void* self, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn(KAnimatedButton*, QPoint*)
+/// @param callback bool func(KAnimatedButton* self, QPoint* pos)
 void k_animatedbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QToolButton
@@ -3404,7 +3404,7 @@ void k_animatedbutton_qbase_check_state_set(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_animatedbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QToolButton
@@ -3432,7 +3432,7 @@ void k_animatedbutton_qbase_next_check_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_animatedbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QToolButton
@@ -3462,7 +3462,7 @@ void k_animatedbutton_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QStyleOptionToolButton*)
+/// @param callback void func(KAnimatedButton* self, QStyleOptionToolButton* option)
 void k_animatedbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3492,7 +3492,7 @@ void k_animatedbutton_qbase_key_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QKeyEvent*)
+/// @param callback void func(KAnimatedButton* self, QKeyEvent* e)
 void k_animatedbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3522,7 +3522,7 @@ void k_animatedbutton_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QKeyEvent*)
+/// @param callback void func(KAnimatedButton* self, QKeyEvent* e)
 void k_animatedbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3552,7 +3552,7 @@ void k_animatedbutton_qbase_mouse_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMouseEvent*)
+/// @param callback void func(KAnimatedButton* self, QMouseEvent* e)
 void k_animatedbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3582,7 +3582,7 @@ void k_animatedbutton_qbase_focus_in_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QFocusEvent*)
+/// @param callback void func(KAnimatedButton* self, QFocusEvent* e)
 void k_animatedbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3612,7 +3612,7 @@ void k_animatedbutton_qbase_focus_out_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QFocusEvent*)
+/// @param callback void func(KAnimatedButton* self, QFocusEvent* e)
 void k_animatedbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3640,7 +3640,7 @@ int32_t k_animatedbutton_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_animatedbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3670,7 +3670,7 @@ void k_animatedbutton_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, bool)
+/// @param callback void func(KAnimatedButton* self, bool visible)
 void k_animatedbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3700,7 +3700,7 @@ int32_t k_animatedbutton_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback int32_t fn(KAnimatedButton*, int)
+/// @param callback int32_t func(KAnimatedButton* self, int param1)
 void k_animatedbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3728,7 +3728,7 @@ bool k_animatedbutton_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_animatedbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3756,7 +3756,7 @@ QPaintEngine* k_animatedbutton_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_animatedbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3786,7 +3786,7 @@ void k_animatedbutton_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMouseEvent*)
+/// @param callback void func(KAnimatedButton* self, QMouseEvent* event)
 void k_animatedbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3816,7 +3816,7 @@ void k_animatedbutton_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QWheelEvent*)
+/// @param callback void func(KAnimatedButton* self, QWheelEvent* event)
 void k_animatedbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3846,7 +3846,7 @@ void k_animatedbutton_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMoveEvent*)
+/// @param callback void func(KAnimatedButton* self, QMoveEvent* event)
 void k_animatedbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3876,7 +3876,7 @@ void k_animatedbutton_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QResizeEvent*)
+/// @param callback void func(KAnimatedButton* self, QResizeEvent* event)
 void k_animatedbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3906,7 +3906,7 @@ void k_animatedbutton_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QCloseEvent*)
+/// @param callback void func(KAnimatedButton* self, QCloseEvent* event)
 void k_animatedbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3936,7 +3936,7 @@ void k_animatedbutton_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QContextMenuEvent*)
+/// @param callback void func(KAnimatedButton* self, QContextMenuEvent* event)
 void k_animatedbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3966,7 +3966,7 @@ void k_animatedbutton_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QTabletEvent*)
+/// @param callback void func(KAnimatedButton* self, QTabletEvent* event)
 void k_animatedbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3996,7 +3996,7 @@ void k_animatedbutton_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QDragEnterEvent*)
+/// @param callback void func(KAnimatedButton* self, QDragEnterEvent* event)
 void k_animatedbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4026,7 +4026,7 @@ void k_animatedbutton_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QDragMoveEvent*)
+/// @param callback void func(KAnimatedButton* self, QDragMoveEvent* event)
 void k_animatedbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4056,7 +4056,7 @@ void k_animatedbutton_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QDragLeaveEvent*)
+/// @param callback void func(KAnimatedButton* self, QDragLeaveEvent* event)
 void k_animatedbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4086,7 +4086,7 @@ void k_animatedbutton_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QDropEvent*)
+/// @param callback void func(KAnimatedButton* self, QDropEvent* event)
 void k_animatedbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4116,7 +4116,7 @@ void k_animatedbutton_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QShowEvent*)
+/// @param callback void func(KAnimatedButton* self, QShowEvent* event)
 void k_animatedbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4146,7 +4146,7 @@ void k_animatedbutton_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QHideEvent*)
+/// @param callback void func(KAnimatedButton* self, QHideEvent* event)
 void k_animatedbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4180,7 +4180,7 @@ bool k_animatedbutton_qbase_native_event(void* self, const char* eventType, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn(KAnimatedButton*, const char*, void*, intptr_t*)
+/// @param callback bool func(KAnimatedButton* self, const char* eventType, void* message, intptr_t* result)
 void k_animatedbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4210,7 +4210,7 @@ int32_t k_animatedbutton_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback int32_t fn(KAnimatedButton*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KAnimatedButton* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_animatedbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4240,7 +4240,7 @@ void k_animatedbutton_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QPainter*)
+/// @param callback void func(KAnimatedButton* self, QPainter* painter)
 void k_animatedbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4270,7 +4270,7 @@ QPaintDevice* k_animatedbutton_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QPaintDevice* fn(KAnimatedButton*, QPoint*)
+/// @param callback QPaintDevice* func(KAnimatedButton* self, QPoint* offset)
 void k_animatedbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4298,7 +4298,7 @@ QPainter* k_animatedbutton_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_animatedbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4328,7 +4328,7 @@ void k_animatedbutton_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QInputMethodEvent*)
+/// @param callback void func(KAnimatedButton* self, QInputMethodEvent* param1)
 void k_animatedbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4358,7 +4358,7 @@ QVariant* k_animatedbutton_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QVariant* fn(KAnimatedButton*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KAnimatedButton* self, enum Qt__InputMethodQuery param1)
 void k_animatedbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4388,7 +4388,7 @@ bool k_animatedbutton_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn(KAnimatedButton*, bool)
+/// @param callback bool func(KAnimatedButton* self, bool next)
 void k_animatedbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4420,7 +4420,7 @@ bool k_animatedbutton_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn(KAnimatedButton*, QObject*, QEvent*)
+/// @param callback bool func(KAnimatedButton* self, QObject* watched, QEvent* event)
 void k_animatedbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4450,7 +4450,7 @@ void k_animatedbutton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QChildEvent*)
+/// @param callback void func(KAnimatedButton* self, QChildEvent* event)
 void k_animatedbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4480,7 +4480,7 @@ void k_animatedbutton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QEvent*)
+/// @param callback void func(KAnimatedButton* self, QEvent* event)
 void k_animatedbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4510,7 +4510,7 @@ void k_animatedbutton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMetaMethod*)
+/// @param callback void func(KAnimatedButton* self, QMetaMethod* signal)
 void k_animatedbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4540,7 +4540,7 @@ void k_animatedbutton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, QMetaMethod*)
+/// @param callback void func(KAnimatedButton* self, QMetaMethod* signal)
 void k_animatedbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4568,7 +4568,7 @@ void k_animatedbutton_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_animatedbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4596,7 +4596,7 @@ void k_animatedbutton_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_animatedbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4624,7 +4624,7 @@ void k_animatedbutton_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_animatedbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4652,7 +4652,7 @@ bool k_animatedbutton_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_animatedbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4680,7 +4680,7 @@ bool k_animatedbutton_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_animatedbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4708,7 +4708,7 @@ QObject* k_animatedbutton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_animatedbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4736,7 +4736,7 @@ int32_t k_animatedbutton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_animatedbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4766,7 +4766,7 @@ int32_t k_animatedbutton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback int32_t fn(KAnimatedButton*, const char*)
+/// @param callback int32_t func(KAnimatedButton* self, const char* signal)
 void k_animatedbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4796,7 +4796,7 @@ bool k_animatedbutton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback bool fn(KAnimatedButton*, QMetaMethod*)
+/// @param callback bool func(KAnimatedButton* self, QMetaMethod* signal)
 void k_animatedbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4828,7 +4828,7 @@ double k_animatedbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAnimatedButton*
-/// @param callback double fn(KAnimatedButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KAnimatedButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_animatedbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4838,7 +4838,7 @@ void k_animatedbutton_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KAnimatedButton*
-/// @param callback void fn(KAnimatedButton*, const char*)
+/// @param callback void func(KAnimatedButton* self, const char* objectName)
 void k_animatedbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kanimatedbutton.html#dtor.KAnimatedButton)

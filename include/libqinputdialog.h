@@ -46,7 +46,7 @@ int32_t q_inputdialog_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn(QInputDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QInputDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_inputdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -303,7 +303,7 @@ QSize* q_inputdialog_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_inputdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#minimumSizeHint)
@@ -323,7 +323,7 @@ QSize* q_inputdialog_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_inputdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#sizeHint)
@@ -344,7 +344,7 @@ void q_inputdialog_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, bool)
+/// @param callback void func(QInputDialog* self, bool visible)
 void q_inputdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setVisible)
@@ -417,7 +417,7 @@ void q_inputdialog_text_value_changed(void* self, const char* text);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueChanged)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, const char*)
+/// @param callback void func(QInputDialog* self, const char* text)
 void q_inputdialog_on_text_value_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueSelected)
@@ -429,7 +429,7 @@ void q_inputdialog_text_value_selected(void* self, const char* text);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueSelected)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, const char*)
+/// @param callback void func(QInputDialog* self, const char* text)
 void q_inputdialog_on_text_value_selected(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueChanged)
@@ -441,7 +441,7 @@ void q_inputdialog_int_value_changed(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueChanged)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, int)
+/// @param callback void func(QInputDialog* self, int value)
 void q_inputdialog_on_int_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueSelected)
@@ -453,7 +453,7 @@ void q_inputdialog_int_value_selected(void* self, int value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueSelected)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, int)
+/// @param callback void func(QInputDialog* self, int value)
 void q_inputdialog_on_int_value_selected(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueChanged)
@@ -465,7 +465,7 @@ void q_inputdialog_double_value_changed(void* self, double value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueChanged)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, double)
+/// @param callback void func(QInputDialog* self, double value)
 void q_inputdialog_on_double_value_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueSelected)
@@ -477,7 +477,7 @@ void q_inputdialog_double_value_selected(void* self, double value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueSelected)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, double)
+/// @param callback void func(QInputDialog* self, double value)
 void q_inputdialog_on_double_value_selected(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#done)
@@ -491,7 +491,7 @@ void q_inputdialog_done(void* self, int result);
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, int)
+/// @param callback void func(QInputDialog* self, int result)
 void q_inputdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#done)
@@ -888,7 +888,7 @@ void q_inputdialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, int)
+/// @param callback void func(QInputDialog* self, int result)
 void q_inputdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -903,7 +903,7 @@ void q_inputdialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*)
+/// @param callback void func(QInputDialog* self)
 void q_inputdialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -918,7 +918,7 @@ void q_inputdialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*)
+/// @param callback void func(QInputDialog* self)
 void q_inputdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2858,7 +2858,7 @@ void q_inputdialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, const char*)
+/// @param callback void func(QInputDialog* self, const char* title)
 void q_inputdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2874,7 +2874,7 @@ void q_inputdialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QIcon*)
+/// @param callback void func(QInputDialog* self, QIcon* icon)
 void q_inputdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2890,7 +2890,7 @@ void q_inputdialog_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, const char*)
+/// @param callback void func(QInputDialog* self, const char* iconText)
 void q_inputdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2906,7 +2906,7 @@ void q_inputdialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QPoint*)
+/// @param callback void func(QInputDialog* self, QPoint* pos)
 void q_inputdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3283,7 +3283,7 @@ void q_inputdialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*)
+/// @param callback void func(QInputDialog* self)
 void q_inputdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3361,7 +3361,7 @@ void q_inputdialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QObject*)
+/// @param callback void func(QInputDialog* self, QObject* param1)
 void q_inputdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3480,7 +3480,7 @@ void q_inputdialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_inputdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3508,7 +3508,7 @@ int32_t q_inputdialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_inputdialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3536,7 +3536,7 @@ void q_inputdialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_inputdialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3564,7 +3564,7 @@ void q_inputdialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_inputdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3594,7 +3594,7 @@ void q_inputdialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QKeyEvent*)
+/// @param callback void func(QInputDialog* self, QKeyEvent* param1)
 void q_inputdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3624,7 +3624,7 @@ void q_inputdialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QCloseEvent*)
+/// @param callback void func(QInputDialog* self, QCloseEvent* param1)
 void q_inputdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3654,7 +3654,7 @@ void q_inputdialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QShowEvent*)
+/// @param callback void func(QInputDialog* self, QShowEvent* param1)
 void q_inputdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3684,7 +3684,7 @@ void q_inputdialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QResizeEvent*)
+/// @param callback void func(QInputDialog* self, QResizeEvent* param1)
 void q_inputdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3714,7 +3714,7 @@ void q_inputdialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QContextMenuEvent*)
+/// @param callback void func(QInputDialog* self, QContextMenuEvent* param1)
 void q_inputdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3746,7 +3746,7 @@ bool q_inputdialog_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn(QInputDialog*, QObject*, QEvent*)
+/// @param callback bool func(QInputDialog* self, QObject* param1, QEvent* param2)
 void q_inputdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3774,7 +3774,7 @@ int32_t q_inputdialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_inputdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3804,7 +3804,7 @@ int32_t q_inputdialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn(QInputDialog*, int)
+/// @param callback int32_t func(QInputDialog* self, int param1)
 void q_inputdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3832,7 +3832,7 @@ bool q_inputdialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_inputdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3860,7 +3860,7 @@ QPaintEngine* q_inputdialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_inputdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3890,7 +3890,7 @@ bool q_inputdialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn(QInputDialog*, QEvent*)
+/// @param callback bool func(QInputDialog* self, QEvent* event)
 void q_inputdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3920,7 +3920,7 @@ void q_inputdialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMouseEvent*)
+/// @param callback void func(QInputDialog* self, QMouseEvent* event)
 void q_inputdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3950,7 +3950,7 @@ void q_inputdialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMouseEvent*)
+/// @param callback void func(QInputDialog* self, QMouseEvent* event)
 void q_inputdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3980,7 +3980,7 @@ void q_inputdialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMouseEvent*)
+/// @param callback void func(QInputDialog* self, QMouseEvent* event)
 void q_inputdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4010,7 +4010,7 @@ void q_inputdialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMouseEvent*)
+/// @param callback void func(QInputDialog* self, QMouseEvent* event)
 void q_inputdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4040,7 +4040,7 @@ void q_inputdialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QWheelEvent*)
+/// @param callback void func(QInputDialog* self, QWheelEvent* event)
 void q_inputdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4070,7 +4070,7 @@ void q_inputdialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QKeyEvent*)
+/// @param callback void func(QInputDialog* self, QKeyEvent* event)
 void q_inputdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4100,7 +4100,7 @@ void q_inputdialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QFocusEvent*)
+/// @param callback void func(QInputDialog* self, QFocusEvent* event)
 void q_inputdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4130,7 +4130,7 @@ void q_inputdialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QFocusEvent*)
+/// @param callback void func(QInputDialog* self, QFocusEvent* event)
 void q_inputdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4160,7 +4160,7 @@ void q_inputdialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QEnterEvent*)
+/// @param callback void func(QInputDialog* self, QEnterEvent* event)
 void q_inputdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4190,7 +4190,7 @@ void q_inputdialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QEvent*)
+/// @param callback void func(QInputDialog* self, QEvent* event)
 void q_inputdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4220,7 +4220,7 @@ void q_inputdialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QPaintEvent*)
+/// @param callback void func(QInputDialog* self, QPaintEvent* event)
 void q_inputdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4250,7 +4250,7 @@ void q_inputdialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMoveEvent*)
+/// @param callback void func(QInputDialog* self, QMoveEvent* event)
 void q_inputdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4280,7 +4280,7 @@ void q_inputdialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QTabletEvent*)
+/// @param callback void func(QInputDialog* self, QTabletEvent* event)
 void q_inputdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4310,7 +4310,7 @@ void q_inputdialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QActionEvent*)
+/// @param callback void func(QInputDialog* self, QActionEvent* event)
 void q_inputdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4340,7 +4340,7 @@ void q_inputdialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QDragEnterEvent*)
+/// @param callback void func(QInputDialog* self, QDragEnterEvent* event)
 void q_inputdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4370,7 +4370,7 @@ void q_inputdialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QDragMoveEvent*)
+/// @param callback void func(QInputDialog* self, QDragMoveEvent* event)
 void q_inputdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4400,7 +4400,7 @@ void q_inputdialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QDragLeaveEvent*)
+/// @param callback void func(QInputDialog* self, QDragLeaveEvent* event)
 void q_inputdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4430,7 +4430,7 @@ void q_inputdialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QDropEvent*)
+/// @param callback void func(QInputDialog* self, QDropEvent* event)
 void q_inputdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4460,7 +4460,7 @@ void q_inputdialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QHideEvent*)
+/// @param callback void func(QInputDialog* self, QHideEvent* event)
 void q_inputdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4494,7 +4494,7 @@ bool q_inputdialog_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn(QInputDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(QInputDialog* self, const char* eventType, void* message, intptr_t* result)
 void q_inputdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4524,7 +4524,7 @@ void q_inputdialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QEvent*)
+/// @param callback void func(QInputDialog* self, QEvent* param1)
 void q_inputdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4554,7 +4554,7 @@ int32_t q_inputdialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn(QInputDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QInputDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_inputdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4584,7 +4584,7 @@ void q_inputdialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QPainter*)
+/// @param callback void func(QInputDialog* self, QPainter* painter)
 void q_inputdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4614,7 +4614,7 @@ QPaintDevice* q_inputdialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback QPaintDevice* fn(QInputDialog*, QPoint*)
+/// @param callback QPaintDevice* func(QInputDialog* self, QPoint* offset)
 void q_inputdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4642,7 +4642,7 @@ QPainter* q_inputdialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_inputdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4672,7 +4672,7 @@ void q_inputdialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QInputMethodEvent*)
+/// @param callback void func(QInputDialog* self, QInputMethodEvent* param1)
 void q_inputdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4702,7 +4702,7 @@ QVariant* q_inputdialog_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback QVariant* fn(QInputDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QInputDialog* self, enum Qt__InputMethodQuery param1)
 void q_inputdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4732,7 +4732,7 @@ bool q_inputdialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn(QInputDialog*, bool)
+/// @param callback bool func(QInputDialog* self, bool next)
 void q_inputdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4762,7 +4762,7 @@ void q_inputdialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QTimerEvent*)
+/// @param callback void func(QInputDialog* self, QTimerEvent* event)
 void q_inputdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4792,7 +4792,7 @@ void q_inputdialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QChildEvent*)
+/// @param callback void func(QInputDialog* self, QChildEvent* event)
 void q_inputdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4822,7 +4822,7 @@ void q_inputdialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QEvent*)
+/// @param callback void func(QInputDialog* self, QEvent* event)
 void q_inputdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4852,7 +4852,7 @@ void q_inputdialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMetaMethod*)
+/// @param callback void func(QInputDialog* self, QMetaMethod* signal)
 void q_inputdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4882,7 +4882,7 @@ void q_inputdialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QMetaMethod*)
+/// @param callback void func(QInputDialog* self, QMetaMethod* signal)
 void q_inputdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4912,7 +4912,7 @@ void q_inputdialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, QWidget*)
+/// @param callback void func(QInputDialog* self, QWidget* param1)
 void q_inputdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4940,7 +4940,7 @@ void q_inputdialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_inputdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4968,7 +4968,7 @@ void q_inputdialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_inputdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4996,7 +4996,7 @@ void q_inputdialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_inputdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5024,7 +5024,7 @@ bool q_inputdialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_inputdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5052,7 +5052,7 @@ bool q_inputdialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_inputdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5080,7 +5080,7 @@ QObject* q_inputdialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_inputdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5108,7 +5108,7 @@ int32_t q_inputdialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_inputdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5138,7 +5138,7 @@ int32_t q_inputdialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback int32_t fn(QInputDialog*, const char*)
+/// @param callback int32_t func(QInputDialog* self, const char* signal)
 void q_inputdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5168,7 +5168,7 @@ bool q_inputdialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback bool fn(QInputDialog*, QMetaMethod*)
+/// @param callback bool func(QInputDialog* self, QMetaMethod* signal)
 void q_inputdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5200,7 +5200,7 @@ double q_inputdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDialog*
-/// @param callback double fn(QInputDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QInputDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_inputdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5210,7 +5210,7 @@ void q_inputdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QInputDialog*
-/// @param callback void fn(QInputDialog*, const char*)
+/// @param callback void func(QInputDialog* self, const char* objectName)
 void q_inputdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#dtor.QInputDialog)

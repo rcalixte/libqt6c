@@ -295,7 +295,7 @@ void q_barmodelmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarModelMapper*
-/// @param callback void fn(QBarModelMapper*)
+/// @param callback void func(QBarModelMapper* self)
 void q_barmodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -373,7 +373,7 @@ void q_barmodelmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarModelMapper*
-/// @param callback void fn(QBarModelMapper*, QObject*)
+/// @param callback void func(QBarModelMapper* self, QObject* param1)
 void q_barmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -383,7 +383,7 @@ void q_barmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBarModelMapper*
-/// @param callback void fn(QBarModelMapper*, const char*)
+/// @param callback void func(QBarModelMapper* self, const char* objectName)
 void q_barmodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarmodelmapper-qtcharts.html#dtor.QBarModelMapper)

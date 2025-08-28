@@ -40,7 +40,7 @@ int32_t q_buffer_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback int32_t fn(QBuffer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QBuffer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_buffer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -103,7 +103,7 @@ bool q_buffer_open(void* self, int64_t openMode);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QBuffer* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_buffer_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#open)
@@ -124,7 +124,7 @@ void q_buffer_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback void fn()
+/// @param callback void func()
 void q_buffer_on_close(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#close)
@@ -144,7 +144,7 @@ long long q_buffer_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_buffer_on_size(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#size)
@@ -164,7 +164,7 @@ long long q_buffer_pos(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_buffer_on_pos(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#pos)
@@ -185,7 +185,7 @@ bool q_buffer_seek(void* self, long long off);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, long long)
+/// @param callback bool func(QBuffer* self, long long off)
 void q_buffer_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#seek)
@@ -206,7 +206,7 @@ bool q_buffer_at_end(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_buffer_on_at_end(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#atEnd)
@@ -226,7 +226,7 @@ bool q_buffer_can_read_line(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_buffer_on_can_read_line(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#canReadLine)
@@ -247,7 +247,7 @@ void q_buffer_connect_notify(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, QMetaMethod*)
+/// @param callback void func(QBuffer* self, QMetaMethod* param1)
 void q_buffer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#connectNotify)
@@ -269,7 +269,7 @@ void q_buffer_disconnect_notify(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, QMetaMethod*)
+/// @param callback void func(QBuffer* self, QMetaMethod* param1)
 void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#disconnectNotify)
@@ -292,7 +292,7 @@ long long q_buffer_read_data(void* self, char* data, long long maxlen);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn(QBuffer*, char*, long long)
+/// @param callback long long func(QBuffer* self, char* data, long long maxlen)
 void q_buffer_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#readData)
@@ -316,7 +316,7 @@ long long q_buffer_write_data(void* self, const char* data, long long lenVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn(QBuffer*, const char*, long long)
+/// @param callback long long func(QBuffer* self, const char* data, long long lenVal)
 void q_buffer_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#writeData)
@@ -605,7 +605,7 @@ void q_buffer_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*)
+/// @param callback void func(QBuffer* self)
 void q_buffer_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -621,7 +621,7 @@ void q_buffer_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, int)
+/// @param callback void func(QBuffer* self, int channel)
 void q_buffer_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -637,7 +637,7 @@ void q_buffer_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, long long)
+/// @param callback void func(QBuffer* self, long long bytes)
 void q_buffer_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -654,7 +654,7 @@ void q_buffer_channel_bytes_written(void* self, int channel, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, int, long long)
+/// @param callback void func(QBuffer* self, int channel, long long bytes)
 void q_buffer_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -669,7 +669,7 @@ void q_buffer_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*)
+/// @param callback void func(QBuffer* self)
 void q_buffer_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -684,7 +684,7 @@ void q_buffer_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*)
+/// @param callback void func(QBuffer* self)
 void q_buffer_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -923,7 +923,7 @@ void q_buffer_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*)
+/// @param callback void func(QBuffer* self)
 void q_buffer_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1001,7 +1001,7 @@ void q_buffer_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, QObject*)
+/// @param callback void func(QBuffer* self, QObject* param1)
 void q_buffer_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1029,7 +1029,7 @@ bool q_buffer_qbase_is_sequential(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_buffer_on_is_sequential(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1057,7 +1057,7 @@ bool q_buffer_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_buffer_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1085,7 +1085,7 @@ long long q_buffer_qbase_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_buffer_on_bytes_available(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1113,7 +1113,7 @@ long long q_buffer_qbase_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_buffer_on_bytes_to_write(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1143,7 +1143,7 @@ bool q_buffer_qbase_wait_for_ready_read(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, int)
+/// @param callback bool func(QBuffer* self, int msecs)
 void q_buffer_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1173,7 +1173,7 @@ bool q_buffer_qbase_wait_for_bytes_written(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, int)
+/// @param callback bool func(QBuffer* self, int msecs)
 void q_buffer_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1205,7 +1205,7 @@ long long q_buffer_qbase_read_line_data(void* self, char* data, long long maxlen
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn(QBuffer*, char*, long long)
+/// @param callback long long func(QBuffer* self, char* data, long long maxlen)
 void q_buffer_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QIODevice
@@ -1235,7 +1235,7 @@ long long q_buffer_qbase_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback long long fn(QBuffer*, long long)
+/// @param callback long long func(QBuffer* self, long long maxSize)
 void q_buffer_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// Inherited from QObject
@@ -1265,7 +1265,7 @@ bool q_buffer_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, QEvent*)
+/// @param callback bool func(QBuffer* self, QEvent* event)
 void q_buffer_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1297,7 +1297,7 @@ bool q_buffer_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, QObject*, QEvent*)
+/// @param callback bool func(QBuffer* self, QObject* watched, QEvent* event)
 void q_buffer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1327,7 +1327,7 @@ void q_buffer_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, QTimerEvent*)
+/// @param callback void func(QBuffer* self, QTimerEvent* event)
 void q_buffer_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1357,7 +1357,7 @@ void q_buffer_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, QChildEvent*)
+/// @param callback void func(QBuffer* self, QChildEvent* event)
 void q_buffer_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1387,7 +1387,7 @@ void q_buffer_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, QEvent*)
+/// @param callback void func(QBuffer* self, QEvent* event)
 void q_buffer_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1417,7 +1417,7 @@ void q_buffer_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QBuffer* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -1447,7 +1447,7 @@ void q_buffer_qbase_set_error_string(void* self, const char* errorString);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, const char*)
+/// @param callback void func(QBuffer* self, const char* errorString)
 void q_buffer_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1475,7 +1475,7 @@ QObject* q_buffer_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_buffer_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1503,7 +1503,7 @@ int32_t q_buffer_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_buffer_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1533,7 +1533,7 @@ int32_t q_buffer_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback int32_t fn(QBuffer*, const char*)
+/// @param callback int32_t func(QBuffer* self, const char* signal)
 void q_buffer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1563,7 +1563,7 @@ bool q_buffer_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool fn(QBuffer*, QMetaMethod*)
+/// @param callback bool func(QBuffer* self, QMetaMethod* signal)
 void q_buffer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1573,7 +1573,7 @@ void q_buffer_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBuffer*
-/// @param callback void fn(QBuffer*, const char*)
+/// @param callback void func(QBuffer* self, const char* objectName)
 void q_buffer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#dtor.QBuffer)

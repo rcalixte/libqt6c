@@ -44,7 +44,7 @@ int32_t k_toolbarlabelaction_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback int32_t fn(KToolBarLabelAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KToolBarLabelAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_toolbarlabelaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -84,7 +84,7 @@ QWidget* k_toolbarlabelaction_create_widget(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback QWidget* fn(KToolBarLabelAction*, QWidget*)
+/// @param callback QWidget* func(KToolBarLabelAction* self, QWidget* parent)
 void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#createWidget)
@@ -104,7 +104,7 @@ void k_toolbarlabelaction_text_changed(void* self, const char* newText);
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#textChanged)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, const char*)
+/// @param callback void func(KToolBarLabelAction* self, const char* newText)
 void k_toolbarlabelaction_on_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#event)
@@ -118,7 +118,7 @@ bool k_toolbarlabelaction_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback bool fn(KToolBarLabelAction*, QEvent*)
+/// @param callback bool func(KToolBarLabelAction* self, QEvent* param1)
 void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#event)
@@ -141,7 +141,7 @@ bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback bool fn(KToolBarLabelAction*, QObject*, QEvent*)
+/// @param callback bool func(KToolBarLabelAction* self, QObject* watched, QEvent* event)
 void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#eventFilter)
@@ -625,7 +625,7 @@ void k_toolbarlabelaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*)
+/// @param callback void func(KToolBarLabelAction* self)
 void k_toolbarlabelaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -641,7 +641,7 @@ void k_toolbarlabelaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, bool)
+/// @param callback void func(KToolBarLabelAction* self, bool enabled)
 void k_toolbarlabelaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -657,7 +657,7 @@ void k_toolbarlabelaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, bool)
+/// @param callback void func(KToolBarLabelAction* self, bool checkable)
 void k_toolbarlabelaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -672,7 +672,7 @@ void k_toolbarlabelaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*)
+/// @param callback void func(KToolBarLabelAction* self)
 void k_toolbarlabelaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -687,7 +687,7 @@ void k_toolbarlabelaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*)
+/// @param callback void func(KToolBarLabelAction* self)
 void k_toolbarlabelaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -702,7 +702,7 @@ void k_toolbarlabelaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*)
+/// @param callback void func(KToolBarLabelAction* self)
 void k_toolbarlabelaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -718,7 +718,7 @@ void k_toolbarlabelaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, bool)
+/// @param callback void func(KToolBarLabelAction* self, bool param1)
 void k_toolbarlabelaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -742,7 +742,7 @@ void k_toolbarlabelaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, bool)
+/// @param callback void func(KToolBarLabelAction* self, bool checked)
 void k_toolbarlabelaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -971,7 +971,7 @@ void k_toolbarlabelaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*)
+/// @param callback void func(KToolBarLabelAction* self)
 void k_toolbarlabelaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1049,7 +1049,7 @@ void k_toolbarlabelaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QObject*)
+/// @param callback void func(KToolBarLabelAction* self, QObject* param1)
 void k_toolbarlabelaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1079,7 +1079,7 @@ void k_toolbarlabelaction_qbase_delete_widget(void* self, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QWidget*)
+/// @param callback void func(KToolBarLabelAction* self, QWidget* widget)
 void k_toolbarlabelaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1109,7 +1109,7 @@ void k_toolbarlabelaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QTimerEvent*)
+/// @param callback void func(KToolBarLabelAction* self, QTimerEvent* event)
 void k_toolbarlabelaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1139,7 +1139,7 @@ void k_toolbarlabelaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QChildEvent*)
+/// @param callback void func(KToolBarLabelAction* self, QChildEvent* event)
 void k_toolbarlabelaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1169,7 +1169,7 @@ void k_toolbarlabelaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QEvent*)
+/// @param callback void func(KToolBarLabelAction* self, QEvent* event)
 void k_toolbarlabelaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1199,7 +1199,7 @@ void k_toolbarlabelaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QMetaMethod*)
+/// @param callback void func(KToolBarLabelAction* self, QMetaMethod* signal)
 void k_toolbarlabelaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1229,7 +1229,7 @@ void k_toolbarlabelaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, QMetaMethod*)
+/// @param callback void func(KToolBarLabelAction* self, QMetaMethod* signal)
 void k_toolbarlabelaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1257,7 +1257,7 @@ libqt_list /* of QWidget* */ k_toolbarlabelaction_qbase_created_widgets(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void k_toolbarlabelaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// Inherited from QObject
@@ -1285,7 +1285,7 @@ QObject* k_toolbarlabelaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_toolbarlabelaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1313,7 +1313,7 @@ int32_t k_toolbarlabelaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_toolbarlabelaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1343,7 +1343,7 @@ int32_t k_toolbarlabelaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback int32_t fn(KToolBarLabelAction*, const char*)
+/// @param callback int32_t func(KToolBarLabelAction* self, const char* signal)
 void k_toolbarlabelaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1373,7 +1373,7 @@ bool k_toolbarlabelaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback bool fn(KToolBarLabelAction*, QMetaMethod*)
+/// @param callback bool func(KToolBarLabelAction* self, QMetaMethod* signal)
 void k_toolbarlabelaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1383,7 +1383,7 @@ void k_toolbarlabelaction_on_is_signal_connected(void* self, bool (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KToolBarLabelAction*
-/// @param callback void fn(KToolBarLabelAction*, const char*)
+/// @param callback void func(KToolBarLabelAction* self, const char* objectName)
 void k_toolbarlabelaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#dtor.KToolBarLabelAction)

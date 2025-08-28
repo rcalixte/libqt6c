@@ -64,7 +64,7 @@ int32_t q_pushbutton_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback int32_t fn(QPushButton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPushButton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pushbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -92,7 +92,7 @@ QSize* q_pushbutton_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pushbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#sizeHint)
@@ -112,7 +112,7 @@ QSize* q_pushbutton_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pushbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#minimumSizeHint)
@@ -182,7 +182,7 @@ bool q_pushbutton_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn(QPushButton*, QEvent*)
+/// @param callback bool func(QPushButton* self, QEvent* e)
 void q_pushbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#event)
@@ -204,7 +204,7 @@ void q_pushbutton_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QPaintEvent*)
+/// @param callback void func(QPushButton* self, QPaintEvent* param1)
 void q_pushbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#paintEvent)
@@ -226,7 +226,7 @@ void q_pushbutton_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QKeyEvent*)
+/// @param callback void func(QPushButton* self, QKeyEvent* param1)
 void q_pushbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#keyPressEvent)
@@ -248,7 +248,7 @@ void q_pushbutton_focus_in_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QFocusEvent*)
+/// @param callback void func(QPushButton* self, QFocusEvent* param1)
 void q_pushbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#focusInEvent)
@@ -270,7 +270,7 @@ void q_pushbutton_focus_out_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QFocusEvent*)
+/// @param callback void func(QPushButton* self, QFocusEvent* param1)
 void q_pushbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#focusOutEvent)
@@ -292,7 +292,7 @@ void q_pushbutton_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMouseEvent*)
+/// @param callback void func(QPushButton* self, QMouseEvent* param1)
 void q_pushbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#mouseMoveEvent)
@@ -314,7 +314,7 @@ void q_pushbutton_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QStyleOptionButton*)
+/// @param callback void func(QPushButton* self, QStyleOptionButton* option)
 void q_pushbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#initStyleOption)
@@ -336,7 +336,7 @@ bool q_pushbutton_hit_button(void* self, void* pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn(QPushButton*, QPoint*)
+/// @param callback bool func(QPushButton* self, QPoint* pos)
 void q_pushbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#hitButton)
@@ -571,7 +571,7 @@ void q_pushbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*)
+/// @param callback void func(QPushButton* self)
 void q_pushbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -586,7 +586,7 @@ void q_pushbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*)
+/// @param callback void func(QPushButton* self)
 void q_pushbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -601,7 +601,7 @@ void q_pushbutton_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*)
+/// @param callback void func(QPushButton* self)
 void q_pushbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -617,7 +617,7 @@ void q_pushbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, bool)
+/// @param callback void func(QPushButton* self, bool checked)
 void q_pushbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -633,7 +633,7 @@ void q_pushbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, bool)
+/// @param callback void func(QPushButton* self, bool checked)
 void q_pushbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2573,7 +2573,7 @@ void q_pushbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, const char*)
+/// @param callback void func(QPushButton* self, const char* title)
 void q_pushbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2589,7 +2589,7 @@ void q_pushbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QIcon*)
+/// @param callback void func(QPushButton* self, QIcon* icon)
 void q_pushbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2605,7 +2605,7 @@ void q_pushbutton_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, const char*)
+/// @param callback void func(QPushButton* self, const char* iconText)
 void q_pushbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2621,7 +2621,7 @@ void q_pushbutton_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QPoint*)
+/// @param callback void func(QPushButton* self, QPoint* pos)
 void q_pushbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2998,7 +2998,7 @@ void q_pushbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*)
+/// @param callback void func(QPushButton* self)
 void q_pushbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3076,7 +3076,7 @@ void q_pushbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QObject*)
+/// @param callback void func(QPushButton* self, QObject* param1)
 void q_pushbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3195,7 +3195,7 @@ void q_pushbutton_qbase_check_state_set(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pushbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3223,7 +3223,7 @@ void q_pushbutton_qbase_next_check_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pushbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3253,7 +3253,7 @@ void q_pushbutton_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QKeyEvent*)
+/// @param callback void func(QPushButton* self, QKeyEvent* e)
 void q_pushbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3283,7 +3283,7 @@ void q_pushbutton_qbase_mouse_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMouseEvent*)
+/// @param callback void func(QPushButton* self, QMouseEvent* e)
 void q_pushbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3313,7 +3313,7 @@ void q_pushbutton_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMouseEvent*)
+/// @param callback void func(QPushButton* self, QMouseEvent* e)
 void q_pushbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3343,7 +3343,7 @@ void q_pushbutton_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QEvent*)
+/// @param callback void func(QPushButton* self, QEvent* e)
 void q_pushbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3373,7 +3373,7 @@ void q_pushbutton_qbase_timer_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QTimerEvent*)
+/// @param callback void func(QPushButton* self, QTimerEvent* e)
 void q_pushbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3401,7 +3401,7 @@ int32_t q_pushbutton_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pushbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3431,7 +3431,7 @@ void q_pushbutton_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, bool)
+/// @param callback void func(QPushButton* self, bool visible)
 void q_pushbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3461,7 +3461,7 @@ int32_t q_pushbutton_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback int32_t fn(QPushButton*, int)
+/// @param callback int32_t func(QPushButton* self, int param1)
 void q_pushbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3489,7 +3489,7 @@ bool q_pushbutton_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pushbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3517,7 +3517,7 @@ QPaintEngine* q_pushbutton_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_pushbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3547,7 +3547,7 @@ void q_pushbutton_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMouseEvent*)
+/// @param callback void func(QPushButton* self, QMouseEvent* event)
 void q_pushbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3577,7 +3577,7 @@ void q_pushbutton_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QWheelEvent*)
+/// @param callback void func(QPushButton* self, QWheelEvent* event)
 void q_pushbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3607,7 +3607,7 @@ void q_pushbutton_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QEnterEvent*)
+/// @param callback void func(QPushButton* self, QEnterEvent* event)
 void q_pushbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3637,7 +3637,7 @@ void q_pushbutton_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QEvent*)
+/// @param callback void func(QPushButton* self, QEvent* event)
 void q_pushbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3667,7 +3667,7 @@ void q_pushbutton_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMoveEvent*)
+/// @param callback void func(QPushButton* self, QMoveEvent* event)
 void q_pushbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3697,7 +3697,7 @@ void q_pushbutton_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QResizeEvent*)
+/// @param callback void func(QPushButton* self, QResizeEvent* event)
 void q_pushbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3727,7 +3727,7 @@ void q_pushbutton_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QCloseEvent*)
+/// @param callback void func(QPushButton* self, QCloseEvent* event)
 void q_pushbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3757,7 +3757,7 @@ void q_pushbutton_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QContextMenuEvent*)
+/// @param callback void func(QPushButton* self, QContextMenuEvent* event)
 void q_pushbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3787,7 +3787,7 @@ void q_pushbutton_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QTabletEvent*)
+/// @param callback void func(QPushButton* self, QTabletEvent* event)
 void q_pushbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3817,7 +3817,7 @@ void q_pushbutton_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QActionEvent*)
+/// @param callback void func(QPushButton* self, QActionEvent* event)
 void q_pushbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3847,7 +3847,7 @@ void q_pushbutton_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QDragEnterEvent*)
+/// @param callback void func(QPushButton* self, QDragEnterEvent* event)
 void q_pushbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3877,7 +3877,7 @@ void q_pushbutton_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QDragMoveEvent*)
+/// @param callback void func(QPushButton* self, QDragMoveEvent* event)
 void q_pushbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3907,7 +3907,7 @@ void q_pushbutton_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QDragLeaveEvent*)
+/// @param callback void func(QPushButton* self, QDragLeaveEvent* event)
 void q_pushbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3937,7 +3937,7 @@ void q_pushbutton_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QDropEvent*)
+/// @param callback void func(QPushButton* self, QDropEvent* event)
 void q_pushbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3967,7 +3967,7 @@ void q_pushbutton_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QShowEvent*)
+/// @param callback void func(QPushButton* self, QShowEvent* event)
 void q_pushbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3997,7 +3997,7 @@ void q_pushbutton_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QHideEvent*)
+/// @param callback void func(QPushButton* self, QHideEvent* event)
 void q_pushbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4031,7 +4031,7 @@ bool q_pushbutton_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn(QPushButton*, const char*, void*, intptr_t*)
+/// @param callback bool func(QPushButton* self, const char* eventType, void* message, intptr_t* result)
 void q_pushbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4061,7 +4061,7 @@ int32_t q_pushbutton_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback int32_t fn(QPushButton*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPushButton* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_pushbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4091,7 +4091,7 @@ void q_pushbutton_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QPainter*)
+/// @param callback void func(QPushButton* self, QPainter* painter)
 void q_pushbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4121,7 +4121,7 @@ QPaintDevice* q_pushbutton_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback QPaintDevice* fn(QPushButton*, QPoint*)
+/// @param callback QPaintDevice* func(QPushButton* self, QPoint* offset)
 void q_pushbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4149,7 +4149,7 @@ QPainter* q_pushbutton_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_pushbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4179,7 +4179,7 @@ void q_pushbutton_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QInputMethodEvent*)
+/// @param callback void func(QPushButton* self, QInputMethodEvent* param1)
 void q_pushbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4209,7 +4209,7 @@ QVariant* q_pushbutton_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback QVariant* fn(QPushButton*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPushButton* self, enum Qt__InputMethodQuery param1)
 void q_pushbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4239,7 +4239,7 @@ bool q_pushbutton_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn(QPushButton*, bool)
+/// @param callback bool func(QPushButton* self, bool next)
 void q_pushbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4271,7 +4271,7 @@ bool q_pushbutton_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn(QPushButton*, QObject*, QEvent*)
+/// @param callback bool func(QPushButton* self, QObject* watched, QEvent* event)
 void q_pushbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4301,7 +4301,7 @@ void q_pushbutton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QChildEvent*)
+/// @param callback void func(QPushButton* self, QChildEvent* event)
 void q_pushbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4331,7 +4331,7 @@ void q_pushbutton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QEvent*)
+/// @param callback void func(QPushButton* self, QEvent* event)
 void q_pushbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4361,7 +4361,7 @@ void q_pushbutton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMetaMethod*)
+/// @param callback void func(QPushButton* self, QMetaMethod* signal)
 void q_pushbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4391,7 +4391,7 @@ void q_pushbutton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, QMetaMethod*)
+/// @param callback void func(QPushButton* self, QMetaMethod* signal)
 void q_pushbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4419,7 +4419,7 @@ void q_pushbutton_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pushbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4447,7 +4447,7 @@ void q_pushbutton_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pushbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4475,7 +4475,7 @@ void q_pushbutton_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pushbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4503,7 +4503,7 @@ bool q_pushbutton_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pushbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4531,7 +4531,7 @@ bool q_pushbutton_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pushbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4559,7 +4559,7 @@ QObject* q_pushbutton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pushbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4587,7 +4587,7 @@ int32_t q_pushbutton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pushbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4617,7 +4617,7 @@ int32_t q_pushbutton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback int32_t fn(QPushButton*, const char*)
+/// @param callback int32_t func(QPushButton* self, const char* signal)
 void q_pushbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4647,7 +4647,7 @@ bool q_pushbutton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback bool fn(QPushButton*, QMetaMethod*)
+/// @param callback bool func(QPushButton* self, QMetaMethod* signal)
 void q_pushbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4679,7 +4679,7 @@ double q_pushbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPushButton*
-/// @param callback double fn(QPushButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPushButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_pushbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4689,7 +4689,7 @@ void q_pushbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPushButton*
-/// @param callback void fn(QPushButton*, const char*)
+/// @param callback void func(QPushButton* self, const char* objectName)
 void q_pushbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#dtor.QPushButton)

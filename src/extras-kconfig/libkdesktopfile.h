@@ -397,7 +397,7 @@ bool k_desktopfile_qbase_sync(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_desktopfile_on_sync(void* self, bool (*callback)());
 
 /// Inherited from KConfig
@@ -425,7 +425,7 @@ void k_desktopfile_qbase_mark_as_clean(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback void fn()
+/// @param callback void func()
 void k_desktopfile_on_mark_as_clean(void* self, void (*callback)());
 
 /// Inherited from KConfig
@@ -457,7 +457,7 @@ int32_t k_desktopfile_qbase_access_mode(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_desktopfile_on_access_mode(void* self, int32_t (*callback)());
 
 /// Inherited from KConfig
@@ -485,7 +485,7 @@ bool k_desktopfile_qbase_is_immutable(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_desktopfile_on_is_immutable(void* self, bool (*callback)());
 
 /// Inherited from KConfig
@@ -517,7 +517,7 @@ const char** k_desktopfile_qbase_group_list(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void k_desktopfile_on_group_list(void* self, const char** (*callback)());
 
 /// Inherited from KConfig
@@ -547,7 +547,7 @@ bool k_desktopfile_qbase_has_group_impl(void* self, const char* groupName);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback bool fn(KDesktopFile*, const char*)
+/// @param callback bool func(KDesktopFile* self, const char* groupName)
 void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
 
 /// Inherited from KConfig
@@ -577,7 +577,7 @@ KConfigGroup* k_desktopfile_qbase_group_impl(void* self, const char* groupName);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback KConfigGroup* fn(KDesktopFile*, const char*)
+/// @param callback KConfigGroup* func(KDesktopFile* self, const char* groupName)
 void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
 /// Inherited from KConfig
@@ -609,7 +609,7 @@ void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback void fn(KDesktopFile*, const char*, flag of enum KConfigBase__WriteConfigFlag)
+/// @param callback void func(KDesktopFile* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
 void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t));
 
 /// Inherited from KConfig
@@ -639,7 +639,7 @@ bool k_desktopfile_qbase_is_group_immutable_impl(void* self, const char* groupNa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback bool fn(KDesktopFile*, const char*)
+/// @param callback bool func(KDesktopFile* self, const char* groupName)
 void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
 
 /// Inherited from KConfig
@@ -671,7 +671,7 @@ void k_desktopfile_qbase_virtual_hook(void* self, int id, void* data);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDesktopFile*
-/// @param callback void fn(KDesktopFile*, int, void*)
+/// @param callback void func(KDesktopFile* self, int id, void* data)
 void k_desktopfile_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdesktopfile.html#dtor.KDesktopFile)

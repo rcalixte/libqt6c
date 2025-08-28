@@ -40,7 +40,7 @@ int32_t q_pieseries_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QPieSeries*
-/// @param callback int32_t fn(QPieSeries*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPieSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pieseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_pieseries_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPieSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pieseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#type)
@@ -237,7 +237,7 @@ void q_pieseries_added(void* self, libqt_list slices);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, libqt_list /* of QPieSlice* */)
+/// @param callback void func(QPieSeries* self, libqt_list /* of QPieSlice* */ /* of QPieSlice* */)
 void q_pieseries_on_added(void* self, void (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
@@ -249,7 +249,7 @@ void q_pieseries_removed(void* self, libqt_list slices);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, libqt_list /* of QPieSlice* */)
+/// @param callback void func(QPieSeries* self, libqt_list /* of QPieSlice* */ /* of QPieSlice* */)
 void q_pieseries_on_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clicked)
@@ -261,7 +261,7 @@ void q_pieseries_clicked(void* self, void* slice);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clicked)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QPieSlice*)
+/// @param callback void func(QPieSeries* self, QPieSlice* slice)
 void q_pieseries_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#hovered)
@@ -274,7 +274,7 @@ void q_pieseries_hovered(void* self, void* slice, bool state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#hovered)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QPieSlice*, bool)
+/// @param callback void func(QPieSeries* self, QPieSlice* slice, bool state)
 void q_pieseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pressed)
@@ -286,7 +286,7 @@ void q_pieseries_pressed(void* self, void* slice);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#pressed)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QPieSlice*)
+/// @param callback void func(QPieSeries* self, QPieSlice* slice)
 void q_pieseries_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#released)
@@ -298,7 +298,7 @@ void q_pieseries_released(void* self, void* slice);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#released)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QPieSlice*)
+/// @param callback void func(QPieSeries* self, QPieSlice* slice)
 void q_pieseries_on_released(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#doubleClicked)
@@ -310,7 +310,7 @@ void q_pieseries_double_clicked(void* self, void* slice);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QPieSlice*)
+/// @param callback void func(QPieSeries* self, QPieSlice* slice)
 void q_pieseries_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#countChanged)
@@ -321,7 +321,7 @@ void q_pieseries_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#countChanged)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#sumChanged)
@@ -332,7 +332,7 @@ void q_pieseries_sum_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#sumChanged)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_sum_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -474,7 +474,7 @@ void q_pieseries_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -489,7 +489,7 @@ void q_pieseries_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -504,7 +504,7 @@ void q_pieseries_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -519,7 +519,7 @@ void q_pieseries_use_open_g_l_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -764,7 +764,7 @@ void q_pieseries_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*)
+/// @param callback void func(QPieSeries* self)
 void q_pieseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -842,7 +842,7 @@ void q_pieseries_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QObject*)
+/// @param callback void func(QPieSeries* self, QObject* param1)
 void q_pieseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -872,7 +872,7 @@ bool q_pieseries_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback bool fn(QPieSeries*, QEvent*)
+/// @param callback bool func(QPieSeries* self, QEvent* event)
 void q_pieseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -904,7 +904,7 @@ bool q_pieseries_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback bool fn(QPieSeries*, QObject*, QEvent*)
+/// @param callback bool func(QPieSeries* self, QObject* watched, QEvent* event)
 void q_pieseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -934,7 +934,7 @@ void q_pieseries_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QTimerEvent*)
+/// @param callback void func(QPieSeries* self, QTimerEvent* event)
 void q_pieseries_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -964,7 +964,7 @@ void q_pieseries_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QChildEvent*)
+/// @param callback void func(QPieSeries* self, QChildEvent* event)
 void q_pieseries_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -994,7 +994,7 @@ void q_pieseries_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QEvent*)
+/// @param callback void func(QPieSeries* self, QEvent* event)
 void q_pieseries_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1024,7 +1024,7 @@ void q_pieseries_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QMetaMethod*)
+/// @param callback void func(QPieSeries* self, QMetaMethod* signal)
 void q_pieseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1054,7 +1054,7 @@ void q_pieseries_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, QMetaMethod*)
+/// @param callback void func(QPieSeries* self, QMetaMethod* signal)
 void q_pieseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1082,7 +1082,7 @@ QObject* q_pieseries_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pieseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1110,7 +1110,7 @@ int32_t q_pieseries_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pieseries_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1140,7 +1140,7 @@ int32_t q_pieseries_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback int32_t fn(QPieSeries*, const char*)
+/// @param callback int32_t func(QPieSeries* self, const char* signal)
 void q_pieseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1170,7 +1170,7 @@ bool q_pieseries_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSeries*
-/// @param callback bool fn(QPieSeries*, QMetaMethod*)
+/// @param callback bool func(QPieSeries* self, QMetaMethod* signal)
 void q_pieseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1180,7 +1180,7 @@ void q_pieseries_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPieSeries*
-/// @param callback void fn(QPieSeries*, const char*)
+/// @param callback void func(QPieSeries* self, const char* objectName)
 void q_pieseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#dtor.QPieSeries)

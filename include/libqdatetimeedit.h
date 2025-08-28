@@ -73,7 +73,7 @@ int32_t q_datetimeedit_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn(QDateTimeEdit*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QDateTimeEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -361,7 +361,7 @@ QSize* q_datetimeedit_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_datetimeedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
@@ -381,7 +381,7 @@ void q_datetimeedit_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_datetimeedit_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
@@ -402,7 +402,7 @@ void q_datetimeedit_step_by(void* self, int steps);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, int)
+/// @param callback void func(QDateTimeEdit* self, int steps)
 void q_datetimeedit_on_step_by(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
@@ -424,7 +424,7 @@ bool q_datetimeedit_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn(QDateTimeEdit*, QEvent*)
+/// @param callback bool func(QDateTimeEdit* self, QEvent* event)
 void q_datetimeedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
@@ -444,7 +444,7 @@ void q_datetimeedit_date_time_changed(void* self, void* dateTime);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QDateTime*)
+/// @param callback void func(QDateTimeEdit* self, QDateTime* dateTime)
 void q_datetimeedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
@@ -456,7 +456,7 @@ void q_datetimeedit_time_changed(void* self, void* time);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QTime*)
+/// @param callback void func(QDateTimeEdit* self, QTime* time)
 void q_datetimeedit_on_time_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
@@ -468,7 +468,7 @@ void q_datetimeedit_date_changed(void* self, void* date);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QDate*)
+/// @param callback void func(QDateTimeEdit* self, QDate* date)
 void q_datetimeedit_on_date_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#setDateTime)
@@ -500,7 +500,7 @@ void q_datetimeedit_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QKeyEvent*)
+/// @param callback void func(QDateTimeEdit* self, QKeyEvent* event)
 void q_datetimeedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
@@ -522,7 +522,7 @@ void q_datetimeedit_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QWheelEvent*)
+/// @param callback void func(QDateTimeEdit* self, QWheelEvent* event)
 void q_datetimeedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
@@ -544,7 +544,7 @@ void q_datetimeedit_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QFocusEvent*)
+/// @param callback void func(QDateTimeEdit* self, QFocusEvent* event)
 void q_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
@@ -566,7 +566,7 @@ bool q_datetimeedit_focus_next_prev_child(void* self, bool next);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn(QDateTimeEdit*, bool)
+/// @param callback bool func(QDateTimeEdit* self, bool next)
 void q_datetimeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
@@ -591,7 +591,7 @@ int32_t q_datetimeedit_validate(void* self, const char* input, int* pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn(QDateTimeEdit*, const char*, int*)
+/// @param callback int32_t func(QDateTimeEdit* self, const char* input, int* pos)
 void q_datetimeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
@@ -616,7 +616,7 @@ void q_datetimeedit_fixup(void* self, const char* input);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, const char*)
+/// @param callback void func(QDateTimeEdit* self, const char* input)
 void q_datetimeedit_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
@@ -638,7 +638,7 @@ QDateTime* q_datetimeedit_date_time_from_text(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QDateTime* fn(QDateTimeEdit*, const char*)
+/// @param callback QDateTime* func(QDateTimeEdit* self, const char* text)
 void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
@@ -662,7 +662,7 @@ const char* q_datetimeedit_text_from_date_time(void* self, void* dt);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback const char* fn(QDateTimeEdit*, QDateTime*)
+/// @param callback const char* func(QDateTimeEdit* self, QDateTime* dt)
 void q_datetimeedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
@@ -685,7 +685,7 @@ int64_t q_datetimeedit_step_enabled(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_datetimeedit_on_step_enabled(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
@@ -708,7 +708,7 @@ void q_datetimeedit_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMouseEvent*)
+/// @param callback void func(QDateTimeEdit* self, QMouseEvent* event)
 void q_datetimeedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
@@ -730,7 +730,7 @@ void q_datetimeedit_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QPaintEvent*)
+/// @param callback void func(QDateTimeEdit* self, QPaintEvent* event)
 void q_datetimeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
@@ -752,7 +752,7 @@ void q_datetimeedit_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QStyleOptionSpinBox*)
+/// @param callback void func(QDateTimeEdit* self, QStyleOptionSpinBox* option)
 void q_datetimeedit_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
@@ -994,7 +994,7 @@ void q_datetimeedit_editing_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*)
+/// @param callback void func(QDateTimeEdit* self)
 void q_datetimeedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2934,7 +2934,7 @@ void q_datetimeedit_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, const char*)
+/// @param callback void func(QDateTimeEdit* self, const char* title)
 void q_datetimeedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2950,7 +2950,7 @@ void q_datetimeedit_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QIcon*)
+/// @param callback void func(QDateTimeEdit* self, QIcon* icon)
 void q_datetimeedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2966,7 +2966,7 @@ void q_datetimeedit_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, const char*)
+/// @param callback void func(QDateTimeEdit* self, const char* iconText)
 void q_datetimeedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2982,7 +2982,7 @@ void q_datetimeedit_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QPoint*)
+/// @param callback void func(QDateTimeEdit* self, QPoint* pos)
 void q_datetimeedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3359,7 +3359,7 @@ void q_datetimeedit_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*)
+/// @param callback void func(QDateTimeEdit* self)
 void q_datetimeedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3437,7 +3437,7 @@ void q_datetimeedit_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QObject*)
+/// @param callback void func(QDateTimeEdit* self, QObject* param1)
 void q_datetimeedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3556,7 +3556,7 @@ QSize* q_datetimeedit_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -3586,7 +3586,7 @@ QVariant* q_datetimeedit_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QVariant* fn(QDateTimeEdit*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QDateTimeEdit* self, enum Qt__InputMethodQuery param1)
 void q_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSpinBox
@@ -3616,7 +3616,7 @@ void q_datetimeedit_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QResizeEvent*)
+/// @param callback void func(QDateTimeEdit* self, QResizeEvent* event)
 void q_datetimeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3646,7 +3646,7 @@ void q_datetimeedit_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QKeyEvent*)
+/// @param callback void func(QDateTimeEdit* self, QKeyEvent* event)
 void q_datetimeedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3676,7 +3676,7 @@ void q_datetimeedit_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QFocusEvent*)
+/// @param callback void func(QDateTimeEdit* self, QFocusEvent* event)
 void q_datetimeedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3706,7 +3706,7 @@ void q_datetimeedit_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QContextMenuEvent*)
+/// @param callback void func(QDateTimeEdit* self, QContextMenuEvent* event)
 void q_datetimeedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3736,7 +3736,7 @@ void q_datetimeedit_qbase_change_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QEvent*)
+/// @param callback void func(QDateTimeEdit* self, QEvent* event)
 void q_datetimeedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3766,7 +3766,7 @@ void q_datetimeedit_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QCloseEvent*)
+/// @param callback void func(QDateTimeEdit* self, QCloseEvent* event)
 void q_datetimeedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3796,7 +3796,7 @@ void q_datetimeedit_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QHideEvent*)
+/// @param callback void func(QDateTimeEdit* self, QHideEvent* event)
 void q_datetimeedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3826,7 +3826,7 @@ void q_datetimeedit_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMouseEvent*)
+/// @param callback void func(QDateTimeEdit* self, QMouseEvent* event)
 void q_datetimeedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3856,7 +3856,7 @@ void q_datetimeedit_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMouseEvent*)
+/// @param callback void func(QDateTimeEdit* self, QMouseEvent* event)
 void q_datetimeedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3886,7 +3886,7 @@ void q_datetimeedit_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QTimerEvent*)
+/// @param callback void func(QDateTimeEdit* self, QTimerEvent* event)
 void q_datetimeedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -3916,7 +3916,7 @@ void q_datetimeedit_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QShowEvent*)
+/// @param callback void func(QDateTimeEdit* self, QShowEvent* event)
 void q_datetimeedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3944,7 +3944,7 @@ int32_t q_datetimeedit_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_datetimeedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3974,7 +3974,7 @@ void q_datetimeedit_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, bool)
+/// @param callback void func(QDateTimeEdit* self, bool visible)
 void q_datetimeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -4004,7 +4004,7 @@ int32_t q_datetimeedit_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn(QDateTimeEdit*, int)
+/// @param callback int32_t func(QDateTimeEdit* self, int param1)
 void q_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -4032,7 +4032,7 @@ bool q_datetimeedit_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_datetimeedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4060,7 +4060,7 @@ QPaintEngine* q_datetimeedit_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -4090,7 +4090,7 @@ void q_datetimeedit_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMouseEvent*)
+/// @param callback void func(QDateTimeEdit* self, QMouseEvent* event)
 void q_datetimeedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4120,7 +4120,7 @@ void q_datetimeedit_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QEnterEvent*)
+/// @param callback void func(QDateTimeEdit* self, QEnterEvent* event)
 void q_datetimeedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4150,7 +4150,7 @@ void q_datetimeedit_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QEvent*)
+/// @param callback void func(QDateTimeEdit* self, QEvent* event)
 void q_datetimeedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4180,7 +4180,7 @@ void q_datetimeedit_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMoveEvent*)
+/// @param callback void func(QDateTimeEdit* self, QMoveEvent* event)
 void q_datetimeedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4210,7 +4210,7 @@ void q_datetimeedit_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QTabletEvent*)
+/// @param callback void func(QDateTimeEdit* self, QTabletEvent* event)
 void q_datetimeedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4240,7 +4240,7 @@ void q_datetimeedit_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QActionEvent*)
+/// @param callback void func(QDateTimeEdit* self, QActionEvent* event)
 void q_datetimeedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4270,7 +4270,7 @@ void q_datetimeedit_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QDragEnterEvent*)
+/// @param callback void func(QDateTimeEdit* self, QDragEnterEvent* event)
 void q_datetimeedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4300,7 +4300,7 @@ void q_datetimeedit_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QDragMoveEvent*)
+/// @param callback void func(QDateTimeEdit* self, QDragMoveEvent* event)
 void q_datetimeedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4330,7 +4330,7 @@ void q_datetimeedit_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QDragLeaveEvent*)
+/// @param callback void func(QDateTimeEdit* self, QDragLeaveEvent* event)
 void q_datetimeedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4360,7 +4360,7 @@ void q_datetimeedit_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QDropEvent*)
+/// @param callback void func(QDateTimeEdit* self, QDropEvent* event)
 void q_datetimeedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4394,7 +4394,7 @@ bool q_datetimeedit_qbase_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn(QDateTimeEdit*, const char*, void*, intptr_t*)
+/// @param callback bool func(QDateTimeEdit* self, const char* eventType, void* message, intptr_t* result)
 void q_datetimeedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4424,7 +4424,7 @@ int32_t q_datetimeedit_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn(QDateTimeEdit*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4454,7 +4454,7 @@ void q_datetimeedit_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QPainter*)
+/// @param callback void func(QDateTimeEdit* self, QPainter* painter)
 void q_datetimeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4484,7 +4484,7 @@ QPaintDevice* q_datetimeedit_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QPaintDevice* fn(QDateTimeEdit*, QPoint*)
+/// @param callback QPaintDevice* func(QDateTimeEdit* self, QPoint* offset)
 void q_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4512,7 +4512,7 @@ QPainter* q_datetimeedit_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4542,7 +4542,7 @@ void q_datetimeedit_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QInputMethodEvent*)
+/// @param callback void func(QDateTimeEdit* self, QInputMethodEvent* param1)
 void q_datetimeedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4574,7 +4574,7 @@ bool q_datetimeedit_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn(QDateTimeEdit*, QObject*, QEvent*)
+/// @param callback bool func(QDateTimeEdit* self, QObject* watched, QEvent* event)
 void q_datetimeedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4604,7 +4604,7 @@ void q_datetimeedit_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QChildEvent*)
+/// @param callback void func(QDateTimeEdit* self, QChildEvent* event)
 void q_datetimeedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4634,7 +4634,7 @@ void q_datetimeedit_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QEvent*)
+/// @param callback void func(QDateTimeEdit* self, QEvent* event)
 void q_datetimeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4664,7 +4664,7 @@ void q_datetimeedit_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMetaMethod*)
+/// @param callback void func(QDateTimeEdit* self, QMetaMethod* signal)
 void q_datetimeedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4694,7 +4694,7 @@ void q_datetimeedit_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QMetaMethod*)
+/// @param callback void func(QDateTimeEdit* self, QMetaMethod* signal)
 void q_datetimeedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -4722,7 +4722,7 @@ QLineEdit* q_datetimeedit_qbase_line_edit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QLineEdit* fn()
+/// @param callback QLineEdit* func()
 void q_datetimeedit_on_line_edit(void* self, QLineEdit* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -4752,7 +4752,7 @@ void q_datetimeedit_qbase_set_line_edit(void* self, void* edit);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, QLineEdit*)
+/// @param callback void func(QDateTimeEdit* self, QLineEdit* edit)
 void q_datetimeedit_on_set_line_edit(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4780,7 +4780,7 @@ void q_datetimeedit_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_datetimeedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4808,7 +4808,7 @@ void q_datetimeedit_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_datetimeedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4836,7 +4836,7 @@ void q_datetimeedit_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_datetimeedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4864,7 +4864,7 @@ bool q_datetimeedit_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_datetimeedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4892,7 +4892,7 @@ bool q_datetimeedit_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_datetimeedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4920,7 +4920,7 @@ QObject* q_datetimeedit_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_datetimeedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4948,7 +4948,7 @@ int32_t q_datetimeedit_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4978,7 +4978,7 @@ int32_t q_datetimeedit_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int32_t fn(QDateTimeEdit*, const char*)
+/// @param callback int32_t func(QDateTimeEdit* self, const char* signal)
 void q_datetimeedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5008,7 +5008,7 @@ bool q_datetimeedit_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback bool fn(QDateTimeEdit*, QMetaMethod*)
+/// @param callback bool func(QDateTimeEdit* self, QMetaMethod* signal)
 void q_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5040,7 +5040,7 @@ double q_datetimeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback double fn(QDateTimeEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5050,7 +5050,7 @@ void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QDateTimeEdit*
-/// @param callback void fn(QDateTimeEdit*, const char*)
+/// @param callback void func(QDateTimeEdit* self, const char* objectName)
 void q_datetimeedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dtor.QDateTimeEdit)
@@ -5100,7 +5100,7 @@ int32_t q_timeedit_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn(QTimeEdit*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTimeEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_timeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -5127,7 +5127,7 @@ void q_timeedit_user_time_changed(void* self, void* time);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeedit.html#userTimeChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QTime*)
+/// @param callback void func(QTimeEdit* self, QTime* time)
 void q_timeedit_on_user_time_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -5510,7 +5510,7 @@ void q_timeedit_date_time_changed(void* self, void* dateTime);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QDateTime*)
+/// @param callback void func(QTimeEdit* self, QDateTime* dateTime)
 void q_timeedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -5526,7 +5526,7 @@ void q_timeedit_time_changed(void* self, void* time);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QTime*)
+/// @param callback void func(QTimeEdit* self, QTime* time)
 void q_timeedit_on_time_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -5542,7 +5542,7 @@ void q_timeedit_date_changed(void* self, void* date);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QDate*)
+/// @param callback void func(QTimeEdit* self, QDate* date)
 void q_timeedit_on_date_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -5783,7 +5783,7 @@ void q_timeedit_editing_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*)
+/// @param callback void func(QTimeEdit* self)
 void q_timeedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -7723,7 +7723,7 @@ void q_timeedit_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, const char*)
+/// @param callback void func(QTimeEdit* self, const char* title)
 void q_timeedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -7739,7 +7739,7 @@ void q_timeedit_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QIcon*)
+/// @param callback void func(QTimeEdit* self, QIcon* icon)
 void q_timeedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7755,7 +7755,7 @@ void q_timeedit_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, const char*)
+/// @param callback void func(QTimeEdit* self, const char* iconText)
 void q_timeedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -7771,7 +7771,7 @@ void q_timeedit_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QPoint*)
+/// @param callback void func(QTimeEdit* self, QPoint* pos)
 void q_timeedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8148,7 +8148,7 @@ void q_timeedit_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*)
+/// @param callback void func(QTimeEdit* self)
 void q_timeedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -8226,7 +8226,7 @@ void q_timeedit_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QObject*)
+/// @param callback void func(QTimeEdit* self, QObject* param1)
 void q_timeedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8345,7 +8345,7 @@ QSize* q_timeedit_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_timeedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -8373,7 +8373,7 @@ void q_timeedit_qbase_clear(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_timeedit_on_clear(void* self, void (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -8403,7 +8403,7 @@ void q_timeedit_qbase_step_by(void* self, int steps);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, int)
+/// @param callback void func(QTimeEdit* self, int steps)
 void q_timeedit_on_step_by(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDateTimeEdit
@@ -8433,7 +8433,7 @@ bool q_timeedit_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn(QTimeEdit*, QEvent*)
+/// @param callback bool func(QTimeEdit* self, QEvent* event)
 void q_timeedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8463,7 +8463,7 @@ void q_timeedit_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QKeyEvent*)
+/// @param callback void func(QTimeEdit* self, QKeyEvent* event)
 void q_timeedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8493,7 +8493,7 @@ void q_timeedit_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QWheelEvent*)
+/// @param callback void func(QTimeEdit* self, QWheelEvent* event)
 void q_timeedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8523,7 +8523,7 @@ void q_timeedit_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QFocusEvent*)
+/// @param callback void func(QTimeEdit* self, QFocusEvent* event)
 void q_timeedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8553,7 +8553,7 @@ bool q_timeedit_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn(QTimeEdit*, bool)
+/// @param callback bool func(QTimeEdit* self, bool next)
 void q_timeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QDateTimeEdit
@@ -8589,7 +8589,7 @@ int32_t q_timeedit_qbase_validate(void* self, const char* input, int* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn(QTimeEdit*, const char*, int*)
+/// @param callback int32_t func(QTimeEdit* self, const char* input, int* pos)
 void q_timeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
@@ -8619,7 +8619,7 @@ void q_timeedit_qbase_fixup(void* self, const char* input);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, const char*)
+/// @param callback void func(QTimeEdit* self, const char* input)
 void q_timeedit_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QDateTimeEdit
@@ -8649,7 +8649,7 @@ QDateTime* q_timeedit_qbase_date_time_from_text(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QDateTime* fn(QTimeEdit*, const char*)
+/// @param callback QDateTime* func(QTimeEdit* self, const char* text)
 void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
 /// Inherited from QDateTimeEdit
@@ -8683,7 +8683,7 @@ const char* q_timeedit_qbase_text_from_date_time(void* self, void* dt);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback const char* fn(QTimeEdit*, QDateTime*)
+/// @param callback const char* func(QTimeEdit* self, QDateTime* dt)
 void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8715,7 +8715,7 @@ int64_t q_timeedit_qbase_step_enabled(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_timeedit_on_step_enabled(void* self, int64_t (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -8745,7 +8745,7 @@ void q_timeedit_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMouseEvent*)
+/// @param callback void func(QTimeEdit* self, QMouseEvent* event)
 void q_timeedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8775,7 +8775,7 @@ void q_timeedit_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QPaintEvent*)
+/// @param callback void func(QTimeEdit* self, QPaintEvent* event)
 void q_timeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -8805,7 +8805,7 @@ void q_timeedit_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QStyleOptionSpinBox*)
+/// @param callback void func(QTimeEdit* self, QStyleOptionSpinBox* option)
 void q_timeedit_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -8833,7 +8833,7 @@ QSize* q_timeedit_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -8863,7 +8863,7 @@ QVariant* q_timeedit_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QVariant* fn(QTimeEdit*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QTimeEdit* self, enum Qt__InputMethodQuery param1)
 void q_timeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSpinBox
@@ -8893,7 +8893,7 @@ void q_timeedit_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QResizeEvent*)
+/// @param callback void func(QTimeEdit* self, QResizeEvent* event)
 void q_timeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -8923,7 +8923,7 @@ void q_timeedit_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QKeyEvent*)
+/// @param callback void func(QTimeEdit* self, QKeyEvent* event)
 void q_timeedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -8953,7 +8953,7 @@ void q_timeedit_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QFocusEvent*)
+/// @param callback void func(QTimeEdit* self, QFocusEvent* event)
 void q_timeedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -8983,7 +8983,7 @@ void q_timeedit_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QContextMenuEvent*)
+/// @param callback void func(QTimeEdit* self, QContextMenuEvent* event)
 void q_timeedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9013,7 +9013,7 @@ void q_timeedit_qbase_change_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QEvent*)
+/// @param callback void func(QTimeEdit* self, QEvent* event)
 void q_timeedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9043,7 +9043,7 @@ void q_timeedit_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QCloseEvent*)
+/// @param callback void func(QTimeEdit* self, QCloseEvent* event)
 void q_timeedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9073,7 +9073,7 @@ void q_timeedit_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QHideEvent*)
+/// @param callback void func(QTimeEdit* self, QHideEvent* event)
 void q_timeedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9103,7 +9103,7 @@ void q_timeedit_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMouseEvent*)
+/// @param callback void func(QTimeEdit* self, QMouseEvent* event)
 void q_timeedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9133,7 +9133,7 @@ void q_timeedit_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMouseEvent*)
+/// @param callback void func(QTimeEdit* self, QMouseEvent* event)
 void q_timeedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9163,7 +9163,7 @@ void q_timeedit_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QTimerEvent*)
+/// @param callback void func(QTimeEdit* self, QTimerEvent* event)
 void q_timeedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9193,7 +9193,7 @@ void q_timeedit_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QShowEvent*)
+/// @param callback void func(QTimeEdit* self, QShowEvent* event)
 void q_timeedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9221,7 +9221,7 @@ int32_t q_timeedit_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_timeedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -9251,7 +9251,7 @@ void q_timeedit_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, bool)
+/// @param callback void func(QTimeEdit* self, bool visible)
 void q_timeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -9281,7 +9281,7 @@ int32_t q_timeedit_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn(QTimeEdit*, int)
+/// @param callback int32_t func(QTimeEdit* self, int param1)
 void q_timeedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -9309,7 +9309,7 @@ bool q_timeedit_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_timeedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -9337,7 +9337,7 @@ QPaintEngine* q_timeedit_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_timeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -9367,7 +9367,7 @@ void q_timeedit_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMouseEvent*)
+/// @param callback void func(QTimeEdit* self, QMouseEvent* event)
 void q_timeedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9397,7 +9397,7 @@ void q_timeedit_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QEnterEvent*)
+/// @param callback void func(QTimeEdit* self, QEnterEvent* event)
 void q_timeedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9427,7 +9427,7 @@ void q_timeedit_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QEvent*)
+/// @param callback void func(QTimeEdit* self, QEvent* event)
 void q_timeedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9457,7 +9457,7 @@ void q_timeedit_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMoveEvent*)
+/// @param callback void func(QTimeEdit* self, QMoveEvent* event)
 void q_timeedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9487,7 +9487,7 @@ void q_timeedit_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QTabletEvent*)
+/// @param callback void func(QTimeEdit* self, QTabletEvent* event)
 void q_timeedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9517,7 +9517,7 @@ void q_timeedit_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QActionEvent*)
+/// @param callback void func(QTimeEdit* self, QActionEvent* event)
 void q_timeedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9547,7 +9547,7 @@ void q_timeedit_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QDragEnterEvent*)
+/// @param callback void func(QTimeEdit* self, QDragEnterEvent* event)
 void q_timeedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9577,7 +9577,7 @@ void q_timeedit_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QDragMoveEvent*)
+/// @param callback void func(QTimeEdit* self, QDragMoveEvent* event)
 void q_timeedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9607,7 +9607,7 @@ void q_timeedit_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QDragLeaveEvent*)
+/// @param callback void func(QTimeEdit* self, QDragLeaveEvent* event)
 void q_timeedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9637,7 +9637,7 @@ void q_timeedit_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QDropEvent*)
+/// @param callback void func(QTimeEdit* self, QDropEvent* event)
 void q_timeedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9671,7 +9671,7 @@ bool q_timeedit_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn(QTimeEdit*, const char*, void*, intptr_t*)
+/// @param callback bool func(QTimeEdit* self, const char* eventType, void* message, intptr_t* result)
 void q_timeedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -9701,7 +9701,7 @@ int32_t q_timeedit_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn(QTimeEdit*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_timeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -9731,7 +9731,7 @@ void q_timeedit_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QPainter*)
+/// @param callback void func(QTimeEdit* self, QPainter* painter)
 void q_timeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9761,7 +9761,7 @@ QPaintDevice* q_timeedit_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QPaintDevice* fn(QTimeEdit*, QPoint*)
+/// @param callback QPaintDevice* func(QTimeEdit* self, QPoint* offset)
 void q_timeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9789,7 +9789,7 @@ QPainter* q_timeedit_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_timeedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -9819,7 +9819,7 @@ void q_timeedit_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QInputMethodEvent*)
+/// @param callback void func(QTimeEdit* self, QInputMethodEvent* param1)
 void q_timeedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9851,7 +9851,7 @@ bool q_timeedit_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn(QTimeEdit*, QObject*, QEvent*)
+/// @param callback bool func(QTimeEdit* self, QObject* watched, QEvent* event)
 void q_timeedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -9881,7 +9881,7 @@ void q_timeedit_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QChildEvent*)
+/// @param callback void func(QTimeEdit* self, QChildEvent* event)
 void q_timeedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9911,7 +9911,7 @@ void q_timeedit_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QEvent*)
+/// @param callback void func(QTimeEdit* self, QEvent* event)
 void q_timeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9941,7 +9941,7 @@ void q_timeedit_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMetaMethod*)
+/// @param callback void func(QTimeEdit* self, QMetaMethod* signal)
 void q_timeedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9971,7 +9971,7 @@ void q_timeedit_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QMetaMethod*)
+/// @param callback void func(QTimeEdit* self, QMetaMethod* signal)
 void q_timeedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -9999,7 +9999,7 @@ QLineEdit* q_timeedit_qbase_line_edit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QLineEdit* fn()
+/// @param callback QLineEdit* func()
 void q_timeedit_on_line_edit(void* self, QLineEdit* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -10029,7 +10029,7 @@ void q_timeedit_qbase_set_line_edit(void* self, void* edit);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, QLineEdit*)
+/// @param callback void func(QTimeEdit* self, QLineEdit* edit)
 void q_timeedit_on_set_line_edit(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -10057,7 +10057,7 @@ void q_timeedit_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_timeedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -10085,7 +10085,7 @@ void q_timeedit_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_timeedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -10113,7 +10113,7 @@ void q_timeedit_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_timeedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -10141,7 +10141,7 @@ bool q_timeedit_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_timeedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -10169,7 +10169,7 @@ bool q_timeedit_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_timeedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -10197,7 +10197,7 @@ QObject* q_timeedit_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_timeedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -10225,7 +10225,7 @@ int32_t q_timeedit_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_timeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -10255,7 +10255,7 @@ int32_t q_timeedit_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int32_t fn(QTimeEdit*, const char*)
+/// @param callback int32_t func(QTimeEdit* self, const char* signal)
 void q_timeedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -10285,7 +10285,7 @@ bool q_timeedit_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback bool fn(QTimeEdit*, QMetaMethod*)
+/// @param callback bool func(QTimeEdit* self, QMetaMethod* signal)
 void q_timeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -10317,7 +10317,7 @@ double q_timeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback double fn(QTimeEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_timeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -10327,7 +10327,7 @@ void q_timeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimeEdit*
-/// @param callback void fn(QTimeEdit*, const char*)
+/// @param callback void func(QTimeEdit* self, const char* objectName)
 void q_timeedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeedit.html#dtor.QTimeEdit)
@@ -10377,7 +10377,7 @@ int32_t q_dateedit_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn(QDateEdit*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QDateEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_dateedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -10404,7 +10404,7 @@ void q_dateedit_user_date_changed(void* self, void* date);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdateedit.html#userDateChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDate*)
+/// @param callback void func(QDateEdit* self, QDate* date)
 void q_dateedit_on_user_date_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -10787,7 +10787,7 @@ void q_dateedit_date_time_changed(void* self, void* dateTime);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDateTime*)
+/// @param callback void func(QDateEdit* self, QDateTime* dateTime)
 void q_dateedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -10803,7 +10803,7 @@ void q_dateedit_time_changed(void* self, void* time);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QTime*)
+/// @param callback void func(QDateEdit* self, QTime* time)
 void q_dateedit_on_time_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -10819,7 +10819,7 @@ void q_dateedit_date_changed(void* self, void* date);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDate*)
+/// @param callback void func(QDateEdit* self, QDate* date)
 void q_dateedit_on_date_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -11060,7 +11060,7 @@ void q_dateedit_editing_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*)
+/// @param callback void func(QDateEdit* self)
 void q_dateedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -13000,7 +13000,7 @@ void q_dateedit_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, const char*)
+/// @param callback void func(QDateEdit* self, const char* title)
 void q_dateedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -13016,7 +13016,7 @@ void q_dateedit_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QIcon*)
+/// @param callback void func(QDateEdit* self, QIcon* icon)
 void q_dateedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -13032,7 +13032,7 @@ void q_dateedit_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, const char*)
+/// @param callback void func(QDateEdit* self, const char* iconText)
 void q_dateedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -13048,7 +13048,7 @@ void q_dateedit_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QPoint*)
+/// @param callback void func(QDateEdit* self, QPoint* pos)
 void q_dateedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -13425,7 +13425,7 @@ void q_dateedit_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*)
+/// @param callback void func(QDateEdit* self)
 void q_dateedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -13503,7 +13503,7 @@ void q_dateedit_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QObject*)
+/// @param callback void func(QDateEdit* self, QObject* param1)
 void q_dateedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -13622,7 +13622,7 @@ QSize* q_dateedit_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_dateedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -13650,7 +13650,7 @@ void q_dateedit_qbase_clear(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_dateedit_on_clear(void* self, void (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -13680,7 +13680,7 @@ void q_dateedit_qbase_step_by(void* self, int steps);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, int)
+/// @param callback void func(QDateEdit* self, int steps)
 void q_dateedit_on_step_by(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDateTimeEdit
@@ -13710,7 +13710,7 @@ bool q_dateedit_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn(QDateEdit*, QEvent*)
+/// @param callback bool func(QDateEdit* self, QEvent* event)
 void q_dateedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -13740,7 +13740,7 @@ void q_dateedit_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QKeyEvent*)
+/// @param callback void func(QDateEdit* self, QKeyEvent* event)
 void q_dateedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -13770,7 +13770,7 @@ void q_dateedit_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QWheelEvent*)
+/// @param callback void func(QDateEdit* self, QWheelEvent* event)
 void q_dateedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -13800,7 +13800,7 @@ void q_dateedit_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QFocusEvent*)
+/// @param callback void func(QDateEdit* self, QFocusEvent* event)
 void q_dateedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -13830,7 +13830,7 @@ bool q_dateedit_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn(QDateEdit*, bool)
+/// @param callback bool func(QDateEdit* self, bool next)
 void q_dateedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QDateTimeEdit
@@ -13866,7 +13866,7 @@ int32_t q_dateedit_qbase_validate(void* self, const char* input, int* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn(QDateEdit*, const char*, int*)
+/// @param callback int32_t func(QDateEdit* self, const char* input, int* pos)
 void q_dateedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
@@ -13896,7 +13896,7 @@ void q_dateedit_qbase_fixup(void* self, const char* input);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, const char*)
+/// @param callback void func(QDateEdit* self, const char* input)
 void q_dateedit_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QDateTimeEdit
@@ -13926,7 +13926,7 @@ QDateTime* q_dateedit_qbase_date_time_from_text(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QDateTime* fn(QDateEdit*, const char*)
+/// @param callback QDateTime* func(QDateEdit* self, const char* text)
 void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
 /// Inherited from QDateTimeEdit
@@ -13960,7 +13960,7 @@ const char* q_dateedit_qbase_text_from_date_time(void* self, void* dt);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback const char* fn(QDateEdit*, QDateTime*)
+/// @param callback const char* func(QDateEdit* self, QDateTime* dt)
 void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -13992,7 +13992,7 @@ int64_t q_dateedit_qbase_step_enabled(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_dateedit_on_step_enabled(void* self, int64_t (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -14022,7 +14022,7 @@ void q_dateedit_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMouseEvent*)
+/// @param callback void func(QDateEdit* self, QMouseEvent* event)
 void q_dateedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -14052,7 +14052,7 @@ void q_dateedit_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QPaintEvent*)
+/// @param callback void func(QDateEdit* self, QPaintEvent* event)
 void q_dateedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -14082,7 +14082,7 @@ void q_dateedit_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QStyleOptionSpinBox*)
+/// @param callback void func(QDateEdit* self, QStyleOptionSpinBox* option)
 void q_dateedit_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14110,7 +14110,7 @@ QSize* q_dateedit_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -14140,7 +14140,7 @@ QVariant* q_dateedit_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QVariant* fn(QDateEdit*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QDateEdit* self, enum Qt__InputMethodQuery param1)
 void q_dateedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSpinBox
@@ -14170,7 +14170,7 @@ void q_dateedit_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QResizeEvent*)
+/// @param callback void func(QDateEdit* self, QResizeEvent* event)
 void q_dateedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14200,7 +14200,7 @@ void q_dateedit_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QKeyEvent*)
+/// @param callback void func(QDateEdit* self, QKeyEvent* event)
 void q_dateedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14230,7 +14230,7 @@ void q_dateedit_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QFocusEvent*)
+/// @param callback void func(QDateEdit* self, QFocusEvent* event)
 void q_dateedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14260,7 +14260,7 @@ void q_dateedit_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QContextMenuEvent*)
+/// @param callback void func(QDateEdit* self, QContextMenuEvent* event)
 void q_dateedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14290,7 +14290,7 @@ void q_dateedit_qbase_change_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QEvent*)
+/// @param callback void func(QDateEdit* self, QEvent* event)
 void q_dateedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14320,7 +14320,7 @@ void q_dateedit_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QCloseEvent*)
+/// @param callback void func(QDateEdit* self, QCloseEvent* event)
 void q_dateedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14350,7 +14350,7 @@ void q_dateedit_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QHideEvent*)
+/// @param callback void func(QDateEdit* self, QHideEvent* event)
 void q_dateedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14380,7 +14380,7 @@ void q_dateedit_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMouseEvent*)
+/// @param callback void func(QDateEdit* self, QMouseEvent* event)
 void q_dateedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14410,7 +14410,7 @@ void q_dateedit_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMouseEvent*)
+/// @param callback void func(QDateEdit* self, QMouseEvent* event)
 void q_dateedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14440,7 +14440,7 @@ void q_dateedit_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QTimerEvent*)
+/// @param callback void func(QDateEdit* self, QTimerEvent* event)
 void q_dateedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -14470,7 +14470,7 @@ void q_dateedit_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QShowEvent*)
+/// @param callback void func(QDateEdit* self, QShowEvent* event)
 void q_dateedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14498,7 +14498,7 @@ int32_t q_dateedit_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_dateedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -14528,7 +14528,7 @@ void q_dateedit_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, bool)
+/// @param callback void func(QDateEdit* self, bool visible)
 void q_dateedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -14558,7 +14558,7 @@ int32_t q_dateedit_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn(QDateEdit*, int)
+/// @param callback int32_t func(QDateEdit* self, int param1)
 void q_dateedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -14586,7 +14586,7 @@ bool q_dateedit_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_dateedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -14614,7 +14614,7 @@ QPaintEngine* q_dateedit_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_dateedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -14644,7 +14644,7 @@ void q_dateedit_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMouseEvent*)
+/// @param callback void func(QDateEdit* self, QMouseEvent* event)
 void q_dateedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14674,7 +14674,7 @@ void q_dateedit_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QEnterEvent*)
+/// @param callback void func(QDateEdit* self, QEnterEvent* event)
 void q_dateedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14704,7 +14704,7 @@ void q_dateedit_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QEvent*)
+/// @param callback void func(QDateEdit* self, QEvent* event)
 void q_dateedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14734,7 +14734,7 @@ void q_dateedit_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMoveEvent*)
+/// @param callback void func(QDateEdit* self, QMoveEvent* event)
 void q_dateedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14764,7 +14764,7 @@ void q_dateedit_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QTabletEvent*)
+/// @param callback void func(QDateEdit* self, QTabletEvent* event)
 void q_dateedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14794,7 +14794,7 @@ void q_dateedit_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QActionEvent*)
+/// @param callback void func(QDateEdit* self, QActionEvent* event)
 void q_dateedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14824,7 +14824,7 @@ void q_dateedit_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDragEnterEvent*)
+/// @param callback void func(QDateEdit* self, QDragEnterEvent* event)
 void q_dateedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14854,7 +14854,7 @@ void q_dateedit_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDragMoveEvent*)
+/// @param callback void func(QDateEdit* self, QDragMoveEvent* event)
 void q_dateedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14884,7 +14884,7 @@ void q_dateedit_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDragLeaveEvent*)
+/// @param callback void func(QDateEdit* self, QDragLeaveEvent* event)
 void q_dateedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14914,7 +14914,7 @@ void q_dateedit_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QDropEvent*)
+/// @param callback void func(QDateEdit* self, QDropEvent* event)
 void q_dateedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -14948,7 +14948,7 @@ bool q_dateedit_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn(QDateEdit*, const char*, void*, intptr_t*)
+/// @param callback bool func(QDateEdit* self, const char* eventType, void* message, intptr_t* result)
 void q_dateedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -14978,7 +14978,7 @@ int32_t q_dateedit_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn(QDateEdit*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QDateEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_dateedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -15008,7 +15008,7 @@ void q_dateedit_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QPainter*)
+/// @param callback void func(QDateEdit* self, QPainter* painter)
 void q_dateedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -15038,7 +15038,7 @@ QPaintDevice* q_dateedit_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QPaintDevice* fn(QDateEdit*, QPoint*)
+/// @param callback QPaintDevice* func(QDateEdit* self, QPoint* offset)
 void q_dateedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -15066,7 +15066,7 @@ QPainter* q_dateedit_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_dateedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -15096,7 +15096,7 @@ void q_dateedit_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QInputMethodEvent*)
+/// @param callback void func(QDateEdit* self, QInputMethodEvent* param1)
 void q_dateedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -15128,7 +15128,7 @@ bool q_dateedit_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn(QDateEdit*, QObject*, QEvent*)
+/// @param callback bool func(QDateEdit* self, QObject* watched, QEvent* event)
 void q_dateedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -15158,7 +15158,7 @@ void q_dateedit_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QChildEvent*)
+/// @param callback void func(QDateEdit* self, QChildEvent* event)
 void q_dateedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -15188,7 +15188,7 @@ void q_dateedit_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QEvent*)
+/// @param callback void func(QDateEdit* self, QEvent* event)
 void q_dateedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -15218,7 +15218,7 @@ void q_dateedit_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMetaMethod*)
+/// @param callback void func(QDateEdit* self, QMetaMethod* signal)
 void q_dateedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -15248,7 +15248,7 @@ void q_dateedit_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QMetaMethod*)
+/// @param callback void func(QDateEdit* self, QMetaMethod* signal)
 void q_dateedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSpinBox
@@ -15276,7 +15276,7 @@ QLineEdit* q_dateedit_qbase_line_edit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QLineEdit* fn()
+/// @param callback QLineEdit* func()
 void q_dateedit_on_line_edit(void* self, QLineEdit* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -15306,7 +15306,7 @@ void q_dateedit_qbase_set_line_edit(void* self, void* edit);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, QLineEdit*)
+/// @param callback void func(QDateEdit* self, QLineEdit* edit)
 void q_dateedit_on_set_line_edit(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -15334,7 +15334,7 @@ void q_dateedit_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_dateedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -15362,7 +15362,7 @@ void q_dateedit_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_dateedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -15390,7 +15390,7 @@ void q_dateedit_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_dateedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -15418,7 +15418,7 @@ bool q_dateedit_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_dateedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -15446,7 +15446,7 @@ bool q_dateedit_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_dateedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -15474,7 +15474,7 @@ QObject* q_dateedit_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_dateedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -15502,7 +15502,7 @@ int32_t q_dateedit_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_dateedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -15532,7 +15532,7 @@ int32_t q_dateedit_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int32_t fn(QDateEdit*, const char*)
+/// @param callback int32_t func(QDateEdit* self, const char* signal)
 void q_dateedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -15562,7 +15562,7 @@ bool q_dateedit_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback bool fn(QDateEdit*, QMetaMethod*)
+/// @param callback bool func(QDateEdit* self, QMetaMethod* signal)
 void q_dateedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -15594,7 +15594,7 @@ double q_dateedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback double fn(QDateEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QDateEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_dateedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -15604,7 +15604,7 @@ void q_dateedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QDateEdit*
-/// @param callback void fn(QDateEdit*, const char*)
+/// @param callback void func(QDateEdit* self, const char* objectName)
 void q_dateedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdateedit.html#dtor.QDateEdit)

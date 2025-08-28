@@ -40,7 +40,7 @@ int32_t q_pdfpagerenderer_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback int32_t fn(QPdfPageRenderer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPdfPageRenderer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pdfpagerenderer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -98,7 +98,7 @@ void q_pdfpagerenderer_document_changed(void* self, void* document);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#documentChanged)
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QPdfDocument*)
+/// @param callback void func(QPdfPageRenderer* self, QPdfDocument* document)
 void q_pdfpagerenderer_on_document_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#renderModeChanged)
@@ -110,7 +110,7 @@ void q_pdfpagerenderer_render_mode_changed(void* self, int32_t renderMode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#renderModeChanged)
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, enum QPdfPageRenderer__RenderMode)
+/// @param callback void func(QPdfPageRenderer* self, enum QPdfPageRenderer__RenderMode renderMode)
 void q_pdfpagerenderer_on_render_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#pageRendered)
@@ -126,7 +126,7 @@ void q_pdfpagerenderer_page_rendered(void* self, int pageNumber, void* imageSize
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#pageRendered)
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, int, QSize*, QImage*, QPdfDocumentRenderOptions*, uint64_t)
+/// @param callback void func(QPdfPageRenderer* self, int pageNumber, QSize* imageSize, QImage* image, QPdfDocumentRenderOptions* options, uint64_t requestId)
 void q_pdfpagerenderer_on_page_rendered(void* self, void (*callback)(void*, int, void*, void*, void*, uint64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -380,7 +380,7 @@ void q_pdfpagerenderer_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*)
+/// @param callback void func(QPdfPageRenderer* self)
 void q_pdfpagerenderer_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -458,7 +458,7 @@ void q_pdfpagerenderer_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QObject*)
+/// @param callback void func(QPdfPageRenderer* self, QObject* param1)
 void q_pdfpagerenderer_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -488,7 +488,7 @@ bool q_pdfpagerenderer_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback bool fn(QPdfPageRenderer*, QEvent*)
+/// @param callback bool func(QPdfPageRenderer* self, QEvent* event)
 void q_pdfpagerenderer_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -520,7 +520,7 @@ bool q_pdfpagerenderer_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback bool fn(QPdfPageRenderer*, QObject*, QEvent*)
+/// @param callback bool func(QPdfPageRenderer* self, QObject* watched, QEvent* event)
 void q_pdfpagerenderer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -550,7 +550,7 @@ void q_pdfpagerenderer_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QTimerEvent*)
+/// @param callback void func(QPdfPageRenderer* self, QTimerEvent* event)
 void q_pdfpagerenderer_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -580,7 +580,7 @@ void q_pdfpagerenderer_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QChildEvent*)
+/// @param callback void func(QPdfPageRenderer* self, QChildEvent* event)
 void q_pdfpagerenderer_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -610,7 +610,7 @@ void q_pdfpagerenderer_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QEvent*)
+/// @param callback void func(QPdfPageRenderer* self, QEvent* event)
 void q_pdfpagerenderer_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -640,7 +640,7 @@ void q_pdfpagerenderer_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QMetaMethod*)
+/// @param callback void func(QPdfPageRenderer* self, QMetaMethod* signal)
 void q_pdfpagerenderer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -670,7 +670,7 @@ void q_pdfpagerenderer_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, QMetaMethod*)
+/// @param callback void func(QPdfPageRenderer* self, QMetaMethod* signal)
 void q_pdfpagerenderer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -698,7 +698,7 @@ QObject* q_pdfpagerenderer_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pdfpagerenderer_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -726,7 +726,7 @@ int32_t q_pdfpagerenderer_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfpagerenderer_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -756,7 +756,7 @@ int32_t q_pdfpagerenderer_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback int32_t fn(QPdfPageRenderer*, const char*)
+/// @param callback int32_t func(QPdfPageRenderer* self, const char* signal)
 void q_pdfpagerenderer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -786,7 +786,7 @@ bool q_pdfpagerenderer_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback bool fn(QPdfPageRenderer*, QMetaMethod*)
+/// @param callback bool func(QPdfPageRenderer* self, QMetaMethod* signal)
 void q_pdfpagerenderer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -796,7 +796,7 @@ void q_pdfpagerenderer_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfPageRenderer*
-/// @param callback void fn(QPdfPageRenderer*, const char*)
+/// @param callback void func(QPdfPageRenderer* self, const char* objectName)
 void q_pdfpagerenderer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#dtor.QPdfPageRenderer)

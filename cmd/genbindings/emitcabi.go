@@ -1334,7 +1334,7 @@ extern "C" {
 		methodPrefixName := cabiClassName(c.ClassName)
 		virtualMethods := c.VirtualMethods()
 		protectedMethods := c.ProtectedMethods()
-		seenClassMethods := map[string]struct{}{}
+		seenClassMethods := map[string]bool{}
 		virtualEligible := AllowVirtualForClass(c.ClassName)
 
 		// Add protected methods first
@@ -1397,10 +1397,14 @@ extern "C" {
 				continue
 			}
 			if _, exists := seenClassMethods[methodPrefixName+"_"+mSafeMethodName]; !exists {
-				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = struct{}{}
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = true
 			} else {
 				continue
 			}
+			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = false
+			}
+
 			returnCabi := m.ReturnType.RenderTypeCabi(false)
 
 			maybeConst := ifv(m.IsConst, "const ", "")
@@ -1425,15 +1429,6 @@ extern "C" {
 					ret.WriteString(fmt.Sprintf("%s %s_Connect_%s(%s* self, intptr_t slot);\n", m.ReturnType.RenderTypeCabi(false), methodPrefixName, mSafeMethodName, methodPrefixName))
 				}
 			}
-
-			if !virtualEligible || !AllowVirtual(m) {
-				continue
-			}
-
-			if (m.IsVirtual || m.IsPrivate || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n")
-				ret.WriteString(fmt.Sprintf("%s %s_QBase%s(%s);\n", returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*")))
-			}
 		}
 		// if filename == "qmetatype.h" {
 		// 	ret.WriteString("bool QMetaType_RegisterConverterFunction(const ConverterFunction& f, QMetaType* from, QMetaType* to);\n")
@@ -1446,20 +1441,27 @@ extern "C" {
 			}
 
 			mSafeMethodName := m.SafeMethodName()
+			baseMethod := false
 
 			if _, ok := skippedMethods[methodPrefixName+"_"+mSafeMethodName]; ok {
 				continue
 			}
-			if _, exists := seenClassMethods[methodPrefixName+"_"+mSafeMethodName]; !exists {
-				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = struct{}{}
-			} else {
+
+			if seen, exists := seenClassMethods[methodPrefixName+"_"+mSafeMethodName]; !exists {
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = true
+			} else if seen {
 				continue
+			} else {
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = true
+				baseMethod = true
 			}
 
 			maybeConst := ifv(m.IsConst, "const ", "")
 
-			ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" +
-				emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
+			if !baseMethod {
+				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_" + mSafeMethodName + "(" +
+					emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
+			}
 
 			ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n")
 			ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
@@ -1495,7 +1497,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 	}
 
 	ret := strings.Builder{}
-	seenClassMethods := map[string]struct{}{}
+	seenClassMethods := map[string]bool{}
 
 	seenRefs := map[string]struct{}{}
 	for _, ref := range getReferencedTypes(src) {
@@ -1687,9 +1689,12 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			}
 
 			if _, exists := seenClassMethods[methodPrefixName+"_"+mSafeMethodName]; !exists {
-				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = struct{}{}
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = true
 			} else {
 				continue
+			}
+			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = false
 			}
 
 			maybeConst := ifv(m.IsConst, "const ", "")
@@ -1751,10 +1756,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					returnCallTarget = "static_cast<" + returnCabi + ">(" + callTarget + ")"
 				}
 
-				var virtualCallTarget, vVarTarget, maybeElse, elseClose, virtualStart, virtualClose, baseStart, baseClose, emptyReturn string
-				baseName := methodPrefixName + "_" + mSafeMethodName
-				callbackName := baseName + "_Callback"
-				isBaseName := baseName + "_IsBase"
+				var virtualCallTarget, vVarTarget, maybeElse, virtualStart, virtualClose, baseClose, emptyReturn string
 
 				if (m.IsVirtual || m.IsPrivate || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
 					if !AllowVirtual(m) {
@@ -1766,11 +1768,9 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					virtualCallTarget += m.CppCallTarget() + "(" + forwarding + ")"
 					maybeElse = "\t} else {\n\t\t"
 					baseClose = emitAssignCppToCabi("\treturn ", m.ReturnType, virtualCallTarget) + "\n"
-					elseClose = maybeElse + baseClose + "\n"
 					if m.IsProtected {
 						maybeElse = ""
 						baseClose = ""
-						elseClose = ""
 						returnCallTarget = vVarTarget
 						emptyReturn = ifv(!m.ReturnType.Void(), "return {};\n", "")
 					}
@@ -1797,40 +1797,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					preamble + virtualStart +
 					emitAssignCppToCabi("\treturn ", m.ReturnType, returnCallTarget) +
 					virtualClose + emptyReturn + "}\n\n")
-
-				if !virtualEligible {
-					goto ToSignal
-				}
-				if !AllowVirtual(m) {
-					goto ToSignal
-				}
-
-				if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-					var maybeConst, maybeConstCast, closeConstCast string
-
-					cClassName := strings.ReplaceAll(c.ClassName, "::", "")
-					if m.IsConst {
-						maybeConstCast = "const_cast<Virtual" + cClassName + "*>("
-						maybeConst = "const "
-						closeConstCast = ")"
-					}
-
-					ret.WriteString("// Subclass method to allow providing a virtual method re-implementation\n")
-					ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot) {\n\t" +
-						"  auto* " + vVar + " = " + maybeConstCast + "dynamic_cast<" + maybeConst + "Virtual" + cClassName + "*>(self)" + closeConstCast + ";\n" +
-						"  if ( " + vVar + " && " + vVar + "->isVirtual" + cClassName + ") {\n" +
-						vVar + "->set" + callbackName + "(reinterpret_cast<Virtual" + cClassName + "::" + callbackName + ">(slot));\n\t}\n}\n\n")
-
-					ret.WriteString("// Virtual base class handler implementation\n")
-					baseStart = virtualStart + vVar + "->set" + isBaseName + "(true);\n"
-					baseClose = emitAssignCppToCabi("\treturn ", m.ReturnType, vVarTarget)
-					ret.WriteString(returnCabi + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
-						preamble + baseStart +
-						baseClose + elseClose + "}" + emptyReturn + "\n}\n\n")
-				}
 			}
 
-		ToSignal:
 			if m.IsSignal {
 				if _, ok := noQtConnect[methodPrefixName]; ok {
 					continue
@@ -1898,15 +1866,19 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			}
 
 			mSafeMethodName := m.SafeMethodName()
+			baseMethod := false
 
 			if _, ok := skippedMethods[methodPrefixName+"_"+mSafeMethodName]; ok {
 				continue
 			}
 
-			if _, exists := seenClassMethods[methodPrefixName+"_"+mSafeMethodName]; !exists {
-				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = struct{}{}
-			} else {
+			if seen, exists := seenClassMethods[methodPrefixName+"_"+mSafeMethodName]; !exists {
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = true
+			} else if seen {
 				continue
+			} else {
+				seenClassMethods[methodPrefixName+"_"+mSafeMethodName] = true
+				baseMethod = true
 			}
 
 			var virtualTarget, vVar, maybeConst, maybeConstCast, closeConstCast string
@@ -1928,8 +1900,6 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			baseName := methodPrefixName + "_" + mSafeMethodName
 			isBaseName := baseName + "_IsBase"
 
-			ret.WriteString("// Derived class handler implementation\n")
-
 			if m.ReturnType.QtClassType() && !m.ReturnType.Pointer &&
 				m.ReturnType.ParameterType != "QString" && m.ReturnType.ParameterType != "QByteArray" {
 				// For Qt class types returned by value, we need to:
@@ -1948,13 +1918,15 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					emptyReturn = "\t}\nreturn {};\n"
 				}
 
-				ret.WriteString(
-					m.ReturnType.RenderTypeCabi(false) + " " + baseName + "(" +
+				if !baseMethod {
+					ret.WriteString("// Derived class handler implementation\n" +
+						m.ReturnType.RenderTypeCabi(false) + " " + baseName + "(" +
 						emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
 						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
 						"\t\treturn new " + nonConstReturn + "(" + vVar + "->" + vbCallTarget + ");\n" +
 						maybeElse + emptyReturn + "\n}\n\n")
+				}
 
 				ret.WriteString("// Base class handler implementation\n")
 
@@ -1982,11 +1954,14 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					elseReturn = emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+c.ClassName+"::"+vbCallTarget)
 				}
 
-				ret.WriteString(m.ReturnType.RenderTypeCabi(false) + " " + baseName +
-					"(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
-					"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
-					vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
-					virtualReturn + "\t} else {\n" + elseReturn + "\n}\n}\n\n")
+				if !baseMethod {
+					ret.WriteString("// Derived class handler implementation\n" +
+						m.ReturnType.RenderTypeCabi(false) + " " + baseName +
+						"(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
+						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
+						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
+						virtualReturn + "\t} else {\n" + elseReturn + "\n}\n}\n\n")
+				}
 
 				ret.WriteString("// Base class handler implementation\n")
 

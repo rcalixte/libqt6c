@@ -40,7 +40,7 @@ int32_t q_mediaplayer_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QMediaPlayer*
-/// @param callback int32_t fn(QMediaPlayer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMediaPlayer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_mediaplayer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -302,7 +302,7 @@ void q_mediaplayer_source_changed(void* self, void* media);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#sourceChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QUrl*)
+/// @param callback void func(QMediaPlayer* self, QUrl* media)
 void q_mediaplayer_on_source_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackStateChanged)
@@ -314,7 +314,7 @@ void q_mediaplayer_playback_state_changed(void* self, int32_t newState);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackStateChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, enum QMediaPlayer__PlaybackState)
+/// @param callback void func(QMediaPlayer* self, enum QMediaPlayer__PlaybackState newState)
 void q_mediaplayer_on_playback_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatusChanged)
@@ -326,7 +326,7 @@ void q_mediaplayer_media_status_changed(void* self, int32_t status);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatusChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, enum QMediaPlayer__MediaStatus)
+/// @param callback void func(QMediaPlayer* self, enum QMediaPlayer__MediaStatus status)
 void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#durationChanged)
@@ -338,7 +338,7 @@ void q_mediaplayer_duration_changed(void* self, long long duration);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#durationChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, long long)
+/// @param callback void func(QMediaPlayer* self, long long duration)
 void q_mediaplayer_on_duration_changed(void* self, void (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#positionChanged)
@@ -350,7 +350,7 @@ void q_mediaplayer_position_changed(void* self, long long position);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#positionChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, long long)
+/// @param callback void func(QMediaPlayer* self, long long position)
 void q_mediaplayer_on_position_changed(void* self, void (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#hasAudioChanged)
@@ -362,7 +362,7 @@ void q_mediaplayer_has_audio_changed(void* self, bool available);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#hasAudioChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, bool)
+/// @param callback void func(QMediaPlayer* self, bool available)
 void q_mediaplayer_on_has_audio_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#hasVideoChanged)
@@ -374,7 +374,7 @@ void q_mediaplayer_has_video_changed(void* self, bool videoAvailable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#hasVideoChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, bool)
+/// @param callback void func(QMediaPlayer* self, bool videoAvailable)
 void q_mediaplayer_on_has_video_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#bufferProgressChanged)
@@ -386,7 +386,7 @@ void q_mediaplayer_buffer_progress_changed(void* self, float progress);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#bufferProgressChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, float)
+/// @param callback void func(QMediaPlayer* self, float progress)
 void q_mediaplayer_on_buffer_progress_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#seekableChanged)
@@ -398,7 +398,7 @@ void q_mediaplayer_seekable_changed(void* self, bool seekable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#seekableChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, bool)
+/// @param callback void func(QMediaPlayer* self, bool seekable)
 void q_mediaplayer_on_seekable_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playingChanged)
@@ -410,7 +410,7 @@ void q_mediaplayer_playing_changed(void* self, bool playing);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playingChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, bool)
+/// @param callback void func(QMediaPlayer* self, bool playing)
 void q_mediaplayer_on_playing_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackRateChanged)
@@ -422,7 +422,7 @@ void q_mediaplayer_playback_rate_changed(void* self, double rate);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackRateChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, double)
+/// @param callback void func(QMediaPlayer* self, double rate)
 void q_mediaplayer_on_playback_rate_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#loopsChanged)
@@ -433,7 +433,7 @@ void q_mediaplayer_loops_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#loopsChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_loops_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#metaDataChanged)
@@ -444,7 +444,7 @@ void q_mediaplayer_meta_data_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#metaDataChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_meta_data_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#videoOutputChanged)
@@ -455,7 +455,7 @@ void q_mediaplayer_video_output_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#videoOutputChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_video_output_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioOutputChanged)
@@ -466,7 +466,7 @@ void q_mediaplayer_audio_output_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioOutputChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_audio_output_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioBufferOutputChanged)
@@ -477,7 +477,7 @@ void q_mediaplayer_audio_buffer_output_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#audioBufferOutputChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_audio_buffer_output_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#tracksChanged)
@@ -488,7 +488,7 @@ void q_mediaplayer_tracks_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#tracksChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_tracks_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#activeTracksChanged)
@@ -499,7 +499,7 @@ void q_mediaplayer_active_tracks_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#activeTracksChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_active_tracks_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorChanged)
@@ -510,7 +510,7 @@ void q_mediaplayer_error_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_error_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorOccurred)
@@ -523,7 +523,7 @@ void q_mediaplayer_error_occurred(void* self, int32_t errorVal, const char* erro
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorOccurred)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, enum QMediaPlayer__Error, const char*)
+/// @param callback void func(QMediaPlayer* self, enum QMediaPlayer__Error errorVal, const char* errorString)
 void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -776,7 +776,7 @@ void q_mediaplayer_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*)
+/// @param callback void func(QMediaPlayer* self)
 void q_mediaplayer_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -854,7 +854,7 @@ void q_mediaplayer_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QObject*)
+/// @param callback void func(QMediaPlayer* self, QObject* param1)
 void q_mediaplayer_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -884,7 +884,7 @@ bool q_mediaplayer_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback bool fn(QMediaPlayer*, QEvent*)
+/// @param callback bool func(QMediaPlayer* self, QEvent* event)
 void q_mediaplayer_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -916,7 +916,7 @@ bool q_mediaplayer_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback bool fn(QMediaPlayer*, QObject*, QEvent*)
+/// @param callback bool func(QMediaPlayer* self, QObject* watched, QEvent* event)
 void q_mediaplayer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -946,7 +946,7 @@ void q_mediaplayer_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QTimerEvent*)
+/// @param callback void func(QMediaPlayer* self, QTimerEvent* event)
 void q_mediaplayer_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -976,7 +976,7 @@ void q_mediaplayer_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QChildEvent*)
+/// @param callback void func(QMediaPlayer* self, QChildEvent* event)
 void q_mediaplayer_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1006,7 +1006,7 @@ void q_mediaplayer_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QEvent*)
+/// @param callback void func(QMediaPlayer* self, QEvent* event)
 void q_mediaplayer_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1036,7 +1036,7 @@ void q_mediaplayer_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QMetaMethod*)
+/// @param callback void func(QMediaPlayer* self, QMetaMethod* signal)
 void q_mediaplayer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1066,7 +1066,7 @@ void q_mediaplayer_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, QMetaMethod*)
+/// @param callback void func(QMediaPlayer* self, QMetaMethod* signal)
 void q_mediaplayer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1094,7 +1094,7 @@ QObject* q_mediaplayer_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_mediaplayer_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1122,7 +1122,7 @@ int32_t q_mediaplayer_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_mediaplayer_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1152,7 +1152,7 @@ int32_t q_mediaplayer_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback int32_t fn(QMediaPlayer*, const char*)
+/// @param callback int32_t func(QMediaPlayer* self, const char* signal)
 void q_mediaplayer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1182,7 +1182,7 @@ bool q_mediaplayer_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaPlayer*
-/// @param callback bool fn(QMediaPlayer*, QMetaMethod*)
+/// @param callback bool func(QMediaPlayer* self, QMetaMethod* signal)
 void q_mediaplayer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1192,7 +1192,7 @@ void q_mediaplayer_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMediaPlayer*
-/// @param callback void fn(QMediaPlayer*, const char*)
+/// @param callback void func(QMediaPlayer* self, const char* objectName)
 void q_mediaplayer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#dtor.QMediaPlayer)

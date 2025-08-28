@@ -40,7 +40,7 @@ int32_t q_filesystemmodel_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int32_t fn(QFileSystemModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QFileSystemModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_filesystemmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -67,7 +67,7 @@ void q_filesystemmodel_root_path_changed(void* self, const char* newPath);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#rootPathChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, const char*)
+/// @param callback void func(QFileSystemModel* self, const char* newPath)
 void q_filesystemmodel_on_root_path_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fileRenamed)
@@ -81,7 +81,7 @@ void q_filesystemmodel_file_renamed(void* self, const char* path, const char* ol
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fileRenamed)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, const char*, const char*, const char*)
+/// @param callback void func(QFileSystemModel* self, const char* path, const char* oldName, const char* newName)
 void q_filesystemmodel_on_file_renamed(void* self, void (*callback)(void*, const char*, const char*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#directoryLoaded)
@@ -93,7 +93,7 @@ void q_filesystemmodel_directory_loaded(void* self, const char* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#directoryLoaded)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, const char*)
+/// @param callback void func(QFileSystemModel* self, const char* path)
 void q_filesystemmodel_on_directory_loaded(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
@@ -109,7 +109,7 @@ QModelIndex* q_filesystemmodel_index(void* self, int row, int column, void* pare
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QModelIndex* fn(QFileSystemModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QFileSystemModel* self, int row, int column, QModelIndex* parent)
 void q_filesystemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
@@ -139,7 +139,7 @@ QModelIndex* q_filesystemmodel_parent(void* self, void* child);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QModelIndex* fn(QFileSystemModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QFileSystemModel* self, QModelIndex* child)
 void q_filesystemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#parent)
@@ -163,7 +163,7 @@ QModelIndex* q_filesystemmodel_sibling(void* self, int row, int column, void* id
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QModelIndex* fn(QFileSystemModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QFileSystemModel* self, int row, int column, QModelIndex* idx)
 void q_filesystemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sibling)
@@ -187,7 +187,7 @@ bool q_filesystemmodel_has_children(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* parent)
 void q_filesystemmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#hasChildren)
@@ -209,7 +209,7 @@ bool q_filesystemmodel_can_fetch_more(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* parent)
 void q_filesystemmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#canFetchMore)
@@ -231,7 +231,7 @@ void q_filesystemmodel_fetch_more(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent)
 void q_filesystemmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fetchMore)
@@ -253,7 +253,7 @@ int32_t q_filesystemmodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int32_t fn(QFileSystemModel*, QModelIndex*)
+/// @param callback int32_t func(QFileSystemModel* self, QModelIndex* parent)
 void q_filesystemmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#rowCount)
@@ -275,7 +275,7 @@ int32_t q_filesystemmodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int32_t fn(QFileSystemModel*, QModelIndex*)
+/// @param callback int32_t func(QFileSystemModel* self, QModelIndex* parent)
 void q_filesystemmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#columnCount)
@@ -303,7 +303,7 @@ QVariant* q_filesystemmodel_data(void* self, void* index, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QVariant* fn(QFileSystemModel*, QModelIndex*, int)
+/// @param callback QVariant* func(QFileSystemModel* self, QModelIndex* index, int role)
 void q_filesystemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#data)
@@ -328,7 +328,7 @@ bool q_filesystemmodel_set_data(void* self, void* index, void* value, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* index, QVariant* value, int role)
 void q_filesystemmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#setData)
@@ -354,7 +354,7 @@ QVariant* q_filesystemmodel_header_data(void* self, int section, int32_t orienta
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QVariant* fn(QFileSystemModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(QFileSystemModel* self, int section, enum Qt__Orientation orientation, int role)
 void q_filesystemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#headerData)
@@ -380,7 +380,7 @@ int64_t q_filesystemmodel_flags(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int64_t fn(QFileSystemModel*, QModelIndex*)
+/// @param callback int64_t func(QFileSystemModel* self, QModelIndex* index)
 void q_filesystemmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#flags)
@@ -405,7 +405,7 @@ void q_filesystemmodel_sort(void* self, int column, int32_t order);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, int, enum Qt__SortOrder)
+/// @param callback void func(QFileSystemModel* self, int column, enum Qt__SortOrder order)
 void q_filesystemmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sort)
@@ -429,7 +429,7 @@ const char** q_filesystemmodel_mime_types(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_filesystemmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeTypes)
@@ -450,7 +450,7 @@ QMimeData* q_filesystemmodel_mime_data(void* self, libqt_list indexes);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QMimeData* fn(QFileSystemModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(QFileSystemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_filesystemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mimeData)
@@ -476,7 +476,7 @@ bool q_filesystemmodel_drop_mime_data(void* self, void* data, int32_t action, in
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_filesystemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dropMimeData)
@@ -503,7 +503,7 @@ int64_t q_filesystemmodel_supported_drop_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_filesystemmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#supportedDropActions)
@@ -525,7 +525,7 @@ libqt_map /* of int to char* */ q_filesystemmodel_role_names(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void q_filesystemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#roleNames)
@@ -747,7 +747,7 @@ void q_filesystemmodel_timer_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QTimerEvent*)
+/// @param callback void func(QFileSystemModel* self, QTimerEvent* event)
 void q_filesystemmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#timerEvent)
@@ -769,7 +769,7 @@ bool q_filesystemmodel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QEvent*)
+/// @param callback bool func(QFileSystemModel* self, QEvent* event)
 void q_filesystemmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#event)
@@ -902,7 +902,7 @@ void q_filesystemmodel_data_changed(void* self, void* topLeft, void* bottomRight
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_filesystemmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -920,7 +920,7 @@ void q_filesystemmodel_header_data_changed(void* self, int32_t orientation, int 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QFileSystemModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_filesystemmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -935,7 +935,7 @@ void q_filesystemmodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*)
+/// @param callback void func(QFileSystemModel* self)
 void q_filesystemmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -950,7 +950,7 @@ void q_filesystemmodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*)
+/// @param callback void func(QFileSystemModel* self)
 void q_filesystemmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1023,7 +1023,7 @@ void q_filesystemmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_filesystemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -1039,7 +1039,7 @@ void q_filesystemmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_filesystemmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1056,7 +1056,7 @@ void q_filesystemmodel_layout_changed2(void* self, libqt_list parents, int32_t h
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_filesystemmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1072,7 +1072,7 @@ void q_filesystemmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_filesystemmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1089,7 +1089,7 @@ void q_filesystemmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QFileSystemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -1318,7 +1318,7 @@ void q_filesystemmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*)
+/// @param callback void func(QFileSystemModel* self)
 void q_filesystemmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1389,7 +1389,7 @@ void q_filesystemmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QObject*)
+/// @param callback void func(QFileSystemModel* self, QObject* param1)
 void q_filesystemmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1425,7 +1425,7 @@ bool q_filesystemmodel_qbase_set_header_data(void* self, int section, int32_t or
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(QFileSystemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void q_filesystemmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1455,7 +1455,7 @@ libqt_map /* of int to QVariant* */ q_filesystemmodel_qbase_item_data(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(QFileSystemModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(QFileSystemModel* self, QModelIndex* index)
 void q_filesystemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1487,7 +1487,7 @@ bool q_filesystemmodel_qbase_set_item_data(void* self, void* index, libqt_map /*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void q_filesystemmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1517,7 +1517,7 @@ bool q_filesystemmodel_qbase_clear_item_data(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* index)
 void q_filesystemmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1555,7 +1555,7 @@ bool q_filesystemmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_filesystemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1587,7 +1587,7 @@ int64_t q_filesystemmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_filesystemmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1621,7 +1621,7 @@ bool q_filesystemmodel_qbase_insert_rows(void* self, int row, int count, void* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, int row, int count, QModelIndex* parent)
 void q_filesystemmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1655,7 +1655,7 @@ bool q_filesystemmodel_qbase_insert_columns(void* self, int column, int count, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, int column, int count, QModelIndex* parent)
 void q_filesystemmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1689,7 +1689,7 @@ bool q_filesystemmodel_qbase_remove_rows(void* self, int row, int count, void* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, int row, int count, QModelIndex* parent)
 void q_filesystemmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1723,7 +1723,7 @@ bool q_filesystemmodel_qbase_remove_columns(void* self, int column, int count, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QFileSystemModel* self, int column, int count, QModelIndex* parent)
 void q_filesystemmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1761,7 +1761,7 @@ bool q_filesystemmodel_qbase_move_rows(void* self, void* sourceParent, int sourc
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void q_filesystemmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1799,7 +1799,7 @@ bool q_filesystemmodel_qbase_move_columns(void* self, void* sourceParent, int so
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void q_filesystemmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1829,7 +1829,7 @@ QModelIndex* q_filesystemmodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QModelIndex* fn(QFileSystemModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QFileSystemModel* self, QModelIndex* index)
 void q_filesystemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1867,7 +1867,7 @@ libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(QFileSystemModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(QFileSystemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void q_filesystemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -1897,7 +1897,7 @@ QSize* q_filesystemmodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QSize* fn(QFileSystemModel*, QModelIndex*)
+/// @param callback QSize* func(QFileSystemModel* self, QModelIndex* index)
 void q_filesystemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1929,7 +1929,7 @@ void q_filesystemmodel_qbase_multi_data(void* self, void* index, void* roleDataS
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void q_filesystemmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1957,7 +1957,7 @@ bool q_filesystemmodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_filesystemmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1985,7 +1985,7 @@ void q_filesystemmodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2013,7 +2013,7 @@ void q_filesystemmodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2045,7 +2045,7 @@ bool q_filesystemmodel_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QObject*, QEvent*)
+/// @param callback bool func(QFileSystemModel* self, QObject* watched, QEvent* event)
 void q_filesystemmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2075,7 +2075,7 @@ void q_filesystemmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QChildEvent*)
+/// @param callback void func(QFileSystemModel* self, QChildEvent* event)
 void q_filesystemmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2105,7 +2105,7 @@ void q_filesystemmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QEvent*)
+/// @param callback void func(QFileSystemModel* self, QEvent* event)
 void q_filesystemmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2135,7 +2135,7 @@ void q_filesystemmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QMetaMethod*)
+/// @param callback void func(QFileSystemModel* self, QMetaMethod* signal)
 void q_filesystemmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2165,7 +2165,7 @@ void q_filesystemmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QMetaMethod*)
+/// @param callback void func(QFileSystemModel* self, QMetaMethod* signal)
 void q_filesystemmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2197,7 +2197,7 @@ QModelIndex* q_filesystemmodel_qbase_create_index(void* self, int row, int colum
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QModelIndex* fn(QFileSystemModel*, int, int)
+/// @param callback QModelIndex* func(QFileSystemModel* self, int row, int column)
 void q_filesystemmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2229,7 +2229,7 @@ void q_filesystemmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(QFileSystemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void q_filesystemmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2265,7 +2265,7 @@ bool q_filesystemmodel_qbase_decode_data(void* self, int row, int column, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(QFileSystemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void q_filesystemmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2299,7 +2299,7 @@ void q_filesystemmodel_qbase_begin_insert_rows(void* self, void* parent, int fir
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2327,7 +2327,7 @@ void q_filesystemmodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2361,7 +2361,7 @@ void q_filesystemmodel_qbase_begin_remove_rows(void* self, void* parent, int fir
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2389,7 +2389,7 @@ void q_filesystemmodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2427,7 +2427,7 @@ bool q_filesystemmodel_qbase_begin_move_rows(void* self, void* sourceParent, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void q_filesystemmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2455,7 +2455,7 @@ void q_filesystemmodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2489,7 +2489,7 @@ void q_filesystemmodel_qbase_begin_insert_columns(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2517,7 +2517,7 @@ void q_filesystemmodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2551,7 +2551,7 @@ void q_filesystemmodel_qbase_begin_remove_columns(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2579,7 +2579,7 @@ void q_filesystemmodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2617,7 +2617,7 @@ bool q_filesystemmodel_qbase_begin_move_columns(void* self, void* sourceParent, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void q_filesystemmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2645,7 +2645,7 @@ void q_filesystemmodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2673,7 +2673,7 @@ void q_filesystemmodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2701,7 +2701,7 @@ void q_filesystemmodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filesystemmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2733,7 +2733,7 @@ void q_filesystemmodel_qbase_change_persistent_index(void* self, void* from, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* from, QModelIndex* to)
 void q_filesystemmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2765,7 +2765,7 @@ void q_filesystemmodel_qbase_change_persistent_index_list(void* self, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QFileSystemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_filesystemmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2793,7 +2793,7 @@ libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_persistent_index_list(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_filesystemmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -2821,7 +2821,7 @@ QObject* q_filesystemmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_filesystemmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2849,7 +2849,7 @@ int32_t q_filesystemmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_filesystemmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2879,7 +2879,7 @@ int32_t q_filesystemmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int32_t fn(QFileSystemModel*, const char*)
+/// @param callback int32_t func(QFileSystemModel* self, const char* signal)
 void q_filesystemmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2909,7 +2909,7 @@ bool q_filesystemmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback bool fn(QFileSystemModel*, QMetaMethod*)
+/// @param callback bool func(QFileSystemModel* self, QMetaMethod* signal)
 void q_filesystemmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2919,7 +2919,7 @@ void q_filesystemmodel_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2929,7 +2929,7 @@ void q_filesystemmodel_on_rows_about_to_be_inserted(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2939,7 +2939,7 @@ void q_filesystemmodel_on_rows_inserted(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2949,7 +2949,7 @@ void q_filesystemmodel_on_rows_about_to_be_removed(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2959,7 +2959,7 @@ void q_filesystemmodel_on_rows_removed(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2969,7 +2969,7 @@ void q_filesystemmodel_on_columns_about_to_be_inserted(void* self, void (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2979,7 +2979,7 @@ void q_filesystemmodel_on_columns_inserted(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2989,7 +2989,7 @@ void q_filesystemmodel_on_columns_about_to_be_removed(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* parent, int first, int last)
 void q_filesystemmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2999,7 +2999,7 @@ void q_filesystemmodel_on_columns_removed(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*)
+/// @param callback void func(QFileSystemModel* self)
 void q_filesystemmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3009,7 +3009,7 @@ void q_filesystemmodel_on_model_about_to_be_reset(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*)
+/// @param callback void func(QFileSystemModel* self)
 void q_filesystemmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3019,7 +3019,7 @@ void q_filesystemmodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_filesystemmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3029,7 +3029,7 @@ void q_filesystemmodel_on_rows_about_to_be_moved(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_filesystemmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3039,7 +3039,7 @@ void q_filesystemmodel_on_rows_moved(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_filesystemmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3049,7 +3049,7 @@ void q_filesystemmodel_on_columns_about_to_be_moved(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QFileSystemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_filesystemmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3059,7 +3059,7 @@ void q_filesystemmodel_on_columns_moved(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemModel*
-/// @param callback void fn(QFileSystemModel*, const char*)
+/// @param callback void func(QFileSystemModel* self, const char* objectName)
 void q_filesystemmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dtor.QFileSystemModel)

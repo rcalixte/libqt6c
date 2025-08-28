@@ -42,7 +42,7 @@ int32_t k_pagewidgetitem_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback int32_t fn(KPageWidgetItem*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPageWidgetItem* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pagewidgetitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -165,7 +165,7 @@ void k_pagewidgetitem_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#changed)
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*)
+/// @param callback void func(KPageWidgetItem* self)
 void k_pagewidgetitem_on_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#toggled)
@@ -177,7 +177,7 @@ void k_pagewidgetitem_toggled(void* self, bool checked);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#toggled)
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, bool)
+/// @param callback void func(KPageWidgetItem* self, bool checked)
 void k_pagewidgetitem_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#actionsChanged)
@@ -188,7 +188,7 @@ void k_pagewidgetitem_actions_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#actionsChanged)
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*)
+/// @param callback void func(KPageWidgetItem* self)
 void k_pagewidgetitem_on_actions_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -434,7 +434,7 @@ void k_pagewidgetitem_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*)
+/// @param callback void func(KPageWidgetItem* self)
 void k_pagewidgetitem_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -512,7 +512,7 @@ void k_pagewidgetitem_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, QObject*)
+/// @param callback void func(KPageWidgetItem* self, QObject* param1)
 void k_pagewidgetitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -542,7 +542,7 @@ bool k_pagewidgetitem_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback bool fn(KPageWidgetItem*, QEvent*)
+/// @param callback bool func(KPageWidgetItem* self, QEvent* event)
 void k_pagewidgetitem_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -574,7 +574,7 @@ bool k_pagewidgetitem_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback bool fn(KPageWidgetItem*, QObject*, QEvent*)
+/// @param callback bool func(KPageWidgetItem* self, QObject* watched, QEvent* event)
 void k_pagewidgetitem_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -604,7 +604,7 @@ void k_pagewidgetitem_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, QTimerEvent*)
+/// @param callback void func(KPageWidgetItem* self, QTimerEvent* event)
 void k_pagewidgetitem_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -634,7 +634,7 @@ void k_pagewidgetitem_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, QChildEvent*)
+/// @param callback void func(KPageWidgetItem* self, QChildEvent* event)
 void k_pagewidgetitem_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -664,7 +664,7 @@ void k_pagewidgetitem_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, QEvent*)
+/// @param callback void func(KPageWidgetItem* self, QEvent* event)
 void k_pagewidgetitem_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -694,7 +694,7 @@ void k_pagewidgetitem_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, QMetaMethod*)
+/// @param callback void func(KPageWidgetItem* self, QMetaMethod* signal)
 void k_pagewidgetitem_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -724,7 +724,7 @@ void k_pagewidgetitem_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, QMetaMethod*)
+/// @param callback void func(KPageWidgetItem* self, QMetaMethod* signal)
 void k_pagewidgetitem_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -752,7 +752,7 @@ QObject* k_pagewidgetitem_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pagewidgetitem_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -780,7 +780,7 @@ int32_t k_pagewidgetitem_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagewidgetitem_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -810,7 +810,7 @@ int32_t k_pagewidgetitem_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback int32_t fn(KPageWidgetItem*, const char*)
+/// @param callback int32_t func(KPageWidgetItem* self, const char* signal)
 void k_pagewidgetitem_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -840,7 +840,7 @@ bool k_pagewidgetitem_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetItem*
-/// @param callback bool fn(KPageWidgetItem*, QMetaMethod*)
+/// @param callback bool func(KPageWidgetItem* self, QMetaMethod* signal)
 void k_pagewidgetitem_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -850,7 +850,7 @@ void k_pagewidgetitem_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetItem*
-/// @param callback void fn(KPageWidgetItem*, const char*)
+/// @param callback void func(KPageWidgetItem* self, const char* objectName)
 void k_pagewidgetitem_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#dtor.KPageWidgetItem)
@@ -889,7 +889,7 @@ int32_t k_pagewidgetmodel_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int32_t fn(KPageWidgetModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPageWidgetModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pagewidgetmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -967,7 +967,7 @@ int32_t k_pagewidgetmodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int32_t fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#columnCount)
@@ -990,7 +990,7 @@ QVariant* k_pagewidgetmodel_data(void* self, void* index, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QVariant* fn(KPageWidgetModel*, QModelIndex*, int)
+/// @param callback QVariant* func(KPageWidgetModel* self, QModelIndex* index, int role)
 void k_pagewidgetmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#data)
@@ -1015,7 +1015,7 @@ bool k_pagewidgetmodel_set_data(void* self, void* index, void* value, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* index, QVariant* value, int role)
 void k_pagewidgetmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#setData)
@@ -1041,7 +1041,7 @@ int64_t k_pagewidgetmodel_flags(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int64_t fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback int64_t func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#flags)
@@ -1067,7 +1067,7 @@ QModelIndex* k_pagewidgetmodel_index(void* self, int row, int column, void* pare
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QModelIndex* fn(KPageWidgetModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column, QModelIndex* parent)
 void k_pagewidgetmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#index)
@@ -1091,7 +1091,7 @@ QModelIndex* k_pagewidgetmodel_parent(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QModelIndex* fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback QModelIndex* func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#parent)
@@ -1113,7 +1113,7 @@ int32_t k_pagewidgetmodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int32_t fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#rowCount)
@@ -1146,7 +1146,7 @@ void k_pagewidgetmodel_toggled(void* self, void* page, bool checked);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#toggled)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, KPageWidgetItem*, bool)
+/// @param callback void func(KPageWidgetModel* self, KPageWidgetItem* page, bool checked)
 void k_pagewidgetmodel_on_toggled(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -1251,7 +1251,7 @@ void k_pagewidgetmodel_data_changed(void* self, void* topLeft, void* bottomRight
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void k_pagewidgetmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1269,7 +1269,7 @@ void k_pagewidgetmodel_header_data_changed(void* self, int32_t orientation, int 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(KPageWidgetModel* self, enum Qt__Orientation orientation, int first, int last)
 void k_pagewidgetmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1284,7 +1284,7 @@ void k_pagewidgetmodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*)
+/// @param callback void func(KPageWidgetModel* self)
 void k_pagewidgetmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1299,7 +1299,7 @@ void k_pagewidgetmodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*)
+/// @param callback void func(KPageWidgetModel* self)
 void k_pagewidgetmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1372,7 +1372,7 @@ void k_pagewidgetmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void k_pagewidgetmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -1388,7 +1388,7 @@ void k_pagewidgetmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void k_pagewidgetmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1405,7 +1405,7 @@ void k_pagewidgetmodel_layout_changed2(void* self, libqt_list parents, int32_t h
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void k_pagewidgetmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1421,7 +1421,7 @@ void k_pagewidgetmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void k_pagewidgetmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1438,7 +1438,7 @@ void k_pagewidgetmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void k_pagewidgetmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -1667,7 +1667,7 @@ void k_pagewidgetmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*)
+/// @param callback void func(KPageWidgetModel* self)
 void k_pagewidgetmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1738,7 +1738,7 @@ void k_pagewidgetmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QObject*)
+/// @param callback void func(KPageWidgetModel* self, QObject* param1)
 void k_pagewidgetmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1772,7 +1772,7 @@ QModelIndex* k_pagewidgetmodel_qbase_sibling(void* self, int row, int column, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QModelIndex* fn(KPageWidgetModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column, QModelIndex* idx)
 void k_pagewidgetmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1802,7 +1802,7 @@ bool k_pagewidgetmodel_qbase_has_children(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1836,7 +1836,7 @@ QVariant* k_pagewidgetmodel_qbase_header_data(void* self, int section, int32_t o
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QVariant* fn(KPageWidgetModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(KPageWidgetModel* self, int section, enum Qt__Orientation orientation, int role)
 void k_pagewidgetmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1872,7 +1872,7 @@ bool k_pagewidgetmodel_qbase_set_header_data(void* self, int section, int32_t or
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(KPageWidgetModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void k_pagewidgetmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1902,7 +1902,7 @@ libqt_map /* of int to QVariant* */ k_pagewidgetmodel_qbase_item_data(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1934,7 +1934,7 @@ bool k_pagewidgetmodel_qbase_set_item_data(void* self, void* index, libqt_map /*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void k_pagewidgetmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1964,7 +1964,7 @@ bool k_pagewidgetmodel_qbase_clear_item_data(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1996,7 +1996,7 @@ const char** k_pagewidgetmodel_qbase_mime_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void k_pagewidgetmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2026,7 +2026,7 @@ QMimeData* k_pagewidgetmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QMimeData* fn(KPageWidgetModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(KPageWidgetModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void k_pagewidgetmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2064,7 +2064,7 @@ bool k_pagewidgetmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void k_pagewidgetmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2102,7 +2102,7 @@ bool k_pagewidgetmodel_qbase_drop_mime_data(void* self, void* data, int32_t acti
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void k_pagewidgetmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2134,7 +2134,7 @@ int64_t k_pagewidgetmodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void k_pagewidgetmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2166,7 +2166,7 @@ int64_t k_pagewidgetmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void k_pagewidgetmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2200,7 +2200,7 @@ bool k_pagewidgetmodel_qbase_insert_rows(void* self, int row, int count, void* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, int, int, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, int row, int count, QModelIndex* parent)
 void k_pagewidgetmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2234,7 +2234,7 @@ bool k_pagewidgetmodel_qbase_insert_columns(void* self, int column, int count, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, int, int, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, int column, int count, QModelIndex* parent)
 void k_pagewidgetmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2268,7 +2268,7 @@ bool k_pagewidgetmodel_qbase_remove_rows(void* self, int row, int count, void* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, int, int, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, int row, int count, QModelIndex* parent)
 void k_pagewidgetmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2302,7 +2302,7 @@ bool k_pagewidgetmodel_qbase_remove_columns(void* self, int column, int count, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, int, int, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, int column, int count, QModelIndex* parent)
 void k_pagewidgetmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2340,7 +2340,7 @@ bool k_pagewidgetmodel_qbase_move_rows(void* self, void* sourceParent, int sourc
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void k_pagewidgetmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2378,7 +2378,7 @@ bool k_pagewidgetmodel_qbase_move_columns(void* self, void* sourceParent, int so
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void k_pagewidgetmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2408,7 +2408,7 @@ void k_pagewidgetmodel_qbase_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2438,7 +2438,7 @@ bool k_pagewidgetmodel_qbase_can_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2470,7 +2470,7 @@ void k_pagewidgetmodel_qbase_sort(void* self, int column, int32_t order);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, int, enum Qt__SortOrder)
+/// @param callback void func(KPageWidgetModel* self, int column, enum Qt__SortOrder order)
 void k_pagewidgetmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -2500,7 +2500,7 @@ QModelIndex* k_pagewidgetmodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QModelIndex* fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback QModelIndex* func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2538,7 +2538,7 @@ libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(KPageWidgetModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(KPageWidgetModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void k_pagewidgetmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -2568,7 +2568,7 @@ QSize* k_pagewidgetmodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QSize* fn(KPageWidgetModel*, QModelIndex*)
+/// @param callback QSize* func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2596,7 +2596,7 @@ libqt_map /* of int to char* */ k_pagewidgetmodel_qbase_role_names(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void k_pagewidgetmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2628,7 +2628,7 @@ void k_pagewidgetmodel_qbase_multi_data(void* self, void* index, void* roleDataS
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void k_pagewidgetmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2656,7 +2656,7 @@ bool k_pagewidgetmodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagewidgetmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2684,7 +2684,7 @@ void k_pagewidgetmodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2712,7 +2712,7 @@ void k_pagewidgetmodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2742,7 +2742,7 @@ bool k_pagewidgetmodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QEvent*)
+/// @param callback bool func(KPageWidgetModel* self, QEvent* event)
 void k_pagewidgetmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2774,7 +2774,7 @@ bool k_pagewidgetmodel_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QObject*, QEvent*)
+/// @param callback bool func(KPageWidgetModel* self, QObject* watched, QEvent* event)
 void k_pagewidgetmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2804,7 +2804,7 @@ void k_pagewidgetmodel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QTimerEvent*)
+/// @param callback void func(KPageWidgetModel* self, QTimerEvent* event)
 void k_pagewidgetmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2834,7 +2834,7 @@ void k_pagewidgetmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QChildEvent*)
+/// @param callback void func(KPageWidgetModel* self, QChildEvent* event)
 void k_pagewidgetmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2864,7 +2864,7 @@ void k_pagewidgetmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QEvent*)
+/// @param callback void func(KPageWidgetModel* self, QEvent* event)
 void k_pagewidgetmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2894,7 +2894,7 @@ void k_pagewidgetmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QMetaMethod*)
+/// @param callback void func(KPageWidgetModel* self, QMetaMethod* signal)
 void k_pagewidgetmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2924,7 +2924,7 @@ void k_pagewidgetmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QMetaMethod*)
+/// @param callback void func(KPageWidgetModel* self, QMetaMethod* signal)
 void k_pagewidgetmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2956,7 +2956,7 @@ QModelIndex* k_pagewidgetmodel_qbase_create_index(void* self, int row, int colum
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QModelIndex* fn(KPageWidgetModel*, int, int)
+/// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column)
 void k_pagewidgetmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2988,7 +2988,7 @@ void k_pagewidgetmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void k_pagewidgetmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3024,7 +3024,7 @@ bool k_pagewidgetmodel_qbase_decode_data(void* self, int row, int column, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(KPageWidgetModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void k_pagewidgetmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3058,7 +3058,7 @@ void k_pagewidgetmodel_qbase_begin_insert_rows(void* self, void* parent, int fir
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3086,7 +3086,7 @@ void k_pagewidgetmodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3120,7 +3120,7 @@ void k_pagewidgetmodel_qbase_begin_remove_rows(void* self, void* parent, int fir
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3148,7 +3148,7 @@ void k_pagewidgetmodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3186,7 +3186,7 @@ bool k_pagewidgetmodel_qbase_begin_move_rows(void* self, void* sourceParent, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void k_pagewidgetmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3214,7 +3214,7 @@ void k_pagewidgetmodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3248,7 +3248,7 @@ void k_pagewidgetmodel_qbase_begin_insert_columns(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3276,7 +3276,7 @@ void k_pagewidgetmodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3310,7 +3310,7 @@ void k_pagewidgetmodel_qbase_begin_remove_columns(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3338,7 +3338,7 @@ void k_pagewidgetmodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3376,7 +3376,7 @@ bool k_pagewidgetmodel_qbase_begin_move_columns(void* self, void* sourceParent, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void k_pagewidgetmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3404,7 +3404,7 @@ void k_pagewidgetmodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3432,7 +3432,7 @@ void k_pagewidgetmodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3460,7 +3460,7 @@ void k_pagewidgetmodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidgetmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3492,7 +3492,7 @@ void k_pagewidgetmodel_qbase_change_persistent_index(void* self, void* from, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* from, QModelIndex* to)
 void k_pagewidgetmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3524,7 +3524,7 @@ void k_pagewidgetmodel_qbase_change_persistent_index_list(void* self, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void k_pagewidgetmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -3552,7 +3552,7 @@ libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_persistent_index_list(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void k_pagewidgetmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -3580,7 +3580,7 @@ QObject* k_pagewidgetmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pagewidgetmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3608,7 +3608,7 @@ int32_t k_pagewidgetmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagewidgetmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3638,7 +3638,7 @@ int32_t k_pagewidgetmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int32_t fn(KPageWidgetModel*, const char*)
+/// @param callback int32_t func(KPageWidgetModel* self, const char* signal)
 void k_pagewidgetmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3668,7 +3668,7 @@ bool k_pagewidgetmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback bool fn(KPageWidgetModel*, QMetaMethod*)
+/// @param callback bool func(KPageWidgetModel* self, QMetaMethod* signal)
 void k_pagewidgetmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3678,7 +3678,7 @@ void k_pagewidgetmodel_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3688,7 +3688,7 @@ void k_pagewidgetmodel_on_rows_about_to_be_inserted(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3698,7 +3698,7 @@ void k_pagewidgetmodel_on_rows_inserted(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3708,7 +3708,7 @@ void k_pagewidgetmodel_on_rows_about_to_be_removed(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3718,7 +3718,7 @@ void k_pagewidgetmodel_on_rows_removed(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3728,7 +3728,7 @@ void k_pagewidgetmodel_on_columns_about_to_be_inserted(void* self, void (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3738,7 +3738,7 @@ void k_pagewidgetmodel_on_columns_inserted(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3748,7 +3748,7 @@ void k_pagewidgetmodel_on_columns_about_to_be_removed(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* parent, int first, int last)
 void k_pagewidgetmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3758,7 +3758,7 @@ void k_pagewidgetmodel_on_columns_removed(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*)
+/// @param callback void func(KPageWidgetModel* self)
 void k_pagewidgetmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3768,7 +3768,7 @@ void k_pagewidgetmodel_on_model_about_to_be_reset(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*)
+/// @param callback void func(KPageWidgetModel* self)
 void k_pagewidgetmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3778,7 +3778,7 @@ void k_pagewidgetmodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void k_pagewidgetmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3788,7 +3788,7 @@ void k_pagewidgetmodel_on_rows_about_to_be_moved(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void k_pagewidgetmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3798,7 +3798,7 @@ void k_pagewidgetmodel_on_rows_moved(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void k_pagewidgetmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3808,7 +3808,7 @@ void k_pagewidgetmodel_on_columns_about_to_be_moved(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(KPageWidgetModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void k_pagewidgetmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3818,7 +3818,7 @@ void k_pagewidgetmodel_on_columns_moved(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void fn(KPageWidgetModel*, const char*)
+/// @param callback void func(KPageWidgetModel* self, const char* objectName)
 void k_pagewidgetmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#dtor.KPageWidgetModel)

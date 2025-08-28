@@ -51,7 +51,7 @@ int32_t q_printdialog_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn(QPrintDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPrintDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_printdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -79,7 +79,7 @@ int32_t q_printdialog_exec(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_printdialog_on_exec(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#exec)
@@ -99,7 +99,7 @@ void q_printdialog_accept(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printdialog_on_accept(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#accept)
@@ -120,7 +120,7 @@ void q_printdialog_done(void* self, int result);
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, int)
+/// @param callback void func(QPrintDialog* self, int result)
 void q_printdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#done)
@@ -167,7 +167,7 @@ void q_printdialog_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, bool)
+/// @param callback void func(QPrintDialog* self, bool visible)
 void q_printdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#setVisible)
@@ -337,7 +337,7 @@ void q_printdialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, int)
+/// @param callback void func(QPrintDialog* self, int result)
 void q_printdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -352,7 +352,7 @@ void q_printdialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*)
+/// @param callback void func(QPrintDialog* self)
 void q_printdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2292,7 +2292,7 @@ void q_printdialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, const char*)
+/// @param callback void func(QPrintDialog* self, const char* title)
 void q_printdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2308,7 +2308,7 @@ void q_printdialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QIcon*)
+/// @param callback void func(QPrintDialog* self, QIcon* icon)
 void q_printdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2324,7 +2324,7 @@ void q_printdialog_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, const char*)
+/// @param callback void func(QPrintDialog* self, const char* iconText)
 void q_printdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2340,7 +2340,7 @@ void q_printdialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QPoint*)
+/// @param callback void func(QPrintDialog* self, QPoint* pos)
 void q_printdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2717,7 +2717,7 @@ void q_printdialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*)
+/// @param callback void func(QPrintDialog* self)
 void q_printdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2795,7 +2795,7 @@ void q_printdialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QObject*)
+/// @param callback void func(QPrintDialog* self, QObject* param1)
 void q_printdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2914,7 +2914,7 @@ QSize* q_printdialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_printdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2942,7 +2942,7 @@ QSize* q_printdialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_printdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2970,7 +2970,7 @@ void q_printdialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2998,7 +2998,7 @@ void q_printdialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3028,7 +3028,7 @@ void q_printdialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QKeyEvent*)
+/// @param callback void func(QPrintDialog* self, QKeyEvent* param1)
 void q_printdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3058,7 +3058,7 @@ void q_printdialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QCloseEvent*)
+/// @param callback void func(QPrintDialog* self, QCloseEvent* param1)
 void q_printdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3088,7 +3088,7 @@ void q_printdialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QShowEvent*)
+/// @param callback void func(QPrintDialog* self, QShowEvent* param1)
 void q_printdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3118,7 +3118,7 @@ void q_printdialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QResizeEvent*)
+/// @param callback void func(QPrintDialog* self, QResizeEvent* param1)
 void q_printdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3148,7 +3148,7 @@ void q_printdialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QContextMenuEvent*)
+/// @param callback void func(QPrintDialog* self, QContextMenuEvent* param1)
 void q_printdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3180,7 +3180,7 @@ bool q_printdialog_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn(QPrintDialog*, QObject*, QEvent*)
+/// @param callback bool func(QPrintDialog* self, QObject* param1, QEvent* param2)
 void q_printdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3208,7 +3208,7 @@ int32_t q_printdialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_printdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3238,7 +3238,7 @@ int32_t q_printdialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn(QPrintDialog*, int)
+/// @param callback int32_t func(QPrintDialog* self, int param1)
 void q_printdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3266,7 +3266,7 @@ bool q_printdialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_printdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3294,7 +3294,7 @@ QPaintEngine* q_printdialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_printdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3324,7 +3324,7 @@ bool q_printdialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn(QPrintDialog*, QEvent*)
+/// @param callback bool func(QPrintDialog* self, QEvent* event)
 void q_printdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3354,7 +3354,7 @@ void q_printdialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMouseEvent*)
+/// @param callback void func(QPrintDialog* self, QMouseEvent* event)
 void q_printdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3384,7 +3384,7 @@ void q_printdialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMouseEvent*)
+/// @param callback void func(QPrintDialog* self, QMouseEvent* event)
 void q_printdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3414,7 +3414,7 @@ void q_printdialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMouseEvent*)
+/// @param callback void func(QPrintDialog* self, QMouseEvent* event)
 void q_printdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3444,7 +3444,7 @@ void q_printdialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMouseEvent*)
+/// @param callback void func(QPrintDialog* self, QMouseEvent* event)
 void q_printdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3474,7 +3474,7 @@ void q_printdialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QWheelEvent*)
+/// @param callback void func(QPrintDialog* self, QWheelEvent* event)
 void q_printdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3504,7 +3504,7 @@ void q_printdialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QKeyEvent*)
+/// @param callback void func(QPrintDialog* self, QKeyEvent* event)
 void q_printdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3534,7 +3534,7 @@ void q_printdialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QFocusEvent*)
+/// @param callback void func(QPrintDialog* self, QFocusEvent* event)
 void q_printdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3564,7 +3564,7 @@ void q_printdialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QFocusEvent*)
+/// @param callback void func(QPrintDialog* self, QFocusEvent* event)
 void q_printdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3594,7 +3594,7 @@ void q_printdialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QEnterEvent*)
+/// @param callback void func(QPrintDialog* self, QEnterEvent* event)
 void q_printdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3624,7 +3624,7 @@ void q_printdialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QEvent*)
+/// @param callback void func(QPrintDialog* self, QEvent* event)
 void q_printdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3654,7 +3654,7 @@ void q_printdialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QPaintEvent*)
+/// @param callback void func(QPrintDialog* self, QPaintEvent* event)
 void q_printdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3684,7 +3684,7 @@ void q_printdialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMoveEvent*)
+/// @param callback void func(QPrintDialog* self, QMoveEvent* event)
 void q_printdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3714,7 +3714,7 @@ void q_printdialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QTabletEvent*)
+/// @param callback void func(QPrintDialog* self, QTabletEvent* event)
 void q_printdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3744,7 +3744,7 @@ void q_printdialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QActionEvent*)
+/// @param callback void func(QPrintDialog* self, QActionEvent* event)
 void q_printdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3774,7 +3774,7 @@ void q_printdialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QDragEnterEvent*)
+/// @param callback void func(QPrintDialog* self, QDragEnterEvent* event)
 void q_printdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3804,7 +3804,7 @@ void q_printdialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QDragMoveEvent*)
+/// @param callback void func(QPrintDialog* self, QDragMoveEvent* event)
 void q_printdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3834,7 +3834,7 @@ void q_printdialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QDragLeaveEvent*)
+/// @param callback void func(QPrintDialog* self, QDragLeaveEvent* event)
 void q_printdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3864,7 +3864,7 @@ void q_printdialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QDropEvent*)
+/// @param callback void func(QPrintDialog* self, QDropEvent* event)
 void q_printdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3894,7 +3894,7 @@ void q_printdialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QHideEvent*)
+/// @param callback void func(QPrintDialog* self, QHideEvent* event)
 void q_printdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3928,7 +3928,7 @@ bool q_printdialog_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn(QPrintDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(QPrintDialog* self, const char* eventType, void* message, intptr_t* result)
 void q_printdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3958,7 +3958,7 @@ void q_printdialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QEvent*)
+/// @param callback void func(QPrintDialog* self, QEvent* param1)
 void q_printdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3988,7 +3988,7 @@ int32_t q_printdialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn(QPrintDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPrintDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_printdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4018,7 +4018,7 @@ void q_printdialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QPainter*)
+/// @param callback void func(QPrintDialog* self, QPainter* painter)
 void q_printdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4048,7 +4048,7 @@ QPaintDevice* q_printdialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QPaintDevice* fn(QPrintDialog*, QPoint*)
+/// @param callback QPaintDevice* func(QPrintDialog* self, QPoint* offset)
 void q_printdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4076,7 +4076,7 @@ QPainter* q_printdialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_printdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4106,7 +4106,7 @@ void q_printdialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QInputMethodEvent*)
+/// @param callback void func(QPrintDialog* self, QInputMethodEvent* param1)
 void q_printdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4136,7 +4136,7 @@ QVariant* q_printdialog_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QVariant* fn(QPrintDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPrintDialog* self, enum Qt__InputMethodQuery param1)
 void q_printdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4166,7 +4166,7 @@ bool q_printdialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn(QPrintDialog*, bool)
+/// @param callback bool func(QPrintDialog* self, bool next)
 void q_printdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4196,7 +4196,7 @@ void q_printdialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QTimerEvent*)
+/// @param callback void func(QPrintDialog* self, QTimerEvent* event)
 void q_printdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4226,7 +4226,7 @@ void q_printdialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QChildEvent*)
+/// @param callback void func(QPrintDialog* self, QChildEvent* event)
 void q_printdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4256,7 +4256,7 @@ void q_printdialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QEvent*)
+/// @param callback void func(QPrintDialog* self, QEvent* event)
 void q_printdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4286,7 +4286,7 @@ void q_printdialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMetaMethod*)
+/// @param callback void func(QPrintDialog* self, QMetaMethod* signal)
 void q_printdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4316,7 +4316,7 @@ void q_printdialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QMetaMethod*)
+/// @param callback void func(QPrintDialog* self, QMetaMethod* signal)
 void q_printdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4346,7 +4346,7 @@ void q_printdialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, QWidget*)
+/// @param callback void func(QPrintDialog* self, QWidget* param1)
 void q_printdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4374,7 +4374,7 @@ void q_printdialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4402,7 +4402,7 @@ void q_printdialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4430,7 +4430,7 @@ void q_printdialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_printdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4458,7 +4458,7 @@ bool q_printdialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_printdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4486,7 +4486,7 @@ bool q_printdialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_printdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4514,7 +4514,7 @@ QObject* q_printdialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_printdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4542,7 +4542,7 @@ int32_t q_printdialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_printdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4572,7 +4572,7 @@ int32_t q_printdialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback int32_t fn(QPrintDialog*, const char*)
+/// @param callback int32_t func(QPrintDialog* self, const char* signal)
 void q_printdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4602,7 +4602,7 @@ bool q_printdialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback bool fn(QPrintDialog*, QMetaMethod*)
+/// @param callback bool func(QPrintDialog* self, QMetaMethod* signal)
 void q_printdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4634,7 +4634,7 @@ double q_printdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintDialog*
-/// @param callback double fn(QPrintDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPrintDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_printdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4644,7 +4644,7 @@ void q_printdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPrintDialog*
-/// @param callback void fn(QPrintDialog*, const char*)
+/// @param callback void func(QPrintDialog* self, const char* objectName)
 void q_printdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#dtor.QPrintDialog)

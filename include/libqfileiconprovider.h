@@ -28,7 +28,7 @@ QIcon* q_fileiconprovider_icon(void* self, int32_t typeVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileIconProvider*
-/// @param callback QIcon* fn(QFileIconProvider*, enum QAbstractFileIconProvider__IconType)
+/// @param callback QIcon* func(QFileIconProvider* self, enum QAbstractFileIconProvider__IconType typeVal)
 void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
@@ -50,7 +50,7 @@ QIcon* q_fileiconprovider_icon2(void* self, void* info);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileIconProvider*
-/// @param callback QIcon* fn(QFileIconProvider*, QFileInfo*)
+/// @param callback QIcon* func(QFileIconProvider* self, QFileInfo* info)
 void q_fileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
@@ -92,7 +92,7 @@ const char* q_fileiconprovider_qbase_type(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileIconProvider*
-/// @param callback const char* fn(QFileIconProvider*, QFileInfo*)
+/// @param callback const char* func(QFileIconProvider* self, QFileInfo* param1)
 void q_fileiconprovider_on_type(void* self, const char* (*callback)(void*, void*));
 
 /// Inherited from QAbstractFileIconProvider
@@ -122,7 +122,7 @@ void q_fileiconprovider_qbase_set_options(void* self, int64_t options);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileIconProvider*
-/// @param callback void fn(QFileIconProvider*, flag of enum QAbstractFileIconProvider__Option)
+/// @param callback void func(QFileIconProvider* self, flag of enum QAbstractFileIconProvider__Option options)
 void q_fileiconprovider_on_set_options(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractFileIconProvider
@@ -154,7 +154,7 @@ int64_t q_fileiconprovider_qbase_options(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileIconProvider*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_fileiconprovider_on_options(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#dtor.QFileIconProvider)

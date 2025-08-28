@@ -40,7 +40,7 @@ int32_t q_sciscintilla_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback int32_t fn(QsciScintilla*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QsciScintilla* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sciscintilla_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -73,7 +73,7 @@ const char** q_sciscintilla_api_context(void* self, int pos, int* context_start,
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback const char** fn(QsciScintilla*, int, int*, int*)
+/// @param callback const char** func(QsciScintilla* self, int pos, int* context_start, int* last_word_start)
 void q_sciscintilla_on_api_context(void* self, const char** (*callback)(void*, int, int*, int*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -360,7 +360,7 @@ bool q_sciscintilla_find_first(void* self, const char* expr, bool re, bool cs, b
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, const char*, bool, bool, bool, bool, bool, int, int, bool, bool, bool)
+/// @param callback bool func(QsciScintilla* self, const char* expr, bool re, bool cs, bool wo, bool wrap, bool forward, int line, int index, bool show, bool posix, bool cxx11)
 void q_sciscintilla_on_find_first(void* self, bool (*callback)(void*, const char*, bool, bool, bool, bool, bool, int, int, bool, bool, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -399,7 +399,7 @@ bool q_sciscintilla_find_first_in_selection(void* self, const char* expr, bool r
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, const char*, bool, bool, bool, bool, bool, bool, bool)
+/// @param callback bool func(QsciScintilla* self, const char* expr, bool re, bool cs, bool wo, bool forward, bool show, bool posix, bool cxx11)
 void q_sciscintilla_on_find_first_in_selection(void* self, bool (*callback)(void*, const char*, bool, bool, bool, bool, bool, bool, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -427,7 +427,7 @@ bool q_sciscintilla_find_next(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sciscintilla_on_find_next(void* self, bool (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -744,7 +744,7 @@ void q_sciscintilla_recolor(void* self, int start, int end);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int start, int end)
 void q_sciscintilla_on_recolor(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -781,7 +781,7 @@ void q_sciscintilla_replace(void* self, const char* replaceStr);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* replaceStr)
 void q_sciscintilla_on_replace(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1308,7 +1308,7 @@ void q_sciscintilla_append(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* text)
 void q_sciscintilla_on_append(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1329,7 +1329,7 @@ void q_sciscintilla_auto_complete_from_all(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_auto_complete_from_all(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1349,7 +1349,7 @@ void q_sciscintilla_auto_complete_from_a_p_is(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_auto_complete_from_a_p_is(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1369,7 +1369,7 @@ void q_sciscintilla_auto_complete_from_document(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_auto_complete_from_document(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1389,7 +1389,7 @@ void q_sciscintilla_call_tip(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_call_tip(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1409,7 +1409,7 @@ void q_sciscintilla_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1429,7 +1429,7 @@ void q_sciscintilla_copy(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_copy(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1449,7 +1449,7 @@ void q_sciscintilla_cut(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_cut(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1469,7 +1469,7 @@ void q_sciscintilla_ensure_cursor_visible(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_ensure_cursor_visible(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1490,7 +1490,7 @@ void q_sciscintilla_ensure_line_visible(void* self, int line);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int line)
 void q_sciscintilla_on_ensure_line_visible(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1512,7 +1512,7 @@ void q_sciscintilla_fold_all(void* self, bool children);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool children)
 void q_sciscintilla_on_fold_all(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1534,7 +1534,7 @@ void q_sciscintilla_fold_line(void* self, int line);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int line)
 void q_sciscintilla_on_fold_line(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1556,7 +1556,7 @@ void q_sciscintilla_indent(void* self, int line);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int line)
 void q_sciscintilla_on_indent(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1578,7 +1578,7 @@ void q_sciscintilla_insert(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* text)
 void q_sciscintilla_on_insert(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1602,7 +1602,7 @@ void q_sciscintilla_insert_at(void* self, const char* text, int line, int index)
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*, int, int)
+/// @param callback void func(QsciScintilla* self, const char* text, int line, int index)
 void q_sciscintilla_on_insert_at(void* self, void (*callback)(void*, const char*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1625,7 +1625,7 @@ void q_sciscintilla_move_to_matching_brace(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_move_to_matching_brace(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1645,7 +1645,7 @@ void q_sciscintilla_paste(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_paste(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1665,7 +1665,7 @@ void q_sciscintilla_redo(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_redo(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1685,7 +1685,7 @@ void q_sciscintilla_remove_selected_text(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_remove_selected_text(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1706,7 +1706,7 @@ void q_sciscintilla_replace_selected_text(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* text)
 void q_sciscintilla_on_replace_selected_text(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1727,7 +1727,7 @@ void q_sciscintilla_reset_selection_background_color(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_reset_selection_background_color(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1747,7 +1747,7 @@ void q_sciscintilla_reset_selection_foreground_color(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_reset_selection_foreground_color(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1768,7 +1768,7 @@ void q_sciscintilla_select_all(void* self, bool selectVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool selectVal)
 void q_sciscintilla_on_select_all(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1789,7 +1789,7 @@ void q_sciscintilla_select_to_matching_brace(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_select_to_matching_brace(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1810,7 +1810,7 @@ void q_sciscintilla_set_auto_completion_case_sensitivity(void* self, bool cs);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool cs)
 void q_sciscintilla_on_set_auto_completion_case_sensitivity(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1832,7 +1832,7 @@ void q_sciscintilla_set_auto_completion_replace_word(void* self, bool replace);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool replace)
 void q_sciscintilla_on_set_auto_completion_replace_word(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1854,7 +1854,7 @@ void q_sciscintilla_set_auto_completion_show_single(void* self, bool single);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool single)
 void q_sciscintilla_on_set_auto_completion_show_single(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1876,7 +1876,7 @@ void q_sciscintilla_set_auto_completion_source(void* self, int32_t source);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__AutoCompletionSource)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__AutoCompletionSource source)
 void q_sciscintilla_on_set_auto_completion_source(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1898,7 +1898,7 @@ void q_sciscintilla_set_auto_completion_threshold(void* self, int thresh);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int thresh)
 void q_sciscintilla_on_set_auto_completion_threshold(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1920,7 +1920,7 @@ void q_sciscintilla_set_auto_completion_use_single(void* self, int32_t single);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__AutoCompletionUseSingle)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__AutoCompletionUseSingle single)
 void q_sciscintilla_on_set_auto_completion_use_single(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1942,7 +1942,7 @@ void q_sciscintilla_set_auto_indent(void* self, bool autoindent);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool autoindent)
 void q_sciscintilla_on_set_auto_indent(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1964,7 +1964,7 @@ void q_sciscintilla_set_brace_matching(void* self, int32_t bm);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__BraceMatch)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__BraceMatch bm)
 void q_sciscintilla_on_set_brace_matching(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -1986,7 +1986,7 @@ void q_sciscintilla_set_backspace_unindents(void* self, bool unindent);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool unindent)
 void q_sciscintilla_on_set_backspace_unindents(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2008,7 +2008,7 @@ void q_sciscintilla_set_caret_foreground_color(void* self, void* col);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_caret_foreground_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2030,7 +2030,7 @@ void q_sciscintilla_set_caret_line_background_color(void* self, void* col);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_caret_line_background_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2052,7 +2052,7 @@ void q_sciscintilla_set_caret_line_frame_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int width)
 void q_sciscintilla_on_set_caret_line_frame_width(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2074,7 +2074,7 @@ void q_sciscintilla_set_caret_line_visible(void* self, bool enable);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool enable)
 void q_sciscintilla_on_set_caret_line_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2096,7 +2096,7 @@ void q_sciscintilla_set_caret_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int width)
 void q_sciscintilla_on_set_caret_width(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2118,7 +2118,7 @@ void q_sciscintilla_set_color(void* self, void* c);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* c)
 void q_sciscintilla_on_set_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2141,7 +2141,7 @@ void q_sciscintilla_set_cursor_position(void* self, int line, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int line, int index)
 void q_sciscintilla_on_set_cursor_position(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2164,7 +2164,7 @@ void q_sciscintilla_set_eol_mode(void* self, int32_t mode);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__EolMode)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__EolMode mode)
 void q_sciscintilla_on_set_eol_mode(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2186,7 +2186,7 @@ void q_sciscintilla_set_eol_visibility(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool visible)
 void q_sciscintilla_on_set_eol_visibility(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2209,7 +2209,7 @@ void q_sciscintilla_set_folding(void* self, int32_t fold, int margin);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__FoldStyle, int)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__FoldStyle fold, int margin)
 void q_sciscintilla_on_set_folding(void* self, void (*callback)(void*, int32_t, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2233,7 +2233,7 @@ void q_sciscintilla_set_indentation(void* self, int line, int indentation);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int line, int indentation)
 void q_sciscintilla_on_set_indentation(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2256,7 +2256,7 @@ void q_sciscintilla_set_indentation_guides(void* self, bool enable);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool enable)
 void q_sciscintilla_on_set_indentation_guides(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2278,7 +2278,7 @@ void q_sciscintilla_set_indentation_guides_background_color(void* self, void* co
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_indentation_guides_background_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2300,7 +2300,7 @@ void q_sciscintilla_set_indentation_guides_foreground_color(void* self, void* co
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_indentation_guides_foreground_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2322,7 +2322,7 @@ void q_sciscintilla_set_indentations_use_tabs(void* self, bool tabs);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool tabs)
 void q_sciscintilla_on_set_indentations_use_tabs(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2344,7 +2344,7 @@ void q_sciscintilla_set_indentation_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int width)
 void q_sciscintilla_on_set_indentation_width(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2366,7 +2366,7 @@ void q_sciscintilla_set_lexer(void* self, void* lexer);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QsciLexer*)
+/// @param callback void func(QsciScintilla* self, QsciLexer* lexer)
 void q_sciscintilla_on_set_lexer(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2388,7 +2388,7 @@ void q_sciscintilla_set_margins_background_color(void* self, void* col);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_margins_background_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2410,7 +2410,7 @@ void q_sciscintilla_set_margins_font(void* self, void* f);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QFont*)
+/// @param callback void func(QsciScintilla* self, QFont* f)
 void q_sciscintilla_on_set_margins_font(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2432,7 +2432,7 @@ void q_sciscintilla_set_margins_foreground_color(void* self, void* col);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_margins_foreground_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2455,7 +2455,7 @@ void q_sciscintilla_set_margin_line_numbers(void* self, int margin, bool lnrs);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, bool)
+/// @param callback void func(QsciScintilla* self, int margin, bool lnrs)
 void q_sciscintilla_on_set_margin_line_numbers(void* self, void (*callback)(void*, int, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2479,7 +2479,7 @@ void q_sciscintilla_set_margin_marker_mask(void* self, int margin, int mask);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int margin, int mask)
 void q_sciscintilla_on_set_margin_marker_mask(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2503,7 +2503,7 @@ void q_sciscintilla_set_margin_sensitivity(void* self, int margin, bool sens);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, bool)
+/// @param callback void func(QsciScintilla* self, int margin, bool sens)
 void q_sciscintilla_on_set_margin_sensitivity(void* self, void (*callback)(void*, int, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2527,7 +2527,7 @@ void q_sciscintilla_set_margin_width(void* self, int margin, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int margin, int width)
 void q_sciscintilla_on_set_margin_width(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2551,7 +2551,7 @@ void q_sciscintilla_set_margin_width2(void* self, int margin, const char* s);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, const char*)
+/// @param callback void func(QsciScintilla* self, int margin, const char* s)
 void q_sciscintilla_on_set_margin_width2(void* self, void (*callback)(void*, int, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2574,7 +2574,7 @@ void q_sciscintilla_set_modified(void* self, bool m);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool m)
 void q_sciscintilla_on_set_modified(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2596,7 +2596,7 @@ void q_sciscintilla_set_paper(void* self, void* c);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* c)
 void q_sciscintilla_on_set_paper(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2618,7 +2618,7 @@ void q_sciscintilla_set_read_only(void* self, bool ro);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool ro)
 void q_sciscintilla_on_set_read_only(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2643,7 +2643,7 @@ void q_sciscintilla_set_selection(void* self, int lineFrom, int indexFrom, int l
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int, int, int)
+/// @param callback void func(QsciScintilla* self, int lineFrom, int indexFrom, int lineTo, int indexTo)
 void q_sciscintilla_on_set_selection(void* self, void (*callback)(void*, int, int, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2668,7 +2668,7 @@ void q_sciscintilla_set_selection_background_color(void* self, void* col);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_selection_background_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2690,7 +2690,7 @@ void q_sciscintilla_set_selection_foreground_color(void* self, void* col);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QColor*)
+/// @param callback void func(QsciScintilla* self, QColor* col)
 void q_sciscintilla_on_set_selection_foreground_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2712,7 +2712,7 @@ void q_sciscintilla_set_tab_indents(void* self, bool indent);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool indent)
 void q_sciscintilla_on_set_tab_indents(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2734,7 +2734,7 @@ void q_sciscintilla_set_tab_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int width)
 void q_sciscintilla_on_set_tab_width(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2756,7 +2756,7 @@ void q_sciscintilla_set_text(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* text)
 void q_sciscintilla_on_set_text(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2778,7 +2778,7 @@ void q_sciscintilla_set_utf8(void* self, bool cp);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool cp)
 void q_sciscintilla_on_set_utf8(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2800,7 +2800,7 @@ void q_sciscintilla_set_whitespace_visibility(void* self, int32_t mode);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__WhitespaceVisibility)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__WhitespaceVisibility mode)
 void q_sciscintilla_on_set_whitespace_visibility(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2822,7 +2822,7 @@ void q_sciscintilla_set_wrap_mode(void* self, int32_t mode);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, enum QsciScintilla__WrapMode)
+/// @param callback void func(QsciScintilla* self, enum QsciScintilla__WrapMode mode)
 void q_sciscintilla_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2843,7 +2843,7 @@ void q_sciscintilla_undo(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_undo(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2864,7 +2864,7 @@ void q_sciscintilla_unindent(void* self, int line);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int line)
 void q_sciscintilla_on_unindent(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2886,7 +2886,7 @@ void q_sciscintilla_zoom_in(void* self, int range);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int range)
 void q_sciscintilla_on_zoom_in(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2907,7 +2907,7 @@ void q_sciscintilla_zoom_in2(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_zoom_in2(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2928,7 +2928,7 @@ void q_sciscintilla_zoom_out(void* self, int range);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int range)
 void q_sciscintilla_on_zoom_out(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2949,7 +2949,7 @@ void q_sciscintilla_zoom_out2(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_zoom_out2(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2970,7 +2970,7 @@ void q_sciscintilla_zoom_to(void* self, int size);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int)
+/// @param callback void func(QsciScintilla* self, int size)
 void q_sciscintilla_on_zoom_to(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -2991,7 +2991,7 @@ void q_sciscintilla_cursor_position_changed(void* self, int line, int index);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int line, int index)
 void q_sciscintilla_on_cursor_position_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3003,7 +3003,7 @@ void q_sciscintilla_copy_available(void* self, bool yes);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool yes)
 void q_sciscintilla_on_copy_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3017,7 +3017,7 @@ void q_sciscintilla_indicator_clicked(void* self, int line, int index, int64_t s
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int, flag of enum Qt__KeyboardModifier)
+/// @param callback void func(QsciScintilla* self, int line, int index, flag of enum Qt__KeyboardModifier state)
 void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int, int, int64_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3031,7 +3031,7 @@ void q_sciscintilla_indicator_released(void* self, int line, int index, int64_t 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int, flag of enum Qt__KeyboardModifier)
+/// @param callback void func(QsciScintilla* self, int line, int index, flag of enum Qt__KeyboardModifier state)
 void q_sciscintilla_on_indicator_released(void* self, void (*callback)(void*, int, int, int64_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3042,7 +3042,7 @@ void q_sciscintilla_lines_changed(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*)
+/// @param callback void func(QsciScintilla* self)
 void q_sciscintilla_on_lines_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3056,7 +3056,7 @@ void q_sciscintilla_margin_clicked(void* self, int margin, int line, int64_t sta
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int, flag of enum Qt__KeyboardModifier)
+/// @param callback void func(QsciScintilla* self, int margin, int line, flag of enum Qt__KeyboardModifier state)
 void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, int, int64_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3070,7 +3070,7 @@ void q_sciscintilla_margin_right_clicked(void* self, int margin, int line, int64
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int, flag of enum Qt__KeyboardModifier)
+/// @param callback void func(QsciScintilla* self, int margin, int line, flag of enum Qt__KeyboardModifier state)
 void q_sciscintilla_on_margin_right_clicked(void* self, void (*callback)(void*, int, int, int64_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3081,7 +3081,7 @@ void q_sciscintilla_modification_attempted(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*)
+/// @param callback void func(QsciScintilla* self)
 void q_sciscintilla_on_modification_attempted(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3093,7 +3093,7 @@ void q_sciscintilla_modification_changed(void* self, bool m);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool m)
 void q_sciscintilla_on_modification_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3104,7 +3104,7 @@ void q_sciscintilla_selection_changed(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*)
+/// @param callback void func(QsciScintilla* self)
 void q_sciscintilla_on_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3115,7 +3115,7 @@ void q_sciscintilla_text_changed(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*)
+/// @param callback void func(QsciScintilla* self)
 void q_sciscintilla_on_text_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3128,7 +3128,7 @@ void q_sciscintilla_user_list_activated(void* self, int id, const char* stringVa
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, const char*)
+/// @param callback void func(QsciScintilla* self, int id, const char* stringVal)
 void q_sciscintilla_on_user_list_activated(void* self, void (*callback)(void*, int, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3142,7 +3142,7 @@ bool q_sciscintilla_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, QEvent*)
+/// @param callback bool func(QsciScintilla* self, QEvent* e)
 void q_sciscintilla_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3164,7 +3164,7 @@ void q_sciscintilla_change_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QEvent*)
+/// @param callback void func(QsciScintilla* self, QEvent* e)
 void q_sciscintilla_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3186,7 +3186,7 @@ void q_sciscintilla_context_menu_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QContextMenuEvent*)
+/// @param callback void func(QsciScintilla* self, QContextMenuEvent* e)
 void q_sciscintilla_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -3208,7 +3208,7 @@ void q_sciscintilla_wheel_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QWheelEvent*)
+/// @param callback void func(QsciScintilla* self, QWheelEvent* e)
 void q_sciscintilla_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -6032,7 +6032,7 @@ void q_sciscintilla_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* title)
 void q_sciscintilla_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6048,7 +6048,7 @@ void q_sciscintilla_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QIcon*)
+/// @param callback void func(QsciScintilla* self, QIcon* icon)
 void q_sciscintilla_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6064,7 +6064,7 @@ void q_sciscintilla_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* iconText)
 void q_sciscintilla_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6080,7 +6080,7 @@ void q_sciscintilla_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QPoint*)
+/// @param callback void func(QsciScintilla* self, QPoint* pos)
 void q_sciscintilla_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6457,7 +6457,7 @@ void q_sciscintilla_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*)
+/// @param callback void func(QsciScintilla* self)
 void q_sciscintilla_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -6535,7 +6535,7 @@ void q_sciscintilla_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QObject*)
+/// @param callback void func(QsciScintilla* self, QObject* param1)
 void q_sciscintilla_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -6656,7 +6656,7 @@ bool q_sciscintilla_qbase_can_insert_from_mime_data(void* self, void* source);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, QMimeData*)
+/// @param callback bool func(QsciScintilla* self, QMimeData* source)
 void q_sciscintilla_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6692,7 +6692,7 @@ char* q_sciscintilla_qbase_from_mime_data(void* self, void* source, bool* rectan
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback char* fn(QsciScintilla*, QMimeData*, bool*)
+/// @param callback char* func(QsciScintilla* self, QMimeData* source, bool* rectangular)
 void q_sciscintilla_on_from_mime_data(void* self, char* (*callback)(void*, void*, bool*));
 
 /// Inherited from QsciScintillaBase
@@ -6724,7 +6724,7 @@ QMimeData* q_sciscintilla_qbase_to_mime_data(void* self, const char* text, bool 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QMimeData* fn(QsciScintilla*, const char*, bool)
+/// @param callback QMimeData* func(QsciScintilla* self, const char* text, bool rectangular)
 void q_sciscintilla_on_to_mime_data(void* self, QMimeData* (*callback)(void*, const char*, bool));
 
 /// Inherited from QsciScintillaBase
@@ -6754,7 +6754,7 @@ void q_sciscintilla_qbase_drag_enter_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QDragEnterEvent*)
+/// @param callback void func(QsciScintilla* self, QDragEnterEvent* e)
 void q_sciscintilla_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6784,7 +6784,7 @@ void q_sciscintilla_qbase_drag_leave_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QDragLeaveEvent*)
+/// @param callback void func(QsciScintilla* self, QDragLeaveEvent* e)
 void q_sciscintilla_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6814,7 +6814,7 @@ void q_sciscintilla_qbase_drag_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QDragMoveEvent*)
+/// @param callback void func(QsciScintilla* self, QDragMoveEvent* e)
 void q_sciscintilla_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6844,7 +6844,7 @@ void q_sciscintilla_qbase_drop_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QDropEvent*)
+/// @param callback void func(QsciScintilla* self, QDropEvent* e)
 void q_sciscintilla_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6874,7 +6874,7 @@ void q_sciscintilla_qbase_focus_in_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QFocusEvent*)
+/// @param callback void func(QsciScintilla* self, QFocusEvent* e)
 void q_sciscintilla_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6904,7 +6904,7 @@ void q_sciscintilla_qbase_focus_out_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QFocusEvent*)
+/// @param callback void func(QsciScintilla* self, QFocusEvent* e)
 void q_sciscintilla_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6934,7 +6934,7 @@ bool q_sciscintilla_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, bool)
+/// @param callback bool func(QsciScintilla* self, bool next)
 void q_sciscintilla_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QsciScintillaBase
@@ -6964,7 +6964,7 @@ void q_sciscintilla_qbase_key_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QKeyEvent*)
+/// @param callback void func(QsciScintilla* self, QKeyEvent* e)
 void q_sciscintilla_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -6994,7 +6994,7 @@ void q_sciscintilla_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QInputMethodEvent*)
+/// @param callback void func(QsciScintilla* self, QInputMethodEvent* event)
 void q_sciscintilla_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7024,7 +7024,7 @@ void q_sciscintilla_qbase_mouse_double_click_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMouseEvent*)
+/// @param callback void func(QsciScintilla* self, QMouseEvent* e)
 void q_sciscintilla_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7054,7 +7054,7 @@ void q_sciscintilla_qbase_mouse_move_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMouseEvent*)
+/// @param callback void func(QsciScintilla* self, QMouseEvent* e)
 void q_sciscintilla_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7084,7 +7084,7 @@ void q_sciscintilla_qbase_mouse_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMouseEvent*)
+/// @param callback void func(QsciScintilla* self, QMouseEvent* e)
 void q_sciscintilla_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7114,7 +7114,7 @@ void q_sciscintilla_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMouseEvent*)
+/// @param callback void func(QsciScintilla* self, QMouseEvent* e)
 void q_sciscintilla_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7144,7 +7144,7 @@ void q_sciscintilla_qbase_paint_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QPaintEvent*)
+/// @param callback void func(QsciScintilla* self, QPaintEvent* e)
 void q_sciscintilla_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7174,7 +7174,7 @@ void q_sciscintilla_qbase_resize_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QResizeEvent*)
+/// @param callback void func(QsciScintilla* self, QResizeEvent* e)
 void q_sciscintilla_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -7206,7 +7206,7 @@ void q_sciscintilla_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int)
+/// @param callback void func(QsciScintilla* self, int dx, int dy)
 void q_sciscintilla_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -7234,7 +7234,7 @@ QSize* q_sciscintilla_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_sciscintilla_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -7262,7 +7262,7 @@ QSize* q_sciscintilla_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_sciscintilla_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -7292,7 +7292,7 @@ void q_sciscintilla_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QWidget*)
+/// @param callback void func(QsciScintilla* self, QWidget* viewport)
 void q_sciscintilla_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -7324,7 +7324,7 @@ bool q_sciscintilla_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, QObject*, QEvent*)
+/// @param callback bool func(QsciScintilla* self, QObject* param1, QEvent* param2)
 void q_sciscintilla_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -7354,7 +7354,7 @@ bool q_sciscintilla_qbase_viewport_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, QEvent*)
+/// @param callback bool func(QsciScintilla* self, QEvent* param1)
 void q_sciscintilla_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -7382,7 +7382,7 @@ QSize* q_sciscintilla_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_sciscintilla_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -7412,7 +7412,7 @@ void q_sciscintilla_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QStyleOptionFrame*)
+/// @param callback void func(QsciScintilla* self, QStyleOptionFrame* option)
 void q_sciscintilla_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7440,7 +7440,7 @@ int32_t q_sciscintilla_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sciscintilla_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -7470,7 +7470,7 @@ void q_sciscintilla_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, bool)
+/// @param callback void func(QsciScintilla* self, bool visible)
 void q_sciscintilla_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -7500,7 +7500,7 @@ int32_t q_sciscintilla_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback int32_t fn(QsciScintilla*, int)
+/// @param callback int32_t func(QsciScintilla* self, int param1)
 void q_sciscintilla_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -7528,7 +7528,7 @@ bool q_sciscintilla_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sciscintilla_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7556,7 +7556,7 @@ QPaintEngine* q_sciscintilla_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_sciscintilla_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -7586,7 +7586,7 @@ void q_sciscintilla_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QKeyEvent*)
+/// @param callback void func(QsciScintilla* self, QKeyEvent* event)
 void q_sciscintilla_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7616,7 +7616,7 @@ void q_sciscintilla_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QEnterEvent*)
+/// @param callback void func(QsciScintilla* self, QEnterEvent* event)
 void q_sciscintilla_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7646,7 +7646,7 @@ void q_sciscintilla_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QEvent*)
+/// @param callback void func(QsciScintilla* self, QEvent* event)
 void q_sciscintilla_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7676,7 +7676,7 @@ void q_sciscintilla_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMoveEvent*)
+/// @param callback void func(QsciScintilla* self, QMoveEvent* event)
 void q_sciscintilla_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7706,7 +7706,7 @@ void q_sciscintilla_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QCloseEvent*)
+/// @param callback void func(QsciScintilla* self, QCloseEvent* event)
 void q_sciscintilla_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7736,7 +7736,7 @@ void q_sciscintilla_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QTabletEvent*)
+/// @param callback void func(QsciScintilla* self, QTabletEvent* event)
 void q_sciscintilla_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7766,7 +7766,7 @@ void q_sciscintilla_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QActionEvent*)
+/// @param callback void func(QsciScintilla* self, QActionEvent* event)
 void q_sciscintilla_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7796,7 +7796,7 @@ void q_sciscintilla_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QShowEvent*)
+/// @param callback void func(QsciScintilla* self, QShowEvent* event)
 void q_sciscintilla_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7826,7 +7826,7 @@ void q_sciscintilla_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QHideEvent*)
+/// @param callback void func(QsciScintilla* self, QHideEvent* event)
 void q_sciscintilla_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7860,7 +7860,7 @@ bool q_sciscintilla_qbase_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, const char*, void*, intptr_t*)
+/// @param callback bool func(QsciScintilla* self, const char* eventType, void* message, intptr_t* result)
 void q_sciscintilla_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -7890,7 +7890,7 @@ int32_t q_sciscintilla_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback int32_t fn(QsciScintilla*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QsciScintilla* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_sciscintilla_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -7920,7 +7920,7 @@ void q_sciscintilla_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QPainter*)
+/// @param callback void func(QsciScintilla* self, QPainter* painter)
 void q_sciscintilla_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7950,7 +7950,7 @@ QPaintDevice* q_sciscintilla_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QPaintDevice* fn(QsciScintilla*, QPoint*)
+/// @param callback QPaintDevice* func(QsciScintilla* self, QPoint* offset)
 void q_sciscintilla_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7978,7 +7978,7 @@ QPainter* q_sciscintilla_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_sciscintilla_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -8008,7 +8008,7 @@ QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QVariant* fn(QsciScintilla*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QsciScintilla* self, enum Qt__InputMethodQuery param1)
 void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
@@ -8038,7 +8038,7 @@ void q_sciscintilla_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QTimerEvent*)
+/// @param callback void func(QsciScintilla* self, QTimerEvent* event)
 void q_sciscintilla_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8068,7 +8068,7 @@ void q_sciscintilla_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QChildEvent*)
+/// @param callback void func(QsciScintilla* self, QChildEvent* event)
 void q_sciscintilla_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8098,7 +8098,7 @@ void q_sciscintilla_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QEvent*)
+/// @param callback void func(QsciScintilla* self, QEvent* event)
 void q_sciscintilla_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8128,7 +8128,7 @@ void q_sciscintilla_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMetaMethod*)
+/// @param callback void func(QsciScintilla* self, QMetaMethod* signal)
 void q_sciscintilla_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8158,7 +8158,7 @@ void q_sciscintilla_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QMetaMethod*)
+/// @param callback void func(QsciScintilla* self, QMetaMethod* signal)
 void q_sciscintilla_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciScintillaBase
@@ -8186,7 +8186,7 @@ void q_sciscintilla_qbase_set_scroll_bars(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_set_scroll_bars(void* self, void (*callback)());
 
 /// Inherited from QsciScintillaBase
@@ -8218,7 +8218,7 @@ bool q_sciscintilla_qbase_context_menu_needed(void* self, int x, int y);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, int, int)
+/// @param callback bool func(QsciScintilla* self, int x, int y)
 void q_sciscintilla_on_context_menu_needed(void* self, bool (*callback)(void*, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -8254,7 +8254,7 @@ void q_sciscintilla_qbase_set_viewport_margins(void* self, int left, int top, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, int, int, int, int)
+/// @param callback void func(QsciScintilla* self, int left, int top, int right, int bottom)
 void q_sciscintilla_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -8282,7 +8282,7 @@ QMargins* q_sciscintilla_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_sciscintilla_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -8312,7 +8312,7 @@ void q_sciscintilla_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, QPainter*)
+/// @param callback void func(QsciScintilla* self, QPainter* param1)
 void q_sciscintilla_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8340,7 +8340,7 @@ void q_sciscintilla_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8368,7 +8368,7 @@ void q_sciscintilla_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8396,7 +8396,7 @@ void q_sciscintilla_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sciscintilla_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8424,7 +8424,7 @@ bool q_sciscintilla_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sciscintilla_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -8452,7 +8452,7 @@ bool q_sciscintilla_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sciscintilla_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -8480,7 +8480,7 @@ QObject* q_sciscintilla_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sciscintilla_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -8508,7 +8508,7 @@ int32_t q_sciscintilla_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sciscintilla_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -8538,7 +8538,7 @@ int32_t q_sciscintilla_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback int32_t fn(QsciScintilla*, const char*)
+/// @param callback int32_t func(QsciScintilla* self, const char* signal)
 void q_sciscintilla_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -8568,7 +8568,7 @@ bool q_sciscintilla_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback bool fn(QsciScintilla*, QMetaMethod*)
+/// @param callback bool func(QsciScintilla* self, QMetaMethod* signal)
 void q_sciscintilla_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8600,7 +8600,7 @@ double q_sciscintilla_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciScintilla*
-/// @param callback double fn(QsciScintilla*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QsciScintilla* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_sciscintilla_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -8610,7 +8610,7 @@ void q_sciscintilla_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QsciScintilla*
-/// @param callback void fn(QsciScintilla*, const char*)
+/// @param callback void func(QsciScintilla* self, const char* objectName)
 void q_sciscintilla_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)

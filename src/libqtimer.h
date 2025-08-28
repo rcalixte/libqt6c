@@ -40,7 +40,7 @@ int32_t q_timer_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QTimer*
-/// @param callback int32_t fn(QTimer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTimer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_timer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -142,7 +142,7 @@ void q_timer_timer_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, QTimerEvent*)
+/// @param callback void func(QTimer* self, QTimerEvent* param1)
 void q_timer_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
@@ -396,7 +396,7 @@ void q_timer_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*)
+/// @param callback void func(QTimer* self)
 void q_timer_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -474,7 +474,7 @@ void q_timer_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, QObject*)
+/// @param callback void func(QTimer* self, QObject* param1)
 void q_timer_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -504,7 +504,7 @@ bool q_timer_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback bool fn(QTimer*, QEvent*)
+/// @param callback bool func(QTimer* self, QEvent* event)
 void q_timer_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -536,7 +536,7 @@ bool q_timer_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback bool fn(QTimer*, QObject*, QEvent*)
+/// @param callback bool func(QTimer* self, QObject* watched, QEvent* event)
 void q_timer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -566,7 +566,7 @@ void q_timer_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, QChildEvent*)
+/// @param callback void func(QTimer* self, QChildEvent* event)
 void q_timer_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -596,7 +596,7 @@ void q_timer_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, QEvent*)
+/// @param callback void func(QTimer* self, QEvent* event)
 void q_timer_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -626,7 +626,7 @@ void q_timer_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, QMetaMethod*)
+/// @param callback void func(QTimer* self, QMetaMethod* signal)
 void q_timer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -656,7 +656,7 @@ void q_timer_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, QMetaMethod*)
+/// @param callback void func(QTimer* self, QMetaMethod* signal)
 void q_timer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -684,7 +684,7 @@ QObject* q_timer_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_timer_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -712,7 +712,7 @@ int32_t q_timer_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_timer_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -742,7 +742,7 @@ int32_t q_timer_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback int32_t fn(QTimer*, const char*)
+/// @param callback int32_t func(QTimer* self, const char* signal)
 void q_timer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -772,7 +772,7 @@ bool q_timer_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimer*
-/// @param callback bool fn(QTimer*, QMetaMethod*)
+/// @param callback bool func(QTimer* self, QMetaMethod* signal)
 void q_timer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timeout)
@@ -780,7 +780,7 @@ void q_timer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*)
+/// @param callback void func(QTimer* self)
 void q_timer_on_timeout(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -790,7 +790,7 @@ void q_timer_on_timeout(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimer*
-/// @param callback void fn(QTimer*, const char*)
+/// @param callback void func(QTimer* self, const char* objectName)
 void q_timer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#dtor.QTimer)

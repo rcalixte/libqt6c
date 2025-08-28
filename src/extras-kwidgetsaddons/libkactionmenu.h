@@ -49,7 +49,7 @@ int32_t k_actionmenu_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KActionMenu*
-/// @param callback int32_t fn(KActionMenu*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KActionMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_actionmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -121,7 +121,7 @@ QWidget* k_actionmenu_create_widget(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self KActionMenu*
-/// @param callback QWidget* fn(KActionMenu*, QWidget*)
+/// @param callback QWidget* func(KActionMenu* self, QWidget* parent)
 void k_actionmenu_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#createWidget)
@@ -604,7 +604,7 @@ void k_actionmenu_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*)
+/// @param callback void func(KActionMenu* self)
 void k_actionmenu_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -620,7 +620,7 @@ void k_actionmenu_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, bool)
+/// @param callback void func(KActionMenu* self, bool enabled)
 void k_actionmenu_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -636,7 +636,7 @@ void k_actionmenu_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, bool)
+/// @param callback void func(KActionMenu* self, bool checkable)
 void k_actionmenu_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -651,7 +651,7 @@ void k_actionmenu_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*)
+/// @param callback void func(KActionMenu* self)
 void k_actionmenu_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -666,7 +666,7 @@ void k_actionmenu_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*)
+/// @param callback void func(KActionMenu* self)
 void k_actionmenu_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -681,7 +681,7 @@ void k_actionmenu_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*)
+/// @param callback void func(KActionMenu* self)
 void k_actionmenu_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -697,7 +697,7 @@ void k_actionmenu_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, bool)
+/// @param callback void func(KActionMenu* self, bool param1)
 void k_actionmenu_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -721,7 +721,7 @@ void k_actionmenu_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, bool)
+/// @param callback void func(KActionMenu* self, bool checked)
 void k_actionmenu_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -950,7 +950,7 @@ void k_actionmenu_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*)
+/// @param callback void func(KActionMenu* self)
 void k_actionmenu_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1028,7 +1028,7 @@ void k_actionmenu_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QObject*)
+/// @param callback void func(KActionMenu* self, QObject* param1)
 void k_actionmenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1058,7 +1058,7 @@ bool k_actionmenu_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback bool fn(KActionMenu*, QEvent*)
+/// @param callback bool func(KActionMenu* self, QEvent* param1)
 void k_actionmenu_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1090,7 +1090,7 @@ bool k_actionmenu_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback bool fn(KActionMenu*, QObject*, QEvent*)
+/// @param callback bool func(KActionMenu* self, QObject* param1, QEvent* param2)
 void k_actionmenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1120,7 +1120,7 @@ void k_actionmenu_qbase_delete_widget(void* self, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QWidget*)
+/// @param callback void func(KActionMenu* self, QWidget* widget)
 void k_actionmenu_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1150,7 +1150,7 @@ void k_actionmenu_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QTimerEvent*)
+/// @param callback void func(KActionMenu* self, QTimerEvent* event)
 void k_actionmenu_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1180,7 +1180,7 @@ void k_actionmenu_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QChildEvent*)
+/// @param callback void func(KActionMenu* self, QChildEvent* event)
 void k_actionmenu_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1210,7 +1210,7 @@ void k_actionmenu_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QEvent*)
+/// @param callback void func(KActionMenu* self, QEvent* event)
 void k_actionmenu_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1240,7 +1240,7 @@ void k_actionmenu_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QMetaMethod*)
+/// @param callback void func(KActionMenu* self, QMetaMethod* signal)
 void k_actionmenu_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1270,7 +1270,7 @@ void k_actionmenu_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, QMetaMethod*)
+/// @param callback void func(KActionMenu* self, QMetaMethod* signal)
 void k_actionmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetAction
@@ -1298,7 +1298,7 @@ libqt_list /* of QWidget* */ k_actionmenu_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void k_actionmenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// Inherited from QObject
@@ -1326,7 +1326,7 @@ QObject* k_actionmenu_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_actionmenu_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1354,7 +1354,7 @@ int32_t k_actionmenu_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_actionmenu_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1384,7 +1384,7 @@ int32_t k_actionmenu_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback int32_t fn(KActionMenu*, const char*)
+/// @param callback int32_t func(KActionMenu* self, const char* signal)
 void k_actionmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1414,7 +1414,7 @@ bool k_actionmenu_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback bool fn(KActionMenu*, QMetaMethod*)
+/// @param callback bool func(KActionMenu* self, QMetaMethod* signal)
 void k_actionmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1424,7 +1424,7 @@ void k_actionmenu_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KActionMenu*
-/// @param callback void fn(KActionMenu*, const char*)
+/// @param callback void func(KActionMenu* self, const char* objectName)
 void k_actionmenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#dtor.KActionMenu)

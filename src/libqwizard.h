@@ -46,7 +46,7 @@ int32_t q_wizard_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn(QWizard*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWizard* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_wizard_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -136,7 +136,7 @@ bool q_wizard_validate_current_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizard_on_validate_current_page(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#validateCurrentPage)
@@ -156,7 +156,7 @@ int32_t q_wizard_next_id(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizard_on_next_id(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#nextId)
@@ -320,7 +320,7 @@ void q_wizard_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, bool)
+/// @param callback void func(QWizard* self, bool visible)
 void q_wizard_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#setVisible)
@@ -341,7 +341,7 @@ QSize* q_wizard_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_wizard_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#sizeHint)
@@ -360,7 +360,7 @@ void q_wizard_current_id_changed(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#currentIdChanged)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int id)
 void q_wizard_on_current_id_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#helpRequested)
@@ -371,7 +371,7 @@ void q_wizard_help_requested(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#helpRequested)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*)
+/// @param callback void func(QWizard* self)
 void q_wizard_on_help_requested(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#customButtonClicked)
@@ -383,7 +383,7 @@ void q_wizard_custom_button_clicked(void* self, int which);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#customButtonClicked)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int which)
 void q_wizard_on_custom_button_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#pageAdded)
@@ -395,7 +395,7 @@ void q_wizard_page_added(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#pageAdded)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int id)
 void q_wizard_on_page_added(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#pageRemoved)
@@ -407,7 +407,7 @@ void q_wizard_page_removed(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#pageRemoved)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int id)
 void q_wizard_on_page_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#back)
@@ -442,7 +442,7 @@ bool q_wizard_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback bool fn(QWizard*, QEvent*)
+/// @param callback bool func(QWizard* self, QEvent* event)
 void q_wizard_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#event)
@@ -464,7 +464,7 @@ void q_wizard_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QResizeEvent*)
+/// @param callback void func(QWizard* self, QResizeEvent* event)
 void q_wizard_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#resizeEvent)
@@ -486,7 +486,7 @@ void q_wizard_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QPaintEvent*)
+/// @param callback void func(QWizard* self, QPaintEvent* event)
 void q_wizard_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#paintEvent)
@@ -508,7 +508,7 @@ void q_wizard_done(void* self, int result);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int result)
 void q_wizard_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#done)
@@ -530,7 +530,7 @@ void q_wizard_initialize_page(void* self, int id);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int id)
 void q_wizard_on_initialize_page(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#initializePage)
@@ -552,7 +552,7 @@ void q_wizard_cleanup_page(void* self, int id);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int id)
 void q_wizard_on_cleanup_page(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#cleanupPage)
@@ -638,7 +638,7 @@ void q_wizard_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, int)
+/// @param callback void func(QWizard* self, int result)
 void q_wizard_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -653,7 +653,7 @@ void q_wizard_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*)
+/// @param callback void func(QWizard* self)
 void q_wizard_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -668,7 +668,7 @@ void q_wizard_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*)
+/// @param callback void func(QWizard* self)
 void q_wizard_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2608,7 +2608,7 @@ void q_wizard_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, const char*)
+/// @param callback void func(QWizard* self, const char* title)
 void q_wizard_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2624,7 +2624,7 @@ void q_wizard_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QIcon*)
+/// @param callback void func(QWizard* self, QIcon* icon)
 void q_wizard_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2640,7 +2640,7 @@ void q_wizard_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, const char*)
+/// @param callback void func(QWizard* self, const char* iconText)
 void q_wizard_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2656,7 +2656,7 @@ void q_wizard_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QPoint*)
+/// @param callback void func(QWizard* self, QPoint* pos)
 void q_wizard_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3033,7 +3033,7 @@ void q_wizard_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*)
+/// @param callback void func(QWizard* self)
 void q_wizard_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3111,7 +3111,7 @@ void q_wizard_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QObject*)
+/// @param callback void func(QWizard* self, QObject* param1)
 void q_wizard_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3230,7 +3230,7 @@ QSize* q_wizard_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_wizard_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3258,7 +3258,7 @@ void q_wizard_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizard_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3286,7 +3286,7 @@ int32_t q_wizard_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizard_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3314,7 +3314,7 @@ void q_wizard_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizard_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3342,7 +3342,7 @@ void q_wizard_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizard_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3372,7 +3372,7 @@ void q_wizard_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QKeyEvent*)
+/// @param callback void func(QWizard* self, QKeyEvent* param1)
 void q_wizard_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3402,7 +3402,7 @@ void q_wizard_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QCloseEvent*)
+/// @param callback void func(QWizard* self, QCloseEvent* param1)
 void q_wizard_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3432,7 +3432,7 @@ void q_wizard_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QShowEvent*)
+/// @param callback void func(QWizard* self, QShowEvent* param1)
 void q_wizard_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3462,7 +3462,7 @@ void q_wizard_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QContextMenuEvent*)
+/// @param callback void func(QWizard* self, QContextMenuEvent* param1)
 void q_wizard_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3494,7 +3494,7 @@ bool q_wizard_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn(QWizard*, QObject*, QEvent*)
+/// @param callback bool func(QWizard* self, QObject* param1, QEvent* param2)
 void q_wizard_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3522,7 +3522,7 @@ int32_t q_wizard_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizard_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3552,7 +3552,7 @@ int32_t q_wizard_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn(QWizard*, int)
+/// @param callback int32_t func(QWizard* self, int param1)
 void q_wizard_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3580,7 +3580,7 @@ bool q_wizard_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizard_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3608,7 +3608,7 @@ QPaintEngine* q_wizard_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_wizard_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3638,7 +3638,7 @@ void q_wizard_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMouseEvent*)
+/// @param callback void func(QWizard* self, QMouseEvent* event)
 void q_wizard_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3668,7 +3668,7 @@ void q_wizard_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMouseEvent*)
+/// @param callback void func(QWizard* self, QMouseEvent* event)
 void q_wizard_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3698,7 +3698,7 @@ void q_wizard_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMouseEvent*)
+/// @param callback void func(QWizard* self, QMouseEvent* event)
 void q_wizard_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3728,7 +3728,7 @@ void q_wizard_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMouseEvent*)
+/// @param callback void func(QWizard* self, QMouseEvent* event)
 void q_wizard_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3758,7 +3758,7 @@ void q_wizard_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QWheelEvent*)
+/// @param callback void func(QWizard* self, QWheelEvent* event)
 void q_wizard_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3788,7 +3788,7 @@ void q_wizard_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QKeyEvent*)
+/// @param callback void func(QWizard* self, QKeyEvent* event)
 void q_wizard_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3818,7 +3818,7 @@ void q_wizard_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QFocusEvent*)
+/// @param callback void func(QWizard* self, QFocusEvent* event)
 void q_wizard_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3848,7 +3848,7 @@ void q_wizard_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QFocusEvent*)
+/// @param callback void func(QWizard* self, QFocusEvent* event)
 void q_wizard_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3878,7 +3878,7 @@ void q_wizard_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QEnterEvent*)
+/// @param callback void func(QWizard* self, QEnterEvent* event)
 void q_wizard_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3908,7 +3908,7 @@ void q_wizard_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QEvent*)
+/// @param callback void func(QWizard* self, QEvent* event)
 void q_wizard_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3938,7 +3938,7 @@ void q_wizard_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMoveEvent*)
+/// @param callback void func(QWizard* self, QMoveEvent* event)
 void q_wizard_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3968,7 +3968,7 @@ void q_wizard_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QTabletEvent*)
+/// @param callback void func(QWizard* self, QTabletEvent* event)
 void q_wizard_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3998,7 +3998,7 @@ void q_wizard_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QActionEvent*)
+/// @param callback void func(QWizard* self, QActionEvent* event)
 void q_wizard_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4028,7 +4028,7 @@ void q_wizard_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QDragEnterEvent*)
+/// @param callback void func(QWizard* self, QDragEnterEvent* event)
 void q_wizard_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4058,7 +4058,7 @@ void q_wizard_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QDragMoveEvent*)
+/// @param callback void func(QWizard* self, QDragMoveEvent* event)
 void q_wizard_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4088,7 +4088,7 @@ void q_wizard_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QDragLeaveEvent*)
+/// @param callback void func(QWizard* self, QDragLeaveEvent* event)
 void q_wizard_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4118,7 +4118,7 @@ void q_wizard_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QDropEvent*)
+/// @param callback void func(QWizard* self, QDropEvent* event)
 void q_wizard_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4148,7 +4148,7 @@ void q_wizard_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QHideEvent*)
+/// @param callback void func(QWizard* self, QHideEvent* event)
 void q_wizard_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4182,7 +4182,7 @@ bool q_wizard_qbase_native_event(void* self, const char* eventType, void* messag
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn(QWizard*, const char*, void*, intptr_t*)
+/// @param callback bool func(QWizard* self, const char* eventType, void* message, intptr_t* result)
 void q_wizard_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4212,7 +4212,7 @@ void q_wizard_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QEvent*)
+/// @param callback void func(QWizard* self, QEvent* param1)
 void q_wizard_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4242,7 +4242,7 @@ int32_t q_wizard_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn(QWizard*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QWizard* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_wizard_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4272,7 +4272,7 @@ void q_wizard_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QPainter*)
+/// @param callback void func(QWizard* self, QPainter* painter)
 void q_wizard_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4302,7 +4302,7 @@ QPaintDevice* q_wizard_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback QPaintDevice* fn(QWizard*, QPoint*)
+/// @param callback QPaintDevice* func(QWizard* self, QPoint* offset)
 void q_wizard_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4330,7 +4330,7 @@ QPainter* q_wizard_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_wizard_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4360,7 +4360,7 @@ void q_wizard_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QInputMethodEvent*)
+/// @param callback void func(QWizard* self, QInputMethodEvent* param1)
 void q_wizard_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4390,7 +4390,7 @@ QVariant* q_wizard_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback QVariant* fn(QWizard*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QWizard* self, enum Qt__InputMethodQuery param1)
 void q_wizard_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4420,7 +4420,7 @@ bool q_wizard_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn(QWizard*, bool)
+/// @param callback bool func(QWizard* self, bool next)
 void q_wizard_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4450,7 +4450,7 @@ void q_wizard_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QTimerEvent*)
+/// @param callback void func(QWizard* self, QTimerEvent* event)
 void q_wizard_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4480,7 +4480,7 @@ void q_wizard_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QChildEvent*)
+/// @param callback void func(QWizard* self, QChildEvent* event)
 void q_wizard_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4510,7 +4510,7 @@ void q_wizard_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QEvent*)
+/// @param callback void func(QWizard* self, QEvent* event)
 void q_wizard_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4540,7 +4540,7 @@ void q_wizard_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMetaMethod*)
+/// @param callback void func(QWizard* self, QMetaMethod* signal)
 void q_wizard_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4570,7 +4570,7 @@ void q_wizard_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QMetaMethod*)
+/// @param callback void func(QWizard* self, QMetaMethod* signal)
 void q_wizard_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4600,7 +4600,7 @@ void q_wizard_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, QWidget*)
+/// @param callback void func(QWizard* self, QWidget* param1)
 void q_wizard_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4628,7 +4628,7 @@ void q_wizard_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizard_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4656,7 +4656,7 @@ void q_wizard_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizard_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4684,7 +4684,7 @@ void q_wizard_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizard_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4712,7 +4712,7 @@ bool q_wizard_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizard_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4740,7 +4740,7 @@ bool q_wizard_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizard_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4768,7 +4768,7 @@ QObject* q_wizard_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_wizard_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4796,7 +4796,7 @@ int32_t q_wizard_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizard_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4826,7 +4826,7 @@ int32_t q_wizard_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t fn(QWizard*, const char*)
+/// @param callback int32_t func(QWizard* self, const char* signal)
 void q_wizard_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4856,7 +4856,7 @@ bool q_wizard_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool fn(QWizard*, QMetaMethod*)
+/// @param callback bool func(QWizard* self, QMetaMethod* signal)
 void q_wizard_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4888,7 +4888,7 @@ double q_wizard_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback double fn(QWizard*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QWizard* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_wizard_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4898,7 +4898,7 @@ void q_wizard_on_get_decoded_metric_f(void* self, double (*callback)(void*, int3
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWizard*
-/// @param callback void fn(QWizard*, const char*)
+/// @param callback void func(QWizard* self, const char* objectName)
 void q_wizard_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#dtor.QWizard)
@@ -4937,7 +4937,7 @@ int32_t q_wizardpage_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn(QWizardPage*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWizardPage* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_wizardpage_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -5041,7 +5041,7 @@ void q_wizardpage_initialize_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizardpage_on_initialize_page(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#initializePage)
@@ -5061,7 +5061,7 @@ void q_wizardpage_cleanup_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizardpage_on_cleanup_page(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#cleanupPage)
@@ -5081,7 +5081,7 @@ bool q_wizardpage_validate_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizardpage_on_validate_page(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#validatePage)
@@ -5101,7 +5101,7 @@ bool q_wizardpage_is_complete(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizardpage_on_is_complete(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#isComplete)
@@ -5121,7 +5121,7 @@ int32_t q_wizardpage_next_id(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizardpage_on_next_id(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#nextId)
@@ -5139,7 +5139,7 @@ void q_wizardpage_complete_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#completeChanged)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*)
+/// @param callback void func(QWizardPage* self)
 void q_wizardpage_on_complete_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#setField)
@@ -5154,7 +5154,7 @@ void q_wizardpage_set_field(void* self, const char* name, void* value);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*, QVariant*)
+/// @param callback void func(QWizardPage* self, const char* name, QVariant* value)
 void q_wizardpage_on_set_field(void* self, void (*callback)(void*, const char*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#setField)
@@ -5177,7 +5177,7 @@ QVariant* q_wizardpage_field(void* self, const char* name);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback QVariant* fn(QWizardPage*, const char*)
+/// @param callback QVariant* func(QWizardPage* self, const char* name)
 void q_wizardpage_on_field(void* self, QVariant* (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#field)
@@ -5200,7 +5200,7 @@ void q_wizardpage_register_field(void* self, const char* name, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*, QWidget*)
+/// @param callback void func(QWizardPage* self, const char* name, QWidget* widget)
 void q_wizardpage_on_register_field(void* self, void (*callback)(void*, const char*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
@@ -5222,7 +5222,7 @@ QWizard* q_wizardpage_wizard(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback QWizard* fn()
+/// @param callback QWizard* func()
 void q_wizardpage_on_wizard(void* self, QWizard* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#wizard)
@@ -5262,7 +5262,7 @@ void q_wizardpage_register_field3(void* self, const char* name, void* widget, co
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*, QWidget*, const char*)
+/// @param callback void func(QWizardPage* self, const char* name, QWidget* widget, const char* property)
 void q_wizardpage_on_register_field3(void* self, void (*callback)(void*, const char*, void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
@@ -5289,7 +5289,7 @@ void q_wizardpage_register_field4(void* self, const char* name, void* widget, co
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*, QWidget*, const char*, const char*)
+/// @param callback void func(QWizardPage* self, const char* name, QWidget* widget, const char* property, const char* changedSignal)
 void q_wizardpage_on_register_field4(void* self, void (*callback)(void*, const char*, void*, const char*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
@@ -7240,7 +7240,7 @@ void q_wizardpage_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*)
+/// @param callback void func(QWizardPage* self, const char* title)
 void q_wizardpage_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -7256,7 +7256,7 @@ void q_wizardpage_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QIcon*)
+/// @param callback void func(QWizardPage* self, QIcon* icon)
 void q_wizardpage_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7272,7 +7272,7 @@ void q_wizardpage_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*)
+/// @param callback void func(QWizardPage* self, const char* iconText)
 void q_wizardpage_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -7288,7 +7288,7 @@ void q_wizardpage_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QPoint*)
+/// @param callback void func(QWizardPage* self, QPoint* pos)
 void q_wizardpage_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7665,7 +7665,7 @@ void q_wizardpage_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*)
+/// @param callback void func(QWizardPage* self)
 void q_wizardpage_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -7743,7 +7743,7 @@ void q_wizardpage_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QObject*)
+/// @param callback void func(QWizardPage* self, QObject* param1)
 void q_wizardpage_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7862,7 +7862,7 @@ int32_t q_wizardpage_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizardpage_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -7892,7 +7892,7 @@ void q_wizardpage_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, bool)
+/// @param callback void func(QWizardPage* self, bool visible)
 void q_wizardpage_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -7920,7 +7920,7 @@ QSize* q_wizardpage_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_wizardpage_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -7948,7 +7948,7 @@ QSize* q_wizardpage_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_wizardpage_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -7978,7 +7978,7 @@ int32_t q_wizardpage_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn(QWizardPage*, int)
+/// @param callback int32_t func(QWizardPage* self, int param1)
 void q_wizardpage_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -8006,7 +8006,7 @@ bool q_wizardpage_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizardpage_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -8034,7 +8034,7 @@ QPaintEngine* q_wizardpage_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_wizardpage_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -8064,7 +8064,7 @@ bool q_wizardpage_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn(QWizardPage*, QEvent*)
+/// @param callback bool func(QWizardPage* self, QEvent* event)
 void q_wizardpage_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8094,7 +8094,7 @@ void q_wizardpage_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMouseEvent*)
+/// @param callback void func(QWizardPage* self, QMouseEvent* event)
 void q_wizardpage_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8124,7 +8124,7 @@ void q_wizardpage_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMouseEvent*)
+/// @param callback void func(QWizardPage* self, QMouseEvent* event)
 void q_wizardpage_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8154,7 +8154,7 @@ void q_wizardpage_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMouseEvent*)
+/// @param callback void func(QWizardPage* self, QMouseEvent* event)
 void q_wizardpage_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8184,7 +8184,7 @@ void q_wizardpage_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMouseEvent*)
+/// @param callback void func(QWizardPage* self, QMouseEvent* event)
 void q_wizardpage_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8214,7 +8214,7 @@ void q_wizardpage_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QWheelEvent*)
+/// @param callback void func(QWizardPage* self, QWheelEvent* event)
 void q_wizardpage_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8244,7 +8244,7 @@ void q_wizardpage_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QKeyEvent*)
+/// @param callback void func(QWizardPage* self, QKeyEvent* event)
 void q_wizardpage_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8274,7 +8274,7 @@ void q_wizardpage_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QKeyEvent*)
+/// @param callback void func(QWizardPage* self, QKeyEvent* event)
 void q_wizardpage_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8304,7 +8304,7 @@ void q_wizardpage_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QFocusEvent*)
+/// @param callback void func(QWizardPage* self, QFocusEvent* event)
 void q_wizardpage_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8334,7 +8334,7 @@ void q_wizardpage_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QFocusEvent*)
+/// @param callback void func(QWizardPage* self, QFocusEvent* event)
 void q_wizardpage_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8364,7 +8364,7 @@ void q_wizardpage_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QEnterEvent*)
+/// @param callback void func(QWizardPage* self, QEnterEvent* event)
 void q_wizardpage_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8394,7 +8394,7 @@ void q_wizardpage_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QEvent*)
+/// @param callback void func(QWizardPage* self, QEvent* event)
 void q_wizardpage_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8424,7 +8424,7 @@ void q_wizardpage_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QPaintEvent*)
+/// @param callback void func(QWizardPage* self, QPaintEvent* event)
 void q_wizardpage_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8454,7 +8454,7 @@ void q_wizardpage_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMoveEvent*)
+/// @param callback void func(QWizardPage* self, QMoveEvent* event)
 void q_wizardpage_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8484,7 +8484,7 @@ void q_wizardpage_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QResizeEvent*)
+/// @param callback void func(QWizardPage* self, QResizeEvent* event)
 void q_wizardpage_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8514,7 +8514,7 @@ void q_wizardpage_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QCloseEvent*)
+/// @param callback void func(QWizardPage* self, QCloseEvent* event)
 void q_wizardpage_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8544,7 +8544,7 @@ void q_wizardpage_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QContextMenuEvent*)
+/// @param callback void func(QWizardPage* self, QContextMenuEvent* event)
 void q_wizardpage_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8574,7 +8574,7 @@ void q_wizardpage_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QTabletEvent*)
+/// @param callback void func(QWizardPage* self, QTabletEvent* event)
 void q_wizardpage_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8604,7 +8604,7 @@ void q_wizardpage_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QActionEvent*)
+/// @param callback void func(QWizardPage* self, QActionEvent* event)
 void q_wizardpage_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8634,7 +8634,7 @@ void q_wizardpage_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QDragEnterEvent*)
+/// @param callback void func(QWizardPage* self, QDragEnterEvent* event)
 void q_wizardpage_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8664,7 +8664,7 @@ void q_wizardpage_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QDragMoveEvent*)
+/// @param callback void func(QWizardPage* self, QDragMoveEvent* event)
 void q_wizardpage_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8694,7 +8694,7 @@ void q_wizardpage_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QDragLeaveEvent*)
+/// @param callback void func(QWizardPage* self, QDragLeaveEvent* event)
 void q_wizardpage_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8724,7 +8724,7 @@ void q_wizardpage_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QDropEvent*)
+/// @param callback void func(QWizardPage* self, QDropEvent* event)
 void q_wizardpage_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8754,7 +8754,7 @@ void q_wizardpage_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QShowEvent*)
+/// @param callback void func(QWizardPage* self, QShowEvent* event)
 void q_wizardpage_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8784,7 +8784,7 @@ void q_wizardpage_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QHideEvent*)
+/// @param callback void func(QWizardPage* self, QHideEvent* event)
 void q_wizardpage_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8818,7 +8818,7 @@ bool q_wizardpage_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn(QWizardPage*, const char*, void*, intptr_t*)
+/// @param callback bool func(QWizardPage* self, const char* eventType, void* message, intptr_t* result)
 void q_wizardpage_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -8848,7 +8848,7 @@ void q_wizardpage_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QEvent*)
+/// @param callback void func(QWizardPage* self, QEvent* param1)
 void q_wizardpage_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8878,7 +8878,7 @@ int32_t q_wizardpage_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn(QWizardPage*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QWizardPage* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_wizardpage_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -8908,7 +8908,7 @@ void q_wizardpage_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QPainter*)
+/// @param callback void func(QWizardPage* self, QPainter* painter)
 void q_wizardpage_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8938,7 +8938,7 @@ QPaintDevice* q_wizardpage_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QPaintDevice* fn(QWizardPage*, QPoint*)
+/// @param callback QPaintDevice* func(QWizardPage* self, QPoint* offset)
 void q_wizardpage_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8966,7 +8966,7 @@ QPainter* q_wizardpage_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_wizardpage_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -8996,7 +8996,7 @@ void q_wizardpage_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QInputMethodEvent*)
+/// @param callback void func(QWizardPage* self, QInputMethodEvent* param1)
 void q_wizardpage_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9026,7 +9026,7 @@ QVariant* q_wizardpage_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QVariant* fn(QWizardPage*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QWizardPage* self, enum Qt__InputMethodQuery param1)
 void q_wizardpage_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -9056,7 +9056,7 @@ bool q_wizardpage_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn(QWizardPage*, bool)
+/// @param callback bool func(QWizardPage* self, bool next)
 void q_wizardpage_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -9088,7 +9088,7 @@ bool q_wizardpage_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn(QWizardPage*, QObject*, QEvent*)
+/// @param callback bool func(QWizardPage* self, QObject* watched, QEvent* event)
 void q_wizardpage_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -9118,7 +9118,7 @@ void q_wizardpage_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QTimerEvent*)
+/// @param callback void func(QWizardPage* self, QTimerEvent* event)
 void q_wizardpage_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9148,7 +9148,7 @@ void q_wizardpage_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QChildEvent*)
+/// @param callback void func(QWizardPage* self, QChildEvent* event)
 void q_wizardpage_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9178,7 +9178,7 @@ void q_wizardpage_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QEvent*)
+/// @param callback void func(QWizardPage* self, QEvent* event)
 void q_wizardpage_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9208,7 +9208,7 @@ void q_wizardpage_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMetaMethod*)
+/// @param callback void func(QWizardPage* self, QMetaMethod* signal)
 void q_wizardpage_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -9238,7 +9238,7 @@ void q_wizardpage_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, QMetaMethod*)
+/// @param callback void func(QWizardPage* self, QMetaMethod* signal)
 void q_wizardpage_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9266,7 +9266,7 @@ void q_wizardpage_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizardpage_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -9294,7 +9294,7 @@ void q_wizardpage_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizardpage_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -9322,7 +9322,7 @@ void q_wizardpage_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_wizardpage_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -9350,7 +9350,7 @@ bool q_wizardpage_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizardpage_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -9378,7 +9378,7 @@ bool q_wizardpage_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_wizardpage_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -9406,7 +9406,7 @@ QObject* q_wizardpage_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_wizardpage_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -9434,7 +9434,7 @@ int32_t q_wizardpage_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_wizardpage_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -9464,7 +9464,7 @@ int32_t q_wizardpage_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback int32_t fn(QWizardPage*, const char*)
+/// @param callback int32_t func(QWizardPage* self, const char* signal)
 void q_wizardpage_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -9494,7 +9494,7 @@ bool q_wizardpage_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool fn(QWizardPage*, QMetaMethod*)
+/// @param callback bool func(QWizardPage* self, QMetaMethod* signal)
 void q_wizardpage_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -9526,7 +9526,7 @@ double q_wizardpage_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback double fn(QWizardPage*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QWizardPage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_wizardpage_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -9536,7 +9536,7 @@ void q_wizardpage_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWizardPage*
-/// @param callback void fn(QWizardPage*, const char*)
+/// @param callback void func(QWizardPage* self, const char* objectName)
 void q_wizardpage_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#dtor.QWizardPage)

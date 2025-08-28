@@ -28,7 +28,7 @@ QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractFileIconProvider*
-/// @param callback QIcon* fn(QAbstractFileIconProvider*, enum QAbstractFileIconProvider__IconType)
+/// @param callback QIcon* func(QAbstractFileIconProvider* self, enum QAbstractFileIconProvider__IconType param1)
 void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
@@ -50,7 +50,7 @@ QIcon* q_abstractfileiconprovider_icon2(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractFileIconProvider*
-/// @param callback QIcon* fn(QAbstractFileIconProvider*, QFileInfo*)
+/// @param callback QIcon* func(QAbstractFileIconProvider* self, QFileInfo* param1)
 void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
@@ -74,7 +74,7 @@ const char* q_abstractfileiconprovider_type(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractFileIconProvider*
-/// @param callback const char* fn(QAbstractFileIconProvider*, QFileInfo*)
+/// @param callback const char* func(QAbstractFileIconProvider* self, QFileInfo* param1)
 void q_abstractfileiconprovider_on_type(void* self, const char* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
@@ -96,7 +96,7 @@ void q_abstractfileiconprovider_set_options(void* self, int64_t options);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractFileIconProvider*
-/// @param callback void fn(QAbstractFileIconProvider*, flag of enum QAbstractFileIconProvider__Option)
+/// @param callback void func(QAbstractFileIconProvider* self, flag of enum QAbstractFileIconProvider__Option options)
 void q_abstractfileiconprovider_on_set_options(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#setOptions)
@@ -119,7 +119,7 @@ int64_t q_abstractfileiconprovider_options(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractFileIconProvider*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_abstractfileiconprovider_on_options(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#options)

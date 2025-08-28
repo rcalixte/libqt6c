@@ -324,7 +324,7 @@ void q_graphicsanchor_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsAnchor*
-/// @param callback void fn(QGraphicsAnchor*)
+/// @param callback void func(QGraphicsAnchor* self)
 void q_graphicsanchor_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -402,7 +402,7 @@ void q_graphicsanchor_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGraphicsAnchor*
-/// @param callback void fn(QGraphicsAnchor*, QObject*)
+/// @param callback void func(QGraphicsAnchor* self, QObject* param1)
 void q_graphicsanchor_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -412,7 +412,7 @@ void q_graphicsanchor_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGraphicsAnchor*
-/// @param callback void fn(QGraphicsAnchor*, const char*)
+/// @param callback void func(QGraphicsAnchor* self, const char* objectName)
 void q_graphicsanchor_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#dtor.QGraphicsAnchor)
@@ -506,7 +506,7 @@ void q_graphicsanchorlayout_remove_at(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, int)
+/// @param callback void func(QGraphicsAnchorLayout* self, int index)
 void q_graphicsanchorlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
@@ -528,7 +528,7 @@ void q_graphicsanchorlayout_set_geometry(void* self, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, QRectF*)
+/// @param callback void func(QGraphicsAnchorLayout* self, QRectF* rect)
 void q_graphicsanchorlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
@@ -549,7 +549,7 @@ int32_t q_graphicsanchorlayout_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicsanchorlayout_on_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
@@ -570,7 +570,7 @@ QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback QGraphicsLayoutItem* fn(QGraphicsAnchorLayout*, int)
+/// @param callback QGraphicsLayoutItem* func(QGraphicsAnchorLayout* self, int index)
 void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
@@ -591,7 +591,7 @@ void q_graphicsanchorlayout_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicsanchorlayout_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
@@ -613,7 +613,7 @@ QSizeF* q_graphicsanchorlayout_size_hint(void* self, int32_t which, void* constr
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback QSizeF* fn(QGraphicsAnchorLayout*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QGraphicsAnchorLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
@@ -967,7 +967,7 @@ void q_graphicsanchorlayout_qbase_get_contents_margins(void* self, double* left,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, double*, double*, double*, double*)
+/// @param callback void func(QGraphicsAnchorLayout* self, double* left, double* top, double* right, double* bottom)
 void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
@@ -995,7 +995,7 @@ void q_graphicsanchorlayout_qbase_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicsanchorlayout_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayout
@@ -1025,7 +1025,7 @@ void q_graphicsanchorlayout_qbase_widget_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, QEvent*)
+/// @param callback void func(QGraphicsAnchorLayout* self, QEvent* e)
 void q_graphicsanchorlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -1053,7 +1053,7 @@ bool q_graphicsanchorlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_graphicsanchorlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsLayout
@@ -1083,7 +1083,7 @@ void q_graphicsanchorlayout_qbase_add_child_layout_item(void* self, void* layout
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, QGraphicsLayoutItem*)
+/// @param callback void func(QGraphicsAnchorLayout* self, QGraphicsLayoutItem* layoutItem)
 void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -1113,7 +1113,7 @@ void q_graphicsanchorlayout_qbase_set_graphics_item(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, QGraphicsItem*)
+/// @param callback void func(QGraphicsAnchorLayout* self, QGraphicsItem* item)
 void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -1143,7 +1143,7 @@ void q_graphicsanchorlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsAnchorLayout*
-/// @param callback void fn(QGraphicsAnchorLayout*, bool)
+/// @param callback void func(QGraphicsAnchorLayout* self, bool ownedByLayout)
 void q_graphicsanchorlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#dtor.QGraphicsAnchorLayout)

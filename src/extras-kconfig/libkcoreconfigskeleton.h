@@ -138,7 +138,7 @@ void k_configskeletonitem_read_config(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn(KConfigSkeletonItem*, KConfig*)
+/// @param callback void func(KConfigSkeletonItem* self, KConfig* param1)
 void k_configskeletonitem_on_read_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#readConfig)
@@ -160,7 +160,7 @@ void k_configskeletonitem_write_config(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn(KConfigSkeletonItem*, KConfig*)
+/// @param callback void func(KConfigSkeletonItem* self, KConfig* param1)
 void k_configskeletonitem_on_write_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#writeConfig)
@@ -182,7 +182,7 @@ void k_configskeletonitem_read_default(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn(KConfigSkeletonItem*, KConfig*)
+/// @param callback void func(KConfigSkeletonItem* self, KConfig* param1)
 void k_configskeletonitem_on_read_default(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#readDefault)
@@ -204,7 +204,7 @@ void k_configskeletonitem_set_property(void* self, void* p);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn(KConfigSkeletonItem*, QVariant*)
+/// @param callback void func(KConfigSkeletonItem* self, QVariant* p)
 void k_configskeletonitem_on_set_property(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#setProperty)
@@ -226,7 +226,7 @@ bool k_configskeletonitem_is_equal(void* self, void* p);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback bool fn(KConfigSkeletonItem*, QVariant*)
+/// @param callback bool func(KConfigSkeletonItem* self, QVariant* p)
 void k_configskeletonitem_on_is_equal(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#isEqual)
@@ -247,7 +247,7 @@ QVariant* k_configskeletonitem_property(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_configskeletonitem_on_property(void* self, QVariant* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#property)
@@ -267,7 +267,7 @@ QVariant* k_configskeletonitem_min_value(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_configskeletonitem_on_min_value(void* self, QVariant* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#minValue)
@@ -287,7 +287,7 @@ QVariant* k_configskeletonitem_max_value(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_configskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#maxValue)
@@ -307,7 +307,7 @@ void k_configskeletonitem_set_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configskeletonitem_on_set_default(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#setDefault)
@@ -327,7 +327,7 @@ void k_configskeletonitem_swap_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configskeletonitem_on_swap_default(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#swapDefault)
@@ -368,7 +368,7 @@ void k_configskeletonitem_read_immutability(void* self, void* group);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeletonItem*
-/// @param callback void fn(KConfigSkeletonItem*, KConfigGroup*)
+/// @param callback void func(KConfigSkeletonItem* self, KConfigGroup* group)
 void k_configskeletonitem_on_read_immutability(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#readImmutability)
@@ -410,7 +410,7 @@ QVariant* k_propertyskeletonitem_property(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_propertyskeletonitem_on_property(void* self, QVariant* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#property)
@@ -431,7 +431,7 @@ void k_propertyskeletonitem_set_property(void* self, void* p);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn(KPropertySkeletonItem*, QVariant*)
+/// @param callback void func(KPropertySkeletonItem* self, QVariant* p)
 void k_propertyskeletonitem_on_set_property(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#setProperty)
@@ -453,7 +453,7 @@ bool k_propertyskeletonitem_is_equal(void* self, void* p);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback bool fn(KPropertySkeletonItem*, QVariant*)
+/// @param callback bool func(KPropertySkeletonItem* self, QVariant* p)
 void k_propertyskeletonitem_on_is_equal(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#isEqual)
@@ -475,7 +475,7 @@ void k_propertyskeletonitem_read_config(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn(KPropertySkeletonItem*, KConfig*)
+/// @param callback void func(KPropertySkeletonItem* self, KConfig* param1)
 void k_propertyskeletonitem_on_read_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#readConfig)
@@ -497,7 +497,7 @@ void k_propertyskeletonitem_write_config(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn(KPropertySkeletonItem*, KConfig*)
+/// @param callback void func(KPropertySkeletonItem* self, KConfig* param1)
 void k_propertyskeletonitem_on_write_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#writeConfig)
@@ -519,7 +519,7 @@ void k_propertyskeletonitem_read_default(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn(KPropertySkeletonItem*, KConfig*)
+/// @param callback void func(KPropertySkeletonItem* self, KConfig* param1)
 void k_propertyskeletonitem_on_read_default(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#readDefault)
@@ -540,7 +540,7 @@ void k_propertyskeletonitem_set_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn()
+/// @param callback void func()
 void k_propertyskeletonitem_on_set_default(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#setDefault)
@@ -560,7 +560,7 @@ void k_propertyskeletonitem_swap_default(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn()
+/// @param callback void func()
 void k_propertyskeletonitem_on_swap_default(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#swapDefault)
@@ -758,7 +758,7 @@ QVariant* k_propertyskeletonitem_qbase_min_value(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)());
 
 /// Inherited from KConfigSkeletonItem
@@ -786,7 +786,7 @@ QVariant* k_propertyskeletonitem_qbase_max_value(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 
 /// Inherited from KConfigSkeletonItem
@@ -816,7 +816,7 @@ void k_propertyskeletonitem_qbase_read_immutability(void* self, void* group);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPropertySkeletonItem*
-/// @param callback void fn(KPropertySkeletonItem*, KConfigGroup*)
+/// @param callback void func(KPropertySkeletonItem* self, KConfigGroup* group)
 void k_propertyskeletonitem_on_read_immutability(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpropertyskeletonitem.html#dtor.KPropertySkeletonItem)
@@ -1080,7 +1080,7 @@ int32_t k_coreconfigskeleton_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback int32_t fn(KCoreConfigSkeleton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KCoreConfigSkeleton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_coreconfigskeleton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -1108,7 +1108,7 @@ void k_coreconfigskeleton_set_defaults(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_coreconfigskeleton_on_set_defaults(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#setDefaults)
@@ -1220,7 +1220,7 @@ bool k_coreconfigskeleton_use_defaults(void* self, bool b);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool fn(KCoreConfigSkeleton*, bool)
+/// @param callback bool func(KCoreConfigSkeleton* self, bool b)
 void k_coreconfigskeleton_on_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#useDefaults)
@@ -1244,7 +1244,7 @@ void k_coreconfigskeleton_config_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*)
+/// @param callback void func(KCoreConfigSkeleton* self)
 void k_coreconfigskeleton_on_config_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
@@ -1258,7 +1258,7 @@ bool k_coreconfigskeleton_usr_use_defaults(void* self, bool b);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool fn(KCoreConfigSkeleton*, bool)
+/// @param callback bool func(KCoreConfigSkeleton* self, bool b)
 void k_coreconfigskeleton_on_usr_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
@@ -1279,7 +1279,7 @@ void k_coreconfigskeleton_usr_set_defaults(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_coreconfigskeleton_on_usr_set_defaults(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
@@ -1299,7 +1299,7 @@ void k_coreconfigskeleton_usr_read(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_coreconfigskeleton_on_usr_read(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrRead)
@@ -1319,7 +1319,7 @@ bool k_coreconfigskeleton_usr_save(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_coreconfigskeleton_on_usr_save(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrSave)
@@ -1613,7 +1613,7 @@ void k_coreconfigskeleton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*)
+/// @param callback void func(KCoreConfigSkeleton* self)
 void k_coreconfigskeleton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1691,7 +1691,7 @@ void k_coreconfigskeleton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, QObject*)
+/// @param callback void func(KCoreConfigSkeleton* self, QObject* param1)
 void k_coreconfigskeleton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1721,7 +1721,7 @@ bool k_coreconfigskeleton_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool fn(KCoreConfigSkeleton*, QEvent*)
+/// @param callback bool func(KCoreConfigSkeleton* self, QEvent* event)
 void k_coreconfigskeleton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1753,7 +1753,7 @@ bool k_coreconfigskeleton_qbase_event_filter(void* self, void* watched, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool fn(KCoreConfigSkeleton*, QObject*, QEvent*)
+/// @param callback bool func(KCoreConfigSkeleton* self, QObject* watched, QEvent* event)
 void k_coreconfigskeleton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1783,7 +1783,7 @@ void k_coreconfigskeleton_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, QTimerEvent*)
+/// @param callback void func(KCoreConfigSkeleton* self, QTimerEvent* event)
 void k_coreconfigskeleton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1813,7 +1813,7 @@ void k_coreconfigskeleton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, QChildEvent*)
+/// @param callback void func(KCoreConfigSkeleton* self, QChildEvent* event)
 void k_coreconfigskeleton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1843,7 +1843,7 @@ void k_coreconfigskeleton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, QEvent*)
+/// @param callback void func(KCoreConfigSkeleton* self, QEvent* event)
 void k_coreconfigskeleton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1873,7 +1873,7 @@ void k_coreconfigskeleton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, QMetaMethod*)
+/// @param callback void func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 void k_coreconfigskeleton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1903,7 +1903,7 @@ void k_coreconfigskeleton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, QMetaMethod*)
+/// @param callback void func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 void k_coreconfigskeleton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1931,7 +1931,7 @@ QObject* k_coreconfigskeleton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_coreconfigskeleton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1959,7 +1959,7 @@ int32_t k_coreconfigskeleton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_coreconfigskeleton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1989,7 +1989,7 @@ int32_t k_coreconfigskeleton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback int32_t fn(KCoreConfigSkeleton*, const char*)
+/// @param callback int32_t func(KCoreConfigSkeleton* self, const char* signal)
 void k_coreconfigskeleton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2019,7 +2019,7 @@ bool k_coreconfigskeleton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback bool fn(KCoreConfigSkeleton*, QMetaMethod*)
+/// @param callback bool func(KCoreConfigSkeleton* self, QMetaMethod* signal)
 void k_coreconfigskeleton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2029,7 +2029,7 @@ void k_coreconfigskeleton_on_is_signal_connected(void* self, bool (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCoreConfigSkeleton*
-/// @param callback void fn(KCoreConfigSkeleton*, const char*)
+/// @param callback void func(KCoreConfigSkeleton* self, const char* objectName)
 void k_coreconfigskeleton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#dtor.KCoreConfigSkeleton)
@@ -2083,7 +2083,7 @@ void k_coreconfigskeleton__itempassword_qbase_write_config(void* self, void* con
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPassword*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPassword*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPassword* self, KConfig* config)
 void k_coreconfigskeleton__itempassword_on_write_config(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2113,7 +2113,7 @@ void k_coreconfigskeleton__itempassword_qbase_read_config(void* self, void* conf
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPassword*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPassword*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPassword* self, KConfig* config)
 void k_coreconfigskeleton__itempassword_on_read_config(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2143,7 +2143,7 @@ void k_coreconfigskeleton__itempassword_qbase_set_property(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPassword*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPassword*, QVariant*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPassword* self, QVariant* p)
 void k_coreconfigskeleton__itempassword_on_set_property(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2173,7 +2173,7 @@ bool k_coreconfigskeleton__itempassword_qbase_is_equal(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPassword*
-/// @param callback bool fn(KCoreConfigSkeleton__ItemPassword*, QVariant*)
+/// @param callback bool func(KCoreConfigSkeleton__ItemPassword* self, QVariant* p)
 void k_coreconfigskeleton__itempassword_on_is_equal(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2201,7 +2201,7 @@ QVariant* k_coreconfigskeleton__itempassword_qbase_property(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPassword*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_coreconfigskeleton__itempassword_on_property(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.
@@ -2253,7 +2253,7 @@ void k_coreconfigskeleton__itempath_qbase_write_config(void* self, void* config)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPath*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPath*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPath* self, KConfig* config)
 void k_coreconfigskeleton__itempath_on_write_config(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2283,7 +2283,7 @@ void k_coreconfigskeleton__itempath_qbase_read_config(void* self, void* config);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPath*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPath*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPath* self, KConfig* config)
 void k_coreconfigskeleton__itempath_on_read_config(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2313,7 +2313,7 @@ void k_coreconfigskeleton__itempath_qbase_set_property(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPath*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPath*, QVariant*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPath* self, QVariant* p)
 void k_coreconfigskeleton__itempath_on_set_property(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2343,7 +2343,7 @@ bool k_coreconfigskeleton__itempath_qbase_is_equal(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPath*
-/// @param callback bool fn(KCoreConfigSkeleton__ItemPath*, QVariant*)
+/// @param callback bool func(KCoreConfigSkeleton__ItemPath* self, QVariant* p)
 void k_coreconfigskeleton__itempath_on_is_equal(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemString
@@ -2371,7 +2371,7 @@ QVariant* k_coreconfigskeleton__itempath_qbase_property(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPath*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_coreconfigskeleton__itempath_on_property(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.
@@ -2501,7 +2501,7 @@ void k_coreconfigskeleton__itemenum_read_config(void* self, void* config);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback void fn(KCoreConfigSkeleton__ItemEnum*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemEnum* self, KConfig* config)
 void k_coreconfigskeleton__itemenum_on_read_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton-itemenum.html#readConfig)
@@ -2523,7 +2523,7 @@ void k_coreconfigskeleton__itemenum_write_config(void* self, void* config);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback void fn(KCoreConfigSkeleton__ItemEnum*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemEnum* self, KConfig* config)
 void k_coreconfigskeleton__itemenum_on_write_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton-itemenum.html#writeConfig)
@@ -2576,7 +2576,7 @@ void k_coreconfigskeleton__itemenum_qbase_set_property(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback void fn(KCoreConfigSkeleton__ItemEnum*, QVariant*)
+/// @param callback void func(KCoreConfigSkeleton__ItemEnum* self, QVariant* p)
 void k_coreconfigskeleton__itemenum_on_set_property(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
@@ -2606,7 +2606,7 @@ bool k_coreconfigskeleton__itemenum_qbase_is_equal(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback bool fn(KCoreConfigSkeleton__ItemEnum*, QVariant*)
+/// @param callback bool func(KCoreConfigSkeleton__ItemEnum* self, QVariant* p)
 void k_coreconfigskeleton__itemenum_on_is_equal(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
@@ -2634,7 +2634,7 @@ QVariant* k_coreconfigskeleton__itemenum_qbase_property(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback)());
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
@@ -2662,7 +2662,7 @@ QVariant* k_coreconfigskeleton__itemenum_qbase_min_value(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callback)());
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
@@ -2690,7 +2690,7 @@ QVariant* k_coreconfigskeleton__itemenum_qbase_max_value(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_coreconfigskeleton__itemenum_on_max_value(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.
@@ -2726,7 +2726,7 @@ void k_coreconfigskeleton__itempathlist_read_config(void* self, void* config);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton__ItemPathList*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPathList*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPathList* self, KConfig* config)
 void k_coreconfigskeleton__itempathlist_on_read_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton-itempathlist.html#readConfig)
@@ -2748,7 +2748,7 @@ void k_coreconfigskeleton__itempathlist_write_config(void* self, void* config);
 /// Allows for overriding the related default method
 ///
 /// @param self KCoreConfigSkeleton__ItemPathList*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPathList*, KConfig*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPathList* self, KConfig* config)
 void k_coreconfigskeleton__itempathlist_on_write_config(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton-itempathlist.html#writeConfig)
@@ -2786,7 +2786,7 @@ void k_coreconfigskeleton__itempathlist_qbase_set_property(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPathList*
-/// @param callback void fn(KCoreConfigSkeleton__ItemPathList*, QVariant*)
+/// @param callback void func(KCoreConfigSkeleton__ItemPathList* self, QVariant* p)
 void k_coreconfigskeleton__itempathlist_on_set_property(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
@@ -2816,7 +2816,7 @@ bool k_coreconfigskeleton__itempathlist_qbase_is_equal(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPathList*
-/// @param callback bool fn(KCoreConfigSkeleton__ItemPathList*, QVariant*)
+/// @param callback bool func(KCoreConfigSkeleton__ItemPathList* self, QVariant* p)
 void k_coreconfigskeleton__itempathlist_on_is_equal(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton::ItemStringList
@@ -2844,7 +2844,7 @@ QVariant* k_coreconfigskeleton__itempathlist_qbase_property(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCoreConfigSkeleton__ItemPathList*
-/// @param callback QVariant* fn()
+/// @param callback QVariant* func()
 void k_coreconfigskeleton__itempathlist_on_property(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.

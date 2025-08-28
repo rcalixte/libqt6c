@@ -27,7 +27,7 @@ void k_onsole__filter_process(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn()
+/// @param callback void func()
 void k_onsole__filter_on_process(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -60,7 +60,7 @@ void k_onsole__filter_add_hot_spot(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, Konsole__Filter__HotSpot*)
+/// @param callback void func(Konsole__Filter* self, Konsole__Filter__HotSpot* param1)
 void k_onsole__filter_on_add_hot_spot(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -83,7 +83,7 @@ const char* k_onsole__filter_buffer(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void k_onsole__filter_on_buffer(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -106,7 +106,7 @@ void k_onsole__filter_get_line_column(void* self, int position, int* startLine, 
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, int, int*, int*)
+/// @param callback void func(Konsole__Filter* self, int position, int* startLine, int* startColumn)
 void k_onsole__filter_on_get_line_column(void* self, void (*callback)(void*, int, int*, int*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -367,7 +367,7 @@ void k_onsole__filter_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*)
+/// @param callback void func(Konsole__Filter* self)
 void k_onsole__filter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -466,7 +466,7 @@ void k_onsole__filter_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, QObject*)
+/// @param callback void func(Konsole__Filter* self, QObject* param1)
 void k_onsole__filter_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -500,7 +500,7 @@ int32_t k_onsole__filter_qbase_metacall(void* self, int32_t param1, int param2, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback int32_t fn(Konsole__Filter*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(Konsole__Filter* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_onsole__filter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Inherited from QObject
@@ -530,7 +530,7 @@ bool k_onsole__filter_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback bool fn(Konsole__Filter*, QEvent*)
+/// @param callback bool func(Konsole__Filter* self, QEvent* event)
 void k_onsole__filter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -562,7 +562,7 @@ bool k_onsole__filter_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback bool fn(Konsole__Filter*, QObject*, QEvent*)
+/// @param callback bool func(Konsole__Filter* self, QObject* watched, QEvent* event)
 void k_onsole__filter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -592,7 +592,7 @@ void k_onsole__filter_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, QTimerEvent*)
+/// @param callback void func(Konsole__Filter* self, QTimerEvent* event)
 void k_onsole__filter_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -622,7 +622,7 @@ void k_onsole__filter_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, QChildEvent*)
+/// @param callback void func(Konsole__Filter* self, QChildEvent* event)
 void k_onsole__filter_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -652,7 +652,7 @@ void k_onsole__filter_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, QEvent*)
+/// @param callback void func(Konsole__Filter* self, QEvent* event)
 void k_onsole__filter_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -682,7 +682,7 @@ void k_onsole__filter_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, QMetaMethod*)
+/// @param callback void func(Konsole__Filter* self, QMetaMethod* signal)
 void k_onsole__filter_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -712,7 +712,7 @@ void k_onsole__filter_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, QMetaMethod*)
+/// @param callback void func(Konsole__Filter* self, QMetaMethod* signal)
 void k_onsole__filter_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -740,7 +740,7 @@ QObject* k_onsole__filter_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_onsole__filter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -768,7 +768,7 @@ int32_t k_onsole__filter_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_onsole__filter_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -798,7 +798,7 @@ int32_t k_onsole__filter_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback int32_t fn(Konsole__Filter*, const char*)
+/// @param callback int32_t func(Konsole__Filter* self, const char* signal)
 void k_onsole__filter_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -828,7 +828,7 @@ bool k_onsole__filter_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Filter*
-/// @param callback bool fn(Konsole__Filter*, QMetaMethod*)
+/// @param callback bool func(Konsole__Filter* self, QMetaMethod* signal)
 void k_onsole__filter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -838,7 +838,7 @@ void k_onsole__filter_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self Konsole__Filter*
-/// @param callback void fn(Konsole__Filter*, const char*)
+/// @param callback void func(Konsole__Filter* self, const char* objectName)
 void k_onsole__filter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
@@ -873,7 +873,7 @@ void k_onsole__regexpfilter_process(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn()
+/// @param callback void func()
 void k_onsole__regexpfilter_on_process(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -897,7 +897,7 @@ Konsole__RegExpFilter__HotSpot* k_onsole__regexpfilter_new_hot_spot(void* self, 
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback Konsole__RegExpFilter__HotSpot* fn(Konsole__RegExpFilter*, int, int, int, int)
+/// @param callback Konsole__RegExpFilter__HotSpot* func(Konsole__RegExpFilter* self, int startLine, int startColumn, int endLine, int endColumn)
 void k_onsole__regexpfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__HotSpot* (*callback)(void*, int, int, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1175,7 +1175,7 @@ void k_onsole__regexpfilter_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*)
+/// @param callback void func(Konsole__RegExpFilter* self)
 void k_onsole__regexpfilter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1274,7 +1274,7 @@ void k_onsole__regexpfilter_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, QObject*)
+/// @param callback void func(Konsole__RegExpFilter* self, QObject* param1)
 void k_onsole__regexpfilter_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1308,7 +1308,7 @@ int32_t k_onsole__regexpfilter_qbase_metacall(void* self, int32_t param1, int pa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback int32_t fn(Konsole__RegExpFilter*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(Konsole__RegExpFilter* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_onsole__regexpfilter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Inherited from QObject
@@ -1338,7 +1338,7 @@ bool k_onsole__regexpfilter_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback bool fn(Konsole__RegExpFilter*, QEvent*)
+/// @param callback bool func(Konsole__RegExpFilter* self, QEvent* event)
 void k_onsole__regexpfilter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1370,7 +1370,7 @@ bool k_onsole__regexpfilter_qbase_event_filter(void* self, void* watched, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback bool fn(Konsole__RegExpFilter*, QObject*, QEvent*)
+/// @param callback bool func(Konsole__RegExpFilter* self, QObject* watched, QEvent* event)
 void k_onsole__regexpfilter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1400,7 +1400,7 @@ void k_onsole__regexpfilter_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, QTimerEvent*)
+/// @param callback void func(Konsole__RegExpFilter* self, QTimerEvent* event)
 void k_onsole__regexpfilter_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1430,7 +1430,7 @@ void k_onsole__regexpfilter_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, QChildEvent*)
+/// @param callback void func(Konsole__RegExpFilter* self, QChildEvent* event)
 void k_onsole__regexpfilter_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1460,7 +1460,7 @@ void k_onsole__regexpfilter_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, QEvent*)
+/// @param callback void func(Konsole__RegExpFilter* self, QEvent* event)
 void k_onsole__regexpfilter_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1490,7 +1490,7 @@ void k_onsole__regexpfilter_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, QMetaMethod*)
+/// @param callback void func(Konsole__RegExpFilter* self, QMetaMethod* signal)
 void k_onsole__regexpfilter_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1520,7 +1520,7 @@ void k_onsole__regexpfilter_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, QMetaMethod*)
+/// @param callback void func(Konsole__RegExpFilter* self, QMetaMethod* signal)
 void k_onsole__regexpfilter_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from Konsole::Filter
@@ -1550,7 +1550,7 @@ void k_onsole__regexpfilter_qbase_add_hot_spot(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, Konsole__Filter__HotSpot*)
+/// @param callback void func(Konsole__RegExpFilter* self, Konsole__Filter__HotSpot* param1)
 void k_onsole__regexpfilter_on_add_hot_spot(void* self, void (*callback)(void*, void*));
 
 /// Inherited from Konsole::Filter
@@ -1582,7 +1582,7 @@ const char* k_onsole__regexpfilter_qbase_buffer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void k_onsole__regexpfilter_on_buffer(void* self, const char* (*callback)());
 
 /// Inherited from Konsole::Filter
@@ -1616,7 +1616,7 @@ void k_onsole__regexpfilter_qbase_get_line_column(void* self, int position, int*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, int, int*, int*)
+/// @param callback void func(Konsole__RegExpFilter* self, int position, int* startLine, int* startColumn)
 void k_onsole__regexpfilter_on_get_line_column(void* self, void (*callback)(void*, int, int*, int*));
 
 /// Inherited from QObject
@@ -1644,7 +1644,7 @@ QObject* k_onsole__regexpfilter_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_onsole__regexpfilter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1672,7 +1672,7 @@ int32_t k_onsole__regexpfilter_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_onsole__regexpfilter_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1702,7 +1702,7 @@ int32_t k_onsole__regexpfilter_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback int32_t fn(Konsole__RegExpFilter*, const char*)
+/// @param callback int32_t func(Konsole__RegExpFilter* self, const char* signal)
 void k_onsole__regexpfilter_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1732,7 +1732,7 @@ bool k_onsole__regexpfilter_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback bool fn(Konsole__RegExpFilter*, QMetaMethod*)
+/// @param callback bool func(Konsole__RegExpFilter* self, QMetaMethod* signal)
 void k_onsole__regexpfilter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1742,7 +1742,7 @@ void k_onsole__regexpfilter_on_is_signal_connected(void* self, bool (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self Konsole__RegExpFilter*
-/// @param callback void fn(Konsole__RegExpFilter*, const char*)
+/// @param callback void func(Konsole__RegExpFilter* self, const char* objectName)
 void k_onsole__regexpfilter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
@@ -1774,7 +1774,7 @@ int32_t k_onsole__urlfilter_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback int32_t fn(Konsole__UrlFilter*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(Konsole__UrlFilter* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_onsole__urlfilter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -1806,7 +1806,7 @@ Konsole__RegExpFilter__HotSpot* k_onsole__urlfilter_new_hot_spot(void* self, int
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback Konsole__RegExpFilter__HotSpot* fn(Konsole__UrlFilter*, int, int, int, int)
+/// @param callback Konsole__RegExpFilter__HotSpot* func(Konsole__UrlFilter* self, int param1, int param2, int param3, int param4)
 void k_onsole__urlfilter_on_new_hot_spot(void* self, Konsole__RegExpFilter__HotSpot* (*callback)(void*, int, int, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1830,7 +1830,7 @@ void k_onsole__urlfilter_activated(void* self, void* url, bool fromContextMenu);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QUrl*, bool)
+/// @param callback void func(Konsole__UrlFilter* self, QUrl* url, bool fromContextMenu)
 void k_onsole__urlfilter_on_activated(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -2107,7 +2107,7 @@ void k_onsole__urlfilter_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*)
+/// @param callback void func(Konsole__UrlFilter* self)
 void k_onsole__urlfilter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2185,7 +2185,7 @@ void k_onsole__urlfilter_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QObject*)
+/// @param callback void func(Konsole__UrlFilter* self, QObject* param1)
 void k_onsole__urlfilter_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from Konsole::RegExpFilter
@@ -2213,7 +2213,7 @@ void k_onsole__urlfilter_qbase_process(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn()
+/// @param callback void func()
 void k_onsole__urlfilter_on_process(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2243,7 +2243,7 @@ bool k_onsole__urlfilter_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback bool fn(Konsole__UrlFilter*, QEvent*)
+/// @param callback bool func(Konsole__UrlFilter* self, QEvent* event)
 void k_onsole__urlfilter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2275,7 +2275,7 @@ bool k_onsole__urlfilter_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback bool fn(Konsole__UrlFilter*, QObject*, QEvent*)
+/// @param callback bool func(Konsole__UrlFilter* self, QObject* watched, QEvent* event)
 void k_onsole__urlfilter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2305,7 +2305,7 @@ void k_onsole__urlfilter_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QTimerEvent*)
+/// @param callback void func(Konsole__UrlFilter* self, QTimerEvent* event)
 void k_onsole__urlfilter_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2335,7 +2335,7 @@ void k_onsole__urlfilter_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QChildEvent*)
+/// @param callback void func(Konsole__UrlFilter* self, QChildEvent* event)
 void k_onsole__urlfilter_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2365,7 +2365,7 @@ void k_onsole__urlfilter_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QEvent*)
+/// @param callback void func(Konsole__UrlFilter* self, QEvent* event)
 void k_onsole__urlfilter_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2395,7 +2395,7 @@ void k_onsole__urlfilter_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QMetaMethod*)
+/// @param callback void func(Konsole__UrlFilter* self, QMetaMethod* signal)
 void k_onsole__urlfilter_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2425,7 +2425,7 @@ void k_onsole__urlfilter_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, QMetaMethod*)
+/// @param callback void func(Konsole__UrlFilter* self, QMetaMethod* signal)
 void k_onsole__urlfilter_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from Konsole::Filter
@@ -2455,7 +2455,7 @@ void k_onsole__urlfilter_qbase_add_hot_spot(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, Konsole__Filter__HotSpot*)
+/// @param callback void func(Konsole__UrlFilter* self, Konsole__Filter__HotSpot* param1)
 void k_onsole__urlfilter_on_add_hot_spot(void* self, void (*callback)(void*, void*));
 
 /// Inherited from Konsole::Filter
@@ -2487,7 +2487,7 @@ const char* k_onsole__urlfilter_qbase_buffer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void k_onsole__urlfilter_on_buffer(void* self, const char* (*callback)());
 
 /// Inherited from Konsole::Filter
@@ -2521,7 +2521,7 @@ void k_onsole__urlfilter_qbase_get_line_column(void* self, int position, int* st
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, int, int*, int*)
+/// @param callback void func(Konsole__UrlFilter* self, int position, int* startLine, int* startColumn)
 void k_onsole__urlfilter_on_get_line_column(void* self, void (*callback)(void*, int, int*, int*));
 
 /// Inherited from QObject
@@ -2549,7 +2549,7 @@ QObject* k_onsole__urlfilter_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_onsole__urlfilter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2577,7 +2577,7 @@ int32_t k_onsole__urlfilter_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_onsole__urlfilter_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2607,7 +2607,7 @@ int32_t k_onsole__urlfilter_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback int32_t fn(Konsole__UrlFilter*, const char*)
+/// @param callback int32_t func(Konsole__UrlFilter* self, const char* signal)
 void k_onsole__urlfilter_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2637,7 +2637,7 @@ bool k_onsole__urlfilter_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback bool fn(Konsole__UrlFilter*, QMetaMethod*)
+/// @param callback bool func(Konsole__UrlFilter* self, QMetaMethod* signal)
 void k_onsole__urlfilter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2647,7 +2647,7 @@ void k_onsole__urlfilter_on_is_signal_connected(void* self, bool (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self Konsole__UrlFilter*
-/// @param callback void fn(Konsole__UrlFilter*, const char*)
+/// @param callback void func(Konsole__UrlFilter* self, const char* objectName)
 void k_onsole__urlfilter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
@@ -2680,7 +2680,7 @@ int32_t k_onsole__filterobject_metacall(void* self, int32_t param1, int param2, 
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback int32_t fn(Konsole__FilterObject*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(Konsole__FilterObject* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_onsole__filterobject_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -2720,7 +2720,7 @@ void k_onsole__filterobject_activated(void* self, void* url, bool fromContextMen
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QUrl*, bool)
+/// @param callback void func(Konsole__FilterObject* self, QUrl* url, bool fromContextMenu)
 void k_onsole__filterobject_on_activated(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -2966,7 +2966,7 @@ void k_onsole__filterobject_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*)
+/// @param callback void func(Konsole__FilterObject* self)
 void k_onsole__filterobject_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3044,7 +3044,7 @@ void k_onsole__filterobject_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QObject*)
+/// @param callback void func(Konsole__FilterObject* self, QObject* param1)
 void k_onsole__filterobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3074,7 +3074,7 @@ bool k_onsole__filterobject_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback bool fn(Konsole__FilterObject*, QEvent*)
+/// @param callback bool func(Konsole__FilterObject* self, QEvent* event)
 void k_onsole__filterobject_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3106,7 +3106,7 @@ bool k_onsole__filterobject_qbase_event_filter(void* self, void* watched, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback bool fn(Konsole__FilterObject*, QObject*, QEvent*)
+/// @param callback bool func(Konsole__FilterObject* self, QObject* watched, QEvent* event)
 void k_onsole__filterobject_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3136,7 +3136,7 @@ void k_onsole__filterobject_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QTimerEvent*)
+/// @param callback void func(Konsole__FilterObject* self, QTimerEvent* event)
 void k_onsole__filterobject_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3166,7 +3166,7 @@ void k_onsole__filterobject_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QChildEvent*)
+/// @param callback void func(Konsole__FilterObject* self, QChildEvent* event)
 void k_onsole__filterobject_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3196,7 +3196,7 @@ void k_onsole__filterobject_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QEvent*)
+/// @param callback void func(Konsole__FilterObject* self, QEvent* event)
 void k_onsole__filterobject_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3226,7 +3226,7 @@ void k_onsole__filterobject_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QMetaMethod*)
+/// @param callback void func(Konsole__FilterObject* self, QMetaMethod* signal)
 void k_onsole__filterobject_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3256,7 +3256,7 @@ void k_onsole__filterobject_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, QMetaMethod*)
+/// @param callback void func(Konsole__FilterObject* self, QMetaMethod* signal)
 void k_onsole__filterobject_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3284,7 +3284,7 @@ QObject* k_onsole__filterobject_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_onsole__filterobject_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3312,7 +3312,7 @@ int32_t k_onsole__filterobject_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_onsole__filterobject_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3342,7 +3342,7 @@ int32_t k_onsole__filterobject_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback int32_t fn(Konsole__FilterObject*, const char*)
+/// @param callback int32_t func(Konsole__FilterObject* self, const char* signal)
 void k_onsole__filterobject_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3372,7 +3372,7 @@ bool k_onsole__filterobject_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback bool fn(Konsole__FilterObject*, QMetaMethod*)
+/// @param callback bool func(Konsole__FilterObject* self, QMetaMethod* signal)
 void k_onsole__filterobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3382,7 +3382,7 @@ void k_onsole__filterobject_on_is_signal_connected(void* self, bool (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self Konsole__FilterObject*
-/// @param callback void fn(Konsole__FilterObject*, const char*)
+/// @param callback void func(Konsole__FilterObject* self, const char* objectName)
 void k_onsole__filterobject_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.
@@ -3591,7 +3591,7 @@ void k_onsole__filter__hotspot_activate(void* self, const char* action);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param callback void fn(Konsole__Filter__HotSpot*, const char*)
+/// @param callback void func(Konsole__Filter__HotSpot* self, const char* action)
 void k_onsole__filter__hotspot_on_activate(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3612,7 +3612,7 @@ libqt_list /* of QAction* */ k_onsole__filter__hotspot_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param callback libqt_list /* of QAction* */ fn()
+/// @param callback libqt_list /* of QAction* */ func()
 void k_onsole__filter__hotspot_on_actions(void* self, libqt_list /* of QAction* */ (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3633,7 +3633,7 @@ void k_onsole__filter__hotspot_set_type(void* self, int32_t typeVal);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param callback void fn(Konsole__Filter__HotSpot*, enum Konsole__Filter__HotSpot__Type)
+/// @param callback void func(Konsole__Filter__HotSpot* self, enum Konsole__Filter__HotSpot__Type typeVal)
 void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3675,7 +3675,7 @@ void k_onsole__regexpfilter__hotspot_activate(void* self, const char* action);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param callback void fn(Konsole__RegExpFilter__HotSpot*, const char*)
+/// @param callback void func(Konsole__RegExpFilter__HotSpot* self, const char* action)
 void k_onsole__regexpfilter__hotspot_on_activate(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3761,7 +3761,7 @@ libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_qbase_actions(void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param callback libqt_list /* of QAction* */ fn()
+/// @param callback libqt_list /* of QAction* */ func()
 void k_onsole__regexpfilter__hotspot_on_actions(void* self, libqt_list /* of QAction* */ (*callback)());
 
 /// Inherited from Konsole::Filter::HotSpot
@@ -3791,7 +3791,7 @@ void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t typeVal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param callback void fn(Konsole__RegExpFilter__HotSpot*, enum Konsole__Filter__HotSpot__Type)
+/// @param callback void func(Konsole__RegExpFilter__HotSpot* self, enum Konsole__Filter__HotSpot__Type typeVal)
 void k_onsole__regexpfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
 /// Delete this object from C++ memory.
@@ -3824,7 +3824,7 @@ libqt_list /* of QAction* */ k_onsole__urlfilter__hotspot_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param callback libqt_list /* of QAction* */ fn()
+/// @param callback libqt_list /* of QAction* */ func()
 void k_onsole__urlfilter__hotspot_on_actions(void* self, libqt_list /* of QAction* */ (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3845,7 +3845,7 @@ void k_onsole__urlfilter__hotspot_activate(void* self, const char* action);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param callback void fn(Konsole__UrlFilter__HotSpot*, const char*)
+/// @param callback void func(Konsole__UrlFilter__HotSpot* self, const char* action)
 void k_onsole__urlfilter__hotspot_on_activate(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3937,7 +3937,7 @@ void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t typeVal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param callback void fn(Konsole__UrlFilter__HotSpot*, enum Konsole__Filter__HotSpot__Type)
+/// @param callback void func(Konsole__UrlFilter__HotSpot* self, enum Konsole__Filter__HotSpot__Type typeVal)
 void k_onsole__urlfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
 /// Delete this object from C++ memory.

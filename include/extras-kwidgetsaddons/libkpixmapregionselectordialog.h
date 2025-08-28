@@ -40,7 +40,7 @@ int32_t k_pixmapregionselectordialog_metacall(void* self, int32_t param1, int pa
 /// Allows for overriding the related default method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn(KPixmapRegionSelectorDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPixmapRegionSelectorDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pixmapregionselectordialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -188,7 +188,7 @@ void k_pixmapregionselectordialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, int)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, int result)
 void k_pixmapregionselectordialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -203,7 +203,7 @@ void k_pixmapregionselectordialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self)
 void k_pixmapregionselectordialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -218,7 +218,7 @@ void k_pixmapregionselectordialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self)
 void k_pixmapregionselectordialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2158,7 +2158,7 @@ void k_pixmapregionselectordialog_window_title_changed(void* self, const char* t
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, const char*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, const char* title)
 void k_pixmapregionselectordialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2174,7 +2174,7 @@ void k_pixmapregionselectordialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QIcon*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QIcon* icon)
 void k_pixmapregionselectordialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2190,7 +2190,7 @@ void k_pixmapregionselectordialog_window_icon_text_changed(void* self, const cha
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, const char*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, const char* iconText)
 void k_pixmapregionselectordialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2206,7 +2206,7 @@ void k_pixmapregionselectordialog_custom_context_menu_requested(void* self, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QPoint*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QPoint* pos)
 void k_pixmapregionselectordialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2583,7 +2583,7 @@ void k_pixmapregionselectordialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self)
 void k_pixmapregionselectordialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2661,7 +2661,7 @@ void k_pixmapregionselectordialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QObject*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QObject* param1)
 void k_pixmapregionselectordialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2782,7 +2782,7 @@ void k_pixmapregionselectordialog_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, bool)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, bool visible)
 void k_pixmapregionselectordialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -2810,7 +2810,7 @@ QSize* k_pixmapregionselectordialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pixmapregionselectordialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2838,7 +2838,7 @@ QSize* k_pixmapregionselectordialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pixmapregionselectordialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2866,7 +2866,7 @@ void k_pixmapregionselectordialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pixmapregionselectordialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2894,7 +2894,7 @@ int32_t k_pixmapregionselectordialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pixmapregionselectordialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -2924,7 +2924,7 @@ void k_pixmapregionselectordialog_qbase_done(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, int)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, int param1)
 void k_pixmapregionselectordialog_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -2952,7 +2952,7 @@ void k_pixmapregionselectordialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pixmapregionselectordialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -2980,7 +2980,7 @@ void k_pixmapregionselectordialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pixmapregionselectordialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3010,7 +3010,7 @@ void k_pixmapregionselectordialog_qbase_key_press_event(void* self, void* param1
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QKeyEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QKeyEvent* param1)
 void k_pixmapregionselectordialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3040,7 +3040,7 @@ void k_pixmapregionselectordialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QCloseEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QCloseEvent* param1)
 void k_pixmapregionselectordialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3070,7 +3070,7 @@ void k_pixmapregionselectordialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QShowEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QShowEvent* param1)
 void k_pixmapregionselectordialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3100,7 +3100,7 @@ void k_pixmapregionselectordialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QResizeEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QResizeEvent* param1)
 void k_pixmapregionselectordialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3130,7 +3130,7 @@ void k_pixmapregionselectordialog_qbase_context_menu_event(void* self, void* par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QContextMenuEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QContextMenuEvent* param1)
 void k_pixmapregionselectordialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3162,7 +3162,7 @@ bool k_pixmapregionselectordialog_qbase_event_filter(void* self, void* param1, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn(KPixmapRegionSelectorDialog*, QObject*, QEvent*)
+/// @param callback bool func(KPixmapRegionSelectorDialog* self, QObject* param1, QEvent* param2)
 void k_pixmapregionselectordialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3190,7 +3190,7 @@ int32_t k_pixmapregionselectordialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pixmapregionselectordialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3220,7 +3220,7 @@ int32_t k_pixmapregionselectordialog_qbase_height_for_width(void* self, int para
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn(KPixmapRegionSelectorDialog*, int)
+/// @param callback int32_t func(KPixmapRegionSelectorDialog* self, int param1)
 void k_pixmapregionselectordialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3248,7 +3248,7 @@ bool k_pixmapregionselectordialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pixmapregionselectordialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3276,7 +3276,7 @@ QPaintEngine* k_pixmapregionselectordialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_pixmapregionselectordialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3306,7 +3306,7 @@ bool k_pixmapregionselectordialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn(KPixmapRegionSelectorDialog*, QEvent*)
+/// @param callback bool func(KPixmapRegionSelectorDialog* self, QEvent* event)
 void k_pixmapregionselectordialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3336,7 +3336,7 @@ void k_pixmapregionselectordialog_qbase_mouse_press_event(void* self, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMouseEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMouseEvent* event)
 void k_pixmapregionselectordialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3366,7 +3366,7 @@ void k_pixmapregionselectordialog_qbase_mouse_release_event(void* self, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMouseEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMouseEvent* event)
 void k_pixmapregionselectordialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3396,7 +3396,7 @@ void k_pixmapregionselectordialog_qbase_mouse_double_click_event(void* self, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMouseEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMouseEvent* event)
 void k_pixmapregionselectordialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3426,7 +3426,7 @@ void k_pixmapregionselectordialog_qbase_mouse_move_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMouseEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMouseEvent* event)
 void k_pixmapregionselectordialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3456,7 +3456,7 @@ void k_pixmapregionselectordialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QWheelEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QWheelEvent* event)
 void k_pixmapregionselectordialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3486,7 +3486,7 @@ void k_pixmapregionselectordialog_qbase_key_release_event(void* self, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QKeyEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QKeyEvent* event)
 void k_pixmapregionselectordialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3516,7 +3516,7 @@ void k_pixmapregionselectordialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QFocusEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QFocusEvent* event)
 void k_pixmapregionselectordialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3546,7 +3546,7 @@ void k_pixmapregionselectordialog_qbase_focus_out_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QFocusEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QFocusEvent* event)
 void k_pixmapregionselectordialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3576,7 +3576,7 @@ void k_pixmapregionselectordialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QEnterEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QEnterEvent* event)
 void k_pixmapregionselectordialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3606,7 +3606,7 @@ void k_pixmapregionselectordialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QEvent* event)
 void k_pixmapregionselectordialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3636,7 +3636,7 @@ void k_pixmapregionselectordialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QPaintEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QPaintEvent* event)
 void k_pixmapregionselectordialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3666,7 +3666,7 @@ void k_pixmapregionselectordialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMoveEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMoveEvent* event)
 void k_pixmapregionselectordialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3696,7 +3696,7 @@ void k_pixmapregionselectordialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QTabletEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QTabletEvent* event)
 void k_pixmapregionselectordialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3726,7 +3726,7 @@ void k_pixmapregionselectordialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QActionEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QActionEvent* event)
 void k_pixmapregionselectordialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3756,7 +3756,7 @@ void k_pixmapregionselectordialog_qbase_drag_enter_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QDragEnterEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QDragEnterEvent* event)
 void k_pixmapregionselectordialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3786,7 +3786,7 @@ void k_pixmapregionselectordialog_qbase_drag_move_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QDragMoveEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QDragMoveEvent* event)
 void k_pixmapregionselectordialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3816,7 +3816,7 @@ void k_pixmapregionselectordialog_qbase_drag_leave_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QDragLeaveEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QDragLeaveEvent* event)
 void k_pixmapregionselectordialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3846,7 +3846,7 @@ void k_pixmapregionselectordialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QDropEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QDropEvent* event)
 void k_pixmapregionselectordialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3876,7 +3876,7 @@ void k_pixmapregionselectordialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QHideEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QHideEvent* event)
 void k_pixmapregionselectordialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3910,7 +3910,7 @@ bool k_pixmapregionselectordialog_qbase_native_event(void* self, const char* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn(KPixmapRegionSelectorDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(KPixmapRegionSelectorDialog* self, const char* eventType, void* message, intptr_t* result)
 void k_pixmapregionselectordialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3940,7 +3940,7 @@ void k_pixmapregionselectordialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QEvent* param1)
 void k_pixmapregionselectordialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3970,7 +3970,7 @@ int32_t k_pixmapregionselectordialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn(KPixmapRegionSelectorDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KPixmapRegionSelectorDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_pixmapregionselectordialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4000,7 +4000,7 @@ void k_pixmapregionselectordialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QPainter*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QPainter* painter)
 void k_pixmapregionselectordialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4030,7 +4030,7 @@ QPaintDevice* k_pixmapregionselectordialog_qbase_redirected(void* self, void* of
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QPaintDevice* fn(KPixmapRegionSelectorDialog*, QPoint*)
+/// @param callback QPaintDevice* func(KPixmapRegionSelectorDialog* self, QPoint* offset)
 void k_pixmapregionselectordialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4058,7 +4058,7 @@ QPainter* k_pixmapregionselectordialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_pixmapregionselectordialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4088,7 +4088,7 @@ void k_pixmapregionselectordialog_qbase_input_method_event(void* self, void* par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QInputMethodEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QInputMethodEvent* param1)
 void k_pixmapregionselectordialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4118,7 +4118,7 @@ QVariant* k_pixmapregionselectordialog_qbase_input_method_query(void* self, int6
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QVariant* fn(KPixmapRegionSelectorDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KPixmapRegionSelectorDialog* self, enum Qt__InputMethodQuery param1)
 void k_pixmapregionselectordialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4148,7 +4148,7 @@ bool k_pixmapregionselectordialog_qbase_focus_next_prev_child(void* self, bool n
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn(KPixmapRegionSelectorDialog*, bool)
+/// @param callback bool func(KPixmapRegionSelectorDialog* self, bool next)
 void k_pixmapregionselectordialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4178,7 +4178,7 @@ void k_pixmapregionselectordialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QTimerEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QTimerEvent* event)
 void k_pixmapregionselectordialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4208,7 +4208,7 @@ void k_pixmapregionselectordialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QChildEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QChildEvent* event)
 void k_pixmapregionselectordialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4238,7 +4238,7 @@ void k_pixmapregionselectordialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QEvent*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QEvent* event)
 void k_pixmapregionselectordialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4268,7 +4268,7 @@ void k_pixmapregionselectordialog_qbase_connect_notify(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMetaMethod*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMetaMethod* signal)
 void k_pixmapregionselectordialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4298,7 +4298,7 @@ void k_pixmapregionselectordialog_qbase_disconnect_notify(void* self, void* sign
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QMetaMethod*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QMetaMethod* signal)
 void k_pixmapregionselectordialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4328,7 +4328,7 @@ void k_pixmapregionselectordialog_qbase_adjust_position(void* self, void* param1
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, QWidget*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, QWidget* param1)
 void k_pixmapregionselectordialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4356,7 +4356,7 @@ void k_pixmapregionselectordialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pixmapregionselectordialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4384,7 +4384,7 @@ void k_pixmapregionselectordialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pixmapregionselectordialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4412,7 +4412,7 @@ void k_pixmapregionselectordialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pixmapregionselectordialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4440,7 +4440,7 @@ bool k_pixmapregionselectordialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pixmapregionselectordialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4468,7 +4468,7 @@ bool k_pixmapregionselectordialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pixmapregionselectordialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4496,7 +4496,7 @@ QObject* k_pixmapregionselectordialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pixmapregionselectordialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4524,7 +4524,7 @@ int32_t k_pixmapregionselectordialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pixmapregionselectordialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4554,7 +4554,7 @@ int32_t k_pixmapregionselectordialog_qbase_receivers(void* self, const char* sig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback int32_t fn(KPixmapRegionSelectorDialog*, const char*)
+/// @param callback int32_t func(KPixmapRegionSelectorDialog* self, const char* signal)
 void k_pixmapregionselectordialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4584,7 +4584,7 @@ bool k_pixmapregionselectordialog_qbase_is_signal_connected(void* self, void* si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback bool fn(KPixmapRegionSelectorDialog*, QMetaMethod*)
+/// @param callback bool func(KPixmapRegionSelectorDialog* self, QMetaMethod* signal)
 void k_pixmapregionselectordialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4616,7 +4616,7 @@ double k_pixmapregionselectordialog_qbase_get_decoded_metric_f(void* self, int32
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback double fn(KPixmapRegionSelectorDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KPixmapRegionSelectorDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_pixmapregionselectordialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4626,7 +4626,7 @@ void k_pixmapregionselectordialog_on_get_decoded_metric_f(void* self, double (*c
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPixmapRegionSelectorDialog*
-/// @param callback void fn(KPixmapRegionSelectorDialog*, const char*)
+/// @param callback void func(KPixmapRegionSelectorDialog* self, const char* objectName)
 void k_pixmapregionselectordialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#dtor.KPixmapRegionSelectorDialog)

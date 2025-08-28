@@ -51,7 +51,7 @@ int32_t q_soundeffect_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QSoundEffect*
-/// @param callback int32_t fn(QSoundEffect*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSoundEffect* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_soundeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -160,7 +160,7 @@ void q_soundeffect_source_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#sourceChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_source_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loopCountChanged)
@@ -171,7 +171,7 @@ void q_soundeffect_loop_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loopCountChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_loop_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loopsRemainingChanged)
@@ -182,7 +182,7 @@ void q_soundeffect_loops_remaining_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loopsRemainingChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_loops_remaining_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#volumeChanged)
@@ -193,7 +193,7 @@ void q_soundeffect_volume_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#volumeChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_volume_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#mutedChanged)
@@ -204,7 +204,7 @@ void q_soundeffect_muted_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#mutedChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_muted_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loadedChanged)
@@ -215,7 +215,7 @@ void q_soundeffect_loaded_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#loadedChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_loaded_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#playingChanged)
@@ -226,7 +226,7 @@ void q_soundeffect_playing_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#playingChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_playing_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#statusChanged)
@@ -237,7 +237,7 @@ void q_soundeffect_status_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#statusChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_status_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#audioDeviceChanged)
@@ -248,7 +248,7 @@ void q_soundeffect_audio_device_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#audioDeviceChanged)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_audio_device_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#play)
@@ -504,7 +504,7 @@ void q_soundeffect_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*)
+/// @param callback void func(QSoundEffect* self)
 void q_soundeffect_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -582,7 +582,7 @@ void q_soundeffect_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, QObject*)
+/// @param callback void func(QSoundEffect* self, QObject* param1)
 void q_soundeffect_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -612,7 +612,7 @@ bool q_soundeffect_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback bool fn(QSoundEffect*, QEvent*)
+/// @param callback bool func(QSoundEffect* self, QEvent* event)
 void q_soundeffect_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -644,7 +644,7 @@ bool q_soundeffect_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback bool fn(QSoundEffect*, QObject*, QEvent*)
+/// @param callback bool func(QSoundEffect* self, QObject* watched, QEvent* event)
 void q_soundeffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -674,7 +674,7 @@ void q_soundeffect_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, QTimerEvent*)
+/// @param callback void func(QSoundEffect* self, QTimerEvent* event)
 void q_soundeffect_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -704,7 +704,7 @@ void q_soundeffect_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, QChildEvent*)
+/// @param callback void func(QSoundEffect* self, QChildEvent* event)
 void q_soundeffect_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -734,7 +734,7 @@ void q_soundeffect_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, QEvent*)
+/// @param callback void func(QSoundEffect* self, QEvent* event)
 void q_soundeffect_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -764,7 +764,7 @@ void q_soundeffect_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, QMetaMethod*)
+/// @param callback void func(QSoundEffect* self, QMetaMethod* signal)
 void q_soundeffect_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -794,7 +794,7 @@ void q_soundeffect_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, QMetaMethod*)
+/// @param callback void func(QSoundEffect* self, QMetaMethod* signal)
 void q_soundeffect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -822,7 +822,7 @@ QObject* q_soundeffect_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_soundeffect_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -850,7 +850,7 @@ int32_t q_soundeffect_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_soundeffect_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -880,7 +880,7 @@ int32_t q_soundeffect_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback int32_t fn(QSoundEffect*, const char*)
+/// @param callback int32_t func(QSoundEffect* self, const char* signal)
 void q_soundeffect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -910,7 +910,7 @@ bool q_soundeffect_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSoundEffect*
-/// @param callback bool fn(QSoundEffect*, QMetaMethod*)
+/// @param callback bool func(QSoundEffect* self, QMetaMethod* signal)
 void q_soundeffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -920,7 +920,7 @@ void q_soundeffect_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSoundEffect*
-/// @param callback void fn(QSoundEffect*, const char*)
+/// @param callback void func(QSoundEffect* self, const char* objectName)
 void q_soundeffect_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsoundeffect.html#dtor.QSoundEffect)

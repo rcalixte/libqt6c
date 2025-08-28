@@ -36,7 +36,7 @@ int32_t q_textlist_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QTextList*
-/// @param callback int32_t fn(QTextList*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTextList* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_textlist_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -372,7 +372,7 @@ void q_textlist_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*)
+/// @param callback void func(QTextList* self)
 void q_textlist_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -450,7 +450,7 @@ void q_textlist_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QObject*)
+/// @param callback void func(QTextList* self, QObject* param1)
 void q_textlist_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextBlockGroup
@@ -480,7 +480,7 @@ void q_textlist_qbase_block_inserted(void* self, void* block);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QTextBlock*)
+/// @param callback void func(QTextList* self, QTextBlock* block)
 void q_textlist_on_block_inserted(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextBlockGroup
@@ -510,7 +510,7 @@ void q_textlist_qbase_block_removed(void* self, void* block);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QTextBlock*)
+/// @param callback void func(QTextList* self, QTextBlock* block)
 void q_textlist_on_block_removed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextBlockGroup
@@ -540,7 +540,7 @@ void q_textlist_qbase_block_format_changed(void* self, void* block);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QTextBlock*)
+/// @param callback void func(QTextList* self, QTextBlock* block)
 void q_textlist_on_block_format_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -570,7 +570,7 @@ bool q_textlist_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback bool fn(QTextList*, QEvent*)
+/// @param callback bool func(QTextList* self, QEvent* event)
 void q_textlist_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -602,7 +602,7 @@ bool q_textlist_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback bool fn(QTextList*, QObject*, QEvent*)
+/// @param callback bool func(QTextList* self, QObject* watched, QEvent* event)
 void q_textlist_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -632,7 +632,7 @@ void q_textlist_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QTimerEvent*)
+/// @param callback void func(QTextList* self, QTimerEvent* event)
 void q_textlist_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -662,7 +662,7 @@ void q_textlist_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QChildEvent*)
+/// @param callback void func(QTextList* self, QChildEvent* event)
 void q_textlist_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -692,7 +692,7 @@ void q_textlist_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QEvent*)
+/// @param callback void func(QTextList* self, QEvent* event)
 void q_textlist_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -722,7 +722,7 @@ void q_textlist_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QMetaMethod*)
+/// @param callback void func(QTextList* self, QMetaMethod* signal)
 void q_textlist_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -752,7 +752,7 @@ void q_textlist_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, QMetaMethod*)
+/// @param callback void func(QTextList* self, QMetaMethod* signal)
 void q_textlist_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextBlockGroup
@@ -780,7 +780,7 @@ libqt_list /* of QTextBlock* */ q_textlist_qbase_block_list(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback libqt_list /* of QTextBlock* */ fn()
+/// @param callback libqt_list /* of QTextBlock* */ func()
 void q_textlist_on_block_list(void* self, libqt_list /* of QTextBlock* */ (*callback)());
 
 /// Inherited from QObject
@@ -808,7 +808,7 @@ QObject* q_textlist_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_textlist_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -836,7 +836,7 @@ int32_t q_textlist_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_textlist_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -866,7 +866,7 @@ int32_t q_textlist_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback int32_t fn(QTextList*, const char*)
+/// @param callback int32_t func(QTextList* self, const char* signal)
 void q_textlist_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -896,7 +896,7 @@ bool q_textlist_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback bool fn(QTextList*, QMetaMethod*)
+/// @param callback bool func(QTextList* self, QMetaMethod* signal)
 void q_textlist_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -906,7 +906,7 @@ void q_textlist_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTextList*
-/// @param callback void fn(QTextList*, const char*)
+/// @param callback void func(QTextList* self, const char* objectName)
 void q_textlist_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlist.html#dtor.QTextList)

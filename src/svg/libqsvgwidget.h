@@ -51,7 +51,7 @@ int32_t q_svgwidget_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QSvgWidget*
-/// @param callback int32_t fn(QSvgWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSvgWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_svgwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -84,7 +84,7 @@ QSize* q_svgwidget_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSvgWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_svgwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgwidget.html#sizeHint)
@@ -130,7 +130,7 @@ void q_svgwidget_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QPaintEvent*)
+/// @param callback void func(QSvgWidget* self, QPaintEvent* event)
 void q_svgwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgwidget.html#paintEvent)
@@ -2095,7 +2095,7 @@ void q_svgwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, const char*)
+/// @param callback void func(QSvgWidget* self, const char* title)
 void q_svgwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2111,7 +2111,7 @@ void q_svgwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QIcon*)
+/// @param callback void func(QSvgWidget* self, QIcon* icon)
 void q_svgwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2127,7 +2127,7 @@ void q_svgwidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, const char*)
+/// @param callback void func(QSvgWidget* self, const char* iconText)
 void q_svgwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2143,7 +2143,7 @@ void q_svgwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QPoint*)
+/// @param callback void func(QSvgWidget* self, QPoint* pos)
 void q_svgwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2520,7 +2520,7 @@ void q_svgwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*)
+/// @param callback void func(QSvgWidget* self)
 void q_svgwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2598,7 +2598,7 @@ void q_svgwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QObject*)
+/// @param callback void func(QSvgWidget* self, QObject* param1)
 void q_svgwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2717,7 +2717,7 @@ int32_t q_svgwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_svgwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2747,7 +2747,7 @@ void q_svgwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, bool)
+/// @param callback void func(QSvgWidget* self, bool visible)
 void q_svgwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2775,7 +2775,7 @@ QSize* q_svgwidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_svgwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2805,7 +2805,7 @@ int32_t q_svgwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback int32_t fn(QSvgWidget*, int)
+/// @param callback int32_t func(QSvgWidget* self, int param1)
 void q_svgwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2833,7 +2833,7 @@ bool q_svgwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_svgwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2861,7 +2861,7 @@ QPaintEngine* q_svgwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_svgwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2891,7 +2891,7 @@ bool q_svgwidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn(QSvgWidget*, QEvent*)
+/// @param callback bool func(QSvgWidget* self, QEvent* event)
 void q_svgwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2921,7 +2921,7 @@ void q_svgwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMouseEvent*)
+/// @param callback void func(QSvgWidget* self, QMouseEvent* event)
 void q_svgwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2951,7 +2951,7 @@ void q_svgwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMouseEvent*)
+/// @param callback void func(QSvgWidget* self, QMouseEvent* event)
 void q_svgwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2981,7 +2981,7 @@ void q_svgwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMouseEvent*)
+/// @param callback void func(QSvgWidget* self, QMouseEvent* event)
 void q_svgwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3011,7 +3011,7 @@ void q_svgwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMouseEvent*)
+/// @param callback void func(QSvgWidget* self, QMouseEvent* event)
 void q_svgwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3041,7 +3041,7 @@ void q_svgwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QWheelEvent*)
+/// @param callback void func(QSvgWidget* self, QWheelEvent* event)
 void q_svgwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3071,7 +3071,7 @@ void q_svgwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QKeyEvent*)
+/// @param callback void func(QSvgWidget* self, QKeyEvent* event)
 void q_svgwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3101,7 +3101,7 @@ void q_svgwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QKeyEvent*)
+/// @param callback void func(QSvgWidget* self, QKeyEvent* event)
 void q_svgwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3131,7 +3131,7 @@ void q_svgwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QFocusEvent*)
+/// @param callback void func(QSvgWidget* self, QFocusEvent* event)
 void q_svgwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3161,7 +3161,7 @@ void q_svgwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QFocusEvent*)
+/// @param callback void func(QSvgWidget* self, QFocusEvent* event)
 void q_svgwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3191,7 +3191,7 @@ void q_svgwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QEnterEvent*)
+/// @param callback void func(QSvgWidget* self, QEnterEvent* event)
 void q_svgwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3221,7 +3221,7 @@ void q_svgwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QEvent*)
+/// @param callback void func(QSvgWidget* self, QEvent* event)
 void q_svgwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3251,7 +3251,7 @@ void q_svgwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMoveEvent*)
+/// @param callback void func(QSvgWidget* self, QMoveEvent* event)
 void q_svgwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3281,7 +3281,7 @@ void q_svgwidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QResizeEvent*)
+/// @param callback void func(QSvgWidget* self, QResizeEvent* event)
 void q_svgwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3311,7 +3311,7 @@ void q_svgwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QCloseEvent*)
+/// @param callback void func(QSvgWidget* self, QCloseEvent* event)
 void q_svgwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3341,7 +3341,7 @@ void q_svgwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QContextMenuEvent*)
+/// @param callback void func(QSvgWidget* self, QContextMenuEvent* event)
 void q_svgwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3371,7 +3371,7 @@ void q_svgwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QTabletEvent*)
+/// @param callback void func(QSvgWidget* self, QTabletEvent* event)
 void q_svgwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3401,7 +3401,7 @@ void q_svgwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QActionEvent*)
+/// @param callback void func(QSvgWidget* self, QActionEvent* event)
 void q_svgwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3431,7 +3431,7 @@ void q_svgwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QDragEnterEvent*)
+/// @param callback void func(QSvgWidget* self, QDragEnterEvent* event)
 void q_svgwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3461,7 +3461,7 @@ void q_svgwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QDragMoveEvent*)
+/// @param callback void func(QSvgWidget* self, QDragMoveEvent* event)
 void q_svgwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3491,7 +3491,7 @@ void q_svgwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QDragLeaveEvent*)
+/// @param callback void func(QSvgWidget* self, QDragLeaveEvent* event)
 void q_svgwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3521,7 +3521,7 @@ void q_svgwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QDropEvent*)
+/// @param callback void func(QSvgWidget* self, QDropEvent* event)
 void q_svgwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3551,7 +3551,7 @@ void q_svgwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QShowEvent*)
+/// @param callback void func(QSvgWidget* self, QShowEvent* event)
 void q_svgwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3581,7 +3581,7 @@ void q_svgwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QHideEvent*)
+/// @param callback void func(QSvgWidget* self, QHideEvent* event)
 void q_svgwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3615,7 +3615,7 @@ bool q_svgwidget_qbase_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn(QSvgWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QSvgWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_svgwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3645,7 +3645,7 @@ void q_svgwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QEvent*)
+/// @param callback void func(QSvgWidget* self, QEvent* param1)
 void q_svgwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3675,7 +3675,7 @@ int32_t q_svgwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback int32_t fn(QSvgWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QSvgWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_svgwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3705,7 +3705,7 @@ void q_svgwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QPainter*)
+/// @param callback void func(QSvgWidget* self, QPainter* painter)
 void q_svgwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3735,7 +3735,7 @@ QPaintDevice* q_svgwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback QPaintDevice* fn(QSvgWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QSvgWidget* self, QPoint* offset)
 void q_svgwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3763,7 +3763,7 @@ QPainter* q_svgwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_svgwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3793,7 +3793,7 @@ void q_svgwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QInputMethodEvent*)
+/// @param callback void func(QSvgWidget* self, QInputMethodEvent* param1)
 void q_svgwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3823,7 +3823,7 @@ QVariant* q_svgwidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback QVariant* fn(QSvgWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QSvgWidget* self, enum Qt__InputMethodQuery param1)
 void q_svgwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3853,7 +3853,7 @@ bool q_svgwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn(QSvgWidget*, bool)
+/// @param callback bool func(QSvgWidget* self, bool next)
 void q_svgwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3885,7 +3885,7 @@ bool q_svgwidget_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn(QSvgWidget*, QObject*, QEvent*)
+/// @param callback bool func(QSvgWidget* self, QObject* watched, QEvent* event)
 void q_svgwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3915,7 +3915,7 @@ void q_svgwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QTimerEvent*)
+/// @param callback void func(QSvgWidget* self, QTimerEvent* event)
 void q_svgwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3945,7 +3945,7 @@ void q_svgwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QChildEvent*)
+/// @param callback void func(QSvgWidget* self, QChildEvent* event)
 void q_svgwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3975,7 +3975,7 @@ void q_svgwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QEvent*)
+/// @param callback void func(QSvgWidget* self, QEvent* event)
 void q_svgwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4005,7 +4005,7 @@ void q_svgwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMetaMethod*)
+/// @param callback void func(QSvgWidget* self, QMetaMethod* signal)
 void q_svgwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4035,7 +4035,7 @@ void q_svgwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, QMetaMethod*)
+/// @param callback void func(QSvgWidget* self, QMetaMethod* signal)
 void q_svgwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4063,7 +4063,7 @@ void q_svgwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_svgwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4091,7 +4091,7 @@ void q_svgwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_svgwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4119,7 +4119,7 @@ void q_svgwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_svgwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4147,7 +4147,7 @@ bool q_svgwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_svgwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4175,7 +4175,7 @@ bool q_svgwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_svgwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4203,7 +4203,7 @@ QObject* q_svgwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_svgwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4231,7 +4231,7 @@ int32_t q_svgwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_svgwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4261,7 +4261,7 @@ int32_t q_svgwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback int32_t fn(QSvgWidget*, const char*)
+/// @param callback int32_t func(QSvgWidget* self, const char* signal)
 void q_svgwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4291,7 +4291,7 @@ bool q_svgwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback bool fn(QSvgWidget*, QMetaMethod*)
+/// @param callback bool func(QSvgWidget* self, QMetaMethod* signal)
 void q_svgwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4323,7 +4323,7 @@ double q_svgwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgWidget*
-/// @param callback double fn(QSvgWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QSvgWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_svgwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4333,7 +4333,7 @@ void q_svgwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, i
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSvgWidget*
-/// @param callback void fn(QSvgWidget*, const char*)
+/// @param callback void func(QSvgWidget* self, const char* objectName)
 void q_svgwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgwidget.html#dtor.QSvgWidget)

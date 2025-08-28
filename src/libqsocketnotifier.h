@@ -55,7 +55,7 @@ int32_t q_socketnotifier_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QSocketNotifier*
-/// @param callback int32_t fn(QSocketNotifier*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSocketNotifier* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_socketnotifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -118,7 +118,7 @@ bool q_socketnotifier_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSocketNotifier*
-/// @param callback bool fn(QSocketNotifier*, QEvent*)
+/// @param callback bool func(QSocketNotifier* self, QEvent* param1)
 void q_socketnotifier_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsocketnotifier.html#event)
@@ -372,7 +372,7 @@ void q_socketnotifier_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*)
+/// @param callback void func(QSocketNotifier* self)
 void q_socketnotifier_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -450,7 +450,7 @@ void q_socketnotifier_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QObject*)
+/// @param callback void func(QSocketNotifier* self, QObject* param1)
 void q_socketnotifier_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -482,7 +482,7 @@ bool q_socketnotifier_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback bool fn(QSocketNotifier*, QObject*, QEvent*)
+/// @param callback bool func(QSocketNotifier* self, QObject* watched, QEvent* event)
 void q_socketnotifier_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -512,7 +512,7 @@ void q_socketnotifier_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QTimerEvent*)
+/// @param callback void func(QSocketNotifier* self, QTimerEvent* event)
 void q_socketnotifier_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -542,7 +542,7 @@ void q_socketnotifier_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QChildEvent*)
+/// @param callback void func(QSocketNotifier* self, QChildEvent* event)
 void q_socketnotifier_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -572,7 +572,7 @@ void q_socketnotifier_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QEvent*)
+/// @param callback void func(QSocketNotifier* self, QEvent* event)
 void q_socketnotifier_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -602,7 +602,7 @@ void q_socketnotifier_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QMetaMethod*)
+/// @param callback void func(QSocketNotifier* self, QMetaMethod* signal)
 void q_socketnotifier_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -632,7 +632,7 @@ void q_socketnotifier_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QMetaMethod*)
+/// @param callback void func(QSocketNotifier* self, QMetaMethod* signal)
 void q_socketnotifier_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -660,7 +660,7 @@ QObject* q_socketnotifier_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_socketnotifier_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -688,7 +688,7 @@ int32_t q_socketnotifier_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_socketnotifier_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -718,7 +718,7 @@ int32_t q_socketnotifier_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback int32_t fn(QSocketNotifier*, const char*)
+/// @param callback int32_t func(QSocketNotifier* self, const char* signal)
 void q_socketnotifier_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -748,7 +748,7 @@ bool q_socketnotifier_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSocketNotifier*
-/// @param callback bool fn(QSocketNotifier*, QMetaMethod*)
+/// @param callback bool func(QSocketNotifier* self, QMetaMethod* signal)
 void q_socketnotifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsocketnotifier.html#activated)
@@ -756,7 +756,7 @@ void q_socketnotifier_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, QSocketDescriptor*, enum QSocketNotifier__Type)
+/// @param callback void func(QSocketNotifier* self, QSocketDescriptor* socket, enum QSocketNotifier__Type activationEvent)
 void q_socketnotifier_on_activated(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QObject
@@ -766,7 +766,7 @@ void q_socketnotifier_on_activated(void* self, void (*callback)(void*, void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSocketNotifier*
-/// @param callback void fn(QSocketNotifier*, const char*)
+/// @param callback void func(QSocketNotifier* self, const char* objectName)
 void q_socketnotifier_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsocketnotifier.html#dtor.QSocketNotifier)

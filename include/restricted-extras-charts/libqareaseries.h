@@ -51,7 +51,7 @@ int32_t q_areaseries_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QAreaSeries*
-/// @param callback int32_t fn(QAreaSeries*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAreaSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_areaseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -81,7 +81,7 @@ int32_t q_areaseries_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAreaSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_areaseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
@@ -233,7 +233,7 @@ void q_areaseries_clicked(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#clicked)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QPointF*)
+/// @param callback void func(QAreaSeries* self, QPointF* point)
 void q_areaseries_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#hovered)
@@ -246,7 +246,7 @@ void q_areaseries_hovered(void* self, void* point, bool state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#hovered)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QPointF*, bool)
+/// @param callback void func(QAreaSeries* self, QPointF* point, bool state)
 void q_areaseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pressed)
@@ -258,7 +258,7 @@ void q_areaseries_pressed(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pressed)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QPointF*)
+/// @param callback void func(QAreaSeries* self, QPointF* point)
 void q_areaseries_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#released)
@@ -270,7 +270,7 @@ void q_areaseries_released(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#released)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QPointF*)
+/// @param callback void func(QAreaSeries* self, QPointF* point)
 void q_areaseries_on_released(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#doubleClicked)
@@ -282,7 +282,7 @@ void q_areaseries_double_clicked(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QPointF*)
+/// @param callback void func(QAreaSeries* self, QPointF* point)
 void q_areaseries_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#selected)
@@ -293,7 +293,7 @@ void q_areaseries_selected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#selected)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*)
+/// @param callback void func(QAreaSeries* self)
 void q_areaseries_on_selected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#colorChanged)
@@ -305,7 +305,7 @@ void q_areaseries_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#colorChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QColor*)
+/// @param callback void func(QAreaSeries* self, QColor* color)
 void q_areaseries_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#borderColorChanged)
@@ -317,7 +317,7 @@ void q_areaseries_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#borderColorChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QColor*)
+/// @param callback void func(QAreaSeries* self, QColor* color)
 void q_areaseries_on_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFormatChanged)
@@ -329,7 +329,7 @@ void q_areaseries_point_labels_format_changed(void* self, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFormatChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, const char*)
+/// @param callback void func(QAreaSeries* self, const char* format)
 void q_areaseries_on_point_labels_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsVisibilityChanged)
@@ -341,7 +341,7 @@ void q_areaseries_point_labels_visibility_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsVisibilityChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, bool)
+/// @param callback void func(QAreaSeries* self, bool visible)
 void q_areaseries_on_point_labels_visibility_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFontChanged)
@@ -353,7 +353,7 @@ void q_areaseries_point_labels_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFontChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QFont*)
+/// @param callback void func(QAreaSeries* self, QFont* font)
 void q_areaseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColorChanged)
@@ -365,7 +365,7 @@ void q_areaseries_point_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QColor*)
+/// @param callback void func(QAreaSeries* self, QColor* color)
 void q_areaseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClippingChanged)
@@ -377,7 +377,7 @@ void q_areaseries_point_labels_clipping_changed(void* self, bool clipping);
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClippingChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, bool)
+/// @param callback void func(QAreaSeries* self, bool clipping)
 void q_areaseries_on_point_labels_clipping_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -531,7 +531,7 @@ void q_areaseries_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*)
+/// @param callback void func(QAreaSeries* self)
 void q_areaseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -546,7 +546,7 @@ void q_areaseries_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*)
+/// @param callback void func(QAreaSeries* self)
 void q_areaseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -561,7 +561,7 @@ void q_areaseries_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*)
+/// @param callback void func(QAreaSeries* self)
 void q_areaseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -576,7 +576,7 @@ void q_areaseries_use_open_g_l_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*)
+/// @param callback void func(QAreaSeries* self)
 void q_areaseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -821,7 +821,7 @@ void q_areaseries_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*)
+/// @param callback void func(QAreaSeries* self)
 void q_areaseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -899,7 +899,7 @@ void q_areaseries_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QObject*)
+/// @param callback void func(QAreaSeries* self, QObject* param1)
 void q_areaseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -929,7 +929,7 @@ bool q_areaseries_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback bool fn(QAreaSeries*, QEvent*)
+/// @param callback bool func(QAreaSeries* self, QEvent* event)
 void q_areaseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -961,7 +961,7 @@ bool q_areaseries_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback bool fn(QAreaSeries*, QObject*, QEvent*)
+/// @param callback bool func(QAreaSeries* self, QObject* watched, QEvent* event)
 void q_areaseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -991,7 +991,7 @@ void q_areaseries_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QTimerEvent*)
+/// @param callback void func(QAreaSeries* self, QTimerEvent* event)
 void q_areaseries_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1021,7 +1021,7 @@ void q_areaseries_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QChildEvent*)
+/// @param callback void func(QAreaSeries* self, QChildEvent* event)
 void q_areaseries_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1051,7 +1051,7 @@ void q_areaseries_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QEvent*)
+/// @param callback void func(QAreaSeries* self, QEvent* event)
 void q_areaseries_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1081,7 +1081,7 @@ void q_areaseries_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QMetaMethod*)
+/// @param callback void func(QAreaSeries* self, QMetaMethod* signal)
 void q_areaseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1111,7 +1111,7 @@ void q_areaseries_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, QMetaMethod*)
+/// @param callback void func(QAreaSeries* self, QMetaMethod* signal)
 void q_areaseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1139,7 +1139,7 @@ QObject* q_areaseries_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_areaseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1167,7 +1167,7 @@ int32_t q_areaseries_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_areaseries_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1197,7 +1197,7 @@ int32_t q_areaseries_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback int32_t fn(QAreaSeries*, const char*)
+/// @param callback int32_t func(QAreaSeries* self, const char* signal)
 void q_areaseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1227,7 +1227,7 @@ bool q_areaseries_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAreaSeries*
-/// @param callback bool fn(QAreaSeries*, QMetaMethod*)
+/// @param callback bool func(QAreaSeries* self, QMetaMethod* signal)
 void q_areaseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1237,7 +1237,7 @@ void q_areaseries_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAreaSeries*
-/// @param callback void fn(QAreaSeries*, const char*)
+/// @param callback void func(QAreaSeries* self, const char* objectName)
 void q_areaseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#dtor.QAreaSeries)

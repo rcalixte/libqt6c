@@ -136,7 +136,7 @@ void q_legendmarker_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#clicked)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#hovered)
@@ -148,7 +148,7 @@ void q_legendmarker_hovered(void* self, bool status);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#hovered)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*, bool)
+/// @param callback void func(QLegendMarker* self, bool status)
 void q_legendmarker_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelChanged)
@@ -159,7 +159,7 @@ void q_legendmarker_label_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_label_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelBrushChanged)
@@ -170,7 +170,7 @@ void q_legendmarker_label_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelBrushChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_label_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#fontChanged)
@@ -181,7 +181,7 @@ void q_legendmarker_font_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#fontChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_font_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#penChanged)
@@ -192,7 +192,7 @@ void q_legendmarker_pen_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#penChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_pen_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#brushChanged)
@@ -203,7 +203,7 @@ void q_legendmarker_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#brushChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#visibleChanged)
@@ -214,7 +214,7 @@ void q_legendmarker_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#visibleChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_visible_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#shapeChanged)
@@ -225,7 +225,7 @@ void q_legendmarker_shape_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#shapeChanged)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_shape_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -488,7 +488,7 @@ void q_legendmarker_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*)
+/// @param callback void func(QLegendMarker* self)
 void q_legendmarker_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -566,7 +566,7 @@ void q_legendmarker_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*, QObject*)
+/// @param callback void func(QLegendMarker* self, QObject* param1)
 void q_legendmarker_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -576,7 +576,7 @@ void q_legendmarker_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QLegendMarker*
-/// @param callback void fn(QLegendMarker*, const char*)
+/// @param callback void func(QLegendMarker* self, const char* objectName)
 void q_legendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#dtor.QLegendMarker)

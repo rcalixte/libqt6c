@@ -241,7 +241,7 @@ int32_t q_object_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback int32_t fn(QObject*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QObject* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_object_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -270,7 +270,7 @@ bool q_object_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback bool fn(QObject*, QEvent*)
+/// @param callback bool func(QObject* self, QEvent* event)
 void q_object_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
@@ -293,7 +293,7 @@ bool q_object_event_filter(void* self, void* watched, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback bool fn(QObject*, QObject*, QEvent*)
+/// @param callback bool func(QObject* self, QObject* watched, QEvent* event)
 void q_object_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -473,7 +473,7 @@ void q_object_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*)
+/// @param callback void func(QObject* self)
 void q_object_on_destroyed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
@@ -502,7 +502,7 @@ QObject* q_object_sender(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_object_on_sender(void* self, QObject* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -522,7 +522,7 @@ int32_t q_object_sender_signal_index(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_object_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -543,7 +543,7 @@ int32_t q_object_receivers(void* self, const char* signal);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback int32_t fn(QObject*, const char*)
+/// @param callback int32_t func(QObject* self, const char* signal)
 void q_object_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -565,7 +565,7 @@ bool q_object_is_signal_connected(void* self, void* signal);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback bool fn(QObject*, QMetaMethod*)
+/// @param callback bool func(QObject* self, QMetaMethod* signal)
 void q_object_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -587,7 +587,7 @@ void q_object_timer_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, QTimerEvent*)
+/// @param callback void func(QObject* self, QTimerEvent* event)
 void q_object_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -609,7 +609,7 @@ void q_object_child_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, QChildEvent*)
+/// @param callback void func(QObject* self, QChildEvent* event)
 void q_object_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -631,7 +631,7 @@ void q_object_custom_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, QEvent*)
+/// @param callback void func(QObject* self, QEvent* event)
 void q_object_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -653,7 +653,7 @@ void q_object_connect_notify(void* self, void* signal);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, QMetaMethod*)
+/// @param callback void func(QObject* self, QMetaMethod* signal)
 void q_object_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -675,7 +675,7 @@ void q_object_disconnect_notify(void* self, void* signal);
 /// Allows for overriding the related default method
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, QMetaMethod*)
+/// @param callback void func(QObject* self, QMetaMethod* signal)
 void q_object_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -744,7 +744,7 @@ void q_object_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, QObject*)
+/// @param callback void func(QObject* self, QObject* param1)
 void q_object_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
@@ -752,7 +752,7 @@ void q_object_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QObject*
-/// @param callback void fn(QObject*, const char*)
+/// @param callback void func(QObject* self, const char* objectName)
 void q_object_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dtor.QObject)

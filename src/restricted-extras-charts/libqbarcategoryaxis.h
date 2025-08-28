@@ -40,7 +40,7 @@ int32_t q_barcategoryaxis_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback int32_t fn(QBarCategoryAxis*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QBarCategoryAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_barcategoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_barcategoryaxis_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_barcategoryaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#type)
@@ -186,7 +186,7 @@ void q_barcategoryaxis_categories_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#categoriesChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*)
+/// @param callback void func(QBarCategoryAxis* self)
 void q_barcategoryaxis_on_categories_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#minChanged)
@@ -198,7 +198,7 @@ void q_barcategoryaxis_min_changed(void* self, const char* min);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#minChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, const char*)
+/// @param callback void func(QBarCategoryAxis* self, const char* min)
 void q_barcategoryaxis_on_min_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#maxChanged)
@@ -210,7 +210,7 @@ void q_barcategoryaxis_max_changed(void* self, const char* max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#maxChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, const char*)
+/// @param callback void func(QBarCategoryAxis* self, const char* max)
 void q_barcategoryaxis_on_max_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#rangeChanged)
@@ -223,7 +223,7 @@ void q_barcategoryaxis_range_changed(void* self, const char* min, const char* ma
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#rangeChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, const char*, const char*)
+/// @param callback void func(QBarCategoryAxis* self, const char* min, const char* max)
 void q_barcategoryaxis_on_range_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#countChanged)
@@ -234,7 +234,7 @@ void q_barcategoryaxis_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#countChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*)
+/// @param callback void func(QBarCategoryAxis* self)
 void q_barcategoryaxis_on_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -703,7 +703,7 @@ void q_barcategoryaxis_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -719,7 +719,7 @@ void q_barcategoryaxis_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QPen*)
+/// @param callback void func(QBarCategoryAxis* self, QPen* pen)
 void q_barcategoryaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -735,7 +735,7 @@ void q_barcategoryaxis_line_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -751,7 +751,7 @@ void q_barcategoryaxis_labels_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -767,7 +767,7 @@ void q_barcategoryaxis_labels_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QBrush*)
+/// @param callback void func(QBarCategoryAxis* self, QBrush* brush)
 void q_barcategoryaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -783,7 +783,7 @@ void q_barcategoryaxis_labels_font_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QFont*)
+/// @param callback void func(QBarCategoryAxis* self, QFont* pen)
 void q_barcategoryaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -799,7 +799,7 @@ void q_barcategoryaxis_labels_angle_changed(void* self, int angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, int)
+/// @param callback void func(QBarCategoryAxis* self, int angle)
 void q_barcategoryaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -815,7 +815,7 @@ void q_barcategoryaxis_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QPen*)
+/// @param callback void func(QBarCategoryAxis* self, QPen* pen)
 void q_barcategoryaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -831,7 +831,7 @@ void q_barcategoryaxis_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -847,7 +847,7 @@ void q_barcategoryaxis_minor_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -863,7 +863,7 @@ void q_barcategoryaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QPen*)
+/// @param callback void func(QBarCategoryAxis* self, QPen* pen)
 void q_barcategoryaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -879,7 +879,7 @@ void q_barcategoryaxis_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QColor*)
+/// @param callback void func(QBarCategoryAxis* self, QColor* color)
 void q_barcategoryaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -895,7 +895,7 @@ void q_barcategoryaxis_minor_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QColor*)
+/// @param callback void func(QBarCategoryAxis* self, QColor* color)
 void q_barcategoryaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -911,7 +911,7 @@ void q_barcategoryaxis_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QColor*)
+/// @param callback void func(QBarCategoryAxis* self, QColor* color)
 void q_barcategoryaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -927,7 +927,7 @@ void q_barcategoryaxis_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QColor*)
+/// @param callback void func(QBarCategoryAxis* self, QColor* color)
 void q_barcategoryaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -943,7 +943,7 @@ void q_barcategoryaxis_title_text_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, const char*)
+/// @param callback void func(QBarCategoryAxis* self, const char* title)
 void q_barcategoryaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -959,7 +959,7 @@ void q_barcategoryaxis_title_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QBrush*)
+/// @param callback void func(QBarCategoryAxis* self, QBrush* brush)
 void q_barcategoryaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -975,7 +975,7 @@ void q_barcategoryaxis_title_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -991,7 +991,7 @@ void q_barcategoryaxis_title_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QFont*)
+/// @param callback void func(QBarCategoryAxis* self, QFont* font)
 void q_barcategoryaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1007,7 +1007,7 @@ void q_barcategoryaxis_shades_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool visible)
 void q_barcategoryaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1023,7 +1023,7 @@ void q_barcategoryaxis_shades_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QColor*)
+/// @param callback void func(QBarCategoryAxis* self, QColor* color)
 void q_barcategoryaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1039,7 +1039,7 @@ void q_barcategoryaxis_shades_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QColor*)
+/// @param callback void func(QBarCategoryAxis* self, QColor* color)
 void q_barcategoryaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1055,7 +1055,7 @@ void q_barcategoryaxis_shades_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QPen*)
+/// @param callback void func(QBarCategoryAxis* self, QPen* pen)
 void q_barcategoryaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1071,7 +1071,7 @@ void q_barcategoryaxis_shades_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QBrush*)
+/// @param callback void func(QBarCategoryAxis* self, QBrush* brush)
 void q_barcategoryaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1087,7 +1087,7 @@ void q_barcategoryaxis_reverse_changed(void* self, bool reverse);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool reverse)
 void q_barcategoryaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1103,7 +1103,7 @@ void q_barcategoryaxis_labels_editable_changed(void* self, bool editable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool editable)
 void q_barcategoryaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1119,7 +1119,7 @@ void q_barcategoryaxis_labels_truncated_changed(void* self, bool labelsTruncated
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool labelsTruncated)
 void q_barcategoryaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1135,7 +1135,7 @@ void q_barcategoryaxis_truncate_labels_changed(void* self, bool truncateLabels);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, bool)
+/// @param callback void func(QBarCategoryAxis* self, bool truncateLabels)
 void q_barcategoryaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1444,7 +1444,7 @@ void q_barcategoryaxis_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*)
+/// @param callback void func(QBarCategoryAxis* self)
 void q_barcategoryaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1522,7 +1522,7 @@ void q_barcategoryaxis_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QObject*)
+/// @param callback void func(QBarCategoryAxis* self, QObject* param1)
 void q_barcategoryaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1552,7 +1552,7 @@ bool q_barcategoryaxis_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback bool fn(QBarCategoryAxis*, QEvent*)
+/// @param callback bool func(QBarCategoryAxis* self, QEvent* event)
 void q_barcategoryaxis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1584,7 +1584,7 @@ bool q_barcategoryaxis_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback bool fn(QBarCategoryAxis*, QObject*, QEvent*)
+/// @param callback bool func(QBarCategoryAxis* self, QObject* watched, QEvent* event)
 void q_barcategoryaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1614,7 +1614,7 @@ void q_barcategoryaxis_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QTimerEvent*)
+/// @param callback void func(QBarCategoryAxis* self, QTimerEvent* event)
 void q_barcategoryaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1644,7 +1644,7 @@ void q_barcategoryaxis_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QChildEvent*)
+/// @param callback void func(QBarCategoryAxis* self, QChildEvent* event)
 void q_barcategoryaxis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1674,7 +1674,7 @@ void q_barcategoryaxis_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QEvent*)
+/// @param callback void func(QBarCategoryAxis* self, QEvent* event)
 void q_barcategoryaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1704,7 +1704,7 @@ void q_barcategoryaxis_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QMetaMethod*)
+/// @param callback void func(QBarCategoryAxis* self, QMetaMethod* signal)
 void q_barcategoryaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1734,7 +1734,7 @@ void q_barcategoryaxis_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, QMetaMethod*)
+/// @param callback void func(QBarCategoryAxis* self, QMetaMethod* signal)
 void q_barcategoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1762,7 +1762,7 @@ QObject* q_barcategoryaxis_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_barcategoryaxis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1790,7 +1790,7 @@ int32_t q_barcategoryaxis_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_barcategoryaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1820,7 +1820,7 @@ int32_t q_barcategoryaxis_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback int32_t fn(QBarCategoryAxis*, const char*)
+/// @param callback int32_t func(QBarCategoryAxis* self, const char* signal)
 void q_barcategoryaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1850,7 +1850,7 @@ bool q_barcategoryaxis_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback bool fn(QBarCategoryAxis*, QMetaMethod*)
+/// @param callback bool func(QBarCategoryAxis* self, QMetaMethod* signal)
 void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1860,7 +1860,7 @@ void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBarCategoryAxis*
-/// @param callback void fn(QBarCategoryAxis*, const char*)
+/// @param callback void func(QBarCategoryAxis* self, const char* objectName)
 void q_barcategoryaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#dtor.QBarCategoryAxis)

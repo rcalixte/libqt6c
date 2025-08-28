@@ -40,7 +40,7 @@ int32_t k_titlewidget_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self KTitleWidget*
-/// @param callback int32_t fn(KTitleWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KTitleWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_titlewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -164,7 +164,7 @@ void k_titlewidget_change_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QEvent*)
+/// @param callback void func(KTitleWidget* self, QEvent* e)
 void k_titlewidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#changeEvent)
@@ -186,7 +186,7 @@ void k_titlewidget_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QShowEvent*)
+/// @param callback void func(KTitleWidget* self, QShowEvent* event)
 void k_titlewidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#showEvent)
@@ -209,7 +209,7 @@ bool k_titlewidget_event_filter(void* self, void* object, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn(KTitleWidget*, QObject*, QEvent*)
+/// @param callback bool func(KTitleWidget* self, QObject* object, QEvent* event)
 void k_titlewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#eventFilter)
@@ -2203,7 +2203,7 @@ void k_titlewidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, const char*)
+/// @param callback void func(KTitleWidget* self, const char* title)
 void k_titlewidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2219,7 +2219,7 @@ void k_titlewidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QIcon*)
+/// @param callback void func(KTitleWidget* self, QIcon* icon)
 void k_titlewidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2235,7 +2235,7 @@ void k_titlewidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, const char*)
+/// @param callback void func(KTitleWidget* self, const char* iconText)
 void k_titlewidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2251,7 +2251,7 @@ void k_titlewidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QPoint*)
+/// @param callback void func(KTitleWidget* self, QPoint* pos)
 void k_titlewidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2628,7 +2628,7 @@ void k_titlewidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*)
+/// @param callback void func(KTitleWidget* self)
 void k_titlewidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2706,7 +2706,7 @@ void k_titlewidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QObject*)
+/// @param callback void func(KTitleWidget* self, QObject* param1)
 void k_titlewidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2825,7 +2825,7 @@ int32_t k_titlewidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_titlewidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2855,7 +2855,7 @@ void k_titlewidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, bool)
+/// @param callback void func(KTitleWidget* self, bool visible)
 void k_titlewidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2883,7 +2883,7 @@ QSize* k_titlewidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_titlewidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2911,7 +2911,7 @@ QSize* k_titlewidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_titlewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2941,7 +2941,7 @@ int32_t k_titlewidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback int32_t fn(KTitleWidget*, int)
+/// @param callback int32_t func(KTitleWidget* self, int param1)
 void k_titlewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2969,7 +2969,7 @@ bool k_titlewidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_titlewidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2997,7 +2997,7 @@ QPaintEngine* k_titlewidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_titlewidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3027,7 +3027,7 @@ bool k_titlewidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn(KTitleWidget*, QEvent*)
+/// @param callback bool func(KTitleWidget* self, QEvent* event)
 void k_titlewidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3057,7 +3057,7 @@ void k_titlewidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMouseEvent*)
+/// @param callback void func(KTitleWidget* self, QMouseEvent* event)
 void k_titlewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3087,7 +3087,7 @@ void k_titlewidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMouseEvent*)
+/// @param callback void func(KTitleWidget* self, QMouseEvent* event)
 void k_titlewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3117,7 +3117,7 @@ void k_titlewidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMouseEvent*)
+/// @param callback void func(KTitleWidget* self, QMouseEvent* event)
 void k_titlewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3147,7 +3147,7 @@ void k_titlewidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMouseEvent*)
+/// @param callback void func(KTitleWidget* self, QMouseEvent* event)
 void k_titlewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3177,7 +3177,7 @@ void k_titlewidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QWheelEvent*)
+/// @param callback void func(KTitleWidget* self, QWheelEvent* event)
 void k_titlewidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3207,7 +3207,7 @@ void k_titlewidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QKeyEvent*)
+/// @param callback void func(KTitleWidget* self, QKeyEvent* event)
 void k_titlewidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3237,7 +3237,7 @@ void k_titlewidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QKeyEvent*)
+/// @param callback void func(KTitleWidget* self, QKeyEvent* event)
 void k_titlewidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3267,7 +3267,7 @@ void k_titlewidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QFocusEvent*)
+/// @param callback void func(KTitleWidget* self, QFocusEvent* event)
 void k_titlewidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3297,7 +3297,7 @@ void k_titlewidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QFocusEvent*)
+/// @param callback void func(KTitleWidget* self, QFocusEvent* event)
 void k_titlewidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3327,7 +3327,7 @@ void k_titlewidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QEnterEvent*)
+/// @param callback void func(KTitleWidget* self, QEnterEvent* event)
 void k_titlewidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3357,7 +3357,7 @@ void k_titlewidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QEvent*)
+/// @param callback void func(KTitleWidget* self, QEvent* event)
 void k_titlewidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3387,7 +3387,7 @@ void k_titlewidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QPaintEvent*)
+/// @param callback void func(KTitleWidget* self, QPaintEvent* event)
 void k_titlewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3417,7 +3417,7 @@ void k_titlewidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMoveEvent*)
+/// @param callback void func(KTitleWidget* self, QMoveEvent* event)
 void k_titlewidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3447,7 +3447,7 @@ void k_titlewidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QResizeEvent*)
+/// @param callback void func(KTitleWidget* self, QResizeEvent* event)
 void k_titlewidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3477,7 +3477,7 @@ void k_titlewidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QCloseEvent*)
+/// @param callback void func(KTitleWidget* self, QCloseEvent* event)
 void k_titlewidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3507,7 +3507,7 @@ void k_titlewidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QContextMenuEvent*)
+/// @param callback void func(KTitleWidget* self, QContextMenuEvent* event)
 void k_titlewidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3537,7 +3537,7 @@ void k_titlewidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QTabletEvent*)
+/// @param callback void func(KTitleWidget* self, QTabletEvent* event)
 void k_titlewidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3567,7 +3567,7 @@ void k_titlewidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QActionEvent*)
+/// @param callback void func(KTitleWidget* self, QActionEvent* event)
 void k_titlewidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3597,7 +3597,7 @@ void k_titlewidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QDragEnterEvent*)
+/// @param callback void func(KTitleWidget* self, QDragEnterEvent* event)
 void k_titlewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3627,7 +3627,7 @@ void k_titlewidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QDragMoveEvent*)
+/// @param callback void func(KTitleWidget* self, QDragMoveEvent* event)
 void k_titlewidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3657,7 +3657,7 @@ void k_titlewidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QDragLeaveEvent*)
+/// @param callback void func(KTitleWidget* self, QDragLeaveEvent* event)
 void k_titlewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3687,7 +3687,7 @@ void k_titlewidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QDropEvent*)
+/// @param callback void func(KTitleWidget* self, QDropEvent* event)
 void k_titlewidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3717,7 +3717,7 @@ void k_titlewidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QHideEvent*)
+/// @param callback void func(KTitleWidget* self, QHideEvent* event)
 void k_titlewidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3751,7 +3751,7 @@ bool k_titlewidget_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn(KTitleWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(KTitleWidget* self, const char* eventType, void* message, intptr_t* result)
 void k_titlewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3781,7 +3781,7 @@ int32_t k_titlewidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback int32_t fn(KTitleWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KTitleWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_titlewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3811,7 +3811,7 @@ void k_titlewidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QPainter*)
+/// @param callback void func(KTitleWidget* self, QPainter* painter)
 void k_titlewidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3841,7 +3841,7 @@ QPaintDevice* k_titlewidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QPaintDevice* fn(KTitleWidget*, QPoint*)
+/// @param callback QPaintDevice* func(KTitleWidget* self, QPoint* offset)
 void k_titlewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3869,7 +3869,7 @@ QPainter* k_titlewidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_titlewidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3899,7 +3899,7 @@ void k_titlewidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QInputMethodEvent*)
+/// @param callback void func(KTitleWidget* self, QInputMethodEvent* param1)
 void k_titlewidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3929,7 +3929,7 @@ QVariant* k_titlewidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QVariant* fn(KTitleWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KTitleWidget* self, enum Qt__InputMethodQuery param1)
 void k_titlewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3959,7 +3959,7 @@ bool k_titlewidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn(KTitleWidget*, bool)
+/// @param callback bool func(KTitleWidget* self, bool next)
 void k_titlewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3989,7 +3989,7 @@ void k_titlewidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QTimerEvent*)
+/// @param callback void func(KTitleWidget* self, QTimerEvent* event)
 void k_titlewidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4019,7 +4019,7 @@ void k_titlewidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QChildEvent*)
+/// @param callback void func(KTitleWidget* self, QChildEvent* event)
 void k_titlewidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4049,7 +4049,7 @@ void k_titlewidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QEvent*)
+/// @param callback void func(KTitleWidget* self, QEvent* event)
 void k_titlewidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4079,7 +4079,7 @@ void k_titlewidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMetaMethod*)
+/// @param callback void func(KTitleWidget* self, QMetaMethod* signal)
 void k_titlewidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4109,7 +4109,7 @@ void k_titlewidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, QMetaMethod*)
+/// @param callback void func(KTitleWidget* self, QMetaMethod* signal)
 void k_titlewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4137,7 +4137,7 @@ void k_titlewidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_titlewidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4165,7 +4165,7 @@ void k_titlewidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_titlewidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4193,7 +4193,7 @@ void k_titlewidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_titlewidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4221,7 +4221,7 @@ bool k_titlewidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_titlewidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4249,7 +4249,7 @@ bool k_titlewidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_titlewidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4277,7 +4277,7 @@ QObject* k_titlewidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_titlewidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4305,7 +4305,7 @@ int32_t k_titlewidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_titlewidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4335,7 +4335,7 @@ int32_t k_titlewidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback int32_t fn(KTitleWidget*, const char*)
+/// @param callback int32_t func(KTitleWidget* self, const char* signal)
 void k_titlewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4365,7 +4365,7 @@ bool k_titlewidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback bool fn(KTitleWidget*, QMetaMethod*)
+/// @param callback bool func(KTitleWidget* self, QMetaMethod* signal)
 void k_titlewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4397,7 +4397,7 @@ double k_titlewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTitleWidget*
-/// @param callback double fn(KTitleWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KTitleWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_titlewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4407,7 +4407,7 @@ void k_titlewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KTitleWidget*
-/// @param callback void fn(KTitleWidget*, const char*)
+/// @param callback void func(KTitleWidget* self, const char* objectName)
 void k_titlewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#dtor.KTitleWidget)

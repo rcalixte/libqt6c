@@ -64,7 +64,7 @@ int32_t q_commandlinkbutton_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback int32_t fn(QCommandLinkButton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QCommandLinkButton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_commandlinkbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -105,7 +105,7 @@ QSize* q_commandlinkbutton_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_commandlinkbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#sizeHint)
@@ -126,7 +126,7 @@ int32_t q_commandlinkbutton_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback int32_t fn(QCommandLinkButton*, int)
+/// @param callback int32_t func(QCommandLinkButton* self, int param1)
 void q_commandlinkbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#heightForWidth)
@@ -147,7 +147,7 @@ QSize* q_commandlinkbutton_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_commandlinkbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#minimumSizeHint)
@@ -168,7 +168,7 @@ void q_commandlinkbutton_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QStyleOptionButton*)
+/// @param callback void func(QCommandLinkButton* self, QStyleOptionButton* option)
 void q_commandlinkbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#initStyleOption)
@@ -190,7 +190,7 @@ bool q_commandlinkbutton_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn(QCommandLinkButton*, QEvent*)
+/// @param callback bool func(QCommandLinkButton* self, QEvent* e)
 void q_commandlinkbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#event)
@@ -212,7 +212,7 @@ void q_commandlinkbutton_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QPaintEvent*)
+/// @param callback void func(QCommandLinkButton* self, QPaintEvent* param1)
 void q_commandlinkbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#paintEvent)
@@ -514,7 +514,7 @@ void q_commandlinkbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*)
+/// @param callback void func(QCommandLinkButton* self)
 void q_commandlinkbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -529,7 +529,7 @@ void q_commandlinkbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*)
+/// @param callback void func(QCommandLinkButton* self)
 void q_commandlinkbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -544,7 +544,7 @@ void q_commandlinkbutton_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*)
+/// @param callback void func(QCommandLinkButton* self)
 void q_commandlinkbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -560,7 +560,7 @@ void q_commandlinkbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, bool)
+/// @param callback void func(QCommandLinkButton* self, bool checked)
 void q_commandlinkbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -576,7 +576,7 @@ void q_commandlinkbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, bool)
+/// @param callback void func(QCommandLinkButton* self, bool checked)
 void q_commandlinkbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2516,7 +2516,7 @@ void q_commandlinkbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, const char*)
+/// @param callback void func(QCommandLinkButton* self, const char* title)
 void q_commandlinkbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2532,7 +2532,7 @@ void q_commandlinkbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QIcon*)
+/// @param callback void func(QCommandLinkButton* self, QIcon* icon)
 void q_commandlinkbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2548,7 +2548,7 @@ void q_commandlinkbutton_window_icon_text_changed(void* self, const char* iconTe
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, const char*)
+/// @param callback void func(QCommandLinkButton* self, const char* iconText)
 void q_commandlinkbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2564,7 +2564,7 @@ void q_commandlinkbutton_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QPoint*)
+/// @param callback void func(QCommandLinkButton* self, QPoint* pos)
 void q_commandlinkbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2941,7 +2941,7 @@ void q_commandlinkbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*)
+/// @param callback void func(QCommandLinkButton* self)
 void q_commandlinkbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3019,7 +3019,7 @@ void q_commandlinkbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QObject*)
+/// @param callback void func(QCommandLinkButton* self, QObject* param1)
 void q_commandlinkbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3140,7 +3140,7 @@ void q_commandlinkbutton_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QKeyEvent*)
+/// @param callback void func(QCommandLinkButton* self, QKeyEvent* param1)
 void q_commandlinkbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3170,7 +3170,7 @@ void q_commandlinkbutton_qbase_focus_in_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QFocusEvent*)
+/// @param callback void func(QCommandLinkButton* self, QFocusEvent* param1)
 void q_commandlinkbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3200,7 +3200,7 @@ void q_commandlinkbutton_qbase_focus_out_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QFocusEvent*)
+/// @param callback void func(QCommandLinkButton* self, QFocusEvent* param1)
 void q_commandlinkbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3230,7 +3230,7 @@ void q_commandlinkbutton_qbase_mouse_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+/// @param callback void func(QCommandLinkButton* self, QMouseEvent* param1)
 void q_commandlinkbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3260,7 +3260,7 @@ bool q_commandlinkbutton_qbase_hit_button(void* self, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn(QCommandLinkButton*, QPoint*)
+/// @param callback bool func(QCommandLinkButton* self, QPoint* pos)
 void q_commandlinkbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3288,7 +3288,7 @@ void q_commandlinkbutton_qbase_check_state_set(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_commandlinkbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3316,7 +3316,7 @@ void q_commandlinkbutton_qbase_next_check_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_commandlinkbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3346,7 +3346,7 @@ void q_commandlinkbutton_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QKeyEvent*)
+/// @param callback void func(QCommandLinkButton* self, QKeyEvent* e)
 void q_commandlinkbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3376,7 +3376,7 @@ void q_commandlinkbutton_qbase_mouse_press_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+/// @param callback void func(QCommandLinkButton* self, QMouseEvent* e)
 void q_commandlinkbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3406,7 +3406,7 @@ void q_commandlinkbutton_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+/// @param callback void func(QCommandLinkButton* self, QMouseEvent* e)
 void q_commandlinkbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3436,7 +3436,7 @@ void q_commandlinkbutton_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QEvent*)
+/// @param callback void func(QCommandLinkButton* self, QEvent* e)
 void q_commandlinkbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3466,7 +3466,7 @@ void q_commandlinkbutton_qbase_timer_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QTimerEvent*)
+/// @param callback void func(QCommandLinkButton* self, QTimerEvent* e)
 void q_commandlinkbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3494,7 +3494,7 @@ int32_t q_commandlinkbutton_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_commandlinkbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3524,7 +3524,7 @@ void q_commandlinkbutton_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, bool)
+/// @param callback void func(QCommandLinkButton* self, bool visible)
 void q_commandlinkbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3552,7 +3552,7 @@ bool q_commandlinkbutton_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_commandlinkbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3580,7 +3580,7 @@ QPaintEngine* q_commandlinkbutton_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_commandlinkbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3610,7 +3610,7 @@ void q_commandlinkbutton_qbase_mouse_double_click_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+/// @param callback void func(QCommandLinkButton* self, QMouseEvent* event)
 void q_commandlinkbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3640,7 +3640,7 @@ void q_commandlinkbutton_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QWheelEvent*)
+/// @param callback void func(QCommandLinkButton* self, QWheelEvent* event)
 void q_commandlinkbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3670,7 +3670,7 @@ void q_commandlinkbutton_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QEnterEvent*)
+/// @param callback void func(QCommandLinkButton* self, QEnterEvent* event)
 void q_commandlinkbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3700,7 +3700,7 @@ void q_commandlinkbutton_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QEvent*)
+/// @param callback void func(QCommandLinkButton* self, QEvent* event)
 void q_commandlinkbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3730,7 +3730,7 @@ void q_commandlinkbutton_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMoveEvent*)
+/// @param callback void func(QCommandLinkButton* self, QMoveEvent* event)
 void q_commandlinkbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3760,7 +3760,7 @@ void q_commandlinkbutton_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QResizeEvent*)
+/// @param callback void func(QCommandLinkButton* self, QResizeEvent* event)
 void q_commandlinkbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3790,7 +3790,7 @@ void q_commandlinkbutton_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QCloseEvent*)
+/// @param callback void func(QCommandLinkButton* self, QCloseEvent* event)
 void q_commandlinkbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3820,7 +3820,7 @@ void q_commandlinkbutton_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QContextMenuEvent*)
+/// @param callback void func(QCommandLinkButton* self, QContextMenuEvent* event)
 void q_commandlinkbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3850,7 +3850,7 @@ void q_commandlinkbutton_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QTabletEvent*)
+/// @param callback void func(QCommandLinkButton* self, QTabletEvent* event)
 void q_commandlinkbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3880,7 +3880,7 @@ void q_commandlinkbutton_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QActionEvent*)
+/// @param callback void func(QCommandLinkButton* self, QActionEvent* event)
 void q_commandlinkbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3910,7 +3910,7 @@ void q_commandlinkbutton_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QDragEnterEvent*)
+/// @param callback void func(QCommandLinkButton* self, QDragEnterEvent* event)
 void q_commandlinkbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3940,7 +3940,7 @@ void q_commandlinkbutton_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QDragMoveEvent*)
+/// @param callback void func(QCommandLinkButton* self, QDragMoveEvent* event)
 void q_commandlinkbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3970,7 +3970,7 @@ void q_commandlinkbutton_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QDragLeaveEvent*)
+/// @param callback void func(QCommandLinkButton* self, QDragLeaveEvent* event)
 void q_commandlinkbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4000,7 +4000,7 @@ void q_commandlinkbutton_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QDropEvent*)
+/// @param callback void func(QCommandLinkButton* self, QDropEvent* event)
 void q_commandlinkbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4030,7 +4030,7 @@ void q_commandlinkbutton_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QShowEvent*)
+/// @param callback void func(QCommandLinkButton* self, QShowEvent* event)
 void q_commandlinkbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4060,7 +4060,7 @@ void q_commandlinkbutton_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QHideEvent*)
+/// @param callback void func(QCommandLinkButton* self, QHideEvent* event)
 void q_commandlinkbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4094,7 +4094,7 @@ bool q_commandlinkbutton_qbase_native_event(void* self, const char* eventType, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn(QCommandLinkButton*, const char*, void*, intptr_t*)
+/// @param callback bool func(QCommandLinkButton* self, const char* eventType, void* message, intptr_t* result)
 void q_commandlinkbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4124,7 +4124,7 @@ int32_t q_commandlinkbutton_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback int32_t fn(QCommandLinkButton*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QCommandLinkButton* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_commandlinkbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4154,7 +4154,7 @@ void q_commandlinkbutton_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QPainter*)
+/// @param callback void func(QCommandLinkButton* self, QPainter* painter)
 void q_commandlinkbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4184,7 +4184,7 @@ QPaintDevice* q_commandlinkbutton_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QPaintDevice* fn(QCommandLinkButton*, QPoint*)
+/// @param callback QPaintDevice* func(QCommandLinkButton* self, QPoint* offset)
 void q_commandlinkbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4212,7 +4212,7 @@ QPainter* q_commandlinkbutton_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_commandlinkbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4242,7 +4242,7 @@ void q_commandlinkbutton_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QInputMethodEvent*)
+/// @param callback void func(QCommandLinkButton* self, QInputMethodEvent* param1)
 void q_commandlinkbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4272,7 +4272,7 @@ QVariant* q_commandlinkbutton_qbase_input_method_query(void* self, int64_t param
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QVariant* fn(QCommandLinkButton*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QCommandLinkButton* self, enum Qt__InputMethodQuery param1)
 void q_commandlinkbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4302,7 +4302,7 @@ bool q_commandlinkbutton_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn(QCommandLinkButton*, bool)
+/// @param callback bool func(QCommandLinkButton* self, bool next)
 void q_commandlinkbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4334,7 +4334,7 @@ bool q_commandlinkbutton_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn(QCommandLinkButton*, QObject*, QEvent*)
+/// @param callback bool func(QCommandLinkButton* self, QObject* watched, QEvent* event)
 void q_commandlinkbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4364,7 +4364,7 @@ void q_commandlinkbutton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QChildEvent*)
+/// @param callback void func(QCommandLinkButton* self, QChildEvent* event)
 void q_commandlinkbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4394,7 +4394,7 @@ void q_commandlinkbutton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QEvent*)
+/// @param callback void func(QCommandLinkButton* self, QEvent* event)
 void q_commandlinkbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4424,7 +4424,7 @@ void q_commandlinkbutton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMetaMethod*)
+/// @param callback void func(QCommandLinkButton* self, QMetaMethod* signal)
 void q_commandlinkbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4454,7 +4454,7 @@ void q_commandlinkbutton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, QMetaMethod*)
+/// @param callback void func(QCommandLinkButton* self, QMetaMethod* signal)
 void q_commandlinkbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4482,7 +4482,7 @@ void q_commandlinkbutton_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_commandlinkbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4510,7 +4510,7 @@ void q_commandlinkbutton_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_commandlinkbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4538,7 +4538,7 @@ void q_commandlinkbutton_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn()
+/// @param callback void func()
 void q_commandlinkbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4566,7 +4566,7 @@ bool q_commandlinkbutton_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_commandlinkbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4594,7 +4594,7 @@ bool q_commandlinkbutton_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_commandlinkbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4622,7 +4622,7 @@ QObject* q_commandlinkbutton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_commandlinkbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4650,7 +4650,7 @@ int32_t q_commandlinkbutton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_commandlinkbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4680,7 +4680,7 @@ int32_t q_commandlinkbutton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback int32_t fn(QCommandLinkButton*, const char*)
+/// @param callback int32_t func(QCommandLinkButton* self, const char* signal)
 void q_commandlinkbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4710,7 +4710,7 @@ bool q_commandlinkbutton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback bool fn(QCommandLinkButton*, QMetaMethod*)
+/// @param callback bool func(QCommandLinkButton* self, QMetaMethod* signal)
 void q_commandlinkbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4742,7 +4742,7 @@ double q_commandlinkbutton_qbase_get_decoded_metric_f(void* self, int32_t metric
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommandLinkButton*
-/// @param callback double fn(QCommandLinkButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QCommandLinkButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_commandlinkbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4752,7 +4752,7 @@ void q_commandlinkbutton_on_get_decoded_metric_f(void* self, double (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QCommandLinkButton*
-/// @param callback void fn(QCommandLinkButton*, const char*)
+/// @param callback void func(QCommandLinkButton* self, const char* objectName)
 void q_commandlinkbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#dtor.QCommandLinkButton)
