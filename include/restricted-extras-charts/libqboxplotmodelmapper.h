@@ -295,7 +295,7 @@ void q_boxplotmodelmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBoxPlotModelMapper*
-/// @param callback void fn(QBoxPlotModelMapper*)
+/// @param callback void func(QBoxPlotModelMapper* self)
 void q_boxplotmodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -373,7 +373,7 @@ void q_boxplotmodelmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBoxPlotModelMapper*
-/// @param callback void fn(QBoxPlotModelMapper*, QObject*)
+/// @param callback void func(QBoxPlotModelMapper* self, QObject* param1)
 void q_boxplotmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -383,7 +383,7 @@ void q_boxplotmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBoxPlotModelMapper*
-/// @param callback void fn(QBoxPlotModelMapper*, const char*)
+/// @param callback void func(QBoxPlotModelMapper* self, const char* objectName)
 void q_boxplotmodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotmodelmapper-qtcharts.html#dtor.QBoxPlotModelMapper)

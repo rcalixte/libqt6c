@@ -107,7 +107,7 @@ int32_t q_messagebox_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn(QMessageBox*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMessageBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_messagebox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -547,7 +547,7 @@ void q_messagebox_button_clicked(void* self, void* button);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#buttonClicked)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QAbstractButton*)
+/// @param callback void func(QMessageBox* self, QAbstractButton* button)
 void q_messagebox_on_button_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#event)
@@ -561,7 +561,7 @@ bool q_messagebox_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn(QMessageBox*, QEvent*)
+/// @param callback bool func(QMessageBox* self, QEvent* e)
 void q_messagebox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#event)
@@ -583,7 +583,7 @@ void q_messagebox_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QResizeEvent*)
+/// @param callback void func(QMessageBox* self, QResizeEvent* event)
 void q_messagebox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#resizeEvent)
@@ -605,7 +605,7 @@ void q_messagebox_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QShowEvent*)
+/// @param callback void func(QMessageBox* self, QShowEvent* event)
 void q_messagebox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#showEvent)
@@ -627,7 +627,7 @@ void q_messagebox_close_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QCloseEvent*)
+/// @param callback void func(QMessageBox* self, QCloseEvent* event)
 void q_messagebox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#closeEvent)
@@ -649,7 +649,7 @@ void q_messagebox_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QKeyEvent*)
+/// @param callback void func(QMessageBox* self, QKeyEvent* event)
 void q_messagebox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#keyPressEvent)
@@ -671,7 +671,7 @@ void q_messagebox_change_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QEvent*)
+/// @param callback void func(QMessageBox* self, QEvent* event)
 void q_messagebox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#changeEvent)
@@ -1084,7 +1084,7 @@ void q_messagebox_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, int)
+/// @param callback void func(QMessageBox* self, int result)
 void q_messagebox_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -1099,7 +1099,7 @@ void q_messagebox_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*)
+/// @param callback void func(QMessageBox* self)
 void q_messagebox_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -1114,7 +1114,7 @@ void q_messagebox_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*)
+/// @param callback void func(QMessageBox* self)
 void q_messagebox_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -3038,7 +3038,7 @@ void q_messagebox_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, const char*)
+/// @param callback void func(QMessageBox* self, const char* title)
 void q_messagebox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3054,7 +3054,7 @@ void q_messagebox_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QIcon*)
+/// @param callback void func(QMessageBox* self, QIcon* icon)
 void q_messagebox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3070,7 +3070,7 @@ void q_messagebox_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, const char*)
+/// @param callback void func(QMessageBox* self, const char* iconText)
 void q_messagebox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3086,7 +3086,7 @@ void q_messagebox_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QPoint*)
+/// @param callback void func(QMessageBox* self, QPoint* pos)
 void q_messagebox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3463,7 +3463,7 @@ void q_messagebox_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*)
+/// @param callback void func(QMessageBox* self)
 void q_messagebox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3541,7 +3541,7 @@ void q_messagebox_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QObject*)
+/// @param callback void func(QMessageBox* self, QObject* param1)
 void q_messagebox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3662,7 +3662,7 @@ void q_messagebox_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, bool)
+/// @param callback void func(QMessageBox* self, bool visible)
 void q_messagebox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -3690,7 +3690,7 @@ QSize* q_messagebox_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_messagebox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3718,7 +3718,7 @@ QSize* q_messagebox_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_messagebox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3746,7 +3746,7 @@ void q_messagebox_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_messagebox_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3774,7 +3774,7 @@ int32_t q_messagebox_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_messagebox_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3804,7 +3804,7 @@ void q_messagebox_qbase_done(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, int)
+/// @param callback void func(QMessageBox* self, int param1)
 void q_messagebox_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -3832,7 +3832,7 @@ void q_messagebox_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_messagebox_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3860,7 +3860,7 @@ void q_messagebox_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_messagebox_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3890,7 +3890,7 @@ void q_messagebox_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QContextMenuEvent*)
+/// @param callback void func(QMessageBox* self, QContextMenuEvent* param1)
 void q_messagebox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3922,7 +3922,7 @@ bool q_messagebox_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn(QMessageBox*, QObject*, QEvent*)
+/// @param callback bool func(QMessageBox* self, QObject* param1, QEvent* param2)
 void q_messagebox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3950,7 +3950,7 @@ int32_t q_messagebox_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_messagebox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3980,7 +3980,7 @@ int32_t q_messagebox_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn(QMessageBox*, int)
+/// @param callback int32_t func(QMessageBox* self, int param1)
 void q_messagebox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -4008,7 +4008,7 @@ bool q_messagebox_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_messagebox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4036,7 +4036,7 @@ QPaintEngine* q_messagebox_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_messagebox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -4066,7 +4066,7 @@ void q_messagebox_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMouseEvent*)
+/// @param callback void func(QMessageBox* self, QMouseEvent* event)
 void q_messagebox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4096,7 +4096,7 @@ void q_messagebox_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMouseEvent*)
+/// @param callback void func(QMessageBox* self, QMouseEvent* event)
 void q_messagebox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4126,7 +4126,7 @@ void q_messagebox_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMouseEvent*)
+/// @param callback void func(QMessageBox* self, QMouseEvent* event)
 void q_messagebox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4156,7 +4156,7 @@ void q_messagebox_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMouseEvent*)
+/// @param callback void func(QMessageBox* self, QMouseEvent* event)
 void q_messagebox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4186,7 +4186,7 @@ void q_messagebox_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QWheelEvent*)
+/// @param callback void func(QMessageBox* self, QWheelEvent* event)
 void q_messagebox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4216,7 +4216,7 @@ void q_messagebox_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QKeyEvent*)
+/// @param callback void func(QMessageBox* self, QKeyEvent* event)
 void q_messagebox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4246,7 +4246,7 @@ void q_messagebox_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QFocusEvent*)
+/// @param callback void func(QMessageBox* self, QFocusEvent* event)
 void q_messagebox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4276,7 +4276,7 @@ void q_messagebox_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QFocusEvent*)
+/// @param callback void func(QMessageBox* self, QFocusEvent* event)
 void q_messagebox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4306,7 +4306,7 @@ void q_messagebox_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QEnterEvent*)
+/// @param callback void func(QMessageBox* self, QEnterEvent* event)
 void q_messagebox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4336,7 +4336,7 @@ void q_messagebox_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QEvent*)
+/// @param callback void func(QMessageBox* self, QEvent* event)
 void q_messagebox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4366,7 +4366,7 @@ void q_messagebox_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QPaintEvent*)
+/// @param callback void func(QMessageBox* self, QPaintEvent* event)
 void q_messagebox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4396,7 +4396,7 @@ void q_messagebox_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMoveEvent*)
+/// @param callback void func(QMessageBox* self, QMoveEvent* event)
 void q_messagebox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4426,7 +4426,7 @@ void q_messagebox_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QTabletEvent*)
+/// @param callback void func(QMessageBox* self, QTabletEvent* event)
 void q_messagebox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4456,7 +4456,7 @@ void q_messagebox_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QActionEvent*)
+/// @param callback void func(QMessageBox* self, QActionEvent* event)
 void q_messagebox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4486,7 +4486,7 @@ void q_messagebox_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QDragEnterEvent*)
+/// @param callback void func(QMessageBox* self, QDragEnterEvent* event)
 void q_messagebox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4516,7 +4516,7 @@ void q_messagebox_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QDragMoveEvent*)
+/// @param callback void func(QMessageBox* self, QDragMoveEvent* event)
 void q_messagebox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4546,7 +4546,7 @@ void q_messagebox_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QDragLeaveEvent*)
+/// @param callback void func(QMessageBox* self, QDragLeaveEvent* event)
 void q_messagebox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4576,7 +4576,7 @@ void q_messagebox_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QDropEvent*)
+/// @param callback void func(QMessageBox* self, QDropEvent* event)
 void q_messagebox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4606,7 +4606,7 @@ void q_messagebox_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QHideEvent*)
+/// @param callback void func(QMessageBox* self, QHideEvent* event)
 void q_messagebox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4640,7 +4640,7 @@ bool q_messagebox_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn(QMessageBox*, const char*, void*, intptr_t*)
+/// @param callback bool func(QMessageBox* self, const char* eventType, void* message, intptr_t* result)
 void q_messagebox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4670,7 +4670,7 @@ int32_t q_messagebox_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn(QMessageBox*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QMessageBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_messagebox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4700,7 +4700,7 @@ void q_messagebox_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QPainter*)
+/// @param callback void func(QMessageBox* self, QPainter* painter)
 void q_messagebox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4730,7 +4730,7 @@ QPaintDevice* q_messagebox_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QPaintDevice* fn(QMessageBox*, QPoint*)
+/// @param callback QPaintDevice* func(QMessageBox* self, QPoint* offset)
 void q_messagebox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4758,7 +4758,7 @@ QPainter* q_messagebox_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_messagebox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4788,7 +4788,7 @@ void q_messagebox_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QInputMethodEvent*)
+/// @param callback void func(QMessageBox* self, QInputMethodEvent* param1)
 void q_messagebox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4818,7 +4818,7 @@ QVariant* q_messagebox_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QVariant* fn(QMessageBox*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QMessageBox* self, enum Qt__InputMethodQuery param1)
 void q_messagebox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4848,7 +4848,7 @@ bool q_messagebox_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn(QMessageBox*, bool)
+/// @param callback bool func(QMessageBox* self, bool next)
 void q_messagebox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4878,7 +4878,7 @@ void q_messagebox_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QTimerEvent*)
+/// @param callback void func(QMessageBox* self, QTimerEvent* event)
 void q_messagebox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4908,7 +4908,7 @@ void q_messagebox_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QChildEvent*)
+/// @param callback void func(QMessageBox* self, QChildEvent* event)
 void q_messagebox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4938,7 +4938,7 @@ void q_messagebox_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QEvent*)
+/// @param callback void func(QMessageBox* self, QEvent* event)
 void q_messagebox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4968,7 +4968,7 @@ void q_messagebox_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMetaMethod*)
+/// @param callback void func(QMessageBox* self, QMetaMethod* signal)
 void q_messagebox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4998,7 +4998,7 @@ void q_messagebox_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QMetaMethod*)
+/// @param callback void func(QMessageBox* self, QMetaMethod* signal)
 void q_messagebox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -5028,7 +5028,7 @@ void q_messagebox_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, QWidget*)
+/// @param callback void func(QMessageBox* self, QWidget* param1)
 void q_messagebox_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5056,7 +5056,7 @@ void q_messagebox_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_messagebox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5084,7 +5084,7 @@ void q_messagebox_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_messagebox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5112,7 +5112,7 @@ void q_messagebox_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_messagebox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5140,7 +5140,7 @@ bool q_messagebox_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_messagebox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5168,7 +5168,7 @@ bool q_messagebox_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_messagebox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5196,7 +5196,7 @@ QObject* q_messagebox_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_messagebox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5224,7 +5224,7 @@ int32_t q_messagebox_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_messagebox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5254,7 +5254,7 @@ int32_t q_messagebox_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback int32_t fn(QMessageBox*, const char*)
+/// @param callback int32_t func(QMessageBox* self, const char* signal)
 void q_messagebox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5284,7 +5284,7 @@ bool q_messagebox_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback bool fn(QMessageBox*, QMetaMethod*)
+/// @param callback bool func(QMessageBox* self, QMetaMethod* signal)
 void q_messagebox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5316,7 +5316,7 @@ double q_messagebox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMessageBox*
-/// @param callback double fn(QMessageBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QMessageBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_messagebox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5326,7 +5326,7 @@ void q_messagebox_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMessageBox*
-/// @param callback void fn(QMessageBox*, const char*)
+/// @param callback void func(QMessageBox* self, const char* objectName)
 void q_messagebox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#dtor.QMessageBox)

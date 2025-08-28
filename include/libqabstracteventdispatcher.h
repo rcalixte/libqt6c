@@ -158,7 +158,7 @@ void q_abstracteventdispatcher_about_to_block(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#aboutToBlock)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param callback void fn(QAbstractEventDispatcher*)
+/// @param callback void func(QAbstractEventDispatcher* self)
 void q_abstracteventdispatcher_on_about_to_block(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#awake)
@@ -169,7 +169,7 @@ void q_abstracteventdispatcher_awake(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#awake)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param callback void fn(QAbstractEventDispatcher*)
+/// @param callback void func(QAbstractEventDispatcher* self)
 void q_abstracteventdispatcher_on_awake(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -437,7 +437,7 @@ void q_abstracteventdispatcher_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param callback void fn(QAbstractEventDispatcher*)
+/// @param callback void func(QAbstractEventDispatcher* self)
 void q_abstracteventdispatcher_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -515,7 +515,7 @@ void q_abstracteventdispatcher_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param callback void fn(QAbstractEventDispatcher*, QObject*)
+/// @param callback void func(QAbstractEventDispatcher* self, QObject* param1)
 void q_abstracteventdispatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -525,7 +525,7 @@ void q_abstracteventdispatcher_on_destroyed1(void* self, void (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param callback void fn(QAbstractEventDispatcher*, const char*)
+/// @param callback void func(QAbstractEventDispatcher* self, const char* objectName)
 void q_abstracteventdispatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#dtor.QAbstractEventDispatcher)
@@ -744,7 +744,7 @@ void q_abstracteventdispatcherv2_about_to_block(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#aboutToBlock)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param callback void fn(QAbstractEventDispatcherV2*)
+/// @param callback void func(QAbstractEventDispatcherV2* self)
 void q_abstracteventdispatcherv2_on_about_to_block(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractEventDispatcher
@@ -759,7 +759,7 @@ void q_abstracteventdispatcherv2_awake(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#awake)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param callback void fn(QAbstractEventDispatcherV2*)
+/// @param callback void func(QAbstractEventDispatcherV2* self)
 void q_abstracteventdispatcherv2_on_awake(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractEventDispatcher
@@ -1012,7 +1012,7 @@ void q_abstracteventdispatcherv2_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param callback void fn(QAbstractEventDispatcherV2*)
+/// @param callback void func(QAbstractEventDispatcherV2* self)
 void q_abstracteventdispatcherv2_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1090,7 +1090,7 @@ void q_abstracteventdispatcherv2_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param callback void fn(QAbstractEventDispatcherV2*, QObject*)
+/// @param callback void func(QAbstractEventDispatcherV2* self, QObject* param1)
 void q_abstracteventdispatcherv2_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1100,7 +1100,7 @@ void q_abstracteventdispatcherv2_on_destroyed1(void* self, void (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param callback void fn(QAbstractEventDispatcherV2*, const char*)
+/// @param callback void func(QAbstractEventDispatcherV2* self, const char* objectName)
 void q_abstracteventdispatcherv2_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#dtor.QAbstractEventDispatcherV2)

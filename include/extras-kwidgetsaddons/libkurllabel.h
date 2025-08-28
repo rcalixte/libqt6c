@@ -58,7 +58,7 @@ int32_t k_urllabel_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self KUrlLabel*
-/// @param callback int32_t fn(KUrlLabel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KUrlLabel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_urllabel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -137,7 +137,7 @@ void k_urllabel_set_font(void* self, void* font);
 /// Allows for overriding the related default method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QFont*)
+/// @param callback void func(KUrlLabel* self, QFont* font)
 void k_urllabel_on_set_font(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setFont)
@@ -213,7 +213,7 @@ void k_urllabel_entered_url(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enteredUrl)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*)
+/// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_entered_url(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftUrl)
@@ -224,7 +224,7 @@ void k_urllabel_left_url(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftUrl)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*)
+/// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_left_url(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftClickedUrl)
@@ -235,7 +235,7 @@ void k_urllabel_left_clicked_url(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftClickedUrl)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*)
+/// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_left_clicked_url(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#rightClickedUrl)
@@ -246,7 +246,7 @@ void k_urllabel_right_clicked_url(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#rightClickedUrl)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*)
+/// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_right_clicked_url(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#middleClickedUrl)
@@ -257,7 +257,7 @@ void k_urllabel_middle_clicked_url(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#middleClickedUrl)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*)
+/// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_middle_clicked_url(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#mouseReleaseEvent)
@@ -271,7 +271,7 @@ void k_urllabel_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMouseEvent*)
+/// @param callback void func(KUrlLabel* self, QMouseEvent* param1)
 void k_urllabel_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#mouseReleaseEvent)
@@ -293,7 +293,7 @@ void k_urllabel_enter_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QEnterEvent*)
+/// @param callback void func(KUrlLabel* self, QEnterEvent* event)
 void k_urllabel_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enterEvent)
@@ -315,7 +315,7 @@ void k_urllabel_leave_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QEvent*)
+/// @param callback void func(KUrlLabel* self, QEvent* param1)
 void k_urllabel_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leaveEvent)
@@ -337,7 +337,7 @@ bool k_urllabel_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn(KUrlLabel*, QEvent*)
+/// @param callback bool func(KUrlLabel* self, QEvent* param1)
 void k_urllabel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#event)
@@ -683,7 +683,7 @@ void k_urllabel_link_activated(void* self, const char* link);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkActivated)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, const char*)
+/// @param callback void func(KUrlLabel* self, const char* link)
 void k_urllabel_on_link_activated(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QLabel
@@ -699,7 +699,7 @@ void k_urllabel_link_hovered(void* self, const char* link);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkHovered)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, const char*)
+/// @param callback void func(KUrlLabel* self, const char* link)
 void k_urllabel_on_link_hovered(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QFrame
@@ -2732,7 +2732,7 @@ void k_urllabel_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, const char*)
+/// @param callback void func(KUrlLabel* self, const char* title)
 void k_urllabel_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2748,7 +2748,7 @@ void k_urllabel_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QIcon*)
+/// @param callback void func(KUrlLabel* self, QIcon* icon)
 void k_urllabel_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2764,7 +2764,7 @@ void k_urllabel_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, const char*)
+/// @param callback void func(KUrlLabel* self, const char* iconText)
 void k_urllabel_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2780,7 +2780,7 @@ void k_urllabel_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QPoint*)
+/// @param callback void func(KUrlLabel* self, QPoint* pos)
 void k_urllabel_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3157,7 +3157,7 @@ void k_urllabel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*)
+/// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3235,7 +3235,7 @@ void k_urllabel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QObject*)
+/// @param callback void func(KUrlLabel* self, QObject* param1)
 void k_urllabel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3354,7 +3354,7 @@ QSize* k_urllabel_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_urllabel_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QLabel
@@ -3382,7 +3382,7 @@ QSize* k_urllabel_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_urllabel_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QLabel
@@ -3412,7 +3412,7 @@ int32_t k_urllabel_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback int32_t fn(KUrlLabel*, int)
+/// @param callback int32_t func(KUrlLabel* self, int param1)
 void k_urllabel_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QLabel
@@ -3442,7 +3442,7 @@ void k_urllabel_qbase_key_press_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QKeyEvent*)
+/// @param callback void func(KUrlLabel* self, QKeyEvent* ev)
 void k_urllabel_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3472,7 +3472,7 @@ void k_urllabel_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QPaintEvent*)
+/// @param callback void func(KUrlLabel* self, QPaintEvent* param1)
 void k_urllabel_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3502,7 +3502,7 @@ void k_urllabel_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QEvent*)
+/// @param callback void func(KUrlLabel* self, QEvent* param1)
 void k_urllabel_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3532,7 +3532,7 @@ void k_urllabel_qbase_mouse_press_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMouseEvent*)
+/// @param callback void func(KUrlLabel* self, QMouseEvent* ev)
 void k_urllabel_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3562,7 +3562,7 @@ void k_urllabel_qbase_mouse_move_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMouseEvent*)
+/// @param callback void func(KUrlLabel* self, QMouseEvent* ev)
 void k_urllabel_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3592,7 +3592,7 @@ void k_urllabel_qbase_context_menu_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QContextMenuEvent*)
+/// @param callback void func(KUrlLabel* self, QContextMenuEvent* ev)
 void k_urllabel_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3622,7 +3622,7 @@ void k_urllabel_qbase_focus_in_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QFocusEvent*)
+/// @param callback void func(KUrlLabel* self, QFocusEvent* ev)
 void k_urllabel_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3652,7 +3652,7 @@ void k_urllabel_qbase_focus_out_event(void* self, void* ev);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QFocusEvent*)
+/// @param callback void func(KUrlLabel* self, QFocusEvent* ev)
 void k_urllabel_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLabel
@@ -3682,7 +3682,7 @@ bool k_urllabel_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn(KUrlLabel*, bool)
+/// @param callback bool func(KUrlLabel* self, bool next)
 void k_urllabel_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QFrame
@@ -3712,7 +3712,7 @@ void k_urllabel_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QStyleOptionFrame*)
+/// @param callback void func(KUrlLabel* self, QStyleOptionFrame* option)
 void k_urllabel_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3740,7 +3740,7 @@ int32_t k_urllabel_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_urllabel_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3770,7 +3770,7 @@ void k_urllabel_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, bool)
+/// @param callback void func(KUrlLabel* self, bool visible)
 void k_urllabel_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3798,7 +3798,7 @@ bool k_urllabel_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_urllabel_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3826,7 +3826,7 @@ QPaintEngine* k_urllabel_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_urllabel_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3856,7 +3856,7 @@ void k_urllabel_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMouseEvent*)
+/// @param callback void func(KUrlLabel* self, QMouseEvent* event)
 void k_urllabel_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3886,7 +3886,7 @@ void k_urllabel_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QWheelEvent*)
+/// @param callback void func(KUrlLabel* self, QWheelEvent* event)
 void k_urllabel_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3916,7 +3916,7 @@ void k_urllabel_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QKeyEvent*)
+/// @param callback void func(KUrlLabel* self, QKeyEvent* event)
 void k_urllabel_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3946,7 +3946,7 @@ void k_urllabel_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMoveEvent*)
+/// @param callback void func(KUrlLabel* self, QMoveEvent* event)
 void k_urllabel_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3976,7 +3976,7 @@ void k_urllabel_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QResizeEvent*)
+/// @param callback void func(KUrlLabel* self, QResizeEvent* event)
 void k_urllabel_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4006,7 +4006,7 @@ void k_urllabel_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QCloseEvent*)
+/// @param callback void func(KUrlLabel* self, QCloseEvent* event)
 void k_urllabel_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4036,7 +4036,7 @@ void k_urllabel_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QTabletEvent*)
+/// @param callback void func(KUrlLabel* self, QTabletEvent* event)
 void k_urllabel_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4066,7 +4066,7 @@ void k_urllabel_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QActionEvent*)
+/// @param callback void func(KUrlLabel* self, QActionEvent* event)
 void k_urllabel_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4096,7 +4096,7 @@ void k_urllabel_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QDragEnterEvent*)
+/// @param callback void func(KUrlLabel* self, QDragEnterEvent* event)
 void k_urllabel_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4126,7 +4126,7 @@ void k_urllabel_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QDragMoveEvent*)
+/// @param callback void func(KUrlLabel* self, QDragMoveEvent* event)
 void k_urllabel_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4156,7 +4156,7 @@ void k_urllabel_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QDragLeaveEvent*)
+/// @param callback void func(KUrlLabel* self, QDragLeaveEvent* event)
 void k_urllabel_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4186,7 +4186,7 @@ void k_urllabel_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QDropEvent*)
+/// @param callback void func(KUrlLabel* self, QDropEvent* event)
 void k_urllabel_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4216,7 +4216,7 @@ void k_urllabel_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QShowEvent*)
+/// @param callback void func(KUrlLabel* self, QShowEvent* event)
 void k_urllabel_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4246,7 +4246,7 @@ void k_urllabel_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QHideEvent*)
+/// @param callback void func(KUrlLabel* self, QHideEvent* event)
 void k_urllabel_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4280,7 +4280,7 @@ bool k_urllabel_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn(KUrlLabel*, const char*, void*, intptr_t*)
+/// @param callback bool func(KUrlLabel* self, const char* eventType, void* message, intptr_t* result)
 void k_urllabel_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4310,7 +4310,7 @@ int32_t k_urllabel_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback int32_t fn(KUrlLabel*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KUrlLabel* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_urllabel_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4340,7 +4340,7 @@ void k_urllabel_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QPainter*)
+/// @param callback void func(KUrlLabel* self, QPainter* painter)
 void k_urllabel_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4370,7 +4370,7 @@ QPaintDevice* k_urllabel_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QPaintDevice* fn(KUrlLabel*, QPoint*)
+/// @param callback QPaintDevice* func(KUrlLabel* self, QPoint* offset)
 void k_urllabel_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4398,7 +4398,7 @@ QPainter* k_urllabel_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_urllabel_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4428,7 +4428,7 @@ void k_urllabel_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QInputMethodEvent*)
+/// @param callback void func(KUrlLabel* self, QInputMethodEvent* param1)
 void k_urllabel_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4458,7 +4458,7 @@ QVariant* k_urllabel_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QVariant* fn(KUrlLabel*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KUrlLabel* self, enum Qt__InputMethodQuery param1)
 void k_urllabel_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
@@ -4490,7 +4490,7 @@ bool k_urllabel_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn(KUrlLabel*, QObject*, QEvent*)
+/// @param callback bool func(KUrlLabel* self, QObject* watched, QEvent* event)
 void k_urllabel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4520,7 +4520,7 @@ void k_urllabel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QTimerEvent*)
+/// @param callback void func(KUrlLabel* self, QTimerEvent* event)
 void k_urllabel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4550,7 +4550,7 @@ void k_urllabel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QChildEvent*)
+/// @param callback void func(KUrlLabel* self, QChildEvent* event)
 void k_urllabel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4580,7 +4580,7 @@ void k_urllabel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QEvent*)
+/// @param callback void func(KUrlLabel* self, QEvent* event)
 void k_urllabel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4610,7 +4610,7 @@ void k_urllabel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMetaMethod*)
+/// @param callback void func(KUrlLabel* self, QMetaMethod* signal)
 void k_urllabel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4640,7 +4640,7 @@ void k_urllabel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QMetaMethod*)
+/// @param callback void func(KUrlLabel* self, QMetaMethod* signal)
 void k_urllabel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -4670,7 +4670,7 @@ void k_urllabel_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, QPainter*)
+/// @param callback void func(KUrlLabel* self, QPainter* param1)
 void k_urllabel_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4698,7 +4698,7 @@ void k_urllabel_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_urllabel_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4726,7 +4726,7 @@ void k_urllabel_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_urllabel_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4754,7 +4754,7 @@ void k_urllabel_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn()
+/// @param callback void func()
 void k_urllabel_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4782,7 +4782,7 @@ bool k_urllabel_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_urllabel_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4810,7 +4810,7 @@ bool k_urllabel_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_urllabel_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4838,7 +4838,7 @@ QObject* k_urllabel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_urllabel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4866,7 +4866,7 @@ int32_t k_urllabel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_urllabel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4896,7 +4896,7 @@ int32_t k_urllabel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback int32_t fn(KUrlLabel*, const char*)
+/// @param callback int32_t func(KUrlLabel* self, const char* signal)
 void k_urllabel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4926,7 +4926,7 @@ bool k_urllabel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback bool fn(KUrlLabel*, QMetaMethod*)
+/// @param callback bool func(KUrlLabel* self, QMetaMethod* signal)
 void k_urllabel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4958,7 +4958,7 @@ double k_urllabel_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlLabel*
-/// @param callback double fn(KUrlLabel*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KUrlLabel* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_urllabel_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4968,7 +4968,7 @@ void k_urllabel_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self KUrlLabel*
-/// @param callback void fn(KUrlLabel*, const char*)
+/// @param callback void func(KUrlLabel* self, const char* objectName)
 void k_urllabel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kurllabel.html#dtor.KUrlLabel)

@@ -388,7 +388,7 @@ void q_abstractaxis_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#visibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenChanged)
@@ -400,7 +400,7 @@ void q_abstractaxis_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#linePenChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QPen*)
+/// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#lineVisibleChanged)
@@ -412,7 +412,7 @@ void q_abstractaxis_line_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#lineVisibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisibleChanged)
@@ -424,7 +424,7 @@ void q_abstractaxis_labels_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsVisibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrushChanged)
@@ -436,7 +436,7 @@ void q_abstractaxis_labels_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsBrushChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QBrush*)
+/// @param callback void func(QAbstractAxis* self, QBrush* brush)
 void q_abstractaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFontChanged)
@@ -448,7 +448,7 @@ void q_abstractaxis_labels_font_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsFontChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QFont*)
+/// @param callback void func(QAbstractAxis* self, QFont* pen)
 void q_abstractaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngleChanged)
@@ -460,7 +460,7 @@ void q_abstractaxis_labels_angle_changed(void* self, int angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsAngleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, int)
+/// @param callback void func(QAbstractAxis* self, int angle)
 void q_abstractaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePenChanged)
@@ -472,7 +472,7 @@ void q_abstractaxis_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLinePenChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QPen*)
+/// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridVisibleChanged)
@@ -484,7 +484,7 @@ void q_abstractaxis_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridVisibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridVisibleChanged)
@@ -496,7 +496,7 @@ void q_abstractaxis_minor_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridVisibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePenChanged)
@@ -508,7 +508,7 @@ void q_abstractaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLinePenChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QPen*)
+/// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColorChanged)
@@ -520,7 +520,7 @@ void q_abstractaxis_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#gridLineColorChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QColor*)
+/// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColorChanged)
@@ -532,7 +532,7 @@ void q_abstractaxis_minor_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#minorGridLineColorChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QColor*)
+/// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#colorChanged)
@@ -544,7 +544,7 @@ void q_abstractaxis_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#colorChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QColor*)
+/// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColorChanged)
@@ -556,7 +556,7 @@ void q_abstractaxis_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsColorChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QColor*)
+/// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleTextChanged)
@@ -568,7 +568,7 @@ void q_abstractaxis_title_text_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleTextChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, const char*)
+/// @param callback void func(QAbstractAxis* self, const char* title)
 void q_abstractaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrushChanged)
@@ -580,7 +580,7 @@ void q_abstractaxis_title_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleBrushChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QBrush*)
+/// @param callback void func(QAbstractAxis* self, QBrush* brush)
 void q_abstractaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleVisibleChanged)
@@ -592,7 +592,7 @@ void q_abstractaxis_title_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleVisibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFontChanged)
@@ -604,7 +604,7 @@ void q_abstractaxis_title_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#titleFontChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QFont*)
+/// @param callback void func(QAbstractAxis* self, QFont* font)
 void q_abstractaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisibleChanged)
@@ -616,7 +616,7 @@ void q_abstractaxis_shades_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesVisibleChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool visible)
 void q_abstractaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColorChanged)
@@ -628,7 +628,7 @@ void q_abstractaxis_shades_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesColorChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QColor*)
+/// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColorChanged)
@@ -640,7 +640,7 @@ void q_abstractaxis_shades_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBorderColorChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QColor*)
+/// @param callback void func(QAbstractAxis* self, QColor* color)
 void q_abstractaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPenChanged)
@@ -652,7 +652,7 @@ void q_abstractaxis_shades_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesPenChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QPen*)
+/// @param callback void func(QAbstractAxis* self, QPen* pen)
 void q_abstractaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrushChanged)
@@ -664,7 +664,7 @@ void q_abstractaxis_shades_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#shadesBrushChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QBrush*)
+/// @param callback void func(QAbstractAxis* self, QBrush* brush)
 void q_abstractaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#reverseChanged)
@@ -676,7 +676,7 @@ void q_abstractaxis_reverse_changed(void* self, bool reverse);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#reverseChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool reverse)
 void q_abstractaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditableChanged)
@@ -688,7 +688,7 @@ void q_abstractaxis_labels_editable_changed(void* self, bool editable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsEditableChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool editable)
 void q_abstractaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncatedChanged)
@@ -700,7 +700,7 @@ void q_abstractaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#labelsTruncatedChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool labelsTruncated)
 void q_abstractaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabelsChanged)
@@ -712,7 +712,7 @@ void q_abstractaxis_truncate_labels_changed(void* self, bool truncateLabels);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#truncateLabelsChanged)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, bool)
+/// @param callback void func(QAbstractAxis* self, bool truncateLabels)
 void q_abstractaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -1035,7 +1035,7 @@ void q_abstractaxis_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*)
+/// @param callback void func(QAbstractAxis* self)
 void q_abstractaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1113,7 +1113,7 @@ void q_abstractaxis_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, QObject*)
+/// @param callback void func(QAbstractAxis* self, QObject* param1)
 void q_abstractaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1123,7 +1123,7 @@ void q_abstractaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractAxis*
-/// @param callback void fn(QAbstractAxis*, const char*)
+/// @param callback void func(QAbstractAxis* self, const char* objectName)
 void q_abstractaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#dtor.QAbstractAxis)

@@ -107,7 +107,7 @@ int32_t q_image_dev_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_image_on_dev_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#devType)
@@ -658,7 +658,7 @@ QPaintEngine* q_image_paint_engine(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_image_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#paintEngine)
@@ -750,7 +750,7 @@ int32_t q_image_metric(void* self, int32_t metric);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback int32_t fn(QImage*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QImage* self, enum QPaintDevice__PaintDeviceMetric metric)
 void q_image_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#metric)
@@ -773,7 +773,7 @@ QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback QImage* fn(QImage*, bool, bool)
+/// @param callback QImage* func(QImage* self, bool horizontal, bool vertical)
 void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
@@ -795,7 +795,7 @@ QImage* q_image_rgb_swapped_helper(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback QImage* fn()
+/// @param callback QImage* func()
 void q_image_on_rgb_swapped_helper(void* self, QImage* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
@@ -817,7 +817,7 @@ void q_image_mirrored_inplace(void* self, bool horizontal, bool vertical);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback void fn(QImage*, bool, bool)
+/// @param callback void func(QImage* self, bool horizontal, bool vertical)
 void q_image_on_mirrored_inplace(void* self, void (*callback)(void*, bool, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
@@ -839,7 +839,7 @@ void q_image_rgb_swapped_inplace(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_image_on_rgb_swapped_inplace(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
@@ -861,7 +861,7 @@ QImage* q_image_convert_to_format_helper(void* self, int32_t format, int64_t fla
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback QImage* fn(QImage*, enum QImage__Format, flag of enum Qt__ImageConversionFlag)
+/// @param callback QImage* func(QImage* self, enum QImage__Format format, flag of enum Qt__ImageConversionFlag flags)
 void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
@@ -885,7 +885,7 @@ bool q_image_convert_to_format_inplace(void* self, int32_t format, int64_t flags
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback bool fn(QImage*, enum QImage__Format, flag of enum Qt__ImageConversionFlag)
+/// @param callback bool func(QImage* self, enum QImage__Format format, flag of enum Qt__ImageConversionFlag flags)
 void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
@@ -909,7 +909,7 @@ QImage* q_image_smooth_scaled(void* self, int w, int h);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback QImage* fn(QImage*, int, int)
+/// @param callback QImage* func(QImage* self, int w, int h)
 void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
@@ -931,7 +931,7 @@ void q_image_detach_metadata(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback void fn()
+/// @param callback void func()
 void q_image_on_detach_metadata(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
@@ -1209,7 +1209,7 @@ void q_image_detach_metadata1(void* self, bool invalidateCache);
 /// Allows for overriding the related default method
 ///
 /// @param self QImage*
-/// @param callback void fn(QImage*, bool)
+/// @param callback void func(QImage* self, bool invalidateCache)
 void q_image_on_detach_metadata1(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
@@ -1317,7 +1317,7 @@ void q_image_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImage*
-/// @param callback void fn(QImage*, QPainter*)
+/// @param callback void func(QImage* self, QPainter* painter)
 void q_image_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -1347,7 +1347,7 @@ QPaintDevice* q_image_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImage*
-/// @param callback QPaintDevice* fn(QImage*, QPoint*)
+/// @param callback QPaintDevice* func(QImage* self, QPoint* offset)
 void q_image_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -1375,7 +1375,7 @@ QPainter* q_image_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImage*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_image_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QPaintDevice
@@ -1407,7 +1407,7 @@ double q_image_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImage*
-/// @param callback double fn(QImage*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QImage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_image_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#dtor.QImage)

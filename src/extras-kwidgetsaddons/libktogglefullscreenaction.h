@@ -42,7 +42,7 @@ int32_t k_togglefullscreenaction_metacall(void* self, int32_t param1, int param2
 /// Allows for overriding the related default method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback int32_t fn(KToggleFullScreenAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KToggleFullScreenAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_togglefullscreenaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -84,7 +84,7 @@ bool k_togglefullscreenaction_event_filter(void* self, void* object, void* event
 /// Allows for overriding the related default method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback bool fn(KToggleFullScreenAction*, QObject*, QEvent*)
+/// @param callback bool func(KToggleFullScreenAction* self, QObject* object, QEvent* event)
 void k_togglefullscreenaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#eventFilter)
@@ -107,7 +107,7 @@ void k_togglefullscreenaction_slot_toggled(void* self, bool checked);
 /// Allows for overriding the related default method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, bool)
+/// @param callback void func(KToggleFullScreenAction* self, bool checked)
 void k_togglefullscreenaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#slotToggled)
@@ -567,7 +567,7 @@ void k_togglefullscreenaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*)
+/// @param callback void func(KToggleFullScreenAction* self)
 void k_togglefullscreenaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -583,7 +583,7 @@ void k_togglefullscreenaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, bool)
+/// @param callback void func(KToggleFullScreenAction* self, bool enabled)
 void k_togglefullscreenaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -599,7 +599,7 @@ void k_togglefullscreenaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, bool)
+/// @param callback void func(KToggleFullScreenAction* self, bool checkable)
 void k_togglefullscreenaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -614,7 +614,7 @@ void k_togglefullscreenaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*)
+/// @param callback void func(KToggleFullScreenAction* self)
 void k_togglefullscreenaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -629,7 +629,7 @@ void k_togglefullscreenaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*)
+/// @param callback void func(KToggleFullScreenAction* self)
 void k_togglefullscreenaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -644,7 +644,7 @@ void k_togglefullscreenaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*)
+/// @param callback void func(KToggleFullScreenAction* self)
 void k_togglefullscreenaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -660,7 +660,7 @@ void k_togglefullscreenaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, bool)
+/// @param callback void func(KToggleFullScreenAction* self, bool param1)
 void k_togglefullscreenaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -684,7 +684,7 @@ void k_togglefullscreenaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, bool)
+/// @param callback void func(KToggleFullScreenAction* self, bool checked)
 void k_togglefullscreenaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -913,7 +913,7 @@ void k_togglefullscreenaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*)
+/// @param callback void func(KToggleFullScreenAction* self)
 void k_togglefullscreenaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -991,7 +991,7 @@ void k_togglefullscreenaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, QObject*)
+/// @param callback void func(KToggleFullScreenAction* self, QObject* param1)
 void k_togglefullscreenaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAction
@@ -1021,7 +1021,7 @@ bool k_togglefullscreenaction_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback bool fn(KToggleFullScreenAction*, QEvent*)
+/// @param callback bool func(KToggleFullScreenAction* self, QEvent* param1)
 void k_togglefullscreenaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1051,7 +1051,7 @@ void k_togglefullscreenaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, QTimerEvent*)
+/// @param callback void func(KToggleFullScreenAction* self, QTimerEvent* event)
 void k_togglefullscreenaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1081,7 +1081,7 @@ void k_togglefullscreenaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, QChildEvent*)
+/// @param callback void func(KToggleFullScreenAction* self, QChildEvent* event)
 void k_togglefullscreenaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1111,7 +1111,7 @@ void k_togglefullscreenaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, QEvent*)
+/// @param callback void func(KToggleFullScreenAction* self, QEvent* event)
 void k_togglefullscreenaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1141,7 +1141,7 @@ void k_togglefullscreenaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, QMetaMethod*)
+/// @param callback void func(KToggleFullScreenAction* self, QMetaMethod* signal)
 void k_togglefullscreenaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1171,7 +1171,7 @@ void k_togglefullscreenaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, QMetaMethod*)
+/// @param callback void func(KToggleFullScreenAction* self, QMetaMethod* signal)
 void k_togglefullscreenaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1199,7 +1199,7 @@ QObject* k_togglefullscreenaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_togglefullscreenaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1227,7 +1227,7 @@ int32_t k_togglefullscreenaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_togglefullscreenaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1257,7 +1257,7 @@ int32_t k_togglefullscreenaction_qbase_receivers(void* self, const char* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback int32_t fn(KToggleFullScreenAction*, const char*)
+/// @param callback int32_t func(KToggleFullScreenAction* self, const char* signal)
 void k_togglefullscreenaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1287,7 +1287,7 @@ bool k_togglefullscreenaction_qbase_is_signal_connected(void* self, void* signal
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback bool fn(KToggleFullScreenAction*, QMetaMethod*)
+/// @param callback bool func(KToggleFullScreenAction* self, QMetaMethod* signal)
 void k_togglefullscreenaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1297,7 +1297,7 @@ void k_togglefullscreenaction_on_is_signal_connected(void* self, bool (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self KToggleFullScreenAction*
-/// @param callback void fn(KToggleFullScreenAction*, const char*)
+/// @param callback void func(KToggleFullScreenAction* self, const char* objectName)
 void k_togglefullscreenaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#dtor.KToggleFullScreenAction)

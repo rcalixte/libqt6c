@@ -35,7 +35,7 @@ int32_t k_onsole__emulation_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback int32_t fn(Konsole__Emulation*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(Konsole__Emulation* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_onsole__emulation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -78,7 +78,7 @@ char k_onsole__emulation_erase_char(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback char fn()
+/// @param callback char func()
 void k_onsole__emulation_on_erase_char(void* self, char (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -111,7 +111,7 @@ void k_onsole__emulation_clear_entire_screen(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn()
+/// @param callback void func()
 void k_onsole__emulation_on_clear_entire_screen(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -131,7 +131,7 @@ void k_onsole__emulation_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn()
+/// @param callback void func()
 void k_onsole__emulation_on_reset(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -163,7 +163,7 @@ void k_onsole__emulation_set_image_size(void* self, int lines, int columns);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int, int)
+/// @param callback void func(Konsole__Emulation* self, int lines, int columns)
 void k_onsole__emulation_on_set_image_size(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -186,7 +186,7 @@ void k_onsole__emulation_send_text(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, const char*)
+/// @param callback void func(Konsole__Emulation* self, const char* text)
 void k_onsole__emulation_on_send_text(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -209,7 +209,7 @@ void k_onsole__emulation_send_key_event(void* self, void* param1, bool fromPaste
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QKeyEvent*, bool)
+/// @param callback void func(Konsole__Emulation* self, QKeyEvent* param1, bool fromPaste)
 void k_onsole__emulation_on_send_key_event(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -235,7 +235,7 @@ void k_onsole__emulation_send_mouse_event(void* self, int buttons, int column, i
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int, int, int, int)
+/// @param callback void func(Konsole__Emulation* self, int buttons, int column, int line, int eventType)
 void k_onsole__emulation_on_send_mouse_event(void* self, void (*callback)(void*, int, int, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -261,7 +261,7 @@ void k_onsole__emulation_send_string(void* self, const char* stringVal, int leng
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, const char*, int)
+/// @param callback void func(Konsole__Emulation* self, const char* stringVal, int length)
 void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -290,7 +290,7 @@ void k_onsole__emulation_send_data(void* self, const char* data, int lenVal);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, const char*, int)
+/// @param callback void func(Konsole__Emulation* self, const char* data, int lenVal)
 void k_onsole__emulation_on_send_data(void* self, void (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -302,7 +302,7 @@ void k_onsole__emulation_lock_pty_request(void* self, bool suspendVal);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, bool)
+/// @param callback void func(Konsole__Emulation* self, bool suspendVal)
 void k_onsole__emulation_on_lock_pty_request(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -314,7 +314,7 @@ void k_onsole__emulation_use_utf8_request(void* self, bool param1);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, bool)
+/// @param callback void func(Konsole__Emulation* self, bool param1)
 void k_onsole__emulation_on_use_utf8_request(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -326,7 +326,7 @@ void k_onsole__emulation_state_set(void* self, int state);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int)
+/// @param callback void func(Konsole__Emulation* self, int state)
 void k_onsole__emulation_on_state_set(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -337,7 +337,7 @@ void k_onsole__emulation_zmodem_detected(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*)
+/// @param callback void func(Konsole__Emulation* self)
 void k_onsole__emulation_on_zmodem_detected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -349,7 +349,7 @@ void k_onsole__emulation_change_tab_text_color_request(void* self, int color);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int)
+/// @param callback void func(Konsole__Emulation* self, int color)
 void k_onsole__emulation_on_change_tab_text_color_request(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -361,7 +361,7 @@ void k_onsole__emulation_program_uses_mouse_changed(void* self, bool usesMouse);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, bool)
+/// @param callback void func(Konsole__Emulation* self, bool usesMouse)
 void k_onsole__emulation_on_program_uses_mouse_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -373,7 +373,7 @@ void k_onsole__emulation_program_bracketed_paste_mode_changed(void* self, bool b
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, bool)
+/// @param callback void func(Konsole__Emulation* self, bool bracketedPasteMode)
 void k_onsole__emulation_on_program_bracketed_paste_mode_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -384,7 +384,7 @@ void k_onsole__emulation_output_changed(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*)
+/// @param callback void func(Konsole__Emulation* self)
 void k_onsole__emulation_on_output_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -397,7 +397,7 @@ void k_onsole__emulation_title_changed(void* self, int title, const char* newTit
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int, const char*)
+/// @param callback void func(Konsole__Emulation* self, int title, const char* newTitle)
 void k_onsole__emulation_on_title_changed(void* self, void (*callback)(void*, int, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -410,7 +410,7 @@ void k_onsole__emulation_image_size_changed(void* self, int lineCount, int colum
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int, int)
+/// @param callback void func(Konsole__Emulation* self, int lineCount, int columnCount)
 void k_onsole__emulation_on_image_size_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -421,7 +421,7 @@ void k_onsole__emulation_image_size_initialized(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*)
+/// @param callback void func(Konsole__Emulation* self)
 void k_onsole__emulation_on_image_size_initialized(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -433,7 +433,7 @@ void k_onsole__emulation_image_resize_request(void* self, void* sizz);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QSize*)
+/// @param callback void func(Konsole__Emulation* self, QSize* sizz)
 void k_onsole__emulation_on_image_resize_request(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -445,7 +445,7 @@ void k_onsole__emulation_profile_change_command_received(void* self, const char*
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, const char*)
+/// @param callback void func(Konsole__Emulation* self, const char* text)
 void k_onsole__emulation_on_profile_change_command_received(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -457,7 +457,7 @@ void k_onsole__emulation_flow_control_key_pressed(void* self, bool suspendKeyPre
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, bool)
+/// @param callback void func(Konsole__Emulation* self, bool suspendKeyPressed)
 void k_onsole__emulation_on_flow_control_key_pressed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -470,7 +470,7 @@ void k_onsole__emulation_cursor_changed(void* self, int32_t cursorShape, bool bl
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, enum Konsole__Emulation__KeyboardCursorShape, bool)
+/// @param callback void func(Konsole__Emulation* self, enum Konsole__Emulation__KeyboardCursorShape cursorShape, bool blinkingCursorEnabled)
 void k_onsole__emulation_on_cursor_changed(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -482,7 +482,7 @@ void k_onsole__emulation_handle_command_from_keyboard(void* self, int32_t comman
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, enum Konsole__KeyboardTranslator__Command)
+/// @param callback void func(Konsole__Emulation* self, enum Konsole__KeyboardTranslator__Command command)
 void k_onsole__emulation_on_handle_command_from_keyboard(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -493,7 +493,7 @@ void k_onsole__emulation_output_from_keypress_event(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*)
+/// @param callback void func(Konsole__Emulation* self)
 void k_onsole__emulation_on_output_from_keypress_event(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -507,7 +507,7 @@ void k_onsole__emulation_set_mode(void* self, int mode);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int)
+/// @param callback void func(Konsole__Emulation* self, int mode)
 void k_onsole__emulation_on_set_mode(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -529,7 +529,7 @@ void k_onsole__emulation_reset_mode(void* self, int mode);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int)
+/// @param callback void func(Konsole__Emulation* self, int mode)
 void k_onsole__emulation_on_reset_mode(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -551,7 +551,7 @@ void k_onsole__emulation_set_screen(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, int)
+/// @param callback void func(Konsole__Emulation* self, int index)
 void k_onsole__emulation_on_set_screen(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -573,7 +573,7 @@ void k_onsole__emulation_set_codec(void* self, int32_t codec);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, enum Konsole__Emulation__EmulationCodec)
+/// @param callback void func(Konsole__Emulation* self, enum Konsole__Emulation__EmulationCodec codec)
 void k_onsole__emulation_on_set_codec(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -594,7 +594,7 @@ void k_onsole__emulation_buffered_update(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn()
+/// @param callback void func()
 void k_onsole__emulation_on_buffered_update(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -847,7 +847,7 @@ void k_onsole__emulation_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*)
+/// @param callback void func(Konsole__Emulation* self)
 void k_onsole__emulation_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -925,7 +925,7 @@ void k_onsole__emulation_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QObject*)
+/// @param callback void func(Konsole__Emulation* self, QObject* param1)
 void k_onsole__emulation_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -955,7 +955,7 @@ bool k_onsole__emulation_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback bool fn(Konsole__Emulation*, QEvent*)
+/// @param callback bool func(Konsole__Emulation* self, QEvent* event)
 void k_onsole__emulation_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -987,7 +987,7 @@ bool k_onsole__emulation_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback bool fn(Konsole__Emulation*, QObject*, QEvent*)
+/// @param callback bool func(Konsole__Emulation* self, QObject* watched, QEvent* event)
 void k_onsole__emulation_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1017,7 +1017,7 @@ void k_onsole__emulation_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QTimerEvent*)
+/// @param callback void func(Konsole__Emulation* self, QTimerEvent* event)
 void k_onsole__emulation_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1047,7 +1047,7 @@ void k_onsole__emulation_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QChildEvent*)
+/// @param callback void func(Konsole__Emulation* self, QChildEvent* event)
 void k_onsole__emulation_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1077,7 +1077,7 @@ void k_onsole__emulation_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QEvent*)
+/// @param callback void func(Konsole__Emulation* self, QEvent* event)
 void k_onsole__emulation_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1107,7 +1107,7 @@ void k_onsole__emulation_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QMetaMethod*)
+/// @param callback void func(Konsole__Emulation* self, QMetaMethod* signal)
 void k_onsole__emulation_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1137,7 +1137,7 @@ void k_onsole__emulation_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, QMetaMethod*)
+/// @param callback void func(Konsole__Emulation* self, QMetaMethod* signal)
 void k_onsole__emulation_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1165,7 +1165,7 @@ QObject* k_onsole__emulation_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_onsole__emulation_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1193,7 +1193,7 @@ int32_t k_onsole__emulation_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_onsole__emulation_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1223,7 +1223,7 @@ int32_t k_onsole__emulation_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback int32_t fn(Konsole__Emulation*, const char*)
+/// @param callback int32_t func(Konsole__Emulation* self, const char* signal)
 void k_onsole__emulation_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1253,7 +1253,7 @@ bool k_onsole__emulation_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback bool fn(Konsole__Emulation*, QMetaMethod*)
+/// @param callback bool func(Konsole__Emulation* self, QMetaMethod* signal)
 void k_onsole__emulation_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1263,7 +1263,7 @@ void k_onsole__emulation_on_is_signal_connected(void* self, bool (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void fn(Konsole__Emulation*, const char*)
+/// @param callback void func(Konsole__Emulation* self, const char* objectName)
 void k_onsole__emulation_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.

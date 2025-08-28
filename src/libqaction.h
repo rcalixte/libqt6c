@@ -64,7 +64,7 @@ int32_t q_action_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QAction*
-/// @param callback int32_t fn(QAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_action_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -355,7 +355,7 @@ bool q_action_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAction*
-/// @param callback bool fn(QAction*, QEvent*)
+/// @param callback bool func(QAction* self, QEvent* param1)
 void q_action_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#event)
@@ -418,7 +418,7 @@ void q_action_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*)
+/// @param callback void func(QAction* self)
 void q_action_on_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
@@ -430,7 +430,7 @@ void q_action_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, bool)
+/// @param callback void func(QAction* self, bool enabled)
 void q_action_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
@@ -442,7 +442,7 @@ void q_action_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, bool)
+/// @param callback void func(QAction* self, bool checkable)
 void q_action_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
@@ -453,7 +453,7 @@ void q_action_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*)
+/// @param callback void func(QAction* self)
 void q_action_on_visible_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
@@ -464,7 +464,7 @@ void q_action_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*)
+/// @param callback void func(QAction* self)
 void q_action_on_triggered(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
@@ -475,7 +475,7 @@ void q_action_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*)
+/// @param callback void func(QAction* self)
 void q_action_on_hovered(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
@@ -487,7 +487,7 @@ void q_action_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, bool)
+/// @param callback void func(QAction* self, bool param1)
 void q_action_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -522,7 +522,7 @@ void q_action_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, bool)
+/// @param callback void func(QAction* self, bool checked)
 void q_action_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -751,7 +751,7 @@ void q_action_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*)
+/// @param callback void func(QAction* self)
 void q_action_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -829,7 +829,7 @@ void q_action_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, QObject*)
+/// @param callback void func(QAction* self, QObject* param1)
 void q_action_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -861,7 +861,7 @@ bool q_action_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback bool fn(QAction*, QObject*, QEvent*)
+/// @param callback bool func(QAction* self, QObject* watched, QEvent* event)
 void q_action_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -891,7 +891,7 @@ void q_action_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, QTimerEvent*)
+/// @param callback void func(QAction* self, QTimerEvent* event)
 void q_action_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -921,7 +921,7 @@ void q_action_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, QChildEvent*)
+/// @param callback void func(QAction* self, QChildEvent* event)
 void q_action_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -951,7 +951,7 @@ void q_action_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, QEvent*)
+/// @param callback void func(QAction* self, QEvent* event)
 void q_action_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -981,7 +981,7 @@ void q_action_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, QMetaMethod*)
+/// @param callback void func(QAction* self, QMetaMethod* signal)
 void q_action_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1011,7 +1011,7 @@ void q_action_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, QMetaMethod*)
+/// @param callback void func(QAction* self, QMetaMethod* signal)
 void q_action_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1039,7 +1039,7 @@ QObject* q_action_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_action_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1067,7 +1067,7 @@ int32_t q_action_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_action_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1097,7 +1097,7 @@ int32_t q_action_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback int32_t fn(QAction*, const char*)
+/// @param callback int32_t func(QAction* self, const char* signal)
 void q_action_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1127,7 +1127,7 @@ bool q_action_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAction*
-/// @param callback bool fn(QAction*, QMetaMethod*)
+/// @param callback bool func(QAction* self, QMetaMethod* signal)
 void q_action_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1137,7 +1137,7 @@ void q_action_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAction*
-/// @param callback void fn(QAction*, const char*)
+/// @param callback void func(QAction* self, const char* objectName)
 void q_action_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#dtor.QAction)

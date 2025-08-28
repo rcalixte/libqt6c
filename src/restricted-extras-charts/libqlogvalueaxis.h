@@ -40,7 +40,7 @@ int32_t q_logvalueaxis_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QLogValueAxis*
-/// @param callback int32_t fn(QLogValueAxis*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QLogValueAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_logvalueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_logvalueaxis_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLogValueAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_logvalueaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#type)
@@ -160,7 +160,7 @@ void q_logvalueaxis_min_changed(void* self, double min);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, double)
+/// @param callback void func(QLogValueAxis* self, double min)
 void q_logvalueaxis_on_min_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#maxChanged)
@@ -172,7 +172,7 @@ void q_logvalueaxis_max_changed(void* self, double max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#maxChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, double)
+/// @param callback void func(QLogValueAxis* self, double max)
 void q_logvalueaxis_on_max_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#rangeChanged)
@@ -185,7 +185,7 @@ void q_logvalueaxis_range_changed(void* self, double min, double max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#rangeChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, double, double)
+/// @param callback void func(QLogValueAxis* self, double min, double max)
 void q_logvalueaxis_on_range_changed(void* self, void (*callback)(void*, double, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#labelFormatChanged)
@@ -197,7 +197,7 @@ void q_logvalueaxis_label_format_changed(void* self, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#labelFormatChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, const char*)
+/// @param callback void func(QLogValueAxis* self, const char* format)
 void q_logvalueaxis_on_label_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#baseChanged)
@@ -209,7 +209,7 @@ void q_logvalueaxis_base_changed(void* self, double base);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#baseChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, double)
+/// @param callback void func(QLogValueAxis* self, double base)
 void q_logvalueaxis_on_base_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#tickCountChanged)
@@ -221,7 +221,7 @@ void q_logvalueaxis_tick_count_changed(void* self, int tickCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#tickCountChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, int)
+/// @param callback void func(QLogValueAxis* self, int tickCount)
 void q_logvalueaxis_on_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minorTickCountChanged)
@@ -233,7 +233,7 @@ void q_logvalueaxis_minor_tick_count_changed(void* self, int minorTickCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#minorTickCountChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, int)
+/// @param callback void func(QLogValueAxis* self, int minorTickCount)
 void q_logvalueaxis_on_minor_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -702,7 +702,7 @@ void q_logvalueaxis_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -718,7 +718,7 @@ void q_logvalueaxis_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QPen*)
+/// @param callback void func(QLogValueAxis* self, QPen* pen)
 void q_logvalueaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -734,7 +734,7 @@ void q_logvalueaxis_line_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -750,7 +750,7 @@ void q_logvalueaxis_labels_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -766,7 +766,7 @@ void q_logvalueaxis_labels_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QBrush*)
+/// @param callback void func(QLogValueAxis* self, QBrush* brush)
 void q_logvalueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -782,7 +782,7 @@ void q_logvalueaxis_labels_font_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QFont*)
+/// @param callback void func(QLogValueAxis* self, QFont* pen)
 void q_logvalueaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -798,7 +798,7 @@ void q_logvalueaxis_labels_angle_changed(void* self, int angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, int)
+/// @param callback void func(QLogValueAxis* self, int angle)
 void q_logvalueaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -814,7 +814,7 @@ void q_logvalueaxis_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QPen*)
+/// @param callback void func(QLogValueAxis* self, QPen* pen)
 void q_logvalueaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -830,7 +830,7 @@ void q_logvalueaxis_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -846,7 +846,7 @@ void q_logvalueaxis_minor_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -862,7 +862,7 @@ void q_logvalueaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QPen*)
+/// @param callback void func(QLogValueAxis* self, QPen* pen)
 void q_logvalueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -878,7 +878,7 @@ void q_logvalueaxis_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QColor*)
+/// @param callback void func(QLogValueAxis* self, QColor* color)
 void q_logvalueaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -894,7 +894,7 @@ void q_logvalueaxis_minor_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QColor*)
+/// @param callback void func(QLogValueAxis* self, QColor* color)
 void q_logvalueaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -910,7 +910,7 @@ void q_logvalueaxis_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QColor*)
+/// @param callback void func(QLogValueAxis* self, QColor* color)
 void q_logvalueaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -926,7 +926,7 @@ void q_logvalueaxis_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QColor*)
+/// @param callback void func(QLogValueAxis* self, QColor* color)
 void q_logvalueaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -942,7 +942,7 @@ void q_logvalueaxis_title_text_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, const char*)
+/// @param callback void func(QLogValueAxis* self, const char* title)
 void q_logvalueaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -958,7 +958,7 @@ void q_logvalueaxis_title_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QBrush*)
+/// @param callback void func(QLogValueAxis* self, QBrush* brush)
 void q_logvalueaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -974,7 +974,7 @@ void q_logvalueaxis_title_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -990,7 +990,7 @@ void q_logvalueaxis_title_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QFont*)
+/// @param callback void func(QLogValueAxis* self, QFont* font)
 void q_logvalueaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1006,7 +1006,7 @@ void q_logvalueaxis_shades_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool visible)
 void q_logvalueaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1022,7 +1022,7 @@ void q_logvalueaxis_shades_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QColor*)
+/// @param callback void func(QLogValueAxis* self, QColor* color)
 void q_logvalueaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1038,7 +1038,7 @@ void q_logvalueaxis_shades_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QColor*)
+/// @param callback void func(QLogValueAxis* self, QColor* color)
 void q_logvalueaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1054,7 +1054,7 @@ void q_logvalueaxis_shades_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QPen*)
+/// @param callback void func(QLogValueAxis* self, QPen* pen)
 void q_logvalueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1070,7 +1070,7 @@ void q_logvalueaxis_shades_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QBrush*)
+/// @param callback void func(QLogValueAxis* self, QBrush* brush)
 void q_logvalueaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1086,7 +1086,7 @@ void q_logvalueaxis_reverse_changed(void* self, bool reverse);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool reverse)
 void q_logvalueaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1102,7 +1102,7 @@ void q_logvalueaxis_labels_editable_changed(void* self, bool editable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool editable)
 void q_logvalueaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1118,7 +1118,7 @@ void q_logvalueaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool labelsTruncated)
 void q_logvalueaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1134,7 +1134,7 @@ void q_logvalueaxis_truncate_labels_changed(void* self, bool truncateLabels);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, bool)
+/// @param callback void func(QLogValueAxis* self, bool truncateLabels)
 void q_logvalueaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1443,7 +1443,7 @@ void q_logvalueaxis_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*)
+/// @param callback void func(QLogValueAxis* self)
 void q_logvalueaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1521,7 +1521,7 @@ void q_logvalueaxis_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QObject*)
+/// @param callback void func(QLogValueAxis* self, QObject* param1)
 void q_logvalueaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1551,7 +1551,7 @@ bool q_logvalueaxis_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback bool fn(QLogValueAxis*, QEvent*)
+/// @param callback bool func(QLogValueAxis* self, QEvent* event)
 void q_logvalueaxis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1583,7 +1583,7 @@ bool q_logvalueaxis_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback bool fn(QLogValueAxis*, QObject*, QEvent*)
+/// @param callback bool func(QLogValueAxis* self, QObject* watched, QEvent* event)
 void q_logvalueaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1613,7 +1613,7 @@ void q_logvalueaxis_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QTimerEvent*)
+/// @param callback void func(QLogValueAxis* self, QTimerEvent* event)
 void q_logvalueaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1643,7 +1643,7 @@ void q_logvalueaxis_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QChildEvent*)
+/// @param callback void func(QLogValueAxis* self, QChildEvent* event)
 void q_logvalueaxis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1673,7 +1673,7 @@ void q_logvalueaxis_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QEvent*)
+/// @param callback void func(QLogValueAxis* self, QEvent* event)
 void q_logvalueaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1703,7 +1703,7 @@ void q_logvalueaxis_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QMetaMethod*)
+/// @param callback void func(QLogValueAxis* self, QMetaMethod* signal)
 void q_logvalueaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1733,7 +1733,7 @@ void q_logvalueaxis_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, QMetaMethod*)
+/// @param callback void func(QLogValueAxis* self, QMetaMethod* signal)
 void q_logvalueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1761,7 +1761,7 @@ QObject* q_logvalueaxis_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_logvalueaxis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1789,7 +1789,7 @@ int32_t q_logvalueaxis_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_logvalueaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1819,7 +1819,7 @@ int32_t q_logvalueaxis_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback int32_t fn(QLogValueAxis*, const char*)
+/// @param callback int32_t func(QLogValueAxis* self, const char* signal)
 void q_logvalueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1849,7 +1849,7 @@ bool q_logvalueaxis_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLogValueAxis*
-/// @param callback bool fn(QLogValueAxis*, QMetaMethod*)
+/// @param callback bool func(QLogValueAxis* self, QMetaMethod* signal)
 void q_logvalueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1859,7 +1859,7 @@ void q_logvalueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QLogValueAxis*
-/// @param callback void fn(QLogValueAxis*, const char*)
+/// @param callback void func(QLogValueAxis* self, const char* objectName)
 void q_logvalueaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#dtor.QLogValueAxis)

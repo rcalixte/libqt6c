@@ -138,7 +138,7 @@ void q_graphicssceneevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneEvent*
-/// @param callback void fn(QGraphicsSceneEvent*, bool)
+/// @param callback void func(QGraphicsSceneEvent* self, bool accepted)
 void q_graphicssceneevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -166,7 +166,7 @@ QEvent* q_graphicssceneevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicssceneevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssceneevent.html#dtor.QGraphicsSceneEvent)
@@ -485,7 +485,7 @@ void q_graphicsscenemouseevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneMouseEvent*
-/// @param callback void fn(QGraphicsSceneMouseEvent*, bool)
+/// @param callback void func(QGraphicsSceneMouseEvent* self, bool accepted)
 void q_graphicsscenemouseevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -513,7 +513,7 @@ QEvent* q_graphicsscenemouseevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneMouseEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenemouseevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#dtor.QGraphicsSceneMouseEvent)
@@ -780,7 +780,7 @@ void q_graphicsscenewheelevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneWheelEvent*
-/// @param callback void fn(QGraphicsSceneWheelEvent*, bool)
+/// @param callback void func(QGraphicsSceneWheelEvent* self, bool accepted)
 void q_graphicsscenewheelevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -808,7 +808,7 @@ QEvent* q_graphicsscenewheelevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneWheelEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenewheelevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#dtor.QGraphicsSceneWheelEvent)
@@ -1016,7 +1016,7 @@ void q_graphicsscenecontextmenuevent_qbase_set_accepted(void* self, bool accepte
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
-/// @param callback void fn(QGraphicsSceneContextMenuEvent*, bool)
+/// @param callback void func(QGraphicsSceneContextMenuEvent* self, bool accepted)
 void q_graphicsscenecontextmenuevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -1044,7 +1044,7 @@ QEvent* q_graphicsscenecontextmenuevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenecontextmenuevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#dtor.QGraphicsSceneContextMenuEvent)
@@ -1272,7 +1272,7 @@ void q_graphicsscenehoverevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneHoverEvent*
-/// @param callback void fn(QGraphicsSceneHoverEvent*, bool)
+/// @param callback void func(QGraphicsSceneHoverEvent* self, bool accepted)
 void q_graphicsscenehoverevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -1300,7 +1300,7 @@ QEvent* q_graphicsscenehoverevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneHoverEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenehoverevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#dtor.QGraphicsSceneHoverEvent)
@@ -1471,7 +1471,7 @@ void q_graphicsscenehelpevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneHelpEvent*
-/// @param callback void fn(QGraphicsSceneHelpEvent*, bool)
+/// @param callback void func(QGraphicsSceneHelpEvent* self, bool accepted)
 void q_graphicsscenehelpevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -1499,7 +1499,7 @@ QEvent* q_graphicsscenehelpevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneHelpEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenehelpevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#dtor.QGraphicsSceneHelpEvent)
@@ -1773,7 +1773,7 @@ void q_graphicsscenedragdropevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneDragDropEvent*
-/// @param callback void fn(QGraphicsSceneDragDropEvent*, bool)
+/// @param callback void func(QGraphicsSceneDragDropEvent* self, bool accepted)
 void q_graphicsscenedragdropevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -1801,7 +1801,7 @@ QEvent* q_graphicsscenedragdropevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneDragDropEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenedragdropevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#dtor.QGraphicsSceneDragDropEvent)
@@ -1967,7 +1967,7 @@ void q_graphicssceneresizeevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneResizeEvent*
-/// @param callback void fn(QGraphicsSceneResizeEvent*, bool)
+/// @param callback void func(QGraphicsSceneResizeEvent* self, bool accepted)
 void q_graphicssceneresizeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -1995,7 +1995,7 @@ QEvent* q_graphicssceneresizeevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneResizeEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicssceneresizeevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#dtor.QGraphicsSceneResizeEvent)
@@ -2161,7 +2161,7 @@ void q_graphicsscenemoveevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneMoveEvent*
-/// @param callback void fn(QGraphicsSceneMoveEvent*, bool)
+/// @param callback void func(QGraphicsSceneMoveEvent* self, bool accepted)
 void q_graphicsscenemoveevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QEvent
@@ -2189,7 +2189,7 @@ QEvent* q_graphicsscenemoveevent_qbase_clone(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsSceneMoveEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_graphicsscenemoveevent_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#dtor.QGraphicsSceneMoveEvent)

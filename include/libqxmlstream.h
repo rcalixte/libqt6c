@@ -168,7 +168,7 @@ const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* pub
 /// Allows for overriding the related default method
 ///
 /// @param self QXmlStreamEntityResolver*
-/// @param callback const char* fn(QXmlStreamEntityResolver*, const char*, const char*)
+/// @param callback const char* func(QXmlStreamEntityResolver* self, const char* publicId, const char* systemId)
 void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*callback)(void*, const char*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
@@ -193,7 +193,7 @@ const char* q_xmlstreamentityresolver_resolve_undeclared_entity(void* self, cons
 /// Allows for overriding the related default method
 ///
 /// @param self QXmlStreamEntityResolver*
-/// @param callback const char* fn(QXmlStreamEntityResolver*, const char*)
+/// @param callback const char* func(QXmlStreamEntityResolver* self, const char* name)
 void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const char* (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)

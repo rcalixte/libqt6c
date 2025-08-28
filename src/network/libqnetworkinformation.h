@@ -112,7 +112,7 @@ void q_networkinformation_reachability_changed(void* self, int32_t newReachabili
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*, enum QNetworkInformation__Reachability)
+/// @param callback void func(QNetworkInformation* self, enum QNetworkInformation__Reachability newReachability)
 void q_networkinformation_on_reachability_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
@@ -124,7 +124,7 @@ void q_networkinformation_is_behind_captive_portal_changed(void* self, bool stat
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*, bool)
+/// @param callback void func(QNetworkInformation* self, bool state)
 void q_networkinformation_on_is_behind_captive_portal_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
@@ -136,7 +136,7 @@ void q_networkinformation_transport_medium_changed(void* self, int32_t current);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*, enum QNetworkInformation__TransportMedium)
+/// @param callback void func(QNetworkInformation* self, enum QNetworkInformation__TransportMedium current)
 void q_networkinformation_on_transport_medium_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
@@ -148,7 +148,7 @@ void q_networkinformation_is_metered_changed(void* self, bool isMetered);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*, bool)
+/// @param callback void func(QNetworkInformation* self, bool isMetered)
 void q_networkinformation_on_is_metered_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -411,7 +411,7 @@ void q_networkinformation_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*)
+/// @param callback void func(QNetworkInformation* self)
 void q_networkinformation_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -489,7 +489,7 @@ void q_networkinformation_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*, QObject*)
+/// @param callback void func(QNetworkInformation* self, QObject* param1)
 void q_networkinformation_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -499,7 +499,7 @@ void q_networkinformation_on_destroyed1(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QNetworkInformation*
-/// @param callback void fn(QNetworkInformation*, const char*)
+/// @param callback void func(QNetworkInformation* self, const char* objectName)
 void q_networkinformation_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qnetworkinformation.html#types

@@ -40,7 +40,7 @@ int32_t q_pdfpageselector_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback int32_t fn(QPdfPageSelector*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPdfPageSelector* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pdfpageselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -96,7 +96,7 @@ void q_pdfpageselector_document_changed(void* self, void* document);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpageselector.html#documentChanged)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QPdfDocument*)
+/// @param callback void func(QPdfPageSelector* self, QPdfDocument* document)
 void q_pdfpageselector_on_document_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpageselector.html#currentPageChanged)
@@ -108,7 +108,7 @@ void q_pdfpageselector_current_page_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpageselector.html#currentPageChanged)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, int)
+/// @param callback void func(QPdfPageSelector* self, int index)
 void q_pdfpageselector_on_current_page_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpageselector.html#currentPageLabelChanged)
@@ -120,7 +120,7 @@ void q_pdfpageselector_current_page_label_changed(void* self, const char* label)
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpageselector.html#currentPageLabelChanged)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, const char*)
+/// @param callback void func(QPdfPageSelector* self, const char* label)
 void q_pdfpageselector_on_current_page_label_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -2077,7 +2077,7 @@ void q_pdfpageselector_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, const char*)
+/// @param callback void func(QPdfPageSelector* self, const char* title)
 void q_pdfpageselector_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2093,7 +2093,7 @@ void q_pdfpageselector_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QIcon*)
+/// @param callback void func(QPdfPageSelector* self, QIcon* icon)
 void q_pdfpageselector_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2109,7 +2109,7 @@ void q_pdfpageselector_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, const char*)
+/// @param callback void func(QPdfPageSelector* self, const char* iconText)
 void q_pdfpageselector_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2125,7 +2125,7 @@ void q_pdfpageselector_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QPoint*)
+/// @param callback void func(QPdfPageSelector* self, QPoint* pos)
 void q_pdfpageselector_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2502,7 +2502,7 @@ void q_pdfpageselector_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*)
+/// @param callback void func(QPdfPageSelector* self)
 void q_pdfpageselector_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2580,7 +2580,7 @@ void q_pdfpageselector_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QObject*)
+/// @param callback void func(QPdfPageSelector* self, QObject* param1)
 void q_pdfpageselector_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2699,7 +2699,7 @@ int32_t q_pdfpageselector_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfpageselector_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2729,7 +2729,7 @@ void q_pdfpageselector_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, bool)
+/// @param callback void func(QPdfPageSelector* self, bool visible)
 void q_pdfpageselector_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2757,7 +2757,7 @@ QSize* q_pdfpageselector_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pdfpageselector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2785,7 +2785,7 @@ QSize* q_pdfpageselector_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_pdfpageselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2815,7 +2815,7 @@ int32_t q_pdfpageselector_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback int32_t fn(QPdfPageSelector*, int)
+/// @param callback int32_t func(QPdfPageSelector* self, int param1)
 void q_pdfpageselector_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2843,7 +2843,7 @@ bool q_pdfpageselector_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfpageselector_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2871,7 +2871,7 @@ QPaintEngine* q_pdfpageselector_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_pdfpageselector_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2901,7 +2901,7 @@ bool q_pdfpageselector_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn(QPdfPageSelector*, QEvent*)
+/// @param callback bool func(QPdfPageSelector* self, QEvent* event)
 void q_pdfpageselector_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2931,7 +2931,7 @@ void q_pdfpageselector_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMouseEvent*)
+/// @param callback void func(QPdfPageSelector* self, QMouseEvent* event)
 void q_pdfpageselector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2961,7 +2961,7 @@ void q_pdfpageselector_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMouseEvent*)
+/// @param callback void func(QPdfPageSelector* self, QMouseEvent* event)
 void q_pdfpageselector_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2991,7 +2991,7 @@ void q_pdfpageselector_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMouseEvent*)
+/// @param callback void func(QPdfPageSelector* self, QMouseEvent* event)
 void q_pdfpageselector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3021,7 +3021,7 @@ void q_pdfpageselector_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMouseEvent*)
+/// @param callback void func(QPdfPageSelector* self, QMouseEvent* event)
 void q_pdfpageselector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3051,7 +3051,7 @@ void q_pdfpageselector_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QWheelEvent*)
+/// @param callback void func(QPdfPageSelector* self, QWheelEvent* event)
 void q_pdfpageselector_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3081,7 +3081,7 @@ void q_pdfpageselector_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QKeyEvent*)
+/// @param callback void func(QPdfPageSelector* self, QKeyEvent* event)
 void q_pdfpageselector_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3111,7 +3111,7 @@ void q_pdfpageselector_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QKeyEvent*)
+/// @param callback void func(QPdfPageSelector* self, QKeyEvent* event)
 void q_pdfpageselector_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3141,7 +3141,7 @@ void q_pdfpageselector_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QFocusEvent*)
+/// @param callback void func(QPdfPageSelector* self, QFocusEvent* event)
 void q_pdfpageselector_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3171,7 +3171,7 @@ void q_pdfpageselector_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QFocusEvent*)
+/// @param callback void func(QPdfPageSelector* self, QFocusEvent* event)
 void q_pdfpageselector_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3201,7 +3201,7 @@ void q_pdfpageselector_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QEnterEvent*)
+/// @param callback void func(QPdfPageSelector* self, QEnterEvent* event)
 void q_pdfpageselector_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3231,7 +3231,7 @@ void q_pdfpageselector_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QEvent*)
+/// @param callback void func(QPdfPageSelector* self, QEvent* event)
 void q_pdfpageselector_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3261,7 +3261,7 @@ void q_pdfpageselector_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QPaintEvent*)
+/// @param callback void func(QPdfPageSelector* self, QPaintEvent* event)
 void q_pdfpageselector_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3291,7 +3291,7 @@ void q_pdfpageselector_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMoveEvent*)
+/// @param callback void func(QPdfPageSelector* self, QMoveEvent* event)
 void q_pdfpageselector_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3321,7 +3321,7 @@ void q_pdfpageselector_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QResizeEvent*)
+/// @param callback void func(QPdfPageSelector* self, QResizeEvent* event)
 void q_pdfpageselector_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3351,7 +3351,7 @@ void q_pdfpageselector_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QCloseEvent*)
+/// @param callback void func(QPdfPageSelector* self, QCloseEvent* event)
 void q_pdfpageselector_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3381,7 +3381,7 @@ void q_pdfpageselector_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QContextMenuEvent*)
+/// @param callback void func(QPdfPageSelector* self, QContextMenuEvent* event)
 void q_pdfpageselector_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3411,7 +3411,7 @@ void q_pdfpageselector_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QTabletEvent*)
+/// @param callback void func(QPdfPageSelector* self, QTabletEvent* event)
 void q_pdfpageselector_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3441,7 +3441,7 @@ void q_pdfpageselector_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QActionEvent*)
+/// @param callback void func(QPdfPageSelector* self, QActionEvent* event)
 void q_pdfpageselector_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3471,7 +3471,7 @@ void q_pdfpageselector_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QDragEnterEvent*)
+/// @param callback void func(QPdfPageSelector* self, QDragEnterEvent* event)
 void q_pdfpageselector_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3501,7 +3501,7 @@ void q_pdfpageselector_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QDragMoveEvent*)
+/// @param callback void func(QPdfPageSelector* self, QDragMoveEvent* event)
 void q_pdfpageselector_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3531,7 +3531,7 @@ void q_pdfpageselector_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QDragLeaveEvent*)
+/// @param callback void func(QPdfPageSelector* self, QDragLeaveEvent* event)
 void q_pdfpageselector_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3561,7 +3561,7 @@ void q_pdfpageselector_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QDropEvent*)
+/// @param callback void func(QPdfPageSelector* self, QDropEvent* event)
 void q_pdfpageselector_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3591,7 +3591,7 @@ void q_pdfpageselector_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QShowEvent*)
+/// @param callback void func(QPdfPageSelector* self, QShowEvent* event)
 void q_pdfpageselector_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3621,7 +3621,7 @@ void q_pdfpageselector_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QHideEvent*)
+/// @param callback void func(QPdfPageSelector* self, QHideEvent* event)
 void q_pdfpageselector_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3655,7 +3655,7 @@ bool q_pdfpageselector_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn(QPdfPageSelector*, const char*, void*, intptr_t*)
+/// @param callback bool func(QPdfPageSelector* self, const char* eventType, void* message, intptr_t* result)
 void q_pdfpageselector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3685,7 +3685,7 @@ void q_pdfpageselector_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QEvent*)
+/// @param callback void func(QPdfPageSelector* self, QEvent* param1)
 void q_pdfpageselector_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3715,7 +3715,7 @@ int32_t q_pdfpageselector_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback int32_t fn(QPdfPageSelector*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QPdfPageSelector* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_pdfpageselector_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3745,7 +3745,7 @@ void q_pdfpageselector_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QPainter*)
+/// @param callback void func(QPdfPageSelector* self, QPainter* painter)
 void q_pdfpageselector_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3775,7 +3775,7 @@ QPaintDevice* q_pdfpageselector_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QPaintDevice* fn(QPdfPageSelector*, QPoint*)
+/// @param callback QPaintDevice* func(QPdfPageSelector* self, QPoint* offset)
 void q_pdfpageselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3803,7 +3803,7 @@ QPainter* q_pdfpageselector_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_pdfpageselector_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3833,7 +3833,7 @@ void q_pdfpageselector_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QInputMethodEvent*)
+/// @param callback void func(QPdfPageSelector* self, QInputMethodEvent* param1)
 void q_pdfpageselector_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3863,7 +3863,7 @@ QVariant* q_pdfpageselector_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QVariant* fn(QPdfPageSelector*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QPdfPageSelector* self, enum Qt__InputMethodQuery param1)
 void q_pdfpageselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3893,7 +3893,7 @@ bool q_pdfpageselector_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn(QPdfPageSelector*, bool)
+/// @param callback bool func(QPdfPageSelector* self, bool next)
 void q_pdfpageselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3925,7 +3925,7 @@ bool q_pdfpageselector_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn(QPdfPageSelector*, QObject*, QEvent*)
+/// @param callback bool func(QPdfPageSelector* self, QObject* watched, QEvent* event)
 void q_pdfpageselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3955,7 +3955,7 @@ void q_pdfpageselector_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QTimerEvent*)
+/// @param callback void func(QPdfPageSelector* self, QTimerEvent* event)
 void q_pdfpageselector_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3985,7 +3985,7 @@ void q_pdfpageselector_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QChildEvent*)
+/// @param callback void func(QPdfPageSelector* self, QChildEvent* event)
 void q_pdfpageselector_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4015,7 +4015,7 @@ void q_pdfpageselector_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QEvent*)
+/// @param callback void func(QPdfPageSelector* self, QEvent* event)
 void q_pdfpageselector_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4045,7 +4045,7 @@ void q_pdfpageselector_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMetaMethod*)
+/// @param callback void func(QPdfPageSelector* self, QMetaMethod* signal)
 void q_pdfpageselector_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4075,7 +4075,7 @@ void q_pdfpageselector_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, QMetaMethod*)
+/// @param callback void func(QPdfPageSelector* self, QMetaMethod* signal)
 void q_pdfpageselector_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4103,7 +4103,7 @@ void q_pdfpageselector_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfpageselector_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4131,7 +4131,7 @@ void q_pdfpageselector_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfpageselector_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4159,7 +4159,7 @@ void q_pdfpageselector_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfpageselector_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4187,7 +4187,7 @@ bool q_pdfpageselector_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfpageselector_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4215,7 +4215,7 @@ bool q_pdfpageselector_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfpageselector_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4243,7 +4243,7 @@ QObject* q_pdfpageselector_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pdfpageselector_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4271,7 +4271,7 @@ int32_t q_pdfpageselector_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfpageselector_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4301,7 +4301,7 @@ int32_t q_pdfpageselector_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback int32_t fn(QPdfPageSelector*, const char*)
+/// @param callback int32_t func(QPdfPageSelector* self, const char* signal)
 void q_pdfpageselector_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4331,7 +4331,7 @@ bool q_pdfpageselector_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback bool fn(QPdfPageSelector*, QMetaMethod*)
+/// @param callback bool func(QPdfPageSelector* self, QMetaMethod* signal)
 void q_pdfpageselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4363,7 +4363,7 @@ double q_pdfpageselector_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfPageSelector*
-/// @param callback double fn(QPdfPageSelector*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QPdfPageSelector* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_pdfpageselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4373,7 +4373,7 @@ void q_pdfpageselector_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfPageSelector*
-/// @param callback void fn(QPdfPageSelector*, const char*)
+/// @param callback void func(QPdfPageSelector* self, const char* objectName)
 void q_pdfpageselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpageselector.html#dtor.QPdfPageSelector)

@@ -87,7 +87,7 @@ void q_graphicslinearlayout_remove_at(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, int)
+/// @param callback void func(QGraphicsLinearLayout* self, int index)
 void q_graphicslinearlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#removeAt)
@@ -161,7 +161,7 @@ void q_graphicslinearlayout_set_geometry(void* self, void* rect);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, QRectF*)
+/// @param callback void func(QGraphicsLinearLayout* self, QRectF* rect)
 void q_graphicslinearlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#setGeometry)
@@ -182,7 +182,7 @@ int32_t q_graphicslinearlayout_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_graphicslinearlayout_on_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#count)
@@ -203,7 +203,7 @@ QGraphicsLayoutItem* q_graphicslinearlayout_item_at(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback QGraphicsLayoutItem* fn(QGraphicsLinearLayout*, int)
+/// @param callback QGraphicsLayoutItem* func(QGraphicsLinearLayout* self, int index)
 void q_graphicslinearlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#itemAt)
@@ -224,7 +224,7 @@ void q_graphicslinearlayout_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicslinearlayout_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#invalidate)
@@ -246,7 +246,7 @@ QSizeF* q_graphicslinearlayout_size_hint(void* self, int32_t which, void* constr
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback QSizeF* fn(QGraphicsLinearLayout*, enum Qt__SizeHint, QSizeF*)
+/// @param callback QSizeF* func(QGraphicsLinearLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#sizeHint)
@@ -616,7 +616,7 @@ void q_graphicslinearlayout_qbase_get_contents_margins(void* self, double* left,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, double*, double*, double*, double*)
+/// @param callback void func(QGraphicsLinearLayout* self, double* left, double* top, double* right, double* bottom)
 void q_graphicslinearlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
@@ -644,7 +644,7 @@ void q_graphicslinearlayout_qbase_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_graphicslinearlayout_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayout
@@ -674,7 +674,7 @@ void q_graphicslinearlayout_qbase_widget_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, QEvent*)
+/// @param callback void func(QGraphicsLinearLayout* self, QEvent* e)
 void q_graphicslinearlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -702,7 +702,7 @@ bool q_graphicslinearlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_graphicslinearlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsLayout
@@ -732,7 +732,7 @@ void q_graphicslinearlayout_qbase_add_child_layout_item(void* self, void* layout
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, QGraphicsLayoutItem*)
+/// @param callback void func(QGraphicsLinearLayout* self, QGraphicsLayoutItem* layoutItem)
 void q_graphicslinearlayout_on_add_child_layout_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -762,7 +762,7 @@ void q_graphicslinearlayout_qbase_set_graphics_item(void* self, void* item);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, QGraphicsItem*)
+/// @param callback void func(QGraphicsLinearLayout* self, QGraphicsItem* item)
 void q_graphicslinearlayout_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
@@ -792,7 +792,7 @@ void q_graphicslinearlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsLinearLayout*
-/// @param callback void fn(QGraphicsLinearLayout*, bool)
+/// @param callback void func(QGraphicsLinearLayout* self, bool ownedByLayout)
 void q_graphicslinearlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#dtor.QGraphicsLinearLayout)

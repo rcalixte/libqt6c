@@ -43,7 +43,7 @@ void q_undocommand_undo(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoCommand*
-/// @param callback void fn()
+/// @param callback void func()
 void q_undocommand_on_undo(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#undo)
@@ -63,7 +63,7 @@ void q_undocommand_redo(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoCommand*
-/// @param callback void fn()
+/// @param callback void func()
 void q_undocommand_on_redo(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#redo)
@@ -114,7 +114,7 @@ int32_t q_undocommand_id(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoCommand*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_undocommand_on_id(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#id)
@@ -135,7 +135,7 @@ bool q_undocommand_merge_with(void* self, void* other);
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoCommand*
-/// @param callback bool fn(QUndoCommand*, QUndoCommand*)
+/// @param callback bool func(QUndoCommand* self, QUndoCommand* other)
 void q_undocommand_on_merge_with(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundocommand.html#mergeWith)
@@ -193,7 +193,7 @@ int32_t q_undostack_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoStack*
-/// @param callback int32_t fn(QUndoStack*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QUndoStack* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_undostack_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -359,7 +359,7 @@ void q_undostack_index_changed(void* self, int idx);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#indexChanged)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, int)
+/// @param callback void func(QUndoStack* self, int idx)
 void q_undostack_on_index_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#cleanChanged)
@@ -371,7 +371,7 @@ void q_undostack_clean_changed(void* self, bool clean);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#cleanChanged)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, bool)
+/// @param callback void func(QUndoStack* self, bool clean)
 void q_undostack_on_clean_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#canUndoChanged)
@@ -383,7 +383,7 @@ void q_undostack_can_undo_changed(void* self, bool canUndo);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#canUndoChanged)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, bool)
+/// @param callback void func(QUndoStack* self, bool canUndo)
 void q_undostack_on_can_undo_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#canRedoChanged)
@@ -395,7 +395,7 @@ void q_undostack_can_redo_changed(void* self, bool canRedo);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#canRedoChanged)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, bool)
+/// @param callback void func(QUndoStack* self, bool canRedo)
 void q_undostack_on_can_redo_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#undoTextChanged)
@@ -407,7 +407,7 @@ void q_undostack_undo_text_changed(void* self, const char* undoText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#undoTextChanged)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, const char*)
+/// @param callback void func(QUndoStack* self, const char* undoText)
 void q_undostack_on_undo_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#redoTextChanged)
@@ -419,7 +419,7 @@ void q_undostack_redo_text_changed(void* self, const char* redoText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#redoTextChanged)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, const char*)
+/// @param callback void func(QUndoStack* self, const char* redoText)
 void q_undostack_on_redo_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -685,7 +685,7 @@ void q_undostack_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*)
+/// @param callback void func(QUndoStack* self)
 void q_undostack_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -763,7 +763,7 @@ void q_undostack_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, QObject*)
+/// @param callback void func(QUndoStack* self, QObject* param1)
 void q_undostack_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -793,7 +793,7 @@ bool q_undostack_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback bool fn(QUndoStack*, QEvent*)
+/// @param callback bool func(QUndoStack* self, QEvent* event)
 void q_undostack_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -825,7 +825,7 @@ bool q_undostack_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback bool fn(QUndoStack*, QObject*, QEvent*)
+/// @param callback bool func(QUndoStack* self, QObject* watched, QEvent* event)
 void q_undostack_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -855,7 +855,7 @@ void q_undostack_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, QTimerEvent*)
+/// @param callback void func(QUndoStack* self, QTimerEvent* event)
 void q_undostack_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -885,7 +885,7 @@ void q_undostack_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, QChildEvent*)
+/// @param callback void func(QUndoStack* self, QChildEvent* event)
 void q_undostack_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -915,7 +915,7 @@ void q_undostack_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, QEvent*)
+/// @param callback void func(QUndoStack* self, QEvent* event)
 void q_undostack_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -945,7 +945,7 @@ void q_undostack_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, QMetaMethod*)
+/// @param callback void func(QUndoStack* self, QMetaMethod* signal)
 void q_undostack_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -975,7 +975,7 @@ void q_undostack_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, QMetaMethod*)
+/// @param callback void func(QUndoStack* self, QMetaMethod* signal)
 void q_undostack_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1003,7 +1003,7 @@ QObject* q_undostack_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_undostack_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1031,7 +1031,7 @@ int32_t q_undostack_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_undostack_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1061,7 +1061,7 @@ int32_t q_undostack_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback int32_t fn(QUndoStack*, const char*)
+/// @param callback int32_t func(QUndoStack* self, const char* signal)
 void q_undostack_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1091,7 +1091,7 @@ bool q_undostack_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoStack*
-/// @param callback bool fn(QUndoStack*, QMetaMethod*)
+/// @param callback bool func(QUndoStack* self, QMetaMethod* signal)
 void q_undostack_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1101,7 +1101,7 @@ void q_undostack_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QUndoStack*
-/// @param callback void fn(QUndoStack*, const char*)
+/// @param callback void func(QUndoStack* self, const char* objectName)
 void q_undostack_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundostack.html#dtor.QUndoStack)

@@ -40,7 +40,7 @@ int32_t q_coloraxis_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QColorAxis*
-/// @param callback int32_t fn(QColorAxis*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QColorAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_coloraxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_coloraxis_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QColorAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_coloraxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#type)
@@ -164,7 +164,7 @@ void q_coloraxis_min_changed(void* self, double min);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#minChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, double)
+/// @param callback void func(QColorAxis* self, double min)
 void q_coloraxis_on_min_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#maxChanged)
@@ -176,7 +176,7 @@ void q_coloraxis_max_changed(void* self, double max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#maxChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, double)
+/// @param callback void func(QColorAxis* self, double max)
 void q_coloraxis_on_max_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#rangeChanged)
@@ -189,7 +189,7 @@ void q_coloraxis_range_changed(void* self, double min, double max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#rangeChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, double, double)
+/// @param callback void func(QColorAxis* self, double min, double max)
 void q_coloraxis_on_range_changed(void* self, void (*callback)(void*, double, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#tickCountChanged)
@@ -201,7 +201,7 @@ void q_coloraxis_tick_count_changed(void* self, int tickCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#tickCountChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, int)
+/// @param callback void func(QColorAxis* self, int tickCount)
 void q_coloraxis_on_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#gradientChanged)
@@ -213,7 +213,7 @@ void q_coloraxis_gradient_changed(void* self, void* gradient);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#gradientChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QLinearGradient*)
+/// @param callback void func(QColorAxis* self, QLinearGradient* gradient)
 void q_coloraxis_on_gradient_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#sizeChanged)
@@ -225,7 +225,7 @@ void q_coloraxis_size_changed(void* self, double size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#sizeChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, double)
+/// @param callback void func(QColorAxis* self, double size)
 void q_coloraxis_on_size_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#autoRangeChanged)
@@ -237,7 +237,7 @@ void q_coloraxis_auto_range_changed(void* self, bool autoRange);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#autoRangeChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool autoRange)
 void q_coloraxis_on_auto_range_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -706,7 +706,7 @@ void q_coloraxis_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -722,7 +722,7 @@ void q_coloraxis_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QPen*)
+/// @param callback void func(QColorAxis* self, QPen* pen)
 void q_coloraxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -738,7 +738,7 @@ void q_coloraxis_line_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -754,7 +754,7 @@ void q_coloraxis_labels_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -770,7 +770,7 @@ void q_coloraxis_labels_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QBrush*)
+/// @param callback void func(QColorAxis* self, QBrush* brush)
 void q_coloraxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -786,7 +786,7 @@ void q_coloraxis_labels_font_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QFont*)
+/// @param callback void func(QColorAxis* self, QFont* pen)
 void q_coloraxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -802,7 +802,7 @@ void q_coloraxis_labels_angle_changed(void* self, int angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, int)
+/// @param callback void func(QColorAxis* self, int angle)
 void q_coloraxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -818,7 +818,7 @@ void q_coloraxis_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QPen*)
+/// @param callback void func(QColorAxis* self, QPen* pen)
 void q_coloraxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -834,7 +834,7 @@ void q_coloraxis_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -850,7 +850,7 @@ void q_coloraxis_minor_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -866,7 +866,7 @@ void q_coloraxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QPen*)
+/// @param callback void func(QColorAxis* self, QPen* pen)
 void q_coloraxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -882,7 +882,7 @@ void q_coloraxis_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QColor*)
+/// @param callback void func(QColorAxis* self, QColor* color)
 void q_coloraxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -898,7 +898,7 @@ void q_coloraxis_minor_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QColor*)
+/// @param callback void func(QColorAxis* self, QColor* color)
 void q_coloraxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -914,7 +914,7 @@ void q_coloraxis_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QColor*)
+/// @param callback void func(QColorAxis* self, QColor* color)
 void q_coloraxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -930,7 +930,7 @@ void q_coloraxis_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QColor*)
+/// @param callback void func(QColorAxis* self, QColor* color)
 void q_coloraxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -946,7 +946,7 @@ void q_coloraxis_title_text_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, const char*)
+/// @param callback void func(QColorAxis* self, const char* title)
 void q_coloraxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -962,7 +962,7 @@ void q_coloraxis_title_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QBrush*)
+/// @param callback void func(QColorAxis* self, QBrush* brush)
 void q_coloraxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -978,7 +978,7 @@ void q_coloraxis_title_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -994,7 +994,7 @@ void q_coloraxis_title_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QFont*)
+/// @param callback void func(QColorAxis* self, QFont* font)
 void q_coloraxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1010,7 +1010,7 @@ void q_coloraxis_shades_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool visible)
 void q_coloraxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1026,7 +1026,7 @@ void q_coloraxis_shades_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QColor*)
+/// @param callback void func(QColorAxis* self, QColor* color)
 void q_coloraxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1042,7 +1042,7 @@ void q_coloraxis_shades_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QColor*)
+/// @param callback void func(QColorAxis* self, QColor* color)
 void q_coloraxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1058,7 +1058,7 @@ void q_coloraxis_shades_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QPen*)
+/// @param callback void func(QColorAxis* self, QPen* pen)
 void q_coloraxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1074,7 +1074,7 @@ void q_coloraxis_shades_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QBrush*)
+/// @param callback void func(QColorAxis* self, QBrush* brush)
 void q_coloraxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1090,7 +1090,7 @@ void q_coloraxis_reverse_changed(void* self, bool reverse);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool reverse)
 void q_coloraxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1106,7 +1106,7 @@ void q_coloraxis_labels_editable_changed(void* self, bool editable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool editable)
 void q_coloraxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1122,7 +1122,7 @@ void q_coloraxis_labels_truncated_changed(void* self, bool labelsTruncated);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool labelsTruncated)
 void q_coloraxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1138,7 +1138,7 @@ void q_coloraxis_truncate_labels_changed(void* self, bool truncateLabels);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, bool)
+/// @param callback void func(QColorAxis* self, bool truncateLabels)
 void q_coloraxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1447,7 +1447,7 @@ void q_coloraxis_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*)
+/// @param callback void func(QColorAxis* self)
 void q_coloraxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1525,7 +1525,7 @@ void q_coloraxis_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QObject*)
+/// @param callback void func(QColorAxis* self, QObject* param1)
 void q_coloraxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1555,7 +1555,7 @@ bool q_coloraxis_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback bool fn(QColorAxis*, QEvent*)
+/// @param callback bool func(QColorAxis* self, QEvent* event)
 void q_coloraxis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1587,7 +1587,7 @@ bool q_coloraxis_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback bool fn(QColorAxis*, QObject*, QEvent*)
+/// @param callback bool func(QColorAxis* self, QObject* watched, QEvent* event)
 void q_coloraxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1617,7 +1617,7 @@ void q_coloraxis_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QTimerEvent*)
+/// @param callback void func(QColorAxis* self, QTimerEvent* event)
 void q_coloraxis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1647,7 +1647,7 @@ void q_coloraxis_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QChildEvent*)
+/// @param callback void func(QColorAxis* self, QChildEvent* event)
 void q_coloraxis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1677,7 +1677,7 @@ void q_coloraxis_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QEvent*)
+/// @param callback void func(QColorAxis* self, QEvent* event)
 void q_coloraxis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1707,7 +1707,7 @@ void q_coloraxis_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QMetaMethod*)
+/// @param callback void func(QColorAxis* self, QMetaMethod* signal)
 void q_coloraxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1737,7 +1737,7 @@ void q_coloraxis_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, QMetaMethod*)
+/// @param callback void func(QColorAxis* self, QMetaMethod* signal)
 void q_coloraxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1765,7 +1765,7 @@ QObject* q_coloraxis_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_coloraxis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1793,7 +1793,7 @@ int32_t q_coloraxis_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_coloraxis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1823,7 +1823,7 @@ int32_t q_coloraxis_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback int32_t fn(QColorAxis*, const char*)
+/// @param callback int32_t func(QColorAxis* self, const char* signal)
 void q_coloraxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1853,7 +1853,7 @@ bool q_coloraxis_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorAxis*
-/// @param callback bool fn(QColorAxis*, QMetaMethod*)
+/// @param callback bool func(QColorAxis* self, QMetaMethod* signal)
 void q_coloraxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1863,7 +1863,7 @@ void q_coloraxis_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QColorAxis*
-/// @param callback void fn(QColorAxis*, const char*)
+/// @param callback void func(QColorAxis* self, const char* objectName)
 void q_coloraxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#dtor.QColorAxis)

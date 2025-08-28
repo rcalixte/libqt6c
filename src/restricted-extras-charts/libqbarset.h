@@ -42,7 +42,7 @@ int32_t q_barset_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QBarSet*
-/// @param callback int32_t fn(QBarSet*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QBarSet* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_barset_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -288,7 +288,7 @@ void q_barset_clicked(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#clicked)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int)
+/// @param callback void func(QBarSet* self, int index)
 void q_barset_on_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#hovered)
@@ -301,7 +301,7 @@ void q_barset_hovered(void* self, bool status, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#hovered)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, bool, int)
+/// @param callback void func(QBarSet* self, bool status, int index)
 void q_barset_on_hovered(void* self, void (*callback)(void*, bool, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#pressed)
@@ -313,7 +313,7 @@ void q_barset_pressed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#pressed)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int)
+/// @param callback void func(QBarSet* self, int index)
 void q_barset_on_pressed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#released)
@@ -325,7 +325,7 @@ void q_barset_released(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#released)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int)
+/// @param callback void func(QBarSet* self, int index)
 void q_barset_on_released(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#doubleClicked)
@@ -337,7 +337,7 @@ void q_barset_double_clicked(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#doubleClicked)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int)
+/// @param callback void func(QBarSet* self, int index)
 void q_barset_on_double_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#penChanged)
@@ -348,7 +348,7 @@ void q_barset_pen_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#penChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*)
+/// @param callback void func(QBarSet* self)
 void q_barset_on_pen_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#brushChanged)
@@ -359,7 +359,7 @@ void q_barset_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#brushChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*)
+/// @param callback void func(QBarSet* self)
 void q_barset_on_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelChanged)
@@ -370,7 +370,7 @@ void q_barset_label_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*)
+/// @param callback void func(QBarSet* self)
 void q_barset_on_label_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelBrushChanged)
@@ -381,7 +381,7 @@ void q_barset_label_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelBrushChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*)
+/// @param callback void func(QBarSet* self)
 void q_barset_on_label_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelFontChanged)
@@ -392,7 +392,7 @@ void q_barset_label_font_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelFontChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*)
+/// @param callback void func(QBarSet* self)
 void q_barset_on_label_font_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#colorChanged)
@@ -404,7 +404,7 @@ void q_barset_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#colorChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QColor*)
+/// @param callback void func(QBarSet* self, QColor* color)
 void q_barset_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#borderColorChanged)
@@ -416,7 +416,7 @@ void q_barset_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#borderColorChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QColor*)
+/// @param callback void func(QBarSet* self, QColor* color)
 void q_barset_on_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelColorChanged)
@@ -428,7 +428,7 @@ void q_barset_label_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#labelColorChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QColor*)
+/// @param callback void func(QBarSet* self, QColor* color)
 void q_barset_on_label_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedColorChanged)
@@ -440,7 +440,7 @@ void q_barset_selected_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedColorChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QColor*)
+/// @param callback void func(QBarSet* self, QColor* color)
 void q_barset_on_selected_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesAdded)
@@ -453,7 +453,7 @@ void q_barset_values_added(void* self, int index, int count);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesAdded)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int, int)
+/// @param callback void func(QBarSet* self, int index, int count)
 void q_barset_on_values_added(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesRemoved)
@@ -466,7 +466,7 @@ void q_barset_values_removed(void* self, int index, int count);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valuesRemoved)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int, int)
+/// @param callback void func(QBarSet* self, int index, int count)
 void q_barset_on_values_removed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valueChanged)
@@ -478,7 +478,7 @@ void q_barset_value_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#valueChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int)
+/// @param callback void func(QBarSet* self, int index)
 void q_barset_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
@@ -490,7 +490,7 @@ void q_barset_selected_bars_changed(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, int*)
+/// @param callback void func(QBarSet* self, int* /* of int */)
 void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -743,7 +743,7 @@ void q_barset_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*)
+/// @param callback void func(QBarSet* self)
 void q_barset_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -821,7 +821,7 @@ void q_barset_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QObject*)
+/// @param callback void func(QBarSet* self, QObject* param1)
 void q_barset_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -851,7 +851,7 @@ bool q_barset_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback bool fn(QBarSet*, QEvent*)
+/// @param callback bool func(QBarSet* self, QEvent* event)
 void q_barset_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -883,7 +883,7 @@ bool q_barset_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback bool fn(QBarSet*, QObject*, QEvent*)
+/// @param callback bool func(QBarSet* self, QObject* watched, QEvent* event)
 void q_barset_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -913,7 +913,7 @@ void q_barset_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QTimerEvent*)
+/// @param callback void func(QBarSet* self, QTimerEvent* event)
 void q_barset_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -943,7 +943,7 @@ void q_barset_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QChildEvent*)
+/// @param callback void func(QBarSet* self, QChildEvent* event)
 void q_barset_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -973,7 +973,7 @@ void q_barset_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QEvent*)
+/// @param callback void func(QBarSet* self, QEvent* event)
 void q_barset_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1003,7 +1003,7 @@ void q_barset_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QMetaMethod*)
+/// @param callback void func(QBarSet* self, QMetaMethod* signal)
 void q_barset_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1033,7 +1033,7 @@ void q_barset_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, QMetaMethod*)
+/// @param callback void func(QBarSet* self, QMetaMethod* signal)
 void q_barset_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1061,7 +1061,7 @@ QObject* q_barset_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_barset_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1089,7 +1089,7 @@ int32_t q_barset_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_barset_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1119,7 +1119,7 @@ int32_t q_barset_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback int32_t fn(QBarSet*, const char*)
+/// @param callback int32_t func(QBarSet* self, const char* signal)
 void q_barset_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1149,7 +1149,7 @@ bool q_barset_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarSet*
-/// @param callback bool fn(QBarSet*, QMetaMethod*)
+/// @param callback bool func(QBarSet* self, QMetaMethod* signal)
 void q_barset_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1159,7 +1159,7 @@ void q_barset_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, const char*)
+/// @param callback void func(QBarSet* self, const char* objectName)
 void q_barset_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#dtor.QBarSet)

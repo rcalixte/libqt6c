@@ -266,7 +266,7 @@ int32_t q_widget_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback int32_t fn(QWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_widget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -294,7 +294,7 @@ int32_t q_widget_dev_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_widget_on_dev_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -1275,7 +1275,7 @@ void q_widget_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, bool)
+/// @param callback void func(QWidget* self, bool visible)
 void q_widget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -1462,7 +1462,7 @@ QSize* q_widget_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widget_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -1482,7 +1482,7 @@ QSize* q_widget_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -1521,7 +1521,7 @@ int32_t q_widget_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback int32_t fn(QWidget*, int)
+/// @param callback int32_t func(QWidget* self, int param1)
 void q_widget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -1542,7 +1542,7 @@ bool q_widget_has_height_for_width(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -1800,7 +1800,7 @@ QPaintEngine* q_widget_paint_engine(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_widget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -1867,7 +1867,7 @@ void q_widget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, const char*)
+/// @param callback void func(QWidget* self, const char* title)
 void q_widget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
@@ -1879,7 +1879,7 @@ void q_widget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QIcon*)
+/// @param callback void func(QWidget* self, QIcon* icon)
 void q_widget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
@@ -1891,7 +1891,7 @@ void q_widget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, const char*)
+/// @param callback void func(QWidget* self, const char* iconText)
 void q_widget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
@@ -1903,7 +1903,7 @@ void q_widget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QPoint*)
+/// @param callback void func(QWidget* self, QPoint* pos)
 void q_widget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -1917,7 +1917,7 @@ bool q_widget_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool fn(QWidget*, QEvent*)
+/// @param callback bool func(QWidget* self, QEvent* event)
 void q_widget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -1939,7 +1939,7 @@ void q_widget_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMouseEvent*)
+/// @param callback void func(QWidget* self, QMouseEvent* event)
 void q_widget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -1961,7 +1961,7 @@ void q_widget_mouse_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMouseEvent*)
+/// @param callback void func(QWidget* self, QMouseEvent* event)
 void q_widget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -1983,7 +1983,7 @@ void q_widget_mouse_double_click_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMouseEvent*)
+/// @param callback void func(QWidget* self, QMouseEvent* event)
 void q_widget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -2005,7 +2005,7 @@ void q_widget_mouse_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMouseEvent*)
+/// @param callback void func(QWidget* self, QMouseEvent* event)
 void q_widget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -2027,7 +2027,7 @@ void q_widget_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QWheelEvent*)
+/// @param callback void func(QWidget* self, QWheelEvent* event)
 void q_widget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -2049,7 +2049,7 @@ void q_widget_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QKeyEvent*)
+/// @param callback void func(QWidget* self, QKeyEvent* event)
 void q_widget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -2071,7 +2071,7 @@ void q_widget_key_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QKeyEvent*)
+/// @param callback void func(QWidget* self, QKeyEvent* event)
 void q_widget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -2093,7 +2093,7 @@ void q_widget_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QFocusEvent*)
+/// @param callback void func(QWidget* self, QFocusEvent* event)
 void q_widget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -2115,7 +2115,7 @@ void q_widget_focus_out_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QFocusEvent*)
+/// @param callback void func(QWidget* self, QFocusEvent* event)
 void q_widget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -2137,7 +2137,7 @@ void q_widget_enter_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QEnterEvent*)
+/// @param callback void func(QWidget* self, QEnterEvent* event)
 void q_widget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -2159,7 +2159,7 @@ void q_widget_leave_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QEvent*)
+/// @param callback void func(QWidget* self, QEvent* event)
 void q_widget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -2181,7 +2181,7 @@ void q_widget_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QPaintEvent*)
+/// @param callback void func(QWidget* self, QPaintEvent* event)
 void q_widget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -2203,7 +2203,7 @@ void q_widget_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMoveEvent*)
+/// @param callback void func(QWidget* self, QMoveEvent* event)
 void q_widget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -2225,7 +2225,7 @@ void q_widget_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QResizeEvent*)
+/// @param callback void func(QWidget* self, QResizeEvent* event)
 void q_widget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -2247,7 +2247,7 @@ void q_widget_close_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QCloseEvent*)
+/// @param callback void func(QWidget* self, QCloseEvent* event)
 void q_widget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -2269,7 +2269,7 @@ void q_widget_context_menu_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QContextMenuEvent*)
+/// @param callback void func(QWidget* self, QContextMenuEvent* event)
 void q_widget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -2291,7 +2291,7 @@ void q_widget_tablet_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QTabletEvent*)
+/// @param callback void func(QWidget* self, QTabletEvent* event)
 void q_widget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -2313,7 +2313,7 @@ void q_widget_action_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QActionEvent*)
+/// @param callback void func(QWidget* self, QActionEvent* event)
 void q_widget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -2335,7 +2335,7 @@ void q_widget_drag_enter_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QDragEnterEvent*)
+/// @param callback void func(QWidget* self, QDragEnterEvent* event)
 void q_widget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -2357,7 +2357,7 @@ void q_widget_drag_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QDragMoveEvent*)
+/// @param callback void func(QWidget* self, QDragMoveEvent* event)
 void q_widget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -2379,7 +2379,7 @@ void q_widget_drag_leave_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QDragLeaveEvent*)
+/// @param callback void func(QWidget* self, QDragLeaveEvent* event)
 void q_widget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -2401,7 +2401,7 @@ void q_widget_drop_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QDropEvent*)
+/// @param callback void func(QWidget* self, QDropEvent* event)
 void q_widget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -2423,7 +2423,7 @@ void q_widget_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QShowEvent*)
+/// @param callback void func(QWidget* self, QShowEvent* event)
 void q_widget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -2445,7 +2445,7 @@ void q_widget_hide_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QHideEvent*)
+/// @param callback void func(QWidget* self, QHideEvent* event)
 void q_widget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -2469,7 +2469,7 @@ bool q_widget_native_event(void* self, const char* eventType, void* message, int
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool fn(QWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_widget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -2493,7 +2493,7 @@ void q_widget_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QEvent*)
+/// @param callback void func(QWidget* self, QEvent* param1)
 void q_widget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -2515,7 +2515,7 @@ int32_t q_widget_metric(void* self, int32_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback int32_t fn(QWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_widget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -2537,7 +2537,7 @@ void q_widget_init_painter(void* self, void* painter);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QPainter*)
+/// @param callback void func(QWidget* self, QPainter* painter)
 void q_widget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -2559,7 +2559,7 @@ QPaintDevice* q_widget_redirected(void* self, void* offset);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback QPaintDevice* fn(QWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QWidget* self, QPoint* offset)
 void q_widget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -2580,7 +2580,7 @@ QPainter* q_widget_shared_painter(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_widget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -2601,7 +2601,7 @@ void q_widget_input_method_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QInputMethodEvent*)
+/// @param callback void func(QWidget* self, QInputMethodEvent* param1)
 void q_widget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -2623,7 +2623,7 @@ QVariant* q_widget_input_method_query(void* self, int64_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback QVariant* fn(QWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QWidget* self, enum Qt__InputMethodQuery param1)
 void q_widget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -2657,7 +2657,7 @@ void q_widget_update_micro_focus(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_widget_on_update_micro_focus(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -2677,7 +2677,7 @@ void q_widget_create(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_widget_on_create(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -2697,7 +2697,7 @@ void q_widget_destroy(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_widget_on_destroy(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -2718,7 +2718,7 @@ bool q_widget_focus_next_prev_child(void* self, bool next);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool fn(QWidget*, bool)
+/// @param callback bool func(QWidget* self, bool next)
 void q_widget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -2739,7 +2739,7 @@ bool q_widget_focus_next_child(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widget_on_focus_next_child(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -2759,7 +2759,7 @@ bool q_widget_focus_previous_child(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -2906,7 +2906,7 @@ void q_widget_update_micro_focus1(void* self, int64_t query);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, enum Qt__InputMethodQuery)
+/// @param callback void func(QWidget* self, enum Qt__InputMethodQuery query)
 void q_widget_on_update_micro_focus1(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -2928,7 +2928,7 @@ void q_widget_create1(void* self, uint64_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, uint64_t)
+/// @param callback void func(QWidget* self, uint64_t param1)
 void q_widget_on_create1(void* self, void (*callback)(void*, uint64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -2951,7 +2951,7 @@ void q_widget_create2(void* self, uint64_t param1, bool initializeWindow);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, uint64_t, bool)
+/// @param callback void func(QWidget* self, uint64_t param1, bool initializeWindow)
 void q_widget_on_create2(void* self, void (*callback)(void*, uint64_t, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -2976,7 +2976,7 @@ void q_widget_create3(void* self, uint64_t param1, bool initializeWindow, bool d
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, uint64_t, bool, bool)
+/// @param callback void func(QWidget* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow)
 void q_widget_on_create3(void* self, void (*callback)(void*, uint64_t, bool, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -3000,7 +3000,7 @@ void q_widget_destroy1(void* self, bool destroyWindow);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, bool)
+/// @param callback void func(QWidget* self, bool destroyWindow)
 void q_widget_on_destroy1(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -3023,7 +3023,7 @@ void q_widget_destroy2(void* self, bool destroyWindow, bool destroySubWindows);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, bool, bool)
+/// @param callback void func(QWidget* self, bool destroyWindow, bool destroySubWindows)
 void q_widget_on_destroy2(void* self, void (*callback)(void*, bool, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -3253,7 +3253,7 @@ void q_widget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*)
+/// @param callback void func(QWidget* self)
 void q_widget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3331,7 +3331,7 @@ void q_widget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QObject*)
+/// @param callback void func(QWidget* self, QObject* param1)
 void q_widget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3454,7 +3454,7 @@ bool q_widget_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback bool fn(QWidget*, QObject*, QEvent*)
+/// @param callback bool func(QWidget* self, QObject* watched, QEvent* event)
 void q_widget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3484,7 +3484,7 @@ void q_widget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QTimerEvent*)
+/// @param callback void func(QWidget* self, QTimerEvent* event)
 void q_widget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3514,7 +3514,7 @@ void q_widget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QChildEvent*)
+/// @param callback void func(QWidget* self, QChildEvent* event)
 void q_widget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3544,7 +3544,7 @@ void q_widget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QEvent*)
+/// @param callback void func(QWidget* self, QEvent* event)
 void q_widget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3574,7 +3574,7 @@ void q_widget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMetaMethod*)
+/// @param callback void func(QWidget* self, QMetaMethod* signal)
 void q_widget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3604,7 +3604,7 @@ void q_widget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, QMetaMethod*)
+/// @param callback void func(QWidget* self, QMetaMethod* signal)
 void q_widget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3632,7 +3632,7 @@ QObject* q_widget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_widget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3660,7 +3660,7 @@ int32_t q_widget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_widget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3690,7 +3690,7 @@ int32_t q_widget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback int32_t fn(QWidget*, const char*)
+/// @param callback int32_t func(QWidget* self, const char* signal)
 void q_widget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3720,7 +3720,7 @@ bool q_widget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback bool fn(QWidget*, QMetaMethod*)
+/// @param callback bool func(QWidget* self, QMetaMethod* signal)
 void q_widget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3752,7 +3752,7 @@ double q_widget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidget*
-/// @param callback double fn(QWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_widget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -3762,7 +3762,7 @@ void q_widget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int3
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWidget*
-/// @param callback void fn(QWidget*, const char*)
+/// @param callback void func(QWidget* self, const char* objectName)
 void q_widget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#dtor.QWidget)

@@ -40,7 +40,7 @@ int32_t q_networkaccessmanager_metacall(void* self, int32_t param1, int param2, 
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback int32_t fn(QNetworkAccessManager*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QNetworkAccessManager* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_networkaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ const char** q_networkaccessmanager_supported_schemes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_networkaccessmanager_on_supported_schemes(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemes)
@@ -335,7 +335,7 @@ void q_networkaccessmanager_proxy_authentication_required(void* self, void* prox
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#proxyAuthenticationRequired)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QNetworkProxy*, QAuthenticator*)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkProxy* proxy, QAuthenticator* authenticator)
 void q_networkaccessmanager_on_proxy_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#authenticationRequired)
@@ -348,7 +348,7 @@ void q_networkaccessmanager_authentication_required(void* self, void* reply, voi
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#authenticationRequired)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QNetworkReply*, QAuthenticator*)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, QAuthenticator* authenticator)
 void q_networkaccessmanager_on_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#finished)
@@ -360,7 +360,7 @@ void q_networkaccessmanager_finished(void* self, void* reply);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#finished)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QNetworkReply*)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply)
 void q_networkaccessmanager_on_finished(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#encrypted)
@@ -372,7 +372,7 @@ void q_networkaccessmanager_encrypted(void* self, void* reply);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#encrypted)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QNetworkReply*)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply)
 void q_networkaccessmanager_on_encrypted(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sslErrors)
@@ -385,7 +385,7 @@ void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list error
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sslErrors)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QNetworkReply*, libqt_list /* of QSslError* */)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, libqt_list /* of QSslError* */ /* of QSslError* */)
 void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#preSharedKeyAuthenticationRequired)
@@ -398,7 +398,7 @@ void q_networkaccessmanager_pre_shared_key_authentication_required(void* self, v
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#preSharedKeyAuthenticationRequired)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QNetworkReply*, QSslPreSharedKeyAuthenticator*)
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, QSslPreSharedKeyAuthenticator* authenticator)
 void q_networkaccessmanager_on_pre_shared_key_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#createRequest)
@@ -414,7 +414,7 @@ QNetworkReply* q_networkaccessmanager_create_request(void* self, int32_t op, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback QNetworkReply* fn(QNetworkAccessManager*, enum QNetworkAccessManager__Operation, QNetworkRequest*, QIODevice*)
+/// @param callback QNetworkReply* func(QNetworkAccessManager* self, enum QNetworkAccessManager__Operation op, QNetworkRequest* request, QIODevice* outgoingData)
 void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callback)(void*, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#createRequest)
@@ -439,7 +439,7 @@ const char** q_networkaccessmanager_supported_schemes_implementation(void* self)
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_networkaccessmanager_on_supported_schemes_implementation(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemesImplementation)
@@ -729,7 +729,7 @@ void q_networkaccessmanager_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*)
+/// @param callback void func(QNetworkAccessManager* self)
 void q_networkaccessmanager_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -807,7 +807,7 @@ void q_networkaccessmanager_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QObject*)
+/// @param callback void func(QNetworkAccessManager* self, QObject* param1)
 void q_networkaccessmanager_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -837,7 +837,7 @@ bool q_networkaccessmanager_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback bool fn(QNetworkAccessManager*, QEvent*)
+/// @param callback bool func(QNetworkAccessManager* self, QEvent* event)
 void q_networkaccessmanager_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -869,7 +869,7 @@ bool q_networkaccessmanager_qbase_event_filter(void* self, void* watched, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback bool fn(QNetworkAccessManager*, QObject*, QEvent*)
+/// @param callback bool func(QNetworkAccessManager* self, QObject* watched, QEvent* event)
 void q_networkaccessmanager_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -899,7 +899,7 @@ void q_networkaccessmanager_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QTimerEvent*)
+/// @param callback void func(QNetworkAccessManager* self, QTimerEvent* event)
 void q_networkaccessmanager_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -929,7 +929,7 @@ void q_networkaccessmanager_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QChildEvent*)
+/// @param callback void func(QNetworkAccessManager* self, QChildEvent* event)
 void q_networkaccessmanager_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -959,7 +959,7 @@ void q_networkaccessmanager_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QEvent*)
+/// @param callback void func(QNetworkAccessManager* self, QEvent* event)
 void q_networkaccessmanager_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -989,7 +989,7 @@ void q_networkaccessmanager_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QMetaMethod*)
+/// @param callback void func(QNetworkAccessManager* self, QMetaMethod* signal)
 void q_networkaccessmanager_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1019,7 +1019,7 @@ void q_networkaccessmanager_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, QMetaMethod*)
+/// @param callback void func(QNetworkAccessManager* self, QMetaMethod* signal)
 void q_networkaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1047,7 +1047,7 @@ QObject* q_networkaccessmanager_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_networkaccessmanager_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1075,7 +1075,7 @@ int32_t q_networkaccessmanager_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_networkaccessmanager_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1105,7 +1105,7 @@ int32_t q_networkaccessmanager_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback int32_t fn(QNetworkAccessManager*, const char*)
+/// @param callback int32_t func(QNetworkAccessManager* self, const char* signal)
 void q_networkaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1135,7 +1135,7 @@ bool q_networkaccessmanager_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback bool fn(QNetworkAccessManager*, QMetaMethod*)
+/// @param callback bool func(QNetworkAccessManager* self, QMetaMethod* signal)
 void q_networkaccessmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1145,7 +1145,7 @@ void q_networkaccessmanager_on_is_signal_connected(void* self, bool (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void fn(QNetworkAccessManager*, const char*)
+/// @param callback void func(QNetworkAccessManager* self, const char* objectName)
 void q_networkaccessmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#dtor.QNetworkAccessManager)

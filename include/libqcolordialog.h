@@ -51,7 +51,7 @@ int32_t q_colordialog_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn(QColorDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QColorDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_colordialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -121,7 +121,7 @@ void q_colordialog_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, bool)
+/// @param callback void func(QColorDialog* self, bool visible)
 void q_colordialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#setVisible)
@@ -171,7 +171,7 @@ void q_colordialog_current_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#currentColorChanged)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QColor*)
+/// @param callback void func(QColorDialog* self, QColor* color)
 void q_colordialog_on_current_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#colorSelected)
@@ -183,7 +183,7 @@ void q_colordialog_color_selected(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#colorSelected)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QColor*)
+/// @param callback void func(QColorDialog* self, QColor* color)
 void q_colordialog_on_color_selected(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#changeEvent)
@@ -197,7 +197,7 @@ void q_colordialog_change_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QEvent*)
+/// @param callback void func(QColorDialog* self, QEvent* event)
 void q_colordialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#changeEvent)
@@ -219,7 +219,7 @@ void q_colordialog_done(void* self, int result);
 /// Allows for overriding the related default method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, int)
+/// @param callback void func(QColorDialog* self, int result)
 void q_colordialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#done)
@@ -331,7 +331,7 @@ void q_colordialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, int)
+/// @param callback void func(QColorDialog* self, int result)
 void q_colordialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -346,7 +346,7 @@ void q_colordialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*)
+/// @param callback void func(QColorDialog* self)
 void q_colordialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -361,7 +361,7 @@ void q_colordialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*)
+/// @param callback void func(QColorDialog* self)
 void q_colordialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2301,7 +2301,7 @@ void q_colordialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, const char*)
+/// @param callback void func(QColorDialog* self, const char* title)
 void q_colordialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2317,7 +2317,7 @@ void q_colordialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QIcon*)
+/// @param callback void func(QColorDialog* self, QIcon* icon)
 void q_colordialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2333,7 +2333,7 @@ void q_colordialog_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, const char*)
+/// @param callback void func(QColorDialog* self, const char* iconText)
 void q_colordialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2349,7 +2349,7 @@ void q_colordialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QPoint*)
+/// @param callback void func(QColorDialog* self, QPoint* pos)
 void q_colordialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2726,7 +2726,7 @@ void q_colordialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*)
+/// @param callback void func(QColorDialog* self)
 void q_colordialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2804,7 +2804,7 @@ void q_colordialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QObject*)
+/// @param callback void func(QColorDialog* self, QObject* param1)
 void q_colordialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2923,7 +2923,7 @@ QSize* q_colordialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_colordialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2951,7 +2951,7 @@ QSize* q_colordialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_colordialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -2979,7 +2979,7 @@ void q_colordialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_colordialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3007,7 +3007,7 @@ int32_t q_colordialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_colordialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3035,7 +3035,7 @@ void q_colordialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_colordialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3063,7 +3063,7 @@ void q_colordialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_colordialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3093,7 +3093,7 @@ void q_colordialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QKeyEvent*)
+/// @param callback void func(QColorDialog* self, QKeyEvent* param1)
 void q_colordialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3123,7 +3123,7 @@ void q_colordialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QCloseEvent*)
+/// @param callback void func(QColorDialog* self, QCloseEvent* param1)
 void q_colordialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3153,7 +3153,7 @@ void q_colordialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QShowEvent*)
+/// @param callback void func(QColorDialog* self, QShowEvent* param1)
 void q_colordialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3183,7 +3183,7 @@ void q_colordialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QResizeEvent*)
+/// @param callback void func(QColorDialog* self, QResizeEvent* param1)
 void q_colordialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3213,7 +3213,7 @@ void q_colordialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QContextMenuEvent*)
+/// @param callback void func(QColorDialog* self, QContextMenuEvent* param1)
 void q_colordialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3245,7 +3245,7 @@ bool q_colordialog_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn(QColorDialog*, QObject*, QEvent*)
+/// @param callback bool func(QColorDialog* self, QObject* param1, QEvent* param2)
 void q_colordialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3273,7 +3273,7 @@ int32_t q_colordialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_colordialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3303,7 +3303,7 @@ int32_t q_colordialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn(QColorDialog*, int)
+/// @param callback int32_t func(QColorDialog* self, int param1)
 void q_colordialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3331,7 +3331,7 @@ bool q_colordialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_colordialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3359,7 +3359,7 @@ QPaintEngine* q_colordialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_colordialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3389,7 +3389,7 @@ bool q_colordialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn(QColorDialog*, QEvent*)
+/// @param callback bool func(QColorDialog* self, QEvent* event)
 void q_colordialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3419,7 +3419,7 @@ void q_colordialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMouseEvent*)
+/// @param callback void func(QColorDialog* self, QMouseEvent* event)
 void q_colordialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3449,7 +3449,7 @@ void q_colordialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMouseEvent*)
+/// @param callback void func(QColorDialog* self, QMouseEvent* event)
 void q_colordialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3479,7 +3479,7 @@ void q_colordialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMouseEvent*)
+/// @param callback void func(QColorDialog* self, QMouseEvent* event)
 void q_colordialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3509,7 +3509,7 @@ void q_colordialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMouseEvent*)
+/// @param callback void func(QColorDialog* self, QMouseEvent* event)
 void q_colordialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3539,7 +3539,7 @@ void q_colordialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QWheelEvent*)
+/// @param callback void func(QColorDialog* self, QWheelEvent* event)
 void q_colordialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3569,7 +3569,7 @@ void q_colordialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QKeyEvent*)
+/// @param callback void func(QColorDialog* self, QKeyEvent* event)
 void q_colordialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3599,7 +3599,7 @@ void q_colordialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QFocusEvent*)
+/// @param callback void func(QColorDialog* self, QFocusEvent* event)
 void q_colordialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3629,7 +3629,7 @@ void q_colordialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QFocusEvent*)
+/// @param callback void func(QColorDialog* self, QFocusEvent* event)
 void q_colordialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3659,7 +3659,7 @@ void q_colordialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QEnterEvent*)
+/// @param callback void func(QColorDialog* self, QEnterEvent* event)
 void q_colordialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3689,7 +3689,7 @@ void q_colordialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QEvent*)
+/// @param callback void func(QColorDialog* self, QEvent* event)
 void q_colordialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3719,7 +3719,7 @@ void q_colordialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QPaintEvent*)
+/// @param callback void func(QColorDialog* self, QPaintEvent* event)
 void q_colordialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3749,7 +3749,7 @@ void q_colordialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMoveEvent*)
+/// @param callback void func(QColorDialog* self, QMoveEvent* event)
 void q_colordialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3779,7 +3779,7 @@ void q_colordialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QTabletEvent*)
+/// @param callback void func(QColorDialog* self, QTabletEvent* event)
 void q_colordialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3809,7 +3809,7 @@ void q_colordialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QActionEvent*)
+/// @param callback void func(QColorDialog* self, QActionEvent* event)
 void q_colordialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3839,7 +3839,7 @@ void q_colordialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QDragEnterEvent*)
+/// @param callback void func(QColorDialog* self, QDragEnterEvent* event)
 void q_colordialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3869,7 +3869,7 @@ void q_colordialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QDragMoveEvent*)
+/// @param callback void func(QColorDialog* self, QDragMoveEvent* event)
 void q_colordialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3899,7 +3899,7 @@ void q_colordialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QDragLeaveEvent*)
+/// @param callback void func(QColorDialog* self, QDragLeaveEvent* event)
 void q_colordialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3929,7 +3929,7 @@ void q_colordialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QDropEvent*)
+/// @param callback void func(QColorDialog* self, QDropEvent* event)
 void q_colordialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3959,7 +3959,7 @@ void q_colordialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QHideEvent*)
+/// @param callback void func(QColorDialog* self, QHideEvent* event)
 void q_colordialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3993,7 +3993,7 @@ bool q_colordialog_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn(QColorDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(QColorDialog* self, const char* eventType, void* message, intptr_t* result)
 void q_colordialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4023,7 +4023,7 @@ int32_t q_colordialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn(QColorDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QColorDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_colordialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4053,7 +4053,7 @@ void q_colordialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QPainter*)
+/// @param callback void func(QColorDialog* self, QPainter* painter)
 void q_colordialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4083,7 +4083,7 @@ QPaintDevice* q_colordialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QPaintDevice* fn(QColorDialog*, QPoint*)
+/// @param callback QPaintDevice* func(QColorDialog* self, QPoint* offset)
 void q_colordialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4111,7 +4111,7 @@ QPainter* q_colordialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_colordialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4141,7 +4141,7 @@ void q_colordialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QInputMethodEvent*)
+/// @param callback void func(QColorDialog* self, QInputMethodEvent* param1)
 void q_colordialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4171,7 +4171,7 @@ QVariant* q_colordialog_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QVariant* fn(QColorDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QColorDialog* self, enum Qt__InputMethodQuery param1)
 void q_colordialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4201,7 +4201,7 @@ bool q_colordialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn(QColorDialog*, bool)
+/// @param callback bool func(QColorDialog* self, bool next)
 void q_colordialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4231,7 +4231,7 @@ void q_colordialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QTimerEvent*)
+/// @param callback void func(QColorDialog* self, QTimerEvent* event)
 void q_colordialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4261,7 +4261,7 @@ void q_colordialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QChildEvent*)
+/// @param callback void func(QColorDialog* self, QChildEvent* event)
 void q_colordialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4291,7 +4291,7 @@ void q_colordialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QEvent*)
+/// @param callback void func(QColorDialog* self, QEvent* event)
 void q_colordialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4321,7 +4321,7 @@ void q_colordialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMetaMethod*)
+/// @param callback void func(QColorDialog* self, QMetaMethod* signal)
 void q_colordialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4351,7 +4351,7 @@ void q_colordialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QMetaMethod*)
+/// @param callback void func(QColorDialog* self, QMetaMethod* signal)
 void q_colordialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4381,7 +4381,7 @@ void q_colordialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, QWidget*)
+/// @param callback void func(QColorDialog* self, QWidget* param1)
 void q_colordialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4409,7 +4409,7 @@ void q_colordialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_colordialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4437,7 +4437,7 @@ void q_colordialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_colordialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4465,7 +4465,7 @@ void q_colordialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_colordialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4493,7 +4493,7 @@ bool q_colordialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_colordialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4521,7 +4521,7 @@ bool q_colordialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_colordialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4549,7 +4549,7 @@ QObject* q_colordialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_colordialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4577,7 +4577,7 @@ int32_t q_colordialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_colordialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4607,7 +4607,7 @@ int32_t q_colordialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback int32_t fn(QColorDialog*, const char*)
+/// @param callback int32_t func(QColorDialog* self, const char* signal)
 void q_colordialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4637,7 +4637,7 @@ bool q_colordialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback bool fn(QColorDialog*, QMetaMethod*)
+/// @param callback bool func(QColorDialog* self, QMetaMethod* signal)
 void q_colordialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4669,7 +4669,7 @@ double q_colordialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColorDialog*
-/// @param callback double fn(QColorDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QColorDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_colordialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4679,7 +4679,7 @@ void q_colordialog_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QColorDialog*
-/// @param callback void fn(QColorDialog*, const char*)
+/// @param callback void func(QColorDialog* self, const char* objectName)
 void q_colordialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#dtor.QColorDialog)

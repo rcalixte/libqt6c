@@ -45,7 +45,7 @@ void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, in
 /// [Qt documentation](https://api-staging.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param callback void fn(KStandardShortcut__StandardShortcutWatcher*, enum KStandardShortcut__StandardShortcut, libqt_list /* of QKeySequence* */)
+/// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, enum KStandardShortcut__StandardShortcut id, libqt_list /* of QKeySequence* */ /* of QKeySequence* */)
 void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self, void (*callback)(void*, int32_t, libqt_list));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -308,7 +308,7 @@ void k_standardshortcut__standardshortcutwatcher_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param callback void fn(KStandardShortcut__StandardShortcutWatcher*)
+/// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self)
 void k_standardshortcut__standardshortcutwatcher_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -386,7 +386,7 @@ void k_standardshortcut__standardshortcutwatcher_destroyed1(void* self, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param callback void fn(KStandardShortcut__StandardShortcutWatcher*, QObject*)
+/// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, QObject* param1)
 void k_standardshortcut__standardshortcutwatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -396,7 +396,7 @@ void k_standardshortcut__standardshortcutwatcher_on_destroyed1(void* self, void 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param callback void fn(KStandardShortcut__StandardShortcutWatcher*, const char*)
+/// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, const char* objectName)
 void k_standardshortcut__standardshortcutwatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// Delete this object from C++ memory.

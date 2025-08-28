@@ -40,7 +40,7 @@ int32_t k_compositejob_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback int32_t fn(KCompositeJob*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KCompositeJob* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_compositejob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ bool k_compositejob_add_subjob(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn(KCompositeJob*, KJob*)
+/// @param callback bool func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_add_subjob(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#addSubjob)
@@ -91,7 +91,7 @@ bool k_compositejob_remove_subjob(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn(KCompositeJob*, KJob*)
+/// @param callback bool func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_remove_subjob(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#removeSubjob)
@@ -112,7 +112,7 @@ bool k_compositejob_has_subjobs(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_compositejob_on_has_subjobs(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#hasSubjobs)
@@ -132,7 +132,7 @@ libqt_list /* of KJob* */ k_compositejob_subjobs(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback libqt_list /* of KJob* */ fn()
+/// @param callback libqt_list /* of KJob* */ func()
 void k_compositejob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#subjobs)
@@ -152,7 +152,7 @@ void k_compositejob_clear_subjobs(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_compositejob_on_clear_subjobs(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#clearSubjobs)
@@ -173,7 +173,7 @@ void k_compositejob_slot_result(void* self, void* job);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*)
+/// @param callback void func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_slot_result(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotResult)
@@ -196,7 +196,7 @@ void k_compositejob_slot_info_message(void* self, void* job, const char* message
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, const char*)
+/// @param callback void func(KCompositeJob* self, KJob* job, const char* message)
 void k_compositejob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotInfoMessage)
@@ -380,7 +380,7 @@ void k_compositejob_description(void* self, void* job, const char* title);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, const char*)
+/// @param callback void func(KCompositeJob* self, KJob* job, const char* title)
 void k_compositejob_on_description(void* self, void (*callback)(void*, void*, const char*));
 
 /// Inherited from KJob
@@ -397,7 +397,7 @@ void k_compositejob_info_message(void* self, void* job, const char* message);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, const char*)
+/// @param callback void func(KCompositeJob* self, KJob* job, const char* message)
 void k_compositejob_on_info_message(void* self, void (*callback)(void*, void*, const char*));
 
 /// Inherited from KJob
@@ -414,7 +414,7 @@ void k_compositejob_warning(void* self, void* job, const char* message);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, const char*)
+/// @param callback void func(KCompositeJob* self, KJob* job, const char* message)
 void k_compositejob_on_warning(void* self, void (*callback)(void*, void*, const char*));
 
 /// Inherited from KJob
@@ -431,7 +431,7 @@ void k_compositejob_total_size(void* self, void* job, uint64_t size);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, uint64_t)
+/// @param callback void func(KCompositeJob* self, KJob* job, uint64_t size)
 void k_compositejob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from KJob
@@ -448,7 +448,7 @@ void k_compositejob_processed_size(void* self, void* job, uint64_t size);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, uint64_t)
+/// @param callback void func(KCompositeJob* self, KJob* job, uint64_t size)
 void k_compositejob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from KJob
@@ -465,7 +465,7 @@ void k_compositejob_speed(void* self, void* job, uint64_t speed);
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, uint64_t)
+/// @param callback void func(KCompositeJob* self, KJob* job, uint64_t speed)
 void k_compositejob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from KJob
@@ -499,7 +499,7 @@ void k_compositejob_description3(void* self, void* job, const char* title, libqt
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KCompositeJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_compositejob_on_description3(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */));
 
 /// Inherited from KJob
@@ -518,7 +518,7 @@ void k_compositejob_description4(void* self, void* job, const char* title, libqt
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)
+/// @param callback void func(KCompositeJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_compositejob_on_description4(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
 
 /// Inherited from QObject
@@ -747,7 +747,7 @@ void k_compositejob_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*)
+/// @param callback void func(KCompositeJob* self)
 void k_compositejob_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -825,7 +825,7 @@ void k_compositejob_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, QObject*)
+/// @param callback void func(KCompositeJob* self, QObject* param1)
 void k_compositejob_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -853,7 +853,7 @@ void k_compositejob_qbase_start(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_compositejob_on_start(void* self, void (*callback)());
 
 /// Inherited from KJob
@@ -881,7 +881,7 @@ bool k_compositejob_qbase_do_kill(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_compositejob_on_do_kill(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -909,7 +909,7 @@ bool k_compositejob_qbase_do_suspend(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_compositejob_on_do_suspend(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -937,7 +937,7 @@ bool k_compositejob_qbase_do_resume(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_compositejob_on_do_resume(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -969,7 +969,7 @@ const char* k_compositejob_qbase_error_string(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void k_compositejob_on_error_string(void* self, const char* (*callback)());
 
 /// Inherited from QObject
@@ -999,7 +999,7 @@ bool k_compositejob_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn(KCompositeJob*, QEvent*)
+/// @param callback bool func(KCompositeJob* self, QEvent* event)
 void k_compositejob_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1031,7 +1031,7 @@ bool k_compositejob_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn(KCompositeJob*, QObject*, QEvent*)
+/// @param callback bool func(KCompositeJob* self, QObject* watched, QEvent* event)
 void k_compositejob_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1061,7 +1061,7 @@ void k_compositejob_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, QTimerEvent*)
+/// @param callback void func(KCompositeJob* self, QTimerEvent* event)
 void k_compositejob_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1091,7 +1091,7 @@ void k_compositejob_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, QChildEvent*)
+/// @param callback void func(KCompositeJob* self, QChildEvent* event)
 void k_compositejob_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1121,7 +1121,7 @@ void k_compositejob_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, QEvent*)
+/// @param callback void func(KCompositeJob* self, QEvent* event)
 void k_compositejob_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1151,7 +1151,7 @@ void k_compositejob_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, QMetaMethod*)
+/// @param callback void func(KCompositeJob* self, QMetaMethod* signal)
 void k_compositejob_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1181,7 +1181,7 @@ void k_compositejob_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, QMetaMethod*)
+/// @param callback void func(KCompositeJob* self, QMetaMethod* signal)
 void k_compositejob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1211,7 +1211,7 @@ void k_compositejob_qbase_set_capabilities(void* self, int64_t capabilities);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, flag of enum KJob__Capability)
+/// @param callback void func(KCompositeJob* self, flag of enum KJob__Capability capabilities)
 void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from KJob
@@ -1239,7 +1239,7 @@ bool k_compositejob_qbase_is_finished(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_compositejob_on_is_finished(void* self, bool (*callback)());
 
 /// Inherited from KJob
@@ -1269,7 +1269,7 @@ void k_compositejob_qbase_set_error(void* self, int errorCode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, int)
+/// @param callback void func(KCompositeJob* self, int errorCode)
 void k_compositejob_on_set_error(void* self, void (*callback)(void*, int));
 
 /// Inherited from KJob
@@ -1299,7 +1299,7 @@ void k_compositejob_qbase_set_error_text(void* self, const char* errorText);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, const char*)
+/// @param callback void func(KCompositeJob* self, const char* errorText)
 void k_compositejob_on_set_error_text(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from KJob
@@ -1331,7 +1331,7 @@ void k_compositejob_qbase_set_processed_amount(void* self, int32_t unit, uint64_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KCompositeJob* self, enum KJob__Unit unit, uint64_t amount)
 void k_compositejob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1363,7 +1363,7 @@ void k_compositejob_qbase_set_total_amount(void* self, int32_t unit, uint64_t am
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KCompositeJob* self, enum KJob__Unit unit, uint64_t amount)
 void k_compositejob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1393,7 +1393,7 @@ void k_compositejob_qbase_set_progress_unit(void* self, int32_t unit);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, enum KJob__Unit)
+/// @param callback void func(KCompositeJob* self, enum KJob__Unit unit)
 void k_compositejob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from KJob
@@ -1423,7 +1423,7 @@ void k_compositejob_qbase_set_percent(void* self, uint64_t percentage);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, uint64_t)
+/// @param callback void func(KCompositeJob* self, uint64_t percentage)
 void k_compositejob_on_set_percent(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from KJob
@@ -1451,7 +1451,7 @@ void k_compositejob_qbase_emit_result(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_compositejob_on_emit_result(void* self, void (*callback)());
 
 /// Inherited from KJob
@@ -1483,7 +1483,7 @@ void k_compositejob_qbase_emit_percent(void* self, uint64_t processedAmount, uin
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, uint64_t, uint64_t)
+/// @param callback void func(KCompositeJob* self, uint64_t processedAmount, uint64_t totalAmount)
 void k_compositejob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t));
 
 /// Inherited from KJob
@@ -1513,7 +1513,7 @@ void k_compositejob_qbase_emit_speed(void* self, uint64_t speed);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, uint64_t)
+/// @param callback void func(KCompositeJob* self, uint64_t speed)
 void k_compositejob_on_emit_speed(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from KJob
@@ -1541,7 +1541,7 @@ void k_compositejob_qbase_start_elapsed_timer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn()
+/// @param callback void func()
 void k_compositejob_on_start_elapsed_timer(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1569,7 +1569,7 @@ QObject* k_compositejob_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_compositejob_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1597,7 +1597,7 @@ int32_t k_compositejob_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_compositejob_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1627,7 +1627,7 @@ int32_t k_compositejob_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback int32_t fn(KCompositeJob*, const char*)
+/// @param callback int32_t func(KCompositeJob* self, const char* signal)
 void k_compositejob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1657,7 +1657,7 @@ bool k_compositejob_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompositeJob*
-/// @param callback bool fn(KCompositeJob*, QMetaMethod*)
+/// @param callback bool func(KCompositeJob* self, QMetaMethod* signal)
 void k_compositejob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1667,7 +1667,7 @@ void k_compositejob_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*)
+/// @param callback void func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_finished(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1677,7 +1677,7 @@ void k_compositejob_on_finished(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*)
+/// @param callback void func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_suspended(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1687,7 +1687,7 @@ void k_compositejob_on_suspended(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*)
+/// @param callback void func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1697,7 +1697,7 @@ void k_compositejob_on_resumed(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*)
+/// @param callback void func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_result(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
@@ -1707,7 +1707,7 @@ void k_compositejob_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KCompositeJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_compositejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1717,7 +1717,7 @@ void k_compositejob_on_total_amount_changed(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, enum KJob__Unit, uint64_t)
+/// @param callback void func(KCompositeJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_compositejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
 /// Inherited from KJob
@@ -1727,7 +1727,7 @@ void k_compositejob_on_processed_amount_changed(void* self, void (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, KJob*, uint64_t)
+/// @param callback void func(KCompositeJob* self, KJob* job, uint64_t percent)
 void k_compositejob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
 
 /// Inherited from QObject
@@ -1737,7 +1737,7 @@ void k_compositejob_on_percent_changed(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KCompositeJob*
-/// @param callback void fn(KCompositeJob*, const char*)
+/// @param callback void func(KCompositeJob* self, const char* objectName)
 void k_compositejob_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#dtor.KCompositeJob)

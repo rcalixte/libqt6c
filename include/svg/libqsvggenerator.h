@@ -133,7 +133,7 @@ QPaintEngine* q_svggenerator_paint_engine(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSvgGenerator*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_svggenerator_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
@@ -154,7 +154,7 @@ int32_t q_svggenerator_metric(void* self, int32_t metric);
 /// Allows for overriding the related default method
 ///
 /// @param self QSvgGenerator*
-/// @param callback int32_t fn(QSvgGenerator*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metric)
 void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
@@ -295,7 +295,7 @@ int32_t q_svggenerator_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgGenerator*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_svggenerator_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QPaintDevice
@@ -325,7 +325,7 @@ void q_svggenerator_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgGenerator*
-/// @param callback void fn(QSvgGenerator*, QPainter*)
+/// @param callback void func(QSvgGenerator* self, QPainter* painter)
 void q_svggenerator_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -355,7 +355,7 @@ QPaintDevice* q_svggenerator_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgGenerator*
-/// @param callback QPaintDevice* fn(QSvgGenerator*, QPoint*)
+/// @param callback QPaintDevice* func(QSvgGenerator* self, QPoint* offset)
 void q_svggenerator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -383,7 +383,7 @@ QPainter* q_svggenerator_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgGenerator*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QPaintDevice
@@ -415,7 +415,7 @@ double q_svggenerator_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSvgGenerator*
-/// @param callback double fn(QSvgGenerator*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#dtor.QSvgGenerator)

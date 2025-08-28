@@ -40,7 +40,7 @@ int32_t q_sslsocket_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback int32_t fn(QSslSocket*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSslSocket* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sslsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -68,7 +68,7 @@ void q_sslsocket_resume(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sslsocket_on_resume(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#resume)
@@ -106,7 +106,7 @@ bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, in
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, intptr_t, enum QAbstractSocket__SocketState, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QSslSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setSocketDescriptor)
@@ -133,7 +133,7 @@ void q_sslsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, const char*, unsigned short, flag of enum QIODeviceBase__OpenModeFlag, enum QAbstractSocket__NetworkLayerProtocol)
+/// @param callback void func(QSslSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag openMode, enum QAbstractSocket__NetworkLayerProtocol protocol)
 void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#connectToHost)
@@ -157,7 +157,7 @@ void q_sslsocket_disconnect_from_host(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sslsocket_on_disconnect_from_host(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#disconnectFromHost)
@@ -179,7 +179,7 @@ void q_sslsocket_set_socket_option(void* self, int32_t option, void* value);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketOption, QVariant*)
+/// @param callback void func(QSslSocket* self, enum QAbstractSocket__SocketOption option, QVariant* value)
 void q_sslsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setSocketOption)
@@ -202,7 +202,7 @@ QVariant* q_sslsocket_socket_option(void* self, int32_t option);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback QVariant* fn(QSslSocket*, enum QAbstractSocket__SocketOption)
+/// @param callback QVariant* func(QSslSocket* self, enum QAbstractSocket__SocketOption option)
 void q_sslsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#socketOption)
@@ -285,7 +285,7 @@ long long q_sslsocket_bytes_available(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_sslsocket_on_bytes_available(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#bytesAvailable)
@@ -305,7 +305,7 @@ long long q_sslsocket_bytes_to_write(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_sslsocket_on_bytes_to_write(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#bytesToWrite)
@@ -325,7 +325,7 @@ bool q_sslsocket_can_read_line(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sslsocket_on_can_read_line(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#canReadLine)
@@ -345,7 +345,7 @@ void q_sslsocket_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sslsocket_on_close(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#close)
@@ -365,7 +365,7 @@ bool q_sslsocket_at_end(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sslsocket_on_at_end(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#atEnd)
@@ -386,7 +386,7 @@ void q_sslsocket_set_read_buffer_size(void* self, long long size);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, long long)
+/// @param callback void func(QSslSocket* self, long long size)
 void q_sslsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setReadBufferSize)
@@ -501,7 +501,7 @@ bool q_sslsocket_wait_for_connected(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, int)
+/// @param callback bool func(QSslSocket* self, int msecs)
 void q_sslsocket_on_wait_for_connected(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#waitForConnected)
@@ -528,7 +528,7 @@ bool q_sslsocket_wait_for_ready_read(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, int)
+/// @param callback bool func(QSslSocket* self, int msecs)
 void q_sslsocket_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#waitForReadyRead)
@@ -550,7 +550,7 @@ bool q_sslsocket_wait_for_bytes_written(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, int)
+/// @param callback bool func(QSslSocket* self, int msecs)
 void q_sslsocket_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#waitForBytesWritten)
@@ -572,7 +572,7 @@ bool q_sslsocket_wait_for_disconnected(void* self, int msecs);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, int)
+/// @param callback bool func(QSslSocket* self, int msecs)
 void q_sslsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#waitForDisconnected)
@@ -696,7 +696,7 @@ void q_sslsocket_encrypted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#encrypted)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_encrypted(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyError)
@@ -708,7 +708,7 @@ void q_sslsocket_peer_verify_error(void* self, void* errorVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyError)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QSslError*)
+/// @param callback void func(QSslSocket* self, QSslError* errorVal)
 void q_sslsocket_on_peer_verify_error(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
@@ -720,7 +720,7 @@ void q_sslsocket_ssl_errors(void* self, libqt_list errors);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, libqt_list /* of QSslError* */)
+/// @param callback void func(QSslSocket* self, libqt_list /* of QSslError* */ /* of QSslError* */)
 void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#modeChanged)
@@ -732,7 +732,7 @@ void q_sslsocket_mode_changed(void* self, int32_t newMode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#modeChanged)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QSslSocket__SslMode)
+/// @param callback void func(QSslSocket* self, enum QSslSocket__SslMode newMode)
 void q_sslsocket_on_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#encryptedBytesWritten)
@@ -744,7 +744,7 @@ void q_sslsocket_encrypted_bytes_written(void* self, long long totalBytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#encryptedBytesWritten)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, long long)
+/// @param callback void func(QSslSocket* self, long long totalBytes)
 void q_sslsocket_on_encrypted_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#preSharedKeyAuthenticationRequired)
@@ -756,7 +756,7 @@ void q_sslsocket_pre_shared_key_authentication_required(void* self, void* authen
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#preSharedKeyAuthenticationRequired)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QSslPreSharedKeyAuthenticator*)
+/// @param callback void func(QSslSocket* self, QSslPreSharedKeyAuthenticator* authenticator)
 void q_sslsocket_on_pre_shared_key_authentication_required(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#newSessionTicketReceived)
@@ -767,7 +767,7 @@ void q_sslsocket_new_session_ticket_received(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#newSessionTicketReceived)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_new_session_ticket_received(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertSent)
@@ -781,7 +781,7 @@ void q_sslsocket_alert_sent(void* self, int32_t level, int32_t typeVal, const ch
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertSent)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
+/// @param callback void func(QSslSocket* self, enum QSsl__AlertLevel level, enum QSsl__AlertType typeVal, const char* description)
 void q_sslsocket_on_alert_sent(void* self, void (*callback)(void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertReceived)
@@ -795,7 +795,7 @@ void q_sslsocket_alert_received(void* self, int32_t level, int32_t typeVal, cons
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertReceived)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
+/// @param callback void func(QSslSocket* self, enum QSsl__AlertLevel level, enum QSsl__AlertType typeVal, const char* description)
 void q_sslsocket_on_alert_received(void* self, void (*callback)(void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#handshakeInterruptedOnError)
@@ -807,7 +807,7 @@ void q_sslsocket_handshake_interrupted_on_error(void* self, void* errorVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#handshakeInterruptedOnError)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QSslError*)
+/// @param callback void func(QSslSocket* self, QSslError* errorVal)
 void q_sslsocket_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#readData)
@@ -822,7 +822,7 @@ long long q_sslsocket_read_data(void* self, char* data, long long maxlen);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn(QSslSocket*, char*, long long)
+/// @param callback long long func(QSslSocket* self, char* data, long long maxlen)
 void q_sslsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#readData)
@@ -845,7 +845,7 @@ long long q_sslsocket_skip_data(void* self, long long maxSize);
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn(QSslSocket*, long long)
+/// @param callback long long func(QSslSocket* self, long long maxSize)
 void q_sslsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#skipData)
@@ -868,7 +868,7 @@ long long q_sslsocket_write_data(void* self, const char* data, long long lenVal)
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn(QSslSocket*, const char*, long long)
+/// @param callback long long func(QSslSocket* self, const char* data, long long lenVal)
 void q_sslsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#writeData)
@@ -1190,7 +1190,7 @@ void q_sslsocket_host_found(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_host_found(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSocket
@@ -1205,7 +1205,7 @@ void q_sslsocket_connected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_connected(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSocket
@@ -1220,7 +1220,7 @@ void q_sslsocket_disconnected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_disconnected(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSocket
@@ -1236,7 +1236,7 @@ void q_sslsocket_state_changed(void* self, int32_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketState)
+/// @param callback void func(QSslSocket* self, enum QAbstractSocket__SocketState param1)
 void q_sslsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -1252,7 +1252,7 @@ void q_sslsocket_error_occurred(void* self, int32_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QSslSocket* self, enum QAbstractSocket__SocketError param1)
 void q_sslsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -1269,7 +1269,7 @@ void q_sslsocket_proxy_authentication_required(void* self, void* proxy, void* au
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QNetworkProxy*, QAuthenticator*)
+/// @param callback void func(QSslSocket* self, QNetworkProxy* proxy, QAuthenticator* authenticator)
 void q_sslsocket_on_proxy_authentication_required(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -1559,7 +1559,7 @@ void q_sslsocket_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1575,7 +1575,7 @@ void q_sslsocket_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, int)
+/// @param callback void func(QSslSocket* self, int channel)
 void q_sslsocket_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1591,7 +1591,7 @@ void q_sslsocket_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, long long)
+/// @param callback void func(QSslSocket* self, long long bytes)
 void q_sslsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1608,7 +1608,7 @@ void q_sslsocket_channel_bytes_written(void* self, int channel, long long bytes)
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, int, long long)
+/// @param callback void func(QSslSocket* self, int channel, long long bytes)
 void q_sslsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -1623,7 +1623,7 @@ void q_sslsocket_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1638,7 +1638,7 @@ void q_sslsocket_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1877,7 +1877,7 @@ void q_sslsocket_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*)
+/// @param callback void func(QSslSocket* self)
 void q_sslsocket_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1955,7 +1955,7 @@ void q_sslsocket_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QObject*)
+/// @param callback void func(QSslSocket* self, QObject* param1)
 void q_sslsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -1989,7 +1989,7 @@ bool q_sslsocket_qbase_bind(void* self, void* address, unsigned short port, int6
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, QHostAddress*, unsigned short, flag of enum QAbstractSocket__BindFlag)
+/// @param callback bool func(QSslSocket* self, QHostAddress* address, unsigned short port, flag of enum QAbstractSocket__BindFlag mode)
 void q_sslsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -2017,7 +2017,7 @@ intptr_t q_sslsocket_qbase_socket_descriptor(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback intptr_t fn()
+/// @param callback intptr_t func()
 void q_sslsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -2045,7 +2045,7 @@ bool q_sslsocket_qbase_is_sequential(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sslsocket_on_is_sequential(void* self, bool (*callback)());
 
 /// Inherited from QAbstractSocket
@@ -2077,7 +2077,7 @@ long long q_sslsocket_qbase_read_line_data(void* self, char* data, long long max
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn(QSslSocket*, char*, long long)
+/// @param callback long long func(QSslSocket* self, char* data, long long maxlen)
 void q_sslsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QIODevice
@@ -2107,7 +2107,7 @@ bool q_sslsocket_qbase_open(void* self, int64_t mode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QSslSocket* self, flag of enum QIODeviceBase__OpenModeFlag mode)
 void q_sslsocket_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -2135,7 +2135,7 @@ long long q_sslsocket_qbase_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_sslsocket_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -2163,7 +2163,7 @@ long long q_sslsocket_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_sslsocket_on_size(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -2193,7 +2193,7 @@ bool q_sslsocket_qbase_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, long long)
+/// @param callback bool func(QSslSocket* self, long long pos)
 void q_sslsocket_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -2221,7 +2221,7 @@ bool q_sslsocket_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sslsocket_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -2251,7 +2251,7 @@ bool q_sslsocket_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, QEvent*)
+/// @param callback bool func(QSslSocket* self, QEvent* event)
 void q_sslsocket_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2283,7 +2283,7 @@ bool q_sslsocket_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, QObject*, QEvent*)
+/// @param callback bool func(QSslSocket* self, QObject* watched, QEvent* event)
 void q_sslsocket_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2313,7 +2313,7 @@ void q_sslsocket_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QTimerEvent*)
+/// @param callback void func(QSslSocket* self, QTimerEvent* event)
 void q_sslsocket_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2343,7 +2343,7 @@ void q_sslsocket_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QChildEvent*)
+/// @param callback void func(QSslSocket* self, QChildEvent* event)
 void q_sslsocket_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2373,7 +2373,7 @@ void q_sslsocket_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QEvent*)
+/// @param callback void func(QSslSocket* self, QEvent* event)
 void q_sslsocket_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2403,7 +2403,7 @@ void q_sslsocket_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QMetaMethod*)
+/// @param callback void func(QSslSocket* self, QMetaMethod* signal)
 void q_sslsocket_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2433,7 +2433,7 @@ void q_sslsocket_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QMetaMethod*)
+/// @param callback void func(QSslSocket* self, QMetaMethod* signal)
 void q_sslsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2463,7 +2463,7 @@ void q_sslsocket_qbase_set_socket_state(void* self, int32_t state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketState)
+/// @param callback void func(QSslSocket* self, enum QAbstractSocket__SocketState state)
 void q_sslsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -2493,7 +2493,7 @@ void q_sslsocket_qbase_set_socket_error(void* self, int32_t socketError);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QSslSocket* self, enum QAbstractSocket__SocketError socketError)
 void q_sslsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
@@ -2523,7 +2523,7 @@ void q_sslsocket_qbase_set_local_port(void* self, unsigned short port);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, unsigned short)
+/// @param callback void func(QSslSocket* self, unsigned short port)
 void q_sslsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short));
 
 /// Inherited from QAbstractSocket
@@ -2553,7 +2553,7 @@ void q_sslsocket_qbase_set_local_address(void* self, void* address);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QHostAddress*)
+/// @param callback void func(QSslSocket* self, QHostAddress* address)
 void q_sslsocket_on_set_local_address(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2583,7 +2583,7 @@ void q_sslsocket_qbase_set_peer_port(void* self, unsigned short port);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, unsigned short)
+/// @param callback void func(QSslSocket* self, unsigned short port)
 void q_sslsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short));
 
 /// Inherited from QAbstractSocket
@@ -2613,7 +2613,7 @@ void q_sslsocket_qbase_set_peer_address(void* self, void* address);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, QHostAddress*)
+/// @param callback void func(QSslSocket* self, QHostAddress* address)
 void q_sslsocket_on_set_peer_address(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2643,7 +2643,7 @@ void q_sslsocket_qbase_set_peer_name(void* self, const char* name);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, const char*)
+/// @param callback void func(QSslSocket* self, const char* name)
 void q_sslsocket_on_set_peer_name(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QIODevice
@@ -2673,7 +2673,7 @@ void q_sslsocket_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QSslSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_sslsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -2703,7 +2703,7 @@ void q_sslsocket_qbase_set_error_string(void* self, const char* errorString);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, const char*)
+/// @param callback void func(QSslSocket* self, const char* errorString)
 void q_sslsocket_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2731,7 +2731,7 @@ QObject* q_sslsocket_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sslsocket_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2759,7 +2759,7 @@ int32_t q_sslsocket_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sslsocket_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2789,7 +2789,7 @@ int32_t q_sslsocket_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback int32_t fn(QSslSocket*, const char*)
+/// @param callback int32_t func(QSslSocket* self, const char* signal)
 void q_sslsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2819,7 +2819,7 @@ bool q_sslsocket_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSslSocket*
-/// @param callback bool fn(QSslSocket*, QMetaMethod*)
+/// @param callback bool func(QSslSocket* self, QMetaMethod* signal)
 void q_sslsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2829,7 +2829,7 @@ void q_sslsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSslSocket*
-/// @param callback void fn(QSslSocket*, const char*)
+/// @param callback void func(QSslSocket* self, const char* objectName)
 void q_sslsocket_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#dtor.QSslSocket)

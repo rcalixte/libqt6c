@@ -427,7 +427,7 @@ void q_webengineclienthints_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineClientHints*
-/// @param callback void fn(QWebEngineClientHints*)
+/// @param callback void func(QWebEngineClientHints* self)
 void q_webengineclienthints_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -505,7 +505,7 @@ void q_webengineclienthints_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineClientHints*
-/// @param callback void fn(QWebEngineClientHints*, QObject*)
+/// @param callback void func(QWebEngineClientHints* self, QObject* param1)
 void q_webengineclienthints_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -515,7 +515,7 @@ void q_webengineclienthints_on_destroyed1(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineClientHints*
-/// @param callback void fn(QWebEngineClientHints*, const char*)
+/// @param callback void func(QWebEngineClientHints* self, const char* objectName)
 void q_webengineclienthints_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclienthints.html#dtor.QWebEngineClientHints)

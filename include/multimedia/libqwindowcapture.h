@@ -40,7 +40,7 @@ int32_t q_windowcapture_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QWindowCapture*
-/// @param callback int32_t fn(QWindowCapture*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWindowCapture* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_windowcapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -122,7 +122,7 @@ void q_windowcapture_active_changed(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#activeChanged)
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, bool)
+/// @param callback void func(QWindowCapture* self, bool param1)
 void q_windowcapture_on_active_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#windowChanged)
@@ -134,7 +134,7 @@ void q_windowcapture_window_changed(void* self, void* window);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#windowChanged)
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QCapturableWindow*)
+/// @param callback void func(QWindowCapture* self, QCapturableWindow* window)
 void q_windowcapture_on_window_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorChanged)
@@ -145,7 +145,7 @@ void q_windowcapture_error_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorChanged)
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*)
+/// @param callback void func(QWindowCapture* self)
 void q_windowcapture_on_error_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorOccurred)
@@ -158,7 +158,7 @@ void q_windowcapture_error_occurred(void* self, int32_t errorVal, const char* er
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorOccurred)
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, enum QWindowCapture__Error, const char*)
+/// @param callback void func(QWindowCapture* self, enum QWindowCapture__Error errorVal, const char* errorString)
 void q_windowcapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -404,7 +404,7 @@ void q_windowcapture_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*)
+/// @param callback void func(QWindowCapture* self)
 void q_windowcapture_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -482,7 +482,7 @@ void q_windowcapture_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QObject*)
+/// @param callback void func(QWindowCapture* self, QObject* param1)
 void q_windowcapture_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -512,7 +512,7 @@ bool q_windowcapture_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback bool fn(QWindowCapture*, QEvent*)
+/// @param callback bool func(QWindowCapture* self, QEvent* event)
 void q_windowcapture_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -544,7 +544,7 @@ bool q_windowcapture_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback bool fn(QWindowCapture*, QObject*, QEvent*)
+/// @param callback bool func(QWindowCapture* self, QObject* watched, QEvent* event)
 void q_windowcapture_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -574,7 +574,7 @@ void q_windowcapture_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QTimerEvent*)
+/// @param callback void func(QWindowCapture* self, QTimerEvent* event)
 void q_windowcapture_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -604,7 +604,7 @@ void q_windowcapture_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QChildEvent*)
+/// @param callback void func(QWindowCapture* self, QChildEvent* event)
 void q_windowcapture_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -634,7 +634,7 @@ void q_windowcapture_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QEvent*)
+/// @param callback void func(QWindowCapture* self, QEvent* event)
 void q_windowcapture_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -664,7 +664,7 @@ void q_windowcapture_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QMetaMethod*)
+/// @param callback void func(QWindowCapture* self, QMetaMethod* signal)
 void q_windowcapture_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -694,7 +694,7 @@ void q_windowcapture_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, QMetaMethod*)
+/// @param callback void func(QWindowCapture* self, QMetaMethod* signal)
 void q_windowcapture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -722,7 +722,7 @@ QObject* q_windowcapture_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_windowcapture_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -750,7 +750,7 @@ int32_t q_windowcapture_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_windowcapture_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -780,7 +780,7 @@ int32_t q_windowcapture_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback int32_t fn(QWindowCapture*, const char*)
+/// @param callback int32_t func(QWindowCapture* self, const char* signal)
 void q_windowcapture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -810,7 +810,7 @@ bool q_windowcapture_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWindowCapture*
-/// @param callback bool fn(QWindowCapture*, QMetaMethod*)
+/// @param callback bool func(QWindowCapture* self, QMetaMethod* signal)
 void q_windowcapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -820,7 +820,7 @@ void q_windowcapture_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWindowCapture*
-/// @param callback void fn(QWindowCapture*, const char*)
+/// @param callback void func(QWindowCapture* self, const char* objectName)
 void q_windowcapture_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#dtor.QWindowCapture)

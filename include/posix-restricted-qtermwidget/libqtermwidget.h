@@ -51,7 +51,7 @@ int32_t q_termwidget_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn(QTermWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTermWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_termwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -79,7 +79,7 @@ QSize* q_termwidget_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_termwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -100,7 +100,7 @@ void q_termwidget_set_terminal_size_hint(void* self, bool enabled);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool enabled)
 void q_termwidget_on_set_terminal_size_hint(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -121,7 +121,7 @@ bool q_termwidget_terminal_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_terminal_size_hint(void* self, bool (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -141,7 +141,7 @@ void q_termwidget_start_shell_program(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_start_shell_program(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -161,7 +161,7 @@ void q_termwidget_start_terminal_teletype(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_start_terminal_teletype(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -181,7 +181,7 @@ int32_t q_termwidget_get_shell_p_i_d(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_get_shell_p_i_d(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -201,7 +201,7 @@ int32_t q_termwidget_get_foreground_process_id(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_get_foreground_process_id(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -222,7 +222,7 @@ void q_termwidget_change_dir(void* self, const char* dir);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* dir)
 void q_termwidget_on_change_dir(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -244,7 +244,7 @@ void q_termwidget_set_terminal_font(void* self, void* font);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QFont*)
+/// @param callback void func(QTermWidget* self, QFont* font)
 void q_termwidget_on_set_terminal_font(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -265,7 +265,7 @@ QFont* q_termwidget_get_terminal_font(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback QFont* fn()
+/// @param callback QFont* func()
 void q_termwidget_on_get_terminal_font(void* self, QFont* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -286,7 +286,7 @@ void q_termwidget_set_terminal_opacity(void* self, double level);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, double)
+/// @param callback void func(QTermWidget* self, double level)
 void q_termwidget_on_set_terminal_opacity(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -308,7 +308,7 @@ void q_termwidget_set_terminal_background_image(void* self, const char* backgrou
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* backgroundImage)
 void q_termwidget_on_set_terminal_background_image(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -330,7 +330,7 @@ void q_termwidget_set_terminal_background_mode(void* self, int mode);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int)
+/// @param callback void func(QTermWidget* self, int mode)
 void q_termwidget_on_set_terminal_background_mode(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -352,7 +352,7 @@ void q_termwidget_set_environment(void* self, const char* environment[]);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char**)
+/// @param callback void func(QTermWidget* self, const char** environment)
 void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const char**));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -374,7 +374,7 @@ void q_termwidget_set_shell_program(void* self, const char* program);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* program)
 void q_termwidget_on_set_shell_program(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -396,7 +396,7 @@ void q_termwidget_set_working_directory(void* self, const char* dir);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* dir)
 void q_termwidget_on_set_working_directory(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -419,7 +419,7 @@ const char* q_termwidget_working_directory(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_termwidget_on_working_directory(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -440,7 +440,7 @@ void q_termwidget_set_args(void* self, const char* args[]);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char**)
+/// @param callback void func(QTermWidget* self, const char** args)
 void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -462,7 +462,7 @@ void q_termwidget_set_color_scheme(void* self, const char* name);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* name)
 void q_termwidget_on_set_color_scheme(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -485,7 +485,7 @@ const char** q_termwidget_get_available_color_schemes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_termwidget_on_get_available_color_schemes(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -517,7 +517,7 @@ void q_termwidget_set_history_size(void* self, int lines);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int)
+/// @param callback void func(QTermWidget* self, int lines)
 void q_termwidget_on_set_history_size(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -538,7 +538,7 @@ int32_t q_termwidget_history_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_history_size(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -559,7 +559,7 @@ void q_termwidget_set_scroll_bar_position(void* self, int32_t scrollBarPosition)
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, enum QTermWidgetInterface__ScrollBarPosition)
+/// @param callback void func(QTermWidget* self, enum QTermWidgetInterface__ScrollBarPosition scrollBarPosition)
 void q_termwidget_on_set_scroll_bar_position(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -580,7 +580,7 @@ void q_termwidget_scroll_to_end(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_scroll_to_end(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -601,7 +601,7 @@ void q_termwidget_send_text(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* text)
 void q_termwidget_on_send_text(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -623,7 +623,7 @@ void q_termwidget_send_key_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QKeyEvent*)
+/// @param callback void func(QTermWidget* self, QKeyEvent* e)
 void q_termwidget_on_send_key_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -645,7 +645,7 @@ void q_termwidget_set_flow_control_enabled(void* self, bool enabled);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool enabled)
 void q_termwidget_on_set_flow_control_enabled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -666,7 +666,7 @@ bool q_termwidget_flow_control_enabled(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_flow_control_enabled(void* self, bool (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -687,7 +687,7 @@ void q_termwidget_set_flow_control_warning_enabled(void* self, bool enabled);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool enabled)
 void q_termwidget_on_set_flow_control_warning_enabled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -716,7 +716,7 @@ const char* q_termwidget_key_bindings(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_termwidget_on_key_bindings(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -737,7 +737,7 @@ void q_termwidget_set_motion_after_pasting(void* self, int motionAfterPasting);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int)
+/// @param callback void func(QTermWidget* self, int motionAfterPasting)
 void q_termwidget_on_set_motion_after_pasting(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -758,7 +758,7 @@ int32_t q_termwidget_history_lines_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_history_lines_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -778,7 +778,7 @@ int32_t q_termwidget_screen_columns_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_screen_columns_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -798,7 +798,7 @@ int32_t q_termwidget_screen_lines_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_screen_lines_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -820,7 +820,7 @@ void q_termwidget_set_selection_start(void* self, int row, int column);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int, int)
+/// @param callback void func(QTermWidget* self, int row, int column)
 void q_termwidget_on_set_selection_start(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -844,7 +844,7 @@ void q_termwidget_set_selection_end(void* self, int row, int column);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int, int)
+/// @param callback void func(QTermWidget* self, int row, int column)
 void q_termwidget_on_set_selection_end(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -868,7 +868,7 @@ void q_termwidget_get_selection_start(void* self, int* row, int* column);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int*, int*)
+/// @param callback void func(QTermWidget* self, int* row, int* column)
 void q_termwidget_on_get_selection_start(void* self, void (*callback)(void*, int*, int*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -892,7 +892,7 @@ void q_termwidget_get_selection_end(void* self, int* row, int* column);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int*, int*)
+/// @param callback void func(QTermWidget* self, int* row, int* column)
 void q_termwidget_on_get_selection_end(void* self, void (*callback)(void*, int*, int*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -917,7 +917,7 @@ const char* q_termwidget_selected_text(void* self, bool preserveLineBreaks);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char* fn(QTermWidget*, bool)
+/// @param callback const char* func(QTermWidget* self, bool preserveLineBreaks)
 void q_termwidget_on_selected_text(void* self, const char* (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -939,7 +939,7 @@ void q_termwidget_set_monitor_activity(void* self, bool monitorActivity);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool monitorActivity)
 void q_termwidget_on_set_monitor_activity(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -961,7 +961,7 @@ void q_termwidget_set_monitor_silence(void* self, bool monitorSilence);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool monitorSilence)
 void q_termwidget_on_set_monitor_silence(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -983,7 +983,7 @@ void q_termwidget_set_silence_timeout(void* self, int seconds);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int)
+/// @param callback void func(QTermWidget* self, int seconds)
 void q_termwidget_on_set_silence_timeout(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1018,7 +1018,7 @@ libqt_list /* of QAction* */ q_termwidget_filter_actions(void* self, void* posit
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback libqt_list /* of QAction* */ fn(QTermWidget*, QPoint*)
+/// @param callback libqt_list /* of QAction* */ func(QTermWidget* self, QPoint* position)
 void q_termwidget_on_filter_actions(void* self, libqt_list /* of QAction* */ (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1039,7 +1039,7 @@ int32_t q_termwidget_get_pty_slave_fd(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_get_pty_slave_fd(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1066,7 +1066,7 @@ void q_termwidget_set_blinking_cursor(void* self, bool blink);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool blink)
 void q_termwidget_on_set_blinking_cursor(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1088,7 +1088,7 @@ void q_termwidget_set_bidi_enabled(void* self, bool enabled);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool enabled)
 void q_termwidget_on_set_bidi_enabled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1109,7 +1109,7 @@ bool q_termwidget_is_bidi_enabled(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_is_bidi_enabled(void* self, bool (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1130,7 +1130,7 @@ void q_termwidget_set_auto_close(void* self, bool autoClose);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool autoClose)
 void q_termwidget_on_set_auto_close(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1153,7 +1153,7 @@ const char* q_termwidget_title(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_termwidget_on_title(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1175,7 +1175,7 @@ const char* q_termwidget_icon(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_termwidget_on_icon(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1195,7 +1195,7 @@ bool q_termwidget_is_title_changed(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_is_title_changed(void* self, bool (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1216,7 +1216,7 @@ void q_termwidget_bracket_text(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* text)
 void q_termwidget_on_bracket_text(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1238,7 +1238,7 @@ void q_termwidget_disable_bracketed_paste_mode(void* self, bool disable);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool disable)
 void q_termwidget_on_disable_bracketed_paste_mode(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1259,7 +1259,7 @@ bool q_termwidget_bracketed_paste_mode_is_disabled(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_bracketed_paste_mode_is_disabled(void* self, bool (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1280,7 +1280,7 @@ void q_termwidget_set_margin(void* self, int margin);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, int)
+/// @param callback void func(QTermWidget* self, int margin)
 void q_termwidget_on_set_margin(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1301,7 +1301,7 @@ int32_t q_termwidget_get_margin(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_get_margin(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1322,7 +1322,7 @@ void q_termwidget_set_draw_line_chars(void* self, bool drawLineChars);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool drawLineChars)
 void q_termwidget_on_set_draw_line_chars(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1344,7 +1344,7 @@ void q_termwidget_set_bold_intense(void* self, bool boldIntense);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool boldIntense)
 void q_termwidget_on_set_bold_intense(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1366,7 +1366,7 @@ void q_termwidget_set_confirm_multiline_paste(void* self, bool confirmMultilineP
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool confirmMultilinePaste)
 void q_termwidget_on_set_confirm_multiline_paste(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1388,7 +1388,7 @@ void q_termwidget_set_trim_pasted_trailing_newlines(void* self, bool trimPastedT
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool trimPastedTrailingNewlines)
 void q_termwidget_on_set_trim_pasted_trailing_newlines(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1411,7 +1411,7 @@ const char* q_termwidget_word_characters(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_termwidget_on_word_characters(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1432,7 +1432,7 @@ void q_termwidget_set_word_characters(void* self, const char* chars);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* chars)
 void q_termwidget_on_set_word_characters(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1454,7 +1454,7 @@ QTermWidgetInterface* q_termwidget_create_widget(void* self, int startnow);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback QTermWidgetInterface* fn(QTermWidget*, int)
+/// @param callback QTermWidgetInterface* func(QTermWidget* self, int startnow)
 void q_termwidget_on_create_widget(void* self, QTermWidgetInterface* (*callback)(void*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1473,7 +1473,7 @@ void q_termwidget_finished(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1485,7 +1485,7 @@ void q_termwidget_copy_available(void* self, bool param1);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool param1)
 void q_termwidget_on_copy_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1496,7 +1496,7 @@ void q_termwidget_term_get_focus(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_term_get_focus(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1507,7 +1507,7 @@ void q_termwidget_term_lost_focus(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_term_lost_focus(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1519,7 +1519,7 @@ void q_termwidget_term_key_pressed(void* self, void* param1);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QKeyEvent*)
+/// @param callback void func(QTermWidget* self, QKeyEvent* param1)
 void q_termwidget_on_term_key_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1532,7 +1532,7 @@ void q_termwidget_url_activated(void* self, void* param1, bool fromContextMenu);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QUrl*, bool)
+/// @param callback void func(QTermWidget* self, QUrl* param1, bool fromContextMenu)
 void q_termwidget_on_url_activated(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1544,7 +1544,7 @@ void q_termwidget_bell(void* self, const char* message);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* message)
 void q_termwidget_on_bell(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1555,7 +1555,7 @@ void q_termwidget_activity(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_activity(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1566,7 +1566,7 @@ void q_termwidget_silence(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_silence(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1579,7 +1579,7 @@ void q_termwidget_send_data(void* self, const char* param1, int param2);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*, int)
+/// @param callback void func(QTermWidget* self, const char* param1, int param2)
 void q_termwidget_on_send_data(void* self, void (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1591,7 +1591,7 @@ void q_termwidget_profile_changed(void* self, const char* profile);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* profile)
 void q_termwidget_on_profile_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1602,7 +1602,7 @@ void q_termwidget_title_changed(void* self);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_title_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1614,7 +1614,7 @@ void q_termwidget_received_data(void* self, const char* text);
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* text)
 void q_termwidget_on_received_data(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1681,7 +1681,7 @@ void q_termwidget_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QResizeEvent*)
+/// @param callback void func(QTermWidget* self, QResizeEvent* param1)
 void q_termwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1702,7 +1702,7 @@ void q_termwidget_session_finished(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_session_finished(void* self, void (*callback)());
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -1723,7 +1723,7 @@ void q_termwidget_selection_changed(void* self, bool textSelected);
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool textSelected)
 void q_termwidget_on_selection_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3688,7 +3688,7 @@ void q_termwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* title)
 void q_termwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3704,7 +3704,7 @@ void q_termwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QIcon*)
+/// @param callback void func(QTermWidget* self, QIcon* icon)
 void q_termwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3720,7 +3720,7 @@ void q_termwidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* iconText)
 void q_termwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3736,7 +3736,7 @@ void q_termwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QPoint*)
+/// @param callback void func(QTermWidget* self, QPoint* pos)
 void q_termwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4113,7 +4113,7 @@ void q_termwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*)
+/// @param callback void func(QTermWidget* self)
 void q_termwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4191,7 +4191,7 @@ void q_termwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QObject*)
+/// @param callback void func(QTermWidget* self, QObject* param1)
 void q_termwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4318,7 +4318,7 @@ int32_t q_termwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4348,7 +4348,7 @@ void q_termwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, bool)
+/// @param callback void func(QTermWidget* self, bool visible)
 void q_termwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -4376,7 +4376,7 @@ QSize* q_termwidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_termwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -4406,7 +4406,7 @@ int32_t q_termwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn(QTermWidget*, int)
+/// @param callback int32_t func(QTermWidget* self, int param1)
 void q_termwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -4434,7 +4434,7 @@ bool q_termwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4462,7 +4462,7 @@ QPaintEngine* q_termwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_termwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -4492,7 +4492,7 @@ bool q_termwidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn(QTermWidget*, QEvent*)
+/// @param callback bool func(QTermWidget* self, QEvent* event)
 void q_termwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4522,7 +4522,7 @@ void q_termwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMouseEvent*)
+/// @param callback void func(QTermWidget* self, QMouseEvent* event)
 void q_termwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4552,7 +4552,7 @@ void q_termwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMouseEvent*)
+/// @param callback void func(QTermWidget* self, QMouseEvent* event)
 void q_termwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4582,7 +4582,7 @@ void q_termwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMouseEvent*)
+/// @param callback void func(QTermWidget* self, QMouseEvent* event)
 void q_termwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4612,7 +4612,7 @@ void q_termwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMouseEvent*)
+/// @param callback void func(QTermWidget* self, QMouseEvent* event)
 void q_termwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4642,7 +4642,7 @@ void q_termwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QWheelEvent*)
+/// @param callback void func(QTermWidget* self, QWheelEvent* event)
 void q_termwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4672,7 +4672,7 @@ void q_termwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QKeyEvent*)
+/// @param callback void func(QTermWidget* self, QKeyEvent* event)
 void q_termwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4702,7 +4702,7 @@ void q_termwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QKeyEvent*)
+/// @param callback void func(QTermWidget* self, QKeyEvent* event)
 void q_termwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4732,7 +4732,7 @@ void q_termwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QFocusEvent*)
+/// @param callback void func(QTermWidget* self, QFocusEvent* event)
 void q_termwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4762,7 +4762,7 @@ void q_termwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QFocusEvent*)
+/// @param callback void func(QTermWidget* self, QFocusEvent* event)
 void q_termwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4792,7 +4792,7 @@ void q_termwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QEnterEvent*)
+/// @param callback void func(QTermWidget* self, QEnterEvent* event)
 void q_termwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4822,7 +4822,7 @@ void q_termwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QEvent*)
+/// @param callback void func(QTermWidget* self, QEvent* event)
 void q_termwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4852,7 +4852,7 @@ void q_termwidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QPaintEvent*)
+/// @param callback void func(QTermWidget* self, QPaintEvent* event)
 void q_termwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4882,7 +4882,7 @@ void q_termwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMoveEvent*)
+/// @param callback void func(QTermWidget* self, QMoveEvent* event)
 void q_termwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4912,7 +4912,7 @@ void q_termwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QCloseEvent*)
+/// @param callback void func(QTermWidget* self, QCloseEvent* event)
 void q_termwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4942,7 +4942,7 @@ void q_termwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QContextMenuEvent*)
+/// @param callback void func(QTermWidget* self, QContextMenuEvent* event)
 void q_termwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4972,7 +4972,7 @@ void q_termwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QTabletEvent*)
+/// @param callback void func(QTermWidget* self, QTabletEvent* event)
 void q_termwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5002,7 +5002,7 @@ void q_termwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QActionEvent*)
+/// @param callback void func(QTermWidget* self, QActionEvent* event)
 void q_termwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5032,7 +5032,7 @@ void q_termwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QDragEnterEvent*)
+/// @param callback void func(QTermWidget* self, QDragEnterEvent* event)
 void q_termwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5062,7 +5062,7 @@ void q_termwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QDragMoveEvent*)
+/// @param callback void func(QTermWidget* self, QDragMoveEvent* event)
 void q_termwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5092,7 +5092,7 @@ void q_termwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QDragLeaveEvent*)
+/// @param callback void func(QTermWidget* self, QDragLeaveEvent* event)
 void q_termwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5122,7 +5122,7 @@ void q_termwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QDropEvent*)
+/// @param callback void func(QTermWidget* self, QDropEvent* event)
 void q_termwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5152,7 +5152,7 @@ void q_termwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QShowEvent*)
+/// @param callback void func(QTermWidget* self, QShowEvent* event)
 void q_termwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5182,7 +5182,7 @@ void q_termwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QHideEvent*)
+/// @param callback void func(QTermWidget* self, QHideEvent* event)
 void q_termwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5216,7 +5216,7 @@ bool q_termwidget_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn(QTermWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QTermWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_termwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -5246,7 +5246,7 @@ void q_termwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QEvent*)
+/// @param callback void func(QTermWidget* self, QEvent* param1)
 void q_termwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5276,7 +5276,7 @@ int32_t q_termwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn(QTermWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QTermWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_termwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -5306,7 +5306,7 @@ void q_termwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QPainter*)
+/// @param callback void func(QTermWidget* self, QPainter* painter)
 void q_termwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5336,7 +5336,7 @@ QPaintDevice* q_termwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback QPaintDevice* fn(QTermWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QTermWidget* self, QPoint* offset)
 void q_termwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5364,7 +5364,7 @@ QPainter* q_termwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_termwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -5394,7 +5394,7 @@ void q_termwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QInputMethodEvent*)
+/// @param callback void func(QTermWidget* self, QInputMethodEvent* param1)
 void q_termwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5424,7 +5424,7 @@ QVariant* q_termwidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback QVariant* fn(QTermWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QTermWidget* self, enum Qt__InputMethodQuery param1)
 void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -5454,7 +5454,7 @@ bool q_termwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn(QTermWidget*, bool)
+/// @param callback bool func(QTermWidget* self, bool next)
 void q_termwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -5486,7 +5486,7 @@ bool q_termwidget_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn(QTermWidget*, QObject*, QEvent*)
+/// @param callback bool func(QTermWidget* self, QObject* watched, QEvent* event)
 void q_termwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -5516,7 +5516,7 @@ void q_termwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QTimerEvent*)
+/// @param callback void func(QTermWidget* self, QTimerEvent* event)
 void q_termwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5546,7 +5546,7 @@ void q_termwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QChildEvent*)
+/// @param callback void func(QTermWidget* self, QChildEvent* event)
 void q_termwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5576,7 +5576,7 @@ void q_termwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QEvent*)
+/// @param callback void func(QTermWidget* self, QEvent* event)
 void q_termwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5606,7 +5606,7 @@ void q_termwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMetaMethod*)
+/// @param callback void func(QTermWidget* self, QMetaMethod* signal)
 void q_termwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5636,7 +5636,7 @@ void q_termwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, QMetaMethod*)
+/// @param callback void func(QTermWidget* self, QMetaMethod* signal)
 void q_termwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5664,7 +5664,7 @@ void q_termwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5692,7 +5692,7 @@ void q_termwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5720,7 +5720,7 @@ void q_termwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_termwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5748,7 +5748,7 @@ bool q_termwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5776,7 +5776,7 @@ bool q_termwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_termwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5804,7 +5804,7 @@ QObject* q_termwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_termwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5832,7 +5832,7 @@ int32_t q_termwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_termwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5862,7 +5862,7 @@ int32_t q_termwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback int32_t fn(QTermWidget*, const char*)
+/// @param callback int32_t func(QTermWidget* self, const char* signal)
 void q_termwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5892,7 +5892,7 @@ bool q_termwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback bool fn(QTermWidget*, QMetaMethod*)
+/// @param callback bool func(QTermWidget* self, QMetaMethod* signal)
 void q_termwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5924,7 +5924,7 @@ double q_termwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTermWidget*
-/// @param callback double fn(QTermWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QTermWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_termwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5934,7 +5934,7 @@ void q_termwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTermWidget*
-/// @param callback void fn(QTermWidget*, const char*)
+/// @param callback void func(QTermWidget* self, const char* objectName)
 void q_termwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)

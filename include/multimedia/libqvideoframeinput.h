@@ -51,7 +51,7 @@ int32_t q_videoframeinput_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback int32_t fn(QVideoFrameInput*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QVideoFrameInput* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_videoframeinput_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -93,7 +93,7 @@ void q_videoframeinput_ready_to_send_video_frame(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeinput.html#readyToSendVideoFrame)
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*)
+/// @param callback void func(QVideoFrameInput* self)
 void q_videoframeinput_on_ready_to_send_video_frame(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -339,7 +339,7 @@ void q_videoframeinput_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*)
+/// @param callback void func(QVideoFrameInput* self)
 void q_videoframeinput_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -417,7 +417,7 @@ void q_videoframeinput_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, QObject*)
+/// @param callback void func(QVideoFrameInput* self, QObject* param1)
 void q_videoframeinput_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -447,7 +447,7 @@ bool q_videoframeinput_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback bool fn(QVideoFrameInput*, QEvent*)
+/// @param callback bool func(QVideoFrameInput* self, QEvent* event)
 void q_videoframeinput_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -479,7 +479,7 @@ bool q_videoframeinput_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback bool fn(QVideoFrameInput*, QObject*, QEvent*)
+/// @param callback bool func(QVideoFrameInput* self, QObject* watched, QEvent* event)
 void q_videoframeinput_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -509,7 +509,7 @@ void q_videoframeinput_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, QTimerEvent*)
+/// @param callback void func(QVideoFrameInput* self, QTimerEvent* event)
 void q_videoframeinput_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -539,7 +539,7 @@ void q_videoframeinput_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, QChildEvent*)
+/// @param callback void func(QVideoFrameInput* self, QChildEvent* event)
 void q_videoframeinput_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -569,7 +569,7 @@ void q_videoframeinput_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, QEvent*)
+/// @param callback void func(QVideoFrameInput* self, QEvent* event)
 void q_videoframeinput_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -599,7 +599,7 @@ void q_videoframeinput_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, QMetaMethod*)
+/// @param callback void func(QVideoFrameInput* self, QMetaMethod* signal)
 void q_videoframeinput_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -629,7 +629,7 @@ void q_videoframeinput_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, QMetaMethod*)
+/// @param callback void func(QVideoFrameInput* self, QMetaMethod* signal)
 void q_videoframeinput_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -657,7 +657,7 @@ QObject* q_videoframeinput_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_videoframeinput_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -685,7 +685,7 @@ int32_t q_videoframeinput_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_videoframeinput_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -715,7 +715,7 @@ int32_t q_videoframeinput_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback int32_t fn(QVideoFrameInput*, const char*)
+/// @param callback int32_t func(QVideoFrameInput* self, const char* signal)
 void q_videoframeinput_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -745,7 +745,7 @@ bool q_videoframeinput_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVideoFrameInput*
-/// @param callback bool fn(QVideoFrameInput*, QMetaMethod*)
+/// @param callback bool func(QVideoFrameInput* self, QMetaMethod* signal)
 void q_videoframeinput_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -755,7 +755,7 @@ void q_videoframeinput_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QVideoFrameInput*
-/// @param callback void fn(QVideoFrameInput*, const char*)
+/// @param callback void func(QVideoFrameInput* self, const char* objectName)
 void q_videoframeinput_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeinput.html#dtor.QVideoFrameInput)

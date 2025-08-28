@@ -193,7 +193,7 @@ void q_scroller_state_changed(void* self, int32_t newstate);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#stateChanged)
 ///
 /// @param self QScroller*
-/// @param callback void fn(QScroller*, enum QScroller__State)
+/// @param callback void func(QScroller* self, enum QScroller__State newstate)
 void q_scroller_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#scrollerPropertiesChanged)
@@ -205,7 +205,7 @@ void q_scroller_scroller_properties_changed(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#scrollerPropertiesChanged)
 ///
 /// @param self QScroller*
-/// @param callback void fn(QScroller*, QScrollerProperties*)
+/// @param callback void func(QScroller* self, QScrollerProperties* param1)
 void q_scroller_on_scroller_properties_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -484,7 +484,7 @@ void q_scroller_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QScroller*
-/// @param callback void fn(QScroller*)
+/// @param callback void func(QScroller* self)
 void q_scroller_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -562,7 +562,7 @@ void q_scroller_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QScroller*
-/// @param callback void fn(QScroller*, QObject*)
+/// @param callback void func(QScroller* self, QObject* param1)
 void q_scroller_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -572,7 +572,7 @@ void q_scroller_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QScroller*
-/// @param callback void fn(QScroller*, const char*)
+/// @param callback void func(QScroller* self, const char* objectName)
 void q_scroller_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qscroller.html#types

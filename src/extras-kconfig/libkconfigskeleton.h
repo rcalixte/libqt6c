@@ -46,7 +46,7 @@ int32_t k_configskeleton_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback int32_t fn(KConfigSkeleton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KConfigSkeleton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_configskeleton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -223,7 +223,7 @@ void k_configskeleton_config_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*)
+/// @param callback void func(KConfigSkeleton* self)
 void k_configskeleton_on_config_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
@@ -503,7 +503,7 @@ void k_configskeleton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*)
+/// @param callback void func(KConfigSkeleton* self)
 void k_configskeleton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -581,7 +581,7 @@ void k_configskeleton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, QObject*)
+/// @param callback void func(KConfigSkeleton* self, QObject* param1)
 void k_configskeleton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreConfigSkeleton
@@ -609,7 +609,7 @@ void k_configskeleton_qbase_set_defaults(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configskeleton_on_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
@@ -639,7 +639,7 @@ bool k_configskeleton_qbase_use_defaults(void* self, bool b);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool fn(KConfigSkeleton*, bool)
+/// @param callback bool func(KConfigSkeleton* self, bool b)
 void k_configskeleton_on_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from KCoreConfigSkeleton
@@ -669,7 +669,7 @@ bool k_configskeleton_qbase_usr_use_defaults(void* self, bool b);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool fn(KConfigSkeleton*, bool)
+/// @param callback bool func(KConfigSkeleton* self, bool b)
 void k_configskeleton_on_usr_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from KCoreConfigSkeleton
@@ -697,7 +697,7 @@ void k_configskeleton_qbase_usr_set_defaults(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configskeleton_on_usr_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
@@ -725,7 +725,7 @@ void k_configskeleton_qbase_usr_read(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configskeleton_on_usr_read(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
@@ -753,7 +753,7 @@ bool k_configskeleton_qbase_usr_save(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_configskeleton_on_usr_save(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -783,7 +783,7 @@ bool k_configskeleton_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool fn(KConfigSkeleton*, QEvent*)
+/// @param callback bool func(KConfigSkeleton* self, QEvent* event)
 void k_configskeleton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -815,7 +815,7 @@ bool k_configskeleton_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool fn(KConfigSkeleton*, QObject*, QEvent*)
+/// @param callback bool func(KConfigSkeleton* self, QObject* watched, QEvent* event)
 void k_configskeleton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -845,7 +845,7 @@ void k_configskeleton_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, QTimerEvent*)
+/// @param callback void func(KConfigSkeleton* self, QTimerEvent* event)
 void k_configskeleton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -875,7 +875,7 @@ void k_configskeleton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, QChildEvent*)
+/// @param callback void func(KConfigSkeleton* self, QChildEvent* event)
 void k_configskeleton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -905,7 +905,7 @@ void k_configskeleton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, QEvent*)
+/// @param callback void func(KConfigSkeleton* self, QEvent* event)
 void k_configskeleton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -935,7 +935,7 @@ void k_configskeleton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, QMetaMethod*)
+/// @param callback void func(KConfigSkeleton* self, QMetaMethod* signal)
 void k_configskeleton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -965,7 +965,7 @@ void k_configskeleton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, QMetaMethod*)
+/// @param callback void func(KConfigSkeleton* self, QMetaMethod* signal)
 void k_configskeleton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -993,7 +993,7 @@ QObject* k_configskeleton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_configskeleton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1021,7 +1021,7 @@ int32_t k_configskeleton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_configskeleton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1051,7 +1051,7 @@ int32_t k_configskeleton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback int32_t fn(KConfigSkeleton*, const char*)
+/// @param callback int32_t func(KConfigSkeleton* self, const char* signal)
 void k_configskeleton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1081,7 +1081,7 @@ bool k_configskeleton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigSkeleton*
-/// @param callback bool fn(KConfigSkeleton*, QMetaMethod*)
+/// @param callback bool func(KConfigSkeleton* self, QMetaMethod* signal)
 void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1091,7 +1091,7 @@ void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KConfigSkeleton*
-/// @param callback void fn(KConfigSkeleton*, const char*)
+/// @param callback void func(KConfigSkeleton* self, const char* objectName)
 void k_configskeleton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeleton.html#dtor.KConfigSkeleton)

@@ -62,7 +62,7 @@ int32_t q_camera_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QCamera*
-/// @param callback int32_t fn(QCamera*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QCamera* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_camera_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -402,7 +402,7 @@ void q_camera_active_changed(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#activeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, bool)
+/// @param callback void func(QCamera* self, bool param1)
 void q_camera_on_active_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorChanged)
@@ -413,7 +413,7 @@ void q_camera_error_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_error_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorOccurred)
@@ -426,7 +426,7 @@ void q_camera_error_occurred(void* self, int32_t errorVal, const char* errorStri
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorOccurred)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, enum QCamera__Error, const char*)
+/// @param callback void func(QCamera* self, enum QCamera__Error errorVal, const char* errorString)
 void q_camera_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraDeviceChanged)
@@ -437,7 +437,7 @@ void q_camera_camera_device_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraDeviceChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_camera_device_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraFormatChanged)
@@ -448,7 +448,7 @@ void q_camera_camera_format_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraFormatChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_camera_format_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#supportedFeaturesChanged)
@@ -459,7 +459,7 @@ void q_camera_supported_features_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#supportedFeaturesChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_supported_features_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusModeChanged)
@@ -470,7 +470,7 @@ void q_camera_focus_mode_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusModeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_focus_mode_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#zoomFactorChanged)
@@ -482,7 +482,7 @@ void q_camera_zoom_factor_changed(void* self, float param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#zoomFactorChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float param1)
 void q_camera_on_zoom_factor_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#minimumZoomFactorChanged)
@@ -494,7 +494,7 @@ void q_camera_minimum_zoom_factor_changed(void* self, float param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#minimumZoomFactorChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float param1)
 void q_camera_on_minimum_zoom_factor_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#maximumZoomFactorChanged)
@@ -506,7 +506,7 @@ void q_camera_maximum_zoom_factor_changed(void* self, float param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#maximumZoomFactorChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float param1)
 void q_camera_on_maximum_zoom_factor_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusDistanceChanged)
@@ -518,7 +518,7 @@ void q_camera_focus_distance_changed(void* self, float param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusDistanceChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float param1)
 void q_camera_on_focus_distance_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusPointChanged)
@@ -529,7 +529,7 @@ void q_camera_focus_point_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusPointChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_focus_point_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#customFocusPointChanged)
@@ -540,7 +540,7 @@ void q_camera_custom_focus_point_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#customFocusPointChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_custom_focus_point_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#flashReady)
@@ -552,7 +552,7 @@ void q_camera_flash_ready(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#flashReady)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, bool)
+/// @param callback void func(QCamera* self, bool param1)
 void q_camera_on_flash_ready(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#flashModeChanged)
@@ -563,7 +563,7 @@ void q_camera_flash_mode_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#flashModeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_flash_mode_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#torchModeChanged)
@@ -574,7 +574,7 @@ void q_camera_torch_mode_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#torchModeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_torch_mode_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureTimeChanged)
@@ -586,7 +586,7 @@ void q_camera_exposure_time_changed(void* self, float speed);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureTimeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float speed)
 void q_camera_on_exposure_time_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#manualExposureTimeChanged)
@@ -598,7 +598,7 @@ void q_camera_manual_exposure_time_changed(void* self, float speed);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#manualExposureTimeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float speed)
 void q_camera_on_manual_exposure_time_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isoSensitivityChanged)
@@ -610,7 +610,7 @@ void q_camera_iso_sensitivity_changed(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isoSensitivityChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, int)
+/// @param callback void func(QCamera* self, int param1)
 void q_camera_on_iso_sensitivity_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#manualIsoSensitivityChanged)
@@ -622,7 +622,7 @@ void q_camera_manual_iso_sensitivity_changed(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#manualIsoSensitivityChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, int)
+/// @param callback void func(QCamera* self, int param1)
 void q_camera_on_manual_iso_sensitivity_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureCompensationChanged)
@@ -634,7 +634,7 @@ void q_camera_exposure_compensation_changed(void* self, float param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureCompensationChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, float)
+/// @param callback void func(QCamera* self, float param1)
 void q_camera_on_exposure_compensation_changed(void* self, void (*callback)(void*, float));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureModeChanged)
@@ -645,7 +645,7 @@ void q_camera_exposure_mode_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureModeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_exposure_mode_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#whiteBalanceModeChanged)
@@ -656,7 +656,7 @@ void q_camera_white_balance_mode_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#whiteBalanceModeChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_white_balance_mode_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#colorTemperatureChanged)
@@ -667,7 +667,7 @@ void q_camera_color_temperature_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#colorTemperatureChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_color_temperature_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#brightnessChanged)
@@ -678,7 +678,7 @@ void q_camera_brightness_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#brightnessChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_brightness_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#contrastChanged)
@@ -689,7 +689,7 @@ void q_camera_contrast_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#contrastChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_contrast_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#saturationChanged)
@@ -700,7 +700,7 @@ void q_camera_saturation_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#saturationChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_saturation_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#hueChanged)
@@ -711,7 +711,7 @@ void q_camera_hue_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#hueChanged)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_hue_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -957,7 +957,7 @@ void q_camera_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*)
+/// @param callback void func(QCamera* self)
 void q_camera_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1035,7 +1035,7 @@ void q_camera_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, QObject*)
+/// @param callback void func(QCamera* self, QObject* param1)
 void q_camera_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1065,7 +1065,7 @@ bool q_camera_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback bool fn(QCamera*, QEvent*)
+/// @param callback bool func(QCamera* self, QEvent* event)
 void q_camera_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1097,7 +1097,7 @@ bool q_camera_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback bool fn(QCamera*, QObject*, QEvent*)
+/// @param callback bool func(QCamera* self, QObject* watched, QEvent* event)
 void q_camera_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1127,7 +1127,7 @@ void q_camera_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, QTimerEvent*)
+/// @param callback void func(QCamera* self, QTimerEvent* event)
 void q_camera_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1157,7 +1157,7 @@ void q_camera_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, QChildEvent*)
+/// @param callback void func(QCamera* self, QChildEvent* event)
 void q_camera_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1187,7 +1187,7 @@ void q_camera_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, QEvent*)
+/// @param callback void func(QCamera* self, QEvent* event)
 void q_camera_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1217,7 +1217,7 @@ void q_camera_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, QMetaMethod*)
+/// @param callback void func(QCamera* self, QMetaMethod* signal)
 void q_camera_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1247,7 +1247,7 @@ void q_camera_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, QMetaMethod*)
+/// @param callback void func(QCamera* self, QMetaMethod* signal)
 void q_camera_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1275,7 +1275,7 @@ QObject* q_camera_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_camera_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1303,7 +1303,7 @@ int32_t q_camera_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_camera_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1333,7 +1333,7 @@ int32_t q_camera_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback int32_t fn(QCamera*, const char*)
+/// @param callback int32_t func(QCamera* self, const char* signal)
 void q_camera_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1363,7 +1363,7 @@ bool q_camera_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCamera*
-/// @param callback bool fn(QCamera*, QMetaMethod*)
+/// @param callback bool func(QCamera* self, QMetaMethod* signal)
 void q_camera_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1373,7 +1373,7 @@ void q_camera_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self QCamera*
-/// @param callback void fn(QCamera*, const char*)
+/// @param callback void func(QCamera* self, const char* objectName)
 void q_camera_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#dtor.QCamera)

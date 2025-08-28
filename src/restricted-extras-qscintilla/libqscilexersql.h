@@ -40,7 +40,7 @@ int32_t q_scilexersql_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn(QsciLexerSQL*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QsciLexerSQL* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_scilexersql_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -203,7 +203,7 @@ void q_scilexersql_set_backslash_escapes(void* self, bool enable);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, bool)
+/// @param callback void func(QsciLexerSQL* self, bool enable)
 void q_scilexersql_on_set_backslash_escapes(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerSQL.html)
@@ -225,7 +225,7 @@ void q_scilexersql_set_fold_comments(void* self, bool fold);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, bool)
+/// @param callback void func(QsciLexerSQL* self, bool fold)
 void q_scilexersql_on_set_fold_comments(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerSQL.html)
@@ -247,7 +247,7 @@ void q_scilexersql_set_fold_compact(void* self, bool fold);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, bool)
+/// @param callback void func(QsciLexerSQL* self, bool fold)
 void q_scilexersql_on_set_fold_compact(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerSQL.html)
@@ -270,7 +270,7 @@ bool q_scilexersql_read_properties(void* self, void* qs, const char* prefix);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn(QsciLexerSQL*, QSettings*, const char*)
+/// @param callback bool func(QsciLexerSQL* self, QSettings* qs, const char* prefix)
 void q_scilexersql_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerSQL.html)
@@ -294,7 +294,7 @@ bool q_scilexersql_write_properties(void* self, void* qs, const char* prefix);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn(QsciLexerSQL*, QSettings*, const char*)
+/// @param callback bool func(QsciLexerSQL* self, QSettings* qs, const char* prefix)
 void q_scilexersql_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerSQL.html)
@@ -406,7 +406,7 @@ void q_scilexersql_color_changed(void* self, void* c, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QColor*, int)
+/// @param callback void func(QsciLexerSQL* self, QColor* c, int style)
 void q_scilexersql_on_color_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -423,7 +423,7 @@ void q_scilexersql_eol_fill_changed(void* self, bool eolfilled, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, bool, int)
+/// @param callback void func(QsciLexerSQL* self, bool eolfilled, int style)
 void q_scilexersql_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -440,7 +440,7 @@ void q_scilexersql_font_changed(void* self, void* f, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QFont*, int)
+/// @param callback void func(QsciLexerSQL* self, QFont* f, int style)
 void q_scilexersql_on_font_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -457,7 +457,7 @@ void q_scilexersql_paper_changed(void* self, void* c, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QColor*, int)
+/// @param callback void func(QsciLexerSQL* self, QColor* c, int style)
 void q_scilexersql_on_paper_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -474,7 +474,7 @@ void q_scilexersql_property_changed(void* self, const char* prop, const char* va
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, const char*, const char*)
+/// @param callback void func(QsciLexerSQL* self, const char* prop, const char* val)
 void q_scilexersql_on_property_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -721,7 +721,7 @@ void q_scilexersql_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*)
+/// @param callback void func(QsciLexerSQL* self)
 void q_scilexersql_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -799,7 +799,7 @@ void q_scilexersql_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QObject*)
+/// @param callback void func(QsciLexerSQL* self, QObject* param1)
 void q_scilexersql_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -827,7 +827,7 @@ int32_t q_scilexersql_qbase_lexer_id(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexersql_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -859,7 +859,7 @@ const char* q_scilexersql_qbase_auto_completion_fillups(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexersql_on_auto_completion_fillups(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -891,7 +891,7 @@ const char** q_scilexersql_qbase_auto_completion_word_separators(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_scilexersql_on_auto_completion_word_separators(void* self, const char** (*callback)());
 
 /// Inherited from QsciLexer
@@ -925,7 +925,7 @@ const char* q_scilexersql_qbase_block_end(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char* fn(QsciLexerSQL*, int*)
+/// @param callback const char* func(QsciLexerSQL* self, int* style)
 void q_scilexersql_on_block_end(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -953,7 +953,7 @@ int32_t q_scilexersql_qbase_block_lookback(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexersql_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -987,7 +987,7 @@ const char* q_scilexersql_qbase_block_start(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char* fn(QsciLexerSQL*, int*)
+/// @param callback const char* func(QsciLexerSQL* self, int* style)
 void q_scilexersql_on_block_start(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1021,7 +1021,7 @@ const char* q_scilexersql_qbase_block_start_keyword(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char* fn(QsciLexerSQL*, int*)
+/// @param callback const char* func(QsciLexerSQL* self, int* style)
 void q_scilexersql_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1049,7 +1049,7 @@ bool q_scilexersql_qbase_case_sensitive(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_scilexersql_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
@@ -1079,7 +1079,7 @@ QColor* q_scilexersql_qbase_color(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QColor* fn(QsciLexerSQL*, int)
+/// @param callback QColor* func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1109,7 +1109,7 @@ bool q_scilexersql_qbase_eol_fill(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn(QsciLexerSQL*, int)
+/// @param callback bool func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1139,7 +1139,7 @@ QFont* q_scilexersql_qbase_font(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QFont* fn(QsciLexerSQL*, int)
+/// @param callback QFont* func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1167,7 +1167,7 @@ int32_t q_scilexersql_qbase_indentation_guide_view(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexersql_on_indentation_guide_view(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1195,7 +1195,7 @@ int32_t q_scilexersql_qbase_default_style(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexersql_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1225,7 +1225,7 @@ QColor* q_scilexersql_qbase_paper(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QColor* fn(QsciLexerSQL*, int)
+/// @param callback QColor* func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1255,7 +1255,7 @@ QColor* q_scilexersql_qbase_default_color2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QColor* fn(QsciLexerSQL*, int)
+/// @param callback QColor* func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1285,7 +1285,7 @@ QFont* q_scilexersql_qbase_default_font2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QFont* fn(QsciLexerSQL*, int)
+/// @param callback QFont* func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1315,7 +1315,7 @@ QColor* q_scilexersql_qbase_default_paper2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QColor* fn(QsciLexerSQL*, int)
+/// @param callback QColor* func(QsciLexerSQL* self, int style)
 void q_scilexersql_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1345,7 +1345,7 @@ void q_scilexersql_qbase_set_editor(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QsciScintilla*)
+/// @param callback void func(QsciLexerSQL* self, QsciScintilla* editor)
 void q_scilexersql_on_set_editor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1373,7 +1373,7 @@ int32_t q_scilexersql_qbase_style_bits_needed(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexersql_on_style_bits_needed(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1405,7 +1405,7 @@ const char* q_scilexersql_qbase_word_characters(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexersql_on_word_characters(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -1435,7 +1435,7 @@ void q_scilexersql_qbase_set_auto_indent_style(void* self, int autoindentstyle);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, int)
+/// @param callback void func(QsciLexerSQL* self, int autoindentstyle)
 void q_scilexersql_on_set_auto_indent_style(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1467,7 +1467,7 @@ void q_scilexersql_qbase_set_color(void* self, void* c, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QColor*, int)
+/// @param callback void func(QsciLexerSQL* self, QColor* c, int style)
 void q_scilexersql_on_set_color(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1499,7 +1499,7 @@ void q_scilexersql_qbase_set_eol_fill(void* self, bool eoffill, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, bool, int)
+/// @param callback void func(QsciLexerSQL* self, bool eoffill, int style)
 void q_scilexersql_on_set_eol_fill(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -1531,7 +1531,7 @@ void q_scilexersql_qbase_set_font(void* self, void* f, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QFont*, int)
+/// @param callback void func(QsciLexerSQL* self, QFont* f, int style)
 void q_scilexersql_on_set_font(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1563,7 +1563,7 @@ void q_scilexersql_qbase_set_paper(void* self, void* c, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QColor*, int)
+/// @param callback void func(QsciLexerSQL* self, QColor* c, int style)
 void q_scilexersql_on_set_paper(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QObject
@@ -1593,7 +1593,7 @@ bool q_scilexersql_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn(QsciLexerSQL*, QEvent*)
+/// @param callback bool func(QsciLexerSQL* self, QEvent* event)
 void q_scilexersql_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1625,7 +1625,7 @@ bool q_scilexersql_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn(QsciLexerSQL*, QObject*, QEvent*)
+/// @param callback bool func(QsciLexerSQL* self, QObject* watched, QEvent* event)
 void q_scilexersql_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1655,7 +1655,7 @@ void q_scilexersql_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QTimerEvent*)
+/// @param callback void func(QsciLexerSQL* self, QTimerEvent* event)
 void q_scilexersql_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1685,7 +1685,7 @@ void q_scilexersql_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QChildEvent*)
+/// @param callback void func(QsciLexerSQL* self, QChildEvent* event)
 void q_scilexersql_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1715,7 +1715,7 @@ void q_scilexersql_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QEvent*)
+/// @param callback void func(QsciLexerSQL* self, QEvent* event)
 void q_scilexersql_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1745,7 +1745,7 @@ void q_scilexersql_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QMetaMethod*)
+/// @param callback void func(QsciLexerSQL* self, QMetaMethod* signal)
 void q_scilexersql_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1775,7 +1775,7 @@ void q_scilexersql_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, QMetaMethod*)
+/// @param callback void func(QsciLexerSQL* self, QMetaMethod* signal)
 void q_scilexersql_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1809,7 +1809,7 @@ char* q_scilexersql_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback char* fn(QsciLexerSQL*, const char*)
+/// @param callback char* func(QsciLexerSQL* self, const char* text)
 void q_scilexersql_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
@@ -1845,7 +1845,7 @@ const char* q_scilexersql_qbase_bytes_as_text(void* self, const char* bytes, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback const char* fn(QsciLexerSQL*, const char*, int)
+/// @param callback const char* func(QsciLexerSQL* self, const char* bytes, int size)
 void q_scilexersql_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
@@ -1873,7 +1873,7 @@ QObject* q_scilexersql_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_scilexersql_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1901,7 +1901,7 @@ int32_t q_scilexersql_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexersql_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1931,7 +1931,7 @@ int32_t q_scilexersql_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback int32_t fn(QsciLexerSQL*, const char*)
+/// @param callback int32_t func(QsciLexerSQL* self, const char* signal)
 void q_scilexersql_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1961,7 +1961,7 @@ bool q_scilexersql_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerSQL*
-/// @param callback bool fn(QsciLexerSQL*, QMetaMethod*)
+/// @param callback bool func(QsciLexerSQL* self, QMetaMethod* signal)
 void q_scilexersql_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1971,7 +1971,7 @@ void q_scilexersql_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QsciLexerSQL*
-/// @param callback void fn(QsciLexerSQL*, const char*)
+/// @param callback void func(QsciLexerSQL* self, const char* objectName)
 void q_scilexersql_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerSQL.html)

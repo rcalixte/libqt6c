@@ -44,7 +44,7 @@ int32_t q_boxplotlegendmarker_metacall(void* self, int32_t param1, int param2, v
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback int32_t fn(QBoxPlotLegendMarker*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QBoxPlotLegendMarker* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_boxplotlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -74,7 +74,7 @@ int32_t q_boxplotlegendmarker_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_boxplotlegendmarker_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotlegendmarker-qtcharts.html#type)
@@ -96,7 +96,7 @@ QBoxPlotSeries* q_boxplotlegendmarker_series(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback QBoxPlotSeries* fn()
+/// @param callback QBoxPlotSeries* func()
 void q_boxplotlegendmarker_on_series(void* self, QBoxPlotSeries* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotlegendmarker-qtcharts.html#series)
@@ -244,7 +244,7 @@ void q_boxplotlegendmarker_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -260,7 +260,7 @@ void q_boxplotlegendmarker_hovered(void* self, bool status);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, bool)
+/// @param callback void func(QBoxPlotLegendMarker* self, bool status)
 void q_boxplotlegendmarker_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QLegendMarker
@@ -275,7 +275,7 @@ void q_boxplotlegendmarker_label_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_label_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -290,7 +290,7 @@ void q_boxplotlegendmarker_label_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_label_brush_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -305,7 +305,7 @@ void q_boxplotlegendmarker_font_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_font_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -320,7 +320,7 @@ void q_boxplotlegendmarker_pen_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_pen_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -335,7 +335,7 @@ void q_boxplotlegendmarker_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_brush_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -350,7 +350,7 @@ void q_boxplotlegendmarker_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -365,7 +365,7 @@ void q_boxplotlegendmarker_shape_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_shape_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -594,7 +594,7 @@ void q_boxplotlegendmarker_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*)
+/// @param callback void func(QBoxPlotLegendMarker* self)
 void q_boxplotlegendmarker_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -672,7 +672,7 @@ void q_boxplotlegendmarker_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, QObject*)
+/// @param callback void func(QBoxPlotLegendMarker* self, QObject* param1)
 void q_boxplotlegendmarker_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -702,7 +702,7 @@ bool q_boxplotlegendmarker_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback bool fn(QBoxPlotLegendMarker*, QEvent*)
+/// @param callback bool func(QBoxPlotLegendMarker* self, QEvent* event)
 void q_boxplotlegendmarker_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -734,7 +734,7 @@ bool q_boxplotlegendmarker_qbase_event_filter(void* self, void* watched, void* e
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback bool fn(QBoxPlotLegendMarker*, QObject*, QEvent*)
+/// @param callback bool func(QBoxPlotLegendMarker* self, QObject* watched, QEvent* event)
 void q_boxplotlegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -764,7 +764,7 @@ void q_boxplotlegendmarker_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, QTimerEvent*)
+/// @param callback void func(QBoxPlotLegendMarker* self, QTimerEvent* event)
 void q_boxplotlegendmarker_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -794,7 +794,7 @@ void q_boxplotlegendmarker_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, QChildEvent*)
+/// @param callback void func(QBoxPlotLegendMarker* self, QChildEvent* event)
 void q_boxplotlegendmarker_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -824,7 +824,7 @@ void q_boxplotlegendmarker_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, QEvent*)
+/// @param callback void func(QBoxPlotLegendMarker* self, QEvent* event)
 void q_boxplotlegendmarker_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -854,7 +854,7 @@ void q_boxplotlegendmarker_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, QMetaMethod*)
+/// @param callback void func(QBoxPlotLegendMarker* self, QMetaMethod* signal)
 void q_boxplotlegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -884,7 +884,7 @@ void q_boxplotlegendmarker_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, QMetaMethod*)
+/// @param callback void func(QBoxPlotLegendMarker* self, QMetaMethod* signal)
 void q_boxplotlegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -912,7 +912,7 @@ QObject* q_boxplotlegendmarker_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_boxplotlegendmarker_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -940,7 +940,7 @@ int32_t q_boxplotlegendmarker_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_boxplotlegendmarker_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -970,7 +970,7 @@ int32_t q_boxplotlegendmarker_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback int32_t fn(QBoxPlotLegendMarker*, const char*)
+/// @param callback int32_t func(QBoxPlotLegendMarker* self, const char* signal)
 void q_boxplotlegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1000,7 +1000,7 @@ bool q_boxplotlegendmarker_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback bool fn(QBoxPlotLegendMarker*, QMetaMethod*)
+/// @param callback bool func(QBoxPlotLegendMarker* self, QMetaMethod* signal)
 void q_boxplotlegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1010,7 +1010,7 @@ void q_boxplotlegendmarker_on_is_signal_connected(void* self, bool (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBoxPlotLegendMarker*
-/// @param callback void fn(QBoxPlotLegendMarker*, const char*)
+/// @param callback void func(QBoxPlotLegendMarker* self, const char* objectName)
 void q_boxplotlegendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotlegendmarker-qtcharts.html#dtor.QBoxPlotLegendMarker)

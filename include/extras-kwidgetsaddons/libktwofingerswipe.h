@@ -40,7 +40,7 @@ int32_t k_twofingerswipe_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback int32_t fn(KTwoFingerSwipe*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KTwoFingerSwipe* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_twofingerswipe_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -409,7 +409,7 @@ void k_twofingerswipe_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*)
+/// @param callback void func(KTwoFingerSwipe* self)
 void k_twofingerswipe_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -487,7 +487,7 @@ void k_twofingerswipe_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, QObject*)
+/// @param callback void func(KTwoFingerSwipe* self, QObject* param1)
 void k_twofingerswipe_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -517,7 +517,7 @@ bool k_twofingerswipe_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback bool fn(KTwoFingerSwipe*, QEvent*)
+/// @param callback bool func(KTwoFingerSwipe* self, QEvent* event)
 void k_twofingerswipe_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -549,7 +549,7 @@ bool k_twofingerswipe_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback bool fn(KTwoFingerSwipe*, QObject*, QEvent*)
+/// @param callback bool func(KTwoFingerSwipe* self, QObject* watched, QEvent* event)
 void k_twofingerswipe_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -579,7 +579,7 @@ void k_twofingerswipe_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, QTimerEvent*)
+/// @param callback void func(KTwoFingerSwipe* self, QTimerEvent* event)
 void k_twofingerswipe_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -609,7 +609,7 @@ void k_twofingerswipe_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, QChildEvent*)
+/// @param callback void func(KTwoFingerSwipe* self, QChildEvent* event)
 void k_twofingerswipe_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -639,7 +639,7 @@ void k_twofingerswipe_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, QEvent*)
+/// @param callback void func(KTwoFingerSwipe* self, QEvent* event)
 void k_twofingerswipe_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -669,7 +669,7 @@ void k_twofingerswipe_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, QMetaMethod*)
+/// @param callback void func(KTwoFingerSwipe* self, QMetaMethod* signal)
 void k_twofingerswipe_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -699,7 +699,7 @@ void k_twofingerswipe_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, QMetaMethod*)
+/// @param callback void func(KTwoFingerSwipe* self, QMetaMethod* signal)
 void k_twofingerswipe_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -727,7 +727,7 @@ QObject* k_twofingerswipe_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_twofingerswipe_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -755,7 +755,7 @@ int32_t k_twofingerswipe_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_twofingerswipe_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -785,7 +785,7 @@ int32_t k_twofingerswipe_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback int32_t fn(KTwoFingerSwipe*, const char*)
+/// @param callback int32_t func(KTwoFingerSwipe* self, const char* signal)
 void k_twofingerswipe_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -815,7 +815,7 @@ bool k_twofingerswipe_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback bool fn(KTwoFingerSwipe*, QMetaMethod*)
+/// @param callback bool func(KTwoFingerSwipe* self, QMetaMethod* signal)
 void k_twofingerswipe_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -825,7 +825,7 @@ void k_twofingerswipe_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KTwoFingerSwipe*
-/// @param callback void fn(KTwoFingerSwipe*, const char*)
+/// @param callback void func(KTwoFingerSwipe* self, const char* objectName)
 void k_twofingerswipe_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#dtor.KTwoFingerSwipe)
@@ -852,7 +852,7 @@ QGesture* k_twofingerswiperecognizer_create(void* self, void* target);
 /// Allows for overriding the related default method
 ///
 /// @param self KTwoFingerSwipeRecognizer*
-/// @param callback QGesture* fn(KTwoFingerSwipeRecognizer*, QObject*)
+/// @param callback QGesture* func(KTwoFingerSwipeRecognizer* self, QObject* target)
 void k_twofingerswiperecognizer_on_create(void* self, QGesture* (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#create)
@@ -878,7 +878,7 @@ int64_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* wa
 /// Allows for overriding the related default method
 ///
 /// @param self KTwoFingerSwipeRecognizer*
-/// @param callback int64_t fn(KTwoFingerSwipeRecognizer*, QGesture*, QObject*, QEvent*)
+/// @param callback int64_t func(KTwoFingerSwipeRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
 void k_twofingerswiperecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#recognize)
@@ -966,7 +966,7 @@ void k_twofingerswiperecognizer_qbase_reset(void* self, void* state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTwoFingerSwipeRecognizer*
-/// @param callback void fn(KTwoFingerSwipeRecognizer*, QGesture*)
+/// @param callback void func(KTwoFingerSwipeRecognizer* self, QGesture* state)
 void k_twofingerswiperecognizer_on_reset(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#dtor.KTwoFingerSwipeRecognizer)

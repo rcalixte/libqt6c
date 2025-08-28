@@ -42,7 +42,7 @@ int32_t q_headerview_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn(QHeaderView*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QHeaderView* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_headerview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -71,7 +71,7 @@ void q_headerview_set_model(void* self, void* model);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QAbstractItemModel*)
+/// @param callback void func(QHeaderView* self, QAbstractItemModel* model)
 void q_headerview_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setModel)
@@ -109,7 +109,7 @@ QSize* q_headerview_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_headerview_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sizeHint)
@@ -130,7 +130,7 @@ void q_headerview_set_visible(void* self, bool v);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, bool)
+/// @param callback void func(QHeaderView* self, bool v)
 void q_headerview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setVisible)
@@ -469,7 +469,7 @@ void q_headerview_do_items_layout(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_do_items_layout(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#doItemsLayout)
@@ -512,7 +512,7 @@ void q_headerview_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_reset(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#reset)
@@ -558,7 +558,7 @@ void q_headerview_section_moved(void* self, int logicalIndex, int oldVisualIndex
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionMoved)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex, int oldVisualIndex, int newVisualIndex)
 void q_headerview_on_section_moved(void* self, void (*callback)(void*, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionResized)
@@ -572,7 +572,7 @@ void q_headerview_section_resized(void* self, int logicalIndex, int oldSize, int
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionResized)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex, int oldSize, int newSize)
 void q_headerview_on_section_resized(void* self, void (*callback)(void*, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionPressed)
@@ -584,7 +584,7 @@ void q_headerview_section_pressed(void* self, int logicalIndex);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionPressed)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_section_pressed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionClicked)
@@ -596,7 +596,7 @@ void q_headerview_section_clicked(void* self, int logicalIndex);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionClicked)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_section_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionEntered)
@@ -608,7 +608,7 @@ void q_headerview_section_entered(void* self, int logicalIndex);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionEntered)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_section_entered(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionDoubleClicked)
@@ -620,7 +620,7 @@ void q_headerview_section_double_clicked(void* self, int logicalIndex);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionDoubleClicked)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_section_double_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionCountChanged)
@@ -633,7 +633,7 @@ void q_headerview_section_count_changed(void* self, int oldCount, int newCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionCountChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int)
+/// @param callback void func(QHeaderView* self, int oldCount, int newCount)
 void q_headerview_on_section_count_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionHandleDoubleClicked)
@@ -645,7 +645,7 @@ void q_headerview_section_handle_double_clicked(void* self, int logicalIndex);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionHandleDoubleClicked)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_section_handle_double_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#geometriesChanged)
@@ -656,7 +656,7 @@ void q_headerview_geometries_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#geometriesChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*)
+/// @param callback void func(QHeaderView* self)
 void q_headerview_on_geometries_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorChanged)
@@ -669,7 +669,7 @@ void q_headerview_sort_indicator_changed(void* self, int logicalIndex, int32_t o
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, enum Qt__SortOrder)
+/// @param callback void func(QHeaderView* self, int logicalIndex, enum Qt__SortOrder order)
 void q_headerview_on_sort_indicator_changed(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorClearableChanged)
@@ -681,7 +681,7 @@ void q_headerview_sort_indicator_clearable_changed(void* self, bool clearable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorClearableChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, bool)
+/// @param callback void func(QHeaderView* self, bool clearable)
 void q_headerview_on_sort_indicator_clearable_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateSection)
@@ -695,7 +695,7 @@ void q_headerview_update_section(void* self, int logicalIndex);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_update_section(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateSection)
@@ -716,7 +716,7 @@ void q_headerview_resize_sections2(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_resize_sections2(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#resizeSections)
@@ -739,7 +739,7 @@ void q_headerview_sections_inserted(void* self, void* parent, int logicalFirst, 
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, int, int)
+/// @param callback void func(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast)
 void q_headerview_on_sections_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionsInserted)
@@ -765,7 +765,7 @@ void q_headerview_sections_about_to_be_removed(void* self, void* parent, int log
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, int, int)
+/// @param callback void func(QHeaderView* self, QModelIndex* parent, int logicalFirst, int logicalLast)
 void q_headerview_on_sections_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionsAboutToBeRemoved)
@@ -788,7 +788,7 @@ void q_headerview_initialize(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_initialize(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initialize)
@@ -808,7 +808,7 @@ void q_headerview_initialize_sections(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_initialize_sections(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initializeSections)
@@ -830,7 +830,7 @@ void q_headerview_initialize_sections2(void* self, int start, int end);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int)
+/// @param callback void func(QHeaderView* self, int start, int end)
 void q_headerview_on_initialize_sections2(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initializeSections)
@@ -854,7 +854,7 @@ void q_headerview_current_changed(void* self, void* current, void* old);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* current, QModelIndex* old)
 void q_headerview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#currentChanged)
@@ -877,7 +877,7 @@ bool q_headerview_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, QEvent*)
+/// @param callback bool func(QHeaderView* self, QEvent* e)
 void q_headerview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#event)
@@ -899,7 +899,7 @@ void q_headerview_paint_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QPaintEvent*)
+/// @param callback void func(QHeaderView* self, QPaintEvent* e)
 void q_headerview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#paintEvent)
@@ -921,7 +921,7 @@ void q_headerview_mouse_press_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMouseEvent*)
+/// @param callback void func(QHeaderView* self, QMouseEvent* e)
 void q_headerview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mousePressEvent)
@@ -943,7 +943,7 @@ void q_headerview_mouse_move_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMouseEvent*)
+/// @param callback void func(QHeaderView* self, QMouseEvent* e)
 void q_headerview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseMoveEvent)
@@ -965,7 +965,7 @@ void q_headerview_mouse_release_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMouseEvent*)
+/// @param callback void func(QHeaderView* self, QMouseEvent* e)
 void q_headerview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseReleaseEvent)
@@ -987,7 +987,7 @@ void q_headerview_mouse_double_click_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMouseEvent*)
+/// @param callback void func(QHeaderView* self, QMouseEvent* e)
 void q_headerview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#mouseDoubleClickEvent)
@@ -1009,7 +1009,7 @@ bool q_headerview_viewport_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, QEvent*)
+/// @param callback bool func(QHeaderView* self, QEvent* e)
 void q_headerview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#viewportEvent)
@@ -1033,7 +1033,7 @@ void q_headerview_paint_section(void* self, void* painter, void* rect, int logic
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QPainter*, QRect*, int)
+/// @param callback void func(QHeaderView* self, QPainter* painter, QRect* rect, int logicalIndex)
 void q_headerview_on_paint_section(void* self, void (*callback)(void*, void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#paintSection)
@@ -1057,7 +1057,7 @@ QSize* q_headerview_section_size_from_contents(void* self, int logicalIndex);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback QSize* fn(QHeaderView*, int)
+/// @param callback QSize* func(QHeaderView* self, int logicalIndex)
 void q_headerview_on_section_size_from_contents(void* self, QSize* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionSizeFromContents)
@@ -1078,7 +1078,7 @@ int32_t q_headerview_horizontal_offset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_headerview_on_horizontal_offset(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#horizontalOffset)
@@ -1098,7 +1098,7 @@ int32_t q_headerview_vertical_offset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_headerview_on_vertical_offset(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#verticalOffset)
@@ -1118,7 +1118,7 @@ void q_headerview_update_geometries(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_update_geometries(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#updateGeometries)
@@ -1140,7 +1140,7 @@ void q_headerview_scroll_contents_by(void* self, int dx, int dy);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int)
+/// @param callback void func(QHeaderView* self, int dx, int dy)
 void q_headerview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollContentsBy)
@@ -1165,7 +1165,7 @@ void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QHeaderView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
@@ -1191,7 +1191,7 @@ void q_headerview_rows_inserted(void* self, void* parent, int start, int end);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, int, int)
+/// @param callback void func(QHeaderView* self, QModelIndex* parent, int start, int end)
 void q_headerview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#rowsInserted)
@@ -1215,7 +1215,7 @@ QRect* q_headerview_visual_rect(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback QRect* fn(QHeaderView*, QModelIndex*)
+/// @param callback QRect* func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRect)
@@ -1238,7 +1238,7 @@ void q_headerview_scroll_to(void* self, void* index, int32_t hint);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
+/// @param callback void func(QHeaderView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 void q_headerview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollTo)
@@ -1261,7 +1261,7 @@ QModelIndex* q_headerview_index_at(void* self, void* p);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback QModelIndex* fn(QHeaderView*, QPoint*)
+/// @param callback QModelIndex* func(QHeaderView* self, QPoint* p)
 void q_headerview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#indexAt)
@@ -1283,7 +1283,7 @@ bool q_headerview_is_index_hidden(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, QModelIndex*)
+/// @param callback bool func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#isIndexHidden)
@@ -1306,7 +1306,7 @@ QModelIndex* q_headerview_move_cursor(void* self, int32_t param1, int64_t param2
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback QModelIndex* fn(QHeaderView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
+/// @param callback QModelIndex* func(QHeaderView* self, enum QAbstractItemView__CursorAction param1, flag of enum Qt__KeyboardModifier param2)
 void q_headerview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#moveCursor)
@@ -1330,7 +1330,7 @@ void q_headerview_set_selection(void* self, void* rect, int64_t flags);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QRect*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(QHeaderView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag flags)
 void q_headerview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSelection)
@@ -1353,7 +1353,7 @@ QRegion* q_headerview_visual_region_for_selection(void* self, void* selection);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback QRegion* fn(QHeaderView*, QItemSelection*)
+/// @param callback QRegion* func(QHeaderView* self, QItemSelection* selection)
 void q_headerview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRegionForSelection)
@@ -1376,7 +1376,7 @@ void q_headerview_init_style_option_for_index(void* self, void* option, int logi
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QStyleOptionHeader*, int)
+/// @param callback void func(QHeaderView* self, QStyleOptionHeader* option, int logicalIndex)
 void q_headerview_on_init_style_option_for_index(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initStyleOptionForIndex)
@@ -1399,7 +1399,7 @@ void q_headerview_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QStyleOptionHeader*)
+/// @param callback void func(QHeaderView* self, QStyleOptionHeader* option)
 void q_headerview_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#initStyleOption)
@@ -1889,7 +1889,7 @@ void q_headerview_pressed(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1905,7 +1905,7 @@ void q_headerview_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1921,7 +1921,7 @@ void q_headerview_double_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1937,7 +1937,7 @@ void q_headerview_activated(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_activated(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1953,7 +1953,7 @@ void q_headerview_entered(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_entered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1968,7 +1968,7 @@ void q_headerview_viewport_entered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*)
+/// @param callback void func(QHeaderView* self)
 void q_headerview_on_viewport_entered(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1984,7 +1984,7 @@ void q_headerview_icon_size_changed(void* self, void* size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QSize*)
+/// @param callback void func(QHeaderView* self, QSize* size)
 void q_headerview_on_icon_size_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4153,7 +4153,7 @@ void q_headerview_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, const char*)
+/// @param callback void func(QHeaderView* self, const char* title)
 void q_headerview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -4169,7 +4169,7 @@ void q_headerview_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QIcon*)
+/// @param callback void func(QHeaderView* self, QIcon* icon)
 void q_headerview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4185,7 +4185,7 @@ void q_headerview_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, const char*)
+/// @param callback void func(QHeaderView* self, const char* iconText)
 void q_headerview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -4201,7 +4201,7 @@ void q_headerview_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QPoint*)
+/// @param callback void func(QHeaderView* self, QPoint* pos)
 void q_headerview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4578,7 +4578,7 @@ void q_headerview_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*)
+/// @param callback void func(QHeaderView* self)
 void q_headerview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4656,7 +4656,7 @@ void q_headerview_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QObject*)
+/// @param callback void func(QHeaderView* self, QObject* param1)
 void q_headerview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4777,7 +4777,7 @@ void q_headerview_qbase_set_selection_model(void* self, void* selectionModel);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QItemSelectionModel*)
+/// @param callback void func(QHeaderView* self, QItemSelectionModel* selectionModel)
 void q_headerview_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -4807,7 +4807,7 @@ void q_headerview_qbase_keyboard_search(void* self, const char* search);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, const char*)
+/// @param callback void func(QHeaderView* self, const char* search)
 void q_headerview_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractItemView
@@ -4837,7 +4837,7 @@ int32_t q_headerview_qbase_size_hint_for_row(void* self, int row);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn(QHeaderView*, int)
+/// @param callback int32_t func(QHeaderView* self, int row)
 void q_headerview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -4867,7 +4867,7 @@ int32_t q_headerview_qbase_size_hint_for_column(void* self, int column);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn(QHeaderView*, int)
+/// @param callback int32_t func(QHeaderView* self, int column)
 void q_headerview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -4897,7 +4897,7 @@ QAbstractItemDelegate* q_headerview_qbase_item_delegate_for_index(void* self, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QAbstractItemDelegate* fn(QHeaderView*, QModelIndex*)
+/// @param callback QAbstractItemDelegate* func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -4927,7 +4927,7 @@ QVariant* q_headerview_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QVariant* fn(QHeaderView*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QHeaderView* self, enum Qt__InputMethodQuery query)
 void q_headerview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -4957,7 +4957,7 @@ void q_headerview_qbase_set_root_index(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*)
+/// @param callback void func(QHeaderView* self, QModelIndex* index)
 void q_headerview_on_set_root_index(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -4985,7 +4985,7 @@ void q_headerview_qbase_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_select_all(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5019,7 +5019,7 @@ void q_headerview_qbase_rows_about_to_be_removed(void* self, void* parent, int s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, int, int)
+/// @param callback void func(QHeaderView* self, QModelIndex* parent, int start, int end)
 void q_headerview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -5051,7 +5051,7 @@ void q_headerview_qbase_selection_changed(void* self, void* selected, void* dese
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QItemSelection*, QItemSelection*)
+/// @param callback void func(QHeaderView* self, QItemSelection* selected, QItemSelection* deselected)
 void q_headerview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5079,7 +5079,7 @@ void q_headerview_qbase_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_update_editor_data(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5107,7 +5107,7 @@ void q_headerview_qbase_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_update_editor_geometries(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5137,7 +5137,7 @@ void q_headerview_qbase_vertical_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int action)
 void q_headerview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5167,7 +5167,7 @@ void q_headerview_qbase_horizontal_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int action)
 void q_headerview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5197,7 +5197,7 @@ void q_headerview_qbase_vertical_scrollbar_value_changed(void* self, int value);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int value)
 void q_headerview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5227,7 +5227,7 @@ void q_headerview_qbase_horizontal_scrollbar_value_changed(void* self, int value
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int)
+/// @param callback void func(QHeaderView* self, int value)
 void q_headerview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5259,7 +5259,7 @@ void q_headerview_qbase_close_editor(void* self, void* editor, int32_t hint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
+/// @param callback void func(QHeaderView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
 void q_headerview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -5289,7 +5289,7 @@ void q_headerview_qbase_commit_data(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QWidget*)
+/// @param callback void func(QHeaderView* self, QWidget* editor)
 void q_headerview_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5319,7 +5319,7 @@ void q_headerview_qbase_editor_destroyed(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QObject*)
+/// @param callback void func(QHeaderView* self, QObject* editor)
 void q_headerview_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5347,7 +5347,7 @@ libqt_list /* of QModelIndex* */ q_headerview_qbase_selected_indexes(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_headerview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5381,7 +5381,7 @@ bool q_headerview_qbase_edit2(void* self, void* index, int32_t trigger, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
+/// @param callback bool func(QHeaderView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 void q_headerview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
@@ -5417,7 +5417,7 @@ int64_t q_headerview_qbase_selection_command(void* self, void* index, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int64_t fn(QHeaderView*, QModelIndex*, QEvent*)
+/// @param callback int64_t func(QHeaderView* self, QModelIndex* index, QEvent* event)
 void q_headerview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5447,7 +5447,7 @@ void q_headerview_qbase_start_drag(void* self, int64_t supportedActions);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, flag of enum Qt__DropAction)
+/// @param callback void func(QHeaderView* self, flag of enum Qt__DropAction supportedActions)
 void q_headerview_on_start_drag(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -5477,7 +5477,7 @@ void q_headerview_qbase_init_view_item_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QStyleOptionViewItem*)
+/// @param callback void func(QHeaderView* self, QStyleOptionViewItem* option)
 void q_headerview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5507,7 +5507,7 @@ bool q_headerview_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, bool)
+/// @param callback bool func(QHeaderView* self, bool next)
 void q_headerview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QAbstractItemView
@@ -5537,7 +5537,7 @@ void q_headerview_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QDragEnterEvent*)
+/// @param callback void func(QHeaderView* self, QDragEnterEvent* event)
 void q_headerview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5567,7 +5567,7 @@ void q_headerview_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QDragMoveEvent*)
+/// @param callback void func(QHeaderView* self, QDragMoveEvent* event)
 void q_headerview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5597,7 +5597,7 @@ void q_headerview_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QDragLeaveEvent*)
+/// @param callback void func(QHeaderView* self, QDragLeaveEvent* event)
 void q_headerview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5627,7 +5627,7 @@ void q_headerview_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QDropEvent*)
+/// @param callback void func(QHeaderView* self, QDropEvent* event)
 void q_headerview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5657,7 +5657,7 @@ void q_headerview_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QFocusEvent*)
+/// @param callback void func(QHeaderView* self, QFocusEvent* event)
 void q_headerview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5687,7 +5687,7 @@ void q_headerview_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QFocusEvent*)
+/// @param callback void func(QHeaderView* self, QFocusEvent* event)
 void q_headerview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5717,7 +5717,7 @@ void q_headerview_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QKeyEvent*)
+/// @param callback void func(QHeaderView* self, QKeyEvent* event)
 void q_headerview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5747,7 +5747,7 @@ void q_headerview_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QResizeEvent*)
+/// @param callback void func(QHeaderView* self, QResizeEvent* event)
 void q_headerview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5777,7 +5777,7 @@ void q_headerview_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QTimerEvent*)
+/// @param callback void func(QHeaderView* self, QTimerEvent* event)
 void q_headerview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5807,7 +5807,7 @@ void q_headerview_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QInputMethodEvent*)
+/// @param callback void func(QHeaderView* self, QInputMethodEvent* event)
 void q_headerview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5839,7 +5839,7 @@ bool q_headerview_qbase_event_filter(void* self, void* object, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, QObject*, QEvent*)
+/// @param callback bool func(QHeaderView* self, QObject* object, QEvent* event)
 void q_headerview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5867,7 +5867,7 @@ QSize* q_headerview_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_headerview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5895,7 +5895,7 @@ QSize* q_headerview_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_headerview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5925,7 +5925,7 @@ void q_headerview_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QWidget*)
+/// @param callback void func(QHeaderView* self, QWidget* viewport)
 void q_headerview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5955,7 +5955,7 @@ void q_headerview_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QWheelEvent*)
+/// @param callback void func(QHeaderView* self, QWheelEvent* param1)
 void q_headerview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -5985,7 +5985,7 @@ void q_headerview_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QContextMenuEvent*)
+/// @param callback void func(QHeaderView* self, QContextMenuEvent* param1)
 void q_headerview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -6015,7 +6015,7 @@ void q_headerview_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QEvent*)
+/// @param callback void func(QHeaderView* self, QEvent* param1)
 void q_headerview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6043,7 +6043,7 @@ int32_t q_headerview_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_headerview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -6073,7 +6073,7 @@ int32_t q_headerview_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn(QHeaderView*, int)
+/// @param callback int32_t func(QHeaderView* self, int param1)
 void q_headerview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -6101,7 +6101,7 @@ bool q_headerview_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_headerview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -6129,7 +6129,7 @@ QPaintEngine* q_headerview_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_headerview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -6159,7 +6159,7 @@ void q_headerview_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QKeyEvent*)
+/// @param callback void func(QHeaderView* self, QKeyEvent* event)
 void q_headerview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6189,7 +6189,7 @@ void q_headerview_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QEnterEvent*)
+/// @param callback void func(QHeaderView* self, QEnterEvent* event)
 void q_headerview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6219,7 +6219,7 @@ void q_headerview_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QEvent*)
+/// @param callback void func(QHeaderView* self, QEvent* event)
 void q_headerview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6249,7 +6249,7 @@ void q_headerview_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMoveEvent*)
+/// @param callback void func(QHeaderView* self, QMoveEvent* event)
 void q_headerview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6279,7 +6279,7 @@ void q_headerview_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QCloseEvent*)
+/// @param callback void func(QHeaderView* self, QCloseEvent* event)
 void q_headerview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6309,7 +6309,7 @@ void q_headerview_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QTabletEvent*)
+/// @param callback void func(QHeaderView* self, QTabletEvent* event)
 void q_headerview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6339,7 +6339,7 @@ void q_headerview_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QActionEvent*)
+/// @param callback void func(QHeaderView* self, QActionEvent* event)
 void q_headerview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6369,7 +6369,7 @@ void q_headerview_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QShowEvent*)
+/// @param callback void func(QHeaderView* self, QShowEvent* event)
 void q_headerview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6399,7 +6399,7 @@ void q_headerview_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QHideEvent*)
+/// @param callback void func(QHeaderView* self, QHideEvent* event)
 void q_headerview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6433,7 +6433,7 @@ bool q_headerview_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, const char*, void*, intptr_t*)
+/// @param callback bool func(QHeaderView* self, const char* eventType, void* message, intptr_t* result)
 void q_headerview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -6463,7 +6463,7 @@ int32_t q_headerview_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn(QHeaderView*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QHeaderView* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_headerview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -6493,7 +6493,7 @@ void q_headerview_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QPainter*)
+/// @param callback void func(QHeaderView* self, QPainter* painter)
 void q_headerview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6523,7 +6523,7 @@ QPaintDevice* q_headerview_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QPaintDevice* fn(QHeaderView*, QPoint*)
+/// @param callback QPaintDevice* func(QHeaderView* self, QPoint* offset)
 void q_headerview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6551,7 +6551,7 @@ QPainter* q_headerview_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_headerview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -6581,7 +6581,7 @@ void q_headerview_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QChildEvent*)
+/// @param callback void func(QHeaderView* self, QChildEvent* event)
 void q_headerview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6611,7 +6611,7 @@ void q_headerview_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QEvent*)
+/// @param callback void func(QHeaderView* self, QEvent* event)
 void q_headerview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6641,7 +6641,7 @@ void q_headerview_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMetaMethod*)
+/// @param callback void func(QHeaderView* self, QMetaMethod* signal)
 void q_headerview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -6671,7 +6671,7 @@ void q_headerview_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QMetaMethod*)
+/// @param callback void func(QHeaderView* self, QMetaMethod* signal)
 void q_headerview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6703,7 +6703,7 @@ int32_t q_headerview_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_headerview_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6733,7 +6733,7 @@ void q_headerview_qbase_set_state(void* self, int32_t state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, enum QAbstractItemView__State)
+/// @param callback void func(QHeaderView* self, enum QAbstractItemView__State state)
 void q_headerview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6761,7 +6761,7 @@ void q_headerview_qbase_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_schedule_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6789,7 +6789,7 @@ void q_headerview_qbase_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_execute_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6819,7 +6819,7 @@ void q_headerview_qbase_set_dirty_region(void* self, void* region);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QRegion*)
+/// @param callback void func(QHeaderView* self, QRegion* region)
 void q_headerview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6851,7 +6851,7 @@ void q_headerview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int)
+/// @param callback void func(QHeaderView* self, int dx, int dy)
 void q_headerview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -6879,7 +6879,7 @@ QPoint* q_headerview_qbase_dirty_region_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QPoint* fn()
+/// @param callback QPoint* func()
 void q_headerview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6907,7 +6907,7 @@ void q_headerview_qbase_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_start_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6935,7 +6935,7 @@ void q_headerview_qbase_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_stop_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6963,7 +6963,7 @@ void q_headerview_qbase_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_do_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6995,7 +6995,7 @@ int32_t q_headerview_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_headerview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -7031,7 +7031,7 @@ void q_headerview_qbase_set_viewport_margins(void* self, int left, int top, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, int, int, int, int)
+/// @param callback void func(QHeaderView* self, int left, int top, int right, int bottom)
 void q_headerview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -7059,7 +7059,7 @@ QMargins* q_headerview_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_headerview_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -7089,7 +7089,7 @@ void q_headerview_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QPainter*)
+/// @param callback void func(QHeaderView* self, QPainter* param1)
 void q_headerview_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7117,7 +7117,7 @@ void q_headerview_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7145,7 +7145,7 @@ void q_headerview_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7173,7 +7173,7 @@ void q_headerview_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn()
+/// @param callback void func()
 void q_headerview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -7201,7 +7201,7 @@ bool q_headerview_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_headerview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7229,7 +7229,7 @@ bool q_headerview_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_headerview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -7257,7 +7257,7 @@ QObject* q_headerview_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_headerview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -7285,7 +7285,7 @@ int32_t q_headerview_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_headerview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -7315,7 +7315,7 @@ int32_t q_headerview_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int32_t fn(QHeaderView*, const char*)
+/// @param callback int32_t func(QHeaderView* self, const char* signal)
 void q_headerview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -7345,7 +7345,7 @@ bool q_headerview_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback bool fn(QHeaderView*, QMetaMethod*)
+/// @param callback bool func(QHeaderView* self, QMetaMethod* signal)
 void q_headerview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7377,7 +7377,7 @@ double q_headerview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback double fn(QHeaderView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QHeaderView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_headerview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -7387,7 +7387,7 @@ void q_headerview_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, const char*)
+/// @param callback void func(QHeaderView* self, const char* objectName)
 void q_headerview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dtor.QHeaderView)

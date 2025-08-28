@@ -40,7 +40,7 @@ int32_t q_parallelanimationgroup_metacall(void* self, int32_t param1, int param2
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback int32_t fn(QParallelAnimationGroup*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QParallelAnimationGroup* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_parallelanimationgroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -68,7 +68,7 @@ int32_t q_parallelanimationgroup_duration(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_parallelanimationgroup_on_duration(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#duration)
@@ -89,7 +89,7 @@ bool q_parallelanimationgroup_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback bool fn(QParallelAnimationGroup*, QEvent*)
+/// @param callback bool func(QParallelAnimationGroup* self, QEvent* event)
 void q_parallelanimationgroup_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#event)
@@ -111,7 +111,7 @@ void q_parallelanimationgroup_update_current_time(void* self, int currentTime);
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, int)
+/// @param callback void func(QParallelAnimationGroup* self, int currentTime)
 void q_parallelanimationgroup_on_update_current_time(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateCurrentTime)
@@ -134,7 +134,7 @@ void q_parallelanimationgroup_update_state(void* self, int32_t newState, int32_t
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+/// @param callback void func(QParallelAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState)
 void q_parallelanimationgroup_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateState)
@@ -157,7 +157,7 @@ void q_parallelanimationgroup_update_direction(void* self, int32_t direction);
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__Direction)
+/// @param callback void func(QParallelAnimationGroup* self, enum QAbstractAnimation__Direction direction)
 void q_parallelanimationgroup_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateDirection)
@@ -336,7 +336,7 @@ void q_parallelanimationgroup_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*)
+/// @param callback void func(QParallelAnimationGroup* self)
 void q_parallelanimationgroup_on_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -353,7 +353,7 @@ void q_parallelanimationgroup_state_changed(void* self, int32_t newState, int32_
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+/// @param callback void func(QParallelAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState)
 void q_parallelanimationgroup_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
@@ -369,7 +369,7 @@ void q_parallelanimationgroup_current_loop_changed(void* self, int currentLoop);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, int)
+/// @param callback void func(QParallelAnimationGroup* self, int currentLoop)
 void q_parallelanimationgroup_on_current_loop_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -385,7 +385,7 @@ void q_parallelanimationgroup_direction_changed(void* self, int32_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__Direction)
+/// @param callback void func(QParallelAnimationGroup* self, enum QAbstractAnimation__Direction param1)
 void q_parallelanimationgroup_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAnimation
@@ -666,7 +666,7 @@ void q_parallelanimationgroup_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*)
+/// @param callback void func(QParallelAnimationGroup* self)
 void q_parallelanimationgroup_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -744,7 +744,7 @@ void q_parallelanimationgroup_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, QObject*)
+/// @param callback void func(QParallelAnimationGroup* self, QObject* param1)
 void q_parallelanimationgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -776,7 +776,7 @@ bool q_parallelanimationgroup_qbase_event_filter(void* self, void* watched, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback bool fn(QParallelAnimationGroup*, QObject*, QEvent*)
+/// @param callback bool func(QParallelAnimationGroup* self, QObject* watched, QEvent* event)
 void q_parallelanimationgroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -806,7 +806,7 @@ void q_parallelanimationgroup_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, QTimerEvent*)
+/// @param callback void func(QParallelAnimationGroup* self, QTimerEvent* event)
 void q_parallelanimationgroup_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -836,7 +836,7 @@ void q_parallelanimationgroup_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, QChildEvent*)
+/// @param callback void func(QParallelAnimationGroup* self, QChildEvent* event)
 void q_parallelanimationgroup_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -866,7 +866,7 @@ void q_parallelanimationgroup_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, QEvent*)
+/// @param callback void func(QParallelAnimationGroup* self, QEvent* event)
 void q_parallelanimationgroup_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -896,7 +896,7 @@ void q_parallelanimationgroup_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, QMetaMethod*)
+/// @param callback void func(QParallelAnimationGroup* self, QMetaMethod* signal)
 void q_parallelanimationgroup_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -926,7 +926,7 @@ void q_parallelanimationgroup_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, QMetaMethod*)
+/// @param callback void func(QParallelAnimationGroup* self, QMetaMethod* signal)
 void q_parallelanimationgroup_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -954,7 +954,7 @@ QObject* q_parallelanimationgroup_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_parallelanimationgroup_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -982,7 +982,7 @@ int32_t q_parallelanimationgroup_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_parallelanimationgroup_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1012,7 +1012,7 @@ int32_t q_parallelanimationgroup_qbase_receivers(void* self, const char* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback int32_t fn(QParallelAnimationGroup*, const char*)
+/// @param callback int32_t func(QParallelAnimationGroup* self, const char* signal)
 void q_parallelanimationgroup_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1042,7 +1042,7 @@ bool q_parallelanimationgroup_qbase_is_signal_connected(void* self, void* signal
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback bool fn(QParallelAnimationGroup*, QMetaMethod*)
+/// @param callback bool func(QParallelAnimationGroup* self, QMetaMethod* signal)
 void q_parallelanimationgroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1052,7 +1052,7 @@ void q_parallelanimationgroup_on_is_signal_connected(void* self, bool (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self QParallelAnimationGroup*
-/// @param callback void fn(QParallelAnimationGroup*, const char*)
+/// @param callback void func(QParallelAnimationGroup* self, const char* objectName)
 void q_parallelanimationgroup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#dtor.QParallelAnimationGroup)

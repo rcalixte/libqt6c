@@ -178,7 +178,7 @@ void q_webenginedownloadrequest_state_changed(void* self, int32_t state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#stateChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*, enum QWebEngineDownloadRequest__DownloadState)
+/// @param callback void func(QWebEngineDownloadRequest* self, enum QWebEngineDownloadRequest__DownloadState state)
 void q_webenginedownloadrequest_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#savePageFormatChanged)
@@ -189,7 +189,7 @@ void q_webenginedownloadrequest_save_page_format_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#savePageFormatChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_save_page_format_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#receivedBytesChanged)
@@ -200,7 +200,7 @@ void q_webenginedownloadrequest_received_bytes_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#receivedBytesChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_received_bytes_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#totalBytesChanged)
@@ -211,7 +211,7 @@ void q_webenginedownloadrequest_total_bytes_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#totalBytesChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_total_bytes_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReasonChanged)
@@ -222,7 +222,7 @@ void q_webenginedownloadrequest_interrupt_reason_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReasonChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_interrupt_reason_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isFinishedChanged)
@@ -233,7 +233,7 @@ void q_webenginedownloadrequest_is_finished_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isFinishedChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_is_finished_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isPausedChanged)
@@ -244,7 +244,7 @@ void q_webenginedownloadrequest_is_paused_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#isPausedChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_is_paused_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadDirectoryChanged)
@@ -255,7 +255,7 @@ void q_webenginedownloadrequest_download_directory_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadDirectoryChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_download_directory_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadFileNameChanged)
@@ -266,7 +266,7 @@ void q_webenginedownloadrequest_download_file_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#downloadFileNameChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_download_file_name_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -529,7 +529,7 @@ void q_webenginedownloadrequest_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*)
+/// @param callback void func(QWebEngineDownloadRequest* self)
 void q_webenginedownloadrequest_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -607,7 +607,7 @@ void q_webenginedownloadrequest_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*, QObject*)
+/// @param callback void func(QWebEngineDownloadRequest* self, QObject* param1)
 void q_webenginedownloadrequest_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -617,7 +617,7 @@ void q_webenginedownloadrequest_on_destroyed1(void* self, void (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineDownloadRequest*
-/// @param callback void fn(QWebEngineDownloadRequest*, const char*)
+/// @param callback void func(QWebEngineDownloadRequest* self, const char* objectName)
 void q_webenginedownloadrequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#dtor.QWebEngineDownloadRequest)

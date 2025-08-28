@@ -51,7 +51,7 @@ int32_t q_keysequenceedit_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback int32_t fn(QKeySequenceEdit*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QKeySequenceEdit* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_keysequenceedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -126,7 +126,7 @@ void q_keysequenceedit_editing_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#editingFinished)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*)
+/// @param callback void func(QKeySequenceEdit* self)
 void q_keysequenceedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequenceChanged)
@@ -138,7 +138,7 @@ void q_keysequenceedit_key_sequence_changed(void* self, void* keySequence);
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequenceChanged)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QKeySequence*)
+/// @param callback void func(QKeySequenceEdit* self, QKeySequence* keySequence)
 void q_keysequenceedit_on_key_sequence_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
@@ -152,7 +152,7 @@ bool q_keysequenceedit_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn(QKeySequenceEdit*, QEvent*)
+/// @param callback bool func(QKeySequenceEdit* self, QEvent* param1)
 void q_keysequenceedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
@@ -174,7 +174,7 @@ void q_keysequenceedit_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QKeyEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QKeyEvent* param1)
 void q_keysequenceedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
@@ -196,7 +196,7 @@ void q_keysequenceedit_key_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QKeyEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QKeyEvent* param1)
 void q_keysequenceedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
@@ -218,7 +218,7 @@ void q_keysequenceedit_timer_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QTimerEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QTimerEvent* param1)
 void q_keysequenceedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
@@ -240,7 +240,7 @@ void q_keysequenceedit_focus_out_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QFocusEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QFocusEvent* param1)
 void q_keysequenceedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
@@ -2205,7 +2205,7 @@ void q_keysequenceedit_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, const char*)
+/// @param callback void func(QKeySequenceEdit* self, const char* title)
 void q_keysequenceedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2221,7 +2221,7 @@ void q_keysequenceedit_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QIcon*)
+/// @param callback void func(QKeySequenceEdit* self, QIcon* icon)
 void q_keysequenceedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2237,7 +2237,7 @@ void q_keysequenceedit_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, const char*)
+/// @param callback void func(QKeySequenceEdit* self, const char* iconText)
 void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2253,7 +2253,7 @@ void q_keysequenceedit_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QPoint*)
+/// @param callback void func(QKeySequenceEdit* self, QPoint* pos)
 void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2630,7 +2630,7 @@ void q_keysequenceedit_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*)
+/// @param callback void func(QKeySequenceEdit* self)
 void q_keysequenceedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2708,7 +2708,7 @@ void q_keysequenceedit_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QObject*)
+/// @param callback void func(QKeySequenceEdit* self, QObject* param1)
 void q_keysequenceedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2827,7 +2827,7 @@ int32_t q_keysequenceedit_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_keysequenceedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2857,7 +2857,7 @@ void q_keysequenceedit_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, bool)
+/// @param callback void func(QKeySequenceEdit* self, bool visible)
 void q_keysequenceedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2885,7 +2885,7 @@ QSize* q_keysequenceedit_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_keysequenceedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2913,7 +2913,7 @@ QSize* q_keysequenceedit_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2943,7 +2943,7 @@ int32_t q_keysequenceedit_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback int32_t fn(QKeySequenceEdit*, int)
+/// @param callback int32_t func(QKeySequenceEdit* self, int param1)
 void q_keysequenceedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2971,7 +2971,7 @@ bool q_keysequenceedit_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_keysequenceedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2999,7 +2999,7 @@ QPaintEngine* q_keysequenceedit_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3029,7 +3029,7 @@ void q_keysequenceedit_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
 void q_keysequenceedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3059,7 +3059,7 @@ void q_keysequenceedit_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
 void q_keysequenceedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3089,7 +3089,7 @@ void q_keysequenceedit_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
 void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3119,7 +3119,7 @@ void q_keysequenceedit_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QMouseEvent* event)
 void q_keysequenceedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3149,7 +3149,7 @@ void q_keysequenceedit_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QWheelEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QWheelEvent* event)
 void q_keysequenceedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3179,7 +3179,7 @@ void q_keysequenceedit_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QFocusEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QFocusEvent* event)
 void q_keysequenceedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3209,7 +3209,7 @@ void q_keysequenceedit_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QEnterEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QEnterEvent* event)
 void q_keysequenceedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3239,7 +3239,7 @@ void q_keysequenceedit_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QEvent* event)
 void q_keysequenceedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3269,7 +3269,7 @@ void q_keysequenceedit_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QPaintEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QPaintEvent* event)
 void q_keysequenceedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3299,7 +3299,7 @@ void q_keysequenceedit_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMoveEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QMoveEvent* event)
 void q_keysequenceedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3329,7 +3329,7 @@ void q_keysequenceedit_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QResizeEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QResizeEvent* event)
 void q_keysequenceedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3359,7 +3359,7 @@ void q_keysequenceedit_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QCloseEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QCloseEvent* event)
 void q_keysequenceedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3389,7 +3389,7 @@ void q_keysequenceedit_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QContextMenuEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QContextMenuEvent* event)
 void q_keysequenceedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3419,7 +3419,7 @@ void q_keysequenceedit_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QTabletEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QTabletEvent* event)
 void q_keysequenceedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3449,7 +3449,7 @@ void q_keysequenceedit_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QActionEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QActionEvent* event)
 void q_keysequenceedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3479,7 +3479,7 @@ void q_keysequenceedit_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QDragEnterEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QDragEnterEvent* event)
 void q_keysequenceedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3509,7 +3509,7 @@ void q_keysequenceedit_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QDragMoveEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QDragMoveEvent* event)
 void q_keysequenceedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3539,7 +3539,7 @@ void q_keysequenceedit_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QDragLeaveEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QDragLeaveEvent* event)
 void q_keysequenceedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3569,7 +3569,7 @@ void q_keysequenceedit_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QDropEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QDropEvent* event)
 void q_keysequenceedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3599,7 +3599,7 @@ void q_keysequenceedit_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QShowEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QShowEvent* event)
 void q_keysequenceedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3629,7 +3629,7 @@ void q_keysequenceedit_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QHideEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QHideEvent* event)
 void q_keysequenceedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3663,7 +3663,7 @@ bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn(QKeySequenceEdit*, const char*, void*, intptr_t*)
+/// @param callback bool func(QKeySequenceEdit* self, const char* eventType, void* message, intptr_t* result)
 void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3693,7 +3693,7 @@ void q_keysequenceedit_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QEvent* param1)
 void q_keysequenceedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3723,7 +3723,7 @@ int32_t q_keysequenceedit_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback int32_t fn(QKeySequenceEdit*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_keysequenceedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3753,7 +3753,7 @@ void q_keysequenceedit_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QPainter*)
+/// @param callback void func(QKeySequenceEdit* self, QPainter* painter)
 void q_keysequenceedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3783,7 +3783,7 @@ QPaintDevice* q_keysequenceedit_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QPaintDevice* fn(QKeySequenceEdit*, QPoint*)
+/// @param callback QPaintDevice* func(QKeySequenceEdit* self, QPoint* offset)
 void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3811,7 +3811,7 @@ QPainter* q_keysequenceedit_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3841,7 +3841,7 @@ void q_keysequenceedit_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QInputMethodEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QInputMethodEvent* param1)
 void q_keysequenceedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3871,7 +3871,7 @@ QVariant* q_keysequenceedit_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QVariant* fn(QKeySequenceEdit*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QKeySequenceEdit* self, enum Qt__InputMethodQuery param1)
 void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3901,7 +3901,7 @@ bool q_keysequenceedit_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn(QKeySequenceEdit*, bool)
+/// @param callback bool func(QKeySequenceEdit* self, bool next)
 void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3933,7 +3933,7 @@ bool q_keysequenceedit_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn(QKeySequenceEdit*, QObject*, QEvent*)
+/// @param callback bool func(QKeySequenceEdit* self, QObject* watched, QEvent* event)
 void q_keysequenceedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3963,7 +3963,7 @@ void q_keysequenceedit_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QChildEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QChildEvent* event)
 void q_keysequenceedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3993,7 +3993,7 @@ void q_keysequenceedit_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QEvent*)
+/// @param callback void func(QKeySequenceEdit* self, QEvent* event)
 void q_keysequenceedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4023,7 +4023,7 @@ void q_keysequenceedit_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMetaMethod*)
+/// @param callback void func(QKeySequenceEdit* self, QMetaMethod* signal)
 void q_keysequenceedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4053,7 +4053,7 @@ void q_keysequenceedit_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, QMetaMethod*)
+/// @param callback void func(QKeySequenceEdit* self, QMetaMethod* signal)
 void q_keysequenceedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4081,7 +4081,7 @@ void q_keysequenceedit_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_keysequenceedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4109,7 +4109,7 @@ void q_keysequenceedit_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_keysequenceedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4137,7 +4137,7 @@ void q_keysequenceedit_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn()
+/// @param callback void func()
 void q_keysequenceedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4165,7 +4165,7 @@ bool q_keysequenceedit_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_keysequenceedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4193,7 +4193,7 @@ bool q_keysequenceedit_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_keysequenceedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4221,7 +4221,7 @@ QObject* q_keysequenceedit_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_keysequenceedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4249,7 +4249,7 @@ int32_t q_keysequenceedit_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4279,7 +4279,7 @@ int32_t q_keysequenceedit_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback int32_t fn(QKeySequenceEdit*, const char*)
+/// @param callback int32_t func(QKeySequenceEdit* self, const char* signal)
 void q_keysequenceedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4309,7 +4309,7 @@ bool q_keysequenceedit_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback bool fn(QKeySequenceEdit*, QMetaMethod*)
+/// @param callback bool func(QKeySequenceEdit* self, QMetaMethod* signal)
 void q_keysequenceedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4341,7 +4341,7 @@ double q_keysequenceedit_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback double fn(QKeySequenceEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4351,7 +4351,7 @@ void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QKeySequenceEdit*
-/// @param callback void fn(QKeySequenceEdit*, const char*)
+/// @param callback void func(QKeySequenceEdit* self, const char* objectName)
 void q_keysequenceedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#dtor.QKeySequenceEdit)

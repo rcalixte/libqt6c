@@ -40,7 +40,7 @@ int32_t q_imagecapture_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QImageCapture*
-/// @param callback int32_t fn(QImageCapture*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QImageCapture* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -186,7 +186,7 @@ void q_imagecapture_error_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorChanged)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*)
+/// @param callback void func(QImageCapture* self)
 void q_imagecapture_on_error_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorOccurred)
@@ -200,7 +200,7 @@ void q_imagecapture_error_occurred(void* self, int id, int32_t errorVal, const c
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorOccurred)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, int, enum QImageCapture__Error, const char*)
+/// @param callback void func(QImageCapture* self, int id, enum QImageCapture__Error errorVal, const char* errorString)
 void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#readyForCaptureChanged)
@@ -212,7 +212,7 @@ void q_imagecapture_ready_for_capture_changed(void* self, bool ready);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#readyForCaptureChanged)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, bool)
+/// @param callback void func(QImageCapture* self, bool ready)
 void q_imagecapture_on_ready_for_capture_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#metaDataChanged)
@@ -223,7 +223,7 @@ void q_imagecapture_meta_data_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#metaDataChanged)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*)
+/// @param callback void func(QImageCapture* self)
 void q_imagecapture_on_meta_data_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatChanged)
@@ -234,7 +234,7 @@ void q_imagecapture_file_format_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatChanged)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*)
+/// @param callback void func(QImageCapture* self)
 void q_imagecapture_on_file_format_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#qualityChanged)
@@ -245,7 +245,7 @@ void q_imagecapture_quality_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#qualityChanged)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*)
+/// @param callback void func(QImageCapture* self)
 void q_imagecapture_on_quality_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#resolutionChanged)
@@ -256,7 +256,7 @@ void q_imagecapture_resolution_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#resolutionChanged)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*)
+/// @param callback void func(QImageCapture* self)
 void q_imagecapture_on_resolution_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageExposed)
@@ -268,7 +268,7 @@ void q_imagecapture_image_exposed(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageExposed)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, int)
+/// @param callback void func(QImageCapture* self, int id)
 void q_imagecapture_on_image_exposed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageCaptured)
@@ -281,7 +281,7 @@ void q_imagecapture_image_captured(void* self, int id, void* preview);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageCaptured)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, int, QImage*)
+/// @param callback void func(QImageCapture* self, int id, QImage* preview)
 void q_imagecapture_on_image_captured(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageMetadataAvailable)
@@ -294,7 +294,7 @@ void q_imagecapture_image_metadata_available(void* self, int id, void* metaData)
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageMetadataAvailable)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, int, QMediaMetaData*)
+/// @param callback void func(QImageCapture* self, int id, QMediaMetaData* metaData)
 void q_imagecapture_on_image_metadata_available(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageAvailable)
@@ -307,7 +307,7 @@ void q_imagecapture_image_available(void* self, int id, void* frame);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageAvailable)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, int, QVideoFrame*)
+/// @param callback void func(QImageCapture* self, int id, QVideoFrame* frame)
 void q_imagecapture_on_image_available(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageSaved)
@@ -320,7 +320,7 @@ void q_imagecapture_image_saved(void* self, int id, const char* fileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#imageSaved)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, int, const char*)
+/// @param callback void func(QImageCapture* self, int id, const char* fileName)
 void q_imagecapture_on_image_saved(void* self, void (*callback)(void*, int, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -572,7 +572,7 @@ void q_imagecapture_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*)
+/// @param callback void func(QImageCapture* self)
 void q_imagecapture_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -650,7 +650,7 @@ void q_imagecapture_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, QObject*)
+/// @param callback void func(QImageCapture* self, QObject* param1)
 void q_imagecapture_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -680,7 +680,7 @@ bool q_imagecapture_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback bool fn(QImageCapture*, QEvent*)
+/// @param callback bool func(QImageCapture* self, QEvent* event)
 void q_imagecapture_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -712,7 +712,7 @@ bool q_imagecapture_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback bool fn(QImageCapture*, QObject*, QEvent*)
+/// @param callback bool func(QImageCapture* self, QObject* watched, QEvent* event)
 void q_imagecapture_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -742,7 +742,7 @@ void q_imagecapture_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, QTimerEvent*)
+/// @param callback void func(QImageCapture* self, QTimerEvent* event)
 void q_imagecapture_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -772,7 +772,7 @@ void q_imagecapture_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, QChildEvent*)
+/// @param callback void func(QImageCapture* self, QChildEvent* event)
 void q_imagecapture_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -802,7 +802,7 @@ void q_imagecapture_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, QEvent*)
+/// @param callback void func(QImageCapture* self, QEvent* event)
 void q_imagecapture_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -832,7 +832,7 @@ void q_imagecapture_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, QMetaMethod*)
+/// @param callback void func(QImageCapture* self, QMetaMethod* signal)
 void q_imagecapture_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -862,7 +862,7 @@ void q_imagecapture_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, QMetaMethod*)
+/// @param callback void func(QImageCapture* self, QMetaMethod* signal)
 void q_imagecapture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -890,7 +890,7 @@ QObject* q_imagecapture_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_imagecapture_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -918,7 +918,7 @@ int32_t q_imagecapture_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_imagecapture_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -948,7 +948,7 @@ int32_t q_imagecapture_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback int32_t fn(QImageCapture*, const char*)
+/// @param callback int32_t func(QImageCapture* self, const char* signal)
 void q_imagecapture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -978,7 +978,7 @@ bool q_imagecapture_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QImageCapture*
-/// @param callback bool fn(QImageCapture*, QMetaMethod*)
+/// @param callback bool func(QImageCapture* self, QMetaMethod* signal)
 void q_imagecapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -988,7 +988,7 @@ void q_imagecapture_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QImageCapture*
-/// @param callback void fn(QImageCapture*, const char*)
+/// @param callback void func(QImageCapture* self, const char* objectName)
 void q_imagecapture_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#dtor.QImageCapture)

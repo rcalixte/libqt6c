@@ -76,7 +76,7 @@ int32_t q_textdocument_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QTextDocument*
-/// @param callback int32_t fn(QTextDocument*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTextDocument* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_textdocument_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -114,7 +114,7 @@ void q_textdocument_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextDocument*
-/// @param callback void fn()
+/// @param callback void func()
 void q_textdocument_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clear)
@@ -601,7 +601,7 @@ void q_textdocument_contents_change(void* self, int from, int charsRemoved, int 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChange)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, int, int, int)
+/// @param callback void func(QTextDocument* self, int from, int charsRemoved, int charsAdded)
 void q_textdocument_on_contents_change(void* self, void (*callback)(void*, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChanged)
@@ -612,7 +612,7 @@ void q_textdocument_contents_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChanged)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*)
+/// @param callback void func(QTextDocument* self)
 void q_textdocument_on_contents_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoAvailable)
@@ -624,7 +624,7 @@ void q_textdocument_undo_available(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoAvailable)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, bool)
+/// @param callback void func(QTextDocument* self, bool param1)
 void q_textdocument_on_undo_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redoAvailable)
@@ -636,7 +636,7 @@ void q_textdocument_redo_available(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redoAvailable)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, bool)
+/// @param callback void func(QTextDocument* self, bool param1)
 void q_textdocument_on_redo_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoCommandAdded)
@@ -647,7 +647,7 @@ void q_textdocument_undo_command_added(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoCommandAdded)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*)
+/// @param callback void func(QTextDocument* self)
 void q_textdocument_on_undo_command_added(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#modificationChanged)
@@ -659,7 +659,7 @@ void q_textdocument_modification_changed(void* self, bool m);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#modificationChanged)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, bool)
+/// @param callback void func(QTextDocument* self, bool m)
 void q_textdocument_on_modification_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#cursorPositionChanged)
@@ -671,7 +671,7 @@ void q_textdocument_cursor_position_changed(void* self, void* cursor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#cursorPositionChanged)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QTextCursor*)
+/// @param callback void func(QTextDocument* self, QTextCursor* cursor)
 void q_textdocument_on_cursor_position_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#blockCountChanged)
@@ -683,7 +683,7 @@ void q_textdocument_block_count_changed(void* self, int newBlockCount);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#blockCountChanged)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, int)
+/// @param callback void func(QTextDocument* self, int newBlockCount)
 void q_textdocument_on_block_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baseUrlChanged)
@@ -695,7 +695,7 @@ void q_textdocument_base_url_changed(void* self, void* url);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baseUrlChanged)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QUrl*)
+/// @param callback void func(QTextDocument* self, QUrl* url)
 void q_textdocument_on_base_url_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentLayoutChanged)
@@ -706,7 +706,7 @@ void q_textdocument_document_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentLayoutChanged)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*)
+/// @param callback void func(QTextDocument* self)
 void q_textdocument_on_document_layout_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undo)
@@ -741,7 +741,7 @@ QTextObject* q_textdocument_create_object(void* self, void* f);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextDocument*
-/// @param callback QTextObject* fn(QTextDocument*, QTextFormat*)
+/// @param callback QTextObject* func(QTextDocument* self, QTextFormat* f)
 void q_textdocument_on_create_object(void* self, QTextObject* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
@@ -764,7 +764,7 @@ QVariant* q_textdocument_load_resource(void* self, int typeVal, void* name);
 /// Allows for overriding the related default method
 ///
 /// @param self QTextDocument*
-/// @param callback QVariant* fn(QTextDocument*, int, QUrl*)
+/// @param callback QVariant* func(QTextDocument* self, int typeVal, QUrl* name)
 void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
@@ -1105,7 +1105,7 @@ void q_textdocument_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*)
+/// @param callback void func(QTextDocument* self)
 void q_textdocument_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1183,7 +1183,7 @@ void q_textdocument_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QObject*)
+/// @param callback void func(QTextDocument* self, QObject* param1)
 void q_textdocument_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1213,7 +1213,7 @@ bool q_textdocument_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback bool fn(QTextDocument*, QEvent*)
+/// @param callback bool func(QTextDocument* self, QEvent* event)
 void q_textdocument_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1245,7 +1245,7 @@ bool q_textdocument_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback bool fn(QTextDocument*, QObject*, QEvent*)
+/// @param callback bool func(QTextDocument* self, QObject* watched, QEvent* event)
 void q_textdocument_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1275,7 +1275,7 @@ void q_textdocument_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QTimerEvent*)
+/// @param callback void func(QTextDocument* self, QTimerEvent* event)
 void q_textdocument_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1305,7 +1305,7 @@ void q_textdocument_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QChildEvent*)
+/// @param callback void func(QTextDocument* self, QChildEvent* event)
 void q_textdocument_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1335,7 +1335,7 @@ void q_textdocument_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QEvent*)
+/// @param callback void func(QTextDocument* self, QEvent* event)
 void q_textdocument_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1365,7 +1365,7 @@ void q_textdocument_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QMetaMethod*)
+/// @param callback void func(QTextDocument* self, QMetaMethod* signal)
 void q_textdocument_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1395,7 +1395,7 @@ void q_textdocument_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, QMetaMethod*)
+/// @param callback void func(QTextDocument* self, QMetaMethod* signal)
 void q_textdocument_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1423,7 +1423,7 @@ QObject* q_textdocument_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_textdocument_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1451,7 +1451,7 @@ int32_t q_textdocument_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_textdocument_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1481,7 +1481,7 @@ int32_t q_textdocument_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback int32_t fn(QTextDocument*, const char*)
+/// @param callback int32_t func(QTextDocument* self, const char* signal)
 void q_textdocument_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1511,7 +1511,7 @@ bool q_textdocument_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextDocument*
-/// @param callback bool fn(QTextDocument*, QMetaMethod*)
+/// @param callback bool func(QTextDocument* self, QMetaMethod* signal)
 void q_textdocument_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1521,7 +1521,7 @@ void q_textdocument_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTextDocument*
-/// @param callback void fn(QTextDocument*, const char*)
+/// @param callback void func(QTextDocument* self, const char* objectName)
 void q_textdocument_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#dtor.QTextDocument)

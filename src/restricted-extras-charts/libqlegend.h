@@ -217,7 +217,7 @@ void q_legend_background_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#backgroundVisibleChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, bool)
+/// @param callback void func(QLegend* self, bool visible)
 void q_legend_on_background_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#colorChanged)
@@ -229,7 +229,7 @@ void q_legend_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#colorChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, QColor*)
+/// @param callback void func(QLegend* self, QColor* color)
 void q_legend_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#borderColorChanged)
@@ -241,7 +241,7 @@ void q_legend_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#borderColorChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, QColor*)
+/// @param callback void func(QLegend* self, QColor* color)
 void q_legend_on_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#fontChanged)
@@ -253,7 +253,7 @@ void q_legend_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#fontChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, QFont*)
+/// @param callback void func(QLegend* self, QFont* font)
 void q_legend_on_font_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#labelColorChanged)
@@ -265,7 +265,7 @@ void q_legend_label_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#labelColorChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, QColor*)
+/// @param callback void func(QLegend* self, QColor* color)
 void q_legend_on_label_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#reverseMarkersChanged)
@@ -277,7 +277,7 @@ void q_legend_reverse_markers_changed(void* self, bool reverseMarkers);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#reverseMarkersChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, bool)
+/// @param callback void func(QLegend* self, bool reverseMarkers)
 void q_legend_on_reverse_markers_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#showToolTipsChanged)
@@ -289,7 +289,7 @@ void q_legend_show_tool_tips_changed(void* self, bool showToolTips);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#showToolTipsChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, bool)
+/// @param callback void func(QLegend* self, bool showToolTips)
 void q_legend_on_show_tool_tips_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markerShapeChanged)
@@ -301,7 +301,7 @@ void q_legend_marker_shape_changed(void* self, int32_t shape);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#markerShapeChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, enum QLegend__MarkerShape)
+/// @param callback void func(QLegend* self, enum QLegend__MarkerShape shape)
 void q_legend_on_marker_shape_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#attachedToChartChanged)
@@ -313,7 +313,7 @@ void q_legend_attached_to_chart_changed(void* self, bool attachedToChart);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#attachedToChartChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, bool)
+/// @param callback void func(QLegend* self, bool attachedToChart)
 void q_legend_on_attached_to_chart_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#interactiveChanged)
@@ -325,7 +325,7 @@ void q_legend_interactive_changed(void* self, bool interactive);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#interactiveChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, bool)
+/// @param callback void func(QLegend* self, bool interactive)
 void q_legend_on_interactive_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -807,7 +807,7 @@ void q_legend_geometry_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_geometry_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -822,7 +822,7 @@ void q_legend_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -896,7 +896,7 @@ void q_legend_parent_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_parent_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -911,7 +911,7 @@ void q_legend_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -926,7 +926,7 @@ void q_legend_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -941,7 +941,7 @@ void q_legend_enabled_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_enabled_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -956,7 +956,7 @@ void q_legend_x_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_x_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -971,7 +971,7 @@ void q_legend_y_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_y_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -986,7 +986,7 @@ void q_legend_z_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_z_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1001,7 +1001,7 @@ void q_legend_rotation_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1016,7 +1016,7 @@ void q_legend_scale_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_scale_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1031,7 +1031,7 @@ void q_legend_children_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_children_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1046,7 +1046,7 @@ void q_legend_width_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_width_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1061,7 +1061,7 @@ void q_legend_height_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_height_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1308,7 +1308,7 @@ void q_legend_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*)
+/// @param callback void func(QLegend* self)
 void q_legend_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1386,7 +1386,7 @@ void q_legend_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, QObject*)
+/// @param callback void func(QLegend* self, QObject* param1)
 void q_legend_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3042,7 +3042,7 @@ QSizeF* q_legend_effective_size_hint2(void* self, int32_t which, void* constrain
 /// Wrapper to allow calling private signal
 ///
 /// @param self QLegend*
-/// @param callback void fn(QLegend*, const char*)
+/// @param callback void func(QLegend* self, const char* objectName)
 void q_legend_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#dtor.QLegend)

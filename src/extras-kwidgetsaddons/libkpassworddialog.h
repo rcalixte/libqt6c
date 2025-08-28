@@ -46,7 +46,7 @@ int32_t k_passworddialog_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn(KPasswordDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPasswordDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_passworddialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -184,7 +184,7 @@ void k_passworddialog_accept(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passworddialog_on_accept(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#accept)
@@ -239,7 +239,7 @@ void k_passworddialog_got_password(void* self, const char* password, bool keep);
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#gotPassword)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, const char*, bool)
+/// @param callback void func(KPasswordDialog* self, const char* password, bool keep)
 void k_passworddialog_on_got_password(void* self, void (*callback)(void*, const char*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#gotUsernameAndPassword)
@@ -253,7 +253,7 @@ void k_passworddialog_got_username_and_password(void* self, const char* username
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#gotUsernameAndPassword)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, const char*, const char*, bool)
+/// @param callback void func(KPasswordDialog* self, const char* username, const char* password, bool keep)
 void k_passworddialog_on_got_username_and_password(void* self, void (*callback)(void*, const char*, const char*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#checkPassword)
@@ -266,7 +266,7 @@ bool k_passworddialog_check_password(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passworddialog_on_check_password(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#checkPassword)
@@ -351,7 +351,7 @@ void k_passworddialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, int)
+/// @param callback void func(KPasswordDialog* self, int result)
 void k_passworddialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -366,7 +366,7 @@ void k_passworddialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*)
+/// @param callback void func(KPasswordDialog* self)
 void k_passworddialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -381,7 +381,7 @@ void k_passworddialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*)
+/// @param callback void func(KPasswordDialog* self)
 void k_passworddialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2321,7 +2321,7 @@ void k_passworddialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, const char*)
+/// @param callback void func(KPasswordDialog* self, const char* title)
 void k_passworddialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2337,7 +2337,7 @@ void k_passworddialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QIcon*)
+/// @param callback void func(KPasswordDialog* self, QIcon* icon)
 void k_passworddialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2353,7 +2353,7 @@ void k_passworddialog_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, const char*)
+/// @param callback void func(KPasswordDialog* self, const char* iconText)
 void k_passworddialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2369,7 +2369,7 @@ void k_passworddialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QPoint*)
+/// @param callback void func(KPasswordDialog* self, QPoint* pos)
 void k_passworddialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2746,7 +2746,7 @@ void k_passworddialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*)
+/// @param callback void func(KPasswordDialog* self)
 void k_passworddialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2824,7 +2824,7 @@ void k_passworddialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QObject*)
+/// @param callback void func(KPasswordDialog* self, QObject* param1)
 void k_passworddialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2945,7 +2945,7 @@ void k_passworddialog_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, bool)
+/// @param callback void func(KPasswordDialog* self, bool visible)
 void k_passworddialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -2973,7 +2973,7 @@ QSize* k_passworddialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_passworddialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3001,7 +3001,7 @@ QSize* k_passworddialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_passworddialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3029,7 +3029,7 @@ void k_passworddialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passworddialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3057,7 +3057,7 @@ int32_t k_passworddialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_passworddialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3087,7 +3087,7 @@ void k_passworddialog_qbase_done(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, int)
+/// @param callback void func(KPasswordDialog* self, int param1)
 void k_passworddialog_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -3115,7 +3115,7 @@ void k_passworddialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passworddialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3145,7 +3145,7 @@ void k_passworddialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QKeyEvent*)
+/// @param callback void func(KPasswordDialog* self, QKeyEvent* param1)
 void k_passworddialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3175,7 +3175,7 @@ void k_passworddialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QCloseEvent*)
+/// @param callback void func(KPasswordDialog* self, QCloseEvent* param1)
 void k_passworddialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3205,7 +3205,7 @@ void k_passworddialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QShowEvent*)
+/// @param callback void func(KPasswordDialog* self, QShowEvent* param1)
 void k_passworddialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3235,7 +3235,7 @@ void k_passworddialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QResizeEvent*)
+/// @param callback void func(KPasswordDialog* self, QResizeEvent* param1)
 void k_passworddialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3265,7 +3265,7 @@ void k_passworddialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QContextMenuEvent*)
+/// @param callback void func(KPasswordDialog* self, QContextMenuEvent* param1)
 void k_passworddialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3297,7 +3297,7 @@ bool k_passworddialog_qbase_event_filter(void* self, void* param1, void* param2)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn(KPasswordDialog*, QObject*, QEvent*)
+/// @param callback bool func(KPasswordDialog* self, QObject* param1, QEvent* param2)
 void k_passworddialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3325,7 +3325,7 @@ int32_t k_passworddialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_passworddialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3355,7 +3355,7 @@ int32_t k_passworddialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn(KPasswordDialog*, int)
+/// @param callback int32_t func(KPasswordDialog* self, int param1)
 void k_passworddialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3383,7 +3383,7 @@ bool k_passworddialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passworddialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3411,7 +3411,7 @@ QPaintEngine* k_passworddialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_passworddialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3441,7 +3441,7 @@ bool k_passworddialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn(KPasswordDialog*, QEvent*)
+/// @param callback bool func(KPasswordDialog* self, QEvent* event)
 void k_passworddialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3471,7 +3471,7 @@ void k_passworddialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMouseEvent*)
+/// @param callback void func(KPasswordDialog* self, QMouseEvent* event)
 void k_passworddialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3501,7 +3501,7 @@ void k_passworddialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMouseEvent*)
+/// @param callback void func(KPasswordDialog* self, QMouseEvent* event)
 void k_passworddialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3531,7 +3531,7 @@ void k_passworddialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMouseEvent*)
+/// @param callback void func(KPasswordDialog* self, QMouseEvent* event)
 void k_passworddialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3561,7 +3561,7 @@ void k_passworddialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMouseEvent*)
+/// @param callback void func(KPasswordDialog* self, QMouseEvent* event)
 void k_passworddialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3591,7 +3591,7 @@ void k_passworddialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QWheelEvent*)
+/// @param callback void func(KPasswordDialog* self, QWheelEvent* event)
 void k_passworddialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3621,7 +3621,7 @@ void k_passworddialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QKeyEvent*)
+/// @param callback void func(KPasswordDialog* self, QKeyEvent* event)
 void k_passworddialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3651,7 +3651,7 @@ void k_passworddialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QFocusEvent*)
+/// @param callback void func(KPasswordDialog* self, QFocusEvent* event)
 void k_passworddialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3681,7 +3681,7 @@ void k_passworddialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QFocusEvent*)
+/// @param callback void func(KPasswordDialog* self, QFocusEvent* event)
 void k_passworddialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3711,7 +3711,7 @@ void k_passworddialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QEnterEvent*)
+/// @param callback void func(KPasswordDialog* self, QEnterEvent* event)
 void k_passworddialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3741,7 +3741,7 @@ void k_passworddialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QEvent*)
+/// @param callback void func(KPasswordDialog* self, QEvent* event)
 void k_passworddialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3771,7 +3771,7 @@ void k_passworddialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QPaintEvent*)
+/// @param callback void func(KPasswordDialog* self, QPaintEvent* event)
 void k_passworddialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3801,7 +3801,7 @@ void k_passworddialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMoveEvent*)
+/// @param callback void func(KPasswordDialog* self, QMoveEvent* event)
 void k_passworddialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3831,7 +3831,7 @@ void k_passworddialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QTabletEvent*)
+/// @param callback void func(KPasswordDialog* self, QTabletEvent* event)
 void k_passworddialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3861,7 +3861,7 @@ void k_passworddialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QActionEvent*)
+/// @param callback void func(KPasswordDialog* self, QActionEvent* event)
 void k_passworddialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3891,7 +3891,7 @@ void k_passworddialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QDragEnterEvent*)
+/// @param callback void func(KPasswordDialog* self, QDragEnterEvent* event)
 void k_passworddialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3921,7 +3921,7 @@ void k_passworddialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QDragMoveEvent*)
+/// @param callback void func(KPasswordDialog* self, QDragMoveEvent* event)
 void k_passworddialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3951,7 +3951,7 @@ void k_passworddialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QDragLeaveEvent*)
+/// @param callback void func(KPasswordDialog* self, QDragLeaveEvent* event)
 void k_passworddialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3981,7 +3981,7 @@ void k_passworddialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QDropEvent*)
+/// @param callback void func(KPasswordDialog* self, QDropEvent* event)
 void k_passworddialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4011,7 +4011,7 @@ void k_passworddialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QHideEvent*)
+/// @param callback void func(KPasswordDialog* self, QHideEvent* event)
 void k_passworddialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4045,7 +4045,7 @@ bool k_passworddialog_qbase_native_event(void* self, const char* eventType, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn(KPasswordDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(KPasswordDialog* self, const char* eventType, void* message, intptr_t* result)
 void k_passworddialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4075,7 +4075,7 @@ void k_passworddialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QEvent*)
+/// @param callback void func(KPasswordDialog* self, QEvent* param1)
 void k_passworddialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4105,7 +4105,7 @@ int32_t k_passworddialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn(KPasswordDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KPasswordDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_passworddialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4135,7 +4135,7 @@ void k_passworddialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QPainter*)
+/// @param callback void func(KPasswordDialog* self, QPainter* painter)
 void k_passworddialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4165,7 +4165,7 @@ QPaintDevice* k_passworddialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QPaintDevice* fn(KPasswordDialog*, QPoint*)
+/// @param callback QPaintDevice* func(KPasswordDialog* self, QPoint* offset)
 void k_passworddialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4193,7 +4193,7 @@ QPainter* k_passworddialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_passworddialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4223,7 +4223,7 @@ void k_passworddialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QInputMethodEvent*)
+/// @param callback void func(KPasswordDialog* self, QInputMethodEvent* param1)
 void k_passworddialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4253,7 +4253,7 @@ QVariant* k_passworddialog_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QVariant* fn(KPasswordDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KPasswordDialog* self, enum Qt__InputMethodQuery param1)
 void k_passworddialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4283,7 +4283,7 @@ bool k_passworddialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn(KPasswordDialog*, bool)
+/// @param callback bool func(KPasswordDialog* self, bool next)
 void k_passworddialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4313,7 +4313,7 @@ void k_passworddialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QTimerEvent*)
+/// @param callback void func(KPasswordDialog* self, QTimerEvent* event)
 void k_passworddialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4343,7 +4343,7 @@ void k_passworddialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QChildEvent*)
+/// @param callback void func(KPasswordDialog* self, QChildEvent* event)
 void k_passworddialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4373,7 +4373,7 @@ void k_passworddialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QEvent*)
+/// @param callback void func(KPasswordDialog* self, QEvent* event)
 void k_passworddialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4403,7 +4403,7 @@ void k_passworddialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMetaMethod*)
+/// @param callback void func(KPasswordDialog* self, QMetaMethod* signal)
 void k_passworddialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4433,7 +4433,7 @@ void k_passworddialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QMetaMethod*)
+/// @param callback void func(KPasswordDialog* self, QMetaMethod* signal)
 void k_passworddialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4463,7 +4463,7 @@ void k_passworddialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, QWidget*)
+/// @param callback void func(KPasswordDialog* self, QWidget* param1)
 void k_passworddialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4491,7 +4491,7 @@ void k_passworddialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passworddialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4519,7 +4519,7 @@ void k_passworddialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passworddialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4547,7 +4547,7 @@ void k_passworddialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_passworddialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4575,7 +4575,7 @@ bool k_passworddialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passworddialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4603,7 +4603,7 @@ bool k_passworddialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_passworddialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4631,7 +4631,7 @@ QObject* k_passworddialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_passworddialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4659,7 +4659,7 @@ int32_t k_passworddialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_passworddialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4689,7 +4689,7 @@ int32_t k_passworddialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback int32_t fn(KPasswordDialog*, const char*)
+/// @param callback int32_t func(KPasswordDialog* self, const char* signal)
 void k_passworddialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4719,7 +4719,7 @@ bool k_passworddialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback bool fn(KPasswordDialog*, QMetaMethod*)
+/// @param callback bool func(KPasswordDialog* self, QMetaMethod* signal)
 void k_passworddialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4751,7 +4751,7 @@ double k_passworddialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPasswordDialog*
-/// @param callback double fn(KPasswordDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KPasswordDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_passworddialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4761,7 +4761,7 @@ void k_passworddialog_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPasswordDialog*
-/// @param callback void fn(KPasswordDialog*, const char*)
+/// @param callback void func(KPasswordDialog* self, const char* objectName)
 void k_passworddialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpassworddialog.html#dtor.KPasswordDialog)

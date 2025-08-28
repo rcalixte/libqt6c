@@ -323,7 +323,7 @@ void q_webenginenewwindowrequest_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNewWindowRequest*
-/// @param callback void fn(QWebEngineNewWindowRequest*)
+/// @param callback void func(QWebEngineNewWindowRequest* self)
 void q_webenginenewwindowrequest_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -401,7 +401,7 @@ void q_webenginenewwindowrequest_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNewWindowRequest*
-/// @param callback void fn(QWebEngineNewWindowRequest*, QObject*)
+/// @param callback void func(QWebEngineNewWindowRequest* self, QObject* param1)
 void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -411,7 +411,7 @@ void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineNewWindowRequest*
-/// @param callback void fn(QWebEngineNewWindowRequest*, const char*)
+/// @param callback void func(QWebEngineNewWindowRequest* self, const char* objectName)
 void q_webenginenewwindowrequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#dtor.QWebEngineNewWindowRequest)

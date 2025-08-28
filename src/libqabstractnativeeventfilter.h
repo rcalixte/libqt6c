@@ -30,7 +30,7 @@ bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eve
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractNativeEventFilter*
-/// @param callback bool fn(QAbstractNativeEventFilter*, const char*, void*, intptr_t*)
+/// @param callback bool func(QAbstractNativeEventFilter* self, const char* eventType, void* message, intptr_t* result)
 void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnativeeventfilter.html#nativeEventFilter)

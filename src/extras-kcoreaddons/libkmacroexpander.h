@@ -65,7 +65,7 @@ int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int 
 /// Allows for overriding the related default method
 ///
 /// @param self KMacroExpanderBase*
-/// @param callback int32_t fn(KMacroExpanderBase*, const char*, int, const char**)
+/// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
 void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kmacroexpanderbase.html#expandPlainMacro)
@@ -91,7 +91,7 @@ int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, in
 /// Allows for overriding the related default method
 ///
 /// @param self KMacroExpanderBase*
-/// @param callback int32_t fn(KMacroExpanderBase*, const char*, int, const char**)
+/// @param callback int32_t func(KMacroExpanderBase* self, const char* str, int pos, const char** retVal)
 void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
@@ -135,7 +135,7 @@ int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int 
 /// Allows for overriding the related default method
 ///
 /// @param self KWordMacroExpander*
-/// @param callback int32_t fn(KWordMacroExpander*, const char*, int, const char**)
+/// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** retVal)
 void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kwordmacroexpander.html#expandPlainMacro)
@@ -161,7 +161,7 @@ int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, in
 /// Allows for overriding the related default method
 ///
 /// @param self KWordMacroExpander*
-/// @param callback int32_t fn(KWordMacroExpander*, const char*, int, const char**)
+/// @param callback int32_t func(KWordMacroExpander* self, const char* str, int pos, const char** retVal)
 void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kwordmacroexpander.html#expandEscapedMacro)
@@ -186,7 +186,7 @@ bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* r
 /// Allows for overriding the related default method
 ///
 /// @param self KWordMacroExpander*
-/// @param callback bool fn(KWordMacroExpander*, const char*, const char**)
+/// @param callback bool func(KWordMacroExpander* self, const char* str, const char** retVal)
 void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kwordmacroexpander.html#expandMacro)
@@ -269,7 +269,7 @@ int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int 
 /// Allows for overriding the related default method
 ///
 /// @param self KCharMacroExpander*
-/// @param callback int32_t fn(KCharMacroExpander*, const char*, int, const char**)
+/// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** retVal)
 void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kcharmacroexpander.html#expandPlainMacro)
@@ -295,7 +295,7 @@ int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, in
 /// Allows for overriding the related default method
 ///
 /// @param self KCharMacroExpander*
-/// @param callback int32_t fn(KCharMacroExpander*, const char*, int, const char**)
+/// @param callback int32_t func(KCharMacroExpander* self, const char* str, int pos, const char** retVal)
 void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)(void*, const char*, int, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kcharmacroexpander.html#expandEscapedMacro)
@@ -320,7 +320,7 @@ bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[
 /// Allows for overriding the related default method
 ///
 /// @param self KCharMacroExpander*
-/// @param callback bool fn(KCharMacroExpander*, QChar*, const char**)
+/// @param callback bool func(KCharMacroExpander* self, QChar* chr, const char** retVal)
 void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**));
 
 /// [Qt documentation](https://api-staging.kde.org/kcharmacroexpander.html#expandMacro)

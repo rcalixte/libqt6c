@@ -35,7 +35,7 @@ int32_t q_mimedata_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QMimeData*
-/// @param callback int32_t fn(QMimeData*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMimeData* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_mimedata_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -169,7 +169,7 @@ bool q_mimedata_has_format(void* self, const char* mimetype);
 /// Allows for overriding the related default method
 ///
 /// @param self QMimeData*
-/// @param callback bool fn(QMimeData*, const char*)
+/// @param callback bool func(QMimeData* self, const char* mimetype)
 void q_mimedata_on_has_format(void* self, bool (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedata.html#hasFormat)
@@ -192,7 +192,7 @@ const char** q_mimedata_formats(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QMimeData*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_mimedata_on_formats(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedata.html#formats)
@@ -219,7 +219,7 @@ QVariant* q_mimedata_retrieve_data(void* self, const char* mimetype, void* prefe
 /// Allows for overriding the related default method
 ///
 /// @param self QMimeData*
-/// @param callback QVariant* fn(QMimeData*, const char*, QMetaType*)
+/// @param callback QVariant* func(QMimeData* self, const char* mimetype, QMetaType* preferredType)
 void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedata.html#retrieveData)
@@ -474,7 +474,7 @@ void q_mimedata_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*)
+/// @param callback void func(QMimeData* self)
 void q_mimedata_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -552,7 +552,7 @@ void q_mimedata_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, QObject*)
+/// @param callback void func(QMimeData* self, QObject* param1)
 void q_mimedata_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -582,7 +582,7 @@ bool q_mimedata_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback bool fn(QMimeData*, QEvent*)
+/// @param callback bool func(QMimeData* self, QEvent* event)
 void q_mimedata_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -614,7 +614,7 @@ bool q_mimedata_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback bool fn(QMimeData*, QObject*, QEvent*)
+/// @param callback bool func(QMimeData* self, QObject* watched, QEvent* event)
 void q_mimedata_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -644,7 +644,7 @@ void q_mimedata_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, QTimerEvent*)
+/// @param callback void func(QMimeData* self, QTimerEvent* event)
 void q_mimedata_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -674,7 +674,7 @@ void q_mimedata_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, QChildEvent*)
+/// @param callback void func(QMimeData* self, QChildEvent* event)
 void q_mimedata_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -704,7 +704,7 @@ void q_mimedata_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, QEvent*)
+/// @param callback void func(QMimeData* self, QEvent* event)
 void q_mimedata_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -734,7 +734,7 @@ void q_mimedata_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, QMetaMethod*)
+/// @param callback void func(QMimeData* self, QMetaMethod* signal)
 void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -764,7 +764,7 @@ void q_mimedata_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, QMetaMethod*)
+/// @param callback void func(QMimeData* self, QMetaMethod* signal)
 void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -792,7 +792,7 @@ QObject* q_mimedata_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_mimedata_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -820,7 +820,7 @@ int32_t q_mimedata_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_mimedata_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -850,7 +850,7 @@ int32_t q_mimedata_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback int32_t fn(QMimeData*, const char*)
+/// @param callback int32_t func(QMimeData* self, const char* signal)
 void q_mimedata_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -880,7 +880,7 @@ bool q_mimedata_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMimeData*
-/// @param callback bool fn(QMimeData*, QMetaMethod*)
+/// @param callback bool func(QMimeData* self, QMetaMethod* signal)
 void q_mimedata_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -890,7 +890,7 @@ void q_mimedata_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMimeData*
-/// @param callback void fn(QMimeData*, const char*)
+/// @param callback void func(QMimeData* self, const char* objectName)
 void q_mimedata_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedata.html#dtor.QMimeData)

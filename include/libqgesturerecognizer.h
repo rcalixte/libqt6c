@@ -28,7 +28,7 @@ QGesture* q_gesturerecognizer_create(void* self, void* target);
 /// Allows for overriding the related default method
 ///
 /// @param self QGestureRecognizer*
-/// @param callback QGesture* fn(QGestureRecognizer*, QObject*)
+/// @param callback QGesture* func(QGestureRecognizer* self, QObject* target)
 void q_gesturerecognizer_on_create(void* self, QGesture* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#create)
@@ -54,7 +54,7 @@ int64_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QGestureRecognizer*
-/// @param callback int64_t fn(QGestureRecognizer*, QGesture*, QObject*, QEvent*)
+/// @param callback int64_t func(QGestureRecognizer* self, QGesture* state, QObject* watched, QEvent* event)
 void q_gesturerecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
@@ -80,7 +80,7 @@ void q_gesturerecognizer_reset(void* self, void* state);
 /// Allows for overriding the related default method
 ///
 /// @param self QGestureRecognizer*
-/// @param callback void fn(QGestureRecognizer*, QGesture*)
+/// @param callback void func(QGestureRecognizer* self, QGesture* state)
 void q_gesturerecognizer_on_reset(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)

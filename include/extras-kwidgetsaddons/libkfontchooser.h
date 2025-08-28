@@ -51,7 +51,7 @@ int32_t k_fontchooser_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self KFontChooser*
-/// @param callback int32_t fn(KFontChooser*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KFontChooser* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_fontchooser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -164,7 +164,7 @@ QSize* k_fontchooser_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFontChooser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_fontchooser_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#sizeHint)
@@ -183,7 +183,7 @@ void k_fontchooser_font_selected(void* self, void* font);
 /// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#fontSelected)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QFont*)
+/// @param callback void func(KFontChooser* self, QFont* font)
 void k_fontchooser_on_font_selected(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -2132,7 +2132,7 @@ void k_fontchooser_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, const char*)
+/// @param callback void func(KFontChooser* self, const char* title)
 void k_fontchooser_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2148,7 +2148,7 @@ void k_fontchooser_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QIcon*)
+/// @param callback void func(KFontChooser* self, QIcon* icon)
 void k_fontchooser_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2164,7 +2164,7 @@ void k_fontchooser_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, const char*)
+/// @param callback void func(KFontChooser* self, const char* iconText)
 void k_fontchooser_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2180,7 +2180,7 @@ void k_fontchooser_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QPoint*)
+/// @param callback void func(KFontChooser* self, QPoint* pos)
 void k_fontchooser_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2557,7 +2557,7 @@ void k_fontchooser_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*)
+/// @param callback void func(KFontChooser* self)
 void k_fontchooser_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2635,7 +2635,7 @@ void k_fontchooser_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QObject*)
+/// @param callback void func(KFontChooser* self, QObject* param1)
 void k_fontchooser_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2754,7 +2754,7 @@ int32_t k_fontchooser_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_fontchooser_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2784,7 +2784,7 @@ void k_fontchooser_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, bool)
+/// @param callback void func(KFontChooser* self, bool visible)
 void k_fontchooser_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2812,7 +2812,7 @@ QSize* k_fontchooser_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_fontchooser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2842,7 +2842,7 @@ int32_t k_fontchooser_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback int32_t fn(KFontChooser*, int)
+/// @param callback int32_t func(KFontChooser* self, int param1)
 void k_fontchooser_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2870,7 +2870,7 @@ bool k_fontchooser_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_fontchooser_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2898,7 +2898,7 @@ QPaintEngine* k_fontchooser_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_fontchooser_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2928,7 +2928,7 @@ bool k_fontchooser_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn(KFontChooser*, QEvent*)
+/// @param callback bool func(KFontChooser* self, QEvent* event)
 void k_fontchooser_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2958,7 +2958,7 @@ void k_fontchooser_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMouseEvent*)
+/// @param callback void func(KFontChooser* self, QMouseEvent* event)
 void k_fontchooser_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2988,7 +2988,7 @@ void k_fontchooser_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMouseEvent*)
+/// @param callback void func(KFontChooser* self, QMouseEvent* event)
 void k_fontchooser_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3018,7 +3018,7 @@ void k_fontchooser_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMouseEvent*)
+/// @param callback void func(KFontChooser* self, QMouseEvent* event)
 void k_fontchooser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3048,7 +3048,7 @@ void k_fontchooser_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMouseEvent*)
+/// @param callback void func(KFontChooser* self, QMouseEvent* event)
 void k_fontchooser_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3078,7 +3078,7 @@ void k_fontchooser_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QWheelEvent*)
+/// @param callback void func(KFontChooser* self, QWheelEvent* event)
 void k_fontchooser_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3108,7 +3108,7 @@ void k_fontchooser_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QKeyEvent*)
+/// @param callback void func(KFontChooser* self, QKeyEvent* event)
 void k_fontchooser_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3138,7 +3138,7 @@ void k_fontchooser_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QKeyEvent*)
+/// @param callback void func(KFontChooser* self, QKeyEvent* event)
 void k_fontchooser_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3168,7 +3168,7 @@ void k_fontchooser_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QFocusEvent*)
+/// @param callback void func(KFontChooser* self, QFocusEvent* event)
 void k_fontchooser_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3198,7 +3198,7 @@ void k_fontchooser_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QFocusEvent*)
+/// @param callback void func(KFontChooser* self, QFocusEvent* event)
 void k_fontchooser_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3228,7 +3228,7 @@ void k_fontchooser_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QEnterEvent*)
+/// @param callback void func(KFontChooser* self, QEnterEvent* event)
 void k_fontchooser_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3258,7 +3258,7 @@ void k_fontchooser_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QEvent*)
+/// @param callback void func(KFontChooser* self, QEvent* event)
 void k_fontchooser_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3288,7 +3288,7 @@ void k_fontchooser_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QPaintEvent*)
+/// @param callback void func(KFontChooser* self, QPaintEvent* event)
 void k_fontchooser_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3318,7 +3318,7 @@ void k_fontchooser_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMoveEvent*)
+/// @param callback void func(KFontChooser* self, QMoveEvent* event)
 void k_fontchooser_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3348,7 +3348,7 @@ void k_fontchooser_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QResizeEvent*)
+/// @param callback void func(KFontChooser* self, QResizeEvent* event)
 void k_fontchooser_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3378,7 +3378,7 @@ void k_fontchooser_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QCloseEvent*)
+/// @param callback void func(KFontChooser* self, QCloseEvent* event)
 void k_fontchooser_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3408,7 +3408,7 @@ void k_fontchooser_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QContextMenuEvent*)
+/// @param callback void func(KFontChooser* self, QContextMenuEvent* event)
 void k_fontchooser_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3438,7 +3438,7 @@ void k_fontchooser_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QTabletEvent*)
+/// @param callback void func(KFontChooser* self, QTabletEvent* event)
 void k_fontchooser_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3468,7 +3468,7 @@ void k_fontchooser_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QActionEvent*)
+/// @param callback void func(KFontChooser* self, QActionEvent* event)
 void k_fontchooser_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3498,7 +3498,7 @@ void k_fontchooser_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QDragEnterEvent*)
+/// @param callback void func(KFontChooser* self, QDragEnterEvent* event)
 void k_fontchooser_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3528,7 +3528,7 @@ void k_fontchooser_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QDragMoveEvent*)
+/// @param callback void func(KFontChooser* self, QDragMoveEvent* event)
 void k_fontchooser_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3558,7 +3558,7 @@ void k_fontchooser_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QDragLeaveEvent*)
+/// @param callback void func(KFontChooser* self, QDragLeaveEvent* event)
 void k_fontchooser_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3588,7 +3588,7 @@ void k_fontchooser_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QDropEvent*)
+/// @param callback void func(KFontChooser* self, QDropEvent* event)
 void k_fontchooser_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3618,7 +3618,7 @@ void k_fontchooser_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QShowEvent*)
+/// @param callback void func(KFontChooser* self, QShowEvent* event)
 void k_fontchooser_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3648,7 +3648,7 @@ void k_fontchooser_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QHideEvent*)
+/// @param callback void func(KFontChooser* self, QHideEvent* event)
 void k_fontchooser_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3682,7 +3682,7 @@ bool k_fontchooser_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn(KFontChooser*, const char*, void*, intptr_t*)
+/// @param callback bool func(KFontChooser* self, const char* eventType, void* message, intptr_t* result)
 void k_fontchooser_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3712,7 +3712,7 @@ void k_fontchooser_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QEvent*)
+/// @param callback void func(KFontChooser* self, QEvent* param1)
 void k_fontchooser_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3742,7 +3742,7 @@ int32_t k_fontchooser_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback int32_t fn(KFontChooser*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KFontChooser* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_fontchooser_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3772,7 +3772,7 @@ void k_fontchooser_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QPainter*)
+/// @param callback void func(KFontChooser* self, QPainter* painter)
 void k_fontchooser_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3802,7 +3802,7 @@ QPaintDevice* k_fontchooser_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback QPaintDevice* fn(KFontChooser*, QPoint*)
+/// @param callback QPaintDevice* func(KFontChooser* self, QPoint* offset)
 void k_fontchooser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3830,7 +3830,7 @@ QPainter* k_fontchooser_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_fontchooser_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3860,7 +3860,7 @@ void k_fontchooser_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QInputMethodEvent*)
+/// @param callback void func(KFontChooser* self, QInputMethodEvent* param1)
 void k_fontchooser_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3890,7 +3890,7 @@ QVariant* k_fontchooser_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback QVariant* fn(KFontChooser*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KFontChooser* self, enum Qt__InputMethodQuery param1)
 void k_fontchooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3920,7 +3920,7 @@ bool k_fontchooser_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn(KFontChooser*, bool)
+/// @param callback bool func(KFontChooser* self, bool next)
 void k_fontchooser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3952,7 +3952,7 @@ bool k_fontchooser_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn(KFontChooser*, QObject*, QEvent*)
+/// @param callback bool func(KFontChooser* self, QObject* watched, QEvent* event)
 void k_fontchooser_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3982,7 +3982,7 @@ void k_fontchooser_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QTimerEvent*)
+/// @param callback void func(KFontChooser* self, QTimerEvent* event)
 void k_fontchooser_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4012,7 +4012,7 @@ void k_fontchooser_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QChildEvent*)
+/// @param callback void func(KFontChooser* self, QChildEvent* event)
 void k_fontchooser_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4042,7 +4042,7 @@ void k_fontchooser_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QEvent*)
+/// @param callback void func(KFontChooser* self, QEvent* event)
 void k_fontchooser_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4072,7 +4072,7 @@ void k_fontchooser_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMetaMethod*)
+/// @param callback void func(KFontChooser* self, QMetaMethod* signal)
 void k_fontchooser_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4102,7 +4102,7 @@ void k_fontchooser_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, QMetaMethod*)
+/// @param callback void func(KFontChooser* self, QMetaMethod* signal)
 void k_fontchooser_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4130,7 +4130,7 @@ void k_fontchooser_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn()
+/// @param callback void func()
 void k_fontchooser_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4158,7 +4158,7 @@ void k_fontchooser_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn()
+/// @param callback void func()
 void k_fontchooser_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4186,7 +4186,7 @@ void k_fontchooser_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback void fn()
+/// @param callback void func()
 void k_fontchooser_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4214,7 +4214,7 @@ bool k_fontchooser_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_fontchooser_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4242,7 +4242,7 @@ bool k_fontchooser_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_fontchooser_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4270,7 +4270,7 @@ QObject* k_fontchooser_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_fontchooser_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4298,7 +4298,7 @@ int32_t k_fontchooser_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_fontchooser_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4328,7 +4328,7 @@ int32_t k_fontchooser_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback int32_t fn(KFontChooser*, const char*)
+/// @param callback int32_t func(KFontChooser* self, const char* signal)
 void k_fontchooser_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4358,7 +4358,7 @@ bool k_fontchooser_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback bool fn(KFontChooser*, QMetaMethod*)
+/// @param callback bool func(KFontChooser* self, QMetaMethod* signal)
 void k_fontchooser_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4390,7 +4390,7 @@ double k_fontchooser_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontChooser*
-/// @param callback double fn(KFontChooser*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KFontChooser* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_fontchooser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4400,7 +4400,7 @@ void k_fontchooser_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KFontChooser*
-/// @param callback void fn(KFontChooser*, const char*)
+/// @param callback void func(KFontChooser* self, const char* objectName)
 void k_fontchooser_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#dtor.KFontChooser)

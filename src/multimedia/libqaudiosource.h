@@ -64,7 +64,7 @@ int32_t q_audiosource_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioSource*
-/// @param callback int32_t fn(QAudioSource*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAudioSource* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_audiosource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -183,7 +183,7 @@ void q_audiosource_state_changed(void* self, int32_t state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, enum QAudio__State)
+/// @param callback void func(QAudioSource* self, enum QAudio__State state)
 void q_audiosource_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -429,7 +429,7 @@ void q_audiosource_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*)
+/// @param callback void func(QAudioSource* self)
 void q_audiosource_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -507,7 +507,7 @@ void q_audiosource_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, QObject*)
+/// @param callback void func(QAudioSource* self, QObject* param1)
 void q_audiosource_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -537,7 +537,7 @@ bool q_audiosource_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback bool fn(QAudioSource*, QEvent*)
+/// @param callback bool func(QAudioSource* self, QEvent* event)
 void q_audiosource_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -569,7 +569,7 @@ bool q_audiosource_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback bool fn(QAudioSource*, QObject*, QEvent*)
+/// @param callback bool func(QAudioSource* self, QObject* watched, QEvent* event)
 void q_audiosource_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -599,7 +599,7 @@ void q_audiosource_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, QTimerEvent*)
+/// @param callback void func(QAudioSource* self, QTimerEvent* event)
 void q_audiosource_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -629,7 +629,7 @@ void q_audiosource_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, QChildEvent*)
+/// @param callback void func(QAudioSource* self, QChildEvent* event)
 void q_audiosource_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -659,7 +659,7 @@ void q_audiosource_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, QEvent*)
+/// @param callback void func(QAudioSource* self, QEvent* event)
 void q_audiosource_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -689,7 +689,7 @@ void q_audiosource_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, QMetaMethod*)
+/// @param callback void func(QAudioSource* self, QMetaMethod* signal)
 void q_audiosource_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -719,7 +719,7 @@ void q_audiosource_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, QMetaMethod*)
+/// @param callback void func(QAudioSource* self, QMetaMethod* signal)
 void q_audiosource_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -747,7 +747,7 @@ QObject* q_audiosource_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_audiosource_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -775,7 +775,7 @@ int32_t q_audiosource_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_audiosource_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -805,7 +805,7 @@ int32_t q_audiosource_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback int32_t fn(QAudioSource*, const char*)
+/// @param callback int32_t func(QAudioSource* self, const char* signal)
 void q_audiosource_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -835,7 +835,7 @@ bool q_audiosource_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioSource*
-/// @param callback bool fn(QAudioSource*, QMetaMethod*)
+/// @param callback bool func(QAudioSource* self, QMetaMethod* signal)
 void q_audiosource_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -845,7 +845,7 @@ void q_audiosource_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAudioSource*
-/// @param callback void fn(QAudioSource*, const char*)
+/// @param callback void func(QAudioSource* self, const char* objectName)
 void q_audiosource_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#dtor.QAudioSource)

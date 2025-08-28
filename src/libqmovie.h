@@ -76,7 +76,7 @@ int32_t q_movie_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QMovie*
-/// @param callback int32_t fn(QMovie*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMovie* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -252,7 +252,7 @@ void q_movie_started(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#started)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*)
+/// @param callback void func(QMovie* self)
 void q_movie_on_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#resized)
@@ -264,7 +264,7 @@ void q_movie_resized(void* self, void* size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#resized)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QSize*)
+/// @param callback void func(QMovie* self, QSize* size)
 void q_movie_on_resized(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#updated)
@@ -276,7 +276,7 @@ void q_movie_updated(void* self, void* rect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#updated)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QRect*)
+/// @param callback void func(QMovie* self, QRect* rect)
 void q_movie_on_updated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#stateChanged)
@@ -288,7 +288,7 @@ void q_movie_state_changed(void* self, int32_t state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#stateChanged)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, enum QMovie__MovieState)
+/// @param callback void func(QMovie* self, enum QMovie__MovieState state)
 void q_movie_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
@@ -300,7 +300,7 @@ void q_movie_error(void* self, int32_t errorVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, enum QImageReader__ImageReaderError)
+/// @param callback void func(QMovie* self, enum QImageReader__ImageReaderError errorVal)
 void q_movie_on_error(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#finished)
@@ -311,7 +311,7 @@ void q_movie_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#finished)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*)
+/// @param callback void func(QMovie* self)
 void q_movie_on_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameChanged)
@@ -323,7 +323,7 @@ void q_movie_frame_changed(void* self, int frameNumber);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameChanged)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, int)
+/// @param callback void func(QMovie* self, int frameNumber)
 void q_movie_on_frame_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#start)
@@ -596,7 +596,7 @@ void q_movie_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*)
+/// @param callback void func(QMovie* self)
 void q_movie_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -674,7 +674,7 @@ void q_movie_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QObject*)
+/// @param callback void func(QMovie* self, QObject* param1)
 void q_movie_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -704,7 +704,7 @@ bool q_movie_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback bool fn(QMovie*, QEvent*)
+/// @param callback bool func(QMovie* self, QEvent* event)
 void q_movie_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -736,7 +736,7 @@ bool q_movie_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback bool fn(QMovie*, QObject*, QEvent*)
+/// @param callback bool func(QMovie* self, QObject* watched, QEvent* event)
 void q_movie_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -766,7 +766,7 @@ void q_movie_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QTimerEvent*)
+/// @param callback void func(QMovie* self, QTimerEvent* event)
 void q_movie_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -796,7 +796,7 @@ void q_movie_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QChildEvent*)
+/// @param callback void func(QMovie* self, QChildEvent* event)
 void q_movie_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -826,7 +826,7 @@ void q_movie_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QEvent*)
+/// @param callback void func(QMovie* self, QEvent* event)
 void q_movie_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -856,7 +856,7 @@ void q_movie_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QMetaMethod*)
+/// @param callback void func(QMovie* self, QMetaMethod* signal)
 void q_movie_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -886,7 +886,7 @@ void q_movie_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, QMetaMethod*)
+/// @param callback void func(QMovie* self, QMetaMethod* signal)
 void q_movie_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -914,7 +914,7 @@ QObject* q_movie_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_movie_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -942,7 +942,7 @@ int32_t q_movie_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_movie_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -972,7 +972,7 @@ int32_t q_movie_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback int32_t fn(QMovie*, const char*)
+/// @param callback int32_t func(QMovie* self, const char* signal)
 void q_movie_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1002,7 +1002,7 @@ bool q_movie_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMovie*
-/// @param callback bool fn(QMovie*, QMetaMethod*)
+/// @param callback bool func(QMovie* self, QMetaMethod* signal)
 void q_movie_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1012,7 +1012,7 @@ void q_movie_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMovie*
-/// @param callback void fn(QMovie*, const char*)
+/// @param callback void func(QMovie* self, const char* objectName)
 void q_movie_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#dtor.QMovie)

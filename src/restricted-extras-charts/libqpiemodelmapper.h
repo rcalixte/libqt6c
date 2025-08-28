@@ -295,7 +295,7 @@ void q_piemodelmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPieModelMapper*
-/// @param callback void fn(QPieModelMapper*)
+/// @param callback void func(QPieModelMapper* self)
 void q_piemodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -373,7 +373,7 @@ void q_piemodelmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPieModelMapper*
-/// @param callback void fn(QPieModelMapper*, QObject*)
+/// @param callback void func(QPieModelMapper* self, QObject* param1)
 void q_piemodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -383,7 +383,7 @@ void q_piemodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPieModelMapper*
-/// @param callback void fn(QPieModelMapper*, const char*)
+/// @param callback void func(QPieModelMapper* self, const char* objectName)
 void q_piemodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpiemodelmapper-qtcharts.html#dtor.QPieModelMapper)

@@ -42,7 +42,7 @@ int32_t q_restaccessmanager_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QRestAccessManager*
-/// @param callback int32_t fn(QRestAccessManager*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QRestAccessManager* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_restaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -469,7 +469,7 @@ void q_restaccessmanager_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*)
+/// @param callback void func(QRestAccessManager* self)
 void q_restaccessmanager_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -547,7 +547,7 @@ void q_restaccessmanager_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, QObject*)
+/// @param callback void func(QRestAccessManager* self, QObject* param1)
 void q_restaccessmanager_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -577,7 +577,7 @@ bool q_restaccessmanager_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback bool fn(QRestAccessManager*, QEvent*)
+/// @param callback bool func(QRestAccessManager* self, QEvent* event)
 void q_restaccessmanager_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -609,7 +609,7 @@ bool q_restaccessmanager_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback bool fn(QRestAccessManager*, QObject*, QEvent*)
+/// @param callback bool func(QRestAccessManager* self, QObject* watched, QEvent* event)
 void q_restaccessmanager_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -639,7 +639,7 @@ void q_restaccessmanager_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, QTimerEvent*)
+/// @param callback void func(QRestAccessManager* self, QTimerEvent* event)
 void q_restaccessmanager_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -669,7 +669,7 @@ void q_restaccessmanager_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, QChildEvent*)
+/// @param callback void func(QRestAccessManager* self, QChildEvent* event)
 void q_restaccessmanager_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -699,7 +699,7 @@ void q_restaccessmanager_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, QEvent*)
+/// @param callback void func(QRestAccessManager* self, QEvent* event)
 void q_restaccessmanager_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -729,7 +729,7 @@ void q_restaccessmanager_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, QMetaMethod*)
+/// @param callback void func(QRestAccessManager* self, QMetaMethod* signal)
 void q_restaccessmanager_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -759,7 +759,7 @@ void q_restaccessmanager_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, QMetaMethod*)
+/// @param callback void func(QRestAccessManager* self, QMetaMethod* signal)
 void q_restaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -787,7 +787,7 @@ QObject* q_restaccessmanager_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_restaccessmanager_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -815,7 +815,7 @@ int32_t q_restaccessmanager_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_restaccessmanager_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -845,7 +845,7 @@ int32_t q_restaccessmanager_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback int32_t fn(QRestAccessManager*, const char*)
+/// @param callback int32_t func(QRestAccessManager* self, const char* signal)
 void q_restaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -875,7 +875,7 @@ bool q_restaccessmanager_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRestAccessManager*
-/// @param callback bool fn(QRestAccessManager*, QMetaMethod*)
+/// @param callback bool func(QRestAccessManager* self, QMetaMethod* signal)
 void q_restaccessmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -885,7 +885,7 @@ void q_restaccessmanager_on_is_signal_connected(void* self, bool (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QRestAccessManager*
-/// @param callback void fn(QRestAccessManager*, const char*)
+/// @param callback void func(QRestAccessManager* self, const char* objectName)
 void q_restaccessmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrestaccessmanager.html#dtor.QRestAccessManager)

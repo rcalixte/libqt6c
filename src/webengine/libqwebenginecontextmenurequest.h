@@ -375,7 +375,7 @@ void q_webenginecontextmenurequest_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineContextMenuRequest*
-/// @param callback void fn(QWebEngineContextMenuRequest*)
+/// @param callback void func(QWebEngineContextMenuRequest* self)
 void q_webenginecontextmenurequest_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -453,7 +453,7 @@ void q_webenginecontextmenurequest_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineContextMenuRequest*
-/// @param callback void fn(QWebEngineContextMenuRequest*, QObject*)
+/// @param callback void func(QWebEngineContextMenuRequest* self, QObject* param1)
 void q_webenginecontextmenurequest_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -463,7 +463,7 @@ void q_webenginecontextmenurequest_on_destroyed1(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineContextMenuRequest*
-/// @param callback void fn(QWebEngineContextMenuRequest*, const char*)
+/// @param callback void func(QWebEngineContextMenuRequest* self, const char* objectName)
 void q_webenginecontextmenurequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#dtor.QWebEngineContextMenuRequest)

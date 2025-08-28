@@ -46,7 +46,7 @@ int32_t k_pagedialog_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn(KPageDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPageDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pagedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -158,7 +158,7 @@ void k_pagedialog_current_page_changed(void* self, void* current, void* before);
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, KPageWidgetItem*, KPageWidgetItem*)
+/// @param callback void func(KPageDialog* self, KPageWidgetItem* current, KPageWidgetItem* before)
 void k_pagedialog_on_current_page_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
@@ -170,7 +170,7 @@ void k_pagedialog_page_removed(void* self, void* page);
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, KPageWidgetItem*)
+/// @param callback void func(KPageDialog* self, KPageWidgetItem* page)
 void k_pagedialog_on_page_removed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
@@ -183,7 +183,7 @@ KPageWidget* k_pagedialog_page_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback KPageWidget* fn()
+/// @param callback KPageWidget* func()
 void k_pagedialog_on_page_widget(void* self, KPageWidget* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
@@ -203,7 +203,7 @@ const KPageWidget* k_pagedialog_page_widget2(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback const KPageWidget* fn()
+/// @param callback const KPageWidget* func()
 void k_pagedialog_on_page_widget2(void* self, const KPageWidget* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
@@ -224,7 +224,7 @@ void k_pagedialog_set_page_widget(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, KPageWidget*)
+/// @param callback void func(KPageDialog* self, KPageWidget* widget)
 void k_pagedialog_on_set_page_widget(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
@@ -245,7 +245,7 @@ QDialogButtonBox* k_pagedialog_button_box(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback QDialogButtonBox* fn()
+/// @param callback QDialogButtonBox* func()
 void k_pagedialog_on_button_box(void* self, QDialogButtonBox* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
@@ -265,7 +265,7 @@ const QDialogButtonBox* k_pagedialog_button_box2(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback const QDialogButtonBox* fn()
+/// @param callback const QDialogButtonBox* func()
 void k_pagedialog_on_button_box2(void* self, const QDialogButtonBox* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
@@ -286,7 +286,7 @@ void k_pagedialog_set_button_box(void* self, void* box);
 /// Allows for overriding the related default method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QDialogButtonBox*)
+/// @param callback void func(KPageDialog* self, QDialogButtonBox* box)
 void k_pagedialog_on_set_button_box(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
@@ -365,7 +365,7 @@ void k_pagedialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, int)
+/// @param callback void func(KPageDialog* self, int result)
 void k_pagedialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -380,7 +380,7 @@ void k_pagedialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*)
+/// @param callback void func(KPageDialog* self)
 void k_pagedialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -395,7 +395,7 @@ void k_pagedialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*)
+/// @param callback void func(KPageDialog* self)
 void k_pagedialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2335,7 +2335,7 @@ void k_pagedialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, const char*)
+/// @param callback void func(KPageDialog* self, const char* title)
 void k_pagedialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2351,7 +2351,7 @@ void k_pagedialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QIcon*)
+/// @param callback void func(KPageDialog* self, QIcon* icon)
 void k_pagedialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2367,7 +2367,7 @@ void k_pagedialog_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, const char*)
+/// @param callback void func(KPageDialog* self, const char* iconText)
 void k_pagedialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2383,7 +2383,7 @@ void k_pagedialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QPoint*)
+/// @param callback void func(KPageDialog* self, QPoint* pos)
 void k_pagedialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2760,7 +2760,7 @@ void k_pagedialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*)
+/// @param callback void func(KPageDialog* self)
 void k_pagedialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2838,7 +2838,7 @@ void k_pagedialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QObject*)
+/// @param callback void func(KPageDialog* self, QObject* param1)
 void k_pagedialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2959,7 +2959,7 @@ void k_pagedialog_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, bool)
+/// @param callback void func(KPageDialog* self, bool visible)
 void k_pagedialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -2987,7 +2987,7 @@ QSize* k_pagedialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pagedialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3015,7 +3015,7 @@ QSize* k_pagedialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pagedialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3043,7 +3043,7 @@ void k_pagedialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagedialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3071,7 +3071,7 @@ int32_t k_pagedialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagedialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3101,7 +3101,7 @@ void k_pagedialog_qbase_done(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, int)
+/// @param callback void func(KPageDialog* self, int param1)
 void k_pagedialog_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -3129,7 +3129,7 @@ void k_pagedialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagedialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3157,7 +3157,7 @@ void k_pagedialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagedialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3187,7 +3187,7 @@ void k_pagedialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QKeyEvent*)
+/// @param callback void func(KPageDialog* self, QKeyEvent* param1)
 void k_pagedialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3217,7 +3217,7 @@ void k_pagedialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QCloseEvent*)
+/// @param callback void func(KPageDialog* self, QCloseEvent* param1)
 void k_pagedialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3247,7 +3247,7 @@ void k_pagedialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QShowEvent*)
+/// @param callback void func(KPageDialog* self, QShowEvent* param1)
 void k_pagedialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3277,7 +3277,7 @@ void k_pagedialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QResizeEvent*)
+/// @param callback void func(KPageDialog* self, QResizeEvent* param1)
 void k_pagedialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3307,7 +3307,7 @@ void k_pagedialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QContextMenuEvent*)
+/// @param callback void func(KPageDialog* self, QContextMenuEvent* param1)
 void k_pagedialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3339,7 +3339,7 @@ bool k_pagedialog_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn(KPageDialog*, QObject*, QEvent*)
+/// @param callback bool func(KPageDialog* self, QObject* param1, QEvent* param2)
 void k_pagedialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3367,7 +3367,7 @@ int32_t k_pagedialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagedialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3397,7 +3397,7 @@ int32_t k_pagedialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn(KPageDialog*, int)
+/// @param callback int32_t func(KPageDialog* self, int param1)
 void k_pagedialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3425,7 +3425,7 @@ bool k_pagedialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagedialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3453,7 +3453,7 @@ QPaintEngine* k_pagedialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_pagedialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3483,7 +3483,7 @@ bool k_pagedialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn(KPageDialog*, QEvent*)
+/// @param callback bool func(KPageDialog* self, QEvent* event)
 void k_pagedialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3513,7 +3513,7 @@ void k_pagedialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMouseEvent*)
+/// @param callback void func(KPageDialog* self, QMouseEvent* event)
 void k_pagedialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3543,7 +3543,7 @@ void k_pagedialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMouseEvent*)
+/// @param callback void func(KPageDialog* self, QMouseEvent* event)
 void k_pagedialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3573,7 +3573,7 @@ void k_pagedialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMouseEvent*)
+/// @param callback void func(KPageDialog* self, QMouseEvent* event)
 void k_pagedialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3603,7 +3603,7 @@ void k_pagedialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMouseEvent*)
+/// @param callback void func(KPageDialog* self, QMouseEvent* event)
 void k_pagedialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3633,7 +3633,7 @@ void k_pagedialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QWheelEvent*)
+/// @param callback void func(KPageDialog* self, QWheelEvent* event)
 void k_pagedialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3663,7 +3663,7 @@ void k_pagedialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QKeyEvent*)
+/// @param callback void func(KPageDialog* self, QKeyEvent* event)
 void k_pagedialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3693,7 +3693,7 @@ void k_pagedialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QFocusEvent*)
+/// @param callback void func(KPageDialog* self, QFocusEvent* event)
 void k_pagedialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3723,7 +3723,7 @@ void k_pagedialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QFocusEvent*)
+/// @param callback void func(KPageDialog* self, QFocusEvent* event)
 void k_pagedialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3753,7 +3753,7 @@ void k_pagedialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QEnterEvent*)
+/// @param callback void func(KPageDialog* self, QEnterEvent* event)
 void k_pagedialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3783,7 +3783,7 @@ void k_pagedialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QEvent*)
+/// @param callback void func(KPageDialog* self, QEvent* event)
 void k_pagedialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3813,7 +3813,7 @@ void k_pagedialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QPaintEvent*)
+/// @param callback void func(KPageDialog* self, QPaintEvent* event)
 void k_pagedialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3843,7 +3843,7 @@ void k_pagedialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMoveEvent*)
+/// @param callback void func(KPageDialog* self, QMoveEvent* event)
 void k_pagedialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3873,7 +3873,7 @@ void k_pagedialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QTabletEvent*)
+/// @param callback void func(KPageDialog* self, QTabletEvent* event)
 void k_pagedialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3903,7 +3903,7 @@ void k_pagedialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QActionEvent*)
+/// @param callback void func(KPageDialog* self, QActionEvent* event)
 void k_pagedialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3933,7 +3933,7 @@ void k_pagedialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QDragEnterEvent*)
+/// @param callback void func(KPageDialog* self, QDragEnterEvent* event)
 void k_pagedialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3963,7 +3963,7 @@ void k_pagedialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QDragMoveEvent*)
+/// @param callback void func(KPageDialog* self, QDragMoveEvent* event)
 void k_pagedialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3993,7 +3993,7 @@ void k_pagedialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QDragLeaveEvent*)
+/// @param callback void func(KPageDialog* self, QDragLeaveEvent* event)
 void k_pagedialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4023,7 +4023,7 @@ void k_pagedialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QDropEvent*)
+/// @param callback void func(KPageDialog* self, QDropEvent* event)
 void k_pagedialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4053,7 +4053,7 @@ void k_pagedialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QHideEvent*)
+/// @param callback void func(KPageDialog* self, QHideEvent* event)
 void k_pagedialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4087,7 +4087,7 @@ bool k_pagedialog_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn(KPageDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(KPageDialog* self, const char* eventType, void* message, intptr_t* result)
 void k_pagedialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4117,7 +4117,7 @@ void k_pagedialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QEvent*)
+/// @param callback void func(KPageDialog* self, QEvent* param1)
 void k_pagedialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4147,7 +4147,7 @@ int32_t k_pagedialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn(KPageDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KPageDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_pagedialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4177,7 +4177,7 @@ void k_pagedialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QPainter*)
+/// @param callback void func(KPageDialog* self, QPainter* painter)
 void k_pagedialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4207,7 +4207,7 @@ QPaintDevice* k_pagedialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QPaintDevice* fn(KPageDialog*, QPoint*)
+/// @param callback QPaintDevice* func(KPageDialog* self, QPoint* offset)
 void k_pagedialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4235,7 +4235,7 @@ QPainter* k_pagedialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_pagedialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4265,7 +4265,7 @@ void k_pagedialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QInputMethodEvent*)
+/// @param callback void func(KPageDialog* self, QInputMethodEvent* param1)
 void k_pagedialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4295,7 +4295,7 @@ QVariant* k_pagedialog_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QVariant* fn(KPageDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KPageDialog* self, enum Qt__InputMethodQuery param1)
 void k_pagedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4325,7 +4325,7 @@ bool k_pagedialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn(KPageDialog*, bool)
+/// @param callback bool func(KPageDialog* self, bool next)
 void k_pagedialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4355,7 +4355,7 @@ void k_pagedialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QTimerEvent*)
+/// @param callback void func(KPageDialog* self, QTimerEvent* event)
 void k_pagedialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4385,7 +4385,7 @@ void k_pagedialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QChildEvent*)
+/// @param callback void func(KPageDialog* self, QChildEvent* event)
 void k_pagedialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4415,7 +4415,7 @@ void k_pagedialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QEvent*)
+/// @param callback void func(KPageDialog* self, QEvent* event)
 void k_pagedialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4445,7 +4445,7 @@ void k_pagedialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMetaMethod*)
+/// @param callback void func(KPageDialog* self, QMetaMethod* signal)
 void k_pagedialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4475,7 +4475,7 @@ void k_pagedialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QMetaMethod*)
+/// @param callback void func(KPageDialog* self, QMetaMethod* signal)
 void k_pagedialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4505,7 +4505,7 @@ void k_pagedialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, QWidget*)
+/// @param callback void func(KPageDialog* self, QWidget* param1)
 void k_pagedialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4533,7 +4533,7 @@ void k_pagedialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagedialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4561,7 +4561,7 @@ void k_pagedialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagedialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4589,7 +4589,7 @@ void k_pagedialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagedialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4617,7 +4617,7 @@ bool k_pagedialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagedialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4645,7 +4645,7 @@ bool k_pagedialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagedialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4673,7 +4673,7 @@ QObject* k_pagedialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pagedialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4701,7 +4701,7 @@ int32_t k_pagedialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagedialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4731,7 +4731,7 @@ int32_t k_pagedialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback int32_t fn(KPageDialog*, const char*)
+/// @param callback int32_t func(KPageDialog* self, const char* signal)
 void k_pagedialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4761,7 +4761,7 @@ bool k_pagedialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback bool fn(KPageDialog*, QMetaMethod*)
+/// @param callback bool func(KPageDialog* self, QMetaMethod* signal)
 void k_pagedialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4793,7 +4793,7 @@ double k_pagedialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageDialog*
-/// @param callback double fn(KPageDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KPageDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_pagedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4803,7 +4803,7 @@ void k_pagedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageDialog*
-/// @param callback void fn(KPageDialog*, const char*)
+/// @param callback void func(KPageDialog* self, const char* objectName)
 void k_pagedialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#dtor.KPageDialog)

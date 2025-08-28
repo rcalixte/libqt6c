@@ -40,7 +40,7 @@ int32_t q_tabbar_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback int32_t fn(QTabBar*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTabBar* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_tabbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -267,7 +267,7 @@ QSize* q_tabbar_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tabbar_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#sizeHint)
@@ -287,7 +287,7 @@ QSize* q_tabbar_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tabbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumSizeHint)
@@ -454,7 +454,7 @@ void q_tabbar_current_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#currentChanged)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int)
+/// @param callback void func(QTabBar* self, int index)
 void q_tabbar_on_current_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabCloseRequested)
@@ -466,7 +466,7 @@ void q_tabbar_tab_close_requested(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabCloseRequested)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int)
+/// @param callback void func(QTabBar* self, int index)
 void q_tabbar_on_tab_close_requested(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabMoved)
@@ -479,7 +479,7 @@ void q_tabbar_tab_moved(void* self, int from, int to);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabMoved)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int, int)
+/// @param callback void func(QTabBar* self, int from, int to)
 void q_tabbar_on_tab_moved(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarClicked)
@@ -491,7 +491,7 @@ void q_tabbar_tab_bar_clicked(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarClicked)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int)
+/// @param callback void func(QTabBar* self, int index)
 void q_tabbar_on_tab_bar_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarDoubleClicked)
@@ -503,7 +503,7 @@ void q_tabbar_tab_bar_double_clicked(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarDoubleClicked)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int)
+/// @param callback void func(QTabBar* self, int index)
 void q_tabbar_on_tab_bar_double_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabSizeHint)
@@ -517,7 +517,7 @@ QSize* q_tabbar_tab_size_hint(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback QSize* fn(QTabBar*, int)
+/// @param callback QSize* func(QTabBar* self, int index)
 void q_tabbar_on_tab_size_hint(void* self, QSize* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabSizeHint)
@@ -539,7 +539,7 @@ QSize* q_tabbar_minimum_tab_size_hint(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback QSize* fn(QTabBar*, int)
+/// @param callback QSize* func(QTabBar* self, int index)
 void q_tabbar_on_minimum_tab_size_hint(void* self, QSize* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumTabSizeHint)
@@ -561,7 +561,7 @@ void q_tabbar_tab_inserted(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int)
+/// @param callback void func(QTabBar* self, int index)
 void q_tabbar_on_tab_inserted(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabInserted)
@@ -583,7 +583,7 @@ void q_tabbar_tab_removed(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, int)
+/// @param callback void func(QTabBar* self, int index)
 void q_tabbar_on_tab_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabRemoved)
@@ -604,7 +604,7 @@ void q_tabbar_tab_layout_change(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabbar_on_tab_layout_change(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabLayoutChange)
@@ -625,7 +625,7 @@ bool q_tabbar_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn(QTabBar*, QEvent*)
+/// @param callback bool func(QTabBar* self, QEvent* param1)
 void q_tabbar_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#event)
@@ -647,7 +647,7 @@ void q_tabbar_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QResizeEvent*)
+/// @param callback void func(QTabBar* self, QResizeEvent* param1)
 void q_tabbar_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#resizeEvent)
@@ -669,7 +669,7 @@ void q_tabbar_show_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QShowEvent*)
+/// @param callback void func(QTabBar* self, QShowEvent* param1)
 void q_tabbar_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#showEvent)
@@ -691,7 +691,7 @@ void q_tabbar_hide_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QHideEvent*)
+/// @param callback void func(QTabBar* self, QHideEvent* param1)
 void q_tabbar_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#hideEvent)
@@ -713,7 +713,7 @@ void q_tabbar_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QPaintEvent*)
+/// @param callback void func(QTabBar* self, QPaintEvent* param1)
 void q_tabbar_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#paintEvent)
@@ -735,7 +735,7 @@ void q_tabbar_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMouseEvent*)
+/// @param callback void func(QTabBar* self, QMouseEvent* param1)
 void q_tabbar_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mousePressEvent)
@@ -757,7 +757,7 @@ void q_tabbar_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMouseEvent*)
+/// @param callback void func(QTabBar* self, QMouseEvent* param1)
 void q_tabbar_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseMoveEvent)
@@ -779,7 +779,7 @@ void q_tabbar_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMouseEvent*)
+/// @param callback void func(QTabBar* self, QMouseEvent* param1)
 void q_tabbar_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseReleaseEvent)
@@ -801,7 +801,7 @@ void q_tabbar_mouse_double_click_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMouseEvent*)
+/// @param callback void func(QTabBar* self, QMouseEvent* param1)
 void q_tabbar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseDoubleClickEvent)
@@ -823,7 +823,7 @@ void q_tabbar_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QWheelEvent*)
+/// @param callback void func(QTabBar* self, QWheelEvent* event)
 void q_tabbar_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#wheelEvent)
@@ -845,7 +845,7 @@ void q_tabbar_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QKeyEvent*)
+/// @param callback void func(QTabBar* self, QKeyEvent* param1)
 void q_tabbar_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#keyPressEvent)
@@ -867,7 +867,7 @@ void q_tabbar_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QEvent*)
+/// @param callback void func(QTabBar* self, QEvent* param1)
 void q_tabbar_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#changeEvent)
@@ -889,7 +889,7 @@ void q_tabbar_timer_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QTimerEvent*)
+/// @param callback void func(QTabBar* self, QTimerEvent* event)
 void q_tabbar_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#timerEvent)
@@ -912,7 +912,7 @@ void q_tabbar_init_style_option(void* self, void* option, int tabIndex);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QStyleOptionTab*, int)
+/// @param callback void func(QTabBar* self, QStyleOptionTab* option, int tabIndex)
 void q_tabbar_on_init_style_option(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#initStyleOption)
@@ -2878,7 +2878,7 @@ void q_tabbar_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, const char*)
+/// @param callback void func(QTabBar* self, const char* title)
 void q_tabbar_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2894,7 +2894,7 @@ void q_tabbar_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QIcon*)
+/// @param callback void func(QTabBar* self, QIcon* icon)
 void q_tabbar_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2910,7 +2910,7 @@ void q_tabbar_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, const char*)
+/// @param callback void func(QTabBar* self, const char* iconText)
 void q_tabbar_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2926,7 +2926,7 @@ void q_tabbar_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QPoint*)
+/// @param callback void func(QTabBar* self, QPoint* pos)
 void q_tabbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3303,7 +3303,7 @@ void q_tabbar_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*)
+/// @param callback void func(QTabBar* self)
 void q_tabbar_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3381,7 +3381,7 @@ void q_tabbar_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QObject*)
+/// @param callback void func(QTabBar* self, QObject* param1)
 void q_tabbar_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3500,7 +3500,7 @@ int32_t q_tabbar_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tabbar_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3530,7 +3530,7 @@ void q_tabbar_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, bool)
+/// @param callback void func(QTabBar* self, bool visible)
 void q_tabbar_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3560,7 +3560,7 @@ int32_t q_tabbar_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback int32_t fn(QTabBar*, int)
+/// @param callback int32_t func(QTabBar* self, int param1)
 void q_tabbar_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3588,7 +3588,7 @@ bool q_tabbar_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tabbar_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3616,7 +3616,7 @@ QPaintEngine* q_tabbar_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_tabbar_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3646,7 +3646,7 @@ void q_tabbar_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QKeyEvent*)
+/// @param callback void func(QTabBar* self, QKeyEvent* event)
 void q_tabbar_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3676,7 +3676,7 @@ void q_tabbar_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QFocusEvent*)
+/// @param callback void func(QTabBar* self, QFocusEvent* event)
 void q_tabbar_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3706,7 +3706,7 @@ void q_tabbar_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QFocusEvent*)
+/// @param callback void func(QTabBar* self, QFocusEvent* event)
 void q_tabbar_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3736,7 +3736,7 @@ void q_tabbar_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QEnterEvent*)
+/// @param callback void func(QTabBar* self, QEnterEvent* event)
 void q_tabbar_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3766,7 +3766,7 @@ void q_tabbar_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QEvent*)
+/// @param callback void func(QTabBar* self, QEvent* event)
 void q_tabbar_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3796,7 +3796,7 @@ void q_tabbar_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMoveEvent*)
+/// @param callback void func(QTabBar* self, QMoveEvent* event)
 void q_tabbar_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3826,7 +3826,7 @@ void q_tabbar_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QCloseEvent*)
+/// @param callback void func(QTabBar* self, QCloseEvent* event)
 void q_tabbar_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3856,7 +3856,7 @@ void q_tabbar_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QContextMenuEvent*)
+/// @param callback void func(QTabBar* self, QContextMenuEvent* event)
 void q_tabbar_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3886,7 +3886,7 @@ void q_tabbar_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QTabletEvent*)
+/// @param callback void func(QTabBar* self, QTabletEvent* event)
 void q_tabbar_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3916,7 +3916,7 @@ void q_tabbar_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QActionEvent*)
+/// @param callback void func(QTabBar* self, QActionEvent* event)
 void q_tabbar_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3946,7 +3946,7 @@ void q_tabbar_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QDragEnterEvent*)
+/// @param callback void func(QTabBar* self, QDragEnterEvent* event)
 void q_tabbar_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3976,7 +3976,7 @@ void q_tabbar_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QDragMoveEvent*)
+/// @param callback void func(QTabBar* self, QDragMoveEvent* event)
 void q_tabbar_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4006,7 +4006,7 @@ void q_tabbar_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QDragLeaveEvent*)
+/// @param callback void func(QTabBar* self, QDragLeaveEvent* event)
 void q_tabbar_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4036,7 +4036,7 @@ void q_tabbar_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QDropEvent*)
+/// @param callback void func(QTabBar* self, QDropEvent* event)
 void q_tabbar_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4070,7 +4070,7 @@ bool q_tabbar_qbase_native_event(void* self, const char* eventType, void* messag
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn(QTabBar*, const char*, void*, intptr_t*)
+/// @param callback bool func(QTabBar* self, const char* eventType, void* message, intptr_t* result)
 void q_tabbar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4100,7 +4100,7 @@ int32_t q_tabbar_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback int32_t fn(QTabBar*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QTabBar* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_tabbar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4130,7 +4130,7 @@ void q_tabbar_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QPainter*)
+/// @param callback void func(QTabBar* self, QPainter* painter)
 void q_tabbar_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4160,7 +4160,7 @@ QPaintDevice* q_tabbar_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback QPaintDevice* fn(QTabBar*, QPoint*)
+/// @param callback QPaintDevice* func(QTabBar* self, QPoint* offset)
 void q_tabbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4188,7 +4188,7 @@ QPainter* q_tabbar_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_tabbar_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4218,7 +4218,7 @@ void q_tabbar_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QInputMethodEvent*)
+/// @param callback void func(QTabBar* self, QInputMethodEvent* param1)
 void q_tabbar_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4248,7 +4248,7 @@ QVariant* q_tabbar_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback QVariant* fn(QTabBar*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QTabBar* self, enum Qt__InputMethodQuery param1)
 void q_tabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4278,7 +4278,7 @@ bool q_tabbar_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn(QTabBar*, bool)
+/// @param callback bool func(QTabBar* self, bool next)
 void q_tabbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4310,7 +4310,7 @@ bool q_tabbar_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn(QTabBar*, QObject*, QEvent*)
+/// @param callback bool func(QTabBar* self, QObject* watched, QEvent* event)
 void q_tabbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4340,7 +4340,7 @@ void q_tabbar_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QChildEvent*)
+/// @param callback void func(QTabBar* self, QChildEvent* event)
 void q_tabbar_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4370,7 +4370,7 @@ void q_tabbar_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QEvent*)
+/// @param callback void func(QTabBar* self, QEvent* event)
 void q_tabbar_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4400,7 +4400,7 @@ void q_tabbar_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMetaMethod*)
+/// @param callback void func(QTabBar* self, QMetaMethod* signal)
 void q_tabbar_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4430,7 +4430,7 @@ void q_tabbar_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, QMetaMethod*)
+/// @param callback void func(QTabBar* self, QMetaMethod* signal)
 void q_tabbar_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4458,7 +4458,7 @@ void q_tabbar_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabbar_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4486,7 +4486,7 @@ void q_tabbar_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabbar_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4514,7 +4514,7 @@ void q_tabbar_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabbar_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4542,7 +4542,7 @@ bool q_tabbar_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tabbar_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4570,7 +4570,7 @@ bool q_tabbar_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tabbar_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4598,7 +4598,7 @@ QObject* q_tabbar_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_tabbar_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4626,7 +4626,7 @@ int32_t q_tabbar_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tabbar_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4656,7 +4656,7 @@ int32_t q_tabbar_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback int32_t fn(QTabBar*, const char*)
+/// @param callback int32_t func(QTabBar* self, const char* signal)
 void q_tabbar_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4686,7 +4686,7 @@ bool q_tabbar_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback bool fn(QTabBar*, QMetaMethod*)
+/// @param callback bool func(QTabBar* self, QMetaMethod* signal)
 void q_tabbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4718,7 +4718,7 @@ double q_tabbar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabBar*
-/// @param callback double fn(QTabBar*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QTabBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_tabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4728,7 +4728,7 @@ void q_tabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int3
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTabBar*
-/// @param callback void fn(QTabBar*, const char*)
+/// @param callback void func(QTabBar* self, const char* objectName)
 void q_tabbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#dtor.QTabBar)

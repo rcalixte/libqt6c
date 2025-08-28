@@ -75,7 +75,7 @@ void k_systemclipboard_changed(void* self, int32_t mode);
 /// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#changed)
 ///
 /// @param self KSystemClipboard*
-/// @param callback void fn(KSystemClipboard*, enum QClipboard__Mode)
+/// @param callback void func(KSystemClipboard* self, enum QClipboard__Mode mode)
 void k_systemclipboard_on_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -338,7 +338,7 @@ void k_systemclipboard_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSystemClipboard*
-/// @param callback void fn(KSystemClipboard*)
+/// @param callback void func(KSystemClipboard* self)
 void k_systemclipboard_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -416,7 +416,7 @@ void k_systemclipboard_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KSystemClipboard*
-/// @param callback void fn(KSystemClipboard*, QObject*)
+/// @param callback void func(KSystemClipboard* self, QObject* param1)
 void k_systemclipboard_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -426,7 +426,7 @@ void k_systemclipboard_on_destroyed1(void* self, void (*callback)(void*, void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self KSystemClipboard*
-/// @param callback void fn(KSystemClipboard*, const char*)
+/// @param callback void func(KSystemClipboard* self, const char* objectName)
 void k_systemclipboard_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#dtor.KSystemClipboard)

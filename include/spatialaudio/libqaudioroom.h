@@ -36,7 +36,7 @@ int32_t q_audioroom_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioRoom*
-/// @param callback int32_t fn(QAudioRoom*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAudioRoom* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -154,7 +154,7 @@ void q_audioroom_position_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#positionChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_position_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#dimensionsChanged)
@@ -165,7 +165,7 @@ void q_audioroom_dimensions_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#dimensionsChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_dimensions_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#rotationChanged)
@@ -176,7 +176,7 @@ void q_audioroom_rotation_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#rotationChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#wallsChanged)
@@ -187,7 +187,7 @@ void q_audioroom_walls_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#wallsChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_walls_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reflectionGainChanged)
@@ -198,7 +198,7 @@ void q_audioroom_reflection_gain_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reflectionGainChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_reflection_gain_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reverbGainChanged)
@@ -209,7 +209,7 @@ void q_audioroom_reverb_gain_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reverbGainChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_reverb_gain_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reverbTimeChanged)
@@ -220,7 +220,7 @@ void q_audioroom_reverb_time_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reverbTimeChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_reverb_time_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reverbBrightnessChanged)
@@ -231,7 +231,7 @@ void q_audioroom_reverb_brightness_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#reverbBrightnessChanged)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_reverb_brightness_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -477,7 +477,7 @@ void q_audioroom_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*)
+/// @param callback void func(QAudioRoom* self)
 void q_audioroom_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -555,7 +555,7 @@ void q_audioroom_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, QObject*)
+/// @param callback void func(QAudioRoom* self, QObject* param1)
 void q_audioroom_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -585,7 +585,7 @@ bool q_audioroom_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback bool fn(QAudioRoom*, QEvent*)
+/// @param callback bool func(QAudioRoom* self, QEvent* event)
 void q_audioroom_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -617,7 +617,7 @@ bool q_audioroom_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback bool fn(QAudioRoom*, QObject*, QEvent*)
+/// @param callback bool func(QAudioRoom* self, QObject* watched, QEvent* event)
 void q_audioroom_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -647,7 +647,7 @@ void q_audioroom_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, QTimerEvent*)
+/// @param callback void func(QAudioRoom* self, QTimerEvent* event)
 void q_audioroom_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -677,7 +677,7 @@ void q_audioroom_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, QChildEvent*)
+/// @param callback void func(QAudioRoom* self, QChildEvent* event)
 void q_audioroom_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -707,7 +707,7 @@ void q_audioroom_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, QEvent*)
+/// @param callback void func(QAudioRoom* self, QEvent* event)
 void q_audioroom_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -737,7 +737,7 @@ void q_audioroom_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, QMetaMethod*)
+/// @param callback void func(QAudioRoom* self, QMetaMethod* signal)
 void q_audioroom_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -767,7 +767,7 @@ void q_audioroom_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, QMetaMethod*)
+/// @param callback void func(QAudioRoom* self, QMetaMethod* signal)
 void q_audioroom_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -795,7 +795,7 @@ QObject* q_audioroom_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_audioroom_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -823,7 +823,7 @@ int32_t q_audioroom_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_audioroom_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -853,7 +853,7 @@ int32_t q_audioroom_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback int32_t fn(QAudioRoom*, const char*)
+/// @param callback int32_t func(QAudioRoom* self, const char* signal)
 void q_audioroom_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -883,7 +883,7 @@ bool q_audioroom_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAudioRoom*
-/// @param callback bool fn(QAudioRoom*, QMetaMethod*)
+/// @param callback bool func(QAudioRoom* self, QMetaMethod* signal)
 void q_audioroom_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -893,7 +893,7 @@ void q_audioroom_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAudioRoom*
-/// @param callback void fn(QAudioRoom*, const char*)
+/// @param callback void func(QAudioRoom* self, const char* objectName)
 void q_audioroom_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#dtor.QAudioRoom)

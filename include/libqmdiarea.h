@@ -40,7 +40,7 @@ int32_t q_mdiarea_metacall(void* self, int32_t param1, int param2, void* param3)
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback int32_t fn(QMdiArea*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMdiArea* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_mdiarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -68,7 +68,7 @@ QSize* q_mdiarea_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_mdiarea_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#sizeHint)
@@ -88,7 +88,7 @@ QSize* q_mdiarea_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_mdiarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#minimumSizeHint)
@@ -242,7 +242,7 @@ void q_mdiarea_sub_window_activated(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#subWindowActivated)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMdiSubWindow*)
+/// @param callback void func(QMdiArea* self, QMdiSubWindow* param1)
 void q_mdiarea_on_sub_window_activated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#setActiveSubWindow)
@@ -292,7 +292,7 @@ void q_mdiarea_setup_viewport(void* self, void* viewport);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QWidget*)
+/// @param callback void func(QMdiArea* self, QWidget* viewport)
 void q_mdiarea_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#setupViewport)
@@ -314,7 +314,7 @@ bool q_mdiarea_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn(QMdiArea*, QEvent*)
+/// @param callback bool func(QMdiArea* self, QEvent* event)
 void q_mdiarea_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#event)
@@ -337,7 +337,7 @@ bool q_mdiarea_event_filter(void* self, void* object, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn(QMdiArea*, QObject*, QEvent*)
+/// @param callback bool func(QMdiArea* self, QObject* object, QEvent* event)
 void q_mdiarea_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#eventFilter)
@@ -360,7 +360,7 @@ void q_mdiarea_paint_event(void* self, void* paintEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QPaintEvent*)
+/// @param callback void func(QMdiArea* self, QPaintEvent* paintEvent)
 void q_mdiarea_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#paintEvent)
@@ -382,7 +382,7 @@ void q_mdiarea_child_event(void* self, void* childEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QChildEvent*)
+/// @param callback void func(QMdiArea* self, QChildEvent* childEvent)
 void q_mdiarea_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#childEvent)
@@ -404,7 +404,7 @@ void q_mdiarea_resize_event(void* self, void* resizeEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QResizeEvent*)
+/// @param callback void func(QMdiArea* self, QResizeEvent* resizeEvent)
 void q_mdiarea_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#resizeEvent)
@@ -426,7 +426,7 @@ void q_mdiarea_timer_event(void* self, void* timerEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QTimerEvent*)
+/// @param callback void func(QMdiArea* self, QTimerEvent* timerEvent)
 void q_mdiarea_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#timerEvent)
@@ -448,7 +448,7 @@ void q_mdiarea_show_event(void* self, void* showEvent);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QShowEvent*)
+/// @param callback void func(QMdiArea* self, QShowEvent* showEvent)
 void q_mdiarea_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#showEvent)
@@ -470,7 +470,7 @@ bool q_mdiarea_viewport_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn(QMdiArea*, QEvent*)
+/// @param callback bool func(QMdiArea* self, QEvent* event)
 void q_mdiarea_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#viewportEvent)
@@ -493,7 +493,7 @@ void q_mdiarea_scroll_contents_by(void* self, int dx, int dy);
 /// Allows for overriding the related default method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, int, int)
+/// @param callback void func(QMdiArea* self, int dx, int dy)
 void q_mdiarea_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#scrollContentsBy)
@@ -2715,7 +2715,7 @@ void q_mdiarea_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, const char*)
+/// @param callback void func(QMdiArea* self, const char* title)
 void q_mdiarea_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2731,7 +2731,7 @@ void q_mdiarea_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QIcon*)
+/// @param callback void func(QMdiArea* self, QIcon* icon)
 void q_mdiarea_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2747,7 +2747,7 @@ void q_mdiarea_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, const char*)
+/// @param callback void func(QMdiArea* self, const char* iconText)
 void q_mdiarea_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2763,7 +2763,7 @@ void q_mdiarea_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QPoint*)
+/// @param callback void func(QMdiArea* self, QPoint* pos)
 void q_mdiarea_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3140,7 +3140,7 @@ void q_mdiarea_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*)
+/// @param callback void func(QMdiArea* self)
 void q_mdiarea_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3218,7 +3218,7 @@ void q_mdiarea_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QObject*)
+/// @param callback void func(QMdiArea* self, QObject* param1)
 void q_mdiarea_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3339,7 +3339,7 @@ void q_mdiarea_qbase_mouse_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMouseEvent*)
+/// @param callback void func(QMdiArea* self, QMouseEvent* param1)
 void q_mdiarea_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3369,7 +3369,7 @@ void q_mdiarea_qbase_mouse_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMouseEvent*)
+/// @param callback void func(QMdiArea* self, QMouseEvent* param1)
 void q_mdiarea_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3399,7 +3399,7 @@ void q_mdiarea_qbase_mouse_double_click_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMouseEvent*)
+/// @param callback void func(QMdiArea* self, QMouseEvent* param1)
 void q_mdiarea_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3429,7 +3429,7 @@ void q_mdiarea_qbase_mouse_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMouseEvent*)
+/// @param callback void func(QMdiArea* self, QMouseEvent* param1)
 void q_mdiarea_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3459,7 +3459,7 @@ void q_mdiarea_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QWheelEvent*)
+/// @param callback void func(QMdiArea* self, QWheelEvent* param1)
 void q_mdiarea_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3489,7 +3489,7 @@ void q_mdiarea_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QContextMenuEvent*)
+/// @param callback void func(QMdiArea* self, QContextMenuEvent* param1)
 void q_mdiarea_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3519,7 +3519,7 @@ void q_mdiarea_qbase_drag_enter_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QDragEnterEvent*)
+/// @param callback void func(QMdiArea* self, QDragEnterEvent* param1)
 void q_mdiarea_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3549,7 +3549,7 @@ void q_mdiarea_qbase_drag_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QDragMoveEvent*)
+/// @param callback void func(QMdiArea* self, QDragMoveEvent* param1)
 void q_mdiarea_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3579,7 +3579,7 @@ void q_mdiarea_qbase_drag_leave_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QDragLeaveEvent*)
+/// @param callback void func(QMdiArea* self, QDragLeaveEvent* param1)
 void q_mdiarea_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3609,7 +3609,7 @@ void q_mdiarea_qbase_drop_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QDropEvent*)
+/// @param callback void func(QMdiArea* self, QDropEvent* param1)
 void q_mdiarea_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3639,7 +3639,7 @@ void q_mdiarea_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QKeyEvent*)
+/// @param callback void func(QMdiArea* self, QKeyEvent* param1)
 void q_mdiarea_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3667,7 +3667,7 @@ QSize* q_mdiarea_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_mdiarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -3697,7 +3697,7 @@ void q_mdiarea_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QEvent*)
+/// @param callback void func(QMdiArea* self, QEvent* param1)
 void q_mdiarea_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3727,7 +3727,7 @@ void q_mdiarea_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QStyleOptionFrame*)
+/// @param callback void func(QMdiArea* self, QStyleOptionFrame* option)
 void q_mdiarea_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3755,7 +3755,7 @@ int32_t q_mdiarea_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_mdiarea_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3785,7 +3785,7 @@ void q_mdiarea_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, bool)
+/// @param callback void func(QMdiArea* self, bool visible)
 void q_mdiarea_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3815,7 +3815,7 @@ int32_t q_mdiarea_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback int32_t fn(QMdiArea*, int)
+/// @param callback int32_t func(QMdiArea* self, int param1)
 void q_mdiarea_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3843,7 +3843,7 @@ bool q_mdiarea_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_mdiarea_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3871,7 +3871,7 @@ QPaintEngine* q_mdiarea_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_mdiarea_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3901,7 +3901,7 @@ void q_mdiarea_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QKeyEvent*)
+/// @param callback void func(QMdiArea* self, QKeyEvent* event)
 void q_mdiarea_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3931,7 +3931,7 @@ void q_mdiarea_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QFocusEvent*)
+/// @param callback void func(QMdiArea* self, QFocusEvent* event)
 void q_mdiarea_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3961,7 +3961,7 @@ void q_mdiarea_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QFocusEvent*)
+/// @param callback void func(QMdiArea* self, QFocusEvent* event)
 void q_mdiarea_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3991,7 +3991,7 @@ void q_mdiarea_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QEnterEvent*)
+/// @param callback void func(QMdiArea* self, QEnterEvent* event)
 void q_mdiarea_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4021,7 +4021,7 @@ void q_mdiarea_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QEvent*)
+/// @param callback void func(QMdiArea* self, QEvent* event)
 void q_mdiarea_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4051,7 +4051,7 @@ void q_mdiarea_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMoveEvent*)
+/// @param callback void func(QMdiArea* self, QMoveEvent* event)
 void q_mdiarea_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4081,7 +4081,7 @@ void q_mdiarea_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QCloseEvent*)
+/// @param callback void func(QMdiArea* self, QCloseEvent* event)
 void q_mdiarea_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4111,7 +4111,7 @@ void q_mdiarea_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QTabletEvent*)
+/// @param callback void func(QMdiArea* self, QTabletEvent* event)
 void q_mdiarea_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4141,7 +4141,7 @@ void q_mdiarea_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QActionEvent*)
+/// @param callback void func(QMdiArea* self, QActionEvent* event)
 void q_mdiarea_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4171,7 +4171,7 @@ void q_mdiarea_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QHideEvent*)
+/// @param callback void func(QMdiArea* self, QHideEvent* event)
 void q_mdiarea_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4205,7 +4205,7 @@ bool q_mdiarea_qbase_native_event(void* self, const char* eventType, void* messa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn(QMdiArea*, const char*, void*, intptr_t*)
+/// @param callback bool func(QMdiArea* self, const char* eventType, void* message, intptr_t* result)
 void q_mdiarea_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4235,7 +4235,7 @@ int32_t q_mdiarea_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback int32_t fn(QMdiArea*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QMdiArea* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_mdiarea_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4265,7 +4265,7 @@ void q_mdiarea_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QPainter*)
+/// @param callback void func(QMdiArea* self, QPainter* painter)
 void q_mdiarea_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4295,7 +4295,7 @@ QPaintDevice* q_mdiarea_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QPaintDevice* fn(QMdiArea*, QPoint*)
+/// @param callback QPaintDevice* func(QMdiArea* self, QPoint* offset)
 void q_mdiarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4323,7 +4323,7 @@ QPainter* q_mdiarea_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_mdiarea_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4353,7 +4353,7 @@ void q_mdiarea_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QInputMethodEvent*)
+/// @param callback void func(QMdiArea* self, QInputMethodEvent* param1)
 void q_mdiarea_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4383,7 +4383,7 @@ QVariant* q_mdiarea_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QVariant* fn(QMdiArea*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QMdiArea* self, enum Qt__InputMethodQuery param1)
 void q_mdiarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4413,7 +4413,7 @@ bool q_mdiarea_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn(QMdiArea*, bool)
+/// @param callback bool func(QMdiArea* self, bool next)
 void q_mdiarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4443,7 +4443,7 @@ void q_mdiarea_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QEvent*)
+/// @param callback void func(QMdiArea* self, QEvent* event)
 void q_mdiarea_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4473,7 +4473,7 @@ void q_mdiarea_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMetaMethod*)
+/// @param callback void func(QMdiArea* self, QMetaMethod* signal)
 void q_mdiarea_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4503,7 +4503,7 @@ void q_mdiarea_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QMetaMethod*)
+/// @param callback void func(QMdiArea* self, QMetaMethod* signal)
 void q_mdiarea_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4539,7 +4539,7 @@ void q_mdiarea_qbase_set_viewport_margins(void* self, int left, int top, int rig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, int, int, int, int)
+/// @param callback void func(QMdiArea* self, int left, int top, int right, int bottom)
 void q_mdiarea_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -4567,7 +4567,7 @@ QMargins* q_mdiarea_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_mdiarea_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -4597,7 +4597,7 @@ void q_mdiarea_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, QPainter*)
+/// @param callback void func(QMdiArea* self, QPainter* param1)
 void q_mdiarea_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4625,7 +4625,7 @@ void q_mdiarea_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn()
+/// @param callback void func()
 void q_mdiarea_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4653,7 +4653,7 @@ void q_mdiarea_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn()
+/// @param callback void func()
 void q_mdiarea_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4681,7 +4681,7 @@ void q_mdiarea_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback void fn()
+/// @param callback void func()
 void q_mdiarea_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4709,7 +4709,7 @@ bool q_mdiarea_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_mdiarea_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4737,7 +4737,7 @@ bool q_mdiarea_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_mdiarea_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4765,7 +4765,7 @@ QObject* q_mdiarea_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_mdiarea_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4793,7 +4793,7 @@ int32_t q_mdiarea_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_mdiarea_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4823,7 +4823,7 @@ int32_t q_mdiarea_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback int32_t fn(QMdiArea*, const char*)
+/// @param callback int32_t func(QMdiArea* self, const char* signal)
 void q_mdiarea_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4853,7 +4853,7 @@ bool q_mdiarea_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback bool fn(QMdiArea*, QMetaMethod*)
+/// @param callback bool func(QMdiArea* self, QMetaMethod* signal)
 void q_mdiarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4885,7 +4885,7 @@ double q_mdiarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMdiArea*
-/// @param callback double fn(QMdiArea*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QMdiArea* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_mdiarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4895,7 +4895,7 @@ void q_mdiarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMdiArea*
-/// @param callback void fn(QMdiArea*, const char*)
+/// @param callback void func(QMdiArea* self, const char* objectName)
 void q_mdiarea_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmdiarea.html#dtor.QMdiArea)

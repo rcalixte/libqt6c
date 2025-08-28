@@ -234,7 +234,7 @@ void q_screen_geometry_changed(void* self, void* geometry);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#geometryChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, QRect*)
+/// @param callback void func(QScreen* self, QRect* geometry)
 void q_screen_on_geometry_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#availableGeometryChanged)
@@ -246,7 +246,7 @@ void q_screen_available_geometry_changed(void* self, void* geometry);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#availableGeometryChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, QRect*)
+/// @param callback void func(QScreen* self, QRect* geometry)
 void q_screen_on_available_geometry_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#physicalSizeChanged)
@@ -258,7 +258,7 @@ void q_screen_physical_size_changed(void* self, void* size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#physicalSizeChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, QSizeF*)
+/// @param callback void func(QScreen* self, QSizeF* size)
 void q_screen_on_physical_size_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInchChanged)
@@ -270,7 +270,7 @@ void q_screen_physical_dots_per_inch_changed(void* self, double dpi);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInchChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, double)
+/// @param callback void func(QScreen* self, double dpi)
 void q_screen_on_physical_dots_per_inch_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInchChanged)
@@ -282,7 +282,7 @@ void q_screen_logical_dots_per_inch_changed(void* self, double dpi);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInchChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, double)
+/// @param callback void func(QScreen* self, double dpi)
 void q_screen_on_logical_dots_per_inch_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#virtualGeometryChanged)
@@ -294,7 +294,7 @@ void q_screen_virtual_geometry_changed(void* self, void* rect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#virtualGeometryChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, QRect*)
+/// @param callback void func(QScreen* self, QRect* rect)
 void q_screen_on_virtual_geometry_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#primaryOrientationChanged)
@@ -306,7 +306,7 @@ void q_screen_primary_orientation_changed(void* self, int32_t orientation);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#primaryOrientationChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, enum Qt__ScreenOrientation)
+/// @param callback void func(QScreen* self, enum Qt__ScreenOrientation orientation)
 void q_screen_on_primary_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#orientationChanged)
@@ -318,7 +318,7 @@ void q_screen_orientation_changed(void* self, int32_t orientation);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#orientationChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, enum Qt__ScreenOrientation)
+/// @param callback void func(QScreen* self, enum Qt__ScreenOrientation orientation)
 void q_screen_on_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#refreshRateChanged)
@@ -330,7 +330,7 @@ void q_screen_refresh_rate_changed(void* self, double refreshRate);
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#refreshRateChanged)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, double)
+/// @param callback void func(QScreen* self, double refreshRate)
 void q_screen_on_refresh_rate_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -633,7 +633,7 @@ void q_screen_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*)
+/// @param callback void func(QScreen* self)
 void q_screen_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -711,7 +711,7 @@ void q_screen_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, QObject*)
+/// @param callback void func(QScreen* self, QObject* param1)
 void q_screen_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -721,7 +721,7 @@ void q_screen_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QScreen*
-/// @param callback void fn(QScreen*, const char*)
+/// @param callback void func(QScreen* self, const char* objectName)
 void q_screen_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#dtor.QScreen)

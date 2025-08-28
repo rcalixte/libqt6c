@@ -40,7 +40,7 @@ int32_t k_datecombobox_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback int32_t fn(KDateComboBox*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDateComboBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_datecombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -111,7 +111,7 @@ void k_datecombobox_date_entered(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEntered)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDate*)
+/// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_date_entered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateChanged)
@@ -123,7 +123,7 @@ void k_datecombobox_date_changed(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDate*)
+/// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_date_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEdited)
@@ -135,7 +135,7 @@ void k_datecombobox_date_edited(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEdited)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDate*)
+/// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_date_edited(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDate)
@@ -208,7 +208,7 @@ bool k_datecombobox_event_filter(void* self, void* object, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn(KDateComboBox*, QObject*, QEvent*)
+/// @param callback bool func(KDateComboBox* self, QObject* object, QEvent* event)
 void k_datecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#eventFilter)
@@ -230,7 +230,7 @@ void k_datecombobox_show_popup(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datecombobox_on_show_popup(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#showPopup)
@@ -250,7 +250,7 @@ void k_datecombobox_hide_popup(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datecombobox_on_hide_popup(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#hidePopup)
@@ -271,7 +271,7 @@ void k_datecombobox_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMouseEvent*)
+/// @param callback void func(KDateComboBox* self, QMouseEvent* event)
 void k_datecombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#mousePressEvent)
@@ -293,7 +293,7 @@ void k_datecombobox_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QWheelEvent*)
+/// @param callback void func(KDateComboBox* self, QWheelEvent* event)
 void k_datecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#wheelEvent)
@@ -315,7 +315,7 @@ void k_datecombobox_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QKeyEvent*)
+/// @param callback void func(KDateComboBox* self, QKeyEvent* event)
 void k_datecombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#keyPressEvent)
@@ -337,7 +337,7 @@ void k_datecombobox_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QFocusEvent*)
+/// @param callback void func(KDateComboBox* self, QFocusEvent* event)
 void k_datecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusInEvent)
@@ -359,7 +359,7 @@ void k_datecombobox_focus_out_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QFocusEvent*)
+/// @param callback void func(KDateComboBox* self, QFocusEvent* event)
 void k_datecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusOutEvent)
@@ -381,7 +381,7 @@ void k_datecombobox_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QResizeEvent*)
+/// @param callback void func(KDateComboBox* self, QResizeEvent* event)
 void k_datecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resizeEvent)
@@ -403,7 +403,7 @@ void k_datecombobox_assign_date(void* self, void* date);
 /// Allows for overriding the related default method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDate*)
+/// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_assign_date(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#assignDate)
@@ -958,7 +958,7 @@ void k_datecombobox_edit_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* param1)
 void k_datecombobox_on_edit_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -974,7 +974,7 @@ void k_datecombobox_activated(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#activated)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, int)
+/// @param callback void func(KDateComboBox* self, int index)
 void k_datecombobox_on_activated(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -990,7 +990,7 @@ void k_datecombobox_text_activated(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* param1)
 void k_datecombobox_on_text_activated(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -1006,7 +1006,7 @@ void k_datecombobox_highlighted(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, int)
+/// @param callback void func(KDateComboBox* self, int index)
 void k_datecombobox_on_highlighted(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -1022,7 +1022,7 @@ void k_datecombobox_text_highlighted(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* param1)
 void k_datecombobox_on_text_highlighted(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -1038,7 +1038,7 @@ void k_datecombobox_current_index_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, int)
+/// @param callback void func(KDateComboBox* self, int index)
 void k_datecombobox_on_current_index_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QComboBox
@@ -1054,7 +1054,7 @@ void k_datecombobox_current_text_changed(void* self, const char* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* param1)
 void k_datecombobox_on_current_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -3089,7 +3089,7 @@ void k_datecombobox_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* title)
 void k_datecombobox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3105,7 +3105,7 @@ void k_datecombobox_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QIcon*)
+/// @param callback void func(KDateComboBox* self, QIcon* icon)
 void k_datecombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3121,7 +3121,7 @@ void k_datecombobox_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* iconText)
 void k_datecombobox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void k_datecombobox_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QPoint*)
+/// @param callback void func(KDateComboBox* self, QPoint* pos)
 void k_datecombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3514,7 +3514,7 @@ void k_datecombobox_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*)
+/// @param callback void func(KDateComboBox* self)
 void k_datecombobox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3592,7 +3592,7 @@ void k_datecombobox_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QObject*)
+/// @param callback void func(KDateComboBox* self, QObject* param1)
 void k_datecombobox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3713,7 +3713,7 @@ void k_datecombobox_qbase_set_model(void* self, void* model);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QAbstractItemModel*)
+/// @param callback void func(KDateComboBox* self, QAbstractItemModel* model)
 void k_datecombobox_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3741,7 +3741,7 @@ QSize* k_datecombobox_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_datecombobox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -3769,7 +3769,7 @@ QSize* k_datecombobox_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_datecombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -3799,7 +3799,7 @@ bool k_datecombobox_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn(KDateComboBox*, QEvent*)
+/// @param callback bool func(KDateComboBox* self, QEvent* event)
 void k_datecombobox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3829,7 +3829,7 @@ QVariant* k_datecombobox_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QVariant* fn(KDateComboBox*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KDateComboBox* self, enum Qt__InputMethodQuery param1)
 void k_datecombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QComboBox
@@ -3859,7 +3859,7 @@ void k_datecombobox_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QEvent*)
+/// @param callback void func(KDateComboBox* self, QEvent* e)
 void k_datecombobox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3889,7 +3889,7 @@ void k_datecombobox_qbase_paint_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QPaintEvent*)
+/// @param callback void func(KDateComboBox* self, QPaintEvent* e)
 void k_datecombobox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3919,7 +3919,7 @@ void k_datecombobox_qbase_show_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QShowEvent*)
+/// @param callback void func(KDateComboBox* self, QShowEvent* e)
 void k_datecombobox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3949,7 +3949,7 @@ void k_datecombobox_qbase_hide_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QHideEvent*)
+/// @param callback void func(KDateComboBox* self, QHideEvent* e)
 void k_datecombobox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -3979,7 +3979,7 @@ void k_datecombobox_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMouseEvent*)
+/// @param callback void func(KDateComboBox* self, QMouseEvent* e)
 void k_datecombobox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4009,7 +4009,7 @@ void k_datecombobox_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QKeyEvent*)
+/// @param callback void func(KDateComboBox* self, QKeyEvent* e)
 void k_datecombobox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4039,7 +4039,7 @@ void k_datecombobox_qbase_context_menu_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QContextMenuEvent*)
+/// @param callback void func(KDateComboBox* self, QContextMenuEvent* e)
 void k_datecombobox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4069,7 +4069,7 @@ void k_datecombobox_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QInputMethodEvent*)
+/// @param callback void func(KDateComboBox* self, QInputMethodEvent* param1)
 void k_datecombobox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QComboBox
@@ -4099,7 +4099,7 @@ void k_datecombobox_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QStyleOptionComboBox*)
+/// @param callback void func(KDateComboBox* self, QStyleOptionComboBox* option)
 void k_datecombobox_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4127,7 +4127,7 @@ int32_t k_datecombobox_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datecombobox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4157,7 +4157,7 @@ void k_datecombobox_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, bool)
+/// @param callback void func(KDateComboBox* self, bool visible)
 void k_datecombobox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -4187,7 +4187,7 @@ int32_t k_datecombobox_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback int32_t fn(KDateComboBox*, int)
+/// @param callback int32_t func(KDateComboBox* self, int param1)
 void k_datecombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -4215,7 +4215,7 @@ bool k_datecombobox_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datecombobox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4243,7 +4243,7 @@ QPaintEngine* k_datecombobox_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_datecombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -4273,7 +4273,7 @@ void k_datecombobox_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMouseEvent*)
+/// @param callback void func(KDateComboBox* self, QMouseEvent* event)
 void k_datecombobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4303,7 +4303,7 @@ void k_datecombobox_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMouseEvent*)
+/// @param callback void func(KDateComboBox* self, QMouseEvent* event)
 void k_datecombobox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4333,7 +4333,7 @@ void k_datecombobox_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QEnterEvent*)
+/// @param callback void func(KDateComboBox* self, QEnterEvent* event)
 void k_datecombobox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4363,7 +4363,7 @@ void k_datecombobox_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QEvent*)
+/// @param callback void func(KDateComboBox* self, QEvent* event)
 void k_datecombobox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4393,7 +4393,7 @@ void k_datecombobox_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMoveEvent*)
+/// @param callback void func(KDateComboBox* self, QMoveEvent* event)
 void k_datecombobox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4423,7 +4423,7 @@ void k_datecombobox_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QCloseEvent*)
+/// @param callback void func(KDateComboBox* self, QCloseEvent* event)
 void k_datecombobox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4453,7 +4453,7 @@ void k_datecombobox_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QTabletEvent*)
+/// @param callback void func(KDateComboBox* self, QTabletEvent* event)
 void k_datecombobox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4483,7 +4483,7 @@ void k_datecombobox_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QActionEvent*)
+/// @param callback void func(KDateComboBox* self, QActionEvent* event)
 void k_datecombobox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4513,7 +4513,7 @@ void k_datecombobox_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDragEnterEvent*)
+/// @param callback void func(KDateComboBox* self, QDragEnterEvent* event)
 void k_datecombobox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4543,7 +4543,7 @@ void k_datecombobox_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDragMoveEvent*)
+/// @param callback void func(KDateComboBox* self, QDragMoveEvent* event)
 void k_datecombobox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4573,7 +4573,7 @@ void k_datecombobox_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDragLeaveEvent*)
+/// @param callback void func(KDateComboBox* self, QDragLeaveEvent* event)
 void k_datecombobox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4603,7 +4603,7 @@ void k_datecombobox_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QDropEvent*)
+/// @param callback void func(KDateComboBox* self, QDropEvent* event)
 void k_datecombobox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4637,7 +4637,7 @@ bool k_datecombobox_qbase_native_event(void* self, const char* eventType, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn(KDateComboBox*, const char*, void*, intptr_t*)
+/// @param callback bool func(KDateComboBox* self, const char* eventType, void* message, intptr_t* result)
 void k_datecombobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4667,7 +4667,7 @@ int32_t k_datecombobox_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback int32_t fn(KDateComboBox*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KDateComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_datecombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4697,7 +4697,7 @@ void k_datecombobox_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QPainter*)
+/// @param callback void func(KDateComboBox* self, QPainter* painter)
 void k_datecombobox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4727,7 +4727,7 @@ QPaintDevice* k_datecombobox_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QPaintDevice* fn(KDateComboBox*, QPoint*)
+/// @param callback QPaintDevice* func(KDateComboBox* self, QPoint* offset)
 void k_datecombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4755,7 +4755,7 @@ QPainter* k_datecombobox_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_datecombobox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4785,7 +4785,7 @@ bool k_datecombobox_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn(KDateComboBox*, bool)
+/// @param callback bool func(KDateComboBox* self, bool next)
 void k_datecombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4815,7 +4815,7 @@ void k_datecombobox_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QTimerEvent*)
+/// @param callback void func(KDateComboBox* self, QTimerEvent* event)
 void k_datecombobox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4845,7 +4845,7 @@ void k_datecombobox_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QChildEvent*)
+/// @param callback void func(KDateComboBox* self, QChildEvent* event)
 void k_datecombobox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4875,7 +4875,7 @@ void k_datecombobox_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QEvent*)
+/// @param callback void func(KDateComboBox* self, QEvent* event)
 void k_datecombobox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4905,7 +4905,7 @@ void k_datecombobox_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMetaMethod*)
+/// @param callback void func(KDateComboBox* self, QMetaMethod* signal)
 void k_datecombobox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4935,7 +4935,7 @@ void k_datecombobox_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, QMetaMethod*)
+/// @param callback void func(KDateComboBox* self, QMetaMethod* signal)
 void k_datecombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4963,7 +4963,7 @@ void k_datecombobox_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datecombobox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4991,7 +4991,7 @@ void k_datecombobox_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datecombobox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5019,7 +5019,7 @@ void k_datecombobox_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datecombobox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5047,7 +5047,7 @@ bool k_datecombobox_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datecombobox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5075,7 +5075,7 @@ bool k_datecombobox_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datecombobox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5103,7 +5103,7 @@ QObject* k_datecombobox_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_datecombobox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5131,7 +5131,7 @@ int32_t k_datecombobox_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datecombobox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5161,7 +5161,7 @@ int32_t k_datecombobox_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback int32_t fn(KDateComboBox*, const char*)
+/// @param callback int32_t func(KDateComboBox* self, const char* signal)
 void k_datecombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5191,7 +5191,7 @@ bool k_datecombobox_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback bool fn(KDateComboBox*, QMetaMethod*)
+/// @param callback bool func(KDateComboBox* self, QMetaMethod* signal)
 void k_datecombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5223,7 +5223,7 @@ double k_datecombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDateComboBox*
-/// @param callback double fn(KDateComboBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KDateComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_datecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5233,7 +5233,7 @@ void k_datecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDateComboBox*
-/// @param callback void fn(KDateComboBox*, const char*)
+/// @param callback void func(KDateComboBox* self, const char* objectName)
 void k_datecombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dtor.KDateComboBox)

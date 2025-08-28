@@ -40,7 +40,7 @@ int32_t q_dtlsclientverifier_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback int32_t fn(QDtlsClientVerifier*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QDtlsClientVerifier* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_dtlsclientverifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -342,7 +342,7 @@ void q_dtlsclientverifier_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*)
+/// @param callback void func(QDtlsClientVerifier* self)
 void q_dtlsclientverifier_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -420,7 +420,7 @@ void q_dtlsclientverifier_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, QObject*)
+/// @param callback void func(QDtlsClientVerifier* self, QObject* param1)
 void q_dtlsclientverifier_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -450,7 +450,7 @@ bool q_dtlsclientverifier_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback bool fn(QDtlsClientVerifier*, QEvent*)
+/// @param callback bool func(QDtlsClientVerifier* self, QEvent* event)
 void q_dtlsclientverifier_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -482,7 +482,7 @@ bool q_dtlsclientverifier_qbase_event_filter(void* self, void* watched, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback bool fn(QDtlsClientVerifier*, QObject*, QEvent*)
+/// @param callback bool func(QDtlsClientVerifier* self, QObject* watched, QEvent* event)
 void q_dtlsclientverifier_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -512,7 +512,7 @@ void q_dtlsclientverifier_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, QTimerEvent*)
+/// @param callback void func(QDtlsClientVerifier* self, QTimerEvent* event)
 void q_dtlsclientverifier_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -542,7 +542,7 @@ void q_dtlsclientverifier_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, QChildEvent*)
+/// @param callback void func(QDtlsClientVerifier* self, QChildEvent* event)
 void q_dtlsclientverifier_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -572,7 +572,7 @@ void q_dtlsclientverifier_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, QEvent*)
+/// @param callback void func(QDtlsClientVerifier* self, QEvent* event)
 void q_dtlsclientverifier_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -602,7 +602,7 @@ void q_dtlsclientverifier_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, QMetaMethod*)
+/// @param callback void func(QDtlsClientVerifier* self, QMetaMethod* signal)
 void q_dtlsclientverifier_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -632,7 +632,7 @@ void q_dtlsclientverifier_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, QMetaMethod*)
+/// @param callback void func(QDtlsClientVerifier* self, QMetaMethod* signal)
 void q_dtlsclientverifier_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -660,7 +660,7 @@ QObject* q_dtlsclientverifier_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_dtlsclientverifier_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -688,7 +688,7 @@ int32_t q_dtlsclientverifier_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_dtlsclientverifier_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -718,7 +718,7 @@ int32_t q_dtlsclientverifier_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback int32_t fn(QDtlsClientVerifier*, const char*)
+/// @param callback int32_t func(QDtlsClientVerifier* self, const char* signal)
 void q_dtlsclientverifier_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -748,7 +748,7 @@ bool q_dtlsclientverifier_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback bool fn(QDtlsClientVerifier*, QMetaMethod*)
+/// @param callback bool func(QDtlsClientVerifier* self, QMetaMethod* signal)
 void q_dtlsclientverifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -758,7 +758,7 @@ void q_dtlsclientverifier_on_is_signal_connected(void* self, bool (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QDtlsClientVerifier*
-/// @param callback void fn(QDtlsClientVerifier*, const char*)
+/// @param callback void func(QDtlsClientVerifier* self, const char* objectName)
 void q_dtlsclientverifier_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier.html#dtor.QDtlsClientVerifier)
@@ -799,7 +799,7 @@ int32_t q_dtls_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QDtls*
-/// @param callback int32_t fn(QDtls*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QDtls* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_dtls_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -991,7 +991,7 @@ void q_dtls_psk_required(void* self, void* authenticator);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#pskRequired)
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QSslPreSharedKeyAuthenticator*)
+/// @param callback void func(QDtls* self, QSslPreSharedKeyAuthenticator* authenticator)
 void q_dtls_on_psk_required(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#handshakeTimeout)
@@ -1002,7 +1002,7 @@ void q_dtls_handshake_timeout(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#handshakeTimeout)
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*)
+/// @param callback void func(QDtls* self)
 void q_dtls_on_handshake_timeout(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -1263,7 +1263,7 @@ void q_dtls_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*)
+/// @param callback void func(QDtls* self)
 void q_dtls_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1341,7 +1341,7 @@ void q_dtls_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QObject*)
+/// @param callback void func(QDtls* self, QObject* param1)
 void q_dtls_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1371,7 +1371,7 @@ bool q_dtls_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback bool fn(QDtls*, QEvent*)
+/// @param callback bool func(QDtls* self, QEvent* event)
 void q_dtls_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1403,7 +1403,7 @@ bool q_dtls_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback bool fn(QDtls*, QObject*, QEvent*)
+/// @param callback bool func(QDtls* self, QObject* watched, QEvent* event)
 void q_dtls_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1433,7 +1433,7 @@ void q_dtls_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QTimerEvent*)
+/// @param callback void func(QDtls* self, QTimerEvent* event)
 void q_dtls_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1463,7 +1463,7 @@ void q_dtls_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QChildEvent*)
+/// @param callback void func(QDtls* self, QChildEvent* event)
 void q_dtls_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1493,7 +1493,7 @@ void q_dtls_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QEvent*)
+/// @param callback void func(QDtls* self, QEvent* event)
 void q_dtls_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1523,7 +1523,7 @@ void q_dtls_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QMetaMethod*)
+/// @param callback void func(QDtls* self, QMetaMethod* signal)
 void q_dtls_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1553,7 +1553,7 @@ void q_dtls_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, QMetaMethod*)
+/// @param callback void func(QDtls* self, QMetaMethod* signal)
 void q_dtls_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1581,7 +1581,7 @@ QObject* q_dtls_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_dtls_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1609,7 +1609,7 @@ int32_t q_dtls_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_dtls_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1639,7 +1639,7 @@ int32_t q_dtls_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback int32_t fn(QDtls*, const char*)
+/// @param callback int32_t func(QDtls* self, const char* signal)
 void q_dtls_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1669,7 +1669,7 @@ bool q_dtls_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDtls*
-/// @param callback bool fn(QDtls*, QMetaMethod*)
+/// @param callback bool func(QDtls* self, QMetaMethod* signal)
 void q_dtls_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1679,7 +1679,7 @@ void q_dtls_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QDtls*
-/// @param callback void fn(QDtls*, const char*)
+/// @param callback void func(QDtls* self, const char* objectName)
 void q_dtls_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#dtor.QDtls)

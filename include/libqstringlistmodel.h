@@ -51,7 +51,7 @@ int32_t q_stringlistmodel_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback int32_t fn(QStringListModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QStringListModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -80,7 +80,7 @@ int32_t q_stringlistmodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback int32_t fn(QStringListModel*, QModelIndex*)
+/// @param callback int32_t func(QStringListModel* self, QModelIndex* parent)
 void q_stringlistmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#rowCount)
@@ -104,7 +104,7 @@ QModelIndex* q_stringlistmodel_sibling(void* self, int row, int column, void* id
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback QModelIndex* fn(QStringListModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QStringListModel* self, int row, int column, QModelIndex* idx)
 void q_stringlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#sibling)
@@ -129,7 +129,7 @@ QVariant* q_stringlistmodel_data(void* self, void* index, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback QVariant* fn(QStringListModel*, QModelIndex*, int)
+/// @param callback QVariant* func(QStringListModel* self, QModelIndex* index, int role)
 void q_stringlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#data)
@@ -154,7 +154,7 @@ bool q_stringlistmodel_set_data(void* self, void* index, void* value, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(QStringListModel* self, QModelIndex* index, QVariant* value, int role)
 void q_stringlistmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#setData)
@@ -178,7 +178,7 @@ bool q_stringlistmodel_clear_item_data(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, QModelIndex* index)
 void q_stringlistmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#clearItemData)
@@ -202,7 +202,7 @@ int64_t q_stringlistmodel_flags(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback int64_t fn(QStringListModel*, QModelIndex*)
+/// @param callback int64_t func(QStringListModel* self, QModelIndex* index)
 void q_stringlistmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#flags)
@@ -228,7 +228,7 @@ bool q_stringlistmodel_insert_rows(void* self, int row, int count, void* parent)
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, int row, int count, QModelIndex* parent)
 void q_stringlistmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#insertRows)
@@ -254,7 +254,7 @@ bool q_stringlistmodel_remove_rows(void* self, int row, int count, void* parent)
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, int row, int count, QModelIndex* parent)
 void q_stringlistmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#removeRows)
@@ -282,7 +282,7 @@ bool q_stringlistmodel_move_rows(void* self, void* sourceParent, int sourceRow, 
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void q_stringlistmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#moveRows)
@@ -308,7 +308,7 @@ libqt_map /* of int to QVariant* */ q_stringlistmodel_item_data(void* self, void
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(QStringListModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(QStringListModel* self, QModelIndex* index)
 void q_stringlistmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#itemData)
@@ -331,7 +331,7 @@ bool q_stringlistmodel_set_item_data(void* self, void* index, libqt_map /* of in
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(QStringListModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void q_stringlistmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#setItemData)
@@ -355,7 +355,7 @@ void q_stringlistmodel_sort(void* self, int column, int32_t order);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, int, enum Qt__SortOrder)
+/// @param callback void func(QStringListModel* self, int column, enum Qt__SortOrder order)
 void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
@@ -392,7 +392,7 @@ int64_t q_stringlistmodel_supported_drop_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_stringlistmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#supportedDropActions)
@@ -445,7 +445,7 @@ QModelIndex* q_stringlistmodel_parent(void* self, void* child);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback QModelIndex* fn(QStringListModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QStringListModel* self, QModelIndex* child)
 void q_stringlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -473,7 +473,7 @@ int32_t q_stringlistmodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback int32_t fn(QStringListModel*, QModelIndex*)
+/// @param callback int32_t func(QStringListModel* self, QModelIndex* parent)
 void q_stringlistmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -501,7 +501,7 @@ bool q_stringlistmodel_has_children(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, QModelIndex* parent)
 void q_stringlistmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -590,7 +590,7 @@ void q_stringlistmodel_data_changed(void* self, void* topLeft, void* bottomRight
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QStringListModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_stringlistmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -608,7 +608,7 @@ void q_stringlistmodel_header_data_changed(void* self, int32_t orientation, int 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QStringListModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_stringlistmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -623,7 +623,7 @@ void q_stringlistmodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*)
+/// @param callback void func(QStringListModel* self)
 void q_stringlistmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -638,7 +638,7 @@ void q_stringlistmodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*)
+/// @param callback void func(QStringListModel* self)
 void q_stringlistmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -711,7 +711,7 @@ void q_stringlistmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QStringListModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_stringlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -727,7 +727,7 @@ void q_stringlistmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QStringListModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_stringlistmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -744,7 +744,7 @@ void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int32_t h
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QStringListModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -760,7 +760,7 @@ void q_stringlistmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QStringListModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -777,7 +777,7 @@ void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QStringListModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -1006,7 +1006,7 @@ void q_stringlistmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*)
+/// @param callback void func(QStringListModel* self)
 void q_stringlistmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1077,7 +1077,7 @@ void q_stringlistmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QObject*)
+/// @param callback void func(QStringListModel* self, QObject* param1)
 void q_stringlistmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractListModel
@@ -1111,7 +1111,7 @@ QModelIndex* q_stringlistmodel_qbase_index(void* self, int row, int column, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QModelIndex* fn(QStringListModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QStringListModel* self, int row, int column, QModelIndex* parent)
 void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -1149,7 +1149,7 @@ bool q_stringlistmodel_qbase_drop_mime_data(void* self, void* data, int32_t acti
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1183,7 +1183,7 @@ QVariant* q_stringlistmodel_qbase_header_data(void* self, int section, int32_t o
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QVariant* fn(QStringListModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(QStringListModel* self, int section, enum Qt__Orientation orientation, int role)
 void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1219,7 +1219,7 @@ bool q_stringlistmodel_qbase_set_header_data(void* self, int section, int32_t or
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(QStringListModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void q_stringlistmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1251,7 +1251,7 @@ const char** q_stringlistmodel_qbase_mime_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_stringlistmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1281,7 +1281,7 @@ QMimeData* q_stringlistmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QMimeData* fn(QStringListModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(QStringListModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1319,7 +1319,7 @@ bool q_stringlistmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1351,7 +1351,7 @@ int64_t q_stringlistmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_stringlistmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1385,7 +1385,7 @@ bool q_stringlistmodel_qbase_insert_columns(void* self, int column, int count, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, int column, int count, QModelIndex* parent)
 void q_stringlistmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1419,7 +1419,7 @@ bool q_stringlistmodel_qbase_remove_columns(void* self, int column, int count, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, int column, int count, QModelIndex* parent)
 void q_stringlistmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1457,7 +1457,7 @@ bool q_stringlistmodel_qbase_move_columns(void* self, void* sourceParent, int so
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void q_stringlistmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1487,7 +1487,7 @@ void q_stringlistmodel_qbase_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent)
 void q_stringlistmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1517,7 +1517,7 @@ bool q_stringlistmodel_qbase_can_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*)
+/// @param callback bool func(QStringListModel* self, QModelIndex* parent)
 void q_stringlistmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1547,7 +1547,7 @@ QModelIndex* q_stringlistmodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QModelIndex* fn(QStringListModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QStringListModel* self, QModelIndex* index)
 void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1585,7 +1585,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_match(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(QStringListModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(QStringListModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void q_stringlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -1615,7 +1615,7 @@ QSize* q_stringlistmodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QSize* fn(QStringListModel*, QModelIndex*)
+/// @param callback QSize* func(QStringListModel* self, QModelIndex* index)
 void q_stringlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1643,7 +1643,7 @@ libqt_map /* of int to char* */ q_stringlistmodel_qbase_role_names(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void q_stringlistmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1675,7 +1675,7 @@ void q_stringlistmodel_qbase_multi_data(void* self, void* index, void* roleDataS
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(QStringListModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void q_stringlistmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1703,7 +1703,7 @@ bool q_stringlistmodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_stringlistmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1731,7 +1731,7 @@ void q_stringlistmodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1759,7 +1759,7 @@ void q_stringlistmodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1789,7 +1789,7 @@ bool q_stringlistmodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QEvent*)
+/// @param callback bool func(QStringListModel* self, QEvent* event)
 void q_stringlistmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1821,7 +1821,7 @@ bool q_stringlistmodel_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QObject*, QEvent*)
+/// @param callback bool func(QStringListModel* self, QObject* watched, QEvent* event)
 void q_stringlistmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1851,7 +1851,7 @@ void q_stringlistmodel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QTimerEvent*)
+/// @param callback void func(QStringListModel* self, QTimerEvent* event)
 void q_stringlistmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1881,7 +1881,7 @@ void q_stringlistmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QChildEvent*)
+/// @param callback void func(QStringListModel* self, QChildEvent* event)
 void q_stringlistmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1911,7 +1911,7 @@ void q_stringlistmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QEvent*)
+/// @param callback void func(QStringListModel* self, QEvent* event)
 void q_stringlistmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1941,7 +1941,7 @@ void q_stringlistmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QMetaMethod*)
+/// @param callback void func(QStringListModel* self, QMetaMethod* signal)
 void q_stringlistmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1971,7 +1971,7 @@ void q_stringlistmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QMetaMethod*)
+/// @param callback void func(QStringListModel* self, QMetaMethod* signal)
 void q_stringlistmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2003,7 +2003,7 @@ QModelIndex* q_stringlistmodel_qbase_create_index(void* self, int row, int colum
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QModelIndex* fn(QStringListModel*, int, int)
+/// @param callback QModelIndex* func(QStringListModel* self, int row, int column)
 void q_stringlistmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2035,7 +2035,7 @@ void q_stringlistmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(QStringListModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void q_stringlistmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2071,7 +2071,7 @@ bool q_stringlistmodel_qbase_decode_data(void* self, int row, int column, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(QStringListModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void q_stringlistmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2105,7 +2105,7 @@ void q_stringlistmodel_qbase_begin_insert_rows(void* self, void* parent, int fir
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2133,7 +2133,7 @@ void q_stringlistmodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2167,7 +2167,7 @@ void q_stringlistmodel_qbase_begin_remove_rows(void* self, void* parent, int fir
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2195,7 +2195,7 @@ void q_stringlistmodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2233,7 +2233,7 @@ bool q_stringlistmodel_qbase_begin_move_rows(void* self, void* sourceParent, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void q_stringlistmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2261,7 +2261,7 @@ void q_stringlistmodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2295,7 +2295,7 @@ void q_stringlistmodel_qbase_begin_insert_columns(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2323,7 +2323,7 @@ void q_stringlistmodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2357,7 +2357,7 @@ void q_stringlistmodel_qbase_begin_remove_columns(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2385,7 +2385,7 @@ void q_stringlistmodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2423,7 +2423,7 @@ bool q_stringlistmodel_qbase_begin_move_columns(void* self, void* sourceParent, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStringListModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void q_stringlistmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2451,7 +2451,7 @@ void q_stringlistmodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2479,7 +2479,7 @@ void q_stringlistmodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2507,7 +2507,7 @@ void q_stringlistmodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stringlistmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2539,7 +2539,7 @@ void q_stringlistmodel_qbase_change_persistent_index(void* self, void* from, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QStringListModel* self, QModelIndex* from, QModelIndex* to)
 void q_stringlistmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2571,7 +2571,7 @@ void q_stringlistmodel_qbase_change_persistent_index_list(void* self, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QStringListModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_stringlistmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2599,7 +2599,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_persistent_index_list(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_stringlistmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -2627,7 +2627,7 @@ QObject* q_stringlistmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_stringlistmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2655,7 +2655,7 @@ int32_t q_stringlistmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_stringlistmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2685,7 +2685,7 @@ int32_t q_stringlistmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback int32_t fn(QStringListModel*, const char*)
+/// @param callback int32_t func(QStringListModel* self, const char* signal)
 void q_stringlistmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2715,7 +2715,7 @@ bool q_stringlistmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStringListModel*
-/// @param callback bool fn(QStringListModel*, QMetaMethod*)
+/// @param callback bool func(QStringListModel* self, QMetaMethod* signal)
 void q_stringlistmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2725,7 +2725,7 @@ void q_stringlistmodel_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2735,7 +2735,7 @@ void q_stringlistmodel_on_rows_about_to_be_inserted(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2745,7 +2745,7 @@ void q_stringlistmodel_on_rows_inserted(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2755,7 +2755,7 @@ void q_stringlistmodel_on_rows_about_to_be_removed(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2765,7 +2765,7 @@ void q_stringlistmodel_on_rows_removed(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2775,7 +2775,7 @@ void q_stringlistmodel_on_columns_about_to_be_inserted(void* self, void (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2785,7 +2785,7 @@ void q_stringlistmodel_on_columns_inserted(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2795,7 +2795,7 @@ void q_stringlistmodel_on_columns_about_to_be_removed(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* parent, int first, int last)
 void q_stringlistmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2805,7 +2805,7 @@ void q_stringlistmodel_on_columns_removed(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*)
+/// @param callback void func(QStringListModel* self)
 void q_stringlistmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2815,7 +2815,7 @@ void q_stringlistmodel_on_model_about_to_be_reset(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*)
+/// @param callback void func(QStringListModel* self)
 void q_stringlistmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2825,7 +2825,7 @@ void q_stringlistmodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_stringlistmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2835,7 +2835,7 @@ void q_stringlistmodel_on_rows_about_to_be_moved(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_stringlistmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2845,7 +2845,7 @@ void q_stringlistmodel_on_rows_moved(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_stringlistmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2855,7 +2855,7 @@ void q_stringlistmodel_on_columns_about_to_be_moved(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStringListModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_stringlistmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2865,7 +2865,7 @@ void q_stringlistmodel_on_columns_moved(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, const char*)
+/// @param callback void func(QStringListModel* self, const char* objectName)
 void q_stringlistmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#dtor.QStringListModel)

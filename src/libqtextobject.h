@@ -315,7 +315,7 @@ void q_textobject_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextObject*
-/// @param callback void fn(QTextObject*)
+/// @param callback void func(QTextObject* self)
 void q_textobject_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -393,7 +393,7 @@ void q_textobject_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextObject*
-/// @param callback void fn(QTextObject*, QObject*)
+/// @param callback void func(QTextObject* self, QObject* param1)
 void q_textobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -403,7 +403,7 @@ void q_textobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTextObject*
-/// @param callback void fn(QTextObject*, const char*)
+/// @param callback void func(QTextObject* self, const char* objectName)
 void q_textobject_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qtextblockgroup.html
@@ -718,7 +718,7 @@ void q_textblockgroup_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextBlockGroup*
-/// @param callback void fn(QTextBlockGroup*)
+/// @param callback void func(QTextBlockGroup* self)
 void q_textblockgroup_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -796,7 +796,7 @@ void q_textblockgroup_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextBlockGroup*
-/// @param callback void fn(QTextBlockGroup*, QObject*)
+/// @param callback void func(QTextBlockGroup* self, QObject* param1)
 void q_textblockgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -806,7 +806,7 @@ void q_textblockgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTextBlockGroup*
-/// @param callback void fn(QTextBlockGroup*, const char*)
+/// @param callback void func(QTextBlockGroup* self, const char* objectName)
 void q_textblockgroup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qtextframelayoutdata.html
@@ -849,7 +849,7 @@ int32_t q_textframe_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QTextFrame*
-/// @param callback int32_t fn(QTextFrame*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTextFrame* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_textframe_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -1200,7 +1200,7 @@ void q_textframe_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*)
+/// @param callback void func(QTextFrame* self)
 void q_textframe_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1278,7 +1278,7 @@ void q_textframe_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QObject*)
+/// @param callback void func(QTextFrame* self, QObject* param1)
 void q_textframe_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1308,7 +1308,7 @@ bool q_textframe_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback bool fn(QTextFrame*, QEvent*)
+/// @param callback bool func(QTextFrame* self, QEvent* event)
 void q_textframe_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1340,7 +1340,7 @@ bool q_textframe_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback bool fn(QTextFrame*, QObject*, QEvent*)
+/// @param callback bool func(QTextFrame* self, QObject* watched, QEvent* event)
 void q_textframe_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1370,7 +1370,7 @@ void q_textframe_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QTimerEvent*)
+/// @param callback void func(QTextFrame* self, QTimerEvent* event)
 void q_textframe_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1400,7 +1400,7 @@ void q_textframe_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QChildEvent*)
+/// @param callback void func(QTextFrame* self, QChildEvent* event)
 void q_textframe_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1430,7 +1430,7 @@ void q_textframe_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QEvent*)
+/// @param callback void func(QTextFrame* self, QEvent* event)
 void q_textframe_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1460,7 +1460,7 @@ void q_textframe_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QMetaMethod*)
+/// @param callback void func(QTextFrame* self, QMetaMethod* signal)
 void q_textframe_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1490,7 +1490,7 @@ void q_textframe_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QMetaMethod*)
+/// @param callback void func(QTextFrame* self, QMetaMethod* signal)
 void q_textframe_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextObject
@@ -1520,7 +1520,7 @@ void q_textframe_qbase_set_format(void* self, void* format);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, QTextFormat*)
+/// @param callback void func(QTextFrame* self, QTextFormat* format)
 void q_textframe_on_set_format(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1548,7 +1548,7 @@ QObject* q_textframe_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_textframe_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1576,7 +1576,7 @@ int32_t q_textframe_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_textframe_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1606,7 +1606,7 @@ int32_t q_textframe_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback int32_t fn(QTextFrame*, const char*)
+/// @param callback int32_t func(QTextFrame* self, const char* signal)
 void q_textframe_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1636,7 +1636,7 @@ bool q_textframe_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextFrame*
-/// @param callback bool fn(QTextFrame*, QMetaMethod*)
+/// @param callback bool func(QTextFrame* self, QMetaMethod* signal)
 void q_textframe_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1646,7 +1646,7 @@ void q_textframe_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTextFrame*
-/// @param callback void fn(QTextFrame*, const char*)
+/// @param callback void func(QTextFrame* self, const char* objectName)
 void q_textframe_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#dtor.QTextFrame)

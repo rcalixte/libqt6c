@@ -51,7 +51,7 @@ int32_t k_recentfilesmenu_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn(KRecentFilesMenu*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KRecentFilesMenu* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_recentfilesmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -124,7 +124,7 @@ void k_recentfilesmenu_url_triggered(void* self, void* url);
 /// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#urlTriggered)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QUrl*)
+/// @param callback void func(KRecentFilesMenu* self, QUrl* url)
 void k_recentfilesmenu_on_url_triggered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#recentFilesChanged)
@@ -135,7 +135,7 @@ void k_recentfilesmenu_recent_files_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#recentFilesChanged)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*)
+/// @param callback void func(KRecentFilesMenu* self)
 void k_recentfilesmenu_on_recent_files_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -478,7 +478,7 @@ void k_recentfilesmenu_about_to_show(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#aboutToShow)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*)
+/// @param callback void func(KRecentFilesMenu* self)
 void k_recentfilesmenu_on_about_to_show(void* self, void (*callback)(void*));
 
 /// Inherited from QMenu
@@ -493,7 +493,7 @@ void k_recentfilesmenu_about_to_hide(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#aboutToHide)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*)
+/// @param callback void func(KRecentFilesMenu* self)
 void k_recentfilesmenu_on_about_to_hide(void* self, void (*callback)(void*));
 
 /// Inherited from QMenu
@@ -509,7 +509,7 @@ void k_recentfilesmenu_triggered(void* self, void* action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#triggered)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QAction*)
+/// @param callback void func(KRecentFilesMenu* self, QAction* action)
 void k_recentfilesmenu_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -525,7 +525,7 @@ void k_recentfilesmenu_hovered(void* self, void* action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#hovered)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QAction*)
+/// @param callback void func(KRecentFilesMenu* self, QAction* action)
 void k_recentfilesmenu_on_hovered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -2502,7 +2502,7 @@ void k_recentfilesmenu_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, const char*)
+/// @param callback void func(KRecentFilesMenu* self, const char* title)
 void k_recentfilesmenu_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2518,7 +2518,7 @@ void k_recentfilesmenu_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QIcon*)
+/// @param callback void func(KRecentFilesMenu* self, QIcon* icon)
 void k_recentfilesmenu_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2534,7 +2534,7 @@ void k_recentfilesmenu_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, const char*)
+/// @param callback void func(KRecentFilesMenu* self, const char* iconText)
 void k_recentfilesmenu_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2550,7 +2550,7 @@ void k_recentfilesmenu_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QPoint*)
+/// @param callback void func(KRecentFilesMenu* self, QPoint* pos)
 void k_recentfilesmenu_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2927,7 +2927,7 @@ void k_recentfilesmenu_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*)
+/// @param callback void func(KRecentFilesMenu* self)
 void k_recentfilesmenu_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3005,7 +3005,7 @@ void k_recentfilesmenu_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QObject*)
+/// @param callback void func(KRecentFilesMenu* self, QObject* param1)
 void k_recentfilesmenu_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3124,7 +3124,7 @@ QSize* k_recentfilesmenu_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_recentfilesmenu_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QMenu
@@ -3154,7 +3154,7 @@ void k_recentfilesmenu_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QEvent* param1)
 void k_recentfilesmenu_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3184,7 +3184,7 @@ void k_recentfilesmenu_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QKeyEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QKeyEvent* param1)
 void k_recentfilesmenu_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3214,7 +3214,7 @@ void k_recentfilesmenu_qbase_mouse_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMouseEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QMouseEvent* param1)
 void k_recentfilesmenu_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3244,7 +3244,7 @@ void k_recentfilesmenu_qbase_mouse_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMouseEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QMouseEvent* param1)
 void k_recentfilesmenu_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3274,7 +3274,7 @@ void k_recentfilesmenu_qbase_mouse_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMouseEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QMouseEvent* param1)
 void k_recentfilesmenu_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3304,7 +3304,7 @@ void k_recentfilesmenu_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QWheelEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QWheelEvent* param1)
 void k_recentfilesmenu_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3334,7 +3334,7 @@ void k_recentfilesmenu_qbase_enter_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QEnterEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QEnterEvent* param1)
 void k_recentfilesmenu_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3364,7 +3364,7 @@ void k_recentfilesmenu_qbase_leave_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QEvent* param1)
 void k_recentfilesmenu_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3394,7 +3394,7 @@ void k_recentfilesmenu_qbase_hide_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QHideEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QHideEvent* param1)
 void k_recentfilesmenu_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3424,7 +3424,7 @@ void k_recentfilesmenu_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QPaintEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QPaintEvent* param1)
 void k_recentfilesmenu_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3454,7 +3454,7 @@ void k_recentfilesmenu_qbase_action_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QActionEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QActionEvent* param1)
 void k_recentfilesmenu_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3484,7 +3484,7 @@ void k_recentfilesmenu_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QTimerEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QTimerEvent* param1)
 void k_recentfilesmenu_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3514,7 +3514,7 @@ bool k_recentfilesmenu_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn(KRecentFilesMenu*, QEvent*)
+/// @param callback bool func(KRecentFilesMenu* self, QEvent* param1)
 void k_recentfilesmenu_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3544,7 +3544,7 @@ bool k_recentfilesmenu_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn(KRecentFilesMenu*, bool)
+/// @param callback bool func(KRecentFilesMenu* self, bool next)
 void k_recentfilesmenu_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QMenu
@@ -3576,7 +3576,7 @@ void k_recentfilesmenu_qbase_init_style_option(void* self, void* option, void* a
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QStyleOptionMenuItem*, QAction*)
+/// @param callback void func(KRecentFilesMenu* self, QStyleOptionMenuItem* option, QAction* action)
 void k_recentfilesmenu_on_init_style_option(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3604,7 +3604,7 @@ int32_t k_recentfilesmenu_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_recentfilesmenu_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3634,7 +3634,7 @@ void k_recentfilesmenu_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, bool)
+/// @param callback void func(KRecentFilesMenu* self, bool visible)
 void k_recentfilesmenu_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3662,7 +3662,7 @@ QSize* k_recentfilesmenu_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_recentfilesmenu_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3692,7 +3692,7 @@ int32_t k_recentfilesmenu_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn(KRecentFilesMenu*, int)
+/// @param callback int32_t func(KRecentFilesMenu* self, int param1)
 void k_recentfilesmenu_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3720,7 +3720,7 @@ bool k_recentfilesmenu_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_recentfilesmenu_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3748,7 +3748,7 @@ QPaintEngine* k_recentfilesmenu_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_recentfilesmenu_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3778,7 +3778,7 @@ void k_recentfilesmenu_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMouseEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QMouseEvent* event)
 void k_recentfilesmenu_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3808,7 +3808,7 @@ void k_recentfilesmenu_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QKeyEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QKeyEvent* event)
 void k_recentfilesmenu_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3838,7 +3838,7 @@ void k_recentfilesmenu_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QFocusEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QFocusEvent* event)
 void k_recentfilesmenu_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3868,7 +3868,7 @@ void k_recentfilesmenu_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QFocusEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QFocusEvent* event)
 void k_recentfilesmenu_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3898,7 +3898,7 @@ void k_recentfilesmenu_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMoveEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QMoveEvent* event)
 void k_recentfilesmenu_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3928,7 +3928,7 @@ void k_recentfilesmenu_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QResizeEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QResizeEvent* event)
 void k_recentfilesmenu_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3958,7 +3958,7 @@ void k_recentfilesmenu_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QCloseEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QCloseEvent* event)
 void k_recentfilesmenu_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3988,7 +3988,7 @@ void k_recentfilesmenu_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QContextMenuEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QContextMenuEvent* event)
 void k_recentfilesmenu_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4018,7 +4018,7 @@ void k_recentfilesmenu_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QTabletEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QTabletEvent* event)
 void k_recentfilesmenu_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4048,7 +4048,7 @@ void k_recentfilesmenu_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QDragEnterEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QDragEnterEvent* event)
 void k_recentfilesmenu_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4078,7 +4078,7 @@ void k_recentfilesmenu_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QDragMoveEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QDragMoveEvent* event)
 void k_recentfilesmenu_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4108,7 +4108,7 @@ void k_recentfilesmenu_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QDragLeaveEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QDragLeaveEvent* event)
 void k_recentfilesmenu_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4138,7 +4138,7 @@ void k_recentfilesmenu_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QDropEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QDropEvent* event)
 void k_recentfilesmenu_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4168,7 +4168,7 @@ void k_recentfilesmenu_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QShowEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QShowEvent* event)
 void k_recentfilesmenu_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4202,7 +4202,7 @@ bool k_recentfilesmenu_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn(KRecentFilesMenu*, const char*, void*, intptr_t*)
+/// @param callback bool func(KRecentFilesMenu* self, const char* eventType, void* message, intptr_t* result)
 void k_recentfilesmenu_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4232,7 +4232,7 @@ int32_t k_recentfilesmenu_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn(KRecentFilesMenu*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KRecentFilesMenu* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_recentfilesmenu_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4262,7 +4262,7 @@ void k_recentfilesmenu_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QPainter*)
+/// @param callback void func(KRecentFilesMenu* self, QPainter* painter)
 void k_recentfilesmenu_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4292,7 +4292,7 @@ QPaintDevice* k_recentfilesmenu_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QPaintDevice* fn(KRecentFilesMenu*, QPoint*)
+/// @param callback QPaintDevice* func(KRecentFilesMenu* self, QPoint* offset)
 void k_recentfilesmenu_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4320,7 +4320,7 @@ QPainter* k_recentfilesmenu_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_recentfilesmenu_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4350,7 +4350,7 @@ void k_recentfilesmenu_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QInputMethodEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QInputMethodEvent* param1)
 void k_recentfilesmenu_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4380,7 +4380,7 @@ QVariant* k_recentfilesmenu_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QVariant* fn(KRecentFilesMenu*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KRecentFilesMenu* self, enum Qt__InputMethodQuery param1)
 void k_recentfilesmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
@@ -4412,7 +4412,7 @@ bool k_recentfilesmenu_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn(KRecentFilesMenu*, QObject*, QEvent*)
+/// @param callback bool func(KRecentFilesMenu* self, QObject* watched, QEvent* event)
 void k_recentfilesmenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4442,7 +4442,7 @@ void k_recentfilesmenu_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QChildEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QChildEvent* event)
 void k_recentfilesmenu_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4472,7 +4472,7 @@ void k_recentfilesmenu_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QEvent*)
+/// @param callback void func(KRecentFilesMenu* self, QEvent* event)
 void k_recentfilesmenu_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4502,7 +4502,7 @@ void k_recentfilesmenu_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMetaMethod*)
+/// @param callback void func(KRecentFilesMenu* self, QMetaMethod* signal)
 void k_recentfilesmenu_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4532,7 +4532,7 @@ void k_recentfilesmenu_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, QMetaMethod*)
+/// @param callback void func(KRecentFilesMenu* self, QMetaMethod* signal)
 void k_recentfilesmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -4560,7 +4560,7 @@ int32_t k_recentfilesmenu_qbase_column_count(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_recentfilesmenu_on_column_count(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4588,7 +4588,7 @@ void k_recentfilesmenu_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn()
+/// @param callback void func()
 void k_recentfilesmenu_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4616,7 +4616,7 @@ void k_recentfilesmenu_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn()
+/// @param callback void func()
 void k_recentfilesmenu_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4644,7 +4644,7 @@ void k_recentfilesmenu_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn()
+/// @param callback void func()
 void k_recentfilesmenu_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4672,7 +4672,7 @@ bool k_recentfilesmenu_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_recentfilesmenu_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4700,7 +4700,7 @@ bool k_recentfilesmenu_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_recentfilesmenu_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4728,7 +4728,7 @@ QObject* k_recentfilesmenu_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_recentfilesmenu_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4756,7 +4756,7 @@ int32_t k_recentfilesmenu_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_recentfilesmenu_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4786,7 +4786,7 @@ int32_t k_recentfilesmenu_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback int32_t fn(KRecentFilesMenu*, const char*)
+/// @param callback int32_t func(KRecentFilesMenu* self, const char* signal)
 void k_recentfilesmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4816,7 +4816,7 @@ bool k_recentfilesmenu_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback bool fn(KRecentFilesMenu*, QMetaMethod*)
+/// @param callback bool func(KRecentFilesMenu* self, QMetaMethod* signal)
 void k_recentfilesmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4848,7 +4848,7 @@ double k_recentfilesmenu_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback double fn(KRecentFilesMenu*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KRecentFilesMenu* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_recentfilesmenu_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4858,7 +4858,7 @@ void k_recentfilesmenu_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KRecentFilesMenu*
-/// @param callback void fn(KRecentFilesMenu*, const char*)
+/// @param callback void func(KRecentFilesMenu* self, const char* objectName)
 void k_recentfilesmenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#dtor.KRecentFilesMenu)

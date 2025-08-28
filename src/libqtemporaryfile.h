@@ -51,7 +51,7 @@ int32_t q_temporaryfile_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QTemporaryFile*
-/// @param callback int32_t fn(QTemporaryFile*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTemporaryFile* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_temporaryfile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -97,7 +97,7 @@ const char* q_temporaryfile_file_name(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTemporaryFile*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_temporaryfile_on_file_name(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#fileName)
@@ -147,7 +147,7 @@ bool q_temporaryfile_open2(void* self, int64_t flags);
 /// Allows for overriding the related default method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QTemporaryFile* self, flag of enum QIODeviceBase__OpenModeFlag flags)
 void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
@@ -688,7 +688,7 @@ void q_temporaryfile_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*)
+/// @param callback void func(QTemporaryFile* self)
 void q_temporaryfile_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -704,7 +704,7 @@ void q_temporaryfile_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, int)
+/// @param callback void func(QTemporaryFile* self, int channel)
 void q_temporaryfile_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -720,7 +720,7 @@ void q_temporaryfile_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, long long)
+/// @param callback void func(QTemporaryFile* self, long long bytes)
 void q_temporaryfile_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -737,7 +737,7 @@ void q_temporaryfile_channel_bytes_written(void* self, int channel, long long by
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, int, long long)
+/// @param callback void func(QTemporaryFile* self, int channel, long long bytes)
 void q_temporaryfile_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -752,7 +752,7 @@ void q_temporaryfile_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*)
+/// @param callback void func(QTemporaryFile* self)
 void q_temporaryfile_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -767,7 +767,7 @@ void q_temporaryfile_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*)
+/// @param callback void func(QTemporaryFile* self)
 void q_temporaryfile_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1006,7 +1006,7 @@ void q_temporaryfile_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*)
+/// @param callback void func(QTemporaryFile* self)
 void q_temporaryfile_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1084,7 +1084,7 @@ void q_temporaryfile_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, QObject*)
+/// @param callback void func(QTemporaryFile* self, QObject* param1)
 void q_temporaryfile_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFile
@@ -1112,7 +1112,7 @@ long long q_temporaryfile_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_temporaryfile_on_size(void* self, long long (*callback)());
 
 /// Inherited from QFile
@@ -1142,7 +1142,7 @@ bool q_temporaryfile_qbase_resize(void* self, long long sz);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, long long)
+/// @param callback bool func(QTemporaryFile* self, long long sz)
 void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QFile
@@ -1174,7 +1174,7 @@ int64_t q_temporaryfile_qbase_permissions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_temporaryfile_on_permissions(void* self, int64_t (*callback)());
 
 /// Inherited from QFile
@@ -1204,7 +1204,7 @@ bool q_temporaryfile_qbase_set_permissions(void* self, int64_t permissionSpec);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, flag of enum QFileDevice__Permission)
+/// @param callback bool func(QTemporaryFile* self, flag of enum QFileDevice__Permission permissionSpec)
 void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QFileDevice
@@ -1232,7 +1232,7 @@ void q_temporaryfile_qbase_close(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn()
+/// @param callback void func()
 void q_temporaryfile_on_close(void* self, void (*callback)());
 
 /// Inherited from QFileDevice
@@ -1260,7 +1260,7 @@ bool q_temporaryfile_qbase_is_sequential(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_temporaryfile_on_is_sequential(void* self, bool (*callback)());
 
 /// Inherited from QFileDevice
@@ -1288,7 +1288,7 @@ long long q_temporaryfile_qbase_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_temporaryfile_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QFileDevice
@@ -1318,7 +1318,7 @@ bool q_temporaryfile_qbase_seek(void* self, long long offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, long long)
+/// @param callback bool func(QTemporaryFile* self, long long offset)
 void q_temporaryfile_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QFileDevice
@@ -1346,7 +1346,7 @@ bool q_temporaryfile_qbase_at_end(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_temporaryfile_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QFileDevice
@@ -1378,7 +1378,7 @@ long long q_temporaryfile_qbase_read_data(void* self, char* data, long long maxl
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn(QTemporaryFile*, char*, long long)
+/// @param callback long long func(QTemporaryFile* self, char* data, long long maxlen)
 void q_temporaryfile_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QFileDevice
@@ -1410,7 +1410,7 @@ long long q_temporaryfile_qbase_write_data(void* self, const char* data, long lo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn(QTemporaryFile*, const char*, long long)
+/// @param callback long long func(QTemporaryFile* self, const char* data, long long lenVal)
 void q_temporaryfile_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// Inherited from QFileDevice
@@ -1442,7 +1442,7 @@ long long q_temporaryfile_qbase_read_line_data(void* self, char* data, long long
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn(QTemporaryFile*, char*, long long)
+/// @param callback long long func(QTemporaryFile* self, char* data, long long maxlen)
 void q_temporaryfile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QIODevice
@@ -1470,7 +1470,7 @@ bool q_temporaryfile_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_temporaryfile_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1498,7 +1498,7 @@ long long q_temporaryfile_qbase_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_temporaryfile_on_bytes_available(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1526,7 +1526,7 @@ long long q_temporaryfile_qbase_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_temporaryfile_on_bytes_to_write(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1554,7 +1554,7 @@ bool q_temporaryfile_qbase_can_read_line(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_temporaryfile_on_can_read_line(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1584,7 +1584,7 @@ bool q_temporaryfile_qbase_wait_for_ready_read(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, int)
+/// @param callback bool func(QTemporaryFile* self, int msecs)
 void q_temporaryfile_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1614,7 +1614,7 @@ bool q_temporaryfile_qbase_wait_for_bytes_written(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, int)
+/// @param callback bool func(QTemporaryFile* self, int msecs)
 void q_temporaryfile_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1644,7 +1644,7 @@ long long q_temporaryfile_qbase_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long fn(QTemporaryFile*, long long)
+/// @param callback long long func(QTemporaryFile* self, long long maxSize)
 void q_temporaryfile_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// Inherited from QObject
@@ -1674,7 +1674,7 @@ bool q_temporaryfile_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, QEvent*)
+/// @param callback bool func(QTemporaryFile* self, QEvent* event)
 void q_temporaryfile_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1706,7 +1706,7 @@ bool q_temporaryfile_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, QObject*, QEvent*)
+/// @param callback bool func(QTemporaryFile* self, QObject* watched, QEvent* event)
 void q_temporaryfile_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1736,7 +1736,7 @@ void q_temporaryfile_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, QTimerEvent*)
+/// @param callback void func(QTemporaryFile* self, QTimerEvent* event)
 void q_temporaryfile_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1766,7 +1766,7 @@ void q_temporaryfile_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, QChildEvent*)
+/// @param callback void func(QTemporaryFile* self, QChildEvent* event)
 void q_temporaryfile_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1796,7 +1796,7 @@ void q_temporaryfile_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, QEvent*)
+/// @param callback void func(QTemporaryFile* self, QEvent* event)
 void q_temporaryfile_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1826,7 +1826,7 @@ void q_temporaryfile_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, QMetaMethod*)
+/// @param callback void func(QTemporaryFile* self, QMetaMethod* signal)
 void q_temporaryfile_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1856,7 +1856,7 @@ void q_temporaryfile_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, QMetaMethod*)
+/// @param callback void func(QTemporaryFile* self, QMetaMethod* signal)
 void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1886,7 +1886,7 @@ void q_temporaryfile_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QTemporaryFile* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -1916,7 +1916,7 @@ void q_temporaryfile_qbase_set_error_string(void* self, const char* errorString)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, const char*)
+/// @param callback void func(QTemporaryFile* self, const char* errorString)
 void q_temporaryfile_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1944,7 +1944,7 @@ QObject* q_temporaryfile_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_temporaryfile_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1972,7 +1972,7 @@ int32_t q_temporaryfile_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_temporaryfile_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2002,7 +2002,7 @@ int32_t q_temporaryfile_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback int32_t fn(QTemporaryFile*, const char*)
+/// @param callback int32_t func(QTemporaryFile* self, const char* signal)
 void q_temporaryfile_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2032,7 +2032,7 @@ bool q_temporaryfile_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool fn(QTemporaryFile*, QMetaMethod*)
+/// @param callback bool func(QTemporaryFile* self, QMetaMethod* signal)
 void q_temporaryfile_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2042,7 +2042,7 @@ void q_temporaryfile_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTemporaryFile*
-/// @param callback void fn(QTemporaryFile*, const char*)
+/// @param callback void func(QTemporaryFile* self, const char* objectName)
 void q_temporaryfile_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#dtor.QTemporaryFile)

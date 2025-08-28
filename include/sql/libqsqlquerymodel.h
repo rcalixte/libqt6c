@@ -40,7 +40,7 @@ int32_t q_sqlquerymodel_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int32_t fn(QSqlQueryModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSqlQueryModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sqlquerymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ int32_t q_sqlquerymodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int32_t fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback int32_t func(QSqlQueryModel* self, QModelIndex* parent)
 void q_sqlquerymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#rowCount)
@@ -91,7 +91,7 @@ int32_t q_sqlquerymodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int32_t fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback int32_t func(QSqlQueryModel* self, QModelIndex* parent)
 void q_sqlquerymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#columnCount)
@@ -125,7 +125,7 @@ QVariant* q_sqlquerymodel_data(void* self, void* item, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QVariant* fn(QSqlQueryModel*, QModelIndex*, int)
+/// @param callback QVariant* func(QSqlQueryModel* self, QModelIndex* item, int role)
 void q_sqlquerymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#data)
@@ -150,7 +150,7 @@ QVariant* q_sqlquerymodel_header_data(void* self, int section, int32_t orientati
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QVariant* fn(QSqlQueryModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(QSqlQueryModel* self, int section, enum Qt__Orientation orientation, int role)
 void q_sqlquerymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#headerData)
@@ -177,7 +177,7 @@ bool q_sqlquerymodel_set_header_data(void* self, int section, int32_t orientatio
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(QSqlQueryModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void q_sqlquerymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#setHeaderData)
@@ -204,7 +204,7 @@ bool q_sqlquerymodel_insert_columns(void* self, int column, int count, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, int, int, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, int column, int count, QModelIndex* parent)
 void q_sqlquerymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#insertColumns)
@@ -230,7 +230,7 @@ bool q_sqlquerymodel_remove_columns(void* self, int column, int count, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, int, int, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, int column, int count, QModelIndex* parent)
 void q_sqlquerymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#removeColumns)
@@ -270,7 +270,7 @@ void q_sqlquerymodel_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#clear)
@@ -296,7 +296,7 @@ void q_sqlquerymodel_fetch_more(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent)
 void q_sqlquerymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#fetchMore)
@@ -318,7 +318,7 @@ bool q_sqlquerymodel_can_fetch_more(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* parent)
 void q_sqlquerymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#canFetchMore)
@@ -339,7 +339,7 @@ libqt_map /* of int to char* */ q_sqlquerymodel_role_names(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void q_sqlquerymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#roleNames)
@@ -362,7 +362,7 @@ void q_sqlquerymodel_begin_insert_rows(void* self, void* parent, int first, int 
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginInsertRows)
@@ -385,7 +385,7 @@ void q_sqlquerymodel_end_insert_rows(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#endInsertRows)
@@ -408,7 +408,7 @@ void q_sqlquerymodel_begin_remove_rows(void* self, void* parent, int first, int 
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginRemoveRows)
@@ -431,7 +431,7 @@ void q_sqlquerymodel_end_remove_rows(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#endRemoveRows)
@@ -454,7 +454,7 @@ void q_sqlquerymodel_begin_insert_columns(void* self, void* parent, int first, i
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginInsertColumns)
@@ -477,7 +477,7 @@ void q_sqlquerymodel_end_insert_columns(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#endInsertColumns)
@@ -500,7 +500,7 @@ void q_sqlquerymodel_begin_remove_columns(void* self, void* parent, int first, i
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginRemoveColumns)
@@ -523,7 +523,7 @@ void q_sqlquerymodel_end_remove_columns(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#endRemoveColumns)
@@ -543,7 +543,7 @@ void q_sqlquerymodel_begin_reset_model(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#beginResetModel)
@@ -563,7 +563,7 @@ void q_sqlquerymodel_end_reset_model(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_reset_model(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#endResetModel)
@@ -583,7 +583,7 @@ void q_sqlquerymodel_query_change(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_query_change(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#queryChange)
@@ -604,7 +604,7 @@ QModelIndex* q_sqlquerymodel_index_in_query(void* self, void* item);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QModelIndex* fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QSqlQueryModel* self, QModelIndex* item)
 void q_sqlquerymodel_on_index_in_query(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#indexInQuery)
@@ -626,7 +626,7 @@ void q_sqlquerymodel_set_last_error(void* self, void* errorVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QSqlError*)
+/// @param callback void func(QSqlQueryModel* self, QSqlError* errorVal)
 void q_sqlquerymodel_on_set_last_error(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#setLastError)
@@ -691,7 +691,7 @@ QModelIndex* q_sqlquerymodel_parent(void* self, void* child);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QModelIndex* fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QSqlQueryModel* self, QModelIndex* child)
 void q_sqlquerymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -719,7 +719,7 @@ bool q_sqlquerymodel_has_children(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* parent)
 void q_sqlquerymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -808,7 +808,7 @@ void q_sqlquerymodel_data_changed(void* self, void* topLeft, void* bottomRight);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_sqlquerymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -826,7 +826,7 @@ void q_sqlquerymodel_header_data_changed(void* self, int32_t orientation, int fi
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QSqlQueryModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_sqlquerymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -841,7 +841,7 @@ void q_sqlquerymodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*)
+/// @param callback void func(QSqlQueryModel* self)
 void q_sqlquerymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -856,7 +856,7 @@ void q_sqlquerymodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*)
+/// @param callback void func(QSqlQueryModel* self)
 void q_sqlquerymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -929,7 +929,7 @@ void q_sqlquerymodel_data_changed3(void* self, void* topLeft, void* bottomRight,
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_sqlquerymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -945,7 +945,7 @@ void q_sqlquerymodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QSqlQueryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_sqlquerymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -962,7 +962,7 @@ void q_sqlquerymodel_layout_changed2(void* self, libqt_list parents, int32_t hin
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QSqlQueryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_sqlquerymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -978,7 +978,7 @@ void q_sqlquerymodel_layout_about_to_be_changed1(void* self, libqt_list parents)
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QSqlQueryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_sqlquerymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -995,7 +995,7 @@ void q_sqlquerymodel_layout_about_to_be_changed2(void* self, libqt_list parents,
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QSqlQueryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_sqlquerymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -1224,7 +1224,7 @@ void q_sqlquerymodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*)
+/// @param callback void func(QSqlQueryModel* self)
 void q_sqlquerymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1295,7 +1295,7 @@ void q_sqlquerymodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QObject*)
+/// @param callback void func(QSqlQueryModel* self, QObject* param1)
 void q_sqlquerymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractTableModel
@@ -1329,7 +1329,7 @@ QModelIndex* q_sqlquerymodel_qbase_index(void* self, int row, int column, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QModelIndex* fn(QSqlQueryModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QSqlQueryModel* self, int row, int column, QModelIndex* parent)
 void q_sqlquerymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractTableModel
@@ -1363,7 +1363,7 @@ QModelIndex* q_sqlquerymodel_qbase_sibling(void* self, int row, int column, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QModelIndex* fn(QSqlQueryModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QSqlQueryModel* self, int row, int column, QModelIndex* idx)
 void q_sqlquerymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractTableModel
@@ -1401,7 +1401,7 @@ bool q_sqlquerymodel_qbase_drop_mime_data(void* self, void* data, int32_t action
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_sqlquerymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractTableModel
@@ -1435,7 +1435,7 @@ int64_t q_sqlquerymodel_qbase_flags(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int64_t fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback int64_t func(QSqlQueryModel* self, QModelIndex* index)
 void q_sqlquerymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1469,7 +1469,7 @@ bool q_sqlquerymodel_qbase_set_data(void* self, void* index, void* value, int ro
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* index, QVariant* value, int role)
 void q_sqlquerymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1499,7 +1499,7 @@ libqt_map /* of int to QVariant* */ q_sqlquerymodel_qbase_item_data(void* self, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(QSqlQueryModel* self, QModelIndex* index)
 void q_sqlquerymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1531,7 +1531,7 @@ bool q_sqlquerymodel_qbase_set_item_data(void* self, void* index, libqt_map /* o
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void q_sqlquerymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1561,7 +1561,7 @@ bool q_sqlquerymodel_qbase_clear_item_data(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* index)
 void q_sqlquerymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1593,7 +1593,7 @@ const char** q_sqlquerymodel_qbase_mime_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_sqlquerymodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1623,7 +1623,7 @@ QMimeData* q_sqlquerymodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QMimeData* fn(QSqlQueryModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(QSqlQueryModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_sqlquerymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1661,7 +1661,7 @@ bool q_sqlquerymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t ac
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_sqlquerymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1693,7 +1693,7 @@ int64_t q_sqlquerymodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_sqlquerymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1725,7 +1725,7 @@ int64_t q_sqlquerymodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_sqlquerymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1759,7 +1759,7 @@ bool q_sqlquerymodel_qbase_insert_rows(void* self, int row, int count, void* par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, int, int, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, int row, int count, QModelIndex* parent)
 void q_sqlquerymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1793,7 +1793,7 @@ bool q_sqlquerymodel_qbase_remove_rows(void* self, int row, int count, void* par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, int, int, QModelIndex*)
+/// @param callback bool func(QSqlQueryModel* self, int row, int count, QModelIndex* parent)
 void q_sqlquerymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1831,7 +1831,7 @@ bool q_sqlquerymodel_qbase_move_rows(void* self, void* sourceParent, int sourceR
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void q_sqlquerymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1869,7 +1869,7 @@ bool q_sqlquerymodel_qbase_move_columns(void* self, void* sourceParent, int sour
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void q_sqlquerymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1901,7 +1901,7 @@ void q_sqlquerymodel_qbase_sort(void* self, int column, int32_t order);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, int, enum Qt__SortOrder)
+/// @param callback void func(QSqlQueryModel* self, int column, enum Qt__SortOrder order)
 void q_sqlquerymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1931,7 +1931,7 @@ QModelIndex* q_sqlquerymodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QModelIndex* fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QSqlQueryModel* self, QModelIndex* index)
 void q_sqlquerymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1969,7 +1969,7 @@ libqt_list /* of QModelIndex* */ q_sqlquerymodel_qbase_match(void* self, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(QSqlQueryModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(QSqlQueryModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void q_sqlquerymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -1999,7 +1999,7 @@ QSize* q_sqlquerymodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QSize* fn(QSqlQueryModel*, QModelIndex*)
+/// @param callback QSize* func(QSqlQueryModel* self, QModelIndex* index)
 void q_sqlquerymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2031,7 +2031,7 @@ void q_sqlquerymodel_qbase_multi_data(void* self, void* index, void* roleDataSpa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void q_sqlquerymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2059,7 +2059,7 @@ bool q_sqlquerymodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sqlquerymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2087,7 +2087,7 @@ void q_sqlquerymodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2115,7 +2115,7 @@ void q_sqlquerymodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2145,7 +2145,7 @@ bool q_sqlquerymodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QEvent*)
+/// @param callback bool func(QSqlQueryModel* self, QEvent* event)
 void q_sqlquerymodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2177,7 +2177,7 @@ bool q_sqlquerymodel_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QObject*, QEvent*)
+/// @param callback bool func(QSqlQueryModel* self, QObject* watched, QEvent* event)
 void q_sqlquerymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2207,7 +2207,7 @@ void q_sqlquerymodel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QTimerEvent*)
+/// @param callback void func(QSqlQueryModel* self, QTimerEvent* event)
 void q_sqlquerymodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2237,7 +2237,7 @@ void q_sqlquerymodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QChildEvent*)
+/// @param callback void func(QSqlQueryModel* self, QChildEvent* event)
 void q_sqlquerymodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2267,7 +2267,7 @@ void q_sqlquerymodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QEvent*)
+/// @param callback void func(QSqlQueryModel* self, QEvent* event)
 void q_sqlquerymodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2297,7 +2297,7 @@ void q_sqlquerymodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QMetaMethod*)
+/// @param callback void func(QSqlQueryModel* self, QMetaMethod* signal)
 void q_sqlquerymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2327,7 +2327,7 @@ void q_sqlquerymodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QMetaMethod*)
+/// @param callback void func(QSqlQueryModel* self, QMetaMethod* signal)
 void q_sqlquerymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2359,7 +2359,7 @@ QModelIndex* q_sqlquerymodel_qbase_create_index(void* self, int row, int column)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QModelIndex* fn(QSqlQueryModel*, int, int)
+/// @param callback QModelIndex* func(QSqlQueryModel* self, int row, int column)
 void q_sqlquerymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2391,7 +2391,7 @@ void q_sqlquerymodel_qbase_encode_data(void* self, libqt_list indexes, void* str
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(QSqlQueryModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void q_sqlquerymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2427,7 +2427,7 @@ bool q_sqlquerymodel_qbase_decode_data(void* self, int row, int column, void* pa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(QSqlQueryModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void q_sqlquerymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2465,7 +2465,7 @@ bool q_sqlquerymodel_qbase_begin_move_rows(void* self, void* sourceParent, int s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void q_sqlquerymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2493,7 +2493,7 @@ void q_sqlquerymodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2531,7 +2531,7 @@ bool q_sqlquerymodel_qbase_begin_move_columns(void* self, void* sourceParent, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void q_sqlquerymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2559,7 +2559,7 @@ void q_sqlquerymodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_sqlquerymodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2591,7 +2591,7 @@ void q_sqlquerymodel_qbase_change_persistent_index(void* self, void* from, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* from, QModelIndex* to)
 void q_sqlquerymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2623,7 +2623,7 @@ void q_sqlquerymodel_qbase_change_persistent_index_list(void* self, libqt_list f
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QSqlQueryModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_sqlquerymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2651,7 +2651,7 @@ libqt_list /* of QModelIndex* */ q_sqlquerymodel_qbase_persistent_index_list(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_sqlquerymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -2679,7 +2679,7 @@ QObject* q_sqlquerymodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sqlquerymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2707,7 +2707,7 @@ int32_t q_sqlquerymodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sqlquerymodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2737,7 +2737,7 @@ int32_t q_sqlquerymodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback int32_t fn(QSqlQueryModel*, const char*)
+/// @param callback int32_t func(QSqlQueryModel* self, const char* signal)
 void q_sqlquerymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2767,7 +2767,7 @@ bool q_sqlquerymodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlQueryModel*
-/// @param callback bool fn(QSqlQueryModel*, QMetaMethod*)
+/// @param callback bool func(QSqlQueryModel* self, QMetaMethod* signal)
 void q_sqlquerymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2777,7 +2777,7 @@ void q_sqlquerymodel_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2787,7 +2787,7 @@ void q_sqlquerymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2797,7 +2797,7 @@ void q_sqlquerymodel_on_rows_inserted(void* self, void (*callback)(void*, void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2807,7 +2807,7 @@ void q_sqlquerymodel_on_rows_about_to_be_removed(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2817,7 +2817,7 @@ void q_sqlquerymodel_on_rows_removed(void* self, void (*callback)(void*, void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2827,7 +2827,7 @@ void q_sqlquerymodel_on_columns_about_to_be_inserted(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2837,7 +2837,7 @@ void q_sqlquerymodel_on_columns_inserted(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2847,7 +2847,7 @@ void q_sqlquerymodel_on_columns_about_to_be_removed(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* parent, int first, int last)
 void q_sqlquerymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2857,7 +2857,7 @@ void q_sqlquerymodel_on_columns_removed(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*)
+/// @param callback void func(QSqlQueryModel* self)
 void q_sqlquerymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2867,7 +2867,7 @@ void q_sqlquerymodel_on_model_about_to_be_reset(void* self, void (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*)
+/// @param callback void func(QSqlQueryModel* self)
 void q_sqlquerymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2877,7 +2877,7 @@ void q_sqlquerymodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_sqlquerymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2887,7 +2887,7 @@ void q_sqlquerymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_sqlquerymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2897,7 +2897,7 @@ void q_sqlquerymodel_on_rows_moved(void* self, void (*callback)(void*, void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_sqlquerymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2907,7 +2907,7 @@ void q_sqlquerymodel_on_columns_about_to_be_moved(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QSqlQueryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_sqlquerymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2917,7 +2917,7 @@ void q_sqlquerymodel_on_columns_moved(void* self, void (*callback)(void*, void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSqlQueryModel*
-/// @param callback void fn(QSqlQueryModel*, const char*)
+/// @param callback void func(QSqlQueryModel* self, const char* objectName)
 void q_sqlquerymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquerymodel.html#dtor.QSqlQueryModel)

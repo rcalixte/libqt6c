@@ -295,7 +295,7 @@ void q_xymodelmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QXYModelMapper*
-/// @param callback void fn(QXYModelMapper*)
+/// @param callback void func(QXYModelMapper* self)
 void q_xymodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -373,7 +373,7 @@ void q_xymodelmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QXYModelMapper*
-/// @param callback void fn(QXYModelMapper*, QObject*)
+/// @param callback void func(QXYModelMapper* self, QObject* param1)
 void q_xymodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -383,7 +383,7 @@ void q_xymodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QXYModelMapper*
-/// @param callback void fn(QXYModelMapper*, const char*)
+/// @param callback void func(QXYModelMapper* self, const char* objectName)
 void q_xymodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper-qtcharts.html#dtor.QXYModelMapper)

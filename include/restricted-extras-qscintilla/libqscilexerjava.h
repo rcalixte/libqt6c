@@ -40,7 +40,7 @@ int32_t q_scilexerjava_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn(QsciLexerJava*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QsciLexerJava* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_scilexerjava_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -352,7 +352,7 @@ void q_scilexerjava_color_changed(void* self, void* c, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QColor*, int)
+/// @param callback void func(QsciLexerJava* self, QColor* c, int style)
 void q_scilexerjava_on_color_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -369,7 +369,7 @@ void q_scilexerjava_eol_fill_changed(void* self, bool eolfilled, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool, int)
+/// @param callback void func(QsciLexerJava* self, bool eolfilled, int style)
 void q_scilexerjava_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -386,7 +386,7 @@ void q_scilexerjava_font_changed(void* self, void* f, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QFont*, int)
+/// @param callback void func(QsciLexerJava* self, QFont* f, int style)
 void q_scilexerjava_on_font_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -403,7 +403,7 @@ void q_scilexerjava_paper_changed(void* self, void* c, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QColor*, int)
+/// @param callback void func(QsciLexerJava* self, QColor* c, int style)
 void q_scilexerjava_on_paper_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -420,7 +420,7 @@ void q_scilexerjava_property_changed(void* self, const char* prop, const char* v
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, const char*, const char*)
+/// @param callback void func(QsciLexerJava* self, const char* prop, const char* val)
 void q_scilexerjava_on_property_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -667,7 +667,7 @@ void q_scilexerjava_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*)
+/// @param callback void func(QsciLexerJava* self)
 void q_scilexerjava_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -745,7 +745,7 @@ void q_scilexerjava_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QObject*)
+/// @param callback void func(QsciLexerJava* self, QObject* param1)
 void q_scilexerjava_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexerCPP
@@ -775,7 +775,7 @@ void q_scilexerjava_qbase_set_fold_at_else(void* self, bool fold);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool)
+/// @param callback void func(QsciLexerJava* self, bool fold)
 void q_scilexerjava_on_set_fold_at_else(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QsciLexerCPP
@@ -805,7 +805,7 @@ void q_scilexerjava_qbase_set_fold_comments(void* self, bool fold);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool)
+/// @param callback void func(QsciLexerJava* self, bool fold)
 void q_scilexerjava_on_set_fold_comments(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QsciLexerCPP
@@ -835,7 +835,7 @@ void q_scilexerjava_qbase_set_fold_compact(void* self, bool fold);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool)
+/// @param callback void func(QsciLexerJava* self, bool fold)
 void q_scilexerjava_on_set_fold_compact(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QsciLexerCPP
@@ -865,7 +865,7 @@ void q_scilexerjava_qbase_set_fold_preprocessor(void* self, bool fold);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool)
+/// @param callback void func(QsciLexerJava* self, bool fold)
 void q_scilexerjava_on_set_fold_preprocessor(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QsciLexerCPP
@@ -895,7 +895,7 @@ void q_scilexerjava_qbase_set_style_preprocessor(void* self, bool style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool)
+/// @param callback void func(QsciLexerJava* self, bool style)
 void q_scilexerjava_on_set_style_preprocessor(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QsciLexer
@@ -927,7 +927,7 @@ const char* q_scilexerjava_qbase_lexer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexerjava_on_lexer(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -955,7 +955,7 @@ int32_t q_scilexerjava_qbase_lexer_id(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -987,7 +987,7 @@ const char* q_scilexerjava_qbase_auto_completion_fillups(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexerjava_on_auto_completion_fillups(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -1019,7 +1019,7 @@ const char** q_scilexerjava_qbase_auto_completion_word_separators(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_scilexerjava_on_auto_completion_word_separators(void* self, const char** (*callback)());
 
 /// Inherited from QsciLexer
@@ -1053,7 +1053,7 @@ const char* q_scilexerjava_qbase_block_end(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn(QsciLexerJava*, int*)
+/// @param callback const char* func(QsciLexerJava* self, int* style)
 void q_scilexerjava_on_block_end(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1081,7 +1081,7 @@ int32_t q_scilexerjava_qbase_block_lookback(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1115,7 +1115,7 @@ const char* q_scilexerjava_qbase_block_start(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn(QsciLexerJava*, int*)
+/// @param callback const char* func(QsciLexerJava* self, int* style)
 void q_scilexerjava_on_block_start(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1149,7 +1149,7 @@ const char* q_scilexerjava_qbase_block_start_keyword(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn(QsciLexerJava*, int*)
+/// @param callback const char* func(QsciLexerJava* self, int* style)
 void q_scilexerjava_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -1177,7 +1177,7 @@ int32_t q_scilexerjava_qbase_brace_style(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_brace_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1205,7 +1205,7 @@ bool q_scilexerjava_qbase_case_sensitive(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_scilexerjava_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
@@ -1235,7 +1235,7 @@ QColor* q_scilexerjava_qbase_color(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QColor* fn(QsciLexerJava*, int)
+/// @param callback QColor* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1265,7 +1265,7 @@ bool q_scilexerjava_qbase_eol_fill(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, int)
+/// @param callback bool func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1295,7 +1295,7 @@ QFont* q_scilexerjava_qbase_font(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QFont* fn(QsciLexerJava*, int)
+/// @param callback QFont* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1323,7 +1323,7 @@ int32_t q_scilexerjava_qbase_indentation_guide_view(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_indentation_guide_view(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1351,7 +1351,7 @@ int32_t q_scilexerjava_qbase_default_style(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1385,7 +1385,7 @@ const char* q_scilexerjava_qbase_description(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn(QsciLexerJava*, int)
+/// @param callback const char* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_description(void* self, const char* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1415,7 +1415,7 @@ QColor* q_scilexerjava_qbase_paper(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QColor* fn(QsciLexerJava*, int)
+/// @param callback QColor* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1445,7 +1445,7 @@ QColor* q_scilexerjava_qbase_default_color2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QColor* fn(QsciLexerJava*, int)
+/// @param callback QColor* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1475,7 +1475,7 @@ bool q_scilexerjava_qbase_default_eol_fill(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, int)
+/// @param callback bool func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_default_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1505,7 +1505,7 @@ QFont* q_scilexerjava_qbase_default_font2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QFont* fn(QsciLexerJava*, int)
+/// @param callback QFont* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1535,7 +1535,7 @@ QColor* q_scilexerjava_qbase_default_paper2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QColor* fn(QsciLexerJava*, int)
+/// @param callback QColor* func(QsciLexerJava* self, int style)
 void q_scilexerjava_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1565,7 +1565,7 @@ void q_scilexerjava_qbase_set_editor(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QsciScintilla*)
+/// @param callback void func(QsciLexerJava* self, QsciScintilla* editor)
 void q_scilexerjava_on_set_editor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1593,7 +1593,7 @@ void q_scilexerjava_qbase_refresh_properties(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn()
+/// @param callback void func()
 void q_scilexerjava_on_refresh_properties(void* self, void (*callback)());
 
 /// Inherited from QsciLexer
@@ -1621,7 +1621,7 @@ int32_t q_scilexerjava_qbase_style_bits_needed(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_style_bits_needed(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1653,7 +1653,7 @@ const char* q_scilexerjava_qbase_word_characters(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexerjava_on_word_characters(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -1683,7 +1683,7 @@ void q_scilexerjava_qbase_set_auto_indent_style(void* self, int autoindentstyle)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, int)
+/// @param callback void func(QsciLexerJava* self, int autoindentstyle)
 void q_scilexerjava_on_set_auto_indent_style(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1715,7 +1715,7 @@ void q_scilexerjava_qbase_set_color(void* self, void* c, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QColor*, int)
+/// @param callback void func(QsciLexerJava* self, QColor* c, int style)
 void q_scilexerjava_on_set_color(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1747,7 +1747,7 @@ void q_scilexerjava_qbase_set_eol_fill(void* self, bool eoffill, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, bool, int)
+/// @param callback void func(QsciLexerJava* self, bool eoffill, int style)
 void q_scilexerjava_on_set_eol_fill(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -1779,7 +1779,7 @@ void q_scilexerjava_qbase_set_font(void* self, void* f, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QFont*, int)
+/// @param callback void func(QsciLexerJava* self, QFont* f, int style)
 void q_scilexerjava_on_set_font(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1811,7 +1811,7 @@ void q_scilexerjava_qbase_set_paper(void* self, void* c, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QColor*, int)
+/// @param callback void func(QsciLexerJava* self, QColor* c, int style)
 void q_scilexerjava_on_set_paper(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1843,7 +1843,7 @@ bool q_scilexerjava_qbase_read_properties(void* self, void* qs, const char* pref
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, QSettings*, const char*)
+/// @param callback bool func(QsciLexerJava* self, QSettings* qs, const char* prefix)
 void q_scilexerjava_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// Inherited from QsciLexer
@@ -1875,7 +1875,7 @@ bool q_scilexerjava_qbase_write_properties(void* self, void* qs, const char* pre
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, QSettings*, const char*)
+/// @param callback bool func(QsciLexerJava* self, QSettings* qs, const char* prefix)
 void q_scilexerjava_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// Inherited from QObject
@@ -1905,7 +1905,7 @@ bool q_scilexerjava_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, QEvent*)
+/// @param callback bool func(QsciLexerJava* self, QEvent* event)
 void q_scilexerjava_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1937,7 +1937,7 @@ bool q_scilexerjava_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, QObject*, QEvent*)
+/// @param callback bool func(QsciLexerJava* self, QObject* watched, QEvent* event)
 void q_scilexerjava_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1967,7 +1967,7 @@ void q_scilexerjava_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QTimerEvent*)
+/// @param callback void func(QsciLexerJava* self, QTimerEvent* event)
 void q_scilexerjava_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1997,7 +1997,7 @@ void q_scilexerjava_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QChildEvent*)
+/// @param callback void func(QsciLexerJava* self, QChildEvent* event)
 void q_scilexerjava_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2027,7 +2027,7 @@ void q_scilexerjava_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QEvent*)
+/// @param callback void func(QsciLexerJava* self, QEvent* event)
 void q_scilexerjava_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2057,7 +2057,7 @@ void q_scilexerjava_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QMetaMethod*)
+/// @param callback void func(QsciLexerJava* self, QMetaMethod* signal)
 void q_scilexerjava_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2087,7 +2087,7 @@ void q_scilexerjava_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, QMetaMethod*)
+/// @param callback void func(QsciLexerJava* self, QMetaMethod* signal)
 void q_scilexerjava_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -2121,7 +2121,7 @@ char* q_scilexerjava_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback char* fn(QsciLexerJava*, const char*)
+/// @param callback char* func(QsciLexerJava* self, const char* text)
 void q_scilexerjava_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
@@ -2157,7 +2157,7 @@ const char* q_scilexerjava_qbase_bytes_as_text(void* self, const char* bytes, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback const char* fn(QsciLexerJava*, const char*, int)
+/// @param callback const char* func(QsciLexerJava* self, const char* bytes, int size)
 void q_scilexerjava_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
@@ -2185,7 +2185,7 @@ QObject* q_scilexerjava_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_scilexerjava_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2213,7 +2213,7 @@ int32_t q_scilexerjava_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexerjava_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2243,7 +2243,7 @@ int32_t q_scilexerjava_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback int32_t fn(QsciLexerJava*, const char*)
+/// @param callback int32_t func(QsciLexerJava* self, const char* signal)
 void q_scilexerjava_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2273,7 +2273,7 @@ bool q_scilexerjava_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerJava*
-/// @param callback bool fn(QsciLexerJava*, QMetaMethod*)
+/// @param callback bool func(QsciLexerJava* self, QMetaMethod* signal)
 void q_scilexerjava_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2283,7 +2283,7 @@ void q_scilexerjava_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QsciLexerJava*
-/// @param callback void fn(QsciLexerJava*, const char*)
+/// @param callback void func(QsciLexerJava* self, const char* objectName)
 void q_scilexerjava_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJava.html)

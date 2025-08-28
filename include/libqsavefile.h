@@ -51,7 +51,7 @@ int32_t q_savefile_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QSaveFile*
-/// @param callback int32_t fn(QSaveFile*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSaveFile* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -81,7 +81,7 @@ const char* q_savefile_file_name(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSaveFile*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_savefile_on_file_name(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#fileName)
@@ -108,7 +108,7 @@ bool q_savefile_open(void* self, int64_t flags);
 /// Allows for overriding the related default method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(QSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag flags)
 void q_savefile_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#open)
@@ -152,7 +152,7 @@ long long q_savefile_write_data(void* self, const char* data, long long lenVal);
 /// Allows for overriding the related default method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn(QSaveFile*, const char*, long long)
+/// @param callback long long func(QSaveFile* self, const char* data, long long lenVal)
 void q_savefile_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#writeData)
@@ -522,7 +522,7 @@ void q_savefile_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*)
+/// @param callback void func(QSaveFile* self)
 void q_savefile_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -538,7 +538,7 @@ void q_savefile_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, int)
+/// @param callback void func(QSaveFile* self, int channel)
 void q_savefile_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -554,7 +554,7 @@ void q_savefile_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, long long)
+/// @param callback void func(QSaveFile* self, long long bytes)
 void q_savefile_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -571,7 +571,7 @@ void q_savefile_channel_bytes_written(void* self, int channel, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, int, long long)
+/// @param callback void func(QSaveFile* self, int channel, long long bytes)
 void q_savefile_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -586,7 +586,7 @@ void q_savefile_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*)
+/// @param callback void func(QSaveFile* self)
 void q_savefile_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -601,7 +601,7 @@ void q_savefile_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*)
+/// @param callback void func(QSaveFile* self)
 void q_savefile_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -840,7 +840,7 @@ void q_savefile_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*)
+/// @param callback void func(QSaveFile* self)
 void q_savefile_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -918,7 +918,7 @@ void q_savefile_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, QObject*)
+/// @param callback void func(QSaveFile* self, QObject* param1)
 void q_savefile_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFileDevice
@@ -946,7 +946,7 @@ bool q_savefile_qbase_is_sequential(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_savefile_on_is_sequential(void* self, bool (*callback)());
 
 /// Inherited from QFileDevice
@@ -974,7 +974,7 @@ long long q_savefile_qbase_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_savefile_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QFileDevice
@@ -1004,7 +1004,7 @@ bool q_savefile_qbase_seek(void* self, long long offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, long long)
+/// @param callback bool func(QSaveFile* self, long long offset)
 void q_savefile_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QFileDevice
@@ -1032,7 +1032,7 @@ bool q_savefile_qbase_at_end(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_savefile_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QFileDevice
@@ -1060,7 +1060,7 @@ long long q_savefile_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_savefile_on_size(void* self, long long (*callback)());
 
 /// Inherited from QFileDevice
@@ -1090,7 +1090,7 @@ bool q_savefile_qbase_resize(void* self, long long sz);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, long long)
+/// @param callback bool func(QSaveFile* self, long long sz)
 void q_savefile_on_resize(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QFileDevice
@@ -1122,7 +1122,7 @@ int64_t q_savefile_qbase_permissions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_savefile_on_permissions(void* self, int64_t (*callback)());
 
 /// Inherited from QFileDevice
@@ -1152,7 +1152,7 @@ bool q_savefile_qbase_set_permissions(void* self, int64_t permissionSpec);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, flag of enum QFileDevice__Permission)
+/// @param callback bool func(QSaveFile* self, flag of enum QFileDevice__Permission permissionSpec)
 void q_savefile_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QFileDevice
@@ -1184,7 +1184,7 @@ long long q_savefile_qbase_read_data(void* self, char* data, long long maxlen);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn(QSaveFile*, char*, long long)
+/// @param callback long long func(QSaveFile* self, char* data, long long maxlen)
 void q_savefile_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QFileDevice
@@ -1216,7 +1216,7 @@ long long q_savefile_qbase_read_line_data(void* self, char* data, long long maxl
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn(QSaveFile*, char*, long long)
+/// @param callback long long func(QSaveFile* self, char* data, long long maxlen)
 void q_savefile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QIODevice
@@ -1244,7 +1244,7 @@ bool q_savefile_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_savefile_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1272,7 +1272,7 @@ long long q_savefile_qbase_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_savefile_on_bytes_available(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1300,7 +1300,7 @@ long long q_savefile_qbase_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn()
+/// @param callback long long func()
 void q_savefile_on_bytes_to_write(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1328,7 +1328,7 @@ bool q_savefile_qbase_can_read_line(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_savefile_on_can_read_line(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1358,7 +1358,7 @@ bool q_savefile_qbase_wait_for_ready_read(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, int)
+/// @param callback bool func(QSaveFile* self, int msecs)
 void q_savefile_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1388,7 +1388,7 @@ bool q_savefile_qbase_wait_for_bytes_written(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, int)
+/// @param callback bool func(QSaveFile* self, int msecs)
 void q_savefile_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -1418,7 +1418,7 @@ long long q_savefile_qbase_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback long long fn(QSaveFile*, long long)
+/// @param callback long long func(QSaveFile* self, long long maxSize)
 void q_savefile_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// Inherited from QObject
@@ -1448,7 +1448,7 @@ bool q_savefile_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, QEvent*)
+/// @param callback bool func(QSaveFile* self, QEvent* event)
 void q_savefile_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1480,7 +1480,7 @@ bool q_savefile_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, QObject*, QEvent*)
+/// @param callback bool func(QSaveFile* self, QObject* watched, QEvent* event)
 void q_savefile_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1510,7 +1510,7 @@ void q_savefile_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, QTimerEvent*)
+/// @param callback void func(QSaveFile* self, QTimerEvent* event)
 void q_savefile_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1540,7 +1540,7 @@ void q_savefile_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, QChildEvent*)
+/// @param callback void func(QSaveFile* self, QChildEvent* event)
 void q_savefile_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1570,7 +1570,7 @@ void q_savefile_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, QEvent*)
+/// @param callback void func(QSaveFile* self, QEvent* event)
 void q_savefile_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1600,7 +1600,7 @@ void q_savefile_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, QMetaMethod*)
+/// @param callback void func(QSaveFile* self, QMetaMethod* signal)
 void q_savefile_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1630,7 +1630,7 @@ void q_savefile_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, QMetaMethod*)
+/// @param callback void func(QSaveFile* self, QMetaMethod* signal)
 void q_savefile_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1660,7 +1660,7 @@ void q_savefile_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(QSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void q_savefile_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -1690,7 +1690,7 @@ void q_savefile_qbase_set_error_string(void* self, const char* errorString);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, const char*)
+/// @param callback void func(QSaveFile* self, const char* errorString)
 void q_savefile_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1718,7 +1718,7 @@ QObject* q_savefile_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_savefile_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1746,7 +1746,7 @@ int32_t q_savefile_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_savefile_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1776,7 +1776,7 @@ int32_t q_savefile_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback int32_t fn(QSaveFile*, const char*)
+/// @param callback int32_t func(QSaveFile* self, const char* signal)
 void q_savefile_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1806,7 +1806,7 @@ bool q_savefile_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback bool fn(QSaveFile*, QMetaMethod*)
+/// @param callback bool func(QSaveFile* self, QMetaMethod* signal)
 void q_savefile_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1816,7 +1816,7 @@ void q_savefile_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSaveFile*
-/// @param callback void fn(QSaveFile*, const char*)
+/// @param callback void func(QSaveFile* self, const char* objectName)
 void q_savefile_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#dtor.QSaveFile)

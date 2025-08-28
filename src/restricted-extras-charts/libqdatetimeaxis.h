@@ -40,7 +40,7 @@ int32_t q_datetimeaxis_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback int32_t fn(QDateTimeAxis*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QDateTimeAxis* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_datetimeaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_datetimeaxis_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_datetimeaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#type)
@@ -144,7 +144,7 @@ void q_datetimeaxis_min_changed(void* self, void* min);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#minChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QDateTime*)
+/// @param callback void func(QDateTimeAxis* self, QDateTime* min)
 void q_datetimeaxis_on_min_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#maxChanged)
@@ -156,7 +156,7 @@ void q_datetimeaxis_max_changed(void* self, void* max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#maxChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QDateTime*)
+/// @param callback void func(QDateTimeAxis* self, QDateTime* max)
 void q_datetimeaxis_on_max_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#rangeChanged)
@@ -169,7 +169,7 @@ void q_datetimeaxis_range_changed(void* self, void* min, void* max);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#rangeChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QDateTime*, QDateTime*)
+/// @param callback void func(QDateTimeAxis* self, QDateTime* min, QDateTime* max)
 void q_datetimeaxis_on_range_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#formatChanged)
@@ -181,7 +181,7 @@ void q_datetimeaxis_format_changed(void* self, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#formatChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, const char*)
+/// @param callback void func(QDateTimeAxis* self, const char* format)
 void q_datetimeaxis_on_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#tickCountChanged)
@@ -193,7 +193,7 @@ void q_datetimeaxis_tick_count_changed(void* self, int tick);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#tickCountChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, int)
+/// @param callback void func(QDateTimeAxis* self, int tick)
 void q_datetimeaxis_on_tick_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -662,7 +662,7 @@ void q_datetimeaxis_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -678,7 +678,7 @@ void q_datetimeaxis_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QPen*)
+/// @param callback void func(QDateTimeAxis* self, QPen* pen)
 void q_datetimeaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -694,7 +694,7 @@ void q_datetimeaxis_line_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -710,7 +710,7 @@ void q_datetimeaxis_labels_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -726,7 +726,7 @@ void q_datetimeaxis_labels_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QBrush*)
+/// @param callback void func(QDateTimeAxis* self, QBrush* brush)
 void q_datetimeaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -742,7 +742,7 @@ void q_datetimeaxis_labels_font_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QFont*)
+/// @param callback void func(QDateTimeAxis* self, QFont* pen)
 void q_datetimeaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -758,7 +758,7 @@ void q_datetimeaxis_labels_angle_changed(void* self, int angle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, int)
+/// @param callback void func(QDateTimeAxis* self, int angle)
 void q_datetimeaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -774,7 +774,7 @@ void q_datetimeaxis_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QPen*)
+/// @param callback void func(QDateTimeAxis* self, QPen* pen)
 void q_datetimeaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -790,7 +790,7 @@ void q_datetimeaxis_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -806,7 +806,7 @@ void q_datetimeaxis_minor_grid_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -822,7 +822,7 @@ void q_datetimeaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QPen*)
+/// @param callback void func(QDateTimeAxis* self, QPen* pen)
 void q_datetimeaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -838,7 +838,7 @@ void q_datetimeaxis_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QColor*)
+/// @param callback void func(QDateTimeAxis* self, QColor* color)
 void q_datetimeaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -854,7 +854,7 @@ void q_datetimeaxis_minor_grid_line_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QColor*)
+/// @param callback void func(QDateTimeAxis* self, QColor* color)
 void q_datetimeaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -870,7 +870,7 @@ void q_datetimeaxis_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QColor*)
+/// @param callback void func(QDateTimeAxis* self, QColor* color)
 void q_datetimeaxis_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -886,7 +886,7 @@ void q_datetimeaxis_labels_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QColor*)
+/// @param callback void func(QDateTimeAxis* self, QColor* color)
 void q_datetimeaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -902,7 +902,7 @@ void q_datetimeaxis_title_text_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, const char*)
+/// @param callback void func(QDateTimeAxis* self, const char* title)
 void q_datetimeaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -918,7 +918,7 @@ void q_datetimeaxis_title_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QBrush*)
+/// @param callback void func(QDateTimeAxis* self, QBrush* brush)
 void q_datetimeaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -934,7 +934,7 @@ void q_datetimeaxis_title_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -950,7 +950,7 @@ void q_datetimeaxis_title_font_changed(void* self, void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QFont*)
+/// @param callback void func(QDateTimeAxis* self, QFont* font)
 void q_datetimeaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -966,7 +966,7 @@ void q_datetimeaxis_shades_visible_changed(void* self, bool visible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool visible)
 void q_datetimeaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -982,7 +982,7 @@ void q_datetimeaxis_shades_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QColor*)
+/// @param callback void func(QDateTimeAxis* self, QColor* color)
 void q_datetimeaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -998,7 +998,7 @@ void q_datetimeaxis_shades_border_color_changed(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QColor*)
+/// @param callback void func(QDateTimeAxis* self, QColor* color)
 void q_datetimeaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1014,7 +1014,7 @@ void q_datetimeaxis_shades_pen_changed(void* self, void* pen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QPen*)
+/// @param callback void func(QDateTimeAxis* self, QPen* pen)
 void q_datetimeaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1030,7 +1030,7 @@ void q_datetimeaxis_shades_brush_changed(void* self, void* brush);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QBrush*)
+/// @param callback void func(QDateTimeAxis* self, QBrush* brush)
 void q_datetimeaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1046,7 +1046,7 @@ void q_datetimeaxis_reverse_changed(void* self, bool reverse);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool reverse)
 void q_datetimeaxis_on_reverse_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1062,7 +1062,7 @@ void q_datetimeaxis_labels_editable_changed(void* self, bool editable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool editable)
 void q_datetimeaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1078,7 +1078,7 @@ void q_datetimeaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool labelsTruncated)
 void q_datetimeaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1094,7 +1094,7 @@ void q_datetimeaxis_truncate_labels_changed(void* self, bool truncateLabels);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, bool)
+/// @param callback void func(QDateTimeAxis* self, bool truncateLabels)
 void q_datetimeaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1403,7 +1403,7 @@ void q_datetimeaxis_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*)
+/// @param callback void func(QDateTimeAxis* self)
 void q_datetimeaxis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1481,7 +1481,7 @@ void q_datetimeaxis_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QObject*)
+/// @param callback void func(QDateTimeAxis* self, QObject* param1)
 void q_datetimeaxis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1511,7 +1511,7 @@ bool q_datetimeaxis_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback bool fn(QDateTimeAxis*, QEvent*)
+/// @param callback bool func(QDateTimeAxis* self, QEvent* event)
 void q_datetimeaxis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1543,7 +1543,7 @@ bool q_datetimeaxis_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback bool fn(QDateTimeAxis*, QObject*, QEvent*)
+/// @param callback bool func(QDateTimeAxis* self, QObject* watched, QEvent* event)
 void q_datetimeaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1573,7 +1573,7 @@ void q_datetimeaxis_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QTimerEvent*)
+/// @param callback void func(QDateTimeAxis* self, QTimerEvent* event)
 void q_datetimeaxis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1603,7 +1603,7 @@ void q_datetimeaxis_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QChildEvent*)
+/// @param callback void func(QDateTimeAxis* self, QChildEvent* event)
 void q_datetimeaxis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1633,7 +1633,7 @@ void q_datetimeaxis_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QEvent*)
+/// @param callback void func(QDateTimeAxis* self, QEvent* event)
 void q_datetimeaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1663,7 +1663,7 @@ void q_datetimeaxis_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QMetaMethod*)
+/// @param callback void func(QDateTimeAxis* self, QMetaMethod* signal)
 void q_datetimeaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1693,7 +1693,7 @@ void q_datetimeaxis_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, QMetaMethod*)
+/// @param callback void func(QDateTimeAxis* self, QMetaMethod* signal)
 void q_datetimeaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1721,7 +1721,7 @@ QObject* q_datetimeaxis_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_datetimeaxis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1749,7 +1749,7 @@ int32_t q_datetimeaxis_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_datetimeaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1779,7 +1779,7 @@ int32_t q_datetimeaxis_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback int32_t fn(QDateTimeAxis*, const char*)
+/// @param callback int32_t func(QDateTimeAxis* self, const char* signal)
 void q_datetimeaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1809,7 +1809,7 @@ bool q_datetimeaxis_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateTimeAxis*
-/// @param callback bool fn(QDateTimeAxis*, QMetaMethod*)
+/// @param callback bool func(QDateTimeAxis* self, QMetaMethod* signal)
 void q_datetimeaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1819,7 +1819,7 @@ void q_datetimeaxis_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QDateTimeAxis*
-/// @param callback void fn(QDateTimeAxis*, const char*)
+/// @param callback void func(QDateTimeAxis* self, const char* objectName)
 void q_datetimeaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#dtor.QDateTimeAxis)

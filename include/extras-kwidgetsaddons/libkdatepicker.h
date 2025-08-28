@@ -51,7 +51,7 @@ int32_t k_datepicker_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback int32_t fn(KDatePicker*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDatePicker* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_datepicker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -79,7 +79,7 @@ QSize* k_datepicker_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_datepicker_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#sizeHint)
@@ -140,7 +140,7 @@ bool k_datepicker_event_filter(void* self, void* o, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn(KDatePicker*, QObject*, QEvent*)
+/// @param callback bool func(KDatePicker* self, QObject* o, QEvent* e)
 void k_datepicker_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#eventFilter)
@@ -163,7 +163,7 @@ void k_datepicker_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QResizeEvent*)
+/// @param callback void func(KDatePicker* self, QResizeEvent* param1)
 void k_datepicker_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#resizeEvent)
@@ -185,7 +185,7 @@ void k_datepicker_change_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QEvent*)
+/// @param callback void func(KDatePicker* self, QEvent* event)
 void k_datepicker_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#changeEvent)
@@ -207,7 +207,7 @@ void k_datepicker_date_changed_slot(void* self, void* date);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDate*)
+/// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_changed_slot(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChangedSlot)
@@ -228,7 +228,7 @@ void k_datepicker_table_clicked_slot(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_table_clicked_slot(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClickedSlot)
@@ -248,7 +248,7 @@ void k_datepicker_month_forward_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_month_forward_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthForwardClicked)
@@ -268,7 +268,7 @@ void k_datepicker_month_backward_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_month_backward_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthBackwardClicked)
@@ -288,7 +288,7 @@ void k_datepicker_year_forward_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_year_forward_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearForwardClicked)
@@ -308,7 +308,7 @@ void k_datepicker_year_backward_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_year_backward_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearBackwardClicked)
@@ -328,7 +328,7 @@ void k_datepicker_select_month_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_select_month_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectMonthClicked)
@@ -348,7 +348,7 @@ void k_datepicker_select_year_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_select_year_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectYearClicked)
@@ -368,7 +368,7 @@ void k_datepicker_uncheck_year_selector(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_uncheck_year_selector(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#uncheckYearSelector)
@@ -388,7 +388,7 @@ void k_datepicker_line_enter_pressed(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_line_enter_pressed(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#lineEnterPressed)
@@ -408,7 +408,7 @@ void k_datepicker_today_button_clicked(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_today_button_clicked(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#todayButtonClicked)
@@ -429,7 +429,7 @@ void k_datepicker_week_selected(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, int)
+/// @param callback void func(KDatePicker* self, int param1)
 void k_datepicker_on_week_selected(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#weekSelected)
@@ -449,7 +449,7 @@ void k_datepicker_date_changed(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChanged)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDate*)
+/// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateSelected)
@@ -461,7 +461,7 @@ void k_datepicker_date_selected(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateSelected)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDate*)
+/// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_selected(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateEntered)
@@ -473,7 +473,7 @@ void k_datepicker_date_entered(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateEntered)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDate*)
+/// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_entered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClicked)
@@ -484,7 +484,7 @@ void k_datepicker_table_clicked(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClicked)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*)
+/// @param callback void func(KDatePicker* self)
 void k_datepicker_on_table_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -2549,7 +2549,7 @@ void k_datepicker_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, const char*)
+/// @param callback void func(KDatePicker* self, const char* title)
 void k_datepicker_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2565,7 +2565,7 @@ void k_datepicker_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QIcon*)
+/// @param callback void func(KDatePicker* self, QIcon* icon)
 void k_datepicker_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2581,7 +2581,7 @@ void k_datepicker_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, const char*)
+/// @param callback void func(KDatePicker* self, const char* iconText)
 void k_datepicker_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2597,7 +2597,7 @@ void k_datepicker_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QPoint*)
+/// @param callback void func(KDatePicker* self, QPoint* pos)
 void k_datepicker_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2974,7 +2974,7 @@ void k_datepicker_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*)
+/// @param callback void func(KDatePicker* self)
 void k_datepicker_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3052,7 +3052,7 @@ void k_datepicker_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QObject*)
+/// @param callback void func(KDatePicker* self, QObject* param1)
 void k_datepicker_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3173,7 +3173,7 @@ bool k_datepicker_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn(KDatePicker*, QEvent*)
+/// @param callback bool func(KDatePicker* self, QEvent* e)
 void k_datepicker_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3203,7 +3203,7 @@ void k_datepicker_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QPaintEvent*)
+/// @param callback void func(KDatePicker* self, QPaintEvent* param1)
 void k_datepicker_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3233,7 +3233,7 @@ void k_datepicker_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QStyleOptionFrame*)
+/// @param callback void func(KDatePicker* self, QStyleOptionFrame* option)
 void k_datepicker_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3261,7 +3261,7 @@ int32_t k_datepicker_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datepicker_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3291,7 +3291,7 @@ void k_datepicker_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, bool)
+/// @param callback void func(KDatePicker* self, bool visible)
 void k_datepicker_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3319,7 +3319,7 @@ QSize* k_datepicker_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_datepicker_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3349,7 +3349,7 @@ int32_t k_datepicker_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback int32_t fn(KDatePicker*, int)
+/// @param callback int32_t func(KDatePicker* self, int param1)
 void k_datepicker_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3377,7 +3377,7 @@ bool k_datepicker_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datepicker_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3405,7 +3405,7 @@ QPaintEngine* k_datepicker_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_datepicker_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3435,7 +3435,7 @@ void k_datepicker_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMouseEvent*)
+/// @param callback void func(KDatePicker* self, QMouseEvent* event)
 void k_datepicker_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3465,7 +3465,7 @@ void k_datepicker_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMouseEvent*)
+/// @param callback void func(KDatePicker* self, QMouseEvent* event)
 void k_datepicker_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3495,7 +3495,7 @@ void k_datepicker_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMouseEvent*)
+/// @param callback void func(KDatePicker* self, QMouseEvent* event)
 void k_datepicker_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3525,7 +3525,7 @@ void k_datepicker_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMouseEvent*)
+/// @param callback void func(KDatePicker* self, QMouseEvent* event)
 void k_datepicker_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3555,7 +3555,7 @@ void k_datepicker_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QWheelEvent*)
+/// @param callback void func(KDatePicker* self, QWheelEvent* event)
 void k_datepicker_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3585,7 +3585,7 @@ void k_datepicker_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QKeyEvent*)
+/// @param callback void func(KDatePicker* self, QKeyEvent* event)
 void k_datepicker_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3615,7 +3615,7 @@ void k_datepicker_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QKeyEvent*)
+/// @param callback void func(KDatePicker* self, QKeyEvent* event)
 void k_datepicker_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3645,7 +3645,7 @@ void k_datepicker_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QFocusEvent*)
+/// @param callback void func(KDatePicker* self, QFocusEvent* event)
 void k_datepicker_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3675,7 +3675,7 @@ void k_datepicker_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QFocusEvent*)
+/// @param callback void func(KDatePicker* self, QFocusEvent* event)
 void k_datepicker_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3705,7 +3705,7 @@ void k_datepicker_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QEnterEvent*)
+/// @param callback void func(KDatePicker* self, QEnterEvent* event)
 void k_datepicker_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3735,7 +3735,7 @@ void k_datepicker_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QEvent*)
+/// @param callback void func(KDatePicker* self, QEvent* event)
 void k_datepicker_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3765,7 +3765,7 @@ void k_datepicker_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMoveEvent*)
+/// @param callback void func(KDatePicker* self, QMoveEvent* event)
 void k_datepicker_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3795,7 +3795,7 @@ void k_datepicker_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QCloseEvent*)
+/// @param callback void func(KDatePicker* self, QCloseEvent* event)
 void k_datepicker_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3825,7 +3825,7 @@ void k_datepicker_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QContextMenuEvent*)
+/// @param callback void func(KDatePicker* self, QContextMenuEvent* event)
 void k_datepicker_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3855,7 +3855,7 @@ void k_datepicker_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QTabletEvent*)
+/// @param callback void func(KDatePicker* self, QTabletEvent* event)
 void k_datepicker_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3885,7 +3885,7 @@ void k_datepicker_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QActionEvent*)
+/// @param callback void func(KDatePicker* self, QActionEvent* event)
 void k_datepicker_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3915,7 +3915,7 @@ void k_datepicker_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDragEnterEvent*)
+/// @param callback void func(KDatePicker* self, QDragEnterEvent* event)
 void k_datepicker_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3945,7 +3945,7 @@ void k_datepicker_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDragMoveEvent*)
+/// @param callback void func(KDatePicker* self, QDragMoveEvent* event)
 void k_datepicker_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3975,7 +3975,7 @@ void k_datepicker_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDragLeaveEvent*)
+/// @param callback void func(KDatePicker* self, QDragLeaveEvent* event)
 void k_datepicker_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4005,7 +4005,7 @@ void k_datepicker_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QDropEvent*)
+/// @param callback void func(KDatePicker* self, QDropEvent* event)
 void k_datepicker_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4035,7 +4035,7 @@ void k_datepicker_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QShowEvent*)
+/// @param callback void func(KDatePicker* self, QShowEvent* event)
 void k_datepicker_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4065,7 +4065,7 @@ void k_datepicker_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QHideEvent*)
+/// @param callback void func(KDatePicker* self, QHideEvent* event)
 void k_datepicker_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4099,7 +4099,7 @@ bool k_datepicker_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn(KDatePicker*, const char*, void*, intptr_t*)
+/// @param callback bool func(KDatePicker* self, const char* eventType, void* message, intptr_t* result)
 void k_datepicker_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4129,7 +4129,7 @@ int32_t k_datepicker_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback int32_t fn(KDatePicker*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KDatePicker* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_datepicker_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4159,7 +4159,7 @@ void k_datepicker_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QPainter*)
+/// @param callback void func(KDatePicker* self, QPainter* painter)
 void k_datepicker_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4189,7 +4189,7 @@ QPaintDevice* k_datepicker_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback QPaintDevice* fn(KDatePicker*, QPoint*)
+/// @param callback QPaintDevice* func(KDatePicker* self, QPoint* offset)
 void k_datepicker_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4217,7 +4217,7 @@ QPainter* k_datepicker_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_datepicker_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4247,7 +4247,7 @@ void k_datepicker_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QInputMethodEvent*)
+/// @param callback void func(KDatePicker* self, QInputMethodEvent* param1)
 void k_datepicker_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4277,7 +4277,7 @@ QVariant* k_datepicker_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback QVariant* fn(KDatePicker*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KDatePicker* self, enum Qt__InputMethodQuery param1)
 void k_datepicker_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4307,7 +4307,7 @@ bool k_datepicker_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn(KDatePicker*, bool)
+/// @param callback bool func(KDatePicker* self, bool next)
 void k_datepicker_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4337,7 +4337,7 @@ void k_datepicker_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QTimerEvent*)
+/// @param callback void func(KDatePicker* self, QTimerEvent* event)
 void k_datepicker_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4367,7 +4367,7 @@ void k_datepicker_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QChildEvent*)
+/// @param callback void func(KDatePicker* self, QChildEvent* event)
 void k_datepicker_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4397,7 +4397,7 @@ void k_datepicker_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QEvent*)
+/// @param callback void func(KDatePicker* self, QEvent* event)
 void k_datepicker_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4427,7 +4427,7 @@ void k_datepicker_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMetaMethod*)
+/// @param callback void func(KDatePicker* self, QMetaMethod* signal)
 void k_datepicker_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4457,7 +4457,7 @@ void k_datepicker_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QMetaMethod*)
+/// @param callback void func(KDatePicker* self, QMetaMethod* signal)
 void k_datepicker_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -4487,7 +4487,7 @@ void k_datepicker_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, QPainter*)
+/// @param callback void func(KDatePicker* self, QPainter* param1)
 void k_datepicker_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4515,7 +4515,7 @@ void k_datepicker_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4543,7 +4543,7 @@ void k_datepicker_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4571,7 +4571,7 @@ void k_datepicker_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepicker_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4599,7 +4599,7 @@ bool k_datepicker_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datepicker_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4627,7 +4627,7 @@ bool k_datepicker_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datepicker_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4655,7 +4655,7 @@ QObject* k_datepicker_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_datepicker_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4683,7 +4683,7 @@ int32_t k_datepicker_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datepicker_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4713,7 +4713,7 @@ int32_t k_datepicker_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback int32_t fn(KDatePicker*, const char*)
+/// @param callback int32_t func(KDatePicker* self, const char* signal)
 void k_datepicker_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4743,7 +4743,7 @@ bool k_datepicker_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback bool fn(KDatePicker*, QMetaMethod*)
+/// @param callback bool func(KDatePicker* self, QMetaMethod* signal)
 void k_datepicker_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4775,7 +4775,7 @@ double k_datepicker_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePicker*
-/// @param callback double fn(KDatePicker*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KDatePicker* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_datepicker_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4785,7 +4785,7 @@ void k_datepicker_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDatePicker*
-/// @param callback void fn(KDatePicker*, const char*)
+/// @param callback void func(KDatePicker* self, const char* objectName)
 void k_datepicker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dtor.KDatePicker)

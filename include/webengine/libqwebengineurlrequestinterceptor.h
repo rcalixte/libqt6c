@@ -40,7 +40,7 @@ int32_t q_webengineurlrequestinterceptor_metacall(void* self, int32_t param1, in
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback int32_t fn(QWebEngineUrlRequestInterceptor*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QWebEngineUrlRequestInterceptor* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_webengineurlrequestinterceptor_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -69,7 +69,7 @@ void q_webengineurlrequestinterceptor_intercept_request(void* self, void* info);
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QWebEngineUrlRequestInfo*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QWebEngineUrlRequestInfo* info)
 void q_webengineurlrequestinterceptor_on_intercept_request(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinterceptor.html#interceptRequest)
@@ -323,7 +323,7 @@ void q_webengineurlrequestinterceptor_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self)
 void q_webengineurlrequestinterceptor_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -401,7 +401,7 @@ void q_webengineurlrequestinterceptor_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QObject*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QObject* param1)
 void q_webengineurlrequestinterceptor_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -431,7 +431,7 @@ bool q_webengineurlrequestinterceptor_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback bool fn(QWebEngineUrlRequestInterceptor*, QEvent*)
+/// @param callback bool func(QWebEngineUrlRequestInterceptor* self, QEvent* event)
 void q_webengineurlrequestinterceptor_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -463,7 +463,7 @@ bool q_webengineurlrequestinterceptor_qbase_event_filter(void* self, void* watch
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback bool fn(QWebEngineUrlRequestInterceptor*, QObject*, QEvent*)
+/// @param callback bool func(QWebEngineUrlRequestInterceptor* self, QObject* watched, QEvent* event)
 void q_webengineurlrequestinterceptor_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -493,7 +493,7 @@ void q_webengineurlrequestinterceptor_qbase_timer_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QTimerEvent*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QTimerEvent* event)
 void q_webengineurlrequestinterceptor_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -523,7 +523,7 @@ void q_webengineurlrequestinterceptor_qbase_child_event(void* self, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QChildEvent*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QChildEvent* event)
 void q_webengineurlrequestinterceptor_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -553,7 +553,7 @@ void q_webengineurlrequestinterceptor_qbase_custom_event(void* self, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QEvent*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QEvent* event)
 void q_webengineurlrequestinterceptor_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -583,7 +583,7 @@ void q_webengineurlrequestinterceptor_qbase_connect_notify(void* self, void* sig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QMetaMethod*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal)
 void q_webengineurlrequestinterceptor_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -613,7 +613,7 @@ void q_webengineurlrequestinterceptor_qbase_disconnect_notify(void* self, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, QMetaMethod*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal)
 void q_webengineurlrequestinterceptor_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -641,7 +641,7 @@ QObject* q_webengineurlrequestinterceptor_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_webengineurlrequestinterceptor_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -669,7 +669,7 @@ int32_t q_webengineurlrequestinterceptor_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_webengineurlrequestinterceptor_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -699,7 +699,7 @@ int32_t q_webengineurlrequestinterceptor_qbase_receivers(void* self, const char*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback int32_t fn(QWebEngineUrlRequestInterceptor*, const char*)
+/// @param callback int32_t func(QWebEngineUrlRequestInterceptor* self, const char* signal)
 void q_webengineurlrequestinterceptor_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -729,7 +729,7 @@ bool q_webengineurlrequestinterceptor_qbase_is_signal_connected(void* self, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback bool fn(QWebEngineUrlRequestInterceptor*, QMetaMethod*)
+/// @param callback bool func(QWebEngineUrlRequestInterceptor* self, QMetaMethod* signal)
 void q_webengineurlrequestinterceptor_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -739,7 +739,7 @@ void q_webengineurlrequestinterceptor_on_is_signal_connected(void* self, bool (*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineUrlRequestInterceptor*
-/// @param callback void fn(QWebEngineUrlRequestInterceptor*, const char*)
+/// @param callback void func(QWebEngineUrlRequestInterceptor* self, const char* objectName)
 void q_webengineurlrequestinterceptor_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinterceptor.html#dtor.QWebEngineUrlRequestInterceptor)

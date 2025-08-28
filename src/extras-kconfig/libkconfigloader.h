@@ -81,7 +81,7 @@ bool k_configloader_usr_save(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KConfigLoader*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_configloader_on_usr_save(void* self, bool (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#usrSave)
@@ -268,7 +268,7 @@ void k_configloader_config_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*)
+/// @param callback void func(KConfigLoader* self)
 void k_configloader_on_config_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
@@ -540,7 +540,7 @@ void k_configloader_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*)
+/// @param callback void func(KConfigLoader* self)
 void k_configloader_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -618,7 +618,7 @@ void k_configloader_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, QObject*)
+/// @param callback void func(KConfigLoader* self, QObject* param1)
 void k_configloader_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KConfigSkeleton
@@ -652,7 +652,7 @@ int32_t k_configloader_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback int32_t fn(KConfigLoader*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KConfigLoader* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_configloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Inherited from KCoreConfigSkeleton
@@ -680,7 +680,7 @@ void k_configloader_qbase_set_defaults(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configloader_on_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
@@ -710,7 +710,7 @@ bool k_configloader_qbase_use_defaults(void* self, bool b);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback bool fn(KConfigLoader*, bool)
+/// @param callback bool func(KConfigLoader* self, bool b)
 void k_configloader_on_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from KCoreConfigSkeleton
@@ -740,7 +740,7 @@ bool k_configloader_qbase_usr_use_defaults(void* self, bool b);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback bool fn(KConfigLoader*, bool)
+/// @param callback bool func(KConfigLoader* self, bool b)
 void k_configloader_on_usr_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from KCoreConfigSkeleton
@@ -768,7 +768,7 @@ void k_configloader_qbase_usr_set_defaults(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configloader_on_usr_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
@@ -796,7 +796,7 @@ void k_configloader_qbase_usr_read(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn()
+/// @param callback void func()
 void k_configloader_on_usr_read(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -826,7 +826,7 @@ bool k_configloader_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback bool fn(KConfigLoader*, QEvent*)
+/// @param callback bool func(KConfigLoader* self, QEvent* event)
 void k_configloader_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -858,7 +858,7 @@ bool k_configloader_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback bool fn(KConfigLoader*, QObject*, QEvent*)
+/// @param callback bool func(KConfigLoader* self, QObject* watched, QEvent* event)
 void k_configloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -888,7 +888,7 @@ void k_configloader_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, QTimerEvent*)
+/// @param callback void func(KConfigLoader* self, QTimerEvent* event)
 void k_configloader_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -918,7 +918,7 @@ void k_configloader_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, QChildEvent*)
+/// @param callback void func(KConfigLoader* self, QChildEvent* event)
 void k_configloader_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -948,7 +948,7 @@ void k_configloader_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, QEvent*)
+/// @param callback void func(KConfigLoader* self, QEvent* event)
 void k_configloader_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -978,7 +978,7 @@ void k_configloader_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, QMetaMethod*)
+/// @param callback void func(KConfigLoader* self, QMetaMethod* signal)
 void k_configloader_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1008,7 +1008,7 @@ void k_configloader_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, QMetaMethod*)
+/// @param callback void func(KConfigLoader* self, QMetaMethod* signal)
 void k_configloader_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1036,7 +1036,7 @@ QObject* k_configloader_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_configloader_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1064,7 +1064,7 @@ int32_t k_configloader_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_configloader_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1094,7 +1094,7 @@ int32_t k_configloader_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback int32_t fn(KConfigLoader*, const char*)
+/// @param callback int32_t func(KConfigLoader* self, const char* signal)
 void k_configloader_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1124,7 +1124,7 @@ bool k_configloader_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KConfigLoader*
-/// @param callback bool fn(KConfigLoader*, QMetaMethod*)
+/// @param callback bool func(KConfigLoader* self, QMetaMethod* signal)
 void k_configloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1134,7 +1134,7 @@ void k_configloader_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KConfigLoader*
-/// @param callback void fn(KConfigLoader*, const char*)
+/// @param callback void func(KConfigLoader* self, const char* objectName)
 void k_configloader_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#dtor.KConfigLoader)

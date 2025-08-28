@@ -64,7 +64,7 @@ int32_t q_label_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback int32_t fn(QLabel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QLabel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_label_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -196,7 +196,7 @@ QSize* q_label_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_label_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#sizeHint)
@@ -216,7 +216,7 @@ QSize* q_label_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_label_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#minimumSizeHint)
@@ -248,7 +248,7 @@ int32_t q_label_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback int32_t fn(QLabel*, int)
+/// @param callback int32_t func(QLabel* self, int param1)
 void q_label_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#heightForWidth)
@@ -357,7 +357,7 @@ void q_label_link_activated(void* self, const char* link);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkActivated)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, const char*)
+/// @param callback void func(QLabel* self, const char* link)
 void q_label_on_link_activated(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkHovered)
@@ -369,7 +369,7 @@ void q_label_link_hovered(void* self, const char* link);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#linkHovered)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, const char*)
+/// @param callback void func(QLabel* self, const char* link)
 void q_label_on_link_hovered(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#event)
@@ -383,7 +383,7 @@ bool q_label_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback bool fn(QLabel*, QEvent*)
+/// @param callback bool func(QLabel* self, QEvent* e)
 void q_label_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#event)
@@ -405,7 +405,7 @@ void q_label_key_press_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QKeyEvent*)
+/// @param callback void func(QLabel* self, QKeyEvent* ev)
 void q_label_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#keyPressEvent)
@@ -427,7 +427,7 @@ void q_label_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QPaintEvent*)
+/// @param callback void func(QLabel* self, QPaintEvent* param1)
 void q_label_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#paintEvent)
@@ -449,7 +449,7 @@ void q_label_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QEvent*)
+/// @param callback void func(QLabel* self, QEvent* param1)
 void q_label_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#changeEvent)
@@ -471,7 +471,7 @@ void q_label_mouse_press_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMouseEvent*)
+/// @param callback void func(QLabel* self, QMouseEvent* ev)
 void q_label_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mousePressEvent)
@@ -493,7 +493,7 @@ void q_label_mouse_move_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMouseEvent*)
+/// @param callback void func(QLabel* self, QMouseEvent* ev)
 void q_label_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mouseMoveEvent)
@@ -515,7 +515,7 @@ void q_label_mouse_release_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMouseEvent*)
+/// @param callback void func(QLabel* self, QMouseEvent* ev)
 void q_label_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#mouseReleaseEvent)
@@ -537,7 +537,7 @@ void q_label_context_menu_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QContextMenuEvent*)
+/// @param callback void func(QLabel* self, QContextMenuEvent* ev)
 void q_label_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#contextMenuEvent)
@@ -559,7 +559,7 @@ void q_label_focus_in_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QFocusEvent*)
+/// @param callback void func(QLabel* self, QFocusEvent* ev)
 void q_label_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusInEvent)
@@ -581,7 +581,7 @@ void q_label_focus_out_event(void* self, void* ev);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QFocusEvent*)
+/// @param callback void func(QLabel* self, QFocusEvent* ev)
 void q_label_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusOutEvent)
@@ -603,7 +603,7 @@ bool q_label_focus_next_prev_child(void* self, bool next);
 /// Allows for overriding the related default method
 ///
 /// @param self QLabel*
-/// @param callback bool fn(QLabel*, bool)
+/// @param callback bool func(QLabel* self, bool next)
 void q_label_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#focusNextPrevChild)
@@ -2669,7 +2669,7 @@ void q_label_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, const char*)
+/// @param callback void func(QLabel* self, const char* title)
 void q_label_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2685,7 +2685,7 @@ void q_label_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QIcon*)
+/// @param callback void func(QLabel* self, QIcon* icon)
 void q_label_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2701,7 +2701,7 @@ void q_label_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, const char*)
+/// @param callback void func(QLabel* self, const char* iconText)
 void q_label_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2717,7 +2717,7 @@ void q_label_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QPoint*)
+/// @param callback void func(QLabel* self, QPoint* pos)
 void q_label_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3094,7 +3094,7 @@ void q_label_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*)
+/// @param callback void func(QLabel* self)
 void q_label_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3172,7 +3172,7 @@ void q_label_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QObject*)
+/// @param callback void func(QLabel* self, QObject* param1)
 void q_label_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3293,7 +3293,7 @@ void q_label_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QStyleOptionFrame*)
+/// @param callback void func(QLabel* self, QStyleOptionFrame* option)
 void q_label_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3321,7 +3321,7 @@ int32_t q_label_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_label_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3351,7 +3351,7 @@ void q_label_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, bool)
+/// @param callback void func(QLabel* self, bool visible)
 void q_label_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3379,7 +3379,7 @@ bool q_label_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_label_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3407,7 +3407,7 @@ QPaintEngine* q_label_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_label_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3437,7 +3437,7 @@ void q_label_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMouseEvent*)
+/// @param callback void func(QLabel* self, QMouseEvent* event)
 void q_label_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ void q_label_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QWheelEvent*)
+/// @param callback void func(QLabel* self, QWheelEvent* event)
 void q_label_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void q_label_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QKeyEvent*)
+/// @param callback void func(QLabel* self, QKeyEvent* event)
 void q_label_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void q_label_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QEnterEvent*)
+/// @param callback void func(QLabel* self, QEnterEvent* event)
 void q_label_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void q_label_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QEvent*)
+/// @param callback void func(QLabel* self, QEvent* event)
 void q_label_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3587,7 +3587,7 @@ void q_label_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMoveEvent*)
+/// @param callback void func(QLabel* self, QMoveEvent* event)
 void q_label_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3617,7 +3617,7 @@ void q_label_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QResizeEvent*)
+/// @param callback void func(QLabel* self, QResizeEvent* event)
 void q_label_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3647,7 +3647,7 @@ void q_label_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QCloseEvent*)
+/// @param callback void func(QLabel* self, QCloseEvent* event)
 void q_label_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3677,7 +3677,7 @@ void q_label_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QTabletEvent*)
+/// @param callback void func(QLabel* self, QTabletEvent* event)
 void q_label_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3707,7 +3707,7 @@ void q_label_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QActionEvent*)
+/// @param callback void func(QLabel* self, QActionEvent* event)
 void q_label_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3737,7 +3737,7 @@ void q_label_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QDragEnterEvent*)
+/// @param callback void func(QLabel* self, QDragEnterEvent* event)
 void q_label_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3767,7 +3767,7 @@ void q_label_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QDragMoveEvent*)
+/// @param callback void func(QLabel* self, QDragMoveEvent* event)
 void q_label_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3797,7 +3797,7 @@ void q_label_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QDragLeaveEvent*)
+/// @param callback void func(QLabel* self, QDragLeaveEvent* event)
 void q_label_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3827,7 +3827,7 @@ void q_label_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QDropEvent*)
+/// @param callback void func(QLabel* self, QDropEvent* event)
 void q_label_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3857,7 +3857,7 @@ void q_label_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QShowEvent*)
+/// @param callback void func(QLabel* self, QShowEvent* event)
 void q_label_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3887,7 +3887,7 @@ void q_label_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QHideEvent*)
+/// @param callback void func(QLabel* self, QHideEvent* event)
 void q_label_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3921,7 +3921,7 @@ bool q_label_qbase_native_event(void* self, const char* eventType, void* message
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool fn(QLabel*, const char*, void*, intptr_t*)
+/// @param callback bool func(QLabel* self, const char* eventType, void* message, intptr_t* result)
 void q_label_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3951,7 +3951,7 @@ int32_t q_label_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback int32_t fn(QLabel*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QLabel* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_label_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3981,7 +3981,7 @@ void q_label_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QPainter*)
+/// @param callback void func(QLabel* self, QPainter* painter)
 void q_label_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4011,7 +4011,7 @@ QPaintDevice* q_label_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback QPaintDevice* fn(QLabel*, QPoint*)
+/// @param callback QPaintDevice* func(QLabel* self, QPoint* offset)
 void q_label_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4039,7 +4039,7 @@ QPainter* q_label_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_label_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4069,7 +4069,7 @@ void q_label_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QInputMethodEvent*)
+/// @param callback void func(QLabel* self, QInputMethodEvent* param1)
 void q_label_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4099,7 +4099,7 @@ QVariant* q_label_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback QVariant* fn(QLabel*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QLabel* self, enum Qt__InputMethodQuery param1)
 void q_label_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
@@ -4131,7 +4131,7 @@ bool q_label_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool fn(QLabel*, QObject*, QEvent*)
+/// @param callback bool func(QLabel* self, QObject* watched, QEvent* event)
 void q_label_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4161,7 +4161,7 @@ void q_label_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QTimerEvent*)
+/// @param callback void func(QLabel* self, QTimerEvent* event)
 void q_label_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4191,7 +4191,7 @@ void q_label_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QChildEvent*)
+/// @param callback void func(QLabel* self, QChildEvent* event)
 void q_label_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4221,7 +4221,7 @@ void q_label_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QEvent*)
+/// @param callback void func(QLabel* self, QEvent* event)
 void q_label_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4251,7 +4251,7 @@ void q_label_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMetaMethod*)
+/// @param callback void func(QLabel* self, QMetaMethod* signal)
 void q_label_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4281,7 +4281,7 @@ void q_label_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QMetaMethod*)
+/// @param callback void func(QLabel* self, QMetaMethod* signal)
 void q_label_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -4311,7 +4311,7 @@ void q_label_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, QPainter*)
+/// @param callback void func(QLabel* self, QPainter* param1)
 void q_label_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4339,7 +4339,7 @@ void q_label_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_label_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4367,7 +4367,7 @@ void q_label_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_label_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4395,7 +4395,7 @@ void q_label_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_label_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4423,7 +4423,7 @@ bool q_label_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_label_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4451,7 +4451,7 @@ bool q_label_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_label_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4479,7 +4479,7 @@ QObject* q_label_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_label_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4507,7 +4507,7 @@ int32_t q_label_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_label_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4537,7 +4537,7 @@ int32_t q_label_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback int32_t fn(QLabel*, const char*)
+/// @param callback int32_t func(QLabel* self, const char* signal)
 void q_label_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4567,7 +4567,7 @@ bool q_label_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback bool fn(QLabel*, QMetaMethod*)
+/// @param callback bool func(QLabel* self, QMetaMethod* signal)
 void q_label_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4599,7 +4599,7 @@ double q_label_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLabel*
-/// @param callback double fn(QLabel*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QLabel* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_label_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4609,7 +4609,7 @@ void q_label_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32
 /// Wrapper to allow calling private signal
 ///
 /// @param self QLabel*
-/// @param callback void fn(QLabel*, const char*)
+/// @param callback void func(QLabel* self, const char* objectName)
 void q_label_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlabel.html#dtor.QLabel)

@@ -40,7 +40,7 @@ int32_t k_pagewidget_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidget*
-/// @param callback int32_t fn(KPageWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPageWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pagewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -128,7 +128,7 @@ void k_pagewidget_current_page_changed(void* self, void* current, void* before);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidget.html#currentPageChanged)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, KPageWidgetItem*, KPageWidgetItem*)
+/// @param callback void func(KPageWidget* self, KPageWidgetItem* current, KPageWidgetItem* before)
 void k_pagewidget_on_current_page_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidget.html#pageToggled)
@@ -141,7 +141,7 @@ void k_pagewidget_page_toggled(void* self, void* page, bool checked);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidget.html#pageToggled)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, KPageWidgetItem*, bool)
+/// @param callback void func(KPageWidget* self, KPageWidgetItem* page, bool checked)
 void k_pagewidget_on_page_toggled(void* self, void (*callback)(void*, void*, bool));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidget.html#pageRemoved)
@@ -153,7 +153,7 @@ void k_pagewidget_page_removed(void* self, void* page);
 /// [Qt documentation](https://api-staging.kde.org/kpagewidget.html#pageRemoved)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, KPageWidgetItem*)
+/// @param callback void func(KPageWidget* self, KPageWidgetItem* page)
 void k_pagewidget_on_page_removed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -2195,7 +2195,7 @@ void k_pagewidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, const char*)
+/// @param callback void func(KPageWidget* self, const char* title)
 void k_pagewidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2211,7 +2211,7 @@ void k_pagewidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QIcon*)
+/// @param callback void func(KPageWidget* self, QIcon* icon)
 void k_pagewidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2227,7 +2227,7 @@ void k_pagewidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, const char*)
+/// @param callback void func(KPageWidget* self, const char* iconText)
 void k_pagewidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2243,7 +2243,7 @@ void k_pagewidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QPoint*)
+/// @param callback void func(KPageWidget* self, QPoint* pos)
 void k_pagewidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2620,7 +2620,7 @@ void k_pagewidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*)
+/// @param callback void func(KPageWidget* self)
 void k_pagewidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2698,7 +2698,7 @@ void k_pagewidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QObject*)
+/// @param callback void func(KPageWidget* self, QObject* param1)
 void k_pagewidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2817,7 +2817,7 @@ QAbstractItemView* k_pagewidget_qbase_create_view(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QAbstractItemView* fn()
+/// @param callback QAbstractItemView* func()
 void k_pagewidget_on_create_view(void* self, QAbstractItemView* (*callback)());
 
 /// Inherited from KPageView
@@ -2845,7 +2845,7 @@ bool k_pagewidget_qbase_show_page_header(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagewidget_on_show_page_header(void* self, bool (*callback)());
 
 /// Inherited from KPageView
@@ -2877,7 +2877,7 @@ int64_t k_pagewidget_qbase_view_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void k_pagewidget_on_view_position(void* self, int64_t (*callback)());
 
 /// Inherited from QWidget
@@ -2905,7 +2905,7 @@ int32_t k_pagewidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagewidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2935,7 +2935,7 @@ void k_pagewidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, bool)
+/// @param callback void func(KPageWidget* self, bool visible)
 void k_pagewidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2963,7 +2963,7 @@ QSize* k_pagewidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pagewidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2991,7 +2991,7 @@ QSize* k_pagewidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_pagewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3021,7 +3021,7 @@ int32_t k_pagewidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback int32_t fn(KPageWidget*, int)
+/// @param callback int32_t func(KPageWidget* self, int param1)
 void k_pagewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3049,7 +3049,7 @@ bool k_pagewidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagewidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3077,7 +3077,7 @@ QPaintEngine* k_pagewidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_pagewidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3107,7 +3107,7 @@ bool k_pagewidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn(KPageWidget*, QEvent*)
+/// @param callback bool func(KPageWidget* self, QEvent* event)
 void k_pagewidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void k_pagewidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMouseEvent*)
+/// @param callback void func(KPageWidget* self, QMouseEvent* event)
 void k_pagewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3167,7 +3167,7 @@ void k_pagewidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMouseEvent*)
+/// @param callback void func(KPageWidget* self, QMouseEvent* event)
 void k_pagewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3197,7 +3197,7 @@ void k_pagewidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMouseEvent*)
+/// @param callback void func(KPageWidget* self, QMouseEvent* event)
 void k_pagewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3227,7 +3227,7 @@ void k_pagewidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMouseEvent*)
+/// @param callback void func(KPageWidget* self, QMouseEvent* event)
 void k_pagewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3257,7 +3257,7 @@ void k_pagewidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QWheelEvent*)
+/// @param callback void func(KPageWidget* self, QWheelEvent* event)
 void k_pagewidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3287,7 +3287,7 @@ void k_pagewidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QKeyEvent*)
+/// @param callback void func(KPageWidget* self, QKeyEvent* event)
 void k_pagewidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3317,7 +3317,7 @@ void k_pagewidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QKeyEvent*)
+/// @param callback void func(KPageWidget* self, QKeyEvent* event)
 void k_pagewidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3347,7 +3347,7 @@ void k_pagewidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QFocusEvent*)
+/// @param callback void func(KPageWidget* self, QFocusEvent* event)
 void k_pagewidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3377,7 +3377,7 @@ void k_pagewidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QFocusEvent*)
+/// @param callback void func(KPageWidget* self, QFocusEvent* event)
 void k_pagewidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3407,7 +3407,7 @@ void k_pagewidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QEnterEvent*)
+/// @param callback void func(KPageWidget* self, QEnterEvent* event)
 void k_pagewidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3437,7 +3437,7 @@ void k_pagewidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QEvent*)
+/// @param callback void func(KPageWidget* self, QEvent* event)
 void k_pagewidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ void k_pagewidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QPaintEvent*)
+/// @param callback void func(KPageWidget* self, QPaintEvent* event)
 void k_pagewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void k_pagewidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMoveEvent*)
+/// @param callback void func(KPageWidget* self, QMoveEvent* event)
 void k_pagewidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void k_pagewidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QResizeEvent*)
+/// @param callback void func(KPageWidget* self, QResizeEvent* event)
 void k_pagewidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void k_pagewidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QCloseEvent*)
+/// @param callback void func(KPageWidget* self, QCloseEvent* event)
 void k_pagewidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3587,7 +3587,7 @@ void k_pagewidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QContextMenuEvent*)
+/// @param callback void func(KPageWidget* self, QContextMenuEvent* event)
 void k_pagewidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3617,7 +3617,7 @@ void k_pagewidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QTabletEvent*)
+/// @param callback void func(KPageWidget* self, QTabletEvent* event)
 void k_pagewidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3647,7 +3647,7 @@ void k_pagewidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QActionEvent*)
+/// @param callback void func(KPageWidget* self, QActionEvent* event)
 void k_pagewidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3677,7 +3677,7 @@ void k_pagewidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QDragEnterEvent*)
+/// @param callback void func(KPageWidget* self, QDragEnterEvent* event)
 void k_pagewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3707,7 +3707,7 @@ void k_pagewidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QDragMoveEvent*)
+/// @param callback void func(KPageWidget* self, QDragMoveEvent* event)
 void k_pagewidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3737,7 +3737,7 @@ void k_pagewidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QDragLeaveEvent*)
+/// @param callback void func(KPageWidget* self, QDragLeaveEvent* event)
 void k_pagewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3767,7 +3767,7 @@ void k_pagewidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QDropEvent*)
+/// @param callback void func(KPageWidget* self, QDropEvent* event)
 void k_pagewidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3797,7 +3797,7 @@ void k_pagewidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QShowEvent*)
+/// @param callback void func(KPageWidget* self, QShowEvent* event)
 void k_pagewidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3827,7 +3827,7 @@ void k_pagewidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QHideEvent*)
+/// @param callback void func(KPageWidget* self, QHideEvent* event)
 void k_pagewidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3861,7 +3861,7 @@ bool k_pagewidget_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn(KPageWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(KPageWidget* self, const char* eventType, void* message, intptr_t* result)
 void k_pagewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3891,7 +3891,7 @@ void k_pagewidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QEvent*)
+/// @param callback void func(KPageWidget* self, QEvent* param1)
 void k_pagewidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3921,7 +3921,7 @@ int32_t k_pagewidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback int32_t fn(KPageWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KPageWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_pagewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3951,7 +3951,7 @@ void k_pagewidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QPainter*)
+/// @param callback void func(KPageWidget* self, QPainter* painter)
 void k_pagewidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3981,7 +3981,7 @@ QPaintDevice* k_pagewidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QPaintDevice* fn(KPageWidget*, QPoint*)
+/// @param callback QPaintDevice* func(KPageWidget* self, QPoint* offset)
 void k_pagewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4009,7 +4009,7 @@ QPainter* k_pagewidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_pagewidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4039,7 +4039,7 @@ void k_pagewidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QInputMethodEvent*)
+/// @param callback void func(KPageWidget* self, QInputMethodEvent* param1)
 void k_pagewidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4069,7 +4069,7 @@ QVariant* k_pagewidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QVariant* fn(KPageWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KPageWidget* self, enum Qt__InputMethodQuery param1)
 void k_pagewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4099,7 +4099,7 @@ bool k_pagewidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn(KPageWidget*, bool)
+/// @param callback bool func(KPageWidget* self, bool next)
 void k_pagewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4131,7 +4131,7 @@ bool k_pagewidget_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn(KPageWidget*, QObject*, QEvent*)
+/// @param callback bool func(KPageWidget* self, QObject* watched, QEvent* event)
 void k_pagewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4161,7 +4161,7 @@ void k_pagewidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QTimerEvent*)
+/// @param callback void func(KPageWidget* self, QTimerEvent* event)
 void k_pagewidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4191,7 +4191,7 @@ void k_pagewidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QChildEvent*)
+/// @param callback void func(KPageWidget* self, QChildEvent* event)
 void k_pagewidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4221,7 +4221,7 @@ void k_pagewidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QEvent*)
+/// @param callback void func(KPageWidget* self, QEvent* event)
 void k_pagewidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4251,7 +4251,7 @@ void k_pagewidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMetaMethod*)
+/// @param callback void func(KPageWidget* self, QMetaMethod* signal)
 void k_pagewidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4281,7 +4281,7 @@ void k_pagewidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, QMetaMethod*)
+/// @param callback void func(KPageWidget* self, QMetaMethod* signal)
 void k_pagewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4309,7 +4309,7 @@ void k_pagewidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4337,7 +4337,7 @@ void k_pagewidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4365,7 +4365,7 @@ void k_pagewidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_pagewidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4393,7 +4393,7 @@ bool k_pagewidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagewidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4421,7 +4421,7 @@ bool k_pagewidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_pagewidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4449,7 +4449,7 @@ QObject* k_pagewidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pagewidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4477,7 +4477,7 @@ int32_t k_pagewidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pagewidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4507,7 +4507,7 @@ int32_t k_pagewidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback int32_t fn(KPageWidget*, const char*)
+/// @param callback int32_t func(KPageWidget* self, const char* signal)
 void k_pagewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4537,7 +4537,7 @@ bool k_pagewidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback bool fn(KPageWidget*, QMetaMethod*)
+/// @param callback bool func(KPageWidget* self, QMetaMethod* signal)
 void k_pagewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4569,7 +4569,7 @@ double k_pagewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidget*
-/// @param callback double fn(KPageWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KPageWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_pagewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4579,7 +4579,7 @@ void k_pagewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPageWidget*
-/// @param callback void fn(KPageWidget*, const char*)
+/// @param callback void func(KPageWidget* self, const char* objectName)
 void k_pagewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidget.html#dtor.KPageWidget)

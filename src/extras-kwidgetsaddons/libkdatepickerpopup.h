@@ -53,7 +53,7 @@ int32_t k_datepickerpopup_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn(KDatePickerPopup*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KDatePickerPopup* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_datepickerpopup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -122,7 +122,7 @@ void k_datepickerpopup_date_changed(void* self, void* date);
 /// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#dateChanged)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QDate*)
+/// @param callback void func(KDatePickerPopup* self, QDate* date)
 void k_datepickerpopup_on_date_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -458,7 +458,7 @@ void k_datepickerpopup_about_to_show(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#aboutToShow)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*)
+/// @param callback void func(KDatePickerPopup* self)
 void k_datepickerpopup_on_about_to_show(void* self, void (*callback)(void*));
 
 /// Inherited from QMenu
@@ -473,7 +473,7 @@ void k_datepickerpopup_about_to_hide(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#aboutToHide)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*)
+/// @param callback void func(KDatePickerPopup* self)
 void k_datepickerpopup_on_about_to_hide(void* self, void (*callback)(void*));
 
 /// Inherited from QMenu
@@ -489,7 +489,7 @@ void k_datepickerpopup_triggered(void* self, void* action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#triggered)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QAction*)
+/// @param callback void func(KDatePickerPopup* self, QAction* action)
 void k_datepickerpopup_on_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -505,7 +505,7 @@ void k_datepickerpopup_hovered(void* self, void* action);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#hovered)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QAction*)
+/// @param callback void func(KDatePickerPopup* self, QAction* action)
 void k_datepickerpopup_on_hovered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -2482,7 +2482,7 @@ void k_datepickerpopup_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, const char*)
+/// @param callback void func(KDatePickerPopup* self, const char* title)
 void k_datepickerpopup_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2498,7 +2498,7 @@ void k_datepickerpopup_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QIcon*)
+/// @param callback void func(KDatePickerPopup* self, QIcon* icon)
 void k_datepickerpopup_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2514,7 +2514,7 @@ void k_datepickerpopup_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, const char*)
+/// @param callback void func(KDatePickerPopup* self, const char* iconText)
 void k_datepickerpopup_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2530,7 +2530,7 @@ void k_datepickerpopup_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QPoint*)
+/// @param callback void func(KDatePickerPopup* self, QPoint* pos)
 void k_datepickerpopup_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2907,7 +2907,7 @@ void k_datepickerpopup_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*)
+/// @param callback void func(KDatePickerPopup* self)
 void k_datepickerpopup_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2985,7 +2985,7 @@ void k_datepickerpopup_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QObject*)
+/// @param callback void func(KDatePickerPopup* self, QObject* param1)
 void k_datepickerpopup_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3104,7 +3104,7 @@ QSize* k_datepickerpopup_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_datepickerpopup_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QMenu
@@ -3134,7 +3134,7 @@ void k_datepickerpopup_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QEvent*)
+/// @param callback void func(KDatePickerPopup* self, QEvent* param1)
 void k_datepickerpopup_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3164,7 +3164,7 @@ void k_datepickerpopup_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QKeyEvent*)
+/// @param callback void func(KDatePickerPopup* self, QKeyEvent* param1)
 void k_datepickerpopup_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3194,7 +3194,7 @@ void k_datepickerpopup_qbase_mouse_release_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMouseEvent*)
+/// @param callback void func(KDatePickerPopup* self, QMouseEvent* param1)
 void k_datepickerpopup_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3224,7 +3224,7 @@ void k_datepickerpopup_qbase_mouse_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMouseEvent*)
+/// @param callback void func(KDatePickerPopup* self, QMouseEvent* param1)
 void k_datepickerpopup_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3254,7 +3254,7 @@ void k_datepickerpopup_qbase_mouse_move_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMouseEvent*)
+/// @param callback void func(KDatePickerPopup* self, QMouseEvent* param1)
 void k_datepickerpopup_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3284,7 +3284,7 @@ void k_datepickerpopup_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QWheelEvent*)
+/// @param callback void func(KDatePickerPopup* self, QWheelEvent* param1)
 void k_datepickerpopup_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3314,7 +3314,7 @@ void k_datepickerpopup_qbase_enter_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QEnterEvent*)
+/// @param callback void func(KDatePickerPopup* self, QEnterEvent* param1)
 void k_datepickerpopup_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3344,7 +3344,7 @@ void k_datepickerpopup_qbase_leave_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QEvent*)
+/// @param callback void func(KDatePickerPopup* self, QEvent* param1)
 void k_datepickerpopup_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3374,7 +3374,7 @@ void k_datepickerpopup_qbase_hide_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QHideEvent*)
+/// @param callback void func(KDatePickerPopup* self, QHideEvent* param1)
 void k_datepickerpopup_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3404,7 +3404,7 @@ void k_datepickerpopup_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QPaintEvent*)
+/// @param callback void func(KDatePickerPopup* self, QPaintEvent* param1)
 void k_datepickerpopup_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3434,7 +3434,7 @@ void k_datepickerpopup_qbase_action_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QActionEvent*)
+/// @param callback void func(KDatePickerPopup* self, QActionEvent* param1)
 void k_datepickerpopup_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3464,7 +3464,7 @@ void k_datepickerpopup_qbase_timer_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QTimerEvent*)
+/// @param callback void func(KDatePickerPopup* self, QTimerEvent* param1)
 void k_datepickerpopup_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3494,7 +3494,7 @@ bool k_datepickerpopup_qbase_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn(KDatePickerPopup*, QEvent*)
+/// @param callback bool func(KDatePickerPopup* self, QEvent* param1)
 void k_datepickerpopup_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -3524,7 +3524,7 @@ bool k_datepickerpopup_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn(KDatePickerPopup*, bool)
+/// @param callback bool func(KDatePickerPopup* self, bool next)
 void k_datepickerpopup_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QMenu
@@ -3556,7 +3556,7 @@ void k_datepickerpopup_qbase_init_style_option(void* self, void* option, void* a
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QStyleOptionMenuItem*, QAction*)
+/// @param callback void func(KDatePickerPopup* self, QStyleOptionMenuItem* option, QAction* action)
 void k_datepickerpopup_on_init_style_option(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3584,7 +3584,7 @@ int32_t k_datepickerpopup_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datepickerpopup_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3614,7 +3614,7 @@ void k_datepickerpopup_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, bool)
+/// @param callback void func(KDatePickerPopup* self, bool visible)
 void k_datepickerpopup_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3642,7 +3642,7 @@ QSize* k_datepickerpopup_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_datepickerpopup_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3672,7 +3672,7 @@ int32_t k_datepickerpopup_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn(KDatePickerPopup*, int)
+/// @param callback int32_t func(KDatePickerPopup* self, int param1)
 void k_datepickerpopup_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3700,7 +3700,7 @@ bool k_datepickerpopup_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datepickerpopup_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3728,7 +3728,7 @@ QPaintEngine* k_datepickerpopup_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_datepickerpopup_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3758,7 +3758,7 @@ void k_datepickerpopup_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMouseEvent*)
+/// @param callback void func(KDatePickerPopup* self, QMouseEvent* event)
 void k_datepickerpopup_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3788,7 +3788,7 @@ void k_datepickerpopup_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QKeyEvent*)
+/// @param callback void func(KDatePickerPopup* self, QKeyEvent* event)
 void k_datepickerpopup_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3818,7 +3818,7 @@ void k_datepickerpopup_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QFocusEvent*)
+/// @param callback void func(KDatePickerPopup* self, QFocusEvent* event)
 void k_datepickerpopup_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3848,7 +3848,7 @@ void k_datepickerpopup_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QFocusEvent*)
+/// @param callback void func(KDatePickerPopup* self, QFocusEvent* event)
 void k_datepickerpopup_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3878,7 +3878,7 @@ void k_datepickerpopup_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMoveEvent*)
+/// @param callback void func(KDatePickerPopup* self, QMoveEvent* event)
 void k_datepickerpopup_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3908,7 +3908,7 @@ void k_datepickerpopup_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QResizeEvent*)
+/// @param callback void func(KDatePickerPopup* self, QResizeEvent* event)
 void k_datepickerpopup_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3938,7 +3938,7 @@ void k_datepickerpopup_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QCloseEvent*)
+/// @param callback void func(KDatePickerPopup* self, QCloseEvent* event)
 void k_datepickerpopup_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3968,7 +3968,7 @@ void k_datepickerpopup_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QContextMenuEvent*)
+/// @param callback void func(KDatePickerPopup* self, QContextMenuEvent* event)
 void k_datepickerpopup_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3998,7 +3998,7 @@ void k_datepickerpopup_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QTabletEvent*)
+/// @param callback void func(KDatePickerPopup* self, QTabletEvent* event)
 void k_datepickerpopup_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4028,7 +4028,7 @@ void k_datepickerpopup_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QDragEnterEvent*)
+/// @param callback void func(KDatePickerPopup* self, QDragEnterEvent* event)
 void k_datepickerpopup_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4058,7 +4058,7 @@ void k_datepickerpopup_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QDragMoveEvent*)
+/// @param callback void func(KDatePickerPopup* self, QDragMoveEvent* event)
 void k_datepickerpopup_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4088,7 +4088,7 @@ void k_datepickerpopup_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QDragLeaveEvent*)
+/// @param callback void func(KDatePickerPopup* self, QDragLeaveEvent* event)
 void k_datepickerpopup_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4118,7 +4118,7 @@ void k_datepickerpopup_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QDropEvent*)
+/// @param callback void func(KDatePickerPopup* self, QDropEvent* event)
 void k_datepickerpopup_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4148,7 +4148,7 @@ void k_datepickerpopup_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QShowEvent*)
+/// @param callback void func(KDatePickerPopup* self, QShowEvent* event)
 void k_datepickerpopup_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4182,7 +4182,7 @@ bool k_datepickerpopup_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn(KDatePickerPopup*, const char*, void*, intptr_t*)
+/// @param callback bool func(KDatePickerPopup* self, const char* eventType, void* message, intptr_t* result)
 void k_datepickerpopup_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4212,7 +4212,7 @@ int32_t k_datepickerpopup_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn(KDatePickerPopup*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KDatePickerPopup* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_datepickerpopup_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4242,7 +4242,7 @@ void k_datepickerpopup_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QPainter*)
+/// @param callback void func(KDatePickerPopup* self, QPainter* painter)
 void k_datepickerpopup_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4272,7 +4272,7 @@ QPaintDevice* k_datepickerpopup_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QPaintDevice* fn(KDatePickerPopup*, QPoint*)
+/// @param callback QPaintDevice* func(KDatePickerPopup* self, QPoint* offset)
 void k_datepickerpopup_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4300,7 +4300,7 @@ QPainter* k_datepickerpopup_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_datepickerpopup_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4330,7 +4330,7 @@ void k_datepickerpopup_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QInputMethodEvent*)
+/// @param callback void func(KDatePickerPopup* self, QInputMethodEvent* param1)
 void k_datepickerpopup_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4360,7 +4360,7 @@ QVariant* k_datepickerpopup_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QVariant* fn(KDatePickerPopup*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KDatePickerPopup* self, enum Qt__InputMethodQuery param1)
 void k_datepickerpopup_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
@@ -4392,7 +4392,7 @@ bool k_datepickerpopup_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn(KDatePickerPopup*, QObject*, QEvent*)
+/// @param callback bool func(KDatePickerPopup* self, QObject* watched, QEvent* event)
 void k_datepickerpopup_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4422,7 +4422,7 @@ void k_datepickerpopup_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QChildEvent*)
+/// @param callback void func(KDatePickerPopup* self, QChildEvent* event)
 void k_datepickerpopup_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4452,7 +4452,7 @@ void k_datepickerpopup_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QEvent*)
+/// @param callback void func(KDatePickerPopup* self, QEvent* event)
 void k_datepickerpopup_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4482,7 +4482,7 @@ void k_datepickerpopup_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMetaMethod*)
+/// @param callback void func(KDatePickerPopup* self, QMetaMethod* signal)
 void k_datepickerpopup_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4512,7 +4512,7 @@ void k_datepickerpopup_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, QMetaMethod*)
+/// @param callback void func(KDatePickerPopup* self, QMetaMethod* signal)
 void k_datepickerpopup_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QMenu
@@ -4540,7 +4540,7 @@ int32_t k_datepickerpopup_qbase_column_count(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datepickerpopup_on_column_count(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -4568,7 +4568,7 @@ void k_datepickerpopup_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepickerpopup_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4596,7 +4596,7 @@ void k_datepickerpopup_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepickerpopup_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4624,7 +4624,7 @@ void k_datepickerpopup_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn()
+/// @param callback void func()
 void k_datepickerpopup_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4652,7 +4652,7 @@ bool k_datepickerpopup_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datepickerpopup_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4680,7 +4680,7 @@ bool k_datepickerpopup_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_datepickerpopup_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4708,7 +4708,7 @@ QObject* k_datepickerpopup_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_datepickerpopup_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4736,7 +4736,7 @@ int32_t k_datepickerpopup_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_datepickerpopup_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4766,7 +4766,7 @@ int32_t k_datepickerpopup_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback int32_t fn(KDatePickerPopup*, const char*)
+/// @param callback int32_t func(KDatePickerPopup* self, const char* signal)
 void k_datepickerpopup_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4796,7 +4796,7 @@ bool k_datepickerpopup_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback bool fn(KDatePickerPopup*, QMetaMethod*)
+/// @param callback bool func(KDatePickerPopup* self, QMetaMethod* signal)
 void k_datepickerpopup_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4828,7 +4828,7 @@ double k_datepickerpopup_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KDatePickerPopup*
-/// @param callback double fn(KDatePickerPopup*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KDatePickerPopup* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_datepickerpopup_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4838,7 +4838,7 @@ void k_datepickerpopup_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KDatePickerPopup*
-/// @param callback void fn(KDatePickerPopup*, const char*)
+/// @param callback void func(KDatePickerPopup* self, const char* objectName)
 void k_datepickerpopup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#dtor.KDatePickerPopup)

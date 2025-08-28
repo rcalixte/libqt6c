@@ -51,7 +51,7 @@ int32_t q_groupbox_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback int32_t fn(QGroupBox*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QGroupBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_groupbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -105,7 +105,7 @@ QSize* q_groupbox_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_groupbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#minimumSizeHint)
@@ -156,7 +156,7 @@ void q_groupbox_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#clicked)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*)
+/// @param callback void func(QGroupBox* self)
 void q_groupbox_on_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#toggled)
@@ -168,7 +168,7 @@ void q_groupbox_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#toggled)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, bool)
+/// @param callback void func(QGroupBox* self, bool param1)
 void q_groupbox_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#event)
@@ -182,7 +182,7 @@ bool q_groupbox_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn(QGroupBox*, QEvent*)
+/// @param callback bool func(QGroupBox* self, QEvent* event)
 void q_groupbox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#event)
@@ -204,7 +204,7 @@ void q_groupbox_child_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QChildEvent*)
+/// @param callback void func(QGroupBox* self, QChildEvent* event)
 void q_groupbox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#childEvent)
@@ -226,7 +226,7 @@ void q_groupbox_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QResizeEvent*)
+/// @param callback void func(QGroupBox* self, QResizeEvent* event)
 void q_groupbox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#resizeEvent)
@@ -248,7 +248,7 @@ void q_groupbox_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QPaintEvent*)
+/// @param callback void func(QGroupBox* self, QPaintEvent* event)
 void q_groupbox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#paintEvent)
@@ -270,7 +270,7 @@ void q_groupbox_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QFocusEvent*)
+/// @param callback void func(QGroupBox* self, QFocusEvent* event)
 void q_groupbox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#focusInEvent)
@@ -292,7 +292,7 @@ void q_groupbox_change_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QEvent*)
+/// @param callback void func(QGroupBox* self, QEvent* event)
 void q_groupbox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#changeEvent)
@@ -314,7 +314,7 @@ void q_groupbox_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMouseEvent*)
+/// @param callback void func(QGroupBox* self, QMouseEvent* event)
 void q_groupbox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mousePressEvent)
@@ -336,7 +336,7 @@ void q_groupbox_mouse_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMouseEvent*)
+/// @param callback void func(QGroupBox* self, QMouseEvent* event)
 void q_groupbox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mouseMoveEvent)
@@ -358,7 +358,7 @@ void q_groupbox_mouse_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMouseEvent*)
+/// @param callback void func(QGroupBox* self, QMouseEvent* event)
 void q_groupbox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#mouseReleaseEvent)
@@ -380,7 +380,7 @@ void q_groupbox_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QStyleOptionGroupBox*)
+/// @param callback void func(QGroupBox* self, QStyleOptionGroupBox* option)
 void q_groupbox_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#initStyleOption)
@@ -417,7 +417,7 @@ void q_groupbox_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#clicked)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, bool)
+/// @param callback void func(QGroupBox* self, bool checked)
 void q_groupbox_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2357,7 +2357,7 @@ void q_groupbox_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, const char*)
+/// @param callback void func(QGroupBox* self, const char* title)
 void q_groupbox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2373,7 +2373,7 @@ void q_groupbox_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QIcon*)
+/// @param callback void func(QGroupBox* self, QIcon* icon)
 void q_groupbox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2389,7 +2389,7 @@ void q_groupbox_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, const char*)
+/// @param callback void func(QGroupBox* self, const char* iconText)
 void q_groupbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2405,7 +2405,7 @@ void q_groupbox_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QPoint*)
+/// @param callback void func(QGroupBox* self, QPoint* pos)
 void q_groupbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2782,7 +2782,7 @@ void q_groupbox_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*)
+/// @param callback void func(QGroupBox* self)
 void q_groupbox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2860,7 +2860,7 @@ void q_groupbox_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QObject*)
+/// @param callback void func(QGroupBox* self, QObject* param1)
 void q_groupbox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2979,7 +2979,7 @@ int32_t q_groupbox_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_groupbox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3009,7 +3009,7 @@ void q_groupbox_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, bool)
+/// @param callback void func(QGroupBox* self, bool visible)
 void q_groupbox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3037,7 +3037,7 @@ QSize* q_groupbox_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_groupbox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3067,7 +3067,7 @@ int32_t q_groupbox_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback int32_t fn(QGroupBox*, int)
+/// @param callback int32_t func(QGroupBox* self, int param1)
 void q_groupbox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3095,7 +3095,7 @@ bool q_groupbox_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_groupbox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3123,7 +3123,7 @@ QPaintEngine* q_groupbox_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_groupbox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3153,7 +3153,7 @@ void q_groupbox_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMouseEvent*)
+/// @param callback void func(QGroupBox* self, QMouseEvent* event)
 void q_groupbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3183,7 +3183,7 @@ void q_groupbox_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QWheelEvent*)
+/// @param callback void func(QGroupBox* self, QWheelEvent* event)
 void q_groupbox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3213,7 +3213,7 @@ void q_groupbox_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QKeyEvent*)
+/// @param callback void func(QGroupBox* self, QKeyEvent* event)
 void q_groupbox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3243,7 +3243,7 @@ void q_groupbox_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QKeyEvent*)
+/// @param callback void func(QGroupBox* self, QKeyEvent* event)
 void q_groupbox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3273,7 +3273,7 @@ void q_groupbox_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QFocusEvent*)
+/// @param callback void func(QGroupBox* self, QFocusEvent* event)
 void q_groupbox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3303,7 +3303,7 @@ void q_groupbox_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QEnterEvent*)
+/// @param callback void func(QGroupBox* self, QEnterEvent* event)
 void q_groupbox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3333,7 +3333,7 @@ void q_groupbox_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QEvent*)
+/// @param callback void func(QGroupBox* self, QEvent* event)
 void q_groupbox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3363,7 +3363,7 @@ void q_groupbox_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMoveEvent*)
+/// @param callback void func(QGroupBox* self, QMoveEvent* event)
 void q_groupbox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3393,7 +3393,7 @@ void q_groupbox_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QCloseEvent*)
+/// @param callback void func(QGroupBox* self, QCloseEvent* event)
 void q_groupbox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3423,7 +3423,7 @@ void q_groupbox_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QContextMenuEvent*)
+/// @param callback void func(QGroupBox* self, QContextMenuEvent* event)
 void q_groupbox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3453,7 +3453,7 @@ void q_groupbox_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QTabletEvent*)
+/// @param callback void func(QGroupBox* self, QTabletEvent* event)
 void q_groupbox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3483,7 +3483,7 @@ void q_groupbox_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QActionEvent*)
+/// @param callback void func(QGroupBox* self, QActionEvent* event)
 void q_groupbox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3513,7 +3513,7 @@ void q_groupbox_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QDragEnterEvent*)
+/// @param callback void func(QGroupBox* self, QDragEnterEvent* event)
 void q_groupbox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3543,7 +3543,7 @@ void q_groupbox_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QDragMoveEvent*)
+/// @param callback void func(QGroupBox* self, QDragMoveEvent* event)
 void q_groupbox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3573,7 +3573,7 @@ void q_groupbox_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QDragLeaveEvent*)
+/// @param callback void func(QGroupBox* self, QDragLeaveEvent* event)
 void q_groupbox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3603,7 +3603,7 @@ void q_groupbox_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QDropEvent*)
+/// @param callback void func(QGroupBox* self, QDropEvent* event)
 void q_groupbox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3633,7 +3633,7 @@ void q_groupbox_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QShowEvent*)
+/// @param callback void func(QGroupBox* self, QShowEvent* event)
 void q_groupbox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3663,7 +3663,7 @@ void q_groupbox_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QHideEvent*)
+/// @param callback void func(QGroupBox* self, QHideEvent* event)
 void q_groupbox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3697,7 +3697,7 @@ bool q_groupbox_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn(QGroupBox*, const char*, void*, intptr_t*)
+/// @param callback bool func(QGroupBox* self, const char* eventType, void* message, intptr_t* result)
 void q_groupbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3727,7 +3727,7 @@ int32_t q_groupbox_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback int32_t fn(QGroupBox*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QGroupBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_groupbox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3757,7 +3757,7 @@ void q_groupbox_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QPainter*)
+/// @param callback void func(QGroupBox* self, QPainter* painter)
 void q_groupbox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3787,7 +3787,7 @@ QPaintDevice* q_groupbox_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback QPaintDevice* fn(QGroupBox*, QPoint*)
+/// @param callback QPaintDevice* func(QGroupBox* self, QPoint* offset)
 void q_groupbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3815,7 +3815,7 @@ QPainter* q_groupbox_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_groupbox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3845,7 +3845,7 @@ void q_groupbox_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QInputMethodEvent*)
+/// @param callback void func(QGroupBox* self, QInputMethodEvent* param1)
 void q_groupbox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3875,7 +3875,7 @@ QVariant* q_groupbox_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback QVariant* fn(QGroupBox*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QGroupBox* self, enum Qt__InputMethodQuery param1)
 void q_groupbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3905,7 +3905,7 @@ bool q_groupbox_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn(QGroupBox*, bool)
+/// @param callback bool func(QGroupBox* self, bool next)
 void q_groupbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3937,7 +3937,7 @@ bool q_groupbox_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn(QGroupBox*, QObject*, QEvent*)
+/// @param callback bool func(QGroupBox* self, QObject* watched, QEvent* event)
 void q_groupbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3967,7 +3967,7 @@ void q_groupbox_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QTimerEvent*)
+/// @param callback void func(QGroupBox* self, QTimerEvent* event)
 void q_groupbox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3997,7 +3997,7 @@ void q_groupbox_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QEvent*)
+/// @param callback void func(QGroupBox* self, QEvent* event)
 void q_groupbox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4027,7 +4027,7 @@ void q_groupbox_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMetaMethod*)
+/// @param callback void func(QGroupBox* self, QMetaMethod* signal)
 void q_groupbox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4057,7 +4057,7 @@ void q_groupbox_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, QMetaMethod*)
+/// @param callback void func(QGroupBox* self, QMetaMethod* signal)
 void q_groupbox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4085,7 +4085,7 @@ void q_groupbox_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_groupbox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4113,7 +4113,7 @@ void q_groupbox_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_groupbox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4141,7 +4141,7 @@ void q_groupbox_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_groupbox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4169,7 +4169,7 @@ bool q_groupbox_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_groupbox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4197,7 +4197,7 @@ bool q_groupbox_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_groupbox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4225,7 +4225,7 @@ QObject* q_groupbox_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_groupbox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4253,7 +4253,7 @@ int32_t q_groupbox_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_groupbox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4283,7 +4283,7 @@ int32_t q_groupbox_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback int32_t fn(QGroupBox*, const char*)
+/// @param callback int32_t func(QGroupBox* self, const char* signal)
 void q_groupbox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4313,7 +4313,7 @@ bool q_groupbox_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback bool fn(QGroupBox*, QMetaMethod*)
+/// @param callback bool func(QGroupBox* self, QMetaMethod* signal)
 void q_groupbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4345,7 +4345,7 @@ double q_groupbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGroupBox*
-/// @param callback double fn(QGroupBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QGroupBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_groupbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4355,7 +4355,7 @@ void q_groupbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QGroupBox*
-/// @param callback void fn(QGroupBox*, const char*)
+/// @param callback void func(QGroupBox* self, const char* objectName)
 void q_groupbox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#dtor.QGroupBox)

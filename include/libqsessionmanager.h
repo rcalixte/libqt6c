@@ -392,7 +392,7 @@ void q_sessionmanager_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSessionManager*
-/// @param callback void fn(QSessionManager*)
+/// @param callback void func(QSessionManager* self)
 void q_sessionmanager_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -470,7 +470,7 @@ void q_sessionmanager_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSessionManager*
-/// @param callback void fn(QSessionManager*, QObject*)
+/// @param callback void func(QSessionManager* self, QObject* param1)
 void q_sessionmanager_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -480,7 +480,7 @@ void q_sessionmanager_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSessionManager*
-/// @param callback void fn(QSessionManager*, const char*)
+/// @param callback void func(QSessionManager* self, const char* objectName)
 void q_sessionmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qsessionmanager.html#types

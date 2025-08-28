@@ -37,7 +37,7 @@ QSize* q_layoutitem_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_layoutitem_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#sizeHint)
@@ -57,7 +57,7 @@ QSize* q_layoutitem_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_layoutitem_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumSize)
@@ -77,7 +77,7 @@ QSize* q_layoutitem_maximum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_layoutitem_on_maximum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#maximumSize)
@@ -99,7 +99,7 @@ int64_t q_layoutitem_expanding_directions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_layoutitem_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#expandingDirections)
@@ -122,7 +122,7 @@ void q_layoutitem_set_geometry(void* self, void* geometry);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback void fn(QLayoutItem*, QRect*)
+/// @param callback void func(QLayoutItem* self, QRect* geometry)
 void q_layoutitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#setGeometry)
@@ -143,7 +143,7 @@ QRect* q_layoutitem_geometry(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_layoutitem_on_geometry(void* self, QRect* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#geometry)
@@ -163,7 +163,7 @@ bool q_layoutitem_is_empty(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_layoutitem_on_is_empty(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#isEmpty)
@@ -183,7 +183,7 @@ bool q_layoutitem_has_height_for_width(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_layoutitem_on_has_height_for_width(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#hasHeightForWidth)
@@ -204,7 +204,7 @@ int32_t q_layoutitem_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback int32_t fn(QLayoutItem*, int)
+/// @param callback int32_t func(QLayoutItem* self, int param1)
 void q_layoutitem_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#heightForWidth)
@@ -226,7 +226,7 @@ int32_t q_layoutitem_minimum_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback int32_t fn(QLayoutItem*, int)
+/// @param callback int32_t func(QLayoutItem* self, int param1)
 void q_layoutitem_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
@@ -247,7 +247,7 @@ void q_layoutitem_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback void fn()
+/// @param callback void func()
 void q_layoutitem_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#invalidate)
@@ -267,7 +267,7 @@ QWidget* q_layoutitem_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_layoutitem_on_widget(void* self, QWidget* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#widget)
@@ -287,7 +287,7 @@ QLayout* q_layoutitem_layout(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_layoutitem_on_layout(void* self, QLayout* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#layout)
@@ -307,7 +307,7 @@ QSpacerItem* q_layoutitem_spacer_item(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_layoutitem_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
@@ -342,7 +342,7 @@ int64_t q_layoutitem_control_types(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_layoutitem_on_control_types(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
@@ -365,7 +365,7 @@ void q_layoutitem_operator_assign(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback void fn(QLayoutItem*, QLayoutItem*)
+/// @param callback void func(QLayoutItem* self, QLayoutItem* param1)
 void q_layoutitem_on_operator_assign(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
@@ -428,7 +428,7 @@ QSize* q_spaceritem_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_spaceritem_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#sizeHint)
@@ -448,7 +448,7 @@ QSize* q_spaceritem_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_spaceritem_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#minimumSize)
@@ -468,7 +468,7 @@ QSize* q_spaceritem_maximum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_spaceritem_on_maximum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#maximumSize)
@@ -490,7 +490,7 @@ int64_t q_spaceritem_expanding_directions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_spaceritem_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#expandingDirections)
@@ -512,7 +512,7 @@ bool q_spaceritem_is_empty(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_spaceritem_on_is_empty(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#isEmpty)
@@ -533,7 +533,7 @@ void q_spaceritem_set_geometry(void* self, void* geometry);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback void fn(QSpacerItem*, QRect*)
+/// @param callback void func(QSpacerItem* self, QRect* geometry)
 void q_spaceritem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#setGeometry)
@@ -554,7 +554,7 @@ QRect* q_spaceritem_geometry(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_spaceritem_on_geometry(void* self, QRect* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#geometry)
@@ -574,7 +574,7 @@ QSpacerItem* q_spaceritem_spacer_item(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_spaceritem_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#spacerItem)
@@ -648,7 +648,7 @@ bool q_spaceritem_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_spaceritem_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QLayoutItem
@@ -678,7 +678,7 @@ int32_t q_spaceritem_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback int32_t fn(QSpacerItem*, int)
+/// @param callback int32_t func(QSpacerItem* self, int param1)
 void q_spaceritem_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QLayoutItem
@@ -708,7 +708,7 @@ int32_t q_spaceritem_qbase_minimum_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback int32_t fn(QSpacerItem*, int)
+/// @param callback int32_t func(QSpacerItem* self, int param1)
 void q_spaceritem_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QLayoutItem
@@ -736,7 +736,7 @@ void q_spaceritem_qbase_invalidate(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback void fn()
+/// @param callback void func()
 void q_spaceritem_on_invalidate(void* self, void (*callback)());
 
 /// Inherited from QLayoutItem
@@ -764,7 +764,7 @@ QWidget* q_spaceritem_qbase_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_spaceritem_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -792,7 +792,7 @@ QLayout* q_spaceritem_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_spaceritem_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -824,7 +824,7 @@ int64_t q_spaceritem_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_spaceritem_on_control_types(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#dtor.QSpacerItem)
@@ -851,7 +851,7 @@ QSize* q_widgetitem_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widgetitem_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#sizeHint)
@@ -871,7 +871,7 @@ QSize* q_widgetitem_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widgetitem_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#minimumSize)
@@ -891,7 +891,7 @@ QSize* q_widgetitem_maximum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widgetitem_on_maximum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#maximumSize)
@@ -913,7 +913,7 @@ int64_t q_widgetitem_expanding_directions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_widgetitem_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
@@ -935,7 +935,7 @@ bool q_widgetitem_is_empty(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widgetitem_on_is_empty(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#isEmpty)
@@ -956,7 +956,7 @@ void q_widgetitem_set_geometry(void* self, void* geometry);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback void fn(QWidgetItem*, QRect*)
+/// @param callback void func(QWidgetItem* self, QRect* geometry)
 void q_widgetitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#setGeometry)
@@ -977,7 +977,7 @@ QRect* q_widgetitem_geometry(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_widgetitem_on_geometry(void* self, QRect* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#geometry)
@@ -997,7 +997,7 @@ QWidget* q_widgetitem_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_widgetitem_on_widget(void* self, QWidget* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#widget)
@@ -1017,7 +1017,7 @@ bool q_widgetitem_has_height_for_width(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widgetitem_on_has_height_for_width(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#hasHeightForWidth)
@@ -1038,7 +1038,7 @@ int32_t q_widgetitem_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback int32_t fn(QWidgetItem*, int)
+/// @param callback int32_t func(QWidgetItem* self, int param1)
 void q_widgetitem_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#heightForWidth)
@@ -1060,7 +1060,7 @@ int32_t q_widgetitem_minimum_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback int32_t fn(QWidgetItem*, int)
+/// @param callback int32_t func(QWidgetItem* self, int param1)
 void q_widgetitem_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#minimumHeightForWidth)
@@ -1083,7 +1083,7 @@ int64_t q_widgetitem_control_types(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_widgetitem_on_control_types(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
@@ -1137,7 +1137,7 @@ void q_widgetitem_qbase_invalidate(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItem*
-/// @param callback void fn()
+/// @param callback void func()
 void q_widgetitem_on_invalidate(void* self, void (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1165,7 +1165,7 @@ QLayout* q_widgetitem_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItem*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_widgetitem_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1193,7 +1193,7 @@ QSpacerItem* q_widgetitem_qbase_spacer_item(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItem*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_widgetitem_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#dtor.QWidgetItem)
@@ -1220,7 +1220,7 @@ QSize* q_widgetitemv2_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widgetitemv2_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitemv2.html#sizeHint)
@@ -1240,7 +1240,7 @@ QSize* q_widgetitemv2_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widgetitemv2_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitemv2.html#minimumSize)
@@ -1260,7 +1260,7 @@ QSize* q_widgetitemv2_maximum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_widgetitemv2_on_maximum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitemv2.html#maximumSize)
@@ -1281,7 +1281,7 @@ int32_t q_widgetitemv2_height_for_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback int32_t fn(QWidgetItemV2*, int)
+/// @param callback int32_t func(QWidgetItemV2* self, int width)
 void q_widgetitemv2_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitemv2.html#heightForWidth)
@@ -1338,7 +1338,7 @@ int64_t q_widgetitemv2_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_widgetitemv2_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// Inherited from QWidgetItem
@@ -1366,7 +1366,7 @@ bool q_widgetitemv2_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widgetitemv2_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QWidgetItem
@@ -1396,7 +1396,7 @@ void q_widgetitemv2_qbase_set_geometry(void* self, void* geometry);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback void fn(QWidgetItemV2*, QRect*)
+/// @param callback void func(QWidgetItemV2* self, QRect* geometry)
 void q_widgetitemv2_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidgetItem
@@ -1424,7 +1424,7 @@ QRect* q_widgetitemv2_qbase_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_widgetitemv2_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QWidgetItem
@@ -1452,7 +1452,7 @@ QWidget* q_widgetitemv2_qbase_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_widgetitemv2_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QWidgetItem
@@ -1480,7 +1480,7 @@ bool q_widgetitemv2_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_widgetitemv2_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidgetItem
@@ -1510,7 +1510,7 @@ int32_t q_widgetitemv2_qbase_minimum_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback int32_t fn(QWidgetItemV2*, int)
+/// @param callback int32_t func(QWidgetItemV2* self, int param1)
 void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidgetItem
@@ -1542,7 +1542,7 @@ int64_t q_widgetitemv2_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_widgetitemv2_on_control_types(void* self, int64_t (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1570,7 +1570,7 @@ void q_widgetitemv2_qbase_invalidate(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback void fn()
+/// @param callback void func()
 void q_widgetitemv2_on_invalidate(void* self, void (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1598,7 +1598,7 @@ QLayout* q_widgetitemv2_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_widgetitemv2_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1626,7 +1626,7 @@ QSpacerItem* q_widgetitemv2_qbase_spacer_item(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_widgetitemv2_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitemv2.html#dtor.QWidgetItemV2)

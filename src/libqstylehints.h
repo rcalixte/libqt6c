@@ -263,7 +263,7 @@ void q_stylehints_cursor_flash_time_changed(void* self, int cursorFlashTime);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#cursorFlashTimeChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int cursorFlashTime)
 void q_stylehints_on_cursor_flash_time_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#keyboardInputIntervalChanged)
@@ -275,7 +275,7 @@ void q_stylehints_keyboard_input_interval_changed(void* self, int keyboardInputI
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#keyboardInputIntervalChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int keyboardInputInterval)
 void q_stylehints_on_keyboard_input_interval_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mouseDoubleClickIntervalChanged)
@@ -287,7 +287,7 @@ void q_stylehints_mouse_double_click_interval_changed(void* self, int mouseDoubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mouseDoubleClickIntervalChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int mouseDoubleClickInterval)
 void q_stylehints_on_mouse_double_click_interval_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mousePressAndHoldIntervalChanged)
@@ -299,7 +299,7 @@ void q_stylehints_mouse_press_and_hold_interval_changed(void* self, int mousePre
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mousePressAndHoldIntervalChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int mousePressAndHoldInterval)
 void q_stylehints_on_mouse_press_and_hold_interval_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#startDragDistanceChanged)
@@ -311,7 +311,7 @@ void q_stylehints_start_drag_distance_changed(void* self, int startDragDistance)
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#startDragDistanceChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int startDragDistance)
 void q_stylehints_on_start_drag_distance_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#startDragTimeChanged)
@@ -323,7 +323,7 @@ void q_stylehints_start_drag_time_changed(void* self, int startDragTime);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#startDragTimeChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int startDragTime)
 void q_stylehints_on_start_drag_time_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#tabFocusBehaviorChanged)
@@ -335,7 +335,7 @@ void q_stylehints_tab_focus_behavior_changed(void* self, int32_t tabFocusBehavio
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#tabFocusBehaviorChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, enum Qt__TabFocusBehavior)
+/// @param callback void func(QStyleHints* self, enum Qt__TabFocusBehavior tabFocusBehavior)
 void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#useHoverEffectsChanged)
@@ -347,7 +347,7 @@ void q_stylehints_use_hover_effects_changed(void* self, bool useHoverEffects);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#useHoverEffectsChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, bool)
+/// @param callback void func(QStyleHints* self, bool useHoverEffects)
 void q_stylehints_on_use_hover_effects_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#showShortcutsInContextMenusChanged)
@@ -359,7 +359,7 @@ void q_stylehints_show_shortcuts_in_context_menus_changed(void* self, bool param
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#showShortcutsInContextMenusChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, bool)
+/// @param callback void func(QStyleHints* self, bool param1)
 void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTriggerChanged)
@@ -371,7 +371,7 @@ void q_stylehints_context_menu_trigger_changed(void* self, int32_t contextMenuTr
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTriggerChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, enum Qt__ContextMenuTrigger)
+/// @param callback void func(QStyleHints* self, enum Qt__ContextMenuTrigger contextMenuTrigger)
 void q_stylehints_on_context_menu_trigger_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#wheelScrollLinesChanged)
@@ -383,7 +383,7 @@ void q_stylehints_wheel_scroll_lines_changed(void* self, int scrollLines);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#wheelScrollLinesChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int scrollLines)
 void q_stylehints_on_wheel_scroll_lines_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mouseQuickSelectionThresholdChanged)
@@ -395,7 +395,7 @@ void q_stylehints_mouse_quick_selection_threshold_changed(void* self, int thresh
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#mouseQuickSelectionThresholdChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, int)
+/// @param callback void func(QStyleHints* self, int threshold)
 void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#colorSchemeChanged)
@@ -407,7 +407,7 @@ void q_stylehints_color_scheme_changed(void* self, int32_t colorScheme);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#colorSchemeChanged)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, enum Qt__ColorScheme)
+/// @param callback void func(QStyleHints* self, enum Qt__ColorScheme colorScheme)
 void q_stylehints_on_color_scheme_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -670,7 +670,7 @@ void q_stylehints_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*)
+/// @param callback void func(QStyleHints* self)
 void q_stylehints_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -748,7 +748,7 @@ void q_stylehints_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, QObject*)
+/// @param callback void func(QStyleHints* self, QObject* param1)
 void q_stylehints_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -758,7 +758,7 @@ void q_stylehints_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStyleHints*
-/// @param callback void fn(QStyleHints*, const char*)
+/// @param callback void func(QStyleHints* self, const char* objectName)
 void q_stylehints_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#dtor.QStyleHints)

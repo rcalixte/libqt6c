@@ -51,7 +51,7 @@ int32_t q_splitter_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn(QSplitter*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSplitter* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_splitter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -151,7 +151,7 @@ QSize* q_splitter_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_splitter_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#sizeHint)
@@ -171,7 +171,7 @@ QSize* q_splitter_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_splitter_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#minimumSizeHint)
@@ -264,7 +264,7 @@ void q_splitter_splitter_moved(void* self, int pos, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#splitterMoved)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, int, int)
+/// @param callback void func(QSplitter* self, int pos, int index)
 void q_splitter_on_splitter_moved(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#createHandle)
@@ -277,7 +277,7 @@ QSplitterHandle* q_splitter_create_handle(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback QSplitterHandle* fn()
+/// @param callback QSplitterHandle* func()
 void q_splitter_on_create_handle(void* self, QSplitterHandle* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#createHandle)
@@ -298,7 +298,7 @@ void q_splitter_child_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QChildEvent*)
+/// @param callback void func(QSplitter* self, QChildEvent* param1)
 void q_splitter_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#childEvent)
@@ -320,7 +320,7 @@ bool q_splitter_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn(QSplitter*, QEvent*)
+/// @param callback bool func(QSplitter* self, QEvent* param1)
 void q_splitter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#event)
@@ -342,7 +342,7 @@ void q_splitter_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QResizeEvent*)
+/// @param callback void func(QSplitter* self, QResizeEvent* param1)
 void q_splitter_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#resizeEvent)
@@ -364,7 +364,7 @@ void q_splitter_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QEvent*)
+/// @param callback void func(QSplitter* self, QEvent* param1)
 void q_splitter_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#changeEvent)
@@ -387,7 +387,7 @@ void q_splitter_move_splitter(void* self, int pos, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, int, int)
+/// @param callback void func(QSplitter* self, int pos, int index)
 void q_splitter_on_move_splitter(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#moveSplitter)
@@ -410,7 +410,7 @@ void q_splitter_set_rubber_band(void* self, int position);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, int)
+/// @param callback void func(QSplitter* self, int position)
 void q_splitter_on_set_rubber_band(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#setRubberBand)
@@ -433,7 +433,7 @@ int32_t q_splitter_closest_legal_position(void* self, int param1, int param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn(QSplitter*, int, int)
+/// @param callback int32_t func(QSplitter* self, int param1, int param2)
 void q_splitter_on_closest_legal_position(void* self, int32_t (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#closestLegalPosition)
@@ -2506,7 +2506,7 @@ void q_splitter_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, const char*)
+/// @param callback void func(QSplitter* self, const char* title)
 void q_splitter_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2522,7 +2522,7 @@ void q_splitter_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QIcon*)
+/// @param callback void func(QSplitter* self, QIcon* icon)
 void q_splitter_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2538,7 +2538,7 @@ void q_splitter_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, const char*)
+/// @param callback void func(QSplitter* self, const char* iconText)
 void q_splitter_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2554,7 +2554,7 @@ void q_splitter_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QPoint*)
+/// @param callback void func(QSplitter* self, QPoint* pos)
 void q_splitter_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2931,7 +2931,7 @@ void q_splitter_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*)
+/// @param callback void func(QSplitter* self)
 void q_splitter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3009,7 +3009,7 @@ void q_splitter_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QObject*)
+/// @param callback void func(QSplitter* self, QObject* param1)
 void q_splitter_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3130,7 +3130,7 @@ void q_splitter_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QPaintEvent*)
+/// @param callback void func(QSplitter* self, QPaintEvent* param1)
 void q_splitter_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3160,7 +3160,7 @@ void q_splitter_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QStyleOptionFrame*)
+/// @param callback void func(QSplitter* self, QStyleOptionFrame* option)
 void q_splitter_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3188,7 +3188,7 @@ int32_t q_splitter_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_splitter_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3218,7 +3218,7 @@ void q_splitter_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, bool)
+/// @param callback void func(QSplitter* self, bool visible)
 void q_splitter_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3248,7 +3248,7 @@ int32_t q_splitter_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn(QSplitter*, int)
+/// @param callback int32_t func(QSplitter* self, int param1)
 void q_splitter_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3276,7 +3276,7 @@ bool q_splitter_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_splitter_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3304,7 +3304,7 @@ QPaintEngine* q_splitter_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_splitter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3334,7 +3334,7 @@ void q_splitter_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMouseEvent*)
+/// @param callback void func(QSplitter* self, QMouseEvent* event)
 void q_splitter_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3364,7 +3364,7 @@ void q_splitter_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMouseEvent*)
+/// @param callback void func(QSplitter* self, QMouseEvent* event)
 void q_splitter_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3394,7 +3394,7 @@ void q_splitter_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMouseEvent*)
+/// @param callback void func(QSplitter* self, QMouseEvent* event)
 void q_splitter_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3424,7 +3424,7 @@ void q_splitter_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMouseEvent*)
+/// @param callback void func(QSplitter* self, QMouseEvent* event)
 void q_splitter_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3454,7 +3454,7 @@ void q_splitter_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QWheelEvent*)
+/// @param callback void func(QSplitter* self, QWheelEvent* event)
 void q_splitter_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3484,7 +3484,7 @@ void q_splitter_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QKeyEvent*)
+/// @param callback void func(QSplitter* self, QKeyEvent* event)
 void q_splitter_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3514,7 +3514,7 @@ void q_splitter_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QKeyEvent*)
+/// @param callback void func(QSplitter* self, QKeyEvent* event)
 void q_splitter_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3544,7 +3544,7 @@ void q_splitter_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QFocusEvent*)
+/// @param callback void func(QSplitter* self, QFocusEvent* event)
 void q_splitter_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3574,7 +3574,7 @@ void q_splitter_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QFocusEvent*)
+/// @param callback void func(QSplitter* self, QFocusEvent* event)
 void q_splitter_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3604,7 +3604,7 @@ void q_splitter_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QEnterEvent*)
+/// @param callback void func(QSplitter* self, QEnterEvent* event)
 void q_splitter_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3634,7 +3634,7 @@ void q_splitter_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QEvent*)
+/// @param callback void func(QSplitter* self, QEvent* event)
 void q_splitter_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3664,7 +3664,7 @@ void q_splitter_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMoveEvent*)
+/// @param callback void func(QSplitter* self, QMoveEvent* event)
 void q_splitter_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3694,7 +3694,7 @@ void q_splitter_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QCloseEvent*)
+/// @param callback void func(QSplitter* self, QCloseEvent* event)
 void q_splitter_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3724,7 +3724,7 @@ void q_splitter_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QContextMenuEvent*)
+/// @param callback void func(QSplitter* self, QContextMenuEvent* event)
 void q_splitter_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3754,7 +3754,7 @@ void q_splitter_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QTabletEvent*)
+/// @param callback void func(QSplitter* self, QTabletEvent* event)
 void q_splitter_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3784,7 +3784,7 @@ void q_splitter_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QActionEvent*)
+/// @param callback void func(QSplitter* self, QActionEvent* event)
 void q_splitter_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3814,7 +3814,7 @@ void q_splitter_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QDragEnterEvent*)
+/// @param callback void func(QSplitter* self, QDragEnterEvent* event)
 void q_splitter_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3844,7 +3844,7 @@ void q_splitter_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QDragMoveEvent*)
+/// @param callback void func(QSplitter* self, QDragMoveEvent* event)
 void q_splitter_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3874,7 +3874,7 @@ void q_splitter_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QDragLeaveEvent*)
+/// @param callback void func(QSplitter* self, QDragLeaveEvent* event)
 void q_splitter_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3904,7 +3904,7 @@ void q_splitter_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QDropEvent*)
+/// @param callback void func(QSplitter* self, QDropEvent* event)
 void q_splitter_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3934,7 +3934,7 @@ void q_splitter_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QShowEvent*)
+/// @param callback void func(QSplitter* self, QShowEvent* event)
 void q_splitter_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3964,7 +3964,7 @@ void q_splitter_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QHideEvent*)
+/// @param callback void func(QSplitter* self, QHideEvent* event)
 void q_splitter_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3998,7 +3998,7 @@ bool q_splitter_qbase_native_event(void* self, const char* eventType, void* mess
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn(QSplitter*, const char*, void*, intptr_t*)
+/// @param callback bool func(QSplitter* self, const char* eventType, void* message, intptr_t* result)
 void q_splitter_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4028,7 +4028,7 @@ int32_t q_splitter_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn(QSplitter*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QSplitter* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_splitter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4058,7 +4058,7 @@ void q_splitter_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QPainter*)
+/// @param callback void func(QSplitter* self, QPainter* painter)
 void q_splitter_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4088,7 +4088,7 @@ QPaintDevice* q_splitter_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback QPaintDevice* fn(QSplitter*, QPoint*)
+/// @param callback QPaintDevice* func(QSplitter* self, QPoint* offset)
 void q_splitter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4116,7 +4116,7 @@ QPainter* q_splitter_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_splitter_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4146,7 +4146,7 @@ void q_splitter_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QInputMethodEvent*)
+/// @param callback void func(QSplitter* self, QInputMethodEvent* param1)
 void q_splitter_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4176,7 +4176,7 @@ QVariant* q_splitter_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback QVariant* fn(QSplitter*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QSplitter* self, enum Qt__InputMethodQuery param1)
 void q_splitter_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4206,7 +4206,7 @@ bool q_splitter_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn(QSplitter*, bool)
+/// @param callback bool func(QSplitter* self, bool next)
 void q_splitter_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4238,7 +4238,7 @@ bool q_splitter_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn(QSplitter*, QObject*, QEvent*)
+/// @param callback bool func(QSplitter* self, QObject* watched, QEvent* event)
 void q_splitter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4268,7 +4268,7 @@ void q_splitter_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QTimerEvent*)
+/// @param callback void func(QSplitter* self, QTimerEvent* event)
 void q_splitter_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4298,7 +4298,7 @@ void q_splitter_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QEvent*)
+/// @param callback void func(QSplitter* self, QEvent* event)
 void q_splitter_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4328,7 +4328,7 @@ void q_splitter_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMetaMethod*)
+/// @param callback void func(QSplitter* self, QMetaMethod* signal)
 void q_splitter_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4358,7 +4358,7 @@ void q_splitter_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QMetaMethod*)
+/// @param callback void func(QSplitter* self, QMetaMethod* signal)
 void q_splitter_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -4388,7 +4388,7 @@ void q_splitter_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, QPainter*)
+/// @param callback void func(QSplitter* self, QPainter* param1)
 void q_splitter_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4416,7 +4416,7 @@ void q_splitter_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn()
+/// @param callback void func()
 void q_splitter_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4444,7 +4444,7 @@ void q_splitter_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn()
+/// @param callback void func()
 void q_splitter_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4472,7 +4472,7 @@ void q_splitter_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback void fn()
+/// @param callback void func()
 void q_splitter_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4500,7 +4500,7 @@ bool q_splitter_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_splitter_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4528,7 +4528,7 @@ bool q_splitter_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_splitter_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4556,7 +4556,7 @@ QObject* q_splitter_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_splitter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4584,7 +4584,7 @@ int32_t q_splitter_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_splitter_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4614,7 +4614,7 @@ int32_t q_splitter_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback int32_t fn(QSplitter*, const char*)
+/// @param callback int32_t func(QSplitter* self, const char* signal)
 void q_splitter_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4644,7 +4644,7 @@ bool q_splitter_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback bool fn(QSplitter*, QMetaMethod*)
+/// @param callback bool func(QSplitter* self, QMetaMethod* signal)
 void q_splitter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4676,7 +4676,7 @@ double q_splitter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitter*
-/// @param callback double fn(QSplitter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QSplitter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_splitter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4686,7 +4686,7 @@ void q_splitter_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSplitter*
-/// @param callback void fn(QSplitter*, const char*)
+/// @param callback void func(QSplitter* self, const char* objectName)
 void q_splitter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#dtor.QSplitter)
@@ -4722,7 +4722,7 @@ int32_t q_splitterhandle_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn(QSplitterHandle*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSplitterHandle* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_splitterhandle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -4773,7 +4773,7 @@ QSize* q_splitterhandle_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_splitterhandle_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#sizeHint)
@@ -4794,7 +4794,7 @@ void q_splitterhandle_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QPaintEvent*)
+/// @param callback void func(QSplitterHandle* self, QPaintEvent* param1)
 void q_splitterhandle_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#paintEvent)
@@ -4816,7 +4816,7 @@ void q_splitterhandle_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMouseEvent*)
+/// @param callback void func(QSplitterHandle* self, QMouseEvent* param1)
 void q_splitterhandle_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseMoveEvent)
@@ -4838,7 +4838,7 @@ void q_splitterhandle_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMouseEvent*)
+/// @param callback void func(QSplitterHandle* self, QMouseEvent* param1)
 void q_splitterhandle_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mousePressEvent)
@@ -4860,7 +4860,7 @@ void q_splitterhandle_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMouseEvent*)
+/// @param callback void func(QSplitterHandle* self, QMouseEvent* param1)
 void q_splitterhandle_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#mouseReleaseEvent)
@@ -4882,7 +4882,7 @@ void q_splitterhandle_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QResizeEvent*)
+/// @param callback void func(QSplitterHandle* self, QResizeEvent* param1)
 void q_splitterhandle_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#resizeEvent)
@@ -4904,7 +4904,7 @@ bool q_splitterhandle_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn(QSplitterHandle*, QEvent*)
+/// @param callback bool func(QSplitterHandle* self, QEvent* param1)
 void q_splitterhandle_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#event)
@@ -4926,7 +4926,7 @@ void q_splitterhandle_move_splitter(void* self, int p);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, int)
+/// @param callback void func(QSplitterHandle* self, int p)
 void q_splitterhandle_on_move_splitter(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#moveSplitter)
@@ -4948,7 +4948,7 @@ int32_t q_splitterhandle_closest_legal_position(void* self, int p);
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn(QSplitterHandle*, int)
+/// @param callback int32_t func(QSplitterHandle* self, int p)
 void q_splitterhandle_on_closest_legal_position(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#closestLegalPosition)
@@ -6913,7 +6913,7 @@ void q_splitterhandle_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, const char*)
+/// @param callback void func(QSplitterHandle* self, const char* title)
 void q_splitterhandle_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6929,7 +6929,7 @@ void q_splitterhandle_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QIcon*)
+/// @param callback void func(QSplitterHandle* self, QIcon* icon)
 void q_splitterhandle_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6945,7 +6945,7 @@ void q_splitterhandle_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, const char*)
+/// @param callback void func(QSplitterHandle* self, const char* iconText)
 void q_splitterhandle_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6961,7 +6961,7 @@ void q_splitterhandle_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QPoint*)
+/// @param callback void func(QSplitterHandle* self, QPoint* pos)
 void q_splitterhandle_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7338,7 +7338,7 @@ void q_splitterhandle_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*)
+/// @param callback void func(QSplitterHandle* self)
 void q_splitterhandle_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -7416,7 +7416,7 @@ void q_splitterhandle_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QObject*)
+/// @param callback void func(QSplitterHandle* self, QObject* param1)
 void q_splitterhandle_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7535,7 +7535,7 @@ int32_t q_splitterhandle_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_splitterhandle_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -7565,7 +7565,7 @@ void q_splitterhandle_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, bool)
+/// @param callback void func(QSplitterHandle* self, bool visible)
 void q_splitterhandle_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -7593,7 +7593,7 @@ QSize* q_splitterhandle_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_splitterhandle_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -7623,7 +7623,7 @@ int32_t q_splitterhandle_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn(QSplitterHandle*, int)
+/// @param callback int32_t func(QSplitterHandle* self, int param1)
 void q_splitterhandle_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -7651,7 +7651,7 @@ bool q_splitterhandle_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_splitterhandle_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7679,7 +7679,7 @@ QPaintEngine* q_splitterhandle_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_splitterhandle_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -7709,7 +7709,7 @@ void q_splitterhandle_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMouseEvent*)
+/// @param callback void func(QSplitterHandle* self, QMouseEvent* event)
 void q_splitterhandle_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7739,7 +7739,7 @@ void q_splitterhandle_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QWheelEvent*)
+/// @param callback void func(QSplitterHandle* self, QWheelEvent* event)
 void q_splitterhandle_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7769,7 +7769,7 @@ void q_splitterhandle_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QKeyEvent*)
+/// @param callback void func(QSplitterHandle* self, QKeyEvent* event)
 void q_splitterhandle_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7799,7 +7799,7 @@ void q_splitterhandle_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QKeyEvent*)
+/// @param callback void func(QSplitterHandle* self, QKeyEvent* event)
 void q_splitterhandle_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7829,7 +7829,7 @@ void q_splitterhandle_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QFocusEvent*)
+/// @param callback void func(QSplitterHandle* self, QFocusEvent* event)
 void q_splitterhandle_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7859,7 +7859,7 @@ void q_splitterhandle_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QFocusEvent*)
+/// @param callback void func(QSplitterHandle* self, QFocusEvent* event)
 void q_splitterhandle_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7889,7 +7889,7 @@ void q_splitterhandle_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QEnterEvent*)
+/// @param callback void func(QSplitterHandle* self, QEnterEvent* event)
 void q_splitterhandle_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7919,7 +7919,7 @@ void q_splitterhandle_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QEvent*)
+/// @param callback void func(QSplitterHandle* self, QEvent* event)
 void q_splitterhandle_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7949,7 +7949,7 @@ void q_splitterhandle_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMoveEvent*)
+/// @param callback void func(QSplitterHandle* self, QMoveEvent* event)
 void q_splitterhandle_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7979,7 +7979,7 @@ void q_splitterhandle_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QCloseEvent*)
+/// @param callback void func(QSplitterHandle* self, QCloseEvent* event)
 void q_splitterhandle_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8009,7 +8009,7 @@ void q_splitterhandle_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QContextMenuEvent*)
+/// @param callback void func(QSplitterHandle* self, QContextMenuEvent* event)
 void q_splitterhandle_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8039,7 +8039,7 @@ void q_splitterhandle_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QTabletEvent*)
+/// @param callback void func(QSplitterHandle* self, QTabletEvent* event)
 void q_splitterhandle_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8069,7 +8069,7 @@ void q_splitterhandle_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QActionEvent*)
+/// @param callback void func(QSplitterHandle* self, QActionEvent* event)
 void q_splitterhandle_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8099,7 +8099,7 @@ void q_splitterhandle_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QDragEnterEvent*)
+/// @param callback void func(QSplitterHandle* self, QDragEnterEvent* event)
 void q_splitterhandle_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8129,7 +8129,7 @@ void q_splitterhandle_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QDragMoveEvent*)
+/// @param callback void func(QSplitterHandle* self, QDragMoveEvent* event)
 void q_splitterhandle_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8159,7 +8159,7 @@ void q_splitterhandle_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QDragLeaveEvent*)
+/// @param callback void func(QSplitterHandle* self, QDragLeaveEvent* event)
 void q_splitterhandle_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8189,7 +8189,7 @@ void q_splitterhandle_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QDropEvent*)
+/// @param callback void func(QSplitterHandle* self, QDropEvent* event)
 void q_splitterhandle_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8219,7 +8219,7 @@ void q_splitterhandle_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QShowEvent*)
+/// @param callback void func(QSplitterHandle* self, QShowEvent* event)
 void q_splitterhandle_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8249,7 +8249,7 @@ void q_splitterhandle_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QHideEvent*)
+/// @param callback void func(QSplitterHandle* self, QHideEvent* event)
 void q_splitterhandle_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8283,7 +8283,7 @@ bool q_splitterhandle_qbase_native_event(void* self, const char* eventType, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn(QSplitterHandle*, const char*, void*, intptr_t*)
+/// @param callback bool func(QSplitterHandle* self, const char* eventType, void* message, intptr_t* result)
 void q_splitterhandle_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -8313,7 +8313,7 @@ void q_splitterhandle_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QEvent*)
+/// @param callback void func(QSplitterHandle* self, QEvent* param1)
 void q_splitterhandle_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8343,7 +8343,7 @@ int32_t q_splitterhandle_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn(QSplitterHandle*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QSplitterHandle* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_splitterhandle_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -8373,7 +8373,7 @@ void q_splitterhandle_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QPainter*)
+/// @param callback void func(QSplitterHandle* self, QPainter* painter)
 void q_splitterhandle_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8403,7 +8403,7 @@ QPaintDevice* q_splitterhandle_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QPaintDevice* fn(QSplitterHandle*, QPoint*)
+/// @param callback QPaintDevice* func(QSplitterHandle* self, QPoint* offset)
 void q_splitterhandle_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8431,7 +8431,7 @@ QPainter* q_splitterhandle_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_splitterhandle_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -8461,7 +8461,7 @@ void q_splitterhandle_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QInputMethodEvent*)
+/// @param callback void func(QSplitterHandle* self, QInputMethodEvent* param1)
 void q_splitterhandle_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8491,7 +8491,7 @@ QVariant* q_splitterhandle_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QVariant* fn(QSplitterHandle*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QSplitterHandle* self, enum Qt__InputMethodQuery param1)
 void q_splitterhandle_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -8521,7 +8521,7 @@ bool q_splitterhandle_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn(QSplitterHandle*, bool)
+/// @param callback bool func(QSplitterHandle* self, bool next)
 void q_splitterhandle_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -8553,7 +8553,7 @@ bool q_splitterhandle_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn(QSplitterHandle*, QObject*, QEvent*)
+/// @param callback bool func(QSplitterHandle* self, QObject* watched, QEvent* event)
 void q_splitterhandle_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -8583,7 +8583,7 @@ void q_splitterhandle_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QTimerEvent*)
+/// @param callback void func(QSplitterHandle* self, QTimerEvent* event)
 void q_splitterhandle_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8613,7 +8613,7 @@ void q_splitterhandle_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QChildEvent*)
+/// @param callback void func(QSplitterHandle* self, QChildEvent* event)
 void q_splitterhandle_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8643,7 +8643,7 @@ void q_splitterhandle_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QEvent*)
+/// @param callback void func(QSplitterHandle* self, QEvent* event)
 void q_splitterhandle_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8673,7 +8673,7 @@ void q_splitterhandle_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMetaMethod*)
+/// @param callback void func(QSplitterHandle* self, QMetaMethod* signal)
 void q_splitterhandle_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8703,7 +8703,7 @@ void q_splitterhandle_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, QMetaMethod*)
+/// @param callback void func(QSplitterHandle* self, QMetaMethod* signal)
 void q_splitterhandle_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8731,7 +8731,7 @@ void q_splitterhandle_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn()
+/// @param callback void func()
 void q_splitterhandle_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8759,7 +8759,7 @@ void q_splitterhandle_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn()
+/// @param callback void func()
 void q_splitterhandle_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8787,7 +8787,7 @@ void q_splitterhandle_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn()
+/// @param callback void func()
 void q_splitterhandle_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8815,7 +8815,7 @@ bool q_splitterhandle_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_splitterhandle_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -8843,7 +8843,7 @@ bool q_splitterhandle_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_splitterhandle_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -8871,7 +8871,7 @@ QObject* q_splitterhandle_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_splitterhandle_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -8899,7 +8899,7 @@ int32_t q_splitterhandle_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_splitterhandle_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -8929,7 +8929,7 @@ int32_t q_splitterhandle_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback int32_t fn(QSplitterHandle*, const char*)
+/// @param callback int32_t func(QSplitterHandle* self, const char* signal)
 void q_splitterhandle_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -8959,7 +8959,7 @@ bool q_splitterhandle_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback bool fn(QSplitterHandle*, QMetaMethod*)
+/// @param callback bool func(QSplitterHandle* self, QMetaMethod* signal)
 void q_splitterhandle_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8991,7 +8991,7 @@ double q_splitterhandle_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSplitterHandle*
-/// @param callback double fn(QSplitterHandle*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QSplitterHandle* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_splitterhandle_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -9001,7 +9001,7 @@ void q_splitterhandle_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSplitterHandle*
-/// @param callback void fn(QSplitterHandle*, const char*)
+/// @param callback void func(QSplitterHandle* self, const char* objectName)
 void q_splitterhandle_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#dtor.QSplitterHandle)

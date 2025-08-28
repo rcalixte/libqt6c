@@ -27,7 +27,7 @@ void q_runnable_run(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QRunnable*
-/// @param callback void fn()
+/// @param callback void func()
 void q_runnable_on_run(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrunnable.html#run)

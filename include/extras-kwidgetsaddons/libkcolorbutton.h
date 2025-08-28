@@ -64,7 +64,7 @@ int32_t k_colorbutton_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback int32_t fn(KColorButton*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KColorButton* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_colorbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -125,7 +125,7 @@ QSize* k_colorbutton_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_colorbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#sizeHint)
@@ -145,7 +145,7 @@ QSize* k_colorbutton_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_colorbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#minimumSizeHint)
@@ -164,7 +164,7 @@ void k_colorbutton_changed(void* self, void* newColor);
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#changed)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QColor*)
+/// @param callback void func(KColorButton* self, QColor* newColor)
 void k_colorbutton_on_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#paintEvent)
@@ -178,7 +178,7 @@ void k_colorbutton_paint_event(void* self, void* pe);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QPaintEvent*)
+/// @param callback void func(KColorButton* self, QPaintEvent* pe)
 void k_colorbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#paintEvent)
@@ -200,7 +200,7 @@ void k_colorbutton_drag_enter_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QDragEnterEvent*)
+/// @param callback void func(KColorButton* self, QDragEnterEvent* param1)
 void k_colorbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dragEnterEvent)
@@ -222,7 +222,7 @@ void k_colorbutton_drop_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QDropEvent*)
+/// @param callback void func(KColorButton* self, QDropEvent* param1)
 void k_colorbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dropEvent)
@@ -244,7 +244,7 @@ void k_colorbutton_mouse_press_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMouseEvent*)
+/// @param callback void func(KColorButton* self, QMouseEvent* e)
 void k_colorbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mousePressEvent)
@@ -266,7 +266,7 @@ void k_colorbutton_mouse_move_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMouseEvent*)
+/// @param callback void func(KColorButton* self, QMouseEvent* e)
 void k_colorbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mouseMoveEvent)
@@ -288,7 +288,7 @@ void k_colorbutton_key_press_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QKeyEvent*)
+/// @param callback void func(KColorButton* self, QKeyEvent* e)
 void k_colorbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#keyPressEvent)
@@ -590,7 +590,7 @@ void k_colorbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*)
+/// @param callback void func(KColorButton* self)
 void k_colorbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -605,7 +605,7 @@ void k_colorbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*)
+/// @param callback void func(KColorButton* self)
 void k_colorbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -620,7 +620,7 @@ void k_colorbutton_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*)
+/// @param callback void func(KColorButton* self)
 void k_colorbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -636,7 +636,7 @@ void k_colorbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, bool)
+/// @param callback void func(KColorButton* self, bool checked)
 void k_colorbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -652,7 +652,7 @@ void k_colorbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, bool)
+/// @param callback void func(KColorButton* self, bool checked)
 void k_colorbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2592,7 +2592,7 @@ void k_colorbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, const char*)
+/// @param callback void func(KColorButton* self, const char* title)
 void k_colorbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2608,7 +2608,7 @@ void k_colorbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QIcon*)
+/// @param callback void func(KColorButton* self, QIcon* icon)
 void k_colorbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2624,7 +2624,7 @@ void k_colorbutton_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, const char*)
+/// @param callback void func(KColorButton* self, const char* iconText)
 void k_colorbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2640,7 +2640,7 @@ void k_colorbutton_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QPoint*)
+/// @param callback void func(KColorButton* self, QPoint* pos)
 void k_colorbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3017,7 +3017,7 @@ void k_colorbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*)
+/// @param callback void func(KColorButton* self)
 void k_colorbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3095,7 +3095,7 @@ void k_colorbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QObject*)
+/// @param callback void func(KColorButton* self, QObject* param1)
 void k_colorbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3216,7 +3216,7 @@ bool k_colorbutton_qbase_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn(KColorButton*, QEvent*)
+/// @param callback bool func(KColorButton* self, QEvent* e)
 void k_colorbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3246,7 +3246,7 @@ void k_colorbutton_qbase_focus_in_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QFocusEvent*)
+/// @param callback void func(KColorButton* self, QFocusEvent* param1)
 void k_colorbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3276,7 +3276,7 @@ void k_colorbutton_qbase_focus_out_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QFocusEvent*)
+/// @param callback void func(KColorButton* self, QFocusEvent* param1)
 void k_colorbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3306,7 +3306,7 @@ void k_colorbutton_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QStyleOptionButton*)
+/// @param callback void func(KColorButton* self, QStyleOptionButton* option)
 void k_colorbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
@@ -3336,7 +3336,7 @@ bool k_colorbutton_qbase_hit_button(void* self, void* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn(KColorButton*, QPoint*)
+/// @param callback bool func(KColorButton* self, QPoint* pos)
 void k_colorbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3364,7 +3364,7 @@ void k_colorbutton_qbase_check_state_set(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3392,7 +3392,7 @@ void k_colorbutton_qbase_next_check_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
@@ -3422,7 +3422,7 @@ void k_colorbutton_qbase_key_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QKeyEvent*)
+/// @param callback void func(KColorButton* self, QKeyEvent* e)
 void k_colorbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3452,7 +3452,7 @@ void k_colorbutton_qbase_mouse_release_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMouseEvent*)
+/// @param callback void func(KColorButton* self, QMouseEvent* e)
 void k_colorbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3482,7 +3482,7 @@ void k_colorbutton_qbase_change_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QEvent*)
+/// @param callback void func(KColorButton* self, QEvent* e)
 void k_colorbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
@@ -3512,7 +3512,7 @@ void k_colorbutton_qbase_timer_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QTimerEvent*)
+/// @param callback void func(KColorButton* self, QTimerEvent* e)
 void k_colorbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3540,7 +3540,7 @@ int32_t k_colorbutton_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_colorbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3570,7 +3570,7 @@ void k_colorbutton_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, bool)
+/// @param callback void func(KColorButton* self, bool visible)
 void k_colorbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3600,7 +3600,7 @@ int32_t k_colorbutton_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback int32_t fn(KColorButton*, int)
+/// @param callback int32_t func(KColorButton* self, int param1)
 void k_colorbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3628,7 +3628,7 @@ bool k_colorbutton_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_colorbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3656,7 +3656,7 @@ QPaintEngine* k_colorbutton_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_colorbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3686,7 +3686,7 @@ void k_colorbutton_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMouseEvent*)
+/// @param callback void func(KColorButton* self, QMouseEvent* event)
 void k_colorbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3716,7 +3716,7 @@ void k_colorbutton_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QWheelEvent*)
+/// @param callback void func(KColorButton* self, QWheelEvent* event)
 void k_colorbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3746,7 +3746,7 @@ void k_colorbutton_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QEnterEvent*)
+/// @param callback void func(KColorButton* self, QEnterEvent* event)
 void k_colorbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3776,7 +3776,7 @@ void k_colorbutton_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QEvent*)
+/// @param callback void func(KColorButton* self, QEvent* event)
 void k_colorbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3806,7 +3806,7 @@ void k_colorbutton_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMoveEvent*)
+/// @param callback void func(KColorButton* self, QMoveEvent* event)
 void k_colorbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3836,7 +3836,7 @@ void k_colorbutton_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QResizeEvent*)
+/// @param callback void func(KColorButton* self, QResizeEvent* event)
 void k_colorbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3866,7 +3866,7 @@ void k_colorbutton_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QCloseEvent*)
+/// @param callback void func(KColorButton* self, QCloseEvent* event)
 void k_colorbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3896,7 +3896,7 @@ void k_colorbutton_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QContextMenuEvent*)
+/// @param callback void func(KColorButton* self, QContextMenuEvent* event)
 void k_colorbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3926,7 +3926,7 @@ void k_colorbutton_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QTabletEvent*)
+/// @param callback void func(KColorButton* self, QTabletEvent* event)
 void k_colorbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3956,7 +3956,7 @@ void k_colorbutton_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QActionEvent*)
+/// @param callback void func(KColorButton* self, QActionEvent* event)
 void k_colorbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3986,7 +3986,7 @@ void k_colorbutton_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QDragMoveEvent*)
+/// @param callback void func(KColorButton* self, QDragMoveEvent* event)
 void k_colorbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4016,7 +4016,7 @@ void k_colorbutton_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QDragLeaveEvent*)
+/// @param callback void func(KColorButton* self, QDragLeaveEvent* event)
 void k_colorbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4046,7 +4046,7 @@ void k_colorbutton_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QShowEvent*)
+/// @param callback void func(KColorButton* self, QShowEvent* event)
 void k_colorbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4076,7 +4076,7 @@ void k_colorbutton_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QHideEvent*)
+/// @param callback void func(KColorButton* self, QHideEvent* event)
 void k_colorbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4110,7 +4110,7 @@ bool k_colorbutton_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn(KColorButton*, const char*, void*, intptr_t*)
+/// @param callback bool func(KColorButton* self, const char* eventType, void* message, intptr_t* result)
 void k_colorbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4140,7 +4140,7 @@ int32_t k_colorbutton_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback int32_t fn(KColorButton*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KColorButton* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_colorbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4170,7 +4170,7 @@ void k_colorbutton_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QPainter*)
+/// @param callback void func(KColorButton* self, QPainter* painter)
 void k_colorbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4200,7 +4200,7 @@ QPaintDevice* k_colorbutton_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback QPaintDevice* fn(KColorButton*, QPoint*)
+/// @param callback QPaintDevice* func(KColorButton* self, QPoint* offset)
 void k_colorbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4228,7 +4228,7 @@ QPainter* k_colorbutton_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_colorbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4258,7 +4258,7 @@ void k_colorbutton_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QInputMethodEvent*)
+/// @param callback void func(KColorButton* self, QInputMethodEvent* param1)
 void k_colorbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4288,7 +4288,7 @@ QVariant* k_colorbutton_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback QVariant* fn(KColorButton*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KColorButton* self, enum Qt__InputMethodQuery param1)
 void k_colorbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4318,7 +4318,7 @@ bool k_colorbutton_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn(KColorButton*, bool)
+/// @param callback bool func(KColorButton* self, bool next)
 void k_colorbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4350,7 +4350,7 @@ bool k_colorbutton_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn(KColorButton*, QObject*, QEvent*)
+/// @param callback bool func(KColorButton* self, QObject* watched, QEvent* event)
 void k_colorbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4380,7 +4380,7 @@ void k_colorbutton_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QChildEvent*)
+/// @param callback void func(KColorButton* self, QChildEvent* event)
 void k_colorbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4410,7 +4410,7 @@ void k_colorbutton_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QEvent*)
+/// @param callback void func(KColorButton* self, QEvent* event)
 void k_colorbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4440,7 +4440,7 @@ void k_colorbutton_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMetaMethod*)
+/// @param callback void func(KColorButton* self, QMetaMethod* signal)
 void k_colorbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4470,7 +4470,7 @@ void k_colorbutton_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, QMetaMethod*)
+/// @param callback void func(KColorButton* self, QMetaMethod* signal)
 void k_colorbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4498,7 +4498,7 @@ void k_colorbutton_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4526,7 +4526,7 @@ void k_colorbutton_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4554,7 +4554,7 @@ void k_colorbutton_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback void fn()
+/// @param callback void func()
 void k_colorbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4582,7 +4582,7 @@ bool k_colorbutton_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_colorbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4610,7 +4610,7 @@ bool k_colorbutton_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_colorbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4638,7 +4638,7 @@ QObject* k_colorbutton_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_colorbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4666,7 +4666,7 @@ int32_t k_colorbutton_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_colorbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4696,7 +4696,7 @@ int32_t k_colorbutton_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback int32_t fn(KColorButton*, const char*)
+/// @param callback int32_t func(KColorButton* self, const char* signal)
 void k_colorbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4726,7 +4726,7 @@ bool k_colorbutton_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback bool fn(KColorButton*, QMetaMethod*)
+/// @param callback bool func(KColorButton* self, QMetaMethod* signal)
 void k_colorbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4758,7 +4758,7 @@ double k_colorbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColorButton*
-/// @param callback double fn(KColorButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KColorButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_colorbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4768,7 +4768,7 @@ void k_colorbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KColorButton*
-/// @param callback void fn(KColorButton*, const char*)
+/// @param callback void func(KColorButton* self, const char* objectName)
 void k_colorbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dtor.KColorButton)

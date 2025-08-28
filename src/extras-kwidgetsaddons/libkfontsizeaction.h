@@ -49,7 +49,7 @@ int32_t k_fontsizeaction_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KFontSizeAction*
-/// @param callback int32_t fn(KFontSizeAction*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KFontSizeAction* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_fontsizeaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -87,7 +87,7 @@ void k_fontsizeaction_font_size_changed(void* self, int param1);
 /// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#fontSizeChanged)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, int)
+/// @param callback void func(KFontSizeAction* self, int param1)
 void k_fontsizeaction_on_font_size_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#slotActionTriggered)
@@ -101,7 +101,7 @@ void k_fontsizeaction_slot_action_triggered(void* self, void* action);
 /// Allows for overriding the related default method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QAction*)
+/// @param callback void func(KFontSizeAction* self, QAction* action)
 void k_fontsizeaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#slotActionTriggered)
@@ -371,7 +371,7 @@ void k_fontsizeaction_action_triggered(void* self, void* action);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QAction*)
+/// @param callback void func(KFontSizeAction* self, QAction* action)
 void k_fontsizeaction_on_action_triggered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -387,7 +387,7 @@ void k_fontsizeaction_index_triggered(void* self, int index);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, int)
+/// @param callback void func(KFontSizeAction* self, int index)
 void k_fontsizeaction_on_index_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from KSelectAction
@@ -403,7 +403,7 @@ void k_fontsizeaction_text_triggered(void* self, const char* text);
 /// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, const char*)
+/// @param callback void func(KFontSizeAction* self, const char* text)
 void k_fontsizeaction_on_text_triggered(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from KSelectAction
@@ -879,7 +879,7 @@ void k_fontsizeaction_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*)
+/// @param callback void func(KFontSizeAction* self)
 void k_fontsizeaction_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -895,7 +895,7 @@ void k_fontsizeaction_enabled_changed(void* self, bool enabled);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, bool)
+/// @param callback void func(KFontSizeAction* self, bool enabled)
 void k_fontsizeaction_on_enabled_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -911,7 +911,7 @@ void k_fontsizeaction_checkable_changed(void* self, bool checkable);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, bool)
+/// @param callback void func(KFontSizeAction* self, bool checkable)
 void k_fontsizeaction_on_checkable_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -926,7 +926,7 @@ void k_fontsizeaction_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*)
+/// @param callback void func(KFontSizeAction* self)
 void k_fontsizeaction_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -941,7 +941,7 @@ void k_fontsizeaction_triggered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*)
+/// @param callback void func(KFontSizeAction* self)
 void k_fontsizeaction_on_triggered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -956,7 +956,7 @@ void k_fontsizeaction_hovered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*)
+/// @param callback void func(KFontSizeAction* self)
 void k_fontsizeaction_on_hovered(void* self, void (*callback)(void*));
 
 /// Inherited from QAction
@@ -972,7 +972,7 @@ void k_fontsizeaction_toggled(void* self, bool param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, bool)
+/// @param callback void func(KFontSizeAction* self, bool param1)
 void k_fontsizeaction_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAction
@@ -996,7 +996,7 @@ void k_fontsizeaction_triggered1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, bool)
+/// @param callback void func(KFontSizeAction* self, bool checked)
 void k_fontsizeaction_on_triggered1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -1225,7 +1225,7 @@ void k_fontsizeaction_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*)
+/// @param callback void func(KFontSizeAction* self)
 void k_fontsizeaction_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1303,7 +1303,7 @@ void k_fontsizeaction_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QObject*)
+/// @param callback void func(KFontSizeAction* self, QObject* param1)
 void k_fontsizeaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1333,7 +1333,7 @@ QAction* k_fontsizeaction_qbase_remove_action(void* self, void* action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback QAction* fn(KFontSizeAction*, QAction*)
+/// @param callback QAction* func(KFontSizeAction* self, QAction* action)
 void k_fontsizeaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1365,7 +1365,7 @@ void k_fontsizeaction_qbase_insert_action(void* self, void* before, void* action
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QAction*, QAction*)
+/// @param callback void func(KFontSizeAction* self, QAction* before, QAction* action)
 void k_fontsizeaction_on_insert_action(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from KSelectAction
@@ -1395,7 +1395,7 @@ QWidget* k_fontsizeaction_qbase_create_widget(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback QWidget* fn(KFontSizeAction*, QWidget*)
+/// @param callback QWidget* func(KFontSizeAction* self, QWidget* parent)
 void k_fontsizeaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1425,7 +1425,7 @@ void k_fontsizeaction_qbase_delete_widget(void* self, void* widget);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QWidget*)
+/// @param callback void func(KFontSizeAction* self, QWidget* widget)
 void k_fontsizeaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1455,7 +1455,7 @@ bool k_fontsizeaction_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback bool fn(KFontSizeAction*, QEvent*)
+/// @param callback bool func(KFontSizeAction* self, QEvent* event)
 void k_fontsizeaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1487,7 +1487,7 @@ bool k_fontsizeaction_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback bool fn(KFontSizeAction*, QObject*, QEvent*)
+/// @param callback bool func(KFontSizeAction* self, QObject* watched, QEvent* event)
 void k_fontsizeaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1517,7 +1517,7 @@ void k_fontsizeaction_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QTimerEvent*)
+/// @param callback void func(KFontSizeAction* self, QTimerEvent* event)
 void k_fontsizeaction_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1547,7 +1547,7 @@ void k_fontsizeaction_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QChildEvent*)
+/// @param callback void func(KFontSizeAction* self, QChildEvent* event)
 void k_fontsizeaction_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1577,7 +1577,7 @@ void k_fontsizeaction_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QEvent*)
+/// @param callback void func(KFontSizeAction* self, QEvent* event)
 void k_fontsizeaction_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1607,7 +1607,7 @@ void k_fontsizeaction_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QMetaMethod*)
+/// @param callback void func(KFontSizeAction* self, QMetaMethod* signal)
 void k_fontsizeaction_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1637,7 +1637,7 @@ void k_fontsizeaction_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, QMetaMethod*)
+/// @param callback void func(KFontSizeAction* self, QMetaMethod* signal)
 void k_fontsizeaction_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
@@ -1667,7 +1667,7 @@ void k_fontsizeaction_qbase_slot_toggled(void* self, bool param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, bool)
+/// @param callback void func(KFontSizeAction* self, bool param1)
 void k_fontsizeaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidgetAction
@@ -1695,7 +1695,7 @@ libqt_list /* of QWidget* */ k_fontsizeaction_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback libqt_list /* of QWidget* */ fn()
+/// @param callback libqt_list /* of QWidget* */ func()
 void k_fontsizeaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
 
 /// Inherited from QObject
@@ -1723,7 +1723,7 @@ QObject* k_fontsizeaction_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_fontsizeaction_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1751,7 +1751,7 @@ int32_t k_fontsizeaction_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_fontsizeaction_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1781,7 +1781,7 @@ int32_t k_fontsizeaction_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback int32_t fn(KFontSizeAction*, const char*)
+/// @param callback int32_t func(KFontSizeAction* self, const char* signal)
 void k_fontsizeaction_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1811,7 +1811,7 @@ bool k_fontsizeaction_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFontSizeAction*
-/// @param callback bool fn(KFontSizeAction*, QMetaMethod*)
+/// @param callback bool func(KFontSizeAction* self, QMetaMethod* signal)
 void k_fontsizeaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1821,7 +1821,7 @@ void k_fontsizeaction_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KFontSizeAction*
-/// @param callback void fn(KFontSizeAction*, const char*)
+/// @param callback void func(KFontSizeAction* self, const char* objectName)
 void k_fontsizeaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#dtor.KFontSizeAction)

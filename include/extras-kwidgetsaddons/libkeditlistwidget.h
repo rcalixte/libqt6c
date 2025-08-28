@@ -66,7 +66,7 @@ int32_t k_editlistwidget_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self KEditListWidget*
-/// @param callback int32_t fn(KEditListWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KEditListWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_editlistwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -211,7 +211,7 @@ bool k_editlistwidget_event_filter(void* self, void* o, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn(KEditListWidget*, QObject*, QEvent*)
+/// @param callback bool func(KEditListWidget* self, QObject* o, QEvent* e)
 void k_editlistwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#eventFilter)
@@ -231,7 +231,7 @@ void k_editlistwidget_changed(void* self);
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#changed)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*)
+/// @param callback void func(KEditListWidget* self)
 void k_editlistwidget_on_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#added)
@@ -243,7 +243,7 @@ void k_editlistwidget_added(void* self, const char* text);
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#added)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, const char*)
+/// @param callback void func(KEditListWidget* self, const char* text)
 void k_editlistwidget_on_added(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#removed)
@@ -255,7 +255,7 @@ void k_editlistwidget_removed(void* self, const char* text);
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#removed)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, const char*)
+/// @param callback void func(KEditListWidget* self, const char* text)
 void k_editlistwidget_on_removed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -2226,7 +2226,7 @@ void k_editlistwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, const char*)
+/// @param callback void func(KEditListWidget* self, const char* title)
 void k_editlistwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2242,7 +2242,7 @@ void k_editlistwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QIcon*)
+/// @param callback void func(KEditListWidget* self, QIcon* icon)
 void k_editlistwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2258,7 +2258,7 @@ void k_editlistwidget_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, const char*)
+/// @param callback void func(KEditListWidget* self, const char* iconText)
 void k_editlistwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2274,7 +2274,7 @@ void k_editlistwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QPoint*)
+/// @param callback void func(KEditListWidget* self, QPoint* pos)
 void k_editlistwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2651,7 +2651,7 @@ void k_editlistwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*)
+/// @param callback void func(KEditListWidget* self)
 void k_editlistwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2729,7 +2729,7 @@ void k_editlistwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QObject*)
+/// @param callback void func(KEditListWidget* self, QObject* param1)
 void k_editlistwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2848,7 +2848,7 @@ int32_t k_editlistwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_editlistwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2878,7 +2878,7 @@ void k_editlistwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, bool)
+/// @param callback void func(KEditListWidget* self, bool visible)
 void k_editlistwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2906,7 +2906,7 @@ QSize* k_editlistwidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_editlistwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2934,7 +2934,7 @@ QSize* k_editlistwidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_editlistwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2964,7 +2964,7 @@ int32_t k_editlistwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback int32_t fn(KEditListWidget*, int)
+/// @param callback int32_t func(KEditListWidget* self, int param1)
 void k_editlistwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2992,7 +2992,7 @@ bool k_editlistwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_editlistwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3020,7 +3020,7 @@ QPaintEngine* k_editlistwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_editlistwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3050,7 +3050,7 @@ bool k_editlistwidget_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn(KEditListWidget*, QEvent*)
+/// @param callback bool func(KEditListWidget* self, QEvent* event)
 void k_editlistwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3080,7 +3080,7 @@ void k_editlistwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMouseEvent*)
+/// @param callback void func(KEditListWidget* self, QMouseEvent* event)
 void k_editlistwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3110,7 +3110,7 @@ void k_editlistwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMouseEvent*)
+/// @param callback void func(KEditListWidget* self, QMouseEvent* event)
 void k_editlistwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3140,7 +3140,7 @@ void k_editlistwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMouseEvent*)
+/// @param callback void func(KEditListWidget* self, QMouseEvent* event)
 void k_editlistwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3170,7 +3170,7 @@ void k_editlistwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMouseEvent*)
+/// @param callback void func(KEditListWidget* self, QMouseEvent* event)
 void k_editlistwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3200,7 +3200,7 @@ void k_editlistwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QWheelEvent*)
+/// @param callback void func(KEditListWidget* self, QWheelEvent* event)
 void k_editlistwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3230,7 +3230,7 @@ void k_editlistwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QKeyEvent*)
+/// @param callback void func(KEditListWidget* self, QKeyEvent* event)
 void k_editlistwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3260,7 +3260,7 @@ void k_editlistwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QKeyEvent*)
+/// @param callback void func(KEditListWidget* self, QKeyEvent* event)
 void k_editlistwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3290,7 +3290,7 @@ void k_editlistwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QFocusEvent*)
+/// @param callback void func(KEditListWidget* self, QFocusEvent* event)
 void k_editlistwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3320,7 +3320,7 @@ void k_editlistwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QFocusEvent*)
+/// @param callback void func(KEditListWidget* self, QFocusEvent* event)
 void k_editlistwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3350,7 +3350,7 @@ void k_editlistwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QEnterEvent*)
+/// @param callback void func(KEditListWidget* self, QEnterEvent* event)
 void k_editlistwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3380,7 +3380,7 @@ void k_editlistwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QEvent*)
+/// @param callback void func(KEditListWidget* self, QEvent* event)
 void k_editlistwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3410,7 +3410,7 @@ void k_editlistwidget_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QPaintEvent*)
+/// @param callback void func(KEditListWidget* self, QPaintEvent* event)
 void k_editlistwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3440,7 +3440,7 @@ void k_editlistwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMoveEvent*)
+/// @param callback void func(KEditListWidget* self, QMoveEvent* event)
 void k_editlistwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3470,7 +3470,7 @@ void k_editlistwidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QResizeEvent*)
+/// @param callback void func(KEditListWidget* self, QResizeEvent* event)
 void k_editlistwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3500,7 +3500,7 @@ void k_editlistwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QCloseEvent*)
+/// @param callback void func(KEditListWidget* self, QCloseEvent* event)
 void k_editlistwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3530,7 +3530,7 @@ void k_editlistwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QContextMenuEvent*)
+/// @param callback void func(KEditListWidget* self, QContextMenuEvent* event)
 void k_editlistwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3560,7 +3560,7 @@ void k_editlistwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QTabletEvent*)
+/// @param callback void func(KEditListWidget* self, QTabletEvent* event)
 void k_editlistwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3590,7 +3590,7 @@ void k_editlistwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QActionEvent*)
+/// @param callback void func(KEditListWidget* self, QActionEvent* event)
 void k_editlistwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3620,7 +3620,7 @@ void k_editlistwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QDragEnterEvent*)
+/// @param callback void func(KEditListWidget* self, QDragEnterEvent* event)
 void k_editlistwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3650,7 +3650,7 @@ void k_editlistwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QDragMoveEvent*)
+/// @param callback void func(KEditListWidget* self, QDragMoveEvent* event)
 void k_editlistwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3680,7 +3680,7 @@ void k_editlistwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QDragLeaveEvent*)
+/// @param callback void func(KEditListWidget* self, QDragLeaveEvent* event)
 void k_editlistwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3710,7 +3710,7 @@ void k_editlistwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QDropEvent*)
+/// @param callback void func(KEditListWidget* self, QDropEvent* event)
 void k_editlistwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3740,7 +3740,7 @@ void k_editlistwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QShowEvent*)
+/// @param callback void func(KEditListWidget* self, QShowEvent* event)
 void k_editlistwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3770,7 +3770,7 @@ void k_editlistwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QHideEvent*)
+/// @param callback void func(KEditListWidget* self, QHideEvent* event)
 void k_editlistwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3804,7 +3804,7 @@ bool k_editlistwidget_qbase_native_event(void* self, const char* eventType, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn(KEditListWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(KEditListWidget* self, const char* eventType, void* message, intptr_t* result)
 void k_editlistwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3834,7 +3834,7 @@ void k_editlistwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QEvent*)
+/// @param callback void func(KEditListWidget* self, QEvent* param1)
 void k_editlistwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3864,7 +3864,7 @@ int32_t k_editlistwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback int32_t fn(KEditListWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KEditListWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_editlistwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3894,7 +3894,7 @@ void k_editlistwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QPainter*)
+/// @param callback void func(KEditListWidget* self, QPainter* painter)
 void k_editlistwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3924,7 +3924,7 @@ QPaintDevice* k_editlistwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QPaintDevice* fn(KEditListWidget*, QPoint*)
+/// @param callback QPaintDevice* func(KEditListWidget* self, QPoint* offset)
 void k_editlistwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3952,7 +3952,7 @@ QPainter* k_editlistwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_editlistwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3982,7 +3982,7 @@ void k_editlistwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QInputMethodEvent*)
+/// @param callback void func(KEditListWidget* self, QInputMethodEvent* param1)
 void k_editlistwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4012,7 +4012,7 @@ QVariant* k_editlistwidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QVariant* fn(KEditListWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KEditListWidget* self, enum Qt__InputMethodQuery param1)
 void k_editlistwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4042,7 +4042,7 @@ bool k_editlistwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn(KEditListWidget*, bool)
+/// @param callback bool func(KEditListWidget* self, bool next)
 void k_editlistwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4072,7 +4072,7 @@ void k_editlistwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QTimerEvent*)
+/// @param callback void func(KEditListWidget* self, QTimerEvent* event)
 void k_editlistwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4102,7 +4102,7 @@ void k_editlistwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QChildEvent*)
+/// @param callback void func(KEditListWidget* self, QChildEvent* event)
 void k_editlistwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4132,7 +4132,7 @@ void k_editlistwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QEvent*)
+/// @param callback void func(KEditListWidget* self, QEvent* event)
 void k_editlistwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4162,7 +4162,7 @@ void k_editlistwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMetaMethod*)
+/// @param callback void func(KEditListWidget* self, QMetaMethod* signal)
 void k_editlistwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4192,7 +4192,7 @@ void k_editlistwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, QMetaMethod*)
+/// @param callback void func(KEditListWidget* self, QMetaMethod* signal)
 void k_editlistwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4220,7 +4220,7 @@ void k_editlistwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_editlistwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4248,7 +4248,7 @@ void k_editlistwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_editlistwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4276,7 +4276,7 @@ void k_editlistwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_editlistwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4304,7 +4304,7 @@ bool k_editlistwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_editlistwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4332,7 +4332,7 @@ bool k_editlistwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_editlistwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4360,7 +4360,7 @@ QObject* k_editlistwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_editlistwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4388,7 +4388,7 @@ int32_t k_editlistwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_editlistwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4418,7 +4418,7 @@ int32_t k_editlistwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback int32_t fn(KEditListWidget*, const char*)
+/// @param callback int32_t func(KEditListWidget* self, const char* signal)
 void k_editlistwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4448,7 +4448,7 @@ bool k_editlistwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback bool fn(KEditListWidget*, QMetaMethod*)
+/// @param callback bool func(KEditListWidget* self, QMetaMethod* signal)
 void k_editlistwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4480,7 +4480,7 @@ double k_editlistwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KEditListWidget*
-/// @param callback double fn(KEditListWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KEditListWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_editlistwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4490,7 +4490,7 @@ void k_editlistwidget_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KEditListWidget*
-/// @param callback void fn(KEditListWidget*, const char*)
+/// @param callback void func(KEditListWidget* self, const char* objectName)
 void k_editlistwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#dtor.KEditListWidget)
@@ -4539,7 +4539,7 @@ QWidget* k_editlistwidget__customeditor_representation_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KEditListWidget__CustomEditor*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void k_editlistwidget__customeditor_on_representation_widget(void* self, QWidget* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#representationWidget)
@@ -4559,7 +4559,7 @@ QLineEdit* k_editlistwidget__customeditor_line_edit(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KEditListWidget__CustomEditor*
-/// @param callback QLineEdit* fn()
+/// @param callback QLineEdit* func()
 void k_editlistwidget__customeditor_on_line_edit(void* self, QLineEdit* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#lineEdit)

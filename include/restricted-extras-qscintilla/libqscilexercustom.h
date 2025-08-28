@@ -40,7 +40,7 @@ int32_t q_scilexercustom_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn(QsciLexerCustom*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QsciLexerCustom* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_scilexercustom_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -90,7 +90,7 @@ void q_scilexercustom_style_text(void* self, int start, int end);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, int, int)
+/// @param callback void func(QsciLexerCustom* self, int start, int end)
 void q_scilexercustom_on_style_text(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCustom.html)
@@ -113,7 +113,7 @@ void q_scilexercustom_set_editor(void* self, void* editor);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QsciScintilla*)
+/// @param callback void func(QsciLexerCustom* self, QsciScintilla* editor)
 void q_scilexercustom_on_set_editor(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCustom.html)
@@ -134,7 +134,7 @@ int32_t q_scilexercustom_style_bits_needed(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_style_bits_needed(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCustom.html)
@@ -272,7 +272,7 @@ void q_scilexercustom_color_changed(void* self, void* c, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QColor*, int)
+/// @param callback void func(QsciLexerCustom* self, QColor* c, int style)
 void q_scilexercustom_on_color_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -289,7 +289,7 @@ void q_scilexercustom_eol_fill_changed(void* self, bool eolfilled, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, bool, int)
+/// @param callback void func(QsciLexerCustom* self, bool eolfilled, int style)
 void q_scilexercustom_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -306,7 +306,7 @@ void q_scilexercustom_font_changed(void* self, void* f, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QFont*, int)
+/// @param callback void func(QsciLexerCustom* self, QFont* f, int style)
 void q_scilexercustom_on_font_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -323,7 +323,7 @@ void q_scilexercustom_paper_changed(void* self, void* c, int style);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QColor*, int)
+/// @param callback void func(QsciLexerCustom* self, QColor* c, int style)
 void q_scilexercustom_on_paper_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -340,7 +340,7 @@ void q_scilexercustom_property_changed(void* self, const char* prop, const char*
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, const char*, const char*)
+/// @param callback void func(QsciLexerCustom* self, const char* prop, const char* val)
 void q_scilexercustom_on_property_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -587,7 +587,7 @@ void q_scilexercustom_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*)
+/// @param callback void func(QsciLexerCustom* self)
 void q_scilexercustom_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -665,7 +665,7 @@ void q_scilexercustom_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QObject*)
+/// @param callback void func(QsciLexerCustom* self, QObject* param1)
 void q_scilexercustom_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -697,7 +697,7 @@ const char* q_scilexercustom_qbase_language(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexercustom_on_language(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -729,7 +729,7 @@ const char* q_scilexercustom_qbase_lexer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexercustom_on_lexer(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -757,7 +757,7 @@ int32_t q_scilexercustom_qbase_lexer_id(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -789,7 +789,7 @@ const char* q_scilexercustom_qbase_auto_completion_fillups(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexercustom_on_auto_completion_fillups(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -821,7 +821,7 @@ const char** q_scilexercustom_qbase_auto_completion_word_separators(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_scilexercustom_on_auto_completion_word_separators(void* self, const char** (*callback)());
 
 /// Inherited from QsciLexer
@@ -855,7 +855,7 @@ const char* q_scilexercustom_qbase_block_end(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn(QsciLexerCustom*, int*)
+/// @param callback const char* func(QsciLexerCustom* self, int* style)
 void q_scilexercustom_on_block_end(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -883,7 +883,7 @@ int32_t q_scilexercustom_qbase_block_lookback(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -917,7 +917,7 @@ const char* q_scilexercustom_qbase_block_start(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn(QsciLexerCustom*, int*)
+/// @param callback const char* func(QsciLexerCustom* self, int* style)
 void q_scilexercustom_on_block_start(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -951,7 +951,7 @@ const char* q_scilexercustom_qbase_block_start_keyword(void* self, int* style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn(QsciLexerCustom*, int*)
+/// @param callback const char* func(QsciLexerCustom* self, int* style)
 void q_scilexercustom_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
@@ -979,7 +979,7 @@ int32_t q_scilexercustom_qbase_brace_style(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_brace_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1007,7 +1007,7 @@ bool q_scilexercustom_qbase_case_sensitive(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_scilexercustom_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
@@ -1037,7 +1037,7 @@ QColor* q_scilexercustom_qbase_color(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QColor* fn(QsciLexerCustom*, int)
+/// @param callback QColor* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1067,7 +1067,7 @@ bool q_scilexercustom_qbase_eol_fill(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, int)
+/// @param callback bool func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1097,7 +1097,7 @@ QFont* q_scilexercustom_qbase_font(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QFont* fn(QsciLexerCustom*, int)
+/// @param callback QFont* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1125,7 +1125,7 @@ int32_t q_scilexercustom_qbase_indentation_guide_view(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_indentation_guide_view(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1159,7 +1159,7 @@ const char* q_scilexercustom_qbase_keywords(void* self, int set);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn(QsciLexerCustom*, int)
+/// @param callback const char* func(QsciLexerCustom* self, int set)
 void q_scilexercustom_on_keywords(void* self, const char* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1187,7 +1187,7 @@ int32_t q_scilexercustom_qbase_default_style(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
@@ -1221,7 +1221,7 @@ const char* q_scilexercustom_qbase_description(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn(QsciLexerCustom*, int)
+/// @param callback const char* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_description(void* self, const char* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1251,7 +1251,7 @@ QColor* q_scilexercustom_qbase_paper(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QColor* fn(QsciLexerCustom*, int)
+/// @param callback QColor* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1281,7 +1281,7 @@ QColor* q_scilexercustom_qbase_default_color2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QColor* fn(QsciLexerCustom*, int)
+/// @param callback QColor* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1311,7 +1311,7 @@ bool q_scilexercustom_qbase_default_eol_fill(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, int)
+/// @param callback bool func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_default_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1341,7 +1341,7 @@ QFont* q_scilexercustom_qbase_default_font2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QFont* fn(QsciLexerCustom*, int)
+/// @param callback QFont* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1371,7 +1371,7 @@ QColor* q_scilexercustom_qbase_default_paper2(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QColor* fn(QsciLexerCustom*, int)
+/// @param callback QColor* func(QsciLexerCustom* self, int style)
 void q_scilexercustom_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1399,7 +1399,7 @@ void q_scilexercustom_qbase_refresh_properties(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn()
+/// @param callback void func()
 void q_scilexercustom_on_refresh_properties(void* self, void (*callback)());
 
 /// Inherited from QsciLexer
@@ -1431,7 +1431,7 @@ const char* q_scilexercustom_qbase_word_characters(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_scilexercustom_on_word_characters(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
@@ -1461,7 +1461,7 @@ void q_scilexercustom_qbase_set_auto_indent_style(void* self, int autoindentstyl
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, int)
+/// @param callback void func(QsciLexerCustom* self, int autoindentstyle)
 void q_scilexercustom_on_set_auto_indent_style(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1493,7 +1493,7 @@ void q_scilexercustom_qbase_set_color(void* self, void* c, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QColor*, int)
+/// @param callback void func(QsciLexerCustom* self, QColor* c, int style)
 void q_scilexercustom_on_set_color(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1525,7 +1525,7 @@ void q_scilexercustom_qbase_set_eol_fill(void* self, bool eoffill, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, bool, int)
+/// @param callback void func(QsciLexerCustom* self, bool eoffill, int style)
 void q_scilexercustom_on_set_eol_fill(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -1557,7 +1557,7 @@ void q_scilexercustom_qbase_set_font(void* self, void* f, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QFont*, int)
+/// @param callback void func(QsciLexerCustom* self, QFont* f, int style)
 void q_scilexercustom_on_set_font(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1589,7 +1589,7 @@ void q_scilexercustom_qbase_set_paper(void* self, void* c, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QColor*, int)
+/// @param callback void func(QsciLexerCustom* self, QColor* c, int style)
 void q_scilexercustom_on_set_paper(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -1621,7 +1621,7 @@ bool q_scilexercustom_qbase_read_properties(void* self, void* qs, const char* pr
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, QSettings*, const char*)
+/// @param callback bool func(QsciLexerCustom* self, QSettings* qs, const char* prefix)
 void q_scilexercustom_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// Inherited from QsciLexer
@@ -1653,7 +1653,7 @@ bool q_scilexercustom_qbase_write_properties(void* self, void* qs, const char* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, QSettings*, const char*)
+/// @param callback bool func(QsciLexerCustom* self, QSettings* qs, const char* prefix)
 void q_scilexercustom_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// Inherited from QObject
@@ -1683,7 +1683,7 @@ bool q_scilexercustom_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, QEvent*)
+/// @param callback bool func(QsciLexerCustom* self, QEvent* event)
 void q_scilexercustom_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1715,7 +1715,7 @@ bool q_scilexercustom_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, QObject*, QEvent*)
+/// @param callback bool func(QsciLexerCustom* self, QObject* watched, QEvent* event)
 void q_scilexercustom_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1745,7 +1745,7 @@ void q_scilexercustom_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QTimerEvent*)
+/// @param callback void func(QsciLexerCustom* self, QTimerEvent* event)
 void q_scilexercustom_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1775,7 +1775,7 @@ void q_scilexercustom_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QChildEvent*)
+/// @param callback void func(QsciLexerCustom* self, QChildEvent* event)
 void q_scilexercustom_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1805,7 +1805,7 @@ void q_scilexercustom_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QEvent*)
+/// @param callback void func(QsciLexerCustom* self, QEvent* event)
 void q_scilexercustom_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1835,7 +1835,7 @@ void q_scilexercustom_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QMetaMethod*)
+/// @param callback void func(QsciLexerCustom* self, QMetaMethod* signal)
 void q_scilexercustom_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1865,7 +1865,7 @@ void q_scilexercustom_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, QMetaMethod*)
+/// @param callback void func(QsciLexerCustom* self, QMetaMethod* signal)
 void q_scilexercustom_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1899,7 +1899,7 @@ char* q_scilexercustom_qbase_text_as_bytes(void* self, const char* text);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback char* fn(QsciLexerCustom*, const char*)
+/// @param callback char* func(QsciLexerCustom* self, const char* text)
 void q_scilexercustom_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
@@ -1935,7 +1935,7 @@ const char* q_scilexercustom_qbase_bytes_as_text(void* self, const char* bytes, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback const char* fn(QsciLexerCustom*, const char*, int)
+/// @param callback const char* func(QsciLexerCustom* self, const char* bytes, int size)
 void q_scilexercustom_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
@@ -1963,7 +1963,7 @@ QObject* q_scilexercustom_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_scilexercustom_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1991,7 +1991,7 @@ int32_t q_scilexercustom_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scilexercustom_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2021,7 +2021,7 @@ int32_t q_scilexercustom_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback int32_t fn(QsciLexerCustom*, const char*)
+/// @param callback int32_t func(QsciLexerCustom* self, const char* signal)
 void q_scilexercustom_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2051,7 +2051,7 @@ bool q_scilexercustom_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciLexerCustom*
-/// @param callback bool fn(QsciLexerCustom*, QMetaMethod*)
+/// @param callback bool func(QsciLexerCustom* self, QMetaMethod* signal)
 void q_scilexercustom_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2061,7 +2061,7 @@ void q_scilexercustom_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QsciLexerCustom*
-/// @param callback void fn(QsciLexerCustom*, const char*)
+/// @param callback void func(QsciLexerCustom* self, const char* objectName)
 void q_scilexercustom_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerCustom.html)

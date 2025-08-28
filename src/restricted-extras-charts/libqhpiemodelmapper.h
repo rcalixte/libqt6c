@@ -40,7 +40,7 @@ int32_t q_hpiemodelmapper_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn(QHPieModelMapper*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QHPieModelMapper* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_hpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -132,7 +132,7 @@ void q_hpiemodelmapper_series_replaced(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#seriesReplaced)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_series_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#modelReplaced)
@@ -143,7 +143,7 @@ void q_hpiemodelmapper_model_replaced(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#modelReplaced)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_model_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#valuesRowChanged)
@@ -154,7 +154,7 @@ void q_hpiemodelmapper_values_row_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#valuesRowChanged)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_values_row_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#labelsRowChanged)
@@ -165,7 +165,7 @@ void q_hpiemodelmapper_labels_row_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#labelsRowChanged)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_labels_row_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#firstColumnChanged)
@@ -176,7 +176,7 @@ void q_hpiemodelmapper_first_column_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#firstColumnChanged)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_first_column_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#columnCountChanged)
@@ -187,7 +187,7 @@ void q_hpiemodelmapper_column_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#columnCountChanged)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_column_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -433,7 +433,7 @@ void q_hpiemodelmapper_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*)
+/// @param callback void func(QHPieModelMapper* self)
 void q_hpiemodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -511,7 +511,7 @@ void q_hpiemodelmapper_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, QObject*)
+/// @param callback void func(QHPieModelMapper* self, QObject* param1)
 void q_hpiemodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -541,7 +541,7 @@ bool q_hpiemodelmapper_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback bool fn(QHPieModelMapper*, QEvent*)
+/// @param callback bool func(QHPieModelMapper* self, QEvent* event)
 void q_hpiemodelmapper_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -573,7 +573,7 @@ bool q_hpiemodelmapper_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback bool fn(QHPieModelMapper*, QObject*, QEvent*)
+/// @param callback bool func(QHPieModelMapper* self, QObject* watched, QEvent* event)
 void q_hpiemodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -603,7 +603,7 @@ void q_hpiemodelmapper_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, QTimerEvent*)
+/// @param callback void func(QHPieModelMapper* self, QTimerEvent* event)
 void q_hpiemodelmapper_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -633,7 +633,7 @@ void q_hpiemodelmapper_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, QChildEvent*)
+/// @param callback void func(QHPieModelMapper* self, QChildEvent* event)
 void q_hpiemodelmapper_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -663,7 +663,7 @@ void q_hpiemodelmapper_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, QEvent*)
+/// @param callback void func(QHPieModelMapper* self, QEvent* event)
 void q_hpiemodelmapper_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -693,7 +693,7 @@ void q_hpiemodelmapper_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, QMetaMethod*)
+/// @param callback void func(QHPieModelMapper* self, QMetaMethod* signal)
 void q_hpiemodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -723,7 +723,7 @@ void q_hpiemodelmapper_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, QMetaMethod*)
+/// @param callback void func(QHPieModelMapper* self, QMetaMethod* signal)
 void q_hpiemodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPieModelMapper
@@ -751,7 +751,7 @@ int32_t q_hpiemodelmapper_qbase_first(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hpiemodelmapper_on_first(void* self, int32_t (*callback)());
 
 /// Inherited from QPieModelMapper
@@ -781,7 +781,7 @@ void q_hpiemodelmapper_qbase_set_first(void* self, int first);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, int)
+/// @param callback void func(QHPieModelMapper* self, int first)
 void q_hpiemodelmapper_on_set_first(void* self, void (*callback)(void*, int));
 
 /// Inherited from QPieModelMapper
@@ -809,7 +809,7 @@ int32_t q_hpiemodelmapper_qbase_count(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hpiemodelmapper_on_count(void* self, int32_t (*callback)());
 
 /// Inherited from QPieModelMapper
@@ -839,7 +839,7 @@ void q_hpiemodelmapper_qbase_set_count(void* self, int count);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, int)
+/// @param callback void func(QHPieModelMapper* self, int count)
 void q_hpiemodelmapper_on_set_count(void* self, void (*callback)(void*, int));
 
 /// Inherited from QPieModelMapper
@@ -867,7 +867,7 @@ int32_t q_hpiemodelmapper_qbase_values_section(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hpiemodelmapper_on_values_section(void* self, int32_t (*callback)());
 
 /// Inherited from QPieModelMapper
@@ -897,7 +897,7 @@ void q_hpiemodelmapper_qbase_set_values_section(void* self, int valuesSection);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, int)
+/// @param callback void func(QHPieModelMapper* self, int valuesSection)
 void q_hpiemodelmapper_on_set_values_section(void* self, void (*callback)(void*, int));
 
 /// Inherited from QPieModelMapper
@@ -925,7 +925,7 @@ int32_t q_hpiemodelmapper_qbase_labels_section(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hpiemodelmapper_on_labels_section(void* self, int32_t (*callback)());
 
 /// Inherited from QPieModelMapper
@@ -955,7 +955,7 @@ void q_hpiemodelmapper_qbase_set_labels_section(void* self, int labelsSection);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, int)
+/// @param callback void func(QHPieModelMapper* self, int labelsSection)
 void q_hpiemodelmapper_on_set_labels_section(void* self, void (*callback)(void*, int));
 
 /// Inherited from QPieModelMapper
@@ -987,7 +987,7 @@ int32_t q_hpiemodelmapper_qbase_orientation(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hpiemodelmapper_on_orientation(void* self, int32_t (*callback)());
 
 /// Inherited from QPieModelMapper
@@ -1017,7 +1017,7 @@ void q_hpiemodelmapper_qbase_set_orientation(void* self, int32_t orientation);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, enum Qt__Orientation)
+/// @param callback void func(QHPieModelMapper* self, enum Qt__Orientation orientation)
 void q_hpiemodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
@@ -1045,7 +1045,7 @@ QObject* q_hpiemodelmapper_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_hpiemodelmapper_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1073,7 +1073,7 @@ int32_t q_hpiemodelmapper_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hpiemodelmapper_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1103,7 +1103,7 @@ int32_t q_hpiemodelmapper_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback int32_t fn(QHPieModelMapper*, const char*)
+/// @param callback int32_t func(QHPieModelMapper* self, const char* signal)
 void q_hpiemodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1133,7 +1133,7 @@ bool q_hpiemodelmapper_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHPieModelMapper*
-/// @param callback bool fn(QHPieModelMapper*, QMetaMethod*)
+/// @param callback bool func(QHPieModelMapper* self, QMetaMethod* signal)
 void q_hpiemodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1143,7 +1143,7 @@ void q_hpiemodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QHPieModelMapper*
-/// @param callback void fn(QHPieModelMapper*, const char*)
+/// @param callback void func(QHPieModelMapper* self, const char* objectName)
 void q_hpiemodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhpiemodelmapper-qtcharts.html#dtor.QHPieModelMapper)

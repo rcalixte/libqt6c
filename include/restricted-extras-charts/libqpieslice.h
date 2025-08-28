@@ -53,7 +53,7 @@ int32_t q_pieslice_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QPieSlice*
-/// @param callback int32_t fn(QPieSlice*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPieSlice* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pieslice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -266,7 +266,7 @@ void q_pieslice_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#clicked)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#hovered)
@@ -278,7 +278,7 @@ void q_pieslice_hovered(void* self, bool state);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#hovered)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, bool)
+/// @param callback void func(QPieSlice* self, bool state)
 void q_pieslice_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#pressed)
@@ -289,7 +289,7 @@ void q_pieslice_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#pressed)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_pressed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#released)
@@ -300,7 +300,7 @@ void q_pieslice_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#released)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_released(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#doubleClicked)
@@ -311,7 +311,7 @@ void q_pieslice_double_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#doubleClicked)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_double_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelChanged)
@@ -322,7 +322,7 @@ void q_pieslice_label_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_label_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#valueChanged)
@@ -333,7 +333,7 @@ void q_pieslice_value_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#valueChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_value_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelVisibleChanged)
@@ -344,7 +344,7 @@ void q_pieslice_label_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelVisibleChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_label_visible_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#penChanged)
@@ -355,7 +355,7 @@ void q_pieslice_pen_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#penChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_pen_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#brushChanged)
@@ -366,7 +366,7 @@ void q_pieslice_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#brushChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelBrushChanged)
@@ -377,7 +377,7 @@ void q_pieslice_label_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelBrushChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_label_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelFontChanged)
@@ -388,7 +388,7 @@ void q_pieslice_label_font_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelFontChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_label_font_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#percentageChanged)
@@ -399,7 +399,7 @@ void q_pieslice_percentage_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#percentageChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_percentage_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#startAngleChanged)
@@ -410,7 +410,7 @@ void q_pieslice_start_angle_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#startAngleChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_start_angle_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#angleSpanChanged)
@@ -421,7 +421,7 @@ void q_pieslice_angle_span_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#angleSpanChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_angle_span_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#colorChanged)
@@ -432,7 +432,7 @@ void q_pieslice_color_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#colorChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_color_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#borderColorChanged)
@@ -443,7 +443,7 @@ void q_pieslice_border_color_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#borderColorChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_border_color_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#borderWidthChanged)
@@ -454,7 +454,7 @@ void q_pieslice_border_width_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#borderWidthChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_border_width_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelColorChanged)
@@ -465,7 +465,7 @@ void q_pieslice_label_color_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#labelColorChanged)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_label_color_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -723,7 +723,7 @@ void q_pieslice_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*)
+/// @param callback void func(QPieSlice* self)
 void q_pieslice_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -801,7 +801,7 @@ void q_pieslice_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, QObject*)
+/// @param callback void func(QPieSlice* self, QObject* param1)
 void q_pieslice_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -831,7 +831,7 @@ bool q_pieslice_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback bool fn(QPieSlice*, QEvent*)
+/// @param callback bool func(QPieSlice* self, QEvent* event)
 void q_pieslice_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -863,7 +863,7 @@ bool q_pieslice_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback bool fn(QPieSlice*, QObject*, QEvent*)
+/// @param callback bool func(QPieSlice* self, QObject* watched, QEvent* event)
 void q_pieslice_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -893,7 +893,7 @@ void q_pieslice_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, QTimerEvent*)
+/// @param callback void func(QPieSlice* self, QTimerEvent* event)
 void q_pieslice_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -923,7 +923,7 @@ void q_pieslice_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, QChildEvent*)
+/// @param callback void func(QPieSlice* self, QChildEvent* event)
 void q_pieslice_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -953,7 +953,7 @@ void q_pieslice_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, QEvent*)
+/// @param callback void func(QPieSlice* self, QEvent* event)
 void q_pieslice_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -983,7 +983,7 @@ void q_pieslice_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, QMetaMethod*)
+/// @param callback void func(QPieSlice* self, QMetaMethod* signal)
 void q_pieslice_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1013,7 +1013,7 @@ void q_pieslice_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, QMetaMethod*)
+/// @param callback void func(QPieSlice* self, QMetaMethod* signal)
 void q_pieslice_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1041,7 +1041,7 @@ QObject* q_pieslice_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pieslice_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1069,7 +1069,7 @@ int32_t q_pieslice_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pieslice_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1099,7 +1099,7 @@ int32_t q_pieslice_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback int32_t fn(QPieSlice*, const char*)
+/// @param callback int32_t func(QPieSlice* self, const char* signal)
 void q_pieslice_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1129,7 +1129,7 @@ bool q_pieslice_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPieSlice*
-/// @param callback bool fn(QPieSlice*, QMetaMethod*)
+/// @param callback bool func(QPieSlice* self, QMetaMethod* signal)
 void q_pieslice_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1139,7 +1139,7 @@ void q_pieslice_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPieSlice*
-/// @param callback void fn(QPieSlice*, const char*)
+/// @param callback void func(QPieSlice* self, const char* objectName)
 void q_pieslice_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieslice-qtcharts.html#dtor.QPieSlice)

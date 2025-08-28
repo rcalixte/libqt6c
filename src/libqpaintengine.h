@@ -118,7 +118,7 @@ bool q_paintengine_begin(void* self, void* pdev);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback bool fn(QPaintEngine*, QPaintDevice*)
+/// @param callback bool func(QPaintEngine* self, QPaintDevice* pdev)
 void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
@@ -139,7 +139,7 @@ bool q_paintengine_end(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_paintengine_on_end(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
@@ -160,7 +160,7 @@ void q_paintengine_update_state(void* self, void* state);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPaintEngineState*)
+/// @param callback void func(QPaintEngine* self, QPaintEngineState* state)
 void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
@@ -183,7 +183,7 @@ void q_paintengine_draw_rects(void* self, void* rects, int rectCount);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRect*, int)
+/// @param callback void func(QPaintEngine* self, QRect* rects, int rectCount)
 void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
@@ -207,7 +207,7 @@ void q_paintengine_draw_rects2(void* self, void* rects, int rectCount);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRectF*, int)
+/// @param callback void func(QPaintEngine* self, QRectF* rects, int rectCount)
 void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
@@ -231,7 +231,7 @@ void q_paintengine_draw_lines(void* self, void* lines, int lineCount);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QLine*, int)
+/// @param callback void func(QPaintEngine* self, QLine* lines, int lineCount)
 void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
@@ -255,7 +255,7 @@ void q_paintengine_draw_lines2(void* self, void* lines, int lineCount);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QLineF*, int)
+/// @param callback void func(QPaintEngine* self, QLineF* lines, int lineCount)
 void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
@@ -278,7 +278,7 @@ void q_paintengine_draw_ellipse(void* self, void* r);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRectF*)
+/// @param callback void func(QPaintEngine* self, QRectF* r)
 void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
@@ -300,7 +300,7 @@ void q_paintengine_draw_ellipse2(void* self, void* r);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRect*)
+/// @param callback void func(QPaintEngine* self, QRect* r)
 void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
@@ -322,7 +322,7 @@ void q_paintengine_draw_path(void* self, void* path);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPainterPath*)
+/// @param callback void func(QPaintEngine* self, QPainterPath* path)
 void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
@@ -345,7 +345,7 @@ void q_paintengine_draw_points(void* self, void* points, int pointCount);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPointF*, int)
+/// @param callback void func(QPaintEngine* self, QPointF* points, int pointCount)
 void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
@@ -369,7 +369,7 @@ void q_paintengine_draw_points2(void* self, void* points, int pointCount);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPoint*, int)
+/// @param callback void func(QPaintEngine* self, QPoint* points, int pointCount)
 void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
@@ -394,7 +394,7 @@ void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPointF*, int, enum QPaintEngine__PolygonDrawMode)
+/// @param callback void func(QPaintEngine* self, QPointF* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode)
 void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
@@ -420,7 +420,7 @@ void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPoint*, int, enum QPaintEngine__PolygonDrawMode)
+/// @param callback void func(QPaintEngine* self, QPoint* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode)
 void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
@@ -446,7 +446,7 @@ void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRectF*, QPixmap*, QRectF*)
+/// @param callback void func(QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF* sr)
 void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
@@ -471,7 +471,7 @@ void q_paintengine_draw_text_item(void* self, void* p, void* textItem);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QPointF*, QTextItem*)
+/// @param callback void func(QPaintEngine* self, QPointF* p, QTextItem* textItem)
 void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
@@ -496,7 +496,7 @@ void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s)
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRectF*, QPixmap*, QPointF*)
+/// @param callback void func(QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s)
 void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
@@ -523,7 +523,7 @@ void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int64_t f
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback void fn(QPaintEngine*, QRectF*, QImage*, QRectF*, flag of enum Qt__ImageConversionFlag)
+/// @param callback void func(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, flag of enum Qt__ImageConversionFlag flags)
 void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
@@ -580,7 +580,7 @@ QPoint* q_paintengine_coordinate_offset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback QPoint* fn()
+/// @param callback QPoint* func()
 void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
@@ -602,7 +602,7 @@ int32_t q_paintengine_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_paintengine_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
@@ -673,7 +673,7 @@ QPixmap* q_paintengine_create_pixmap(void* self, void* size);
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback QPixmap* fn(QPaintEngine*, QSize*)
+/// @param callback QPixmap* func(QPaintEngine* self, QSize* size)
 void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
@@ -696,7 +696,7 @@ QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int64_t
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback QPixmap* fn(QPaintEngine*, QImage*, flag of enum Qt__ImageConversionFlag)
+/// @param callback QPixmap* func(QPaintEngine* self, QImage* image, flag of enum Qt__ImageConversionFlag flags)
 void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)

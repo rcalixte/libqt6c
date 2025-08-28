@@ -40,7 +40,7 @@ int32_t q_abstractspinbox_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn(QAbstractSpinBox*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAbstractSpinBox* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_abstractspinbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -198,7 +198,7 @@ QSize* q_abstractspinbox_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractspinbox_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#sizeHint)
@@ -218,7 +218,7 @@ QSize* q_abstractspinbox_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractspinbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
@@ -244,7 +244,7 @@ bool q_abstractspinbox_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn(QAbstractSpinBox*, QEvent*)
+/// @param callback bool func(QAbstractSpinBox* self, QEvent* event)
 void q_abstractspinbox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#event)
@@ -266,7 +266,7 @@ QVariant* q_abstractspinbox_input_method_query(void* self, int64_t param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QVariant* fn(QAbstractSpinBox*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QAbstractSpinBox* self, enum Qt__InputMethodQuery param1)
 void q_abstractspinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
@@ -291,7 +291,7 @@ int32_t q_abstractspinbox_validate(void* self, const char* input, int* pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn(QAbstractSpinBox*, const char*, int*)
+/// @param callback int32_t func(QAbstractSpinBox* self, const char* input, int* pos)
 void q_abstractspinbox_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#validate)
@@ -316,7 +316,7 @@ void q_abstractspinbox_fixup(void* self, const char* input);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, const char*)
+/// @param callback void func(QAbstractSpinBox* self, const char* input)
 void q_abstractspinbox_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#fixup)
@@ -338,7 +338,7 @@ void q_abstractspinbox_step_by(void* self, int steps);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, int)
+/// @param callback void func(QAbstractSpinBox* self, int steps)
 void q_abstractspinbox_on_step_by(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepBy)
@@ -374,7 +374,7 @@ void q_abstractspinbox_clear(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractspinbox_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#clear)
@@ -395,7 +395,7 @@ void q_abstractspinbox_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QResizeEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QResizeEvent* event)
 void q_abstractspinbox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
@@ -417,7 +417,7 @@ void q_abstractspinbox_key_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QKeyEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QKeyEvent* event)
 void q_abstractspinbox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyPressEvent)
@@ -439,7 +439,7 @@ void q_abstractspinbox_key_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QKeyEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QKeyEvent* event)
 void q_abstractspinbox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
@@ -461,7 +461,7 @@ void q_abstractspinbox_wheel_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QWheelEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QWheelEvent* event)
 void q_abstractspinbox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#wheelEvent)
@@ -483,7 +483,7 @@ void q_abstractspinbox_focus_in_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QFocusEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QFocusEvent* event)
 void q_abstractspinbox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusInEvent)
@@ -505,7 +505,7 @@ void q_abstractspinbox_focus_out_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QFocusEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QFocusEvent* event)
 void q_abstractspinbox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
@@ -527,7 +527,7 @@ void q_abstractspinbox_context_menu_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QContextMenuEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QContextMenuEvent* event)
 void q_abstractspinbox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
@@ -549,7 +549,7 @@ void q_abstractspinbox_change_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QEvent* event)
 void q_abstractspinbox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
@@ -571,7 +571,7 @@ void q_abstractspinbox_close_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QCloseEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QCloseEvent* event)
 void q_abstractspinbox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
@@ -593,7 +593,7 @@ void q_abstractspinbox_hide_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QHideEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QHideEvent* event)
 void q_abstractspinbox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
@@ -615,7 +615,7 @@ void q_abstractspinbox_mouse_press_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMouseEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QMouseEvent* event)
 void q_abstractspinbox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mousePressEvent)
@@ -637,7 +637,7 @@ void q_abstractspinbox_mouse_release_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMouseEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QMouseEvent* event)
 void q_abstractspinbox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
@@ -659,7 +659,7 @@ void q_abstractspinbox_mouse_move_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMouseEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QMouseEvent* event)
 void q_abstractspinbox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
@@ -681,7 +681,7 @@ void q_abstractspinbox_timer_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QTimerEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QTimerEvent* event)
 void q_abstractspinbox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
@@ -703,7 +703,7 @@ void q_abstractspinbox_paint_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QPaintEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QPaintEvent* event)
 void q_abstractspinbox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#paintEvent)
@@ -725,7 +725,7 @@ void q_abstractspinbox_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QShowEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QShowEvent* event)
 void q_abstractspinbox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
@@ -747,7 +747,7 @@ void q_abstractspinbox_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QStyleOptionSpinBox*)
+/// @param callback void func(QAbstractSpinBox* self, QStyleOptionSpinBox* option)
 void q_abstractspinbox_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#initStyleOption)
@@ -768,7 +768,7 @@ QLineEdit* q_abstractspinbox_line_edit(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QLineEdit* fn()
+/// @param callback QLineEdit* func()
 void q_abstractspinbox_on_line_edit(void* self, QLineEdit* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
@@ -789,7 +789,7 @@ void q_abstractspinbox_set_line_edit(void* self, void* edit);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QLineEdit*)
+/// @param callback void func(QAbstractSpinBox* self, QLineEdit* edit)
 void q_abstractspinbox_on_set_line_edit(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
@@ -812,7 +812,7 @@ int64_t q_abstractspinbox_step_enabled(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_abstractspinbox_on_step_enabled(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
@@ -832,7 +832,7 @@ void q_abstractspinbox_editing_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*)
+/// @param callback void func(QAbstractSpinBox* self)
 void q_abstractspinbox_on_editing_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -2789,7 +2789,7 @@ void q_abstractspinbox_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, const char*)
+/// @param callback void func(QAbstractSpinBox* self, const char* title)
 void q_abstractspinbox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2805,7 +2805,7 @@ void q_abstractspinbox_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QIcon*)
+/// @param callback void func(QAbstractSpinBox* self, QIcon* icon)
 void q_abstractspinbox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2821,7 +2821,7 @@ void q_abstractspinbox_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, const char*)
+/// @param callback void func(QAbstractSpinBox* self, const char* iconText)
 void q_abstractspinbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2837,7 +2837,7 @@ void q_abstractspinbox_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QPoint*)
+/// @param callback void func(QAbstractSpinBox* self, QPoint* pos)
 void q_abstractspinbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3214,7 +3214,7 @@ void q_abstractspinbox_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*)
+/// @param callback void func(QAbstractSpinBox* self)
 void q_abstractspinbox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3292,7 +3292,7 @@ void q_abstractspinbox_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QObject*)
+/// @param callback void func(QAbstractSpinBox* self, QObject* param1)
 void q_abstractspinbox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3411,7 +3411,7 @@ int32_t q_abstractspinbox_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractspinbox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3441,7 +3441,7 @@ void q_abstractspinbox_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, bool)
+/// @param callback void func(QAbstractSpinBox* self, bool visible)
 void q_abstractspinbox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3471,7 +3471,7 @@ int32_t q_abstractspinbox_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn(QAbstractSpinBox*, int)
+/// @param callback int32_t func(QAbstractSpinBox* self, int param1)
 void q_abstractspinbox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3499,7 +3499,7 @@ bool q_abstractspinbox_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractspinbox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ QPaintEngine* q_abstractspinbox_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_abstractspinbox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void q_abstractspinbox_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMouseEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QMouseEvent* event)
 void q_abstractspinbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3587,7 +3587,7 @@ void q_abstractspinbox_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QEnterEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QEnterEvent* event)
 void q_abstractspinbox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3617,7 +3617,7 @@ void q_abstractspinbox_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QEvent* event)
 void q_abstractspinbox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3647,7 +3647,7 @@ void q_abstractspinbox_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMoveEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QMoveEvent* event)
 void q_abstractspinbox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3677,7 +3677,7 @@ void q_abstractspinbox_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QTabletEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QTabletEvent* event)
 void q_abstractspinbox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3707,7 +3707,7 @@ void q_abstractspinbox_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QActionEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QActionEvent* event)
 void q_abstractspinbox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3737,7 +3737,7 @@ void q_abstractspinbox_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QDragEnterEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QDragEnterEvent* event)
 void q_abstractspinbox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3767,7 +3767,7 @@ void q_abstractspinbox_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QDragMoveEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QDragMoveEvent* event)
 void q_abstractspinbox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3797,7 +3797,7 @@ void q_abstractspinbox_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QDragLeaveEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QDragLeaveEvent* event)
 void q_abstractspinbox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3827,7 +3827,7 @@ void q_abstractspinbox_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QDropEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QDropEvent* event)
 void q_abstractspinbox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3861,7 +3861,7 @@ bool q_abstractspinbox_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn(QAbstractSpinBox*, const char*, void*, intptr_t*)
+/// @param callback bool func(QAbstractSpinBox* self, const char* eventType, void* message, intptr_t* result)
 void q_abstractspinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3891,7 +3891,7 @@ int32_t q_abstractspinbox_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn(QAbstractSpinBox*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QAbstractSpinBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_abstractspinbox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3921,7 +3921,7 @@ void q_abstractspinbox_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QPainter*)
+/// @param callback void func(QAbstractSpinBox* self, QPainter* painter)
 void q_abstractspinbox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3951,7 +3951,7 @@ QPaintDevice* q_abstractspinbox_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QPaintDevice* fn(QAbstractSpinBox*, QPoint*)
+/// @param callback QPaintDevice* func(QAbstractSpinBox* self, QPoint* offset)
 void q_abstractspinbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3979,7 +3979,7 @@ QPainter* q_abstractspinbox_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_abstractspinbox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4009,7 +4009,7 @@ void q_abstractspinbox_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QInputMethodEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QInputMethodEvent* param1)
 void q_abstractspinbox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4039,7 +4039,7 @@ bool q_abstractspinbox_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn(QAbstractSpinBox*, bool)
+/// @param callback bool func(QAbstractSpinBox* self, bool next)
 void q_abstractspinbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4071,7 +4071,7 @@ bool q_abstractspinbox_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn(QAbstractSpinBox*, QObject*, QEvent*)
+/// @param callback bool func(QAbstractSpinBox* self, QObject* watched, QEvent* event)
 void q_abstractspinbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4101,7 +4101,7 @@ void q_abstractspinbox_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QChildEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QChildEvent* event)
 void q_abstractspinbox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4131,7 +4131,7 @@ void q_abstractspinbox_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QEvent*)
+/// @param callback void func(QAbstractSpinBox* self, QEvent* event)
 void q_abstractspinbox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4161,7 +4161,7 @@ void q_abstractspinbox_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMetaMethod*)
+/// @param callback void func(QAbstractSpinBox* self, QMetaMethod* signal)
 void q_abstractspinbox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4191,7 +4191,7 @@ void q_abstractspinbox_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, QMetaMethod*)
+/// @param callback void func(QAbstractSpinBox* self, QMetaMethod* signal)
 void q_abstractspinbox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4219,7 +4219,7 @@ void q_abstractspinbox_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractspinbox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4247,7 +4247,7 @@ void q_abstractspinbox_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractspinbox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4275,7 +4275,7 @@ void q_abstractspinbox_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractspinbox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4303,7 +4303,7 @@ bool q_abstractspinbox_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractspinbox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4331,7 +4331,7 @@ bool q_abstractspinbox_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractspinbox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4359,7 +4359,7 @@ QObject* q_abstractspinbox_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_abstractspinbox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4387,7 +4387,7 @@ int32_t q_abstractspinbox_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractspinbox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4417,7 +4417,7 @@ int32_t q_abstractspinbox_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int32_t fn(QAbstractSpinBox*, const char*)
+/// @param callback int32_t func(QAbstractSpinBox* self, const char* signal)
 void q_abstractspinbox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4447,7 +4447,7 @@ bool q_abstractspinbox_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback bool fn(QAbstractSpinBox*, QMetaMethod*)
+/// @param callback bool func(QAbstractSpinBox* self, QMetaMethod* signal)
 void q_abstractspinbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4479,7 +4479,7 @@ double q_abstractspinbox_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback double fn(QAbstractSpinBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QAbstractSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_abstractspinbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4489,7 +4489,7 @@ void q_abstractspinbox_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback void fn(QAbstractSpinBox*, const char*)
+/// @param callback void func(QAbstractSpinBox* self, const char* objectName)
 void q_abstractspinbox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#dtor.QAbstractSpinBox)

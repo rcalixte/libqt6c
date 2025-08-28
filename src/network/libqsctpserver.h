@@ -40,7 +40,7 @@ int32_t q_sctpserver_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QSctpServer*
-/// @param callback int32_t fn(QSctpServer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSctpServer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_sctpserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -85,7 +85,7 @@ void q_sctpserver_incoming_connection(void* self, intptr_t handle);
 /// Allows for overriding the related default method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, intptr_t)
+/// @param callback void func(QSctpServer* self, intptr_t handle)
 void q_sctpserver_on_incoming_connection(void* self, void (*callback)(void*, intptr_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsctpserver.html#incomingConnection)
@@ -259,7 +259,7 @@ void q_sctpserver_new_connection(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#newConnection)
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*)
+/// @param callback void func(QSctpServer* self)
 void q_sctpserver_on_new_connection(void* self, void (*callback)(void*));
 
 /// Inherited from QTcpServer
@@ -275,7 +275,7 @@ void q_sctpserver_accept_error(void* self, int32_t socketError);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#acceptError)
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, enum QAbstractSocket__SocketError)
+/// @param callback void func(QSctpServer* self, enum QAbstractSocket__SocketError socketError)
 void q_sctpserver_on_accept_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QTcpServer
@@ -538,7 +538,7 @@ void q_sctpserver_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*)
+/// @param callback void func(QSctpServer* self)
 void q_sctpserver_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -616,7 +616,7 @@ void q_sctpserver_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QObject*)
+/// @param callback void func(QSctpServer* self, QObject* param1)
 void q_sctpserver_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -644,7 +644,7 @@ bool q_sctpserver_qbase_has_pending_connections(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sctpserver_on_has_pending_connections(void* self, bool (*callback)());
 
 /// Inherited from QTcpServer
@@ -672,7 +672,7 @@ QTcpSocket* q_sctpserver_qbase_next_pending_connection(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback QTcpSocket* fn()
+/// @param callback QTcpSocket* func()
 void q_sctpserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)());
 
 /// Inherited from QObject
@@ -702,7 +702,7 @@ bool q_sctpserver_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback bool fn(QSctpServer*, QEvent*)
+/// @param callback bool func(QSctpServer* self, QEvent* event)
 void q_sctpserver_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -734,7 +734,7 @@ bool q_sctpserver_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback bool fn(QSctpServer*, QObject*, QEvent*)
+/// @param callback bool func(QSctpServer* self, QObject* watched, QEvent* event)
 void q_sctpserver_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -764,7 +764,7 @@ void q_sctpserver_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QTimerEvent*)
+/// @param callback void func(QSctpServer* self, QTimerEvent* event)
 void q_sctpserver_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -794,7 +794,7 @@ void q_sctpserver_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QChildEvent*)
+/// @param callback void func(QSctpServer* self, QChildEvent* event)
 void q_sctpserver_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -824,7 +824,7 @@ void q_sctpserver_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QEvent*)
+/// @param callback void func(QSctpServer* self, QEvent* event)
 void q_sctpserver_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -854,7 +854,7 @@ void q_sctpserver_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QMetaMethod*)
+/// @param callback void func(QSctpServer* self, QMetaMethod* signal)
 void q_sctpserver_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -884,7 +884,7 @@ void q_sctpserver_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QMetaMethod*)
+/// @param callback void func(QSctpServer* self, QMetaMethod* signal)
 void q_sctpserver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -914,7 +914,7 @@ void q_sctpserver_qbase_add_pending_connection(void* self, void* socket);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, QTcpSocket*)
+/// @param callback void func(QSctpServer* self, QTcpSocket* socket)
 void q_sctpserver_on_add_pending_connection(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -942,7 +942,7 @@ QObject* q_sctpserver_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_sctpserver_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -970,7 +970,7 @@ int32_t q_sctpserver_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sctpserver_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1000,7 +1000,7 @@ int32_t q_sctpserver_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback int32_t fn(QSctpServer*, const char*)
+/// @param callback int32_t func(QSctpServer* self, const char* signal)
 void q_sctpserver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1030,7 +1030,7 @@ bool q_sctpserver_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSctpServer*
-/// @param callback bool fn(QSctpServer*, QMetaMethod*)
+/// @param callback bool func(QSctpServer* self, QMetaMethod* signal)
 void q_sctpserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -1040,7 +1040,7 @@ void q_sctpserver_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*)
+/// @param callback void func(QSctpServer* self)
 void q_sctpserver_on_pending_connection_available(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1050,7 +1050,7 @@ void q_sctpserver_on_pending_connection_available(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSctpServer*
-/// @param callback void fn(QSctpServer*, const char*)
+/// @param callback void func(QSctpServer* self, const char* objectName)
 void q_sctpserver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsctpserver.html#dtor.QSctpServer)

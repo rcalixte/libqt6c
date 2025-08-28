@@ -40,7 +40,7 @@ int32_t k_process_metacall(void* self, int32_t param1, int param2, void* param3)
 /// Allows for overriding the related default method
 ///
 /// @param self KProcess*
-/// @param callback int32_t fn(KProcess*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KProcess* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_process_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -561,7 +561,7 @@ void k_process_finished(void* self, int exitCode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#finished)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, int)
+/// @param callback void func(KProcess* self, int exitCode)
 void k_process_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QProcess
@@ -577,7 +577,7 @@ void k_process_error_occurred(void* self, int32_t errorVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, enum QProcess__ProcessError)
+/// @param callback void func(KProcess* self, enum QProcess__ProcessError errorVal)
 void k_process_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QProcess
@@ -691,7 +691,7 @@ void k_process_finished2(void* self, int exitCode, int32_t exitStatus);
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#finished)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, int, enum QProcess__ExitStatus)
+/// @param callback void func(KProcess* self, int exitCode, enum QProcess__ExitStatus exitStatus)
 void k_process_on_finished2(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QIODevice
@@ -954,7 +954,7 @@ void k_process_ready_read(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -970,7 +970,7 @@ void k_process_channel_ready_read(void* self, int channel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, int)
+/// @param callback void func(KProcess* self, int channel)
 void k_process_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
@@ -986,7 +986,7 @@ void k_process_bytes_written(void* self, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, long long)
+/// @param callback void func(KProcess* self, long long bytes)
 void k_process_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1003,7 +1003,7 @@ void k_process_channel_bytes_written(void* self, int channel, long long bytes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, int, long long)
+/// @param callback void func(KProcess* self, int channel, long long bytes)
 void k_process_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -1018,7 +1018,7 @@ void k_process_about_to_close(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1033,7 +1033,7 @@ void k_process_read_channel_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
@@ -1272,7 +1272,7 @@ void k_process_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1350,7 +1350,7 @@ void k_process_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, QObject*)
+/// @param callback void func(KProcess* self, QObject* param1)
 void k_process_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QProcess
@@ -1380,7 +1380,7 @@ bool k_process_qbase_open(void* self, int64_t mode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback bool func(KProcess* self, flag of enum QIODeviceBase__OpenModeFlag mode)
 void k_process_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QProcess
@@ -1410,7 +1410,7 @@ bool k_process_qbase_wait_for_ready_read(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, int)
+/// @param callback bool func(KProcess* self, int msecs)
 void k_process_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QProcess
@@ -1440,7 +1440,7 @@ bool k_process_qbase_wait_for_bytes_written(void* self, int msecs);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, int)
+/// @param callback bool func(KProcess* self, int msecs)
 void k_process_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QProcess
@@ -1468,7 +1468,7 @@ long long k_process_qbase_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn()
+/// @param callback long long func()
 void k_process_on_bytes_to_write(void* self, long long (*callback)());
 
 /// Inherited from QProcess
@@ -1496,7 +1496,7 @@ bool k_process_qbase_is_sequential(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_process_on_is_sequential(void* self, bool (*callback)());
 
 /// Inherited from QProcess
@@ -1524,7 +1524,7 @@ void k_process_qbase_close(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn()
+/// @param callback void func()
 void k_process_on_close(void* self, void (*callback)());
 
 /// Inherited from QProcess
@@ -1556,7 +1556,7 @@ long long k_process_qbase_read_data(void* self, char* data, long long maxlen);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn(KProcess*, char*, long long)
+/// @param callback long long func(KProcess* self, char* data, long long maxlen)
 void k_process_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QProcess
@@ -1588,7 +1588,7 @@ long long k_process_qbase_write_data(void* self, const char* data, long long len
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn(KProcess*, const char*, long long)
+/// @param callback long long func(KProcess* self, const char* data, long long lenVal)
 void k_process_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
 /// Inherited from QIODevice
@@ -1616,7 +1616,7 @@ long long k_process_qbase_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn()
+/// @param callback long long func()
 void k_process_on_pos(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1644,7 +1644,7 @@ long long k_process_qbase_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn()
+/// @param callback long long func()
 void k_process_on_size(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1674,7 +1674,7 @@ bool k_process_qbase_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, long long)
+/// @param callback bool func(KProcess* self, long long pos)
 void k_process_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1702,7 +1702,7 @@ bool k_process_qbase_at_end(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_process_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1730,7 +1730,7 @@ bool k_process_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_process_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1758,7 +1758,7 @@ long long k_process_qbase_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn()
+/// @param callback long long func()
 void k_process_on_bytes_available(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
@@ -1786,7 +1786,7 @@ bool k_process_qbase_can_read_line(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_process_on_can_read_line(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
@@ -1818,7 +1818,7 @@ long long k_process_qbase_read_line_data(void* self, char* data, long long maxle
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn(KProcess*, char*, long long)
+/// @param callback long long func(KProcess* self, char* data, long long maxlen)
 void k_process_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QIODevice
@@ -1848,7 +1848,7 @@ long long k_process_qbase_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long fn(KProcess*, long long)
+/// @param callback long long func(KProcess* self, long long maxSize)
 void k_process_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// Inherited from QObject
@@ -1878,7 +1878,7 @@ bool k_process_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, QEvent*)
+/// @param callback bool func(KProcess* self, QEvent* event)
 void k_process_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1910,7 +1910,7 @@ bool k_process_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, QObject*, QEvent*)
+/// @param callback bool func(KProcess* self, QObject* watched, QEvent* event)
 void k_process_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1940,7 +1940,7 @@ void k_process_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, QTimerEvent*)
+/// @param callback void func(KProcess* self, QTimerEvent* event)
 void k_process_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1970,7 +1970,7 @@ void k_process_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, QChildEvent*)
+/// @param callback void func(KProcess* self, QChildEvent* event)
 void k_process_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2000,7 +2000,7 @@ void k_process_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, QEvent*)
+/// @param callback void func(KProcess* self, QEvent* event)
 void k_process_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2030,7 +2030,7 @@ void k_process_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, QMetaMethod*)
+/// @param callback void func(KProcess* self, QMetaMethod* signal)
 void k_process_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2060,7 +2060,7 @@ void k_process_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, QMetaMethod*)
+/// @param callback void func(KProcess* self, QMetaMethod* signal)
 void k_process_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QProcess
@@ -2090,7 +2090,7 @@ void k_process_qbase_set_process_state(void* self, int32_t state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, enum QProcess__ProcessState)
+/// @param callback void func(KProcess* self, enum QProcess__ProcessState state)
 void k_process_on_set_process_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
@@ -2120,7 +2120,7 @@ void k_process_qbase_set_open_mode(void* self, int64_t openMode);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, flag of enum QIODeviceBase__OpenModeFlag)
+/// @param callback void func(KProcess* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
 void k_process_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
@@ -2150,7 +2150,7 @@ void k_process_qbase_set_error_string(void* self, const char* errorString);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, const char*)
+/// @param callback void func(KProcess* self, const char* errorString)
 void k_process_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2178,7 +2178,7 @@ QObject* k_process_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_process_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2206,7 +2206,7 @@ int32_t k_process_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_process_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2236,7 +2236,7 @@ int32_t k_process_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback int32_t fn(KProcess*, const char*)
+/// @param callback int32_t func(KProcess* self, const char* signal)
 void k_process_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2266,7 +2266,7 @@ bool k_process_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool fn(KProcess*, QMetaMethod*)
+/// @param callback bool func(KProcess* self, QMetaMethod* signal)
 void k_process_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QProcess
@@ -2276,7 +2276,7 @@ void k_process_on_is_signal_connected(void* self, bool (*callback)(void*, void*)
 /// Wrapper to allow calling private signal
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_started(void* self, void (*callback)(void*));
 
 /// Inherited from QProcess
@@ -2286,7 +2286,7 @@ void k_process_on_started(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, enum QProcess__ProcessState)
+/// @param callback void func(KProcess* self, enum QProcess__ProcessState state)
 void k_process_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QProcess
@@ -2296,7 +2296,7 @@ void k_process_on_state_changed(void* self, void (*callback)(void*, int32_t));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_ready_read_standard_output(void* self, void (*callback)(void*));
 
 /// Inherited from QProcess
@@ -2306,7 +2306,7 @@ void k_process_on_ready_read_standard_output(void* self, void (*callback)(void*)
 /// Wrapper to allow calling private signal
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*)
+/// @param callback void func(KProcess* self)
 void k_process_on_ready_read_standard_error(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2316,7 +2316,7 @@ void k_process_on_ready_read_standard_error(void* self, void (*callback)(void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self KProcess*
-/// @param callback void fn(KProcess*, const char*)
+/// @param callback void func(KProcess* self, const char* objectName)
 void k_process_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kprocess.html#dtor.KProcess)

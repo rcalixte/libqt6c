@@ -51,7 +51,7 @@ int32_t q_filesystemwatcher_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback int32_t fn(QFileSystemWatcher*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QFileSystemWatcher* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_filesystemwatcher_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -354,7 +354,7 @@ void q_filesystemwatcher_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*)
+/// @param callback void func(QFileSystemWatcher* self)
 void q_filesystemwatcher_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -432,7 +432,7 @@ void q_filesystemwatcher_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, QObject*)
+/// @param callback void func(QFileSystemWatcher* self, QObject* param1)
 void q_filesystemwatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -462,7 +462,7 @@ bool q_filesystemwatcher_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback bool fn(QFileSystemWatcher*, QEvent*)
+/// @param callback bool func(QFileSystemWatcher* self, QEvent* event)
 void q_filesystemwatcher_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -494,7 +494,7 @@ bool q_filesystemwatcher_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback bool fn(QFileSystemWatcher*, QObject*, QEvent*)
+/// @param callback bool func(QFileSystemWatcher* self, QObject* watched, QEvent* event)
 void q_filesystemwatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -524,7 +524,7 @@ void q_filesystemwatcher_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, QTimerEvent*)
+/// @param callback void func(QFileSystemWatcher* self, QTimerEvent* event)
 void q_filesystemwatcher_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -554,7 +554,7 @@ void q_filesystemwatcher_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, QChildEvent*)
+/// @param callback void func(QFileSystemWatcher* self, QChildEvent* event)
 void q_filesystemwatcher_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -584,7 +584,7 @@ void q_filesystemwatcher_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, QEvent*)
+/// @param callback void func(QFileSystemWatcher* self, QEvent* event)
 void q_filesystemwatcher_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -614,7 +614,7 @@ void q_filesystemwatcher_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, QMetaMethod*)
+/// @param callback void func(QFileSystemWatcher* self, QMetaMethod* signal)
 void q_filesystemwatcher_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -644,7 +644,7 @@ void q_filesystemwatcher_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, QMetaMethod*)
+/// @param callback void func(QFileSystemWatcher* self, QMetaMethod* signal)
 void q_filesystemwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -672,7 +672,7 @@ QObject* q_filesystemwatcher_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_filesystemwatcher_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -700,7 +700,7 @@ int32_t q_filesystemwatcher_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_filesystemwatcher_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -730,7 +730,7 @@ int32_t q_filesystemwatcher_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback int32_t fn(QFileSystemWatcher*, const char*)
+/// @param callback int32_t func(QFileSystemWatcher* self, const char* signal)
 void q_filesystemwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -760,7 +760,7 @@ bool q_filesystemwatcher_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback bool fn(QFileSystemWatcher*, QMetaMethod*)
+/// @param callback bool func(QFileSystemWatcher* self, QMetaMethod* signal)
 void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#fileChanged)
@@ -768,7 +768,7 @@ void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, const char*)
+/// @param callback void func(QFileSystemWatcher* self, const char* path)
 void q_filesystemwatcher_on_file_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#directoryChanged)
@@ -776,7 +776,7 @@ void q_filesystemwatcher_on_file_changed(void* self, void (*callback)(void*, con
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, const char*)
+/// @param callback void func(QFileSystemWatcher* self, const char* path)
 void q_filesystemwatcher_on_directory_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -786,7 +786,7 @@ void q_filesystemwatcher_on_directory_changed(void* self, void (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileSystemWatcher*
-/// @param callback void fn(QFileSystemWatcher*, const char*)
+/// @param callback void func(QFileSystemWatcher* self, const char* objectName)
 void q_filesystemwatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#dtor.QFileSystemWatcher)

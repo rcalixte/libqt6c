@@ -41,7 +41,7 @@ void q_event_set_accepted(void* self, bool accepted);
 /// Allows for overriding the related default method
 ///
 /// @param self QEvent*
-/// @param callback void fn(QEvent*, bool)
+/// @param callback void func(QEvent* self, bool accepted)
 void q_event_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -96,7 +96,7 @@ QEvent* q_event_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QEvent*
-/// @param callback QEvent* fn()
+/// @param callback QEvent* func()
 void q_event_on_clone(void* self, QEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -140,7 +140,7 @@ QTimerEvent* q_timerevent_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTimerEvent*
-/// @param callback QTimerEvent* fn()
+/// @param callback QTimerEvent* func()
 void q_timerevent_on_clone(void* self, QTimerEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimerevent.html#clone)
@@ -260,7 +260,7 @@ void q_timerevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimerEvent*
-/// @param callback void fn(QTimerEvent*, bool)
+/// @param callback void func(QTimerEvent* self, bool accepted)
 void q_timerevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimerevent.html#dtor.QTimerEvent)
@@ -288,7 +288,7 @@ QChildEvent* q_childevent_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QChildEvent*
-/// @param callback QChildEvent* fn()
+/// @param callback QChildEvent* func()
 void q_childevent_on_clone(void* self, QChildEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildevent.html#clone)
@@ -416,7 +416,7 @@ void q_childevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QChildEvent*
-/// @param callback void fn(QChildEvent*, bool)
+/// @param callback void func(QChildEvent* self, bool accepted)
 void q_childevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildevent.html#dtor.QChildEvent)
@@ -443,7 +443,7 @@ QDynamicPropertyChangeEvent* q_dynamicpropertychangeevent_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDynamicPropertyChangeEvent*
-/// @param callback QDynamicPropertyChangeEvent* fn()
+/// @param callback QDynamicPropertyChangeEvent* func()
 void q_dynamicpropertychangeevent_on_clone(void* self, QDynamicPropertyChangeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#clone)
@@ -558,7 +558,7 @@ void q_dynamicpropertychangeevent_qbase_set_accepted(void* self, bool accepted);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDynamicPropertyChangeEvent*
-/// @param callback void fn(QDynamicPropertyChangeEvent*, bool)
+/// @param callback void func(QDynamicPropertyChangeEvent* self, bool accepted)
 void q_dynamicpropertychangeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdynamicpropertychangeevent.html#dtor.QDynamicPropertyChangeEvent)

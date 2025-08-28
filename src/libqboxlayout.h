@@ -42,7 +42,7 @@ int32_t q_boxlayout_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn(QBoxLayout*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QBoxLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -119,7 +119,7 @@ void q_boxlayout_add_item(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QLayoutItem*)
+/// @param callback void func(QBoxLayout* self, QLayoutItem* param1)
 void q_boxlayout_on_add_item(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#addItem)
@@ -181,7 +181,7 @@ int32_t q_boxlayout_spacing(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_boxlayout_on_spacing(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#spacing)
@@ -202,7 +202,7 @@ void q_boxlayout_set_spacing(void* self, int spacing);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, int)
+/// @param callback void func(QBoxLayout* self, int spacing)
 void q_boxlayout_on_set_spacing(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#setSpacing)
@@ -250,7 +250,7 @@ QSize* q_boxlayout_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_boxlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#sizeHint)
@@ -270,7 +270,7 @@ QSize* q_boxlayout_minimum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_boxlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#minimumSize)
@@ -290,7 +290,7 @@ QSize* q_boxlayout_maximum_size(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_boxlayout_on_maximum_size(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#maximumSize)
@@ -310,7 +310,7 @@ bool q_boxlayout_has_height_for_width(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_boxlayout_on_has_height_for_width(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#hasHeightForWidth)
@@ -331,7 +331,7 @@ int32_t q_boxlayout_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn(QBoxLayout*, int)
+/// @param callback int32_t func(QBoxLayout* self, int param1)
 void q_boxlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#heightForWidth)
@@ -353,7 +353,7 @@ int32_t q_boxlayout_minimum_height_for_width(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn(QBoxLayout*, int)
+/// @param callback int32_t func(QBoxLayout* self, int param1)
 void q_boxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#minimumHeightForWidth)
@@ -376,7 +376,7 @@ int64_t q_boxlayout_expanding_directions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_boxlayout_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#expandingDirections)
@@ -398,7 +398,7 @@ void q_boxlayout_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_boxlayout_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#invalidate)
@@ -419,7 +419,7 @@ QLayoutItem* q_boxlayout_item_at(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback QLayoutItem* fn(QBoxLayout*, int)
+/// @param callback QLayoutItem* func(QBoxLayout* self, int param1)
 void q_boxlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#itemAt)
@@ -441,7 +441,7 @@ QLayoutItem* q_boxlayout_take_at(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback QLayoutItem* fn(QBoxLayout*, int)
+/// @param callback QLayoutItem* func(QBoxLayout* self, int param1)
 void q_boxlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#takeAt)
@@ -462,7 +462,7 @@ int32_t q_boxlayout_count(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_boxlayout_on_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#count)
@@ -483,7 +483,7 @@ void q_boxlayout_set_geometry(void* self, void* geometry);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QRect*)
+/// @param callback void func(QBoxLayout* self, QRect* geometry)
 void q_boxlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#setGeometry)
@@ -724,7 +724,7 @@ int32_t q_boxlayout_index_of2(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn(QBoxLayout*, QLayoutItem*)
+/// @param callback int32_t func(QBoxLayout* self, QLayoutItem* param1)
 void q_boxlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1023,7 +1023,7 @@ void q_boxlayout_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*)
+/// @param callback void func(QBoxLayout* self)
 void q_boxlayout_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1101,7 +1101,7 @@ void q_boxlayout_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QObject*)
+/// @param callback void func(QBoxLayout* self, QObject* param1)
 void q_boxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1138,7 +1138,7 @@ QRect* q_boxlayout_qbase_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_boxlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -1168,7 +1168,7 @@ int32_t q_boxlayout_qbase_index_of(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn(QBoxLayout*, QWidget*)
+/// @param callback int32_t func(QBoxLayout* self, QWidget* param1)
 void q_boxlayout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1196,7 +1196,7 @@ bool q_boxlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_boxlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QLayout
@@ -1228,7 +1228,7 @@ int64_t q_boxlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_boxlayout_on_control_types(void* self, int64_t (*callback)());
 
 /// Inherited from QLayout
@@ -1262,7 +1262,7 @@ QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QLayoutItem* fn(QBoxLayout*, QWidget*, QWidget*, flag of enum Qt__FindChildOption)
+/// @param callback QLayoutItem* func(QBoxLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
 void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
 
 /// Inherited from QLayout
@@ -1290,7 +1290,7 @@ QLayout* q_boxlayout_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_boxlayout_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayout
@@ -1320,7 +1320,7 @@ void q_boxlayout_qbase_child_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QChildEvent*)
+/// @param callback void func(QBoxLayout* self, QChildEvent* e)
 void q_boxlayout_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1350,7 +1350,7 @@ bool q_boxlayout_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback bool fn(QBoxLayout*, QEvent*)
+/// @param callback bool func(QBoxLayout* self, QEvent* event)
 void q_boxlayout_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1382,7 +1382,7 @@ bool q_boxlayout_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback bool fn(QBoxLayout*, QObject*, QEvent*)
+/// @param callback bool func(QBoxLayout* self, QObject* watched, QEvent* event)
 void q_boxlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1412,7 +1412,7 @@ void q_boxlayout_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QTimerEvent*)
+/// @param callback void func(QBoxLayout* self, QTimerEvent* event)
 void q_boxlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1442,7 +1442,7 @@ void q_boxlayout_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QEvent*)
+/// @param callback void func(QBoxLayout* self, QEvent* event)
 void q_boxlayout_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1472,7 +1472,7 @@ void q_boxlayout_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QMetaMethod*)
+/// @param callback void func(QBoxLayout* self, QMetaMethod* signal)
 void q_boxlayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1502,7 +1502,7 @@ void q_boxlayout_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QMetaMethod*)
+/// @param callback void func(QBoxLayout* self, QMetaMethod* signal)
 void q_boxlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1530,7 +1530,7 @@ QWidget* q_boxlayout_qbase_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_boxlayout_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -1558,7 +1558,7 @@ QSpacerItem* q_boxlayout_qbase_spacer_item(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_boxlayout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// Inherited from QLayout
@@ -1588,7 +1588,7 @@ void q_boxlayout_qbase_widget_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QEvent*)
+/// @param callback void func(QBoxLayout* self, QEvent* param1)
 void q_boxlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1618,7 +1618,7 @@ void q_boxlayout_qbase_add_child_layout(void* self, void* l);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QLayout*)
+/// @param callback void func(QBoxLayout* self, QLayout* l)
 void q_boxlayout_on_add_child_layout(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1648,7 +1648,7 @@ void q_boxlayout_qbase_add_child_widget(void* self, void* w);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, QWidget*)
+/// @param callback void func(QBoxLayout* self, QWidget* w)
 void q_boxlayout_on_add_child_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1678,7 +1678,7 @@ bool q_boxlayout_qbase_adopt_layout(void* self, void* layout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback bool fn(QBoxLayout*, QLayout*)
+/// @param callback bool func(QBoxLayout* self, QLayout* layout)
 void q_boxlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -1708,7 +1708,7 @@ QRect* q_boxlayout_qbase_alignment_rect(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QRect* fn(QBoxLayout*, QRect*)
+/// @param callback QRect* func(QBoxLayout* self, QRect* param1)
 void q_boxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1736,7 +1736,7 @@ QObject* q_boxlayout_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_boxlayout_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1764,7 +1764,7 @@ int32_t q_boxlayout_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_boxlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1794,7 +1794,7 @@ int32_t q_boxlayout_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback int32_t fn(QBoxLayout*, const char*)
+/// @param callback int32_t func(QBoxLayout* self, const char* signal)
 void q_boxlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1824,7 +1824,7 @@ bool q_boxlayout_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback bool fn(QBoxLayout*, QMetaMethod*)
+/// @param callback bool func(QBoxLayout* self, QMetaMethod* signal)
 void q_boxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1834,7 +1834,7 @@ void q_boxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBoxLayout*
-/// @param callback void fn(QBoxLayout*, const char*)
+/// @param callback void func(QBoxLayout* self, const char* objectName)
 void q_boxlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#dtor.QBoxLayout)
@@ -1873,7 +1873,7 @@ int32_t q_hboxlayout_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn(QHBoxLayout*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QHBoxLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -2289,7 +2289,7 @@ int32_t q_hboxlayout_index_of2(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn(QHBoxLayout*, QLayoutItem*)
+/// @param callback int32_t func(QHBoxLayout* self, QLayoutItem* param1)
 void q_hboxlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -2588,7 +2588,7 @@ void q_hboxlayout_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*)
+/// @param callback void func(QHBoxLayout* self)
 void q_hboxlayout_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2666,7 +2666,7 @@ void q_hboxlayout_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QObject*)
+/// @param callback void func(QHBoxLayout* self, QObject* param1)
 void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -2705,7 +2705,7 @@ void q_hboxlayout_qbase_add_item(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QLayoutItem*)
+/// @param callback void func(QHBoxLayout* self, QLayoutItem* param1)
 void q_hboxlayout_on_add_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QBoxLayout
@@ -2733,7 +2733,7 @@ int32_t q_hboxlayout_qbase_spacing(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hboxlayout_on_spacing(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxLayout
@@ -2763,7 +2763,7 @@ void q_hboxlayout_qbase_set_spacing(void* self, int spacing);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, int)
+/// @param callback void func(QHBoxLayout* self, int spacing)
 void q_hboxlayout_on_set_spacing(void* self, void (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -2791,7 +2791,7 @@ QSize* q_hboxlayout_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_hboxlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -2819,7 +2819,7 @@ QSize* q_hboxlayout_qbase_minimum_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_hboxlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -2847,7 +2847,7 @@ QSize* q_hboxlayout_qbase_maximum_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_hboxlayout_on_maximum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -2875,7 +2875,7 @@ bool q_hboxlayout_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_hboxlayout_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QBoxLayout
@@ -2905,7 +2905,7 @@ int32_t q_hboxlayout_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn(QHBoxLayout*, int)
+/// @param callback int32_t func(QHBoxLayout* self, int param1)
 void q_hboxlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -2935,7 +2935,7 @@ int32_t q_hboxlayout_qbase_minimum_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn(QHBoxLayout*, int)
+/// @param callback int32_t func(QHBoxLayout* self, int param1)
 void q_hboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -2967,7 +2967,7 @@ int64_t q_hboxlayout_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_hboxlayout_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// Inherited from QBoxLayout
@@ -2995,7 +2995,7 @@ void q_hboxlayout_qbase_invalidate(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_hboxlayout_on_invalidate(void* self, void (*callback)());
 
 /// Inherited from QBoxLayout
@@ -3025,7 +3025,7 @@ QLayoutItem* q_hboxlayout_qbase_item_at(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QLayoutItem* fn(QHBoxLayout*, int)
+/// @param callback QLayoutItem* func(QHBoxLayout* self, int param1)
 void q_hboxlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -3055,7 +3055,7 @@ QLayoutItem* q_hboxlayout_qbase_take_at(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QLayoutItem* fn(QHBoxLayout*, int)
+/// @param callback QLayoutItem* func(QHBoxLayout* self, int param1)
 void q_hboxlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -3083,7 +3083,7 @@ int32_t q_hboxlayout_qbase_count(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hboxlayout_on_count(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxLayout
@@ -3113,7 +3113,7 @@ void q_hboxlayout_qbase_set_geometry(void* self, void* geometry);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QRect*)
+/// @param callback void func(QHBoxLayout* self, QRect* geometry)
 void q_hboxlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -3141,7 +3141,7 @@ QRect* q_hboxlayout_qbase_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_hboxlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -3171,7 +3171,7 @@ int32_t q_hboxlayout_qbase_index_of(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn(QHBoxLayout*, QWidget*)
+/// @param callback int32_t func(QHBoxLayout* self, QWidget* param1)
 void q_hboxlayout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -3199,7 +3199,7 @@ bool q_hboxlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_hboxlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QLayout
@@ -3231,7 +3231,7 @@ int64_t q_hboxlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_hboxlayout_on_control_types(void* self, int64_t (*callback)());
 
 /// Inherited from QLayout
@@ -3265,7 +3265,7 @@ QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QLayoutItem* fn(QHBoxLayout*, QWidget*, QWidget*, flag of enum Qt__FindChildOption)
+/// @param callback QLayoutItem* func(QHBoxLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
 void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
 
 /// Inherited from QLayout
@@ -3293,7 +3293,7 @@ QLayout* q_hboxlayout_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_hboxlayout_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayout
@@ -3323,7 +3323,7 @@ void q_hboxlayout_qbase_child_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QChildEvent*)
+/// @param callback void func(QHBoxLayout* self, QChildEvent* e)
 void q_hboxlayout_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3353,7 +3353,7 @@ bool q_hboxlayout_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback bool fn(QHBoxLayout*, QEvent*)
+/// @param callback bool func(QHBoxLayout* self, QEvent* event)
 void q_hboxlayout_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3385,7 +3385,7 @@ bool q_hboxlayout_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback bool fn(QHBoxLayout*, QObject*, QEvent*)
+/// @param callback bool func(QHBoxLayout* self, QObject* watched, QEvent* event)
 void q_hboxlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3415,7 +3415,7 @@ void q_hboxlayout_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QTimerEvent*)
+/// @param callback void func(QHBoxLayout* self, QTimerEvent* event)
 void q_hboxlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3445,7 +3445,7 @@ void q_hboxlayout_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QEvent*)
+/// @param callback void func(QHBoxLayout* self, QEvent* event)
 void q_hboxlayout_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3475,7 +3475,7 @@ void q_hboxlayout_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QMetaMethod*)
+/// @param callback void func(QHBoxLayout* self, QMetaMethod* signal)
 void q_hboxlayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3505,7 +3505,7 @@ void q_hboxlayout_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QMetaMethod*)
+/// @param callback void func(QHBoxLayout* self, QMetaMethod* signal)
 void q_hboxlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -3533,7 +3533,7 @@ QWidget* q_hboxlayout_qbase_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_hboxlayout_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -3561,7 +3561,7 @@ QSpacerItem* q_hboxlayout_qbase_spacer_item(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_hboxlayout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// Inherited from QLayout
@@ -3591,7 +3591,7 @@ void q_hboxlayout_qbase_widget_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QEvent*)
+/// @param callback void func(QHBoxLayout* self, QEvent* param1)
 void q_hboxlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -3621,7 +3621,7 @@ void q_hboxlayout_qbase_add_child_layout(void* self, void* l);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QLayout*)
+/// @param callback void func(QHBoxLayout* self, QLayout* l)
 void q_hboxlayout_on_add_child_layout(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -3651,7 +3651,7 @@ void q_hboxlayout_qbase_add_child_widget(void* self, void* w);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, QWidget*)
+/// @param callback void func(QHBoxLayout* self, QWidget* w)
 void q_hboxlayout_on_add_child_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -3681,7 +3681,7 @@ bool q_hboxlayout_qbase_adopt_layout(void* self, void* layout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback bool fn(QHBoxLayout*, QLayout*)
+/// @param callback bool func(QHBoxLayout* self, QLayout* layout)
 void q_hboxlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -3711,7 +3711,7 @@ QRect* q_hboxlayout_qbase_alignment_rect(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QRect* fn(QHBoxLayout*, QRect*)
+/// @param callback QRect* func(QHBoxLayout* self, QRect* param1)
 void q_hboxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3739,7 +3739,7 @@ QObject* q_hboxlayout_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_hboxlayout_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3767,7 +3767,7 @@ int32_t q_hboxlayout_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_hboxlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3797,7 +3797,7 @@ int32_t q_hboxlayout_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int32_t fn(QHBoxLayout*, const char*)
+/// @param callback int32_t func(QHBoxLayout* self, const char* signal)
 void q_hboxlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3827,7 +3827,7 @@ bool q_hboxlayout_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback bool fn(QHBoxLayout*, QMetaMethod*)
+/// @param callback bool func(QHBoxLayout* self, QMetaMethod* signal)
 void q_hboxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3837,7 +3837,7 @@ void q_hboxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QHBoxLayout*
-/// @param callback void fn(QHBoxLayout*, const char*)
+/// @param callback void func(QHBoxLayout* self, const char* objectName)
 void q_hboxlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhboxlayout.html#dtor.QHBoxLayout)
@@ -3876,7 +3876,7 @@ int32_t q_vboxlayout_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn(QVBoxLayout*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QVBoxLayout* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -4292,7 +4292,7 @@ int32_t q_vboxlayout_index_of2(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn(QVBoxLayout*, QLayoutItem*)
+/// @param callback int32_t func(QVBoxLayout* self, QLayoutItem* param1)
 void q_vboxlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -4591,7 +4591,7 @@ void q_vboxlayout_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*)
+/// @param callback void func(QVBoxLayout* self)
 void q_vboxlayout_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4669,7 +4669,7 @@ void q_vboxlayout_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QObject*)
+/// @param callback void func(QVBoxLayout* self, QObject* param1)
 void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -4708,7 +4708,7 @@ void q_vboxlayout_qbase_add_item(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QLayoutItem*)
+/// @param callback void func(QVBoxLayout* self, QLayoutItem* param1)
 void q_vboxlayout_on_add_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QBoxLayout
@@ -4736,7 +4736,7 @@ int32_t q_vboxlayout_qbase_spacing(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vboxlayout_on_spacing(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxLayout
@@ -4766,7 +4766,7 @@ void q_vboxlayout_qbase_set_spacing(void* self, int spacing);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, int)
+/// @param callback void func(QVBoxLayout* self, int spacing)
 void q_vboxlayout_on_set_spacing(void* self, void (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -4794,7 +4794,7 @@ QSize* q_vboxlayout_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_vboxlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -4822,7 +4822,7 @@ QSize* q_vboxlayout_qbase_minimum_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_vboxlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -4850,7 +4850,7 @@ QSize* q_vboxlayout_qbase_maximum_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_vboxlayout_on_maximum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -4878,7 +4878,7 @@ bool q_vboxlayout_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_vboxlayout_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QBoxLayout
@@ -4908,7 +4908,7 @@ int32_t q_vboxlayout_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn(QVBoxLayout*, int)
+/// @param callback int32_t func(QVBoxLayout* self, int param1)
 void q_vboxlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -4938,7 +4938,7 @@ int32_t q_vboxlayout_qbase_minimum_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn(QVBoxLayout*, int)
+/// @param callback int32_t func(QVBoxLayout* self, int param1)
 void q_vboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -4970,7 +4970,7 @@ int64_t q_vboxlayout_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_vboxlayout_on_expanding_directions(void* self, int64_t (*callback)());
 
 /// Inherited from QBoxLayout
@@ -4998,7 +4998,7 @@ void q_vboxlayout_qbase_invalidate(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn()
+/// @param callback void func()
 void q_vboxlayout_on_invalidate(void* self, void (*callback)());
 
 /// Inherited from QBoxLayout
@@ -5028,7 +5028,7 @@ QLayoutItem* q_vboxlayout_qbase_item_at(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QLayoutItem* fn(QVBoxLayout*, int)
+/// @param callback QLayoutItem* func(QVBoxLayout* self, int param1)
 void q_vboxlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -5058,7 +5058,7 @@ QLayoutItem* q_vboxlayout_qbase_take_at(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QLayoutItem* fn(QVBoxLayout*, int)
+/// @param callback QLayoutItem* func(QVBoxLayout* self, int param1)
 void q_vboxlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
 /// Inherited from QBoxLayout
@@ -5086,7 +5086,7 @@ int32_t q_vboxlayout_qbase_count(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vboxlayout_on_count(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxLayout
@@ -5116,7 +5116,7 @@ void q_vboxlayout_qbase_set_geometry(void* self, void* geometry);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QRect*)
+/// @param callback void func(QVBoxLayout* self, QRect* geometry)
 void q_vboxlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -5144,7 +5144,7 @@ QRect* q_vboxlayout_qbase_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QRect* fn()
+/// @param callback QRect* func()
 void q_vboxlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -5174,7 +5174,7 @@ int32_t q_vboxlayout_qbase_index_of(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn(QVBoxLayout*, QWidget*)
+/// @param callback int32_t func(QVBoxLayout* self, QWidget* param1)
 void q_vboxlayout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -5202,7 +5202,7 @@ bool q_vboxlayout_qbase_is_empty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_vboxlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QLayout
@@ -5234,7 +5234,7 @@ int64_t q_vboxlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_vboxlayout_on_control_types(void* self, int64_t (*callback)());
 
 /// Inherited from QLayout
@@ -5268,7 +5268,7 @@ QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QLayoutItem* fn(QVBoxLayout*, QWidget*, QWidget*, flag of enum Qt__FindChildOption)
+/// @param callback QLayoutItem* func(QVBoxLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
 void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
 
 /// Inherited from QLayout
@@ -5296,7 +5296,7 @@ QLayout* q_vboxlayout_qbase_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QLayout* fn()
+/// @param callback QLayout* func()
 void q_vboxlayout_on_layout(void* self, QLayout* (*callback)());
 
 /// Inherited from QLayout
@@ -5326,7 +5326,7 @@ void q_vboxlayout_qbase_child_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QChildEvent*)
+/// @param callback void func(QVBoxLayout* self, QChildEvent* e)
 void q_vboxlayout_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5356,7 +5356,7 @@ bool q_vboxlayout_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback bool fn(QVBoxLayout*, QEvent*)
+/// @param callback bool func(QVBoxLayout* self, QEvent* event)
 void q_vboxlayout_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5388,7 +5388,7 @@ bool q_vboxlayout_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback bool fn(QVBoxLayout*, QObject*, QEvent*)
+/// @param callback bool func(QVBoxLayout* self, QObject* watched, QEvent* event)
 void q_vboxlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -5418,7 +5418,7 @@ void q_vboxlayout_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QTimerEvent*)
+/// @param callback void func(QVBoxLayout* self, QTimerEvent* event)
 void q_vboxlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5448,7 +5448,7 @@ void q_vboxlayout_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QEvent*)
+/// @param callback void func(QVBoxLayout* self, QEvent* event)
 void q_vboxlayout_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5478,7 +5478,7 @@ void q_vboxlayout_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QMetaMethod*)
+/// @param callback void func(QVBoxLayout* self, QMetaMethod* signal)
 void q_vboxlayout_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5508,7 +5508,7 @@ void q_vboxlayout_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QMetaMethod*)
+/// @param callback void func(QVBoxLayout* self, QMetaMethod* signal)
 void q_vboxlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -5536,7 +5536,7 @@ QWidget* q_vboxlayout_qbase_widget(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QWidget* fn()
+/// @param callback QWidget* func()
 void q_vboxlayout_on_widget(void* self, QWidget* (*callback)());
 
 /// Inherited from QLayoutItem
@@ -5564,7 +5564,7 @@ QSpacerItem* q_vboxlayout_qbase_spacer_item(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QSpacerItem* fn()
+/// @param callback QSpacerItem* func()
 void q_vboxlayout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 
 /// Inherited from QLayout
@@ -5594,7 +5594,7 @@ void q_vboxlayout_qbase_widget_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QEvent*)
+/// @param callback void func(QVBoxLayout* self, QEvent* param1)
 void q_vboxlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -5624,7 +5624,7 @@ void q_vboxlayout_qbase_add_child_layout(void* self, void* l);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QLayout*)
+/// @param callback void func(QVBoxLayout* self, QLayout* l)
 void q_vboxlayout_on_add_child_layout(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -5654,7 +5654,7 @@ void q_vboxlayout_qbase_add_child_widget(void* self, void* w);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, QWidget*)
+/// @param callback void func(QVBoxLayout* self, QWidget* w)
 void q_vboxlayout_on_add_child_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -5684,7 +5684,7 @@ bool q_vboxlayout_qbase_adopt_layout(void* self, void* layout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback bool fn(QVBoxLayout*, QLayout*)
+/// @param callback bool func(QVBoxLayout* self, QLayout* layout)
 void q_vboxlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QLayout
@@ -5714,7 +5714,7 @@ QRect* q_vboxlayout_qbase_alignment_rect(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QRect* fn(QVBoxLayout*, QRect*)
+/// @param callback QRect* func(QVBoxLayout* self, QRect* param1)
 void q_vboxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5742,7 +5742,7 @@ QObject* q_vboxlayout_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_vboxlayout_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5770,7 +5770,7 @@ int32_t q_vboxlayout_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_vboxlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5800,7 +5800,7 @@ int32_t q_vboxlayout_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int32_t fn(QVBoxLayout*, const char*)
+/// @param callback int32_t func(QVBoxLayout* self, const char* signal)
 void q_vboxlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5830,7 +5830,7 @@ bool q_vboxlayout_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback bool fn(QVBoxLayout*, QMetaMethod*)
+/// @param callback bool func(QVBoxLayout* self, QMetaMethod* signal)
 void q_vboxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -5840,7 +5840,7 @@ void q_vboxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QVBoxLayout*
-/// @param callback void fn(QVBoxLayout*, const char*)
+/// @param callback void func(QVBoxLayout* self, const char* objectName)
 void q_vboxlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvboxlayout.html#dtor.QVBoxLayout)

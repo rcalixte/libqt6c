@@ -50,7 +50,7 @@ QVariant* q_standarditem_data(void* self, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback QVariant* fn(QStandardItem*, int)
+/// @param callback QVariant* func(QStandardItem* self, int role)
 void q_standarditem_on_data(void* self, QVariant* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#data)
@@ -72,7 +72,7 @@ void q_standarditem_multi_data(void* self, void* roleDataSpan);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback void fn(QStandardItem*, QModelRoleDataSpan*)
+/// @param callback void func(QStandardItem* self, QModelRoleDataSpan* roleDataSpan)
 void q_standarditem_on_multi_data(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#multiData)
@@ -95,7 +95,7 @@ void q_standarditem_set_data(void* self, void* value, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback void fn(QStandardItem*, QVariant*, int)
+/// @param callback void func(QStandardItem* self, QVariant* value, int role)
 void q_standarditem_on_set_data(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#setData)
@@ -571,7 +571,7 @@ QStandardItem* q_standarditem_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback QStandardItem* fn()
+/// @param callback QStandardItem* func()
 void q_standarditem_on_clone(void* self, QStandardItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#clone)
@@ -591,7 +591,7 @@ int32_t q_standarditem_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_standarditem_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#type)
@@ -612,7 +612,7 @@ void q_standarditem_read(void* self, void* in);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback void fn(QStandardItem*, QDataStream*)
+/// @param callback void func(QStandardItem* self, QDataStream* in)
 void q_standarditem_on_read(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#read)
@@ -634,7 +634,7 @@ void q_standarditem_write(void* self, void* out);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback void fn(QStandardItem*, QDataStream*)
+/// @param callback void func(QStandardItem* self, QDataStream* out)
 void q_standarditem_on_write(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#write)
@@ -656,7 +656,7 @@ bool q_standarditem_operator_lesser(void* self, void* other);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback bool fn(QStandardItem*, QStandardItem*)
+/// @param callback bool func(QStandardItem* self, QStandardItem* other)
 void q_standarditem_on_operator_lesser(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
@@ -678,7 +678,7 @@ void q_standarditem_operator_assign(void* self, void* other);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback void fn(QStandardItem*, QStandardItem*)
+/// @param callback void func(QStandardItem* self, QStandardItem* other)
 void q_standarditem_on_operator_assign(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
@@ -699,7 +699,7 @@ void q_standarditem_emit_data_changed(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItem*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditem_on_emit_data_changed(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#emitDataChanged)
@@ -779,7 +779,7 @@ int32_t q_standarditemmodel_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int32_t fn(QStandardItemModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QStandardItemModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_standarditemmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -813,7 +813,7 @@ libqt_map /* of int to char* */ q_standarditemmodel_role_names(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void q_standarditemmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#roleNames)
@@ -836,7 +836,7 @@ QModelIndex* q_standarditemmodel_index(void* self, int row, int column, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QModelIndex* fn(QStandardItemModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* parent)
 void q_standarditemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#index)
@@ -860,7 +860,7 @@ QModelIndex* q_standarditemmodel_parent(void* self, void* child);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QModelIndex* fn(QStandardItemModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* child)
 void q_standarditemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#parent)
@@ -882,7 +882,7 @@ int32_t q_standarditemmodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int32_t fn(QStandardItemModel*, QModelIndex*)
+/// @param callback int32_t func(QStandardItemModel* self, QModelIndex* parent)
 void q_standarditemmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#rowCount)
@@ -904,7 +904,7 @@ int32_t q_standarditemmodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int32_t fn(QStandardItemModel*, QModelIndex*)
+/// @param callback int32_t func(QStandardItemModel* self, QModelIndex* parent)
 void q_standarditemmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#columnCount)
@@ -926,7 +926,7 @@ bool q_standarditemmodel_has_children(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* parent)
 void q_standarditemmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#hasChildren)
@@ -949,7 +949,7 @@ QVariant* q_standarditemmodel_data(void* self, void* index, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QVariant* fn(QStandardItemModel*, QModelIndex*, int)
+/// @param callback QVariant* func(QStandardItemModel* self, QModelIndex* index, int role)
 void q_standarditemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#data)
@@ -973,7 +973,7 @@ void q_standarditemmodel_multi_data(void* self, void* index, void* roleDataSpan)
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void q_standarditemmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#multiData)
@@ -998,7 +998,7 @@ bool q_standarditemmodel_set_data(void* self, void* index, void* value, int role
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* index, QVariant* value, int role)
 void q_standarditemmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setData)
@@ -1022,7 +1022,7 @@ bool q_standarditemmodel_clear_item_data(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* index)
 void q_standarditemmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#clearItemData)
@@ -1046,7 +1046,7 @@ QVariant* q_standarditemmodel_header_data(void* self, int section, int32_t orien
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QVariant* fn(QStandardItemModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(QStandardItemModel* self, int section, enum Qt__Orientation orientation, int role)
 void q_standarditemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#headerData)
@@ -1073,7 +1073,7 @@ bool q_standarditemmodel_set_header_data(void* self, int section, int32_t orient
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(QStandardItemModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void q_standarditemmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setHeaderData)
@@ -1100,7 +1100,7 @@ bool q_standarditemmodel_insert_rows(void* self, int row, int count, void* paren
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, int row, int count, QModelIndex* parent)
 void q_standarditemmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRows)
@@ -1126,7 +1126,7 @@ bool q_standarditemmodel_insert_columns(void* self, int column, int count, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, int column, int count, QModelIndex* parent)
 void q_standarditemmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumns)
@@ -1152,7 +1152,7 @@ bool q_standarditemmodel_remove_rows(void* self, int row, int count, void* paren
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, int row, int count, QModelIndex* parent)
 void q_standarditemmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeRows)
@@ -1178,7 +1178,7 @@ bool q_standarditemmodel_remove_columns(void* self, int column, int count, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, int, int, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, int column, int count, QModelIndex* parent)
 void q_standarditemmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#removeColumns)
@@ -1204,7 +1204,7 @@ int64_t q_standarditemmodel_flags(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int64_t fn(QStandardItemModel*, QModelIndex*)
+/// @param callback int64_t func(QStandardItemModel* self, QModelIndex* index)
 void q_standarditemmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
@@ -1229,7 +1229,7 @@ int64_t q_standarditemmodel_supported_drop_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_standarditemmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
@@ -1252,7 +1252,7 @@ libqt_map /* of int to QVariant* */ q_standarditemmodel_item_data(void* self, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(QStandardItemModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(QStandardItemModel* self, QModelIndex* index)
 void q_standarditemmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
@@ -1275,7 +1275,7 @@ bool q_standarditemmodel_set_item_data(void* self, void* index, libqt_map /* of 
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void q_standarditemmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setItemData)
@@ -1304,7 +1304,7 @@ void q_standarditemmodel_sort(void* self, int column, int32_t order);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, int, enum Qt__SortOrder)
+/// @param callback void func(QStandardItemModel* self, int column, enum Qt__SortOrder order)
 void q_standarditemmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#sort)
@@ -1525,7 +1525,7 @@ const char** q_standarditemmodel_mime_types(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_standarditemmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeTypes)
@@ -1546,7 +1546,7 @@ QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list indexes);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QMimeData* fn(QStandardItemModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(QStandardItemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
@@ -1572,7 +1572,7 @@ bool q_standarditemmodel_drop_mime_data(void* self, void* data, int32_t action, 
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_standarditemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#dropMimeData)
@@ -1596,7 +1596,7 @@ void q_standarditemmodel_item_changed(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QStandardItem*)
+/// @param callback void func(QStandardItemModel* self, QStandardItem* item)
 void q_standarditemmodel_on_item_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -1728,7 +1728,7 @@ void q_standarditemmodel_data_changed(void* self, void* topLeft, void* bottomRig
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_standarditemmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1746,7 +1746,7 @@ void q_standarditemmodel_header_data_changed(void* self, int32_t orientation, in
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QStandardItemModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_standarditemmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1761,7 +1761,7 @@ void q_standarditemmodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*)
+/// @param callback void func(QStandardItemModel* self)
 void q_standarditemmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1776,7 +1776,7 @@ void q_standarditemmodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*)
+/// @param callback void func(QStandardItemModel* self)
 void q_standarditemmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1831,7 +1831,7 @@ void q_standarditemmodel_data_changed3(void* self, void* topLeft, void* bottomRi
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_standarditemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -1847,7 +1847,7 @@ void q_standarditemmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_standarditemmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1864,7 +1864,7 @@ void q_standarditemmodel_layout_changed2(void* self, libqt_list parents, int32_t
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_standarditemmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1880,7 +1880,7 @@ void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list pare
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1897,7 +1897,7 @@ void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list pare
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -2126,7 +2126,7 @@ void q_standarditemmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*)
+/// @param callback void func(QStandardItemModel* self)
 void q_standarditemmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2197,7 +2197,7 @@ void q_standarditemmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QObject*)
+/// @param callback void func(QStandardItemModel* self, QObject* param1)
 void q_standarditemmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2231,7 +2231,7 @@ QModelIndex* q_standarditemmodel_qbase_sibling(void* self, int row, int column, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QModelIndex* fn(QStandardItemModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* idx)
 void q_standarditemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2269,7 +2269,7 @@ bool q_standarditemmodel_qbase_can_drop_mime_data(void* self, void* data, int32_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_standarditemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2301,7 +2301,7 @@ int64_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_standarditemmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2339,7 +2339,7 @@ bool q_standarditemmodel_qbase_move_rows(void* self, void* sourceParent, int sou
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void q_standarditemmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2377,7 +2377,7 @@ bool q_standarditemmodel_qbase_move_columns(void* self, void* sourceParent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void q_standarditemmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2407,7 +2407,7 @@ void q_standarditemmodel_qbase_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent)
 void q_standarditemmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2437,7 +2437,7 @@ bool q_standarditemmodel_qbase_can_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* parent)
 void q_standarditemmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2467,7 +2467,7 @@ QModelIndex* q_standarditemmodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QModelIndex* fn(QStandardItemModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* index)
 void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2505,7 +2505,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(QStandardItemModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void q_standarditemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -2535,7 +2535,7 @@ QSize* q_standarditemmodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QSize* fn(QStandardItemModel*, QModelIndex*)
+/// @param callback QSize* func(QStandardItemModel* self, QModelIndex* index)
 void q_standarditemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2563,7 +2563,7 @@ bool q_standarditemmodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_standarditemmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2591,7 +2591,7 @@ void q_standarditemmodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2619,7 +2619,7 @@ void q_standarditemmodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -2649,7 +2649,7 @@ bool q_standarditemmodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QEvent*)
+/// @param callback bool func(QStandardItemModel* self, QEvent* event)
 void q_standarditemmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2681,7 +2681,7 @@ bool q_standarditemmodel_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QObject*, QEvent*)
+/// @param callback bool func(QStandardItemModel* self, QObject* watched, QEvent* event)
 void q_standarditemmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2711,7 +2711,7 @@ void q_standarditemmodel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QTimerEvent*)
+/// @param callback void func(QStandardItemModel* self, QTimerEvent* event)
 void q_standarditemmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2741,7 +2741,7 @@ void q_standarditemmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QChildEvent*)
+/// @param callback void func(QStandardItemModel* self, QChildEvent* event)
 void q_standarditemmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2771,7 +2771,7 @@ void q_standarditemmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QEvent*)
+/// @param callback void func(QStandardItemModel* self, QEvent* event)
 void q_standarditemmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2801,7 +2801,7 @@ void q_standarditemmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QMetaMethod*)
+/// @param callback void func(QStandardItemModel* self, QMetaMethod* signal)
 void q_standarditemmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2831,7 +2831,7 @@ void q_standarditemmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QMetaMethod*)
+/// @param callback void func(QStandardItemModel* self, QMetaMethod* signal)
 void q_standarditemmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2863,7 +2863,7 @@ QModelIndex* q_standarditemmodel_qbase_create_index(void* self, int row, int col
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QModelIndex* fn(QStandardItemModel*, int, int)
+/// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column)
 void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2895,7 +2895,7 @@ void q_standarditemmodel_qbase_encode_data(void* self, libqt_list indexes, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(QStandardItemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void q_standarditemmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2931,7 +2931,7 @@ bool q_standarditemmodel_qbase_decode_data(void* self, int row, int column, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(QStandardItemModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void q_standarditemmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2965,7 +2965,7 @@ void q_standarditemmodel_qbase_begin_insert_rows(void* self, void* parent, int f
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2993,7 +2993,7 @@ void q_standarditemmodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3027,7 +3027,7 @@ void q_standarditemmodel_qbase_begin_remove_rows(void* self, void* parent, int f
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3055,7 +3055,7 @@ void q_standarditemmodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3093,7 +3093,7 @@ bool q_standarditemmodel_qbase_begin_move_rows(void* self, void* sourceParent, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void q_standarditemmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3121,7 +3121,7 @@ void q_standarditemmodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3155,7 +3155,7 @@ void q_standarditemmodel_qbase_begin_insert_columns(void* self, void* parent, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3183,7 +3183,7 @@ void q_standarditemmodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3217,7 +3217,7 @@ void q_standarditemmodel_qbase_begin_remove_columns(void* self, void* parent, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3245,7 +3245,7 @@ void q_standarditemmodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3283,7 +3283,7 @@ bool q_standarditemmodel_qbase_begin_move_columns(void* self, void* sourceParent
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void q_standarditemmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3311,7 +3311,7 @@ void q_standarditemmodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3339,7 +3339,7 @@ void q_standarditemmodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3367,7 +3367,7 @@ void q_standarditemmodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_standarditemmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -3399,7 +3399,7 @@ void q_standarditemmodel_qbase_change_persistent_index(void* self, void* from, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* from, QModelIndex* to)
 void q_standarditemmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3431,7 +3431,7 @@ void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_li
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QStandardItemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -3459,7 +3459,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_persistent_index_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_standarditemmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -3487,7 +3487,7 @@ QObject* q_standarditemmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_standarditemmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -3515,7 +3515,7 @@ int32_t q_standarditemmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_standarditemmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -3545,7 +3545,7 @@ int32_t q_standarditemmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int32_t fn(QStandardItemModel*, const char*)
+/// @param callback int32_t func(QStandardItemModel* self, const char* signal)
 void q_standarditemmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -3575,7 +3575,7 @@ bool q_standarditemmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback bool fn(QStandardItemModel*, QMetaMethod*)
+/// @param callback bool func(QStandardItemModel* self, QMetaMethod* signal)
 void q_standarditemmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3585,7 +3585,7 @@ void q_standarditemmodel_on_is_signal_connected(void* self, bool (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3595,7 +3595,7 @@ void q_standarditemmodel_on_rows_about_to_be_inserted(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3605,7 +3605,7 @@ void q_standarditemmodel_on_rows_inserted(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3615,7 +3615,7 @@ void q_standarditemmodel_on_rows_about_to_be_removed(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3625,7 +3625,7 @@ void q_standarditemmodel_on_rows_removed(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3635,7 +3635,7 @@ void q_standarditemmodel_on_columns_about_to_be_inserted(void* self, void (*call
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3645,7 +3645,7 @@ void q_standarditemmodel_on_columns_inserted(void* self, void (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3655,7 +3655,7 @@ void q_standarditemmodel_on_columns_about_to_be_removed(void* self, void (*callb
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* parent, int first, int last)
 void q_standarditemmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -3665,7 +3665,7 @@ void q_standarditemmodel_on_columns_removed(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*)
+/// @param callback void func(QStandardItemModel* self)
 void q_standarditemmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3675,7 +3675,7 @@ void q_standarditemmodel_on_model_about_to_be_reset(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*)
+/// @param callback void func(QStandardItemModel* self)
 void q_standarditemmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -3685,7 +3685,7 @@ void q_standarditemmodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_standarditemmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3695,7 +3695,7 @@ void q_standarditemmodel_on_rows_about_to_be_moved(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_standarditemmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3705,7 +3705,7 @@ void q_standarditemmodel_on_rows_moved(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_standarditemmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -3715,7 +3715,7 @@ void q_standarditemmodel_on_columns_about_to_be_moved(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QStandardItemModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_standarditemmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3725,7 +3725,7 @@ void q_standarditemmodel_on_columns_moved(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStandardItemModel*
-/// @param callback void fn(QStandardItemModel*, const char*)
+/// @param callback void func(QStandardItemModel* self, const char* objectName)
 void q_standarditemmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#dtor.QStandardItemModel)

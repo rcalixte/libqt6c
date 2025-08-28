@@ -35,7 +35,7 @@ int32_t q_commonstyle_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback int32_t fn(QCommonStyle*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QCommonStyle* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_commonstyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -67,7 +67,7 @@ void q_commonstyle_draw_primitive(void* self, int32_t pe, void* opt, void* p, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, enum QStyle__PrimitiveElement, QStyleOption*, QPainter*, QWidget*)
+/// @param callback void func(QCommonStyle* self, enum QStyle__PrimitiveElement pe, QStyleOption* opt, QPainter* p, QWidget* w)
 void q_commonstyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawPrimitive)
@@ -95,7 +95,7 @@ void q_commonstyle_draw_control(void* self, int64_t element, void* opt, void* p,
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, enum QStyle__ControlElement, QStyleOption*, QPainter*, QWidget*)
+/// @param callback void func(QCommonStyle* self, enum QStyle__ControlElement element, QStyleOption* opt, QPainter* p, QWidget* w)
 void q_commonstyle_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawControl)
@@ -122,7 +122,7 @@ QRect* q_commonstyle_sub_element_rect(void* self, int64_t r, void* opt, void* wi
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback QRect* fn(QCommonStyle*, enum QStyle__SubElement, QStyleOption*, QWidget*)
+/// @param callback QRect* func(QCommonStyle* self, enum QStyle__SubElement r, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subElementRect)
@@ -149,7 +149,7 @@ void q_commonstyle_draw_complex_control(void* self, int64_t cc, void* opt, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPainter*, QWidget*)
+/// @param callback void func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPainter* p, QWidget* w)
 void q_commonstyle_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#drawComplexControl)
@@ -179,7 +179,7 @@ int64_t q_commonstyle_hit_test_complex_control(void* self, int64_t cc, void* opt
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback int64_t fn(QCommonStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, QPoint*, QWidget*)
+/// @param callback int64_t func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, QPoint* pt, QWidget* w)
 void q_commonstyle_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#hitTestComplexControl)
@@ -209,7 +209,7 @@ QRect* q_commonstyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback QRect* fn(QCommonStyle*, enum QStyle__ComplexControl, QStyleOptionComplex*, enum QStyle__SubControl, QWidget*)
+/// @param callback QRect* func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* w)
 void q_commonstyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#subControlRect)
@@ -237,7 +237,7 @@ QSize* q_commonstyle_size_from_contents(void* self, int64_t ct, void* opt, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback QSize* fn(QCommonStyle*, enum QStyle__ContentsType, QStyleOption*, QSize*, QWidget*)
+/// @param callback QSize* func(QCommonStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* widget)
 void q_commonstyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#sizeFromContents)
@@ -264,7 +264,7 @@ int32_t q_commonstyle_pixel_metric(void* self, int64_t m, void* opt, void* widge
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback int32_t fn(QCommonStyle*, enum QStyle__PixelMetric, QStyleOption*, QWidget*)
+/// @param callback int32_t func(QCommonStyle* self, enum QStyle__PixelMetric m, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#pixelMetric)
@@ -291,7 +291,7 @@ int32_t q_commonstyle_style_hint(void* self, int64_t sh, void* opt, void* w, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback int32_t fn(QCommonStyle*, enum QStyle__StyleHint, QStyleOption*, QWidget*, QStyleHintReturn*)
+/// @param callback int32_t func(QCommonStyle* self, enum QStyle__StyleHint sh, QStyleOption* opt, QWidget* w, QStyleHintReturn* shret)
 void q_commonstyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#styleHint)
@@ -318,7 +318,7 @@ QIcon* q_commonstyle_standard_icon(void* self, int64_t standardIcon, void* opt, 
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback QIcon* fn(QCommonStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*)
+/// @param callback QIcon* func(QCommonStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardIcon)
@@ -344,7 +344,7 @@ QPixmap* q_commonstyle_standard_pixmap(void* self, int64_t sp, void* opt, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback QPixmap* fn(QCommonStyle*, enum QStyle__StandardPixmap, QStyleOption*, QWidget*)
+/// @param callback QPixmap* func(QCommonStyle* self, enum QStyle__StandardPixmap sp, QStyleOption* opt, QWidget* widget)
 void q_commonstyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#standardPixmap)
@@ -370,7 +370,7 @@ QPixmap* q_commonstyle_generated_icon_pixmap(void* self, int32_t iconMode, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback QPixmap* fn(QCommonStyle*, enum QIcon__Mode, QPixmap*, QStyleOption*)
+/// @param callback QPixmap* func(QCommonStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
 void q_commonstyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#generatedIconPixmap)
@@ -398,7 +398,7 @@ int32_t q_commonstyle_layout_spacing(void* self, int32_t control1, int32_t contr
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback int32_t fn(QCommonStyle*, enum QSizePolicy__ControlType, enum QSizePolicy__ControlType, enum Qt__Orientation, QStyleOption*, QWidget*)
+/// @param callback int32_t func(QCommonStyle* self, enum QSizePolicy__ControlType control1, enum QSizePolicy__ControlType control2, enum Qt__Orientation orientation, QStyleOption* option, QWidget* widget)
 void q_commonstyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#layoutSpacing)
@@ -424,7 +424,7 @@ void q_commonstyle_polish(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QPalette*)
+/// @param callback void func(QCommonStyle* self, QPalette* param1)
 void q_commonstyle_on_polish(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
@@ -446,7 +446,7 @@ void q_commonstyle_polish2(void* self, void* app);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QApplication*)
+/// @param callback void func(QCommonStyle* self, QApplication* app)
 void q_commonstyle_on_polish2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
@@ -468,7 +468,7 @@ void q_commonstyle_polish3(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QWidget*)
+/// @param callback void func(QCommonStyle* self, QWidget* widget)
 void q_commonstyle_on_polish3(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
@@ -490,7 +490,7 @@ void q_commonstyle_unpolish(void* self, void* widget);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QWidget*)
+/// @param callback void func(QCommonStyle* self, QWidget* widget)
 void q_commonstyle_on_unpolish(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
@@ -512,7 +512,7 @@ void q_commonstyle_unpolish2(void* self, void* application);
 /// Allows for overriding the related default method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QApplication*)
+/// @param callback void func(QCommonStyle* self, QApplication* application)
 void q_commonstyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
@@ -895,7 +895,7 @@ void q_commonstyle_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*)
+/// @param callback void func(QCommonStyle* self)
 void q_commonstyle_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -973,7 +973,7 @@ void q_commonstyle_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QObject*)
+/// @param callback void func(QCommonStyle* self, QObject* param1)
 void q_commonstyle_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QStyle
@@ -1011,7 +1011,7 @@ QRect* q_commonstyle_qbase_item_text_rect(void* self, void* fm, void* r, int fla
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback QRect* fn(QCommonStyle*, QFontMetrics*, QRect*, int, bool, const char*)
+/// @param callback QRect* func(QCommonStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
 void q_commonstyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// Inherited from QStyle
@@ -1045,7 +1045,7 @@ QRect* q_commonstyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback QRect* fn(QCommonStyle*, QRect*, int, QPixmap*)
+/// @param callback QRect* func(QCommonStyle* self, QRect* r, int flags, QPixmap* pixmap)
 void q_commonstyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
 /// Inherited from QStyle
@@ -1087,7 +1087,7 @@ void q_commonstyle_qbase_draw_item_text(void* self, void* painter, void* rect, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QPainter*, QRect*, int, QPalette*, bool, const char*, enum QPalette__ColorRole)
+/// @param callback void func(QCommonStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, const char* text, enum QPalette__ColorRole textRole)
 void q_commonstyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
 /// Inherited from QStyle
@@ -1123,7 +1123,7 @@ void q_commonstyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QPainter*, QRect*, int, QPixmap*)
+/// @param callback void func(QCommonStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap)
 void q_commonstyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*));
 
 /// Inherited from QStyle
@@ -1151,7 +1151,7 @@ QPalette* q_commonstyle_qbase_standard_palette(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback QPalette* fn()
+/// @param callback QPalette* func()
 void q_commonstyle_on_standard_palette(void* self, QPalette* (*callback)());
 
 /// Inherited from QObject
@@ -1181,7 +1181,7 @@ bool q_commonstyle_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback bool fn(QCommonStyle*, QEvent*)
+/// @param callback bool func(QCommonStyle* self, QEvent* event)
 void q_commonstyle_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1213,7 +1213,7 @@ bool q_commonstyle_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback bool fn(QCommonStyle*, QObject*, QEvent*)
+/// @param callback bool func(QCommonStyle* self, QObject* watched, QEvent* event)
 void q_commonstyle_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1243,7 +1243,7 @@ void q_commonstyle_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QTimerEvent*)
+/// @param callback void func(QCommonStyle* self, QTimerEvent* event)
 void q_commonstyle_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1273,7 +1273,7 @@ void q_commonstyle_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QChildEvent*)
+/// @param callback void func(QCommonStyle* self, QChildEvent* event)
 void q_commonstyle_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1303,7 +1303,7 @@ void q_commonstyle_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QEvent*)
+/// @param callback void func(QCommonStyle* self, QEvent* event)
 void q_commonstyle_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1333,7 +1333,7 @@ void q_commonstyle_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QMetaMethod*)
+/// @param callback void func(QCommonStyle* self, QMetaMethod* signal)
 void q_commonstyle_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1363,7 +1363,7 @@ void q_commonstyle_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, QMetaMethod*)
+/// @param callback void func(QCommonStyle* self, QMetaMethod* signal)
 void q_commonstyle_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1391,7 +1391,7 @@ QObject* q_commonstyle_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_commonstyle_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1419,7 +1419,7 @@ int32_t q_commonstyle_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_commonstyle_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1449,7 +1449,7 @@ int32_t q_commonstyle_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback int32_t fn(QCommonStyle*, const char*)
+/// @param callback int32_t func(QCommonStyle* self, const char* signal)
 void q_commonstyle_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1479,7 +1479,7 @@ bool q_commonstyle_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QCommonStyle*
-/// @param callback bool fn(QCommonStyle*, QMetaMethod*)
+/// @param callback bool func(QCommonStyle* self, QMetaMethod* signal)
 void q_commonstyle_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1489,7 +1489,7 @@ void q_commonstyle_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QCommonStyle*
-/// @param callback void fn(QCommonStyle*, const char*)
+/// @param callback void func(QCommonStyle* self, const char* objectName)
 void q_commonstyle_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#dtor.QCommonStyle)

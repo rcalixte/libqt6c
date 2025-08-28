@@ -40,7 +40,7 @@ int32_t q_stackedwidget_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self QStackedWidget*
-/// @param callback int32_t fn(QStackedWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QStackedWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_stackedwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -125,7 +125,7 @@ void q_stackedwidget_current_changed(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#currentChanged)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, int)
+/// @param callback void func(QStackedWidget* self, int param1)
 void q_stackedwidget_on_current_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#widgetRemoved)
@@ -137,7 +137,7 @@ void q_stackedwidget_widget_removed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#widgetRemoved)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, int)
+/// @param callback void func(QStackedWidget* self, int index)
 void q_stackedwidget_on_widget_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#event)
@@ -151,7 +151,7 @@ bool q_stackedwidget_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn(QStackedWidget*, QEvent*)
+/// @param callback bool func(QStackedWidget* self, QEvent* e)
 void q_stackedwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#event)
@@ -2217,7 +2217,7 @@ void q_stackedwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, const char*)
+/// @param callback void func(QStackedWidget* self, const char* title)
 void q_stackedwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2233,7 +2233,7 @@ void q_stackedwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QIcon*)
+/// @param callback void func(QStackedWidget* self, QIcon* icon)
 void q_stackedwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2249,7 +2249,7 @@ void q_stackedwidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, const char*)
+/// @param callback void func(QStackedWidget* self, const char* iconText)
 void q_stackedwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2265,7 +2265,7 @@ void q_stackedwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QPoint*)
+/// @param callback void func(QStackedWidget* self, QPoint* pos)
 void q_stackedwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2642,7 +2642,7 @@ void q_stackedwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*)
+/// @param callback void func(QStackedWidget* self)
 void q_stackedwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2720,7 +2720,7 @@ void q_stackedwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QObject*)
+/// @param callback void func(QStackedWidget* self, QObject* param1)
 void q_stackedwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2839,7 +2839,7 @@ QSize* q_stackedwidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_stackedwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -2869,7 +2869,7 @@ void q_stackedwidget_qbase_paint_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QPaintEvent*)
+/// @param callback void func(QStackedWidget* self, QPaintEvent* param1)
 void q_stackedwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -2899,7 +2899,7 @@ void q_stackedwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QEvent*)
+/// @param callback void func(QStackedWidget* self, QEvent* param1)
 void q_stackedwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -2929,7 +2929,7 @@ void q_stackedwidget_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QStyleOptionFrame*)
+/// @param callback void func(QStackedWidget* self, QStyleOptionFrame* option)
 void q_stackedwidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2957,7 +2957,7 @@ int32_t q_stackedwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_stackedwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2987,7 +2987,7 @@ void q_stackedwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, bool)
+/// @param callback void func(QStackedWidget* self, bool visible)
 void q_stackedwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3015,7 +3015,7 @@ QSize* q_stackedwidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_stackedwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3045,7 +3045,7 @@ int32_t q_stackedwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback int32_t fn(QStackedWidget*, int)
+/// @param callback int32_t func(QStackedWidget* self, int param1)
 void q_stackedwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3073,7 +3073,7 @@ bool q_stackedwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_stackedwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3101,7 +3101,7 @@ QPaintEngine* q_stackedwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_stackedwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3131,7 +3131,7 @@ void q_stackedwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+/// @param callback void func(QStackedWidget* self, QMouseEvent* event)
 void q_stackedwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3161,7 +3161,7 @@ void q_stackedwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+/// @param callback void func(QStackedWidget* self, QMouseEvent* event)
 void q_stackedwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3191,7 +3191,7 @@ void q_stackedwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+/// @param callback void func(QStackedWidget* self, QMouseEvent* event)
 void q_stackedwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3221,7 +3221,7 @@ void q_stackedwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+/// @param callback void func(QStackedWidget* self, QMouseEvent* event)
 void q_stackedwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3251,7 +3251,7 @@ void q_stackedwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QWheelEvent*)
+/// @param callback void func(QStackedWidget* self, QWheelEvent* event)
 void q_stackedwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3281,7 +3281,7 @@ void q_stackedwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QKeyEvent*)
+/// @param callback void func(QStackedWidget* self, QKeyEvent* event)
 void q_stackedwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3311,7 +3311,7 @@ void q_stackedwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QKeyEvent*)
+/// @param callback void func(QStackedWidget* self, QKeyEvent* event)
 void q_stackedwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3341,7 +3341,7 @@ void q_stackedwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QFocusEvent*)
+/// @param callback void func(QStackedWidget* self, QFocusEvent* event)
 void q_stackedwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3371,7 +3371,7 @@ void q_stackedwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QFocusEvent*)
+/// @param callback void func(QStackedWidget* self, QFocusEvent* event)
 void q_stackedwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3401,7 +3401,7 @@ void q_stackedwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QEnterEvent*)
+/// @param callback void func(QStackedWidget* self, QEnterEvent* event)
 void q_stackedwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3431,7 +3431,7 @@ void q_stackedwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QEvent*)
+/// @param callback void func(QStackedWidget* self, QEvent* event)
 void q_stackedwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3461,7 +3461,7 @@ void q_stackedwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMoveEvent*)
+/// @param callback void func(QStackedWidget* self, QMoveEvent* event)
 void q_stackedwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3491,7 +3491,7 @@ void q_stackedwidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QResizeEvent*)
+/// @param callback void func(QStackedWidget* self, QResizeEvent* event)
 void q_stackedwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3521,7 +3521,7 @@ void q_stackedwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QCloseEvent*)
+/// @param callback void func(QStackedWidget* self, QCloseEvent* event)
 void q_stackedwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3551,7 +3551,7 @@ void q_stackedwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QContextMenuEvent*)
+/// @param callback void func(QStackedWidget* self, QContextMenuEvent* event)
 void q_stackedwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3581,7 +3581,7 @@ void q_stackedwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QTabletEvent*)
+/// @param callback void func(QStackedWidget* self, QTabletEvent* event)
 void q_stackedwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3611,7 +3611,7 @@ void q_stackedwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QActionEvent*)
+/// @param callback void func(QStackedWidget* self, QActionEvent* event)
 void q_stackedwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3641,7 +3641,7 @@ void q_stackedwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QDragEnterEvent*)
+/// @param callback void func(QStackedWidget* self, QDragEnterEvent* event)
 void q_stackedwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3671,7 +3671,7 @@ void q_stackedwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QDragMoveEvent*)
+/// @param callback void func(QStackedWidget* self, QDragMoveEvent* event)
 void q_stackedwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3701,7 +3701,7 @@ void q_stackedwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QDragLeaveEvent*)
+/// @param callback void func(QStackedWidget* self, QDragLeaveEvent* event)
 void q_stackedwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3731,7 +3731,7 @@ void q_stackedwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QDropEvent*)
+/// @param callback void func(QStackedWidget* self, QDropEvent* event)
 void q_stackedwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3761,7 +3761,7 @@ void q_stackedwidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QShowEvent*)
+/// @param callback void func(QStackedWidget* self, QShowEvent* event)
 void q_stackedwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3791,7 +3791,7 @@ void q_stackedwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QHideEvent*)
+/// @param callback void func(QStackedWidget* self, QHideEvent* event)
 void q_stackedwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3825,7 +3825,7 @@ bool q_stackedwidget_qbase_native_event(void* self, const char* eventType, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn(QStackedWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QStackedWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_stackedwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3855,7 +3855,7 @@ int32_t q_stackedwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback int32_t fn(QStackedWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QStackedWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_stackedwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3885,7 +3885,7 @@ void q_stackedwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QPainter*)
+/// @param callback void func(QStackedWidget* self, QPainter* painter)
 void q_stackedwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3915,7 +3915,7 @@ QPaintDevice* q_stackedwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QPaintDevice* fn(QStackedWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QStackedWidget* self, QPoint* offset)
 void q_stackedwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3943,7 +3943,7 @@ QPainter* q_stackedwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_stackedwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3973,7 +3973,7 @@ void q_stackedwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QInputMethodEvent*)
+/// @param callback void func(QStackedWidget* self, QInputMethodEvent* param1)
 void q_stackedwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4003,7 +4003,7 @@ QVariant* q_stackedwidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QVariant* fn(QStackedWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QStackedWidget* self, enum Qt__InputMethodQuery param1)
 void q_stackedwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4033,7 +4033,7 @@ bool q_stackedwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn(QStackedWidget*, bool)
+/// @param callback bool func(QStackedWidget* self, bool next)
 void q_stackedwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4065,7 +4065,7 @@ bool q_stackedwidget_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn(QStackedWidget*, QObject*, QEvent*)
+/// @param callback bool func(QStackedWidget* self, QObject* watched, QEvent* event)
 void q_stackedwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4095,7 +4095,7 @@ void q_stackedwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QTimerEvent*)
+/// @param callback void func(QStackedWidget* self, QTimerEvent* event)
 void q_stackedwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4125,7 +4125,7 @@ void q_stackedwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QChildEvent*)
+/// @param callback void func(QStackedWidget* self, QChildEvent* event)
 void q_stackedwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4155,7 +4155,7 @@ void q_stackedwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QEvent*)
+/// @param callback void func(QStackedWidget* self, QEvent* event)
 void q_stackedwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4185,7 +4185,7 @@ void q_stackedwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMetaMethod*)
+/// @param callback void func(QStackedWidget* self, QMetaMethod* signal)
 void q_stackedwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4215,7 +4215,7 @@ void q_stackedwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QMetaMethod*)
+/// @param callback void func(QStackedWidget* self, QMetaMethod* signal)
 void q_stackedwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -4245,7 +4245,7 @@ void q_stackedwidget_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, QPainter*)
+/// @param callback void func(QStackedWidget* self, QPainter* param1)
 void q_stackedwidget_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4273,7 +4273,7 @@ void q_stackedwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stackedwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4301,7 +4301,7 @@ void q_stackedwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stackedwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4329,7 +4329,7 @@ void q_stackedwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_stackedwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4357,7 +4357,7 @@ bool q_stackedwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_stackedwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4385,7 +4385,7 @@ bool q_stackedwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_stackedwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4413,7 +4413,7 @@ QObject* q_stackedwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_stackedwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4441,7 +4441,7 @@ int32_t q_stackedwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_stackedwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4471,7 +4471,7 @@ int32_t q_stackedwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback int32_t fn(QStackedWidget*, const char*)
+/// @param callback int32_t func(QStackedWidget* self, const char* signal)
 void q_stackedwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4501,7 +4501,7 @@ bool q_stackedwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback bool fn(QStackedWidget*, QMetaMethod*)
+/// @param callback bool func(QStackedWidget* self, QMetaMethod* signal)
 void q_stackedwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4533,7 +4533,7 @@ double q_stackedwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedWidget*
-/// @param callback double fn(QStackedWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QStackedWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_stackedwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4543,7 +4543,7 @@ void q_stackedwidget_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QStackedWidget*
-/// @param callback void fn(QStackedWidget*, const char*)
+/// @param callback void func(QStackedWidget* self, const char* objectName)
 void q_stackedwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#dtor.QStackedWidget)

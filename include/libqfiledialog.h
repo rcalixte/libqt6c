@@ -67,7 +67,7 @@ int32_t q_filedialog_metacall(void* self, int32_t param1, int param2, void* para
 /// Allows for overriding the related default method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn(QFileDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QFileDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_filedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -394,7 +394,7 @@ void q_filedialog_set_visible(void* self, bool visible);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, bool)
+/// @param callback void func(QFileDialog* self, bool visible)
 void q_filedialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setVisible)
@@ -414,7 +414,7 @@ void q_filedialog_file_selected(void* self, const char* file);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#fileSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* file)
 void q_filedialog_on_file_selected(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#filesSelected)
@@ -426,7 +426,7 @@ void q_filedialog_files_selected(void* self, const char* files[]);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#filesSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char**)
+/// @param callback void func(QFileDialog* self, const char** files)
 void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentChanged)
@@ -438,7 +438,7 @@ void q_filedialog_current_changed(void* self, const char* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentChanged)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* path)
 void q_filedialog_on_current_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#directoryEntered)
@@ -450,7 +450,7 @@ void q_filedialog_directory_entered(void* self, const char* directory);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#directoryEntered)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* directory)
 void q_filedialog_on_directory_entered(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlSelected)
@@ -462,7 +462,7 @@ void q_filedialog_url_selected(void* self, void* url);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QUrl*)
+/// @param callback void func(QFileDialog* self, QUrl* url)
 void q_filedialog_on_url_selected(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
@@ -474,7 +474,7 @@ void q_filedialog_urls_selected(void* self, libqt_list urls);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, libqt_list /* of QUrl* */)
+/// @param callback void func(QFileDialog* self, libqt_list /* of QUrl* */ /* of QUrl* */)
 void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentUrlChanged)
@@ -486,7 +486,7 @@ void q_filedialog_current_url_changed(void* self, void* url);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentUrlChanged)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QUrl*)
+/// @param callback void func(QFileDialog* self, QUrl* url)
 void q_filedialog_on_current_url_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#directoryUrlEntered)
@@ -498,7 +498,7 @@ void q_filedialog_directory_url_entered(void* self, void* directory);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#directoryUrlEntered)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QUrl*)
+/// @param callback void func(QFileDialog* self, QUrl* directory)
 void q_filedialog_on_directory_url_entered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#filterSelected)
@@ -510,7 +510,7 @@ void q_filedialog_filter_selected(void* self, const char* filter);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#filterSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* filter)
 void q_filedialog_on_filter_selected(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
@@ -570,7 +570,7 @@ void q_filedialog_done(void* self, int result);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, int)
+/// @param callback void func(QFileDialog* self, int result)
 void q_filedialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#done)
@@ -591,7 +591,7 @@ void q_filedialog_accept(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filedialog_on_accept(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#accept)
@@ -612,7 +612,7 @@ void q_filedialog_change_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QEvent*)
+/// @param callback void func(QFileDialog* self, QEvent* e)
 void q_filedialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#changeEvent)
@@ -954,7 +954,7 @@ void q_filedialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, int)
+/// @param callback void func(QFileDialog* self, int result)
 void q_filedialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -969,7 +969,7 @@ void q_filedialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*)
+/// @param callback void func(QFileDialog* self)
 void q_filedialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -984,7 +984,7 @@ void q_filedialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*)
+/// @param callback void func(QFileDialog* self)
 void q_filedialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -2924,7 +2924,7 @@ void q_filedialog_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* title)
 void q_filedialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2940,7 +2940,7 @@ void q_filedialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QIcon*)
+/// @param callback void func(QFileDialog* self, QIcon* icon)
 void q_filedialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2956,7 +2956,7 @@ void q_filedialog_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* iconText)
 void q_filedialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2972,7 +2972,7 @@ void q_filedialog_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QPoint*)
+/// @param callback void func(QFileDialog* self, QPoint* pos)
 void q_filedialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3349,7 +3349,7 @@ void q_filedialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*)
+/// @param callback void func(QFileDialog* self)
 void q_filedialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3427,7 +3427,7 @@ void q_filedialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QObject*)
+/// @param callback void func(QFileDialog* self, QObject* param1)
 void q_filedialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3546,7 +3546,7 @@ QSize* q_filedialog_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_filedialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3574,7 +3574,7 @@ QSize* q_filedialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_filedialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3602,7 +3602,7 @@ void q_filedialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filedialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3630,7 +3630,7 @@ int32_t q_filedialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_filedialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -3658,7 +3658,7 @@ void q_filedialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filedialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -3688,7 +3688,7 @@ void q_filedialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QKeyEvent*)
+/// @param callback void func(QFileDialog* self, QKeyEvent* param1)
 void q_filedialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3718,7 +3718,7 @@ void q_filedialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QCloseEvent*)
+/// @param callback void func(QFileDialog* self, QCloseEvent* param1)
 void q_filedialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3748,7 +3748,7 @@ void q_filedialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QShowEvent*)
+/// @param callback void func(QFileDialog* self, QShowEvent* param1)
 void q_filedialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3778,7 +3778,7 @@ void q_filedialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QResizeEvent*)
+/// @param callback void func(QFileDialog* self, QResizeEvent* param1)
 void q_filedialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3808,7 +3808,7 @@ void q_filedialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QContextMenuEvent*)
+/// @param callback void func(QFileDialog* self, QContextMenuEvent* param1)
 void q_filedialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -3840,7 +3840,7 @@ bool q_filedialog_qbase_event_filter(void* self, void* param1, void* param2);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn(QFileDialog*, QObject*, QEvent*)
+/// @param callback bool func(QFileDialog* self, QObject* param1, QEvent* param2)
 void q_filedialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -3868,7 +3868,7 @@ int32_t q_filedialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_filedialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3898,7 +3898,7 @@ int32_t q_filedialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn(QFileDialog*, int)
+/// @param callback int32_t func(QFileDialog* self, int param1)
 void q_filedialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3926,7 +3926,7 @@ bool q_filedialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_filedialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3954,7 +3954,7 @@ QPaintEngine* q_filedialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_filedialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3984,7 +3984,7 @@ bool q_filedialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn(QFileDialog*, QEvent*)
+/// @param callback bool func(QFileDialog* self, QEvent* event)
 void q_filedialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4014,7 +4014,7 @@ void q_filedialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMouseEvent*)
+/// @param callback void func(QFileDialog* self, QMouseEvent* event)
 void q_filedialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4044,7 +4044,7 @@ void q_filedialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMouseEvent*)
+/// @param callback void func(QFileDialog* self, QMouseEvent* event)
 void q_filedialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4074,7 +4074,7 @@ void q_filedialog_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMouseEvent*)
+/// @param callback void func(QFileDialog* self, QMouseEvent* event)
 void q_filedialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4104,7 +4104,7 @@ void q_filedialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMouseEvent*)
+/// @param callback void func(QFileDialog* self, QMouseEvent* event)
 void q_filedialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4134,7 +4134,7 @@ void q_filedialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QWheelEvent*)
+/// @param callback void func(QFileDialog* self, QWheelEvent* event)
 void q_filedialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4164,7 +4164,7 @@ void q_filedialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QKeyEvent*)
+/// @param callback void func(QFileDialog* self, QKeyEvent* event)
 void q_filedialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4194,7 +4194,7 @@ void q_filedialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QFocusEvent*)
+/// @param callback void func(QFileDialog* self, QFocusEvent* event)
 void q_filedialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4224,7 +4224,7 @@ void q_filedialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QFocusEvent*)
+/// @param callback void func(QFileDialog* self, QFocusEvent* event)
 void q_filedialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4254,7 +4254,7 @@ void q_filedialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QEnterEvent*)
+/// @param callback void func(QFileDialog* self, QEnterEvent* event)
 void q_filedialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4284,7 +4284,7 @@ void q_filedialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QEvent*)
+/// @param callback void func(QFileDialog* self, QEvent* event)
 void q_filedialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4314,7 +4314,7 @@ void q_filedialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QPaintEvent*)
+/// @param callback void func(QFileDialog* self, QPaintEvent* event)
 void q_filedialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4344,7 +4344,7 @@ void q_filedialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMoveEvent*)
+/// @param callback void func(QFileDialog* self, QMoveEvent* event)
 void q_filedialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4374,7 +4374,7 @@ void q_filedialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QTabletEvent*)
+/// @param callback void func(QFileDialog* self, QTabletEvent* event)
 void q_filedialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4404,7 +4404,7 @@ void q_filedialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QActionEvent*)
+/// @param callback void func(QFileDialog* self, QActionEvent* event)
 void q_filedialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4434,7 +4434,7 @@ void q_filedialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QDragEnterEvent*)
+/// @param callback void func(QFileDialog* self, QDragEnterEvent* event)
 void q_filedialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4464,7 +4464,7 @@ void q_filedialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QDragMoveEvent*)
+/// @param callback void func(QFileDialog* self, QDragMoveEvent* event)
 void q_filedialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4494,7 +4494,7 @@ void q_filedialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QDragLeaveEvent*)
+/// @param callback void func(QFileDialog* self, QDragLeaveEvent* event)
 void q_filedialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4524,7 +4524,7 @@ void q_filedialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QDropEvent*)
+/// @param callback void func(QFileDialog* self, QDropEvent* event)
 void q_filedialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4554,7 +4554,7 @@ void q_filedialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QHideEvent*)
+/// @param callback void func(QFileDialog* self, QHideEvent* event)
 void q_filedialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4588,7 +4588,7 @@ bool q_filedialog_qbase_native_event(void* self, const char* eventType, void* me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn(QFileDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(QFileDialog* self, const char* eventType, void* message, intptr_t* result)
 void q_filedialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4618,7 +4618,7 @@ int32_t q_filedialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn(QFileDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QFileDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_filedialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4648,7 +4648,7 @@ void q_filedialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QPainter*)
+/// @param callback void func(QFileDialog* self, QPainter* painter)
 void q_filedialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4678,7 +4678,7 @@ QPaintDevice* q_filedialog_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QPaintDevice* fn(QFileDialog*, QPoint*)
+/// @param callback QPaintDevice* func(QFileDialog* self, QPoint* offset)
 void q_filedialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4706,7 +4706,7 @@ QPainter* q_filedialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_filedialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4736,7 +4736,7 @@ void q_filedialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QInputMethodEvent*)
+/// @param callback void func(QFileDialog* self, QInputMethodEvent* param1)
 void q_filedialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4766,7 +4766,7 @@ QVariant* q_filedialog_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QVariant* fn(QFileDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QFileDialog* self, enum Qt__InputMethodQuery param1)
 void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4796,7 +4796,7 @@ bool q_filedialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn(QFileDialog*, bool)
+/// @param callback bool func(QFileDialog* self, bool next)
 void q_filedialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4826,7 +4826,7 @@ void q_filedialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QTimerEvent*)
+/// @param callback void func(QFileDialog* self, QTimerEvent* event)
 void q_filedialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4856,7 +4856,7 @@ void q_filedialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QChildEvent*)
+/// @param callback void func(QFileDialog* self, QChildEvent* event)
 void q_filedialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4886,7 +4886,7 @@ void q_filedialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QEvent*)
+/// @param callback void func(QFileDialog* self, QEvent* event)
 void q_filedialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4916,7 +4916,7 @@ void q_filedialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMetaMethod*)
+/// @param callback void func(QFileDialog* self, QMetaMethod* signal)
 void q_filedialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4946,7 +4946,7 @@ void q_filedialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QMetaMethod*)
+/// @param callback void func(QFileDialog* self, QMetaMethod* signal)
 void q_filedialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -4976,7 +4976,7 @@ void q_filedialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, QWidget*)
+/// @param callback void func(QFileDialog* self, QWidget* param1)
 void q_filedialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -5004,7 +5004,7 @@ void q_filedialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filedialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5032,7 +5032,7 @@ void q_filedialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filedialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5060,7 +5060,7 @@ void q_filedialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void q_filedialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -5088,7 +5088,7 @@ bool q_filedialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_filedialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -5116,7 +5116,7 @@ bool q_filedialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_filedialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -5144,7 +5144,7 @@ QObject* q_filedialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_filedialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -5172,7 +5172,7 @@ int32_t q_filedialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_filedialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -5202,7 +5202,7 @@ int32_t q_filedialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback int32_t fn(QFileDialog*, const char*)
+/// @param callback int32_t func(QFileDialog* self, const char* signal)
 void q_filedialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -5232,7 +5232,7 @@ bool q_filedialog_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback bool fn(QFileDialog*, QMetaMethod*)
+/// @param callback bool func(QFileDialog* self, QMetaMethod* signal)
 void q_filedialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5264,7 +5264,7 @@ double q_filedialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileDialog*
-/// @param callback double fn(QFileDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QFileDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_filedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -5274,7 +5274,7 @@ void q_filedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFileDialog*
-/// @param callback void fn(QFileDialog*, const char*)
+/// @param callback void func(QFileDialog* self, const char* objectName)
 void q_filedialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#dtor.QFileDialog)

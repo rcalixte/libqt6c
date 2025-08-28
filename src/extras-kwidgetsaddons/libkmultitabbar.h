@@ -51,7 +51,7 @@ int32_t k_multitabbar_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self KMultiTabBar*
-/// @param callback int32_t fn(KMultiTabBar*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KMultiTabBar* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_multitabbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -155,7 +155,7 @@ void k_multitabbar_font_change(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QFont*)
+/// @param callback void func(KMultiTabBar* self, QFont* param1)
 void k_multitabbar_on_font_change(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#fontChange)
@@ -177,7 +177,7 @@ void k_multitabbar_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QPaintEvent*)
+/// @param callback void func(KMultiTabBar* self, QPaintEvent* param1)
 void k_multitabbar_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#paintEvent)
@@ -198,7 +198,7 @@ void k_multitabbar_update_separator(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void k_multitabbar_on_update_separator(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#updateSeparator)
@@ -2193,7 +2193,7 @@ void k_multitabbar_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, const char*)
+/// @param callback void func(KMultiTabBar* self, const char* title)
 void k_multitabbar_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2209,7 +2209,7 @@ void k_multitabbar_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QIcon*)
+/// @param callback void func(KMultiTabBar* self, QIcon* icon)
 void k_multitabbar_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2225,7 +2225,7 @@ void k_multitabbar_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, const char*)
+/// @param callback void func(KMultiTabBar* self, const char* iconText)
 void k_multitabbar_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2241,7 +2241,7 @@ void k_multitabbar_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QPoint*)
+/// @param callback void func(KMultiTabBar* self, QPoint* pos)
 void k_multitabbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2618,7 +2618,7 @@ void k_multitabbar_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*)
+/// @param callback void func(KMultiTabBar* self)
 void k_multitabbar_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2696,7 +2696,7 @@ void k_multitabbar_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QObject*)
+/// @param callback void func(KMultiTabBar* self, QObject* param1)
 void k_multitabbar_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2815,7 +2815,7 @@ int32_t k_multitabbar_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_multitabbar_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2845,7 +2845,7 @@ void k_multitabbar_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, bool)
+/// @param callback void func(KMultiTabBar* self, bool visible)
 void k_multitabbar_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2873,7 +2873,7 @@ QSize* k_multitabbar_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_multitabbar_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2901,7 +2901,7 @@ QSize* k_multitabbar_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_multitabbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2931,7 +2931,7 @@ int32_t k_multitabbar_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback int32_t fn(KMultiTabBar*, int)
+/// @param callback int32_t func(KMultiTabBar* self, int param1)
 void k_multitabbar_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2959,7 +2959,7 @@ bool k_multitabbar_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_multitabbar_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2987,7 +2987,7 @@ QPaintEngine* k_multitabbar_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_multitabbar_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3017,7 +3017,7 @@ bool k_multitabbar_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn(KMultiTabBar*, QEvent*)
+/// @param callback bool func(KMultiTabBar* self, QEvent* event)
 void k_multitabbar_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3047,7 +3047,7 @@ void k_multitabbar_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMouseEvent*)
+/// @param callback void func(KMultiTabBar* self, QMouseEvent* event)
 void k_multitabbar_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3077,7 +3077,7 @@ void k_multitabbar_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMouseEvent*)
+/// @param callback void func(KMultiTabBar* self, QMouseEvent* event)
 void k_multitabbar_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3107,7 +3107,7 @@ void k_multitabbar_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMouseEvent*)
+/// @param callback void func(KMultiTabBar* self, QMouseEvent* event)
 void k_multitabbar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void k_multitabbar_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMouseEvent*)
+/// @param callback void func(KMultiTabBar* self, QMouseEvent* event)
 void k_multitabbar_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3167,7 +3167,7 @@ void k_multitabbar_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QWheelEvent*)
+/// @param callback void func(KMultiTabBar* self, QWheelEvent* event)
 void k_multitabbar_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3197,7 +3197,7 @@ void k_multitabbar_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QKeyEvent*)
+/// @param callback void func(KMultiTabBar* self, QKeyEvent* event)
 void k_multitabbar_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3227,7 +3227,7 @@ void k_multitabbar_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QKeyEvent*)
+/// @param callback void func(KMultiTabBar* self, QKeyEvent* event)
 void k_multitabbar_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3257,7 +3257,7 @@ void k_multitabbar_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QFocusEvent*)
+/// @param callback void func(KMultiTabBar* self, QFocusEvent* event)
 void k_multitabbar_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3287,7 +3287,7 @@ void k_multitabbar_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QFocusEvent*)
+/// @param callback void func(KMultiTabBar* self, QFocusEvent* event)
 void k_multitabbar_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3317,7 +3317,7 @@ void k_multitabbar_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QEnterEvent*)
+/// @param callback void func(KMultiTabBar* self, QEnterEvent* event)
 void k_multitabbar_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3347,7 +3347,7 @@ void k_multitabbar_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QEvent*)
+/// @param callback void func(KMultiTabBar* self, QEvent* event)
 void k_multitabbar_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3377,7 +3377,7 @@ void k_multitabbar_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMoveEvent*)
+/// @param callback void func(KMultiTabBar* self, QMoveEvent* event)
 void k_multitabbar_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3407,7 +3407,7 @@ void k_multitabbar_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QResizeEvent*)
+/// @param callback void func(KMultiTabBar* self, QResizeEvent* event)
 void k_multitabbar_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3437,7 +3437,7 @@ void k_multitabbar_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QCloseEvent*)
+/// @param callback void func(KMultiTabBar* self, QCloseEvent* event)
 void k_multitabbar_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3467,7 +3467,7 @@ void k_multitabbar_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QContextMenuEvent*)
+/// @param callback void func(KMultiTabBar* self, QContextMenuEvent* event)
 void k_multitabbar_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3497,7 +3497,7 @@ void k_multitabbar_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QTabletEvent*)
+/// @param callback void func(KMultiTabBar* self, QTabletEvent* event)
 void k_multitabbar_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void k_multitabbar_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QActionEvent*)
+/// @param callback void func(KMultiTabBar* self, QActionEvent* event)
 void k_multitabbar_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3557,7 +3557,7 @@ void k_multitabbar_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QDragEnterEvent*)
+/// @param callback void func(KMultiTabBar* self, QDragEnterEvent* event)
 void k_multitabbar_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3587,7 +3587,7 @@ void k_multitabbar_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QDragMoveEvent*)
+/// @param callback void func(KMultiTabBar* self, QDragMoveEvent* event)
 void k_multitabbar_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3617,7 +3617,7 @@ void k_multitabbar_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QDragLeaveEvent*)
+/// @param callback void func(KMultiTabBar* self, QDragLeaveEvent* event)
 void k_multitabbar_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3647,7 +3647,7 @@ void k_multitabbar_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QDropEvent*)
+/// @param callback void func(KMultiTabBar* self, QDropEvent* event)
 void k_multitabbar_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3677,7 +3677,7 @@ void k_multitabbar_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QShowEvent*)
+/// @param callback void func(KMultiTabBar* self, QShowEvent* event)
 void k_multitabbar_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3707,7 +3707,7 @@ void k_multitabbar_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QHideEvent*)
+/// @param callback void func(KMultiTabBar* self, QHideEvent* event)
 void k_multitabbar_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3741,7 +3741,7 @@ bool k_multitabbar_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn(KMultiTabBar*, const char*, void*, intptr_t*)
+/// @param callback bool func(KMultiTabBar* self, const char* eventType, void* message, intptr_t* result)
 void k_multitabbar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3771,7 +3771,7 @@ void k_multitabbar_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QEvent*)
+/// @param callback void func(KMultiTabBar* self, QEvent* param1)
 void k_multitabbar_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3801,7 +3801,7 @@ int32_t k_multitabbar_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback int32_t fn(KMultiTabBar*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KMultiTabBar* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_multitabbar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3831,7 +3831,7 @@ void k_multitabbar_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QPainter*)
+/// @param callback void func(KMultiTabBar* self, QPainter* painter)
 void k_multitabbar_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3861,7 +3861,7 @@ QPaintDevice* k_multitabbar_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QPaintDevice* fn(KMultiTabBar*, QPoint*)
+/// @param callback QPaintDevice* func(KMultiTabBar* self, QPoint* offset)
 void k_multitabbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3889,7 +3889,7 @@ QPainter* k_multitabbar_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_multitabbar_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3919,7 +3919,7 @@ void k_multitabbar_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QInputMethodEvent*)
+/// @param callback void func(KMultiTabBar* self, QInputMethodEvent* param1)
 void k_multitabbar_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3949,7 +3949,7 @@ QVariant* k_multitabbar_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QVariant* fn(KMultiTabBar*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KMultiTabBar* self, enum Qt__InputMethodQuery param1)
 void k_multitabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3979,7 +3979,7 @@ bool k_multitabbar_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn(KMultiTabBar*, bool)
+/// @param callback bool func(KMultiTabBar* self, bool next)
 void k_multitabbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4011,7 +4011,7 @@ bool k_multitabbar_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn(KMultiTabBar*, QObject*, QEvent*)
+/// @param callback bool func(KMultiTabBar* self, QObject* watched, QEvent* event)
 void k_multitabbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4041,7 +4041,7 @@ void k_multitabbar_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QTimerEvent*)
+/// @param callback void func(KMultiTabBar* self, QTimerEvent* event)
 void k_multitabbar_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4071,7 +4071,7 @@ void k_multitabbar_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QChildEvent*)
+/// @param callback void func(KMultiTabBar* self, QChildEvent* event)
 void k_multitabbar_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4101,7 +4101,7 @@ void k_multitabbar_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QEvent*)
+/// @param callback void func(KMultiTabBar* self, QEvent* event)
 void k_multitabbar_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4131,7 +4131,7 @@ void k_multitabbar_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMetaMethod*)
+/// @param callback void func(KMultiTabBar* self, QMetaMethod* signal)
 void k_multitabbar_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4161,7 +4161,7 @@ void k_multitabbar_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, QMetaMethod*)
+/// @param callback void func(KMultiTabBar* self, QMetaMethod* signal)
 void k_multitabbar_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4189,7 +4189,7 @@ void k_multitabbar_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void k_multitabbar_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4217,7 +4217,7 @@ void k_multitabbar_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void k_multitabbar_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4245,7 +4245,7 @@ void k_multitabbar_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn()
+/// @param callback void func()
 void k_multitabbar_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4273,7 +4273,7 @@ bool k_multitabbar_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_multitabbar_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4301,7 +4301,7 @@ bool k_multitabbar_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_multitabbar_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4329,7 +4329,7 @@ QObject* k_multitabbar_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_multitabbar_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4357,7 +4357,7 @@ int32_t k_multitabbar_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_multitabbar_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4387,7 +4387,7 @@ int32_t k_multitabbar_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback int32_t fn(KMultiTabBar*, const char*)
+/// @param callback int32_t func(KMultiTabBar* self, const char* signal)
 void k_multitabbar_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4417,7 +4417,7 @@ bool k_multitabbar_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool fn(KMultiTabBar*, QMetaMethod*)
+/// @param callback bool func(KMultiTabBar* self, QMetaMethod* signal)
 void k_multitabbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4449,7 +4449,7 @@ double k_multitabbar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback double fn(KMultiTabBar*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KMultiTabBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_multitabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4459,7 +4459,7 @@ void k_multitabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self KMultiTabBar*
-/// @param callback void fn(KMultiTabBar*, const char*)
+/// @param callback void func(KMultiTabBar* self, const char* objectName)
 void k_multitabbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#dtor.KMultiTabBar)
@@ -4513,7 +4513,7 @@ void k_multitabbarbutton_clicked(void* self, int id);
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#clicked)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, int)
+/// @param callback void func(KMultiTabBarButton* self, int id)
 void k_multitabbarbutton_on_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
@@ -4813,7 +4813,7 @@ void k_multitabbarbutton_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*)
+/// @param callback void func(KMultiTabBarButton* self)
 void k_multitabbarbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -4828,7 +4828,7 @@ void k_multitabbarbutton_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*)
+/// @param callback void func(KMultiTabBarButton* self)
 void k_multitabbarbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -4844,7 +4844,7 @@ void k_multitabbarbutton_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, bool)
+/// @param callback void func(KMultiTabBarButton* self, bool checked)
 void k_multitabbarbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -4860,7 +4860,7 @@ void k_multitabbarbutton_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, bool)
+/// @param callback void func(KMultiTabBarButton* self, bool checked)
 void k_multitabbarbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -6837,7 +6837,7 @@ void k_multitabbarbutton_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, const char*)
+/// @param callback void func(KMultiTabBarButton* self, const char* title)
 void k_multitabbarbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6853,7 +6853,7 @@ void k_multitabbarbutton_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, QIcon*)
+/// @param callback void func(KMultiTabBarButton* self, QIcon* icon)
 void k_multitabbarbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6869,7 +6869,7 @@ void k_multitabbarbutton_window_icon_text_changed(void* self, const char* iconTe
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, const char*)
+/// @param callback void func(KMultiTabBarButton* self, const char* iconText)
 void k_multitabbarbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6885,7 +6885,7 @@ void k_multitabbarbutton_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, QPoint*)
+/// @param callback void func(KMultiTabBarButton* self, QPoint* pos)
 void k_multitabbarbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7279,7 +7279,7 @@ void k_multitabbarbutton_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*)
+/// @param callback void func(KMultiTabBarButton* self)
 void k_multitabbarbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -7357,7 +7357,7 @@ void k_multitabbarbutton_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, QObject*)
+/// @param callback void func(KMultiTabBarButton* self, QObject* param1)
 void k_multitabbarbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7458,7 +7458,7 @@ int32_t k_multitabbarbutton_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling private signal
 ///
 /// @param self KMultiTabBarButton*
-/// @param callback void fn(KMultiTabBarButton*, const char*)
+/// @param callback void func(KMultiTabBarButton* self, const char* objectName)
 void k_multitabbarbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#dtor.KMultiTabBarButton)
@@ -7565,7 +7565,7 @@ void k_multitabbartab_clicked(void* self, int id);
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#clicked)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, int)
+/// @param callback void func(KMultiTabBarTab* self, int id)
 void k_multitabbartab_on_clicked(void* self, void (*callback)(void*, int));
 
 /// Inherited from QPushButton
@@ -7834,7 +7834,7 @@ void k_multitabbartab_pressed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*)
+/// @param callback void func(KMultiTabBarTab* self)
 void k_multitabbartab_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -7849,7 +7849,7 @@ void k_multitabbartab_released(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*)
+/// @param callback void func(KMultiTabBarTab* self)
 void k_multitabbartab_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
@@ -7865,7 +7865,7 @@ void k_multitabbartab_toggled(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, bool)
+/// @param callback void func(KMultiTabBarTab* self, bool checked)
 void k_multitabbartab_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -7881,7 +7881,7 @@ void k_multitabbartab_clicked1(void* self, bool checked);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, bool)
+/// @param callback void func(KMultiTabBarTab* self, bool checked)
 void k_multitabbartab_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -9850,7 +9850,7 @@ void k_multitabbartab_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, const char*)
+/// @param callback void func(KMultiTabBarTab* self, const char* title)
 void k_multitabbartab_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -9866,7 +9866,7 @@ void k_multitabbartab_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, QIcon*)
+/// @param callback void func(KMultiTabBarTab* self, QIcon* icon)
 void k_multitabbartab_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -9882,7 +9882,7 @@ void k_multitabbartab_window_icon_text_changed(void* self, const char* iconText)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, const char*)
+/// @param callback void func(KMultiTabBarTab* self, const char* iconText)
 void k_multitabbartab_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -9898,7 +9898,7 @@ void k_multitabbartab_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, QPoint*)
+/// @param callback void func(KMultiTabBarTab* self, QPoint* pos)
 void k_multitabbartab_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -10292,7 +10292,7 @@ void k_multitabbartab_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*)
+/// @param callback void func(KMultiTabBarTab* self)
 void k_multitabbartab_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -10370,7 +10370,7 @@ void k_multitabbartab_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, QObject*)
+/// @param callback void func(KMultiTabBarTab* self, QObject* param1)
 void k_multitabbartab_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -10471,7 +10471,7 @@ int32_t k_multitabbartab_encode_metric_f(int32_t metric, double value);
 /// Wrapper to allow calling private signal
 ///
 /// @param self KMultiTabBarTab*
-/// @param callback void fn(KMultiTabBarTab*, const char*)
+/// @param callback void func(KMultiTabBarTab* self, const char* objectName)
 void k_multitabbartab_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#dtor.KMultiTabBarTab)

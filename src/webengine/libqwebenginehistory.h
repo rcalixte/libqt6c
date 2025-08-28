@@ -513,7 +513,7 @@ void q_webenginehistorymodel_data_changed(void* self, void* topLeft, void* botto
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_webenginehistorymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -531,7 +531,7 @@ void q_webenginehistorymodel_header_data_changed(void* self, int32_t orientation
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_webenginehistorymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -546,7 +546,7 @@ void q_webenginehistorymodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*)
+/// @param callback void func(QWebEngineHistoryModel* self)
 void q_webenginehistorymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -561,7 +561,7 @@ void q_webenginehistorymodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*)
+/// @param callback void func(QWebEngineHistoryModel* self)
 void q_webenginehistorymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -648,7 +648,7 @@ void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bott
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -664,7 +664,7 @@ void q_webenginehistorymodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -681,7 +681,7 @@ void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -697,7 +697,7 @@ void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, libqt_list 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -714,7 +714,7 @@ void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -960,7 +960,7 @@ void q_webenginehistorymodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*)
+/// @param callback void func(QWebEngineHistoryModel* self)
 void q_webenginehistorymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1031,7 +1031,7 @@ void q_webenginehistorymodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QObject*)
+/// @param callback void func(QWebEngineHistoryModel* self, QObject* param1)
 void q_webenginehistorymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1041,7 +1041,7 @@ void q_webenginehistorymodel_on_destroyed1(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1051,7 +1051,7 @@ void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*cal
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1061,7 +1061,7 @@ void q_webenginehistorymodel_on_rows_inserted(void* self, void (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1071,7 +1071,7 @@ void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*call
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1081,7 +1081,7 @@ void q_webenginehistorymodel_on_rows_removed(void* self, void (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1091,7 +1091,7 @@ void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1101,7 +1101,7 @@ void q_webenginehistorymodel_on_columns_inserted(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1111,7 +1111,7 @@ void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*c
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* parent, int first, int last)
 void q_webenginehistorymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1121,7 +1121,7 @@ void q_webenginehistorymodel_on_columns_removed(void* self, void (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*)
+/// @param callback void func(QWebEngineHistoryModel* self)
 void q_webenginehistorymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1131,7 +1131,7 @@ void q_webenginehistorymodel_on_model_about_to_be_reset(void* self, void (*callb
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*)
+/// @param callback void func(QWebEngineHistoryModel* self)
 void q_webenginehistorymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1141,7 +1141,7 @@ void q_webenginehistorymodel_on_model_reset(void* self, void (*callback)(void*))
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1151,7 +1151,7 @@ void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_webenginehistorymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1161,7 +1161,7 @@ void q_webenginehistorymodel_on_rows_moved(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1171,7 +1171,7 @@ void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*cal
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_webenginehistorymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -1181,7 +1181,7 @@ void q_webenginehistorymodel_on_columns_moved(void* self, void (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistoryModel*
-/// @param callback void fn(QWebEngineHistoryModel*, const char*)
+/// @param callback void func(QWebEngineHistoryModel* self, const char* objectName)
 void q_webenginehistorymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qwebenginehistory.html
@@ -1562,7 +1562,7 @@ void q_webenginehistory_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineHistory*
-/// @param callback void fn(QWebEngineHistory*)
+/// @param callback void func(QWebEngineHistory* self)
 void q_webenginehistory_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -1640,7 +1640,7 @@ void q_webenginehistory_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineHistory*
-/// @param callback void fn(QWebEngineHistory*, QObject*)
+/// @param callback void func(QWebEngineHistory* self, QObject* param1)
 void q_webenginehistory_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1650,7 +1650,7 @@ void q_webenginehistory_on_destroyed1(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineHistory*
-/// @param callback void fn(QWebEngineHistory*, const char*)
+/// @param callback void func(QWebEngineHistory* self, const char* objectName)
 void q_webenginehistory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qwebenginehistory.html#types

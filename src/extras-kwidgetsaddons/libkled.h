@@ -68,7 +68,7 @@ int32_t k_led_metacall(void* self, int32_t param1, int param2, void* param3);
 /// Allows for overriding the related default method
 ///
 /// @param self KLed*
-/// @param callback int32_t fn(KLed*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KLed* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_led_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -157,7 +157,7 @@ QSize* k_led_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KLed*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_led_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kled.html#sizeHint)
@@ -177,7 +177,7 @@ QSize* k_led_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KLed*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_led_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kled.html#minimumSizeHint)
@@ -213,7 +213,7 @@ void k_led_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QPaintEvent*)
+/// @param callback void func(KLed* self, QPaintEvent* param1)
 void k_led_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kled.html#paintEvent)
@@ -235,7 +235,7 @@ void k_led_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QResizeEvent*)
+/// @param callback void func(KLed* self, QResizeEvent* param1)
 void k_led_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kled.html#resizeEvent)
@@ -2200,7 +2200,7 @@ void k_led_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, const char*)
+/// @param callback void func(KLed* self, const char* title)
 void k_led_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2216,7 +2216,7 @@ void k_led_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QIcon*)
+/// @param callback void func(KLed* self, QIcon* icon)
 void k_led_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2232,7 +2232,7 @@ void k_led_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, const char*)
+/// @param callback void func(KLed* self, const char* iconText)
 void k_led_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2248,7 +2248,7 @@ void k_led_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QPoint*)
+/// @param callback void func(KLed* self, QPoint* pos)
 void k_led_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2625,7 +2625,7 @@ void k_led_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*)
+/// @param callback void func(KLed* self)
 void k_led_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2703,7 +2703,7 @@ void k_led_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QObject*)
+/// @param callback void func(KLed* self, QObject* param1)
 void k_led_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2822,7 +2822,7 @@ int32_t k_led_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_led_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2852,7 +2852,7 @@ void k_led_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, bool)
+/// @param callback void func(KLed* self, bool visible)
 void k_led_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2882,7 +2882,7 @@ int32_t k_led_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback int32_t fn(KLed*, int)
+/// @param callback int32_t func(KLed* self, int param1)
 void k_led_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2910,7 +2910,7 @@ bool k_led_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_led_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2938,7 +2938,7 @@ QPaintEngine* k_led_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_led_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2968,7 +2968,7 @@ bool k_led_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn(KLed*, QEvent*)
+/// @param callback bool func(KLed* self, QEvent* event)
 void k_led_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2998,7 +2998,7 @@ void k_led_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMouseEvent*)
+/// @param callback void func(KLed* self, QMouseEvent* event)
 void k_led_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3028,7 +3028,7 @@ void k_led_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMouseEvent*)
+/// @param callback void func(KLed* self, QMouseEvent* event)
 void k_led_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3058,7 +3058,7 @@ void k_led_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMouseEvent*)
+/// @param callback void func(KLed* self, QMouseEvent* event)
 void k_led_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3088,7 +3088,7 @@ void k_led_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMouseEvent*)
+/// @param callback void func(KLed* self, QMouseEvent* event)
 void k_led_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3118,7 +3118,7 @@ void k_led_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QWheelEvent*)
+/// @param callback void func(KLed* self, QWheelEvent* event)
 void k_led_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3148,7 +3148,7 @@ void k_led_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QKeyEvent*)
+/// @param callback void func(KLed* self, QKeyEvent* event)
 void k_led_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3178,7 +3178,7 @@ void k_led_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QKeyEvent*)
+/// @param callback void func(KLed* self, QKeyEvent* event)
 void k_led_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3208,7 +3208,7 @@ void k_led_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QFocusEvent*)
+/// @param callback void func(KLed* self, QFocusEvent* event)
 void k_led_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3238,7 +3238,7 @@ void k_led_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QFocusEvent*)
+/// @param callback void func(KLed* self, QFocusEvent* event)
 void k_led_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3268,7 +3268,7 @@ void k_led_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QEnterEvent*)
+/// @param callback void func(KLed* self, QEnterEvent* event)
 void k_led_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3298,7 +3298,7 @@ void k_led_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QEvent*)
+/// @param callback void func(KLed* self, QEvent* event)
 void k_led_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3328,7 +3328,7 @@ void k_led_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMoveEvent*)
+/// @param callback void func(KLed* self, QMoveEvent* event)
 void k_led_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3358,7 +3358,7 @@ void k_led_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QCloseEvent*)
+/// @param callback void func(KLed* self, QCloseEvent* event)
 void k_led_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3388,7 +3388,7 @@ void k_led_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QContextMenuEvent*)
+/// @param callback void func(KLed* self, QContextMenuEvent* event)
 void k_led_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3418,7 +3418,7 @@ void k_led_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QTabletEvent*)
+/// @param callback void func(KLed* self, QTabletEvent* event)
 void k_led_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3448,7 +3448,7 @@ void k_led_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QActionEvent*)
+/// @param callback void func(KLed* self, QActionEvent* event)
 void k_led_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3478,7 +3478,7 @@ void k_led_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QDragEnterEvent*)
+/// @param callback void func(KLed* self, QDragEnterEvent* event)
 void k_led_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3508,7 +3508,7 @@ void k_led_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QDragMoveEvent*)
+/// @param callback void func(KLed* self, QDragMoveEvent* event)
 void k_led_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3538,7 +3538,7 @@ void k_led_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QDragLeaveEvent*)
+/// @param callback void func(KLed* self, QDragLeaveEvent* event)
 void k_led_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3568,7 +3568,7 @@ void k_led_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QDropEvent*)
+/// @param callback void func(KLed* self, QDropEvent* event)
 void k_led_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3598,7 +3598,7 @@ void k_led_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QShowEvent*)
+/// @param callback void func(KLed* self, QShowEvent* event)
 void k_led_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3628,7 +3628,7 @@ void k_led_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QHideEvent*)
+/// @param callback void func(KLed* self, QHideEvent* event)
 void k_led_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3662,7 +3662,7 @@ bool k_led_qbase_native_event(void* self, const char* eventType, void* message, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn(KLed*, const char*, void*, intptr_t*)
+/// @param callback bool func(KLed* self, const char* eventType, void* message, intptr_t* result)
 void k_led_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3692,7 +3692,7 @@ void k_led_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QEvent*)
+/// @param callback void func(KLed* self, QEvent* param1)
 void k_led_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3722,7 +3722,7 @@ int32_t k_led_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback int32_t fn(KLed*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KLed* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_led_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3752,7 +3752,7 @@ void k_led_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QPainter*)
+/// @param callback void func(KLed* self, QPainter* painter)
 void k_led_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3782,7 +3782,7 @@ QPaintDevice* k_led_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback QPaintDevice* fn(KLed*, QPoint*)
+/// @param callback QPaintDevice* func(KLed* self, QPoint* offset)
 void k_led_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3810,7 +3810,7 @@ QPainter* k_led_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_led_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3840,7 +3840,7 @@ void k_led_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QInputMethodEvent*)
+/// @param callback void func(KLed* self, QInputMethodEvent* param1)
 void k_led_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3870,7 +3870,7 @@ QVariant* k_led_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback QVariant* fn(KLed*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KLed* self, enum Qt__InputMethodQuery param1)
 void k_led_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3900,7 +3900,7 @@ bool k_led_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn(KLed*, bool)
+/// @param callback bool func(KLed* self, bool next)
 void k_led_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3932,7 +3932,7 @@ bool k_led_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn(KLed*, QObject*, QEvent*)
+/// @param callback bool func(KLed* self, QObject* watched, QEvent* event)
 void k_led_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3962,7 +3962,7 @@ void k_led_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QTimerEvent*)
+/// @param callback void func(KLed* self, QTimerEvent* event)
 void k_led_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3992,7 +3992,7 @@ void k_led_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QChildEvent*)
+/// @param callback void func(KLed* self, QChildEvent* event)
 void k_led_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4022,7 +4022,7 @@ void k_led_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QEvent*)
+/// @param callback void func(KLed* self, QEvent* event)
 void k_led_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4052,7 +4052,7 @@ void k_led_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMetaMethod*)
+/// @param callback void func(KLed* self, QMetaMethod* signal)
 void k_led_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4082,7 +4082,7 @@ void k_led_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, QMetaMethod*)
+/// @param callback void func(KLed* self, QMetaMethod* signal)
 void k_led_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4110,7 +4110,7 @@ void k_led_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn()
+/// @param callback void func()
 void k_led_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4138,7 +4138,7 @@ void k_led_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn()
+/// @param callback void func()
 void k_led_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4166,7 +4166,7 @@ void k_led_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback void fn()
+/// @param callback void func()
 void k_led_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4194,7 +4194,7 @@ bool k_led_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_led_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4222,7 +4222,7 @@ bool k_led_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_led_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4250,7 +4250,7 @@ QObject* k_led_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_led_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4278,7 +4278,7 @@ int32_t k_led_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_led_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4308,7 +4308,7 @@ int32_t k_led_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback int32_t fn(KLed*, const char*)
+/// @param callback int32_t func(KLed* self, const char* signal)
 void k_led_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4338,7 +4338,7 @@ bool k_led_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback bool fn(KLed*, QMetaMethod*)
+/// @param callback bool func(KLed* self, QMetaMethod* signal)
 void k_led_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4370,7 +4370,7 @@ double k_led_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KLed*
-/// @param callback double fn(KLed*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KLed* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_led_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4380,7 +4380,7 @@ void k_led_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t
 /// Wrapper to allow calling private signal
 ///
 /// @param self KLed*
-/// @param callback void fn(KLed*, const char*)
+/// @param callback void func(KLed* self, const char* objectName)
 void k_led_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kled.html#dtor.KLed)

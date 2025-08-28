@@ -64,7 +64,7 @@ int32_t q_inputdevice_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDevice*
-/// @param callback int32_t fn(QInputDevice*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QInputDevice* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -155,7 +155,7 @@ void q_inputdevice_available_virtual_geometry_changed(void* self, void* area);
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#availableVirtualGeometryChanged)
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QRect*)
+/// @param callback void func(QInputDevice* self, QRect* area)
 void q_inputdevice_on_available_virtual_geometry_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -406,7 +406,7 @@ void q_inputdevice_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*)
+/// @param callback void func(QInputDevice* self)
 void q_inputdevice_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -484,7 +484,7 @@ void q_inputdevice_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QObject*)
+/// @param callback void func(QInputDevice* self, QObject* param1)
 void q_inputdevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -514,7 +514,7 @@ bool q_inputdevice_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback bool fn(QInputDevice*, QEvent*)
+/// @param callback bool func(QInputDevice* self, QEvent* event)
 void q_inputdevice_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -546,7 +546,7 @@ bool q_inputdevice_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback bool fn(QInputDevice*, QObject*, QEvent*)
+/// @param callback bool func(QInputDevice* self, QObject* watched, QEvent* event)
 void q_inputdevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -576,7 +576,7 @@ void q_inputdevice_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QTimerEvent*)
+/// @param callback void func(QInputDevice* self, QTimerEvent* event)
 void q_inputdevice_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -606,7 +606,7 @@ void q_inputdevice_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QChildEvent*)
+/// @param callback void func(QInputDevice* self, QChildEvent* event)
 void q_inputdevice_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -636,7 +636,7 @@ void q_inputdevice_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QEvent*)
+/// @param callback void func(QInputDevice* self, QEvent* event)
 void q_inputdevice_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -666,7 +666,7 @@ void q_inputdevice_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QMetaMethod*)
+/// @param callback void func(QInputDevice* self, QMetaMethod* signal)
 void q_inputdevice_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -696,7 +696,7 @@ void q_inputdevice_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, QMetaMethod*)
+/// @param callback void func(QInputDevice* self, QMetaMethod* signal)
 void q_inputdevice_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -724,7 +724,7 @@ QObject* q_inputdevice_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_inputdevice_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -752,7 +752,7 @@ int32_t q_inputdevice_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_inputdevice_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -782,7 +782,7 @@ int32_t q_inputdevice_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback int32_t fn(QInputDevice*, const char*)
+/// @param callback int32_t func(QInputDevice* self, const char* signal)
 void q_inputdevice_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -812,7 +812,7 @@ bool q_inputdevice_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QInputDevice*
-/// @param callback bool fn(QInputDevice*, QMetaMethod*)
+/// @param callback bool func(QInputDevice* self, QMetaMethod* signal)
 void q_inputdevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -822,7 +822,7 @@ void q_inputdevice_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QInputDevice*
-/// @param callback void fn(QInputDevice*, const char*)
+/// @param callback void func(QInputDevice* self, const char* objectName)
 void q_inputdevice_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#dtor.QInputDevice)

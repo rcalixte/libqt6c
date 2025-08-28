@@ -41,7 +41,7 @@ int32_t q_syntaxhighlighter_metacall(void* self, int32_t param1, int param2, voi
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback int32_t fn(QSyntaxHighlighter*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QSyntaxHighlighter* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_syntaxhighlighter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -92,7 +92,7 @@ void q_syntaxhighlighter_highlight_block(void* self, const char* text);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, const char*)
+/// @param callback void func(QSyntaxHighlighter* self, const char* text)
 void q_syntaxhighlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#highlightBlock)
@@ -116,7 +116,7 @@ void q_syntaxhighlighter_set_format(void* self, int start, int count, void* form
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, int, int, QTextCharFormat*)
+/// @param callback void func(QSyntaxHighlighter* self, int start, int count, QTextCharFormat* format)
 void q_syntaxhighlighter_on_set_format(void* self, void (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
@@ -142,7 +142,7 @@ void q_syntaxhighlighter_set_format2(void* self, int start, int count, void* col
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, int, int, QColor*)
+/// @param callback void func(QSyntaxHighlighter* self, int start, int count, QColor* color)
 void q_syntaxhighlighter_on_set_format2(void* self, void (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
@@ -168,7 +168,7 @@ void q_syntaxhighlighter_set_format3(void* self, int start, int count, void* fon
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, int, int, QFont*)
+/// @param callback void func(QSyntaxHighlighter* self, int start, int count, QFont* font)
 void q_syntaxhighlighter_on_set_format3(void* self, void (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setFormat)
@@ -192,7 +192,7 @@ QTextCharFormat* q_syntaxhighlighter_format(void* self, int pos);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback QTextCharFormat* fn(QSyntaxHighlighter*, int)
+/// @param callback QTextCharFormat* func(QSyntaxHighlighter* self, int pos)
 void q_syntaxhighlighter_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#format)
@@ -213,7 +213,7 @@ int32_t q_syntaxhighlighter_previous_block_state(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_syntaxhighlighter_on_previous_block_state(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#previousBlockState)
@@ -233,7 +233,7 @@ int32_t q_syntaxhighlighter_current_block_state(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_syntaxhighlighter_on_current_block_state(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockState)
@@ -254,7 +254,7 @@ void q_syntaxhighlighter_set_current_block_state(void* self, int newState);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, int)
+/// @param callback void func(QSyntaxHighlighter* self, int newState)
 void q_syntaxhighlighter_on_set_current_block_state(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockState)
@@ -276,7 +276,7 @@ void q_syntaxhighlighter_set_current_block_user_data(void* self, void* data);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QTextBlockUserData*)
+/// @param callback void func(QSyntaxHighlighter* self, QTextBlockUserData* data)
 void q_syntaxhighlighter_on_set_current_block_user_data(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#setCurrentBlockUserData)
@@ -297,7 +297,7 @@ QTextBlockUserData* q_syntaxhighlighter_current_block_user_data(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback QTextBlockUserData* fn()
+/// @param callback QTextBlockUserData* func()
 void q_syntaxhighlighter_on_current_block_user_data(void* self, QTextBlockUserData* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlockUserData)
@@ -317,7 +317,7 @@ QTextBlock* q_syntaxhighlighter_current_block(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback QTextBlock* fn()
+/// @param callback QTextBlock* func()
 void q_syntaxhighlighter_on_current_block(void* self, QTextBlock* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#currentBlock)
@@ -570,7 +570,7 @@ void q_syntaxhighlighter_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*)
+/// @param callback void func(QSyntaxHighlighter* self)
 void q_syntaxhighlighter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -648,7 +648,7 @@ void q_syntaxhighlighter_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QObject*)
+/// @param callback void func(QSyntaxHighlighter* self, QObject* param1)
 void q_syntaxhighlighter_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -678,7 +678,7 @@ bool q_syntaxhighlighter_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback bool fn(QSyntaxHighlighter*, QEvent*)
+/// @param callback bool func(QSyntaxHighlighter* self, QEvent* event)
 void q_syntaxhighlighter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -710,7 +710,7 @@ bool q_syntaxhighlighter_qbase_event_filter(void* self, void* watched, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback bool fn(QSyntaxHighlighter*, QObject*, QEvent*)
+/// @param callback bool func(QSyntaxHighlighter* self, QObject* watched, QEvent* event)
 void q_syntaxhighlighter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -740,7 +740,7 @@ void q_syntaxhighlighter_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QTimerEvent*)
+/// @param callback void func(QSyntaxHighlighter* self, QTimerEvent* event)
 void q_syntaxhighlighter_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -770,7 +770,7 @@ void q_syntaxhighlighter_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QChildEvent*)
+/// @param callback void func(QSyntaxHighlighter* self, QChildEvent* event)
 void q_syntaxhighlighter_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -800,7 +800,7 @@ void q_syntaxhighlighter_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QEvent*)
+/// @param callback void func(QSyntaxHighlighter* self, QEvent* event)
 void q_syntaxhighlighter_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -830,7 +830,7 @@ void q_syntaxhighlighter_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QMetaMethod*)
+/// @param callback void func(QSyntaxHighlighter* self, QMetaMethod* signal)
 void q_syntaxhighlighter_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -860,7 +860,7 @@ void q_syntaxhighlighter_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, QMetaMethod*)
+/// @param callback void func(QSyntaxHighlighter* self, QMetaMethod* signal)
 void q_syntaxhighlighter_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -888,7 +888,7 @@ QObject* q_syntaxhighlighter_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_syntaxhighlighter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -916,7 +916,7 @@ int32_t q_syntaxhighlighter_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_syntaxhighlighter_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -946,7 +946,7 @@ int32_t q_syntaxhighlighter_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback int32_t fn(QSyntaxHighlighter*, const char*)
+/// @param callback int32_t func(QSyntaxHighlighter* self, const char* signal)
 void q_syntaxhighlighter_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -976,7 +976,7 @@ bool q_syntaxhighlighter_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback bool fn(QSyntaxHighlighter*, QMetaMethod*)
+/// @param callback bool func(QSyntaxHighlighter* self, QMetaMethod* signal)
 void q_syntaxhighlighter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -986,7 +986,7 @@ void q_syntaxhighlighter_on_is_signal_connected(void* self, bool (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QSyntaxHighlighter*
-/// @param callback void fn(QSyntaxHighlighter*, const char*)
+/// @param callback void func(QSyntaxHighlighter* self, const char* objectName)
 void q_syntaxhighlighter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsyntaxhighlighter.html#dtor.QSyntaxHighlighter)

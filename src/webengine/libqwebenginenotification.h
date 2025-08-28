@@ -109,7 +109,7 @@ void q_webenginenotification_closed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#closed)
 ///
 /// @param self QWebEngineNotification*
-/// @param callback void fn(QWebEngineNotification*)
+/// @param callback void func(QWebEngineNotification* self)
 void q_webenginenotification_on_closed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -372,7 +372,7 @@ void q_webenginenotification_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNotification*
-/// @param callback void fn(QWebEngineNotification*)
+/// @param callback void func(QWebEngineNotification* self)
 void q_webenginenotification_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -450,7 +450,7 @@ void q_webenginenotification_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineNotification*
-/// @param callback void fn(QWebEngineNotification*, QObject*)
+/// @param callback void func(QWebEngineNotification* self, QObject* param1)
 void q_webenginenotification_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -460,7 +460,7 @@ void q_webenginenotification_on_destroyed1(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineNotification*
-/// @param callback void fn(QWebEngineNotification*, const char*)
+/// @param callback void func(QWebEngineNotification* self, const char* objectName)
 void q_webenginenotification_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#dtor.QWebEngineNotification)

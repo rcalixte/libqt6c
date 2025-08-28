@@ -929,7 +929,7 @@ QAccessibleInterface* q_accessibleevent_accessible_interface(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessibleEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibleevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#accessibleInterface)
@@ -1028,7 +1028,7 @@ QAccessibleInterface* q_accessiblestatechangeevent_qbase_accessible_interface(vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleStateChangeEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessiblestatechangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblestatechangeevent.html#dtor.QAccessibleStateChangeEvent)
@@ -1126,7 +1126,7 @@ QAccessibleInterface* q_accessibletextcursorevent_qbase_accessible_interface(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleTextCursorEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibletextcursorevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextcursorevent.html#dtor.QAccessibleTextCursorEvent)
@@ -1247,7 +1247,7 @@ QAccessibleInterface* q_accessibletextselectionevent_qbase_accessible_interface(
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleTextSelectionEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibletextselectionevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextselectionevent.html#dtor.QAccessibleTextSelectionEvent)
@@ -1363,7 +1363,7 @@ QAccessibleInterface* q_accessibletextinsertevent_qbase_accessible_interface(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleTextInsertEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibletextinsertevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinsertevent.html#dtor.QAccessibleTextInsertEvent)
@@ -1479,7 +1479,7 @@ QAccessibleInterface* q_accessibletextremoveevent_qbase_accessible_interface(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleTextRemoveEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibletextremoveevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextremoveevent.html#dtor.QAccessibleTextRemoveEvent)
@@ -1604,7 +1604,7 @@ QAccessibleInterface* q_accessibletextupdateevent_qbase_accessible_interface(voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleTextUpdateEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibletextupdateevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextupdateevent.html#dtor.QAccessibleTextUpdateEvent)
@@ -1702,7 +1702,7 @@ QAccessibleInterface* q_accessiblevaluechangeevent_qbase_accessible_interface(vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleValueChangeEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessiblevaluechangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblevaluechangeevent.html#dtor.QAccessibleValueChangeEvent)
@@ -1846,7 +1846,7 @@ QAccessibleInterface* q_accessibletablemodelchangeevent_qbase_accessible_interfa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleTableModelChangeEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibletablemodelchangeevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablemodelchangeevent.html#dtor.QAccessibleTableModelChangeEvent)
@@ -1953,7 +1953,7 @@ QAccessibleInterface* q_accessibleannouncementevent_qbase_accessible_interface(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleAnnouncementEvent*
-/// @param callback QAccessibleInterface* fn()
+/// @param callback QAccessibleInterface* func()
 void q_accessibleannouncementevent_on_accessible_interface(void* self, QAccessibleInterface* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#dtor.QAccessibleAnnouncementEvent)

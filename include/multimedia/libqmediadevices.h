@@ -40,7 +40,7 @@ int32_t q_mediadevices_metacall(void* self, int32_t param1, int param2, void* pa
 /// Allows for overriding the related default method
 ///
 /// @param self QMediaDevices*
-/// @param callback int32_t fn(QMediaDevices*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QMediaDevices* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_mediadevices_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -90,7 +90,7 @@ void q_mediadevices_audio_inputs_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#audioInputsChanged)
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*)
+/// @param callback void func(QMediaDevices* self)
 void q_mediadevices_on_audio_inputs_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#audioOutputsChanged)
@@ -101,7 +101,7 @@ void q_mediadevices_audio_outputs_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#audioOutputsChanged)
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*)
+/// @param callback void func(QMediaDevices* self)
 void q_mediadevices_on_audio_outputs_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#videoInputsChanged)
@@ -112,7 +112,7 @@ void q_mediadevices_video_inputs_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#videoInputsChanged)
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*)
+/// @param callback void func(QMediaDevices* self)
 void q_mediadevices_on_video_inputs_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#connectNotify)
@@ -126,7 +126,7 @@ void q_mediadevices_connect_notify(void* self, void* signal);
 /// Allows for overriding the related default method
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, QMetaMethod*)
+/// @param callback void func(QMediaDevices* self, QMetaMethod* signal)
 void q_mediadevices_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#connectNotify)
@@ -380,7 +380,7 @@ void q_mediadevices_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*)
+/// @param callback void func(QMediaDevices* self)
 void q_mediadevices_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -458,7 +458,7 @@ void q_mediadevices_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, QObject*)
+/// @param callback void func(QMediaDevices* self, QObject* param1)
 void q_mediadevices_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -488,7 +488,7 @@ bool q_mediadevices_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback bool fn(QMediaDevices*, QEvent*)
+/// @param callback bool func(QMediaDevices* self, QEvent* event)
 void q_mediadevices_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -520,7 +520,7 @@ bool q_mediadevices_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback bool fn(QMediaDevices*, QObject*, QEvent*)
+/// @param callback bool func(QMediaDevices* self, QObject* watched, QEvent* event)
 void q_mediadevices_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -550,7 +550,7 @@ void q_mediadevices_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, QTimerEvent*)
+/// @param callback void func(QMediaDevices* self, QTimerEvent* event)
 void q_mediadevices_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -580,7 +580,7 @@ void q_mediadevices_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, QChildEvent*)
+/// @param callback void func(QMediaDevices* self, QChildEvent* event)
 void q_mediadevices_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -610,7 +610,7 @@ void q_mediadevices_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, QEvent*)
+/// @param callback void func(QMediaDevices* self, QEvent* event)
 void q_mediadevices_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -640,7 +640,7 @@ void q_mediadevices_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, QMetaMethod*)
+/// @param callback void func(QMediaDevices* self, QMetaMethod* signal)
 void q_mediadevices_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -668,7 +668,7 @@ QObject* q_mediadevices_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_mediadevices_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -696,7 +696,7 @@ int32_t q_mediadevices_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_mediadevices_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -726,7 +726,7 @@ int32_t q_mediadevices_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback int32_t fn(QMediaDevices*, const char*)
+/// @param callback int32_t func(QMediaDevices* self, const char* signal)
 void q_mediadevices_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -756,7 +756,7 @@ bool q_mediadevices_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMediaDevices*
-/// @param callback bool fn(QMediaDevices*, QMetaMethod*)
+/// @param callback bool func(QMediaDevices* self, QMetaMethod* signal)
 void q_mediadevices_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -766,7 +766,7 @@ void q_mediadevices_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QMediaDevices*
-/// @param callback void fn(QMediaDevices*, const char*)
+/// @param callback void func(QMediaDevices* self, const char* objectName)
 void q_mediadevices_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#dtor.QMediaDevices)

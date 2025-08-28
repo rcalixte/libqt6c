@@ -40,7 +40,7 @@ int32_t q_horizontalstackedbarseries_metacall(void* self, int32_t param1, int pa
 /// Allows for overriding the related default method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback int32_t fn(QHorizontalStackedBarSeries*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QHorizontalStackedBarSeries* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_horizontalstackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -70,7 +70,7 @@ int32_t q_horizontalstackedbarseries_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_horizontalstackedbarseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhorizontalstackedbarseries-qtcharts.html#type)
@@ -268,7 +268,7 @@ void q_horizontalstackedbarseries_clicked(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, int, QBarSet*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, int index, QBarSet* barset)
 void q_horizontalstackedbarseries_on_clicked(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -286,7 +286,7 @@ void q_horizontalstackedbarseries_hovered(void* self, bool status, int index, vo
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, bool, int, QBarSet*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, bool status, int index, QBarSet* barset)
 void q_horizontalstackedbarseries_on_hovered(void* self, void (*callback)(void*, bool, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -303,7 +303,7 @@ void q_horizontalstackedbarseries_pressed(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, int, QBarSet*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, int index, QBarSet* barset)
 void q_horizontalstackedbarseries_on_pressed(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -320,7 +320,7 @@ void q_horizontalstackedbarseries_released(void* self, int index, void* barset);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, int, QBarSet*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, int index, QBarSet* barset)
 void q_horizontalstackedbarseries_on_released(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -337,7 +337,7 @@ void q_horizontalstackedbarseries_double_clicked(void* self, int index, void* ba
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, int, QBarSet*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, int index, QBarSet* barset)
 void q_horizontalstackedbarseries_on_double_clicked(void* self, void (*callback)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -352,7 +352,7 @@ void q_horizontalstackedbarseries_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_count_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -367,7 +367,7 @@ void q_horizontalstackedbarseries_labels_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_labels_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -383,7 +383,7 @@ void q_horizontalstackedbarseries_labels_format_changed(void* self, const char* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, const char*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, const char* format)
 void q_horizontalstackedbarseries_on_labels_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractBarSeries
@@ -399,7 +399,7 @@ void q_horizontalstackedbarseries_labels_position_changed(void* self, int32_t po
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, enum QAbstractBarSeries__LabelsPosition)
+/// @param callback void func(QHorizontalStackedBarSeries* self, enum QAbstractBarSeries__LabelsPosition position)
 void q_horizontalstackedbarseries_on_labels_position_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractBarSeries
@@ -415,7 +415,7 @@ void q_horizontalstackedbarseries_labels_angle_changed(void* self, double angle)
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, double)
+/// @param callback void func(QHorizontalStackedBarSeries* self, double angle)
 void q_horizontalstackedbarseries_on_labels_angle_changed(void* self, void (*callback)(void*, double));
 
 /// Inherited from QAbstractBarSeries
@@ -431,7 +431,7 @@ void q_horizontalstackedbarseries_labels_precision_changed(void* self, int preci
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, int)
+/// @param callback void func(QHorizontalStackedBarSeries* self, int precision)
 void q_horizontalstackedbarseries_on_labels_precision_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractBarSeries
@@ -447,7 +447,7 @@ void q_horizontalstackedbarseries_barsets_added(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, libqt_list /* of QBarSet* */)
+/// @param callback void func(QHorizontalStackedBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
 void q_horizontalstackedbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -463,7 +463,7 @@ void q_horizontalstackedbarseries_barsets_removed(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, libqt_list /* of QBarSet* */)
+/// @param callback void func(QHorizontalStackedBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
 void q_horizontalstackedbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -590,7 +590,7 @@ void q_horizontalstackedbarseries_name_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -605,7 +605,7 @@ void q_horizontalstackedbarseries_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -620,7 +620,7 @@ void q_horizontalstackedbarseries_opacity_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -635,7 +635,7 @@ void q_horizontalstackedbarseries_use_open_g_l_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
@@ -880,7 +880,7 @@ void q_horizontalstackedbarseries_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*)
+/// @param callback void func(QHorizontalStackedBarSeries* self)
 void q_horizontalstackedbarseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -958,7 +958,7 @@ void q_horizontalstackedbarseries_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, QObject*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, QObject* param1)
 void q_horizontalstackedbarseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -988,7 +988,7 @@ bool q_horizontalstackedbarseries_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback bool fn(QHorizontalStackedBarSeries*, QEvent*)
+/// @param callback bool func(QHorizontalStackedBarSeries* self, QEvent* event)
 void q_horizontalstackedbarseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1020,7 +1020,7 @@ bool q_horizontalstackedbarseries_qbase_event_filter(void* self, void* watched, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback bool fn(QHorizontalStackedBarSeries*, QObject*, QEvent*)
+/// @param callback bool func(QHorizontalStackedBarSeries* self, QObject* watched, QEvent* event)
 void q_horizontalstackedbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1050,7 +1050,7 @@ void q_horizontalstackedbarseries_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, QTimerEvent*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, QTimerEvent* event)
 void q_horizontalstackedbarseries_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1080,7 +1080,7 @@ void q_horizontalstackedbarseries_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, QChildEvent*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, QChildEvent* event)
 void q_horizontalstackedbarseries_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1110,7 +1110,7 @@ void q_horizontalstackedbarseries_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, QEvent*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, QEvent* event)
 void q_horizontalstackedbarseries_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1140,7 +1140,7 @@ void q_horizontalstackedbarseries_qbase_connect_notify(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, QMetaMethod*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, QMetaMethod* signal)
 void q_horizontalstackedbarseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1170,7 +1170,7 @@ void q_horizontalstackedbarseries_qbase_disconnect_notify(void* self, void* sign
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, QMetaMethod*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, QMetaMethod* signal)
 void q_horizontalstackedbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1198,7 +1198,7 @@ QObject* q_horizontalstackedbarseries_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_horizontalstackedbarseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1226,7 +1226,7 @@ int32_t q_horizontalstackedbarseries_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_horizontalstackedbarseries_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1256,7 +1256,7 @@ int32_t q_horizontalstackedbarseries_qbase_receivers(void* self, const char* sig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback int32_t fn(QHorizontalStackedBarSeries*, const char*)
+/// @param callback int32_t func(QHorizontalStackedBarSeries* self, const char* signal)
 void q_horizontalstackedbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1286,7 +1286,7 @@ bool q_horizontalstackedbarseries_qbase_is_signal_connected(void* self, void* si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback bool fn(QHorizontalStackedBarSeries*, QMetaMethod*)
+/// @param callback bool func(QHorizontalStackedBarSeries* self, QMetaMethod* signal)
 void q_horizontalstackedbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1296,7 +1296,7 @@ void q_horizontalstackedbarseries_on_is_signal_connected(void* self, bool (*call
 /// Wrapper to allow calling private signal
 ///
 /// @param self QHorizontalStackedBarSeries*
-/// @param callback void fn(QHorizontalStackedBarSeries*, const char*)
+/// @param callback void func(QHorizontalStackedBarSeries* self, const char* objectName)
 void q_horizontalstackedbarseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhorizontalstackedbarseries-qtcharts.html#dtor.QHorizontalStackedBarSeries)

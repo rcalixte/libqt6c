@@ -40,7 +40,7 @@ int32_t q_pdfbookmarkmodel_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int32_t fn(QPdfBookmarkModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPdfBookmarkModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pdfbookmarkmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -81,7 +81,7 @@ QVariant* q_pdfbookmarkmodel_data(void* self, void* index, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QVariant* fn(QPdfBookmarkModel*, QModelIndex*, int)
+/// @param callback QVariant* func(QPdfBookmarkModel* self, QModelIndex* index, int role)
 void q_pdfbookmarkmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#data)
@@ -106,7 +106,7 @@ QModelIndex* q_pdfbookmarkmodel_index(void* self, int row, int column, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QModelIndex* fn(QPdfBookmarkModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfBookmarkModel* self, int row, int column, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#index)
@@ -130,7 +130,7 @@ QModelIndex* q_pdfbookmarkmodel_parent(void* self, void* index);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QModelIndex* fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfBookmarkModel* self, QModelIndex* index)
 void q_pdfbookmarkmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#parent)
@@ -152,7 +152,7 @@ int32_t q_pdfbookmarkmodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int32_t fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback int32_t func(QPdfBookmarkModel* self, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#rowCount)
@@ -174,7 +174,7 @@ int32_t q_pdfbookmarkmodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int32_t fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback int32_t func(QPdfBookmarkModel* self, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#columnCount)
@@ -195,7 +195,7 @@ libqt_map /* of int to char* */ q_pdfbookmarkmodel_role_names(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#roleNames)
@@ -214,7 +214,7 @@ void q_pdfbookmarkmodel_document_changed(void* self, void* document);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#documentChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QPdfDocument*)
+/// @param callback void func(QPdfBookmarkModel* self, QPdfDocument* document)
 void q_pdfbookmarkmodel_on_document_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -319,7 +319,7 @@ void q_pdfbookmarkmodel_data_changed(void* self, void* topLeft, void* bottomRigh
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_pdfbookmarkmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -337,7 +337,7 @@ void q_pdfbookmarkmodel_header_data_changed(void* self, int32_t orientation, int
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_pdfbookmarkmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -352,7 +352,7 @@ void q_pdfbookmarkmodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*)
+/// @param callback void func(QPdfBookmarkModel* self)
 void q_pdfbookmarkmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -367,7 +367,7 @@ void q_pdfbookmarkmodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*)
+/// @param callback void func(QPdfBookmarkModel* self)
 void q_pdfbookmarkmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -440,7 +440,7 @@ void q_pdfbookmarkmodel_data_changed3(void* self, void* topLeft, void* bottomRig
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_pdfbookmarkmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -456,7 +456,7 @@ void q_pdfbookmarkmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QPdfBookmarkModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_pdfbookmarkmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -473,7 +473,7 @@ void q_pdfbookmarkmodel_layout_changed2(void* self, libqt_list parents, int32_t 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QPdfBookmarkModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_pdfbookmarkmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -489,7 +489,7 @@ void q_pdfbookmarkmodel_layout_about_to_be_changed1(void* self, libqt_list paren
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QPdfBookmarkModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_pdfbookmarkmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -506,7 +506,7 @@ void q_pdfbookmarkmodel_layout_about_to_be_changed2(void* self, libqt_list paren
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QPdfBookmarkModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_pdfbookmarkmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -735,7 +735,7 @@ void q_pdfbookmarkmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*)
+/// @param callback void func(QPdfBookmarkModel* self)
 void q_pdfbookmarkmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -806,7 +806,7 @@ void q_pdfbookmarkmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QObject*)
+/// @param callback void func(QPdfBookmarkModel* self, QObject* param1)
 void q_pdfbookmarkmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -840,7 +840,7 @@ QModelIndex* q_pdfbookmarkmodel_qbase_sibling(void* self, int row, int column, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QModelIndex* fn(QPdfBookmarkModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfBookmarkModel* self, int row, int column, QModelIndex* idx)
 void q_pdfbookmarkmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -870,7 +870,7 @@ bool q_pdfbookmarkmodel_qbase_has_children(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -904,7 +904,7 @@ bool q_pdfbookmarkmodel_qbase_set_data(void* self, void* index, void* value, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* index, QVariant* value, int role)
 void q_pdfbookmarkmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -938,7 +938,7 @@ QVariant* q_pdfbookmarkmodel_qbase_header_data(void* self, int section, int32_t 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QVariant* fn(QPdfBookmarkModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(QPdfBookmarkModel* self, int section, enum Qt__Orientation orientation, int role)
 void q_pdfbookmarkmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -974,7 +974,7 @@ bool q_pdfbookmarkmodel_qbase_set_header_data(void* self, int section, int32_t o
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(QPdfBookmarkModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void q_pdfbookmarkmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1004,7 +1004,7 @@ libqt_map /* of int to QVariant* */ q_pdfbookmarkmodel_qbase_item_data(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(QPdfBookmarkModel* self, QModelIndex* index)
 void q_pdfbookmarkmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1036,7 +1036,7 @@ bool q_pdfbookmarkmodel_qbase_set_item_data(void* self, void* index, libqt_map /
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void q_pdfbookmarkmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1066,7 +1066,7 @@ bool q_pdfbookmarkmodel_qbase_clear_item_data(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* index)
 void q_pdfbookmarkmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1098,7 +1098,7 @@ const char** q_pdfbookmarkmodel_qbase_mime_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_pdfbookmarkmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1128,7 +1128,7 @@ QMimeData* q_pdfbookmarkmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QMimeData* fn(QPdfBookmarkModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(QPdfBookmarkModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_pdfbookmarkmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1166,7 +1166,7 @@ bool q_pdfbookmarkmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1204,7 +1204,7 @@ bool q_pdfbookmarkmodel_qbase_drop_mime_data(void* self, void* data, int32_t act
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1236,7 +1236,7 @@ int64_t q_pdfbookmarkmodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_pdfbookmarkmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1268,7 +1268,7 @@ int64_t q_pdfbookmarkmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_pdfbookmarkmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1302,7 +1302,7 @@ bool q_pdfbookmarkmodel_qbase_insert_rows(void* self, int row, int count, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, int row, int count, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1336,7 +1336,7 @@ bool q_pdfbookmarkmodel_qbase_insert_columns(void* self, int column, int count, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, int column, int count, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1370,7 +1370,7 @@ bool q_pdfbookmarkmodel_qbase_remove_rows(void* self, int row, int count, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, int row, int count, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1404,7 +1404,7 @@ bool q_pdfbookmarkmodel_qbase_remove_columns(void* self, int column, int count, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, int column, int count, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1442,7 +1442,7 @@ bool q_pdfbookmarkmodel_qbase_move_rows(void* self, void* sourceParent, int sour
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void q_pdfbookmarkmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1480,7 +1480,7 @@ bool q_pdfbookmarkmodel_qbase_move_columns(void* self, void* sourceParent, int s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void q_pdfbookmarkmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1510,7 +1510,7 @@ void q_pdfbookmarkmodel_qbase_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1540,7 +1540,7 @@ bool q_pdfbookmarkmodel_qbase_can_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* parent)
 void q_pdfbookmarkmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1574,7 +1574,7 @@ int64_t q_pdfbookmarkmodel_qbase_flags(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int64_t fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback int64_t func(QPdfBookmarkModel* self, QModelIndex* index)
 void q_pdfbookmarkmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1606,7 +1606,7 @@ void q_pdfbookmarkmodel_qbase_sort(void* self, int column, int32_t order);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, int, enum Qt__SortOrder)
+/// @param callback void func(QPdfBookmarkModel* self, int column, enum Qt__SortOrder order)
 void q_pdfbookmarkmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1636,7 +1636,7 @@ QModelIndex* q_pdfbookmarkmodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QModelIndex* fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfBookmarkModel* self, QModelIndex* index)
 void q_pdfbookmarkmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1674,7 +1674,7 @@ libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_qbase_match(void* self, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(QPdfBookmarkModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(QPdfBookmarkModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void q_pdfbookmarkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -1704,7 +1704,7 @@ QSize* q_pdfbookmarkmodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QSize* fn(QPdfBookmarkModel*, QModelIndex*)
+/// @param callback QSize* func(QPdfBookmarkModel* self, QModelIndex* index)
 void q_pdfbookmarkmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1736,7 +1736,7 @@ void q_pdfbookmarkmodel_qbase_multi_data(void* self, void* index, void* roleData
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void q_pdfbookmarkmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1764,7 +1764,7 @@ bool q_pdfbookmarkmodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfbookmarkmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1792,7 +1792,7 @@ void q_pdfbookmarkmodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1820,7 +1820,7 @@ void q_pdfbookmarkmodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1850,7 +1850,7 @@ bool q_pdfbookmarkmodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QEvent*)
+/// @param callback bool func(QPdfBookmarkModel* self, QEvent* event)
 void q_pdfbookmarkmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1882,7 +1882,7 @@ bool q_pdfbookmarkmodel_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QObject*, QEvent*)
+/// @param callback bool func(QPdfBookmarkModel* self, QObject* watched, QEvent* event)
 void q_pdfbookmarkmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -1912,7 +1912,7 @@ void q_pdfbookmarkmodel_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QTimerEvent*)
+/// @param callback void func(QPdfBookmarkModel* self, QTimerEvent* event)
 void q_pdfbookmarkmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1942,7 +1942,7 @@ void q_pdfbookmarkmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QChildEvent*)
+/// @param callback void func(QPdfBookmarkModel* self, QChildEvent* event)
 void q_pdfbookmarkmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1972,7 +1972,7 @@ void q_pdfbookmarkmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QEvent*)
+/// @param callback void func(QPdfBookmarkModel* self, QEvent* event)
 void q_pdfbookmarkmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2002,7 +2002,7 @@ void q_pdfbookmarkmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QMetaMethod*)
+/// @param callback void func(QPdfBookmarkModel* self, QMetaMethod* signal)
 void q_pdfbookmarkmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2032,7 +2032,7 @@ void q_pdfbookmarkmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QMetaMethod*)
+/// @param callback void func(QPdfBookmarkModel* self, QMetaMethod* signal)
 void q_pdfbookmarkmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2064,7 +2064,7 @@ QModelIndex* q_pdfbookmarkmodel_qbase_create_index(void* self, int row, int colu
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QModelIndex* fn(QPdfBookmarkModel*, int, int)
+/// @param callback QModelIndex* func(QPdfBookmarkModel* self, int row, int column)
 void q_pdfbookmarkmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2096,7 +2096,7 @@ void q_pdfbookmarkmodel_qbase_encode_data(void* self, libqt_list indexes, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(QPdfBookmarkModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void q_pdfbookmarkmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2132,7 +2132,7 @@ bool q_pdfbookmarkmodel_qbase_decode_data(void* self, int row, int column, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(QPdfBookmarkModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void q_pdfbookmarkmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2166,7 +2166,7 @@ void q_pdfbookmarkmodel_qbase_begin_insert_rows(void* self, void* parent, int fi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2194,7 +2194,7 @@ void q_pdfbookmarkmodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2228,7 +2228,7 @@ void q_pdfbookmarkmodel_qbase_begin_remove_rows(void* self, void* parent, int fi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2256,7 +2256,7 @@ void q_pdfbookmarkmodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2294,7 +2294,7 @@ bool q_pdfbookmarkmodel_qbase_begin_move_rows(void* self, void* sourceParent, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void q_pdfbookmarkmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2322,7 +2322,7 @@ void q_pdfbookmarkmodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2356,7 +2356,7 @@ void q_pdfbookmarkmodel_qbase_begin_insert_columns(void* self, void* parent, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2384,7 +2384,7 @@ void q_pdfbookmarkmodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2418,7 +2418,7 @@ void q_pdfbookmarkmodel_qbase_begin_remove_columns(void* self, void* parent, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2446,7 +2446,7 @@ void q_pdfbookmarkmodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2484,7 +2484,7 @@ bool q_pdfbookmarkmodel_qbase_begin_move_columns(void* self, void* sourceParent,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void q_pdfbookmarkmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2512,7 +2512,7 @@ void q_pdfbookmarkmodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2540,7 +2540,7 @@ void q_pdfbookmarkmodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2568,7 +2568,7 @@ void q_pdfbookmarkmodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfbookmarkmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2600,7 +2600,7 @@ void q_pdfbookmarkmodel_qbase_change_persistent_index(void* self, void* from, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* from, QModelIndex* to)
 void q_pdfbookmarkmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2632,7 +2632,7 @@ void q_pdfbookmarkmodel_qbase_change_persistent_index_list(void* self, libqt_lis
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QPdfBookmarkModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_pdfbookmarkmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2660,7 +2660,7 @@ libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_qbase_persistent_index_list(
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_pdfbookmarkmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -2688,7 +2688,7 @@ QObject* q_pdfbookmarkmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pdfbookmarkmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2716,7 +2716,7 @@ int32_t q_pdfbookmarkmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfbookmarkmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2746,7 +2746,7 @@ int32_t q_pdfbookmarkmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback int32_t fn(QPdfBookmarkModel*, const char*)
+/// @param callback int32_t func(QPdfBookmarkModel* self, const char* signal)
 void q_pdfbookmarkmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2776,7 +2776,7 @@ bool q_pdfbookmarkmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback bool fn(QPdfBookmarkModel*, QMetaMethod*)
+/// @param callback bool func(QPdfBookmarkModel* self, QMetaMethod* signal)
 void q_pdfbookmarkmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2786,7 +2786,7 @@ void q_pdfbookmarkmodel_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2796,7 +2796,7 @@ void q_pdfbookmarkmodel_on_rows_about_to_be_inserted(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2806,7 +2806,7 @@ void q_pdfbookmarkmodel_on_rows_inserted(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2816,7 +2816,7 @@ void q_pdfbookmarkmodel_on_rows_about_to_be_removed(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2826,7 +2826,7 @@ void q_pdfbookmarkmodel_on_rows_removed(void* self, void (*callback)(void*, void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2836,7 +2836,7 @@ void q_pdfbookmarkmodel_on_columns_about_to_be_inserted(void* self, void (*callb
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2846,7 +2846,7 @@ void q_pdfbookmarkmodel_on_columns_inserted(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2856,7 +2856,7 @@ void q_pdfbookmarkmodel_on_columns_about_to_be_removed(void* self, void (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* parent, int first, int last)
 void q_pdfbookmarkmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2866,7 +2866,7 @@ void q_pdfbookmarkmodel_on_columns_removed(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*)
+/// @param callback void func(QPdfBookmarkModel* self)
 void q_pdfbookmarkmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2876,7 +2876,7 @@ void q_pdfbookmarkmodel_on_model_about_to_be_reset(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*)
+/// @param callback void func(QPdfBookmarkModel* self)
 void q_pdfbookmarkmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2886,7 +2886,7 @@ void q_pdfbookmarkmodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_pdfbookmarkmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2896,7 +2896,7 @@ void q_pdfbookmarkmodel_on_rows_about_to_be_moved(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_pdfbookmarkmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2906,7 +2906,7 @@ void q_pdfbookmarkmodel_on_rows_moved(void* self, void (*callback)(void*, void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_pdfbookmarkmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2916,7 +2916,7 @@ void q_pdfbookmarkmodel_on_columns_about_to_be_moved(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfBookmarkModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_pdfbookmarkmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2926,7 +2926,7 @@ void q_pdfbookmarkmodel_on_columns_moved(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfBookmarkModel*
-/// @param callback void fn(QPdfBookmarkModel*, const char*)
+/// @param callback void func(QPdfBookmarkModel* self, const char* objectName)
 void q_pdfbookmarkmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfbookmarkmodel.html#dtor.QPdfBookmarkModel)

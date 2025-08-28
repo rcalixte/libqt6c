@@ -31,7 +31,7 @@ void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback void fn(QIconEngine*, QPainter*, QRect*, enum QIcon__Mode, enum QIcon__State)
+/// @param callback void func(QIconEngine* self, QPainter* painter, QRect* rect, enum QIcon__Mode mode, enum QIcon__State state)
 void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#paint)
@@ -58,7 +58,7 @@ QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t st
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback QSize* fn(QIconEngine*, QSize*, enum QIcon__Mode, enum QIcon__State)
+/// @param callback QSize* func(QIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
@@ -84,7 +84,7 @@ QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback QPixmap* fn(QIconEngine*, QSize*, enum QIcon__Mode, enum QIcon__State)
+/// @param callback QPixmap* func(QIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
@@ -110,7 +110,7 @@ void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t sta
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback void fn(QIconEngine*, QPixmap*, enum QIcon__Mode, enum QIcon__State)
+/// @param callback void func(QIconEngine* self, QPixmap* pixmap, enum QIcon__Mode mode, enum QIcon__State state)
 void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
@@ -137,7 +137,7 @@ void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback void fn(QIconEngine*, const char*, QSize*, enum QIcon__Mode, enum QIcon__State)
+/// @param callback void func(QIconEngine* self, const char* fileName, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addFile)
@@ -163,7 +163,7 @@ const char* q_iconengine_key(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_iconengine_on_key(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#key)
@@ -183,7 +183,7 @@ QIconEngine* q_iconengine_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback QIconEngine* fn()
+/// @param callback QIconEngine* func()
 void q_iconengine_on_clone(void* self, QIconEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#clone)
@@ -204,7 +204,7 @@ bool q_iconengine_read(void* self, void* in);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback bool fn(QIconEngine*, QDataStream*)
+/// @param callback bool func(QIconEngine* self, QDataStream* in)
 void q_iconengine_on_read(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#read)
@@ -226,7 +226,7 @@ bool q_iconengine_write(void* self, void* out);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback bool fn(QIconEngine*, QDataStream*)
+/// @param callback bool func(QIconEngine* self, QDataStream* out)
 void q_iconengine_on_write(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#write)
@@ -249,7 +249,7 @@ libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback libqt_list /* of QSize* */ fn(QIconEngine*, enum QIcon__Mode, enum QIcon__State)
+/// @param callback libqt_list /* of QSize* */ func(QIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
 void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
@@ -273,7 +273,7 @@ const char* q_iconengine_icon_name(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback const char* fn()
+/// @param callback const char* func()
 void q_iconengine_on_icon_name(void* self, const char* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#iconName)
@@ -293,7 +293,7 @@ bool q_iconengine_is_null(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_iconengine_on_is_null(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#isNull)
@@ -317,7 +317,7 @@ QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback QPixmap* fn(QIconEngine*, QSize*, enum QIcon__Mode, enum QIcon__State, double)
+/// @param callback QPixmap* func(QIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state, double scale)
 void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
@@ -343,7 +343,7 @@ void q_iconengine_virtual_hook(void* self, int id, void* data);
 /// Allows for overriding the related default method
 ///
 /// @param self QIconEngine*
-/// @param callback void fn(QIconEngine*, int, void*)
+/// @param callback void func(QIconEngine* self, int id, void* data)
 void q_iconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)

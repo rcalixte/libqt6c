@@ -40,7 +40,7 @@ int32_t k_viewstatemaintainerbase_metacall(void* self, int32_t param1, int param
 /// Allows for overriding the related default method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback int32_t fn(KViewStateMaintainerBase*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KViewStateMaintainerBase* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_viewstatemaintainerbase_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -90,7 +90,7 @@ void k_viewstatemaintainerbase_save_state(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn()
+/// @param callback void func()
 void k_viewstatemaintainerbase_on_save_state(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#saveState)
@@ -110,7 +110,7 @@ void k_viewstatemaintainerbase_restore_state(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn()
+/// @param callback void func()
 void k_viewstatemaintainerbase_on_restore_state(void* self, void (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#restoreState)
@@ -363,7 +363,7 @@ void k_viewstatemaintainerbase_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*)
+/// @param callback void func(KViewStateMaintainerBase* self)
 void k_viewstatemaintainerbase_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -441,7 +441,7 @@ void k_viewstatemaintainerbase_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, QObject*)
+/// @param callback void func(KViewStateMaintainerBase* self, QObject* param1)
 void k_viewstatemaintainerbase_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -471,7 +471,7 @@ bool k_viewstatemaintainerbase_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback bool fn(KViewStateMaintainerBase*, QEvent*)
+/// @param callback bool func(KViewStateMaintainerBase* self, QEvent* event)
 void k_viewstatemaintainerbase_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -503,7 +503,7 @@ bool k_viewstatemaintainerbase_qbase_event_filter(void* self, void* watched, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback bool fn(KViewStateMaintainerBase*, QObject*, QEvent*)
+/// @param callback bool func(KViewStateMaintainerBase* self, QObject* watched, QEvent* event)
 void k_viewstatemaintainerbase_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -533,7 +533,7 @@ void k_viewstatemaintainerbase_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, QTimerEvent*)
+/// @param callback void func(KViewStateMaintainerBase* self, QTimerEvent* event)
 void k_viewstatemaintainerbase_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -563,7 +563,7 @@ void k_viewstatemaintainerbase_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, QChildEvent*)
+/// @param callback void func(KViewStateMaintainerBase* self, QChildEvent* event)
 void k_viewstatemaintainerbase_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -593,7 +593,7 @@ void k_viewstatemaintainerbase_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, QEvent*)
+/// @param callback void func(KViewStateMaintainerBase* self, QEvent* event)
 void k_viewstatemaintainerbase_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -623,7 +623,7 @@ void k_viewstatemaintainerbase_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, QMetaMethod*)
+/// @param callback void func(KViewStateMaintainerBase* self, QMetaMethod* signal)
 void k_viewstatemaintainerbase_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -653,7 +653,7 @@ void k_viewstatemaintainerbase_qbase_disconnect_notify(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, QMetaMethod*)
+/// @param callback void func(KViewStateMaintainerBase* self, QMetaMethod* signal)
 void k_viewstatemaintainerbase_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -681,7 +681,7 @@ QObject* k_viewstatemaintainerbase_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_viewstatemaintainerbase_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -709,7 +709,7 @@ int32_t k_viewstatemaintainerbase_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_viewstatemaintainerbase_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -739,7 +739,7 @@ int32_t k_viewstatemaintainerbase_qbase_receivers(void* self, const char* signal
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback int32_t fn(KViewStateMaintainerBase*, const char*)
+/// @param callback int32_t func(KViewStateMaintainerBase* self, const char* signal)
 void k_viewstatemaintainerbase_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -769,7 +769,7 @@ bool k_viewstatemaintainerbase_qbase_is_signal_connected(void* self, void* signa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback bool fn(KViewStateMaintainerBase*, QMetaMethod*)
+/// @param callback bool func(KViewStateMaintainerBase* self, QMetaMethod* signal)
 void k_viewstatemaintainerbase_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -779,7 +779,7 @@ void k_viewstatemaintainerbase_on_is_signal_connected(void* self, bool (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self KViewStateMaintainerBase*
-/// @param callback void fn(KViewStateMaintainerBase*, const char*)
+/// @param callback void func(KViewStateMaintainerBase* self, const char* objectName)
 void k_viewstatemaintainerbase_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#dtor.KViewStateMaintainerBase)

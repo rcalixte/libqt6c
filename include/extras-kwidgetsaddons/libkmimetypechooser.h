@@ -80,7 +80,7 @@ int32_t k_mimetypechooser_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback int32_t fn(KMimeTypeChooser*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KMimeTypeChooser* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_mimetypechooser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -2066,7 +2066,7 @@ void k_mimetypechooser_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, const char*)
+/// @param callback void func(KMimeTypeChooser* self, const char* title)
 void k_mimetypechooser_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2082,7 +2082,7 @@ void k_mimetypechooser_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QIcon*)
+/// @param callback void func(KMimeTypeChooser* self, QIcon* icon)
 void k_mimetypechooser_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2098,7 +2098,7 @@ void k_mimetypechooser_window_icon_text_changed(void* self, const char* iconText
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, const char*)
+/// @param callback void func(KMimeTypeChooser* self, const char* iconText)
 void k_mimetypechooser_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2114,7 +2114,7 @@ void k_mimetypechooser_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QPoint*)
+/// @param callback void func(KMimeTypeChooser* self, QPoint* pos)
 void k_mimetypechooser_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2491,7 +2491,7 @@ void k_mimetypechooser_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*)
+/// @param callback void func(KMimeTypeChooser* self)
 void k_mimetypechooser_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2569,7 +2569,7 @@ void k_mimetypechooser_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QObject*)
+/// @param callback void func(KMimeTypeChooser* self, QObject* param1)
 void k_mimetypechooser_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2688,7 +2688,7 @@ int32_t k_mimetypechooser_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_mimetypechooser_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2718,7 +2718,7 @@ void k_mimetypechooser_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, bool)
+/// @param callback void func(KMimeTypeChooser* self, bool visible)
 void k_mimetypechooser_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2746,7 +2746,7 @@ QSize* k_mimetypechooser_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_mimetypechooser_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2774,7 +2774,7 @@ QSize* k_mimetypechooser_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_mimetypechooser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2804,7 +2804,7 @@ int32_t k_mimetypechooser_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback int32_t fn(KMimeTypeChooser*, int)
+/// @param callback int32_t func(KMimeTypeChooser* self, int param1)
 void k_mimetypechooser_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2832,7 +2832,7 @@ bool k_mimetypechooser_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_mimetypechooser_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2860,7 +2860,7 @@ QPaintEngine* k_mimetypechooser_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_mimetypechooser_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2890,7 +2890,7 @@ bool k_mimetypechooser_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn(KMimeTypeChooser*, QEvent*)
+/// @param callback bool func(KMimeTypeChooser* self, QEvent* event)
 void k_mimetypechooser_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2920,7 +2920,7 @@ void k_mimetypechooser_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QMouseEvent* event)
 void k_mimetypechooser_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2950,7 +2950,7 @@ void k_mimetypechooser_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QMouseEvent* event)
 void k_mimetypechooser_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2980,7 +2980,7 @@ void k_mimetypechooser_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QMouseEvent* event)
 void k_mimetypechooser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3010,7 +3010,7 @@ void k_mimetypechooser_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QMouseEvent* event)
 void k_mimetypechooser_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3040,7 +3040,7 @@ void k_mimetypechooser_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QWheelEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QWheelEvent* event)
 void k_mimetypechooser_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3070,7 +3070,7 @@ void k_mimetypechooser_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QKeyEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QKeyEvent* event)
 void k_mimetypechooser_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3100,7 +3100,7 @@ void k_mimetypechooser_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QKeyEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QKeyEvent* event)
 void k_mimetypechooser_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3130,7 +3130,7 @@ void k_mimetypechooser_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QFocusEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QFocusEvent* event)
 void k_mimetypechooser_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3160,7 +3160,7 @@ void k_mimetypechooser_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QFocusEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QFocusEvent* event)
 void k_mimetypechooser_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3190,7 +3190,7 @@ void k_mimetypechooser_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QEnterEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QEnterEvent* event)
 void k_mimetypechooser_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3220,7 +3220,7 @@ void k_mimetypechooser_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QEvent* event)
 void k_mimetypechooser_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3250,7 +3250,7 @@ void k_mimetypechooser_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QPaintEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QPaintEvent* event)
 void k_mimetypechooser_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3280,7 +3280,7 @@ void k_mimetypechooser_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMoveEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QMoveEvent* event)
 void k_mimetypechooser_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3310,7 +3310,7 @@ void k_mimetypechooser_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QResizeEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QResizeEvent* event)
 void k_mimetypechooser_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3340,7 +3340,7 @@ void k_mimetypechooser_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QCloseEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QCloseEvent* event)
 void k_mimetypechooser_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3370,7 +3370,7 @@ void k_mimetypechooser_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QContextMenuEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QContextMenuEvent* event)
 void k_mimetypechooser_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3400,7 +3400,7 @@ void k_mimetypechooser_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QTabletEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QTabletEvent* event)
 void k_mimetypechooser_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3430,7 +3430,7 @@ void k_mimetypechooser_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QActionEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QActionEvent* event)
 void k_mimetypechooser_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3460,7 +3460,7 @@ void k_mimetypechooser_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QDragEnterEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QDragEnterEvent* event)
 void k_mimetypechooser_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3490,7 +3490,7 @@ void k_mimetypechooser_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QDragMoveEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QDragMoveEvent* event)
 void k_mimetypechooser_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3520,7 +3520,7 @@ void k_mimetypechooser_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QDragLeaveEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QDragLeaveEvent* event)
 void k_mimetypechooser_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3550,7 +3550,7 @@ void k_mimetypechooser_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QDropEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QDropEvent* event)
 void k_mimetypechooser_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3580,7 +3580,7 @@ void k_mimetypechooser_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QShowEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QShowEvent* event)
 void k_mimetypechooser_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3610,7 +3610,7 @@ void k_mimetypechooser_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QHideEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QHideEvent* event)
 void k_mimetypechooser_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3644,7 +3644,7 @@ bool k_mimetypechooser_qbase_native_event(void* self, const char* eventType, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn(KMimeTypeChooser*, const char*, void*, intptr_t*)
+/// @param callback bool func(KMimeTypeChooser* self, const char* eventType, void* message, intptr_t* result)
 void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3674,7 +3674,7 @@ void k_mimetypechooser_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QEvent* param1)
 void k_mimetypechooser_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3704,7 +3704,7 @@ int32_t k_mimetypechooser_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback int32_t fn(KMimeTypeChooser*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KMimeTypeChooser* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_mimetypechooser_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3734,7 +3734,7 @@ void k_mimetypechooser_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QPainter*)
+/// @param callback void func(KMimeTypeChooser* self, QPainter* painter)
 void k_mimetypechooser_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3764,7 +3764,7 @@ QPaintDevice* k_mimetypechooser_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QPaintDevice* fn(KMimeTypeChooser*, QPoint*)
+/// @param callback QPaintDevice* func(KMimeTypeChooser* self, QPoint* offset)
 void k_mimetypechooser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3792,7 +3792,7 @@ QPainter* k_mimetypechooser_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_mimetypechooser_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3822,7 +3822,7 @@ void k_mimetypechooser_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QInputMethodEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QInputMethodEvent* param1)
 void k_mimetypechooser_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3852,7 +3852,7 @@ QVariant* k_mimetypechooser_qbase_input_method_query(void* self, int64_t param1)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QVariant* fn(KMimeTypeChooser*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KMimeTypeChooser* self, enum Qt__InputMethodQuery param1)
 void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3882,7 +3882,7 @@ bool k_mimetypechooser_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn(KMimeTypeChooser*, bool)
+/// @param callback bool func(KMimeTypeChooser* self, bool next)
 void k_mimetypechooser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3914,7 +3914,7 @@ bool k_mimetypechooser_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn(KMimeTypeChooser*, QObject*, QEvent*)
+/// @param callback bool func(KMimeTypeChooser* self, QObject* watched, QEvent* event)
 void k_mimetypechooser_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3944,7 +3944,7 @@ void k_mimetypechooser_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QTimerEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QTimerEvent* event)
 void k_mimetypechooser_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3974,7 +3974,7 @@ void k_mimetypechooser_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QChildEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QChildEvent* event)
 void k_mimetypechooser_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4004,7 +4004,7 @@ void k_mimetypechooser_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QEvent*)
+/// @param callback void func(KMimeTypeChooser* self, QEvent* event)
 void k_mimetypechooser_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4034,7 +4034,7 @@ void k_mimetypechooser_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMetaMethod*)
+/// @param callback void func(KMimeTypeChooser* self, QMetaMethod* signal)
 void k_mimetypechooser_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4064,7 +4064,7 @@ void k_mimetypechooser_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, QMetaMethod*)
+/// @param callback void func(KMimeTypeChooser* self, QMetaMethod* signal)
 void k_mimetypechooser_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4092,7 +4092,7 @@ void k_mimetypechooser_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooser_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4120,7 +4120,7 @@ void k_mimetypechooser_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooser_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4148,7 +4148,7 @@ void k_mimetypechooser_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooser_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4176,7 +4176,7 @@ bool k_mimetypechooser_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_mimetypechooser_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4204,7 +4204,7 @@ bool k_mimetypechooser_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_mimetypechooser_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4232,7 +4232,7 @@ QObject* k_mimetypechooser_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_mimetypechooser_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4260,7 +4260,7 @@ int32_t k_mimetypechooser_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_mimetypechooser_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4290,7 +4290,7 @@ int32_t k_mimetypechooser_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback int32_t fn(KMimeTypeChooser*, const char*)
+/// @param callback int32_t func(KMimeTypeChooser* self, const char* signal)
 void k_mimetypechooser_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4320,7 +4320,7 @@ bool k_mimetypechooser_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback bool fn(KMimeTypeChooser*, QMetaMethod*)
+/// @param callback bool func(KMimeTypeChooser* self, QMetaMethod* signal)
 void k_mimetypechooser_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4352,7 +4352,7 @@ double k_mimetypechooser_qbase_get_decoded_metric_f(void* self, int32_t metricA,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback double fn(KMimeTypeChooser*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KMimeTypeChooser* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_mimetypechooser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4362,7 +4362,7 @@ void k_mimetypechooser_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KMimeTypeChooser*
-/// @param callback void fn(KMimeTypeChooser*, const char*)
+/// @param callback void func(KMimeTypeChooser* self, const char* objectName)
 void k_mimetypechooser_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmimetypechooser.html#dtor.KMimeTypeChooser)
@@ -4469,7 +4469,7 @@ int32_t k_mimetypechooserdialog_metacall(void* self, int32_t param1, int param2,
 /// Allows for overriding the related default method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn(KMimeTypeChooserDialog*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KMimeTypeChooserDialog* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_mimetypechooserdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -4502,7 +4502,7 @@ QSize* k_mimetypechooserdialog_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#sizeHint)
@@ -4580,7 +4580,7 @@ void k_mimetypechooserdialog_finished(void* self, int result);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, int)
+/// @param callback void func(KMimeTypeChooserDialog* self, int result)
 void k_mimetypechooserdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -4595,7 +4595,7 @@ void k_mimetypechooserdialog_accepted(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*)
+/// @param callback void func(KMimeTypeChooserDialog* self)
 void k_mimetypechooserdialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
@@ -4610,7 +4610,7 @@ void k_mimetypechooserdialog_rejected(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*)
+/// @param callback void func(KMimeTypeChooserDialog* self)
 void k_mimetypechooserdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
@@ -6550,7 +6550,7 @@ void k_mimetypechooserdialog_window_title_changed(void* self, const char* title)
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, const char*)
+/// @param callback void func(KMimeTypeChooserDialog* self, const char* title)
 void k_mimetypechooserdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6566,7 +6566,7 @@ void k_mimetypechooserdialog_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QIcon*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QIcon* icon)
 void k_mimetypechooserdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6582,7 +6582,7 @@ void k_mimetypechooserdialog_window_icon_text_changed(void* self, const char* ic
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, const char*)
+/// @param callback void func(KMimeTypeChooserDialog* self, const char* iconText)
 void k_mimetypechooserdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6598,7 +6598,7 @@ void k_mimetypechooserdialog_custom_context_menu_requested(void* self, void* pos
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QPoint*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QPoint* pos)
 void k_mimetypechooserdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6975,7 +6975,7 @@ void k_mimetypechooserdialog_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*)
+/// @param callback void func(KMimeTypeChooserDialog* self)
 void k_mimetypechooserdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -7053,7 +7053,7 @@ void k_mimetypechooserdialog_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QObject*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QObject* param1)
 void k_mimetypechooserdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7174,7 +7174,7 @@ void k_mimetypechooserdialog_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, bool)
+/// @param callback void func(KMimeTypeChooserDialog* self, bool visible)
 void k_mimetypechooserdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
@@ -7202,7 +7202,7 @@ QSize* k_mimetypechooserdialog_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_mimetypechooserdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -7230,7 +7230,7 @@ void k_mimetypechooserdialog_qbase_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooserdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -7258,7 +7258,7 @@ int32_t k_mimetypechooserdialog_qbase_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_mimetypechooserdialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
@@ -7288,7 +7288,7 @@ void k_mimetypechooserdialog_qbase_done(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, int)
+/// @param callback void func(KMimeTypeChooserDialog* self, int param1)
 void k_mimetypechooserdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
@@ -7316,7 +7316,7 @@ void k_mimetypechooserdialog_qbase_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooserdialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -7344,7 +7344,7 @@ void k_mimetypechooserdialog_qbase_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooserdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
@@ -7374,7 +7374,7 @@ void k_mimetypechooserdialog_qbase_key_press_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QKeyEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QKeyEvent* param1)
 void k_mimetypechooserdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -7404,7 +7404,7 @@ void k_mimetypechooserdialog_qbase_close_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QCloseEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QCloseEvent* param1)
 void k_mimetypechooserdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -7434,7 +7434,7 @@ void k_mimetypechooserdialog_qbase_show_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QShowEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QShowEvent* param1)
 void k_mimetypechooserdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -7464,7 +7464,7 @@ void k_mimetypechooserdialog_qbase_resize_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QResizeEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QResizeEvent* param1)
 void k_mimetypechooserdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -7494,7 +7494,7 @@ void k_mimetypechooserdialog_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QContextMenuEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QContextMenuEvent* param1)
 void k_mimetypechooserdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -7526,7 +7526,7 @@ bool k_mimetypechooserdialog_qbase_event_filter(void* self, void* param1, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn(KMimeTypeChooserDialog*, QObject*, QEvent*)
+/// @param callback bool func(KMimeTypeChooserDialog* self, QObject* param1, QEvent* param2)
 void k_mimetypechooserdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
@@ -7554,7 +7554,7 @@ int32_t k_mimetypechooserdialog_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_mimetypechooserdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -7584,7 +7584,7 @@ int32_t k_mimetypechooserdialog_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn(KMimeTypeChooserDialog*, int)
+/// @param callback int32_t func(KMimeTypeChooserDialog* self, int param1)
 void k_mimetypechooserdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -7612,7 +7612,7 @@ bool k_mimetypechooserdialog_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_mimetypechooserdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -7640,7 +7640,7 @@ QPaintEngine* k_mimetypechooserdialog_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_mimetypechooserdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -7670,7 +7670,7 @@ bool k_mimetypechooserdialog_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn(KMimeTypeChooserDialog*, QEvent*)
+/// @param callback bool func(KMimeTypeChooserDialog* self, QEvent* event)
 void k_mimetypechooserdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7700,7 +7700,7 @@ void k_mimetypechooserdialog_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMouseEvent* event)
 void k_mimetypechooserdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7730,7 +7730,7 @@ void k_mimetypechooserdialog_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMouseEvent* event)
 void k_mimetypechooserdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7760,7 +7760,7 @@ void k_mimetypechooserdialog_qbase_mouse_double_click_event(void* self, void* ev
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMouseEvent* event)
 void k_mimetypechooserdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7790,7 +7790,7 @@ void k_mimetypechooserdialog_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMouseEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMouseEvent* event)
 void k_mimetypechooserdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7820,7 +7820,7 @@ void k_mimetypechooserdialog_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QWheelEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QWheelEvent* event)
 void k_mimetypechooserdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7850,7 +7850,7 @@ void k_mimetypechooserdialog_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QKeyEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QKeyEvent* event)
 void k_mimetypechooserdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7880,7 +7880,7 @@ void k_mimetypechooserdialog_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QFocusEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QFocusEvent* event)
 void k_mimetypechooserdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7910,7 +7910,7 @@ void k_mimetypechooserdialog_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QFocusEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QFocusEvent* event)
 void k_mimetypechooserdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7940,7 +7940,7 @@ void k_mimetypechooserdialog_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QEnterEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QEnterEvent* event)
 void k_mimetypechooserdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7970,7 +7970,7 @@ void k_mimetypechooserdialog_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QEvent* event)
 void k_mimetypechooserdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8000,7 +8000,7 @@ void k_mimetypechooserdialog_qbase_paint_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QPaintEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QPaintEvent* event)
 void k_mimetypechooserdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8030,7 +8030,7 @@ void k_mimetypechooserdialog_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMoveEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMoveEvent* event)
 void k_mimetypechooserdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8060,7 +8060,7 @@ void k_mimetypechooserdialog_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QTabletEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QTabletEvent* event)
 void k_mimetypechooserdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8090,7 +8090,7 @@ void k_mimetypechooserdialog_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QActionEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QActionEvent* event)
 void k_mimetypechooserdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8120,7 +8120,7 @@ void k_mimetypechooserdialog_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QDragEnterEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QDragEnterEvent* event)
 void k_mimetypechooserdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8150,7 +8150,7 @@ void k_mimetypechooserdialog_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QDragMoveEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QDragMoveEvent* event)
 void k_mimetypechooserdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8180,7 +8180,7 @@ void k_mimetypechooserdialog_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QDragLeaveEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QDragLeaveEvent* event)
 void k_mimetypechooserdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8210,7 +8210,7 @@ void k_mimetypechooserdialog_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QDropEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QDropEvent* event)
 void k_mimetypechooserdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8240,7 +8240,7 @@ void k_mimetypechooserdialog_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QHideEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QHideEvent* event)
 void k_mimetypechooserdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8274,7 +8274,7 @@ bool k_mimetypechooserdialog_qbase_native_event(void* self, const char* eventTyp
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn(KMimeTypeChooserDialog*, const char*, void*, intptr_t*)
+/// @param callback bool func(KMimeTypeChooserDialog* self, const char* eventType, void* message, intptr_t* result)
 void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -8304,7 +8304,7 @@ void k_mimetypechooserdialog_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QEvent* param1)
 void k_mimetypechooserdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8334,7 +8334,7 @@ int32_t k_mimetypechooserdialog_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn(KMimeTypeChooserDialog*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KMimeTypeChooserDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_mimetypechooserdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -8364,7 +8364,7 @@ void k_mimetypechooserdialog_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QPainter*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QPainter* painter)
 void k_mimetypechooserdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8394,7 +8394,7 @@ QPaintDevice* k_mimetypechooserdialog_qbase_redirected(void* self, void* offset)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QPaintDevice* fn(KMimeTypeChooserDialog*, QPoint*)
+/// @param callback QPaintDevice* func(KMimeTypeChooserDialog* self, QPoint* offset)
 void k_mimetypechooserdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8422,7 +8422,7 @@ QPainter* k_mimetypechooserdialog_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_mimetypechooserdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -8452,7 +8452,7 @@ void k_mimetypechooserdialog_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QInputMethodEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QInputMethodEvent* param1)
 void k_mimetypechooserdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8482,7 +8482,7 @@ QVariant* k_mimetypechooserdialog_qbase_input_method_query(void* self, int64_t p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QVariant* fn(KMimeTypeChooserDialog*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KMimeTypeChooserDialog* self, enum Qt__InputMethodQuery param1)
 void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -8512,7 +8512,7 @@ bool k_mimetypechooserdialog_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn(KMimeTypeChooserDialog*, bool)
+/// @param callback bool func(KMimeTypeChooserDialog* self, bool next)
 void k_mimetypechooserdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -8542,7 +8542,7 @@ void k_mimetypechooserdialog_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QTimerEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QTimerEvent* event)
 void k_mimetypechooserdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8572,7 +8572,7 @@ void k_mimetypechooserdialog_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QChildEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QChildEvent* event)
 void k_mimetypechooserdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8602,7 +8602,7 @@ void k_mimetypechooserdialog_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QEvent*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QEvent* event)
 void k_mimetypechooserdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8632,7 +8632,7 @@ void k_mimetypechooserdialog_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMetaMethod*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMetaMethod* signal)
 void k_mimetypechooserdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -8662,7 +8662,7 @@ void k_mimetypechooserdialog_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QMetaMethod*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QMetaMethod* signal)
 void k_mimetypechooserdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
@@ -8692,7 +8692,7 @@ void k_mimetypechooserdialog_qbase_adjust_position(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, QWidget*)
+/// @param callback void func(KMimeTypeChooserDialog* self, QWidget* param1)
 void k_mimetypechooserdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8720,7 +8720,7 @@ void k_mimetypechooserdialog_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooserdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8748,7 +8748,7 @@ void k_mimetypechooserdialog_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooserdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8776,7 +8776,7 @@ void k_mimetypechooserdialog_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn()
+/// @param callback void func()
 void k_mimetypechooserdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8804,7 +8804,7 @@ bool k_mimetypechooserdialog_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_mimetypechooserdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -8832,7 +8832,7 @@ bool k_mimetypechooserdialog_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_mimetypechooserdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -8860,7 +8860,7 @@ QObject* k_mimetypechooserdialog_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_mimetypechooserdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -8888,7 +8888,7 @@ int32_t k_mimetypechooserdialog_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_mimetypechooserdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -8918,7 +8918,7 @@ int32_t k_mimetypechooserdialog_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback int32_t fn(KMimeTypeChooserDialog*, const char*)
+/// @param callback int32_t func(KMimeTypeChooserDialog* self, const char* signal)
 void k_mimetypechooserdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -8948,7 +8948,7 @@ bool k_mimetypechooserdialog_qbase_is_signal_connected(void* self, void* signal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback bool fn(KMimeTypeChooserDialog*, QMetaMethod*)
+/// @param callback bool func(KMimeTypeChooserDialog* self, QMetaMethod* signal)
 void k_mimetypechooserdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8980,7 +8980,7 @@ double k_mimetypechooserdialog_qbase_get_decoded_metric_f(void* self, int32_t me
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback double fn(KMimeTypeChooserDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KMimeTypeChooserDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_mimetypechooserdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -8990,7 +8990,7 @@ void k_mimetypechooserdialog_on_get_decoded_metric_f(void* self, double (*callba
 /// Wrapper to allow calling private signal
 ///
 /// @param self KMimeTypeChooserDialog*
-/// @param callback void fn(KMimeTypeChooserDialog*, const char*)
+/// @param callback void func(KMimeTypeChooserDialog* self, const char* objectName)
 void k_mimetypechooserdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#dtor.KMimeTypeChooserDialog)

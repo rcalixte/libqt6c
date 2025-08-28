@@ -40,7 +40,7 @@ int32_t k_busyindicatorwidget_metacall(void* self, int32_t param1, int param2, v
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback int32_t fn(KBusyIndicatorWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KBusyIndicatorWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_busyindicatorwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -68,7 +68,7 @@ QSize* k_busyindicatorwidget_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_busyindicatorwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
@@ -109,7 +109,7 @@ void k_busyindicatorwidget_show_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QShowEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QShowEvent* event)
 void k_busyindicatorwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#showEvent)
@@ -131,7 +131,7 @@ void k_busyindicatorwidget_hide_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QHideEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QHideEvent* event)
 void k_busyindicatorwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#hideEvent)
@@ -153,7 +153,7 @@ void k_busyindicatorwidget_resize_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QResizeEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QResizeEvent* event)
 void k_busyindicatorwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#resizeEvent)
@@ -175,7 +175,7 @@ void k_busyindicatorwidget_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QPaintEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QPaintEvent* param1)
 void k_busyindicatorwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#paintEvent)
@@ -197,7 +197,7 @@ bool k_busyindicatorwidget_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn(KBusyIndicatorWidget*, QEvent*)
+/// @param callback bool func(KBusyIndicatorWidget* self, QEvent* event)
 void k_busyindicatorwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#event)
@@ -2168,7 +2168,7 @@ void k_busyindicatorwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, const char*)
+/// @param callback void func(KBusyIndicatorWidget* self, const char* title)
 void k_busyindicatorwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2184,7 +2184,7 @@ void k_busyindicatorwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QIcon*)
+/// @param callback void func(KBusyIndicatorWidget* self, QIcon* icon)
 void k_busyindicatorwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2200,7 +2200,7 @@ void k_busyindicatorwidget_window_icon_text_changed(void* self, const char* icon
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, const char*)
+/// @param callback void func(KBusyIndicatorWidget* self, const char* iconText)
 void k_busyindicatorwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2216,7 +2216,7 @@ void k_busyindicatorwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QPoint*)
+/// @param callback void func(KBusyIndicatorWidget* self, QPoint* pos)
 void k_busyindicatorwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2593,7 +2593,7 @@ void k_busyindicatorwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*)
+/// @param callback void func(KBusyIndicatorWidget* self)
 void k_busyindicatorwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -2671,7 +2671,7 @@ void k_busyindicatorwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QObject*)
+/// @param callback void func(KBusyIndicatorWidget* self, QObject* param1)
 void k_busyindicatorwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -2790,7 +2790,7 @@ int32_t k_busyindicatorwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_busyindicatorwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -2820,7 +2820,7 @@ void k_busyindicatorwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, bool)
+/// @param callback void func(KBusyIndicatorWidget* self, bool visible)
 void k_busyindicatorwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -2848,7 +2848,7 @@ QSize* k_busyindicatorwidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void k_busyindicatorwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -2878,7 +2878,7 @@ int32_t k_busyindicatorwidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback int32_t fn(KBusyIndicatorWidget*, int)
+/// @param callback int32_t func(KBusyIndicatorWidget* self, int param1)
 void k_busyindicatorwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -2906,7 +2906,7 @@ bool k_busyindicatorwidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_busyindicatorwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -2934,7 +2934,7 @@ QPaintEngine* k_busyindicatorwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void k_busyindicatorwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -2964,7 +2964,7 @@ void k_busyindicatorwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMouseEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMouseEvent* event)
 void k_busyindicatorwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2994,7 +2994,7 @@ void k_busyindicatorwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMouseEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMouseEvent* event)
 void k_busyindicatorwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3024,7 +3024,7 @@ void k_busyindicatorwidget_qbase_mouse_double_click_event(void* self, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMouseEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMouseEvent* event)
 void k_busyindicatorwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3054,7 +3054,7 @@ void k_busyindicatorwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMouseEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMouseEvent* event)
 void k_busyindicatorwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3084,7 +3084,7 @@ void k_busyindicatorwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QWheelEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QWheelEvent* event)
 void k_busyindicatorwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3114,7 +3114,7 @@ void k_busyindicatorwidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QKeyEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QKeyEvent* event)
 void k_busyindicatorwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3144,7 +3144,7 @@ void k_busyindicatorwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QKeyEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QKeyEvent* event)
 void k_busyindicatorwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3174,7 +3174,7 @@ void k_busyindicatorwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QFocusEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QFocusEvent* event)
 void k_busyindicatorwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3204,7 +3204,7 @@ void k_busyindicatorwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QFocusEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QFocusEvent* event)
 void k_busyindicatorwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3234,7 +3234,7 @@ void k_busyindicatorwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QEnterEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QEnterEvent* event)
 void k_busyindicatorwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3264,7 +3264,7 @@ void k_busyindicatorwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QEvent* event)
 void k_busyindicatorwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3294,7 +3294,7 @@ void k_busyindicatorwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMoveEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMoveEvent* event)
 void k_busyindicatorwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3324,7 +3324,7 @@ void k_busyindicatorwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QCloseEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QCloseEvent* event)
 void k_busyindicatorwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3354,7 +3354,7 @@ void k_busyindicatorwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QContextMenuEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QContextMenuEvent* event)
 void k_busyindicatorwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3384,7 +3384,7 @@ void k_busyindicatorwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QTabletEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QTabletEvent* event)
 void k_busyindicatorwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3414,7 +3414,7 @@ void k_busyindicatorwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QActionEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QActionEvent* event)
 void k_busyindicatorwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3444,7 +3444,7 @@ void k_busyindicatorwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QDragEnterEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QDragEnterEvent* event)
 void k_busyindicatorwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3474,7 +3474,7 @@ void k_busyindicatorwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QDragMoveEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QDragMoveEvent* event)
 void k_busyindicatorwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3504,7 +3504,7 @@ void k_busyindicatorwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QDragLeaveEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QDragLeaveEvent* event)
 void k_busyindicatorwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3534,7 +3534,7 @@ void k_busyindicatorwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QDropEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QDropEvent* event)
 void k_busyindicatorwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3568,7 +3568,7 @@ bool k_busyindicatorwidget_qbase_native_event(void* self, const char* eventType,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn(KBusyIndicatorWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(KBusyIndicatorWidget* self, const char* eventType, void* message, intptr_t* result)
 void k_busyindicatorwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3598,7 +3598,7 @@ void k_busyindicatorwidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QEvent* param1)
 void k_busyindicatorwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3628,7 +3628,7 @@ int32_t k_busyindicatorwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback int32_t fn(KBusyIndicatorWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(KBusyIndicatorWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void k_busyindicatorwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3658,7 +3658,7 @@ void k_busyindicatorwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QPainter*)
+/// @param callback void func(KBusyIndicatorWidget* self, QPainter* painter)
 void k_busyindicatorwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3688,7 +3688,7 @@ QPaintDevice* k_busyindicatorwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QPaintDevice* fn(KBusyIndicatorWidget*, QPoint*)
+/// @param callback QPaintDevice* func(KBusyIndicatorWidget* self, QPoint* offset)
 void k_busyindicatorwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3716,7 +3716,7 @@ QPainter* k_busyindicatorwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void k_busyindicatorwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -3746,7 +3746,7 @@ void k_busyindicatorwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QInputMethodEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QInputMethodEvent* param1)
 void k_busyindicatorwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3776,7 +3776,7 @@ QVariant* k_busyindicatorwidget_qbase_input_method_query(void* self, int64_t par
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QVariant* fn(KBusyIndicatorWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(KBusyIndicatorWidget* self, enum Qt__InputMethodQuery param1)
 void k_busyindicatorwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -3806,7 +3806,7 @@ bool k_busyindicatorwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn(KBusyIndicatorWidget*, bool)
+/// @param callback bool func(KBusyIndicatorWidget* self, bool next)
 void k_busyindicatorwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -3838,7 +3838,7 @@ bool k_busyindicatorwidget_qbase_event_filter(void* self, void* watched, void* e
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn(KBusyIndicatorWidget*, QObject*, QEvent*)
+/// @param callback bool func(KBusyIndicatorWidget* self, QObject* watched, QEvent* event)
 void k_busyindicatorwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -3868,7 +3868,7 @@ void k_busyindicatorwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QTimerEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QTimerEvent* event)
 void k_busyindicatorwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3898,7 +3898,7 @@ void k_busyindicatorwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QChildEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QChildEvent* event)
 void k_busyindicatorwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3928,7 +3928,7 @@ void k_busyindicatorwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QEvent*)
+/// @param callback void func(KBusyIndicatorWidget* self, QEvent* event)
 void k_busyindicatorwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3958,7 +3958,7 @@ void k_busyindicatorwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMetaMethod*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMetaMethod* signal)
 void k_busyindicatorwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -3988,7 +3988,7 @@ void k_busyindicatorwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, QMetaMethod*)
+/// @param callback void func(KBusyIndicatorWidget* self, QMetaMethod* signal)
 void k_busyindicatorwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4016,7 +4016,7 @@ void k_busyindicatorwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_busyindicatorwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4044,7 +4044,7 @@ void k_busyindicatorwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_busyindicatorwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4072,7 +4072,7 @@ void k_busyindicatorwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void k_busyindicatorwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4100,7 +4100,7 @@ bool k_busyindicatorwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_busyindicatorwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4128,7 +4128,7 @@ bool k_busyindicatorwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void k_busyindicatorwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4156,7 +4156,7 @@ QObject* k_busyindicatorwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_busyindicatorwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4184,7 +4184,7 @@ int32_t k_busyindicatorwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_busyindicatorwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4214,7 +4214,7 @@ int32_t k_busyindicatorwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback int32_t fn(KBusyIndicatorWidget*, const char*)
+/// @param callback int32_t func(KBusyIndicatorWidget* self, const char* signal)
 void k_busyindicatorwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4244,7 +4244,7 @@ bool k_busyindicatorwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback bool fn(KBusyIndicatorWidget*, QMetaMethod*)
+/// @param callback bool func(KBusyIndicatorWidget* self, QMetaMethod* signal)
 void k_busyindicatorwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4276,7 +4276,7 @@ double k_busyindicatorwidget_qbase_get_decoded_metric_f(void* self, int32_t metr
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback double fn(KBusyIndicatorWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(KBusyIndicatorWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void k_busyindicatorwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4286,7 +4286,7 @@ void k_busyindicatorwidget_on_get_decoded_metric_f(void* self, double (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self KBusyIndicatorWidget*
-/// @param callback void fn(KBusyIndicatorWidget*, const char*)
+/// @param callback void func(KBusyIndicatorWidget* self, const char* objectName)
 void k_busyindicatorwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#dtor.KBusyIndicatorWidget)

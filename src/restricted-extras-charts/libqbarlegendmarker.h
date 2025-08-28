@@ -46,7 +46,7 @@ int32_t q_barlegendmarker_metacall(void* self, int32_t param1, int param2, void*
 /// Allows for overriding the related default method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback int32_t fn(QBarLegendMarker*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QBarLegendMarker* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_barlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -76,7 +76,7 @@ int32_t q_barlegendmarker_type(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_barlegendmarker_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#type)
@@ -98,7 +98,7 @@ QAbstractBarSeries* q_barlegendmarker_series(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback QAbstractBarSeries* fn()
+/// @param callback QAbstractBarSeries* func()
 void q_barlegendmarker_on_series(void* self, QAbstractBarSeries* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#series)
@@ -251,7 +251,7 @@ void q_barlegendmarker_clicked(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -267,7 +267,7 @@ void q_barlegendmarker_hovered(void* self, bool status);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, bool)
+/// @param callback void func(QBarLegendMarker* self, bool status)
 void q_barlegendmarker_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QLegendMarker
@@ -282,7 +282,7 @@ void q_barlegendmarker_label_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_label_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -297,7 +297,7 @@ void q_barlegendmarker_label_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_label_brush_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -312,7 +312,7 @@ void q_barlegendmarker_font_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_font_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -327,7 +327,7 @@ void q_barlegendmarker_pen_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_pen_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -342,7 +342,7 @@ void q_barlegendmarker_brush_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_brush_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -357,7 +357,7 @@ void q_barlegendmarker_visible_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QLegendMarker
@@ -372,7 +372,7 @@ void q_barlegendmarker_shape_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_shape_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -601,7 +601,7 @@ void q_barlegendmarker_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*)
+/// @param callback void func(QBarLegendMarker* self)
 void q_barlegendmarker_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -679,7 +679,7 @@ void q_barlegendmarker_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, QObject*)
+/// @param callback void func(QBarLegendMarker* self, QObject* param1)
 void q_barlegendmarker_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -709,7 +709,7 @@ bool q_barlegendmarker_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback bool fn(QBarLegendMarker*, QEvent*)
+/// @param callback bool func(QBarLegendMarker* self, QEvent* event)
 void q_barlegendmarker_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -741,7 +741,7 @@ bool q_barlegendmarker_qbase_event_filter(void* self, void* watched, void* event
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback bool fn(QBarLegendMarker*, QObject*, QEvent*)
+/// @param callback bool func(QBarLegendMarker* self, QObject* watched, QEvent* event)
 void q_barlegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -771,7 +771,7 @@ void q_barlegendmarker_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, QTimerEvent*)
+/// @param callback void func(QBarLegendMarker* self, QTimerEvent* event)
 void q_barlegendmarker_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -801,7 +801,7 @@ void q_barlegendmarker_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, QChildEvent*)
+/// @param callback void func(QBarLegendMarker* self, QChildEvent* event)
 void q_barlegendmarker_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -831,7 +831,7 @@ void q_barlegendmarker_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, QEvent*)
+/// @param callback void func(QBarLegendMarker* self, QEvent* event)
 void q_barlegendmarker_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -861,7 +861,7 @@ void q_barlegendmarker_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, QMetaMethod*)
+/// @param callback void func(QBarLegendMarker* self, QMetaMethod* signal)
 void q_barlegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -891,7 +891,7 @@ void q_barlegendmarker_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, QMetaMethod*)
+/// @param callback void func(QBarLegendMarker* self, QMetaMethod* signal)
 void q_barlegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -919,7 +919,7 @@ QObject* q_barlegendmarker_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_barlegendmarker_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -947,7 +947,7 @@ int32_t q_barlegendmarker_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_barlegendmarker_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -977,7 +977,7 @@ int32_t q_barlegendmarker_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback int32_t fn(QBarLegendMarker*, const char*)
+/// @param callback int32_t func(QBarLegendMarker* self, const char* signal)
 void q_barlegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1007,7 +1007,7 @@ bool q_barlegendmarker_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback bool fn(QBarLegendMarker*, QMetaMethod*)
+/// @param callback bool func(QBarLegendMarker* self, QMetaMethod* signal)
 void q_barlegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1017,7 +1017,7 @@ void q_barlegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QBarLegendMarker*
-/// @param callback void fn(QBarLegendMarker*, const char*)
+/// @param callback void func(QBarLegendMarker* self, const char* objectName)
 void q_barlegendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#dtor.QBarLegendMarker)

@@ -40,7 +40,7 @@ int32_t q_variantanimation_metacall(void* self, int32_t param1, int param2, void
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback int32_t fn(QVariantAnimation*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QVariantAnimation* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_variantanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -119,7 +119,7 @@ int32_t q_variantanimation_duration(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_variantanimation_on_duration(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#duration)
@@ -155,7 +155,7 @@ void q_variantanimation_value_changed(void* self, void* value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#valueChanged)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QVariant*)
+/// @param callback void func(QVariantAnimation* self, QVariant* value)
 void q_variantanimation_on_value_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#event)
@@ -169,7 +169,7 @@ bool q_variantanimation_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback bool fn(QVariantAnimation*, QEvent*)
+/// @param callback bool func(QVariantAnimation* self, QEvent* event)
 void q_variantanimation_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#event)
@@ -191,7 +191,7 @@ void q_variantanimation_update_current_time(void* self, int param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, int)
+/// @param callback void func(QVariantAnimation* self, int param1)
 void q_variantanimation_on_update_current_time(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentTime)
@@ -214,7 +214,7 @@ void q_variantanimation_update_state(void* self, int32_t newState, int32_t oldSt
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+/// @param callback void func(QVariantAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState)
 void q_variantanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateState)
@@ -237,7 +237,7 @@ void q_variantanimation_update_current_value(void* self, void* value);
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QVariant*)
+/// @param callback void func(QVariantAnimation* self, QVariant* value)
 void q_variantanimation_on_update_current_value(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentValue)
@@ -261,7 +261,7 @@ QVariant* q_variantanimation_interpolated(void* self, void* from, void* to, doub
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
-/// @param callback QVariant* fn(QVariantAnimation*, QVariant*, QVariant*, double)
+/// @param callback QVariant* func(QVariantAnimation* self, QVariant* from, QVariant* to, double progress)
 void q_variantanimation_on_interpolated(void* self, QVariant* (*callback)(void*, void*, void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#interpolated)
@@ -379,7 +379,7 @@ void q_variantanimation_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*)
+/// @param callback void func(QVariantAnimation* self)
 void q_variantanimation_on_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -396,7 +396,7 @@ void q_variantanimation_state_changed(void* self, int32_t newState, int32_t oldS
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+/// @param callback void func(QVariantAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState)
 void q_variantanimation_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
@@ -412,7 +412,7 @@ void q_variantanimation_current_loop_changed(void* self, int currentLoop);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, int)
+/// @param callback void func(QVariantAnimation* self, int currentLoop)
 void q_variantanimation_on_current_loop_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -428,7 +428,7 @@ void q_variantanimation_direction_changed(void* self, int32_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__Direction)
+/// @param callback void func(QVariantAnimation* self, enum QAbstractAnimation__Direction param1)
 void q_variantanimation_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAnimation
@@ -709,7 +709,7 @@ void q_variantanimation_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*)
+/// @param callback void func(QVariantAnimation* self)
 void q_variantanimation_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -787,7 +787,7 @@ void q_variantanimation_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QObject*)
+/// @param callback void func(QVariantAnimation* self, QObject* param1)
 void q_variantanimation_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAnimation
@@ -817,7 +817,7 @@ void q_variantanimation_qbase_update_direction(void* self, int32_t direction);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__Direction)
+/// @param callback void func(QVariantAnimation* self, enum QAbstractAnimation__Direction direction)
 void q_variantanimation_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
@@ -849,7 +849,7 @@ bool q_variantanimation_qbase_event_filter(void* self, void* watched, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback bool fn(QVariantAnimation*, QObject*, QEvent*)
+/// @param callback bool func(QVariantAnimation* self, QObject* watched, QEvent* event)
 void q_variantanimation_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -879,7 +879,7 @@ void q_variantanimation_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QTimerEvent*)
+/// @param callback void func(QVariantAnimation* self, QTimerEvent* event)
 void q_variantanimation_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -909,7 +909,7 @@ void q_variantanimation_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QChildEvent*)
+/// @param callback void func(QVariantAnimation* self, QChildEvent* event)
 void q_variantanimation_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -939,7 +939,7 @@ void q_variantanimation_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QEvent*)
+/// @param callback void func(QVariantAnimation* self, QEvent* event)
 void q_variantanimation_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -969,7 +969,7 @@ void q_variantanimation_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QMetaMethod*)
+/// @param callback void func(QVariantAnimation* self, QMetaMethod* signal)
 void q_variantanimation_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -999,7 +999,7 @@ void q_variantanimation_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, QMetaMethod*)
+/// @param callback void func(QVariantAnimation* self, QMetaMethod* signal)
 void q_variantanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1027,7 +1027,7 @@ QObject* q_variantanimation_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_variantanimation_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -1055,7 +1055,7 @@ int32_t q_variantanimation_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_variantanimation_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -1085,7 +1085,7 @@ int32_t q_variantanimation_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback int32_t fn(QVariantAnimation*, const char*)
+/// @param callback int32_t func(QVariantAnimation* self, const char* signal)
 void q_variantanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -1115,7 +1115,7 @@ bool q_variantanimation_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVariantAnimation*
-/// @param callback bool fn(QVariantAnimation*, QMetaMethod*)
+/// @param callback bool func(QVariantAnimation* self, QMetaMethod* signal)
 void q_variantanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1125,7 +1125,7 @@ void q_variantanimation_on_is_signal_connected(void* self, bool (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self QVariantAnimation*
-/// @param callback void fn(QVariantAnimation*, const char*)
+/// @param callback void func(QVariantAnimation* self, const char* objectName)
 void q_variantanimation_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#dtor.QVariantAnimation)

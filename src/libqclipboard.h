@@ -128,7 +128,7 @@ void q_clipboard_changed(void* self, int32_t mode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#changed)
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*, enum QClipboard__Mode)
+/// @param callback void func(QClipboard* self, enum QClipboard__Mode mode)
 void q_clipboard_on_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#selectionChanged)
@@ -139,7 +139,7 @@ void q_clipboard_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#selectionChanged)
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*)
+/// @param callback void func(QClipboard* self)
 void q_clipboard_on_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#findBufferChanged)
@@ -150,7 +150,7 @@ void q_clipboard_find_buffer_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#findBufferChanged)
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*)
+/// @param callback void func(QClipboard* self)
 void q_clipboard_on_find_buffer_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#dataChanged)
@@ -161,7 +161,7 @@ void q_clipboard_data_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#dataChanged)
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*)
+/// @param callback void func(QClipboard* self)
 void q_clipboard_on_data_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -493,7 +493,7 @@ void q_clipboard_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*)
+/// @param callback void func(QClipboard* self)
 void q_clipboard_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -571,7 +571,7 @@ void q_clipboard_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*, QObject*)
+/// @param callback void func(QClipboard* self, QObject* param1)
 void q_clipboard_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -581,7 +581,7 @@ void q_clipboard_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QClipboard*
-/// @param callback void fn(QClipboard*, const char*)
+/// @param callback void func(QClipboard* self, const char* objectName)
 void q_clipboard_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qclipboard.html#types

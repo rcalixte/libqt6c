@@ -71,7 +71,7 @@ void q_webenginecookiestore_cookie_added(void* self, void* cookie);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieAdded)
 ///
 /// @param self QWebEngineCookieStore*
-/// @param callback void fn(QWebEngineCookieStore*, QNetworkCookie*)
+/// @param callback void func(QWebEngineCookieStore* self, QNetworkCookie* cookie)
 void q_webenginecookiestore_on_cookie_added(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieRemoved)
@@ -83,7 +83,7 @@ void q_webenginecookiestore_cookie_removed(void* self, void* cookie);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#cookieRemoved)
 ///
 /// @param self QWebEngineCookieStore*
-/// @param callback void fn(QWebEngineCookieStore*, QNetworkCookie*)
+/// @param callback void func(QWebEngineCookieStore* self, QNetworkCookie* cookie)
 void q_webenginecookiestore_on_cookie_removed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
@@ -360,7 +360,7 @@ void q_webenginecookiestore_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineCookieStore*
-/// @param callback void fn(QWebEngineCookieStore*)
+/// @param callback void func(QWebEngineCookieStore* self)
 void q_webenginecookiestore_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -438,7 +438,7 @@ void q_webenginecookiestore_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QWebEngineCookieStore*
-/// @param callback void fn(QWebEngineCookieStore*, QObject*)
+/// @param callback void func(QWebEngineCookieStore* self, QObject* param1)
 void q_webenginecookiestore_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -448,7 +448,7 @@ void q_webenginecookiestore_on_destroyed1(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QWebEngineCookieStore*
-/// @param callback void fn(QWebEngineCookieStore*, const char*)
+/// @param callback void func(QWebEngineCookieStore* self, const char* objectName)
 void q_webenginecookiestore_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore.html#dtor.QWebEngineCookieStore)

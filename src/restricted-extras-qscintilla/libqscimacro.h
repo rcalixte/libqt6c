@@ -42,7 +42,7 @@ int32_t q_scimacro_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QsciMacro*
-/// @param callback int32_t fn(QsciMacro*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QsciMacro* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_scimacro_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -88,7 +88,7 @@ void q_scimacro_play(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn()
+/// @param callback void func()
 void q_scimacro_on_play(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
@@ -108,7 +108,7 @@ void q_scimacro_start_recording(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn()
+/// @param callback void func()
 void q_scimacro_on_start_recording(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
@@ -128,7 +128,7 @@ void q_scimacro_end_recording(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn()
+/// @param callback void func()
 void q_scimacro_on_end_recording(void* self, void (*callback)());
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)
@@ -381,7 +381,7 @@ void q_scimacro_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*)
+/// @param callback void func(QsciMacro* self)
 void q_scimacro_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -459,7 +459,7 @@ void q_scimacro_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, QObject*)
+/// @param callback void func(QsciMacro* self, QObject* param1)
 void q_scimacro_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -489,7 +489,7 @@ bool q_scimacro_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback bool fn(QsciMacro*, QEvent*)
+/// @param callback bool func(QsciMacro* self, QEvent* event)
 void q_scimacro_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -521,7 +521,7 @@ bool q_scimacro_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback bool fn(QsciMacro*, QObject*, QEvent*)
+/// @param callback bool func(QsciMacro* self, QObject* watched, QEvent* event)
 void q_scimacro_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -551,7 +551,7 @@ void q_scimacro_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, QTimerEvent*)
+/// @param callback void func(QsciMacro* self, QTimerEvent* event)
 void q_scimacro_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -581,7 +581,7 @@ void q_scimacro_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, QChildEvent*)
+/// @param callback void func(QsciMacro* self, QChildEvent* event)
 void q_scimacro_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -611,7 +611,7 @@ void q_scimacro_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, QEvent*)
+/// @param callback void func(QsciMacro* self, QEvent* event)
 void q_scimacro_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -641,7 +641,7 @@ void q_scimacro_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, QMetaMethod*)
+/// @param callback void func(QsciMacro* self, QMetaMethod* signal)
 void q_scimacro_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -671,7 +671,7 @@ void q_scimacro_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, QMetaMethod*)
+/// @param callback void func(QsciMacro* self, QMetaMethod* signal)
 void q_scimacro_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -699,7 +699,7 @@ QObject* q_scimacro_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_scimacro_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -727,7 +727,7 @@ int32_t q_scimacro_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_scimacro_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -757,7 +757,7 @@ int32_t q_scimacro_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback int32_t fn(QsciMacro*, const char*)
+/// @param callback int32_t func(QsciMacro* self, const char* signal)
 void q_scimacro_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -787,7 +787,7 @@ bool q_scimacro_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciMacro*
-/// @param callback bool fn(QsciMacro*, QMetaMethod*)
+/// @param callback bool func(QsciMacro* self, QMetaMethod* signal)
 void q_scimacro_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -797,7 +797,7 @@ void q_scimacro_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QsciMacro*
-/// @param callback void fn(QsciMacro*, const char*)
+/// @param callback void func(QsciMacro* self, const char* objectName)
 void q_scimacro_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciMacro.html)

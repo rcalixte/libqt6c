@@ -36,7 +36,7 @@ void q_sciprinter_format_page(void* self, void* painter, bool drawing, void* are
 /// Allows for overriding the related default method
 ///
 /// @param self QsciPrinter*
-/// @param callback void fn(QsciPrinter*, QPainter*, bool, QRect*, int)
+/// @param callback void func(QsciPrinter* self, QPainter* painter, bool drawing, QRect* area, int pagenr)
 void q_sciprinter_on_format_page(void* self, void (*callback)(void*, void*, bool, void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
@@ -66,7 +66,7 @@ void q_sciprinter_set_magnification(void* self, int magnification);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciPrinter*
-/// @param callback void fn(QsciPrinter*, int)
+/// @param callback void func(QsciPrinter* self, int magnification)
 void q_sciprinter_on_set_magnification(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
@@ -91,7 +91,7 @@ int32_t q_sciprinter_print_range(void* self, void* qsb, void* painter, int from,
 /// Allows for overriding the related default method
 ///
 /// @param self QsciPrinter*
-/// @param callback int32_t fn(QsciPrinter*, QsciScintillaBase*, QPainter*, int, int)
+/// @param callback int32_t func(QsciPrinter* self, QsciScintillaBase* qsb, QPainter* painter, int from, int to)
 void q_sciprinter_on_print_range(void* self, int32_t (*callback)(void*, void*, void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
@@ -118,7 +118,7 @@ int32_t q_sciprinter_print_range2(void* self, void* qsb, int from, int to);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciPrinter*
-/// @param callback int32_t fn(QsciPrinter*, QsciScintillaBase*, int, int)
+/// @param callback int32_t func(QsciPrinter* self, QsciScintillaBase* qsb, int from, int to)
 void q_sciprinter_on_print_range2(void* self, int32_t (*callback)(void*, void*, int, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
@@ -149,7 +149,7 @@ void q_sciprinter_set_wrap_mode(void* self, int32_t wmode);
 /// Allows for overriding the related default method
 ///
 /// @param self QsciPrinter*
-/// @param callback void fn(QsciPrinter*, enum QsciScintilla__WrapMode)
+/// @param callback void func(QsciPrinter* self, enum QsciScintilla__WrapMode wmode)
 void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
@@ -674,7 +674,7 @@ int32_t q_sciprinter_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_sciprinter_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QPrinter
@@ -702,7 +702,7 @@ bool q_sciprinter_qbase_new_page(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_sciprinter_on_new_page(void* self, bool (*callback)());
 
 /// Inherited from QPrinter
@@ -730,7 +730,7 @@ QPaintEngine* q_sciprinter_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QPrinter
@@ -760,7 +760,7 @@ int32_t q_sciprinter_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback int32_t fn(QsciPrinter*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
@@ -790,7 +790,7 @@ bool q_sciprinter_qbase_set_page_layout(void* self, void* pageLayout);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback bool fn(QsciPrinter*, QPageLayout*)
+/// @param callback bool func(QsciPrinter* self, QPageLayout* pageLayout)
 void q_sciprinter_on_set_page_layout(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
@@ -820,7 +820,7 @@ bool q_sciprinter_qbase_set_page_size(void* self, void* pageSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback bool fn(QsciPrinter*, QPageSize*)
+/// @param callback bool func(QsciPrinter* self, QPageSize* pageSize)
 void q_sciprinter_on_set_page_size(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
@@ -850,7 +850,7 @@ bool q_sciprinter_qbase_set_page_orientation(void* self, int32_t orientation);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback bool fn(QsciPrinter*, enum QPageLayout__Orientation)
+/// @param callback bool func(QsciPrinter* self, enum QPageLayout__Orientation orientation)
 void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
@@ -882,7 +882,7 @@ bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int32_t unit
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback bool fn(QsciPrinter*, QMarginsF*, enum QPageLayout__Unit)
+/// @param callback bool func(QsciPrinter* self, QMarginsF* margins, enum QPageLayout__Unit units)
 void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
@@ -912,7 +912,7 @@ void q_sciprinter_qbase_set_page_ranges(void* self, void* ranges);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback void fn(QsciPrinter*, QPageRanges*)
+/// @param callback void func(QsciPrinter* self, QPageRanges* ranges)
 void q_sciprinter_on_set_page_ranges(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -942,7 +942,7 @@ void q_sciprinter_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback void fn(QsciPrinter*, QPainter*)
+/// @param callback void func(QsciPrinter* self, QPainter* painter)
 void q_sciprinter_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -972,7 +972,7 @@ QPaintDevice* q_sciprinter_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback QPaintDevice* fn(QsciPrinter*, QPoint*)
+/// @param callback QPaintDevice* func(QsciPrinter* self, QPoint* offset)
 void q_sciprinter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -1000,7 +1000,7 @@ QPainter* q_sciprinter_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_sciprinter_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QPrinter
@@ -1032,7 +1032,7 @@ void q_sciprinter_qbase_set_engines(void* self, void* printEngine, void* paintEn
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback void fn(QsciPrinter*, QPrintEngine*, QPaintEngine*)
+/// @param callback void func(QsciPrinter* self, QPrintEngine* printEngine, QPaintEngine* paintEngine)
 void q_sciprinter_on_set_engines(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QPaintDevice
@@ -1064,7 +1064,7 @@ double q_sciprinter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int3
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QsciPrinter*
-/// @param callback double fn(QsciPrinter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_sciprinter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)

@@ -40,7 +40,7 @@ int32_t q_tabwidget_metacall(void* self, int32_t param1, int param2, void* param
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback int32_t fn(QTabWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTabWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_tabwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -265,7 +265,7 @@ QSize* q_tabwidget_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tabwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#sizeHint)
@@ -285,7 +285,7 @@ QSize* q_tabwidget_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tabwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#minimumSizeHint)
@@ -306,7 +306,7 @@ int32_t q_tabwidget_height_for_width(void* self, int width);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback int32_t fn(QTabWidget*, int)
+/// @param callback int32_t func(QTabWidget* self, int width)
 void q_tabwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#heightForWidth)
@@ -327,7 +327,7 @@ bool q_tabwidget_has_height_for_width(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tabwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#hasHeightForWidth)
@@ -436,7 +436,7 @@ void q_tabwidget_current_changed(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#currentChanged)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, int)
+/// @param callback void func(QTabWidget* self, int index)
 void q_tabwidget_on_current_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabCloseRequested)
@@ -448,7 +448,7 @@ void q_tabwidget_tab_close_requested(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabCloseRequested)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, int)
+/// @param callback void func(QTabWidget* self, int index)
 void q_tabwidget_on_tab_close_requested(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabBarClicked)
@@ -460,7 +460,7 @@ void q_tabwidget_tab_bar_clicked(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabBarClicked)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, int)
+/// @param callback void func(QTabWidget* self, int index)
 void q_tabwidget_on_tab_bar_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabBarDoubleClicked)
@@ -472,7 +472,7 @@ void q_tabwidget_tab_bar_double_clicked(void* self, int index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabBarDoubleClicked)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, int)
+/// @param callback void func(QTabWidget* self, int index)
 void q_tabwidget_on_tab_bar_double_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabInserted)
@@ -486,7 +486,7 @@ void q_tabwidget_tab_inserted(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, int)
+/// @param callback void func(QTabWidget* self, int index)
 void q_tabwidget_on_tab_inserted(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabInserted)
@@ -508,7 +508,7 @@ void q_tabwidget_tab_removed(void* self, int index);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, int)
+/// @param callback void func(QTabWidget* self, int index)
 void q_tabwidget_on_tab_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabRemoved)
@@ -530,7 +530,7 @@ void q_tabwidget_show_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QShowEvent*)
+/// @param callback void func(QTabWidget* self, QShowEvent* param1)
 void q_tabwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#showEvent)
@@ -552,7 +552,7 @@ void q_tabwidget_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QResizeEvent*)
+/// @param callback void func(QTabWidget* self, QResizeEvent* param1)
 void q_tabwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#resizeEvent)
@@ -574,7 +574,7 @@ void q_tabwidget_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QKeyEvent*)
+/// @param callback void func(QTabWidget* self, QKeyEvent* param1)
 void q_tabwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#keyPressEvent)
@@ -596,7 +596,7 @@ void q_tabwidget_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QPaintEvent*)
+/// @param callback void func(QTabWidget* self, QPaintEvent* param1)
 void q_tabwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#paintEvent)
@@ -618,7 +618,7 @@ void q_tabwidget_set_tab_bar(void* self, void* tabBar);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QTabBar*)
+/// @param callback void func(QTabWidget* self, QTabBar* tabBar)
 void q_tabwidget_on_set_tab_bar(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#setTabBar)
@@ -640,7 +640,7 @@ void q_tabwidget_change_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QEvent*)
+/// @param callback void func(QTabWidget* self, QEvent* param1)
 void q_tabwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#changeEvent)
@@ -662,7 +662,7 @@ bool q_tabwidget_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn(QTabWidget*, QEvent*)
+/// @param callback bool func(QTabWidget* self, QEvent* param1)
 void q_tabwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#event)
@@ -684,7 +684,7 @@ void q_tabwidget_init_style_option(void* self, void* option);
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QStyleOptionTabWidgetFrame*)
+/// @param callback void func(QTabWidget* self, QStyleOptionTabWidgetFrame* option)
 void q_tabwidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#initStyleOption)
@@ -2662,7 +2662,7 @@ void q_tabwidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, const char*)
+/// @param callback void func(QTabWidget* self, const char* title)
 void q_tabwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2678,7 +2678,7 @@ void q_tabwidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QIcon*)
+/// @param callback void func(QTabWidget* self, QIcon* icon)
 void q_tabwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2694,7 +2694,7 @@ void q_tabwidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, const char*)
+/// @param callback void func(QTabWidget* self, const char* iconText)
 void q_tabwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2710,7 +2710,7 @@ void q_tabwidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QPoint*)
+/// @param callback void func(QTabWidget* self, QPoint* pos)
 void q_tabwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3087,7 +3087,7 @@ void q_tabwidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*)
+/// @param callback void func(QTabWidget* self)
 void q_tabwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3165,7 +3165,7 @@ void q_tabwidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QObject*)
+/// @param callback void func(QTabWidget* self, QObject* param1)
 void q_tabwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3284,7 +3284,7 @@ int32_t q_tabwidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tabwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3314,7 +3314,7 @@ void q_tabwidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, bool)
+/// @param callback void func(QTabWidget* self, bool visible)
 void q_tabwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3342,7 +3342,7 @@ QPaintEngine* q_tabwidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_tabwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3372,7 +3372,7 @@ void q_tabwidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMouseEvent*)
+/// @param callback void func(QTabWidget* self, QMouseEvent* event)
 void q_tabwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3402,7 +3402,7 @@ void q_tabwidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMouseEvent*)
+/// @param callback void func(QTabWidget* self, QMouseEvent* event)
 void q_tabwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3432,7 +3432,7 @@ void q_tabwidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMouseEvent*)
+/// @param callback void func(QTabWidget* self, QMouseEvent* event)
 void q_tabwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3462,7 +3462,7 @@ void q_tabwidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMouseEvent*)
+/// @param callback void func(QTabWidget* self, QMouseEvent* event)
 void q_tabwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3492,7 +3492,7 @@ void q_tabwidget_qbase_wheel_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QWheelEvent*)
+/// @param callback void func(QTabWidget* self, QWheelEvent* event)
 void q_tabwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3522,7 +3522,7 @@ void q_tabwidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QKeyEvent*)
+/// @param callback void func(QTabWidget* self, QKeyEvent* event)
 void q_tabwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3552,7 +3552,7 @@ void q_tabwidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QFocusEvent*)
+/// @param callback void func(QTabWidget* self, QFocusEvent* event)
 void q_tabwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3582,7 +3582,7 @@ void q_tabwidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QFocusEvent*)
+/// @param callback void func(QTabWidget* self, QFocusEvent* event)
 void q_tabwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3612,7 +3612,7 @@ void q_tabwidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QEnterEvent*)
+/// @param callback void func(QTabWidget* self, QEnterEvent* event)
 void q_tabwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3642,7 +3642,7 @@ void q_tabwidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QEvent*)
+/// @param callback void func(QTabWidget* self, QEvent* event)
 void q_tabwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3672,7 +3672,7 @@ void q_tabwidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMoveEvent*)
+/// @param callback void func(QTabWidget* self, QMoveEvent* event)
 void q_tabwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3702,7 +3702,7 @@ void q_tabwidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QCloseEvent*)
+/// @param callback void func(QTabWidget* self, QCloseEvent* event)
 void q_tabwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3732,7 +3732,7 @@ void q_tabwidget_qbase_context_menu_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QContextMenuEvent*)
+/// @param callback void func(QTabWidget* self, QContextMenuEvent* event)
 void q_tabwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3762,7 +3762,7 @@ void q_tabwidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QTabletEvent*)
+/// @param callback void func(QTabWidget* self, QTabletEvent* event)
 void q_tabwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3792,7 +3792,7 @@ void q_tabwidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QActionEvent*)
+/// @param callback void func(QTabWidget* self, QActionEvent* event)
 void q_tabwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3822,7 +3822,7 @@ void q_tabwidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QDragEnterEvent*)
+/// @param callback void func(QTabWidget* self, QDragEnterEvent* event)
 void q_tabwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3852,7 +3852,7 @@ void q_tabwidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QDragMoveEvent*)
+/// @param callback void func(QTabWidget* self, QDragMoveEvent* event)
 void q_tabwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3882,7 +3882,7 @@ void q_tabwidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QDragLeaveEvent*)
+/// @param callback void func(QTabWidget* self, QDragLeaveEvent* event)
 void q_tabwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3912,7 +3912,7 @@ void q_tabwidget_qbase_drop_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QDropEvent*)
+/// @param callback void func(QTabWidget* self, QDropEvent* event)
 void q_tabwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3942,7 +3942,7 @@ void q_tabwidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QHideEvent*)
+/// @param callback void func(QTabWidget* self, QHideEvent* event)
 void q_tabwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3976,7 +3976,7 @@ bool q_tabwidget_qbase_native_event(void* self, const char* eventType, void* mes
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn(QTabWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QTabWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_tabwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -4006,7 +4006,7 @@ int32_t q_tabwidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback int32_t fn(QTabWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QTabWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_tabwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -4036,7 +4036,7 @@ void q_tabwidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QPainter*)
+/// @param callback void func(QTabWidget* self, QPainter* painter)
 void q_tabwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4066,7 +4066,7 @@ QPaintDevice* q_tabwidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback QPaintDevice* fn(QTabWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QTabWidget* self, QPoint* offset)
 void q_tabwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4094,7 +4094,7 @@ QPainter* q_tabwidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_tabwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4124,7 +4124,7 @@ void q_tabwidget_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QInputMethodEvent*)
+/// @param callback void func(QTabWidget* self, QInputMethodEvent* param1)
 void q_tabwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4154,7 +4154,7 @@ QVariant* q_tabwidget_qbase_input_method_query(void* self, int64_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback QVariant* fn(QTabWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QTabWidget* self, enum Qt__InputMethodQuery param1)
 void q_tabwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4184,7 +4184,7 @@ bool q_tabwidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn(QTabWidget*, bool)
+/// @param callback bool func(QTabWidget* self, bool next)
 void q_tabwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4216,7 +4216,7 @@ bool q_tabwidget_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn(QTabWidget*, QObject*, QEvent*)
+/// @param callback bool func(QTabWidget* self, QObject* watched, QEvent* event)
 void q_tabwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -4246,7 +4246,7 @@ void q_tabwidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QTimerEvent*)
+/// @param callback void func(QTabWidget* self, QTimerEvent* event)
 void q_tabwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4276,7 +4276,7 @@ void q_tabwidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QChildEvent*)
+/// @param callback void func(QTabWidget* self, QChildEvent* event)
 void q_tabwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4306,7 +4306,7 @@ void q_tabwidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QEvent*)
+/// @param callback void func(QTabWidget* self, QEvent* event)
 void q_tabwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4336,7 +4336,7 @@ void q_tabwidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMetaMethod*)
+/// @param callback void func(QTabWidget* self, QMetaMethod* signal)
 void q_tabwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4366,7 +4366,7 @@ void q_tabwidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, QMetaMethod*)
+/// @param callback void func(QTabWidget* self, QMetaMethod* signal)
 void q_tabwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4394,7 +4394,7 @@ void q_tabwidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4422,7 +4422,7 @@ void q_tabwidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4450,7 +4450,7 @@ void q_tabwidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tabwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4478,7 +4478,7 @@ bool q_tabwidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tabwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4506,7 +4506,7 @@ bool q_tabwidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tabwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4534,7 +4534,7 @@ QObject* q_tabwidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_tabwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4562,7 +4562,7 @@ int32_t q_tabwidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tabwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4592,7 +4592,7 @@ int32_t q_tabwidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback int32_t fn(QTabWidget*, const char*)
+/// @param callback int32_t func(QTabWidget* self, const char* signal)
 void q_tabwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4622,7 +4622,7 @@ bool q_tabwidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool fn(QTabWidget*, QMetaMethod*)
+/// @param callback bool func(QTabWidget* self, QMetaMethod* signal)
 void q_tabwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4654,7 +4654,7 @@ double q_tabwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback double fn(QTabWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QTabWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_tabwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4664,7 +4664,7 @@ void q_tabwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, i
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTabWidget*
-/// @param callback void fn(QTabWidget*, const char*)
+/// @param callback void func(QTabWidget* self, const char* objectName)
 void q_tabwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#dtor.QTabWidget)

@@ -46,7 +46,7 @@ int32_t q_timeline_metacall(void* self, int32_t param1, int param2, void* param3
 /// Allows for overriding the related default method
 ///
 /// @param self QTimeLine*
-/// @param callback int32_t fn(QTimeLine*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTimeLine* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -189,7 +189,7 @@ double q_timeline_value_for_time(void* self, int msec);
 /// Allows for overriding the related default method
 ///
 /// @param self QTimeLine*
-/// @param callback double fn(QTimeLine*, int)
+/// @param callback double func(QTimeLine* self, int msec)
 void q_timeline_on_value_for_time(void* self, double (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#valueForTime)
@@ -243,7 +243,7 @@ void q_timeline_timer_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, QTimerEvent*)
+/// @param callback void func(QTimeLine* self, QTimerEvent* event)
 void q_timeline_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#timerEvent)
@@ -497,7 +497,7 @@ void q_timeline_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*)
+/// @param callback void func(QTimeLine* self)
 void q_timeline_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -575,7 +575,7 @@ void q_timeline_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, QObject*)
+/// @param callback void func(QTimeLine* self, QObject* param1)
 void q_timeline_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -605,7 +605,7 @@ bool q_timeline_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback bool fn(QTimeLine*, QEvent*)
+/// @param callback bool func(QTimeLine* self, QEvent* event)
 void q_timeline_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -637,7 +637,7 @@ bool q_timeline_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback bool fn(QTimeLine*, QObject*, QEvent*)
+/// @param callback bool func(QTimeLine* self, QObject* watched, QEvent* event)
 void q_timeline_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -667,7 +667,7 @@ void q_timeline_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, QChildEvent*)
+/// @param callback void func(QTimeLine* self, QChildEvent* event)
 void q_timeline_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -697,7 +697,7 @@ void q_timeline_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, QEvent*)
+/// @param callback void func(QTimeLine* self, QEvent* event)
 void q_timeline_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -727,7 +727,7 @@ void q_timeline_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, QMetaMethod*)
+/// @param callback void func(QTimeLine* self, QMetaMethod* signal)
 void q_timeline_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -757,7 +757,7 @@ void q_timeline_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, QMetaMethod*)
+/// @param callback void func(QTimeLine* self, QMetaMethod* signal)
 void q_timeline_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -785,7 +785,7 @@ QObject* q_timeline_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_timeline_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -813,7 +813,7 @@ int32_t q_timeline_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_timeline_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -843,7 +843,7 @@ int32_t q_timeline_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback int32_t fn(QTimeLine*, const char*)
+/// @param callback int32_t func(QTimeLine* self, const char* signal)
 void q_timeline_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -873,7 +873,7 @@ bool q_timeline_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeLine*
-/// @param callback bool fn(QTimeLine*, QMetaMethod*)
+/// @param callback bool func(QTimeLine* self, QMetaMethod* signal)
 void q_timeline_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#valueChanged)
@@ -881,7 +881,7 @@ void q_timeline_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, double)
+/// @param callback void func(QTimeLine* self, double x)
 void q_timeline_on_value_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#frameChanged)
@@ -889,7 +889,7 @@ void q_timeline_on_value_changed(void* self, void (*callback)(void*, double));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, int)
+/// @param callback void func(QTimeLine* self, int param1)
 void q_timeline_on_frame_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#stateChanged)
@@ -897,7 +897,7 @@ void q_timeline_on_frame_changed(void* self, void (*callback)(void*, int));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, enum QTimeLine__State)
+/// @param callback void func(QTimeLine* self, enum QTimeLine__State newState)
 void q_timeline_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#finished)
@@ -905,7 +905,7 @@ void q_timeline_on_state_changed(void* self, void (*callback)(void*, int32_t));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*)
+/// @param callback void func(QTimeLine* self)
 void q_timeline_on_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -915,7 +915,7 @@ void q_timeline_on_finished(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTimeLine*
-/// @param callback void fn(QTimeLine*, const char*)
+/// @param callback void func(QTimeLine* self, const char* objectName)
 void q_timeline_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#dtor.QTimeLine)

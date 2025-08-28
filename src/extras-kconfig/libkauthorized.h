@@ -320,7 +320,7 @@ void k_authorized_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAuthorized*
-/// @param callback void fn(KAuthorized*)
+/// @param callback void func(KAuthorized* self)
 void k_authorized_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -398,7 +398,7 @@ void k_authorized_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KAuthorized*
-/// @param callback void fn(KAuthorized*, QObject*)
+/// @param callback void func(KAuthorized* self, QObject* param1)
 void k_authorized_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -408,7 +408,7 @@ void k_authorized_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KAuthorized*
-/// @param callback void fn(KAuthorized*, const char*)
+/// @param callback void func(KAuthorized* self, const char* objectName)
 void k_authorized_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kauthorized.html#dtor.KAuthorized)

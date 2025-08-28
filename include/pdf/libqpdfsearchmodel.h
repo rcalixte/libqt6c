@@ -40,7 +40,7 @@ int32_t q_pdfsearchmodel_metacall(void* self, int32_t param1, int param2, void* 
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int32_t fn(QPdfSearchModel*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QPdfSearchModel* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_pdfsearchmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -92,7 +92,7 @@ libqt_map /* of int to char* */ q_pdfsearchmodel_role_names(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback libqt_map /* of int to char* */ fn()
+/// @param callback libqt_map /* of int to char* */ func()
 void q_pdfsearchmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#roleNames)
@@ -113,7 +113,7 @@ int32_t q_pdfsearchmodel_row_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int32_t fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback int32_t func(QPdfSearchModel* self, QModelIndex* parent)
 void q_pdfsearchmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#rowCount)
@@ -136,7 +136,7 @@ QVariant* q_pdfsearchmodel_data(void* self, void* index, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QVariant* fn(QPdfSearchModel*, QModelIndex*, int)
+/// @param callback QVariant* func(QPdfSearchModel* self, QModelIndex* index, int role)
 void q_pdfsearchmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#data)
@@ -173,7 +173,7 @@ void q_pdfsearchmodel_document_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#documentChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_document_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#searchStringChanged)
@@ -184,7 +184,7 @@ void q_pdfsearchmodel_search_string_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#searchStringChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_search_string_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#countChanged)
@@ -195,7 +195,7 @@ void q_pdfsearchmodel_count_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#countChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#updatePage)
@@ -209,7 +209,7 @@ void q_pdfsearchmodel_update_page(void* self, int page);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, int)
+/// @param callback void func(QPdfSearchModel* self, int page)
 void q_pdfsearchmodel_on_update_page(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#updatePage)
@@ -231,7 +231,7 @@ void q_pdfsearchmodel_timer_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QTimerEvent*)
+/// @param callback void func(QPdfSearchModel* self, QTimerEvent* event)
 void q_pdfsearchmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#timerEvent)
@@ -283,7 +283,7 @@ QModelIndex* q_pdfsearchmodel_parent(void* self, void* child);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QModelIndex* fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfSearchModel* self, QModelIndex* child)
 void q_pdfsearchmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -311,7 +311,7 @@ int32_t q_pdfsearchmodel_column_count(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int32_t fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback int32_t func(QPdfSearchModel* self, QModelIndex* parent)
 void q_pdfsearchmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -339,7 +339,7 @@ bool q_pdfsearchmodel_has_children(void* self, void* parent);
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* parent)
 void q_pdfsearchmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -428,7 +428,7 @@ void q_pdfsearchmodel_data_changed(void* self, void* topLeft, void* bottomRight)
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 void q_pdfsearchmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -446,7 +446,7 @@ void q_pdfsearchmodel_header_data_changed(void* self, int32_t orientation, int f
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, enum Qt__Orientation, int, int)
+/// @param callback void func(QPdfSearchModel* self, enum Qt__Orientation orientation, int first, int last)
 void q_pdfsearchmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -461,7 +461,7 @@ void q_pdfsearchmodel_layout_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -476,7 +476,7 @@ void q_pdfsearchmodel_layout_about_to_be_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -549,7 +549,7 @@ void q_pdfsearchmodel_data_changed3(void* self, void* topLeft, void* bottomRight
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_pdfsearchmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
@@ -565,7 +565,7 @@ void q_pdfsearchmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QPdfSearchModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_pdfsearchmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -582,7 +582,7 @@ void q_pdfsearchmodel_layout_changed2(void* self, libqt_list parents, int32_t hi
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QPdfSearchModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_pdfsearchmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -598,7 +598,7 @@ void q_pdfsearchmodel_layout_about_to_be_changed1(void* self, libqt_list parents
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */)
+/// @param callback void func(QPdfSearchModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
 void q_pdfsearchmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -615,7 +615,7 @@ void q_pdfsearchmodel_layout_about_to_be_changed2(void* self, libqt_list parents
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+/// @param callback void func(QPdfSearchModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
 void q_pdfsearchmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
@@ -844,7 +844,7 @@ void q_pdfsearchmodel_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -915,7 +915,7 @@ void q_pdfsearchmodel_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QObject*)
+/// @param callback void func(QPdfSearchModel* self, QObject* param1)
 void q_pdfsearchmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractListModel
@@ -949,7 +949,7 @@ QModelIndex* q_pdfsearchmodel_qbase_index(void* self, int row, int column, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QModelIndex* fn(QPdfSearchModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfSearchModel* self, int row, int column, QModelIndex* parent)
 void q_pdfsearchmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -983,7 +983,7 @@ QModelIndex* q_pdfsearchmodel_qbase_sibling(void* self, int row, int column, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QModelIndex* fn(QPdfSearchModel*, int, int, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfSearchModel* self, int row, int column, QModelIndex* idx)
 void q_pdfsearchmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -1021,7 +1021,7 @@ bool q_pdfsearchmodel_qbase_drop_mime_data(void* self, void* data, int32_t actio
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_pdfsearchmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -1055,7 +1055,7 @@ int64_t q_pdfsearchmodel_qbase_flags(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int64_t fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback int64_t func(QPdfSearchModel* self, QModelIndex* index)
 void q_pdfsearchmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1089,7 +1089,7 @@ bool q_pdfsearchmodel_qbase_set_data(void* self, void* index, void* value, int r
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*, QVariant*, int)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* index, QVariant* value, int role)
 void q_pdfsearchmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1123,7 +1123,7 @@ QVariant* q_pdfsearchmodel_qbase_header_data(void* self, int section, int32_t or
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QVariant* fn(QPdfSearchModel*, int, enum Qt__Orientation, int)
+/// @param callback QVariant* func(QPdfSearchModel* self, int section, enum Qt__Orientation orientation, int role)
 void q_pdfsearchmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
@@ -1159,7 +1159,7 @@ bool q_pdfsearchmodel_qbase_set_header_data(void* self, int section, int32_t ori
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, int, enum Qt__Orientation, QVariant*, int)
+/// @param callback bool func(QPdfSearchModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 void q_pdfsearchmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1189,7 +1189,7 @@ libqt_map /* of int to QVariant* */ q_pdfsearchmodel_qbase_item_data(void* self,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback libqt_map /* of int to QVariant* */ fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback libqt_map /* of int to QVariant* */ func(QPdfSearchModel* self, QModelIndex* index)
 void q_pdfsearchmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1221,7 +1221,7 @@ bool q_pdfsearchmodel_qbase_set_item_data(void* self, void* index, libqt_map /* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ /* of int to QVariant* */)
 void q_pdfsearchmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractItemModel
@@ -1251,7 +1251,7 @@ bool q_pdfsearchmodel_qbase_clear_item_data(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* index)
 void q_pdfsearchmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1283,7 +1283,7 @@ const char** q_pdfsearchmodel_qbase_mime_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_pdfsearchmodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1313,7 +1313,7 @@ QMimeData* q_pdfsearchmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QMimeData* fn(QPdfSearchModel*, libqt_list /* of QModelIndex* */)
+/// @param callback QMimeData* func(QPdfSearchModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_pdfsearchmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1351,7 +1351,7 @@ bool q_pdfsearchmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t a
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 void q_pdfsearchmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1383,7 +1383,7 @@ int64_t q_pdfsearchmodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_pdfsearchmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1415,7 +1415,7 @@ int64_t q_pdfsearchmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_pdfsearchmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1449,7 +1449,7 @@ bool q_pdfsearchmodel_qbase_insert_rows(void* self, int row, int count, void* pa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, int row, int count, QModelIndex* parent)
 void q_pdfsearchmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1483,7 +1483,7 @@ bool q_pdfsearchmodel_qbase_insert_columns(void* self, int column, int count, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, int column, int count, QModelIndex* parent)
 void q_pdfsearchmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1517,7 +1517,7 @@ bool q_pdfsearchmodel_qbase_remove_rows(void* self, int row, int count, void* pa
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, int row, int count, QModelIndex* parent)
 void q_pdfsearchmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1551,7 +1551,7 @@ bool q_pdfsearchmodel_qbase_remove_columns(void* self, int column, int count, vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, int, int, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, int column, int count, QModelIndex* parent)
 void q_pdfsearchmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1589,7 +1589,7 @@ bool q_pdfsearchmodel_qbase_move_rows(void* self, void* sourceParent, int source
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 void q_pdfsearchmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1627,7 +1627,7 @@ bool q_pdfsearchmodel_qbase_move_columns(void* self, void* sourceParent, int sou
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 void q_pdfsearchmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -1657,7 +1657,7 @@ void q_pdfsearchmodel_qbase_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent)
 void q_pdfsearchmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1687,7 +1687,7 @@ bool q_pdfsearchmodel_qbase_can_fetch_more(void* self, void* parent);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* parent)
 void q_pdfsearchmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1719,7 +1719,7 @@ void q_pdfsearchmodel_qbase_sort(void* self, int column, int32_t order);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, int, enum Qt__SortOrder)
+/// @param callback void func(QPdfSearchModel* self, int column, enum Qt__SortOrder order)
 void q_pdfsearchmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
@@ -1749,7 +1749,7 @@ QModelIndex* q_pdfsearchmodel_qbase_buddy(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QModelIndex* fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback QModelIndex* func(QPdfSearchModel* self, QModelIndex* index)
 void q_pdfsearchmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1787,7 +1787,7 @@ libqt_list /* of QModelIndex* */ q_pdfsearchmodel_qbase_match(void* self, void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn(QPdfSearchModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+/// @param callback libqt_list /* of QModelIndex* */ func(QPdfSearchModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 void q_pdfsearchmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -1817,7 +1817,7 @@ QSize* q_pdfsearchmodel_qbase_span(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QSize* fn(QPdfSearchModel*, QModelIndex*)
+/// @param callback QSize* func(QPdfSearchModel* self, QModelIndex* index)
 void q_pdfsearchmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1849,7 +1849,7 @@ void q_pdfsearchmodel_qbase_multi_data(void* self, void* index, void* roleDataSp
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, QModelRoleDataSpan*)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 void q_pdfsearchmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1877,7 +1877,7 @@ bool q_pdfsearchmodel_qbase_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_pdfsearchmodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1905,7 +1905,7 @@ void q_pdfsearchmodel_qbase_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -1933,7 +1933,7 @@ void q_pdfsearchmodel_qbase_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
@@ -1963,7 +1963,7 @@ bool q_pdfsearchmodel_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QEvent*)
+/// @param callback bool func(QPdfSearchModel* self, QEvent* event)
 void q_pdfsearchmodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -1995,7 +1995,7 @@ bool q_pdfsearchmodel_qbase_event_filter(void* self, void* watched, void* event)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QObject*, QEvent*)
+/// @param callback bool func(QPdfSearchModel* self, QObject* watched, QEvent* event)
 void q_pdfsearchmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -2025,7 +2025,7 @@ void q_pdfsearchmodel_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QChildEvent*)
+/// @param callback void func(QPdfSearchModel* self, QChildEvent* event)
 void q_pdfsearchmodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2055,7 +2055,7 @@ void q_pdfsearchmodel_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QEvent*)
+/// @param callback void func(QPdfSearchModel* self, QEvent* event)
 void q_pdfsearchmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2085,7 +2085,7 @@ void q_pdfsearchmodel_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QMetaMethod*)
+/// @param callback void func(QPdfSearchModel* self, QMetaMethod* signal)
 void q_pdfsearchmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -2115,7 +2115,7 @@ void q_pdfsearchmodel_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QMetaMethod*)
+/// @param callback void func(QPdfSearchModel* self, QMetaMethod* signal)
 void q_pdfsearchmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2147,7 +2147,7 @@ QModelIndex* q_pdfsearchmodel_qbase_create_index(void* self, int row, int column
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QModelIndex* fn(QPdfSearchModel*, int, int)
+/// @param callback QModelIndex* func(QPdfSearchModel* self, int row, int column)
 void q_pdfsearchmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2179,7 +2179,7 @@ void q_pdfsearchmodel_qbase_encode_data(void* self, libqt_list indexes, void* st
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+/// @param callback void func(QPdfSearchModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
 void q_pdfsearchmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2215,7 +2215,7 @@ bool q_pdfsearchmodel_qbase_decode_data(void* self, int row, int column, void* p
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, int, int, QModelIndex*, QDataStream*)
+/// @param callback bool func(QPdfSearchModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 void q_pdfsearchmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2249,7 +2249,7 @@ void q_pdfsearchmodel_qbase_begin_insert_rows(void* self, void* parent, int firs
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2277,7 +2277,7 @@ void q_pdfsearchmodel_qbase_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2311,7 +2311,7 @@ void q_pdfsearchmodel_qbase_begin_remove_rows(void* self, void* parent, int firs
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2339,7 +2339,7 @@ void q_pdfsearchmodel_qbase_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2377,7 +2377,7 @@ bool q_pdfsearchmodel_qbase_begin_move_rows(void* self, void* sourceParent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 void q_pdfsearchmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2405,7 +2405,7 @@ void q_pdfsearchmodel_qbase_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2439,7 +2439,7 @@ void q_pdfsearchmodel_qbase_begin_insert_columns(void* self, void* parent, int f
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2467,7 +2467,7 @@ void q_pdfsearchmodel_qbase_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2501,7 +2501,7 @@ void q_pdfsearchmodel_qbase_begin_remove_columns(void* self, void* parent, int f
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2529,7 +2529,7 @@ void q_pdfsearchmodel_qbase_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2567,7 +2567,7 @@ bool q_pdfsearchmodel_qbase_begin_move_columns(void* self, void* sourceParent, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback bool func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 void q_pdfsearchmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2595,7 +2595,7 @@ void q_pdfsearchmodel_qbase_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2623,7 +2623,7 @@ void q_pdfsearchmodel_qbase_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2651,7 +2651,7 @@ void q_pdfsearchmodel_qbase_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn()
+/// @param callback void func()
 void q_pdfsearchmodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
@@ -2683,7 +2683,7 @@ void q_pdfsearchmodel_qbase_change_persistent_index(void* self, void* from, void
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* from, QModelIndex* to)
 void q_pdfsearchmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2715,7 +2715,7 @@ void q_pdfsearchmodel_qbase_change_persistent_index_list(void* self, libqt_list 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+/// @param callback void func(QPdfSearchModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
 void q_pdfsearchmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2743,7 +2743,7 @@ libqt_list /* of QModelIndex* */ q_pdfsearchmodel_qbase_persistent_index_list(vo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_pdfsearchmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
@@ -2771,7 +2771,7 @@ QObject* q_pdfsearchmodel_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_pdfsearchmodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -2799,7 +2799,7 @@ int32_t q_pdfsearchmodel_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_pdfsearchmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -2829,7 +2829,7 @@ int32_t q_pdfsearchmodel_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback int32_t fn(QPdfSearchModel*, const char*)
+/// @param callback int32_t func(QPdfSearchModel* self, const char* signal)
 void q_pdfsearchmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -2859,7 +2859,7 @@ bool q_pdfsearchmodel_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPdfSearchModel*
-/// @param callback bool fn(QPdfSearchModel*, QMetaMethod*)
+/// @param callback bool func(QPdfSearchModel* self, QMetaMethod* signal)
 void q_pdfsearchmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2869,7 +2869,7 @@ void q_pdfsearchmodel_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2879,7 +2879,7 @@ void q_pdfsearchmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2889,7 +2889,7 @@ void q_pdfsearchmodel_on_rows_inserted(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2899,7 +2899,7 @@ void q_pdfsearchmodel_on_rows_about_to_be_removed(void* self, void (*callback)(v
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2909,7 +2909,7 @@ void q_pdfsearchmodel_on_rows_removed(void* self, void (*callback)(void*, void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2919,7 +2919,7 @@ void q_pdfsearchmodel_on_columns_about_to_be_inserted(void* self, void (*callbac
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2929,7 +2929,7 @@ void q_pdfsearchmodel_on_columns_inserted(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2939,7 +2939,7 @@ void q_pdfsearchmodel_on_columns_about_to_be_removed(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* parent, int first, int last)
 void q_pdfsearchmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2949,7 +2949,7 @@ void q_pdfsearchmodel_on_columns_removed(void* self, void (*callback)(void*, voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2959,7 +2959,7 @@ void q_pdfsearchmodel_on_model_about_to_be_reset(void* self, void (*callback)(vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*)
+/// @param callback void func(QPdfSearchModel* self)
 void q_pdfsearchmodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2969,7 +2969,7 @@ void q_pdfsearchmodel_on_model_reset(void* self, void (*callback)(void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_pdfsearchmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2979,7 +2979,7 @@ void q_pdfsearchmodel_on_rows_about_to_be_moved(void* self, void (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 void q_pdfsearchmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2989,7 +2989,7 @@ void q_pdfsearchmodel_on_rows_moved(void* self, void (*callback)(void*, void*, i
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_pdfsearchmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2999,7 +2999,7 @@ void q_pdfsearchmodel_on_columns_about_to_be_moved(void* self, void (*callback)(
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int)
+/// @param callback void func(QPdfSearchModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 void q_pdfsearchmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -3009,7 +3009,7 @@ void q_pdfsearchmodel_on_columns_moved(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QPdfSearchModel*
-/// @param callback void fn(QPdfSearchModel*, const char*)
+/// @param callback void func(QPdfSearchModel* self, const char* objectName)
 void q_pdfsearchmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#dtor.QPdfSearchModel)

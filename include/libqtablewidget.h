@@ -134,7 +134,7 @@ QTableWidgetItem* q_tablewidgetitem_clone(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidgetItem*
-/// @param callback QTableWidgetItem* fn()
+/// @param callback QTableWidgetItem* func()
 void q_tablewidgetitem_on_clone(void* self, QTableWidgetItem* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#clone)
@@ -337,7 +337,7 @@ QVariant* q_tablewidgetitem_data(void* self, int role);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidgetItem*
-/// @param callback QVariant* fn(QTableWidgetItem*, int)
+/// @param callback QVariant* func(QTableWidgetItem* self, int role)
 void q_tablewidgetitem_on_data(void* self, QVariant* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#data)
@@ -360,7 +360,7 @@ void q_tablewidgetitem_set_data(void* self, int role, void* value);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidgetItem*
-/// @param callback void fn(QTableWidgetItem*, int, QVariant*)
+/// @param callback void func(QTableWidgetItem* self, int role, QVariant* value)
 void q_tablewidgetitem_on_set_data(void* self, void (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#setData)
@@ -383,7 +383,7 @@ bool q_tablewidgetitem_operator_lesser(void* self, void* other);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidgetItem*
-/// @param callback bool fn(QTableWidgetItem*, QTableWidgetItem*)
+/// @param callback bool func(QTableWidgetItem* self, QTableWidgetItem* other)
 void q_tablewidgetitem_on_operator_lesser(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-lt)
@@ -405,7 +405,7 @@ void q_tablewidgetitem_read(void* self, void* in);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidgetItem*
-/// @param callback void fn(QTableWidgetItem*, QDataStream*)
+/// @param callback void func(QTableWidgetItem* self, QDataStream* in)
 void q_tablewidgetitem_on_read(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#read)
@@ -427,7 +427,7 @@ void q_tablewidgetitem_write(void* self, void* out);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidgetItem*
-/// @param callback void fn(QTableWidgetItem*, QDataStream*)
+/// @param callback void func(QTableWidgetItem* self, QDataStream* out)
 void q_tablewidgetitem_on_write(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#write)
@@ -498,7 +498,7 @@ int32_t q_tablewidget_metacall(void* self, int32_t param1, int param2, void* par
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn(QTableWidget*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QTableWidget* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_tablewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -861,7 +861,7 @@ void q_tablewidget_item_pressed(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemPressed)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* item)
 void q_tablewidget_on_item_pressed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemClicked)
@@ -873,7 +873,7 @@ void q_tablewidget_item_clicked(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemClicked)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* item)
 void q_tablewidget_on_item_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemDoubleClicked)
@@ -885,7 +885,7 @@ void q_tablewidget_item_double_clicked(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemDoubleClicked)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* item)
 void q_tablewidget_on_item_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemActivated)
@@ -897,7 +897,7 @@ void q_tablewidget_item_activated(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemActivated)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* item)
 void q_tablewidget_on_item_activated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemEntered)
@@ -909,7 +909,7 @@ void q_tablewidget_item_entered(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemEntered)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* item)
 void q_tablewidget_on_item_entered(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemChanged)
@@ -921,7 +921,7 @@ void q_tablewidget_item_changed(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* item)
 void q_tablewidget_on_item_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#currentItemChanged)
@@ -934,7 +934,7 @@ void q_tablewidget_current_item_changed(void* self, void* current, void* previou
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#currentItemChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTableWidgetItem*, QTableWidgetItem*)
+/// @param callback void func(QTableWidget* self, QTableWidgetItem* current, QTableWidgetItem* previous)
 void q_tablewidget_on_current_item_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemSelectionChanged)
@@ -945,7 +945,7 @@ void q_tablewidget_item_selection_changed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#itemSelectionChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*)
+/// @param callback void func(QTableWidget* self)
 void q_tablewidget_on_item_selection_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellPressed)
@@ -958,7 +958,7 @@ void q_tablewidget_cell_pressed(void* self, int row, int column);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellPressed)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int row, int column)
 void q_tablewidget_on_cell_pressed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellClicked)
@@ -971,7 +971,7 @@ void q_tablewidget_cell_clicked(void* self, int row, int column);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellClicked)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int row, int column)
 void q_tablewidget_on_cell_clicked(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellDoubleClicked)
@@ -984,7 +984,7 @@ void q_tablewidget_cell_double_clicked(void* self, int row, int column);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellDoubleClicked)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int row, int column)
 void q_tablewidget_on_cell_double_clicked(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellActivated)
@@ -997,7 +997,7 @@ void q_tablewidget_cell_activated(void* self, int row, int column);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellActivated)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int row, int column)
 void q_tablewidget_on_cell_activated(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellEntered)
@@ -1010,7 +1010,7 @@ void q_tablewidget_cell_entered(void* self, int row, int column);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellEntered)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int row, int column)
 void q_tablewidget_on_cell_entered(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellChanged)
@@ -1023,7 +1023,7 @@ void q_tablewidget_cell_changed(void* self, int row, int column);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#cellChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int row, int column)
 void q_tablewidget_on_cell_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#currentCellChanged)
@@ -1038,7 +1038,7 @@ void q_tablewidget_current_cell_changed(void* self, int currentRow, int currentC
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#currentCellChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int, int, int)
+/// @param callback void func(QTableWidget* self, int currentRow, int currentColumn, int previousRow, int previousColumn)
 void q_tablewidget_on_current_cell_changed(void* self, void (*callback)(void*, int, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#event)
@@ -1052,7 +1052,7 @@ bool q_tablewidget_event(void* self, void* e);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, QEvent*)
+/// @param callback bool func(QTableWidget* self, QEvent* e)
 void q_tablewidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#event)
@@ -1075,7 +1075,7 @@ const char** q_tablewidget_mime_types(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback const char** fn()
+/// @param callback const char** func()
 void q_tablewidget_on_mime_types(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeTypes)
@@ -1096,7 +1096,7 @@ QMimeData* q_tablewidget_mime_data(void* self, libqt_list items);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback QMimeData* fn(QTableWidget*, libqt_list /* of QTableWidgetItem* */)
+/// @param callback QMimeData* func(QTableWidget* self, libqt_list /* of QTableWidgetItem* */ /* of QTableWidgetItem* */)
 void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
@@ -1121,7 +1121,7 @@ bool q_tablewidget_drop_mime_data(void* self, int row, int column, void* data, i
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, int, int, QMimeData*, enum Qt__DropAction)
+/// @param callback bool func(QTableWidget* self, int row, int column, QMimeData* data, enum Qt__DropAction action)
 void q_tablewidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, int, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropMimeData)
@@ -1147,7 +1147,7 @@ int64_t q_tablewidget_supported_drop_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback int64_t fn()
+/// @param callback int64_t func()
 void q_tablewidget_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#supportedDropActions)
@@ -1170,7 +1170,7 @@ void q_tablewidget_drop_event(void* self, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QDropEvent*)
+/// @param callback void func(QTableWidget* self, QDropEvent* event)
 void q_tablewidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropEvent)
@@ -1227,7 +1227,7 @@ void q_tablewidget_set_model(void* self, void* model);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QAbstractItemModel*)
+/// @param callback void func(QTableWidget* self, QAbstractItemModel* model)
 void q_tablewidget_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -1993,7 +1993,7 @@ void q_tablewidget_pressed(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -2009,7 +2009,7 @@ void q_tablewidget_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -2025,7 +2025,7 @@ void q_tablewidget_double_clicked(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -2041,7 +2041,7 @@ void q_tablewidget_activated(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_activated(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -2057,7 +2057,7 @@ void q_tablewidget_entered(void* self, void* index);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_entered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -2072,7 +2072,7 @@ void q_tablewidget_viewport_entered(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*)
+/// @param callback void func(QTableWidget* self)
 void q_tablewidget_on_viewport_entered(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
@@ -2088,7 +2088,7 @@ void q_tablewidget_icon_size_changed(void* self, void* size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QSize*)
+/// @param callback void func(QTableWidget* self, QSize* size)
 void q_tablewidget_on_icon_size_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -4257,7 +4257,7 @@ void q_tablewidget_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, const char*)
+/// @param callback void func(QTableWidget* self, const char* title)
 void q_tablewidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -4273,7 +4273,7 @@ void q_tablewidget_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QIcon*)
+/// @param callback void func(QTableWidget* self, QIcon* icon)
 void q_tablewidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4289,7 +4289,7 @@ void q_tablewidget_window_icon_text_changed(void* self, const char* iconText);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, const char*)
+/// @param callback void func(QTableWidget* self, const char* iconText)
 void q_tablewidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -4305,7 +4305,7 @@ void q_tablewidget_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QPoint*)
+/// @param callback void func(QTableWidget* self, QPoint* pos)
 void q_tablewidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4682,7 +4682,7 @@ void q_tablewidget_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*)
+/// @param callback void func(QTableWidget* self)
 void q_tablewidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -4760,7 +4760,7 @@ void q_tablewidget_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QObject*)
+/// @param callback void func(QTableWidget* self, QObject* param1)
 void q_tablewidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4881,7 +4881,7 @@ void q_tablewidget_qbase_set_root_index(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_set_root_index(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -4911,7 +4911,7 @@ void q_tablewidget_qbase_set_selection_model(void* self, void* selectionModel);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QItemSelectionModel*)
+/// @param callback void func(QTableWidget* self, QItemSelectionModel* selectionModel)
 void q_tablewidget_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -4939,7 +4939,7 @@ void q_tablewidget_qbase_do_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_do_items_layout(void* self, void (*callback)());
 
 /// Inherited from QTableView
@@ -4969,7 +4969,7 @@ QRect* q_tablewidget_qbase_visual_rect(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QRect* fn(QTableWidget*, QModelIndex*)
+/// @param callback QRect* func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5001,7 +5001,7 @@ void q_tablewidget_qbase_scroll_to(void* self, void* index, int32_t hint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*, enum QAbstractItemView__ScrollHint)
+/// @param callback void func(QTableWidget* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 void q_tablewidget_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QTableView
@@ -5031,7 +5031,7 @@ QModelIndex* q_tablewidget_qbase_index_at(void* self, void* p);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QModelIndex* fn(QTableWidget*, QPoint*)
+/// @param callback QModelIndex* func(QTableWidget* self, QPoint* p)
 void q_tablewidget_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5063,7 +5063,7 @@ void q_tablewidget_qbase_scroll_contents_by(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int dx, int dy)
 void q_tablewidget_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QTableView
@@ -5093,7 +5093,7 @@ void q_tablewidget_qbase_init_view_item_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QStyleOptionViewItem*)
+/// @param callback void func(QTableWidget* self, QStyleOptionViewItem* option)
 void q_tablewidget_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5123,7 +5123,7 @@ void q_tablewidget_qbase_paint_event(void* self, void* e);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QPaintEvent*)
+/// @param callback void func(QTableWidget* self, QPaintEvent* e)
 void q_tablewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5153,7 +5153,7 @@ void q_tablewidget_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTimerEvent*)
+/// @param callback void func(QTableWidget* self, QTimerEvent* event)
 void q_tablewidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5181,7 +5181,7 @@ int32_t q_tablewidget_qbase_horizontal_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tablewidget_on_horizontal_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QTableView
@@ -5209,7 +5209,7 @@ int32_t q_tablewidget_qbase_vertical_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tablewidget_on_vertical_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QTableView
@@ -5241,7 +5241,7 @@ QModelIndex* q_tablewidget_qbase_move_cursor(void* self, int32_t cursorAction, i
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QModelIndex* fn(QTableWidget*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
+/// @param callback QModelIndex* func(QTableWidget* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 void q_tablewidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// Inherited from QTableView
@@ -5273,7 +5273,7 @@ void q_tablewidget_qbase_set_selection(void* self, void* rect, int64_t command);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QRect*, flag of enum QItemSelectionModel__SelectionFlag)
+/// @param callback void func(QTableWidget* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 void q_tablewidget_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
 
 /// Inherited from QTableView
@@ -5303,7 +5303,7 @@ QRegion* q_tablewidget_qbase_visual_region_for_selection(void* self, void* selec
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QRegion* fn(QTableWidget*, QItemSelection*)
+/// @param callback QRegion* func(QTableWidget* self, QItemSelection* selection)
 void q_tablewidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5331,7 +5331,7 @@ libqt_list /* of QModelIndex* */ q_tablewidget_qbase_selected_indexes(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback libqt_list /* of QModelIndex* */ fn()
+/// @param callback libqt_list /* of QModelIndex* */ func()
 void q_tablewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QTableView
@@ -5359,7 +5359,7 @@ void q_tablewidget_qbase_update_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_update_geometries(void* self, void (*callback)());
 
 /// Inherited from QTableView
@@ -5387,7 +5387,7 @@ QSize* q_tablewidget_qbase_viewport_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tablewidget_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QTableView
@@ -5417,7 +5417,7 @@ int32_t q_tablewidget_qbase_size_hint_for_row(void* self, int row);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn(QTableWidget*, int)
+/// @param callback int32_t func(QTableWidget* self, int row)
 void q_tablewidget_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QTableView
@@ -5447,7 +5447,7 @@ int32_t q_tablewidget_qbase_size_hint_for_column(void* self, int column);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn(QTableWidget*, int)
+/// @param callback int32_t func(QTableWidget* self, int column)
 void q_tablewidget_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QTableView
@@ -5477,7 +5477,7 @@ void q_tablewidget_qbase_vertical_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int)
+/// @param callback void func(QTableWidget* self, int action)
 void q_tablewidget_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QTableView
@@ -5507,7 +5507,7 @@ void q_tablewidget_qbase_horizontal_scrollbar_action(void* self, int action);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int)
+/// @param callback void func(QTableWidget* self, int action)
 void q_tablewidget_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QTableView
@@ -5537,7 +5537,7 @@ bool q_tablewidget_qbase_is_index_hidden(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, QModelIndex*)
+/// @param callback bool func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5569,7 +5569,7 @@ void q_tablewidget_qbase_selection_changed(void* self, void* selected, void* des
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QItemSelection*, QItemSelection*)
+/// @param callback void func(QTableWidget* self, QItemSelection* selected, QItemSelection* deselected)
 void q_tablewidget_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QTableView
@@ -5601,7 +5601,7 @@ void q_tablewidget_qbase_current_changed(void* self, void* current, void* previo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*, QModelIndex*)
+/// @param callback void func(QTableWidget* self, QModelIndex* current, QModelIndex* previous)
 void q_tablewidget_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5631,7 +5631,7 @@ void q_tablewidget_qbase_keyboard_search(void* self, const char* search);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, const char*)
+/// @param callback void func(QTableWidget* self, const char* search)
 void q_tablewidget_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractItemView
@@ -5661,7 +5661,7 @@ QAbstractItemDelegate* q_tablewidget_qbase_item_delegate_for_index(void* self, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QAbstractItemDelegate* fn(QTableWidget*, QModelIndex*)
+/// @param callback QAbstractItemDelegate* func(QTableWidget* self, QModelIndex* index)
 void q_tablewidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -5691,7 +5691,7 @@ QVariant* q_tablewidget_qbase_input_method_query(void* self, int64_t query);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QVariant* fn(QTableWidget*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QTableWidget* self, enum Qt__InputMethodQuery query)
 void q_tablewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -5719,7 +5719,7 @@ void q_tablewidget_qbase_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_reset(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5747,7 +5747,7 @@ void q_tablewidget_qbase_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_select_all(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5781,7 +5781,7 @@ void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*, QModelIndex*, int*)
+/// @param callback void func(QTableWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemView
@@ -5815,7 +5815,7 @@ void q_tablewidget_qbase_rows_inserted(void* self, void* parent, int start, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*, int, int)
+/// @param callback void func(QTableWidget* self, QModelIndex* parent, int start, int end)
 void q_tablewidget_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -5849,7 +5849,7 @@ void q_tablewidget_qbase_rows_about_to_be_removed(void* self, void* parent, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*, int, int)
+/// @param callback void func(QTableWidget* self, QModelIndex* parent, int start, int end)
 void q_tablewidget_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -5877,7 +5877,7 @@ void q_tablewidget_qbase_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_update_editor_data(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5905,7 +5905,7 @@ void q_tablewidget_qbase_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_update_editor_geometries(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -5935,7 +5935,7 @@ void q_tablewidget_qbase_vertical_scrollbar_value_changed(void* self, int value)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int)
+/// @param callback void func(QTableWidget* self, int value)
 void q_tablewidget_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5965,7 +5965,7 @@ void q_tablewidget_qbase_horizontal_scrollbar_value_changed(void* self, int valu
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int)
+/// @param callback void func(QTableWidget* self, int value)
 void q_tablewidget_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
@@ -5997,7 +5997,7 @@ void q_tablewidget_qbase_close_editor(void* self, void* editor, int32_t hint);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
+/// @param callback void func(QTableWidget* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint)
 void q_tablewidget_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6027,7 +6027,7 @@ void q_tablewidget_qbase_commit_data(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QWidget*)
+/// @param callback void func(QTableWidget* self, QWidget* editor)
 void q_tablewidget_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6057,7 +6057,7 @@ void q_tablewidget_qbase_editor_destroyed(void* self, void* editor);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QObject*)
+/// @param callback void func(QTableWidget* self, QObject* editor)
 void q_tablewidget_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6091,7 +6091,7 @@ bool q_tablewidget_qbase_edit2(void* self, void* index, int32_t trigger, void* e
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
+/// @param callback bool func(QTableWidget* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 void q_tablewidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
@@ -6127,7 +6127,7 @@ int64_t q_tablewidget_qbase_selection_command(void* self, void* index, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int64_t fn(QTableWidget*, QModelIndex*, QEvent*)
+/// @param callback int64_t func(QTableWidget* self, QModelIndex* index, QEvent* event)
 void q_tablewidget_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6157,7 +6157,7 @@ void q_tablewidget_qbase_start_drag(void* self, int64_t supportedActions);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, flag of enum Qt__DropAction)
+/// @param callback void func(QTableWidget* self, flag of enum Qt__DropAction supportedActions)
 void q_tablewidget_on_start_drag(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
@@ -6187,7 +6187,7 @@ bool q_tablewidget_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, bool)
+/// @param callback bool func(QTableWidget* self, bool next)
 void q_tablewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QAbstractItemView
@@ -6217,7 +6217,7 @@ bool q_tablewidget_qbase_viewport_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, QEvent*)
+/// @param callback bool func(QTableWidget* self, QEvent* event)
 void q_tablewidget_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6247,7 +6247,7 @@ void q_tablewidget_qbase_mouse_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMouseEvent*)
+/// @param callback void func(QTableWidget* self, QMouseEvent* event)
 void q_tablewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6277,7 +6277,7 @@ void q_tablewidget_qbase_mouse_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMouseEvent*)
+/// @param callback void func(QTableWidget* self, QMouseEvent* event)
 void q_tablewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6307,7 +6307,7 @@ void q_tablewidget_qbase_mouse_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMouseEvent*)
+/// @param callback void func(QTableWidget* self, QMouseEvent* event)
 void q_tablewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6337,7 +6337,7 @@ void q_tablewidget_qbase_mouse_double_click_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMouseEvent*)
+/// @param callback void func(QTableWidget* self, QMouseEvent* event)
 void q_tablewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6367,7 +6367,7 @@ void q_tablewidget_qbase_drag_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QDragEnterEvent*)
+/// @param callback void func(QTableWidget* self, QDragEnterEvent* event)
 void q_tablewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6397,7 +6397,7 @@ void q_tablewidget_qbase_drag_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QDragMoveEvent*)
+/// @param callback void func(QTableWidget* self, QDragMoveEvent* event)
 void q_tablewidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6427,7 +6427,7 @@ void q_tablewidget_qbase_drag_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QDragLeaveEvent*)
+/// @param callback void func(QTableWidget* self, QDragLeaveEvent* event)
 void q_tablewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6457,7 +6457,7 @@ void q_tablewidget_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QFocusEvent*)
+/// @param callback void func(QTableWidget* self, QFocusEvent* event)
 void q_tablewidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6487,7 +6487,7 @@ void q_tablewidget_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QFocusEvent*)
+/// @param callback void func(QTableWidget* self, QFocusEvent* event)
 void q_tablewidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6517,7 +6517,7 @@ void q_tablewidget_qbase_key_press_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QKeyEvent*)
+/// @param callback void func(QTableWidget* self, QKeyEvent* event)
 void q_tablewidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6547,7 +6547,7 @@ void q_tablewidget_qbase_resize_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QResizeEvent*)
+/// @param callback void func(QTableWidget* self, QResizeEvent* event)
 void q_tablewidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6577,7 +6577,7 @@ void q_tablewidget_qbase_input_method_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QInputMethodEvent*)
+/// @param callback void func(QTableWidget* self, QInputMethodEvent* event)
 void q_tablewidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -6609,7 +6609,7 @@ bool q_tablewidget_qbase_event_filter(void* self, void* object, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, QObject*, QEvent*)
+/// @param callback bool func(QTableWidget* self, QObject* object, QEvent* event)
 void q_tablewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -6637,7 +6637,7 @@ QSize* q_tablewidget_qbase_minimum_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tablewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6665,7 +6665,7 @@ QSize* q_tablewidget_qbase_size_hint(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_tablewidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6695,7 +6695,7 @@ void q_tablewidget_qbase_setup_viewport(void* self, void* viewport);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QWidget*)
+/// @param callback void func(QTableWidget* self, QWidget* viewport)
 void q_tablewidget_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -6725,7 +6725,7 @@ void q_tablewidget_qbase_wheel_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QWheelEvent*)
+/// @param callback void func(QTableWidget* self, QWheelEvent* param1)
 void q_tablewidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -6755,7 +6755,7 @@ void q_tablewidget_qbase_context_menu_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QContextMenuEvent*)
+/// @param callback void func(QTableWidget* self, QContextMenuEvent* param1)
 void q_tablewidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -6785,7 +6785,7 @@ void q_tablewidget_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QEvent*)
+/// @param callback void func(QTableWidget* self, QEvent* param1)
 void q_tablewidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -6815,7 +6815,7 @@ void q_tablewidget_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QStyleOptionFrame*)
+/// @param callback void func(QTableWidget* self, QStyleOptionFrame* option)
 void q_tablewidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -6843,7 +6843,7 @@ int32_t q_tablewidget_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tablewidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -6873,7 +6873,7 @@ void q_tablewidget_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, bool)
+/// @param callback void func(QTableWidget* self, bool visible)
 void q_tablewidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -6903,7 +6903,7 @@ int32_t q_tablewidget_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn(QTableWidget*, int)
+/// @param callback int32_t func(QTableWidget* self, int param1)
 void q_tablewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -6931,7 +6931,7 @@ bool q_tablewidget_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tablewidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -6959,7 +6959,7 @@ QPaintEngine* q_tablewidget_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_tablewidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -6989,7 +6989,7 @@ void q_tablewidget_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QKeyEvent*)
+/// @param callback void func(QTableWidget* self, QKeyEvent* event)
 void q_tablewidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7019,7 +7019,7 @@ void q_tablewidget_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QEnterEvent*)
+/// @param callback void func(QTableWidget* self, QEnterEvent* event)
 void q_tablewidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7049,7 +7049,7 @@ void q_tablewidget_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QEvent*)
+/// @param callback void func(QTableWidget* self, QEvent* event)
 void q_tablewidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7079,7 +7079,7 @@ void q_tablewidget_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMoveEvent*)
+/// @param callback void func(QTableWidget* self, QMoveEvent* event)
 void q_tablewidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7109,7 +7109,7 @@ void q_tablewidget_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QCloseEvent*)
+/// @param callback void func(QTableWidget* self, QCloseEvent* event)
 void q_tablewidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7139,7 +7139,7 @@ void q_tablewidget_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QTabletEvent*)
+/// @param callback void func(QTableWidget* self, QTabletEvent* event)
 void q_tablewidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7169,7 +7169,7 @@ void q_tablewidget_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QActionEvent*)
+/// @param callback void func(QTableWidget* self, QActionEvent* event)
 void q_tablewidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7199,7 +7199,7 @@ void q_tablewidget_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QShowEvent*)
+/// @param callback void func(QTableWidget* self, QShowEvent* event)
 void q_tablewidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7229,7 +7229,7 @@ void q_tablewidget_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QHideEvent*)
+/// @param callback void func(QTableWidget* self, QHideEvent* event)
 void q_tablewidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7263,7 +7263,7 @@ bool q_tablewidget_qbase_native_event(void* self, const char* eventType, void* m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, const char*, void*, intptr_t*)
+/// @param callback bool func(QTableWidget* self, const char* eventType, void* message, intptr_t* result)
 void q_tablewidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -7293,7 +7293,7 @@ int32_t q_tablewidget_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn(QTableWidget*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QTableWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_tablewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -7323,7 +7323,7 @@ void q_tablewidget_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QPainter*)
+/// @param callback void func(QTableWidget* self, QPainter* painter)
 void q_tablewidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7353,7 +7353,7 @@ QPaintDevice* q_tablewidget_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QPaintDevice* fn(QTableWidget*, QPoint*)
+/// @param callback QPaintDevice* func(QTableWidget* self, QPoint* offset)
 void q_tablewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -7381,7 +7381,7 @@ QPainter* q_tablewidget_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_tablewidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
@@ -7411,7 +7411,7 @@ void q_tablewidget_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QChildEvent*)
+/// @param callback void func(QTableWidget* self, QChildEvent* event)
 void q_tablewidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -7441,7 +7441,7 @@ void q_tablewidget_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QEvent*)
+/// @param callback void func(QTableWidget* self, QEvent* event)
 void q_tablewidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -7471,7 +7471,7 @@ void q_tablewidget_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMetaMethod*)
+/// @param callback void func(QTableWidget* self, QMetaMethod* signal)
 void q_tablewidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -7501,7 +7501,7 @@ void q_tablewidget_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QMetaMethod*)
+/// @param callback void func(QTableWidget* self, QMetaMethod* signal)
 void q_tablewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -7535,7 +7535,7 @@ void q_tablewidget_qbase_row_moved(void* self, int row, int oldIndex, int newInd
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int, int)
+/// @param callback void func(QTableWidget* self, int row, int oldIndex, int newIndex)
 void q_tablewidget_on_row_moved(void* self, void (*callback)(void*, int, int, int));
 
 /// Inherited from QTableView
@@ -7569,7 +7569,7 @@ void q_tablewidget_qbase_column_moved(void* self, int column, int oldIndex, int 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int, int)
+/// @param callback void func(QTableWidget* self, int column, int oldIndex, int newIndex)
 void q_tablewidget_on_column_moved(void* self, void (*callback)(void*, int, int, int));
 
 /// Inherited from QTableView
@@ -7603,7 +7603,7 @@ void q_tablewidget_qbase_row_resized(void* self, int row, int oldHeight, int new
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int, int)
+/// @param callback void func(QTableWidget* self, int row, int oldHeight, int newHeight)
 void q_tablewidget_on_row_resized(void* self, void (*callback)(void*, int, int, int));
 
 /// Inherited from QTableView
@@ -7637,7 +7637,7 @@ void q_tablewidget_qbase_column_resized(void* self, int column, int oldWidth, in
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int, int)
+/// @param callback void func(QTableWidget* self, int column, int oldWidth, int newWidth)
 void q_tablewidget_on_column_resized(void* self, void (*callback)(void*, int, int, int));
 
 /// Inherited from QTableView
@@ -7669,7 +7669,7 @@ void q_tablewidget_qbase_row_count_changed(void* self, int oldCount, int newCoun
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int oldCount, int newCount)
 void q_tablewidget_on_row_count_changed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QTableView
@@ -7701,7 +7701,7 @@ void q_tablewidget_qbase_column_count_changed(void* self, int oldCount, int newC
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int oldCount, int newCount)
 void q_tablewidget_on_column_count_changed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -7733,7 +7733,7 @@ int32_t q_tablewidget_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tablewidget_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7763,7 +7763,7 @@ void q_tablewidget_qbase_set_state(void* self, int32_t state);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, enum QAbstractItemView__State)
+/// @param callback void func(QTableWidget* self, enum QAbstractItemView__State state)
 void q_tablewidget_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -7791,7 +7791,7 @@ void q_tablewidget_qbase_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_schedule_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7819,7 +7819,7 @@ void q_tablewidget_qbase_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_execute_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7849,7 +7849,7 @@ void q_tablewidget_qbase_set_dirty_region(void* self, void* region);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QRegion*)
+/// @param callback void func(QTableWidget* self, QRegion* region)
 void q_tablewidget_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -7881,7 +7881,7 @@ void q_tablewidget_qbase_scroll_dirty_region(void* self, int dx, int dy);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int)
+/// @param callback void func(QTableWidget* self, int dx, int dy)
 void q_tablewidget_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
@@ -7909,7 +7909,7 @@ QPoint* q_tablewidget_qbase_dirty_region_offset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QPoint* fn()
+/// @param callback QPoint* func()
 void q_tablewidget_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7937,7 +7937,7 @@ void q_tablewidget_qbase_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_start_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7965,7 +7965,7 @@ void q_tablewidget_qbase_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_stop_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7993,7 +7993,7 @@ void q_tablewidget_qbase_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_do_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8025,7 +8025,7 @@ int32_t q_tablewidget_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tablewidget_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -8061,7 +8061,7 @@ void q_tablewidget_qbase_set_viewport_margins(void* self, int left, int top, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, int, int, int, int)
+/// @param callback void func(QTableWidget* self, int left, int top, int right, int bottom)
 void q_tablewidget_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
@@ -8089,7 +8089,7 @@ QMargins* q_tablewidget_qbase_viewport_margins(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_tablewidget_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -8119,7 +8119,7 @@ void q_tablewidget_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QPainter*)
+/// @param callback void func(QTableWidget* self, QPainter* param1)
 void q_tablewidget_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -8147,7 +8147,7 @@ void q_tablewidget_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8175,7 +8175,7 @@ void q_tablewidget_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8203,7 +8203,7 @@ void q_tablewidget_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn()
+/// @param callback void func()
 void q_tablewidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -8231,7 +8231,7 @@ bool q_tablewidget_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tablewidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -8259,7 +8259,7 @@ bool q_tablewidget_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_tablewidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -8287,7 +8287,7 @@ QObject* q_tablewidget_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_tablewidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -8315,7 +8315,7 @@ int32_t q_tablewidget_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_tablewidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -8345,7 +8345,7 @@ int32_t q_tablewidget_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int32_t fn(QTableWidget*, const char*)
+/// @param callback int32_t func(QTableWidget* self, const char* signal)
 void q_tablewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -8375,7 +8375,7 @@ bool q_tablewidget_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback bool fn(QTableWidget*, QMetaMethod*)
+/// @param callback bool func(QTableWidget* self, QMetaMethod* signal)
 void q_tablewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8407,7 +8407,7 @@ double q_tablewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback double fn(QTableWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QTableWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_tablewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -8417,7 +8417,7 @@ void q_tablewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// Wrapper to allow calling private signal
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, const char*)
+/// @param callback void func(QTableWidget* self, const char* objectName)
 void q_tablewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dtor.QTableWidget)

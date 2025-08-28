@@ -35,7 +35,7 @@ int32_t k_pluginfactory_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self KPluginFactory*
-/// @param callback int32_t fn(KPluginFactory*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KPluginFactory* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_pluginfactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -78,7 +78,7 @@ QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidge
 /// Allows for overriding the related default method
 ///
 /// @param self KPluginFactory*
-/// @param callback QObject* fn(KPluginFactory*, const char*, QWidget*, QObject*, libqt_list /* of QVariant* */)
+/// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, libqt_list /* of QVariant* */ /* of QVariant* */)
 void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, libqt_list));
 
 /// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#create)
@@ -335,7 +335,7 @@ void k_pluginfactory_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*)
+/// @param callback void func(KPluginFactory* self)
 void k_pluginfactory_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -413,7 +413,7 @@ void k_pluginfactory_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, QObject*)
+/// @param callback void func(KPluginFactory* self, QObject* param1)
 void k_pluginfactory_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -443,7 +443,7 @@ bool k_pluginfactory_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback bool fn(KPluginFactory*, QEvent*)
+/// @param callback bool func(KPluginFactory* self, QEvent* event)
 void k_pluginfactory_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -475,7 +475,7 @@ bool k_pluginfactory_qbase_event_filter(void* self, void* watched, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback bool fn(KPluginFactory*, QObject*, QEvent*)
+/// @param callback bool func(KPluginFactory* self, QObject* watched, QEvent* event)
 void k_pluginfactory_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
@@ -505,7 +505,7 @@ void k_pluginfactory_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, QTimerEvent*)
+/// @param callback void func(KPluginFactory* self, QTimerEvent* event)
 void k_pluginfactory_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -535,7 +535,7 @@ void k_pluginfactory_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, QChildEvent*)
+/// @param callback void func(KPluginFactory* self, QChildEvent* event)
 void k_pluginfactory_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -565,7 +565,7 @@ void k_pluginfactory_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, QEvent*)
+/// @param callback void func(KPluginFactory* self, QEvent* event)
 void k_pluginfactory_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -595,7 +595,7 @@ void k_pluginfactory_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, QMetaMethod*)
+/// @param callback void func(KPluginFactory* self, QMetaMethod* signal)
 void k_pluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -625,7 +625,7 @@ void k_pluginfactory_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, QMetaMethod*)
+/// @param callback void func(KPluginFactory* self, QMetaMethod* signal)
 void k_pluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -653,7 +653,7 @@ QObject* k_pluginfactory_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_pluginfactory_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -681,7 +681,7 @@ int32_t k_pluginfactory_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_pluginfactory_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -711,7 +711,7 @@ int32_t k_pluginfactory_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback int32_t fn(KPluginFactory*, const char*)
+/// @param callback int32_t func(KPluginFactory* self, const char* signal)
 void k_pluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -741,7 +741,7 @@ bool k_pluginfactory_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPluginFactory*
-/// @param callback bool fn(KPluginFactory*, QMetaMethod*)
+/// @param callback bool func(KPluginFactory* self, QMetaMethod* signal)
 void k_pluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -751,7 +751,7 @@ void k_pluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KPluginFactory*
-/// @param callback void fn(KPluginFactory*, const char*)
+/// @param callback void func(KPluginFactory* self, const char* objectName)
 void k_pluginfactory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#dtor.KPluginFactory)

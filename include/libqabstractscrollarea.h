@@ -40,7 +40,7 @@ int32_t q_abstractscrollarea_metacall(void* self, int32_t param1, int param2, vo
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback int32_t fn(QAbstractScrollArea*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(QAbstractScrollArea* self, enum QMetaObject__Call param1, int param2, void* param3)
 void q_abstractscrollarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -156,7 +156,7 @@ QSize* q_abstractscrollarea_minimum_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractscrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -176,7 +176,7 @@ QSize* q_abstractscrollarea_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractscrollarea_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
@@ -197,7 +197,7 @@ void q_abstractscrollarea_setup_viewport(void* self, void* viewport);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QWidget*)
+/// @param callback void func(QAbstractScrollArea* self, QWidget* viewport)
 void q_abstractscrollarea_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -235,7 +235,7 @@ void q_abstractscrollarea_set_viewport_margins(void* self, int left, int top, in
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, int, int, int, int)
+/// @param callback void func(QAbstractScrollArea* self, int left, int top, int right, int bottom)
 void q_abstractscrollarea_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -260,7 +260,7 @@ void q_abstractscrollarea_set_viewport_margins2(void* self, void* margins);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMargins*)
+/// @param callback void func(QAbstractScrollArea* self, QMargins* margins)
 void q_abstractscrollarea_on_set_viewport_margins2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -281,7 +281,7 @@ QMargins* q_abstractscrollarea_viewport_margins(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QMargins* fn()
+/// @param callback QMargins* func()
 void q_abstractscrollarea_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -303,7 +303,7 @@ bool q_abstractscrollarea_event_filter(void* self, void* param1, void* param2);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn(QAbstractScrollArea*, QObject*, QEvent*)
+/// @param callback bool func(QAbstractScrollArea* self, QObject* param1, QEvent* param2)
 void q_abstractscrollarea_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#eventFilter)
@@ -326,7 +326,7 @@ bool q_abstractscrollarea_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn(QAbstractScrollArea*, QEvent*)
+/// @param callback bool func(QAbstractScrollArea* self, QEvent* param1)
 void q_abstractscrollarea_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#event)
@@ -348,7 +348,7 @@ bool q_abstractscrollarea_viewport_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn(QAbstractScrollArea*, QEvent*)
+/// @param callback bool func(QAbstractScrollArea* self, QEvent* param1)
 void q_abstractscrollarea_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportEvent)
@@ -370,7 +370,7 @@ void q_abstractscrollarea_resize_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QResizeEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QResizeEvent* param1)
 void q_abstractscrollarea_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#resizeEvent)
@@ -392,7 +392,7 @@ void q_abstractscrollarea_paint_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QPaintEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QPaintEvent* param1)
 void q_abstractscrollarea_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#paintEvent)
@@ -414,7 +414,7 @@ void q_abstractscrollarea_mouse_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMouseEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QMouseEvent* param1)
 void q_abstractscrollarea_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mousePressEvent)
@@ -436,7 +436,7 @@ void q_abstractscrollarea_mouse_release_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMouseEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QMouseEvent* param1)
 void q_abstractscrollarea_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseReleaseEvent)
@@ -458,7 +458,7 @@ void q_abstractscrollarea_mouse_double_click_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMouseEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QMouseEvent* param1)
 void q_abstractscrollarea_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseDoubleClickEvent)
@@ -480,7 +480,7 @@ void q_abstractscrollarea_mouse_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMouseEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QMouseEvent* param1)
 void q_abstractscrollarea_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#mouseMoveEvent)
@@ -502,7 +502,7 @@ void q_abstractscrollarea_wheel_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QWheelEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QWheelEvent* param1)
 void q_abstractscrollarea_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#wheelEvent)
@@ -524,7 +524,7 @@ void q_abstractscrollarea_context_menu_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QContextMenuEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QContextMenuEvent* param1)
 void q_abstractscrollarea_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -546,7 +546,7 @@ void q_abstractscrollarea_drag_enter_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QDragEnterEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QDragEnterEvent* param1)
 void q_abstractscrollarea_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragEnterEvent)
@@ -568,7 +568,7 @@ void q_abstractscrollarea_drag_move_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QDragMoveEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QDragMoveEvent* param1)
 void q_abstractscrollarea_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragMoveEvent)
@@ -590,7 +590,7 @@ void q_abstractscrollarea_drag_leave_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QDragLeaveEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QDragLeaveEvent* param1)
 void q_abstractscrollarea_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#dragLeaveEvent)
@@ -612,7 +612,7 @@ void q_abstractscrollarea_drop_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QDropEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QDropEvent* param1)
 void q_abstractscrollarea_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#dropEvent)
@@ -634,7 +634,7 @@ void q_abstractscrollarea_key_press_event(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QKeyEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QKeyEvent* param1)
 void q_abstractscrollarea_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#keyPressEvent)
@@ -657,7 +657,7 @@ void q_abstractscrollarea_scroll_contents_by(void* self, int dx, int dy);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, int, int)
+/// @param callback void func(QAbstractScrollArea* self, int dx, int dy)
 void q_abstractscrollarea_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#scrollContentsBy)
@@ -679,7 +679,7 @@ QSize* q_abstractscrollarea_viewport_size_hint(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QSize* fn()
+/// @param callback QSize* func()
 void q_abstractscrollarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportSizeHint)
@@ -2744,7 +2744,7 @@ void q_abstractscrollarea_window_title_changed(void* self, const char* title);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, const char*)
+/// @param callback void func(QAbstractScrollArea* self, const char* title)
 void q_abstractscrollarea_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2760,7 +2760,7 @@ void q_abstractscrollarea_window_icon_changed(void* self, void* icon);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QIcon*)
+/// @param callback void func(QAbstractScrollArea* self, QIcon* icon)
 void q_abstractscrollarea_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -2776,7 +2776,7 @@ void q_abstractscrollarea_window_icon_text_changed(void* self, const char* iconT
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, const char*)
+/// @param callback void func(QAbstractScrollArea* self, const char* iconText)
 void q_abstractscrollarea_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2792,7 +2792,7 @@ void q_abstractscrollarea_custom_context_menu_requested(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QPoint*)
+/// @param callback void func(QAbstractScrollArea* self, QPoint* pos)
 void q_abstractscrollarea_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3169,7 +3169,7 @@ void q_abstractscrollarea_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*)
+/// @param callback void func(QAbstractScrollArea* self)
 void q_abstractscrollarea_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -3247,7 +3247,7 @@ void q_abstractscrollarea_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QObject*)
+/// @param callback void func(QAbstractScrollArea* self, QObject* param1)
 void q_abstractscrollarea_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3368,7 +3368,7 @@ void q_abstractscrollarea_qbase_change_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QEvent* param1)
 void q_abstractscrollarea_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -3398,7 +3398,7 @@ void q_abstractscrollarea_qbase_init_style_option(void* self, void* option);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QStyleOptionFrame*)
+/// @param callback void func(QAbstractScrollArea* self, QStyleOptionFrame* option)
 void q_abstractscrollarea_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3426,7 +3426,7 @@ int32_t q_abstractscrollarea_qbase_dev_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractscrollarea_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
@@ -3456,7 +3456,7 @@ void q_abstractscrollarea_qbase_set_visible(void* self, bool visible);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, bool)
+/// @param callback void func(QAbstractScrollArea* self, bool visible)
 void q_abstractscrollarea_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
@@ -3486,7 +3486,7 @@ int32_t q_abstractscrollarea_qbase_height_for_width(void* self, int param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback int32_t fn(QAbstractScrollArea*, int)
+/// @param callback int32_t func(QAbstractScrollArea* self, int param1)
 void q_abstractscrollarea_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
@@ -3514,7 +3514,7 @@ bool q_abstractscrollarea_qbase_has_height_for_width(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractscrollarea_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -3542,7 +3542,7 @@ QPaintEngine* q_abstractscrollarea_qbase_paint_engine(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QPaintEngine* fn()
+/// @param callback QPaintEngine* func()
 void q_abstractscrollarea_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
@@ -3572,7 +3572,7 @@ void q_abstractscrollarea_qbase_key_release_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QKeyEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QKeyEvent* event)
 void q_abstractscrollarea_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3602,7 +3602,7 @@ void q_abstractscrollarea_qbase_focus_in_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QFocusEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QFocusEvent* event)
 void q_abstractscrollarea_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3632,7 +3632,7 @@ void q_abstractscrollarea_qbase_focus_out_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QFocusEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QFocusEvent* event)
 void q_abstractscrollarea_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3662,7 +3662,7 @@ void q_abstractscrollarea_qbase_enter_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QEnterEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QEnterEvent* event)
 void q_abstractscrollarea_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3692,7 +3692,7 @@ void q_abstractscrollarea_qbase_leave_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QEvent* event)
 void q_abstractscrollarea_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3722,7 +3722,7 @@ void q_abstractscrollarea_qbase_move_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMoveEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QMoveEvent* event)
 void q_abstractscrollarea_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3752,7 +3752,7 @@ void q_abstractscrollarea_qbase_close_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QCloseEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QCloseEvent* event)
 void q_abstractscrollarea_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3782,7 +3782,7 @@ void q_abstractscrollarea_qbase_tablet_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QTabletEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QTabletEvent* event)
 void q_abstractscrollarea_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3812,7 +3812,7 @@ void q_abstractscrollarea_qbase_action_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QActionEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QActionEvent* event)
 void q_abstractscrollarea_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3842,7 +3842,7 @@ void q_abstractscrollarea_qbase_show_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QShowEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QShowEvent* event)
 void q_abstractscrollarea_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3872,7 +3872,7 @@ void q_abstractscrollarea_qbase_hide_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QHideEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QHideEvent* event)
 void q_abstractscrollarea_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3906,7 +3906,7 @@ bool q_abstractscrollarea_qbase_native_event(void* self, const char* eventType, 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn(QAbstractScrollArea*, const char*, void*, intptr_t*)
+/// @param callback bool func(QAbstractScrollArea* self, const char* eventType, void* message, intptr_t* result)
 void q_abstractscrollarea_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
@@ -3936,7 +3936,7 @@ int32_t q_abstractscrollarea_qbase_metric(void* self, int32_t param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback int32_t fn(QAbstractScrollArea*, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback int32_t func(QAbstractScrollArea* self, enum QPaintDevice__PaintDeviceMetric param1)
 void q_abstractscrollarea_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -3966,7 +3966,7 @@ void q_abstractscrollarea_qbase_init_painter(void* self, void* painter);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QPainter*)
+/// @param callback void func(QAbstractScrollArea* self, QPainter* painter)
 void q_abstractscrollarea_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -3996,7 +3996,7 @@ QPaintDevice* q_abstractscrollarea_qbase_redirected(void* self, void* offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QPaintDevice* fn(QAbstractScrollArea*, QPoint*)
+/// @param callback QPaintDevice* func(QAbstractScrollArea* self, QPoint* offset)
 void q_abstractscrollarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4024,7 +4024,7 @@ QPainter* q_abstractscrollarea_qbase_shared_painter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QPainter* fn()
+/// @param callback QPainter* func()
 void q_abstractscrollarea_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
@@ -4054,7 +4054,7 @@ void q_abstractscrollarea_qbase_input_method_event(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QInputMethodEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QInputMethodEvent* param1)
 void q_abstractscrollarea_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4084,7 +4084,7 @@ QVariant* q_abstractscrollarea_qbase_input_method_query(void* self, int64_t para
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QVariant* fn(QAbstractScrollArea*, enum Qt__InputMethodQuery)
+/// @param callback QVariant* func(QAbstractScrollArea* self, enum Qt__InputMethodQuery param1)
 void q_abstractscrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
@@ -4114,7 +4114,7 @@ bool q_abstractscrollarea_qbase_focus_next_prev_child(void* self, bool next);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn(QAbstractScrollArea*, bool)
+/// @param callback bool func(QAbstractScrollArea* self, bool next)
 void q_abstractscrollarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
@@ -4144,7 +4144,7 @@ void q_abstractscrollarea_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QTimerEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QTimerEvent* event)
 void q_abstractscrollarea_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4174,7 +4174,7 @@ void q_abstractscrollarea_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QChildEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QChildEvent* event)
 void q_abstractscrollarea_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4204,7 +4204,7 @@ void q_abstractscrollarea_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QEvent*)
+/// @param callback void func(QAbstractScrollArea* self, QEvent* event)
 void q_abstractscrollarea_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4234,7 +4234,7 @@ void q_abstractscrollarea_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMetaMethod*)
+/// @param callback void func(QAbstractScrollArea* self, QMetaMethod* signal)
 void q_abstractscrollarea_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -4264,7 +4264,7 @@ void q_abstractscrollarea_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QMetaMethod*)
+/// @param callback void func(QAbstractScrollArea* self, QMetaMethod* signal)
 void q_abstractscrollarea_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
@@ -4294,7 +4294,7 @@ void q_abstractscrollarea_qbase_draw_frame(void* self, void* param1);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, QPainter*)
+/// @param callback void func(QAbstractScrollArea* self, QPainter* param1)
 void q_abstractscrollarea_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
@@ -4322,7 +4322,7 @@ void q_abstractscrollarea_qbase_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractscrollarea_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4350,7 +4350,7 @@ void q_abstractscrollarea_qbase_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractscrollarea_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4378,7 +4378,7 @@ void q_abstractscrollarea_qbase_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn()
+/// @param callback void func()
 void q_abstractscrollarea_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
@@ -4406,7 +4406,7 @@ bool q_abstractscrollarea_qbase_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractscrollarea_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
@@ -4434,7 +4434,7 @@ bool q_abstractscrollarea_qbase_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn()
+/// @param callback bool func()
 void q_abstractscrollarea_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
@@ -4462,7 +4462,7 @@ QObject* q_abstractscrollarea_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void q_abstractscrollarea_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -4490,7 +4490,7 @@ int32_t q_abstractscrollarea_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void q_abstractscrollarea_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -4520,7 +4520,7 @@ int32_t q_abstractscrollarea_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback int32_t fn(QAbstractScrollArea*, const char*)
+/// @param callback int32_t func(QAbstractScrollArea* self, const char* signal)
 void q_abstractscrollarea_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -4550,7 +4550,7 @@ bool q_abstractscrollarea_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback bool fn(QAbstractScrollArea*, QMetaMethod*)
+/// @param callback bool func(QAbstractScrollArea* self, QMetaMethod* signal)
 void q_abstractscrollarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4582,7 +4582,7 @@ double q_abstractscrollarea_qbase_get_decoded_metric_f(void* self, int32_t metri
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback double fn(QAbstractScrollArea*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+/// @param callback double func(QAbstractScrollArea* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 void q_abstractscrollarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
@@ -4592,7 +4592,7 @@ void q_abstractscrollarea_on_get_decoded_metric_f(void* self, double (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self QAbstractScrollArea*
-/// @param callback void fn(QAbstractScrollArea*, const char*)
+/// @param callback void func(QAbstractScrollArea* self, const char* objectName)
 void q_abstractscrollarea_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#dtor.QAbstractScrollArea)

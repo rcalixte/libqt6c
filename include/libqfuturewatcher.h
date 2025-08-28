@@ -117,7 +117,7 @@ void q_futurewatcherbase_started(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#started)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#finished)
@@ -128,7 +128,7 @@ void q_futurewatcherbase_finished(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#finished)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#canceled)
@@ -139,7 +139,7 @@ void q_futurewatcherbase_canceled(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#canceled)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_canceled(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#paused)
@@ -150,7 +150,7 @@ void q_futurewatcherbase_paused(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#paused)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_paused(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspending)
@@ -161,7 +161,7 @@ void q_futurewatcherbase_suspending(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspending)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_suspending(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspended)
@@ -172,7 +172,7 @@ void q_futurewatcherbase_suspended(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspended)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_suspended(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resumed)
@@ -183,7 +183,7 @@ void q_futurewatcherbase_resumed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resumed)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_resumed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultReadyAt)
@@ -195,7 +195,7 @@ void q_futurewatcherbase_result_ready_at(void* self, int resultIndex);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultReadyAt)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, int)
+/// @param callback void func(QFutureWatcherBase* self, int resultIndex)
 void q_futurewatcherbase_on_result_ready_at(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultsReadyAt)
@@ -208,7 +208,7 @@ void q_futurewatcherbase_results_ready_at(void* self, int beginIndex, int endInd
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultsReadyAt)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, int, int)
+/// @param callback void func(QFutureWatcherBase* self, int beginIndex, int endIndex)
 void q_futurewatcherbase_on_results_ready_at(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressRangeChanged)
@@ -221,7 +221,7 @@ void q_futurewatcherbase_progress_range_changed(void* self, int minimum, int max
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressRangeChanged)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, int, int)
+/// @param callback void func(QFutureWatcherBase* self, int minimum, int maximum)
 void q_futurewatcherbase_on_progress_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressValueChanged)
@@ -233,7 +233,7 @@ void q_futurewatcherbase_progress_value_changed(void* self, int progressValue);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressValueChanged)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, int)
+/// @param callback void func(QFutureWatcherBase* self, int progressValue)
 void q_futurewatcherbase_on_progress_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressTextChanged)
@@ -245,7 +245,7 @@ void q_futurewatcherbase_progress_text_changed(void* self, const char* progressT
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressTextChanged)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, const char*)
+/// @param callback void func(QFutureWatcherBase* self, const char* progressText)
 void q_futurewatcherbase_on_progress_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#cancel)
@@ -542,7 +542,7 @@ void q_futurewatcherbase_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*)
+/// @param callback void func(QFutureWatcherBase* self)
 void q_futurewatcherbase_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -620,7 +620,7 @@ void q_futurewatcherbase_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, QObject*)
+/// @param callback void func(QFutureWatcherBase* self, QObject* param1)
 void q_futurewatcherbase_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -630,7 +630,7 @@ void q_futurewatcherbase_on_destroyed1(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self QFutureWatcherBase*
-/// @param callback void fn(QFutureWatcherBase*, const char*)
+/// @param callback void func(QFutureWatcherBase* self, const char* objectName)
 void q_futurewatcherbase_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#dtor.QFutureWatcherBase)

@@ -40,7 +40,7 @@ int32_t k_columnresizer_metacall(void* self, int32_t param1, int param2, void* p
 /// Allows for overriding the related default method
 ///
 /// @param self KColumnResizer*
-/// @param callback int32_t fn(KColumnResizer*, enum QMetaObject__Call, int, void*)
+/// @param callback int32_t func(KColumnResizer* self, enum QMetaObject__Call param1, int param2, void* param3)
 void k_columnresizer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
@@ -88,7 +88,7 @@ bool k_columnresizer_event_filter(void* self, void* param1, void* event);
 /// Allows for overriding the related default method
 ///
 /// @param self KColumnResizer*
-/// @param callback bool fn(KColumnResizer*, QObject*, QEvent*)
+/// @param callback bool func(KColumnResizer* self, QObject* param1, QEvent* event)
 void k_columnresizer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#eventFilter)
@@ -350,7 +350,7 @@ void k_columnresizer_destroyed(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*)
+/// @param callback void func(KColumnResizer* self)
 void k_columnresizer_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
@@ -428,7 +428,7 @@ void k_columnresizer_destroyed1(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, QObject*)
+/// @param callback void func(KColumnResizer* self, QObject* param1)
 void k_columnresizer_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -458,7 +458,7 @@ bool k_columnresizer_qbase_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback bool fn(KColumnResizer*, QEvent*)
+/// @param callback bool func(KColumnResizer* self, QEvent* event)
 void k_columnresizer_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -488,7 +488,7 @@ void k_columnresizer_qbase_timer_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, QTimerEvent*)
+/// @param callback void func(KColumnResizer* self, QTimerEvent* event)
 void k_columnresizer_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -518,7 +518,7 @@ void k_columnresizer_qbase_child_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, QChildEvent*)
+/// @param callback void func(KColumnResizer* self, QChildEvent* event)
 void k_columnresizer_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -548,7 +548,7 @@ void k_columnresizer_qbase_custom_event(void* self, void* event);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, QEvent*)
+/// @param callback void func(KColumnResizer* self, QEvent* event)
 void k_columnresizer_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -578,7 +578,7 @@ void k_columnresizer_qbase_connect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, QMetaMethod*)
+/// @param callback void func(KColumnResizer* self, QMetaMethod* signal)
 void k_columnresizer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -608,7 +608,7 @@ void k_columnresizer_qbase_disconnect_notify(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, QMetaMethod*)
+/// @param callback void func(KColumnResizer* self, QMetaMethod* signal)
 void k_columnresizer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -636,7 +636,7 @@ QObject* k_columnresizer_qbase_sender(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback QObject* fn()
+/// @param callback QObject* func()
 void k_columnresizer_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
@@ -664,7 +664,7 @@ int32_t k_columnresizer_qbase_sender_signal_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback int32_t fn()
+/// @param callback int32_t func()
 void k_columnresizer_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
@@ -694,7 +694,7 @@ int32_t k_columnresizer_qbase_receivers(void* self, const char* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback int32_t fn(KColumnResizer*, const char*)
+/// @param callback int32_t func(KColumnResizer* self, const char* signal)
 void k_columnresizer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
@@ -724,7 +724,7 @@ bool k_columnresizer_qbase_is_signal_connected(void* self, void* signal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KColumnResizer*
-/// @param callback bool fn(KColumnResizer*, QMetaMethod*)
+/// @param callback bool func(KColumnResizer* self, QMetaMethod* signal)
 void k_columnresizer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
@@ -734,7 +734,7 @@ void k_columnresizer_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KColumnResizer*
-/// @param callback void fn(KColumnResizer*, const char*)
+/// @param callback void func(KColumnResizer* self, const char* objectName)
 void k_columnresizer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#dtor.KColumnResizer)
