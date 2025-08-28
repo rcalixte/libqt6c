@@ -86,7 +86,8 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	}
 
 	qtUrl := "https://doc.qt.io/qt-6/"
-	if len(className) > 0 && className[0] == 'K' || className[0] == 'k' {
+	if len(className) > 0 && className[0] == 'K' || className[0] == 'k' ||
+		strings.HasPrefix(className, "Sonnet") || strings.HasPrefix(pageName, "sonnet") {
 		qtUrl = "https://api-staging.kde.org/"
 	}
 
@@ -982,7 +983,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		cPrefix := "q_"
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
 			nameIndex = 1
-			cPrefix = strings.ToLower(string(cStructName[0])) + "_"
+			cPrefix = strings.ToLower(cStructName[:1]) + "_"
+		} else if strings.HasPrefix(cStructName, "Sonnet") {
+			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
 
@@ -1434,9 +1437,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	}
 
 	if len(src.Enums) > 0 {
-		pageName := getPageName(cfs.currentHeaderName)
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-		pageUrl := getPageUrl(EnumPage, pageName+maybeCharts, "", cfs.currentHeaderName)
+		maybeSonnet := ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", "")
+		pageName := maybeSonnet + getPageName(cfs.currentHeaderName) + maybeCharts
+		pageUrl := getPageUrl(EnumPage, pageName, "", cfs.currentHeaderName)
 		maybeUrl := ifv(pageUrl != "", "\n\n/// "+pageUrl, "")
 		ret.WriteString(maybeUrl + "\n\n")
 	}
@@ -1592,7 +1596,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		cPrefix := "q_"
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
 			nameIndex = 1
-			cPrefix = strings.ToLower(string(cStructName[0])) + "_"
+			cPrefix = strings.ToLower(cStructName[:1]) + "_"
+		} else if strings.HasPrefix(cStructName, "Sonnet") {
+			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
 
