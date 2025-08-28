@@ -1,4 +1,10 @@
 
+### 6.8.2 rev17 (28 August 2025)
+
+* Add [Sonnet](https://api-staging.kde.org/sonnet-index.html) (#42)
+* Simplify override structure and update callback documentation comments (#41)
+* Fix method mismatch in C ABI (#40)
+
 ### 6.8.2 rev16 (27 August 2025)
 
 * Add [KGuiAddons](https://api-staging.kde.org/kguiaddons-index.html) (#37)
