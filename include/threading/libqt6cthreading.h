@@ -17,7 +17,7 @@ extern "C" {
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_exec_now(void* self, void (*callback)(void*));
 
 /// Auto execution in main thread (thread-safe)
@@ -31,7 +31,7 @@ void q_threading_exec_now(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_exec(void* self, void (*callback)(void*));
 
 /// Unique auto execution in main thread (thread-safe)
@@ -42,7 +42,7 @@ void q_threading_exec(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_exec_unique(void* self, void (*callback)(void*));
 
 /// Single-shot execution in main thread (thread-safe)
@@ -52,7 +52,7 @@ void q_threading_exec_unique(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_exec_once(void* self, void (*callback)(void*));
 
 /// Non-blocking execution in main thread (thread-safe)
@@ -64,7 +64,7 @@ void q_threading_exec_once(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_async(void* self, void (*callback)(void*));
 
 /// Unique non-blocking execution in main thread (thread-safe)
@@ -75,7 +75,7 @@ void q_threading_async(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_async_unique(void* self, void (*callback)(void*));
 
 /// Single-shot non-blocking execution in main thread (thread-safe)
@@ -85,7 +85,7 @@ void q_threading_async_unique(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_async_once(void* self, void (*callback)(void*));
 
 /// Unique single-shot non-blocking execution in main thread (thread-safe)
@@ -96,7 +96,7 @@ void q_threading_async_once(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_async_unique_once(void* self, void (*callback)(void*));
 
 /// Blocking execution in main thread (thread-safe)
@@ -123,7 +123,7 @@ void q_threading_async_unique_once(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_sync(void* self, void (*callback)(void*));
 
 /// Unique blocking execution in main thread (thread-safe)
@@ -135,7 +135,7 @@ void q_threading_sync(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_sync_unique(void* self, void (*callback)(void*));
 
 /// Single-shot blocking execution in main thread (thread-safe)
@@ -146,7 +146,7 @@ void q_threading_sync_unique(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_sync_once(void* self, void (*callback)(void*));
 
 /// Unique single-shot blocking execution in main thread (thread-safe)
@@ -158,7 +158,7 @@ void q_threading_sync_once(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/threads-qobject.html)
 ///
 /// @param self void*
-/// @param callback void fn(void*)
+/// @param callback void func(void* self)
 void q_threading_sync_unique_once(void* self, void (*callback)(void*));
 
 #ifdef __cplusplus
