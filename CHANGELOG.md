@@ -1,4 +1,9 @@
 
+### 6.8.2 rev18 (29 August 2025)
+
+* Update to Zig 0.15
+* Ensure proper callback structure (#43)
+
 ### 6.8.2 rev17 (28 August 2025)
 
 * Add [Sonnet](https://api-staging.kde.org/sonnet-index.html) (#42)
