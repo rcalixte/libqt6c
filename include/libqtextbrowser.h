@@ -617,7 +617,7 @@ void q_textbrowser_set_read_only(void* self, bool ro);
 ///
 /// @param self QTextBrowser*
 /// @param flags flag of enum Qt__TextInteractionFlag
-void q_textbrowser_set_text_interaction_flags(void* self, int64_t flags);
+void q_textbrowser_set_text_interaction_flags(void* self, int32_t flags);
 
 /// Inherited from QTextEdit
 ///
@@ -626,7 +626,7 @@ void q_textbrowser_set_text_interaction_flags(void* self, int64_t flags);
 /// @param self QTextBrowser*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
-int64_t q_textbrowser_text_interaction_flags(void* self);
+int32_t q_textbrowser_text_interaction_flags(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -693,7 +693,7 @@ QFont* q_textbrowser_current_font(void* self);
 /// @param self QTextBrowser*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_textbrowser_alignment(void* self);
+int32_t q_textbrowser_alignment(void* self);
 
 /// Inherited from QTextEdit
 ///
@@ -1106,7 +1106,7 @@ void q_textbrowser_set_current_font(void* self, void* f);
 ///
 /// @param self QTextBrowser*
 /// @param a flag of enum Qt__AlignmentFlag
-void q_textbrowser_set_alignment(void* self, int64_t a);
+void q_textbrowser_set_alignment(void* self, int32_t a);
 
 /// Inherited from QTextEdit
 ///
@@ -1351,7 +1351,7 @@ void q_textbrowser_on_cursor_position_changed(void* self, void (*callback)(void*
 /// @param self QTextBrowser*
 /// @param exp const char*
 /// @param options flag of enum QTextDocument__FindFlag
-bool q_textbrowser_find22(void* self, const char* exp, int64_t options);
+bool q_textbrowser_find22(void* self, const char* exp, int32_t options);
 
 /// Inherited from QTextEdit
 ///
@@ -1360,7 +1360,7 @@ bool q_textbrowser_find22(void* self, const char* exp, int64_t options);
 /// @param self QTextBrowser*
 /// @param exp QRegularExpression*
 /// @param options flag of enum QTextDocument__FindFlag
-bool q_textbrowser_find23(void* self, void* exp, int64_t options);
+bool q_textbrowser_find23(void* self, void* exp, int32_t options);
 
 /// Inherited from QTextEdit
 ///
@@ -1370,7 +1370,7 @@ bool q_textbrowser_find23(void* self, void* exp, int64_t options);
 ///
 /// @param self QTextBrowser*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-const char* q_textbrowser_to_markdown1(void* self, int64_t features);
+const char* q_textbrowser_to_markdown1(void* self, int32_t features);
 
 /// Inherited from QTextEdit
 ///
@@ -1483,7 +1483,7 @@ void q_textbrowser_set_corner_widget(void* self, void* widget);
 /// @param self QTextBrowser*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_textbrowser_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_textbrowser_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1491,7 +1491,7 @@ void q_textbrowser_add_scroll_bar_widget(void* self, void* widget, int64_t align
 ///
 /// @param self QTextBrowser*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_textbrowser_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_textbrowser_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3133,7 +3133,7 @@ bool q_textbrowser_is_full_screen(void* self);
 /// @param self QTextBrowser*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_textbrowser_window_state(void* self);
+int32_t q_textbrowser_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3141,7 +3141,7 @@ int64_t q_textbrowser_window_state(void* self);
 ///
 /// @param self QTextBrowser*
 /// @param state flag of enum Qt__WindowState
-void q_textbrowser_set_window_state(void* self, int64_t state);
+void q_textbrowser_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3149,7 +3149,7 @@ void q_textbrowser_set_window_state(void* self, int64_t state);
 ///
 /// @param self QTextBrowser*
 /// @param state flag of enum Qt__WindowState
-void q_textbrowser_override_window_state(void* self, int64_t state);
+void q_textbrowser_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3659,7 +3659,7 @@ void q_textbrowser_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_textbrowser_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_textbrowser_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3689,7 +3689,7 @@ void q_textbrowser_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_textbrowser_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_textbrowser_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3706,7 +3706,7 @@ QPixmap* q_textbrowser_grab1(void* self, void* rectangle);
 /// @param self QTextBrowser*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_textbrowser_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_textbrowser_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

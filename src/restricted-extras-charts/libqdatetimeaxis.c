@@ -354,7 +354,7 @@ int32_t q_datetimeaxis_orientation(void* self) {
     return QAbstractAxis_Orientation((QAbstractAxis*)self);
 }
 
-int64_t q_datetimeaxis_alignment(void* self) {
+int32_t q_datetimeaxis_alignment(void* self) {
     return QAbstractAxis_Alignment((QAbstractAxis*)self);
 }
 

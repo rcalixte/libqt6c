@@ -20,13 +20,13 @@ KFontChooserDialog* k_fontchooserdialog_new();
 /// k_fontchooserdialog_new2 constructs a new KFontChooserDialog object.
 ///
 /// @param flags flag of enum KFontChooser__DisplayFlag
-KFontChooserDialog* k_fontchooserdialog_new2(const int64_t* flags);
+KFontChooserDialog* k_fontchooserdialog_new2(const int32_t* flags);
 
 /// k_fontchooserdialog_new3 constructs a new KFontChooserDialog object.
 ///
 /// @param flags flag of enum KFontChooser__DisplayFlag
 /// @param parent QWidget*
-KFontChooserDialog* k_fontchooserdialog_new3(const int64_t* flags, void* parent);
+KFontChooserDialog* k_fontchooserdialog_new3(const int32_t* flags, void* parent);
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
 ///
@@ -84,7 +84,7 @@ int32_t k_fontchooserdialog_get_font(void* theFont);
 ///
 /// @param theFont QFont*
 /// @param diffFlags flag of enum KFontChooser__FontDiff
-int32_t k_fontchooserdialog_get_font_diff(void* theFont, int64_t* diffFlags);
+int32_t k_fontchooserdialog_get_font_diff(void* theFont, int32_t* diffFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#fontSelected)
 ///
@@ -126,21 +126,21 @@ void k_fontchooserdialog_set_font2(void* self, void* font, bool onlyFixed);
 ///
 /// @param theFont QFont*
 /// @param flags flag of enum KFontChooser__DisplayFlag
-int32_t k_fontchooserdialog_get_font2(void* theFont, const int64_t* flags);
+int32_t k_fontchooserdialog_get_font2(void* theFont, const int32_t* flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFont)
 ///
 /// @param theFont QFont*
 /// @param flags flag of enum KFontChooser__DisplayFlag
 /// @param parent QWidget*
-int32_t k_fontchooserdialog_get_font3(void* theFont, const int64_t* flags, void* parent);
+int32_t k_fontchooserdialog_get_font3(void* theFont, const int32_t* flags, void* parent);
 
 /// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
 /// @param diffFlags flag of enum KFontChooser__FontDiff
 /// @param flags flag of enum KFontChooser__DisplayFlag
-int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int64_t* diffFlags, const int64_t* flags);
+int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int32_t* diffFlags, const int32_t* flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
@@ -148,7 +148,7 @@ int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int64_t* diffFlags, co
 /// @param diffFlags flag of enum KFontChooser__FontDiff
 /// @param flags flag of enum KFontChooser__DisplayFlag
 /// @param parent QWidget*
-int32_t k_fontchooserdialog_get_font_diff4(void* theFont, int64_t* diffFlags, const int64_t* flags, void* parent);
+int32_t k_fontchooserdialog_get_font_diff4(void* theFont, int32_t* diffFlags, const int32_t* flags, void* parent);
 
 /// Inherited from QDialog
 ///
@@ -1719,7 +1719,7 @@ bool k_fontchooserdialog_is_full_screen(void* self);
 /// @param self KFontChooserDialog*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_fontchooserdialog_window_state(void* self);
+int32_t k_fontchooserdialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1727,7 +1727,7 @@ int64_t k_fontchooserdialog_window_state(void* self);
 ///
 /// @param self KFontChooserDialog*
 /// @param state flag of enum Qt__WindowState
-void k_fontchooserdialog_set_window_state(void* self, int64_t state);
+void k_fontchooserdialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1735,7 +1735,7 @@ void k_fontchooserdialog_set_window_state(void* self, int64_t state);
 ///
 /// @param self KFontChooserDialog*
 /// @param state flag of enum Qt__WindowState
-void k_fontchooserdialog_override_window_state(void* self, int64_t state);
+void k_fontchooserdialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2252,7 +2252,7 @@ void k_fontchooserdialog_render3(void* self, void* target, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_fontchooserdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_fontchooserdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2282,7 +2282,7 @@ void k_fontchooserdialog_render32(void* self, void* painter, void* targetOffset,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_fontchooserdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_fontchooserdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2299,7 +2299,7 @@ QPixmap* k_fontchooserdialog_grab1(void* self, void* rectangle);
 /// @param self KFontChooserDialog*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_fontchooserdialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_fontchooserdialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

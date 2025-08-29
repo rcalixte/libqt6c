@@ -179,16 +179,16 @@ QItemSelection* q_identityproxymodel_qbase_map_selection_to_source(void* self, v
     return QIdentityProxyModel_QBaseMapSelectionToSource((QIdentityProxyModel*)self, (QItemSelection*)selection);
 }
 
-libqt_list /* of QModelIndex* */ q_identityproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_identityproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QIdentityProxyModel_Match((QIdentityProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_identityproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_identityproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QIdentityProxyModel_OnMatch((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QIdentityProxyModel_QBaseMatch((QIdentityProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
@@ -411,7 +411,7 @@ bool q_identityproxymodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_identityproxymodel_check_index2(void* self, void* index, int64_t options) {
+bool q_identityproxymodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -670,15 +670,15 @@ void q_identityproxymodel_on_item_data(void* self, libqt_map /* of int to QVaria
     QIdentityProxyModel_OnItemData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_identityproxymodel_flags(void* self, void* index) {
+int32_t q_identityproxymodel_flags(void* self, void* index) {
     return QIdentityProxyModel_Flags((QIdentityProxyModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_identityproxymodel_qbase_flags(void* self, void* index) {
+int32_t q_identityproxymodel_qbase_flags(void* self, void* index) {
     return QIdentityProxyModel_QBaseFlags((QIdentityProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_identityproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_identityproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QIdentityProxyModel_OnFlags((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -868,27 +868,27 @@ void q_identityproxymodel_on_mime_types(void* self, const char** (*callback)()) 
     QIdentityProxyModel_OnMimeTypes((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_identityproxymodel_supported_drag_actions(void* self) {
+int32_t q_identityproxymodel_supported_drag_actions(void* self) {
     return QIdentityProxyModel_SupportedDragActions((QIdentityProxyModel*)self);
 }
 
-int64_t q_identityproxymodel_qbase_supported_drag_actions(void* self) {
+int32_t q_identityproxymodel_qbase_supported_drag_actions(void* self) {
     return QIdentityProxyModel_QBaseSupportedDragActions((QIdentityProxyModel*)self);
 }
 
-void q_identityproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_identityproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QIdentityProxyModel_OnSupportedDragActions((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_identityproxymodel_supported_drop_actions(void* self) {
+int32_t q_identityproxymodel_supported_drop_actions(void* self) {
     return QIdentityProxyModel_SupportedDropActions((QIdentityProxyModel*)self);
 }
 
-int64_t q_identityproxymodel_qbase_supported_drop_actions(void* self) {
+int32_t q_identityproxymodel_qbase_supported_drop_actions(void* self) {
     return QIdentityProxyModel_QBaseSupportedDropActions((QIdentityProxyModel*)self);
 }
 
-void q_identityproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_identityproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QIdentityProxyModel_OnSupportedDropActions((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 

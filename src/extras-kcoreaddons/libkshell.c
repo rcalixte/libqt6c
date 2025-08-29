@@ -1,7 +1,7 @@
 #include "libkshell.hpp"
 #include "libkshell.h"
 
-const char** k_shell_split_args(const char* param1, int64_t param2, int32_t* param3) {
+const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* param3) {
     libqt_list _arr = KShell_SplitArgs(qstring(param1), param2, param3);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

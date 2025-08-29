@@ -64,7 +64,7 @@ QRect* k_pixmapsequenceoverlaypainter_rect(void* self) {
     return KPixmapSequenceOverlayPainter_Rect((KPixmapSequenceOverlayPainter*)self);
 }
 
-int64_t k_pixmapsequenceoverlaypainter_alignment(void* self) {
+int32_t k_pixmapsequenceoverlaypainter_alignment(void* self) {
     return KPixmapSequenceOverlayPainter_Alignment((KPixmapSequenceOverlayPainter*)self);
 }
 
@@ -88,7 +88,7 @@ void k_pixmapsequenceoverlaypainter_set_rect(void* self, void* rect) {
     KPixmapSequenceOverlayPainter_SetRect((KPixmapSequenceOverlayPainter*)self, (QRect*)rect);
 }
 
-void k_pixmapsequenceoverlaypainter_set_alignment(void* self, int64_t align) {
+void k_pixmapsequenceoverlaypainter_set_alignment(void* self, int32_t align) {
     KPixmapSequenceOverlayPainter_SetAlignment((KPixmapSequenceOverlayPainter*)self, align);
 }
 

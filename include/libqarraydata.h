@@ -18,13 +18,13 @@
 /// @param self QArrayData*
 ///
 /// @return flag of enum QArrayData__ArrayOption
-int64_t q_arraydata_flags(void* self);
+int32_t q_arraydata_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
 ///
 /// @param self QArrayData*
 /// @param flags flag of enum QArrayData__ArrayOption
-void q_arraydata_set_flags(void* self, int64_t flags);
+void q_arraydata_set_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
 ///

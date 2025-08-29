@@ -121,11 +121,11 @@ QModelIndex* q_abstractitemview_root_index(void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
-void q_abstractitemview_set_edit_triggers(void* self, int64_t triggers) {
+void q_abstractitemview_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int64_t q_abstractitemview_edit_triggers(void* self) {
+int32_t q_abstractitemview_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -737,15 +737,15 @@ bool q_abstractitemview_qbase_is_index_hidden(void* self, void* index) {
     return QAbstractItemView_QBaseIsIndexHidden((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemview_set_selection(void* self, void* rect, int64_t command) {
+void q_abstractitemview_set_selection(void* self, void* rect, int32_t command) {
     QAbstractItemView_SetSelection((QAbstractItemView*)self, (QRect*)rect, command);
 }
 
-void q_abstractitemview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_abstractitemview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
     QAbstractItemView_OnSetSelection((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void q_abstractitemview_qbase_set_selection(void* self, void* rect, int64_t command) {
+void q_abstractitemview_qbase_set_selection(void* self, void* rect, int32_t command) {
     QAbstractItemView_QBaseSetSelection((QAbstractItemView*)self, (QRect*)rect, command);
 }
 
@@ -787,27 +787,27 @@ bool q_abstractitemview_qbase_edit2(void* self, void* index, int32_t trigger, vo
     return QAbstractItemView_QBaseEdit2((QAbstractItemView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-int64_t q_abstractitemview_selection_command(void* self, void* index, void* event) {
+int32_t q_abstractitemview_selection_command(void* self, void* index, void* event) {
     return QAbstractItemView_SelectionCommand((QAbstractItemView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_abstractitemview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+void q_abstractitemview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
     QAbstractItemView_OnSelectionCommand((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractitemview_qbase_selection_command(void* self, void* index, void* event) {
+int32_t q_abstractitemview_qbase_selection_command(void* self, void* index, void* event) {
     return QAbstractItemView_QBaseSelectionCommand((QAbstractItemView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_abstractitemview_start_drag(void* self, int64_t supportedActions) {
+void q_abstractitemview_start_drag(void* self, int32_t supportedActions) {
     QAbstractItemView_StartDrag((QAbstractItemView*)self, supportedActions);
 }
 
-void q_abstractitemview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+void q_abstractitemview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     QAbstractItemView_OnStartDrag((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-void q_abstractitemview_qbase_start_drag(void* self, int64_t supportedActions) {
+void q_abstractitemview_qbase_start_drag(void* self, int32_t supportedActions) {
     QAbstractItemView_QBaseStartDrag((QAbstractItemView*)self, supportedActions);
 }
 
@@ -1237,11 +1237,11 @@ void q_abstractitemview_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_abstractitemview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_abstractitemview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_abstractitemview_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_abstractitemview_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -2119,15 +2119,15 @@ bool q_abstractitemview_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_abstractitemview_window_state(void* self) {
+int32_t q_abstractitemview_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_abstractitemview_set_window_state(void* self, int64_t state) {
+void q_abstractitemview_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_abstractitemview_override_window_state(void* self, int64_t state) {
+void q_abstractitemview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -2384,7 +2384,7 @@ void q_abstractitemview_render3(void* self, void* target, void* targetOffset, vo
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_abstractitemview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_abstractitemview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2396,7 +2396,7 @@ void q_abstractitemview_render32(void* self, void* painter, void* targetOffset, 
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_abstractitemview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_abstractitemview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2404,7 +2404,7 @@ QPixmap* q_abstractitemview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_abstractitemview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_abstractitemview_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

@@ -366,7 +366,7 @@ QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int32_t which, void* 
     return QGraphicsAnchorLayout_QBaseSizeHint((QGraphicsAnchorLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicsanchorlayout_add_anchors3(void* self, void* firstItem, void* secondItem, int64_t orientations) {
+void q_graphicsanchorlayout_add_anchors3(void* self, void* firstItem, void* secondItem, int32_t orientations) {
     QGraphicsAnchorLayout_AddAnchors3((QGraphicsAnchorLayout*)self, (QGraphicsLayoutItem*)firstItem, (QGraphicsLayoutItem*)secondItem, orientations);
 }
 

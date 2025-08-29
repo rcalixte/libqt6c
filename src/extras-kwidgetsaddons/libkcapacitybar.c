@@ -100,11 +100,11 @@ int32_t k_capacitybar_bar_height(void* self) {
     return KCapacityBar_BarHeight((KCapacityBar*)self);
 }
 
-void k_capacitybar_set_horizontal_text_alignment(void* self, int64_t textAlignment) {
+void k_capacitybar_set_horizontal_text_alignment(void* self, int32_t textAlignment) {
     KCapacityBar_SetHorizontalTextAlignment((KCapacityBar*)self, textAlignment);
 }
 
-int64_t k_capacitybar_horizontal_text_alignment(void* self) {
+int32_t k_capacitybar_horizontal_text_alignment(void* self) {
     return KCapacityBar_HorizontalTextAlignment((KCapacityBar*)self);
 }
 
@@ -120,7 +120,7 @@ void k_capacitybar_draw_capacity_bar(void* self, void* p, void* rect) {
     KCapacityBar_DrawCapacityBar((KCapacityBar*)self, (QPainter*)p, (QRect*)rect);
 }
 
-void k_capacitybar_draw_capacity_bar2(void* self, void* p, void* rect, int64_t state) {
+void k_capacitybar_draw_capacity_bar2(void* self, void* p, void* rect, int32_t state) {
     KCapacityBar_DrawCapacityBar2((KCapacityBar*)self, (QPainter*)p, (QRect*)rect, state);
 }
 
@@ -979,15 +979,15 @@ bool k_capacitybar_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_capacitybar_window_state(void* self) {
+int32_t k_capacitybar_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_capacitybar_set_window_state(void* self, int64_t state) {
+void k_capacitybar_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_capacitybar_override_window_state(void* self, int64_t state) {
+void k_capacitybar_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1244,7 +1244,7 @@ void k_capacitybar_render3(void* self, void* target, void* targetOffset, void* s
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_capacitybar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_capacitybar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1256,7 +1256,7 @@ void k_capacitybar_render32(void* self, void* painter, void* targetOffset, void*
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_capacitybar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_capacitybar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1264,7 +1264,7 @@ QPixmap* k_capacitybar_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_capacitybar_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_capacitybar_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

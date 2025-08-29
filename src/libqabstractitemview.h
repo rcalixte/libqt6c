@@ -163,14 +163,14 @@ QModelIndex* q_abstractitemview_root_index(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param triggers flag of enum QAbstractItemView__EditTrigger
-void q_abstractitemview_set_edit_triggers(void* self, int64_t triggers);
+void q_abstractitemview_set_edit_triggers(void* self, int32_t triggers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editTriggers)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
-int64_t q_abstractitemview_edit_triggers(void* self);
+int32_t q_abstractitemview_edit_triggers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setVerticalScrollMode)
 ///
@@ -1213,7 +1213,7 @@ bool q_abstractitemview_qbase_is_index_hidden(void* self, void* index);
 /// @param self QAbstractItemView*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_abstractitemview_set_selection(void* self, void* rect, int64_t command);
+void q_abstractitemview_set_selection(void* self, void* rect, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelection)
 ///
@@ -1221,7 +1221,7 @@ void q_abstractitemview_set_selection(void* self, void* rect, int64_t command);
 ///
 /// @param self QAbstractItemView*
 /// @param callback void func(QAbstractItemView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
-void q_abstractitemview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
+void q_abstractitemview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelection)
 ///
@@ -1230,7 +1230,7 @@ void q_abstractitemview_on_set_selection(void* self, void (*callback)(void*, voi
 /// @param self QAbstractItemView*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_abstractitemview_qbase_set_selection(void* self, void* rect, int64_t command);
+void q_abstractitemview_qbase_set_selection(void* self, void* rect, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#visualRegionForSelection)
 ///
@@ -1307,15 +1307,15 @@ bool q_abstractitemview_qbase_edit2(void* self, void* index, int32_t trigger, vo
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_abstractitemview_selection_command(void* self, void* index, void* event);
+int32_t q_abstractitemview_selection_command(void* self, void* index, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback int64_t func(QAbstractItemView* self, QModelIndex* index, QEvent* event)
-void q_abstractitemview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
+/// @param callback int32_t func(QAbstractItemView* self, QModelIndex* index, QEvent* event)
+void q_abstractitemview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
@@ -1326,13 +1326,13 @@ void q_abstractitemview_on_selection_command(void* self, int64_t (*callback)(voi
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_abstractitemview_qbase_selection_command(void* self, void* index, void* event);
+int32_t q_abstractitemview_qbase_selection_command(void* self, void* index, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
 /// @param self QAbstractItemView*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_abstractitemview_start_drag(void* self, int64_t supportedActions);
+void q_abstractitemview_start_drag(void* self, int32_t supportedActions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
@@ -1340,7 +1340,7 @@ void q_abstractitemview_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QAbstractItemView*
 /// @param callback void func(QAbstractItemView* self, flag of enum Qt__DropAction supportedActions)
-void q_abstractitemview_on_start_drag(void* self, void (*callback)(void*, int64_t));
+void q_abstractitemview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#startDrag)
 ///
@@ -1348,7 +1348,7 @@ void q_abstractitemview_on_start_drag(void* self, void (*callback)(void*, int64_
 ///
 /// @param self QAbstractItemView*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_abstractitemview_qbase_start_drag(void* self, int64_t supportedActions);
+void q_abstractitemview_qbase_start_drag(void* self, int32_t supportedActions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#initViewItemOption)
 ///
@@ -2129,7 +2129,7 @@ void q_abstractitemview_set_corner_widget(void* self, void* widget);
 /// @param self QAbstractItemView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_abstractitemview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_abstractitemview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2137,7 +2137,7 @@ void q_abstractitemview_add_scroll_bar_widget(void* self, void* widget, int64_t 
 ///
 /// @param self QAbstractItemView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_abstractitemview_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_abstractitemview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3772,7 +3772,7 @@ bool q_abstractitemview_is_full_screen(void* self);
 /// @param self QAbstractItemView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_abstractitemview_window_state(void* self);
+int32_t q_abstractitemview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3780,7 +3780,7 @@ int64_t q_abstractitemview_window_state(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param state flag of enum Qt__WindowState
-void q_abstractitemview_set_window_state(void* self, int64_t state);
+void q_abstractitemview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3788,7 +3788,7 @@ void q_abstractitemview_set_window_state(void* self, int64_t state);
 ///
 /// @param self QAbstractItemView*
 /// @param state flag of enum Qt__WindowState
-void q_abstractitemview_override_window_state(void* self, int64_t state);
+void q_abstractitemview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -4305,7 +4305,7 @@ void q_abstractitemview_render3(void* self, void* target, void* targetOffset, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_abstractitemview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_abstractitemview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4335,7 +4335,7 @@ void q_abstractitemview_render32(void* self, void* painter, void* targetOffset, 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_abstractitemview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_abstractitemview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4352,7 +4352,7 @@ QPixmap* q_abstractitemview_grab1(void* self, void* rectangle);
 /// @param self QAbstractItemView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_abstractitemview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_abstractitemview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

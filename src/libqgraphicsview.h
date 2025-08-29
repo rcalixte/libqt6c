@@ -94,7 +94,7 @@ QSize* q_graphicsview_qbase_size_hint(void* self);
 /// @param self QGraphicsView*
 ///
 /// @return flag of enum QPainter__RenderHint
-int64_t q_graphicsview_render_hints(void* self);
+int32_t q_graphicsview_render_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#setRenderHint)
 ///
@@ -106,20 +106,20 @@ void q_graphicsview_set_render_hint(void* self, int32_t hint);
 ///
 /// @param self QGraphicsView*
 /// @param hints flag of enum QPainter__RenderHint
-void q_graphicsview_set_render_hints(void* self, int64_t hints);
+void q_graphicsview_set_render_hints(void* self, int32_t hints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#alignment)
 ///
 /// @param self QGraphicsView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_graphicsview_alignment(void* self);
+int32_t q_graphicsview_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#setAlignment)
 ///
 /// @param self QGraphicsView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsview_set_alignment(void* self, int64_t alignment);
+void q_graphicsview_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#transformationAnchor)
 ///
@@ -165,7 +165,7 @@ void q_graphicsview_set_viewport_update_mode(void* self, int32_t mode);
 /// @param self QGraphicsView*
 ///
 /// @return flag of enum QGraphicsView__OptimizationFlag
-int64_t q_graphicsview_optimization_flags(void* self);
+int32_t q_graphicsview_optimization_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#setOptimizationFlag)
 ///
@@ -177,7 +177,7 @@ void q_graphicsview_set_optimization_flag(void* self, int32_t flag);
 ///
 /// @param self QGraphicsView*
 /// @param flags flag of enum QGraphicsView__OptimizationFlag
-void q_graphicsview_set_optimization_flags(void* self, int64_t flags);
+void q_graphicsview_set_optimization_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#dragMode)
 ///
@@ -215,13 +215,13 @@ QRect* q_graphicsview_rubber_band_rect(void* self);
 /// @param self QGraphicsView*
 ///
 /// @return flag of enum QGraphicsView__CacheModeFlag
-int64_t q_graphicsview_cache_mode(void* self);
+int32_t q_graphicsview_cache_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#setCacheMode)
 ///
 /// @param self QGraphicsView*
 /// @param mode flag of enum QGraphicsView__CacheModeFlag
-void q_graphicsview_set_cache_mode(void* self, int64_t mode);
+void q_graphicsview_set_cache_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#resetCachedContent)
 ///
@@ -1283,7 +1283,7 @@ void q_graphicsview_invalidate_scene1(void* self, void* rect);
 /// @param self QGraphicsView*
 /// @param rect QRectF*
 /// @param layers flag of enum QGraphicsScene__SceneLayer
-void q_graphicsview_invalidate_scene2(void* self, void* rect, int64_t layers);
+void q_graphicsview_invalidate_scene2(void* self, void* rect, int32_t layers);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1371,7 +1371,7 @@ void q_graphicsview_set_corner_widget(void* self, void* widget);
 /// @param self QGraphicsView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_graphicsview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1379,7 +1379,7 @@ void q_graphicsview_add_scroll_bar_widget(void* self, void* widget, int64_t alig
 ///
 /// @param self QGraphicsView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_graphicsview_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_graphicsview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3005,7 +3005,7 @@ bool q_graphicsview_is_full_screen(void* self);
 /// @param self QGraphicsView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_graphicsview_window_state(void* self);
+int32_t q_graphicsview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3013,7 +3013,7 @@ int64_t q_graphicsview_window_state(void* self);
 ///
 /// @param self QGraphicsView*
 /// @param state flag of enum Qt__WindowState
-void q_graphicsview_set_window_state(void* self, int64_t state);
+void q_graphicsview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3021,7 +3021,7 @@ void q_graphicsview_set_window_state(void* self, int64_t state);
 ///
 /// @param self QGraphicsView*
 /// @param state flag of enum Qt__WindowState
-void q_graphicsview_override_window_state(void* self, int64_t state);
+void q_graphicsview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3547,7 +3547,7 @@ void q_graphicsview_render32(void* self, void* painter, void* targetOffset, void
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_graphicsview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_graphicsview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3564,7 +3564,7 @@ QPixmap* q_graphicsview_grab1(void* self, void* rectangle);
 /// @param self QGraphicsView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_graphicsview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_graphicsview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

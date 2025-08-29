@@ -92,7 +92,7 @@ QTextDocumentFragment* q_textdocumentfragment_from_markdown(const char* markdown
 ///
 /// @param self QTextDocumentFragment*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-const char* q_textdocumentfragment_to_markdown1(void* self, int64_t features);
+const char* q_textdocumentfragment_to_markdown1(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentfragment.html#fromHtml)
 ///
@@ -104,7 +104,7 @@ QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, void*
 ///
 /// @param markdown const char*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-QTextDocumentFragment* q_textdocumentfragment_from_markdown2(const char* markdown, int64_t features);
+QTextDocumentFragment* q_textdocumentfragment_from_markdown2(const char* markdown, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentfragment.html#dtor.QTextDocumentFragment)
 ///

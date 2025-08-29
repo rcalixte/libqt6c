@@ -368,7 +368,7 @@ double q_textlayout_maximum_width(void* self);
 /// @param from int
 /// @param length int
 /// @param flags flag of enum QTextLayout__GlyphRunRetrievalFlag
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, int64_t flags);
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, uint16_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
@@ -607,7 +607,7 @@ void q_textline_draw(void* self, void* painter, void* position);
 /// @param from int
 /// @param length int
 /// @param flags flag of enum QTextLayout__GlyphRunRetrievalFlag
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, int64_t flags);
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, uint16_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///

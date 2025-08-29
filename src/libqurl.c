@@ -362,7 +362,7 @@ QUrl* q_url_from_user_input2(const char* userInput, const char* workingDirectory
     return QUrl_FromUserInput2(qstring(userInput), qstring(workingDirectory));
 }
 
-QUrl* q_url_from_user_input3(const char* userInput, const char* workingDirectory, int64_t options) {
+QUrl* q_url_from_user_input3(const char* userInput, const char* workingDirectory, int32_t options) {
     return QUrl_FromUserInput3(qstring(userInput), qstring(workingDirectory), options);
 }
 
@@ -370,7 +370,7 @@ void q_url_set_authority2(void* self, const char* authority, int32_t mode) {
     QUrl_SetAuthority2((QUrl*)self, qstring(authority), mode);
 }
 
-const char* q_url_authority1(void* self, int64_t options) {
+const char* q_url_authority1(void* self, uint32_t options) {
     libqt_string _str = QUrl_Authority1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -381,7 +381,7 @@ void q_url_set_user_info2(void* self, const char* userInfo, int32_t mode) {
     QUrl_SetUserInfo2((QUrl*)self, qstring(userInfo), mode);
 }
 
-const char* q_url_user_info1(void* self, int64_t options) {
+const char* q_url_user_info1(void* self, uint32_t options) {
     libqt_string _str = QUrl_UserInfo1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -392,7 +392,7 @@ void q_url_set_user_name2(void* self, const char* userName, int32_t mode) {
     QUrl_SetUserName2((QUrl*)self, qstring(userName), mode);
 }
 
-const char* q_url_user_name1(void* self, int64_t options) {
+const char* q_url_user_name1(void* self, uint32_t options) {
     libqt_string _str = QUrl_UserName1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -403,7 +403,7 @@ void q_url_set_password2(void* self, const char* password, int32_t mode) {
     QUrl_SetPassword2((QUrl*)self, qstring(password), mode);
 }
 
-const char* q_url_password1(void* self, int64_t param1) {
+const char* q_url_password1(void* self, uint32_t param1) {
     libqt_string _str = QUrl_Password1((QUrl*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -414,7 +414,7 @@ void q_url_set_host2(void* self, const char* host, int32_t mode) {
     QUrl_SetHost2((QUrl*)self, qstring(host), mode);
 }
 
-const char* q_url_host1(void* self, int64_t param1) {
+const char* q_url_host1(void* self, uint32_t param1) {
     libqt_string _str = QUrl_Host1((QUrl*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -429,14 +429,14 @@ void q_url_set_path2(void* self, const char* path, int32_t mode) {
     QUrl_SetPath2((QUrl*)self, qstring(path), mode);
 }
 
-const char* q_url_path1(void* self, int64_t options) {
+const char* q_url_path1(void* self, uint32_t options) {
     libqt_string _str = QUrl_Path1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_file_name1(void* self, int64_t options) {
+const char* q_url_file_name1(void* self, uint32_t options) {
     libqt_string _str = QUrl_FileName1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -447,14 +447,14 @@ void q_url_set_query22(void* self, const char* query, int32_t mode) {
     QUrl_SetQuery22((QUrl*)self, qstring(query), mode);
 }
 
-const char* q_url_query1(void* self, int64_t param1) {
+const char* q_url_query1(void* self, uint32_t param1) {
     libqt_string _str = QUrl_Query1((QUrl*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_url_fragment1(void* self, int64_t options) {
+const char* q_url_fragment1(void* self, uint32_t options) {
     libqt_string _str = QUrl_Fragment1((QUrl*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -479,14 +479,14 @@ char* q_url_to_percent_encoding3(const char* param1, const char* exclude, const 
     return _ret;
 }
 
-const char* q_url_from_ace2(const char* domain, int64_t options) {
+const char* q_url_from_ace2(const char* domain, uint32_t options) {
     libqt_string _str = QUrl_FromAce2(qstring(domain), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_url_to_ace2(const char* domain, int64_t options) {
+char* q_url_to_ace2(const char* domain, uint32_t options) {
     libqt_string _str = QUrl_ToAce2(qstring(domain), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

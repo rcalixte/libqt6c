@@ -19,11 +19,11 @@ KFontChooserDialog* k_fontchooserdialog_new() {
     return KFontChooserDialog_new();
 }
 
-KFontChooserDialog* k_fontchooserdialog_new2(const int64_t* flags) {
+KFontChooserDialog* k_fontchooserdialog_new2(const int32_t* flags) {
     return KFontChooserDialog_new2(flags);
 }
 
-KFontChooserDialog* k_fontchooserdialog_new3(const int64_t* flags, void* parent) {
+KFontChooserDialog* k_fontchooserdialog_new3(const int32_t* flags, void* parent) {
     return KFontChooserDialog_new3(flags, (QWidget*)parent);
 }
 
@@ -66,7 +66,7 @@ int32_t k_fontchooserdialog_get_font(void* theFont) {
     return KFontChooserDialog_GetFont((QFont*)theFont);
 }
 
-int32_t k_fontchooserdialog_get_font_diff(void* theFont, int64_t* diffFlags) {
+int32_t k_fontchooserdialog_get_font_diff(void* theFont, int32_t* diffFlags) {
     return KFontChooserDialog_GetFontDiff((QFont*)theFont, diffFlags);
 }
 
@@ -96,19 +96,19 @@ void k_fontchooserdialog_set_font2(void* self, void* font, bool onlyFixed) {
     KFontChooserDialog_SetFont2((KFontChooserDialog*)self, (QFont*)font, onlyFixed);
 }
 
-int32_t k_fontchooserdialog_get_font2(void* theFont, const int64_t* flags) {
+int32_t k_fontchooserdialog_get_font2(void* theFont, const int32_t* flags) {
     return KFontChooserDialog_GetFont2((QFont*)theFont, flags);
 }
 
-int32_t k_fontchooserdialog_get_font3(void* theFont, const int64_t* flags, void* parent) {
+int32_t k_fontchooserdialog_get_font3(void* theFont, const int32_t* flags, void* parent) {
     return KFontChooserDialog_GetFont3((QFont*)theFont, flags, (QWidget*)parent);
 }
 
-int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int64_t* diffFlags, const int64_t* flags) {
+int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int32_t* diffFlags, const int32_t* flags) {
     return KFontChooserDialog_GetFontDiff3((QFont*)theFont, diffFlags, flags);
 }
 
-int32_t k_fontchooserdialog_get_font_diff4(void* theFont, int64_t* diffFlags, const int64_t* flags, void* parent) {
+int32_t k_fontchooserdialog_get_font_diff4(void* theFont, int32_t* diffFlags, const int32_t* flags, void* parent) {
     return KFontChooserDialog_GetFontDiff4((QFont*)theFont, diffFlags, flags, (QWidget*)parent);
 }
 
@@ -953,15 +953,15 @@ bool k_fontchooserdialog_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_fontchooserdialog_window_state(void* self) {
+int32_t k_fontchooserdialog_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_fontchooserdialog_set_window_state(void* self, int64_t state) {
+void k_fontchooserdialog_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_fontchooserdialog_override_window_state(void* self, int64_t state) {
+void k_fontchooserdialog_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1218,7 +1218,7 @@ void k_fontchooserdialog_render3(void* self, void* target, void* targetOffset, v
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_fontchooserdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_fontchooserdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1230,7 +1230,7 @@ void k_fontchooserdialog_render32(void* self, void* painter, void* targetOffset,
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_fontchooserdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_fontchooserdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1238,7 +1238,7 @@ QPixmap* k_fontchooserdialog_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_fontchooserdialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_fontchooserdialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

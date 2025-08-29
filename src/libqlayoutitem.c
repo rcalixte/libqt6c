@@ -14,7 +14,7 @@ QLayoutItem* q_layoutitem_new2(void* param1) {
     return QLayoutItem_new2((QLayoutItem*)param1);
 }
 
-QLayoutItem* q_layoutitem_new3(int64_t alignment) {
+QLayoutItem* q_layoutitem_new3(int32_t alignment) {
     return QLayoutItem_new3(alignment);
 }
 
@@ -54,15 +54,15 @@ QSize* q_layoutitem_qbase_maximum_size(void* self) {
     return QLayoutItem_QBaseMaximumSize((QLayoutItem*)self);
 }
 
-int64_t q_layoutitem_expanding_directions(void* self) {
+int32_t q_layoutitem_expanding_directions(void* self) {
     return QLayoutItem_ExpandingDirections((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)()) {
     QLayoutItem_OnExpandingDirections((QLayoutItem*)self, (intptr_t)callback);
 }
 
-int64_t q_layoutitem_qbase_expanding_directions(void* self) {
+int32_t q_layoutitem_qbase_expanding_directions(void* self) {
     return QLayoutItem_QBaseExpandingDirections((QLayoutItem*)self);
 }
 
@@ -186,23 +186,23 @@ QSpacerItem* q_layoutitem_qbase_spacer_item(void* self) {
     return QLayoutItem_QBaseSpacerItem((QLayoutItem*)self);
 }
 
-int64_t q_layoutitem_alignment(void* self) {
+int32_t q_layoutitem_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
-void q_layoutitem_set_alignment(void* self, int64_t a) {
+void q_layoutitem_set_alignment(void* self, int32_t a) {
     QLayoutItem_SetAlignment((QLayoutItem*)self, a);
 }
 
-int64_t q_layoutitem_control_types(void* self) {
+int32_t q_layoutitem_control_types(void* self) {
     return QLayoutItem_ControlTypes((QLayoutItem*)self);
 }
 
-void q_layoutitem_on_control_types(void* self, int64_t (*callback)()) {
+void q_layoutitem_on_control_types(void* self, int32_t (*callback)()) {
     QLayoutItem_OnControlTypes((QLayoutItem*)self, (intptr_t)callback);
 }
 
-int64_t q_layoutitem_qbase_control_types(void* self) {
+int32_t q_layoutitem_qbase_control_types(void* self) {
     return QLayoutItem_QBaseControlTypes((QLayoutItem*)self);
 }
 
@@ -278,15 +278,15 @@ QSize* q_spaceritem_qbase_maximum_size(void* self) {
     return QSpacerItem_QBaseMaximumSize((QSpacerItem*)self);
 }
 
-int64_t q_spaceritem_expanding_directions(void* self) {
+int32_t q_spaceritem_expanding_directions(void* self) {
     return QSpacerItem_ExpandingDirections((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)()) {
     QSpacerItem_OnExpandingDirections((QSpacerItem*)self, (intptr_t)callback);
 }
 
-int64_t q_spaceritem_qbase_expanding_directions(void* self) {
+int32_t q_spaceritem_qbase_expanding_directions(void* self) {
     return QSpacerItem_QBaseExpandingDirections((QSpacerItem*)self);
 }
 
@@ -350,11 +350,11 @@ void q_spaceritem_change_size4(void* self, int w, int h, int32_t hData, int32_t 
     QSpacerItem_ChangeSize4((QSpacerItem*)self, w, h, hData, vData);
 }
 
-int64_t q_spaceritem_alignment(void* self) {
+int32_t q_spaceritem_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
-void q_spaceritem_set_alignment(void* self, int64_t a) {
+void q_spaceritem_set_alignment(void* self, int32_t a) {
     QLayoutItem_SetAlignment((QLayoutItem*)self, a);
 }
 
@@ -430,15 +430,15 @@ void q_spaceritem_on_layout(void* self, QLayout* (*callback)()) {
     QSpacerItem_OnLayout((QSpacerItem*)self, (intptr_t)callback);
 }
 
-int64_t q_spaceritem_control_types(void* self) {
+int32_t q_spaceritem_control_types(void* self) {
     return QSpacerItem_ControlTypes((QSpacerItem*)self);
 }
 
-int64_t q_spaceritem_qbase_control_types(void* self) {
+int32_t q_spaceritem_qbase_control_types(void* self) {
     return QSpacerItem_QBaseControlTypes((QSpacerItem*)self);
 }
 
-void q_spaceritem_on_control_types(void* self, int64_t (*callback)()) {
+void q_spaceritem_on_control_types(void* self, int32_t (*callback)()) {
     QSpacerItem_OnControlTypes((QSpacerItem*)self, (intptr_t)callback);
 }
 
@@ -486,15 +486,15 @@ QSize* q_widgetitem_qbase_maximum_size(void* self) {
     return QWidgetItem_QBaseMaximumSize((QWidgetItem*)self);
 }
 
-int64_t q_widgetitem_expanding_directions(void* self) {
+int32_t q_widgetitem_expanding_directions(void* self) {
     return QWidgetItem_ExpandingDirections((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)()) {
     QWidgetItem_OnExpandingDirections((QWidgetItem*)self, (intptr_t)callback);
 }
 
-int64_t q_widgetitem_qbase_expanding_directions(void* self) {
+int32_t q_widgetitem_qbase_expanding_directions(void* self) {
     return QWidgetItem_QBaseExpandingDirections((QWidgetItem*)self);
 }
 
@@ -582,23 +582,23 @@ int32_t q_widgetitem_qbase_minimum_height_for_width(void* self, int param1) {
     return QWidgetItem_QBaseMinimumHeightForWidth((QWidgetItem*)self, param1);
 }
 
-int64_t q_widgetitem_control_types(void* self) {
+int32_t q_widgetitem_control_types(void* self) {
     return QWidgetItem_ControlTypes((QWidgetItem*)self);
 }
 
-void q_widgetitem_on_control_types(void* self, int64_t (*callback)()) {
+void q_widgetitem_on_control_types(void* self, int32_t (*callback)()) {
     QWidgetItem_OnControlTypes((QWidgetItem*)self, (intptr_t)callback);
 }
 
-int64_t q_widgetitem_qbase_control_types(void* self) {
+int32_t q_widgetitem_qbase_control_types(void* self) {
     return QWidgetItem_QBaseControlTypes((QWidgetItem*)self);
 }
 
-int64_t q_widgetitem_alignment(void* self) {
+int32_t q_widgetitem_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
-void q_widgetitem_set_alignment(void* self, int64_t a) {
+void q_widgetitem_set_alignment(void* self, int32_t a) {
     QLayoutItem_SetAlignment((QLayoutItem*)self, a);
 }
 
@@ -694,23 +694,23 @@ int32_t q_widgetitemv2_qbase_height_for_width(void* self, int width) {
     return QWidgetItemV2_QBaseHeightForWidth((QWidgetItemV2*)self, width);
 }
 
-int64_t q_widgetitemv2_alignment(void* self) {
+int32_t q_widgetitemv2_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
-void q_widgetitemv2_set_alignment(void* self, int64_t a) {
+void q_widgetitemv2_set_alignment(void* self, int32_t a) {
     QLayoutItem_SetAlignment((QLayoutItem*)self, a);
 }
 
-int64_t q_widgetitemv2_expanding_directions(void* self) {
+int32_t q_widgetitemv2_expanding_directions(void* self) {
     return QWidgetItemV2_ExpandingDirections((QWidgetItemV2*)self);
 }
 
-int64_t q_widgetitemv2_qbase_expanding_directions(void* self) {
+int32_t q_widgetitemv2_qbase_expanding_directions(void* self) {
     return QWidgetItemV2_QBaseExpandingDirections((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_widgetitemv2_on_expanding_directions(void* self, int32_t (*callback)()) {
     QWidgetItemV2_OnExpandingDirections((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
@@ -786,15 +786,15 @@ void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(
     QWidgetItemV2_OnMinimumHeightForWidth((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
-int64_t q_widgetitemv2_control_types(void* self) {
+int32_t q_widgetitemv2_control_types(void* self) {
     return QWidgetItemV2_ControlTypes((QWidgetItemV2*)self);
 }
 
-int64_t q_widgetitemv2_qbase_control_types(void* self) {
+int32_t q_widgetitemv2_qbase_control_types(void* self) {
     return QWidgetItemV2_QBaseControlTypes((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_on_control_types(void* self, int64_t (*callback)()) {
+void q_widgetitemv2_on_control_types(void* self, int32_t (*callback)()) {
     QWidgetItemV2_OnControlTypes((QWidgetItemV2*)self, (intptr_t)callback);
 }
 

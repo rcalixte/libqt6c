@@ -134,15 +134,15 @@ void k_modifierkeyinfoprovider_on_key_removed(void* self, void (*callback)(void*
     KModifierKeyInfoProvider_Connect_KeyRemoved((KModifierKeyInfoProvider*)self, (intptr_t)callback);
 }
 
-void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int64_t state) {
+void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int32_t state) {
     KModifierKeyInfoProvider_StateUpdated((KModifierKeyInfoProvider*)self, key, state);
 }
 
-void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(void*, int32_t, int64_t)) {
+void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(void*, int32_t, int32_t)) {
     KModifierKeyInfoProvider_OnStateUpdated((KModifierKeyInfoProvider*)self, (intptr_t)callback);
 }
 
-void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int64_t state) {
+void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int32_t state) {
     KModifierKeyInfoProvider_QBaseStateUpdated((KModifierKeyInfoProvider*)self, key, state);
 }
 

@@ -106,13 +106,13 @@ bool q_filedevice_resize(void* self, long long sz);
 /// @param self QFileDevice*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_filedevice_permissions(void* self);
+int32_t q_filedevice_permissions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
 ///
 /// @param self QFileDevice*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_filedevice_set_permissions(void* self, int64_t permissionSpec);
+bool q_filedevice_set_permissions(void* self, int32_t permissionSpec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
@@ -163,7 +163,7 @@ const char* q_filedevice_tr3(const char* s, const char* c, int n);
 /// @param offset long long
 /// @param size long long
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
-unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int64_t flags);
+unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -172,7 +172,7 @@ unsigned char* q_filedevice_map3(void* self, long long offset, long long size, i
 /// @param self QFileDevice*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_filedevice_open_mode(void* self);
+int32_t q_filedevice_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -260,7 +260,7 @@ void q_filedevice_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QFileDevice*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_filedevice_open(void* self, int64_t mode);
+bool q_filedevice_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///

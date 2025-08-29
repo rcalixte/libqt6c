@@ -77,11 +77,11 @@ bool q_filedevice_resize(void* self, long long sz) {
     return QFileDevice_Resize((QFileDevice*)self, sz);
 }
 
-int64_t q_filedevice_permissions(void* self) {
+int32_t q_filedevice_permissions(void* self) {
     return QFileDevice_Permissions((QFileDevice*)self);
 }
 
-bool q_filedevice_set_permissions(void* self, int64_t permissionSpec) {
+bool q_filedevice_set_permissions(void* self, int32_t permissionSpec) {
     return QFileDevice_SetPermissions((QFileDevice*)self, permissionSpec);
 }
 
@@ -115,11 +115,11 @@ const char* q_filedevice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int64_t flags) {
+unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int32_t flags) {
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-int64_t q_filedevice_open_mode(void* self) {
+int32_t q_filedevice_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -167,7 +167,7 @@ void q_filedevice_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-bool q_filedevice_open(void* self, int64_t mode) {
+bool q_filedevice_open(void* self, int32_t mode) {
     return QIODevice_Open((QIODevice*)self, mode);
 }
 

@@ -120,7 +120,7 @@ libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes(void* self, li
 /// @param self QRawFont*
 /// @param glyphIndexes libqt_list /* of uint32_t */
 /// @param layoutFlags flag of enum QRawFont__LayoutFlag
-libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int64_t layoutFlags);
+libqt_list /* of QPointF* */ q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int32_t layoutFlags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#glyphIndexesForChars)
 ///
@@ -146,7 +146,7 @@ bool q_rawfont_advances_for_glyph_indexes3(void* self, uint32_t* glyphIndexes, v
 /// @param advances QPointF*
 /// @param numGlyphs int
 /// @param layoutFlags flag of enum QRawFont__LayoutFlag
-bool q_rawfont_advances_for_glyph_indexes4(void* self, uint32_t* glyphIndexes, void* advances, int numGlyphs, int64_t layoutFlags);
+bool q_rawfont_advances_for_glyph_indexes4(void* self, uint32_t* glyphIndexes, void* advances, int numGlyphs, int32_t layoutFlags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#alphaMapForGlyph)
 ///

@@ -42,7 +42,7 @@ const char** k_urlmimedata_mime_data_types();
 /// @param param1 QMimeData*
 /// @param param2 flag of enum KUrlMimeData__DecodeOption
 /// @param param3 libqt_map* /* of const char* to const char* */
-libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* param1, int64_t param2, libqt_map* /* of const char* to const char* */ param3);
+libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* param1, int32_t param2, libqt_map* /* of const char* to const char* */ param3);
 
 /// https://api-staging.kde.org/kurlmimedata.html#types
 

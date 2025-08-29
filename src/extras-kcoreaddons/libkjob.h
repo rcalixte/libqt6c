@@ -74,7 +74,7 @@ KJobUiDelegate* k_job_ui_delegate(void* self);
 /// @param self KJob*
 ///
 /// @return flag of enum KJob__Capability
-int64_t k_job_capabilities(void* self);
+int32_t k_job_capabilities(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#isSuspended)
 ///
@@ -180,7 +180,7 @@ bool k_job_qbase_do_resume(void* self);
 ///
 /// @param self KJob*
 /// @param capabilities flag of enum KJob__Capability
-void k_job_set_capabilities(void* self, int64_t capabilities);
+void k_job_set_capabilities(void* self, int32_t capabilities);
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
 ///
@@ -188,7 +188,7 @@ void k_job_set_capabilities(void* self, int64_t capabilities);
 ///
 /// @param self KJob*
 /// @param callback void func(KJob* self, flag of enum KJob__Capability capabilities)
-void k_job_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
+void k_job_on_set_capabilities(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
 ///
@@ -196,7 +196,7 @@ void k_job_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
 ///
 /// @param self KJob*
 /// @param capabilities flag of enum KJob__Capability
-void k_job_qbase_set_capabilities(void* self, int64_t capabilities);
+void k_job_qbase_set_capabilities(void* self, int32_t capabilities);
 
 /// [Qt documentation](https://api-staging.kde.org/kjob.html#exec)
 ///

@@ -959,15 +959,15 @@ bool k_newpasswordwidget_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_newpasswordwidget_window_state(void* self) {
+int32_t k_newpasswordwidget_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_newpasswordwidget_set_window_state(void* self, int64_t state) {
+void k_newpasswordwidget_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_newpasswordwidget_override_window_state(void* self, int64_t state) {
+void k_newpasswordwidget_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1224,7 +1224,7 @@ void k_newpasswordwidget_render3(void* self, void* target, void* targetOffset, v
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_newpasswordwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_newpasswordwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1236,7 +1236,7 @@ void k_newpasswordwidget_render32(void* self, void* painter, void* targetOffset,
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_newpasswordwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_newpasswordwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1244,7 +1244,7 @@ QPixmap* k_newpasswordwidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_newpasswordwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_newpasswordwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

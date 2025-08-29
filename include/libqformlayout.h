@@ -88,27 +88,27 @@ int32_t q_formlayout_row_wrap_policy(void* self);
 ///
 /// @param self QFormLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_formlayout_set_label_alignment(void* self, int64_t alignment);
+void q_formlayout_set_label_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#labelAlignment)
 ///
 /// @param self QFormLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_formlayout_label_alignment(void* self);
+int32_t q_formlayout_label_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setFormAlignment)
 ///
 /// @param self QFormLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_formlayout_set_form_alignment(void* self, int64_t alignment);
+void q_formlayout_set_form_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#formAlignment)
 ///
 /// @param self QFormLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_formlayout_form_alignment(void* self);
+int32_t q_formlayout_form_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setHorizontalSpacing)
 ///
@@ -573,15 +573,15 @@ int32_t q_formlayout_qbase_height_for_width(void* self, int width);
 /// @param self QFormLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_formlayout_expanding_directions(void* self);
+int32_t q_formlayout_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QFormLayout*
-/// @param callback int64_t func()
-void q_formlayout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_formlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#expandingDirections)
 ///
@@ -590,7 +590,7 @@ void q_formlayout_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QFormLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_formlayout_qbase_expanding_directions(void* self);
+int32_t q_formlayout_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#count)
 ///
@@ -692,7 +692,7 @@ QRect* q_formlayout_contents_rect(void* self);
 /// @param self QFormLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_formlayout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_formlayout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -701,7 +701,7 @@ bool q_formlayout_set_alignment(void* self, void* w, int64_t alignment);
 /// @param self QFormLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_formlayout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_formlayout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -1182,7 +1182,7 @@ void q_formlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QFormLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_formlayout_alignment(void* self);
+int32_t q_formlayout_alignment(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1307,7 +1307,7 @@ void q_formlayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QFormLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_formlayout_control_types(void* self);
+int32_t q_formlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1318,7 +1318,7 @@ int64_t q_formlayout_control_types(void* self);
 /// @param self QFormLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_formlayout_qbase_control_types(void* self);
+int32_t q_formlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1327,8 +1327,8 @@ int64_t q_formlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFormLayout*
-/// @param callback int64_t func()
-void q_formlayout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_formlayout_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -1340,7 +1340,7 @@ void q_formlayout_on_control_types(void* self, int64_t (*callback)());
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1352,7 +1352,7 @@ QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int64
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1362,7 +1362,7 @@ QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to,
 ///
 /// @param self QFormLayout*
 /// @param callback QLayoutItem* func(QFormLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_formlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_formlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// Inherited from QLayout
 ///

@@ -34,7 +34,7 @@ KSandbox__ProcessContext* k_sandbox_make_host_context(void* param1);
 ///
 /// @param param1 QProcess*
 /// @param param2 flag of enum QIODeviceBase__OpenModeFlag
-void k_sandbox_start_host_process(void* param1, int64_t param2);
+void k_sandbox_start_host_process(void* param1, int32_t param2);
 
 /// https://api-staging.kde.org/ksandbox-processcontext.html
 

@@ -64,7 +64,7 @@ bool k_datecombobox_is_null(void* self) {
     return KDateComboBox_IsNull((KDateComboBox*)self);
 }
 
-int64_t k_datecombobox_options(void* self) {
+int32_t k_datecombobox_options(void* self) {
     return KDateComboBox_Options((KDateComboBox*)self);
 }
 
@@ -112,7 +112,7 @@ void k_datecombobox_set_date(void* self, void* date) {
     KDateComboBox_SetDate((KDateComboBox*)self, (QDate*)date);
 }
 
-void k_datecombobox_set_options(void* self, int64_t options) {
+void k_datecombobox_set_options(void* self, int32_t options) {
     KDateComboBox_SetOptions((KDateComboBox*)self, options);
 }
 
@@ -629,7 +629,7 @@ void k_datecombobox_on_current_text_changed(void* self, void (*callback)(void*, 
     QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_datecombobox_find_text2(void* self, const char* text, int64_t flags) {
+int32_t k_datecombobox_find_text2(void* self, const char* text, int32_t flags) {
     return QComboBox_FindText2((QComboBox*)self, qstring(text), flags);
 }
 
@@ -637,7 +637,7 @@ int32_t k_datecombobox_find_data2(void* self, void* data, int role) {
     return QComboBox_FindData2((QComboBox*)self, (QVariant*)data, role);
 }
 
-int32_t k_datecombobox_find_data3(void* self, void* data, int role, int64_t flags) {
+int32_t k_datecombobox_find_data3(void* self, void* data, int role, int32_t flags) {
     return QComboBox_FindData3((QComboBox*)self, (QVariant*)data, role, flags);
 }
 
@@ -1474,15 +1474,15 @@ bool k_datecombobox_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_datecombobox_window_state(void* self) {
+int32_t k_datecombobox_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_datecombobox_set_window_state(void* self, int64_t state) {
+void k_datecombobox_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_datecombobox_override_window_state(void* self, int64_t state) {
+void k_datecombobox_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1739,7 +1739,7 @@ void k_datecombobox_render3(void* self, void* target, void* targetOffset, void* 
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_datecombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_datecombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1751,7 +1751,7 @@ void k_datecombobox_render32(void* self, void* painter, void* targetOffset, void
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_datecombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_datecombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1759,7 +1759,7 @@ QPixmap* k_datecombobox_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_datecombobox_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_datecombobox_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

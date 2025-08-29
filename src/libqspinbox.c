@@ -290,11 +290,11 @@ bool q_spinbox_keyboard_tracking(void* self) {
     return QAbstractSpinBox_KeyboardTracking((QAbstractSpinBox*)self);
 }
 
-void q_spinbox_set_alignment(void* self, int64_t flag) {
+void q_spinbox_set_alignment(void* self, int32_t flag) {
     QAbstractSpinBox_SetAlignment((QAbstractSpinBox*)self, flag);
 }
 
-int64_t q_spinbox_alignment(void* self) {
+int32_t q_spinbox_alignment(void* self) {
     return QAbstractSpinBox_Alignment((QAbstractSpinBox*)self);
 }
 
@@ -1151,15 +1151,15 @@ bool q_spinbox_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_spinbox_window_state(void* self) {
+int32_t q_spinbox_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_spinbox_set_window_state(void* self, int64_t state) {
+void q_spinbox_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_spinbox_override_window_state(void* self, int64_t state) {
+void q_spinbox_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1416,7 +1416,7 @@ void q_spinbox_render3(void* self, void* target, void* targetOffset, void* sourc
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_spinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_spinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1428,7 +1428,7 @@ void q_spinbox_render32(void* self, void* painter, void* targetOffset, void* sou
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_spinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_spinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1436,7 +1436,7 @@ QPixmap* q_spinbox_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_spinbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_spinbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -1951,15 +1951,15 @@ void q_spinbox_on_init_style_option(void* self, void (*callback)(void*, void*)) 
     QSpinBox_OnInitStyleOption((QSpinBox*)self, (intptr_t)callback);
 }
 
-int64_t q_spinbox_step_enabled(void* self) {
+int32_t q_spinbox_step_enabled(void* self) {
     return QSpinBox_StepEnabled((QSpinBox*)self);
 }
 
-int64_t q_spinbox_qbase_step_enabled(void* self) {
+int32_t q_spinbox_qbase_step_enabled(void* self) {
     return QSpinBox_QBaseStepEnabled((QSpinBox*)self);
 }
 
-void q_spinbox_on_step_enabled(void* self, int64_t (*callback)()) {
+void q_spinbox_on_step_enabled(void* self, int32_t (*callback)()) {
     QSpinBox_OnStepEnabled((QSpinBox*)self, (intptr_t)callback);
 }
 
@@ -2701,11 +2701,11 @@ bool q_doublespinbox_keyboard_tracking(void* self) {
     return QAbstractSpinBox_KeyboardTracking((QAbstractSpinBox*)self);
 }
 
-void q_doublespinbox_set_alignment(void* self, int64_t flag) {
+void q_doublespinbox_set_alignment(void* self, int32_t flag) {
     QAbstractSpinBox_SetAlignment((QAbstractSpinBox*)self, flag);
 }
 
-int64_t q_doublespinbox_alignment(void* self) {
+int32_t q_doublespinbox_alignment(void* self) {
     return QAbstractSpinBox_Alignment((QAbstractSpinBox*)self);
 }
 
@@ -3562,15 +3562,15 @@ bool q_doublespinbox_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_doublespinbox_window_state(void* self) {
+int32_t q_doublespinbox_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_doublespinbox_set_window_state(void* self, int64_t state) {
+void q_doublespinbox_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_doublespinbox_override_window_state(void* self, int64_t state) {
+void q_doublespinbox_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -3827,7 +3827,7 @@ void q_doublespinbox_render3(void* self, void* target, void* targetOffset, void*
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_doublespinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_doublespinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -3839,7 +3839,7 @@ void q_doublespinbox_render32(void* self, void* painter, void* targetOffset, voi
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_doublespinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_doublespinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -3847,7 +3847,7 @@ QPixmap* q_doublespinbox_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_doublespinbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_doublespinbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -4374,15 +4374,15 @@ void q_doublespinbox_on_init_style_option(void* self, void (*callback)(void*, vo
     QDoubleSpinBox_OnInitStyleOption((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
-int64_t q_doublespinbox_step_enabled(void* self) {
+int32_t q_doublespinbox_step_enabled(void* self) {
     return QDoubleSpinBox_StepEnabled((QDoubleSpinBox*)self);
 }
 
-int64_t q_doublespinbox_qbase_step_enabled(void* self) {
+int32_t q_doublespinbox_qbase_step_enabled(void* self) {
     return QDoubleSpinBox_QBaseStepEnabled((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_step_enabled(void* self, int64_t (*callback)()) {
+void q_doublespinbox_on_step_enabled(void* self, int32_t (*callback)()) {
     QDoubleSpinBox_OnStepEnabled((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 

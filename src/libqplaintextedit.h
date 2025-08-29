@@ -119,14 +119,14 @@ void q_plaintextedit_set_read_only(void* self, bool ro);
 ///
 /// @param self QPlainTextEdit*
 /// @param flags flag of enum Qt__TextInteractionFlag
-void q_plaintextedit_set_text_interaction_flags(void* self, int64_t flags);
+void q_plaintextedit_set_text_interaction_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#textInteractionFlags)
 ///
 /// @param self QPlainTextEdit*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
-int64_t q_plaintextedit_text_interaction_flags(void* self);
+int32_t q_plaintextedit_text_interaction_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#mergeCurrentCharFormat)
 ///
@@ -1340,14 +1340,14 @@ const char* q_plaintextedit_tr3(const char* s, const char* c, int n);
 /// @param self QPlainTextEdit*
 /// @param exp const char*
 /// @param options flag of enum QTextDocument__FindFlag
-bool q_plaintextedit_find22(void* self, const char* exp, int64_t options);
+bool q_plaintextedit_find22(void* self, const char* exp, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#find)
 ///
 /// @param self QPlainTextEdit*
 /// @param exp QRegularExpression*
 /// @param options flag of enum QTextDocument__FindFlag
-bool q_plaintextedit_find23(void* self, void* exp, int64_t options);
+bool q_plaintextedit_find23(void* self, void* exp, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#moveCursor)
 ///
@@ -1454,7 +1454,7 @@ void q_plaintextedit_set_corner_widget(void* self, void* widget);
 /// @param self QPlainTextEdit*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_plaintextedit_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_plaintextedit_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1462,7 +1462,7 @@ void q_plaintextedit_add_scroll_bar_widget(void* self, void* widget, int64_t ali
 ///
 /// @param self QPlainTextEdit*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_plaintextedit_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_plaintextedit_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3104,7 +3104,7 @@ bool q_plaintextedit_is_full_screen(void* self);
 /// @param self QPlainTextEdit*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_plaintextedit_window_state(void* self);
+int32_t q_plaintextedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3112,7 +3112,7 @@ int64_t q_plaintextedit_window_state(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param state flag of enum Qt__WindowState
-void q_plaintextedit_set_window_state(void* self, int64_t state);
+void q_plaintextedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3120,7 +3120,7 @@ void q_plaintextedit_set_window_state(void* self, int64_t state);
 ///
 /// @param self QPlainTextEdit*
 /// @param state flag of enum Qt__WindowState
-void q_plaintextedit_override_window_state(void* self, int64_t state);
+void q_plaintextedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3630,7 +3630,7 @@ void q_plaintextedit_render3(void* self, void* target, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_plaintextedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_plaintextedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3660,7 +3660,7 @@ void q_plaintextedit_render32(void* self, void* painter, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_plaintextedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_plaintextedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3677,7 +3677,7 @@ QPixmap* q_plaintextedit_grab1(void* self, void* rectangle);
 /// @param self QPlainTextEdit*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_plaintextedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_plaintextedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

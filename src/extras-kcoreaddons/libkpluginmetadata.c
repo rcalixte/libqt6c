@@ -24,11 +24,11 @@ KPluginMetaData* k_pluginmetadata_new5(void* param1) {
     return KPluginMetaData_new5((KPluginMetaData*)param1);
 }
 
-KPluginMetaData* k_pluginmetadata_new6(void* loader, int64_t options) {
+KPluginMetaData* k_pluginmetadata_new6(void* loader, int32_t options) {
     return KPluginMetaData_new6((QPluginLoader*)loader, options);
 }
 
-KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int64_t options) {
+KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int32_t options) {
     return KPluginMetaData_new7(qstring(pluginFile), options);
 }
 
@@ -258,7 +258,7 @@ bool k_pluginmetadata_is_static_plugin(void* self) {
     return KPluginMetaData_IsStaticPlugin((KPluginMetaData*)self);
 }
 
-KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, const char* pluginId, int64_t options) {
+KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, const char* pluginId, int32_t options) {
     return KPluginMetaData_FindPluginById3(qstring(directory), qstring(pluginId), options);
 }
 

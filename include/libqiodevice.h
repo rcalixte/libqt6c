@@ -63,7 +63,7 @@ const char* q_iodevice_tr(const char* s);
 /// @param self QIODevice*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_iodevice_open_mode(void* self);
+int32_t q_iodevice_open_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setTextModeEnabled)
 ///
@@ -147,7 +147,7 @@ void q_iodevice_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QIODevice*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_iodevice_open(void* self, int64_t mode);
+bool q_iodevice_open(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
 ///
@@ -155,7 +155,7 @@ bool q_iodevice_open(void* self, int64_t mode);
 ///
 /// @param self QIODevice*
 /// @param callback bool func(QIODevice* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void q_iodevice_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_iodevice_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
 ///
@@ -163,7 +163,7 @@ void q_iodevice_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QIODevice*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_iodevice_qbase_open(void* self, int64_t mode);
+bool q_iodevice_qbase_open(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#close)
 ///
@@ -680,7 +680,7 @@ long long q_iodevice_qbase_write_data(void* self, const char* data, long long le
 ///
 /// @param self QIODevice*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_iodevice_set_open_mode(void* self, int64_t openMode);
+void q_iodevice_set_open_mode(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
@@ -688,7 +688,7 @@ void q_iodevice_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QIODevice*
 /// @param callback void func(QIODevice* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
@@ -696,7 +696,7 @@ void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 ///
 /// @param self QIODevice*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_iodevice_qbase_set_open_mode(void* self, int64_t openMode);
+void q_iodevice_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///

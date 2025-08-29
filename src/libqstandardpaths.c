@@ -75,14 +75,14 @@ bool q_standardpaths_is_test_mode_enabled() {
     return QStandardPaths_IsTestModeEnabled();
 }
 
-const char* q_standardpaths_locate3(int32_t typeVal, const char* fileName, int64_t options) {
+const char* q_standardpaths_locate3(int32_t typeVal, const char* fileName, int32_t options) {
     libqt_string _str = QStandardPaths_Locate3(typeVal, qstring(fileName), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_standardpaths_locate_all3(int32_t typeVal, const char* fileName, int64_t options) {
+const char** q_standardpaths_locate_all3(int32_t typeVal, const char* fileName, int32_t options) {
     libqt_list _arr = QStandardPaths_LocateAll3(typeVal, qstring(fileName), options);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

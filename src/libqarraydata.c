@@ -1,11 +1,11 @@
 #include "libqarraydata.hpp"
 #include "libqarraydata.h"
 
-int64_t q_arraydata_flags(void* self) {
+int32_t q_arraydata_flags(void* self) {
     return QArrayData_Flags((QArrayData*)self);
 }
 
-void q_arraydata_set_flags(void* self, int64_t flags) {
+void q_arraydata_set_flags(void* self, int32_t flags) {
     QArrayData_SetFlags((QArrayData*)self, flags);
 }
 

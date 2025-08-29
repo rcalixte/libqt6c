@@ -70,14 +70,14 @@ const char* q_networkinformation_backend_name(void* self);
 ///
 /// @param self QNetworkInformation*
 /// @param features flag of enum QNetworkInformation__Feature
-bool q_networkinformation_supports(void* self, int64_t features);
+bool q_networkinformation_supports(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#supportedFeatures)
 ///
 /// @param self QNetworkInformation*
 ///
 /// @return flag of enum QNetworkInformation__Feature
-int64_t q_networkinformation_supported_features(void* self);
+int32_t q_networkinformation_supported_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#loadDefaultBackend)
 ///
@@ -86,12 +86,12 @@ bool q_networkinformation_load_default_backend();
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#loadBackendByFeatures)
 ///
 /// @param features flag of enum QNetworkInformation__Feature
-bool q_networkinformation_load_backend_by_features(int64_t features);
+bool q_networkinformation_load_backend_by_features(int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#load)
 ///
 /// @param features flag of enum QNetworkInformation__Feature
-bool q_networkinformation_load2(int64_t features);
+bool q_networkinformation_load2(int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#availableBackends)
 ///

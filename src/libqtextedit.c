@@ -106,11 +106,11 @@ void q_textedit_set_read_only(void* self, bool ro) {
     QTextEdit_SetReadOnly((QTextEdit*)self, ro);
 }
 
-void q_textedit_set_text_interaction_flags(void* self, int64_t flags) {
+void q_textedit_set_text_interaction_flags(void* self, int32_t flags) {
     QTextEdit_SetTextInteractionFlags((QTextEdit*)self, flags);
 }
 
-int64_t q_textedit_text_interaction_flags(void* self) {
+int32_t q_textedit_text_interaction_flags(void* self) {
     return QTextEdit_TextInteractionFlags((QTextEdit*)self);
 }
 
@@ -149,7 +149,7 @@ QFont* q_textedit_current_font(void* self) {
     return QTextEdit_CurrentFont((QTextEdit*)self);
 }
 
-int64_t q_textedit_alignment(void* self) {
+int32_t q_textedit_alignment(void* self) {
     return QTextEdit_Alignment((QTextEdit*)self);
 }
 
@@ -397,7 +397,7 @@ void q_textedit_set_current_font(void* self, void* f) {
     QTextEdit_SetCurrentFont((QTextEdit*)self, (QFont*)f);
 }
 
-void q_textedit_set_alignment(void* self, int64_t a) {
+void q_textedit_set_alignment(void* self, int32_t a) {
     QTextEdit_SetAlignment((QTextEdit*)self, a);
 }
 
@@ -875,15 +875,15 @@ const char* q_textedit_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_textedit_find22(void* self, const char* exp, int64_t options) {
+bool q_textedit_find22(void* self, const char* exp, int32_t options) {
     return QTextEdit_Find22((QTextEdit*)self, qstring(exp), options);
 }
 
-bool q_textedit_find23(void* self, void* exp, int64_t options) {
+bool q_textedit_find23(void* self, void* exp, int32_t options) {
     return QTextEdit_Find23((QTextEdit*)self, (QRegularExpression*)exp, options);
 }
 
-const char* q_textedit_to_markdown1(void* self, int64_t features) {
+const char* q_textedit_to_markdown1(void* self, int32_t features) {
     libqt_string _str = QTextEdit_ToMarkdown1((QTextEdit*)self, features);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -942,11 +942,11 @@ void q_textedit_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_textedit_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_textedit_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_textedit_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_textedit_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1828,15 +1828,15 @@ bool q_textedit_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_textedit_window_state(void* self) {
+int32_t q_textedit_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_textedit_set_window_state(void* self, int64_t state) {
+void q_textedit_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_textedit_override_window_state(void* self, int64_t state) {
+void q_textedit_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -2089,7 +2089,7 @@ void q_textedit_render3(void* self, void* target, void* targetOffset, void* sour
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_textedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_textedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2101,7 +2101,7 @@ void q_textedit_render32(void* self, void* painter, void* targetOffset, void* so
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_textedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_textedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2109,7 +2109,7 @@ QPixmap* q_textedit_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_textedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_textedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

@@ -179,7 +179,7 @@ int32_t q_paintdevicewindow_window_state(void* self) {
     return QWindow_WindowState((QWindow*)self);
 }
 
-int64_t q_paintdevicewindow_window_states(void* self) {
+int32_t q_paintdevicewindow_window_states(void* self) {
     return QWindow_WindowStates((QWindow*)self);
 }
 
@@ -187,7 +187,7 @@ void q_paintdevicewindow_set_window_state(void* self, int32_t state) {
     QWindow_SetWindowState((QWindow*)self, state);
 }
 
-void q_paintdevicewindow_set_window_states(void* self, int64_t states) {
+void q_paintdevicewindow_set_window_states(void* self, int32_t states) {
     QWindow_SetWindowStates((QWindow*)self, states);
 }
 
@@ -438,7 +438,7 @@ void q_paintdevicewindow_lower(void* self) {
     QWindow_Lower((QWindow*)self);
 }
 
-bool q_paintdevicewindow_start_system_resize(void* self, int64_t edges) {
+bool q_paintdevicewindow_start_system_resize(void* self, int32_t edges) {
     return QWindow_StartSystemResize((QWindow*)self, edges);
 }
 

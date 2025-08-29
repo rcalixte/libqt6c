@@ -262,14 +262,14 @@ int32_t q_networkproxy_type(void* self);
 ///
 /// @param self QNetworkProxy*
 /// @param capab flag of enum QNetworkProxy__Capability
-void q_networkproxy_set_capabilities(void* self, int64_t capab);
+void q_networkproxy_set_capabilities(void* self, int32_t capab);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#capabilities)
 ///
 /// @param self QNetworkProxy*
 ///
 /// @return flag of enum QNetworkProxy__Capability
-int64_t q_networkproxy_capabilities(void* self);
+int32_t q_networkproxy_capabilities(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#isCachingProxy)
 ///

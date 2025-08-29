@@ -129,14 +129,14 @@ bool k_keysequencerecorder_modifier_only_allowed(void* self);
 ///
 /// @param self KKeySequenceRecorder*
 /// @param patterns flag of enum KKeySequenceRecorder__Pattern
-void k_keysequencerecorder_set_patterns(void* self, int64_t patterns);
+void k_keysequencerecorder_set_patterns(void* self, int32_t patterns);
 
 /// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#patterns)
 ///
 /// @param self KKeySequenceRecorder*
 ///
 /// @return flag of enum KKeySequenceRecorder__Pattern
-int64_t k_keysequencerecorder_patterns(void* self);
+int32_t k_keysequencerecorder_patterns(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#cancelRecording)
 ///

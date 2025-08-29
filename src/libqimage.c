@@ -580,27 +580,27 @@ void q_image_qbase_rgb_swapped_inplace(void* self) {
     QImage_QBaseRgbSwappedInplace((QImage*)self);
 }
 
-QImage* q_image_convert_to_format_helper(void* self, int32_t format, int64_t flags) {
+QImage* q_image_convert_to_format_helper(void* self, int32_t format, int32_t flags) {
     return QImage_ConvertToFormatHelper((QImage*)self, format, flags);
 }
 
-void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int64_t)) {
+void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int32_t)) {
     QImage_OnConvertToFormatHelper((QImage*)self, (intptr_t)callback);
 }
 
-QImage* q_image_qbase_convert_to_format_helper(void* self, int32_t format, int64_t flags) {
+QImage* q_image_qbase_convert_to_format_helper(void* self, int32_t format, int32_t flags) {
     return QImage_QBaseConvertToFormatHelper((QImage*)self, format, flags);
 }
 
-bool q_image_convert_to_format_inplace(void* self, int32_t format, int64_t flags) {
+bool q_image_convert_to_format_inplace(void* self, int32_t format, int32_t flags) {
     return QImage_ConvertToFormatInplace((QImage*)self, format, flags);
 }
 
-void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int32_t, int64_t)) {
+void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int32_t, int32_t)) {
     QImage_OnConvertToFormatInplace((QImage*)self, (intptr_t)callback);
 }
 
-bool q_image_qbase_convert_to_format_inplace(void* self, int32_t format, int64_t flags) {
+bool q_image_qbase_convert_to_format_inplace(void* self, int32_t format, int32_t flags) {
     return QImage_QBaseConvertToFormatInplace((QImage*)self, format, flags);
 }
 
@@ -632,23 +632,23 @@ QImage* q_image_copy1(void* self, void* rect) {
     return QImage_Copy1((QImage*)self, (QRect*)rect);
 }
 
-QImage* q_image_convert_to_format22(void* self, int32_t f, int64_t flags) {
+QImage* q_image_convert_to_format22(void* self, int32_t f, int32_t flags) {
     return QImage_ConvertToFormat22((QImage*)self, f, flags);
 }
 
-QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list colorTable, int64_t flags) {
+QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list colorTable, int32_t flags) {
     return QImage_ConvertToFormat3((QImage*)self, f, colorTable, flags);
 }
 
-QImage* q_image_converted_to2(void* self, int32_t f, int64_t flags) {
+QImage* q_image_converted_to2(void* self, int32_t f, int32_t flags) {
     return QImage_ConvertedTo2((QImage*)self, f, flags);
 }
 
-void q_image_convert_to2(void* self, int32_t f, int64_t flags) {
+void q_image_convert_to2(void* self, int32_t f, int32_t flags) {
     QImage_ConvertTo2((QImage*)self, f, flags);
 }
 
-QImage* q_image_create_alpha_mask1(void* self, int64_t flags) {
+QImage* q_image_create_alpha_mask1(void* self, int32_t flags) {
     return QImage_CreateAlphaMask1((QImage*)self, flags);
 }
 
@@ -708,19 +708,19 @@ void q_image_invert_pixels1(void* self, int32_t param1) {
     QImage_InvertPixels1((QImage*)self, param1);
 }
 
-QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int32_t format, int64_t flags) {
+QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int32_t format, int32_t flags) {
     return QImage_ConvertedToColorSpace3((QImage*)self, (QColorSpace*)colorSpace, format, flags);
 }
 
-void q_image_convert_to_color_space3(void* self, void* colorSpace, int32_t format, int64_t flags) {
+void q_image_convert_to_color_space3(void* self, void* colorSpace, int32_t format, int32_t flags) {
     QImage_ConvertToColorSpace3((QImage*)self, (QColorSpace*)colorSpace, format, flags);
 }
 
-QImage* q_image_color_transformed3(void* self, void* transform, int32_t format, int64_t flags) {
+QImage* q_image_color_transformed3(void* self, void* transform, int32_t format, int32_t flags) {
     return QImage_ColorTransformed3((QImage*)self, (QColorTransform*)transform, format, flags);
 }
 
-void q_image_apply_color_transform3(void* self, void* transform, int32_t format, int64_t flags) {
+void q_image_apply_color_transform3(void* self, void* transform, int32_t format, int32_t flags) {
     QImage_ApplyColorTransform3((QImage*)self, (QColorTransform*)transform, format, flags);
 }
 

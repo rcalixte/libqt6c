@@ -159,7 +159,7 @@ const char* k_dirwatch_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_dirwatch_add_dir2(void* self, const char* path, int64_t watchModes) {
+void k_dirwatch_add_dir2(void* self, const char* path, int32_t watchModes) {
     KDirWatch_AddDir2((KDirWatch*)self, qstring(path), watchModes);
 }
 

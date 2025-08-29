@@ -146,14 +146,14 @@ bool q_abstractspinbox_keyboard_tracking(void* self);
 ///
 /// @param self QAbstractSpinBox*
 /// @param flag flag of enum Qt__AlignmentFlag
-void q_abstractspinbox_set_alignment(void* self, int64_t flag);
+void q_abstractspinbox_set_alignment(void* self, int32_t flag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#alignment)
 ///
 /// @param self QAbstractSpinBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_abstractspinbox_alignment(void* self);
+int32_t q_abstractspinbox_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#setFrame)
 ///
@@ -805,15 +805,15 @@ void q_abstractspinbox_qbase_set_line_edit(void* self, void* edit);
 /// @param self QAbstractSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_abstractspinbox_step_enabled(void* self);
+int32_t q_abstractspinbox_step_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSpinBox*
-/// @param callback int64_t func()
-void q_abstractspinbox_on_step_enabled(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractspinbox_on_step_enabled(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#stepEnabled)
 ///
@@ -822,7 +822,7 @@ void q_abstractspinbox_on_step_enabled(void* self, int64_t (*callback)());
 /// @param self QAbstractSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_abstractspinbox_qbase_step_enabled(void* self);
+int32_t q_abstractspinbox_qbase_step_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
@@ -2352,7 +2352,7 @@ bool q_abstractspinbox_is_full_screen(void* self);
 /// @param self QAbstractSpinBox*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_abstractspinbox_window_state(void* self);
+int32_t q_abstractspinbox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2360,7 +2360,7 @@ int64_t q_abstractspinbox_window_state(void* self);
 ///
 /// @param self QAbstractSpinBox*
 /// @param state flag of enum Qt__WindowState
-void q_abstractspinbox_set_window_state(void* self, int64_t state);
+void q_abstractspinbox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2368,7 +2368,7 @@ void q_abstractspinbox_set_window_state(void* self, int64_t state);
 ///
 /// @param self QAbstractSpinBox*
 /// @param state flag of enum Qt__WindowState
-void q_abstractspinbox_override_window_state(void* self, int64_t state);
+void q_abstractspinbox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2885,7 +2885,7 @@ void q_abstractspinbox_render3(void* self, void* target, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_abstractspinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_abstractspinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2915,7 +2915,7 @@ void q_abstractspinbox_render32(void* self, void* painter, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_abstractspinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_abstractspinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2932,7 +2932,7 @@ QPixmap* q_abstractspinbox_grab1(void* self, void* rectangle);
 /// @param self QAbstractSpinBox*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_abstractspinbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_abstractspinbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

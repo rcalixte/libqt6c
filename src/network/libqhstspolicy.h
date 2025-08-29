@@ -22,7 +22,7 @@ QHstsPolicy* q_hstspolicy_new();
 /// @param expiry QDateTime*
 /// @param flags flag of enum QHstsPolicy__PolicyFlag
 /// @param host const char*
-QHstsPolicy* q_hstspolicy_new2(void* expiry, int64_t flags, const char* host);
+QHstsPolicy* q_hstspolicy_new2(void* expiry, int32_t flags, const char* host);
 
 /// q_hstspolicy_new3 constructs a new QHstsPolicy object.
 ///
@@ -35,7 +35,7 @@ QHstsPolicy* q_hstspolicy_new3(void* rhs);
 /// @param flags flag of enum QHstsPolicy__PolicyFlag
 /// @param host const char*
 /// @param mode enum QUrl__ParsingMode
-QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int32_t mode);
+QHstsPolicy* q_hstspolicy_new4(void* expiry, int32_t flags, const char* host, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#operator-eq)
 ///
@@ -102,7 +102,7 @@ void q_hstspolicy_set_host2(void* self, const char* host, int32_t mode);
 ///
 /// @param self QHstsPolicy*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_hstspolicy_host1(void* self, int64_t options);
+const char* q_hstspolicy_host1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#dtor.QHstsPolicy)
 ///

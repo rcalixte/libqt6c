@@ -1629,7 +1629,7 @@ bool k_mimetypechooser_is_full_screen(void* self);
 /// @param self KMimeTypeChooser*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_mimetypechooser_window_state(void* self);
+int32_t k_mimetypechooser_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1637,7 +1637,7 @@ int64_t k_mimetypechooser_window_state(void* self);
 ///
 /// @param self KMimeTypeChooser*
 /// @param state flag of enum Qt__WindowState
-void k_mimetypechooser_set_window_state(void* self, int64_t state);
+void k_mimetypechooser_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1645,7 +1645,7 @@ void k_mimetypechooser_set_window_state(void* self, int64_t state);
 ///
 /// @param self KMimeTypeChooser*
 /// @param state flag of enum Qt__WindowState
-void k_mimetypechooser_override_window_state(void* self, int64_t state);
+void k_mimetypechooser_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2162,7 +2162,7 @@ void k_mimetypechooser_render3(void* self, void* target, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_mimetypechooser_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_mimetypechooser_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2192,7 +2192,7 @@ void k_mimetypechooser_render32(void* self, void* painter, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_mimetypechooser_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_mimetypechooser_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2209,7 +2209,7 @@ QPixmap* k_mimetypechooser_grab1(void* self, void* rectangle);
 /// @param self KMimeTypeChooser*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_mimetypechooser_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_mimetypechooser_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -6113,7 +6113,7 @@ bool k_mimetypechooserdialog_is_full_screen(void* self);
 /// @param self KMimeTypeChooserDialog*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_mimetypechooserdialog_window_state(void* self);
+int32_t k_mimetypechooserdialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6121,7 +6121,7 @@ int64_t k_mimetypechooserdialog_window_state(void* self);
 ///
 /// @param self KMimeTypeChooserDialog*
 /// @param state flag of enum Qt__WindowState
-void k_mimetypechooserdialog_set_window_state(void* self, int64_t state);
+void k_mimetypechooserdialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -6129,7 +6129,7 @@ void k_mimetypechooserdialog_set_window_state(void* self, int64_t state);
 ///
 /// @param self KMimeTypeChooserDialog*
 /// @param state flag of enum Qt__WindowState
-void k_mimetypechooserdialog_override_window_state(void* self, int64_t state);
+void k_mimetypechooserdialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -6646,7 +6646,7 @@ void k_mimetypechooserdialog_render3(void* self, void* target, void* targetOffse
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_mimetypechooserdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_mimetypechooserdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -6676,7 +6676,7 @@ void k_mimetypechooserdialog_render32(void* self, void* painter, void* targetOff
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_mimetypechooserdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_mimetypechooserdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -6693,7 +6693,7 @@ QPixmap* k_mimetypechooserdialog_grab1(void* self, void* rectangle);
 /// @param self KMimeTypeChooserDialog*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_mimetypechooserdialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_mimetypechooserdialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

@@ -842,7 +842,7 @@ void q_graphicsscene_set_focus1(void* self, int32_t focusReason) {
     QGraphicsScene_SetFocus1((QGraphicsScene*)self, focusReason);
 }
 
-void q_graphicsscene_invalidate5(void* self, double x, double y, double w, double h, int64_t layers) {
+void q_graphicsscene_invalidate5(void* self, double x, double y, double w, double h, int32_t layers) {
     QGraphicsScene_Invalidate5((QGraphicsScene*)self, x, y, w, h, layers);
 }
 
@@ -854,7 +854,7 @@ void q_graphicsscene_invalidate1(void* self, void* rect) {
     QGraphicsScene_Invalidate1((QGraphicsScene*)self, (QRectF*)rect);
 }
 
-void q_graphicsscene_invalidate22(void* self, void* rect, int64_t layers) {
+void q_graphicsscene_invalidate22(void* self, void* rect, int32_t layers) {
     QGraphicsScene_Invalidate22((QGraphicsScene*)self, (QRectF*)rect, layers);
 }
 

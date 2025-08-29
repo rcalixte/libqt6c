@@ -746,14 +746,14 @@ libqt_list /* of uint16_t */ q_locale_countries_for_language(uint16_t lang);
 ///
 /// @param self QLocale*
 /// @param options flag of enum QLocale__NumberOption
-void q_locale_set_number_options(void* self, int64_t options);
+void q_locale_set_number_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#numberOptions)
 ///
 /// @param self QLocale*
 ///
 /// @return flag of enum QLocale__NumberOption
-int64_t q_locale_number_options(void* self);
+int32_t q_locale_number_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#quoteString)
 ///
@@ -1188,7 +1188,7 @@ const char* q_locale_formatted_data_size2(void* self, long long bytes, int preci
 /// @param bytes long long
 /// @param precision int
 /// @param format flag of enum QLocale__DataSizeFormat
-const char* q_locale_formatted_data_size3(void* self, long long bytes, int precision, int64_t format);
+const char* q_locale_formatted_data_size3(void* self, long long bytes, int precision, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#uiLanguages)
 ///
@@ -1204,7 +1204,7 @@ const char** q_locale_ui_languages1(void* self, int8_t separator);
 ///
 /// @param language enum QLocale__Language
 /// @param codeTypes flag of enum QLocale__LanguageCodeType
-const char* q_locale_language_to_code2(uint16_t language, int64_t codeTypes);
+const char* q_locale_language_to_code2(uint16_t language, int32_t codeTypes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#quoteString)
 ///

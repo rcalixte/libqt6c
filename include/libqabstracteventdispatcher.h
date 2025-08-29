@@ -43,7 +43,7 @@ QAbstractEventDispatcher* q_abstracteventdispatcher_instance();
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
-bool q_abstracteventdispatcher_process_events(void* self, int64_t flags);
+bool q_abstracteventdispatcher_process_events(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerSocketNotifier)
 ///
@@ -576,7 +576,7 @@ libqt_list /* of QAbstractEventDispatcher__TimerInfoV2* */ q_abstracteventdispat
 /// @param self QAbstractEventDispatcherV2*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param deadline QDeadlineTimer*
-bool q_abstracteventdispatcherv2_process_events_with_deadline(void* self, int64_t flags, void* deadline);
+bool q_abstracteventdispatcherv2_process_events_with_deadline(void* self, int32_t flags, void* deadline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -607,7 +607,7 @@ QAbstractEventDispatcher* q_abstracteventdispatcherv2_instance();
 ///
 /// @param self QAbstractEventDispatcherV2*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
-bool q_abstracteventdispatcherv2_process_events(void* self, int64_t flags);
+bool q_abstracteventdispatcherv2_process_events(void* self, int32_t flags);
 
 /// Inherited from QAbstractEventDispatcher
 ///

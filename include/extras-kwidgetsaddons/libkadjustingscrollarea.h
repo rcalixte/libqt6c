@@ -181,7 +181,7 @@ void k_adjustingscrollarea_set_widget_resizable(void* self, bool resizable);
 /// @param self KAdjustingScrollArea*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_adjustingscrollarea_alignment(void* self);
+int32_t k_adjustingscrollarea_alignment(void* self);
 
 /// Inherited from QScrollArea
 ///
@@ -189,7 +189,7 @@ int64_t k_adjustingscrollarea_alignment(void* self);
 ///
 /// @param self KAdjustingScrollArea*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_adjustingscrollarea_set_alignment(void* self, int64_t alignment);
+void k_adjustingscrollarea_set_alignment(void* self, int32_t alignment);
 
 /// Inherited from QScrollArea
 ///
@@ -334,7 +334,7 @@ void k_adjustingscrollarea_set_corner_widget(void* self, void* widget);
 /// @param self KAdjustingScrollArea*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_adjustingscrollarea_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void k_adjustingscrollarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -342,7 +342,7 @@ void k_adjustingscrollarea_add_scroll_bar_widget(void* self, void* widget, int64
 ///
 /// @param self KAdjustingScrollArea*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ k_adjustingscrollarea_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ k_adjustingscrollarea_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1984,7 +1984,7 @@ bool k_adjustingscrollarea_is_full_screen(void* self);
 /// @param self KAdjustingScrollArea*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_adjustingscrollarea_window_state(void* self);
+int32_t k_adjustingscrollarea_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1992,7 +1992,7 @@ int64_t k_adjustingscrollarea_window_state(void* self);
 ///
 /// @param self KAdjustingScrollArea*
 /// @param state flag of enum Qt__WindowState
-void k_adjustingscrollarea_set_window_state(void* self, int64_t state);
+void k_adjustingscrollarea_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2000,7 +2000,7 @@ void k_adjustingscrollarea_set_window_state(void* self, int64_t state);
 ///
 /// @param self KAdjustingScrollArea*
 /// @param state flag of enum Qt__WindowState
-void k_adjustingscrollarea_override_window_state(void* self, int64_t state);
+void k_adjustingscrollarea_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2517,7 +2517,7 @@ void k_adjustingscrollarea_render3(void* self, void* target, void* targetOffset,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_adjustingscrollarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_adjustingscrollarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2547,7 +2547,7 @@ void k_adjustingscrollarea_render32(void* self, void* painter, void* targetOffse
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_adjustingscrollarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_adjustingscrollarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2564,7 +2564,7 @@ QPixmap* k_adjustingscrollarea_grab1(void* self, void* rectangle);
 /// @param self KAdjustingScrollArea*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_adjustingscrollarea_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_adjustingscrollarea_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

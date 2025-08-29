@@ -367,7 +367,7 @@ QSize* q_icon_actual_size4(void* self, void* window, void* size, int32_t mode, i
 /// @param painter QPainter*
 /// @param rect QRect*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_icon_paint3(void* self, void* painter, void* rect, int64_t alignment);
+void q_icon_paint3(void* self, void* painter, void* rect, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
@@ -376,7 +376,7 @@ void q_icon_paint3(void* self, void* painter, void* rect, int64_t alignment);
 /// @param rect QRect*
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
-void q_icon_paint4(void* self, void* painter, void* rect, int64_t alignment, int32_t mode);
+void q_icon_paint4(void* self, void* painter, void* rect, int32_t alignment, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
@@ -386,7 +386,7 @@ void q_icon_paint4(void* self, void* painter, void* rect, int64_t alignment, int
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_icon_paint5(void* self, void* painter, void* rect, int64_t alignment, int32_t mode, int32_t state);
+void q_icon_paint5(void* self, void* painter, void* rect, int32_t alignment, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
@@ -397,7 +397,7 @@ void q_icon_paint5(void* self, void* painter, void* rect, int64_t alignment, int
 /// @param w int
 /// @param h int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int64_t alignment);
+void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
@@ -409,7 +409,7 @@ void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int64_
 /// @param h int
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
-void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int32_t mode);
+void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#paint)
 ///
@@ -422,7 +422,7 @@ void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int64_
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int32_t mode, int32_t state);
+void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#addPixmap)
 ///

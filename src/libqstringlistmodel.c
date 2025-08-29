@@ -139,15 +139,15 @@ bool q_stringlistmodel_qbase_clear_item_data(void* self, void* index) {
     return QStringListModel_QBaseClearItemData((QStringListModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_stringlistmodel_flags(void* self, void* index) {
+int32_t q_stringlistmodel_flags(void* self, void* index) {
     return QStringListModel_Flags((QStringListModel*)self, (QModelIndex*)index);
 }
 
-void q_stringlistmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_stringlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QStringListModel_OnFlags((QStringListModel*)self, (intptr_t)callback);
 }
 
-int64_t q_stringlistmodel_qbase_flags(void* self, void* index) {
+int32_t q_stringlistmodel_qbase_flags(void* self, void* index) {
     return QStringListModel_QBaseFlags((QStringListModel*)self, (QModelIndex*)index);
 }
 
@@ -257,15 +257,15 @@ void q_stringlistmodel_set_string_list(void* self, const char* strings[]) {
     free(strings_qstr);
 }
 
-int64_t q_stringlistmodel_supported_drop_actions(void* self) {
+int32_t q_stringlistmodel_supported_drop_actions(void* self) {
     return QStringListModel_SupportedDropActions((QStringListModel*)self);
 }
 
-void q_stringlistmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_stringlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QStringListModel_OnSupportedDropActions((QStringListModel*)self, (intptr_t)callback);
 }
 
-int64_t q_stringlistmodel_qbase_supported_drop_actions(void* self) {
+int32_t q_stringlistmodel_qbase_supported_drop_actions(void* self) {
     return QStringListModel_QBaseSupportedDropActions((QStringListModel*)self);
 }
 
@@ -403,7 +403,7 @@ bool q_stringlistmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_stringlistmodel_check_index2(void* self, void* index, int64_t options) {
+bool q_stringlistmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -728,15 +728,15 @@ void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
     QStringListModel_OnCanDropMimeData((QStringListModel*)self, (intptr_t)callback);
 }
 
-int64_t q_stringlistmodel_supported_drag_actions(void* self) {
+int32_t q_stringlistmodel_supported_drag_actions(void* self) {
     return QStringListModel_SupportedDragActions((QStringListModel*)self);
 }
 
-int64_t q_stringlistmodel_qbase_supported_drag_actions(void* self) {
+int32_t q_stringlistmodel_qbase_supported_drag_actions(void* self) {
     return QStringListModel_QBaseSupportedDragActions((QStringListModel*)self);
 }
 
-void q_stringlistmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_stringlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QStringListModel_OnSupportedDragActions((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -812,17 +812,17 @@ void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
     QStringListModel_OnBuddy((QStringListModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_stringlistmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_stringlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QStringListModel_Match((QStringListModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QStringListModel_QBaseMatch((QStringListModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_stringlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_stringlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QStringListModel_OnMatch((QStringListModel*)self, (intptr_t)callback);
 }
 

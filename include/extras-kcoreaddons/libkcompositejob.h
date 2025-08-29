@@ -247,7 +247,7 @@ KJobUiDelegate* k_compositejob_ui_delegate(void* self);
 /// @param self KCompositeJob*
 ///
 /// @return flag of enum KJob__Capability
-int64_t k_compositejob_capabilities(void* self);
+int32_t k_compositejob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
@@ -1192,7 +1192,7 @@ void k_compositejob_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// @param self KCompositeJob*
 /// @param capabilities flag of enum KJob__Capability
-void k_compositejob_set_capabilities(void* self, int64_t capabilities);
+void k_compositejob_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1202,7 +1202,7 @@ void k_compositejob_set_capabilities(void* self, int64_t capabilities);
 ///
 /// @param self KCompositeJob*
 /// @param capabilities flag of enum KJob__Capability
-void k_compositejob_qbase_set_capabilities(void* self, int64_t capabilities);
+void k_compositejob_qbase_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1212,7 +1212,7 @@ void k_compositejob_qbase_set_capabilities(void* self, int64_t capabilities);
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, flag of enum KJob__Capability capabilities)
-void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
+void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from KJob
 ///

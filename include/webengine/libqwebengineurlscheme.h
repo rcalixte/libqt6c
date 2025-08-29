@@ -87,13 +87,13 @@ void q_webengineurlscheme_set_default_port(void* self, int newValue);
 /// @param self QWebEngineUrlScheme*
 ///
 /// @return flag of enum QWebEngineUrlScheme__Flag
-int64_t q_webengineurlscheme_flags(void* self);
+int32_t q_webengineurlscheme_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setFlags)
 ///
 /// @param self QWebEngineUrlScheme*
 /// @param newValue flag of enum QWebEngineUrlScheme__Flag
-void q_webengineurlscheme_set_flags(void* self, int64_t newValue);
+void q_webengineurlscheme_set_flags(void* self, int32_t newValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#registerScheme)
 ///

@@ -44,7 +44,7 @@ QStringConverterBase__State* q_stringconverterbase__state_new() {
     return QStringConverterBase__State_new();
 }
 
-QStringConverterBase__State* q_stringconverterbase__state_new2(int64_t f) {
+QStringConverterBase__State* q_stringconverterbase__state_new2(int32_t f) {
     return QStringConverterBase__State_new2(f);
 }
 
@@ -56,11 +56,11 @@ void q_stringconverterbase__state_reset(void* self) {
     QStringConverterBase__State_Reset((QStringConverterBase__State*)self);
 }
 
-int64_t q_stringconverterbase__state_flags(void* self) {
+int32_t q_stringconverterbase__state_flags(void* self) {
     return QStringConverterBase__State_Flags((QStringConverterBase__State*)self);
 }
 
-void q_stringconverterbase__state_set_flags(void* self, int64_t flags) {
+void q_stringconverterbase__state_set_flags(void* self, int32_t flags) {
     QStringConverterBase__State_SetFlags((QStringConverterBase__State*)self, flags);
 }
 

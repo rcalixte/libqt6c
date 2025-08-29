@@ -63,11 +63,11 @@ const char* q_chartview_tr(const char* s) {
     return _ret;
 }
 
-void q_chartview_set_rubber_band(void* self, const int64_t* rubberBands) {
+void q_chartview_set_rubber_band(void* self, const int32_t* rubberBands) {
     QChartView_SetRubberBand((QChartView*)self, rubberBands);
 }
 
-int64_t q_chartview_rubber_band(void* self) {
+int32_t q_chartview_rubber_band(void* self) {
     return QChartView_RubberBand((QChartView*)self);
 }
 
@@ -141,7 +141,7 @@ const char* q_chartview_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_chartview_render_hints(void* self) {
+int32_t q_chartview_render_hints(void* self) {
     return QGraphicsView_RenderHints((QGraphicsView*)self);
 }
 
@@ -149,15 +149,15 @@ void q_chartview_set_render_hint(void* self, int32_t hint) {
     QGraphicsView_SetRenderHint((QGraphicsView*)self, hint);
 }
 
-void q_chartview_set_render_hints(void* self, int64_t hints) {
+void q_chartview_set_render_hints(void* self, int32_t hints) {
     QGraphicsView_SetRenderHints((QGraphicsView*)self, hints);
 }
 
-int64_t q_chartview_alignment(void* self) {
+int32_t q_chartview_alignment(void* self) {
     return QGraphicsView_Alignment((QGraphicsView*)self);
 }
 
-void q_chartview_set_alignment(void* self, int64_t alignment) {
+void q_chartview_set_alignment(void* self, int32_t alignment) {
     QGraphicsView_SetAlignment((QGraphicsView*)self, alignment);
 }
 
@@ -185,7 +185,7 @@ void q_chartview_set_viewport_update_mode(void* self, int32_t mode) {
     QGraphicsView_SetViewportUpdateMode((QGraphicsView*)self, mode);
 }
 
-int64_t q_chartview_optimization_flags(void* self) {
+int32_t q_chartview_optimization_flags(void* self) {
     return QGraphicsView_OptimizationFlags((QGraphicsView*)self);
 }
 
@@ -193,7 +193,7 @@ void q_chartview_set_optimization_flag(void* self, int32_t flag) {
     QGraphicsView_SetOptimizationFlag((QGraphicsView*)self, flag);
 }
 
-void q_chartview_set_optimization_flags(void* self, int64_t flags) {
+void q_chartview_set_optimization_flags(void* self, int32_t flags) {
     QGraphicsView_SetOptimizationFlags((QGraphicsView*)self, flags);
 }
 
@@ -217,11 +217,11 @@ QRect* q_chartview_rubber_band_rect(void* self) {
     return QGraphicsView_RubberBandRect((QGraphicsView*)self);
 }
 
-int64_t q_chartview_cache_mode(void* self) {
+int32_t q_chartview_cache_mode(void* self) {
     return QGraphicsView_CacheMode((QGraphicsView*)self);
 }
 
-void q_chartview_set_cache_mode(void* self, int64_t mode) {
+void q_chartview_set_cache_mode(void* self, int32_t mode) {
     QGraphicsView_SetCacheMode((QGraphicsView*)self, mode);
 }
 
@@ -510,7 +510,7 @@ void q_chartview_invalidate_scene1(void* self, void* rect) {
     QGraphicsView_InvalidateScene1((QGraphicsView*)self, (QRectF*)rect);
 }
 
-void q_chartview_invalidate_scene2(void* self, void* rect, int64_t layers) {
+void q_chartview_invalidate_scene2(void* self, void* rect, int32_t layers) {
     QGraphicsView_InvalidateScene2((QGraphicsView*)self, (QRectF*)rect, layers);
 }
 
@@ -554,11 +554,11 @@ void q_chartview_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_chartview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_chartview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_chartview_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_chartview_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1432,15 +1432,15 @@ bool q_chartview_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_chartview_window_state(void* self) {
+int32_t q_chartview_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_chartview_set_window_state(void* self, int64_t state) {
+void q_chartview_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_chartview_override_window_state(void* self, int64_t state) {
+void q_chartview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1701,7 +1701,7 @@ void q_chartview_render32(void* self, void* painter, void* targetOffset, void* s
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_chartview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_chartview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1709,7 +1709,7 @@ QPixmap* q_chartview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_chartview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_chartview_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

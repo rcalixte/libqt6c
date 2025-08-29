@@ -206,11 +206,11 @@ void q_graphicsscenemouseevent_set_source(void* self, int32_t source) {
     QGraphicsSceneMouseEvent_SetSource((QGraphicsSceneMouseEvent*)self, source);
 }
 
-int64_t q_graphicsscenemouseevent_flags(void* self) {
+int32_t q_graphicsscenemouseevent_flags(void* self) {
     return QGraphicsSceneMouseEvent_Flags((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_flags(void* self, int64_t flags) {
+void q_graphicsscenemouseevent_set_flags(void* self, int32_t flags) {
     QGraphicsSceneMouseEvent_SetFlags((QGraphicsSceneMouseEvent*)self, flags);
 }
 
@@ -906,11 +906,11 @@ void q_graphicsscenedragdropevent_set_modifiers(void* self, int64_t modifiers) {
     QGraphicsSceneDragDropEvent_SetModifiers((QGraphicsSceneDragDropEvent*)self, modifiers);
 }
 
-int64_t q_graphicsscenedragdropevent_possible_actions(void* self) {
+int32_t q_graphicsscenedragdropevent_possible_actions(void* self) {
     return QGraphicsSceneDragDropEvent_PossibleActions((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_set_possible_actions(void* self, int64_t actions) {
+void q_graphicsscenedragdropevent_set_possible_actions(void* self, int32_t actions) {
     QGraphicsSceneDragDropEvent_SetPossibleActions((QGraphicsSceneDragDropEvent*)self, actions);
 }
 

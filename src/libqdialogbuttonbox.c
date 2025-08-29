@@ -27,11 +27,11 @@ QDialogButtonBox* q_dialogbuttonbox_new3(int32_t orientation) {
     return QDialogButtonBox_new3(orientation);
 }
 
-QDialogButtonBox* q_dialogbuttonbox_new4(int64_t buttons) {
+QDialogButtonBox* q_dialogbuttonbox_new4(int32_t buttons) {
     return QDialogButtonBox_new4(buttons);
 }
 
-QDialogButtonBox* q_dialogbuttonbox_new5(int64_t buttons, int32_t orientation) {
+QDialogButtonBox* q_dialogbuttonbox_new5(int32_t buttons, int32_t orientation) {
     return QDialogButtonBox_new5(buttons, orientation);
 }
 
@@ -39,11 +39,11 @@ QDialogButtonBox* q_dialogbuttonbox_new6(int32_t orientation, void* parent) {
     return QDialogButtonBox_new6(orientation, (QWidget*)parent);
 }
 
-QDialogButtonBox* q_dialogbuttonbox_new7(int64_t buttons, void* parent) {
+QDialogButtonBox* q_dialogbuttonbox_new7(int32_t buttons, void* parent) {
     return QDialogButtonBox_new7(buttons, (QWidget*)parent);
 }
 
-QDialogButtonBox* q_dialogbuttonbox_new8(int64_t buttons, int32_t orientation, void* parent) {
+QDialogButtonBox* q_dialogbuttonbox_new8(int32_t buttons, int32_t orientation, void* parent) {
     return QDialogButtonBox_new8(buttons, orientation, (QWidget*)parent);
 }
 
@@ -111,11 +111,11 @@ int32_t q_dialogbuttonbox_button_role(void* self, void* button) {
     return QDialogButtonBox_ButtonRole((QDialogButtonBox*)self, (QAbstractButton*)button);
 }
 
-void q_dialogbuttonbox_set_standard_buttons(void* self, int64_t buttons) {
+void q_dialogbuttonbox_set_standard_buttons(void* self, int32_t buttons) {
     QDialogButtonBox_SetStandardButtons((QDialogButtonBox*)self, buttons);
 }
 
-int64_t q_dialogbuttonbox_standard_buttons(void* self) {
+int32_t q_dialogbuttonbox_standard_buttons(void* self) {
     return QDialogButtonBox_StandardButtons((QDialogButtonBox*)self);
 }
 
@@ -1010,15 +1010,15 @@ bool q_dialogbuttonbox_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_dialogbuttonbox_window_state(void* self) {
+int32_t q_dialogbuttonbox_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_dialogbuttonbox_set_window_state(void* self, int64_t state) {
+void q_dialogbuttonbox_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_dialogbuttonbox_override_window_state(void* self, int64_t state) {
+void q_dialogbuttonbox_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1275,7 +1275,7 @@ void q_dialogbuttonbox_render3(void* self, void* target, void* targetOffset, voi
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_dialogbuttonbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_dialogbuttonbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1287,7 +1287,7 @@ void q_dialogbuttonbox_render32(void* self, void* painter, void* targetOffset, v
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_dialogbuttonbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_dialogbuttonbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1295,7 +1295,7 @@ QPixmap* q_dialogbuttonbox_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_dialogbuttonbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_dialogbuttonbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

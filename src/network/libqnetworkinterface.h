@@ -204,7 +204,7 @@ const char* q_networkinterface_human_readable_name(void* self);
 /// @param self QNetworkInterface*
 ///
 /// @return flag of enum QNetworkInterface__InterfaceFlag
-int64_t q_networkinterface_flags(void* self);
+int32_t q_networkinterface_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#type)
 ///

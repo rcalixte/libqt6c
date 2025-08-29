@@ -723,7 +723,7 @@ void k_colorcombo_on_current_text_changed(void* self, void (*callback)(void*, co
 /// @param self KColorCombo*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
-int32_t k_colorcombo_find_text2(void* self, const char* text, int64_t flags);
+int32_t k_colorcombo_find_text2(void* self, const char* text, int32_t flags);
 
 /// Inherited from QComboBox
 ///
@@ -742,7 +742,7 @@ int32_t k_colorcombo_find_data2(void* self, void* data, int role);
 /// @param data QVariant*
 /// @param role int
 /// @param flags flag of enum Qt__MatchFlag
-int32_t k_colorcombo_find_data3(void* self, void* data, int role, int64_t flags);
+int32_t k_colorcombo_find_data3(void* self, void* data, int role, int32_t flags);
 
 /// Inherited from QComboBox
 ///
@@ -2311,7 +2311,7 @@ bool k_colorcombo_is_full_screen(void* self);
 /// @param self KColorCombo*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_colorcombo_window_state(void* self);
+int32_t k_colorcombo_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2319,7 +2319,7 @@ int64_t k_colorcombo_window_state(void* self);
 ///
 /// @param self KColorCombo*
 /// @param state flag of enum Qt__WindowState
-void k_colorcombo_set_window_state(void* self, int64_t state);
+void k_colorcombo_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2327,7 +2327,7 @@ void k_colorcombo_set_window_state(void* self, int64_t state);
 ///
 /// @param self KColorCombo*
 /// @param state flag of enum Qt__WindowState
-void k_colorcombo_override_window_state(void* self, int64_t state);
+void k_colorcombo_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2844,7 +2844,7 @@ void k_colorcombo_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_colorcombo_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_colorcombo_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2874,7 +2874,7 @@ void k_colorcombo_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_colorcombo_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_colorcombo_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2891,7 +2891,7 @@ QPixmap* k_colorcombo_grab1(void* self, void* rectangle);
 /// @param self KColorCombo*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_colorcombo_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_colorcombo_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

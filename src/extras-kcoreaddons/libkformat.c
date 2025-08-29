@@ -110,7 +110,7 @@ const char* k_format_format_byte_size4(void* self, double size, int precision, i
     return _ret;
 }
 
-const char* k_format_format_duration2(void* self, uint64_t msecs, int64_t options) {
+const char* k_format_format_duration2(void* self, uint64_t msecs, int32_t options) {
     libqt_string _str = KFormat_FormatDuration2((KFormat*)self, msecs, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -159,7 +159,7 @@ const char* k_format_format_value42(void* self, double value, const char* unit, 
     return _ret;
 }
 
-const char* k_format_format_distance2(void* self, double distance, int64_t param2) {
+const char* k_format_format_distance2(void* self, double distance, int32_t param2) {
     libqt_string _str = KFormat_FormatDistance2((KFormat*)self, distance, param2);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -349,7 +349,7 @@ int32_t k_listwidgetsearchline_cursor_position_at(void* self, void* pos);
 ///
 /// @param self KListWidgetSearchLine*
 /// @param flag flag of enum Qt__AlignmentFlag
-void k_listwidgetsearchline_set_alignment(void* self, int64_t flag);
+void k_listwidgetsearchline_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QLineEdit
 ///
@@ -358,7 +358,7 @@ void k_listwidgetsearchline_set_alignment(void* self, int64_t flag);
 /// @param self KListWidgetSearchLine*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_listwidgetsearchline_alignment(void* self);
+int32_t k_listwidgetsearchline_alignment(void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -2305,7 +2305,7 @@ bool k_listwidgetsearchline_is_full_screen(void* self);
 /// @param self KListWidgetSearchLine*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_listwidgetsearchline_window_state(void* self);
+int32_t k_listwidgetsearchline_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2313,7 +2313,7 @@ int64_t k_listwidgetsearchline_window_state(void* self);
 ///
 /// @param self KListWidgetSearchLine*
 /// @param state flag of enum Qt__WindowState
-void k_listwidgetsearchline_set_window_state(void* self, int64_t state);
+void k_listwidgetsearchline_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2321,7 +2321,7 @@ void k_listwidgetsearchline_set_window_state(void* self, int64_t state);
 ///
 /// @param self KListWidgetSearchLine*
 /// @param state flag of enum Qt__WindowState
-void k_listwidgetsearchline_override_window_state(void* self, int64_t state);
+void k_listwidgetsearchline_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2822,7 +2822,7 @@ void k_listwidgetsearchline_render3(void* self, void* target, void* targetOffset
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_listwidgetsearchline_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_listwidgetsearchline_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2852,7 +2852,7 @@ void k_listwidgetsearchline_render32(void* self, void* painter, void* targetOffs
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_listwidgetsearchline_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_listwidgetsearchline_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2869,7 +2869,7 @@ QPixmap* k_listwidgetsearchline_grab1(void* self, void* rectangle);
 /// @param self KListWidgetSearchLine*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_listwidgetsearchline_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_listwidgetsearchline_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

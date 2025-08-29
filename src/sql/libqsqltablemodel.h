@@ -99,15 +99,15 @@ const char* q_sqltablemodel_table_name(void* self);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_sqltablemodel_flags(void* self, void* index);
+int32_t q_sqltablemodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqltablemodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlTableModel*
-/// @param callback int64_t func(QSqlTableModel* self, QModelIndex* index)
-void q_sqltablemodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QSqlTableModel* self, QModelIndex* index)
+void q_sqltablemodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqltablemodel.html#flags)
 ///
@@ -117,7 +117,7 @@ void q_sqltablemodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_sqltablemodel_qbase_flags(void* self, void* index);
+int32_t q_sqltablemodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqltablemodel.html#record)
 ///
@@ -1146,7 +1146,7 @@ bool q_sqltablemodel_remove_column2(void* self, int column, void* parent);
 /// @param self QSqlTableModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_sqltablemodel_check_index2(void* self, void* index, int64_t options);
+bool q_sqltablemodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2025,7 +2025,7 @@ void q_sqltablemodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, v
 /// @param self QSqlTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sqltablemodel_supported_drop_actions(void* self);
+int32_t q_sqltablemodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2036,7 +2036,7 @@ int64_t q_sqltablemodel_supported_drop_actions(void* self);
 /// @param self QSqlTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sqltablemodel_qbase_supported_drop_actions(void* self);
+int32_t q_sqltablemodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2045,8 +2045,8 @@ int64_t q_sqltablemodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback int64_t func()
-void q_sqltablemodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_sqltablemodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2057,7 +2057,7 @@ void q_sqltablemodel_on_supported_drop_actions(void* self, int64_t (*callback)()
 /// @param self QSqlTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sqltablemodel_supported_drag_actions(void* self);
+int32_t q_sqltablemodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2068,7 +2068,7 @@ int64_t q_sqltablemodel_supported_drag_actions(void* self);
 /// @param self QSqlTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sqltablemodel_qbase_supported_drag_actions(void* self);
+int32_t q_sqltablemodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2077,8 +2077,8 @@ int64_t q_sqltablemodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSqlTableModel*
-/// @param callback int64_t func()
-void q_sqltablemodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_sqltablemodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2198,7 +2198,7 @@ void q_sqltablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_sqltablemodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_sqltablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2212,7 +2212,7 @@ libqt_list /* of QModelIndex* */ q_sqltablemodel_match(void* self, void* start, 
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_sqltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_sqltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2222,7 +2222,7 @@ libqt_list /* of QModelIndex* */ q_sqltablemodel_qbase_match(void* self, void* s
 ///
 /// @param self QSqlTableModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QSqlTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_sqltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_sqltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

@@ -1645,26 +1645,26 @@ const char* q_pinchgesture_tr(const char* s);
 /// @param self QPinchGesture*
 ///
 /// @return flag of enum QPinchGesture__ChangeFlag
-int64_t q_pinchgesture_total_change_flags(void* self);
+int32_t q_pinchgesture_total_change_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpinchgesture.html#setTotalChangeFlags)
 ///
 /// @param self QPinchGesture*
 /// @param value flag of enum QPinchGesture__ChangeFlag
-void q_pinchgesture_set_total_change_flags(void* self, int64_t value);
+void q_pinchgesture_set_total_change_flags(void* self, int32_t value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpinchgesture.html#changeFlags)
 ///
 /// @param self QPinchGesture*
 ///
 /// @return flag of enum QPinchGesture__ChangeFlag
-int64_t q_pinchgesture_change_flags(void* self);
+int32_t q_pinchgesture_change_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpinchgesture.html#setChangeFlags)
 ///
 /// @param self QPinchGesture*
 /// @param value flag of enum QPinchGesture__ChangeFlag
-void q_pinchgesture_set_change_flags(void* self, int64_t value);
+void q_pinchgesture_set_change_flags(void* self, int32_t value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpinchgesture.html#startCenterPoint)
 ///

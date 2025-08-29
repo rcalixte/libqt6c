@@ -22,15 +22,15 @@ KDatePickerPopup* k_datepickerpopup_new() {
     return KDatePickerPopup_new();
 }
 
-KDatePickerPopup* k_datepickerpopup_new2(int64_t modes) {
+KDatePickerPopup* k_datepickerpopup_new2(int32_t modes) {
     return KDatePickerPopup_new2(modes);
 }
 
-KDatePickerPopup* k_datepickerpopup_new3(int64_t modes, void* date) {
+KDatePickerPopup* k_datepickerpopup_new3(int32_t modes, void* date) {
     return KDatePickerPopup_new3(modes, (QDate*)date);
 }
 
-KDatePickerPopup* k_datepickerpopup_new4(int64_t modes, void* date, void* parent) {
+KDatePickerPopup* k_datepickerpopup_new4(int32_t modes, void* date, void* parent) {
     return KDatePickerPopup_new4(modes, (QDate*)date, (QWidget*)parent);
 }
 
@@ -61,11 +61,11 @@ const char* k_datepickerpopup_tr(const char* s) {
     return _ret;
 }
 
-int64_t k_datepickerpopup_modes(void* self) {
+int32_t k_datepickerpopup_modes(void* self) {
     return KDatePickerPopup_Modes((KDatePickerPopup*)self);
 }
 
-void k_datepickerpopup_set_modes(void* self, int64_t modes) {
+void k_datepickerpopup_set_modes(void* self, int32_t modes) {
     KDatePickerPopup_SetModes((KDatePickerPopup*)self, modes);
 }
 
@@ -1123,15 +1123,15 @@ bool k_datepickerpopup_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_datepickerpopup_window_state(void* self) {
+int32_t k_datepickerpopup_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_datepickerpopup_set_window_state(void* self, int64_t state) {
+void k_datepickerpopup_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_datepickerpopup_override_window_state(void* self, int64_t state) {
+void k_datepickerpopup_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1388,7 +1388,7 @@ void k_datepickerpopup_render3(void* self, void* target, void* targetOffset, voi
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_datepickerpopup_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_datepickerpopup_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1400,7 +1400,7 @@ void k_datepickerpopup_render32(void* self, void* painter, void* targetOffset, v
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_datepickerpopup_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_datepickerpopup_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1408,7 +1408,7 @@ QPixmap* k_datepickerpopup_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_datepickerpopup_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_datepickerpopup_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

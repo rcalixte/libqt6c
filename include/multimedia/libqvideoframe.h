@@ -313,13 +313,13 @@ void q_videoframe__paintoptions_set_aspect_ratio_mode(void* self, int32_t aspect
 /// @param self QVideoFrame__PaintOptions*
 ///
 /// @return flag of enum QVideoFrame__PaintOptions__PaintFlag
-int64_t q_videoframe__paintoptions_paint_flags(void* self);
+int32_t q_videoframe__paintoptions_paint_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#paintFlags-var)
 ///
 /// @param self QVideoFrame__PaintOptions*
 /// @param paintFlags flag of enum QVideoFrame__PaintOptions__PaintFlag
-void q_videoframe__paintoptions_set_paint_flags(void* self, int64_t paintFlags);
+void q_videoframe__paintoptions_set_paint_flags(void* self, int32_t paintFlags);
 
 /// Delete this object from C++ memory.
 ///

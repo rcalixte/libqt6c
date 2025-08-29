@@ -247,11 +247,11 @@ QRect* q_stackedlayout_contents_rect(void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
-bool q_stackedlayout_set_alignment(void* self, void* w, int64_t alignment) {
+bool q_stackedlayout_set_alignment(void* self, void* w, int32_t alignment) {
     return QLayout_SetAlignment((QLayout*)self, (QWidget*)w, alignment);
 }
 
-bool q_stackedlayout_set_alignment2(void* self, void* l, int64_t alignment) {
+bool q_stackedlayout_set_alignment2(void* self, void* l, int32_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
@@ -506,7 +506,7 @@ void q_stackedlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_stackedlayout_alignment(void* self) {
+int32_t q_stackedlayout_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
@@ -558,15 +558,15 @@ void q_stackedlayout_on_geometry(void* self, QRect* (*callback)()) {
     QStackedLayout_OnGeometry((QStackedLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_stackedlayout_expanding_directions(void* self) {
+int32_t q_stackedlayout_expanding_directions(void* self) {
     return QStackedLayout_ExpandingDirections((QStackedLayout*)self);
 }
 
-int64_t q_stackedlayout_qbase_expanding_directions(void* self) {
+int32_t q_stackedlayout_qbase_expanding_directions(void* self) {
     return QStackedLayout_QBaseExpandingDirections((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_stackedlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QStackedLayout_OnExpandingDirections((QStackedLayout*)self, (intptr_t)callback);
 }
 
@@ -606,27 +606,27 @@ void q_stackedlayout_on_is_empty(void* self, bool (*callback)()) {
     QStackedLayout_OnIsEmpty((QStackedLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_stackedlayout_control_types(void* self) {
+int32_t q_stackedlayout_control_types(void* self) {
     return QStackedLayout_ControlTypes((QStackedLayout*)self);
 }
 
-int64_t q_stackedlayout_qbase_control_types(void* self) {
+int32_t q_stackedlayout_qbase_control_types(void* self) {
     return QStackedLayout_QBaseControlTypes((QStackedLayout*)self);
 }
 
-void q_stackedlayout_on_control_types(void* self, int64_t (*callback)()) {
+void q_stackedlayout_on_control_types(void* self, int32_t (*callback)()) {
     QStackedLayout_OnControlTypes((QStackedLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QStackedLayout_ReplaceWidget((QStackedLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QStackedLayout_QBaseReplaceWidget((QStackedLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_stackedlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+void q_stackedlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
     QStackedLayout_OnReplaceWidget((QStackedLayout*)self, (intptr_t)callback);
 }
 

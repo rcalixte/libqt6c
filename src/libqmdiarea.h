@@ -628,7 +628,7 @@ void q_mdiarea_set_corner_widget(void* self, void* widget);
 /// @param self QMdiArea*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_mdiarea_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_mdiarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -636,7 +636,7 @@ void q_mdiarea_add_scroll_bar_widget(void* self, void* widget, int64_t alignment
 ///
 /// @param self QMdiArea*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_mdiarea_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_mdiarea_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2278,7 +2278,7 @@ bool q_mdiarea_is_full_screen(void* self);
 /// @param self QMdiArea*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_mdiarea_window_state(void* self);
+int32_t q_mdiarea_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2286,7 +2286,7 @@ int64_t q_mdiarea_window_state(void* self);
 ///
 /// @param self QMdiArea*
 /// @param state flag of enum Qt__WindowState
-void q_mdiarea_set_window_state(void* self, int64_t state);
+void q_mdiarea_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2294,7 +2294,7 @@ void q_mdiarea_set_window_state(void* self, int64_t state);
 ///
 /// @param self QMdiArea*
 /// @param state flag of enum Qt__WindowState
-void q_mdiarea_override_window_state(void* self, int64_t state);
+void q_mdiarea_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2811,7 +2811,7 @@ void q_mdiarea_render3(void* self, void* target, void* targetOffset, void* sourc
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_mdiarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_mdiarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2841,7 +2841,7 @@ void q_mdiarea_render32(void* self, void* painter, void* targetOffset, void* sou
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_mdiarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_mdiarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2858,7 +2858,7 @@ QPixmap* q_mdiarea_grab1(void* self, void* rectangle);
 /// @param self QMdiArea*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_mdiarea_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_mdiarea_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

@@ -899,15 +899,15 @@ bool q_sortfilterproxymodel_qbase_can_fetch_more(void* self, void* parent);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_sortfilterproxymodel_flags(void* self, void* index);
+int32_t q_sortfilterproxymodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback int64_t func(QSortFilterProxyModel* self, QModelIndex* index)
-void q_sortfilterproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QSortFilterProxyModel* self, QModelIndex* index)
+void q_sortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
@@ -917,7 +917,7 @@ void q_sortfilterproxymodel_on_flags(void* self, int64_t (*callback)(void*, void
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_sortfilterproxymodel_qbase_flags(void* self, void* index);
+int32_t q_sortfilterproxymodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
@@ -949,7 +949,7 @@ QModelIndex* q_sortfilterproxymodel_qbase_buddy(void* self, void* index);
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
@@ -957,7 +957,7 @@ libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* 
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_sortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_sortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
@@ -969,7 +969,7 @@ void q_sortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* *
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
@@ -1044,15 +1044,15 @@ const char** q_sortfilterproxymodel_qbase_mime_types(void* self);
 /// @param self QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sortfilterproxymodel_supported_drop_actions(void* self);
+int32_t q_sortfilterproxymodel_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback int64_t func()
-void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
@@ -1061,7 +1061,7 @@ void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int64_t (*call
 /// @param self QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sortfilterproxymodel_qbase_supported_drop_actions(void* self);
+int32_t q_sortfilterproxymodel_qbase_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
@@ -1372,7 +1372,7 @@ bool q_sortfilterproxymodel_remove_column2(void* self, int column, void* parent)
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_sortfilterproxymodel_check_index2(void* self, void* index, int64_t options);
+bool q_sortfilterproxymodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1953,7 +1953,7 @@ void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(v
 /// @param self QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sortfilterproxymodel_supported_drag_actions(void* self);
+int32_t q_sortfilterproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1964,7 +1964,7 @@ int64_t q_sortfilterproxymodel_supported_drag_actions(void* self);
 /// @param self QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_sortfilterproxymodel_qbase_supported_drag_actions(void* self);
+int32_t q_sortfilterproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1973,8 +1973,8 @@ int64_t q_sortfilterproxymodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback int64_t func()
-void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///

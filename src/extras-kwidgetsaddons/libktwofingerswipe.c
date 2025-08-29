@@ -448,15 +448,15 @@ QGesture* k_twofingerswiperecognizer_qbase_create(void* self, void* target) {
     return KTwoFingerSwipeRecognizer_QBaseCreate((KTwoFingerSwipeRecognizer*)self, (QObject*)target);
 }
 
-int64_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* watched, void* event) {
+int32_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* watched, void* event) {
     return KTwoFingerSwipeRecognizer_Recognize((KTwoFingerSwipeRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
 }
 
-void k_twofingerswiperecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*)) {
+void k_twofingerswiperecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*)) {
     KTwoFingerSwipeRecognizer_OnRecognize((KTwoFingerSwipeRecognizer*)self, (intptr_t)callback);
 }
 
-int64_t k_twofingerswiperecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event) {
+int32_t k_twofingerswiperecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event) {
     return KTwoFingerSwipeRecognizer_QBaseRecognize((KTwoFingerSwipeRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
 }
 

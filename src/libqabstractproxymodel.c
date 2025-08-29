@@ -170,15 +170,15 @@ libqt_map /* of int to QVariant* */ q_abstractproxymodel_qbase_item_data(void* s
     return QAbstractProxyModel_QBaseItemData((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_abstractproxymodel_flags(void* self, void* index) {
+int32_t q_abstractproxymodel_flags(void* self, void* index) {
     return QAbstractProxyModel_Flags((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_abstractproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QAbstractProxyModel_OnFlags((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractproxymodel_qbase_flags(void* self, void* index) {
+int32_t q_abstractproxymodel_qbase_flags(void* self, void* index) {
     return QAbstractProxyModel_QBaseFlags((QAbstractProxyModel*)self, (QModelIndex*)index);
 }
 
@@ -392,27 +392,27 @@ const char** q_abstractproxymodel_qbase_mime_types(void* self) {
     return _ret;
 }
 
-int64_t q_abstractproxymodel_supported_drag_actions(void* self) {
+int32_t q_abstractproxymodel_supported_drag_actions(void* self) {
     return QAbstractProxyModel_SupportedDragActions((QAbstractProxyModel*)self);
 }
 
-void q_abstractproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_abstractproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QAbstractProxyModel_OnSupportedDragActions((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractproxymodel_qbase_supported_drag_actions(void* self) {
+int32_t q_abstractproxymodel_qbase_supported_drag_actions(void* self) {
     return QAbstractProxyModel_QBaseSupportedDragActions((QAbstractProxyModel*)self);
 }
 
-int64_t q_abstractproxymodel_supported_drop_actions(void* self) {
+int32_t q_abstractproxymodel_supported_drop_actions(void* self) {
     return QAbstractProxyModel_SupportedDropActions((QAbstractProxyModel*)self);
 }
 
-void q_abstractproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_abstractproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QAbstractProxyModel_OnSupportedDropActions((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractproxymodel_qbase_supported_drop_actions(void* self) {
+int32_t q_abstractproxymodel_qbase_supported_drop_actions(void* self) {
     return QAbstractProxyModel_QBaseSupportedDropActions((QAbstractProxyModel*)self);
 }
 
@@ -538,7 +538,7 @@ bool q_abstractproxymodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_abstractproxymodel_check_index2(void* self, void* index, int64_t options) {
+bool q_abstractproxymodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -869,17 +869,17 @@ void q_abstractproxymodel_on_move_columns(void* self, bool (*callback)(void*, vo
     QAbstractProxyModel_OnMoveColumns((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_abstractproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstractproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractProxyModel_Match((QAbstractProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractProxyModel_QBaseMatch((QAbstractProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_abstractproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_abstractproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QAbstractProxyModel_OnMatch((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 

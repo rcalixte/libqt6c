@@ -101,7 +101,7 @@ void q_sizepolicy_set_control_type(void* self, int32_t typeVal);
 /// @param self QSizePolicy*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_sizepolicy_expanding_directions(void* self);
+int32_t q_sizepolicy_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setHeightForWidth)
 ///

@@ -133,15 +133,15 @@ bool q_sctpsocket_bind2(void* self, int32_t addr, unsigned short port) {
     return QTcpSocket_Bind2((QTcpSocket*)self, addr, port);
 }
 
-bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode) {
+bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode) {
     return QTcpSocket_Bind3((QTcpSocket*)self, addr, port, mode);
 }
 
-int64_t q_sctpsocket_pause_mode(void* self) {
+int32_t q_sctpsocket_pause_mode(void* self) {
     return QAbstractSocket_PauseMode((QAbstractSocket*)self);
 }
 
-void q_sctpsocket_set_pause_mode(void* self, int64_t pauseMode) {
+void q_sctpsocket_set_pause_mode(void* self, int32_t pauseMode) {
     QAbstractSocket_SetPauseMode((QAbstractSocket*)self, pauseMode);
 }
 
@@ -271,15 +271,15 @@ bool q_sctpsocket_bind1(void* self, unsigned short port) {
     return QAbstractSocket_Bind1((QAbstractSocket*)self, port);
 }
 
-bool q_sctpsocket_bind22(void* self, unsigned short port, int64_t mode) {
+bool q_sctpsocket_bind22(void* self, unsigned short port, int32_t mode) {
     return QAbstractSocket_Bind22((QAbstractSocket*)self, port, mode);
 }
 
-void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short port, int64_t mode) {
+void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode) {
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-int64_t q_sctpsocket_open_mode(void* self) {
+int32_t q_sctpsocket_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -656,27 +656,27 @@ void q_sctpsocket_on_resume(void* self, void (*callback)()) {
     QSctpSocket_OnResume((QSctpSocket*)self, (intptr_t)callback);
 }
 
-bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int64_t mode) {
+bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int32_t mode) {
     return QSctpSocket_Bind((QSctpSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int64_t mode) {
+bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int32_t mode) {
     return QSctpSocket_QBaseBind((QSctpSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t)) {
+void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t)) {
     QSctpSocket_OnBind((QSctpSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
+void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
     QSctpSocket_ConnectToHost((QSctpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
+void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
     QSctpSocket_QBaseConnectToHost((QSctpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t)) {
+void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t)) {
     QSctpSocket_OnConnectToHost((QSctpSocket*)self, (intptr_t)callback);
 }
 
@@ -728,15 +728,15 @@ void q_sctpsocket_on_socket_descriptor(void* self, intptr_t (*callback)()) {
     QSctpSocket_OnSocketDescriptor((QSctpSocket*)self, (intptr_t)callback);
 }
 
-bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
+bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
     return QSctpSocket_SetSocketDescriptor((QSctpSocket*)self, socketDescriptor, state, openMode);
 }
 
-bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
+bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
     return QSctpSocket_QBaseSetSocketDescriptor((QSctpSocket*)self, socketDescriptor, state, openMode);
 }
 
-void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t)) {
+void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t)) {
     QSctpSocket_OnSetSocketDescriptor((QSctpSocket*)self, (intptr_t)callback);
 }
 
@@ -848,15 +848,15 @@ void q_sctpsocket_on_write_data(void* self, long long (*callback)(void*, const c
     QSctpSocket_OnWriteData((QSctpSocket*)self, (intptr_t)callback);
 }
 
-bool q_sctpsocket_open(void* self, int64_t mode) {
+bool q_sctpsocket_open(void* self, int32_t mode) {
     return QSctpSocket_Open((QSctpSocket*)self, mode);
 }
 
-bool q_sctpsocket_qbase_open(void* self, int64_t mode) {
+bool q_sctpsocket_qbase_open(void* self, int32_t mode) {
     return QSctpSocket_QBaseOpen((QSctpSocket*)self, mode);
 }
 
-void q_sctpsocket_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QSctpSocket_OnOpen((QSctpSocket*)self, (intptr_t)callback);
 }
 
@@ -1100,15 +1100,15 @@ void q_sctpsocket_on_set_peer_name(void* self, void (*callback)(void*, const cha
     QSctpSocket_OnSetPeerName((QSctpSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_set_open_mode(void* self, int64_t openMode) {
+void q_sctpsocket_set_open_mode(void* self, int32_t openMode) {
     QSctpSocket_SetOpenMode((QSctpSocket*)self, openMode);
 }
 
-void q_sctpsocket_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_sctpsocket_qbase_set_open_mode(void* self, int32_t openMode) {
     QSctpSocket_QBaseSetOpenMode((QSctpSocket*)self, openMode);
 }
 
-void q_sctpsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QSctpSocket_OnSetOpenMode((QSctpSocket*)self, (intptr_t)callback);
 }
 

@@ -208,14 +208,14 @@ bool q_wizard_test_option(void* self, int32_t option);
 ///
 /// @param self QWizard*
 /// @param options flag of enum QWizard__WizardOption
-void q_wizard_set_options(void* self, int64_t options);
+void q_wizard_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#options)
 ///
 /// @param self QWizard*
 ///
 /// @return flag of enum QWizard__WizardOption
-int64_t q_wizard_options(void* self);
+int32_t q_wizard_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#setButtonText)
 ///
@@ -2171,7 +2171,7 @@ bool q_wizard_is_full_screen(void* self);
 /// @param self QWizard*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_wizard_window_state(void* self);
+int32_t q_wizard_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2179,7 +2179,7 @@ int64_t q_wizard_window_state(void* self);
 ///
 /// @param self QWizard*
 /// @param state flag of enum Qt__WindowState
-void q_wizard_set_window_state(void* self, int64_t state);
+void q_wizard_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2187,7 +2187,7 @@ void q_wizard_set_window_state(void* self, int64_t state);
 ///
 /// @param self QWizard*
 /// @param state flag of enum Qt__WindowState
-void q_wizard_override_window_state(void* self, int64_t state);
+void q_wizard_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2704,7 +2704,7 @@ void q_wizard_render3(void* self, void* target, void* targetOffset, void* source
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_wizard_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_wizard_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2734,7 +2734,7 @@ void q_wizard_render32(void* self, void* painter, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_wizard_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_wizard_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2751,7 +2751,7 @@ QPixmap* q_wizard_grab1(void* self, void* rectangle);
 /// @param self QWizard*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_wizard_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_wizard_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -6803,7 +6803,7 @@ bool q_wizardpage_is_full_screen(void* self);
 /// @param self QWizardPage*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_wizardpage_window_state(void* self);
+int32_t q_wizardpage_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6811,7 +6811,7 @@ int64_t q_wizardpage_window_state(void* self);
 ///
 /// @param self QWizardPage*
 /// @param state flag of enum Qt__WindowState
-void q_wizardpage_set_window_state(void* self, int64_t state);
+void q_wizardpage_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -6819,7 +6819,7 @@ void q_wizardpage_set_window_state(void* self, int64_t state);
 ///
 /// @param self QWizardPage*
 /// @param state flag of enum Qt__WindowState
-void q_wizardpage_override_window_state(void* self, int64_t state);
+void q_wizardpage_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -7336,7 +7336,7 @@ void q_wizardpage_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_wizardpage_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_wizardpage_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7366,7 +7366,7 @@ void q_wizardpage_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_wizardpage_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_wizardpage_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7383,7 +7383,7 @@ QPixmap* q_wizardpage_grab1(void* self, void* rectangle);
 /// @param self QWizardPage*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_wizardpage_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_wizardpage_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

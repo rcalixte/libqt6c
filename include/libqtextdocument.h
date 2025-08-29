@@ -805,14 +805,14 @@ QTextDocument* q_textdocument_clone1(void* self, void* parent);
 ///
 /// @param self QTextDocument*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-const char* q_textdocument_to_markdown1(void* self, int64_t features);
+const char* q_textdocument_to_markdown1(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setMarkdown)
 ///
 /// @param self QTextDocument*
 /// @param markdown const char*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-void q_textdocument_set_markdown2(void* self, const char* markdown, int64_t features);
+void q_textdocument_set_markdown2(void* self, const char* markdown, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
@@ -827,7 +827,7 @@ QTextCursor* q_textdocument_find22(void* self, const char* subString, int from);
 /// @param subString const char*
 /// @param from int
 /// @param options flag of enum QTextDocument__FindFlag
-QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, int64_t options);
+QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
@@ -835,7 +835,7 @@ QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, 
 /// @param subString const char*
 /// @param cursor QTextCursor*
 /// @param options flag of enum QTextDocument__FindFlag
-QTextCursor* q_textdocument_find33(void* self, const char* subString, void* cursor, int64_t options);
+QTextCursor* q_textdocument_find33(void* self, const char* subString, void* cursor, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
@@ -850,7 +850,7 @@ QTextCursor* q_textdocument_find23(void* self, void* expr, int from);
 /// @param expr QRegularExpression*
 /// @param from int
 /// @param options flag of enum QTextDocument__FindFlag
-QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int64_t options);
+QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
@@ -858,7 +858,7 @@ QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int64_t opt
 /// @param expr QRegularExpression*
 /// @param cursor QTextCursor*
 /// @param options flag of enum QTextDocument__FindFlag
-QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int64_t options);
+QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#drawContents)
 ///

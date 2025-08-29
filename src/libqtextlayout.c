@@ -262,7 +262,7 @@ double q_textlayout_maximum_width(void* self) {
     return QTextLayout_MaximumWidth((QTextLayout*)self);
 }
 
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, int64_t flags) {
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, uint16_t flags) {
     libqt_list _arr = QTextLayout_GlyphRuns((QTextLayout*)self, from, length, flags);
     return _arr;
 }
@@ -430,7 +430,7 @@ void q_textline_draw(void* self, void* painter, void* position) {
     QTextLine_Draw((QTextLine*)self, (QPainter*)painter, (QPointF*)position);
 }
 
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, int64_t flags) {
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, uint16_t flags) {
     libqt_list _arr = QTextLine_GlyphRuns((QTextLine*)self, from, length, flags);
     return _arr;
 }

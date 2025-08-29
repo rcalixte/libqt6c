@@ -54,23 +54,23 @@ void q_abstractsocket_qbase_resume(void* self) {
     QAbstractSocket_QBaseResume((QAbstractSocket*)self);
 }
 
-int64_t q_abstractsocket_pause_mode(void* self) {
+int32_t q_abstractsocket_pause_mode(void* self) {
     return QAbstractSocket_PauseMode((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_set_pause_mode(void* self, int64_t pauseMode) {
+void q_abstractsocket_set_pause_mode(void* self, int32_t pauseMode) {
     QAbstractSocket_SetPauseMode((QAbstractSocket*)self, pauseMode);
 }
 
-bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int64_t mode) {
+bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int32_t mode) {
     return QAbstractSocket_Bind((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t)) {
+void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t)) {
     QAbstractSocket_OnBind((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-bool q_abstractsocket_qbase_bind(void* self, void* address, unsigned short port, int64_t mode) {
+bool q_abstractsocket_qbase_bind(void* self, void* address, unsigned short port, int32_t mode) {
     return QAbstractSocket_QBaseBind((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
@@ -78,15 +78,15 @@ bool q_abstractsocket_bind2(void* self) {
     return QAbstractSocket_Bind2((QAbstractSocket*)self);
 }
 
-void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
+void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
     QAbstractSocket_ConnectToHost((QAbstractSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t)) {
+void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t)) {
     QAbstractSocket_OnConnectToHost((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-void q_abstractsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
+void q_abstractsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
     QAbstractSocket_QBaseConnectToHost((QAbstractSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
@@ -189,15 +189,15 @@ intptr_t q_abstractsocket_qbase_socket_descriptor(void* self) {
     return QAbstractSocket_QBaseSocketDescriptor((QAbstractSocket*)self);
 }
 
-bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
+bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
     return QAbstractSocket_SetSocketDescriptor((QAbstractSocket*)self, socketDescriptor, state, openMode);
 }
 
-void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t)) {
+void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t)) {
     QAbstractSocket_OnSetSocketDescriptor((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
+bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
     return QAbstractSocket_QBaseSetSocketDescriptor((QAbstractSocket*)self, socketDescriptor, state, openMode);
 }
 
@@ -530,15 +530,15 @@ bool q_abstractsocket_bind1(void* self, unsigned short port) {
     return QAbstractSocket_Bind1((QAbstractSocket*)self, port);
 }
 
-bool q_abstractsocket_bind22(void* self, unsigned short port, int64_t mode) {
+bool q_abstractsocket_bind22(void* self, unsigned short port, int32_t mode) {
     return QAbstractSocket_Bind22((QAbstractSocket*)self, port, mode);
 }
 
-void q_abstractsocket_connect_to_host3(void* self, void* address, unsigned short port, int64_t mode) {
+void q_abstractsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode) {
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-int64_t q_abstractsocket_open_mode(void* self) {
+int32_t q_abstractsocket_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -903,15 +903,15 @@ void q_abstractsocket_on_destroyed1(void* self, void (*callback)(void*, void*)) 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool q_abstractsocket_open(void* self, int64_t mode) {
+bool q_abstractsocket_open(void* self, int32_t mode) {
     return QAbstractSocket_Open((QAbstractSocket*)self, mode);
 }
 
-bool q_abstractsocket_qbase_open(void* self, int64_t mode) {
+bool q_abstractsocket_qbase_open(void* self, int32_t mode) {
     return QAbstractSocket_QBaseOpen((QAbstractSocket*)self, mode);
 }
 
-void q_abstractsocket_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_abstractsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QAbstractSocket_OnOpen((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -1071,15 +1071,15 @@ void q_abstractsocket_on_disconnect_notify(void* self, void (*callback)(void*, v
     QAbstractSocket_OnDisconnectNotify((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-void q_abstractsocket_set_open_mode(void* self, int64_t openMode) {
+void q_abstractsocket_set_open_mode(void* self, int32_t openMode) {
     QAbstractSocket_SetOpenMode((QAbstractSocket*)self, openMode);
 }
 
-void q_abstractsocket_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_abstractsocket_qbase_set_open_mode(void* self, int32_t openMode) {
     QAbstractSocket_QBaseSetOpenMode((QAbstractSocket*)self, openMode);
 }
 
-void q_abstractsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_abstractsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QAbstractSocket_OnSetOpenMode((QAbstractSocket*)self, (intptr_t)callback);
 }
 

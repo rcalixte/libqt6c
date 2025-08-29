@@ -6,7 +6,7 @@ QSurfaceFormat* q_surfaceformat_new() {
     return QSurfaceFormat_new();
 }
 
-QSurfaceFormat* q_surfaceformat_new2(int64_t options) {
+QSurfaceFormat* q_surfaceformat_new2(int32_t options) {
     return QSurfaceFormat_new2(options);
 }
 
@@ -134,7 +134,7 @@ void q_surfaceformat_set_stereo(void* self, bool enable) {
     QSurfaceFormat_SetStereo((QSurfaceFormat*)self, enable);
 }
 
-void q_surfaceformat_set_options(void* self, int64_t options) {
+void q_surfaceformat_set_options(void* self, int32_t options) {
     QSurfaceFormat_SetOptions((QSurfaceFormat*)self, options);
 }
 
@@ -146,7 +146,7 @@ bool q_surfaceformat_test_option(void* self, int32_t option) {
     return QSurfaceFormat_TestOption((QSurfaceFormat*)self, option);
 }
 
-int64_t q_surfaceformat_options(void* self) {
+int32_t q_surfaceformat_options(void* self) {
     return QSurfaceFormat_Options((QSurfaceFormat*)self);
 }
 

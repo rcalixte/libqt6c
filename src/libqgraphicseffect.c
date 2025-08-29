@@ -94,15 +94,15 @@ void q_graphicseffect_qbase_draw(void* self, void* painter) {
     QGraphicsEffect_QBaseDraw((QGraphicsEffect*)self, (QPainter*)painter);
 }
 
-void q_graphicseffect_source_changed(void* self, int64_t flags) {
+void q_graphicseffect_source_changed(void* self, int32_t flags) {
     QGraphicsEffect_SourceChanged((QGraphicsEffect*)self, flags);
 }
 
-void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
     QGraphicsEffect_OnSourceChanged((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicseffect_qbase_source_changed(void* self, int64_t flags) {
+void q_graphicseffect_qbase_source_changed(void* self, int32_t flags) {
     QGraphicsEffect_QBaseSourceChanged((QGraphicsEffect*)self, flags);
 }
 
@@ -839,15 +839,15 @@ void q_graphicscolorizeeffect_on_bounding_rect_for(void* self, QRectF* (*callbac
     QGraphicsColorizeEffect_OnBoundingRectFor((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicscolorizeeffect_source_changed(void* self, int64_t flags) {
+void q_graphicscolorizeeffect_source_changed(void* self, int32_t flags) {
     QGraphicsColorizeEffect_SourceChanged((QGraphicsColorizeEffect*)self, flags);
 }
 
-void q_graphicscolorizeeffect_qbase_source_changed(void* self, int64_t flags) {
+void q_graphicscolorizeeffect_qbase_source_changed(void* self, int32_t flags) {
     QGraphicsColorizeEffect_QBaseSourceChanged((QGraphicsColorizeEffect*)self, flags);
 }
 
-void q_graphicscolorizeeffect_on_source_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_graphicscolorizeeffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
     QGraphicsColorizeEffect_OnSourceChanged((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
@@ -1102,7 +1102,7 @@ double q_graphicsblureffect_blur_radius(void* self) {
     return QGraphicsBlurEffect_BlurRadius((QGraphicsBlurEffect*)self);
 }
 
-int64_t q_graphicsblureffect_blur_hints(void* self) {
+int32_t q_graphicsblureffect_blur_hints(void* self) {
     return QGraphicsBlurEffect_BlurHints((QGraphicsBlurEffect*)self);
 }
 
@@ -1110,7 +1110,7 @@ void q_graphicsblureffect_set_blur_radius(void* self, double blurRadius) {
     QGraphicsBlurEffect_SetBlurRadius((QGraphicsBlurEffect*)self, blurRadius);
 }
 
-void q_graphicsblureffect_set_blur_hints(void* self, int64_t hints) {
+void q_graphicsblureffect_set_blur_hints(void* self, int32_t hints) {
     QGraphicsBlurEffect_SetBlurHints((QGraphicsBlurEffect*)self, hints);
 }
 
@@ -1122,11 +1122,11 @@ void q_graphicsblureffect_on_blur_radius_changed(void* self, void (*callback)(vo
     QGraphicsBlurEffect_Connect_BlurRadiusChanged((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicsblureffect_blur_hints_changed(void* self, int64_t hints) {
+void q_graphicsblureffect_blur_hints_changed(void* self, int32_t hints) {
     QGraphicsBlurEffect_BlurHintsChanged((QGraphicsBlurEffect*)self, hints);
 }
 
-void q_graphicsblureffect_on_blur_hints_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_graphicsblureffect_on_blur_hints_changed(void* self, void (*callback)(void*, int32_t)) {
     QGraphicsBlurEffect_Connect_BlurHintsChanged((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
@@ -1351,15 +1351,15 @@ void q_graphicsblureffect_on_destroyed1(void* self, void (*callback)(void*, void
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_graphicsblureffect_source_changed(void* self, int64_t flags) {
+void q_graphicsblureffect_source_changed(void* self, int32_t flags) {
     QGraphicsBlurEffect_SourceChanged((QGraphicsBlurEffect*)self, flags);
 }
 
-void q_graphicsblureffect_qbase_source_changed(void* self, int64_t flags) {
+void q_graphicsblureffect_qbase_source_changed(void* self, int32_t flags) {
     QGraphicsBlurEffect_QBaseSourceChanged((QGraphicsBlurEffect*)self, flags);
 }
 
-void q_graphicsblureffect_on_source_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_graphicsblureffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
     QGraphicsBlurEffect_OnSourceChanged((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
@@ -1903,15 +1903,15 @@ void q_graphicsdropshadoweffect_on_destroyed1(void* self, void (*callback)(void*
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_graphicsdropshadoweffect_source_changed(void* self, int64_t flags) {
+void q_graphicsdropshadoweffect_source_changed(void* self, int32_t flags) {
     QGraphicsDropShadowEffect_SourceChanged((QGraphicsDropShadowEffect*)self, flags);
 }
 
-void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int64_t flags) {
+void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int32_t flags) {
     QGraphicsDropShadowEffect_QBaseSourceChanged((QGraphicsDropShadowEffect*)self, flags);
 }
 
-void q_graphicsdropshadoweffect_on_source_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_graphicsdropshadoweffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
     QGraphicsDropShadowEffect_OnSourceChanged((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
@@ -2415,15 +2415,15 @@ void q_graphicsopacityeffect_on_bounding_rect_for(void* self, QRectF* (*callback
     QGraphicsOpacityEffect_OnBoundingRectFor((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 
-void q_graphicsopacityeffect_source_changed(void* self, int64_t flags) {
+void q_graphicsopacityeffect_source_changed(void* self, int32_t flags) {
     QGraphicsOpacityEffect_SourceChanged((QGraphicsOpacityEffect*)self, flags);
 }
 
-void q_graphicsopacityeffect_qbase_source_changed(void* self, int64_t flags) {
+void q_graphicsopacityeffect_qbase_source_changed(void* self, int32_t flags) {
     QGraphicsOpacityEffect_QBaseSourceChanged((QGraphicsOpacityEffect*)self, flags);
 }
 
-void q_graphicsopacityeffect_on_source_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_graphicsopacityeffect_on_source_changed(void* self, void (*callback)(void*, int32_t)) {
     QGraphicsOpacityEffect_OnSourceChanged((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 

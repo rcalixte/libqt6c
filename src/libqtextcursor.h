@@ -490,7 +490,7 @@ bool q_textcursor_move_position3(void* self, int32_t op, int32_t param2, int n);
 /// @param self QTextCursor*
 /// @param markdown const char*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-void q_textcursor_insert_markdown2(void* self, const char* markdown, int64_t features);
+void q_textcursor_insert_markdown2(void* self, const char* markdown, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertImage)
 ///

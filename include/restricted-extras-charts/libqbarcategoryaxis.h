@@ -639,7 +639,7 @@ int32_t q_barcategoryaxis_orientation(void* self);
 /// @param self QBarCategoryAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_barcategoryaxis_alignment(void* self);
+int32_t q_barcategoryaxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
 ///

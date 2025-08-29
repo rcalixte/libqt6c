@@ -200,13 +200,13 @@ void q_filedialog_select_mime_type_filter(void* self, const char* filter);
 /// @param self QFileDialog*
 ///
 /// @return flag of enum QDir__Filter
-int64_t q_filedialog_filter(void* self);
+int32_t q_filedialog_filter(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setFilter)
 ///
 /// @param self QFileDialog*
 /// @param filters flag of enum QDir__Filter
-void q_filedialog_set_filter(void* self, int64_t filters);
+void q_filedialog_set_filter(void* self, int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setViewMode)
 ///
@@ -374,14 +374,14 @@ bool q_filedialog_test_option(void* self, int32_t option);
 ///
 /// @param self QFileDialog*
 /// @param options flag of enum QFileDialog__Option
-void q_filedialog_set_options(void* self, int64_t options);
+void q_filedialog_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#options)
 ///
 /// @param self QFileDialog*
 ///
 /// @return flag of enum QFileDialog__Option
-int64_t q_filedialog_options(void* self);
+int32_t q_filedialog_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setVisible)
 ///
@@ -799,7 +799,7 @@ const char* q_filedialog_get_existing_directory3(void* parent, const char* capti
 /// @param caption const char*
 /// @param dir const char*
 /// @param options flag of enum QFileDialog__Option
-const char* q_filedialog_get_existing_directory4(void* parent, const char* caption, const char* dir, int64_t options);
+const char* q_filedialog_get_existing_directory4(void* parent, const char* caption, const char* dir, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectoryUrl)
 ///
@@ -825,7 +825,7 @@ QUrl* q_filedialog_get_existing_directory_url3(void* parent, const char* caption
 /// @param caption const char*
 /// @param dir QUrl*
 /// @param options flag of enum QFileDialog__Option
-QUrl* q_filedialog_get_existing_directory_url4(void* parent, const char* caption, void* dir, int64_t options);
+QUrl* q_filedialog_get_existing_directory_url4(void* parent, const char* caption, void* dir, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#getExistingDirectoryUrl)
 ///
@@ -834,7 +834,7 @@ QUrl* q_filedialog_get_existing_directory_url4(void* parent, const char* caption
 /// @param dir QUrl*
 /// @param options flag of enum QFileDialog__Option
 /// @param supportedSchemes const char**
-QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption, void* dir, int64_t options, const char* supportedSchemes[]);
+QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption, void* dir, int32_t options, const char* supportedSchemes[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileNames)
 ///
@@ -2487,7 +2487,7 @@ bool q_filedialog_is_full_screen(void* self);
 /// @param self QFileDialog*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_filedialog_window_state(void* self);
+int32_t q_filedialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2495,7 +2495,7 @@ int64_t q_filedialog_window_state(void* self);
 ///
 /// @param self QFileDialog*
 /// @param state flag of enum Qt__WindowState
-void q_filedialog_set_window_state(void* self, int64_t state);
+void q_filedialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2503,7 +2503,7 @@ void q_filedialog_set_window_state(void* self, int64_t state);
 ///
 /// @param self QFileDialog*
 /// @param state flag of enum Qt__WindowState
-void q_filedialog_override_window_state(void* self, int64_t state);
+void q_filedialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3020,7 +3020,7 @@ void q_filedialog_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_filedialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_filedialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3050,7 +3050,7 @@ void q_filedialog_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_filedialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_filedialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3067,7 +3067,7 @@ QPixmap* q_filedialog_grab1(void* self, void* rectangle);
 /// @param self QFileDialog*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_filedialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_filedialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

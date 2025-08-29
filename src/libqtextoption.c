@@ -6,7 +6,7 @@ QTextOption* q_textoption_new() {
     return QTextOption_new();
 }
 
-QTextOption* q_textoption_new2(int64_t alignment) {
+QTextOption* q_textoption_new2(int32_t alignment) {
     return QTextOption_new2(alignment);
 }
 
@@ -18,11 +18,11 @@ void q_textoption_operator_assign(void* self, void* o) {
     QTextOption_OperatorAssign((QTextOption*)self, (QTextOption*)o);
 }
 
-void q_textoption_set_alignment(void* self, int64_t alignment) {
+void q_textoption_set_alignment(void* self, int32_t alignment) {
     QTextOption_SetAlignment((QTextOption*)self, alignment);
 }
 
-int64_t q_textoption_alignment(void* self) {
+int32_t q_textoption_alignment(void* self) {
     return QTextOption_Alignment((QTextOption*)self);
 }
 

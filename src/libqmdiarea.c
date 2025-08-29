@@ -394,11 +394,11 @@ void q_mdiarea_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_mdiarea_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_mdiarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_mdiarea_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_mdiarea_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1280,15 +1280,15 @@ bool q_mdiarea_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_mdiarea_window_state(void* self) {
+int32_t q_mdiarea_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_mdiarea_set_window_state(void* self, int64_t state) {
+void q_mdiarea_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_mdiarea_override_window_state(void* self, int64_t state) {
+void q_mdiarea_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1545,7 +1545,7 @@ void q_mdiarea_render3(void* self, void* target, void* targetOffset, void* sourc
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_mdiarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_mdiarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1557,7 +1557,7 @@ void q_mdiarea_render32(void* self, void* painter, void* targetOffset, void* sou
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_mdiarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_mdiarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1565,7 +1565,7 @@ QPixmap* q_mdiarea_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_mdiarea_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_mdiarea_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

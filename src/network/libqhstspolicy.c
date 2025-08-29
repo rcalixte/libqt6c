@@ -6,7 +6,7 @@ QHstsPolicy* q_hstspolicy_new() {
     return QHstsPolicy_new();
 }
 
-QHstsPolicy* q_hstspolicy_new2(void* expiry, int64_t flags, const char* host) {
+QHstsPolicy* q_hstspolicy_new2(void* expiry, int32_t flags, const char* host) {
     return QHstsPolicy_new2((QDateTime*)expiry, flags, qstring(host));
 }
 
@@ -14,7 +14,7 @@ QHstsPolicy* q_hstspolicy_new3(void* rhs) {
     return QHstsPolicy_new3((QHstsPolicy*)rhs);
 }
 
-QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int32_t mode) {
+QHstsPolicy* q_hstspolicy_new4(void* expiry, int32_t flags, const char* host, int32_t mode) {
     return QHstsPolicy_new4((QDateTime*)expiry, flags, qstring(host), mode);
 }
 
@@ -61,7 +61,7 @@ void q_hstspolicy_set_host2(void* self, const char* host, int32_t mode) {
     QHstsPolicy_SetHost2((QHstsPolicy*)self, qstring(host), mode);
 }
 
-const char* q_hstspolicy_host1(void* self, int64_t options) {
+const char* q_hstspolicy_host1(void* self, uint32_t options) {
     libqt_string _str = QHstsPolicy_Host1((QHstsPolicy*)self, options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

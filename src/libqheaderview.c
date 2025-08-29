@@ -314,11 +314,11 @@ void q_headerview_set_maximum_section_size(void* self, int size) {
     QHeaderView_SetMaximumSectionSize((QHeaderView*)self, size);
 }
 
-int64_t q_headerview_default_alignment(void* self) {
+int32_t q_headerview_default_alignment(void* self) {
     return QHeaderView_DefaultAlignment((QHeaderView*)self);
 }
 
-void q_headerview_set_default_alignment(void* self, int64_t alignment) {
+void q_headerview_set_default_alignment(void* self, int32_t alignment) {
     QHeaderView_SetDefaultAlignment((QHeaderView*)self, alignment);
 }
 
@@ -805,15 +805,15 @@ QModelIndex* q_headerview_qbase_move_cursor(void* self, int32_t param1, int64_t 
     return QHeaderView_QBaseMoveCursor((QHeaderView*)self, param1, param2);
 }
 
-void q_headerview_set_selection(void* self, void* rect, int64_t flags) {
+void q_headerview_set_selection(void* self, void* rect, int32_t flags) {
     QHeaderView_SetSelection((QHeaderView*)self, (QRect*)rect, flags);
 }
 
-void q_headerview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_headerview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
     QHeaderView_OnSetSelection((QHeaderView*)self, (intptr_t)callback);
 }
 
-void q_headerview_qbase_set_selection(void* self, void* rect, int64_t flags) {
+void q_headerview_qbase_set_selection(void* self, void* rect, int32_t flags) {
     QHeaderView_QBaseSetSelection((QHeaderView*)self, (QRect*)rect, flags);
 }
 
@@ -907,11 +907,11 @@ QModelIndex* q_headerview_root_index(void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
-void q_headerview_set_edit_triggers(void* self, int64_t triggers) {
+void q_headerview_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int64_t q_headerview_edit_triggers(void* self) {
+int32_t q_headerview_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -1191,11 +1191,11 @@ void q_headerview_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_headerview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_headerview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_headerview_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_headerview_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -2073,15 +2073,15 @@ bool q_headerview_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_headerview_window_state(void* self) {
+int32_t q_headerview_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_headerview_set_window_state(void* self, int64_t state) {
+void q_headerview_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_headerview_override_window_state(void* self, int64_t state) {
+void q_headerview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -2338,7 +2338,7 @@ void q_headerview_render3(void* self, void* target, void* targetOffset, void* so
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_headerview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_headerview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2350,7 +2350,7 @@ void q_headerview_render32(void* self, void* painter, void* targetOffset, void* 
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_headerview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_headerview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2358,7 +2358,7 @@ QPixmap* q_headerview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_headerview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_headerview_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -2863,27 +2863,27 @@ void q_headerview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
     QHeaderView_OnEdit2((QHeaderView*)self, (intptr_t)callback);
 }
 
-int64_t q_headerview_selection_command(void* self, void* index, void* event) {
+int32_t q_headerview_selection_command(void* self, void* index, void* event) {
     return QHeaderView_SelectionCommand((QHeaderView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int64_t q_headerview_qbase_selection_command(void* self, void* index, void* event) {
+int32_t q_headerview_qbase_selection_command(void* self, void* index, void* event) {
     return QHeaderView_QBaseSelectionCommand((QHeaderView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_headerview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+void q_headerview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
     QHeaderView_OnSelectionCommand((QHeaderView*)self, (intptr_t)callback);
 }
 
-void q_headerview_start_drag(void* self, int64_t supportedActions) {
+void q_headerview_start_drag(void* self, int32_t supportedActions) {
     QHeaderView_StartDrag((QHeaderView*)self, supportedActions);
 }
 
-void q_headerview_qbase_start_drag(void* self, int64_t supportedActions) {
+void q_headerview_qbase_start_drag(void* self, int32_t supportedActions) {
     QHeaderView_QBaseStartDrag((QHeaderView*)self, supportedActions);
 }
 
-void q_headerview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+void q_headerview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     QHeaderView_OnStartDrag((QHeaderView*)self, (intptr_t)callback);
 }
 

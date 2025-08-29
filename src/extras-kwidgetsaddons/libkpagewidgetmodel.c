@@ -572,15 +572,15 @@ bool k_pagewidgetmodel_qbase_set_data(void* self, void* index, void* value, int 
     return KPageWidgetModel_QBaseSetData((KPageWidgetModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-int64_t k_pagewidgetmodel_flags(void* self, void* index) {
+int32_t k_pagewidgetmodel_flags(void* self, void* index) {
     return KPageWidgetModel_Flags((KPageWidgetModel*)self, (QModelIndex*)index);
 }
 
-void k_pagewidgetmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void k_pagewidgetmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     KPageWidgetModel_OnFlags((KPageWidgetModel*)self, (intptr_t)callback);
 }
 
-int64_t k_pagewidgetmodel_qbase_flags(void* self, void* index) {
+int32_t k_pagewidgetmodel_qbase_flags(void* self, void* index) {
     return KPageWidgetModel_QBaseFlags((KPageWidgetModel*)self, (QModelIndex*)index);
 }
 
@@ -734,7 +734,7 @@ bool k_pagewidgetmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_pagewidgetmodel_check_index2(void* self, void* index, int64_t options) {
+bool k_pagewidgetmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -1107,27 +1107,27 @@ void k_pagewidgetmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
     KPageWidgetModel_OnDropMimeData((KPageWidgetModel*)self, (intptr_t)callback);
 }
 
-int64_t k_pagewidgetmodel_supported_drop_actions(void* self) {
+int32_t k_pagewidgetmodel_supported_drop_actions(void* self) {
     return KPageWidgetModel_SupportedDropActions((KPageWidgetModel*)self);
 }
 
-int64_t k_pagewidgetmodel_qbase_supported_drop_actions(void* self) {
+int32_t k_pagewidgetmodel_qbase_supported_drop_actions(void* self) {
     return KPageWidgetModel_QBaseSupportedDropActions((KPageWidgetModel*)self);
 }
 
-void k_pagewidgetmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void k_pagewidgetmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     KPageWidgetModel_OnSupportedDropActions((KPageWidgetModel*)self, (intptr_t)callback);
 }
 
-int64_t k_pagewidgetmodel_supported_drag_actions(void* self) {
+int32_t k_pagewidgetmodel_supported_drag_actions(void* self) {
     return KPageWidgetModel_SupportedDragActions((KPageWidgetModel*)self);
 }
 
-int64_t k_pagewidgetmodel_qbase_supported_drag_actions(void* self) {
+int32_t k_pagewidgetmodel_qbase_supported_drag_actions(void* self) {
     return KPageWidgetModel_QBaseSupportedDragActions((KPageWidgetModel*)self);
 }
 
-void k_pagewidgetmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void k_pagewidgetmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     KPageWidgetModel_OnSupportedDragActions((KPageWidgetModel*)self, (intptr_t)callback);
 }
 
@@ -1251,17 +1251,17 @@ void k_pagewidgetmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
     KPageWidgetModel_OnBuddy((KPageWidgetModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_pagewidgetmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ k_pagewidgetmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = KPageWidgetModel_Match((KPageWidgetModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = KPageWidgetModel_QBaseMatch((KPageWidgetModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void k_pagewidgetmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void k_pagewidgetmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KPageWidgetModel_OnMatch((KPageWidgetModel*)self, (intptr_t)callback);
 }
 

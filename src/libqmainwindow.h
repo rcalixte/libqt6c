@@ -135,20 +135,20 @@ int32_t q_mainwindow_tab_position(void* self, int32_t area);
 /// @param self QMainWindow*
 /// @param areas flag of enum Qt__DockWidgetArea
 /// @param tabPosition enum QTabWidget__TabPosition
-void q_mainwindow_set_tab_position(void* self, int64_t areas, int32_t tabPosition);
+void q_mainwindow_set_tab_position(void* self, int32_t areas, int32_t tabPosition);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#setDockOptions)
 ///
 /// @param self QMainWindow*
 /// @param options flag of enum QMainWindow__DockOption
-void q_mainwindow_set_dock_options(void* self, int64_t options);
+void q_mainwindow_set_dock_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#dockOptions)
 ///
 /// @param self QMainWindow*
 ///
 /// @return flag of enum QMainWindow__DockOption
-int64_t q_mainwindow_dock_options(void* self);
+int32_t q_mainwindow_dock_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmainwindow.html#isSeparator)
 ///
@@ -2021,7 +2021,7 @@ bool q_mainwindow_is_full_screen(void* self);
 /// @param self QMainWindow*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_mainwindow_window_state(void* self);
+int32_t q_mainwindow_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2029,7 +2029,7 @@ int64_t q_mainwindow_window_state(void* self);
 ///
 /// @param self QMainWindow*
 /// @param state flag of enum Qt__WindowState
-void q_mainwindow_set_window_state(void* self, int64_t state);
+void q_mainwindow_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2037,7 +2037,7 @@ void q_mainwindow_set_window_state(void* self, int64_t state);
 ///
 /// @param self QMainWindow*
 /// @param state flag of enum Qt__WindowState
-void q_mainwindow_override_window_state(void* self, int64_t state);
+void q_mainwindow_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2554,7 +2554,7 @@ void q_mainwindow_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_mainwindow_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_mainwindow_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2584,7 +2584,7 @@ void q_mainwindow_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_mainwindow_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_mainwindow_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2601,7 +2601,7 @@ QPixmap* q_mainwindow_grab1(void* self, void* rectangle);
 /// @param self QMainWindow*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_mainwindow_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_mainwindow_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

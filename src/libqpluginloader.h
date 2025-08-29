@@ -126,14 +126,14 @@ const char* q_pluginloader_error_string(void* self);
 ///
 /// @param self QPluginLoader*
 /// @param loadHints flag of enum QLibrary__LoadHint
-void q_pluginloader_set_load_hints(void* self, int64_t loadHints);
+void q_pluginloader_set_load_hints(void* self, int32_t loadHints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpluginloader.html#loadHints)
 ///
 /// @param self QPluginLoader*
 ///
 /// @return flag of enum QLibrary__LoadHint
-int64_t q_pluginloader_load_hints(void* self);
+int32_t q_pluginloader_load_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

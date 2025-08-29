@@ -595,7 +595,7 @@ int32_t q_commonstyle_slider_value_from_position(int min, int max, int pos, int 
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_commonstyle_visual_alignment(int32_t direction, int64_t alignment);
+int32_t q_commonstyle_visual_alignment(int32_t direction, int32_t alignment);
 
 /// Inherited from QStyle
 ///
@@ -605,7 +605,7 @@ int64_t q_commonstyle_visual_alignment(int32_t direction, int64_t alignment);
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param size QSize*
 /// @param rectangle QRect*
-QRect* q_commonstyle_aligned_rect(int32_t direction, int64_t alignment, void* size, void* rectangle);
+QRect* q_commonstyle_aligned_rect(int32_t direction, int32_t alignment, void* size, void* rectangle);
 
 /// Inherited from QStyle
 ///
@@ -615,7 +615,7 @@ QRect* q_commonstyle_aligned_rect(int32_t direction, int64_t alignment, void* si
 /// @param controls1 flag of enum QSizePolicy__ControlType
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
-int32_t q_commonstyle_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int32_t orientation);
+int32_t q_commonstyle_combined_layout_spacing(void* self, int32_t controls1, int32_t controls2, int32_t orientation);
 
 /// Inherited from QStyle
 ///
@@ -655,7 +655,7 @@ int32_t q_commonstyle_slider_value_from_position5(int min, int max, int pos, int
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
-int32_t q_commonstyle_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option);
+int32_t q_commonstyle_combined_layout_spacing4(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option);
 
 /// Inherited from QStyle
 ///
@@ -667,7 +667,7 @@ int32_t q_commonstyle_combined_layout_spacing4(void* self, int64_t controls1, in
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_commonstyle_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option, void* widget);
+int32_t q_commonstyle_combined_layout_spacing5(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option, void* widget);
 
 /// Inherited from QObject
 ///

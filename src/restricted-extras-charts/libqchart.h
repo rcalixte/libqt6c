@@ -113,7 +113,7 @@ QAbstractAxis* q_chart_axis_y(void* self);
 /// @param self QChart*
 /// @param axis QAbstractAxis*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_chart_add_axis(void* self, void* axis, int64_t alignment);
+void q_chart_add_axis(void* self, void* axis, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#removeAxis)
 ///
@@ -236,14 +236,14 @@ double q_chart_background_roundness(void* self);
 ///
 /// @param self QChart*
 /// @param options flag of enum QChart__AnimationOption
-void q_chart_set_animation_options(void* self, int64_t options);
+void q_chart_set_animation_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#animationOptions)
 ///
 /// @param self QChart*
 ///
 /// @return flag of enum QChart__AnimationOption
-int64_t q_chart_animation_options(void* self);
+int32_t q_chart_animation_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setAnimationDuration)
 ///
@@ -465,14 +465,14 @@ QAbstractAxis* q_chart_axis_y1(void* self, void* series);
 ///
 /// @param self QChart*
 /// @param orientation flag of enum Qt__Orientation
-libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int64_t orientation);
+libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#axes)
 ///
 /// @param self QChart*
 /// @param orientation flag of enum Qt__Orientation
 /// @param series QAbstractSeries*
-libqt_list /* of QAbstractAxis* */ q_chart_axes2(void* self, int64_t orientation, void* series);
+libqt_list /* of QAbstractAxis* */ q_chart_axes2(void* self, int32_t orientation, void* series);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#setBackgroundVisible)
 ///
@@ -1179,7 +1179,7 @@ void q_chart_on_height_changed(void* self, void (*callback)(void*));
 /// @param self QChart*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_chart_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_chart_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1616,7 +1616,7 @@ void q_chart_set_group(void* self, void* group);
 /// @param self QChart*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
-int64_t q_chart_flags(void* self);
+int32_t q_chart_flags(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1632,7 +1632,7 @@ void q_chart_set_flag(void* self, int32_t flag);
 ///
 /// @param self QChart*
 /// @param flags flag of enum QGraphicsItem__GraphicsItemFlag
-void q_chart_set_flags(void* self, int64_t flags);
+void q_chart_set_flags(void* self, int32_t flags);
 
 /// Inherited from QGraphicsItem
 ///

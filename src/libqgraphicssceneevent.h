@@ -349,13 +349,13 @@ void q_graphicsscenemouseevent_set_source(void* self, int32_t source);
 /// @param self QGraphicsSceneMouseEvent*
 ///
 /// @return flag of enum Qt__MouseEventFlag
-int64_t q_graphicsscenemouseevent_flags(void* self);
+int32_t q_graphicsscenemouseevent_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setFlags)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param flags flag of enum Qt__MouseEventFlag
-void q_graphicsscenemouseevent_set_flags(void* self, int64_t flags);
+void q_graphicsscenemouseevent_set_flags(void* self, int32_t flags);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1584,13 +1584,13 @@ void q_graphicsscenedragdropevent_set_modifiers(void* self, int64_t modifiers);
 /// @param self QGraphicsSceneDragDropEvent*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_graphicsscenedragdropevent_possible_actions(void* self);
+int32_t q_graphicsscenedragdropevent_possible_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setPossibleActions)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param actions flag of enum Qt__DropAction
-void q_graphicsscenedragdropevent_set_possible_actions(void* self, int64_t actions);
+void q_graphicsscenedragdropevent_set_possible_actions(void* self, int32_t actions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#proposedAction)
 ///

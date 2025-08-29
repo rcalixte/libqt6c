@@ -249,7 +249,7 @@ void q_graphicssvgitem_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicssvgitem_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_graphicssvgitem_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
 }
 
@@ -493,7 +493,7 @@ void q_graphicssvgitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicssvgitem_flags(void* self) {
+int32_t q_graphicssvgitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -501,7 +501,7 @@ void q_graphicssvgitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicssvgitem_set_flags(void* self, int64_t flags) {
+void q_graphicssvgitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 

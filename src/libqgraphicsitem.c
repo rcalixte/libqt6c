@@ -107,7 +107,7 @@ void q_graphicsitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicsitem_flags(void* self) {
+int32_t q_graphicsitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -115,7 +115,7 @@ void q_graphicsitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicsitem_set_flags(void* self, int64_t flags) {
+void q_graphicsitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -1354,7 +1354,7 @@ const char* q_graphicsobject_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicsobject_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_graphicsobject_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
 }
 
@@ -1598,7 +1598,7 @@ void q_graphicsobject_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicsobject_flags(void* self) {
+int32_t q_graphicsobject_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -1606,7 +1606,7 @@ void q_graphicsobject_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicsobject_set_flags(void* self, int64_t flags) {
+void q_graphicsobject_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -2897,7 +2897,7 @@ void q_abstractgraphicsshapeitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_abstractgraphicsshapeitem_flags(void* self) {
+int32_t q_abstractgraphicsshapeitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -2905,7 +2905,7 @@ void q_abstractgraphicsshapeitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_abstractgraphicsshapeitem_set_flags(void* self, int64_t flags) {
+void q_abstractgraphicsshapeitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -4172,7 +4172,7 @@ void q_graphicspathitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicspathitem_flags(void* self) {
+int32_t q_graphicspathitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -4180,7 +4180,7 @@ void q_graphicspathitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicspathitem_set_flags(void* self, int64_t flags) {
+void q_graphicspathitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -5363,7 +5363,7 @@ void q_graphicsrectitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicsrectitem_flags(void* self) {
+int32_t q_graphicsrectitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -5371,7 +5371,7 @@ void q_graphicsrectitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicsrectitem_set_flags(void* self, int64_t flags) {
+void q_graphicsrectitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -6570,7 +6570,7 @@ void q_graphicsellipseitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicsellipseitem_flags(void* self) {
+int32_t q_graphicsellipseitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -6578,7 +6578,7 @@ void q_graphicsellipseitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicsellipseitem_set_flags(void* self, int64_t flags) {
+void q_graphicsellipseitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -7741,7 +7741,7 @@ void q_graphicspolygonitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicspolygonitem_flags(void* self) {
+int32_t q_graphicspolygonitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -7749,7 +7749,7 @@ void q_graphicspolygonitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicspolygonitem_set_flags(void* self, int64_t flags) {
+void q_graphicspolygonitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -8924,7 +8924,7 @@ void q_graphicslineitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicslineitem_flags(void* self) {
+int32_t q_graphicslineitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -8932,7 +8932,7 @@ void q_graphicslineitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicslineitem_set_flags(void* self, int64_t flags) {
+void q_graphicslineitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -10115,7 +10115,7 @@ void q_graphicspixmapitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicspixmapitem_flags(void* self) {
+int32_t q_graphicspixmapitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -10123,7 +10123,7 @@ void q_graphicspixmapitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicspixmapitem_set_flags(void* self, int64_t flags) {
+void q_graphicspixmapitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -11250,11 +11250,11 @@ QTextDocument* q_graphicstextitem_document(void* self) {
     return QGraphicsTextItem_Document((QGraphicsTextItem*)self);
 }
 
-void q_graphicstextitem_set_text_interaction_flags(void* self, int64_t flags) {
+void q_graphicstextitem_set_text_interaction_flags(void* self, int32_t flags) {
     QGraphicsTextItem_SetTextInteractionFlags((QGraphicsTextItem*)self, flags);
 }
 
-int64_t q_graphicstextitem_text_interaction_flags(void* self) {
+int32_t q_graphicstextitem_text_interaction_flags(void* self) {
     return QGraphicsTextItem_TextInteractionFlags((QGraphicsTextItem*)self);
 }
 
@@ -11680,7 +11680,7 @@ void q_graphicstextitem_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_graphicstextitem_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
 }
 
@@ -11924,7 +11924,7 @@ void q_graphicstextitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicstextitem_flags(void* self) {
+int32_t q_graphicstextitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -11932,7 +11932,7 @@ void q_graphicstextitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicstextitem_set_flags(void* self, int64_t flags) {
+void q_graphicstextitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -13022,7 +13022,7 @@ void q_graphicssimpletextitem_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicssimpletextitem_flags(void* self) {
+int32_t q_graphicssimpletextitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -13030,7 +13030,7 @@ void q_graphicssimpletextitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicssimpletextitem_set_flags(void* self, int64_t flags) {
+void q_graphicssimpletextitem_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
@@ -14117,7 +14117,7 @@ void q_graphicsitemgroup_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_graphicsitemgroup_flags(void* self) {
+int32_t q_graphicsitemgroup_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -14125,7 +14125,7 @@ void q_graphicsitemgroup_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_graphicsitemgroup_set_flags(void* self, int64_t flags) {
+void q_graphicsitemgroup_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 

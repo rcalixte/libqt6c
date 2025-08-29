@@ -440,15 +440,15 @@ QGesture* k_twofingertaprecognizer_qbase_create(void* self, void* target) {
     return KTwoFingerTapRecognizer_QBaseCreate((KTwoFingerTapRecognizer*)self, (QObject*)target);
 }
 
-int64_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watched, void* event) {
+int32_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watched, void* event) {
     return KTwoFingerTapRecognizer_Recognize((KTwoFingerTapRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
 }
 
-void k_twofingertaprecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*)) {
+void k_twofingertaprecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*)) {
     KTwoFingerTapRecognizer_OnRecognize((KTwoFingerTapRecognizer*)self, (intptr_t)callback);
 }
 
-int64_t k_twofingertaprecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event) {
+int32_t k_twofingertaprecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event) {
     return KTwoFingerTapRecognizer_QBaseRecognize((KTwoFingerTapRecognizer*)self, (QGesture*)gesture, (QObject*)watched, (QEvent*)event);
 }
 

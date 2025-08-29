@@ -843,7 +843,7 @@ int32_t q_mouseevent_source(void* self) {
     return QMouseEvent_Source((QMouseEvent*)self);
 }
 
-int64_t q_mouseevent_flags(void* self) {
+int32_t q_mouseevent_flags(void* self) {
     return QMouseEvent_Flags((QMouseEvent*)self);
 }
 
@@ -3406,11 +3406,11 @@ void q_inputmethodqueryevent_delete(void* self) {
     QInputMethodQueryEvent_Delete((QInputMethodQueryEvent*)(self));
 }
 
-QDropEvent* q_dropevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers) {
+QDropEvent* q_dropevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers) {
     return QDropEvent_new((QPointF*)pos, actions, (QMimeData*)data, buttons, modifiers);
 }
 
-QDropEvent* q_dropevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal) {
+QDropEvent* q_dropevent_new2(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal) {
     return QDropEvent_new2((QPointF*)pos, actions, (QMimeData*)data, buttons, modifiers, typeVal);
 }
 
@@ -3454,7 +3454,7 @@ int64_t q_dropevent_modifiers(void* self) {
     return QDropEvent_Modifiers((QDropEvent*)self);
 }
 
-int64_t q_dropevent_possible_actions(void* self) {
+int32_t q_dropevent_possible_actions(void* self) {
     return QDropEvent_PossibleActions((QDropEvent*)self);
 }
 
@@ -3538,11 +3538,11 @@ void q_dropevent_delete(void* self) {
     QDropEvent_Delete((QDropEvent*)(self));
 }
 
-QDragMoveEvent* q_dragmoveevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers) {
+QDragMoveEvent* q_dragmoveevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers) {
     return QDragMoveEvent_new((QPoint*)pos, actions, (QMimeData*)data, buttons, modifiers);
 }
 
-QDragMoveEvent* q_dragmoveevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal) {
+QDragMoveEvent* q_dragmoveevent_new2(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal) {
     return QDragMoveEvent_new2((QPoint*)pos, actions, (QMimeData*)data, buttons, modifiers, typeVal);
 }
 
@@ -3606,7 +3606,7 @@ int64_t q_dragmoveevent_modifiers(void* self) {
     return QDropEvent_Modifiers((QDropEvent*)self);
 }
 
-int64_t q_dragmoveevent_possible_actions(void* self) {
+int32_t q_dragmoveevent_possible_actions(void* self) {
     return QDropEvent_PossibleActions((QDropEvent*)self);
 }
 
@@ -3682,7 +3682,7 @@ void q_dragmoveevent_delete(void* self) {
     QDragMoveEvent_Delete((QDragMoveEvent*)(self));
 }
 
-QDragEnterEvent* q_dragenterevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers) {
+QDragEnterEvent* q_dragenterevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers) {
     return QDragEnterEvent_new((QPoint*)pos, actions, (QMimeData*)data, buttons, modifiers);
 }
 
@@ -3746,7 +3746,7 @@ int64_t q_dragenterevent_modifiers(void* self) {
     return QDropEvent_Modifiers((QDropEvent*)self);
 }
 
-int64_t q_dragenterevent_possible_actions(void* self) {
+int32_t q_dragenterevent_possible_actions(void* self) {
     return QDropEvent_PossibleActions((QDropEvent*)self);
 }
 
@@ -4263,7 +4263,7 @@ QUrl* q_fileopenevent_url(void* self) {
     return QFileOpenEvent_Url((QFileOpenEvent*)self);
 }
 
-bool q_fileopenevent_open_file(void* self, void* file, int64_t flags) {
+bool q_fileopenevent_open_file(void* self, void* file, int32_t flags) {
     return QFileOpenEvent_OpenFile((QFileOpenEvent*)self, (QFile*)file, flags);
 }
 
@@ -4499,11 +4499,11 @@ void q_shortcutevent_delete(void* self) {
     QShortcutEvent_Delete((QShortcutEvent*)(self));
 }
 
-QWindowStateChangeEvent* q_windowstatechangeevent_new(int64_t oldState) {
+QWindowStateChangeEvent* q_windowstatechangeevent_new(int32_t oldState) {
     return QWindowStateChangeEvent_new(oldState);
 }
 
-QWindowStateChangeEvent* q_windowstatechangeevent_new2(int64_t oldState, bool isOverride) {
+QWindowStateChangeEvent* q_windowstatechangeevent_new2(int32_t oldState, bool isOverride) {
     return QWindowStateChangeEvent_new2(oldState, isOverride);
 }
 
@@ -4519,7 +4519,7 @@ QWindowStateChangeEvent* q_windowstatechangeevent_qbase_clone(void* self) {
     return QWindowStateChangeEvent_QBaseClone((QWindowStateChangeEvent*)self);
 }
 
-int64_t q_windowstatechangeevent_old_state(void* self) {
+int32_t q_windowstatechangeevent_old_state(void* self) {
     return QWindowStateChangeEvent_OldState((QWindowStateChangeEvent*)self);
 }
 
@@ -4587,7 +4587,7 @@ QTouchEvent* q_touchevent_new(int32_t eventType) {
     return QTouchEvent_new(eventType);
 }
 
-QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int64_t modifiers, int64_t touchPointStates) {
+QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int64_t modifiers, uint8_t touchPointStates) {
     return QTouchEvent_new2(eventType, (QPointingDevice*)device, modifiers, touchPointStates);
 }
 
@@ -4603,7 +4603,7 @@ QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int64_t modifier
     return QTouchEvent_new5(eventType, (QPointingDevice*)device, modifiers, touchPoints);
 }
 
-QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints) {
+QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int64_t modifiers, uint8_t touchPointStates, libqt_list touchPoints) {
     return QTouchEvent_new6(eventType, (QPointingDevice*)device, modifiers, touchPointStates, touchPoints);
 }
 
@@ -4623,7 +4623,7 @@ QObject* q_touchevent_target(void* self) {
     return QTouchEvent_Target((QTouchEvent*)self);
 }
 
-int64_t q_touchevent_touch_point_states(void* self) {
+uint8_t q_touchevent_touch_point_states(void* self) {
     return QTouchEvent_TouchPointStates((QTouchEvent*)self);
 }
 

@@ -143,7 +143,7 @@ bool k_pagemodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_check_index2(void* self, void* index, int64_t options) {
+bool k_pagemodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -588,27 +588,27 @@ void k_pagemodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, in
     KPageModel_OnDropMimeData((KPageModel*)self, (intptr_t)callback);
 }
 
-int64_t k_pagemodel_supported_drop_actions(void* self) {
+int32_t k_pagemodel_supported_drop_actions(void* self) {
     return KPageModel_SupportedDropActions((KPageModel*)self);
 }
 
-int64_t k_pagemodel_qbase_supported_drop_actions(void* self) {
+int32_t k_pagemodel_qbase_supported_drop_actions(void* self) {
     return KPageModel_QBaseSupportedDropActions((KPageModel*)self);
 }
 
-void k_pagemodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void k_pagemodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     KPageModel_OnSupportedDropActions((KPageModel*)self, (intptr_t)callback);
 }
 
-int64_t k_pagemodel_supported_drag_actions(void* self) {
+int32_t k_pagemodel_supported_drag_actions(void* self) {
     return KPageModel_SupportedDragActions((KPageModel*)self);
 }
 
-int64_t k_pagemodel_qbase_supported_drag_actions(void* self) {
+int32_t k_pagemodel_qbase_supported_drag_actions(void* self) {
     return KPageModel_QBaseSupportedDragActions((KPageModel*)self);
 }
 
-void k_pagemodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void k_pagemodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     KPageModel_OnSupportedDragActions((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -708,15 +708,15 @@ void k_pagemodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
     KPageModel_OnCanFetchMore((KPageModel*)self, (intptr_t)callback);
 }
 
-int64_t k_pagemodel_flags(void* self, void* index) {
+int32_t k_pagemodel_flags(void* self, void* index) {
     return KPageModel_Flags((KPageModel*)self, (QModelIndex*)index);
 }
 
-int64_t k_pagemodel_qbase_flags(void* self, void* index) {
+int32_t k_pagemodel_qbase_flags(void* self, void* index) {
     return KPageModel_QBaseFlags((KPageModel*)self, (QModelIndex*)index);
 }
 
-void k_pagemodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void k_pagemodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     KPageModel_OnFlags((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -744,17 +744,17 @@ void k_pagemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
     KPageModel_OnBuddy((KPageModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_pagemodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ k_pagemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = KPageModel_Match((KPageModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_pagemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ k_pagemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = KPageModel_QBaseMatch((KPageModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void k_pagemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void k_pagemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     KPageModel_OnMatch((KPageModel*)self, (intptr_t)callback);
 }
 

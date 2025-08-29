@@ -34,15 +34,15 @@ QMessageBox* q_messagebox_new4(const char* title, const char* text, int32_t icon
     return QMessageBox_new4(qstring(title), qstring(text), icon, button0, button1, button2);
 }
 
-QMessageBox* q_messagebox_new5(int32_t icon, const char* title, const char* text, int64_t buttons) {
+QMessageBox* q_messagebox_new5(int32_t icon, const char* title, const char* text, int32_t buttons) {
     return QMessageBox_new5(icon, qstring(title), qstring(text), buttons);
 }
 
-QMessageBox* q_messagebox_new6(int32_t icon, const char* title, const char* text, int64_t buttons, void* parent) {
+QMessageBox* q_messagebox_new6(int32_t icon, const char* title, const char* text, int32_t buttons, void* parent) {
     return QMessageBox_new6(icon, qstring(title), qstring(text), buttons, (QWidget*)parent);
 }
 
-QMessageBox* q_messagebox_new7(int32_t icon, const char* title, const char* text, int64_t buttons, void* parent, int64_t flags) {
+QMessageBox* q_messagebox_new7(int32_t icon, const char* title, const char* text, int32_t buttons, void* parent, int64_t flags) {
     return QMessageBox_new7(icon, qstring(title), qstring(text), buttons, (QWidget*)parent, flags);
 }
 
@@ -106,11 +106,11 @@ int32_t q_messagebox_button_role(void* self, void* button) {
     return QMessageBox_ButtonRole((QMessageBox*)self, (QAbstractButton*)button);
 }
 
-void q_messagebox_set_standard_buttons(void* self, int64_t buttons) {
+void q_messagebox_set_standard_buttons(void* self, int32_t buttons) {
     QMessageBox_SetStandardButtons((QMessageBox*)self, buttons);
 }
 
-int64_t q_messagebox_standard_buttons(void* self) {
+int32_t q_messagebox_standard_buttons(void* self) {
     return QMessageBox_StandardButtons((QMessageBox*)self);
 }
 
@@ -185,11 +185,11 @@ void q_messagebox_set_text_format(void* self, int32_t format) {
     QMessageBox_SetTextFormat((QMessageBox*)self, format);
 }
 
-void q_messagebox_set_text_interaction_flags(void* self, int64_t flags) {
+void q_messagebox_set_text_interaction_flags(void* self, int32_t flags) {
     QMessageBox_SetTextInteractionFlags((QMessageBox*)self, flags);
 }
 
-int64_t q_messagebox_text_interaction_flags(void* self) {
+int32_t q_messagebox_text_interaction_flags(void* self) {
     return QMessageBox_TextInteractionFlags((QMessageBox*)self);
 }
 
@@ -209,11 +209,11 @@ bool q_messagebox_test_option(void* self, int32_t option) {
     return QMessageBox_TestOption((QMessageBox*)self, option);
 }
 
-void q_messagebox_set_options(void* self, int64_t options) {
+void q_messagebox_set_options(void* self, int32_t options) {
     QMessageBox_SetOptions((QMessageBox*)self, options);
 }
 
-int64_t q_messagebox_options(void* self) {
+int32_t q_messagebox_options(void* self) {
     return QMessageBox_Options((QMessageBox*)self);
 }
 
@@ -432,11 +432,11 @@ void q_messagebox_set_option2(void* self, int32_t option, bool on) {
     QMessageBox_SetOption2((QMessageBox*)self, option, on);
 }
 
-int32_t q_messagebox_information42(void* parent, const char* title, const char* text, int64_t buttons) {
+int32_t q_messagebox_information42(void* parent, const char* title, const char* text, int32_t buttons) {
     return QMessageBox_Information42((QWidget*)parent, qstring(title), qstring(text), buttons);
 }
 
-int32_t q_messagebox_information5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton) {
+int32_t q_messagebox_information5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton) {
     return QMessageBox_Information5((QWidget*)parent, qstring(title), qstring(text), buttons, defaultButton);
 }
 
@@ -444,27 +444,27 @@ int32_t q_messagebox_information52(void* parent, const char* title, const char* 
     return QMessageBox_Information52((QWidget*)parent, qstring(title), qstring(text), button0, button1);
 }
 
-int32_t q_messagebox_question42(void* parent, const char* title, const char* text, int64_t buttons) {
+int32_t q_messagebox_question42(void* parent, const char* title, const char* text, int32_t buttons) {
     return QMessageBox_Question42((QWidget*)parent, qstring(title), qstring(text), buttons);
 }
 
-int32_t q_messagebox_question5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton) {
+int32_t q_messagebox_question5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton) {
     return QMessageBox_Question5((QWidget*)parent, qstring(title), qstring(text), buttons, defaultButton);
 }
 
-int32_t q_messagebox_warning42(void* parent, const char* title, const char* text, int64_t buttons) {
+int32_t q_messagebox_warning42(void* parent, const char* title, const char* text, int32_t buttons) {
     return QMessageBox_Warning42((QWidget*)parent, qstring(title), qstring(text), buttons);
 }
 
-int32_t q_messagebox_warning5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton) {
+int32_t q_messagebox_warning5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton) {
     return QMessageBox_Warning5((QWidget*)parent, qstring(title), qstring(text), buttons, defaultButton);
 }
 
-int32_t q_messagebox_critical42(void* parent, const char* title, const char* text, int64_t buttons) {
+int32_t q_messagebox_critical42(void* parent, const char* title, const char* text, int32_t buttons) {
     return QMessageBox_Critical42((QWidget*)parent, qstring(title), qstring(text), buttons);
 }
 
-int32_t q_messagebox_critical5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton) {
+int32_t q_messagebox_critical5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton) {
     return QMessageBox_Critical5((QWidget*)parent, qstring(title), qstring(text), buttons, defaultButton);
 }
 
@@ -1401,15 +1401,15 @@ bool q_messagebox_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_messagebox_window_state(void* self) {
+int32_t q_messagebox_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_messagebox_set_window_state(void* self, int64_t state) {
+void q_messagebox_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_messagebox_override_window_state(void* self, int64_t state) {
+void q_messagebox_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1666,7 +1666,7 @@ void q_messagebox_render3(void* self, void* target, void* targetOffset, void* so
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_messagebox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_messagebox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1678,7 +1678,7 @@ void q_messagebox_render32(void* self, void* painter, void* targetOffset, void* 
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_messagebox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_messagebox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1686,7 +1686,7 @@ QPixmap* q_messagebox_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_messagebox_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_messagebox_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

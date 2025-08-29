@@ -214,11 +214,11 @@ void q_videoframe__paintoptions_set_aspect_ratio_mode(void* self, int32_t aspect
     QVideoFrame__PaintOptions_SetAspectRatioMode((QVideoFrame__PaintOptions*)self, aspectRatioMode);
 }
 
-int64_t q_videoframe__paintoptions_paint_flags(void* self) {
+int32_t q_videoframe__paintoptions_paint_flags(void* self) {
     return QVideoFrame__PaintOptions_PaintFlags((QVideoFrame__PaintOptions*)self);
 }
 
-void q_videoframe__paintoptions_set_paint_flags(void* self, int64_t paintFlags) {
+void q_videoframe__paintoptions_set_paint_flags(void* self, int32_t paintFlags) {
     QVideoFrame__PaintOptions_SetPaintFlags((QVideoFrame__PaintOptions*)self, paintFlags);
 }
 

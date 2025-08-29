@@ -2108,7 +2108,7 @@ bool q_dial_is_full_screen(void* self);
 /// @param self QDial*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_dial_window_state(void* self);
+int32_t q_dial_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2116,7 +2116,7 @@ int64_t q_dial_window_state(void* self);
 ///
 /// @param self QDial*
 /// @param state flag of enum Qt__WindowState
-void q_dial_set_window_state(void* self, int64_t state);
+void q_dial_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2124,7 +2124,7 @@ void q_dial_set_window_state(void* self, int64_t state);
 ///
 /// @param self QDial*
 /// @param state flag of enum Qt__WindowState
-void q_dial_override_window_state(void* self, int64_t state);
+void q_dial_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2641,7 +2641,7 @@ void q_dial_render3(void* self, void* target, void* targetOffset, void* sourceRe
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dial_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dial_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2671,7 +2671,7 @@ void q_dial_render32(void* self, void* painter, void* targetOffset, void* source
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dial_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dial_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2688,7 +2688,7 @@ QPixmap* q_dial_grab1(void* self, void* rectangle);
 /// @param self QDial*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_dial_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_dial_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

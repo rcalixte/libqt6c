@@ -97,14 +97,14 @@ void q_dockwidget_set_widget(void* self, void* widget);
 ///
 /// @param self QDockWidget*
 /// @param features flag of enum QDockWidget__DockWidgetFeature
-void q_dockwidget_set_features(void* self, int64_t features);
+void q_dockwidget_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#features)
 ///
 /// @param self QDockWidget*
 ///
 /// @return flag of enum QDockWidget__DockWidgetFeature
-int64_t q_dockwidget_features(void* self);
+int32_t q_dockwidget_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#setFloating)
 ///
@@ -121,14 +121,14 @@ bool q_dockwidget_is_floating(void* self);
 ///
 /// @param self QDockWidget*
 /// @param areas flag of enum Qt__DockWidgetArea
-void q_dockwidget_set_allowed_areas(void* self, int64_t areas);
+void q_dockwidget_set_allowed_areas(void* self, int32_t areas);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#allowedAreas)
 ///
 /// @param self QDockWidget*
 ///
 /// @return flag of enum Qt__DockWidgetArea
-int64_t q_dockwidget_allowed_areas(void* self);
+int32_t q_dockwidget_allowed_areas(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#setTitleBarWidget)
 ///
@@ -156,13 +156,13 @@ QAction* q_dockwidget_toggle_view_action(void* self);
 ///
 /// @param self QDockWidget*
 /// @param features flag of enum QDockWidget__DockWidgetFeature
-void q_dockwidget_features_changed(void* self, int64_t features);
+void q_dockwidget_features_changed(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#featuresChanged)
 ///
 /// @param self QDockWidget*
 /// @param callback void func(QDockWidget* self, flag of enum QDockWidget__DockWidgetFeature features)
-void q_dockwidget_on_features_changed(void* self, void (*callback)(void*, int64_t));
+void q_dockwidget_on_features_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#topLevelChanged)
 ///
@@ -180,13 +180,13 @@ void q_dockwidget_on_top_level_changed(void* self, void (*callback)(void*, bool)
 ///
 /// @param self QDockWidget*
 /// @param allowedAreas flag of enum Qt__DockWidgetArea
-void q_dockwidget_allowed_areas_changed(void* self, int64_t allowedAreas);
+void q_dockwidget_allowed_areas_changed(void* self, int32_t allowedAreas);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#allowedAreasChanged)
 ///
 /// @param self QDockWidget*
 /// @param callback void func(QDockWidget* self, flag of enum Qt__DockWidgetArea allowedAreas)
-void q_dockwidget_on_allowed_areas_changed(void* self, void (*callback)(void*, int64_t));
+void q_dockwidget_on_allowed_areas_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#visibilityChanged)
 ///
@@ -1839,7 +1839,7 @@ bool q_dockwidget_is_full_screen(void* self);
 /// @param self QDockWidget*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_dockwidget_window_state(void* self);
+int32_t q_dockwidget_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1847,7 +1847,7 @@ int64_t q_dockwidget_window_state(void* self);
 ///
 /// @param self QDockWidget*
 /// @param state flag of enum Qt__WindowState
-void q_dockwidget_set_window_state(void* self, int64_t state);
+void q_dockwidget_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1855,7 +1855,7 @@ void q_dockwidget_set_window_state(void* self, int64_t state);
 ///
 /// @param self QDockWidget*
 /// @param state flag of enum Qt__WindowState
-void q_dockwidget_override_window_state(void* self, int64_t state);
+void q_dockwidget_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2372,7 +2372,7 @@ void q_dockwidget_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dockwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dockwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2402,7 +2402,7 @@ void q_dockwidget_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dockwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dockwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2419,7 +2419,7 @@ QPixmap* q_dockwidget_grab1(void* self, void* rectangle);
 /// @param self QDockWidget*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_dockwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_dockwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

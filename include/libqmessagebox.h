@@ -45,7 +45,7 @@ QMessageBox* q_messagebox_new4(const char* title, const char* text, int32_t icon
 /// @param title const char*
 /// @param text const char*
 /// @param buttons flag of enum QMessageBox__StandardButton
-QMessageBox* q_messagebox_new5(int32_t icon, const char* title, const char* text, int64_t buttons);
+QMessageBox* q_messagebox_new5(int32_t icon, const char* title, const char* text, int32_t buttons);
 
 /// q_messagebox_new6 constructs a new QMessageBox object.
 ///
@@ -54,7 +54,7 @@ QMessageBox* q_messagebox_new5(int32_t icon, const char* title, const char* text
 /// @param text const char*
 /// @param buttons flag of enum QMessageBox__StandardButton
 /// @param parent QWidget*
-QMessageBox* q_messagebox_new6(int32_t icon, const char* title, const char* text, int64_t buttons, void* parent);
+QMessageBox* q_messagebox_new6(int32_t icon, const char* title, const char* text, int32_t buttons, void* parent);
 
 /// q_messagebox_new7 constructs a new QMessageBox object.
 ///
@@ -64,7 +64,7 @@ QMessageBox* q_messagebox_new6(int32_t icon, const char* title, const char* text
 /// @param buttons flag of enum QMessageBox__StandardButton
 /// @param parent QWidget*
 /// @param flags flag of enum Qt__WindowType
-QMessageBox* q_messagebox_new7(int32_t icon, const char* title, const char* text, int64_t buttons, void* parent, int64_t flags);
+QMessageBox* q_messagebox_new7(int32_t icon, const char* title, const char* text, int32_t buttons, void* parent, int64_t flags);
 
 /// q_messagebox_new8 constructs a new QMessageBox object.
 ///
@@ -168,14 +168,14 @@ int32_t q_messagebox_button_role(void* self, void* button);
 ///
 /// @param self QMessageBox*
 /// @param buttons flag of enum QMessageBox__StandardButton
-void q_messagebox_set_standard_buttons(void* self, int64_t buttons);
+void q_messagebox_set_standard_buttons(void* self, int32_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#standardButtons)
 ///
 /// @param self QMessageBox*
 ///
 /// @return flag of enum QMessageBox__StandardButton
-int64_t q_messagebox_standard_buttons(void* self);
+int32_t q_messagebox_standard_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#standardButton)
 ///
@@ -284,14 +284,14 @@ void q_messagebox_set_text_format(void* self, int32_t format);
 ///
 /// @param self QMessageBox*
 /// @param flags flag of enum Qt__TextInteractionFlag
-void q_messagebox_set_text_interaction_flags(void* self, int64_t flags);
+void q_messagebox_set_text_interaction_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#textInteractionFlags)
 ///
 /// @param self QMessageBox*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
-int64_t q_messagebox_text_interaction_flags(void* self);
+int32_t q_messagebox_text_interaction_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setCheckBox)
 ///
@@ -320,14 +320,14 @@ bool q_messagebox_test_option(void* self, int32_t option);
 ///
 /// @param self QMessageBox*
 /// @param options flag of enum QMessageBox__Option
-void q_messagebox_set_options(void* self, int64_t options);
+void q_messagebox_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#options)
 ///
 /// @param self QMessageBox*
 ///
 /// @return flag of enum QMessageBox__Option
-int64_t q_messagebox_options(void* self);
+int32_t q_messagebox_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
@@ -714,7 +714,7 @@ void q_messagebox_set_option2(void* self, int32_t option, bool on);
 /// @param buttons flag of enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_information42(void* parent, const char* title, const char* text, int64_t buttons);
+int32_t q_messagebox_information42(void* parent, const char* title, const char* text, int32_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
@@ -725,7 +725,7 @@ int32_t q_messagebox_information42(void* parent, const char* title, const char* 
 /// @param defaultButton enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_information5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton);
+int32_t q_messagebox_information5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
@@ -746,7 +746,7 @@ int32_t q_messagebox_information52(void* parent, const char* title, const char* 
 /// @param buttons flag of enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_question42(void* parent, const char* title, const char* text, int64_t buttons);
+int32_t q_messagebox_question42(void* parent, const char* title, const char* text, int32_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
@@ -757,7 +757,7 @@ int32_t q_messagebox_question42(void* parent, const char* title, const char* tex
 /// @param defaultButton enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_question5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton);
+int32_t q_messagebox_question5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
@@ -767,7 +767,7 @@ int32_t q_messagebox_question5(void* parent, const char* title, const char* text
 /// @param buttons flag of enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_warning42(void* parent, const char* title, const char* text, int64_t buttons);
+int32_t q_messagebox_warning42(void* parent, const char* title, const char* text, int32_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
@@ -778,7 +778,7 @@ int32_t q_messagebox_warning42(void* parent, const char* title, const char* text
 /// @param defaultButton enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_warning5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton);
+int32_t q_messagebox_warning5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
@@ -788,7 +788,7 @@ int32_t q_messagebox_warning5(void* parent, const char* title, const char* text,
 /// @param buttons flag of enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_critical42(void* parent, const char* title, const char* text, int64_t buttons);
+int32_t q_messagebox_critical42(void* parent, const char* title, const char* text, int32_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
@@ -799,7 +799,7 @@ int32_t q_messagebox_critical42(void* parent, const char* title, const char* tex
 /// @param defaultButton enum QMessageBox__StandardButton
 ///
 /// @return enum QMessageBox__StandardButton
-int32_t q_messagebox_critical5(void* parent, const char* title, const char* text, int64_t buttons, int32_t defaultButton);
+int32_t q_messagebox_critical5(void* parent, const char* title, const char* text, int32_t buttons, int32_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#aboutQt)
 ///
@@ -2601,7 +2601,7 @@ bool q_messagebox_is_full_screen(void* self);
 /// @param self QMessageBox*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_messagebox_window_state(void* self);
+int32_t q_messagebox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2609,7 +2609,7 @@ int64_t q_messagebox_window_state(void* self);
 ///
 /// @param self QMessageBox*
 /// @param state flag of enum Qt__WindowState
-void q_messagebox_set_window_state(void* self, int64_t state);
+void q_messagebox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2617,7 +2617,7 @@ void q_messagebox_set_window_state(void* self, int64_t state);
 ///
 /// @param self QMessageBox*
 /// @param state flag of enum Qt__WindowState
-void q_messagebox_override_window_state(void* self, int64_t state);
+void q_messagebox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3134,7 +3134,7 @@ void q_messagebox_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_messagebox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_messagebox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3164,7 +3164,7 @@ void q_messagebox_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_messagebox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_messagebox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3181,7 +3181,7 @@ QPixmap* q_messagebox_grab1(void* self, void* rectangle);
 /// @param self QMessageBox*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_messagebox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_messagebox_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

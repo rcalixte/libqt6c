@@ -183,7 +183,7 @@ bool q_localsocket_qbase_can_read_line(void* self);
 ///
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_localsocket_open(void* self, int64_t openMode);
+bool q_localsocket_open(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#open)
 ///
@@ -191,7 +191,7 @@ bool q_localsocket_open(void* self, int64_t openMode);
 ///
 /// @param self QLocalSocket*
 /// @param callback bool func(QLocalSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_localsocket_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_localsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#open)
 ///
@@ -199,7 +199,7 @@ void q_localsocket_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_localsocket_qbase_open(void* self, int64_t openMode);
+bool q_localsocket_qbase_open(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#close)
 ///
@@ -264,14 +264,14 @@ intptr_t q_localsocket_socket_descriptor(void* self);
 ///
 /// @param self QLocalSocket*
 /// @param option flag of enum QLocalSocket__SocketOption
-void q_localsocket_set_socket_options(void* self, int64_t option);
+void q_localsocket_set_socket_options(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#socketOptions)
 ///
 /// @param self QLocalSocket*
 ///
 /// @return flag of enum QLocalSocket__SocketOption
-int64_t q_localsocket_socket_options(void* self);
+int32_t q_localsocket_socket_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#state)
 ///
@@ -495,14 +495,14 @@ const char* q_localsocket_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_localsocket_connect_to_server1(void* self, int64_t openMode);
+void q_localsocket_connect_to_server1(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#connectToServer)
 ///
 /// @param self QLocalSocket*
 /// @param name const char*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_localsocket_connect_to_server22(void* self, const char* name, int64_t openMode);
+void q_localsocket_connect_to_server22(void* self, const char* name, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#setSocketDescriptor)
 ///
@@ -517,7 +517,7 @@ bool q_localsocket_set_socket_descriptor2(void* self, intptr_t socketDescriptor,
 /// @param socketDescriptor intptr_t
 /// @param socketState enum QLocalSocket__LocalSocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_localsocket_set_socket_descriptor3(void* self, intptr_t socketDescriptor, int32_t socketState, int64_t openMode);
+bool q_localsocket_set_socket_descriptor3(void* self, intptr_t socketDescriptor, int32_t socketState, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#waitForConnected)
 ///
@@ -538,7 +538,7 @@ bool q_localsocket_wait_for_disconnected1(void* self, int msecs);
 /// @param self QLocalSocket*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_localsocket_open_mode(void* self);
+int32_t q_localsocket_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1552,7 +1552,7 @@ void q_localsocket_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_localsocket_set_open_mode(void* self, int64_t openMode);
+void q_localsocket_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1562,7 +1562,7 @@ void q_localsocket_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QLocalSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_localsocket_qbase_set_open_mode(void* self, int64_t openMode);
+void q_localsocket_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1572,7 +1572,7 @@ void q_localsocket_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QLocalSocket*
 /// @param callback void func(QLocalSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

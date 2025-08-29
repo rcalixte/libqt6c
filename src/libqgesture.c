@@ -854,19 +854,19 @@ const char* q_pinchgesture_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_pinchgesture_total_change_flags(void* self) {
+int32_t q_pinchgesture_total_change_flags(void* self) {
     return QPinchGesture_TotalChangeFlags((QPinchGesture*)self);
 }
 
-void q_pinchgesture_set_total_change_flags(void* self, int64_t value) {
+void q_pinchgesture_set_total_change_flags(void* self, int32_t value) {
     QPinchGesture_SetTotalChangeFlags((QPinchGesture*)self, value);
 }
 
-int64_t q_pinchgesture_change_flags(void* self) {
+int32_t q_pinchgesture_change_flags(void* self) {
     return QPinchGesture_ChangeFlags((QPinchGesture*)self);
 }
 
-void q_pinchgesture_set_change_flags(void* self, int64_t value) {
+void q_pinchgesture_set_change_flags(void* self, int32_t value) {
     QPinchGesture_SetChangeFlags((QPinchGesture*)self, value);
 }
 

@@ -98,11 +98,11 @@ void q_glyphrun_set_flag(void* self, int32_t flag) {
     QGlyphRun_SetFlag((QGlyphRun*)self, flag);
 }
 
-void q_glyphrun_set_flags(void* self, int64_t flags) {
+void q_glyphrun_set_flags(void* self, int32_t flags) {
     QGlyphRun_SetFlags((QGlyphRun*)self, flags);
 }
 
-int64_t q_glyphrun_flags(void* self) {
+int32_t q_glyphrun_flags(void* self) {
     return QGlyphRun_Flags((QGlyphRun*)self);
 }
 

@@ -118,11 +118,11 @@ bool q_imagewriter_progressive_scan_write(void* self) {
     return QImageWriter_ProgressiveScanWrite((QImageWriter*)self);
 }
 
-int64_t q_imagewriter_transformation(void* self) {
+int32_t q_imagewriter_transformation(void* self) {
     return QImageWriter_Transformation((QImageWriter*)self);
 }
 
-void q_imagewriter_set_transformation(void* self, int64_t orientation) {
+void q_imagewriter_set_transformation(void* self, int32_t orientation) {
     QImageWriter_SetTransformation((QImageWriter*)self, orientation);
 }
 

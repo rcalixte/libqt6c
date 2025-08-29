@@ -260,11 +260,11 @@ uint32_t q_fileinfo_group_id(void* self) {
     return QFileInfo_GroupId((QFileInfo*)self);
 }
 
-bool q_fileinfo_permission(void* self, int64_t permissions) {
+bool q_fileinfo_permission(void* self, int32_t permissions) {
     return QFileInfo_Permission((QFileInfo*)self, permissions);
 }
 
-int64_t q_fileinfo_permissions(void* self) {
+int32_t q_fileinfo_permissions(void* self) {
     return QFileInfo_Permissions((QFileInfo*)self);
 }
 

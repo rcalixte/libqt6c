@@ -245,15 +245,15 @@ bool q_sqlquery_exec_batch1(void* self, int32_t mode) {
     return QSqlQuery_ExecBatch1((QSqlQuery*)self, mode);
 }
 
-void q_sqlquery_bind_value3(void* self, const char* placeholder, void* val, int64_t typeVal) {
+void q_sqlquery_bind_value3(void* self, const char* placeholder, void* val, int32_t typeVal) {
     QSqlQuery_BindValue3((QSqlQuery*)self, qstring(placeholder), (QVariant*)val, typeVal);
 }
 
-void q_sqlquery_bind_value32(void* self, int pos, void* val, int64_t typeVal) {
+void q_sqlquery_bind_value32(void* self, int pos, void* val, int32_t typeVal) {
     QSqlQuery_BindValue32((QSqlQuery*)self, pos, (QVariant*)val, typeVal);
 }
 
-void q_sqlquery_add_bind_value2(void* self, void* val, int64_t typeVal) {
+void q_sqlquery_add_bind_value2(void* self, void* val, int32_t typeVal) {
     QSqlQuery_AddBindValue2((QSqlQuery*)self, (QVariant*)val, typeVal);
 }
 

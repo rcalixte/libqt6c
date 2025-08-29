@@ -49,7 +49,7 @@ KJobUiDelegate* k_job_ui_delegate(void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int64_t k_job_capabilities(void* self) {
+int32_t k_job_capabilities(void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
@@ -117,15 +117,15 @@ bool k_job_qbase_do_resume(void* self) {
     return KJob_QBaseDoResume((KJob*)self);
 }
 
-void k_job_set_capabilities(void* self, int64_t capabilities) {
+void k_job_set_capabilities(void* self, int32_t capabilities) {
     KJob_SetCapabilities((KJob*)self, capabilities);
 }
 
-void k_job_on_set_capabilities(void* self, void (*callback)(void*, int64_t)) {
+void k_job_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
     KJob_OnSetCapabilities((KJob*)self, (intptr_t)callback);
 }
 
-void k_job_qbase_set_capabilities(void* self, int64_t capabilities) {
+void k_job_qbase_set_capabilities(void* self, int32_t capabilities) {
     KJob_QBaseSetCapabilities((KJob*)self, capabilities);
 }
 

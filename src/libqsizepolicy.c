@@ -58,7 +58,7 @@ void q_sizepolicy_set_control_type(void* self, int32_t typeVal) {
     QSizePolicy_SetControlType((QSizePolicy*)self, typeVal);
 }
 
-int64_t q_sizepolicy_expanding_directions(void* self) {
+int32_t q_sizepolicy_expanding_directions(void* self) {
     return QSizePolicy_ExpandingDirections((QSizePolicy*)self);
 }
 

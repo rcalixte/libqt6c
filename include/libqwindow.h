@@ -276,7 +276,7 @@ int32_t q_window_window_state(void* self);
 /// @param self QWindow*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_window_window_states(void* self);
+int32_t q_window_window_states(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setWindowState)
 ///
@@ -288,7 +288,7 @@ void q_window_set_window_state(void* self, int32_t state);
 ///
 /// @param self QWindow*
 /// @param states flag of enum Qt__WindowState
-void q_window_set_window_states(void* self, int64_t states);
+void q_window_set_window_states(void* self, int32_t states);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setTransientParent)
 ///
@@ -694,7 +694,7 @@ void q_window_lower(void* self);
 ///
 /// @param self QWindow*
 /// @param edges flag of enum Qt__Edge
-bool q_window_start_system_resize(void* self, int64_t edges);
+bool q_window_start_system_resize(void* self, int32_t edges);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#startSystemMove)
 ///

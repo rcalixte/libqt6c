@@ -20,7 +20,7 @@
 /// @param param1 const char*
 /// @param param2 flag of enum KShell__Option
 /// @param param3 enum KShell__Errors*
-const char** k_shell_split_args(const char* param1, int64_t param2, int32_t* param3);
+const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* param3);
 
 /// [Qt documentation](https://api-staging.kde.org/kshell.html#joinArgs)
 ///

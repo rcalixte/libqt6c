@@ -122,11 +122,11 @@ QBluetoothPermission* q_bluetoothpermission_new2(void* other) {
     return QBluetoothPermission_new2((QBluetoothPermission*)other);
 }
 
-void q_bluetoothpermission_set_communication_modes(void* self, int64_t modes) {
+void q_bluetoothpermission_set_communication_modes(void* self, uint8_t modes) {
     QBluetoothPermission_SetCommunicationModes((QBluetoothPermission*)self, modes);
 }
 
-int64_t q_bluetoothpermission_communication_modes(void* self) {
+uint8_t q_bluetoothpermission_communication_modes(void* self) {
     return QBluetoothPermission_CommunicationModes((QBluetoothPermission*)self);
 }
 

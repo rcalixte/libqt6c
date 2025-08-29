@@ -17,11 +17,11 @@ QStringEncoder* q_stringencoder_new3(char* name) {
     return QStringEncoder_new3(name);
 }
 
-QStringEncoder* q_stringencoder_new4(int32_t encoding, int64_t flags) {
+QStringEncoder* q_stringencoder_new4(int32_t encoding, int32_t flags) {
     return QStringEncoder_new4(encoding, flags);
 }
 
-QStringEncoder* q_stringencoder_new5(char* name, int64_t flags) {
+QStringEncoder* q_stringencoder_new5(char* name, int32_t flags) {
     return QStringEncoder_new5(name, flags);
 }
 
@@ -84,11 +84,11 @@ QStringDecoder* q_stringdecoder_new3(char* name) {
     return QStringDecoder_new3(name);
 }
 
-QStringDecoder* q_stringdecoder_new4(int32_t encoding, int64_t flags) {
+QStringDecoder* q_stringdecoder_new4(int32_t encoding, int32_t flags) {
     return QStringDecoder_new4(encoding, flags);
 }
 
-QStringDecoder* q_stringdecoder_new5(char* name, int64_t f) {
+QStringDecoder* q_stringdecoder_new5(char* name, int32_t f) {
     return QStringDecoder_new5(name, f);
 }
 

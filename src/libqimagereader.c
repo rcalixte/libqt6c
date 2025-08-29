@@ -157,7 +157,7 @@ bool q_imagereader_supports_animation(void* self) {
     return QImageReader_SupportsAnimation((QImageReader*)self);
 }
 
-int64_t q_imagereader_transformation(void* self) {
+int32_t q_imagereader_transformation(void* self) {
     return QImageReader_Transformation((QImageReader*)self);
 }
 

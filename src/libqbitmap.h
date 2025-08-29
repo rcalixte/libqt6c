@@ -98,7 +98,7 @@ void q_bitmap_operator_assign2(void* self, void* param1);
 ///
 /// @param image QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
-QBitmap* q_bitmap_from_image2(void* image, int64_t flags);
+QBitmap* q_bitmap_from_image2(void* image, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#fromData)
 ///
@@ -507,7 +507,7 @@ QPixmap* q_bitmap_transformed2(void* self, void* param1, int32_t mode);
 ///
 /// @param imageReader QImageReader*
 /// @param flags flag of enum Qt__ImageConversionFlag
-QPixmap* q_bitmap_from_image_reader2(void* imageReader, int64_t flags);
+QPixmap* q_bitmap_from_image_reader2(void* imageReader, int32_t flags);
 
 /// Inherited from QPixmap
 ///
@@ -526,7 +526,7 @@ bool q_bitmap_load2(void* self, const char* fileName, const char* format);
 /// @param fileName const char*
 /// @param format const char*
 /// @param flags flag of enum Qt__ImageConversionFlag
-bool q_bitmap_load3(void* self, const char* fileName, const char* format, int64_t flags);
+bool q_bitmap_load3(void* self, const char* fileName, const char* format, int32_t flags);
 
 /// Inherited from QPixmap
 ///
@@ -547,7 +547,7 @@ bool q_bitmap_load_from_data3(void* self, unsigned char* buf, uint32_t lenVal, c
 /// @param lenVal uint32_t
 /// @param format const char*
 /// @param flags flag of enum Qt__ImageConversionFlag
-bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, const char* format, int64_t flags);
+bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, const char* format, int32_t flags);
 
 /// Inherited from QPixmap
 ///
@@ -566,7 +566,7 @@ bool q_bitmap_load_from_data22(void* self, const char* data, const char* format)
 /// @param data const char*
 /// @param format const char*
 /// @param flags flag of enum Qt__ImageConversionFlag
-bool q_bitmap_load_from_data32(void* self, const char* data, const char* format, int64_t flags);
+bool q_bitmap_load_from_data32(void* self, const char* data, const char* format, int32_t flags);
 
 /// Inherited from QPixmap
 ///
@@ -613,7 +613,7 @@ bool q_bitmap_save32(void* self, void* device, const char* format, int quality);
 /// @param self QBitmap*
 /// @param img QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
-bool q_bitmap_convert_from_image2(void* self, void* img, int64_t flags);
+bool q_bitmap_convert_from_image2(void* self, void* img, int32_t flags);
 
 /// Inherited from QPixmap
 ///

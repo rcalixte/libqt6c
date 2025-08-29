@@ -552,7 +552,7 @@ int32_t k_treewidgetsearchline_cursor_position_at(void* self, void* pos);
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param flag flag of enum Qt__AlignmentFlag
-void k_treewidgetsearchline_set_alignment(void* self, int64_t flag);
+void k_treewidgetsearchline_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QLineEdit
 ///
@@ -561,7 +561,7 @@ void k_treewidgetsearchline_set_alignment(void* self, int64_t flag);
 /// @param self KTreeWidgetSearchLine*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_treewidgetsearchline_alignment(void* self);
+int32_t k_treewidgetsearchline_alignment(void* self);
 
 /// Inherited from QLineEdit
 ///
@@ -2515,7 +2515,7 @@ bool k_treewidgetsearchline_is_full_screen(void* self);
 /// @param self KTreeWidgetSearchLine*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_treewidgetsearchline_window_state(void* self);
+int32_t k_treewidgetsearchline_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2523,7 +2523,7 @@ int64_t k_treewidgetsearchline_window_state(void* self);
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param state flag of enum Qt__WindowState
-void k_treewidgetsearchline_set_window_state(void* self, int64_t state);
+void k_treewidgetsearchline_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2531,7 +2531,7 @@ void k_treewidgetsearchline_set_window_state(void* self, int64_t state);
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param state flag of enum Qt__WindowState
-void k_treewidgetsearchline_override_window_state(void* self, int64_t state);
+void k_treewidgetsearchline_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3032,7 +3032,7 @@ void k_treewidgetsearchline_render3(void* self, void* target, void* targetOffset
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_treewidgetsearchline_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_treewidgetsearchline_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3062,7 +3062,7 @@ void k_treewidgetsearchline_render32(void* self, void* painter, void* targetOffs
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_treewidgetsearchline_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_treewidgetsearchline_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3079,7 +3079,7 @@ QPixmap* k_treewidgetsearchline_grab1(void* self, void* rectangle);
 /// @param self KTreeWidgetSearchLine*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_treewidgetsearchline_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_treewidgetsearchline_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

@@ -201,15 +201,15 @@ int32_t q_gridlayout_qbase_minimum_height_for_width(void* self, int param1) {
     return QGridLayout_QBaseMinimumHeightForWidth((QGridLayout*)self, param1);
 }
 
-int64_t q_gridlayout_expanding_directions(void* self) {
+int32_t q_gridlayout_expanding_directions(void* self) {
     return QGridLayout_ExpandingDirections((QGridLayout*)self);
 }
 
-void q_gridlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_gridlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QGridLayout_OnExpandingDirections((QGridLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_gridlayout_qbase_expanding_directions(void* self) {
+int32_t q_gridlayout_qbase_expanding_directions(void* self) {
     return QGridLayout_QBaseExpandingDirections((QGridLayout*)self);
 }
 
@@ -343,19 +343,19 @@ const char* q_gridlayout_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_gridlayout_add_widget4(void* self, void* param1, int row, int column, int64_t param4) {
+void q_gridlayout_add_widget4(void* self, void* param1, int row, int column, int32_t param4) {
     QGridLayout_AddWidget4((QGridLayout*)self, (QWidget*)param1, row, column, param4);
 }
 
-void q_gridlayout_add_widget6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int64_t param6) {
+void q_gridlayout_add_widget6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int32_t param6) {
     QGridLayout_AddWidget6((QGridLayout*)self, (QWidget*)param1, row, column, rowSpan, columnSpan, param6);
 }
 
-void q_gridlayout_add_layout4(void* self, void* param1, int row, int column, int64_t param4) {
+void q_gridlayout_add_layout4(void* self, void* param1, int row, int column, int32_t param4) {
     QGridLayout_AddLayout4((QGridLayout*)self, (QLayout*)param1, row, column, param4);
 }
 
-void q_gridlayout_add_layout6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int64_t param6) {
+void q_gridlayout_add_layout6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int32_t param6) {
     QGridLayout_AddLayout6((QGridLayout*)self, (QLayout*)param1, row, column, rowSpan, columnSpan, param6);
 }
 
@@ -367,7 +367,7 @@ void q_gridlayout_add_item5(void* self, void* item, int row, int column, int row
     QGridLayout_AddItem5((QGridLayout*)self, (QLayoutItem*)item, row, column, rowSpan, columnSpan);
 }
 
-void q_gridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int64_t param6) {
+void q_gridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int32_t param6) {
     QGridLayout_AddItem6((QGridLayout*)self, (QLayoutItem*)item, row, column, rowSpan, columnSpan, param6);
 }
 
@@ -395,11 +395,11 @@ QRect* q_gridlayout_contents_rect(void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
-bool q_gridlayout_set_alignment(void* self, void* w, int64_t alignment) {
+bool q_gridlayout_set_alignment(void* self, void* w, int32_t alignment) {
     return QLayout_SetAlignment((QLayout*)self, (QWidget*)w, alignment);
 }
 
-bool q_gridlayout_set_alignment2(void* self, void* l, int64_t alignment) {
+bool q_gridlayout_set_alignment2(void* self, void* l, int32_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
@@ -654,7 +654,7 @@ void q_gridlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_gridlayout_alignment(void* self) {
+int32_t q_gridlayout_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
@@ -694,27 +694,27 @@ void q_gridlayout_on_is_empty(void* self, bool (*callback)()) {
     QGridLayout_OnIsEmpty((QGridLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_gridlayout_control_types(void* self) {
+int32_t q_gridlayout_control_types(void* self) {
     return QGridLayout_ControlTypes((QGridLayout*)self);
 }
 
-int64_t q_gridlayout_qbase_control_types(void* self) {
+int32_t q_gridlayout_qbase_control_types(void* self) {
     return QGridLayout_QBaseControlTypes((QGridLayout*)self);
 }
 
-void q_gridlayout_on_control_types(void* self, int64_t (*callback)()) {
+void q_gridlayout_on_control_types(void* self, int32_t (*callback)()) {
     QGridLayout_OnControlTypes((QGridLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QGridLayout_ReplaceWidget((QGridLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_gridlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_gridlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QGridLayout_QBaseReplaceWidget((QGridLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_gridlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+void q_gridlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
     QGridLayout_OnReplaceWidget((QGridLayout*)self, (intptr_t)callback);
 }
 

@@ -70,7 +70,7 @@ void q_bitmap_operator_assign2(void* self, void* param1) {
     QBitmap_OperatorAssign2((QBitmap*)self, (QBitmap*)param1);
 }
 
-QBitmap* q_bitmap_from_image2(void* image, int64_t flags) {
+QBitmap* q_bitmap_from_image2(void* image, int32_t flags) {
     return QBitmap_FromImage2((QImage*)image, flags);
 }
 
@@ -274,7 +274,7 @@ QPixmap* q_bitmap_transformed2(void* self, void* param1, int32_t mode) {
     return QPixmap_Transformed2((QPixmap*)self, (QTransform*)param1, mode);
 }
 
-QPixmap* q_bitmap_from_image_reader2(void* imageReader, int64_t flags) {
+QPixmap* q_bitmap_from_image_reader2(void* imageReader, int32_t flags) {
     return QPixmap_FromImageReader2((QImageReader*)imageReader, flags);
 }
 
@@ -282,7 +282,7 @@ bool q_bitmap_load2(void* self, const char* fileName, const char* format) {
     return QPixmap_Load2((QPixmap*)self, qstring(fileName), format);
 }
 
-bool q_bitmap_load3(void* self, const char* fileName, const char* format, int64_t flags) {
+bool q_bitmap_load3(void* self, const char* fileName, const char* format, int32_t flags) {
     return QPixmap_Load3((QPixmap*)self, qstring(fileName), format, flags);
 }
 
@@ -290,7 +290,7 @@ bool q_bitmap_load_from_data3(void* self, unsigned char* buf, uint32_t lenVal, c
     return QPixmap_LoadFromData3((QPixmap*)self, buf, lenVal, format);
 }
 
-bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, const char* format, int64_t flags) {
+bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, const char* format, int32_t flags) {
     return QPixmap_LoadFromData4((QPixmap*)self, buf, lenVal, format, flags);
 }
 
@@ -298,7 +298,7 @@ bool q_bitmap_load_from_data22(void* self, const char* data, const char* format)
     return QPixmap_LoadFromData22((QPixmap*)self, qstring(data), format);
 }
 
-bool q_bitmap_load_from_data32(void* self, const char* data, const char* format, int64_t flags) {
+bool q_bitmap_load_from_data32(void* self, const char* data, const char* format, int32_t flags) {
     return QPixmap_LoadFromData32((QPixmap*)self, qstring(data), format, flags);
 }
 
@@ -318,7 +318,7 @@ bool q_bitmap_save32(void* self, void* device, const char* format, int quality) 
     return QPixmap_Save32((QPixmap*)self, (QIODevice*)device, format, quality);
 }
 
-bool q_bitmap_convert_from_image2(void* self, void* img, int64_t flags) {
+bool q_bitmap_convert_from_image2(void* self, void* img, int32_t flags) {
     return QPixmap_ConvertFromImage2((QPixmap*)self, (QImage*)img, flags);
 }
 

@@ -185,7 +185,7 @@ const char* k_desktopfile_name(void* self) {
     return _ret;
 }
 
-int64_t k_desktopfile_open_flags(void* self) {
+int32_t k_desktopfile_open_flags(void* self) {
     return KConfig_OpenFlags((KConfig*)self);
 }
 
@@ -301,7 +301,7 @@ bool k_desktopfile_is_group_immutable(void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_desktopfile_delete_group2(void* self, const char* group, int64_t flags) {
+void k_desktopfile_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
 }
 
@@ -419,15 +419,15 @@ void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
     KDesktopFile_OnGroupImpl((KDesktopFile*)self, (intptr_t)callback);
 }
 
-void k_desktopfile_delete_group_impl(void* self, const char* groupName, int64_t flags) {
+void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t flags) {
     KDesktopFile_DeleteGroupImpl((KDesktopFile*)self, qstring(groupName), flags);
 }
 
-void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, int64_t flags) {
+void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags) {
     KDesktopFile_QBaseDeleteGroupImpl((KDesktopFile*)self, qstring(groupName), flags);
 }
 
-void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t)) {
+void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t)) {
     KDesktopFile_OnDeleteGroupImpl((KDesktopFile*)self, (intptr_t)callback);
 }
 

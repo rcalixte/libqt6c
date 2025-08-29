@@ -237,7 +237,7 @@ void q_modelindex_multi_data(void* self, void* roleDataSpan);
 /// @param self QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_modelindex_flags(void* self);
+int32_t q_modelindex_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmodelindex.html#model)
 ///
@@ -354,7 +354,7 @@ void q_persistentmodelindex_multi_data(void* self, void* roleDataSpan);
 /// @param self QPersistentModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_persistentmodelindex_flags(void* self);
+int32_t q_persistentmodelindex_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#model)
 ///
@@ -854,15 +854,15 @@ bool q_abstractitemmodel_qbase_drop_mime_data(void* self, void* data, int32_t ac
 /// @param self QAbstractItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractitemmodel_supported_drop_actions(void* self);
+int32_t q_abstractitemmodel_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemModel*
-/// @param callback int64_t func()
-void q_abstractitemmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractitemmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
@@ -871,22 +871,22 @@ void q_abstractitemmodel_on_supported_drop_actions(void* self, int64_t (*callbac
 /// @param self QAbstractItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractitemmodel_qbase_supported_drop_actions(void* self);
+int32_t q_abstractitemmodel_qbase_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// @param self QAbstractItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractitemmodel_supported_drag_actions(void* self);
+int32_t q_abstractitemmodel_supported_drag_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemModel*
-/// @param callback int64_t func()
-void q_abstractitemmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractitemmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
@@ -895,7 +895,7 @@ void q_abstractitemmodel_on_supported_drag_actions(void* self, int64_t (*callbac
 /// @param self QAbstractItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractitemmodel_qbase_supported_drag_actions(void* self);
+int32_t q_abstractitemmodel_qbase_supported_drag_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
@@ -1153,15 +1153,15 @@ bool q_abstractitemmodel_qbase_can_fetch_more(void* self, void* parent);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstractitemmodel_flags(void* self, void* index);
+int32_t q_abstractitemmodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemModel*
-/// @param callback int64_t func(QAbstractItemModel* self, QModelIndex* index)
-void q_abstractitemmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QAbstractItemModel* self, QModelIndex* index)
+void q_abstractitemmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#flags)
 ///
@@ -1171,7 +1171,7 @@ void q_abstractitemmodel_on_flags(void* self, int64_t (*callback)(void*, void*))
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstractitemmodel_qbase_flags(void* self, void* index);
+int32_t q_abstractitemmodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
 ///
@@ -1227,7 +1227,7 @@ QModelIndex* q_abstractitemmodel_qbase_buddy(void* self, void* index);
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstractitemmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstractitemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
@@ -1235,7 +1235,7 @@ libqt_list /* of QModelIndex* */ q_abstractitemmodel_match(void* self, void* sta
 ///
 /// @param self QAbstractItemModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QAbstractItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_abstractitemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_abstractitemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
@@ -1247,7 +1247,7 @@ void q_abstractitemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstractitemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstractitemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
@@ -1982,7 +1982,7 @@ bool q_abstractitemmodel_remove_column2(void* self, int column, void* parent);
 /// @param self QAbstractItemModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_abstractitemmodel_check_index2(void* self, void* index, int64_t options);
+bool q_abstractitemmodel_check_index2(void* self, void* index, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
@@ -2966,15 +2966,15 @@ bool q_abstracttablemodel_qbase_drop_mime_data(void* self, void* data, int32_t a
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstracttablemodel_flags(void* self, void* index);
+int32_t q_abstracttablemodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttablemodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTableModel*
-/// @param callback int64_t func(QAbstractTableModel* self, QModelIndex* index)
-void q_abstracttablemodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QAbstractTableModel* self, QModelIndex* index)
+void q_abstracttablemodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttablemodel.html#flags)
 ///
@@ -2984,7 +2984,7 @@ void q_abstracttablemodel_on_flags(void* self, int64_t (*callback)(void*, void*)
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstracttablemodel_qbase_flags(void* self, void* index);
+int32_t q_abstracttablemodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3248,7 +3248,7 @@ bool q_abstracttablemodel_remove_column2(void* self, int column, void* parent);
 /// @param self QAbstractTableModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_abstracttablemodel_check_index2(void* self, void* index, int64_t options);
+bool q_abstracttablemodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4031,7 +4031,7 @@ void q_abstracttablemodel_on_can_drop_mime_data(void* self, bool (*callback)(voi
 /// @param self QAbstractTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstracttablemodel_supported_drop_actions(void* self);
+int32_t q_abstracttablemodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4042,7 +4042,7 @@ int64_t q_abstracttablemodel_supported_drop_actions(void* self);
 /// @param self QAbstractTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstracttablemodel_qbase_supported_drop_actions(void* self);
+int32_t q_abstracttablemodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4051,8 +4051,8 @@ int64_t q_abstracttablemodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTableModel*
-/// @param callback int64_t func()
-void q_abstracttablemodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstracttablemodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4063,7 +4063,7 @@ void q_abstracttablemodel_on_supported_drop_actions(void* self, int64_t (*callba
 /// @param self QAbstractTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstracttablemodel_supported_drag_actions(void* self);
+int32_t q_abstracttablemodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4074,7 +4074,7 @@ int64_t q_abstracttablemodel_supported_drag_actions(void* self);
 /// @param self QAbstractTableModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstracttablemodel_qbase_supported_drag_actions(void* self);
+int32_t q_abstracttablemodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4083,8 +4083,8 @@ int64_t q_abstracttablemodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractTableModel*
-/// @param callback int64_t func()
-void q_abstracttablemodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstracttablemodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4432,7 +4432,7 @@ void q_abstracttablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, v
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstracttablemodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstracttablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4446,7 +4446,7 @@ libqt_list /* of QModelIndex* */ q_abstracttablemodel_match(void* self, void* st
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstracttablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstracttablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4456,7 +4456,7 @@ libqt_list /* of QModelIndex* */ q_abstracttablemodel_qbase_match(void* self, vo
 ///
 /// @param self QAbstractTableModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QAbstractTableModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_abstracttablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_abstracttablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -5880,15 +5880,15 @@ bool q_abstractlistmodel_qbase_drop_mime_data(void* self, void* data, int32_t ac
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstractlistmodel_flags(void* self, void* index);
+int32_t q_abstractlistmodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractListModel*
-/// @param callback int64_t func(QAbstractListModel* self, QModelIndex* index)
-void q_abstractlistmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QAbstractListModel* self, QModelIndex* index)
+void q_abstractlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
 ///
@@ -5898,7 +5898,7 @@ void q_abstractlistmodel_on_flags(void* self, int64_t (*callback)(void*, void*))
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstractlistmodel_qbase_flags(void* self, void* index);
+int32_t q_abstractlistmodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -6190,7 +6190,7 @@ bool q_abstractlistmodel_remove_column2(void* self, int column, void* parent);
 /// @param self QAbstractListModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_abstractlistmodel_check_index2(void* self, void* index, int64_t options);
+bool q_abstractlistmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6943,7 +6943,7 @@ void q_abstractlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void
 /// @param self QAbstractListModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractlistmodel_supported_drop_actions(void* self);
+int32_t q_abstractlistmodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6954,7 +6954,7 @@ int64_t q_abstractlistmodel_supported_drop_actions(void* self);
 /// @param self QAbstractListModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractlistmodel_qbase_supported_drop_actions(void* self);
+int32_t q_abstractlistmodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6963,8 +6963,8 @@ int64_t q_abstractlistmodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractListModel*
-/// @param callback int64_t func()
-void q_abstractlistmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6975,7 +6975,7 @@ void q_abstractlistmodel_on_supported_drop_actions(void* self, int64_t (*callbac
 /// @param self QAbstractListModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractlistmodel_supported_drag_actions(void* self);
+int32_t q_abstractlistmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6986,7 +6986,7 @@ int64_t q_abstractlistmodel_supported_drag_actions(void* self);
 /// @param self QAbstractListModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractlistmodel_qbase_supported_drag_actions(void* self);
+int32_t q_abstractlistmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6995,8 +6995,8 @@ int64_t q_abstractlistmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractListModel*
-/// @param callback int64_t func()
-void q_abstractlistmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7344,7 +7344,7 @@ void q_abstractlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, vo
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstractlistmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstractlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7358,7 +7358,7 @@ libqt_list /* of QModelIndex* */ q_abstractlistmodel_match(void* self, void* sta
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstractlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstractlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -7368,7 +7368,7 @@ libqt_list /* of QModelIndex* */ q_abstractlistmodel_qbase_match(void* self, voi
 ///
 /// @param self QAbstractListModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QAbstractListModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_abstractlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_abstractlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

@@ -87,11 +87,11 @@ int32_t q_graphicslinearlayout_stretch_factor(void* self, void* item) {
     return QGraphicsLinearLayout_StretchFactor((QGraphicsLinearLayout*)self, (QGraphicsLayoutItem*)item);
 }
 
-void q_graphicslinearlayout_set_alignment(void* self, void* item, int64_t alignment) {
+void q_graphicslinearlayout_set_alignment(void* self, void* item, int32_t alignment) {
     QGraphicsLinearLayout_SetAlignment((QGraphicsLinearLayout*)self, (QGraphicsLayoutItem*)item, alignment);
 }
 
-int64_t q_graphicslinearlayout_alignment(void* self, void* item) {
+int32_t q_graphicslinearlayout_alignment(void* self, void* item) {
     return QGraphicsLinearLayout_Alignment((QGraphicsLinearLayout*)self, (QGraphicsLayoutItem*)item);
 }
 

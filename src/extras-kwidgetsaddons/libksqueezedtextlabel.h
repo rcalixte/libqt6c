@@ -125,7 +125,7 @@ void k_squeezedtextlabel_set_margin(void* self, int margin);
 ///
 /// @param self KSqueezedTextLabel*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_squeezedtextlabel_set_alignment(void* self, int64_t alignment);
+void k_squeezedtextlabel_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setAlignment)
 ///
@@ -133,7 +133,7 @@ void k_squeezedtextlabel_set_alignment(void* self, int64_t alignment);
 ///
 /// @param self KSqueezedTextLabel*
 /// @param callback void func(KSqueezedTextLabel* self, flag of enum Qt__AlignmentFlag alignment)
-void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, int64_t));
+void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setAlignment)
 ///
@@ -141,7 +141,7 @@ void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, in
 ///
 /// @param self KSqueezedTextLabel*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_squeezedtextlabel_qbase_set_alignment(void* self, int64_t alignment);
+void k_squeezedtextlabel_qbase_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#textElideMode)
 ///
@@ -357,7 +357,7 @@ void k_squeezedtextlabel_set_text_format(void* self, int32_t textFormat);
 /// @param self KSqueezedTextLabel*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_squeezedtextlabel_alignment(void* self);
+int32_t k_squeezedtextlabel_alignment(void* self);
 
 /// Inherited from QLabel
 ///
@@ -439,7 +439,7 @@ void k_squeezedtextlabel_set_open_external_links(void* self, bool open);
 ///
 /// @param self KSqueezedTextLabel*
 /// @param flags flag of enum Qt__TextInteractionFlag
-void k_squeezedtextlabel_set_text_interaction_flags(void* self, int64_t flags);
+void k_squeezedtextlabel_set_text_interaction_flags(void* self, int32_t flags);
 
 /// Inherited from QLabel
 ///
@@ -448,7 +448,7 @@ void k_squeezedtextlabel_set_text_interaction_flags(void* self, int64_t flags);
 /// @param self KSqueezedTextLabel*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
-int64_t k_squeezedtextlabel_text_interaction_flags(void* self);
+int32_t k_squeezedtextlabel_text_interaction_flags(void* self);
 
 /// Inherited from QLabel
 ///
@@ -2155,7 +2155,7 @@ bool k_squeezedtextlabel_is_full_screen(void* self);
 /// @param self KSqueezedTextLabel*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_squeezedtextlabel_window_state(void* self);
+int32_t k_squeezedtextlabel_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2163,7 +2163,7 @@ int64_t k_squeezedtextlabel_window_state(void* self);
 ///
 /// @param self KSqueezedTextLabel*
 /// @param state flag of enum Qt__WindowState
-void k_squeezedtextlabel_set_window_state(void* self, int64_t state);
+void k_squeezedtextlabel_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2171,7 +2171,7 @@ void k_squeezedtextlabel_set_window_state(void* self, int64_t state);
 ///
 /// @param self KSqueezedTextLabel*
 /// @param state flag of enum Qt__WindowState
-void k_squeezedtextlabel_override_window_state(void* self, int64_t state);
+void k_squeezedtextlabel_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2681,7 +2681,7 @@ void k_squeezedtextlabel_render3(void* self, void* target, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_squeezedtextlabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_squeezedtextlabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2711,7 +2711,7 @@ void k_squeezedtextlabel_render32(void* self, void* painter, void* targetOffset,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_squeezedtextlabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_squeezedtextlabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2728,7 +2728,7 @@ QPixmap* k_squeezedtextlabel_grab1(void* self, void* rectangle);
 /// @param self KSqueezedTextLabel*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_squeezedtextlabel_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_squeezedtextlabel_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

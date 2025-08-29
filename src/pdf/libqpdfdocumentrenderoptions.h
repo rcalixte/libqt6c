@@ -62,13 +62,13 @@ void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r);
 /// @param self QPdfDocumentRenderOptions*
 ///
 /// @return flag of enum QPdfDocumentRenderOptions__RenderFlag
-int64_t q_pdfdocumentrenderoptions_render_flags(void* self);
+int32_t q_pdfdocumentrenderoptions_render_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRenderFlags)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param r flag of enum QPdfDocumentRenderOptions__RenderFlag
-void q_pdfdocumentrenderoptions_set_render_flags(void* self, int64_t r);
+void q_pdfdocumentrenderoptions_set_render_flags(void* self, int32_t r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledClipRect)
 ///

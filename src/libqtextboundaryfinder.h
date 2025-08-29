@@ -118,7 +118,7 @@ bool q_textboundaryfinder_is_at_boundary(void* self);
 /// @param self QTextBoundaryFinder*
 ///
 /// @return flag of enum QTextBoundaryFinder__BoundaryReason
-int64_t q_textboundaryfinder_boundary_reasons(void* self);
+int32_t q_textboundaryfinder_boundary_reasons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#dtor.QTextBoundaryFinder)
 ///

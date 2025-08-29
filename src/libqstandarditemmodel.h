@@ -202,13 +202,13 @@ void q_standarditem_set_font(void* self, void* font);
 /// @param self QStandardItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_standarditem_text_alignment(void* self);
+int32_t q_standarditem_text_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#setTextAlignment)
 ///
 /// @param self QStandardItem*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void q_standarditem_set_text_alignment(void* self, int64_t textAlignment);
+void q_standarditem_set_text_alignment(void* self, int32_t textAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#background)
 ///
@@ -276,13 +276,13 @@ void q_standarditem_set_accessible_description(void* self, const char* accessibl
 /// @param self QStandardItem*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_standarditem_flags(void* self);
+int32_t q_standarditem_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#setFlags)
 ///
 /// @param self QStandardItem*
 /// @param flags flag of enum Qt__ItemFlag
-void q_standarditem_set_flags(void* self, int64_t flags);
+void q_standarditem_set_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#isEnabled)
 ///
@@ -1197,15 +1197,15 @@ bool q_standarditemmodel_qbase_remove_columns(void* self, int column, int count,
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_standarditemmodel_flags(void* self, void* index);
+int32_t q_standarditemmodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int64_t func(QStandardItemModel* self, QModelIndex* index)
-void q_standarditemmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QStandardItemModel* self, QModelIndex* index)
+void q_standarditemmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#flags)
 ///
@@ -1215,22 +1215,22 @@ void q_standarditemmodel_on_flags(void* self, int64_t (*callback)(void*, void*))
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_standarditemmodel_qbase_flags(void* self, void* index);
+int32_t q_standarditemmodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
 ///
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_standarditemmodel_supported_drop_actions(void* self);
+int32_t q_standarditemmodel_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int64_t func()
-void q_standarditemmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_standarditemmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#supportedDropActions)
 ///
@@ -1239,7 +1239,7 @@ void q_standarditemmodel_on_supported_drop_actions(void* self, int64_t (*callbac
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_standarditemmodel_qbase_supported_drop_actions(void* self);
+int32_t q_standarditemmodel_qbase_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#itemData)
 ///
@@ -1649,7 +1649,7 @@ QStandardItem* q_standarditemmodel_take_item2(void* self, int row, int column);
 /// @param self QStandardItemModel*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items2(void* self, const char* text, int64_t flags);
+libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items2(void* self, const char* text, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#findItems)
 ///
@@ -1657,7 +1657,7 @@ libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items2(void* self, c
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 /// @param column int
-libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items3(void* self, const char* text, int64_t flags, int column);
+libqt_list /* of QStandardItem* */ q_standarditemmodel_find_items3(void* self, const char* text, int32_t flags, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1814,7 +1814,7 @@ bool q_standarditemmodel_remove_column2(void* self, int column, void* parent);
 /// @param self QStandardItemModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_standarditemmodel_check_index2(void* self, void* index, int64_t options);
+bool q_standarditemmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2281,7 +2281,7 @@ void q_standarditemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_standarditemmodel_supported_drag_actions(void* self);
+int32_t q_standarditemmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2292,7 +2292,7 @@ int64_t q_standarditemmodel_supported_drag_actions(void* self);
 /// @param self QStandardItemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
+int32_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2301,8 +2301,8 @@ int64_t q_standarditemmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback int64_t func()
-void q_standarditemmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_standarditemmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2482,7 +2482,7 @@ void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, vo
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_standarditemmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_standarditemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2496,7 +2496,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_match(void* self, void* sta
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2506,7 +2506,7 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, voi
 ///
 /// @param self QStandardItemModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_standarditemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_standarditemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

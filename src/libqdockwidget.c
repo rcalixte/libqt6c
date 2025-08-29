@@ -74,11 +74,11 @@ void q_dockwidget_set_widget(void* self, void* widget) {
     QDockWidget_SetWidget((QDockWidget*)self, (QWidget*)widget);
 }
 
-void q_dockwidget_set_features(void* self, int64_t features) {
+void q_dockwidget_set_features(void* self, int32_t features) {
     QDockWidget_SetFeatures((QDockWidget*)self, features);
 }
 
-int64_t q_dockwidget_features(void* self) {
+int32_t q_dockwidget_features(void* self) {
     return QDockWidget_Features((QDockWidget*)self);
 }
 
@@ -90,11 +90,11 @@ bool q_dockwidget_is_floating(void* self) {
     return QDockWidget_IsFloating((QDockWidget*)self);
 }
 
-void q_dockwidget_set_allowed_areas(void* self, int64_t areas) {
+void q_dockwidget_set_allowed_areas(void* self, int32_t areas) {
     QDockWidget_SetAllowedAreas((QDockWidget*)self, areas);
 }
 
-int64_t q_dockwidget_allowed_areas(void* self) {
+int32_t q_dockwidget_allowed_areas(void* self) {
     return QDockWidget_AllowedAreas((QDockWidget*)self);
 }
 
@@ -114,11 +114,11 @@ QAction* q_dockwidget_toggle_view_action(void* self) {
     return QDockWidget_ToggleViewAction((QDockWidget*)self);
 }
 
-void q_dockwidget_features_changed(void* self, int64_t features) {
+void q_dockwidget_features_changed(void* self, int32_t features) {
     QDockWidget_FeaturesChanged((QDockWidget*)self, features);
 }
 
-void q_dockwidget_on_features_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_dockwidget_on_features_changed(void* self, void (*callback)(void*, int32_t)) {
     QDockWidget_Connect_FeaturesChanged((QDockWidget*)self, (intptr_t)callback);
 }
 
@@ -130,11 +130,11 @@ void q_dockwidget_on_top_level_changed(void* self, void (*callback)(void*, bool)
     QDockWidget_Connect_TopLevelChanged((QDockWidget*)self, (intptr_t)callback);
 }
 
-void q_dockwidget_allowed_areas_changed(void* self, int64_t allowedAreas) {
+void q_dockwidget_allowed_areas_changed(void* self, int32_t allowedAreas) {
     QDockWidget_AllowedAreasChanged((QDockWidget*)self, allowedAreas);
 }
 
-void q_dockwidget_on_allowed_areas_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_dockwidget_on_allowed_areas_changed(void* self, void (*callback)(void*, int32_t)) {
     QDockWidget_Connect_AllowedAreasChanged((QDockWidget*)self, (intptr_t)callback);
 }
 
@@ -1033,15 +1033,15 @@ bool q_dockwidget_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_dockwidget_window_state(void* self) {
+int32_t q_dockwidget_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_dockwidget_set_window_state(void* self, int64_t state) {
+void q_dockwidget_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_dockwidget_override_window_state(void* self, int64_t state) {
+void q_dockwidget_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1298,7 +1298,7 @@ void q_dockwidget_render3(void* self, void* target, void* targetOffset, void* so
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_dockwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_dockwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1310,7 +1310,7 @@ void q_dockwidget_render32(void* self, void* painter, void* targetOffset, void* 
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_dockwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_dockwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1318,7 +1318,7 @@ QPixmap* q_dockwidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_dockwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_dockwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

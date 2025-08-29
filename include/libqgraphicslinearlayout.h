@@ -140,7 +140,7 @@ int32_t q_graphicslinearlayout_stretch_factor(void* self, void* item);
 /// @param self QGraphicsLinearLayout*
 /// @param item QGraphicsLayoutItem*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicslinearlayout_set_alignment(void* self, void* item, int64_t alignment);
+void q_graphicslinearlayout_set_alignment(void* self, void* item, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#alignment)
 ///
@@ -148,7 +148,7 @@ void q_graphicslinearlayout_set_alignment(void* self, void* item, int64_t alignm
 /// @param item QGraphicsLayoutItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_graphicslinearlayout_alignment(void* self, void* item);
+int32_t q_graphicslinearlayout_alignment(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslinearlayout.html#setGeometry)
 ///

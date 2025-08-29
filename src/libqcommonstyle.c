@@ -301,15 +301,15 @@ int32_t q_commonstyle_slider_value_from_position(int min, int max, int pos, int 
     return QStyle_SliderValueFromPosition(min, max, pos, space);
 }
 
-int64_t q_commonstyle_visual_alignment(int32_t direction, int64_t alignment) {
+int32_t q_commonstyle_visual_alignment(int32_t direction, int32_t alignment) {
     return QStyle_VisualAlignment(direction, alignment);
 }
 
-QRect* q_commonstyle_aligned_rect(int32_t direction, int64_t alignment, void* size, void* rectangle) {
+QRect* q_commonstyle_aligned_rect(int32_t direction, int32_t alignment, void* size, void* rectangle) {
     return QStyle_AlignedRect(direction, alignment, (QSize*)size, (QRect*)rectangle);
 }
 
-int32_t q_commonstyle_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int32_t orientation) {
+int32_t q_commonstyle_combined_layout_spacing(void* self, int32_t controls1, int32_t controls2, int32_t orientation) {
     return QStyle_CombinedLayoutSpacing((QStyle*)self, controls1, controls2, orientation);
 }
 
@@ -325,11 +325,11 @@ int32_t q_commonstyle_slider_value_from_position5(int min, int max, int pos, int
     return QStyle_SliderValueFromPosition5(min, max, pos, space, upsideDown);
 }
 
-int32_t q_commonstyle_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option) {
+int32_t q_commonstyle_combined_layout_spacing4(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option) {
     return QStyle_CombinedLayoutSpacing4((QStyle*)self, controls1, controls2, orientation, (QStyleOption*)option);
 }
 
-int32_t q_commonstyle_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option, void* widget) {
+int32_t q_commonstyle_combined_layout_spacing5(void* self, int32_t controls1, int32_t controls2, int32_t orientation, void* option, void* widget) {
     return QStyle_CombinedLayoutSpacing5((QStyle*)self, controls1, controls2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 

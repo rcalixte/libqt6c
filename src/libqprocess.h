@@ -194,7 +194,7 @@ bool q_process_start_detached(void* self);
 ///
 /// @param self QProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_process_open(void* self, int64_t mode);
+bool q_process_open(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#open)
 ///
@@ -202,7 +202,7 @@ bool q_process_open(void* self, int64_t mode);
 ///
 /// @param self QProcess*
 /// @param callback bool func(QProcess* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void q_process_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_process_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#open)
 ///
@@ -210,7 +210,7 @@ void q_process_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_process_qbase_open(void* self, int64_t mode);
+bool q_process_qbase_open(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#program)
 ///
@@ -333,7 +333,7 @@ void q_process_set_unix_process_parameters(void* self, void* params);
 ///
 /// @param self QProcess*
 /// @param flagsOnly flag of enum QProcess__UnixProcessFlag
-void q_process_set_unix_process_parameters2(void* self, int64_t flagsOnly);
+void q_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#workingDirectory)
 ///
@@ -687,20 +687,20 @@ void q_process_start22(void* self, const char* program, const char* arguments[])
 /// @param program const char*
 /// @param arguments const char**
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_start3(void* self, const char* program, const char* arguments[], int64_t mode);
+void q_process_start3(void* self, const char* program, const char* arguments[], int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#start)
 ///
 /// @param self QProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_start1(void* self, int64_t mode);
+void q_process_start1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#startCommand)
 ///
 /// @param self QProcess*
 /// @param command const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_start_command2(void* self, const char* command, int64_t mode);
+void q_process_start_command2(void* self, const char* command, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#startDetached)
 ///
@@ -713,14 +713,14 @@ bool q_process_start_detached1(void* self, long long* pid);
 /// @param self QProcess*
 /// @param fileName const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_set_standard_output_file2(void* self, const char* fileName, int64_t mode);
+void q_process_set_standard_output_file2(void* self, const char* fileName, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setStandardErrorFile)
 ///
 /// @param self QProcess*
 /// @param fileName const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_set_standard_error_file2(void* self, const char* fileName, int64_t mode);
+void q_process_set_standard_error_file2(void* self, const char* fileName, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
 ///
@@ -788,7 +788,7 @@ void q_process_on_finished2(void* self, void (*callback)(void*, int, int32_t));
 /// @param self QProcess*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_process_open_mode(void* self);
+int32_t q_process_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1920,7 +1920,7 @@ void q_process_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QProcess*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_set_open_mode(void* self, int64_t openMode);
+void q_process_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1930,7 +1930,7 @@ void q_process_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QProcess*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_qbase_set_open_mode(void* self, int64_t openMode);
+void q_process_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1940,7 +1940,7 @@ void q_process_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QProcess*
 /// @param callback void func(QProcess* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_process_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_process_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///
@@ -2166,13 +2166,13 @@ void q_process__unixprocessparameters_move_assign(void* self, void* other);
 /// @param self QProcess__UnixProcessParameters*
 ///
 /// @return flag of enum QProcess__UnixProcessFlag
-int64_t q_process__unixprocessparameters_flags(void* self);
+uint32_t q_process__unixprocessparameters_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#flags-var)
 ///
 /// @param self QProcess__UnixProcessParameters*
 /// @param flags flag of enum QProcess__UnixProcessFlag
-void q_process__unixprocessparameters_set_flags(void* self, int64_t flags);
+void q_process__unixprocessparameters_set_flags(void* self, uint32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#lowestFileDescriptorToClose-var)
 ///

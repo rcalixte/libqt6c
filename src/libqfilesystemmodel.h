@@ -373,15 +373,15 @@ QVariant* q_filesystemmodel_qbase_header_data(void* self, int section, int32_t o
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_filesystemmodel_flags(void* self, void* index);
+int32_t q_filesystemmodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int64_t func(QFileSystemModel* self, QModelIndex* index)
-void q_filesystemmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QFileSystemModel* self, QModelIndex* index)
+void q_filesystemmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#flags)
 ///
@@ -391,7 +391,7 @@ void q_filesystemmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_filesystemmodel_qbase_flags(void* self, void* index);
+int32_t q_filesystemmodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#sort)
 ///
@@ -496,15 +496,15 @@ bool q_filesystemmodel_qbase_drop_mime_data(void* self, void* data, int32_t acti
 /// @param self QFileSystemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_filesystemmodel_supported_drop_actions(void* self);
+int32_t q_filesystemmodel_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int64_t func()
-void q_filesystemmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_filesystemmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#supportedDropActions)
 ///
@@ -513,7 +513,7 @@ void q_filesystemmodel_on_supported_drop_actions(void* self, int64_t (*callback)
 /// @param self QFileSystemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_filesystemmodel_qbase_supported_drop_actions(void* self);
+int32_t q_filesystemmodel_qbase_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#roleNames)
 ///
@@ -568,14 +568,14 @@ QAbstractFileIconProvider* q_filesystemmodel_icon_provider(void* self);
 ///
 /// @param self QFileSystemModel*
 /// @param filters flag of enum QDir__Filter
-void q_filesystemmodel_set_filter(void* self, int64_t filters);
+void q_filesystemmodel_set_filter(void* self, int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#filter)
 ///
 /// @param self QFileSystemModel*
 ///
 /// @return flag of enum QDir__Filter
-int64_t q_filesystemmodel_filter(void* self);
+int32_t q_filesystemmodel_filter(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#setResolveSymlinks)
 ///
@@ -639,14 +639,14 @@ bool q_filesystemmodel_test_option(void* self, int32_t option);
 ///
 /// @param self QFileSystemModel*
 /// @param options flag of enum QFileSystemModel__Option
-void q_filesystemmodel_set_options(void* self, int64_t options);
+void q_filesystemmodel_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#options)
 ///
 /// @param self QFileSystemModel*
 ///
 /// @return flag of enum QFileSystemModel__Option
-int64_t q_filesystemmodel_options(void* self);
+int32_t q_filesystemmodel_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#filePath)
 ///
@@ -722,7 +722,7 @@ QIcon* q_filesystemmodel_file_icon(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_filesystemmodel_permissions(void* self, void* index);
+int32_t q_filesystemmodel_permissions(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#fileInfo)
 ///
@@ -1006,7 +1006,7 @@ bool q_filesystemmodel_remove_column2(void* self, int column, void* parent);
 /// @param self QFileSystemModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_filesystemmodel_check_index2(void* self, void* index, int64_t options);
+bool q_filesystemmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1567,7 +1567,7 @@ void q_filesystemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
 /// @param self QFileSystemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_filesystemmodel_supported_drag_actions(void* self);
+int32_t q_filesystemmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1578,7 +1578,7 @@ int64_t q_filesystemmodel_supported_drag_actions(void* self);
 /// @param self QFileSystemModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_filesystemmodel_qbase_supported_drag_actions(void* self);
+int32_t q_filesystemmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1587,8 +1587,8 @@ int64_t q_filesystemmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QFileSystemModel*
-/// @param callback int64_t func()
-void q_filesystemmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_filesystemmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1844,7 +1844,7 @@ void q_filesystemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_filesystemmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_filesystemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1858,7 +1858,7 @@ libqt_list /* of QModelIndex* */ q_filesystemmodel_match(void* self, void* start
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1868,7 +1868,7 @@ libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void*
 ///
 /// @param self QFileSystemModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QFileSystemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_filesystemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_filesystemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

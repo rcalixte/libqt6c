@@ -174,11 +174,11 @@ bool q_listview_is_selection_rect_visible(void* self) {
     return QListView_IsSelectionRectVisible((QListView*)self);
 }
 
-void q_listview_set_item_alignment(void* self, int64_t alignment) {
+void q_listview_set_item_alignment(void* self, int32_t alignment) {
     QListView_SetItemAlignment((QListView*)self, alignment);
 }
 
-int64_t q_listview_item_alignment(void* self) {
+int32_t q_listview_item_alignment(void* self) {
     return QListView_ItemAlignment((QListView*)self);
 }
 
@@ -442,15 +442,15 @@ void q_listview_qbase_drop_event(void* self, void* e) {
     QListView_QBaseDropEvent((QListView*)self, (QDropEvent*)e);
 }
 
-void q_listview_start_drag(void* self, int64_t supportedActions) {
+void q_listview_start_drag(void* self, int32_t supportedActions) {
     QListView_StartDrag((QListView*)self, supportedActions);
 }
 
-void q_listview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+void q_listview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     QListView_OnStartDrag((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_start_drag(void* self, int64_t supportedActions) {
+void q_listview_qbase_start_drag(void* self, int32_t supportedActions) {
     QListView_QBaseStartDrag((QListView*)self, supportedActions);
 }
 
@@ -538,15 +538,15 @@ void q_listview_qbase_set_position_for_index(void* self, void* position, void* i
     QListView_QBaseSetPositionForIndex((QListView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
-void q_listview_set_selection(void* self, void* rect, int64_t command) {
+void q_listview_set_selection(void* self, void* rect, int32_t command) {
     QListView_SetSelection((QListView*)self, (QRect*)rect, command);
 }
 
-void q_listview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_listview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
     QListView_OnSetSelection((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_set_selection(void* self, void* rect, int64_t command) {
+void q_listview_qbase_set_selection(void* self, void* rect, int32_t command) {
     QListView_QBaseSetSelection((QListView*)self, (QRect*)rect, command);
 }
 
@@ -690,11 +690,11 @@ QModelIndex* q_listview_root_index(void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
-void q_listview_set_edit_triggers(void* self, int64_t triggers) {
+void q_listview_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int64_t q_listview_edit_triggers(void* self) {
+int32_t q_listview_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -974,11 +974,11 @@ void q_listview_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_listview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_listview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_listview_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_listview_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1856,15 +1856,15 @@ bool q_listview_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_listview_window_state(void* self) {
+int32_t q_listview_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_listview_set_window_state(void* self, int64_t state) {
+void q_listview_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_listview_override_window_state(void* self, int64_t state) {
+void q_listview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -2121,7 +2121,7 @@ void q_listview_render3(void* self, void* target, void* targetOffset, void* sour
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_listview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_listview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2133,7 +2133,7 @@ void q_listview_render32(void* self, void* painter, void* targetOffset, void* so
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_listview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_listview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2141,7 +2141,7 @@ QPixmap* q_listview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_listview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_listview_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -2608,15 +2608,15 @@ void q_listview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, voi
     QListView_OnEdit2((QListView*)self, (intptr_t)callback);
 }
 
-int64_t q_listview_selection_command(void* self, void* index, void* event) {
+int32_t q_listview_selection_command(void* self, void* index, void* event) {
     return QListView_SelectionCommand((QListView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int64_t q_listview_qbase_selection_command(void* self, void* index, void* event) {
+int32_t q_listview_qbase_selection_command(void* self, void* index, void* event) {
     return QListView_QBaseSelectionCommand((QListView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_listview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+void q_listview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
     QListView_OnSelectionCommand((QListView*)self, (intptr_t)callback);
 }
 

@@ -1515,7 +1515,7 @@ int32_t q_mouseevent_source(void* self);
 /// @param self QMouseEvent*
 ///
 /// @return flag of enum Qt__MouseEventFlag
-int64_t q_mouseevent_flags(void* self);
+int32_t q_mouseevent_flags(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
@@ -6373,7 +6373,7 @@ void q_inputmethodqueryevent_delete(void* self);
 /// @param data QMimeData*
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QDropEvent* q_dropevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers);
+QDropEvent* q_dropevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers);
 
 /// q_dropevent_new2 constructs a new QDropEvent object.
 ///
@@ -6383,7 +6383,7 @@ QDropEvent* q_dropevent_new(void* pos, int64_t actions, void* data, int64_t butt
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param typeVal enum QEvent__Type
-QDropEvent* q_dropevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal);
+QDropEvent* q_dropevent_new2(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
@@ -6453,7 +6453,7 @@ int64_t q_dropevent_modifiers(void* self);
 /// @param self QDropEvent*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_dropevent_possible_actions(void* self);
+int32_t q_dropevent_possible_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#proposedAction)
 ///
@@ -6607,7 +6607,7 @@ void q_dropevent_delete(void* self);
 /// @param data QMimeData*
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QDragMoveEvent* q_dragmoveevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers);
+QDragMoveEvent* q_dragmoveevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers);
 
 /// q_dragmoveevent_new2 constructs a new QDragMoveEvent object.
 ///
@@ -6617,7 +6617,7 @@ QDragMoveEvent* q_dragmoveevent_new(void* pos, int64_t actions, void* data, int6
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param typeVal enum QEvent__Type
-QDragMoveEvent* q_dragmoveevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal);
+QDragMoveEvent* q_dragmoveevent_new2(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
@@ -6730,7 +6730,7 @@ int64_t q_dragmoveevent_modifiers(void* self);
 /// @param self QDragMoveEvent*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_dragmoveevent_possible_actions(void* self);
+int32_t q_dragmoveevent_possible_actions(void* self);
 
 /// Inherited from QDropEvent
 ///
@@ -6882,7 +6882,7 @@ void q_dragmoveevent_delete(void* self);
 /// @param data QMimeData*
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QDragEnterEvent* q_dragenterevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers);
+QDragEnterEvent* q_dragenterevent_new(void* pos, int32_t actions, void* data, int64_t buttons, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
 ///
@@ -7005,7 +7005,7 @@ int64_t q_dragenterevent_modifiers(void* self);
 /// @param self QDragEnterEvent*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_dragenterevent_possible_actions(void* self);
+int32_t q_dragenterevent_possible_actions(void* self);
 
 /// Inherited from QDropEvent
 ///
@@ -7935,7 +7935,7 @@ QUrl* q_fileopenevent_url(void* self);
 /// @param self QFileOpenEvent*
 /// @param file QFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_fileopenevent_open_file(void* self, void* file, int64_t flags);
+bool q_fileopenevent_open_file(void* self, void* file, int32_t flags);
 
 /// Inherited from QEvent
 ///
@@ -8366,13 +8366,13 @@ void q_shortcutevent_delete(void* self);
 /// q_windowstatechangeevent_new constructs a new QWindowStateChangeEvent object.
 ///
 /// @param oldState flag of enum Qt__WindowState
-QWindowStateChangeEvent* q_windowstatechangeevent_new(int64_t oldState);
+QWindowStateChangeEvent* q_windowstatechangeevent_new(int32_t oldState);
 
 /// q_windowstatechangeevent_new2 constructs a new QWindowStateChangeEvent object.
 ///
 /// @param oldState flag of enum Qt__WindowState
 /// @param isOverride bool
-QWindowStateChangeEvent* q_windowstatechangeevent_new2(int64_t oldState, bool isOverride);
+QWindowStateChangeEvent* q_windowstatechangeevent_new2(int32_t oldState, bool isOverride);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
 ///
@@ -8399,7 +8399,7 @@ QWindowStateChangeEvent* q_windowstatechangeevent_qbase_clone(void* self);
 /// @param self QWindowStateChangeEvent*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_windowstatechangeevent_old_state(void* self);
+int32_t q_windowstatechangeevent_old_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#isOverride)
 ///
@@ -8527,7 +8527,7 @@ QTouchEvent* q_touchevent_new(int32_t eventType);
 /// @param device QPointingDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param touchPointStates flag of enum QEventPoint__State
-QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int64_t modifiers, int64_t touchPointStates);
+QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int64_t modifiers, uint8_t touchPointStates);
 
 /// q_touchevent_new3 constructs a new QTouchEvent object.
 ///
@@ -8557,7 +8557,7 @@ QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int64_t modifier
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param touchPointStates flag of enum QEventPoint__State
 /// @param touchPoints libqt_list /* of QEventPoint* */
-QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints);
+QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int64_t modifiers, uint8_t touchPointStates, libqt_list touchPoints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
@@ -8589,7 +8589,7 @@ QObject* q_touchevent_target(void* self);
 /// @param self QTouchEvent*
 ///
 /// @return flag of enum QEventPoint__State
-int64_t q_touchevent_touch_point_states(void* self);
+uint8_t q_touchevent_touch_point_states(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#touchPoints)
 ///

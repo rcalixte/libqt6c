@@ -101,7 +101,7 @@ int32_t q_inputdevice_type(void* self);
 /// @param self QInputDevice*
 ///
 /// @return flag of enum QInputDevice__Capability
-int64_t q_inputdevice_capabilities(void* self);
+int32_t q_inputdevice_capabilities(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#hasCapability)
 ///

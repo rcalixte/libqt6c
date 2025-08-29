@@ -1212,14 +1212,14 @@ bool q_textblockformat_is_valid(void* self);
 ///
 /// @param self QTextBlockFormat*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_textblockformat_set_alignment(void* self, int64_t alignment);
+void q_textblockformat_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#alignment)
 ///
 /// @param self QTextBlockFormat*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_textblockformat_alignment(void* self);
+int32_t q_textblockformat_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#setTopMargin)
 ///
@@ -1337,14 +1337,14 @@ bool q_textblockformat_non_breakable_lines(void* self);
 ///
 /// @param self QTextBlockFormat*
 /// @param flags flag of enum QTextFormat__PageBreakFlag
-void q_textblockformat_set_page_break_policy(void* self, int64_t flags);
+void q_textblockformat_set_page_break_policy(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#pageBreakPolicy)
 ///
 /// @param self QTextBlockFormat*
 ///
 /// @return flag of enum QTextFormat__PageBreakFlag
-int64_t q_textblockformat_page_break_policy(void* self);
+int32_t q_textblockformat_page_break_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#setTabPositions)
 ///
@@ -3374,14 +3374,14 @@ QTextLength* q_textframeformat_height(void* self);
 ///
 /// @param self QTextFrameFormat*
 /// @param flags flag of enum QTextFormat__PageBreakFlag
-void q_textframeformat_set_page_break_policy(void* self, int64_t flags);
+void q_textframeformat_set_page_break_policy(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#pageBreakPolicy)
 ///
 /// @param self QTextFrameFormat*
 ///
 /// @return flag of enum QTextFormat__PageBreakFlag
-int64_t q_textframeformat_page_break_policy(void* self);
+int32_t q_textframeformat_page_break_policy(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3834,14 +3834,14 @@ void q_texttableformat_set_cell_padding(void* self, double padding);
 ///
 /// @param self QTextTableFormat*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_texttableformat_set_alignment(void* self, int64_t alignment);
+void q_texttableformat_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttableformat.html#alignment)
 ///
 /// @param self QTextTableFormat*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_texttableformat_alignment(void* self);
+int32_t q_texttableformat_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttableformat.html#setHeaderRowCount)
 ///
@@ -4071,7 +4071,7 @@ QTextLength* q_texttableformat_height(void* self);
 ///
 /// @param self QTextTableFormat*
 /// @param flags flag of enum QTextFormat__PageBreakFlag
-void q_texttableformat_set_page_break_policy(void* self, int64_t flags);
+void q_texttableformat_set_page_break_policy(void* self, int32_t flags);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4080,7 +4080,7 @@ void q_texttableformat_set_page_break_policy(void* self, int64_t flags);
 /// @param self QTextTableFormat*
 ///
 /// @return flag of enum QTextFormat__PageBreakFlag
-int64_t q_texttableformat_page_break_policy(void* self);
+int32_t q_texttableformat_page_break_policy(void* self);
 
 /// Inherited from QTextFormat
 ///

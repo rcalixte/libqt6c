@@ -96,7 +96,7 @@ const char* q_buffer_data(void* self);
 ///
 /// @param self QBuffer*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_buffer_open(void* self, int64_t openMode);
+bool q_buffer_open(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#open)
 ///
@@ -104,7 +104,7 @@ bool q_buffer_open(void* self, int64_t openMode);
 ///
 /// @param self QBuffer*
 /// @param callback bool func(QBuffer* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_buffer_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_buffer_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#open)
 ///
@@ -112,7 +112,7 @@ void q_buffer_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QBuffer*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_buffer_qbase_open(void* self, int64_t openMode);
+bool q_buffer_qbase_open(void* self, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#close)
 ///
@@ -352,7 +352,7 @@ const char* q_buffer_tr3(const char* s, const char* c, int n);
 /// @param self QBuffer*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_buffer_open_mode(void* self);
+int32_t q_buffer_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1398,7 +1398,7 @@ void q_buffer_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QBuffer*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_buffer_set_open_mode(void* self, int64_t openMode);
+void q_buffer_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1408,7 +1408,7 @@ void q_buffer_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QBuffer*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_buffer_qbase_set_open_mode(void* self, int64_t openMode);
+void q_buffer_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1418,7 +1418,7 @@ void q_buffer_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QBuffer*
 /// @param callback void func(QBuffer* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

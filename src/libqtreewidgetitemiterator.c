@@ -14,11 +14,11 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_new3(void* item) {
     return QTreeWidgetItemIterator_new3((QTreeWidgetItem*)item);
 }
 
-QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int64_t flags) {
+QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int32_t flags) {
     return QTreeWidgetItemIterator_new4((QTreeWidget*)widget, flags);
 }
 
-QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int64_t flags) {
+QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int32_t flags) {
     return QTreeWidgetItemIterator_new5((QTreeWidgetItem*)item, flags);
 }
 

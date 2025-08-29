@@ -10,7 +10,7 @@ KJobUiDelegate* k_jobuidelegate_new() {
     return KJobUiDelegate_new();
 }
 
-KJobUiDelegate* k_jobuidelegate_new2(int64_t flags) {
+KJobUiDelegate* k_jobuidelegate_new2(int32_t flags) {
     return KJobUiDelegate_new2(flags);
 }
 

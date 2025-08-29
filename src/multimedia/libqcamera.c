@@ -98,7 +98,7 @@ const char* q_camera_error_string(void* self) {
     return _ret;
 }
 
-int64_t q_camera_supported_features(void* self) {
+int32_t q_camera_supported_features(void* self) {
     return QCamera_SupportedFeatures((QCamera*)self);
 }
 

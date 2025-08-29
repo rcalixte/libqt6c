@@ -1676,7 +1676,7 @@ bool q_focusframe_is_full_screen(void* self);
 /// @param self QFocusFrame*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_focusframe_window_state(void* self);
+int32_t q_focusframe_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1684,7 +1684,7 @@ int64_t q_focusframe_window_state(void* self);
 ///
 /// @param self QFocusFrame*
 /// @param state flag of enum Qt__WindowState
-void q_focusframe_set_window_state(void* self, int64_t state);
+void q_focusframe_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1692,7 +1692,7 @@ void q_focusframe_set_window_state(void* self, int64_t state);
 ///
 /// @param self QFocusFrame*
 /// @param state flag of enum Qt__WindowState
-void q_focusframe_override_window_state(void* self, int64_t state);
+void q_focusframe_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2209,7 +2209,7 @@ void q_focusframe_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_focusframe_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_focusframe_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2239,7 +2239,7 @@ void q_focusframe_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_focusframe_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_focusframe_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2256,7 +2256,7 @@ QPixmap* q_focusframe_grab1(void* self, void* rectangle);
 /// @param self QFocusFrame*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_focusframe_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_focusframe_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

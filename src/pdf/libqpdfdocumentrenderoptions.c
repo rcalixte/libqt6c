@@ -35,11 +35,11 @@ void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r) {
     QPdfDocumentRenderOptions_SetRotation((QPdfDocumentRenderOptions*)self, r);
 }
 
-int64_t q_pdfdocumentrenderoptions_render_flags(void* self) {
+int32_t q_pdfdocumentrenderoptions_render_flags(void* self) {
     return QPdfDocumentRenderOptions_RenderFlags((QPdfDocumentRenderOptions*)self);
 }
 
-void q_pdfdocumentrenderoptions_set_render_flags(void* self, int64_t r) {
+void q_pdfdocumentrenderoptions_set_render_flags(void* self, int32_t r) {
     QPdfDocumentRenderOptions_SetRenderFlags((QPdfDocumentRenderOptions*)self, r);
 }
 

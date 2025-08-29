@@ -259,7 +259,7 @@ uint32_t q_hostaddress_to_i_pv4_address1(void* self, bool* ok);
 /// @param self QHostAddress*
 /// @param address QHostAddress*
 /// @param mode flag of enum QHostAddress__ConversionModeFlag
-bool q_hostaddress_is_equal2(void* self, void* address, int64_t mode);
+bool q_hostaddress_is_equal2(void* self, void* address, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#dtor.QHostAddress)
 ///

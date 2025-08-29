@@ -239,7 +239,7 @@ void q_datetimeedit_set_time_range(void* self, void* min, void* max);
 /// @param self QDateTimeEdit*
 ///
 /// @return flag of enum QDateTimeEdit__Section
-int64_t q_datetimeedit_displayed_sections(void* self);
+int32_t q_datetimeedit_displayed_sections(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSection)
 ///
@@ -678,15 +678,15 @@ const char* q_datetimeedit_qbase_text_from_date_time(void* self, void* dt);
 /// @param self QDateTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_datetimeedit_step_enabled(void* self);
+int32_t q_datetimeedit_step_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int64_t func()
-void q_datetimeedit_on_step_enabled(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_datetimeedit_on_step_enabled(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
@@ -695,7 +695,7 @@ void q_datetimeedit_on_step_enabled(void* self, int64_t (*callback)());
 /// @param self QDateTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_datetimeedit_qbase_step_enabled(void* self);
+int32_t q_datetimeedit_qbase_step_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
 ///
@@ -898,7 +898,7 @@ bool q_datetimeedit_keyboard_tracking(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param flag flag of enum Qt__AlignmentFlag
-void q_datetimeedit_set_alignment(void* self, int64_t flag);
+void q_datetimeedit_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -907,7 +907,7 @@ void q_datetimeedit_set_alignment(void* self, int64_t flag);
 /// @param self QDateTimeEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_datetimeedit_alignment(void* self);
+int32_t q_datetimeedit_alignment(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -2497,7 +2497,7 @@ bool q_datetimeedit_is_full_screen(void* self);
 /// @param self QDateTimeEdit*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_datetimeedit_window_state(void* self);
+int32_t q_datetimeedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2505,7 +2505,7 @@ int64_t q_datetimeedit_window_state(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param state flag of enum Qt__WindowState
-void q_datetimeedit_set_window_state(void* self, int64_t state);
+void q_datetimeedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2513,7 +2513,7 @@ void q_datetimeedit_set_window_state(void* self, int64_t state);
 ///
 /// @param self QDateTimeEdit*
 /// @param state flag of enum Qt__WindowState
-void q_datetimeedit_override_window_state(void* self, int64_t state);
+void q_datetimeedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3030,7 +3030,7 @@ void q_datetimeedit_render3(void* self, void* target, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_datetimeedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_datetimeedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3060,7 +3060,7 @@ void q_datetimeedit_render32(void* self, void* painter, void* targetOffset, void
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_datetimeedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_datetimeedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3077,7 +3077,7 @@ QPixmap* q_datetimeedit_grab1(void* self, void* rectangle);
 /// @param self QDateTimeEdit*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_datetimeedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_datetimeedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -5349,7 +5349,7 @@ void q_timeedit_set_time_range(void* self, void* min, void* max);
 /// @param self QTimeEdit*
 ///
 /// @return flag of enum QDateTimeEdit__Section
-int64_t q_timeedit_displayed_sections(void* self);
+int32_t q_timeedit_displayed_sections(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5687,7 +5687,7 @@ bool q_timeedit_keyboard_tracking(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param flag flag of enum Qt__AlignmentFlag
-void q_timeedit_set_alignment(void* self, int64_t flag);
+void q_timeedit_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5696,7 +5696,7 @@ void q_timeedit_set_alignment(void* self, int64_t flag);
 /// @param self QTimeEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_timeedit_alignment(void* self);
+int32_t q_timeedit_alignment(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -7286,7 +7286,7 @@ bool q_timeedit_is_full_screen(void* self);
 /// @param self QTimeEdit*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_timeedit_window_state(void* self);
+int32_t q_timeedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7294,7 +7294,7 @@ int64_t q_timeedit_window_state(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param state flag of enum Qt__WindowState
-void q_timeedit_set_window_state(void* self, int64_t state);
+void q_timeedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -7302,7 +7302,7 @@ void q_timeedit_set_window_state(void* self, int64_t state);
 ///
 /// @param self QTimeEdit*
 /// @param state flag of enum Qt__WindowState
-void q_timeedit_override_window_state(void* self, int64_t state);
+void q_timeedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -7819,7 +7819,7 @@ void q_timeedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_timeedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_timeedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7849,7 +7849,7 @@ void q_timeedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_timeedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_timeedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7866,7 +7866,7 @@ QPixmap* q_timeedit_grab1(void* self, void* rectangle);
 /// @param self QTimeEdit*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_timeedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_timeedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -8695,7 +8695,7 @@ void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(void*
 /// @param self QTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_timeedit_step_enabled(void* self);
+int32_t q_timeedit_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -8706,7 +8706,7 @@ int64_t q_timeedit_step_enabled(void* self);
 /// @param self QTimeEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_timeedit_qbase_step_enabled(void* self);
+int32_t q_timeedit_qbase_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -8715,8 +8715,8 @@ int64_t q_timeedit_qbase_step_enabled(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int64_t func()
-void q_timeedit_on_step_enabled(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_timeedit_on_step_enabled(void* self, int32_t (*callback)());
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10626,7 +10626,7 @@ void q_dateedit_set_time_range(void* self, void* min, void* max);
 /// @param self QDateEdit*
 ///
 /// @return flag of enum QDateTimeEdit__Section
-int64_t q_dateedit_displayed_sections(void* self);
+int32_t q_dateedit_displayed_sections(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10964,7 +10964,7 @@ bool q_dateedit_keyboard_tracking(void* self);
 ///
 /// @param self QDateEdit*
 /// @param flag flag of enum Qt__AlignmentFlag
-void q_dateedit_set_alignment(void* self, int64_t flag);
+void q_dateedit_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10973,7 +10973,7 @@ void q_dateedit_set_alignment(void* self, int64_t flag);
 /// @param self QDateEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_dateedit_alignment(void* self);
+int32_t q_dateedit_alignment(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -12563,7 +12563,7 @@ bool q_dateedit_is_full_screen(void* self);
 /// @param self QDateEdit*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_dateedit_window_state(void* self);
+int32_t q_dateedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -12571,7 +12571,7 @@ int64_t q_dateedit_window_state(void* self);
 ///
 /// @param self QDateEdit*
 /// @param state flag of enum Qt__WindowState
-void q_dateedit_set_window_state(void* self, int64_t state);
+void q_dateedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -12579,7 +12579,7 @@ void q_dateedit_set_window_state(void* self, int64_t state);
 ///
 /// @param self QDateEdit*
 /// @param state flag of enum Qt__WindowState
-void q_dateedit_override_window_state(void* self, int64_t state);
+void q_dateedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -13096,7 +13096,7 @@ void q_dateedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dateedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dateedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -13126,7 +13126,7 @@ void q_dateedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dateedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dateedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -13143,7 +13143,7 @@ QPixmap* q_dateedit_grab1(void* self, void* rectangle);
 /// @param self QDateEdit*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_dateedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_dateedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -13972,7 +13972,7 @@ void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(void*
 /// @param self QDateEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_dateedit_step_enabled(void* self);
+int32_t q_dateedit_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -13983,7 +13983,7 @@ int64_t q_dateedit_step_enabled(void* self);
 /// @param self QDateEdit*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_dateedit_qbase_step_enabled(void* self);
+int32_t q_dateedit_qbase_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -13992,8 +13992,8 @@ int64_t q_dateedit_qbase_step_enabled(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int64_t func()
-void q_dateedit_on_step_enabled(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_dateedit_on_step_enabled(void* self, int32_t (*callback)());
 
 /// Inherited from QDateTimeEdit
 ///

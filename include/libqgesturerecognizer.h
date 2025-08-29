@@ -47,15 +47,15 @@ QGesture* q_gesturerecognizer_qbase_create(void* self, void* target);
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
-int64_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, void* event);
+int32_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGestureRecognizer*
-/// @param callback int64_t func(QGestureRecognizer* self, QGesture* state, QObject* watched, QEvent* event)
-void q_gesturerecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*));
+/// @param callback int32_t func(QGestureRecognizer* self, QGesture* state, QObject* watched, QEvent* event)
+void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
 ///
@@ -67,7 +67,7 @@ void q_gesturerecognizer_on_recognize(void* self, int64_t (*callback)(void*, voi
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
-int64_t q_gesturerecognizer_qbase_recognize(void* self, void* state, void* watched, void* event);
+int32_t q_gesturerecognizer_qbase_recognize(void* self, void* state, void* watched, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
 ///

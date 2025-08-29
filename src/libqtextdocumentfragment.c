@@ -67,7 +67,7 @@ QTextDocumentFragment* q_textdocumentfragment_from_markdown(const char* markdown
     return QTextDocumentFragment_FromMarkdown(qstring(markdown));
 }
 
-const char* q_textdocumentfragment_to_markdown1(void* self, int64_t features) {
+const char* q_textdocumentfragment_to_markdown1(void* self, int32_t features) {
     libqt_string _str = QTextDocumentFragment_ToMarkdown1((QTextDocumentFragment*)self, features);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -78,7 +78,7 @@ QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, void*
     return QTextDocumentFragment_FromHtml2(qstring(html), (QTextDocument*)resourceProvider);
 }
 
-QTextDocumentFragment* q_textdocumentfragment_from_markdown2(const char* markdown, int64_t features) {
+QTextDocumentFragment* q_textdocumentfragment_from_markdown2(const char* markdown, int32_t features) {
     return QTextDocumentFragment_FromMarkdown2(qstring(markdown), features);
 }
 

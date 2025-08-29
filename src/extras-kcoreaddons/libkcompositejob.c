@@ -149,7 +149,7 @@ KJobUiDelegate* k_compositejob_ui_delegate(void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int64_t k_compositejob_capabilities(void* self) {
+int32_t k_compositejob_capabilities(void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
@@ -613,15 +613,15 @@ void k_compositejob_on_disconnect_notify(void* self, void (*callback)(void*, voi
     KCompositeJob_OnDisconnectNotify((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_set_capabilities(void* self, int64_t capabilities) {
+void k_compositejob_set_capabilities(void* self, int32_t capabilities) {
     KCompositeJob_SetCapabilities((KCompositeJob*)self, capabilities);
 }
 
-void k_compositejob_qbase_set_capabilities(void* self, int64_t capabilities) {
+void k_compositejob_qbase_set_capabilities(void* self, int32_t capabilities) {
     KCompositeJob_QBaseSetCapabilities((KCompositeJob*)self, capabilities);
 }
 
-void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int64_t)) {
+void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
     KCompositeJob_OnSetCapabilities((KCompositeJob*)self, (intptr_t)callback);
 }
 

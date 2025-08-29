@@ -1821,7 +1821,7 @@ bool k_xyselector_is_full_screen(void* self);
 /// @param self KXYSelector*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_xyselector_window_state(void* self);
+int32_t k_xyselector_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1829,7 +1829,7 @@ int64_t k_xyselector_window_state(void* self);
 ///
 /// @param self KXYSelector*
 /// @param state flag of enum Qt__WindowState
-void k_xyselector_set_window_state(void* self, int64_t state);
+void k_xyselector_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1837,7 +1837,7 @@ void k_xyselector_set_window_state(void* self, int64_t state);
 ///
 /// @param self KXYSelector*
 /// @param state flag of enum Qt__WindowState
-void k_xyselector_override_window_state(void* self, int64_t state);
+void k_xyselector_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2347,7 +2347,7 @@ void k_xyselector_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_xyselector_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_xyselector_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2377,7 +2377,7 @@ void k_xyselector_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_xyselector_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_xyselector_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2394,7 +2394,7 @@ QPixmap* k_xyselector_grab1(void* self, void* rectangle);
 /// @param self KXYSelector*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_xyselector_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_xyselector_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

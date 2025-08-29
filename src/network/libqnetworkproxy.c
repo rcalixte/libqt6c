@@ -170,11 +170,11 @@ int32_t q_networkproxy_type(void* self) {
     return QNetworkProxy_Type((QNetworkProxy*)self);
 }
 
-void q_networkproxy_set_capabilities(void* self, int64_t capab) {
+void q_networkproxy_set_capabilities(void* self, int32_t capab) {
     QNetworkProxy_SetCapabilities((QNetworkProxy*)self, capab);
 }
 
-int64_t q_networkproxy_capabilities(void* self) {
+int32_t q_networkproxy_capabilities(void* self) {
     return QNetworkProxy_Capabilities((QNetworkProxy*)self);
 }
 

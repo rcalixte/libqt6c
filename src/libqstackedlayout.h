@@ -406,7 +406,7 @@ QRect* q_stackedlayout_contents_rect(void* self);
 /// @param self QStackedLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_stackedlayout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_stackedlayout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -415,7 +415,7 @@ bool q_stackedlayout_set_alignment(void* self, void* w, int64_t alignment);
 /// @param self QStackedLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_stackedlayout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_stackedlayout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -888,7 +888,7 @@ void q_stackedlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QStackedLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_stackedlayout_alignment(void* self);
+int32_t q_stackedlayout_alignment(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1013,7 +1013,7 @@ void q_stackedlayout_on_geometry(void* self, QRect* (*callback)());
 /// @param self QStackedLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_stackedlayout_expanding_directions(void* self);
+int32_t q_stackedlayout_expanding_directions(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1024,7 +1024,7 @@ int64_t q_stackedlayout_expanding_directions(void* self);
 /// @param self QStackedLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_stackedlayout_qbase_expanding_directions(void* self);
+int32_t q_stackedlayout_qbase_expanding_directions(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1033,8 +1033,8 @@ int64_t q_stackedlayout_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedLayout*
-/// @param callback int64_t func()
-void q_stackedlayout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_stackedlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -1131,7 +1131,7 @@ void q_stackedlayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QStackedLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_stackedlayout_control_types(void* self);
+int32_t q_stackedlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1142,7 +1142,7 @@ int64_t q_stackedlayout_control_types(void* self);
 /// @param self QStackedLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_stackedlayout_qbase_control_types(void* self);
+int32_t q_stackedlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1151,8 +1151,8 @@ int64_t q_stackedlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStackedLayout*
-/// @param callback int64_t func()
-void q_stackedlayout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_stackedlayout_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -1164,7 +1164,7 @@ void q_stackedlayout_on_control_types(void* self, int64_t (*callback)());
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1176,7 +1176,7 @@ QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, in
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1186,7 +1186,7 @@ QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* 
 ///
 /// @param self QStackedLayout*
 /// @param callback QLayoutItem* func(QStackedLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_stackedlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_stackedlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// Inherited from QLayout
 ///

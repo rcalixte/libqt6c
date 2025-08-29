@@ -52,11 +52,11 @@ void q_webengineurlscheme_set_default_port(void* self, int newValue) {
     QWebEngineUrlScheme_SetDefaultPort((QWebEngineUrlScheme*)self, newValue);
 }
 
-int64_t q_webengineurlscheme_flags(void* self) {
+int32_t q_webengineurlscheme_flags(void* self) {
     return QWebEngineUrlScheme_Flags((QWebEngineUrlScheme*)self);
 }
 
-void q_webengineurlscheme_set_flags(void* self, int64_t newValue) {
+void q_webengineurlscheme_set_flags(void* self, int32_t newValue) {
     QWebEngineUrlScheme_SetFlags((QWebEngineUrlScheme*)self, newValue);
 }
 

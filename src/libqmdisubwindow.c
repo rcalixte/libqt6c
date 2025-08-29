@@ -134,11 +134,11 @@ QMdiArea* q_mdisubwindow_mdi_area(void* self) {
     return QMdiSubWindow_MdiArea((QMdiSubWindow*)self);
 }
 
-void q_mdisubwindow_window_state_changed(void* self, int64_t oldState, int64_t newState) {
+void q_mdisubwindow_window_state_changed(void* self, int32_t oldState, int32_t newState) {
     QMdiSubWindow_WindowStateChanged((QMdiSubWindow*)self, oldState, newState);
 }
 
-void q_mdisubwindow_on_window_state_changed(void* self, void (*callback)(void*, int64_t, int64_t)) {
+void q_mdisubwindow_on_window_state_changed(void* self, void (*callback)(void*, int32_t, int32_t)) {
     QMdiSubWindow_Connect_WindowStateChanged((QMdiSubWindow*)self, (intptr_t)callback);
 }
 
@@ -1221,15 +1221,15 @@ bool q_mdisubwindow_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_mdisubwindow_window_state(void* self) {
+int32_t q_mdisubwindow_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_mdisubwindow_set_window_state(void* self, int64_t state) {
+void q_mdisubwindow_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_mdisubwindow_override_window_state(void* self, int64_t state) {
+void q_mdisubwindow_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1486,7 +1486,7 @@ void q_mdisubwindow_render3(void* self, void* target, void* targetOffset, void* 
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_mdisubwindow_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_mdisubwindow_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1498,7 +1498,7 @@ void q_mdisubwindow_render32(void* self, void* painter, void* targetOffset, void
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_mdisubwindow_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_mdisubwindow_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1506,7 +1506,7 @@ QPixmap* q_mdisubwindow_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_mdisubwindow_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_mdisubwindow_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

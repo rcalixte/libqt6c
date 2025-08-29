@@ -52,7 +52,7 @@ QPointingDevice* q_pointingdevice_new() {
     return QPointingDevice_new();
 }
 
-QPointingDevice* q_pointingdevice_new2(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount) {
+QPointingDevice* q_pointingdevice_new2(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount) {
     return QPointingDevice_new2(qstring(name), systemId, devType, pType, caps, maxPoints, buttonCount);
 }
 
@@ -60,15 +60,15 @@ QPointingDevice* q_pointingdevice_new3(void* parent) {
     return QPointingDevice_new3((QObject*)parent);
 }
 
-QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName) {
+QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount, const char* seatName) {
     return QPointingDevice_new4(qstring(name), systemId, devType, pType, caps, maxPoints, buttonCount, qstring(seatName));
 }
 
-QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId) {
+QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId) {
     return QPointingDevice_new5(qstring(name), systemId, devType, pType, caps, maxPoints, buttonCount, qstring(seatName), (QPointingDeviceUniqueId*)uniqueId);
 }
 
-QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId, void* parent) {
+QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId, void* parent) {
     return QPointingDevice_new6(qstring(name), systemId, devType, pType, caps, maxPoints, buttonCount, qstring(seatName), (QPointingDeviceUniqueId*)uniqueId, (QObject*)parent);
 }
 
@@ -103,7 +103,7 @@ void q_pointingdevice_set_type(void* self, int32_t devType) {
     QPointingDevice_SetType((QPointingDevice*)self, devType);
 }
 
-void q_pointingdevice_set_capabilities(void* self, int64_t caps) {
+void q_pointingdevice_set_capabilities(void* self, int32_t caps) {
     QPointingDevice_SetCapabilities((QPointingDevice*)self, caps);
 }
 
@@ -172,7 +172,7 @@ int32_t q_pointingdevice_type(void* self) {
     return QInputDevice_Type((QInputDevice*)self);
 }
 
-int64_t q_pointingdevice_capabilities(void* self) {
+int32_t q_pointingdevice_capabilities(void* self) {
     return QInputDevice_Capabilities((QInputDevice*)self);
 }
 

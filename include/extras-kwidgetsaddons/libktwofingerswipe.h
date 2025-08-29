@@ -871,15 +871,15 @@ QGesture* k_twofingerswiperecognizer_qbase_create(void* self, void* target);
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
-int64_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* watched, void* event);
+int32_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* watched, void* event);
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#recognize)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KTwoFingerSwipeRecognizer*
-/// @param callback int64_t func(KTwoFingerSwipeRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
-void k_twofingerswiperecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*));
+/// @param callback int32_t func(KTwoFingerSwipeRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
+void k_twofingerswiperecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#recognize)
 ///
@@ -891,7 +891,7 @@ void k_twofingerswiperecognizer_on_recognize(void* self, int64_t (*callback)(voi
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
-int64_t k_twofingerswiperecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event);
+int32_t k_twofingerswiperecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event);
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#maxSwipeTime)
 ///

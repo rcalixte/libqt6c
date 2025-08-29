@@ -166,15 +166,15 @@ bool q_process_start_detached(void* self) {
     return QProcess_StartDetached((QProcess*)self);
 }
 
-bool q_process_open(void* self, int64_t mode) {
+bool q_process_open(void* self, int32_t mode) {
     return QProcess_Open((QProcess*)self, mode);
 }
 
-void q_process_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_process_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QProcess_OnOpen((QProcess*)self, (intptr_t)callback);
 }
 
-bool q_process_qbase_open(void* self, int64_t mode) {
+bool q_process_qbase_open(void* self, int32_t mode) {
     return QProcess_QBaseOpen((QProcess*)self, mode);
 }
 
@@ -283,7 +283,7 @@ void q_process_set_unix_process_parameters(void* self, void* params) {
     QProcess_SetUnixProcessParameters((QProcess*)self, (QProcess__UnixProcessParameters*)params);
 }
 
-void q_process_set_unix_process_parameters2(void* self, int64_t flagsOnly) {
+void q_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly) {
     QProcess_SetUnixProcessParameters2((QProcess*)self, flagsOnly);
 }
 
@@ -565,7 +565,7 @@ void q_process_start22(void* self, const char* program, const char* arguments[])
     free(arguments_qstr);
 }
 
-void q_process_start3(void* self, const char* program, const char* arguments[], int64_t mode) {
+void q_process_start3(void* self, const char* program, const char* arguments[], int32_t mode) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -580,11 +580,11 @@ void q_process_start3(void* self, const char* program, const char* arguments[], 
     free(arguments_qstr);
 }
 
-void q_process_start1(void* self, int64_t mode) {
+void q_process_start1(void* self, int32_t mode) {
     QProcess_Start1((QProcess*)self, mode);
 }
 
-void q_process_start_command2(void* self, const char* command, int64_t mode) {
+void q_process_start_command2(void* self, const char* command, int32_t mode) {
     QProcess_StartCommand2((QProcess*)self, qstring(command), mode);
 }
 
@@ -592,11 +592,11 @@ bool q_process_start_detached1(void* self, long long* pid) {
     return QProcess_StartDetached1((QProcess*)self, pid);
 }
 
-void q_process_set_standard_output_file2(void* self, const char* fileName, int64_t mode) {
+void q_process_set_standard_output_file2(void* self, const char* fileName, int32_t mode) {
     QProcess_SetStandardOutputFile2((QProcess*)self, qstring(fileName), mode);
 }
 
-void q_process_set_standard_error_file2(void* self, const char* fileName, int64_t mode) {
+void q_process_set_standard_error_file2(void* self, const char* fileName, int32_t mode) {
     QProcess_SetStandardErrorFile2((QProcess*)self, qstring(fileName), mode);
 }
 
@@ -684,7 +684,7 @@ void q_process_on_finished2(void* self, void (*callback)(void*, int, int32_t)) {
     QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
 }
 
-int64_t q_process_open_mode(void* self) {
+int32_t q_process_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -1241,15 +1241,15 @@ void q_process_on_disconnect_notify(void* self, void (*callback)(void*, void*)) 
     QProcess_OnDisconnectNotify((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_set_open_mode(void* self, int64_t openMode) {
+void q_process_set_open_mode(void* self, int32_t openMode) {
     QProcess_SetOpenMode((QProcess*)self, openMode);
 }
 
-void q_process_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_process_qbase_set_open_mode(void* self, int32_t openMode) {
     QProcess_QBaseSetOpenMode((QProcess*)self, openMode);
 }
 
-void q_process_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_process_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QProcess_OnSetOpenMode((QProcess*)self, (intptr_t)callback);
 }
 
@@ -1353,11 +1353,11 @@ void q_process__unixprocessparameters_move_assign(void* self, void* other) {
     QProcess__UnixProcessParameters_MoveAssign((QProcess__UnixProcessParameters*)self, (QProcess__UnixProcessParameters*)other);
 }
 
-int64_t q_process__unixprocessparameters_flags(void* self) {
+uint32_t q_process__unixprocessparameters_flags(void* self) {
     return QProcess__UnixProcessParameters_Flags((QProcess__UnixProcessParameters*)self);
 }
 
-void q_process__unixprocessparameters_set_flags(void* self, int64_t flags) {
+void q_process__unixprocessparameters_set_flags(void* self, uint32_t flags) {
     QProcess__UnixProcessParameters_SetFlags((QProcess__UnixProcessParameters*)self, flags);
 }
 

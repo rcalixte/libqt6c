@@ -34,7 +34,7 @@ int32_t q_webenginefilesystemaccessrequest_handle_type(void* self) {
     return QWebEngineFileSystemAccessRequest_HandleType((QWebEngineFileSystemAccessRequest*)self);
 }
 
-int64_t q_webenginefilesystemaccessrequest_access_flags(void* self) {
+int32_t q_webenginefilesystemaccessrequest_access_flags(void* self) {
     return QWebEngineFileSystemAccessRequest_AccessFlags((QWebEngineFileSystemAccessRequest*)self);
 }
 

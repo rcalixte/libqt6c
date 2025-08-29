@@ -46,7 +46,7 @@ KEditListWidget* k_editlistwidget_new5(void* customEditor, void* parent, bool ch
 /// @param parent QWidget*
 /// @param checkAtEntering bool
 /// @param buttons flag of enum KEditListWidget__Button
-KEditListWidget* k_editlistwidget_new6(void* customEditor, void* parent, bool checkAtEntering, int64_t buttons);
+KEditListWidget* k_editlistwidget_new6(void* customEditor, void* parent, bool checkAtEntering, int32_t buttons);
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
 ///
@@ -174,13 +174,13 @@ void k_editlistwidget_set_items(void* self, const char* items[]);
 /// @param self KEditListWidget*
 ///
 /// @return flag of enum KEditListWidget__Button
-int64_t k_editlistwidget_buttons(void* self);
+int32_t k_editlistwidget_buttons(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#setButtons)
 ///
 /// @param self KEditListWidget*
 /// @param buttons flag of enum KEditListWidget__Button
-void k_editlistwidget_set_buttons(void* self, int64_t buttons);
+void k_editlistwidget_set_buttons(void* self, int32_t buttons);
 
 /// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#setCheckAtEntering)
 ///
@@ -1789,7 +1789,7 @@ bool k_editlistwidget_is_full_screen(void* self);
 /// @param self KEditListWidget*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_editlistwidget_window_state(void* self);
+int32_t k_editlistwidget_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1797,7 +1797,7 @@ int64_t k_editlistwidget_window_state(void* self);
 ///
 /// @param self KEditListWidget*
 /// @param state flag of enum Qt__WindowState
-void k_editlistwidget_set_window_state(void* self, int64_t state);
+void k_editlistwidget_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1805,7 +1805,7 @@ void k_editlistwidget_set_window_state(void* self, int64_t state);
 ///
 /// @param self KEditListWidget*
 /// @param state flag of enum Qt__WindowState
-void k_editlistwidget_override_window_state(void* self, int64_t state);
+void k_editlistwidget_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2322,7 +2322,7 @@ void k_editlistwidget_render3(void* self, void* target, void* targetOffset, void
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_editlistwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_editlistwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2352,7 +2352,7 @@ void k_editlistwidget_render32(void* self, void* painter, void* targetOffset, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_editlistwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_editlistwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2369,7 +2369,7 @@ QPixmap* k_editlistwidget_grab1(void* self, void* rectangle);
 /// @param self KEditListWidget*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_editlistwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_editlistwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

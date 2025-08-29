@@ -82,7 +82,7 @@ int32_t q_metatype_size_of(int typeVal);
 /// @param typeVal int
 ///
 /// @return flag of enum QMetaType__TypeFlag
-int64_t q_metatype_type_flags(int typeVal);
+int32_t q_metatype_type_flags(int typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#metaObjectForType)
 ///
@@ -153,7 +153,7 @@ int64_t q_metatype_align_of(void* self);
 /// @param self QMetaType*
 ///
 /// @return flag of enum QMetaType__TypeFlag
-int64_t q_metatype_flags(void* self);
+int32_t q_metatype_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

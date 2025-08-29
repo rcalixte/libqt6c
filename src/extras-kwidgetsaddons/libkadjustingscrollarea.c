@@ -123,11 +123,11 @@ void k_adjustingscrollarea_set_widget_resizable(void* self, bool resizable) {
     QScrollArea_SetWidgetResizable((QScrollArea*)self, resizable);
 }
 
-int64_t k_adjustingscrollarea_alignment(void* self) {
+int32_t k_adjustingscrollarea_alignment(void* self) {
     return QScrollArea_Alignment((QScrollArea*)self);
 }
 
-void k_adjustingscrollarea_set_alignment(void* self, int64_t alignment) {
+void k_adjustingscrollarea_set_alignment(void* self, int32_t alignment) {
     QScrollArea_SetAlignment((QScrollArea*)self, alignment);
 }
 
@@ -195,11 +195,11 @@ void k_adjustingscrollarea_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void k_adjustingscrollarea_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void k_adjustingscrollarea_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ k_adjustingscrollarea_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ k_adjustingscrollarea_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1081,15 +1081,15 @@ bool k_adjustingscrollarea_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_adjustingscrollarea_window_state(void* self) {
+int32_t k_adjustingscrollarea_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_adjustingscrollarea_set_window_state(void* self, int64_t state) {
+void k_adjustingscrollarea_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_adjustingscrollarea_override_window_state(void* self, int64_t state) {
+void k_adjustingscrollarea_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1346,7 +1346,7 @@ void k_adjustingscrollarea_render3(void* self, void* target, void* targetOffset,
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_adjustingscrollarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_adjustingscrollarea_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1358,7 +1358,7 @@ void k_adjustingscrollarea_render32(void* self, void* painter, void* targetOffse
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_adjustingscrollarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_adjustingscrollarea_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1366,7 +1366,7 @@ QPixmap* k_adjustingscrollarea_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_adjustingscrollarea_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_adjustingscrollarea_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

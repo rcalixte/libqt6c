@@ -32,14 +32,14 @@ KConfig* k_config_new3(const char* file);
 ///
 /// @param file const char*
 /// @param mode flag of enum KConfig__OpenFlag
-KConfig* k_config_new4(const char* file, int64_t mode);
+KConfig* k_config_new4(const char* file, int32_t mode);
 
 /// k_config_new5 constructs a new KConfig object.
 ///
 /// @param file const char*
 /// @param mode flag of enum KConfig__OpenFlag
 /// @param typeVal enum QStandardPaths__StandardLocation
-KConfig* k_config_new5(const char* file, int64_t mode, int32_t typeVal);
+KConfig* k_config_new5(const char* file, int32_t mode, int32_t typeVal);
 
 /// k_config_new6 constructs a new KConfig object.
 ///
@@ -67,7 +67,7 @@ const char* k_config_name(void* self);
 /// @param self KConfig*
 ///
 /// @return flag of enum KConfig__OpenFlag
-int64_t k_config_open_flags(void* self);
+int32_t k_config_open_flags(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#sync)
 ///
@@ -328,7 +328,7 @@ const KConfigGroup* k_config_qbase_group_impl2(void* self, const char* groupName
 /// @param self KConfig*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_config_delete_group_impl(void* self, const char* groupName, int64_t flags);
+void k_config_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#deleteGroupImpl)
 ///
@@ -336,7 +336,7 @@ void k_config_delete_group_impl(void* self, const char* groupName, int64_t flags
 ///
 /// @param self KConfig*
 /// @param callback void func(KConfig* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
-void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t));
+void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#deleteGroupImpl)
 ///
@@ -345,7 +345,7 @@ void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const cha
 /// @param self KConfig*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_config_qbase_delete_group_impl(void* self, const char* groupName, int64_t flags);
+void k_config_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#isGroupImmutableImpl)
 ///
@@ -453,7 +453,7 @@ bool k_config_is_group_immutable(void* self, const char* group);
 /// @param self KConfig*
 /// @param group const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_config_delete_group2(void* self, const char* group, int64_t flags);
+void k_config_delete_group2(void* self, const char* group, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfig.html#dtor.KConfig)
 ///

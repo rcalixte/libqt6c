@@ -49,11 +49,11 @@ void q_styleoption_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoption_state(void* self) {
+int32_t q_styleoption_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoption_set_state(void* self, int64_t state) {
+void q_styleoption_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -141,11 +141,11 @@ void q_styleoptionfocusrect_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionfocusrect_state(void* self) {
+int32_t q_styleoptionfocusrect_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionfocusrect_set_state(void* self, int64_t state) {
+void q_styleoptionfocusrect_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -225,11 +225,11 @@ void q_styleoptionframe_set_mid_line_width(void* self, int midLineWidth) {
     QStyleOptionFrame_SetMidLineWidth((QStyleOptionFrame*)self, midLineWidth);
 }
 
-int64_t q_styleoptionframe_features(void* self) {
+int32_t q_styleoptionframe_features(void* self) {
     return QStyleOptionFrame_Features((QStyleOptionFrame*)self);
 }
 
-void q_styleoptionframe_set_features(void* self, int64_t features) {
+void q_styleoptionframe_set_features(void* self, int32_t features) {
     QStyleOptionFrame_SetFeatures((QStyleOptionFrame*)self, features);
 }
 
@@ -257,11 +257,11 @@ void q_styleoptionframe_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionframe_state(void* self) {
+int32_t q_styleoptionframe_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionframe_set_state(void* self, int64_t state) {
+void q_styleoptionframe_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -405,11 +405,11 @@ void q_styleoptiontabwidgetframe_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontabwidgetframe_state(void* self) {
+int32_t q_styleoptiontabwidgetframe_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontabwidgetframe_set_state(void* self, int64_t state) {
+void q_styleoptiontabwidgetframe_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -521,11 +521,11 @@ void q_styleoptiontabbarbase_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontabbarbase_state(void* self) {
+int32_t q_styleoptiontabbarbase_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontabbarbase_set_state(void* self, int64_t state) {
+void q_styleoptiontabbarbase_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -608,11 +608,11 @@ void q_styleoptionheader_set_text(void* self, const char* text) {
     QStyleOptionHeader_SetText((QStyleOptionHeader*)self, qstring(text));
 }
 
-int64_t q_styleoptionheader_text_alignment(void* self) {
+int32_t q_styleoptionheader_text_alignment(void* self) {
     return QStyleOptionHeader_TextAlignment((QStyleOptionHeader*)self);
 }
 
-void q_styleoptionheader_set_text_alignment(void* self, int64_t textAlignment) {
+void q_styleoptionheader_set_text_alignment(void* self, int32_t textAlignment) {
     QStyleOptionHeader_SetTextAlignment((QStyleOptionHeader*)self, textAlignment);
 }
 
@@ -624,11 +624,11 @@ void q_styleoptionheader_set_icon(void* self, void* icon) {
     QStyleOptionHeader_SetIcon((QStyleOptionHeader*)self, (QIcon*)icon);
 }
 
-int64_t q_styleoptionheader_icon_alignment(void* self) {
+int32_t q_styleoptionheader_icon_alignment(void* self) {
     return QStyleOptionHeader_IconAlignment((QStyleOptionHeader*)self);
 }
 
-void q_styleoptionheader_set_icon_alignment(void* self, int64_t iconAlignment) {
+void q_styleoptionheader_set_icon_alignment(void* self, int32_t iconAlignment) {
     QStyleOptionHeader_SetIconAlignment((QStyleOptionHeader*)self, iconAlignment);
 }
 
@@ -680,11 +680,11 @@ void q_styleoptionheader_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionheader_state(void* self) {
+int32_t q_styleoptionheader_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionheader_set_state(void* self, int64_t state) {
+void q_styleoptionheader_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -791,11 +791,11 @@ void q_styleoptionheaderv2_set_text(void* self, const char* text) {
     QStyleOptionHeader_SetText((QStyleOptionHeader*)self, qstring(text));
 }
 
-int64_t q_styleoptionheaderv2_text_alignment(void* self) {
+int32_t q_styleoptionheaderv2_text_alignment(void* self) {
     return QStyleOptionHeader_TextAlignment((QStyleOptionHeader*)self);
 }
 
-void q_styleoptionheaderv2_set_text_alignment(void* self, int64_t textAlignment) {
+void q_styleoptionheaderv2_set_text_alignment(void* self, int32_t textAlignment) {
     QStyleOptionHeader_SetTextAlignment((QStyleOptionHeader*)self, textAlignment);
 }
 
@@ -807,11 +807,11 @@ void q_styleoptionheaderv2_set_icon(void* self, void* icon) {
     QStyleOptionHeader_SetIcon((QStyleOptionHeader*)self, (QIcon*)icon);
 }
 
-int64_t q_styleoptionheaderv2_icon_alignment(void* self) {
+int32_t q_styleoptionheaderv2_icon_alignment(void* self) {
     return QStyleOptionHeader_IconAlignment((QStyleOptionHeader*)self);
 }
 
-void q_styleoptionheaderv2_set_icon_alignment(void* self, int64_t iconAlignment) {
+void q_styleoptionheaderv2_set_icon_alignment(void* self, int32_t iconAlignment) {
     QStyleOptionHeader_SetIconAlignment((QStyleOptionHeader*)self, iconAlignment);
 }
 
@@ -863,11 +863,11 @@ void q_styleoptionheaderv2_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionheaderv2_state(void* self) {
+int32_t q_styleoptionheaderv2_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionheaderv2_set_state(void* self, int64_t state) {
+void q_styleoptionheaderv2_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -931,11 +931,11 @@ QStyleOptionButton* q_styleoptionbutton_new2(void* other) {
     return QStyleOptionButton_new2((QStyleOptionButton*)other);
 }
 
-int64_t q_styleoptionbutton_features(void* self) {
+int32_t q_styleoptionbutton_features(void* self) {
     return QStyleOptionButton_Features((QStyleOptionButton*)self);
 }
 
-void q_styleoptionbutton_set_features(void* self, int64_t features) {
+void q_styleoptionbutton_set_features(void* self, int32_t features) {
     QStyleOptionButton_SetFeatures((QStyleOptionButton*)self, features);
 }
 
@@ -982,11 +982,11 @@ void q_styleoptionbutton_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionbutton_state(void* self) {
+int32_t q_styleoptionbutton_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionbutton_set_state(void* self, int64_t state) {
+void q_styleoptionbutton_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -1101,11 +1101,11 @@ void q_styleoptiontab_set_selected_position(void* self, int32_t selectedPosition
     QStyleOptionTab_SetSelectedPosition((QStyleOptionTab*)self, selectedPosition);
 }
 
-int64_t q_styleoptiontab_corner_widgets(void* self) {
+int32_t q_styleoptiontab_corner_widgets(void* self) {
     return QStyleOptionTab_CornerWidgets((QStyleOptionTab*)self);
 }
 
-void q_styleoptiontab_set_corner_widgets(void* self, int64_t cornerWidgets) {
+void q_styleoptiontab_set_corner_widgets(void* self, int32_t cornerWidgets) {
     QStyleOptionTab_SetCornerWidgets((QStyleOptionTab*)self, cornerWidgets);
 }
 
@@ -1141,11 +1141,11 @@ void q_styleoptiontab_set_right_button_size(void* self, void* rightButtonSize) {
     QStyleOptionTab_SetRightButtonSize((QStyleOptionTab*)self, (QSize*)rightButtonSize);
 }
 
-int64_t q_styleoptiontab_features(void* self) {
+int32_t q_styleoptiontab_features(void* self) {
     return QStyleOptionTab_Features((QStyleOptionTab*)self);
 }
 
-void q_styleoptiontab_set_features(void* self, int64_t features) {
+void q_styleoptiontab_set_features(void* self, int32_t features) {
     QStyleOptionTab_SetFeatures((QStyleOptionTab*)self, features);
 }
 
@@ -1173,11 +1173,11 @@ void q_styleoptiontab_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontab_state(void* self) {
+int32_t q_styleoptiontab_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontab_set_state(void* self, int64_t state) {
+void q_styleoptiontab_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -1265,11 +1265,11 @@ void q_styleoptiontoolbar_set_tool_bar_area(void* self, int32_t toolBarArea) {
     QStyleOptionToolBar_SetToolBarArea((QStyleOptionToolBar*)self, toolBarArea);
 }
 
-int64_t q_styleoptiontoolbar_features(void* self) {
+int32_t q_styleoptiontoolbar_features(void* self) {
     return QStyleOptionToolBar_Features((QStyleOptionToolBar*)self);
 }
 
-void q_styleoptiontoolbar_set_features(void* self, int64_t features) {
+void q_styleoptiontoolbar_set_features(void* self, int32_t features) {
     QStyleOptionToolBar_SetFeatures((QStyleOptionToolBar*)self, features);
 }
 
@@ -1305,11 +1305,11 @@ void q_styleoptiontoolbar_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontoolbar_state(void* self) {
+int32_t q_styleoptiontoolbar_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontoolbar_set_state(void* self, int64_t state) {
+void q_styleoptiontoolbar_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -1408,11 +1408,11 @@ void q_styleoptionprogressbar_set_text(void* self, const char* text) {
     QStyleOptionProgressBar_SetText((QStyleOptionProgressBar*)self, qstring(text));
 }
 
-int64_t q_styleoptionprogressbar_text_alignment(void* self) {
+int32_t q_styleoptionprogressbar_text_alignment(void* self) {
     return QStyleOptionProgressBar_TextAlignment((QStyleOptionProgressBar*)self);
 }
 
-void q_styleoptionprogressbar_set_text_alignment(void* self, int64_t textAlignment) {
+void q_styleoptionprogressbar_set_text_alignment(void* self, int32_t textAlignment) {
     QStyleOptionProgressBar_SetTextAlignment((QStyleOptionProgressBar*)self, textAlignment);
 }
 
@@ -1456,11 +1456,11 @@ void q_styleoptionprogressbar_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionprogressbar_state(void* self) {
+int32_t q_styleoptionprogressbar_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionprogressbar_set_state(void* self, int64_t state) {
+void q_styleoptionprogressbar_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -1623,11 +1623,11 @@ void q_styleoptionmenuitem_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionmenuitem_state(void* self) {
+int32_t q_styleoptionmenuitem_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionmenuitem_set_state(void* self, int64_t state) {
+void q_styleoptionmenuitem_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -1750,11 +1750,11 @@ void q_styleoptiondockwidget_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiondockwidget_state(void* self) {
+int32_t q_styleoptiondockwidget_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiondockwidget_set_state(void* self, int64_t state) {
+void q_styleoptiondockwidget_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -1818,19 +1818,19 @@ QStyleOptionViewItem* q_styleoptionviewitem_new2(void* other) {
     return QStyleOptionViewItem_new2((QStyleOptionViewItem*)other);
 }
 
-int64_t q_styleoptionviewitem_display_alignment(void* self) {
+int32_t q_styleoptionviewitem_display_alignment(void* self) {
     return QStyleOptionViewItem_DisplayAlignment((QStyleOptionViewItem*)self);
 }
 
-void q_styleoptionviewitem_set_display_alignment(void* self, int64_t displayAlignment) {
+void q_styleoptionviewitem_set_display_alignment(void* self, int32_t displayAlignment) {
     QStyleOptionViewItem_SetDisplayAlignment((QStyleOptionViewItem*)self, displayAlignment);
 }
 
-int64_t q_styleoptionviewitem_decoration_alignment(void* self) {
+int32_t q_styleoptionviewitem_decoration_alignment(void* self) {
     return QStyleOptionViewItem_DecorationAlignment((QStyleOptionViewItem*)self);
 }
 
-void q_styleoptionviewitem_set_decoration_alignment(void* self, int64_t decorationAlignment) {
+void q_styleoptionviewitem_set_decoration_alignment(void* self, int32_t decorationAlignment) {
     QStyleOptionViewItem_SetDecorationAlignment((QStyleOptionViewItem*)self, decorationAlignment);
 }
 
@@ -1874,11 +1874,11 @@ void q_styleoptionviewitem_set_show_decoration_selected(void* self, bool showDec
     QStyleOptionViewItem_SetShowDecorationSelected((QStyleOptionViewItem*)self, showDecorationSelected);
 }
 
-int64_t q_styleoptionviewitem_features(void* self) {
+int32_t q_styleoptionviewitem_features(void* self) {
     return QStyleOptionViewItem_Features((QStyleOptionViewItem*)self);
 }
 
-void q_styleoptionviewitem_set_features(void* self, int64_t features) {
+void q_styleoptionviewitem_set_features(void* self, int32_t features) {
     QStyleOptionViewItem_SetFeatures((QStyleOptionViewItem*)self, features);
 }
 
@@ -1965,11 +1965,11 @@ void q_styleoptionviewitem_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionviewitem_state(void* self) {
+int32_t q_styleoptionviewitem_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionviewitem_set_state(void* self, int64_t state) {
+void q_styleoptionviewitem_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2084,11 +2084,11 @@ void q_styleoptiontoolbox_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontoolbox_state(void* self) {
+int32_t q_styleoptiontoolbox_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontoolbox_set_state(void* self, int64_t state) {
+void q_styleoptiontoolbox_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2184,11 +2184,11 @@ void q_styleoptionrubberband_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionrubberband_state(void* self) {
+int32_t q_styleoptionrubberband_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionrubberband_set_state(void* self, int64_t state) {
+void q_styleoptionrubberband_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2292,11 +2292,11 @@ void q_styleoptioncomplex_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptioncomplex_state(void* self) {
+int32_t q_styleoptioncomplex_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptioncomplex_set_state(void* self, int64_t state) {
+void q_styleoptioncomplex_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2496,11 +2496,11 @@ void q_styleoptionslider_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionslider_state(void* self) {
+int32_t q_styleoptionslider_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionslider_set_state(void* self, int64_t state) {
+void q_styleoptionslider_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2572,11 +2572,11 @@ void q_styleoptionspinbox_set_button_symbols(void* self, int32_t buttonSymbols) 
     QStyleOptionSpinBox_SetButtonSymbols((QStyleOptionSpinBox*)self, buttonSymbols);
 }
 
-int64_t q_styleoptionspinbox_step_enabled(void* self) {
+int32_t q_styleoptionspinbox_step_enabled(void* self) {
     return QStyleOptionSpinBox_StepEnabled((QStyleOptionSpinBox*)self);
 }
 
-void q_styleoptionspinbox_set_step_enabled(void* self, int64_t stepEnabled) {
+void q_styleoptionspinbox_set_step_enabled(void* self, int32_t stepEnabled) {
     QStyleOptionSpinBox_SetStepEnabled((QStyleOptionSpinBox*)self, stepEnabled);
 }
 
@@ -2620,11 +2620,11 @@ void q_styleoptionspinbox_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionspinbox_state(void* self) {
+int32_t q_styleoptionspinbox_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionspinbox_set_state(void* self, int64_t state) {
+void q_styleoptionspinbox_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2688,11 +2688,11 @@ QStyleOptionToolButton* q_styleoptiontoolbutton_new2(void* other) {
     return QStyleOptionToolButton_new2((QStyleOptionToolButton*)other);
 }
 
-int64_t q_styleoptiontoolbutton_features(void* self) {
+int32_t q_styleoptiontoolbutton_features(void* self) {
     return QStyleOptionToolButton_Features((QStyleOptionToolButton*)self);
 }
 
-void q_styleoptiontoolbutton_set_features(void* self, int64_t features) {
+void q_styleoptiontoolbutton_set_features(void* self, int32_t features) {
     QStyleOptionToolButton_SetFeatures((QStyleOptionToolButton*)self, features);
 }
 
@@ -2787,11 +2787,11 @@ void q_styleoptiontoolbutton_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontoolbutton_state(void* self) {
+int32_t q_styleoptiontoolbutton_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontoolbutton_set_state(void* self, int64_t state) {
+void q_styleoptiontoolbutton_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -2906,11 +2906,11 @@ void q_styleoptioncombobox_set_icon_size(void* self, void* iconSize) {
     QStyleOptionComboBox_SetIconSize((QStyleOptionComboBox*)self, (QSize*)iconSize);
 }
 
-int64_t q_styleoptioncombobox_text_alignment(void* self) {
+int32_t q_styleoptioncombobox_text_alignment(void* self) {
     return QStyleOptionComboBox_TextAlignment((QStyleOptionComboBox*)self);
 }
 
-void q_styleoptioncombobox_set_text_alignment(void* self, int64_t textAlignment) {
+void q_styleoptioncombobox_set_text_alignment(void* self, int32_t textAlignment) {
     QStyleOptionComboBox_SetTextAlignment((QStyleOptionComboBox*)self, textAlignment);
 }
 
@@ -2946,11 +2946,11 @@ void q_styleoptioncombobox_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptioncombobox_state(void* self) {
+int32_t q_styleoptioncombobox_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptioncombobox_set_state(void* self, int64_t state) {
+void q_styleoptioncombobox_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -3081,11 +3081,11 @@ void q_styleoptiontitlebar_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiontitlebar_state(void* self) {
+int32_t q_styleoptiontitlebar_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiontitlebar_set_state(void* self, int64_t state) {
+void q_styleoptiontitlebar_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -3149,11 +3149,11 @@ QStyleOptionGroupBox* q_styleoptiongroupbox_new2(void* other) {
     return QStyleOptionGroupBox_new2((QStyleOptionGroupBox*)other);
 }
 
-int64_t q_styleoptiongroupbox_features(void* self) {
+int32_t q_styleoptiongroupbox_features(void* self) {
     return QStyleOptionGroupBox_Features((QStyleOptionGroupBox*)self);
 }
 
-void q_styleoptiongroupbox_set_features(void* self, int64_t features) {
+void q_styleoptiongroupbox_set_features(void* self, int32_t features) {
     QStyleOptionGroupBox_SetFeatures((QStyleOptionGroupBox*)self, features);
 }
 
@@ -3168,11 +3168,11 @@ void q_styleoptiongroupbox_set_text(void* self, const char* text) {
     QStyleOptionGroupBox_SetText((QStyleOptionGroupBox*)self, qstring(text));
 }
 
-int64_t q_styleoptiongroupbox_text_alignment(void* self) {
+int32_t q_styleoptiongroupbox_text_alignment(void* self) {
     return QStyleOptionGroupBox_TextAlignment((QStyleOptionGroupBox*)self);
 }
 
-void q_styleoptiongroupbox_set_text_alignment(void* self, int64_t textAlignment) {
+void q_styleoptiongroupbox_set_text_alignment(void* self, int32_t textAlignment) {
     QStyleOptionGroupBox_SetTextAlignment((QStyleOptionGroupBox*)self, textAlignment);
 }
 
@@ -3232,11 +3232,11 @@ void q_styleoptiongroupbox_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiongroupbox_state(void* self) {
+int32_t q_styleoptiongroupbox_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiongroupbox_set_state(void* self, int64_t state) {
+void q_styleoptiongroupbox_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -3340,11 +3340,11 @@ void q_styleoptionsizegrip_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptionsizegrip_state(void* self) {
+int32_t q_styleoptionsizegrip_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptionsizegrip_set_state(void* self, int64_t state) {
+void q_styleoptionsizegrip_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
@@ -3436,11 +3436,11 @@ void q_styleoptiongraphicsitem_set_type(void* self, int _type) {
     QStyleOption_SetType((QStyleOption*)self, _type);
 }
 
-int64_t q_styleoptiongraphicsitem_state(void* self) {
+int32_t q_styleoptiongraphicsitem_state(void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
-void q_styleoptiongraphicsitem_set_state(void* self, int64_t state) {
+void q_styleoptiongraphicsitem_set_state(void* self, int32_t state) {
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 

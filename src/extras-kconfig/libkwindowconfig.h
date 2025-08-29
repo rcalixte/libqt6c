@@ -18,7 +18,7 @@
 /// @param param1 QWindow*
 /// @param param2 KConfigGroup*
 /// @param param3 flag of enum KConfigBase__WriteConfigFlag
-void k_windowconfig_save_window_size(void* param1, void* param2, int64_t param3);
+void k_windowconfig_save_window_size(void* param1, void* param2, int32_t param3);
 
 /// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#hasSavedWindowSize)
 ///
@@ -36,7 +36,7 @@ void k_windowconfig_restore_window_size(void* param1, void* param2);
 /// @param param1 QWindow*
 /// @param param2 KConfigGroup*
 /// @param param3 flag of enum KConfigBase__WriteConfigFlag
-void k_windowconfig_save_window_position(void* param1, void* param2, int64_t param3);
+void k_windowconfig_save_window_position(void* param1, void* param2, int32_t param3);
 
 /// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#hasSavedWindowPosition)
 ///

@@ -20,7 +20,7 @@ QSurfaceFormat* q_surfaceformat_new();
 /// q_surfaceformat_new2 constructs a new QSurfaceFormat object.
 ///
 /// @param options flag of enum QSurfaceFormat__FormatOption
-QSurfaceFormat* q_surfaceformat_new2(int64_t options);
+QSurfaceFormat* q_surfaceformat_new2(int32_t options);
 
 /// q_surfaceformat_new3 constructs a new QSurfaceFormat object.
 ///
@@ -203,7 +203,7 @@ void q_surfaceformat_set_stereo(void* self, bool enable);
 ///
 /// @param self QSurfaceFormat*
 /// @param options flag of enum QSurfaceFormat__FormatOption
-void q_surfaceformat_set_options(void* self, int64_t options);
+void q_surfaceformat_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setOption)
 ///
@@ -222,7 +222,7 @@ bool q_surfaceformat_test_option(void* self, int32_t option);
 /// @param self QSurfaceFormat*
 ///
 /// @return flag of enum QSurfaceFormat__FormatOption
-int64_t q_surfaceformat_options(void* self);
+int32_t q_surfaceformat_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#swapInterval)
 ///

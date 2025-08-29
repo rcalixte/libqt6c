@@ -101,7 +101,7 @@ void q_savefile_set_file_name(void* self, const char* name);
 ///
 /// @param self QSaveFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_savefile_open(void* self, int64_t flags);
+bool q_savefile_open(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#open)
 ///
@@ -109,7 +109,7 @@ bool q_savefile_open(void* self, int64_t flags);
 ///
 /// @param self QSaveFile*
 /// @param callback bool func(QSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag flags)
-void q_savefile_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_savefile_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#open)
 ///
@@ -117,7 +117,7 @@ void q_savefile_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QSaveFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_savefile_qbase_open(void* self, int64_t flags);
+bool q_savefile_qbase_open(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsavefile.html#commit)
 ///
@@ -260,7 +260,7 @@ bool q_savefile_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// @param offset long long
 /// @param size long long
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
-unsigned char* q_savefile_map3(void* self, long long offset, long long size, int64_t flags);
+unsigned char* q_savefile_map3(void* self, long long offset, long long size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -269,7 +269,7 @@ unsigned char* q_savefile_map3(void* self, long long offset, long long size, int
 /// @param self QSaveFile*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_savefile_open_mode(void* self);
+int32_t q_savefile_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1102,7 +1102,7 @@ void q_savefile_on_resize(void* self, bool (*callback)(void*, long long));
 /// @param self QSaveFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_savefile_permissions(void* self);
+int32_t q_savefile_permissions(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1113,7 +1113,7 @@ int64_t q_savefile_permissions(void* self);
 /// @param self QSaveFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_savefile_qbase_permissions(void* self);
+int32_t q_savefile_qbase_permissions(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1122,8 +1122,8 @@ int64_t q_savefile_qbase_permissions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSaveFile*
-/// @param callback int64_t func()
-void q_savefile_on_permissions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_savefile_on_permissions(void* self, int32_t (*callback)());
 
 /// Inherited from QFileDevice
 ///
@@ -1133,7 +1133,7 @@ void q_savefile_on_permissions(void* self, int64_t (*callback)());
 ///
 /// @param self QSaveFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_savefile_set_permissions(void* self, int64_t permissionSpec);
+bool q_savefile_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFileDevice
 ///
@@ -1143,7 +1143,7 @@ bool q_savefile_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self QSaveFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_savefile_qbase_set_permissions(void* self, int64_t permissionSpec);
+bool q_savefile_qbase_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFileDevice
 ///
@@ -1153,7 +1153,7 @@ bool q_savefile_qbase_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self QSaveFile*
 /// @param callback bool func(QSaveFile* self, flag of enum QFileDevice__Permission permissionSpec)
-void q_savefile_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
+void q_savefile_on_set_permissions(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1641,7 +1641,7 @@ void q_savefile_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QSaveFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_savefile_set_open_mode(void* self, int64_t openMode);
+void q_savefile_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1651,7 +1651,7 @@ void q_savefile_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QSaveFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_savefile_qbase_set_open_mode(void* self, int64_t openMode);
+void q_savefile_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1661,7 +1661,7 @@ void q_savefile_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QSaveFile*
 /// @param callback void func(QSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_savefile_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_savefile_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

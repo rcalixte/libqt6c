@@ -141,7 +141,7 @@ const char* q_networkinterface_human_readable_name(void* self) {
     return _ret;
 }
 
-int64_t q_networkinterface_flags(void* self) {
+int32_t q_networkinterface_flags(void* self) {
     return QNetworkInterface_Flags((QNetworkInterface*)self);
 }
 

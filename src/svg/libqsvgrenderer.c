@@ -101,11 +101,11 @@ void q_svgrenderer_set_aspect_ratio_mode(void* self, int32_t mode) {
     QSvgRenderer_SetAspectRatioMode((QSvgRenderer*)self, mode);
 }
 
-int64_t q_svgrenderer_options(void* self) {
+uint32_t q_svgrenderer_options(void* self) {
     return QSvgRenderer_Options((QSvgRenderer*)self);
 }
 
-void q_svgrenderer_set_options(void* self, int64_t flags) {
+void q_svgrenderer_set_options(void* self, uint32_t flags) {
     QSvgRenderer_SetOptions((QSvgRenderer*)self, flags);
 }
 
@@ -153,7 +153,7 @@ QTransform* q_svgrenderer_transform_for_element(void* self, const char* id) {
     return QSvgRenderer_TransformForElement((QSvgRenderer*)self, qstring(id));
 }
 
-void q_svgrenderer_set_default_options(int64_t flags) {
+void q_svgrenderer_set_default_options(uint32_t flags) {
     QSvgRenderer_SetDefaultOptions(flags);
 }
 

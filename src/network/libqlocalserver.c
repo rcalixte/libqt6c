@@ -138,11 +138,11 @@ int32_t q_localserver_listen_backlog_size(void* self) {
     return QLocalServer_ListenBacklogSize((QLocalServer*)self);
 }
 
-void q_localserver_set_socket_options(void* self, int64_t options) {
+void q_localserver_set_socket_options(void* self, int32_t options) {
     QLocalServer_SetSocketOptions((QLocalServer*)self, options);
 }
 
-int64_t q_localserver_socket_options(void* self) {
+int32_t q_localserver_socket_options(void* self) {
     return QLocalServer_SocketOptions((QLocalServer*)self);
 }
 

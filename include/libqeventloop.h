@@ -68,14 +68,14 @@ bool q_eventloop_process_events(void* self);
 /// @param self QEventLoop*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param maximumTime int
-void q_eventloop_process_events2(void* self, int64_t flags, int maximumTime);
+void q_eventloop_process_events2(void* self, int32_t flags, int maximumTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventloop.html#processEvents)
 ///
 /// @param self QEventLoop*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param deadline QDeadlineTimer*
-void q_eventloop_process_events3(void* self, int64_t flags, void* deadline);
+void q_eventloop_process_events3(void* self, int32_t flags, void* deadline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventloop.html#exec)
 ///
@@ -145,13 +145,13 @@ const char* q_eventloop_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QEventLoop*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
-bool q_eventloop_process_events1(void* self, int64_t flags);
+bool q_eventloop_process_events1(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventloop.html#exec)
 ///
 /// @param self QEventLoop*
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
-int32_t q_eventloop_exec1(void* self, int64_t flags);
+int32_t q_eventloop_exec1(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventloop.html#exit)
 ///

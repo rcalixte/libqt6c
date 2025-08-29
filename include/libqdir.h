@@ -38,7 +38,7 @@ QDir* q_dir_new4(const char* path);
 /// @param path const char*
 /// @param nameFilter const char*
 /// @param sort flag of enum QDir__SortFlag
-QDir* q_dir_new5(const char* path, const char* nameFilter, int64_t sort);
+QDir* q_dir_new5(const char* path, const char* nameFilter, int32_t sort);
 
 /// q_dir_new6 constructs a new QDir object.
 ///
@@ -46,7 +46,7 @@ QDir* q_dir_new5(const char* path, const char* nameFilter, int64_t sort);
 /// @param nameFilter const char*
 /// @param sort flag of enum QDir__SortFlag
 /// @param filter flag of enum QDir__Filter
-QDir* q_dir_new6(const char* path, const char* nameFilter, int64_t sort, int64_t filter);
+QDir* q_dir_new6(const char* path, const char* nameFilter, int32_t sort, int32_t filter);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator-eq)
 ///
@@ -180,26 +180,26 @@ void q_dir_set_name_filters(void* self, const char* nameFilters[]);
 /// @param self QDir*
 ///
 /// @return flag of enum QDir__Filter
-int64_t q_dir_filter(void* self);
+int32_t q_dir_filter(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setFilter)
 ///
 /// @param self QDir*
 /// @param filter flag of enum QDir__Filter
-void q_dir_set_filter(void* self, int64_t filter);
+void q_dir_set_filter(void* self, int32_t filter);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#sorting)
 ///
 /// @param self QDir*
 ///
 /// @return flag of enum QDir__SortFlag
-int64_t q_dir_sorting(void* self);
+int32_t q_dir_sorting(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setSorting)
 ///
 /// @param self QDir*
 /// @param sort flag of enum QDir__SortFlag
-void q_dir_set_sorting(void* self, int64_t sort);
+void q_dir_set_sorting(void* self, int32_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#count)
 ///
@@ -263,7 +263,7 @@ bool q_dir_mkdir(void* self, const char* dirName);
 /// @param self QDir*
 /// @param dirName const char*
 /// @param permissions flag of enum QFileDevice__Permission
-bool q_dir_mkdir2(void* self, const char* dirName, int64_t permissions);
+bool q_dir_mkdir2(void* self, const char* dirName, int32_t permissions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rmdir)
 ///
@@ -438,7 +438,7 @@ int64_t q_dir_count1(void* self, void* param1);
 ///
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
-bool q_dir_is_empty1(void* self, int64_t filters);
+bool q_dir_is_empty1(void* self, int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
@@ -446,7 +446,7 @@ bool q_dir_is_empty1(void* self, int64_t filters);
 ///
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
-const char** q_dir_entry_list1(void* self, int64_t filters);
+const char** q_dir_entry_list1(void* self, int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
@@ -455,7 +455,7 @@ const char** q_dir_entry_list1(void* self, int64_t filters);
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
 /// @param sort flag of enum QDir__SortFlag
-const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort);
+const char** q_dir_entry_list22(void* self, int32_t filters, int32_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
@@ -464,7 +464,7 @@ const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort);
 /// @param self QDir*
 /// @param nameFilters const char**
 /// @param filters flag of enum QDir__Filter
-const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t filters);
+const char** q_dir_entry_list23(void* self, const char* nameFilters[], int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
@@ -474,27 +474,27 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t f
 /// @param nameFilters const char**
 /// @param filters flag of enum QDir__Filter
 /// @param sort flag of enum QDir__SortFlag
-const char** q_dir_entry_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort);
+const char** q_dir_entry_list3(void* self, const char* nameFilters[], int32_t filters, int32_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(void* self, int64_t filters);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(void* self, int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
 /// @param self QDir*
 /// @param filters flag of enum QDir__Filter
 /// @param sort flag of enum QDir__SortFlag
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int64_t filters, int64_t sort);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int32_t filters, int32_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
 /// @param self QDir*
 /// @param nameFilters const char**
 /// @param filters flag of enum QDir__Filter
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int64_t filters);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int32_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
@@ -502,7 +502,7 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* n
 /// @param nameFilters const char**
 /// @param filters flag of enum QDir__Filter
 /// @param sort flag of enum QDir__SortFlag
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[], int32_t filters, int32_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#dtor.QDir)
 ///

@@ -176,11 +176,11 @@ const char** q_commandlineoption_default_values(void* self) {
     return _ret;
 }
 
-int64_t q_commandlineoption_flags(void* self) {
+int32_t q_commandlineoption_flags(void* self) {
     return QCommandLineOption_Flags((QCommandLineOption*)self);
 }
 
-void q_commandlineoption_set_flags(void* self, int64_t aflags) {
+void q_commandlineoption_set_flags(void* self, int32_t aflags) {
     QCommandLineOption_SetFlags((QCommandLineOption*)self, aflags);
 }
 

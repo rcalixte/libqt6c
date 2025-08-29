@@ -75,7 +75,7 @@ int32_t q_drag_exec(void* self) {
     return QDrag_Exec((QDrag*)self);
 }
 
-int32_t q_drag_exec2(void* self, int64_t supportedActions, int32_t defaultAction) {
+int32_t q_drag_exec2(void* self, int32_t supportedActions, int32_t defaultAction) {
     return QDrag_Exec2((QDrag*)self, supportedActions, defaultAction);
 }
 
@@ -87,7 +87,7 @@ QPixmap* q_drag_drag_cursor(void* self, int32_t action) {
     return QDrag_DragCursor((QDrag*)self, action);
 }
 
-int64_t q_drag_supported_actions(void* self) {
+int32_t q_drag_supported_actions(void* self) {
     return QDrag_SupportedActions((QDrag*)self);
 }
 
@@ -129,7 +129,7 @@ const char* q_drag_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int32_t q_drag_exec1(void* self, int64_t supportedActions) {
+int32_t q_drag_exec1(void* self, int32_t supportedActions) {
     return QDrag_Exec1((QDrag*)self, supportedActions);
 }
 

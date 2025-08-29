@@ -516,7 +516,7 @@ void q_paintengine_qbase_draw_tiled_pixmap(void* self, void* r, void* pixmap, vo
 /// @param pm QImage*
 /// @param sr QRectF*
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags);
+void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
@@ -524,7 +524,7 @@ void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int64_t f
 ///
 /// @param self QPaintEngine*
 /// @param callback void func(QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, flag of enum Qt__ImageConversionFlag flags)
-void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int64_t));
+void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
@@ -535,7 +535,7 @@ void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void
 /// @param pm QImage*
 /// @param sr QRectF*
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags);
+void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setPaintDevice)
 ///
@@ -627,19 +627,19 @@ void q_paintengine_fix_neg_rect(void* self, int* x, int* y, int* w, int* h);
 ///
 /// @param self QPaintEngine*
 /// @param df flag of enum QPaintEngine__DirtyFlag
-bool q_paintengine_test_dirty(void* self, int64_t df);
+bool q_paintengine_test_dirty(void* self, int32_t df);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setDirty)
 ///
 /// @param self QPaintEngine*
 /// @param df flag of enum QPaintEngine__DirtyFlag
-void q_paintengine_set_dirty(void* self, int64_t df);
+void q_paintengine_set_dirty(void* self, int32_t df);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#clearDirty)
 ///
 /// @param self QPaintEngine*
 /// @param df flag of enum QPaintEngine__DirtyFlag
-void q_paintengine_clear_dirty(void* self, int64_t df);
+void q_paintengine_clear_dirty(void* self, int32_t df);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#hasFeature)
 ///
@@ -689,7 +689,7 @@ QPixmap* q_paintengine_qbase_create_pixmap(void* self, void* size);
 /// @param self QPaintEngine*
 /// @param image QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
-QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int64_t flags);
+QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
@@ -697,7 +697,7 @@ QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int64_t
 ///
 /// @param self QPaintEngine*
 /// @param callback QPixmap* func(QPaintEngine* self, QImage* image, flag of enum Qt__ImageConversionFlag flags)
-void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int64_t));
+void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
@@ -706,7 +706,7 @@ void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(
 /// @param self QPaintEngine*
 /// @param image QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
-QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int64_t flags);
+QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#dtor.QPaintEngine)
 ///
@@ -744,7 +744,7 @@ void q_paintenginestate_move_assign(void* self, void* other);
 /// @param self QPaintEngineState*
 ///
 /// @return flag of enum QPaintEngine__DirtyFlag
-int64_t q_paintenginestate_state(void* self);
+int32_t q_paintenginestate_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#pen)
 ///
@@ -810,7 +810,7 @@ bool q_paintenginestate_is_clip_enabled(void* self);
 /// @param self QPaintEngineState*
 ///
 /// @return flag of enum QPainter__RenderHint
-int64_t q_paintenginestate_render_hints(void* self);
+int32_t q_paintenginestate_render_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#compositionMode)
 ///

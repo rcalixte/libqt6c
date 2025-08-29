@@ -592,14 +592,14 @@ QCborValue* q_cborvalue_from_cbor33(unsigned char* data, int64_t lenVal, void* e
 ///
 /// @param self QCborValue*
 /// @param opt flag of enum QCborValue__EncodingOption
-char* q_cborvalue_to_cbor1(void* self, int64_t opt);
+char* q_cborvalue_to_cbor1(void* self, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
 /// @param self QCborValue*
 /// @param writer QCborStreamWriter*
 /// @param opt flag of enum QCborValue__EncodingOption
-void q_cborvalue_to_cbor22(void* self, void* writer, int64_t opt);
+void q_cborvalue_to_cbor22(void* self, void* writer, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toDiagnosticNotation)
 ///
@@ -607,7 +607,7 @@ void q_cborvalue_to_cbor22(void* self, void* writer, int64_t opt);
 ///
 /// @param self QCborValue*
 /// @param opts flag of enum QCborValue__DiagnosticNotationOption
-const char* q_cborvalue_to_diagnostic_notation1(void* self, int64_t opts);
+const char* q_cborvalue_to_diagnostic_notation1(void* self, int32_t opts);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#dtor.QCborValue)
 ///
@@ -965,14 +965,14 @@ QUuid* q_cborvalueconstref_to_uuid1(void* self, void* defaultValue);
 ///
 /// @param self QCborValueConstRef*
 /// @param opt flag of enum QCborValue__EncodingOption
-char* q_cborvalueconstref_to_cbor1(void* self, int64_t opt);
+char* q_cborvalueconstref_to_cbor1(void* self, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
 /// @param self QCborValueConstRef*
 /// @param writer QCborStreamWriter*
 /// @param opt flag of enum QCborValue__EncodingOption
-void q_cborvalueconstref_to_cbor22(void* self, void* writer, int64_t opt);
+void q_cborvalueconstref_to_cbor22(void* self, void* writer, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDiagnosticNotation)
 ///
@@ -980,7 +980,7 @@ void q_cborvalueconstref_to_cbor22(void* self, void* writer, int64_t opt);
 ///
 /// @param self QCborValueConstRef*
 /// @param opt flag of enum QCborValue__DiagnosticNotationOption
-const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int64_t opt);
+const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#dtor.QCborValueConstRef)
 ///
@@ -1367,14 +1367,14 @@ QUuid* q_cborvalueref_to_uuid1(void* self, void* defaultValue);
 ///
 /// @param self QCborValueRef*
 /// @param opt flag of enum QCborValue__EncodingOption
-char* q_cborvalueref_to_cbor1(void* self, int64_t opt);
+char* q_cborvalueref_to_cbor1(void* self, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
 /// @param self QCborValueRef*
 /// @param writer QCborStreamWriter*
 /// @param opt flag of enum QCborValue__EncodingOption
-void q_cborvalueref_to_cbor22(void* self, void* writer, int64_t opt);
+void q_cborvalueref_to_cbor22(void* self, void* writer, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toDiagnosticNotation)
 ///
@@ -1382,7 +1382,7 @@ void q_cborvalueref_to_cbor22(void* self, void* writer, int64_t opt);
 ///
 /// @param self QCborValueRef*
 /// @param opt flag of enum QCborValue__DiagnosticNotationOption
-const char* q_cborvalueref_to_diagnostic_notation1(void* self, int64_t opt);
+const char* q_cborvalueref_to_diagnostic_notation1(void* self, int32_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#dtor.QCborValueRef)
 ///
