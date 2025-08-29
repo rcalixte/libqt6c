@@ -196,7 +196,12 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 			if fullEnumName {
 				ret = "flag of enum " + cabiEnumClassName(p.ParameterType[7:len(p.ParameterType)-1])
 			} else {
-				ret = ifv(p.Const, "const ", "") + "int64_t" + ifv(p.Pointer || p.ByRef, "*", "")
+				e, ok := KnownEnums[p.ParameterType]
+				if ok {
+					ret = ifv(p.Const, "const ", "") + e.EnumTypeC + ifv(p.Pointer || p.ByRef, "*", "")
+				} else {
+					ret = ifv(p.Const, "const ", "") + "int64_t" + ifv(p.Pointer || p.ByRef, "*", "")
+				}
 			}
 		}
 
@@ -208,8 +213,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	switch p.ParameterType {
 	case "uchar", "quint8":
 		ret += "uint8_t"
-	case "qint8", "signed char":
-		ret += "char" // Signed
+	case "qint8":
+		ret += "signed char"
 	case "qint16":
 		ret += "int16_t"
 	case "ushort", "quint16":
@@ -573,7 +578,7 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 func (cfs *cFileState) emitParametersC2CABIForwarding(m CppMethod) (preamble, forwarding string) {
 	tmp := make([]string, 0, len(m.Parameters)+2)
 
-	if !m.IsStatic {
+	if !(m.IsStatic && !m.IsProtected) {
 		tmp = append(tmp, "("+cfs.castType+"*)self")
 	}
 
@@ -665,7 +670,11 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		rvalue = "(" + p.RenderTypeC(cfs, true, false) + ")" + p.ParameterName
 
 	} else if p.IntType() || p.IsFlagType() || p.IsKnownEnum() {
-		rvalue = p.ParameterName
+		if p.ParameterType == "unsigned long long" && (p.Pointer || p.ByRef) {
+			rvalue = "(" + p.ParameterType + "*)" + p.ParameterName
+		} else {
+			rvalue = p.ParameterName
+		}
 
 	} else if p.ParameterType == "bool" {
 		if p.Pointer || p.ByRef {
@@ -1196,7 +1205,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			mSafeName := mSafeMethodName
 			mTrim := mSafeName[:len(mSafeName)-1]
 			method := safeMethodName + "(void* self" + commaParams
-			if m.IsStatic {
+			if m.IsStatic && !m.IsProtected {
 				commentParam = ""
 				method = safeMethodName + "("
 			}
@@ -1791,7 +1800,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			method := safeMethodName + "(void* self" + commaParams
-			if m.IsStatic {
+			if m.IsStatic && !m.IsProtected {
 				method = safeMethodName + "("
 			}
 
