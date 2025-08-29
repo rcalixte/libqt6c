@@ -37,7 +37,7 @@ KEditListWidget* k_editlistwidget_new5(void* customEditor, void* parent, bool ch
     return KEditListWidget_new5((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent, checkAtEntering);
 }
 
-KEditListWidget* k_editlistwidget_new6(void* customEditor, void* parent, bool checkAtEntering, int64_t buttons) {
+KEditListWidget* k_editlistwidget_new6(void* customEditor, void* parent, bool checkAtEntering, int32_t buttons) {
     return KEditListWidget_new6((KEditListWidget__CustomEditor*)customEditor, (QWidget*)parent, checkAtEntering, buttons);
 }
 
@@ -171,11 +171,11 @@ void k_editlistwidget_set_items(void* self, const char* items[]) {
     free(items_qstr);
 }
 
-int64_t k_editlistwidget_buttons(void* self) {
+int32_t k_editlistwidget_buttons(void* self) {
     return KEditListWidget_Buttons((KEditListWidget*)self);
 }
 
-void k_editlistwidget_set_buttons(void* self, int64_t buttons) {
+void k_editlistwidget_set_buttons(void* self, int32_t buttons) {
     KEditListWidget_SetButtons((KEditListWidget*)self, buttons);
 }
 
@@ -1065,15 +1065,15 @@ bool k_editlistwidget_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_editlistwidget_window_state(void* self) {
+int32_t k_editlistwidget_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_editlistwidget_set_window_state(void* self, int64_t state) {
+void k_editlistwidget_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_editlistwidget_override_window_state(void* self, int64_t state) {
+void k_editlistwidget_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1330,7 +1330,7 @@ void k_editlistwidget_render3(void* self, void* target, void* targetOffset, void
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_editlistwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_editlistwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1342,7 +1342,7 @@ void k_editlistwidget_render32(void* self, void* painter, void* targetOffset, vo
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_editlistwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_editlistwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1350,7 +1350,7 @@ QPixmap* k_editlistwidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_editlistwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_editlistwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

@@ -217,7 +217,7 @@ void q_graphicsgridlayout_set_column_fixed_width(void* self, int column, double 
 /// @param self QGraphicsGridLayout*
 /// @param row int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsgridlayout_set_row_alignment(void* self, int row, int64_t alignment);
+void q_graphicsgridlayout_set_row_alignment(void* self, int row, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowAlignment)
 ///
@@ -225,14 +225,14 @@ void q_graphicsgridlayout_set_row_alignment(void* self, int row, int64_t alignme
 /// @param row int
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_graphicsgridlayout_row_alignment(void* self, int row);
+int32_t q_graphicsgridlayout_row_alignment(void* self, int row);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnAlignment)
 ///
 /// @param self QGraphicsGridLayout*
 /// @param column int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsgridlayout_set_column_alignment(void* self, int column, int64_t alignment);
+void q_graphicsgridlayout_set_column_alignment(void* self, int column, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnAlignment)
 ///
@@ -240,14 +240,14 @@ void q_graphicsgridlayout_set_column_alignment(void* self, int column, int64_t a
 /// @param column int
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_graphicsgridlayout_column_alignment(void* self, int column);
+int32_t q_graphicsgridlayout_column_alignment(void* self, int column);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setAlignment)
 ///
 /// @param self QGraphicsGridLayout*
 /// @param item QGraphicsLayoutItem*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsgridlayout_set_alignment(void* self, void* item, int64_t alignment);
+void q_graphicsgridlayout_set_alignment(void* self, void* item, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#alignment)
 ///
@@ -255,7 +255,7 @@ void q_graphicsgridlayout_set_alignment(void* self, void* item, int64_t alignmen
 /// @param item QGraphicsLayoutItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_graphicsgridlayout_alignment(void* self, void* item);
+int32_t q_graphicsgridlayout_alignment(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowCount)
 ///
@@ -419,7 +419,7 @@ QSizeF* q_graphicsgridlayout_qbase_size_hint(void* self, int32_t which, void* co
 /// @param rowSpan int
 /// @param columnSpan int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsgridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int64_t alignment);
+void q_graphicsgridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#addItem)
 ///
@@ -428,7 +428,7 @@ void q_graphicsgridlayout_add_item6(void* self, void* item, int row, int column,
 /// @param row int
 /// @param column int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_graphicsgridlayout_add_item4(void* self, void* item, int row, int column, int64_t alignment);
+void q_graphicsgridlayout_add_item4(void* self, void* item, int row, int column, int32_t alignment);
 
 /// Inherited from QGraphicsLayout
 ///

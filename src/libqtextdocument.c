@@ -579,14 +579,14 @@ QTextDocument* q_textdocument_clone1(void* self, void* parent) {
     return QTextDocument_Clone1((QTextDocument*)self, (QObject*)parent);
 }
 
-const char* q_textdocument_to_markdown1(void* self, int64_t features) {
+const char* q_textdocument_to_markdown1(void* self, int32_t features) {
     libqt_string _str = QTextDocument_ToMarkdown1((QTextDocument*)self, features);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_textdocument_set_markdown2(void* self, const char* markdown, int64_t features) {
+void q_textdocument_set_markdown2(void* self, const char* markdown, int32_t features) {
     QTextDocument_SetMarkdown2((QTextDocument*)self, qstring(markdown), features);
 }
 
@@ -594,11 +594,11 @@ QTextCursor* q_textdocument_find22(void* self, const char* subString, int from) 
     return QTextDocument_Find22((QTextDocument*)self, qstring(subString), from);
 }
 
-QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, int64_t options) {
+QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, int32_t options) {
     return QTextDocument_Find32((QTextDocument*)self, qstring(subString), from, options);
 }
 
-QTextCursor* q_textdocument_find33(void* self, const char* subString, void* cursor, int64_t options) {
+QTextCursor* q_textdocument_find33(void* self, const char* subString, void* cursor, int32_t options) {
     return QTextDocument_Find33((QTextDocument*)self, qstring(subString), (QTextCursor*)cursor, options);
 }
 
@@ -606,11 +606,11 @@ QTextCursor* q_textdocument_find23(void* self, void* expr, int from) {
     return QTextDocument_Find23((QTextDocument*)self, (QRegularExpression*)expr, from);
 }
 
-QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int64_t options) {
+QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int32_t options) {
     return QTextDocument_Find34((QTextDocument*)self, (QRegularExpression*)expr, from, options);
 }
 
-QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int64_t options) {
+QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int32_t options) {
     return QTextDocument_Find35((QTextDocument*)self, (QRegularExpression*)expr, (QTextCursor*)cursor, options);
 }
 

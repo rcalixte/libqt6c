@@ -267,7 +267,7 @@ void q_matrix4x4_projected_rotate2(void* self, float angle, float x, float y, fl
     QMatrix4x4_ProjectedRotate2((QMatrix4x4*)self, angle, x, y, z);
 }
 
-int64_t q_matrix4x4_flags(void* self) {
+int32_t q_matrix4x4_flags(void* self) {
     return QMatrix4x4_Flags((QMatrix4x4*)self);
 }
 

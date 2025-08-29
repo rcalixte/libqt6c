@@ -130,14 +130,14 @@ int32_t k_capacitybar_bar_height(void* self);
 ///
 /// @param self KCapacityBar*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void k_capacitybar_set_horizontal_text_alignment(void* self, int64_t textAlignment);
+void k_capacitybar_set_horizontal_text_alignment(void* self, int32_t textAlignment);
 
 /// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#horizontalTextAlignment)
 ///
 /// @param self KCapacityBar*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_capacitybar_horizontal_text_alignment(void* self);
+int32_t k_capacitybar_horizontal_text_alignment(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setDrawTextMode)
 ///
@@ -165,7 +165,7 @@ void k_capacitybar_draw_capacity_bar(void* self, void* p, void* rect);
 /// @param p QPainter*
 /// @param rect QRect*
 /// @param state flag of enum QStyle__StateFlag
-void k_capacitybar_draw_capacity_bar2(void* self, void* p, void* rect, int64_t state);
+void k_capacitybar_draw_capacity_bar2(void* self, void* p, void* rect, int32_t state);
 
 /// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#minimumSizeHint)
 ///
@@ -1748,7 +1748,7 @@ bool k_capacitybar_is_full_screen(void* self);
 /// @param self KCapacityBar*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_capacitybar_window_state(void* self);
+int32_t k_capacitybar_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1756,7 +1756,7 @@ int64_t k_capacitybar_window_state(void* self);
 ///
 /// @param self KCapacityBar*
 /// @param state flag of enum Qt__WindowState
-void k_capacitybar_set_window_state(void* self, int64_t state);
+void k_capacitybar_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1764,7 +1764,7 @@ void k_capacitybar_set_window_state(void* self, int64_t state);
 ///
 /// @param self KCapacityBar*
 /// @param state flag of enum Qt__WindowState
-void k_capacitybar_override_window_state(void* self, int64_t state);
+void k_capacitybar_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2281,7 +2281,7 @@ void k_capacitybar_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_capacitybar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_capacitybar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2311,7 +2311,7 @@ void k_capacitybar_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_capacitybar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_capacitybar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2328,7 +2328,7 @@ QPixmap* k_capacitybar_grab1(void* self, void* rectangle);
 /// @param self KCapacityBar*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_capacitybar_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_capacitybar_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

@@ -25,7 +25,7 @@ QLayoutItem* q_layoutitem_new2(void* param1);
 /// q_layoutitem_new3 constructs a new QLayoutItem object.
 ///
 /// @param alignment flag of enum Qt__AlignmentFlag
-QLayoutItem* q_layoutitem_new3(int64_t alignment);
+QLayoutItem* q_layoutitem_new3(int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#sizeHint)
 ///
@@ -92,15 +92,15 @@ QSize* q_layoutitem_qbase_maximum_size(void* self);
 /// @param self QLayoutItem*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_layoutitem_expanding_directions(void* self);
+int32_t q_layoutitem_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback int64_t func()
-void q_layoutitem_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#expandingDirections)
 ///
@@ -109,7 +109,7 @@ void q_layoutitem_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QLayoutItem*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_layoutitem_qbase_expanding_directions(void* self);
+int32_t q_layoutitem_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#setGeometry)
 ///
@@ -322,28 +322,28 @@ QSpacerItem* q_layoutitem_qbase_spacer_item(void* self);
 /// @param self QLayoutItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_layoutitem_alignment(void* self);
+int32_t q_layoutitem_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#setAlignment)
 ///
 /// @param self QLayoutItem*
 /// @param a flag of enum Qt__AlignmentFlag
-void q_layoutitem_set_alignment(void* self, int64_t a);
+void q_layoutitem_set_alignment(void* self, int32_t a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
 ///
 /// @param self QLayoutItem*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_layoutitem_control_types(void* self);
+int32_t q_layoutitem_control_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLayoutItem*
-/// @param callback int64_t func()
-void q_layoutitem_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_layoutitem_on_control_types(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#controlTypes)
 ///
@@ -352,7 +352,7 @@ void q_layoutitem_on_control_types(void* self, int64_t (*callback)());
 /// @param self QLayoutItem*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_layoutitem_qbase_control_types(void* self);
+int32_t q_layoutitem_qbase_control_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
 ///
@@ -483,15 +483,15 @@ QSize* q_spaceritem_qbase_maximum_size(void* self);
 /// @param self QSpacerItem*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_spaceritem_expanding_directions(void* self);
+int32_t q_spaceritem_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSpacerItem*
-/// @param callback int64_t func()
-void q_spaceritem_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#expandingDirections)
 ///
@@ -500,7 +500,7 @@ void q_spaceritem_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QSpacerItem*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_spaceritem_qbase_expanding_directions(void* self);
+int32_t q_spaceritem_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#isEmpty)
 ///
@@ -613,7 +613,7 @@ void q_spaceritem_change_size4(void* self, int w, int h, int32_t hData, int32_t 
 /// @param self QSpacerItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_spaceritem_alignment(void* self);
+int32_t q_spaceritem_alignment(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -621,7 +621,7 @@ int64_t q_spaceritem_alignment(void* self);
 ///
 /// @param self QSpacerItem*
 /// @param a flag of enum Qt__AlignmentFlag
-void q_spaceritem_set_alignment(void* self, int64_t a);
+void q_spaceritem_set_alignment(void* self, int32_t a);
 
 /// Inherited from QLayoutItem
 ///
@@ -804,7 +804,7 @@ void q_spaceritem_on_layout(void* self, QLayout* (*callback)());
 /// @param self QSpacerItem*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_spaceritem_control_types(void* self);
+int32_t q_spaceritem_control_types(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -815,7 +815,7 @@ int64_t q_spaceritem_control_types(void* self);
 /// @param self QSpacerItem*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_spaceritem_qbase_control_types(void* self);
+int32_t q_spaceritem_qbase_control_types(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -824,8 +824,8 @@ int64_t q_spaceritem_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpacerItem*
-/// @param callback int64_t func()
-void q_spaceritem_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_spaceritem_on_control_types(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#dtor.QSpacerItem)
 ///
@@ -906,15 +906,15 @@ QSize* q_widgetitem_qbase_maximum_size(void* self);
 /// @param self QWidgetItem*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_widgetitem_expanding_directions(void* self);
+int32_t q_widgetitem_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback int64_t func()
-void q_widgetitem_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#expandingDirections)
 ///
@@ -923,7 +923,7 @@ void q_widgetitem_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QWidgetItem*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_widgetitem_qbase_expanding_directions(void* self);
+int32_t q_widgetitem_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#isEmpty)
 ///
@@ -1076,15 +1076,15 @@ int32_t q_widgetitem_qbase_minimum_height_for_width(void* self, int param1);
 /// @param self QWidgetItem*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_widgetitem_control_types(void* self);
+int32_t q_widgetitem_control_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetItem*
-/// @param callback int64_t func()
-void q_widgetitem_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_widgetitem_on_control_types(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetitem.html#controlTypes)
 ///
@@ -1093,7 +1093,7 @@ void q_widgetitem_on_control_types(void* self, int64_t (*callback)());
 /// @param self QWidgetItem*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_widgetitem_qbase_control_types(void* self);
+int32_t q_widgetitem_qbase_control_types(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1102,7 +1102,7 @@ int64_t q_widgetitem_qbase_control_types(void* self);
 /// @param self QWidgetItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_widgetitem_alignment(void* self);
+int32_t q_widgetitem_alignment(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1110,7 +1110,7 @@ int64_t q_widgetitem_alignment(void* self);
 ///
 /// @param self QWidgetItem*
 /// @param a flag of enum Qt__AlignmentFlag
-void q_widgetitem_set_alignment(void* self, int64_t a);
+void q_widgetitem_set_alignment(void* self, int32_t a);
 
 /// Inherited from QLayoutItem
 ///
@@ -1299,7 +1299,7 @@ int32_t q_widgetitemv2_qbase_height_for_width(void* self, int width);
 /// @param self QWidgetItemV2*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_widgetitemv2_alignment(void* self);
+int32_t q_widgetitemv2_alignment(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1307,7 +1307,7 @@ int64_t q_widgetitemv2_alignment(void* self);
 ///
 /// @param self QWidgetItemV2*
 /// @param a flag of enum Qt__AlignmentFlag
-void q_widgetitemv2_set_alignment(void* self, int64_t a);
+void q_widgetitemv2_set_alignment(void* self, int32_t a);
 
 /// Inherited from QWidgetItem
 ///
@@ -1318,7 +1318,7 @@ void q_widgetitemv2_set_alignment(void* self, int64_t a);
 /// @param self QWidgetItemV2*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_widgetitemv2_expanding_directions(void* self);
+int32_t q_widgetitemv2_expanding_directions(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1329,7 +1329,7 @@ int64_t q_widgetitemv2_expanding_directions(void* self);
 /// @param self QWidgetItemV2*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_widgetitemv2_qbase_expanding_directions(void* self);
+int32_t q_widgetitemv2_qbase_expanding_directions(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1338,8 +1338,8 @@ int64_t q_widgetitemv2_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback int64_t func()
-void q_widgetitemv2_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_widgetitemv2_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// Inherited from QWidgetItem
 ///
@@ -1522,7 +1522,7 @@ void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(
 /// @param self QWidgetItemV2*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_widgetitemv2_control_types(void* self);
+int32_t q_widgetitemv2_control_types(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1533,7 +1533,7 @@ int64_t q_widgetitemv2_control_types(void* self);
 /// @param self QWidgetItemV2*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_widgetitemv2_qbase_control_types(void* self);
+int32_t q_widgetitemv2_qbase_control_types(void* self);
 
 /// Inherited from QWidgetItem
 ///
@@ -1542,8 +1542,8 @@ int64_t q_widgetitemv2_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWidgetItemV2*
-/// @param callback int64_t func()
-void q_widgetitemv2_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_widgetitemv2_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayoutItem
 ///

@@ -343,7 +343,7 @@ bool q_textcursor_move_position3(void* self, int32_t op, int32_t param2, int n) 
     return QTextCursor_MovePosition3((QTextCursor*)self, op, param2, n);
 }
 
-void q_textcursor_insert_markdown2(void* self, const char* markdown, int64_t features) {
+void q_textcursor_insert_markdown2(void* self, const char* markdown, int32_t features) {
     QTextCursor_InsertMarkdown2((QTextCursor*)self, qstring(markdown), features);
 }
 

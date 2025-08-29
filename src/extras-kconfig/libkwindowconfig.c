@@ -4,7 +4,7 @@
 #include "libkwindowconfig.hpp"
 #include "libkwindowconfig.h"
 
-void k_windowconfig_save_window_size(void* param1, void* param2, int64_t param3) {
+void k_windowconfig_save_window_size(void* param1, void* param2, int32_t param3) {
     KWindowConfig_SaveWindowSize((QWindow*)param1, (KConfigGroup*)param2, param3);
 }
 
@@ -16,7 +16,7 @@ void k_windowconfig_restore_window_size(void* param1, void* param2) {
     KWindowConfig_RestoreWindowSize((QWindow*)param1, (KConfigGroup*)param2);
 }
 
-void k_windowconfig_save_window_position(void* param1, void* param2, int64_t param3) {
+void k_windowconfig_save_window_position(void* param1, void* param2, int32_t param3) {
     KWindowConfig_SaveWindowPosition((QWindow*)param1, (KConfigGroup*)param2, param3);
 }
 

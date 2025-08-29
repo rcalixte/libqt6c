@@ -87,12 +87,12 @@ const char* q_polarchart_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-libqt_list /* of QAbstractAxis* */ q_polarchart_axes1(void* self, int64_t polarOrientation) {
+libqt_list /* of QAbstractAxis* */ q_polarchart_axes1(void* self, int32_t polarOrientation) {
     libqt_list _arr = QPolarChart_Axes1((QPolarChart*)self, polarOrientation);
     return _arr;
 }
 
-libqt_list /* of QAbstractAxis* */ q_polarchart_axes2(void* self, int64_t polarOrientation, void* series) {
+libqt_list /* of QAbstractAxis* */ q_polarchart_axes2(void* self, int32_t polarOrientation, void* series) {
     libqt_list _arr = QPolarChart_Axes2((QPolarChart*)self, polarOrientation, (QAbstractSeries*)series);
     return _arr;
 }
@@ -213,11 +213,11 @@ double q_polarchart_background_roundness(void* self) {
     return QChart_BackgroundRoundness((QChart*)self);
 }
 
-void q_polarchart_set_animation_options(void* self, int64_t options) {
+void q_polarchart_set_animation_options(void* self, int32_t options) {
     QChart_SetAnimationOptions((QChart*)self, options);
 }
 
-int64_t q_polarchart_animation_options(void* self) {
+int32_t q_polarchart_animation_options(void* self) {
     return QChart_AnimationOptions((QChart*)self);
 }
 
@@ -721,7 +721,7 @@ void q_polarchart_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_polarchart_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_polarchart_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
 }
 
@@ -965,7 +965,7 @@ void q_polarchart_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_polarchart_flags(void* self) {
+int32_t q_polarchart_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -973,7 +973,7 @@ void q_polarchart_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_polarchart_set_flags(void* self, int64_t flags) {
+void q_polarchart_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 

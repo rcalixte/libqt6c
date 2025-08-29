@@ -53,7 +53,7 @@ libqt_list /* of Konsole__KeyboardTranslator__Entry* */ k_onsole__keyboardtransl
     return _arr;
 }
 
-Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry3(void* self, int keyCode, int64_t modifiers, int64_t state) {
+Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator_find_entry3(void* self, int keyCode, int64_t modifiers, int32_t state) {
     return Konsole__KeyboardTranslator_FindEntry3((Konsole__KeyboardTranslator*)self, keyCode, modifiers, state);
 }
 
@@ -221,19 +221,19 @@ void k_onsole__keyboardtranslator__entry_set_modifier_mask(void* self, int64_t m
     Konsole__KeyboardTranslator__Entry_SetModifierMask((Konsole__KeyboardTranslator__Entry*)self, modifiers);
 }
 
-int64_t k_onsole__keyboardtranslator__entry_state(void* self) {
+int32_t k_onsole__keyboardtranslator__entry_state(void* self) {
     return Konsole__KeyboardTranslator__Entry_State((Konsole__KeyboardTranslator__Entry*)self);
 }
 
-int64_t k_onsole__keyboardtranslator__entry_state_mask(void* self) {
+int32_t k_onsole__keyboardtranslator__entry_state_mask(void* self) {
     return Konsole__KeyboardTranslator__Entry_StateMask((Konsole__KeyboardTranslator__Entry*)self);
 }
 
-void k_onsole__keyboardtranslator__entry_set_state(void* self, int64_t state) {
+void k_onsole__keyboardtranslator__entry_set_state(void* self, int32_t state) {
     Konsole__KeyboardTranslator__Entry_SetState((Konsole__KeyboardTranslator__Entry*)self, state);
 }
 
-void k_onsole__keyboardtranslator__entry_set_state_mask(void* self, int64_t mask) {
+void k_onsole__keyboardtranslator__entry_set_state_mask(void* self, int32_t mask) {
     Konsole__KeyboardTranslator__Entry_SetStateMask((Konsole__KeyboardTranslator__Entry*)self, mask);
 }
 
@@ -251,7 +251,7 @@ const char* k_onsole__keyboardtranslator__entry_result_to_string(void* self) {
     return _ret;
 }
 
-bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int64_t modifiers, int64_t flags) {
+bool k_onsole__keyboardtranslator__entry_matches(void* self, int keyCode, int64_t modifiers, int32_t flags) {
     return Konsole__KeyboardTranslator__Entry_Matches((Konsole__KeyboardTranslator__Entry*)self, keyCode, modifiers, flags);
 }
 

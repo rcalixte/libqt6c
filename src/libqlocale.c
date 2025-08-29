@@ -610,11 +610,11 @@ libqt_list /* of uint16_t */ q_locale_countries_for_language(uint16_t lang) {
     return _arr;
 }
 
-void q_locale_set_number_options(void* self, int64_t options) {
+void q_locale_set_number_options(void* self, int32_t options) {
     QLocale_SetNumberOptions((QLocale*)self, options);
 }
 
-int64_t q_locale_number_options(void* self) {
+int32_t q_locale_number_options(void* self) {
     return QLocale_NumberOptions((QLocale*)self);
 }
 
@@ -923,7 +923,7 @@ const char* q_locale_formatted_data_size2(void* self, long long bytes, int preci
     return _ret;
 }
 
-const char* q_locale_formatted_data_size3(void* self, long long bytes, int precision, int64_t format) {
+const char* q_locale_formatted_data_size3(void* self, long long bytes, int precision, int32_t format) {
     libqt_string _str = QLocale_FormattedDataSize3((QLocale*)self, bytes, precision, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -949,7 +949,7 @@ const char** q_locale_ui_languages1(void* self, int8_t separator) {
     return _ret;
 }
 
-const char* q_locale_language_to_code2(uint16_t language, int64_t codeTypes) {
+const char* q_locale_language_to_code2(uint16_t language, int32_t codeTypes) {
     libqt_string _str = QLocale_LanguageToCode2(language, codeTypes);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

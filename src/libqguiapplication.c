@@ -515,11 +515,11 @@ void q_guiapplication_process_events() {
     QCoreApplication_ProcessEvents();
 }
 
-void q_guiapplication_process_events2(int64_t flags, int maxtime) {
+void q_guiapplication_process_events2(int32_t flags, int maxtime) {
     QCoreApplication_ProcessEvents2(flags, maxtime);
 }
 
-void q_guiapplication_process_events3(int64_t flags, void* deadline) {
+void q_guiapplication_process_events3(int32_t flags, void* deadline) {
     QCoreApplication_ProcessEvents3(flags, (QDeadlineTimer*)deadline);
 }
 
@@ -702,7 +702,7 @@ void q_guiapplication_set_attribute2(int32_t attribute, bool on) {
     QCoreApplication_SetAttribute2(attribute, on);
 }
 
-void q_guiapplication_process_events1(int64_t flags) {
+void q_guiapplication_process_events1(int32_t flags) {
     QCoreApplication_ProcessEvents1(flags);
 }
 

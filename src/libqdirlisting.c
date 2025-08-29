@@ -25,11 +25,11 @@ QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[]) {
     return _out;
 }
 
-QDirListing* q_dirlisting_new3(const char* path, int64_t flags) {
+QDirListing* q_dirlisting_new3(const char* path, int32_t flags) {
     return QDirListing_new3(qstring(path), flags);
 }
 
-QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[], int64_t flags) {
+QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[], int32_t flags) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -57,7 +57,7 @@ const char* q_dirlisting_iterator_path(void* self) {
     return _ret;
 }
 
-int64_t q_dirlisting_iterator_flags(void* self) {
+int32_t q_dirlisting_iterator_flags(void* self) {
     return QDirListing_IteratorFlags((QDirListing*)self);
 }
 

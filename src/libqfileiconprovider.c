@@ -50,27 +50,27 @@ void q_fileiconprovider_on_type(void* self, const char* (*callback)(void*, void*
     QFileIconProvider_OnType((QFileIconProvider*)self, (intptr_t)callback);
 }
 
-void q_fileiconprovider_set_options(void* self, int64_t options) {
+void q_fileiconprovider_set_options(void* self, int32_t options) {
     QFileIconProvider_SetOptions((QFileIconProvider*)self, options);
 }
 
-void q_fileiconprovider_qbase_set_options(void* self, int64_t options) {
+void q_fileiconprovider_qbase_set_options(void* self, int32_t options) {
     QFileIconProvider_QBaseSetOptions((QFileIconProvider*)self, options);
 }
 
-void q_fileiconprovider_on_set_options(void* self, void (*callback)(void*, int64_t)) {
+void q_fileiconprovider_on_set_options(void* self, void (*callback)(void*, int32_t)) {
     QFileIconProvider_OnSetOptions((QFileIconProvider*)self, (intptr_t)callback);
 }
 
-int64_t q_fileiconprovider_options(void* self) {
+int32_t q_fileiconprovider_options(void* self) {
     return QFileIconProvider_Options((QFileIconProvider*)self);
 }
 
-int64_t q_fileiconprovider_qbase_options(void* self) {
+int32_t q_fileiconprovider_qbase_options(void* self) {
     return QFileIconProvider_QBaseOptions((QFileIconProvider*)self);
 }
 
-void q_fileiconprovider_on_options(void* self, int64_t (*callback)()) {
+void q_fileiconprovider_on_options(void* self, int32_t (*callback)()) {
     QFileIconProvider_OnOptions((QFileIconProvider*)self, (intptr_t)callback);
 }
 

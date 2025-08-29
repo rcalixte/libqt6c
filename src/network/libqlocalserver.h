@@ -195,14 +195,14 @@ int32_t q_localserver_listen_backlog_size(void* self);
 ///
 /// @param self QLocalServer*
 /// @param options flag of enum QLocalServer__SocketOption
-void q_localserver_set_socket_options(void* self, int64_t options);
+void q_localserver_set_socket_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#socketOptions)
 ///
 /// @param self QLocalServer*
 ///
 /// @return flag of enum QLocalServer__SocketOption
-int64_t q_localserver_socket_options(void* self);
+int32_t q_localserver_socket_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#socketDescriptor)
 ///

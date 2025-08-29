@@ -34,7 +34,7 @@ const char** k_urlmimedata_mime_data_types() {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* param1, int64_t param2, libqt_map* /* of const char* to const char* */ param3) {
+libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* param1, int32_t param2, libqt_map* /* of const char* to const char* */ param3) {
     libqt_list _arr = KUrlMimeData_UrlsFromMimeData((QMimeData*)param1, param2, param3);
     return _arr;
 }

@@ -491,7 +491,7 @@ bool q_sqlquerymodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_sqlquerymodel_check_index2(void* self, void* index, int64_t options) {
+bool q_sqlquerymodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -738,15 +738,15 @@ void q_sqlquerymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*
     QSqlQueryModel_OnDropMimeData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqlquerymodel_flags(void* self, void* index) {
+int32_t q_sqlquerymodel_flags(void* self, void* index) {
     return QSqlQueryModel_Flags((QSqlQueryModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_sqlquerymodel_qbase_flags(void* self, void* index) {
+int32_t q_sqlquerymodel_qbase_flags(void* self, void* index) {
     return QSqlQueryModel_QBaseFlags((QSqlQueryModel*)self, (QModelIndex*)index);
 }
 
-void q_sqlquerymodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_sqlquerymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QSqlQueryModel_OnFlags((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -864,27 +864,27 @@ void q_sqlquerymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, v
     QSqlQueryModel_OnCanDropMimeData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqlquerymodel_supported_drop_actions(void* self) {
+int32_t q_sqlquerymodel_supported_drop_actions(void* self) {
     return QSqlQueryModel_SupportedDropActions((QSqlQueryModel*)self);
 }
 
-int64_t q_sqlquerymodel_qbase_supported_drop_actions(void* self) {
+int32_t q_sqlquerymodel_qbase_supported_drop_actions(void* self) {
     return QSqlQueryModel_QBaseSupportedDropActions((QSqlQueryModel*)self);
 }
 
-void q_sqlquerymodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_sqlquerymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QSqlQueryModel_OnSupportedDropActions((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqlquerymodel_supported_drag_actions(void* self) {
+int32_t q_sqlquerymodel_supported_drag_actions(void* self) {
     return QSqlQueryModel_SupportedDragActions((QSqlQueryModel*)self);
 }
 
-int64_t q_sqlquerymodel_qbase_supported_drag_actions(void* self) {
+int32_t q_sqlquerymodel_qbase_supported_drag_actions(void* self) {
     return QSqlQueryModel_QBaseSupportedDragActions((QSqlQueryModel*)self);
 }
 
-void q_sqlquerymodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_sqlquerymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QSqlQueryModel_OnSupportedDragActions((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -960,17 +960,17 @@ void q_sqlquerymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)
     QSqlQueryModel_OnBuddy((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_sqlquerymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sqlquerymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlQueryModel_Match((QSqlQueryModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_sqlquerymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sqlquerymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlQueryModel_QBaseMatch((QSqlQueryModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_sqlquerymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_sqlquerymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QSqlQueryModel_OnMatch((QSqlQueryModel*)self, (intptr_t)callback);
 }
 

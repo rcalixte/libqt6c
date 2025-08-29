@@ -113,7 +113,7 @@ bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int32_t acti
     return QAbstractListModel_DropMimeData((QAbstractListModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int64_t q_webenginehistorymodel_flags(void* self, void* index) {
+int32_t q_webenginehistorymodel_flags(void* self, void* index) {
     return QAbstractListModel_Flags((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
@@ -184,11 +184,11 @@ bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int32_t 
     return QAbstractItemModel_CanDropMimeData((QAbstractItemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int64_t q_webenginehistorymodel_supported_drop_actions(void* self) {
+int32_t q_webenginehistorymodel_supported_drop_actions(void* self) {
     return QAbstractItemModel_SupportedDropActions((QAbstractItemModel*)self);
 }
 
-int64_t q_webenginehistorymodel_supported_drag_actions(void* self) {
+int32_t q_webenginehistorymodel_supported_drag_actions(void* self) {
     return QAbstractItemModel_SupportedDragActions((QAbstractItemModel*)self);
 }
 
@@ -256,7 +256,7 @@ QModelIndex* q_webenginehistorymodel_buddy(void* self, void* index) {
     return QAbstractItemModel_Buddy((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractItemModel_Match((QAbstractItemModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
@@ -333,7 +333,7 @@ bool q_webenginehistorymodel_remove_column2(void* self, int column, void* parent
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_check_index2(void* self, void* index, int64_t options) {
+bool q_webenginehistorymodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 

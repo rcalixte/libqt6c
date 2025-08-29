@@ -158,7 +158,7 @@ const char* k_format_format_byte_size4(void* self, double size, int precision, i
 /// @param self KFormat*
 /// @param msecs uint64_t
 /// @param options flag of enum KFormat__DurationFormatOption
-const char* k_format_format_duration2(void* self, uint64_t msecs, int64_t options);
+const char* k_format_format_duration2(void* self, uint64_t msecs, int32_t options);
 
 /// [Qt documentation](https://api-staging.kde.org/kformat.html#formatDecimalDuration)
 ///
@@ -230,7 +230,7 @@ const char* k_format_format_value42(void* self, double value, const char* unit, 
 /// @param self KFormat*
 /// @param distance double
 /// @param param2 flag of enum KFormat__DistanceFormatOption
-const char* k_format_format_distance2(void* self, double distance, int64_t param2);
+const char* k_format_format_distance2(void* self, double distance, int32_t param2);
 
 /// [Qt documentation](https://api-staging.kde.org/kformat.html#dtor.KFormat)
 ///

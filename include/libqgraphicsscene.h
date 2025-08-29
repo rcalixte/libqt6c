@@ -1376,7 +1376,7 @@ void q_graphicsscene_set_focus1(void* self, int32_t focusReason);
 /// @param w double
 /// @param h double
 /// @param layers flag of enum QGraphicsScene__SceneLayer
-void q_graphicsscene_invalidate5(void* self, double x, double y, double w, double h, int64_t layers);
+void q_graphicsscene_invalidate5(void* self, double x, double y, double w, double h, int32_t layers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#update)
 ///
@@ -1395,7 +1395,7 @@ void q_graphicsscene_invalidate1(void* self, void* rect);
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 /// @param layers flag of enum QGraphicsScene__SceneLayer
-void q_graphicsscene_invalidate22(void* self, void* rect, int64_t layers);
+void q_graphicsscene_invalidate22(void* self, void* rect, int32_t layers);
 
 /// Inherited from QObject
 ///

@@ -104,14 +104,14 @@ const char* q_polarchart_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QPolarChart*
 /// @param polarOrientation flag of enum QPolarChart__PolarOrientation
-libqt_list /* of QAbstractAxis* */ q_polarchart_axes1(void* self, int64_t polarOrientation);
+libqt_list /* of QAbstractAxis* */ q_polarchart_axes1(void* self, int32_t polarOrientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
 /// @param self QPolarChart*
 /// @param polarOrientation flag of enum QPolarChart__PolarOrientation
 /// @param series QAbstractSeries*
-libqt_list /* of QAbstractAxis* */ q_polarchart_axes2(void* self, int64_t polarOrientation, void* series);
+libqt_list /* of QAbstractAxis* */ q_polarchart_axes2(void* self, int32_t polarOrientation, void* series);
 
 /// Inherited from QChart
 ///
@@ -331,7 +331,7 @@ double q_polarchart_background_roundness(void* self);
 ///
 /// @param self QPolarChart*
 /// @param options flag of enum QChart__AnimationOption
-void q_polarchart_set_animation_options(void* self, int64_t options);
+void q_polarchart_set_animation_options(void* self, int32_t options);
 
 /// Inherited from QChart
 ///
@@ -340,7 +340,7 @@ void q_polarchart_set_animation_options(void* self, int64_t options);
 /// @param self QPolarChart*
 ///
 /// @return flag of enum QChart__AnimationOption
-int64_t q_polarchart_animation_options(void* self);
+int32_t q_polarchart_animation_options(void* self);
 
 /// Inherited from QChart
 ///
@@ -1326,7 +1326,7 @@ void q_polarchart_on_height_changed(void* self, void (*callback)(void*));
 /// @param self QPolarChart*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_polarchart_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_polarchart_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1763,7 +1763,7 @@ void q_polarchart_set_group(void* self, void* group);
 /// @param self QPolarChart*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
-int64_t q_polarchart_flags(void* self);
+int32_t q_polarchart_flags(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1779,7 +1779,7 @@ void q_polarchart_set_flag(void* self, int32_t flag);
 ///
 /// @param self QPolarChart*
 /// @param flags flag of enum QGraphicsItem__GraphicsItemFlag
-void q_polarchart_set_flags(void* self, int64_t flags);
+void q_polarchart_set_flags(void* self, int32_t flags);
 
 /// Inherited from QGraphicsItem
 ///

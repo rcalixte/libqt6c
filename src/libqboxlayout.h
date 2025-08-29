@@ -369,15 +369,15 @@ int32_t q_boxlayout_qbase_minimum_height_for_width(void* self, int param1);
 /// @param self QBoxLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_boxlayout_expanding_directions(void* self);
+int32_t q_boxlayout_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
-/// @param callback int64_t func()
-void q_boxlayout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_boxlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#expandingDirections)
 ///
@@ -386,7 +386,7 @@ void q_boxlayout_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QBoxLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_boxlayout_qbase_expanding_directions(void* self);
+int32_t q_boxlayout_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#invalidate)
 ///
@@ -530,7 +530,7 @@ void q_boxlayout_add_widget2(void* self, void* param1, int stretch);
 /// @param param1 QWidget*
 /// @param stretch int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_boxlayout_add_widget3(void* self, void* param1, int stretch, int64_t alignment);
+void q_boxlayout_add_widget3(void* self, void* param1, int stretch, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#addLayout)
 ///
@@ -561,7 +561,7 @@ void q_boxlayout_insert_widget3(void* self, int index, void* widget, int stretch
 /// @param widget QWidget*
 /// @param stretch int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_boxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int64_t alignment);
+void q_boxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#insertLayout)
 ///
@@ -629,7 +629,7 @@ QRect* q_boxlayout_contents_rect(void* self);
 /// @param self QBoxLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_boxlayout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_boxlayout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -638,7 +638,7 @@ bool q_boxlayout_set_alignment(void* self, void* w, int64_t alignment);
 /// @param self QBoxLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_boxlayout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_boxlayout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -1111,7 +1111,7 @@ void q_boxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QBoxLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_boxlayout_alignment(void* self);
+int32_t q_boxlayout_alignment(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1208,7 +1208,7 @@ void q_boxlayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QBoxLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_boxlayout_control_types(void* self);
+int32_t q_boxlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1219,7 +1219,7 @@ int64_t q_boxlayout_control_types(void* self);
 /// @param self QBoxLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_boxlayout_qbase_control_types(void* self);
+int32_t q_boxlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1228,8 +1228,8 @@ int64_t q_boxlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBoxLayout*
-/// @param callback int64_t func()
-void q_boxlayout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_boxlayout_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -1241,7 +1241,7 @@ void q_boxlayout_on_control_types(void* self, int64_t (*callback)());
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1253,7 +1253,7 @@ QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int64_
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1263,7 +1263,7 @@ QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, 
 ///
 /// @param self QBoxLayout*
 /// @param callback QLayoutItem* func(QBoxLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// Inherited from QLayout
 ///
@@ -2085,7 +2085,7 @@ void q_hboxlayout_add_widget2(void* self, void* param1, int stretch);
 /// @param param1 QWidget*
 /// @param stretch int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_hboxlayout_add_widget3(void* self, void* param1, int stretch, int64_t alignment);
+void q_hboxlayout_add_widget3(void* self, void* param1, int stretch, int32_t alignment);
 
 /// Inherited from QBoxLayout
 ///
@@ -2124,7 +2124,7 @@ void q_hboxlayout_insert_widget3(void* self, int index, void* widget, int stretc
 /// @param widget QWidget*
 /// @param stretch int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_hboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int64_t alignment);
+void q_hboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int32_t alignment);
 
 /// Inherited from QBoxLayout
 ///
@@ -2194,7 +2194,7 @@ QRect* q_hboxlayout_contents_rect(void* self);
 /// @param self QHBoxLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_hboxlayout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_hboxlayout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -2203,7 +2203,7 @@ bool q_hboxlayout_set_alignment(void* self, void* w, int64_t alignment);
 /// @param self QHBoxLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_hboxlayout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_hboxlayout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -2676,7 +2676,7 @@ void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QHBoxLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_hboxlayout_alignment(void* self);
+int32_t q_hboxlayout_alignment(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -2947,7 +2947,7 @@ void q_hboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
 /// @param self QHBoxLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_hboxlayout_expanding_directions(void* self);
+int32_t q_hboxlayout_expanding_directions(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -2958,7 +2958,7 @@ int64_t q_hboxlayout_expanding_directions(void* self);
 /// @param self QHBoxLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_hboxlayout_qbase_expanding_directions(void* self);
+int32_t q_hboxlayout_qbase_expanding_directions(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -2967,8 +2967,8 @@ int64_t q_hboxlayout_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int64_t func()
-void q_hboxlayout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_hboxlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxLayout
 ///
@@ -3211,7 +3211,7 @@ void q_hboxlayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QHBoxLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_hboxlayout_control_types(void* self);
+int32_t q_hboxlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -3222,7 +3222,7 @@ int64_t q_hboxlayout_control_types(void* self);
 /// @param self QHBoxLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_hboxlayout_qbase_control_types(void* self);
+int32_t q_hboxlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -3231,8 +3231,8 @@ int64_t q_hboxlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHBoxLayout*
-/// @param callback int64_t func()
-void q_hboxlayout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_hboxlayout_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -3244,7 +3244,7 @@ void q_hboxlayout_on_control_types(void* self, int64_t (*callback)());
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -3256,7 +3256,7 @@ QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int64
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -3266,7 +3266,7 @@ QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to,
 ///
 /// @param self QHBoxLayout*
 /// @param callback QLayoutItem* func(QHBoxLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// Inherited from QLayout
 ///
@@ -4088,7 +4088,7 @@ void q_vboxlayout_add_widget2(void* self, void* param1, int stretch);
 /// @param param1 QWidget*
 /// @param stretch int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_vboxlayout_add_widget3(void* self, void* param1, int stretch, int64_t alignment);
+void q_vboxlayout_add_widget3(void* self, void* param1, int stretch, int32_t alignment);
 
 /// Inherited from QBoxLayout
 ///
@@ -4127,7 +4127,7 @@ void q_vboxlayout_insert_widget3(void* self, int index, void* widget, int stretc
 /// @param widget QWidget*
 /// @param stretch int
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_vboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int64_t alignment);
+void q_vboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int32_t alignment);
 
 /// Inherited from QBoxLayout
 ///
@@ -4197,7 +4197,7 @@ QRect* q_vboxlayout_contents_rect(void* self);
 /// @param self QVBoxLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_vboxlayout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_vboxlayout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -4206,7 +4206,7 @@ bool q_vboxlayout_set_alignment(void* self, void* w, int64_t alignment);
 /// @param self QVBoxLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_vboxlayout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_vboxlayout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -4679,7 +4679,7 @@ void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QVBoxLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_vboxlayout_alignment(void* self);
+int32_t q_vboxlayout_alignment(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -4950,7 +4950,7 @@ void q_vboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
 /// @param self QVBoxLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_vboxlayout_expanding_directions(void* self);
+int32_t q_vboxlayout_expanding_directions(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -4961,7 +4961,7 @@ int64_t q_vboxlayout_expanding_directions(void* self);
 /// @param self QVBoxLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_vboxlayout_qbase_expanding_directions(void* self);
+int32_t q_vboxlayout_qbase_expanding_directions(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -4970,8 +4970,8 @@ int64_t q_vboxlayout_qbase_expanding_directions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int64_t func()
-void q_vboxlayout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_vboxlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxLayout
 ///
@@ -5214,7 +5214,7 @@ void q_vboxlayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QVBoxLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_vboxlayout_control_types(void* self);
+int32_t q_vboxlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -5225,7 +5225,7 @@ int64_t q_vboxlayout_control_types(void* self);
 /// @param self QVBoxLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_vboxlayout_qbase_control_types(void* self);
+int32_t q_vboxlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -5234,8 +5234,8 @@ int64_t q_vboxlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxLayout*
-/// @param callback int64_t func()
-void q_vboxlayout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_vboxlayout_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -5247,7 +5247,7 @@ void q_vboxlayout_on_control_types(void* self, int64_t (*callback)());
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -5259,7 +5259,7 @@ QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int64
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -5269,7 +5269,7 @@ QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to,
 ///
 /// @param self QVBoxLayout*
 /// @param callback QLayoutItem* func(QVBoxLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// Inherited from QLayout
 ///

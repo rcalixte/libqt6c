@@ -64,7 +64,7 @@ int32_t q_inputdevice_type(void* self) {
     return QInputDevice_Type((QInputDevice*)self);
 }
 
-int64_t q_inputdevice_capabilities(void* self) {
+int32_t q_inputdevice_capabilities(void* self) {
     return QInputDevice_Capabilities((QInputDevice*)self);
 }
 

@@ -350,7 +350,7 @@ void q_columnview_qbase_resize_event(void* self, void* event);
 /// @param self QColumnView*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_columnview_set_selection(void* self, void* rect, int64_t command);
+void q_columnview_set_selection(void* self, void* rect, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setSelection)
 ///
@@ -358,7 +358,7 @@ void q_columnview_set_selection(void* self, void* rect, int64_t command);
 ///
 /// @param self QColumnView*
 /// @param callback void func(QColumnView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
-void q_columnview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
+void q_columnview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#setSelection)
 ///
@@ -367,7 +367,7 @@ void q_columnview_on_set_selection(void* self, void (*callback)(void*, void*, in
 /// @param self QColumnView*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_columnview_qbase_set_selection(void* self, void* rect, int64_t command);
+void q_columnview_qbase_set_selection(void* self, void* rect, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#visualRegionForSelection)
 ///
@@ -649,7 +649,7 @@ QModelIndex* q_columnview_root_index(void* self);
 ///
 /// @param self QColumnView*
 /// @param triggers flag of enum QAbstractItemView__EditTrigger
-void q_columnview_set_edit_triggers(void* self, int64_t triggers);
+void q_columnview_set_edit_triggers(void* self, int32_t triggers);
 
 /// Inherited from QAbstractItemView
 ///
@@ -658,7 +658,7 @@ void q_columnview_set_edit_triggers(void* self, int64_t triggers);
 /// @param self QColumnView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
-int64_t q_columnview_edit_triggers(void* self);
+int32_t q_columnview_edit_triggers(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1212,7 +1212,7 @@ void q_columnview_set_corner_widget(void* self, void* widget);
 /// @param self QColumnView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_columnview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_columnview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1220,7 +1220,7 @@ void q_columnview_add_scroll_bar_widget(void* self, void* widget, int64_t alignm
 ///
 /// @param self QColumnView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_columnview_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_columnview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2855,7 +2855,7 @@ bool q_columnview_is_full_screen(void* self);
 /// @param self QColumnView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_columnview_window_state(void* self);
+int32_t q_columnview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2863,7 +2863,7 @@ int64_t q_columnview_window_state(void* self);
 ///
 /// @param self QColumnView*
 /// @param state flag of enum Qt__WindowState
-void q_columnview_set_window_state(void* self, int64_t state);
+void q_columnview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2871,7 +2871,7 @@ void q_columnview_set_window_state(void* self, int64_t state);
 ///
 /// @param self QColumnView*
 /// @param state flag of enum Qt__WindowState
-void q_columnview_override_window_state(void* self, int64_t state);
+void q_columnview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3388,7 +3388,7 @@ void q_columnview_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_columnview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_columnview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3418,7 +3418,7 @@ void q_columnview_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_columnview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_columnview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3435,7 +3435,7 @@ QPixmap* q_columnview_grab1(void* self, void* rectangle);
 /// @param self QColumnView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_columnview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_columnview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4564,7 +4564,7 @@ void q_columnview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_columnview_selection_command(void* self, void* index, void* event);
+int32_t q_columnview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4577,7 +4577,7 @@ int64_t q_columnview_selection_command(void* self, void* index, void* event);
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_columnview_qbase_selection_command(void* self, void* index, void* event);
+int32_t q_columnview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4586,8 +4586,8 @@ int64_t q_columnview_qbase_selection_command(void* self, void* index, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColumnView*
-/// @param callback int64_t func(QColumnView* self, QModelIndex* index, QEvent* event)
-void q_columnview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
+/// @param callback int32_t func(QColumnView* self, QModelIndex* index, QEvent* event)
+void q_columnview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4597,7 +4597,7 @@ void q_columnview_on_selection_command(void* self, int64_t (*callback)(void*, vo
 ///
 /// @param self QColumnView*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_columnview_start_drag(void* self, int64_t supportedActions);
+void q_columnview_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4607,7 +4607,7 @@ void q_columnview_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QColumnView*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_columnview_qbase_start_drag(void* self, int64_t supportedActions);
+void q_columnview_qbase_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4617,7 +4617,7 @@ void q_columnview_qbase_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QColumnView*
 /// @param callback void func(QColumnView* self, flag of enum Qt__DropAction supportedActions)
-void q_columnview_on_start_drag(void* self, void (*callback)(void*, int64_t));
+void q_columnview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///

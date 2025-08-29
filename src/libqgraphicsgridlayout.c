@@ -131,27 +131,27 @@ void q_graphicsgridlayout_set_column_fixed_width(void* self, int column, double 
     QGraphicsGridLayout_SetColumnFixedWidth((QGraphicsGridLayout*)self, column, width);
 }
 
-void q_graphicsgridlayout_set_row_alignment(void* self, int row, int64_t alignment) {
+void q_graphicsgridlayout_set_row_alignment(void* self, int row, int32_t alignment) {
     QGraphicsGridLayout_SetRowAlignment((QGraphicsGridLayout*)self, row, alignment);
 }
 
-int64_t q_graphicsgridlayout_row_alignment(void* self, int row) {
+int32_t q_graphicsgridlayout_row_alignment(void* self, int row) {
     return QGraphicsGridLayout_RowAlignment((QGraphicsGridLayout*)self, row);
 }
 
-void q_graphicsgridlayout_set_column_alignment(void* self, int column, int64_t alignment) {
+void q_graphicsgridlayout_set_column_alignment(void* self, int column, int32_t alignment) {
     QGraphicsGridLayout_SetColumnAlignment((QGraphicsGridLayout*)self, column, alignment);
 }
 
-int64_t q_graphicsgridlayout_column_alignment(void* self, int column) {
+int32_t q_graphicsgridlayout_column_alignment(void* self, int column) {
     return QGraphicsGridLayout_ColumnAlignment((QGraphicsGridLayout*)self, column);
 }
 
-void q_graphicsgridlayout_set_alignment(void* self, void* item, int64_t alignment) {
+void q_graphicsgridlayout_set_alignment(void* self, void* item, int32_t alignment) {
     QGraphicsGridLayout_SetAlignment((QGraphicsGridLayout*)self, (QGraphicsLayoutItem*)item, alignment);
 }
 
-int64_t q_graphicsgridlayout_alignment(void* self, void* item) {
+int32_t q_graphicsgridlayout_alignment(void* self, void* item) {
     return QGraphicsGridLayout_Alignment((QGraphicsGridLayout*)self, (QGraphicsLayoutItem*)item);
 }
 
@@ -243,11 +243,11 @@ QSizeF* q_graphicsgridlayout_qbase_size_hint(void* self, int32_t which, void* co
     return QGraphicsGridLayout_QBaseSizeHint((QGraphicsGridLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicsgridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int64_t alignment) {
+void q_graphicsgridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int32_t alignment) {
     QGraphicsGridLayout_AddItem6((QGraphicsGridLayout*)self, (QGraphicsLayoutItem*)item, row, column, rowSpan, columnSpan, alignment);
 }
 
-void q_graphicsgridlayout_add_item4(void* self, void* item, int row, int column, int64_t alignment) {
+void q_graphicsgridlayout_add_item4(void* self, void* item, int row, int column, int32_t alignment) {
     QGraphicsGridLayout_AddItem4((QGraphicsGridLayout*)self, (QGraphicsLayoutItem*)item, row, column, alignment);
 }
 

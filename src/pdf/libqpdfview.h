@@ -488,7 +488,7 @@ void q_pdfview_set_corner_widget(void* self, void* widget);
 /// @param self QPdfView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_pdfview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_pdfview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -496,7 +496,7 @@ void q_pdfview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment
 ///
 /// @param self QPdfView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_pdfview_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_pdfview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2138,7 +2138,7 @@ bool q_pdfview_is_full_screen(void* self);
 /// @param self QPdfView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_pdfview_window_state(void* self);
+int32_t q_pdfview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2146,7 +2146,7 @@ int64_t q_pdfview_window_state(void* self);
 ///
 /// @param self QPdfView*
 /// @param state flag of enum Qt__WindowState
-void q_pdfview_set_window_state(void* self, int64_t state);
+void q_pdfview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2154,7 +2154,7 @@ void q_pdfview_set_window_state(void* self, int64_t state);
 ///
 /// @param self QPdfView*
 /// @param state flag of enum Qt__WindowState
-void q_pdfview_override_window_state(void* self, int64_t state);
+void q_pdfview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2671,7 +2671,7 @@ void q_pdfview_render3(void* self, void* target, void* targetOffset, void* sourc
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_pdfview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_pdfview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2701,7 +2701,7 @@ void q_pdfview_render32(void* self, void* painter, void* targetOffset, void* sou
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_pdfview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_pdfview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2718,7 +2718,7 @@ QPixmap* q_pdfview_grab1(void* self, void* rectangle);
 /// @param self QPdfView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_pdfview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_pdfview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

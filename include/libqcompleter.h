@@ -119,14 +119,14 @@ int32_t q_completer_completion_mode(void* self);
 ///
 /// @param self QCompleter*
 /// @param filterMode flag of enum Qt__MatchFlag
-void q_completer_set_filter_mode(void* self, int64_t filterMode);
+void q_completer_set_filter_mode(void* self, int32_t filterMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#filterMode)
 ///
 /// @param self QCompleter*
 ///
 /// @return flag of enum Qt__MatchFlag
-int64_t q_completer_filter_mode(void* self);
+int32_t q_completer_filter_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#popup)
 ///

@@ -32,13 +32,13 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_new3(void* item);
 ///
 /// @param widget QTreeWidget*
 /// @param flags flag of enum QTreeWidgetItemIterator__IteratorFlag
-QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int64_t flags);
+QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int32_t flags);
 
 /// q_treewidgetitemiterator_new5 constructs a new QTreeWidgetItemIterator object.
 ///
 /// @param item QTreeWidgetItem*
 /// @param flags flag of enum QTreeWidgetItemIterator__IteratorFlag
-QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int64_t flags);
+QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-eq)
 ///

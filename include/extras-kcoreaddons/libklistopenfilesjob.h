@@ -118,7 +118,7 @@ KJobUiDelegate* k_listopenfilesjob_ui_delegate(void* self);
 /// @param self KListOpenFilesJob*
 ///
 /// @return flag of enum KJob__Capability
-int64_t k_listopenfilesjob_capabilities(void* self);
+int32_t k_listopenfilesjob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
@@ -1035,7 +1035,7 @@ void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// @param self KListOpenFilesJob*
 /// @param capabilities flag of enum KJob__Capability
-void k_listopenfilesjob_set_capabilities(void* self, int64_t capabilities);
+void k_listopenfilesjob_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1045,7 +1045,7 @@ void k_listopenfilesjob_set_capabilities(void* self, int64_t capabilities);
 ///
 /// @param self KListOpenFilesJob*
 /// @param capabilities flag of enum KJob__Capability
-void k_listopenfilesjob_qbase_set_capabilities(void* self, int64_t capabilities);
+void k_listopenfilesjob_qbase_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
@@ -1055,7 +1055,7 @@ void k_listopenfilesjob_qbase_set_capabilities(void* self, int64_t capabilities)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, flag of enum KJob__Capability capabilities)
-void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, int64_t));
+void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from KJob
 ///

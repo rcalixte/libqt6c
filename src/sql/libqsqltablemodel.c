@@ -73,15 +73,15 @@ const char* q_sqltablemodel_table_name(void* self) {
     return _ret;
 }
 
-int64_t q_sqltablemodel_flags(void* self, void* index) {
+int32_t q_sqltablemodel_flags(void* self, void* index) {
     return QSqlTableModel_Flags((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-void q_sqltablemodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_sqltablemodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QSqlTableModel_OnFlags((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqltablemodel_qbase_flags(void* self, void* index) {
+int32_t q_sqltablemodel_qbase_flags(void* self, void* index) {
     return QSqlTableModel_QBaseFlags((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
@@ -642,7 +642,7 @@ bool q_sqltablemodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_check_index2(void* self, void* index, int64_t options) {
+bool q_sqltablemodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -1063,27 +1063,27 @@ void q_sqltablemodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, v
     QSqlTableModel_OnCanDropMimeData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqltablemodel_supported_drop_actions(void* self) {
+int32_t q_sqltablemodel_supported_drop_actions(void* self) {
     return QSqlTableModel_SupportedDropActions((QSqlTableModel*)self);
 }
 
-int64_t q_sqltablemodel_qbase_supported_drop_actions(void* self) {
+int32_t q_sqltablemodel_qbase_supported_drop_actions(void* self) {
     return QSqlTableModel_QBaseSupportedDropActions((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_sqltablemodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QSqlTableModel_OnSupportedDropActions((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqltablemodel_supported_drag_actions(void* self) {
+int32_t q_sqltablemodel_supported_drag_actions(void* self) {
     return QSqlTableModel_SupportedDragActions((QSqlTableModel*)self);
 }
 
-int64_t q_sqltablemodel_qbase_supported_drag_actions(void* self) {
+int32_t q_sqltablemodel_qbase_supported_drag_actions(void* self) {
     return QSqlTableModel_QBaseSupportedDragActions((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_sqltablemodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QSqlTableModel_OnSupportedDragActions((QSqlTableModel*)self, (intptr_t)callback);
 }
 
@@ -1123,17 +1123,17 @@ void q_sqltablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)
     QSqlTableModel_OnBuddy((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_sqltablemodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sqltablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlTableModel_Match((QSqlTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_sqltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sqltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlTableModel_QBaseMatch((QSqlTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_sqltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_sqltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QSqlTableModel_OnMatch((QSqlTableModel*)self, (intptr_t)callback);
 }
 

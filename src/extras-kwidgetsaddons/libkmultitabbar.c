@@ -980,15 +980,15 @@ bool k_multitabbar_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_multitabbar_window_state(void* self) {
+int32_t k_multitabbar_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_multitabbar_set_window_state(void* self, int64_t state) {
+void k_multitabbar_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_multitabbar_override_window_state(void* self, int64_t state) {
+void k_multitabbar_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1245,7 +1245,7 @@ void k_multitabbar_render3(void* self, void* target, void* targetOffset, void* s
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_multitabbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_multitabbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1257,7 +1257,7 @@ void k_multitabbar_render32(void* self, void* painter, void* targetOffset, void*
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_multitabbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_multitabbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1265,7 +1265,7 @@ QPixmap* k_multitabbar_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_multitabbar_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_multitabbar_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -3237,15 +3237,15 @@ bool k_multitabbarbutton_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_multitabbarbutton_window_state(void* self) {
+int32_t k_multitabbarbutton_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_multitabbarbutton_set_window_state(void* self, int64_t state) {
+void k_multitabbarbutton_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_multitabbarbutton_override_window_state(void* self, int64_t state) {
+void k_multitabbarbutton_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -3518,7 +3518,7 @@ void k_multitabbarbutton_render3(void* self, void* target, void* targetOffset, v
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_multitabbarbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_multitabbarbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -3530,7 +3530,7 @@ void k_multitabbarbutton_render32(void* self, void* painter, void* targetOffset,
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_multitabbarbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_multitabbarbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -3538,7 +3538,7 @@ QPixmap* k_multitabbarbutton_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_multitabbarbutton_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_multitabbarbutton_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -4850,15 +4850,15 @@ bool k_multitabbartab_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_multitabbartab_window_state(void* self) {
+int32_t k_multitabbartab_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_multitabbartab_set_window_state(void* self, int64_t state) {
+void k_multitabbartab_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_multitabbartab_override_window_state(void* self, int64_t state) {
+void k_multitabbartab_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -5131,7 +5131,7 @@ void k_multitabbartab_render3(void* self, void* target, void* targetOffset, void
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_multitabbartab_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_multitabbartab_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -5143,7 +5143,7 @@ void k_multitabbartab_render32(void* self, void* painter, void* targetOffset, vo
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_multitabbartab_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_multitabbartab_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -5151,7 +5151,7 @@ QPixmap* k_multitabbartab_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_multitabbartab_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_multitabbartab_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

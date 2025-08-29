@@ -290,15 +290,15 @@ void q_paintengine_qbase_draw_tiled_pixmap(void* self, void* r, void* pixmap, vo
     QPaintEngine_QBaseDrawTiledPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pixmap, (QPointF*)s);
 }
 
-void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags) {
+void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags) {
     QPaintEngine_DrawImage((QPaintEngine*)self, (QRectF*)r, (QImage*)pm, (QRectF*)sr, flags);
 }
 
-void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int64_t)) {
+void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int32_t)) {
     QPaintEngine_OnDrawImage((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags) {
+void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags) {
     QPaintEngine_QBaseDrawImage((QPaintEngine*)self, (QRectF*)r, (QImage*)pm, (QRectF*)sr, flags);
 }
 
@@ -354,15 +354,15 @@ void q_paintengine_fix_neg_rect(void* self, int* x, int* y, int* w, int* h) {
     QPaintEngine_FixNegRect((QPaintEngine*)self, x, y, w, h);
 }
 
-bool q_paintengine_test_dirty(void* self, int64_t df) {
+bool q_paintengine_test_dirty(void* self, int32_t df) {
     return QPaintEngine_TestDirty((QPaintEngine*)self, df);
 }
 
-void q_paintengine_set_dirty(void* self, int64_t df) {
+void q_paintengine_set_dirty(void* self, int32_t df) {
     QPaintEngine_SetDirty((QPaintEngine*)self, df);
 }
 
-void q_paintengine_clear_dirty(void* self, int64_t df) {
+void q_paintengine_clear_dirty(void* self, int32_t df) {
     QPaintEngine_ClearDirty((QPaintEngine*)self, df);
 }
 
@@ -394,15 +394,15 @@ QPixmap* q_paintengine_qbase_create_pixmap(void* self, void* size) {
     return QPaintEngine_QBaseCreatePixmap((QPaintEngine*)self, (QSize*)size);
 }
 
-QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int64_t flags) {
+QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int32_t flags) {
     return QPaintEngine_CreatePixmapFromImage((QPaintEngine*)self, (QImage*)image, flags);
 }
 
-void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int64_t)) {
+void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int32_t)) {
     QPaintEngine_OnCreatePixmapFromImage((QPaintEngine*)self, (intptr_t)callback);
 }
 
-QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int64_t flags) {
+QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int32_t flags) {
     return QPaintEngine_QBaseCreatePixmapFromImage((QPaintEngine*)self, (QImage*)image, flags);
 }
 
@@ -426,7 +426,7 @@ void q_paintenginestate_move_assign(void* self, void* other) {
     QPaintEngineState_MoveAssign((QPaintEngineState*)self, (QPaintEngineState*)other);
 }
 
-int64_t q_paintenginestate_state(void* self) {
+int32_t q_paintenginestate_state(void* self) {
     return QPaintEngineState_State((QPaintEngineState*)self);
 }
 
@@ -474,7 +474,7 @@ bool q_paintenginestate_is_clip_enabled(void* self) {
     return QPaintEngineState_IsClipEnabled((QPaintEngineState*)self);
 }
 
-int64_t q_paintenginestate_render_hints(void* self) {
+int32_t q_paintenginestate_render_hints(void* self) {
     return QPaintEngineState_RenderHints((QPaintEngineState*)self);
 }
 

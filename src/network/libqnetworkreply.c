@@ -256,7 +256,7 @@ const char* q_networkreply_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_networkreply_open_mode(void* self) {
+int32_t q_networkreply_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -304,7 +304,7 @@ void q_networkreply_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-bool q_networkreply_open(void* self, int64_t mode) {
+bool q_networkreply_open(void* self, int32_t mode) {
     return QIODevice_Open((QIODevice*)self, mode);
 }
 

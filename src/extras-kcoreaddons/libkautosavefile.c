@@ -73,15 +73,15 @@ void k_autosavefile_qbase_release_lock(void* self) {
     KAutoSaveFile_QBaseReleaseLock((KAutoSaveFile*)self);
 }
 
-bool k_autosavefile_open(void* self, int64_t openmode) {
+bool k_autosavefile_open(void* self, int32_t openmode) {
     return KAutoSaveFile_Open((KAutoSaveFile*)self, openmode);
 }
 
-void k_autosavefile_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void k_autosavefile_on_open(void* self, bool (*callback)(void*, int32_t)) {
     KAutoSaveFile_OnOpen((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_qbase_open(void* self, int64_t openmode) {
+bool k_autosavefile_qbase_open(void* self, int32_t openmode) {
     return KAutoSaveFile_QBaseOpen((KAutoSaveFile*)self, openmode);
 }
 
@@ -206,11 +206,11 @@ bool k_autosavefile_copy2(const char* fileName, const char* newName) {
     return QFile_Copy2(qstring(fileName), qstring(newName));
 }
 
-bool k_autosavefile_open2(void* self, int64_t flags, int64_t permissions) {
+bool k_autosavefile_open2(void* self, int32_t flags, int32_t permissions) {
     return QFile_Open2((QFile*)self, flags, permissions);
 }
 
-bool k_autosavefile_open4(void* self, int fd, int64_t ioFlags) {
+bool k_autosavefile_open4(void* self, int fd, int32_t ioFlags) {
     return QFile_Open4((QFile*)self, fd, ioFlags);
 }
 
@@ -218,15 +218,15 @@ bool k_autosavefile_resize2(const char* filename, long long sz) {
     return QFile_Resize2(qstring(filename), sz);
 }
 
-int64_t k_autosavefile_permissions2(const char* filename) {
+int32_t k_autosavefile_permissions2(const char* filename) {
     return QFile_Permissions2(qstring(filename));
 }
 
-bool k_autosavefile_set_permissions2(const char* filename, int64_t permissionSpec) {
+bool k_autosavefile_set_permissions2(const char* filename, int32_t permissionSpec) {
     return QFile_SetPermissions2(qstring(filename), permissionSpec);
 }
 
-bool k_autosavefile_open33(void* self, int fd, int64_t ioFlags, int64_t handleFlags) {
+bool k_autosavefile_open33(void* self, int fd, int32_t ioFlags, int32_t handleFlags) {
     return QFile_Open33((QFile*)self, fd, ioFlags, handleFlags);
 }
 
@@ -262,11 +262,11 @@ bool k_autosavefile_set_file_time(void* self, void* newDate, int32_t fileTime) {
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
-unsigned char* k_autosavefile_map3(void* self, long long offset, long long size, int64_t flags) {
+unsigned char* k_autosavefile_map3(void* self, long long offset, long long size, int32_t flags) {
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-int64_t k_autosavefile_open_mode(void* self) {
+int32_t k_autosavefile_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -673,27 +673,27 @@ void k_autosavefile_on_resize(void* self, bool (*callback)(void*, long long)) {
     KAutoSaveFile_OnResize((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-int64_t k_autosavefile_permissions(void* self) {
+int32_t k_autosavefile_permissions(void* self) {
     return KAutoSaveFile_Permissions((KAutoSaveFile*)self);
 }
 
-int64_t k_autosavefile_qbase_permissions(void* self) {
+int32_t k_autosavefile_qbase_permissions(void* self) {
     return KAutoSaveFile_QBasePermissions((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_permissions(void* self, int64_t (*callback)()) {
+void k_autosavefile_on_permissions(void* self, int32_t (*callback)()) {
     KAutoSaveFile_OnPermissions((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_set_permissions(void* self, int64_t permissionSpec) {
+bool k_autosavefile_set_permissions(void* self, int32_t permissionSpec) {
     return KAutoSaveFile_SetPermissions((KAutoSaveFile*)self, permissionSpec);
 }
 
-bool k_autosavefile_qbase_set_permissions(void* self, int64_t permissionSpec) {
+bool k_autosavefile_qbase_set_permissions(void* self, int32_t permissionSpec) {
     return KAutoSaveFile_QBaseSetPermissions((KAutoSaveFile*)self, permissionSpec);
 }
 
-void k_autosavefile_on_set_permissions(void* self, bool (*callback)(void*, int64_t)) {
+void k_autosavefile_on_set_permissions(void* self, bool (*callback)(void*, int32_t)) {
     KAutoSaveFile_OnSetPermissions((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -961,15 +961,15 @@ void k_autosavefile_on_disconnect_notify(void* self, void (*callback)(void*, voi
     KAutoSaveFile_OnDisconnectNotify((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-void k_autosavefile_set_open_mode(void* self, int64_t openMode) {
+void k_autosavefile_set_open_mode(void* self, int32_t openMode) {
     KAutoSaveFile_SetOpenMode((KAutoSaveFile*)self, openMode);
 }
 
-void k_autosavefile_qbase_set_open_mode(void* self, int64_t openMode) {
+void k_autosavefile_qbase_set_open_mode(void* self, int32_t openMode) {
     KAutoSaveFile_QBaseSetOpenMode((KAutoSaveFile*)self, openMode);
 }
 
-void k_autosavefile_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void k_autosavefile_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     KAutoSaveFile_OnSetOpenMode((KAutoSaveFile*)self, (intptr_t)callback);
 }
 

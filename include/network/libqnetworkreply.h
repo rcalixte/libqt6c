@@ -329,7 +329,7 @@ const char* q_networkreply_tr3(const char* s, const char* c, int n);
 /// @param self QNetworkReply*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_networkreply_open_mode(void* self);
+int32_t q_networkreply_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -417,7 +417,7 @@ void q_networkreply_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QNetworkReply*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_networkreply_open(void* self, int64_t mode);
+bool q_networkreply_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///

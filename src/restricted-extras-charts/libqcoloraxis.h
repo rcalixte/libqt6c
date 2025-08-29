@@ -642,7 +642,7 @@ int32_t q_coloraxis_orientation(void* self);
 /// @param self QColorAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_coloraxis_alignment(void* self);
+int32_t q_coloraxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
 ///

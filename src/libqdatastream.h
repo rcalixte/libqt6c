@@ -107,8 +107,8 @@ void q_datastream_operator_shift_right(void* self, char* i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
-/// @param i char*
-void q_datastream_operator_shift_right2(void* self, char* i);
+/// @param i signed char*
+void q_datastream_operator_shift_right2(void* self, signed char* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
@@ -185,8 +185,8 @@ void q_datastream_operator_shift_left(void* self, char i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
-/// @param i char
-void q_datastream_operator_shift_left2(void* self, char i);
+/// @param i signed char
+void q_datastream_operator_shift_left2(void* self, signed char i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///

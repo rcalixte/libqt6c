@@ -860,15 +860,15 @@ QGesture* k_twofingertaprecognizer_qbase_create(void* self, void* target);
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
-int64_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watched, void* event);
+int32_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watched, void* event);
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#recognize)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KTwoFingerTapRecognizer*
-/// @param callback int64_t func(KTwoFingerTapRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
-void k_twofingertaprecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*));
+/// @param callback int32_t func(KTwoFingerTapRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
+void k_twofingertaprecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#recognize)
 ///
@@ -880,7 +880,7 @@ void k_twofingertaprecognizer_on_recognize(void* self, int64_t (*callback)(void*
 /// @param event QEvent*
 ///
 /// @return flag of enum QGestureRecognizer__ResultFlag
-int64_t k_twofingertaprecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event);
+int32_t k_twofingertaprecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event);
 
 /// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#tapRadius)
 ///

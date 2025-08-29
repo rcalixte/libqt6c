@@ -466,7 +466,7 @@ void k_urllabel_set_text_format(void* self, int32_t textFormat);
 /// @param self KUrlLabel*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_urllabel_alignment(void* self);
+int32_t k_urllabel_alignment(void* self);
 
 /// Inherited from QLabel
 ///
@@ -474,7 +474,7 @@ int64_t k_urllabel_alignment(void* self);
 ///
 /// @param self KUrlLabel*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_urllabel_set_alignment(void* self, int64_t alignment);
+void k_urllabel_set_alignment(void* self, int32_t alignment);
 
 /// Inherited from QLabel
 ///
@@ -572,7 +572,7 @@ void k_urllabel_set_open_external_links(void* self, bool open);
 ///
 /// @param self KUrlLabel*
 /// @param flags flag of enum Qt__TextInteractionFlag
-void k_urllabel_set_text_interaction_flags(void* self, int64_t flags);
+void k_urllabel_set_text_interaction_flags(void* self, int32_t flags);
 
 /// Inherited from QLabel
 ///
@@ -581,7 +581,7 @@ void k_urllabel_set_text_interaction_flags(void* self, int64_t flags);
 /// @param self KUrlLabel*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
-int64_t k_urllabel_text_interaction_flags(void* self);
+int32_t k_urllabel_text_interaction_flags(void* self);
 
 /// Inherited from QLabel
 ///
@@ -2295,7 +2295,7 @@ bool k_urllabel_is_full_screen(void* self);
 /// @param self KUrlLabel*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_urllabel_window_state(void* self);
+int32_t k_urllabel_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2303,7 +2303,7 @@ int64_t k_urllabel_window_state(void* self);
 ///
 /// @param self KUrlLabel*
 /// @param state flag of enum Qt__WindowState
-void k_urllabel_set_window_state(void* self, int64_t state);
+void k_urllabel_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2311,7 +2311,7 @@ void k_urllabel_set_window_state(void* self, int64_t state);
 ///
 /// @param self KUrlLabel*
 /// @param state flag of enum Qt__WindowState
-void k_urllabel_override_window_state(void* self, int64_t state);
+void k_urllabel_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2828,7 +2828,7 @@ void k_urllabel_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_urllabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_urllabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2858,7 +2858,7 @@ void k_urllabel_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_urllabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_urllabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2875,7 +2875,7 @@ QPixmap* k_urllabel_grab1(void* self, void* rectangle);
 /// @param self KUrlLabel*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_urllabel_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_urllabel_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

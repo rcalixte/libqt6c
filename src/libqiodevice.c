@@ -41,7 +41,7 @@ const char* q_iodevice_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_iodevice_open_mode(void* self) {
+int32_t q_iodevice_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -101,15 +101,15 @@ void q_iodevice_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-bool q_iodevice_open(void* self, int64_t mode) {
+bool q_iodevice_open(void* self, int32_t mode) {
     return QIODevice_Open((QIODevice*)self, mode);
 }
 
-void q_iodevice_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_iodevice_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QIODevice_OnOpen((QIODevice*)self, (intptr_t)callback);
 }
 
-bool q_iodevice_qbase_open(void* self, int64_t mode) {
+bool q_iodevice_qbase_open(void* self, int32_t mode) {
     return QIODevice_QBaseOpen((QIODevice*)self, mode);
 }
 
@@ -432,15 +432,15 @@ long long q_iodevice_qbase_write_data(void* self, const char* data, long long le
     return QIODevice_QBaseWriteData((QIODevice*)self, data, lenVal);
 }
 
-void q_iodevice_set_open_mode(void* self, int64_t openMode) {
+void q_iodevice_set_open_mode(void* self, int32_t openMode) {
     QIODevice_SetOpenMode((QIODevice*)self, openMode);
 }
 
-void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QIODevice_OnSetOpenMode((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_iodevice_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_iodevice_qbase_set_open_mode(void* self, int32_t openMode) {
     QIODevice_QBaseSetOpenMode((QIODevice*)self, openMode);
 }
 

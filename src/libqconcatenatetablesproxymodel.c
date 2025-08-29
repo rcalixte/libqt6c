@@ -114,15 +114,15 @@ bool q_concatenatetablesproxymodel_qbase_set_item_data(void* self, void* index, 
     return QConcatenateTablesProxyModel_QBaseSetItemData((QConcatenateTablesProxyModel*)self, (QModelIndex*)index, roles);
 }
 
-int64_t q_concatenatetablesproxymodel_flags(void* self, void* index) {
+int32_t q_concatenatetablesproxymodel_flags(void* self, void* index) {
     return QConcatenateTablesProxyModel_Flags((QConcatenateTablesProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_concatenatetablesproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_concatenatetablesproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QConcatenateTablesProxyModel_OnFlags((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_concatenatetablesproxymodel_qbase_flags(void* self, void* index) {
+int32_t q_concatenatetablesproxymodel_qbase_flags(void* self, void* index) {
     return QConcatenateTablesProxyModel_QBaseFlags((QConcatenateTablesProxyModel*)self, (QModelIndex*)index);
 }
 
@@ -374,7 +374,7 @@ bool q_concatenatetablesproxymodel_remove_column2(void* self, int column, void* 
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int64_t options) {
+bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -633,27 +633,27 @@ void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*callbac
     QConcatenateTablesProxyModel_OnClearItemData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_concatenatetablesproxymodel_supported_drop_actions(void* self) {
+int32_t q_concatenatetablesproxymodel_supported_drop_actions(void* self) {
     return QConcatenateTablesProxyModel_SupportedDropActions((QConcatenateTablesProxyModel*)self);
 }
 
-int64_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self) {
+int32_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self) {
     return QConcatenateTablesProxyModel_QBaseSupportedDropActions((QConcatenateTablesProxyModel*)self);
 }
 
-void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QConcatenateTablesProxyModel_OnSupportedDropActions((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_concatenatetablesproxymodel_supported_drag_actions(void* self) {
+int32_t q_concatenatetablesproxymodel_supported_drag_actions(void* self) {
     return QConcatenateTablesProxyModel_SupportedDragActions((QConcatenateTablesProxyModel*)self);
 }
 
-int64_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self) {
+int32_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self) {
     return QConcatenateTablesProxyModel_QBaseSupportedDragActions((QConcatenateTablesProxyModel*)self);
 }
 
-void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QConcatenateTablesProxyModel_OnSupportedDragActions((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
@@ -777,17 +777,17 @@ void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*callback)
     QConcatenateTablesProxyModel_OnBuddy((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QConcatenateTablesProxyModel_Match((QConcatenateTablesProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QConcatenateTablesProxyModel_QBaseMatch((QConcatenateTablesProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QConcatenateTablesProxyModel_OnMatch((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 

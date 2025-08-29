@@ -73,7 +73,7 @@ bool q_textboundaryfinder_is_at_boundary(void* self) {
     return QTextBoundaryFinder_IsAtBoundary((QTextBoundaryFinder*)self);
 }
 
-int64_t q_textboundaryfinder_boundary_reasons(void* self) {
+int32_t q_textboundaryfinder_boundary_reasons(void* self) {
     return QTextBoundaryFinder_BoundaryReasons((QTextBoundaryFinder*)self);
 }
 

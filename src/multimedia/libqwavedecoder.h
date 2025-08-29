@@ -96,7 +96,7 @@ long long q_wavedecoder_header_length();
 ///
 /// @param self QWaveDecoder*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_wavedecoder_open(void* self, int64_t mode);
+bool q_wavedecoder_open(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
@@ -104,7 +104,7 @@ bool q_wavedecoder_open(void* self, int64_t mode);
 ///
 /// @param self QWaveDecoder*
 /// @param callback bool func(QWaveDecoder* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
@@ -112,7 +112,7 @@ void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QWaveDecoder*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_wavedecoder_qbase_open(void* self, int64_t mode);
+bool q_wavedecoder_qbase_open(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#close)
 ///
@@ -282,7 +282,7 @@ const char* q_wavedecoder_tr3(const char* s, const char* c, int n);
 /// @param self QWaveDecoder*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_wavedecoder_open_mode(void* self);
+int32_t q_wavedecoder_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1388,7 +1388,7 @@ void q_wavedecoder_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// @param self QWaveDecoder*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_wavedecoder_set_open_mode(void* self, int64_t openMode);
+void q_wavedecoder_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1398,7 +1398,7 @@ void q_wavedecoder_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QWaveDecoder*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_wavedecoder_qbase_set_open_mode(void* self, int64_t openMode);
+void q_wavedecoder_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1408,7 +1408,7 @@ void q_wavedecoder_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QWaveDecoder*
 /// @param callback void func(QWaveDecoder* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

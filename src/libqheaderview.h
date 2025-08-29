@@ -451,13 +451,13 @@ void q_headerview_set_maximum_section_size(void* self, int size);
 /// @param self QHeaderView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_headerview_default_alignment(void* self);
+int32_t q_headerview_default_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setDefaultAlignment)
 ///
 /// @param self QHeaderView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_headerview_set_default_alignment(void* self, int64_t alignment);
+void q_headerview_set_default_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#doItemsLayout)
 ///
@@ -1323,7 +1323,7 @@ QModelIndex* q_headerview_qbase_move_cursor(void* self, int32_t param1, int64_t 
 /// @param self QHeaderView*
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
-void q_headerview_set_selection(void* self, void* rect, int64_t flags);
+void q_headerview_set_selection(void* self, void* rect, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSelection)
 ///
@@ -1331,7 +1331,7 @@ void q_headerview_set_selection(void* self, void* rect, int64_t flags);
 ///
 /// @param self QHeaderView*
 /// @param callback void func(QHeaderView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag flags)
-void q_headerview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
+void q_headerview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSelection)
 ///
@@ -1340,7 +1340,7 @@ void q_headerview_on_set_selection(void* self, void (*callback)(void*, void*, in
 /// @param self QHeaderView*
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
-void q_headerview_qbase_set_selection(void* self, void* rect, int64_t flags);
+void q_headerview_qbase_set_selection(void* self, void* rect, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#visualRegionForSelection)
 ///
@@ -1510,7 +1510,7 @@ QModelIndex* q_headerview_root_index(void* self);
 ///
 /// @param self QHeaderView*
 /// @param triggers flag of enum QAbstractItemView__EditTrigger
-void q_headerview_set_edit_triggers(void* self, int64_t triggers);
+void q_headerview_set_edit_triggers(void* self, int32_t triggers);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1519,7 +1519,7 @@ void q_headerview_set_edit_triggers(void* self, int64_t triggers);
 /// @param self QHeaderView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
-int64_t q_headerview_edit_triggers(void* self);
+int32_t q_headerview_edit_triggers(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2073,7 +2073,7 @@ void q_headerview_set_corner_widget(void* self, void* widget);
 /// @param self QHeaderView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_headerview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_headerview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2081,7 +2081,7 @@ void q_headerview_add_scroll_bar_widget(void* self, void* widget, int64_t alignm
 ///
 /// @param self QHeaderView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_headerview_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_headerview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3716,7 +3716,7 @@ bool q_headerview_is_full_screen(void* self);
 /// @param self QHeaderView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_headerview_window_state(void* self);
+int32_t q_headerview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3724,7 +3724,7 @@ int64_t q_headerview_window_state(void* self);
 ///
 /// @param self QHeaderView*
 /// @param state flag of enum Qt__WindowState
-void q_headerview_set_window_state(void* self, int64_t state);
+void q_headerview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3732,7 +3732,7 @@ void q_headerview_set_window_state(void* self, int64_t state);
 ///
 /// @param self QHeaderView*
 /// @param state flag of enum Qt__WindowState
-void q_headerview_override_window_state(void* self, int64_t state);
+void q_headerview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -4249,7 +4249,7 @@ void q_headerview_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_headerview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_headerview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4279,7 +4279,7 @@ void q_headerview_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_headerview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_headerview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4296,7 +4296,7 @@ QPixmap* q_headerview_grab1(void* self, void* rectangle);
 /// @param self QHeaderView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_headerview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_headerview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -5395,7 +5395,7 @@ void q_headerview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_headerview_selection_command(void* self, void* index, void* event);
+int32_t q_headerview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5408,7 +5408,7 @@ int64_t q_headerview_selection_command(void* self, void* index, void* event);
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_headerview_qbase_selection_command(void* self, void* index, void* event);
+int32_t q_headerview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5417,8 +5417,8 @@ int64_t q_headerview_qbase_selection_command(void* self, void* index, void* even
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int64_t func(QHeaderView* self, QModelIndex* index, QEvent* event)
-void q_headerview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
+/// @param callback int32_t func(QHeaderView* self, QModelIndex* index, QEvent* event)
+void q_headerview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5428,7 +5428,7 @@ void q_headerview_on_selection_command(void* self, int64_t (*callback)(void*, vo
 ///
 /// @param self QHeaderView*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_headerview_start_drag(void* self, int64_t supportedActions);
+void q_headerview_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5438,7 +5438,7 @@ void q_headerview_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QHeaderView*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_headerview_qbase_start_drag(void* self, int64_t supportedActions);
+void q_headerview_qbase_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5448,7 +5448,7 @@ void q_headerview_qbase_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QHeaderView*
 /// @param callback void func(QHeaderView* self, flag of enum Qt__DropAction supportedActions)
-void q_headerview_on_start_drag(void* self, void (*callback)(void*, int64_t));
+void q_headerview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///

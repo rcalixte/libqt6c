@@ -318,11 +318,11 @@ void k_urllabel_set_text_format(void* self, int32_t textFormat) {
     QLabel_SetTextFormat((QLabel*)self, textFormat);
 }
 
-int64_t k_urllabel_alignment(void* self) {
+int32_t k_urllabel_alignment(void* self) {
     return QLabel_Alignment((QLabel*)self);
 }
 
-void k_urllabel_set_alignment(void* self, int64_t alignment) {
+void k_urllabel_set_alignment(void* self, int32_t alignment) {
     QLabel_SetAlignment((QLabel*)self, alignment);
 }
 
@@ -374,11 +374,11 @@ void k_urllabel_set_open_external_links(void* self, bool open) {
     QLabel_SetOpenExternalLinks((QLabel*)self, open);
 }
 
-void k_urllabel_set_text_interaction_flags(void* self, int64_t flags) {
+void k_urllabel_set_text_interaction_flags(void* self, int32_t flags) {
     QLabel_SetTextInteractionFlags((QLabel*)self, flags);
 }
 
-int64_t k_urllabel_text_interaction_flags(void* self) {
+int32_t k_urllabel_text_interaction_flags(void* self) {
     return QLabel_TextInteractionFlags((QLabel*)self);
 }
 
@@ -1298,15 +1298,15 @@ bool k_urllabel_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_urllabel_window_state(void* self) {
+int32_t k_urllabel_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_urllabel_set_window_state(void* self, int64_t state) {
+void k_urllabel_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_urllabel_override_window_state(void* self, int64_t state) {
+void k_urllabel_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1563,7 +1563,7 @@ void k_urllabel_render3(void* self, void* target, void* targetOffset, void* sour
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_urllabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_urllabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1575,7 +1575,7 @@ void k_urllabel_render32(void* self, void* painter, void* targetOffset, void* so
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_urllabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_urllabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1583,7 +1583,7 @@ QPixmap* k_urllabel_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_urllabel_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_urllabel_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

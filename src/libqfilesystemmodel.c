@@ -215,15 +215,15 @@ QVariant* q_filesystemmodel_qbase_header_data(void* self, int section, int32_t o
     return QFileSystemModel_QBaseHeaderData((QFileSystemModel*)self, section, orientation, role);
 }
 
-int64_t q_filesystemmodel_flags(void* self, void* index) {
+int32_t q_filesystemmodel_flags(void* self, void* index) {
     return QFileSystemModel_Flags((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
-void q_filesystemmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_filesystemmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QFileSystemModel_OnFlags((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-int64_t q_filesystemmodel_qbase_flags(void* self, void* index) {
+int32_t q_filesystemmodel_qbase_flags(void* self, void* index) {
     return QFileSystemModel_QBaseFlags((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
@@ -305,15 +305,15 @@ bool q_filesystemmodel_qbase_drop_mime_data(void* self, void* data, int32_t acti
     return QFileSystemModel_QBaseDropMimeData((QFileSystemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int64_t q_filesystemmodel_supported_drop_actions(void* self) {
+int32_t q_filesystemmodel_supported_drop_actions(void* self) {
     return QFileSystemModel_SupportedDropActions((QFileSystemModel*)self);
 }
 
-void q_filesystemmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_filesystemmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QFileSystemModel_OnSupportedDropActions((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-int64_t q_filesystemmodel_qbase_supported_drop_actions(void* self) {
+int32_t q_filesystemmodel_qbase_supported_drop_actions(void* self) {
     return QFileSystemModel_QBaseSupportedDropActions((QFileSystemModel*)self);
 }
 
@@ -352,11 +352,11 @@ QAbstractFileIconProvider* q_filesystemmodel_icon_provider(void* self) {
     return QFileSystemModel_IconProvider((QFileSystemModel*)self);
 }
 
-void q_filesystemmodel_set_filter(void* self, int64_t filters) {
+void q_filesystemmodel_set_filter(void* self, int32_t filters) {
     QFileSystemModel_SetFilter((QFileSystemModel*)self, filters);
 }
 
-int64_t q_filesystemmodel_filter(void* self) {
+int32_t q_filesystemmodel_filter(void* self) {
     return QFileSystemModel_Filter((QFileSystemModel*)self);
 }
 
@@ -426,11 +426,11 @@ bool q_filesystemmodel_test_option(void* self, int32_t option) {
     return QFileSystemModel_TestOption((QFileSystemModel*)self, option);
 }
 
-void q_filesystemmodel_set_options(void* self, int64_t options) {
+void q_filesystemmodel_set_options(void* self, int32_t options) {
     QFileSystemModel_SetOptions((QFileSystemModel*)self, options);
 }
 
-int64_t q_filesystemmodel_options(void* self) {
+int32_t q_filesystemmodel_options(void* self) {
     return QFileSystemModel_Options((QFileSystemModel*)self);
 }
 
@@ -483,7 +483,7 @@ QIcon* q_filesystemmodel_file_icon(void* self, void* index) {
     return QFileSystemModel_FileIcon((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_filesystemmodel_permissions(void* self, void* index) {
+int32_t q_filesystemmodel_permissions(void* self, void* index) {
     return QFileSystemModel_Permissions((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
@@ -629,7 +629,7 @@ bool q_filesystemmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_filesystemmodel_check_index2(void* self, void* index, int64_t options) {
+bool q_filesystemmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -900,15 +900,15 @@ void q_filesystemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*,
     QFileSystemModel_OnCanDropMimeData((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-int64_t q_filesystemmodel_supported_drag_actions(void* self) {
+int32_t q_filesystemmodel_supported_drag_actions(void* self) {
     return QFileSystemModel_SupportedDragActions((QFileSystemModel*)self);
 }
 
-int64_t q_filesystemmodel_qbase_supported_drag_actions(void* self) {
+int32_t q_filesystemmodel_qbase_supported_drag_actions(void* self) {
     return QFileSystemModel_QBaseSupportedDragActions((QFileSystemModel*)self);
 }
 
-void q_filesystemmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_filesystemmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QFileSystemModel_OnSupportedDragActions((QFileSystemModel*)self, (intptr_t)callback);
 }
 
@@ -996,17 +996,17 @@ void q_filesystemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
     QFileSystemModel_OnBuddy((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_filesystemmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_filesystemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QFileSystemModel_Match((QFileSystemModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_filesystemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QFileSystemModel_QBaseMatch((QFileSystemModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_filesystemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_filesystemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QFileSystemModel_OnMatch((QFileSystemModel*)self, (intptr_t)callback);
 }
 

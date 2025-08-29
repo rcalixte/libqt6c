@@ -46,11 +46,11 @@ bool q_eventloop_process_events(void* self) {
     return QEventLoop_ProcessEvents((QEventLoop*)self);
 }
 
-void q_eventloop_process_events2(void* self, int64_t flags, int maximumTime) {
+void q_eventloop_process_events2(void* self, int32_t flags, int maximumTime) {
     QEventLoop_ProcessEvents2((QEventLoop*)self, flags, maximumTime);
 }
 
-void q_eventloop_process_events3(void* self, int64_t flags, void* deadline) {
+void q_eventloop_process_events3(void* self, int32_t flags, void* deadline) {
     QEventLoop_ProcessEvents3((QEventLoop*)self, flags, (QDeadlineTimer*)deadline);
 }
 
@@ -100,11 +100,11 @@ const char* q_eventloop_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_eventloop_process_events1(void* self, int64_t flags) {
+bool q_eventloop_process_events1(void* self, int32_t flags) {
     return QEventLoop_ProcessEvents1((QEventLoop*)self, flags);
 }
 
-int32_t q_eventloop_exec1(void* self, int64_t flags) {
+int32_t q_eventloop_exec1(void* self, int32_t flags) {
     return QEventLoop_Exec1((QEventLoop*)self, flags);
 }
 

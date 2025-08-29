@@ -223,15 +223,15 @@ void q_columnview_qbase_resize_event(void* self, void* event) {
     QColumnView_QBaseResizeEvent((QColumnView*)self, (QResizeEvent*)event);
 }
 
-void q_columnview_set_selection(void* self, void* rect, int64_t command) {
+void q_columnview_set_selection(void* self, void* rect, int32_t command) {
     QColumnView_SetSelection((QColumnView*)self, (QRect*)rect, command);
 }
 
-void q_columnview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_columnview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
     QColumnView_OnSetSelection((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_set_selection(void* self, void* rect, int64_t command) {
+void q_columnview_qbase_set_selection(void* self, void* rect, int32_t command) {
     QColumnView_QBaseSetSelection((QColumnView*)self, (QRect*)rect, command);
 }
 
@@ -385,11 +385,11 @@ QModelIndex* q_columnview_root_index(void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
-void q_columnview_set_edit_triggers(void* self, int64_t triggers) {
+void q_columnview_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int64_t q_columnview_edit_triggers(void* self) {
+int32_t q_columnview_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -669,11 +669,11 @@ void q_columnview_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_columnview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_columnview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_columnview_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_columnview_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1551,15 +1551,15 @@ bool q_columnview_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_columnview_window_state(void* self) {
+int32_t q_columnview_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_columnview_set_window_state(void* self, int64_t state) {
+void q_columnview_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_columnview_override_window_state(void* self, int64_t state) {
+void q_columnview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1816,7 +1816,7 @@ void q_columnview_render3(void* self, void* target, void* targetOffset, void* so
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_columnview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_columnview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1828,7 +1828,7 @@ void q_columnview_render32(void* self, void* painter, void* targetOffset, void* 
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_columnview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_columnview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1836,7 +1836,7 @@ QPixmap* q_columnview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_columnview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_columnview_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -2353,27 +2353,27 @@ void q_columnview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
     QColumnView_OnEdit2((QColumnView*)self, (intptr_t)callback);
 }
 
-int64_t q_columnview_selection_command(void* self, void* index, void* event) {
+int32_t q_columnview_selection_command(void* self, void* index, void* event) {
     return QColumnView_SelectionCommand((QColumnView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int64_t q_columnview_qbase_selection_command(void* self, void* index, void* event) {
+int32_t q_columnview_qbase_selection_command(void* self, void* index, void* event) {
     return QColumnView_QBaseSelectionCommand((QColumnView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_columnview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+void q_columnview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
     QColumnView_OnSelectionCommand((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_start_drag(void* self, int64_t supportedActions) {
+void q_columnview_start_drag(void* self, int32_t supportedActions) {
     QColumnView_StartDrag((QColumnView*)self, supportedActions);
 }
 
-void q_columnview_qbase_start_drag(void* self, int64_t supportedActions) {
+void q_columnview_qbase_start_drag(void* self, int32_t supportedActions) {
     QColumnView_QBaseStartDrag((QColumnView*)self, supportedActions);
 }
 
-void q_columnview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+void q_columnview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     QColumnView_OnStartDrag((QColumnView*)self, (intptr_t)callback);
 }
 

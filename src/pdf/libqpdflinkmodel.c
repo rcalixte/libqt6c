@@ -254,7 +254,7 @@ bool q_pdflinkmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_pdflinkmodel_check_index2(void* self, void* index, int64_t options) {
+bool q_pdflinkmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -501,15 +501,15 @@ void q_pdflinkmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*,
     QPdfLinkModel_OnDropMimeData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
-int64_t q_pdflinkmodel_flags(void* self, void* index) {
+int32_t q_pdflinkmodel_flags(void* self, void* index) {
     return QPdfLinkModel_Flags((QPdfLinkModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_pdflinkmodel_qbase_flags(void* self, void* index) {
+int32_t q_pdflinkmodel_qbase_flags(void* self, void* index) {
     return QPdfLinkModel_QBaseFlags((QPdfLinkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdflinkmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_pdflinkmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QPdfLinkModel_OnFlags((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -651,27 +651,27 @@ void q_pdflinkmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, vo
     QPdfLinkModel_OnCanDropMimeData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
-int64_t q_pdflinkmodel_supported_drop_actions(void* self) {
+int32_t q_pdflinkmodel_supported_drop_actions(void* self) {
     return QPdfLinkModel_SupportedDropActions((QPdfLinkModel*)self);
 }
 
-int64_t q_pdflinkmodel_qbase_supported_drop_actions(void* self) {
+int32_t q_pdflinkmodel_qbase_supported_drop_actions(void* self) {
     return QPdfLinkModel_QBaseSupportedDropActions((QPdfLinkModel*)self);
 }
 
-void q_pdflinkmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_pdflinkmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QPdfLinkModel_OnSupportedDropActions((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
-int64_t q_pdflinkmodel_supported_drag_actions(void* self) {
+int32_t q_pdflinkmodel_supported_drag_actions(void* self) {
     return QPdfLinkModel_SupportedDragActions((QPdfLinkModel*)self);
 }
 
-int64_t q_pdflinkmodel_qbase_supported_drag_actions(void* self) {
+int32_t q_pdflinkmodel_qbase_supported_drag_actions(void* self) {
     return QPdfLinkModel_QBaseSupportedDragActions((QPdfLinkModel*)self);
 }
 
-void q_pdflinkmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_pdflinkmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QPdfLinkModel_OnSupportedDragActions((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -795,17 +795,17 @@ void q_pdflinkmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*))
     QPdfLinkModel_OnBuddy((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_pdflinkmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_pdflinkmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QPdfLinkModel_Match((QPdfLinkModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_pdflinkmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_pdflinkmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QPdfLinkModel_QBaseMatch((QPdfLinkModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_pdflinkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_pdflinkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QPdfLinkModel_OnMatch((QPdfLinkModel*)self, (intptr_t)callback);
 }
 

@@ -1356,7 +1356,7 @@ void q_graphicswidget_on_height_changed(void* self, void (*callback)(void*));
 /// @param self QGraphicsWidget*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_graphicswidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_graphicswidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1793,7 +1793,7 @@ void q_graphicswidget_set_group(void* self, void* group);
 /// @param self QGraphicsWidget*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
-int64_t q_graphicswidget_flags(void* self);
+int32_t q_graphicswidget_flags(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1809,7 +1809,7 @@ void q_graphicswidget_set_flag(void* self, int32_t flag);
 ///
 /// @param self QGraphicsWidget*
 /// @param flags flag of enum QGraphicsItem__GraphicsItemFlag
-void q_graphicswidget_set_flags(void* self, int64_t flags);
+void q_graphicswidget_set_flags(void* self, int32_t flags);
 
 /// Inherited from QGraphicsItem
 ///

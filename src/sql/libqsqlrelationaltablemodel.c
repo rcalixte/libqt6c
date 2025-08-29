@@ -516,7 +516,7 @@ bool q_sqlrelationaltablemodel_remove_column2(void* self, int column, void* pare
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_sqlrelationaltablemodel_check_index2(void* self, void* index, int64_t options) {
+bool q_sqlrelationaltablemodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -727,15 +727,15 @@ void q_sqlrelationaltablemodel_on_destroyed1(void* self, void (*callback)(void*,
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_sqlrelationaltablemodel_flags(void* self, void* index) {
+int32_t q_sqlrelationaltablemodel_flags(void* self, void* index) {
     return QSqlRelationalTableModel_Flags((QSqlRelationalTableModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_sqlrelationaltablemodel_qbase_flags(void* self, void* index) {
+int32_t q_sqlrelationaltablemodel_qbase_flags(void* self, void* index) {
     return QSqlRelationalTableModel_QBaseFlags((QSqlRelationalTableModel*)self, (QModelIndex*)index);
 }
 
-void q_sqlrelationaltablemodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_sqlrelationaltablemodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QSqlRelationalTableModel_OnFlags((QSqlRelationalTableModel*)self, (intptr_t)callback);
 }
 
@@ -1117,27 +1117,27 @@ void q_sqlrelationaltablemodel_on_can_drop_mime_data(void* self, bool (*callback
     QSqlRelationalTableModel_OnCanDropMimeData((QSqlRelationalTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqlrelationaltablemodel_supported_drop_actions(void* self) {
+int32_t q_sqlrelationaltablemodel_supported_drop_actions(void* self) {
     return QSqlRelationalTableModel_SupportedDropActions((QSqlRelationalTableModel*)self);
 }
 
-int64_t q_sqlrelationaltablemodel_qbase_supported_drop_actions(void* self) {
+int32_t q_sqlrelationaltablemodel_qbase_supported_drop_actions(void* self) {
     return QSqlRelationalTableModel_QBaseSupportedDropActions((QSqlRelationalTableModel*)self);
 }
 
-void q_sqlrelationaltablemodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_sqlrelationaltablemodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QSqlRelationalTableModel_OnSupportedDropActions((QSqlRelationalTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sqlrelationaltablemodel_supported_drag_actions(void* self) {
+int32_t q_sqlrelationaltablemodel_supported_drag_actions(void* self) {
     return QSqlRelationalTableModel_SupportedDragActions((QSqlRelationalTableModel*)self);
 }
 
-int64_t q_sqlrelationaltablemodel_qbase_supported_drag_actions(void* self) {
+int32_t q_sqlrelationaltablemodel_qbase_supported_drag_actions(void* self) {
     return QSqlRelationalTableModel_QBaseSupportedDragActions((QSqlRelationalTableModel*)self);
 }
 
-void q_sqlrelationaltablemodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_sqlrelationaltablemodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QSqlRelationalTableModel_OnSupportedDragActions((QSqlRelationalTableModel*)self, (intptr_t)callback);
 }
 
@@ -1177,17 +1177,17 @@ void q_sqlrelationaltablemodel_on_buddy(void* self, QModelIndex* (*callback)(voi
     QSqlRelationalTableModel_OnBuddy((QSqlRelationalTableModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlRelationalTableModel_Match((QSqlRelationalTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sqlrelationaltablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlRelationalTableModel_QBaseMatch((QSqlRelationalTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_sqlrelationaltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_sqlrelationaltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QSqlRelationalTableModel_OnMatch((QSqlRelationalTableModel*)self, (intptr_t)callback);
 }
 

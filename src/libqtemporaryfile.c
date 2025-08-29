@@ -105,15 +105,15 @@ QTemporaryFile* q_temporaryfile_create_native_file2(void* file) {
     return QTemporaryFile_CreateNativeFile2((QFile*)file);
 }
 
-bool q_temporaryfile_open2(void* self, int64_t flags) {
+bool q_temporaryfile_open2(void* self, int32_t flags) {
     return QTemporaryFile_Open2((QTemporaryFile*)self, flags);
 }
 
-void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int64_t)) {
+void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int32_t)) {
     QTemporaryFile_OnOpen2((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-bool q_temporaryfile_qbase_open2(void* self, int64_t flags) {
+bool q_temporaryfile_qbase_open2(void* self, int32_t flags) {
     return QTemporaryFile_QBaseOpen2((QTemporaryFile*)self, flags);
 }
 
@@ -214,7 +214,7 @@ bool q_temporaryfile_copy2(const char* fileName, const char* newName) {
     return QFile_Copy2(qstring(fileName), qstring(newName));
 }
 
-bool q_temporaryfile_open4(void* self, int fd, int64_t ioFlags) {
+bool q_temporaryfile_open4(void* self, int fd, int32_t ioFlags) {
     return QFile_Open4((QFile*)self, fd, ioFlags);
 }
 
@@ -222,15 +222,15 @@ bool q_temporaryfile_resize2(const char* filename, long long sz) {
     return QFile_Resize2(qstring(filename), sz);
 }
 
-int64_t q_temporaryfile_permissions2(const char* filename) {
+int32_t q_temporaryfile_permissions2(const char* filename) {
     return QFile_Permissions2(qstring(filename));
 }
 
-bool q_temporaryfile_set_permissions2(const char* filename, int64_t permissionSpec) {
+bool q_temporaryfile_set_permissions2(const char* filename, int32_t permissionSpec) {
     return QFile_SetPermissions2(qstring(filename), permissionSpec);
 }
 
-bool q_temporaryfile_open33(void* self, int fd, int64_t ioFlags, int64_t handleFlags) {
+bool q_temporaryfile_open33(void* self, int fd, int32_t ioFlags, int32_t handleFlags) {
     return QFile_Open33((QFile*)self, fd, ioFlags, handleFlags);
 }
 
@@ -266,11 +266,11 @@ bool q_temporaryfile_set_file_time(void* self, void* newDate, int32_t fileTime) 
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
-unsigned char* q_temporaryfile_map3(void* self, long long offset, long long size, int64_t flags) {
+unsigned char* q_temporaryfile_map3(void* self, long long offset, long long size, int32_t flags) {
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-int64_t q_temporaryfile_open_mode(void* self) {
+int32_t q_temporaryfile_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -659,27 +659,27 @@ void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, long long)) {
     QTemporaryFile_OnResize((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-int64_t q_temporaryfile_permissions(void* self) {
+int32_t q_temporaryfile_permissions(void* self) {
     return QTemporaryFile_Permissions((QTemporaryFile*)self);
 }
 
-int64_t q_temporaryfile_qbase_permissions(void* self) {
+int32_t q_temporaryfile_qbase_permissions(void* self) {
     return QTemporaryFile_QBasePermissions((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_permissions(void* self, int64_t (*callback)()) {
+void q_temporaryfile_on_permissions(void* self, int32_t (*callback)()) {
     QTemporaryFile_OnPermissions((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-bool q_temporaryfile_set_permissions(void* self, int64_t permissionSpec) {
+bool q_temporaryfile_set_permissions(void* self, int32_t permissionSpec) {
     return QTemporaryFile_SetPermissions((QTemporaryFile*)self, permissionSpec);
 }
 
-bool q_temporaryfile_qbase_set_permissions(void* self, int64_t permissionSpec) {
+bool q_temporaryfile_qbase_set_permissions(void* self, int32_t permissionSpec) {
     return QTemporaryFile_QBaseSetPermissions((QTemporaryFile*)self, permissionSpec);
 }
 
-void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int64_t)) {
+void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int32_t)) {
     QTemporaryFile_OnSetPermissions((QTemporaryFile*)self, (intptr_t)callback);
 }
 
@@ -947,15 +947,15 @@ void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, vo
     QTemporaryFile_OnDisconnectNotify((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-void q_temporaryfile_set_open_mode(void* self, int64_t openMode) {
+void q_temporaryfile_set_open_mode(void* self, int32_t openMode) {
     QTemporaryFile_SetOpenMode((QTemporaryFile*)self, openMode);
 }
 
-void q_temporaryfile_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_temporaryfile_qbase_set_open_mode(void* self, int32_t openMode) {
     QTemporaryFile_QBaseSetOpenMode((QTemporaryFile*)self, openMode);
 }
 
-void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QTemporaryFile_OnSetOpenMode((QTemporaryFile*)self, (intptr_t)callback);
 }
 

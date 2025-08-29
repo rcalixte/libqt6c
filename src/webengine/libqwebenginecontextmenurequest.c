@@ -93,11 +93,11 @@ void q_webenginecontextmenurequest_set_accepted(void* self, bool accepted) {
     QWebEngineContextMenuRequest_SetAccepted((QWebEngineContextMenuRequest*)self, accepted);
 }
 
-int64_t q_webenginecontextmenurequest_media_flags(void* self) {
+int32_t q_webenginecontextmenurequest_media_flags(void* self) {
     return QWebEngineContextMenuRequest_MediaFlags((QWebEngineContextMenuRequest*)self);
 }
 
-int64_t q_webenginecontextmenurequest_edit_flags(void* self) {
+int32_t q_webenginecontextmenurequest_edit_flags(void* self) {
     return QWebEngineContextMenuRequest_EditFlags((QWebEngineContextMenuRequest*)self);
 }
 

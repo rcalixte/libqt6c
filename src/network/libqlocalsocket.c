@@ -124,15 +124,15 @@ bool q_localsocket_qbase_can_read_line(void* self) {
     return QLocalSocket_QBaseCanReadLine((QLocalSocket*)self);
 }
 
-bool q_localsocket_open(void* self, int64_t openMode) {
+bool q_localsocket_open(void* self, int32_t openMode) {
     return QLocalSocket_Open((QLocalSocket*)self, openMode);
 }
 
-void q_localsocket_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_localsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QLocalSocket_OnOpen((QLocalSocket*)self, (intptr_t)callback);
 }
 
-bool q_localsocket_qbase_open(void* self, int64_t openMode) {
+bool q_localsocket_qbase_open(void* self, int32_t openMode) {
     return QLocalSocket_QBaseOpen((QLocalSocket*)self, openMode);
 }
 
@@ -176,11 +176,11 @@ intptr_t q_localsocket_socket_descriptor(void* self) {
     return QLocalSocket_SocketDescriptor((QLocalSocket*)self);
 }
 
-void q_localsocket_set_socket_options(void* self, int64_t option) {
+void q_localsocket_set_socket_options(void* self, int32_t option) {
     QLocalSocket_SetSocketOptions((QLocalSocket*)self, option);
 }
 
-int64_t q_localsocket_socket_options(void* self) {
+int32_t q_localsocket_socket_options(void* self) {
     return QLocalSocket_SocketOptions((QLocalSocket*)self);
 }
 
@@ -314,11 +314,11 @@ const char* q_localsocket_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_localsocket_connect_to_server1(void* self, int64_t openMode) {
+void q_localsocket_connect_to_server1(void* self, int32_t openMode) {
     QLocalSocket_ConnectToServer1((QLocalSocket*)self, openMode);
 }
 
-void q_localsocket_connect_to_server22(void* self, const char* name, int64_t openMode) {
+void q_localsocket_connect_to_server22(void* self, const char* name, int32_t openMode) {
     QLocalSocket_ConnectToServer22((QLocalSocket*)self, qstring(name), openMode);
 }
 
@@ -326,7 +326,7 @@ bool q_localsocket_set_socket_descriptor2(void* self, intptr_t socketDescriptor,
     return QLocalSocket_SetSocketDescriptor2((QLocalSocket*)self, socketDescriptor, socketState);
 }
 
-bool q_localsocket_set_socket_descriptor3(void* self, intptr_t socketDescriptor, int32_t socketState, int64_t openMode) {
+bool q_localsocket_set_socket_descriptor3(void* self, intptr_t socketDescriptor, int32_t socketState, int32_t openMode) {
     return QLocalSocket_SetSocketDescriptor3((QLocalSocket*)self, socketDescriptor, socketState, openMode);
 }
 
@@ -338,7 +338,7 @@ bool q_localsocket_wait_for_disconnected1(void* self, int msecs) {
     return QLocalSocket_WaitForDisconnected1((QLocalSocket*)self, msecs);
 }
 
-int64_t q_localsocket_open_mode(void* self) {
+int32_t q_localsocket_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -847,15 +847,15 @@ void q_localsocket_on_disconnect_notify(void* self, void (*callback)(void*, void
     QLocalSocket_OnDisconnectNotify((QLocalSocket*)self, (intptr_t)callback);
 }
 
-void q_localsocket_set_open_mode(void* self, int64_t openMode) {
+void q_localsocket_set_open_mode(void* self, int32_t openMode) {
     QLocalSocket_SetOpenMode((QLocalSocket*)self, openMode);
 }
 
-void q_localsocket_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_localsocket_qbase_set_open_mode(void* self, int32_t openMode) {
     QLocalSocket_QBaseSetOpenMode((QLocalSocket*)self, openMode);
 }
 
-void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QLocalSocket_OnSetOpenMode((QLocalSocket*)self, (intptr_t)callback);
 }
 

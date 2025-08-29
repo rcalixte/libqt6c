@@ -630,15 +630,15 @@ const KConfigGroup* k_configgroup_qbase_group_impl2(void* self, const char* grou
     return KConfigGroup_QBaseGroupImpl2((KConfigGroup*)self, qstring(groupName));
 }
 
-void k_configgroup_delete_group_impl(void* self, const char* groupName, int64_t flags) {
+void k_configgroup_delete_group_impl(void* self, const char* groupName, int32_t flags) {
     KConfigGroup_DeleteGroupImpl((KConfigGroup*)self, qstring(groupName), flags);
 }
 
-void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t)) {
+void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t)) {
     KConfigGroup_OnDeleteGroupImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 
-void k_configgroup_qbase_delete_group_impl(void* self, const char* groupName, int64_t flags) {
+void k_configgroup_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags) {
     KConfigGroup_QBaseDeleteGroupImpl((KConfigGroup*)self, qstring(groupName), flags);
 }
 
@@ -654,23 +654,23 @@ bool k_configgroup_qbase_is_group_immutable_impl(void* self, const char* groupNa
     return KConfigGroup_QBaseIsGroupImmutableImpl((KConfigGroup*)self, qstring(groupName));
 }
 
-void k_configgroup_copy_to2(void* self, void* other, int64_t pFlags) {
+void k_configgroup_copy_to2(void* self, void* other, int32_t pFlags) {
     KConfigGroup_CopyTo2((KConfigGroup*)self, (KConfigBase*)other, pFlags);
 }
 
-void k_configgroup_reparent2(void* self, void* parent, int64_t pFlags) {
+void k_configgroup_reparent2(void* self, void* parent, int32_t pFlags) {
     KConfigGroup_Reparent2((KConfigGroup*)self, (KConfigBase*)parent, pFlags);
 }
 
-void k_configgroup_move_values_to3(void* self, libqt_list /* of const char* */ keys, void* other, int64_t pFlags) {
+void k_configgroup_move_values_to3(void* self, libqt_list /* of const char* */ keys, void* other, int32_t pFlags) {
     KConfigGroup_MoveValuesTo3((KConfigGroup*)self, keys, (KConfigGroup*)other, pFlags);
 }
 
-void k_configgroup_move_values_to22(void* self, void* other, int64_t pFlags) {
+void k_configgroup_move_values_to22(void* self, void* other, int32_t pFlags) {
     KConfigGroup_MoveValuesTo22((KConfigGroup*)self, (KConfigGroup*)other, pFlags);
 }
 
-void k_configgroup_delete_group1(void* self, int64_t pFlags) {
+void k_configgroup_delete_group1(void* self, int32_t pFlags) {
     KConfigGroup_DeleteGroup1((KConfigGroup*)self, pFlags);
 }
 
@@ -762,39 +762,39 @@ const char* k_configgroup_read_entry_untranslated23(void* self, const char* key,
     return _ret;
 }
 
-void k_configgroup_write_entry32(void* self, const char* key, void* value, int64_t pFlags) {
+void k_configgroup_write_entry32(void* self, const char* key, void* value, int32_t pFlags) {
     KConfigGroup_WriteEntry32((KConfigGroup*)self, qstring(key), (QVariant*)value, pFlags);
 }
 
-void k_configgroup_write_entry33(void* self, const char* key, void* value, int64_t pFlags) {
+void k_configgroup_write_entry33(void* self, const char* key, void* value, int32_t pFlags) {
     KConfigGroup_WriteEntry33((KConfigGroup*)self, key, (QVariant*)value, pFlags);
 }
 
-void k_configgroup_write_entry34(void* self, const char* key, const char* value, int64_t pFlags) {
+void k_configgroup_write_entry34(void* self, const char* key, const char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry34((KConfigGroup*)self, qstring(key), qstring(value), pFlags);
 }
 
-void k_configgroup_write_entry35(void* self, const char* key, const char* value, int64_t pFlags) {
+void k_configgroup_write_entry35(void* self, const char* key, const char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry35((KConfigGroup*)self, key, qstring(value), pFlags);
 }
 
-void k_configgroup_write_entry36(void* self, const char* key, const char* value, int64_t pFlags) {
+void k_configgroup_write_entry36(void* self, const char* key, const char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry36((KConfigGroup*)self, qstring(key), qstring(value), pFlags);
 }
 
-void k_configgroup_write_entry37(void* self, const char* key, const char* value, int64_t pFlags) {
+void k_configgroup_write_entry37(void* self, const char* key, const char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry37((KConfigGroup*)self, key, qstring(value), pFlags);
 }
 
-void k_configgroup_write_entry38(void* self, const char* key, const char* value, int64_t pFlags) {
+void k_configgroup_write_entry38(void* self, const char* key, const char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry38((KConfigGroup*)self, qstring(key), value, pFlags);
 }
 
-void k_configgroup_write_entry39(void* self, const char* key, const char* value, int64_t pFlags) {
+void k_configgroup_write_entry39(void* self, const char* key, const char* value, int32_t pFlags) {
     KConfigGroup_WriteEntry39((KConfigGroup*)self, key, value, pFlags);
 }
 
-void k_configgroup_write_entry310(void* self, const char* key, const char* value[], int64_t pFlags) {
+void k_configgroup_write_entry310(void* self, const char* key, const char* value[], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -809,7 +809,7 @@ void k_configgroup_write_entry310(void* self, const char* key, const char* value
     free(value_qstr);
 }
 
-void k_configgroup_write_entry311(void* self, const char* key, const char* value[], int64_t pFlags) {
+void k_configgroup_write_entry311(void* self, const char* key, const char* value[], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -824,15 +824,15 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
     free(value_qstr);
 }
 
-void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int64_t pFlags) {
+void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int32_t pFlags) {
     KConfigGroup_WriteEntry312((KConfigGroup*)self, qstring(key), value, pFlags);
 }
 
-void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int64_t pFlags) {
+void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int32_t pFlags) {
     KConfigGroup_WriteEntry313((KConfigGroup*)self, key, value, pFlags);
 }
 
-void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[], int64_t pFlags) {
+void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -847,7 +847,7 @@ void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const cha
     free(value_qstr);
 }
 
-void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[], int64_t pFlags) {
+void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -862,15 +862,15 @@ void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const cha
     free(value_qstr);
 }
 
-void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* path, int64_t pFlags) {
+void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* path, int32_t pFlags) {
     KConfigGroup_WritePathEntry32((KConfigGroup*)self, qstring(pKey), qstring(path), pFlags);
 }
 
-void k_configgroup_write_path_entry33(void* self, const char* Key, const char* path, int64_t pFlags) {
+void k_configgroup_write_path_entry33(void* self, const char* Key, const char* path, int32_t pFlags) {
     KConfigGroup_WritePathEntry33((KConfigGroup*)self, Key, qstring(path), pFlags);
 }
 
-void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[], int64_t pFlags) {
+void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -885,7 +885,7 @@ void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* 
     free(value_qstr);
 }
 
-void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[], int64_t pFlags) {
+void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -900,19 +900,19 @@ void k_configgroup_write_path_entry35(void* self, const char* key, const char* v
     free(value_qstr);
 }
 
-void k_configgroup_delete_entry22(void* self, const char* pKey, int64_t pFlags) {
+void k_configgroup_delete_entry22(void* self, const char* pKey, int32_t pFlags) {
     KConfigGroup_DeleteEntry22((KConfigGroup*)self, qstring(pKey), pFlags);
 }
 
-void k_configgroup_delete_entry23(void* self, const char* key, int64_t pFlags) {
+void k_configgroup_delete_entry23(void* self, const char* key, int32_t pFlags) {
     KConfigGroup_DeleteEntry23((KConfigGroup*)self, key, pFlags);
 }
 
-void k_configgroup_revert_to_default22(void* self, const char* key, int64_t pFlag) {
+void k_configgroup_revert_to_default22(void* self, const char* key, int32_t pFlag) {
     KConfigGroup_RevertToDefault22((KConfigGroup*)self, qstring(key), pFlag);
 }
 
-void k_configgroup_revert_to_default23(void* self, const char* key, int64_t pFlag) {
+void k_configgroup_revert_to_default23(void* self, const char* key, int32_t pFlag) {
     KConfigGroup_RevertToDefault23((KConfigGroup*)self, key, pFlag);
 }
 
@@ -932,7 +932,7 @@ bool k_configgroup_is_group_immutable(void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_configgroup_delete_group2(void* self, const char* group, int64_t flags) {
+void k_configgroup_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
 }
 

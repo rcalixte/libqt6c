@@ -339,7 +339,7 @@ Qt::AlignmentFlag alignment = Qt::AlignmentFlag::AlignLeft | Qt::AlignmentFlag::
 
 ```c
 // libqt6c API
-int64_t alignment = QT_ALIGNMENTFLAG_ALIGNLEFT | QT_ALIGNMENTFLAG_ALIGNTOP;
+int32_t alignment = QT_ALIGNMENTFLAG_ALIGNLEFT | QT_ALIGNMENTFLAG_ALIGNTOP;
 ```
 
 > [!IMPORTANT]

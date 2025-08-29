@@ -15,7 +15,7 @@ const char* k_sharedconfig_name(void* self) {
     return _ret;
 }
 
-int64_t k_sharedconfig_open_flags(void* self) {
+int32_t k_sharedconfig_open_flags(void* self) {
     return KConfig_OpenFlags((KConfig*)self);
 }
 
@@ -170,6 +170,6 @@ bool k_sharedconfig_is_group_immutable(void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_sharedconfig_delete_group2(void* self, const char* group, int64_t flags) {
+void k_sharedconfig_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
 }

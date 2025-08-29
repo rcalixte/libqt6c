@@ -111,7 +111,7 @@ int32_t q_drag_exec(void* self);
 /// @param defaultAction enum Qt__DropAction
 ///
 /// @return enum Qt__DropAction
-int32_t q_drag_exec2(void* self, int64_t supportedActions, int32_t defaultAction);
+int32_t q_drag_exec2(void* self, int32_t supportedActions, int32_t defaultAction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdrag.html#setDragCursor)
 ///
@@ -131,7 +131,7 @@ QPixmap* q_drag_drag_cursor(void* self, int32_t action);
 /// @param self QDrag*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_drag_supported_actions(void* self);
+int32_t q_drag_supported_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdrag.html#defaultAction)
 ///
@@ -191,7 +191,7 @@ const char* q_drag_tr3(const char* s, const char* c, int n);
 /// @param supportedActions flag of enum Qt__DropAction
 ///
 /// @return enum Qt__DropAction
-int32_t q_drag_exec1(void* self, int64_t supportedActions);
+int32_t q_drag_exec1(void* self, int32_t supportedActions);
 
 /// Inherited from QObject
 ///

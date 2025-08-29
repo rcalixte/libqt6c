@@ -225,15 +225,15 @@ int32_t q_boxlayout_qbase_minimum_height_for_width(void* self, int param1) {
     return QBoxLayout_QBaseMinimumHeightForWidth((QBoxLayout*)self, param1);
 }
 
-int64_t q_boxlayout_expanding_directions(void* self) {
+int32_t q_boxlayout_expanding_directions(void* self) {
     return QBoxLayout_ExpandingDirections((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_boxlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QBoxLayout_OnExpandingDirections((QBoxLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_boxlayout_qbase_expanding_directions(void* self) {
+int32_t q_boxlayout_qbase_expanding_directions(void* self) {
     return QBoxLayout_QBaseExpandingDirections((QBoxLayout*)self);
 }
 
@@ -319,7 +319,7 @@ void q_boxlayout_add_widget2(void* self, void* param1, int stretch) {
     QBoxLayout_AddWidget2((QBoxLayout*)self, (QWidget*)param1, stretch);
 }
 
-void q_boxlayout_add_widget3(void* self, void* param1, int stretch, int64_t alignment) {
+void q_boxlayout_add_widget3(void* self, void* param1, int stretch, int32_t alignment) {
     QBoxLayout_AddWidget3((QBoxLayout*)self, (QWidget*)param1, stretch, alignment);
 }
 
@@ -335,7 +335,7 @@ void q_boxlayout_insert_widget3(void* self, int index, void* widget, int stretch
     QBoxLayout_InsertWidget3((QBoxLayout*)self, index, (QWidget*)widget, stretch);
 }
 
-void q_boxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int64_t alignment) {
+void q_boxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int32_t alignment) {
     QBoxLayout_InsertWidget4((QBoxLayout*)self, index, (QWidget*)widget, stretch, alignment);
 }
 
@@ -367,11 +367,11 @@ QRect* q_boxlayout_contents_rect(void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
-bool q_boxlayout_set_alignment(void* self, void* w, int64_t alignment) {
+bool q_boxlayout_set_alignment(void* self, void* w, int32_t alignment) {
     return QLayout_SetAlignment((QLayout*)self, (QWidget*)w, alignment);
 }
 
-bool q_boxlayout_set_alignment2(void* self, void* l, int64_t alignment) {
+bool q_boxlayout_set_alignment2(void* self, void* l, int32_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
@@ -626,7 +626,7 @@ void q_boxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_boxlayout_alignment(void* self) {
+int32_t q_boxlayout_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
@@ -666,27 +666,27 @@ void q_boxlayout_on_is_empty(void* self, bool (*callback)()) {
     QBoxLayout_OnIsEmpty((QBoxLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_boxlayout_control_types(void* self) {
+int32_t q_boxlayout_control_types(void* self) {
     return QBoxLayout_ControlTypes((QBoxLayout*)self);
 }
 
-int64_t q_boxlayout_qbase_control_types(void* self) {
+int32_t q_boxlayout_qbase_control_types(void* self) {
     return QBoxLayout_QBaseControlTypes((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_control_types(void* self, int64_t (*callback)()) {
+void q_boxlayout_on_control_types(void* self, int32_t (*callback)()) {
     QBoxLayout_OnControlTypes((QBoxLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QBoxLayout_ReplaceWidget((QBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QBoxLayout_QBaseReplaceWidget((QBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
     QBoxLayout_OnReplaceWidget((QBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -1055,7 +1055,7 @@ void q_hboxlayout_add_widget2(void* self, void* param1, int stretch) {
     QBoxLayout_AddWidget2((QBoxLayout*)self, (QWidget*)param1, stretch);
 }
 
-void q_hboxlayout_add_widget3(void* self, void* param1, int stretch, int64_t alignment) {
+void q_hboxlayout_add_widget3(void* self, void* param1, int stretch, int32_t alignment) {
     QBoxLayout_AddWidget3((QBoxLayout*)self, (QWidget*)param1, stretch, alignment);
 }
 
@@ -1071,7 +1071,7 @@ void q_hboxlayout_insert_widget3(void* self, int index, void* widget, int stretc
     QBoxLayout_InsertWidget3((QBoxLayout*)self, index, (QWidget*)widget, stretch);
 }
 
-void q_hboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int64_t alignment) {
+void q_hboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int32_t alignment) {
     QBoxLayout_InsertWidget4((QBoxLayout*)self, index, (QWidget*)widget, stretch, alignment);
 }
 
@@ -1103,11 +1103,11 @@ QRect* q_hboxlayout_contents_rect(void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
-bool q_hboxlayout_set_alignment(void* self, void* w, int64_t alignment) {
+bool q_hboxlayout_set_alignment(void* self, void* w, int32_t alignment) {
     return QLayout_SetAlignment((QLayout*)self, (QWidget*)w, alignment);
 }
 
-bool q_hboxlayout_set_alignment2(void* self, void* l, int64_t alignment) {
+bool q_hboxlayout_set_alignment2(void* self, void* l, int32_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
@@ -1362,7 +1362,7 @@ void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_hboxlayout_alignment(void* self) {
+int32_t q_hboxlayout_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
@@ -1474,15 +1474,15 @@ void q_hboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
     QHBoxLayout_OnMinimumHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_hboxlayout_expanding_directions(void* self) {
+int32_t q_hboxlayout_expanding_directions(void* self) {
     return QHBoxLayout_ExpandingDirections((QHBoxLayout*)self);
 }
 
-int64_t q_hboxlayout_qbase_expanding_directions(void* self) {
+int32_t q_hboxlayout_qbase_expanding_directions(void* self) {
     return QHBoxLayout_QBaseExpandingDirections((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_hboxlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QHBoxLayout_OnExpandingDirections((QHBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -1582,27 +1582,27 @@ void q_hboxlayout_on_is_empty(void* self, bool (*callback)()) {
     QHBoxLayout_OnIsEmpty((QHBoxLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_hboxlayout_control_types(void* self) {
+int32_t q_hboxlayout_control_types(void* self) {
     return QHBoxLayout_ControlTypes((QHBoxLayout*)self);
 }
 
-int64_t q_hboxlayout_qbase_control_types(void* self) {
+int32_t q_hboxlayout_qbase_control_types(void* self) {
     return QHBoxLayout_QBaseControlTypes((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_control_types(void* self, int64_t (*callback)()) {
+void q_hboxlayout_on_control_types(void* self, int32_t (*callback)()) {
     QHBoxLayout_OnControlTypes((QHBoxLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QHBoxLayout_ReplaceWidget((QHBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QHBoxLayout_QBaseReplaceWidget((QHBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
     QHBoxLayout_OnReplaceWidget((QHBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -1971,7 +1971,7 @@ void q_vboxlayout_add_widget2(void* self, void* param1, int stretch) {
     QBoxLayout_AddWidget2((QBoxLayout*)self, (QWidget*)param1, stretch);
 }
 
-void q_vboxlayout_add_widget3(void* self, void* param1, int stretch, int64_t alignment) {
+void q_vboxlayout_add_widget3(void* self, void* param1, int stretch, int32_t alignment) {
     QBoxLayout_AddWidget3((QBoxLayout*)self, (QWidget*)param1, stretch, alignment);
 }
 
@@ -1987,7 +1987,7 @@ void q_vboxlayout_insert_widget3(void* self, int index, void* widget, int stretc
     QBoxLayout_InsertWidget3((QBoxLayout*)self, index, (QWidget*)widget, stretch);
 }
 
-void q_vboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int64_t alignment) {
+void q_vboxlayout_insert_widget4(void* self, int index, void* widget, int stretch, int32_t alignment) {
     QBoxLayout_InsertWidget4((QBoxLayout*)self, index, (QWidget*)widget, stretch, alignment);
 }
 
@@ -2019,11 +2019,11 @@ QRect* q_vboxlayout_contents_rect(void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
-bool q_vboxlayout_set_alignment(void* self, void* w, int64_t alignment) {
+bool q_vboxlayout_set_alignment(void* self, void* w, int32_t alignment) {
     return QLayout_SetAlignment((QLayout*)self, (QWidget*)w, alignment);
 }
 
-bool q_vboxlayout_set_alignment2(void* self, void* l, int64_t alignment) {
+bool q_vboxlayout_set_alignment2(void* self, void* l, int32_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
@@ -2278,7 +2278,7 @@ void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_vboxlayout_alignment(void* self) {
+int32_t q_vboxlayout_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
@@ -2390,15 +2390,15 @@ void q_vboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
     QVBoxLayout_OnMinimumHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_vboxlayout_expanding_directions(void* self) {
+int32_t q_vboxlayout_expanding_directions(void* self) {
     return QVBoxLayout_ExpandingDirections((QVBoxLayout*)self);
 }
 
-int64_t q_vboxlayout_qbase_expanding_directions(void* self) {
+int32_t q_vboxlayout_qbase_expanding_directions(void* self) {
     return QVBoxLayout_QBaseExpandingDirections((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_vboxlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QVBoxLayout_OnExpandingDirections((QVBoxLayout*)self, (intptr_t)callback);
 }
 
@@ -2498,27 +2498,27 @@ void q_vboxlayout_on_is_empty(void* self, bool (*callback)()) {
     QVBoxLayout_OnIsEmpty((QVBoxLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_vboxlayout_control_types(void* self) {
+int32_t q_vboxlayout_control_types(void* self) {
     return QVBoxLayout_ControlTypes((QVBoxLayout*)self);
 }
 
-int64_t q_vboxlayout_qbase_control_types(void* self) {
+int32_t q_vboxlayout_qbase_control_types(void* self) {
     return QVBoxLayout_QBaseControlTypes((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_control_types(void* self, int64_t (*callback)()) {
+void q_vboxlayout_on_control_types(void* self, int32_t (*callback)()) {
     QVBoxLayout_OnControlTypes((QVBoxLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QVBoxLayout_ReplaceWidget((QVBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QVBoxLayout_QBaseReplaceWidget((QVBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
     QVBoxLayout_OnReplaceWidget((QVBoxLayout*)self, (intptr_t)callback);
 }
 

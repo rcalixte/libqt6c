@@ -36,7 +36,7 @@ const char* k_sharedconfig_name(void* self);
 /// @param self KSharedConfig*
 ///
 /// @return flag of enum KConfig__OpenFlag
-int64_t k_sharedconfig_open_flags(void* self);
+int32_t k_sharedconfig_open_flags(void* self);
 
 /// Inherited from KConfig
 ///
@@ -251,5 +251,5 @@ bool k_sharedconfig_is_group_immutable(void* self, const char* group);
 /// @param self KSharedConfig*
 /// @param group const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_sharedconfig_delete_group2(void* self, const char* group, int64_t flags);
+void k_sharedconfig_delete_group2(void* self, const char* group, int32_t flags);
 #endif

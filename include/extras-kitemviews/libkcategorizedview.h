@@ -297,7 +297,7 @@ void k_categorizedview_qbase_resize_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
-void k_categorizedview_set_selection(void* self, void* rect, int64_t flags);
+void k_categorizedview_set_selection(void* self, void* rect, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setSelection)
 ///
@@ -305,7 +305,7 @@ void k_categorizedview_set_selection(void* self, void* rect, int64_t flags);
 ///
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag flags)
-void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
+void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setSelection)
 ///
@@ -314,7 +314,7 @@ void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void
 /// @param self KCategorizedView*
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
-void k_categorizedview_qbase_set_selection(void* self, void* rect, int64_t flags);
+void k_categorizedview_qbase_set_selection(void* self, void* rect, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
@@ -408,7 +408,7 @@ void k_categorizedview_qbase_leave_event(void* self, void* event);
 ///
 /// @param self KCategorizedView*
 /// @param supportedActions flag of enum Qt__DropAction
-void k_categorizedview_start_drag(void* self, int64_t supportedActions);
+void k_categorizedview_start_drag(void* self, int32_t supportedActions);
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#startDrag)
 ///
@@ -416,7 +416,7 @@ void k_categorizedview_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, flag of enum Qt__DropAction supportedActions)
-void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int64_t));
+void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#startDrag)
 ///
@@ -424,7 +424,7 @@ void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int64_t
 ///
 /// @param self KCategorizedView*
 /// @param supportedActions flag of enum Qt__DropAction
-void k_categorizedview_qbase_start_drag(void* self, int64_t supportedActions);
+void k_categorizedview_qbase_start_drag(void* self, int32_t supportedActions);
 
 /// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragMoveEvent)
 ///
@@ -924,7 +924,7 @@ bool k_categorizedview_is_selection_rect_visible(void* self);
 ///
 /// @param self KCategorizedView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_categorizedview_set_item_alignment(void* self, int64_t alignment);
+void k_categorizedview_set_item_alignment(void* self, int32_t alignment);
 
 /// Inherited from QListView
 ///
@@ -933,7 +933,7 @@ void k_categorizedview_set_item_alignment(void* self, int64_t alignment);
 /// @param self KCategorizedView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_categorizedview_item_alignment(void* self);
+int32_t k_categorizedview_item_alignment(void* self);
 
 /// Inherited from QListView
 ///
@@ -1034,7 +1034,7 @@ QModelIndex* k_categorizedview_root_index(void* self);
 ///
 /// @param self KCategorizedView*
 /// @param triggers flag of enum QAbstractItemView__EditTrigger
-void k_categorizedview_set_edit_triggers(void* self, int64_t triggers);
+void k_categorizedview_set_edit_triggers(void* self, int32_t triggers);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1043,7 +1043,7 @@ void k_categorizedview_set_edit_triggers(void* self, int64_t triggers);
 /// @param self KCategorizedView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
-int64_t k_categorizedview_edit_triggers(void* self);
+int32_t k_categorizedview_edit_triggers(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1597,7 +1597,7 @@ void k_categorizedview_set_corner_widget(void* self, void* widget);
 /// @param self KCategorizedView*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_categorizedview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void k_categorizedview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1605,7 +1605,7 @@ void k_categorizedview_add_scroll_bar_widget(void* self, void* widget, int64_t a
 ///
 /// @param self KCategorizedView*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ k_categorizedview_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ k_categorizedview_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3240,7 +3240,7 @@ bool k_categorizedview_is_full_screen(void* self);
 /// @param self KCategorizedView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_categorizedview_window_state(void* self);
+int32_t k_categorizedview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3248,7 +3248,7 @@ int64_t k_categorizedview_window_state(void* self);
 ///
 /// @param self KCategorizedView*
 /// @param state flag of enum Qt__WindowState
-void k_categorizedview_set_window_state(void* self, int64_t state);
+void k_categorizedview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3256,7 +3256,7 @@ void k_categorizedview_set_window_state(void* self, int64_t state);
 ///
 /// @param self KCategorizedView*
 /// @param state flag of enum Qt__WindowState
-void k_categorizedview_override_window_state(void* self, int64_t state);
+void k_categorizedview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3773,7 +3773,7 @@ void k_categorizedview_render3(void* self, void* target, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_categorizedview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_categorizedview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3803,7 +3803,7 @@ void k_categorizedview_render32(void* self, void* painter, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_categorizedview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_categorizedview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3820,7 +3820,7 @@ QPixmap* k_categorizedview_grab1(void* self, void* rectangle);
 /// @param self KCategorizedView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_categorizedview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_categorizedview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -5241,7 +5241,7 @@ void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t k_categorizedview_selection_command(void* self, void* index, void* event);
+int32_t k_categorizedview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5254,7 +5254,7 @@ int64_t k_categorizedview_selection_command(void* self, void* index, void* event
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t k_categorizedview_qbase_selection_command(void* self, void* index, void* event);
+int32_t k_categorizedview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5263,8 +5263,8 @@ int64_t k_categorizedview_qbase_selection_command(void* self, void* index, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback int64_t func(KCategorizedView* self, QModelIndex* index, QEvent* event)
-void k_categorizedview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
+/// @param callback int32_t func(KCategorizedView* self, QModelIndex* index, QEvent* event)
+void k_categorizedview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
 ///

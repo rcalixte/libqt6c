@@ -598,7 +598,7 @@ int32_t q_datetimeaxis_orientation(void* self);
 /// @param self QDateTimeAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_datetimeaxis_alignment(void* self);
+int32_t q_datetimeaxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
 ///

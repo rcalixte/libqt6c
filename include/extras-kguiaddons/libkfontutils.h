@@ -22,7 +22,7 @@
 /// @param param5 double
 /// @param param6 double
 /// @param param7 flag of enum KFontUtils__AdaptFontSizeOption
-double k_fontutils_adapt_font_size(void* param1, const char* param2, double param3, double param4, double param5, double param6, int64_t param7);
+double k_fontutils_adapt_font_size(void* param1, const char* param2, double param3, double param4, double param5, double param6, int32_t param7);
 
 /// [Qt documentation](https://api-staging.kde.org/kfontutils.html#adaptFontSize)
 ///
@@ -32,7 +32,7 @@ double k_fontutils_adapt_font_size(void* param1, const char* param2, double para
 /// @param param4 double
 /// @param param5 double
 /// @param param6 flag of enum KFontUtils__AdaptFontSizeOption
-double k_fontutils_adapt_font_size2(void* param1, const char* param2, void* param3, double param4, double param5, int64_t param6);
+double k_fontutils_adapt_font_size2(void* param1, const char* param2, void* param3, double param4, double param5, int32_t param6);
 
 /// https://api-staging.kde.org/kfontutils.html#types
 

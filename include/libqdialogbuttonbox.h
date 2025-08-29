@@ -30,13 +30,13 @@ QDialogButtonBox* q_dialogbuttonbox_new3(int32_t orientation);
 /// q_dialogbuttonbox_new4 constructs a new QDialogButtonBox object.
 ///
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
-QDialogButtonBox* q_dialogbuttonbox_new4(int64_t buttons);
+QDialogButtonBox* q_dialogbuttonbox_new4(int32_t buttons);
 
 /// q_dialogbuttonbox_new5 constructs a new QDialogButtonBox object.
 ///
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
 /// @param orientation enum Qt__Orientation
-QDialogButtonBox* q_dialogbuttonbox_new5(int64_t buttons, int32_t orientation);
+QDialogButtonBox* q_dialogbuttonbox_new5(int32_t buttons, int32_t orientation);
 
 /// q_dialogbuttonbox_new6 constructs a new QDialogButtonBox object.
 ///
@@ -48,14 +48,14 @@ QDialogButtonBox* q_dialogbuttonbox_new6(int32_t orientation, void* parent);
 ///
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
 /// @param parent QWidget*
-QDialogButtonBox* q_dialogbuttonbox_new7(int64_t buttons, void* parent);
+QDialogButtonBox* q_dialogbuttonbox_new7(int32_t buttons, void* parent);
 
 /// q_dialogbuttonbox_new8 constructs a new QDialogButtonBox object.
 ///
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
 /// @param orientation enum Qt__Orientation
 /// @param parent QWidget*
-QDialogButtonBox* q_dialogbuttonbox_new8(int64_t buttons, int32_t orientation, void* parent);
+QDialogButtonBox* q_dialogbuttonbox_new8(int32_t buttons, int32_t orientation, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -154,14 +154,14 @@ int32_t q_dialogbuttonbox_button_role(void* self, void* button);
 ///
 /// @param self QDialogButtonBox*
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
-void q_dialogbuttonbox_set_standard_buttons(void* self, int64_t buttons);
+void q_dialogbuttonbox_set_standard_buttons(void* self, int32_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#standardButtons)
 ///
 /// @param self QDialogButtonBox*
 ///
 /// @return flag of enum QDialogButtonBox__StandardButton
-int64_t q_dialogbuttonbox_standard_buttons(void* self);
+int32_t q_dialogbuttonbox_standard_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#standardButton)
 ///
@@ -1794,7 +1794,7 @@ bool q_dialogbuttonbox_is_full_screen(void* self);
 /// @param self QDialogButtonBox*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_dialogbuttonbox_window_state(void* self);
+int32_t q_dialogbuttonbox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1802,7 +1802,7 @@ int64_t q_dialogbuttonbox_window_state(void* self);
 ///
 /// @param self QDialogButtonBox*
 /// @param state flag of enum Qt__WindowState
-void q_dialogbuttonbox_set_window_state(void* self, int64_t state);
+void q_dialogbuttonbox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1810,7 +1810,7 @@ void q_dialogbuttonbox_set_window_state(void* self, int64_t state);
 ///
 /// @param self QDialogButtonBox*
 /// @param state flag of enum Qt__WindowState
-void q_dialogbuttonbox_override_window_state(void* self, int64_t state);
+void q_dialogbuttonbox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2327,7 +2327,7 @@ void q_dialogbuttonbox_render3(void* self, void* target, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dialogbuttonbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dialogbuttonbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2357,7 +2357,7 @@ void q_dialogbuttonbox_render32(void* self, void* painter, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_dialogbuttonbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_dialogbuttonbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2374,7 +2374,7 @@ QPixmap* q_dialogbuttonbox_grab1(void* self, void* rectangle);
 /// @param self QDialogButtonBox*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_dialogbuttonbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_dialogbuttonbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

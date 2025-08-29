@@ -828,11 +828,11 @@ bool q_textblockformat_is_valid(void* self) {
     return QTextBlockFormat_IsValid((QTextBlockFormat*)self);
 }
 
-void q_textblockformat_set_alignment(void* self, int64_t alignment) {
+void q_textblockformat_set_alignment(void* self, int32_t alignment) {
     QTextBlockFormat_SetAlignment((QTextBlockFormat*)self, alignment);
 }
 
-int64_t q_textblockformat_alignment(void* self) {
+int32_t q_textblockformat_alignment(void* self) {
     return QTextBlockFormat_Alignment((QTextBlockFormat*)self);
 }
 
@@ -916,11 +916,11 @@ bool q_textblockformat_non_breakable_lines(void* self) {
     return QTextBlockFormat_NonBreakableLines((QTextBlockFormat*)self);
 }
 
-void q_textblockformat_set_page_break_policy(void* self, int64_t flags) {
+void q_textblockformat_set_page_break_policy(void* self, int32_t flags) {
     QTextBlockFormat_SetPageBreakPolicy((QTextBlockFormat*)self, flags);
 }
 
-int64_t q_textblockformat_page_break_policy(void* self) {
+int32_t q_textblockformat_page_break_policy(void* self) {
     return QTextBlockFormat_PageBreakPolicy((QTextBlockFormat*)self);
 }
 
@@ -2104,11 +2104,11 @@ QTextLength* q_textframeformat_height(void* self) {
     return QTextFrameFormat_Height((QTextFrameFormat*)self);
 }
 
-void q_textframeformat_set_page_break_policy(void* self, int64_t flags) {
+void q_textframeformat_set_page_break_policy(void* self, int32_t flags) {
     QTextFrameFormat_SetPageBreakPolicy((QTextFrameFormat*)self, flags);
 }
 
-int64_t q_textframeformat_page_break_policy(void* self) {
+int32_t q_textframeformat_page_break_policy(void* self) {
     return QTextFrameFormat_PageBreakPolicy((QTextFrameFormat*)self);
 }
 
@@ -2365,11 +2365,11 @@ void q_texttableformat_set_cell_padding(void* self, double padding) {
     QTextTableFormat_SetCellPadding((QTextTableFormat*)self, padding);
 }
 
-void q_texttableformat_set_alignment(void* self, int64_t alignment) {
+void q_texttableformat_set_alignment(void* self, int32_t alignment) {
     QTextTableFormat_SetAlignment((QTextTableFormat*)self, alignment);
 }
 
-int64_t q_texttableformat_alignment(void* self) {
+int32_t q_texttableformat_alignment(void* self) {
     return QTextTableFormat_Alignment((QTextTableFormat*)self);
 }
 
@@ -2493,11 +2493,11 @@ QTextLength* q_texttableformat_height(void* self) {
     return QTextFrameFormat_Height((QTextFrameFormat*)self);
 }
 
-void q_texttableformat_set_page_break_policy(void* self, int64_t flags) {
+void q_texttableformat_set_page_break_policy(void* self, int32_t flags) {
     QTextFrameFormat_SetPageBreakPolicy((QTextFrameFormat*)self, flags);
 }
 
-int64_t q_texttableformat_page_break_policy(void* self) {
+int32_t q_texttableformat_page_break_policy(void* self) {
     return QTextFrameFormat_PageBreakPolicy((QTextFrameFormat*)self);
 }
 

@@ -18,7 +18,7 @@ bool k_ratingpainter_half_steps_enabled(void* self) {
     return KRatingPainter_HalfStepsEnabled((KRatingPainter*)self);
 }
 
-int64_t k_ratingpainter_alignment(void* self) {
+int32_t k_ratingpainter_alignment(void* self) {
     return KRatingPainter_Alignment((KRatingPainter*)self);
 }
 
@@ -50,7 +50,7 @@ void k_ratingpainter_set_half_steps_enabled(void* self, bool enabled) {
     KRatingPainter_SetHalfStepsEnabled((KRatingPainter*)self, enabled);
 }
 
-void k_ratingpainter_set_alignment(void* self, int64_t align) {
+void k_ratingpainter_set_alignment(void* self, int32_t align) {
     KRatingPainter_SetAlignment((KRatingPainter*)self, align);
 }
 
@@ -82,11 +82,11 @@ int32_t k_ratingpainter_rating_from_position(void* self, void* rect, void* pos) 
     return KRatingPainter_RatingFromPosition((KRatingPainter*)self, (QRect*)rect, (QPoint*)pos);
 }
 
-void k_ratingpainter_paint_rating(void* p, void* rect, int64_t align, int rating) {
+void k_ratingpainter_paint_rating(void* p, void* rect, int32_t align, int rating) {
     KRatingPainter_PaintRating((QPainter*)p, (QRect*)rect, align, rating);
 }
 
-int32_t k_ratingpainter_get_rating_from_position(void* rect, int64_t align, int32_t direction, void* pos) {
+int32_t k_ratingpainter_get_rating_from_position(void* rect, int32_t align, int32_t direction, void* pos) {
     return KRatingPainter_GetRatingFromPosition((QRect*)rect, align, direction, (QPoint*)pos);
 }
 
@@ -94,7 +94,7 @@ void k_ratingpainter_paint4(void* self, void* painter, void* rect, int rating, i
     KRatingPainter_Paint4((KRatingPainter*)self, (QPainter*)painter, (QRect*)rect, rating, hoverRating);
 }
 
-void k_ratingpainter_paint_rating5(void* p, void* rect, int64_t align, int rating, int hoverRating) {
+void k_ratingpainter_paint_rating5(void* p, void* rect, int32_t align, int rating, int hoverRating) {
     KRatingPainter_PaintRating5((QPainter*)p, (QRect*)rect, align, rating, hoverRating);
 }
 

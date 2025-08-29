@@ -773,11 +773,11 @@ void q_stylepainter_set_render_hint(void* self, int32_t hint) {
     QPainter_SetRenderHint((QPainter*)self, hint);
 }
 
-void q_stylepainter_set_render_hints(void* self, int64_t hints) {
+void q_stylepainter_set_render_hints(void* self, int32_t hints) {
     QPainter_SetRenderHints((QPainter*)self, hints);
 }
 
-int64_t q_stylepainter_render_hints(void* self) {
+int32_t q_stylepainter_render_hints(void* self) {
     return QPainter_RenderHints((QPainter*)self);
 }
 
@@ -861,23 +861,23 @@ void q_stylepainter_draw_tiled_pixmap33(void* self, void* param1, void* param2, 
     QPainter_DrawTiledPixmap33((QPainter*)self, (QRect*)param1, (QPixmap*)param2, (QPoint*)param3);
 }
 
-void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentCount, void* pixmap, int64_t hints) {
+void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentCount, void* pixmap, int32_t hints) {
     QPainter_DrawPixmapFragments4((QPainter*)self, (QPainter__PixmapFragment*)fragments, fragmentCount, (QPixmap*)pixmap, hints);
 }
 
-void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void* sourceRect, int64_t flags) {
+void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags) {
     QPainter_DrawImage42((QPainter*)self, (QRectF*)targetRect, (QImage*)image, (QRectF*)sourceRect, flags);
 }
 
-void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void* sourceRect, int64_t flags) {
+void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags) {
     QPainter_DrawImage43((QPainter*)self, (QRect*)targetRect, (QImage*)image, (QRect*)sourceRect, flags);
 }
 
-void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int64_t flags) {
+void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int32_t flags) {
     QPainter_DrawImage44((QPainter*)self, (QPointF*)p, (QImage*)image, (QRectF*)sr, flags);
 }
 
-void q_stylepainter_draw_image45(void* self, void* p, void* image, void* sr, int64_t flags) {
+void q_stylepainter_draw_image45(void* self, void* p, void* image, void* sr, int32_t flags) {
     QPainter_DrawImage45((QPainter*)self, (QPoint*)p, (QImage*)image, (QRect*)sr, flags);
 }
 
@@ -897,7 +897,7 @@ void q_stylepainter_draw_image72(void* self, int x, int y, void* image, int sx, 
     QPainter_DrawImage72((QPainter*)self, x, y, (QImage*)image, sx, sy, sw, sh);
 }
 
-void q_stylepainter_draw_image82(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh, int64_t flags) {
+void q_stylepainter_draw_image82(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh, int32_t flags) {
     QPainter_DrawImage82((QPainter*)self, x, y, (QImage*)image, sx, sy, sw, sh, flags);
 }
 
@@ -925,7 +925,7 @@ void q_stylepainter_set_render_hint2(void* self, int32_t hint, bool on) {
     QPainter_SetRenderHint2((QPainter*)self, hint, on);
 }
 
-void q_stylepainter_set_render_hints2(void* self, int64_t hints, bool on) {
+void q_stylepainter_set_render_hints2(void* self, int32_t hints, bool on) {
     QPainter_SetRenderHints2((QPainter*)self, hints, on);
 }
 

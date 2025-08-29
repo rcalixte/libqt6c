@@ -31,7 +31,7 @@ QTextStream* q_textstream_new3(const char* array);
 ///
 /// @param array const char*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-QTextStream* q_textstream_new4(const char* array, int64_t openMode);
+QTextStream* q_textstream_new4(const char* array, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setEncoding)
 ///
@@ -207,14 +207,14 @@ int32_t q_textstream_field_width(void* self);
 ///
 /// @param self QTextStream*
 /// @param flags flag of enum QTextStream__NumberFlag
-void q_textstream_set_number_flags(void* self, int64_t flags);
+void q_textstream_set_number_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#numberFlags)
 ///
 /// @param self QTextStream*
 ///
 /// @return flag of enum QTextStream__NumberFlag
-int64_t q_textstream_number_flags(void* self);
+int32_t q_textstream_number_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setIntegerBase)
 ///

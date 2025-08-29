@@ -1718,7 +1718,7 @@ void q_stylepainter_set_render_hint(void* self, int32_t hint);
 ///
 /// @param self QStylePainter*
 /// @param hints flag of enum QPainter__RenderHint
-void q_stylepainter_set_render_hints(void* self, int64_t hints);
+void q_stylepainter_set_render_hints(void* self, int32_t hints);
 
 /// Inherited from QPainter
 ///
@@ -1727,7 +1727,7 @@ void q_stylepainter_set_render_hints(void* self, int64_t hints);
 /// @param self QStylePainter*
 ///
 /// @return flag of enum QPainter__RenderHint
-int64_t q_stylepainter_render_hints(void* self);
+int32_t q_stylepainter_render_hints(void* self);
 
 /// Inherited from QPainter
 ///
@@ -1936,7 +1936,7 @@ void q_stylepainter_draw_tiled_pixmap33(void* self, void* param1, void* param2, 
 /// @param fragmentCount int
 /// @param pixmap QPixmap*
 /// @param hints flag of enum QPainter__PixmapFragmentHint
-void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentCount, void* pixmap, int64_t hints);
+void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentCount, void* pixmap, int32_t hints);
 
 /// Inherited from QPainter
 ///
@@ -1947,7 +1947,7 @@ void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int frag
 /// @param image QImage*
 /// @param sourceRect QRectF*
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void* sourceRect, int64_t flags);
+void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -1958,7 +1958,7 @@ void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void
 /// @param image QImage*
 /// @param sourceRect QRect*
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void* sourceRect, int64_t flags);
+void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -1969,7 +1969,7 @@ void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void
 /// @param image QImage*
 /// @param sr QRectF*
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int64_t flags);
+void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -1980,7 +1980,7 @@ void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int
 /// @param image QImage*
 /// @param sr QRect*
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_stylepainter_draw_image45(void* self, void* p, void* image, void* sr, int64_t flags);
+void q_stylepainter_draw_image45(void* self, void* p, void* image, void* sr, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2045,7 +2045,7 @@ void q_stylepainter_draw_image72(void* self, int x, int y, void* image, int sx, 
 /// @param sw int
 /// @param sh int
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_stylepainter_draw_image82(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh, int64_t flags);
+void q_stylepainter_draw_image82(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2119,7 +2119,7 @@ void q_stylepainter_set_render_hint2(void* self, int32_t hint, bool on);
 /// @param self QStylePainter*
 /// @param hints flag of enum QPainter__RenderHint
 /// @param on bool
-void q_stylepainter_set_render_hints2(void* self, int64_t hints, bool on);
+void q_stylepainter_set_render_hints2(void* self, int32_t hints, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylepainter.html#dtor.QStylePainter)
 ///

@@ -106,11 +106,11 @@ const char* q_library_error_string(void* self) {
     return _ret;
 }
 
-void q_library_set_load_hints(void* self, int64_t hints) {
+void q_library_set_load_hints(void* self, int32_t hints) {
     QLibrary_SetLoadHints((QLibrary*)self, hints);
 }
 
-int64_t q_library_load_hints(void* self) {
+int32_t q_library_load_hints(void* self) {
     return QLibrary_LoadHints((QLibrary*)self);
 }
 

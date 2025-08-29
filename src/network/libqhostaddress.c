@@ -179,7 +179,7 @@ uint32_t q_hostaddress_to_i_pv4_address1(void* self, bool* ok) {
     return QHostAddress_ToIPv4Address1((QHostAddress*)self, (bool*)ok);
 }
 
-bool q_hostaddress_is_equal2(void* self, void* address, int64_t mode) {
+bool q_hostaddress_is_equal2(void* self, void* address, int32_t mode) {
     return QHostAddress_IsEqual2((QHostAddress*)self, (QHostAddress*)address, mode);
 }
 

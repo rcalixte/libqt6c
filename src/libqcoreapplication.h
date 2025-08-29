@@ -147,13 +147,13 @@ void q_coreapplication_process_events();
 ///
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param maxtime int
-void q_coreapplication_process_events2(int64_t flags, int maxtime);
+void q_coreapplication_process_events2(int32_t flags, int maxtime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
 /// @param deadline QDeadlineTimer*
-void q_coreapplication_process_events3(int64_t flags, void* deadline);
+void q_coreapplication_process_events3(int32_t flags, void* deadline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
 ///
@@ -437,7 +437,7 @@ void q_coreapplication_set_attribute2(int32_t attribute, bool on);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
 /// @param flags flag of enum QEventLoop__ProcessEventsFlag
-void q_coreapplication_process_events1(int64_t flags);
+void q_coreapplication_process_events1(int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
 ///

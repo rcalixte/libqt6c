@@ -206,15 +206,15 @@ void k_categorizedview_qbase_resize_event(void* self, void* event) {
     KCategorizedView_QBaseResizeEvent((KCategorizedView*)self, (QResizeEvent*)event);
 }
 
-void k_categorizedview_set_selection(void* self, void* rect, int64_t flags) {
+void k_categorizedview_set_selection(void* self, void* rect, int32_t flags) {
     KCategorizedView_SetSelection((KCategorizedView*)self, (QRect*)rect, flags);
 }
 
-void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
     KCategorizedView_OnSetSelection((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_set_selection(void* self, void* rect, int64_t flags) {
+void k_categorizedview_qbase_set_selection(void* self, void* rect, int32_t flags) {
     KCategorizedView_QBaseSetSelection((KCategorizedView*)self, (QRect*)rect, flags);
 }
 
@@ -266,15 +266,15 @@ void k_categorizedview_qbase_leave_event(void* self, void* event) {
     KCategorizedView_QBaseLeaveEvent((KCategorizedView*)self, (QEvent*)event);
 }
 
-void k_categorizedview_start_drag(void* self, int64_t supportedActions) {
+void k_categorizedview_start_drag(void* self, int32_t supportedActions) {
     KCategorizedView_StartDrag((KCategorizedView*)self, supportedActions);
 }
 
-void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     KCategorizedView_OnStartDrag((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_start_drag(void* self, int64_t supportedActions) {
+void k_categorizedview_qbase_start_drag(void* self, int32_t supportedActions) {
     KCategorizedView_QBaseStartDrag((KCategorizedView*)self, supportedActions);
 }
 
@@ -536,11 +536,11 @@ bool k_categorizedview_is_selection_rect_visible(void* self) {
     return QListView_IsSelectionRectVisible((QListView*)self);
 }
 
-void k_categorizedview_set_item_alignment(void* self, int64_t alignment) {
+void k_categorizedview_set_item_alignment(void* self, int32_t alignment) {
     QListView_SetItemAlignment((QListView*)self, alignment);
 }
 
-int64_t k_categorizedview_item_alignment(void* self) {
+int32_t k_categorizedview_item_alignment(void* self) {
     return QListView_ItemAlignment((QListView*)self);
 }
 
@@ -592,11 +592,11 @@ QModelIndex* k_categorizedview_root_index(void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
-void k_categorizedview_set_edit_triggers(void* self, int64_t triggers) {
+void k_categorizedview_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int64_t k_categorizedview_edit_triggers(void* self) {
+int32_t k_categorizedview_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -876,11 +876,11 @@ void k_categorizedview_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void k_categorizedview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void k_categorizedview_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ k_categorizedview_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ k_categorizedview_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -1758,15 +1758,15 @@ bool k_categorizedview_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_categorizedview_window_state(void* self) {
+int32_t k_categorizedview_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_categorizedview_set_window_state(void* self, int64_t state) {
+void k_categorizedview_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_categorizedview_override_window_state(void* self, int64_t state) {
+void k_categorizedview_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -2023,7 +2023,7 @@ void k_categorizedview_render3(void* self, void* target, void* targetOffset, voi
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_categorizedview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_categorizedview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2035,7 +2035,7 @@ void k_categorizedview_render32(void* self, void* painter, void* targetOffset, v
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_categorizedview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_categorizedview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2043,7 +2043,7 @@ QPixmap* k_categorizedview_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_categorizedview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_categorizedview_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -2680,15 +2680,15 @@ void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32
     KCategorizedView_OnEdit2((KCategorizedView*)self, (intptr_t)callback);
 }
 
-int64_t k_categorizedview_selection_command(void* self, void* index, void* event) {
+int32_t k_categorizedview_selection_command(void* self, void* index, void* event) {
     return KCategorizedView_SelectionCommand((KCategorizedView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int64_t k_categorizedview_qbase_selection_command(void* self, void* index, void* event) {
+int32_t k_categorizedview_qbase_selection_command(void* self, void* index, void* event) {
     return KCategorizedView_QBaseSelectionCommand((KCategorizedView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void k_categorizedview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+void k_categorizedview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
     KCategorizedView_OnSelectionCommand((KCategorizedView*)self, (intptr_t)callback);
 }
 

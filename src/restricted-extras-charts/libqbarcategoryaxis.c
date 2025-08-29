@@ -420,7 +420,7 @@ int32_t q_barcategoryaxis_orientation(void* self) {
     return QAbstractAxis_Orientation((QAbstractAxis*)self);
 }
 
-int64_t q_barcategoryaxis_alignment(void* self) {
+int32_t q_barcategoryaxis_alignment(void* self) {
     return QAbstractAxis_Alignment((QAbstractAxis*)self);
 }
 

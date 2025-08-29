@@ -61,19 +61,19 @@ int32_t q_formlayout_row_wrap_policy(void* self) {
     return QFormLayout_RowWrapPolicy((QFormLayout*)self);
 }
 
-void q_formlayout_set_label_alignment(void* self, int64_t alignment) {
+void q_formlayout_set_label_alignment(void* self, int32_t alignment) {
     QFormLayout_SetLabelAlignment((QFormLayout*)self, alignment);
 }
 
-int64_t q_formlayout_label_alignment(void* self) {
+int32_t q_formlayout_label_alignment(void* self) {
     return QFormLayout_LabelAlignment((QFormLayout*)self);
 }
 
-void q_formlayout_set_form_alignment(void* self, int64_t alignment) {
+void q_formlayout_set_form_alignment(void* self, int32_t alignment) {
     QFormLayout_SetFormAlignment((QFormLayout*)self, alignment);
 }
 
-int64_t q_formlayout_form_alignment(void* self) {
+int32_t q_formlayout_form_alignment(void* self) {
     return QFormLayout_FormAlignment((QFormLayout*)self);
 }
 
@@ -345,15 +345,15 @@ int32_t q_formlayout_qbase_height_for_width(void* self, int width) {
     return QFormLayout_QBaseHeightForWidth((QFormLayout*)self, width);
 }
 
-int64_t q_formlayout_expanding_directions(void* self) {
+int32_t q_formlayout_expanding_directions(void* self) {
     return QFormLayout_ExpandingDirections((QFormLayout*)self);
 }
 
-void q_formlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+void q_formlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QFormLayout_OnExpandingDirections((QFormLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_formlayout_qbase_expanding_directions(void* self) {
+int32_t q_formlayout_qbase_expanding_directions(void* self) {
     return QFormLayout_QBaseExpandingDirections((QFormLayout*)self);
 }
 
@@ -411,11 +411,11 @@ QRect* q_formlayout_contents_rect(void* self) {
     return QLayout_ContentsRect((QLayout*)self);
 }
 
-bool q_formlayout_set_alignment(void* self, void* w, int64_t alignment) {
+bool q_formlayout_set_alignment(void* self, void* w, int32_t alignment) {
     return QLayout_SetAlignment((QLayout*)self, (QWidget*)w, alignment);
 }
 
-bool q_formlayout_set_alignment2(void* self, void* l, int64_t alignment) {
+bool q_formlayout_set_alignment2(void* self, void* l, int32_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
@@ -674,7 +674,7 @@ void q_formlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_formlayout_alignment(void* self) {
+int32_t q_formlayout_alignment(void* self) {
     return QLayoutItem_Alignment((QLayoutItem*)self);
 }
 
@@ -726,27 +726,27 @@ void q_formlayout_on_is_empty(void* self, bool (*callback)()) {
     QFormLayout_OnIsEmpty((QFormLayout*)self, (intptr_t)callback);
 }
 
-int64_t q_formlayout_control_types(void* self) {
+int32_t q_formlayout_control_types(void* self) {
     return QFormLayout_ControlTypes((QFormLayout*)self);
 }
 
-int64_t q_formlayout_qbase_control_types(void* self) {
+int32_t q_formlayout_qbase_control_types(void* self) {
     return QFormLayout_QBaseControlTypes((QFormLayout*)self);
 }
 
-void q_formlayout_on_control_types(void* self, int64_t (*callback)()) {
+void q_formlayout_on_control_types(void* self, int32_t (*callback)()) {
     QFormLayout_OnControlTypes((QFormLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QFormLayout_ReplaceWidget((QFormLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options) {
+QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
     return QFormLayout_QBaseReplaceWidget((QFormLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_formlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+void q_formlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
     QFormLayout_OnReplaceWidget((QFormLayout*)self, (intptr_t)callback);
 }
 

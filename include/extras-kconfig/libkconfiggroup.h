@@ -625,7 +625,7 @@ const KConfigGroup* k_configgroup_qbase_group_impl2(void* self, const char* grou
 /// @param self KConfigGroup*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_delete_group_impl(void* self, const char* groupName, int64_t flags);
+void k_configgroup_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
@@ -633,7 +633,7 @@ void k_configgroup_delete_group_impl(void* self, const char* groupName, int64_t 
 ///
 /// @param self KConfigGroup*
 /// @param callback void func(KConfigGroup* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
-void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t));
+void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#deleteGroupImpl)
 ///
@@ -642,7 +642,7 @@ void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, cons
 /// @param self KConfigGroup*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_qbase_delete_group_impl(void* self, const char* groupName, int64_t flags);
+void k_configgroup_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#isGroupImmutableImpl)
 ///
@@ -671,14 +671,14 @@ bool k_configgroup_qbase_is_group_immutable_impl(void* self, const char* groupNa
 /// @param self KConfigGroup*
 /// @param other KConfigBase*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_copy_to2(void* self, void* other, int64_t pFlags);
+void k_configgroup_copy_to2(void* self, void* other, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#reparent)
 ///
 /// @param self KConfigGroup*
 /// @param parent KConfigBase*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_reparent2(void* self, void* parent, int64_t pFlags);
+void k_configgroup_reparent2(void* self, void* parent, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#moveValuesTo)
 ///
@@ -686,20 +686,20 @@ void k_configgroup_reparent2(void* self, void* parent, int64_t pFlags);
 /// @param keys libqt_list /* of const char* */
 /// @param other KConfigGroup*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_move_values_to3(void* self, libqt_list /* of const char* */ keys, void* other, int64_t pFlags);
+void k_configgroup_move_values_to3(void* self, libqt_list /* of const char* */ keys, void* other, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#moveValuesTo)
 ///
 /// @param self KConfigGroup*
 /// @param other KConfigGroup*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_move_values_to22(void* self, void* other, int64_t pFlags);
+void k_configgroup_move_values_to22(void* self, void* other, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#deleteGroup)
 ///
 /// @param self KConfigGroup*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_delete_group1(void* self, int64_t pFlags);
+void k_configgroup_delete_group1(void* self, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#readEntry)
 ///
@@ -761,7 +761,7 @@ const char* k_configgroup_read_entry_untranslated23(void* self, const char* key,
 /// @param key const char*
 /// @param value QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry32(void* self, const char* key, void* value, int64_t pFlags);
+void k_configgroup_write_entry32(void* self, const char* key, void* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -769,7 +769,7 @@ void k_configgroup_write_entry32(void* self, const char* key, void* value, int64
 /// @param key const char*
 /// @param value QVariant*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry33(void* self, const char* key, void* value, int64_t pFlags);
+void k_configgroup_write_entry33(void* self, const char* key, void* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -777,7 +777,7 @@ void k_configgroup_write_entry33(void* self, const char* key, void* value, int64
 /// @param key const char*
 /// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry34(void* self, const char* key, const char* value, int64_t pFlags);
+void k_configgroup_write_entry34(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -785,7 +785,7 @@ void k_configgroup_write_entry34(void* self, const char* key, const char* value,
 /// @param key const char*
 /// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry35(void* self, const char* key, const char* value, int64_t pFlags);
+void k_configgroup_write_entry35(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -793,7 +793,7 @@ void k_configgroup_write_entry35(void* self, const char* key, const char* value,
 /// @param key const char*
 /// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry36(void* self, const char* key, const char* value, int64_t pFlags);
+void k_configgroup_write_entry36(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -801,7 +801,7 @@ void k_configgroup_write_entry36(void* self, const char* key, const char* value,
 /// @param key const char*
 /// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry37(void* self, const char* key, const char* value, int64_t pFlags);
+void k_configgroup_write_entry37(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -809,7 +809,7 @@ void k_configgroup_write_entry37(void* self, const char* key, const char* value,
 /// @param key const char*
 /// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry38(void* self, const char* key, const char* value, int64_t pFlags);
+void k_configgroup_write_entry38(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -817,7 +817,7 @@ void k_configgroup_write_entry38(void* self, const char* key, const char* value,
 /// @param key const char*
 /// @param value const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry39(void* self, const char* key, const char* value, int64_t pFlags);
+void k_configgroup_write_entry39(void* self, const char* key, const char* value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -825,7 +825,7 @@ void k_configgroup_write_entry39(void* self, const char* key, const char* value,
 /// @param key const char*
 /// @param value const char**
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry310(void* self, const char* key, const char* value[], int64_t pFlags);
+void k_configgroup_write_entry310(void* self, const char* key, const char* value[], int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -833,7 +833,7 @@ void k_configgroup_write_entry310(void* self, const char* key, const char* value
 /// @param key const char*
 /// @param value const char**
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry311(void* self, const char* key, const char* value[], int64_t pFlags);
+void k_configgroup_write_entry311(void* self, const char* key, const char* value[], int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -841,7 +841,7 @@ void k_configgroup_write_entry311(void* self, const char* key, const char* value
 /// @param key const char*
 /// @param value libqt_list /* of QVariant* */
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int64_t pFlags);
+void k_configgroup_write_entry312(void* self, const char* key, libqt_list value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeEntry)
 ///
@@ -849,7 +849,7 @@ void k_configgroup_write_entry312(void* self, const char* key, libqt_list value,
 /// @param key const char*
 /// @param value libqt_list /* of QVariant* */
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int64_t pFlags);
+void k_configgroup_write_entry313(void* self, const char* key, libqt_list value, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
@@ -857,7 +857,7 @@ void k_configgroup_write_entry313(void* self, const char* key, libqt_list value,
 /// @param pKey const char*
 /// @param value const char**
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[], int64_t pFlags);
+void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[], int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writeXdgListEntry)
 ///
@@ -865,7 +865,7 @@ void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const cha
 /// @param key const char*
 /// @param value const char**
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[], int64_t pFlags);
+void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[], int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writePathEntry)
 ///
@@ -873,7 +873,7 @@ void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const cha
 /// @param pKey const char*
 /// @param path const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* path, int64_t pFlags);
+void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* path, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writePathEntry)
 ///
@@ -881,7 +881,7 @@ void k_configgroup_write_path_entry32(void* self, const char* pKey, const char* 
 /// @param Key const char*
 /// @param path const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_path_entry33(void* self, const char* Key, const char* path, int64_t pFlags);
+void k_configgroup_write_path_entry33(void* self, const char* Key, const char* path, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writePathEntry)
 ///
@@ -889,7 +889,7 @@ void k_configgroup_write_path_entry33(void* self, const char* Key, const char* p
 /// @param pKey const char*
 /// @param value const char**
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[], int64_t pFlags);
+void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[], int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#writePathEntry)
 ///
@@ -897,35 +897,35 @@ void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* 
 /// @param key const char*
 /// @param value const char**
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[], int64_t pFlags);
+void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[], int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#deleteEntry)
 ///
 /// @param self KConfigGroup*
 /// @param pKey const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_delete_entry22(void* self, const char* pKey, int64_t pFlags);
+void k_configgroup_delete_entry22(void* self, const char* pKey, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#deleteEntry)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param pFlags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_delete_entry23(void* self, const char* key, int64_t pFlags);
+void k_configgroup_delete_entry23(void* self, const char* key, int32_t pFlags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#revertToDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param pFlag flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_revert_to_default22(void* self, const char* key, int64_t pFlag);
+void k_configgroup_revert_to_default22(void* self, const char* key, int32_t pFlag);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfiggroup.html#revertToDefault)
 ///
 /// @param self KConfigGroup*
 /// @param key const char*
 /// @param pFlag flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_revert_to_default23(void* self, const char* key, int64_t pFlag);
+void k_configgroup_revert_to_default23(void* self, const char* key, int32_t pFlag);
 
 /// Inherited from KConfigBase
 ///
@@ -966,7 +966,7 @@ bool k_configgroup_is_group_immutable(void* self, const char* group);
 /// @param self KConfigGroup*
 /// @param group const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_configgroup_delete_group2(void* self, const char* group, int64_t flags);
+void k_configgroup_delete_group2(void* self, const char* group, int32_t flags);
 
 /// Inherited from KConfigBase
 ///

@@ -291,15 +291,15 @@ libqt_map /* of int to QVariant* */ q_abstractproxymodel_qbase_item_data(void* s
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstractproxymodel_flags(void* self, void* index);
+int32_t q_abstractproxymodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractProxyModel*
-/// @param callback int64_t func(QAbstractProxyModel* self, QModelIndex* index)
-void q_abstractproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QAbstractProxyModel* self, QModelIndex* index)
+void q_abstractproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#flags)
 ///
@@ -309,7 +309,7 @@ void q_abstractproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*)
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_abstractproxymodel_qbase_flags(void* self, void* index);
+int32_t q_abstractproxymodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#setData)
 ///
@@ -680,15 +680,15 @@ const char** q_abstractproxymodel_qbase_mime_types(void* self);
 /// @param self QAbstractProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractproxymodel_supported_drag_actions(void* self);
+int32_t q_abstractproxymodel_supported_drag_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractProxyModel*
-/// @param callback int64_t func()
-void q_abstractproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDragActions)
 ///
@@ -697,22 +697,22 @@ void q_abstractproxymodel_on_supported_drag_actions(void* self, int64_t (*callba
 /// @param self QAbstractProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractproxymodel_qbase_supported_drag_actions(void* self);
+int32_t q_abstractproxymodel_qbase_supported_drag_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
 ///
 /// @param self QAbstractProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractproxymodel_supported_drop_actions(void* self);
+int32_t q_abstractproxymodel_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractProxyModel*
-/// @param callback int64_t func()
-void q_abstractproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_abstractproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#supportedDropActions)
 ///
@@ -721,7 +721,7 @@ void q_abstractproxymodel_on_supported_drop_actions(void* self, int64_t (*callba
 /// @param self QAbstractProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_abstractproxymodel_qbase_supported_drop_actions(void* self);
+int32_t q_abstractproxymodel_qbase_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#roleNames)
 ///
@@ -975,7 +975,7 @@ bool q_abstractproxymodel_remove_column2(void* self, int column, void* parent);
 /// @param self QAbstractProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_abstractproxymodel_check_index2(void* self, void* index, int64_t options);
+bool q_abstractproxymodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1709,7 +1709,7 @@ void q_abstractproxymodel_on_move_columns(void* self, bool (*callback)(void*, vo
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstractproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstractproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1723,7 +1723,7 @@ libqt_list /* of QModelIndex* */ q_abstractproxymodel_match(void* self, void* st
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1733,7 +1733,7 @@ libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, vo
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QAbstractProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_abstractproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_abstractproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

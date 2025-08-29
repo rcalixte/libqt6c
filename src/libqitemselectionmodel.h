@@ -266,7 +266,7 @@ void q_itemselectionmodel_set_model(void* self, void* model);
 /// @param self QItemSelectionModel*
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselectionmodel_set_current_index(void* self, void* index, int64_t command);
+void q_itemselectionmodel_set_current_index(void* self, void* index, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
 ///
@@ -274,7 +274,7 @@ void q_itemselectionmodel_set_current_index(void* self, void* index, int64_t com
 ///
 /// @param self QItemSelectionModel*
 /// @param callback void func(QItemSelectionModel* self, QModelIndex* index, flag of enum QItemSelectionModel__SelectionFlag command)
-void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int64_t));
+void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
 ///
@@ -283,14 +283,14 @@ void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void
 /// @param self QItemSelectionModel*
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselectionmodel_qbase_set_current_index(void* self, void* index, int64_t command);
+void q_itemselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
 /// @param self QItemSelectionModel*
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselectionmodel_select(void* self, void* index, int64_t command);
+void q_itemselectionmodel_select(void* self, void* index, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
@@ -298,7 +298,7 @@ void q_itemselectionmodel_select(void* self, void* index, int64_t command);
 ///
 /// @param self QItemSelectionModel*
 /// @param callback void func(QItemSelectionModel* self, QModelIndex* index, flag of enum QItemSelectionModel__SelectionFlag command)
-void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int64_t));
+void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
@@ -307,14 +307,14 @@ void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, i
 /// @param self QItemSelectionModel*
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselectionmodel_qbase_select(void* self, void* index, int64_t command);
+void q_itemselectionmodel_qbase_select(void* self, void* index, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
 /// @param self QItemSelectionModel*
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselectionmodel_select2(void* self, void* selection, int64_t command);
+void q_itemselectionmodel_select2(void* self, void* selection, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
@@ -322,7 +322,7 @@ void q_itemselectionmodel_select2(void* self, void* selection, int64_t command);
 ///
 /// @param self QItemSelectionModel*
 /// @param callback void func(QItemSelectionModel* self, QItemSelection* selection, flag of enum QItemSelectionModel__SelectionFlag command)
-void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int64_t));
+void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#select)
 ///
@@ -331,7 +331,7 @@ void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, 
 /// @param self QItemSelectionModel*
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselectionmodel_qbase_select2(void* self, void* selection, int64_t command);
+void q_itemselectionmodel_qbase_select2(void* self, void* selection, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
 ///
@@ -1235,7 +1235,7 @@ libqt_list /* of QModelIndex* */ q_itemselection_indexes(void* self);
 /// @param self QItemSelection*
 /// @param other QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_itemselection_merge(void* self, void* other, int64_t command);
+void q_itemselection_merge(void* self, void* other, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselection.html#split)
 ///

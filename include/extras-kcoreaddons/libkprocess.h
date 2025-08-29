@@ -75,7 +75,7 @@ int32_t k_process_output_channel_mode(void* self);
 ///
 /// @param self KProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_set_next_open_mode(void* self, int64_t mode);
+void k_process_set_next_open_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://api-staging.kde.org/kprocess.html#setEnv)
 ///
@@ -394,7 +394,7 @@ void k_process_set_unix_process_parameters(void* self, void* params);
 ///
 /// @param self KProcess*
 /// @param flagsOnly flag of enum QProcess__UnixProcessFlag
-void k_process_set_unix_process_parameters2(void* self, int64_t flagsOnly);
+void k_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
 
 /// Inherited from QProcess
 ///
@@ -597,7 +597,7 @@ void k_process_start22(void* self, const char* program, const char* arguments[])
 /// @param program const char*
 /// @param arguments const char**
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_start3(void* self, const char* program, const char* arguments[], int64_t mode);
+void k_process_start3(void* self, const char* program, const char* arguments[], int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -605,7 +605,7 @@ void k_process_start3(void* self, const char* program, const char* arguments[], 
 ///
 /// @param self KProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_start1(void* self, int64_t mode);
+void k_process_start1(void* self, int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -614,7 +614,7 @@ void k_process_start1(void* self, int64_t mode);
 /// @param self KProcess*
 /// @param command const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_start_command2(void* self, const char* command, int64_t mode);
+void k_process_start_command2(void* self, const char* command, int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -631,7 +631,7 @@ bool k_process_start_detached1(void* self, long long* pid);
 /// @param self KProcess*
 /// @param fileName const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_set_standard_output_file2(void* self, const char* fileName, int64_t mode);
+void k_process_set_standard_output_file2(void* self, const char* fileName, int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -640,7 +640,7 @@ void k_process_set_standard_output_file2(void* self, const char* fileName, int64
 /// @param self KProcess*
 /// @param fileName const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_set_standard_error_file2(void* self, const char* fileName, int64_t mode);
+void k_process_set_standard_error_file2(void* self, const char* fileName, int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -701,7 +701,7 @@ void k_process_on_finished2(void* self, void (*callback)(void*, int, int32_t));
 /// @param self KProcess*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t k_process_open_mode(void* self);
+int32_t k_process_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1361,7 +1361,7 @@ void k_process_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool k_process_open(void* self, int64_t mode);
+bool k_process_open(void* self, int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -1371,7 +1371,7 @@ bool k_process_open(void* self, int64_t mode);
 ///
 /// @param self KProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool k_process_qbase_open(void* self, int64_t mode);
+bool k_process_qbase_open(void* self, int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -1381,7 +1381,7 @@ bool k_process_qbase_open(void* self, int64_t mode);
 ///
 /// @param self KProcess*
 /// @param callback bool func(KProcess* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void k_process_on_open(void* self, bool (*callback)(void*, int64_t));
+void k_process_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QProcess
 ///
@@ -2101,7 +2101,7 @@ void k_process_on_set_process_state(void* self, void (*callback)(void*, int32_t)
 ///
 /// @param self KProcess*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_set_open_mode(void* self, int64_t openMode);
+void k_process_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2111,7 +2111,7 @@ void k_process_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self KProcess*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_qbase_set_open_mode(void* self, int64_t openMode);
+void k_process_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2121,7 +2121,7 @@ void k_process_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self KProcess*
 /// @param callback void func(KProcess* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void k_process_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void k_process_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

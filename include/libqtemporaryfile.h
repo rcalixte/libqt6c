@@ -140,7 +140,7 @@ QTemporaryFile* q_temporaryfile_create_native_file2(void* file);
 ///
 /// @param self QTemporaryFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_temporaryfile_open2(void* self, int64_t flags);
+bool q_temporaryfile_open2(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
 ///
@@ -148,7 +148,7 @@ bool q_temporaryfile_open2(void* self, int64_t flags);
 ///
 /// @param self QTemporaryFile*
 /// @param callback bool func(QTemporaryFile* self, flag of enum QIODeviceBase__OpenModeFlag flags)
-void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int64_t));
+void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
 ///
@@ -156,7 +156,7 @@ void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QTemporaryFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_temporaryfile_qbase_open2(void* self, int64_t flags);
+bool q_temporaryfile_qbase_open2(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -317,7 +317,7 @@ bool q_temporaryfile_copy2(const char* fileName, const char* newName);
 /// @param self QTemporaryFile*
 /// @param fd int
 /// @param ioFlags flag of enum QIODeviceBase__OpenModeFlag
-bool q_temporaryfile_open4(void* self, int fd, int64_t ioFlags);
+bool q_temporaryfile_open4(void* self, int fd, int32_t ioFlags);
 
 /// Inherited from QFile
 ///
@@ -334,7 +334,7 @@ bool q_temporaryfile_resize2(const char* filename, long long sz);
 /// @param filename const char*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_temporaryfile_permissions2(const char* filename);
+int32_t q_temporaryfile_permissions2(const char* filename);
 
 /// Inherited from QFile
 ///
@@ -342,7 +342,7 @@ int64_t q_temporaryfile_permissions2(const char* filename);
 ///
 /// @param filename const char*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_temporaryfile_set_permissions2(const char* filename, int64_t permissionSpec);
+bool q_temporaryfile_set_permissions2(const char* filename, int32_t permissionSpec);
 
 /// Inherited from QFile
 ///
@@ -352,7 +352,7 @@ bool q_temporaryfile_set_permissions2(const char* filename, int64_t permissionSp
 /// @param fd int
 /// @param ioFlags flag of enum QIODeviceBase__OpenModeFlag
 /// @param handleFlags flag of enum QFileDevice__FileHandleFlag
-bool q_temporaryfile_open33(void* self, int fd, int64_t ioFlags, int64_t handleFlags);
+bool q_temporaryfile_open33(void* self, int fd, int32_t ioFlags, int32_t handleFlags);
 
 /// Inherited from QFileDevice
 ///
@@ -426,7 +426,7 @@ bool q_temporaryfile_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// @param offset long long
 /// @param size long long
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
-unsigned char* q_temporaryfile_map3(void* self, long long offset, long long size, int64_t flags);
+unsigned char* q_temporaryfile_map3(void* self, long long offset, long long size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -435,7 +435,7 @@ unsigned char* q_temporaryfile_map3(void* self, long long offset, long long size
 /// @param self QTemporaryFile*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_temporaryfile_open_mode(void* self);
+int32_t q_temporaryfile_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1154,7 +1154,7 @@ void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, long long));
 /// @param self QTemporaryFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_temporaryfile_permissions(void* self);
+int32_t q_temporaryfile_permissions(void* self);
 
 /// Inherited from QFile
 ///
@@ -1165,7 +1165,7 @@ int64_t q_temporaryfile_permissions(void* self);
 /// @param self QTemporaryFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_temporaryfile_qbase_permissions(void* self);
+int32_t q_temporaryfile_qbase_permissions(void* self);
 
 /// Inherited from QFile
 ///
@@ -1174,8 +1174,8 @@ int64_t q_temporaryfile_qbase_permissions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback int64_t func()
-void q_temporaryfile_on_permissions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_temporaryfile_on_permissions(void* self, int32_t (*callback)());
 
 /// Inherited from QFile
 ///
@@ -1185,7 +1185,7 @@ void q_temporaryfile_on_permissions(void* self, int64_t (*callback)());
 ///
 /// @param self QTemporaryFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_temporaryfile_set_permissions(void* self, int64_t permissionSpec);
+bool q_temporaryfile_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFile
 ///
@@ -1195,7 +1195,7 @@ bool q_temporaryfile_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self QTemporaryFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_temporaryfile_qbase_set_permissions(void* self, int64_t permissionSpec);
+bool q_temporaryfile_qbase_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFile
 ///
@@ -1205,7 +1205,7 @@ bool q_temporaryfile_qbase_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self QTemporaryFile*
 /// @param callback bool func(QTemporaryFile* self, flag of enum QFileDevice__Permission permissionSpec)
-void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
+void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1867,7 +1867,7 @@ void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// @param self QTemporaryFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_temporaryfile_set_open_mode(void* self, int64_t openMode);
+void q_temporaryfile_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1877,7 +1877,7 @@ void q_temporaryfile_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QTemporaryFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_temporaryfile_qbase_set_open_mode(void* self, int64_t openMode);
+void q_temporaryfile_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1887,7 +1887,7 @@ void q_temporaryfile_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QTemporaryFile*
 /// @param callback void func(QTemporaryFile* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

@@ -154,7 +154,7 @@ void q_urlquery_remove_all_query_items(void* self, const char* key);
 ///
 /// @param self QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
-const char* q_urlquery_query1(void* self, int64_t encoding);
+const char* q_urlquery_query1(void* self, uint32_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#toString)
 ///
@@ -162,13 +162,13 @@ const char* q_urlquery_query1(void* self, int64_t encoding);
 ///
 /// @param self QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
-const char* q_urlquery_to_string1(void* self, int64_t encoding);
+const char* q_urlquery_to_string1(void* self, uint32_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#queryItems)
 ///
 /// @param self QUrlQuery*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
-libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery_query_items1(void* self, int64_t encoding);
+libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery_query_items1(void* self, uint32_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#queryItemValue)
 ///
@@ -177,7 +177,7 @@ libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery
 /// @param self QUrlQuery*
 /// @param key const char*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
-const char* q_urlquery_query_item_value2(void* self, const char* key, int64_t encoding);
+const char* q_urlquery_query_item_value2(void* self, const char* key, uint32_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#allQueryItemValues)
 ///
@@ -186,7 +186,7 @@ const char* q_urlquery_query_item_value2(void* self, const char* key, int64_t en
 /// @param self QUrlQuery*
 /// @param key const char*
 /// @param encoding flag of enum QUrl__ComponentFormattingOption
-const char** q_urlquery_all_query_item_values2(void* self, const char* key, int64_t encoding);
+const char** q_urlquery_all_query_item_values2(void* self, const char* key, uint32_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#dtor.QUrlQuery)
 ///

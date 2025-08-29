@@ -500,15 +500,15 @@ bool q_sortfilterproxymodel_qbase_can_fetch_more(void* self, void* parent) {
     return QSortFilterProxyModel_QBaseCanFetchMore((QSortFilterProxyModel*)self, (QModelIndex*)parent);
 }
 
-int64_t q_sortfilterproxymodel_flags(void* self, void* index) {
+int32_t q_sortfilterproxymodel_flags(void* self, void* index) {
     return QSortFilterProxyModel_Flags((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-void q_sortfilterproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_sortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QSortFilterProxyModel_OnFlags((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sortfilterproxymodel_qbase_flags(void* self, void* index) {
+int32_t q_sortfilterproxymodel_qbase_flags(void* self, void* index) {
     return QSortFilterProxyModel_QBaseFlags((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
@@ -524,16 +524,16 @@ QModelIndex* q_sortfilterproxymodel_qbase_buddy(void* self, void* index) {
     return QSortFilterProxyModel_QBaseBuddy((QSortFilterProxyModel*)self, (QModelIndex*)index);
 }
 
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSortFilterProxyModel_Match((QSortFilterProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_sortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_sortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QSortFilterProxyModel_OnMatch((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_sortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QSortFilterProxyModel_QBaseMatch((QSortFilterProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
@@ -604,15 +604,15 @@ const char** q_sortfilterproxymodel_qbase_mime_types(void* self) {
     return _ret;
 }
 
-int64_t q_sortfilterproxymodel_supported_drop_actions(void* self) {
+int32_t q_sortfilterproxymodel_supported_drop_actions(void* self) {
     return QSortFilterProxyModel_SupportedDropActions((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QSortFilterProxyModel_OnSupportedDropActions((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sortfilterproxymodel_qbase_supported_drop_actions(void* self) {
+int32_t q_sortfilterproxymodel_qbase_supported_drop_actions(void* self) {
     return QSortFilterProxyModel_QBaseSupportedDropActions((QSortFilterProxyModel*)self);
 }
 
@@ -782,7 +782,7 @@ bool q_sortfilterproxymodel_remove_column2(void* self, int column, void* parent)
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_sortfilterproxymodel_check_index2(void* self, void* index, int64_t options) {
+bool q_sortfilterproxymodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -1065,15 +1065,15 @@ void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(v
     QSortFilterProxyModel_OnCanDropMimeData((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 
-int64_t q_sortfilterproxymodel_supported_drag_actions(void* self) {
+int32_t q_sortfilterproxymodel_supported_drag_actions(void* self) {
     return QSortFilterProxyModel_SupportedDragActions((QSortFilterProxyModel*)self);
 }
 
-int64_t q_sortfilterproxymodel_qbase_supported_drag_actions(void* self) {
+int32_t q_sortfilterproxymodel_qbase_supported_drag_actions(void* self) {
     return QSortFilterProxyModel_QBaseSupportedDragActions((QSortFilterProxyModel*)self);
 }
 
-void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QSortFilterProxyModel_OnSupportedDragActions((QSortFilterProxyModel*)self, (intptr_t)callback);
 }
 

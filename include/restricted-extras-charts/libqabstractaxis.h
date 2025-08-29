@@ -323,7 +323,7 @@ int32_t q_abstractaxis_orientation(void* self);
 /// @param self QAbstractAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_abstractaxis_alignment(void* self);
+int32_t q_abstractaxis_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#setMin)
 ///

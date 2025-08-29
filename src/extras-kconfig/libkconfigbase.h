@@ -77,7 +77,7 @@ bool k_configbase_is_group_immutable(void* self, const char* group);
 /// @param self KConfigBase*
 /// @param group const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_configbase_delete_group2(void* self, const char* group, int64_t flags);
+void k_configbase_delete_group2(void* self, const char* group, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigbase.html#dtor.KConfigBase)
 ///

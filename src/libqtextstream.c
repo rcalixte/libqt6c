@@ -17,7 +17,7 @@ QTextStream* q_textstream_new3(const char* array) {
     return QTextStream_new3(qstring(array));
 }
 
-QTextStream* q_textstream_new4(const char* array, int64_t openMode) {
+QTextStream* q_textstream_new4(const char* array, int32_t openMode) {
     return QTextStream_new4(qstring(array), openMode);
 }
 
@@ -149,11 +149,11 @@ int32_t q_textstream_field_width(void* self) {
     return QTextStream_FieldWidth((QTextStream*)self);
 }
 
-void q_textstream_set_number_flags(void* self, int64_t flags) {
+void q_textstream_set_number_flags(void* self, int32_t flags) {
     QTextStream_SetNumberFlags((QTextStream*)self, flags);
 }
 
-int64_t q_textstream_number_flags(void* self) {
+int32_t q_textstream_number_flags(void* self) {
     return QTextStream_NumberFlags((QTextStream*)self);
 }
 
@@ -218,7 +218,7 @@ QTextStream* q_textstream_operator_shift_right10(void* self, long long* i) {
 }
 
 QTextStream* q_textstream_operator_shift_right11(void* self, uint64_t* i) {
-    return QTextStream_OperatorShiftRight11((QTextStream*)self, i);
+    return QTextStream_OperatorShiftRight11((QTextStream*)self, (unsigned long long*)i);
 }
 
 QTextStream* q_textstream_operator_shift_right12(void* self, float* f) {

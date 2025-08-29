@@ -81,7 +81,7 @@ QPointingDevice* q_pointingdevice_new();
 /// @param caps flag of enum QInputDevice__Capability
 /// @param maxPoints int
 /// @param buttonCount int
-QPointingDevice* q_pointingdevice_new2(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount);
+QPointingDevice* q_pointingdevice_new2(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount);
 
 /// q_pointingdevice_new3 constructs a new QPointingDevice object.
 ///
@@ -98,7 +98,7 @@ QPointingDevice* q_pointingdevice_new3(void* parent);
 /// @param maxPoints int
 /// @param buttonCount int
 /// @param seatName const char*
-QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName);
+QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount, const char* seatName);
 
 /// q_pointingdevice_new5 constructs a new QPointingDevice object.
 ///
@@ -111,7 +111,7 @@ QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int
 /// @param buttonCount int
 /// @param seatName const char*
 /// @param uniqueId QPointingDeviceUniqueId*
-QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId);
+QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId);
 
 /// q_pointingdevice_new6 constructs a new QPointingDevice object.
 ///
@@ -125,7 +125,7 @@ QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int
 /// @param seatName const char*
 /// @param uniqueId QPointingDeviceUniqueId*
 /// @param parent QObject*
-QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId, void* parent);
+QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int32_t devType, int32_t pType, int32_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -173,7 +173,7 @@ void q_pointingdevice_set_type(void* self, int32_t devType);
 ///
 /// @param self QPointingDevice*
 /// @param caps flag of enum QInputDevice__Capability
-void q_pointingdevice_set_capabilities(void* self, int64_t caps);
+void q_pointingdevice_set_capabilities(void* self, int32_t caps);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#setMaximumTouchPoints)
 ///
@@ -275,7 +275,7 @@ int32_t q_pointingdevice_type(void* self);
 /// @param self QPointingDevice*
 ///
 /// @return flag of enum QInputDevice__Capability
-int64_t q_pointingdevice_capabilities(void* self);
+int32_t q_pointingdevice_capabilities(void* self);
 
 /// Inherited from QInputDevice
 ///

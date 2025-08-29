@@ -106,14 +106,14 @@ void q_webenginecontextmenurequest_set_accepted(void* self, bool accepted);
 /// @param self QWebEngineContextMenuRequest*
 ///
 /// @return flag of enum QWebEngineContextMenuRequest__MediaFlag
-int64_t q_webenginecontextmenurequest_media_flags(void* self);
+int32_t q_webenginecontextmenurequest_media_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#editFlags)
 ///
 /// @param self QWebEngineContextMenuRequest*
 ///
 /// @return flag of enum QWebEngineContextMenuRequest__EditFlag
-int64_t q_webenginecontextmenurequest_edit_flags(void* self);
+int32_t q_webenginecontextmenurequest_edit_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

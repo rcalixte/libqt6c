@@ -443,7 +443,7 @@ bool q_spinbox_keyboard_tracking(void* self);
 ///
 /// @param self QSpinBox*
 /// @param flag flag of enum Qt__AlignmentFlag
-void q_spinbox_set_alignment(void* self, int64_t flag);
+void q_spinbox_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -452,7 +452,7 @@ void q_spinbox_set_alignment(void* self, int64_t flag);
 /// @param self QSpinBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_spinbox_alignment(void* self);
+int32_t q_spinbox_alignment(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -2042,7 +2042,7 @@ bool q_spinbox_is_full_screen(void* self);
 /// @param self QSpinBox*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_spinbox_window_state(void* self);
+int32_t q_spinbox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2050,7 +2050,7 @@ int64_t q_spinbox_window_state(void* self);
 ///
 /// @param self QSpinBox*
 /// @param state flag of enum Qt__WindowState
-void q_spinbox_set_window_state(void* self, int64_t state);
+void q_spinbox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2058,7 +2058,7 @@ void q_spinbox_set_window_state(void* self, int64_t state);
 ///
 /// @param self QSpinBox*
 /// @param state flag of enum Qt__WindowState
-void q_spinbox_override_window_state(void* self, int64_t state);
+void q_spinbox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2575,7 +2575,7 @@ void q_spinbox_render3(void* self, void* target, void* targetOffset, void* sourc
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_spinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_spinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2605,7 +2605,7 @@ void q_spinbox_render32(void* self, void* painter, void* targetOffset, void* sou
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_spinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_spinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2622,7 +2622,7 @@ QPixmap* q_spinbox_grab1(void* self, void* rectangle);
 /// @param self QSpinBox*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_spinbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_spinbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -3739,7 +3739,7 @@ void q_spinbox_on_init_style_option(void* self, void (*callback)(void*, void*));
 /// @param self QSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_spinbox_step_enabled(void* self);
+int32_t q_spinbox_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3750,7 +3750,7 @@ int64_t q_spinbox_step_enabled(void* self);
 /// @param self QSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_spinbox_qbase_step_enabled(void* self);
+int32_t q_spinbox_qbase_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -3759,8 +3759,8 @@ int64_t q_spinbox_qbase_step_enabled(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSpinBox*
-/// @param callback int64_t func()
-void q_spinbox_on_step_enabled(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_spinbox_on_step_enabled(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5343,7 +5343,7 @@ bool q_doublespinbox_keyboard_tracking(void* self);
 ///
 /// @param self QDoubleSpinBox*
 /// @param flag flag of enum Qt__AlignmentFlag
-void q_doublespinbox_set_alignment(void* self, int64_t flag);
+void q_doublespinbox_set_alignment(void* self, int32_t flag);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5352,7 +5352,7 @@ void q_doublespinbox_set_alignment(void* self, int64_t flag);
 /// @param self QDoubleSpinBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_doublespinbox_alignment(void* self);
+int32_t q_doublespinbox_alignment(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -6942,7 +6942,7 @@ bool q_doublespinbox_is_full_screen(void* self);
 /// @param self QDoubleSpinBox*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_doublespinbox_window_state(void* self);
+int32_t q_doublespinbox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6950,7 +6950,7 @@ int64_t q_doublespinbox_window_state(void* self);
 ///
 /// @param self QDoubleSpinBox*
 /// @param state flag of enum Qt__WindowState
-void q_doublespinbox_set_window_state(void* self, int64_t state);
+void q_doublespinbox_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -6958,7 +6958,7 @@ void q_doublespinbox_set_window_state(void* self, int64_t state);
 ///
 /// @param self QDoubleSpinBox*
 /// @param state flag of enum Qt__WindowState
-void q_doublespinbox_override_window_state(void* self, int64_t state);
+void q_doublespinbox_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -7475,7 +7475,7 @@ void q_doublespinbox_render3(void* self, void* target, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_doublespinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_doublespinbox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7505,7 +7505,7 @@ void q_doublespinbox_render32(void* self, void* painter, void* targetOffset, voi
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_doublespinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_doublespinbox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7522,7 +7522,7 @@ QPixmap* q_doublespinbox_grab1(void* self, void* rectangle);
 /// @param self QDoubleSpinBox*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_doublespinbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_doublespinbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -8669,7 +8669,7 @@ void q_doublespinbox_on_init_style_option(void* self, void (*callback)(void*, vo
 /// @param self QDoubleSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_doublespinbox_step_enabled(void* self);
+int32_t q_doublespinbox_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -8680,7 +8680,7 @@ int64_t q_doublespinbox_step_enabled(void* self);
 /// @param self QDoubleSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_doublespinbox_qbase_step_enabled(void* self);
+int32_t q_doublespinbox_qbase_step_enabled(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -8689,8 +8689,8 @@ int64_t q_doublespinbox_qbase_step_enabled(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDoubleSpinBox*
-/// @param callback int64_t func()
-void q_doublespinbox_on_step_enabled(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_doublespinbox_on_step_enabled(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///

@@ -198,14 +198,14 @@ QBluetoothPermission* q_bluetoothpermission_new2(void* other);
 ///
 /// @param self QBluetoothPermission*
 /// @param modes flag of enum QBluetoothPermission__CommunicationMode
-void q_bluetoothpermission_set_communication_modes(void* self, int64_t modes);
+void q_bluetoothpermission_set_communication_modes(void* self, uint8_t modes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#communicationModes)
 ///
 /// @param self QBluetoothPermission*
 ///
 /// @return flag of enum QBluetoothPermission__CommunicationMode
-int64_t q_bluetoothpermission_communication_modes(void* self);
+uint8_t q_bluetoothpermission_communication_modes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#operator-eq)
 ///

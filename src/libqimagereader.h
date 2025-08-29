@@ -197,7 +197,7 @@ bool q_imagereader_supports_animation(void* self);
 /// @param self QImageReader*
 ///
 /// @return flag of enum QImageIOHandler__Transformation
-int64_t q_imagereader_transformation(void* self);
+int32_t q_imagereader_transformation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagereader.html#setAutoTransform)
 ///

@@ -1756,7 +1756,7 @@ bool k_multitabbar_is_full_screen(void* self);
 /// @param self KMultiTabBar*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_multitabbar_window_state(void* self);
+int32_t k_multitabbar_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1764,7 +1764,7 @@ int64_t k_multitabbar_window_state(void* self);
 ///
 /// @param self KMultiTabBar*
 /// @param state flag of enum Qt__WindowState
-void k_multitabbar_set_window_state(void* self, int64_t state);
+void k_multitabbar_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1772,7 +1772,7 @@ void k_multitabbar_set_window_state(void* self, int64_t state);
 ///
 /// @param self KMultiTabBar*
 /// @param state flag of enum Qt__WindowState
-void k_multitabbar_override_window_state(void* self, int64_t state);
+void k_multitabbar_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2289,7 +2289,7 @@ void k_multitabbar_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_multitabbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_multitabbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2319,7 +2319,7 @@ void k_multitabbar_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_multitabbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_multitabbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2336,7 +2336,7 @@ QPixmap* k_multitabbar_grab1(void* self, void* rectangle);
 /// @param self KMultiTabBar*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_multitabbar_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_multitabbar_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -6378,7 +6378,7 @@ bool k_multitabbarbutton_is_full_screen(void* self);
 /// @param self KMultiTabBarButton*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_multitabbarbutton_window_state(void* self);
+int32_t k_multitabbarbutton_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6386,7 +6386,7 @@ int64_t k_multitabbarbutton_window_state(void* self);
 ///
 /// @param self KMultiTabBarButton*
 /// @param state flag of enum Qt__WindowState
-void k_multitabbarbutton_set_window_state(void* self, int64_t state);
+void k_multitabbarbutton_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -6394,7 +6394,7 @@ void k_multitabbarbutton_set_window_state(void* self, int64_t state);
 ///
 /// @param self KMultiTabBarButton*
 /// @param state flag of enum Qt__WindowState
-void k_multitabbarbutton_override_window_state(void* self, int64_t state);
+void k_multitabbarbutton_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -6941,7 +6941,7 @@ void k_multitabbarbutton_render3(void* self, void* target, void* targetOffset, v
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_multitabbarbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_multitabbarbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -6971,7 +6971,7 @@ void k_multitabbarbutton_render32(void* self, void* painter, void* targetOffset,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_multitabbarbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_multitabbarbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -6988,7 +6988,7 @@ QPixmap* k_multitabbarbutton_grab1(void* self, void* rectangle);
 /// @param self KMultiTabBarButton*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_multitabbarbutton_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_multitabbarbutton_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -9391,7 +9391,7 @@ bool k_multitabbartab_is_full_screen(void* self);
 /// @param self KMultiTabBarTab*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_multitabbartab_window_state(void* self);
+int32_t k_multitabbartab_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -9399,7 +9399,7 @@ int64_t k_multitabbartab_window_state(void* self);
 ///
 /// @param self KMultiTabBarTab*
 /// @param state flag of enum Qt__WindowState
-void k_multitabbartab_set_window_state(void* self, int64_t state);
+void k_multitabbartab_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -9407,7 +9407,7 @@ void k_multitabbartab_set_window_state(void* self, int64_t state);
 ///
 /// @param self KMultiTabBarTab*
 /// @param state flag of enum Qt__WindowState
-void k_multitabbartab_override_window_state(void* self, int64_t state);
+void k_multitabbartab_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -9954,7 +9954,7 @@ void k_multitabbartab_render3(void* self, void* target, void* targetOffset, void
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_multitabbartab_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_multitabbartab_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -9984,7 +9984,7 @@ void k_multitabbartab_render32(void* self, void* painter, void* targetOffset, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_multitabbartab_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_multitabbartab_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -10001,7 +10001,7 @@ QPixmap* k_multitabbartab_grab1(void* self, void* rectangle);
 /// @param self KMultiTabBarTab*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_multitabbartab_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_multitabbartab_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

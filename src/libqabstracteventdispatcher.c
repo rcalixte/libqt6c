@@ -31,7 +31,7 @@ QAbstractEventDispatcher* q_abstracteventdispatcher_instance() {
     return QAbstractEventDispatcher_Instance();
 }
 
-bool q_abstracteventdispatcher_process_events(void* self, int64_t flags) {
+bool q_abstracteventdispatcher_process_events(void* self, int32_t flags) {
     return QAbstractEventDispatcher_ProcessEvents((QAbstractEventDispatcher*)self, flags);
 }
 
@@ -354,7 +354,7 @@ libqt_list /* of QAbstractEventDispatcher__TimerInfoV2* */ q_abstracteventdispat
     return _arr;
 }
 
-bool q_abstracteventdispatcherv2_process_events_with_deadline(void* self, int64_t flags, void* deadline) {
+bool q_abstracteventdispatcherv2_process_events_with_deadline(void* self, int32_t flags, void* deadline) {
     return QAbstractEventDispatcherV2_ProcessEventsWithDeadline((QAbstractEventDispatcherV2*)self, flags, (QDeadlineTimer*)deadline);
 }
 
@@ -376,7 +376,7 @@ QAbstractEventDispatcher* q_abstracteventdispatcherv2_instance() {
     return QAbstractEventDispatcher_Instance();
 }
 
-bool q_abstracteventdispatcherv2_process_events(void* self, int64_t flags) {
+bool q_abstracteventdispatcherv2_process_events(void* self, int32_t flags) {
     return QAbstractEventDispatcher_ProcessEvents((QAbstractEventDispatcher*)self, flags);
 }
 

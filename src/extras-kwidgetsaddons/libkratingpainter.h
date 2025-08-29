@@ -32,7 +32,7 @@ bool k_ratingpainter_half_steps_enabled(void* self);
 /// @param self KRatingPainter*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_ratingpainter_alignment(void* self);
+int32_t k_ratingpainter_alignment(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kratingpainter.html#layoutDirection)
 ///
@@ -77,7 +77,7 @@ void k_ratingpainter_set_half_steps_enabled(void* self, bool enabled);
 ///
 /// @param self KRatingPainter*
 /// @param align flag of enum Qt__AlignmentFlag
-void k_ratingpainter_set_alignment(void* self, int64_t align);
+void k_ratingpainter_set_alignment(void* self, int32_t align);
 
 /// [Qt documentation](https://api-staging.kde.org/kratingpainter.html#setLayoutDirection)
 ///
@@ -130,7 +130,7 @@ int32_t k_ratingpainter_rating_from_position(void* self, void* rect, void* pos);
 /// @param rect QRect*
 /// @param align flag of enum Qt__AlignmentFlag
 /// @param rating int
-void k_ratingpainter_paint_rating(void* p, void* rect, int64_t align, int rating);
+void k_ratingpainter_paint_rating(void* p, void* rect, int32_t align, int rating);
 
 /// [Qt documentation](https://api-staging.kde.org/kratingpainter.html#getRatingFromPosition)
 ///
@@ -138,7 +138,7 @@ void k_ratingpainter_paint_rating(void* p, void* rect, int64_t align, int rating
 /// @param align flag of enum Qt__AlignmentFlag
 /// @param direction enum Qt__LayoutDirection
 /// @param pos QPoint*
-int32_t k_ratingpainter_get_rating_from_position(void* rect, int64_t align, int32_t direction, void* pos);
+int32_t k_ratingpainter_get_rating_from_position(void* rect, int32_t align, int32_t direction, void* pos);
 
 /// [Qt documentation](https://api-staging.kde.org/kratingpainter.html#paint)
 ///
@@ -156,7 +156,7 @@ void k_ratingpainter_paint4(void* self, void* painter, void* rect, int rating, i
 /// @param align flag of enum Qt__AlignmentFlag
 /// @param rating int
 /// @param hoverRating int
-void k_ratingpainter_paint_rating5(void* p, void* rect, int64_t align, int rating, int hoverRating);
+void k_ratingpainter_paint_rating5(void* p, void* rect, int32_t align, int rating, int hoverRating);
 
 /// [Qt documentation](https://api-staging.kde.org/kratingpainter.html#dtor.KRatingPainter)
 ///

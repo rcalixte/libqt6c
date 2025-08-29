@@ -139,13 +139,13 @@ const char** q_commandlineoption_default_values(void* self);
 /// @param self QCommandLineOption*
 ///
 /// @return flag of enum QCommandLineOption__Flag
-int64_t q_commandlineoption_flags(void* self);
+int32_t q_commandlineoption_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#setFlags)
 ///
 /// @param self QCommandLineOption*
 /// @param aflags flag of enum QCommandLineOption__Flag
-void q_commandlineoption_set_flags(void* self, int64_t aflags);
+void q_commandlineoption_set_flags(void* self, int32_t aflags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#dtor.QCommandLineOption)
 ///

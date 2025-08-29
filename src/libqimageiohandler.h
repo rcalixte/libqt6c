@@ -366,7 +366,7 @@ const char* q_imageioplugin_tr(const char* s);
 /// @param format const char*
 ///
 /// @return flag of enum QImageIOPlugin__Capability
-int64_t q_imageioplugin_capabilities(void* self, void* device, const char* format);
+int32_t q_imageioplugin_capabilities(void* self, void* device, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///

@@ -173,7 +173,7 @@ bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int32_t acti
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_webenginehistorymodel_flags(void* self, void* index);
+int32_t q_webenginehistorymodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -300,7 +300,7 @@ bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int32_t 
 /// @param self QWebEngineHistoryModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_webenginehistorymodel_supported_drop_actions(void* self);
+int32_t q_webenginehistorymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -309,7 +309,7 @@ int64_t q_webenginehistorymodel_supported_drop_actions(void* self);
 /// @param self QWebEngineHistoryModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_webenginehistorymodel_supported_drag_actions(void* self);
+int32_t q_webenginehistorymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -472,7 +472,7 @@ QModelIndex* q_webenginehistorymodel_buddy(void* self, void* index);
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -631,7 +631,7 @@ bool q_webenginehistorymodel_remove_column2(void* self, int column, void* parent
 /// @param self QWebEngineHistoryModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_webenginehistorymodel_check_index2(void* self, void* index, int64_t options);
+bool q_webenginehistorymodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///

@@ -438,7 +438,7 @@ void q_matrix4x4_projected_rotate2(void* self, float angle, float x, float y, fl
 /// @param self QMatrix4x4*
 ///
 /// @return flag of enum QMatrix4x4__Flag
-int64_t q_matrix4x4_flags(void* self);
+int32_t q_matrix4x4_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#inverted)
 ///

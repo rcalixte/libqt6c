@@ -101,11 +101,11 @@ bool q_listwidgetitem_is_hidden(void* self) {
     return QListWidgetItem_IsHidden((QListWidgetItem*)self);
 }
 
-int64_t q_listwidgetitem_flags(void* self) {
+int32_t q_listwidgetitem_flags(void* self) {
     return QListWidgetItem_Flags((QListWidgetItem*)self);
 }
 
-void q_listwidgetitem_set_flags(void* self, int64_t flags) {
+void q_listwidgetitem_set_flags(void* self, int32_t flags) {
     QListWidgetItem_SetFlags((QListWidgetItem*)self, flags);
 }
 
@@ -181,7 +181,7 @@ void q_listwidgetitem_set_text_alignment2(void* self, int32_t alignment) {
     QListWidgetItem_SetTextAlignment2((QListWidgetItem*)self, alignment);
 }
 
-void q_listwidgetitem_set_text_alignment3(void* self, int64_t alignment) {
+void q_listwidgetitem_set_text_alignment3(void* self, int32_t alignment) {
     QListWidgetItem_SetTextAlignment3((QListWidgetItem*)self, alignment);
 }
 
@@ -406,7 +406,7 @@ void q_listwidget_set_current_item(void* self, void* item) {
     QListWidget_SetCurrentItem((QListWidget*)self, (QListWidgetItem*)item);
 }
 
-void q_listwidget_set_current_item2(void* self, void* item, int64_t command) {
+void q_listwidget_set_current_item2(void* self, void* item, int32_t command) {
     QListWidget_SetCurrentItem2((QListWidget*)self, (QListWidgetItem*)item, command);
 }
 
@@ -418,7 +418,7 @@ void q_listwidget_set_current_row(void* self, int row) {
     QListWidget_SetCurrentRow((QListWidget*)self, row);
 }
 
-void q_listwidget_set_current_row2(void* self, int row, int64_t command) {
+void q_listwidget_set_current_row2(void* self, int row, int32_t command) {
     QListWidget_SetCurrentRow2((QListWidget*)self, row, command);
 }
 
@@ -479,7 +479,7 @@ libqt_list /* of QListWidgetItem* */ q_listwidget_selected_items(void* self) {
     return _arr;
 }
 
-libqt_list /* of QListWidgetItem* */ q_listwidget_find_items(void* self, const char* text, int64_t flags) {
+libqt_list /* of QListWidgetItem* */ q_listwidget_find_items(void* self, const char* text, int32_t flags) {
     libqt_list _arr = QListWidget_FindItems((QListWidget*)self, qstring(text), flags);
     return _arr;
 }
@@ -675,15 +675,15 @@ bool q_listwidget_qbase_drop_mime_data(void* self, int index, void* data, int32_
     return QListWidget_QBaseDropMimeData((QListWidget*)self, index, (QMimeData*)data, action);
 }
 
-int64_t q_listwidget_supported_drop_actions(void* self) {
+int32_t q_listwidget_supported_drop_actions(void* self) {
     return QListWidget_SupportedDropActions((QListWidget*)self);
 }
 
-void q_listwidget_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_listwidget_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QListWidget_OnSupportedDropActions((QListWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_listwidget_qbase_supported_drop_actions(void* self) {
+int32_t q_listwidget_qbase_supported_drop_actions(void* self) {
     return QListWidget_QBaseSupportedDropActions((QListWidget*)self);
 }
 
@@ -825,11 +825,11 @@ bool q_listwidget_is_selection_rect_visible(void* self) {
     return QListView_IsSelectionRectVisible((QListView*)self);
 }
 
-void q_listwidget_set_item_alignment(void* self, int64_t alignment) {
+void q_listwidget_set_item_alignment(void* self, int32_t alignment) {
     QListView_SetItemAlignment((QListView*)self, alignment);
 }
 
-int64_t q_listwidget_item_alignment(void* self) {
+int32_t q_listwidget_item_alignment(void* self) {
     return QListView_ItemAlignment((QListView*)self);
 }
 
@@ -893,11 +893,11 @@ QModelIndex* q_listwidget_root_index(void* self) {
     return QAbstractItemView_RootIndex((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_edit_triggers(void* self, int64_t triggers) {
+void q_listwidget_set_edit_triggers(void* self, int32_t triggers) {
     QAbstractItemView_SetEditTriggers((QAbstractItemView*)self, triggers);
 }
 
-int64_t q_listwidget_edit_triggers(void* self) {
+int32_t q_listwidget_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
@@ -1165,11 +1165,11 @@ void q_listwidget_set_corner_widget(void* self, void* widget) {
     QAbstractScrollArea_SetCornerWidget((QAbstractScrollArea*)self, (QWidget*)widget);
 }
 
-void q_listwidget_add_scroll_bar_widget(void* self, void* widget, int64_t alignment) {
+void q_listwidget_add_scroll_bar_widget(void* self, void* widget, int32_t alignment) {
     QAbstractScrollArea_AddScrollBarWidget((QAbstractScrollArea*)self, (QWidget*)widget, alignment);
 }
 
-libqt_list /* of QWidget* */ q_listwidget_scroll_bar_widgets(void* self, int64_t alignment) {
+libqt_list /* of QWidget* */ q_listwidget_scroll_bar_widgets(void* self, int32_t alignment) {
     libqt_list _arr = QAbstractScrollArea_ScrollBarWidgets((QAbstractScrollArea*)self, alignment);
     return _arr;
 }
@@ -2047,15 +2047,15 @@ bool q_listwidget_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t q_listwidget_window_state(void* self) {
+int32_t q_listwidget_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void q_listwidget_set_window_state(void* self, int64_t state) {
+void q_listwidget_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void q_listwidget_override_window_state(void* self, int64_t state) {
+void q_listwidget_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -2312,7 +2312,7 @@ void q_listwidget_render3(void* self, void* target, void* targetOffset, void* so
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_listwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_listwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2324,7 +2324,7 @@ void q_listwidget_render32(void* self, void* painter, void* targetOffset, void* 
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void q_listwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void q_listwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -2332,7 +2332,7 @@ QPixmap* q_listwidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_listwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_listwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
@@ -2787,15 +2787,15 @@ void q_listwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)
     QListWidget_OnDragLeaveEvent((QListWidget*)self, (intptr_t)callback);
 }
 
-void q_listwidget_start_drag(void* self, int64_t supportedActions) {
+void q_listwidget_start_drag(void* self, int32_t supportedActions) {
     QListWidget_StartDrag((QListWidget*)self, supportedActions);
 }
 
-void q_listwidget_qbase_start_drag(void* self, int64_t supportedActions) {
+void q_listwidget_qbase_start_drag(void* self, int32_t supportedActions) {
     QListWidget_QBaseStartDrag((QListWidget*)self, supportedActions);
 }
 
-void q_listwidget_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+void q_listwidget_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     QListWidget_OnStartDrag((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -2859,15 +2859,15 @@ void q_listwidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
     QListWidget_OnMoveCursor((QListWidget*)self, (intptr_t)callback);
 }
 
-void q_listwidget_set_selection(void* self, void* rect, int64_t command) {
+void q_listwidget_set_selection(void* self, void* rect, int32_t command) {
     QListWidget_SetSelection((QListWidget*)self, (QRect*)rect, command);
 }
 
-void q_listwidget_qbase_set_selection(void* self, void* rect, int64_t command) {
+void q_listwidget_qbase_set_selection(void* self, void* rect, int32_t command) {
     QListWidget_QBaseSetSelection((QListWidget*)self, (QRect*)rect, command);
 }
 
-void q_listwidget_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_listwidget_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
     QListWidget_OnSetSelection((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3149,15 +3149,15 @@ void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
     QListWidget_OnEdit2((QListWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_listwidget_selection_command(void* self, void* index, void* event) {
+int32_t q_listwidget_selection_command(void* self, void* index, void* event) {
     return QListWidget_SelectionCommand((QListWidget*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int64_t q_listwidget_qbase_selection_command(void* self, void* index, void* event) {
+int32_t q_listwidget_qbase_selection_command(void* self, void* index, void* event) {
     return QListWidget_QBaseSelectionCommand((QListWidget*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_listwidget_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+void q_listwidget_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
     QListWidget_OnSelectionCommand((QListWidget*)self, (intptr_t)callback);
 }
 

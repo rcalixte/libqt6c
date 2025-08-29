@@ -99,7 +99,7 @@ QAbstractAxis* q_chart_axis_y(void* self) {
     return QChart_AxisY((QChart*)self);
 }
 
-void q_chart_add_axis(void* self, void* axis, int64_t alignment) {
+void q_chart_add_axis(void* self, void* axis, int32_t alignment) {
     QChart_AddAxis((QChart*)self, (QAbstractAxis*)axis, alignment);
 }
 
@@ -191,11 +191,11 @@ double q_chart_background_roundness(void* self) {
     return QChart_BackgroundRoundness((QChart*)self);
 }
 
-void q_chart_set_animation_options(void* self, int64_t options) {
+void q_chart_set_animation_options(void* self, int32_t options) {
     QChart_SetAnimationOptions((QChart*)self, options);
 }
 
-int64_t q_chart_animation_options(void* self) {
+int32_t q_chart_animation_options(void* self) {
     return QChart_AnimationOptions((QChart*)self);
 }
 
@@ -353,12 +353,12 @@ QAbstractAxis* q_chart_axis_y1(void* self, void* series) {
     return QChart_AxisY1((QChart*)self, (QAbstractSeries*)series);
 }
 
-libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int64_t orientation) {
+libqt_list /* of QAbstractAxis* */ q_chart_axes1(void* self, int32_t orientation) {
     libqt_list _arr = QChart_Axes1((QChart*)self, orientation);
     return _arr;
 }
 
-libqt_list /* of QAbstractAxis* */ q_chart_axes2(void* self, int64_t orientation, void* series) {
+libqt_list /* of QAbstractAxis* */ q_chart_axes2(void* self, int32_t orientation, void* series) {
     libqt_list _arr = QChart_Axes2((QChart*)self, orientation, (QAbstractSeries*)series);
     return _arr;
 }
@@ -723,7 +723,7 @@ void q_chart_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_chart_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_chart_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
 }
 
@@ -967,7 +967,7 @@ void q_chart_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_chart_flags(void* self) {
+int32_t q_chart_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -975,7 +975,7 @@ void q_chart_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_chart_set_flags(void* self, int64_t flags) {
+void q_chart_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 

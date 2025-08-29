@@ -110,11 +110,11 @@ int32_t q_completer_completion_mode(void* self) {
     return QCompleter_CompletionMode((QCompleter*)self);
 }
 
-void q_completer_set_filter_mode(void* self, int64_t filterMode) {
+void q_completer_set_filter_mode(void* self, int32_t filterMode) {
     QCompleter_SetFilterMode((QCompleter*)self, filterMode);
 }
 
-int64_t q_completer_filter_mode(void* self) {
+int32_t q_completer_filter_mode(void* self) {
     return QCompleter_FilterMode((QCompleter*)self);
 }
 

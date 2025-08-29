@@ -92,15 +92,15 @@ void k_squeezedtextlabel_set_margin(void* self, int margin) {
     KSqueezedTextLabel_SetMargin((KSqueezedTextLabel*)self, margin);
 }
 
-void k_squeezedtextlabel_set_alignment(void* self, int64_t alignment) {
+void k_squeezedtextlabel_set_alignment(void* self, int32_t alignment) {
     KSqueezedTextLabel_SetAlignment((KSqueezedTextLabel*)self, alignment);
 }
 
-void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, int64_t)) {
+void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, int32_t)) {
     KSqueezedTextLabel_OnSetAlignment((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void k_squeezedtextlabel_qbase_set_alignment(void* self, int64_t alignment) {
+void k_squeezedtextlabel_qbase_set_alignment(void* self, int32_t alignment) {
     KSqueezedTextLabel_QBaseSetAlignment((KSqueezedTextLabel*)self, alignment);
 }
 
@@ -232,7 +232,7 @@ void k_squeezedtextlabel_set_text_format(void* self, int32_t textFormat) {
     QLabel_SetTextFormat((QLabel*)self, textFormat);
 }
 
-int64_t k_squeezedtextlabel_alignment(void* self) {
+int32_t k_squeezedtextlabel_alignment(void* self) {
     return QLabel_Alignment((QLabel*)self);
 }
 
@@ -276,11 +276,11 @@ void k_squeezedtextlabel_set_open_external_links(void* self, bool open) {
     QLabel_SetOpenExternalLinks((QLabel*)self, open);
 }
 
-void k_squeezedtextlabel_set_text_interaction_flags(void* self, int64_t flags) {
+void k_squeezedtextlabel_set_text_interaction_flags(void* self, int32_t flags) {
     QLabel_SetTextInteractionFlags((QLabel*)self, flags);
 }
 
-int64_t k_squeezedtextlabel_text_interaction_flags(void* self) {
+int32_t k_squeezedtextlabel_text_interaction_flags(void* self) {
     return QLabel_TextInteractionFlags((QLabel*)self);
 }
 
@@ -1196,15 +1196,15 @@ bool k_squeezedtextlabel_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_squeezedtextlabel_window_state(void* self) {
+int32_t k_squeezedtextlabel_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_squeezedtextlabel_set_window_state(void* self, int64_t state) {
+void k_squeezedtextlabel_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_squeezedtextlabel_override_window_state(void* self, int64_t state) {
+void k_squeezedtextlabel_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1457,7 +1457,7 @@ void k_squeezedtextlabel_render3(void* self, void* target, void* targetOffset, v
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_squeezedtextlabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_squeezedtextlabel_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1469,7 +1469,7 @@ void k_squeezedtextlabel_render32(void* self, void* painter, void* targetOffset,
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_squeezedtextlabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_squeezedtextlabel_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1477,7 +1477,7 @@ QPixmap* k_squeezedtextlabel_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_squeezedtextlabel_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_squeezedtextlabel_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

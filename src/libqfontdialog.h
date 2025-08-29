@@ -101,14 +101,14 @@ bool q_fontdialog_test_option(void* self, int32_t option);
 ///
 /// @param self QFontDialog*
 /// @param options flag of enum QFontDialog__FontDialogOption
-void q_fontdialog_set_options(void* self, int64_t options);
+void q_fontdialog_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdialog.html#options)
 ///
 /// @param self QFontDialog*
 ///
 /// @return flag of enum QFontDialog__FontDialogOption
-int64_t q_fontdialog_options(void* self);
+int32_t q_fontdialog_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdialog.html#setVisible)
 ///
@@ -287,7 +287,7 @@ QFont* q_fontdialog_get_font4(bool* ok, void* initial, void* parent, const char*
 /// @param parent QWidget*
 /// @param title const char*
 /// @param options flag of enum QFontDialog__FontDialogOption
-QFont* q_fontdialog_get_font5(bool* ok, void* initial, void* parent, const char* title, int64_t options);
+QFont* q_fontdialog_get_font5(bool* ok, void* initial, void* parent, const char* title, int32_t options);
 
 /// Inherited from QDialog
 ///
@@ -1873,7 +1873,7 @@ bool q_fontdialog_is_full_screen(void* self);
 /// @param self QFontDialog*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_fontdialog_window_state(void* self);
+int32_t q_fontdialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1881,7 +1881,7 @@ int64_t q_fontdialog_window_state(void* self);
 ///
 /// @param self QFontDialog*
 /// @param state flag of enum Qt__WindowState
-void q_fontdialog_set_window_state(void* self, int64_t state);
+void q_fontdialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1889,7 +1889,7 @@ void q_fontdialog_set_window_state(void* self, int64_t state);
 ///
 /// @param self QFontDialog*
 /// @param state flag of enum Qt__WindowState
-void q_fontdialog_override_window_state(void* self, int64_t state);
+void q_fontdialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2406,7 +2406,7 @@ void q_fontdialog_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_fontdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_fontdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2436,7 +2436,7 @@ void q_fontdialog_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_fontdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_fontdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2453,7 +2453,7 @@ QPixmap* q_fontdialog_grab1(void* self, void* rectangle);
 /// @param self QFontDialog*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_fontdialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_fontdialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

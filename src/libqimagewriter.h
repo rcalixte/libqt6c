@@ -147,13 +147,13 @@ bool q_imagewriter_progressive_scan_write(void* self);
 /// @param self QImageWriter*
 ///
 /// @return flag of enum QImageIOHandler__Transformation
-int64_t q_imagewriter_transformation(void* self);
+int32_t q_imagewriter_transformation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#setTransformation)
 ///
 /// @param self QImageWriter*
 /// @param orientation flag of enum QImageIOHandler__Transformation
-void q_imagewriter_set_transformation(void* self, int64_t orientation);
+void q_imagewriter_set_transformation(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#setText)
 ///

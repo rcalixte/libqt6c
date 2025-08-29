@@ -697,7 +697,7 @@ int32_t q_valueaxis_orientation(void* self);
 /// @param self QValueAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_valueaxis_alignment(void* self);
+int32_t q_valueaxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
 ///

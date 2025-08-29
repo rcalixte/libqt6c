@@ -15,11 +15,11 @@ KConfig* k_config_new3(const char* file) {
     return KConfig_new3(qstring(file));
 }
 
-KConfig* k_config_new4(const char* file, int64_t mode) {
+KConfig* k_config_new4(const char* file, int32_t mode) {
     return KConfig_new4(qstring(file), mode);
 }
 
-KConfig* k_config_new5(const char* file, int64_t mode, int32_t typeVal) {
+KConfig* k_config_new5(const char* file, int32_t mode, int32_t typeVal) {
     return KConfig_new5(qstring(file), mode, typeVal);
 }
 
@@ -38,7 +38,7 @@ const char* k_config_name(void* self) {
     return _ret;
 }
 
-int64_t k_config_open_flags(void* self) {
+int32_t k_config_open_flags(void* self) {
     return KConfig_OpenFlags((KConfig*)self);
 }
 
@@ -256,15 +256,15 @@ const KConfigGroup* k_config_qbase_group_impl2(void* self, const char* groupName
     return KConfig_QBaseGroupImpl2((KConfig*)self, qstring(groupName));
 }
 
-void k_config_delete_group_impl(void* self, const char* groupName, int64_t flags) {
+void k_config_delete_group_impl(void* self, const char* groupName, int32_t flags) {
     KConfig_DeleteGroupImpl((KConfig*)self, qstring(groupName), flags);
 }
 
-void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t)) {
+void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t)) {
     KConfig_OnDeleteGroupImpl((KConfig*)self, (intptr_t)callback);
 }
 
-void k_config_qbase_delete_group_impl(void* self, const char* groupName, int64_t flags) {
+void k_config_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags) {
     KConfig_QBaseDeleteGroupImpl((KConfig*)self, qstring(groupName), flags);
 }
 
@@ -320,7 +320,7 @@ bool k_config_is_group_immutable(void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_config_delete_group2(void* self, const char* group, int64_t flags) {
+void k_config_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
 }
 

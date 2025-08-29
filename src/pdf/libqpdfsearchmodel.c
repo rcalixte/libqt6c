@@ -297,7 +297,7 @@ bool q_pdfsearchmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_check_index2(void* self, void* index, int64_t options) {
+bool q_pdfsearchmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -544,15 +544,15 @@ void q_pdfsearchmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void
     QPdfSearchModel_OnDropMimeData((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-int64_t q_pdfsearchmodel_flags(void* self, void* index) {
+int32_t q_pdfsearchmodel_flags(void* self, void* index) {
     return QPdfSearchModel_Flags((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
-int64_t q_pdfsearchmodel_qbase_flags(void* self, void* index) {
+int32_t q_pdfsearchmodel_qbase_flags(void* self, void* index) {
     return QPdfSearchModel_QBaseFlags((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfsearchmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_pdfsearchmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QPdfSearchModel_OnFlags((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
@@ -694,27 +694,27 @@ void q_pdfsearchmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, 
     QPdfSearchModel_OnCanDropMimeData((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-int64_t q_pdfsearchmodel_supported_drop_actions(void* self) {
+int32_t q_pdfsearchmodel_supported_drop_actions(void* self) {
     return QPdfSearchModel_SupportedDropActions((QPdfSearchModel*)self);
 }
 
-int64_t q_pdfsearchmodel_qbase_supported_drop_actions(void* self) {
+int32_t q_pdfsearchmodel_qbase_supported_drop_actions(void* self) {
     return QPdfSearchModel_QBaseSupportedDropActions((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_pdfsearchmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QPdfSearchModel_OnSupportedDropActions((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-int64_t q_pdfsearchmodel_supported_drag_actions(void* self) {
+int32_t q_pdfsearchmodel_supported_drag_actions(void* self) {
     return QPdfSearchModel_SupportedDragActions((QPdfSearchModel*)self);
 }
 
-int64_t q_pdfsearchmodel_qbase_supported_drag_actions(void* self) {
+int32_t q_pdfsearchmodel_qbase_supported_drag_actions(void* self) {
     return QPdfSearchModel_QBaseSupportedDragActions((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_pdfsearchmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QPdfSearchModel_OnSupportedDragActions((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
@@ -838,17 +838,17 @@ void q_pdfsearchmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*
     QPdfSearchModel_OnBuddy((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_pdfsearchmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_pdfsearchmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QPdfSearchModel_Match((QPdfSearchModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_pdfsearchmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_pdfsearchmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QPdfSearchModel_QBaseMatch((QPdfSearchModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_pdfsearchmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_pdfsearchmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QPdfSearchModel_OnMatch((QPdfSearchModel*)self, (intptr_t)callback);
 }
 

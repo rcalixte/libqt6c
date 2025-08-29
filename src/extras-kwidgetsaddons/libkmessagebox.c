@@ -9,15 +9,15 @@
 #include "libkmessagebox.hpp"
 #include "libkmessagebox.h"
 
-int32_t k_messagebox_question_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7) {
+int32_t k_messagebox_question_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
     return KMessageBox_QuestionTwoActions((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
 }
 
-int32_t k_messagebox_question_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_question_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     return KMessageBox_QuestionTwoActionsCancel((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
 }
 
-int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -33,11 +33,11 @@ int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2,
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7) {
+int32_t k_messagebox_warning_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
     return KMessageBox_WarningTwoActions((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
 }
 
-int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -53,15 +53,15 @@ int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, 
     return _out;
 }
 
-int32_t k_messagebox_warning_continue_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7) {
+int32_t k_messagebox_warning_continue_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
     return KMessageBox_WarningContinueCancel((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
 }
 
-int32_t k_messagebox_warning_continue_cancel_detailed(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7, const char* param8) {
+int32_t k_messagebox_warning_continue_cancel_detailed(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7, const char* param8) {
     return KMessageBox_WarningContinueCancelDetailed((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7, qstring(param8));
 }
 
-int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -77,11 +77,11 @@ int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* para
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_warning_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     return KMessageBox_WarningTwoActionsCancel((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, void* param7, const char* param8, int64_t param9) {
+int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -97,15 +97,15 @@ int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* p
     return _out;
 }
 
-void k_messagebox_error(void* param1, const char* param2, const char* param3, int64_t param4) {
+void k_messagebox_error(void* param1, const char* param2, const char* param3, int32_t param4) {
     KMessageBox_Error((QWidget*)param1, qstring(param2), qstring(param3), param4);
 }
 
-void k_messagebox_error2(void* param1, const char* param2, const char* param3, void* param4, int64_t param5) {
+void k_messagebox_error2(void* param1, const char* param2, const char* param3, void* param4, int32_t param5) {
     KMessageBox_Error2((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, param5);
 }
 
-void k_messagebox_error_list(void* param1, const char* param2, const char* param3[], const char* param4, int64_t param5) {
+void k_messagebox_error_list(void* param1, const char* param2, const char* param3[], const char* param4, int32_t param5) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -120,19 +120,19 @@ void k_messagebox_error_list(void* param1, const char* param2, const char* param
     free(param3_qstr);
 }
 
-void k_messagebox_detailed_error(void* param1, const char* param2, const char* param3, const char* param4, int64_t param5) {
+void k_messagebox_detailed_error(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
     KMessageBox_DetailedError((QWidget*)param1, qstring(param2), qstring(param3), qstring(param4), param5);
 }
 
-void k_messagebox_detailed_error2(void* param1, const char* param2, const char* param3, const char* param4, void* param5, int64_t param6) {
+void k_messagebox_detailed_error2(void* param1, const char* param2, const char* param3, const char* param4, void* param5, int32_t param6) {
     KMessageBox_DetailedError2((QWidget*)param1, qstring(param2), qstring(param3), qstring(param4), (KGuiItem*)param5, param6);
 }
 
-void k_messagebox_information(void* param1, const char* param2, const char* param3, const char* param4, int64_t param5) {
+void k_messagebox_information(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
     KMessageBox_Information((QWidget*)param1, qstring(param2), qstring(param3), qstring(param4), param5);
 }
 
-void k_messagebox_information_list(void* param1, const char* param2, const char* param3[], const char* param4, const char* param5, int64_t param6) {
+void k_messagebox_information_list(void* param1, const char* param2, const char* param3[], const char* param4, const char* param5, int32_t param6) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -155,7 +155,7 @@ void k_messagebox_enable_message(const char* param1) {
     KMessageBox_EnableMessage(qstring(param1));
 }
 
-int32_t k_messagebox_message_box(void* param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int64_t param9) {
+int32_t k_messagebox_message_box(void* param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
     return KMessageBox_MessageBox((QWidget*)param1, param2, qstring(param3), qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, (KGuiItem*)param7, qstring(param8), param9);
 }
 
@@ -187,7 +187,7 @@ void k_messagebox_set_notify_interface(void* param1) {
     KMessageBox_SetNotifyInterface((KMessageBoxNotifyInterface*)param1);
 }
 
-int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t param3, const char* param4, const char* param5[], const char* param6, bool* param7, int64_t param8, const char* param9) {
+int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t param3, const char* param4, const char* param5[], const char* param6, bool* param7, int32_t param8, const char* param9) {
     size_t param5_len = libqt_strv_length(param5);
     libqt_string* param5_qstr = (libqt_string*)malloc(param5_len * sizeof(libqt_string));
     if (param5_qstr == NULL) {
@@ -203,7 +203,7 @@ int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t pa
     return _out;
 }
 
-int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* param3, const char* param4, const char* param5[], const char* param6, bool* param7, int64_t param8, const char* param9, int32_t param10) {
+int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* param3, const char* param4, const char* param5[], const char* param6, bool* param7, int32_t param8, const char* param9, int32_t param10) {
     size_t param5_len = libqt_strv_length(param5);
     libqt_string* param5_qstr = (libqt_string*)malloc(param5_len * sizeof(libqt_string));
     if (param5_qstr == NULL) {
@@ -219,15 +219,15 @@ int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* par
     return _out;
 }
 
-int32_t k_messagebox_question_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7) {
+int32_t k_messagebox_question_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
     return KMessageBox_QuestionTwoActionsWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
 }
 
-int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     return KMessageBox_QuestionTwoActionsCancelWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
 }
 
-int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -243,11 +243,11 @@ int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7) {
+int32_t k_messagebox_warning_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
     return KMessageBox_WarningTwoActionsWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
 }
 
-int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -263,11 +263,11 @@ int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char*
     return _out;
 }
 
-int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int64_t param7) {
+int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
     return KMessageBox_WarningContinueCancelWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
 }
 
-int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -283,11 +283,11 @@ int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const c
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int64_t param8) {
+int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
     return KMessageBox_WarningTwoActionsCancelWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, void* param7, const char* param8, int64_t param9) {
+int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -303,11 +303,11 @@ int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, cons
     return _out;
 }
 
-void k_messagebox_error_w_id(uintptr_t param1, const char* param2, const char* param3, int64_t param4) {
+void k_messagebox_error_w_id(uintptr_t param1, const char* param2, const char* param3, int32_t param4) {
     KMessageBox_ErrorWId(param1, qstring(param2), qstring(param3), param4);
 }
 
-void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, int64_t param5) {
+void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, int32_t param5) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -322,19 +322,19 @@ void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const ch
     free(param3_qstr);
 }
 
-void k_messagebox_detailed_error_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int64_t param5) {
+void k_messagebox_detailed_error_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
     KMessageBox_DetailedErrorWId(param1, qstring(param2), qstring(param3), qstring(param4), param5);
 }
 
-void k_messagebox_detailed_error_w_id2(uintptr_t param1, const char* param2, const char* param3, const char* param4, void* param5, int64_t param6) {
+void k_messagebox_detailed_error_w_id2(uintptr_t param1, const char* param2, const char* param3, const char* param4, void* param5, int32_t param6) {
     KMessageBox_DetailedErrorWId2(param1, qstring(param2), qstring(param3), qstring(param4), (KGuiItem*)param5, param6);
 }
 
-void k_messagebox_information_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int64_t param5) {
+void k_messagebox_information_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
     KMessageBox_InformationWId(param1, qstring(param2), qstring(param3), qstring(param4), param5);
 }
 
-void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, const char* param5, int64_t param6) {
+void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, const char* param5, int32_t param6) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {
@@ -349,6 +349,6 @@ void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, co
     free(param3_qstr);
 }
 
-int32_t k_messagebox_message_box_w_id(uintptr_t param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int64_t param9) {
+int32_t k_messagebox_message_box_w_id(uintptr_t param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
     return KMessageBox_MessageBoxWId(param1, param2, qstring(param3), qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, (KGuiItem*)param7, qstring(param8), param9);
 }

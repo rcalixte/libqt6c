@@ -57,7 +57,7 @@ bool k_configbase_is_group_immutable(void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_configbase_delete_group2(void* self, const char* group, int64_t flags) {
+void k_configbase_delete_group2(void* self, const char* group, int32_t flags) {
     KConfigBase_DeleteGroup2((KConfigBase*)self, qstring(group), flags);
 }
 

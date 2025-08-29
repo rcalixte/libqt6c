@@ -441,18 +441,18 @@ QCborValue* q_cborvalue_from_cbor33(unsigned char* data, int64_t lenVal, void* e
     return QCborValue_FromCbor33(data, lenVal, (QCborParserError*)errorVal);
 }
 
-char* q_cborvalue_to_cbor1(void* self, int64_t opt) {
+char* q_cborvalue_to_cbor1(void* self, int32_t opt) {
     libqt_string _str = QCborValue_ToCbor1((QCborValue*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalue_to_cbor22(void* self, void* writer, int64_t opt) {
+void q_cborvalue_to_cbor22(void* self, void* writer, int32_t opt) {
     QCborValue_ToCbor22((QCborValue*)self, (QCborStreamWriter*)writer, opt);
 }
 
-const char* q_cborvalue_to_diagnostic_notation1(void* self, int64_t opts) {
+const char* q_cborvalue_to_diagnostic_notation1(void* self, int32_t opts) {
     libqt_string _str = QCborValue_ToDiagnosticNotation1((QCborValue*)self, opts);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -721,18 +721,18 @@ QUuid* q_cborvalueconstref_to_uuid1(void* self, void* defaultValue) {
     return QCborValueConstRef_ToUuid1((QCborValueConstRef*)self, (QUuid*)defaultValue);
 }
 
-char* q_cborvalueconstref_to_cbor1(void* self, int64_t opt) {
+char* q_cborvalueconstref_to_cbor1(void* self, int32_t opt) {
     libqt_string _str = QCborValueConstRef_ToCbor1((QCborValueConstRef*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalueconstref_to_cbor22(void* self, void* writer, int64_t opt) {
+void q_cborvalueconstref_to_cbor22(void* self, void* writer, int32_t opt) {
     QCborValueConstRef_ToCbor22((QCborValueConstRef*)self, (QCborStreamWriter*)writer, opt);
 }
 
-const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int64_t opt) {
+const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int32_t opt) {
     libqt_string _str = QCborValueConstRef_ToDiagnosticNotation1((QCborValueConstRef*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1021,18 +1021,18 @@ QUuid* q_cborvalueref_to_uuid1(void* self, void* defaultValue) {
     return QCborValueRef_ToUuid1((QCborValueRef*)self, (QUuid*)defaultValue);
 }
 
-char* q_cborvalueref_to_cbor1(void* self, int64_t opt) {
+char* q_cborvalueref_to_cbor1(void* self, int32_t opt) {
     libqt_string _str = QCborValueRef_ToCbor1((QCborValueRef*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_cborvalueref_to_cbor22(void* self, void* writer, int64_t opt) {
+void q_cborvalueref_to_cbor22(void* self, void* writer, int32_t opt) {
     QCborValueRef_ToCbor22((QCborValueRef*)self, (QCborStreamWriter*)writer, opt);
 }
 
-const char* q_cborvalueref_to_diagnostic_notation1(void* self, int64_t opt) {
+const char* q_cborvalueref_to_diagnostic_notation1(void* self, int32_t opt) {
     libqt_string _str = QCborValueRef_ToDiagnosticNotation1((QCborValueRef*)self, opt);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

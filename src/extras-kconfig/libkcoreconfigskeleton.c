@@ -90,11 +90,11 @@ const char* k_configskeletonitem_whats_this(void* self) {
     return _ret;
 }
 
-void k_configskeletonitem_set_write_flags(void* self, int64_t flags) {
+void k_configskeletonitem_set_write_flags(void* self, int32_t flags) {
     KConfigSkeletonItem_SetWriteFlags((KConfigSkeletonItem*)self, flags);
 }
 
-int64_t k_configskeletonitem_write_flags(void* self) {
+int32_t k_configskeletonitem_write_flags(void* self) {
     return KConfigSkeletonItem_WriteFlags((KConfigSkeletonItem*)self);
 }
 
@@ -428,11 +428,11 @@ const char* k_propertyskeletonitem_whats_this(void* self) {
     return _ret;
 }
 
-void k_propertyskeletonitem_set_write_flags(void* self, int64_t flags) {
+void k_propertyskeletonitem_set_write_flags(void* self, int32_t flags) {
     KConfigSkeletonItem_SetWriteFlags((KConfigSkeletonItem*)self, flags);
 }
 
-int64_t k_propertyskeletonitem_write_flags(void* self) {
+int32_t k_propertyskeletonitem_write_flags(void* self) {
     return KConfigSkeletonItem_WriteFlags((KConfigSkeletonItem*)self);
 }
 
@@ -532,11 +532,11 @@ void k_configcompilersignallingitem_swap_default(void* self) {
     KConfigCompilerSignallingItem_SwapDefault((KConfigCompilerSignallingItem*)self);
 }
 
-void k_configcompilersignallingitem_set_write_flags(void* self, int64_t flags) {
+void k_configcompilersignallingitem_set_write_flags(void* self, int32_t flags) {
     KConfigCompilerSignallingItem_SetWriteFlags((KConfigCompilerSignallingItem*)self, flags);
 }
 
-int64_t k_configcompilersignallingitem_write_flags(void* self) {
+int32_t k_configcompilersignallingitem_write_flags(void* self) {
     return KConfigCompilerSignallingItem_WriteFlags((KConfigCompilerSignallingItem*)self);
 }
 

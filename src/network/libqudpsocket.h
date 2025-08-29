@@ -176,7 +176,7 @@ bool q_udpsocket_bind2(void* self, int32_t addr, unsigned short port);
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_udpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode);
+bool q_udpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qudpsocket.html#receiveDatagram)
 ///
@@ -208,7 +208,7 @@ long long q_udpsocket_read_datagram4(void* self, char* data, long long maxlen, v
 /// @param self QUdpSocket*
 ///
 /// @return flag of enum QAbstractSocket__PauseMode
-int64_t q_udpsocket_pause_mode(void* self);
+int32_t q_udpsocket_pause_mode(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -216,7 +216,7 @@ int64_t q_udpsocket_pause_mode(void* self);
 ///
 /// @param self QUdpSocket*
 /// @param pauseMode flag of enum QAbstractSocket__PauseMode
-void q_udpsocket_set_pause_mode(void* self, int64_t pauseMode);
+void q_udpsocket_set_pause_mode(void* self, int32_t pauseMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -460,7 +460,7 @@ bool q_udpsocket_bind1(void* self, unsigned short port);
 /// @param self QUdpSocket*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_udpsocket_bind22(void* self, unsigned short port, int64_t mode);
+bool q_udpsocket_bind22(void* self, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -470,7 +470,7 @@ bool q_udpsocket_bind22(void* self, unsigned short port, int64_t mode);
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_udpsocket_connect_to_host3(void* self, void* address, unsigned short port, int64_t mode);
+void q_udpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -479,7 +479,7 @@ void q_udpsocket_connect_to_host3(void* self, void* address, unsigned short port
 /// @param self QUdpSocket*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_udpsocket_open_mode(void* self);
+int32_t q_udpsocket_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1170,7 +1170,7 @@ void q_udpsocket_on_resume(void* self, void (*callback)());
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
+void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1183,7 +1183,7 @@ void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_udpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
+void q_udpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1193,7 +1193,7 @@ void q_udpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigne
 ///
 /// @param self QUdpSocket*
 /// @param callback void func(QUdpSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
-void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
+void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1347,7 +1347,7 @@ void q_udpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
+bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1359,7 +1359,7 @@ bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, in
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_udpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
+bool q_udpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1369,7 +1369,7 @@ bool q_udpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescript
 ///
 /// @param self QUdpSocket*
 /// @param callback bool func(QUdpSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
+void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1743,7 +1743,7 @@ void q_udpsocket_on_write_data(void* self, long long (*callback)(void*, const ch
 ///
 /// @param self QUdpSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_udpsocket_open(void* self, int64_t mode);
+bool q_udpsocket_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1753,7 +1753,7 @@ bool q_udpsocket_open(void* self, int64_t mode);
 ///
 /// @param self QUdpSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_udpsocket_qbase_open(void* self, int64_t mode);
+bool q_udpsocket_qbase_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1763,7 +1763,7 @@ bool q_udpsocket_qbase_open(void* self, int64_t mode);
 ///
 /// @param self QUdpSocket*
 /// @param callback bool func(QUdpSocket* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void q_udpsocket_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_udpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///
@@ -2365,7 +2365,7 @@ void q_udpsocket_on_set_peer_name(void* self, void (*callback)(void*, const char
 ///
 /// @param self QUdpSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_udpsocket_set_open_mode(void* self, int64_t openMode);
+void q_udpsocket_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2375,7 +2375,7 @@ void q_udpsocket_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QUdpSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_udpsocket_qbase_set_open_mode(void* self, int64_t openMode);
+void q_udpsocket_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2385,7 +2385,7 @@ void q_udpsocket_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QUdpSocket*
 /// @param callback void func(QUdpSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_udpsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_udpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

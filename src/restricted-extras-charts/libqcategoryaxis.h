@@ -860,7 +860,7 @@ int32_t q_categoryaxis_orientation(void* self);
 /// @param self QCategoryAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_categoryaxis_alignment(void* self);
+int32_t q_categoryaxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
 ///

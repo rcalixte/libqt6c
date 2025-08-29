@@ -27,7 +27,7 @@ QDirIterator* q_diriterator_new2(const char* path);
 ///
 /// @param path const char*
 /// @param filter flag of enum QDir__Filter
-QDirIterator* q_diriterator_new3(const char* path, int64_t filter);
+QDirIterator* q_diriterator_new3(const char* path, int32_t filter);
 
 /// q_diriterator_new4 constructs a new QDirIterator object.
 ///
@@ -39,27 +39,27 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[]);
 ///
 /// @param dir QDir*
 /// @param flags flag of enum QDirIterator__IteratorFlag
-QDirIterator* q_diriterator_new5(void* dir, int64_t flags);
+QDirIterator* q_diriterator_new5(void* dir, int32_t flags);
 
 /// q_diriterator_new6 constructs a new QDirIterator object.
 ///
 /// @param path const char*
 /// @param flags flag of enum QDirIterator__IteratorFlag
-QDirIterator* q_diriterator_new6(const char* path, int64_t flags);
+QDirIterator* q_diriterator_new6(const char* path, int32_t flags);
 
 /// q_diriterator_new7 constructs a new QDirIterator object.
 ///
 /// @param path const char*
 /// @param filter flag of enum QDir__Filter
 /// @param flags flag of enum QDirIterator__IteratorFlag
-QDirIterator* q_diriterator_new7(const char* path, int64_t filter, int64_t flags);
+QDirIterator* q_diriterator_new7(const char* path, int32_t filter, int32_t flags);
 
 /// q_diriterator_new8 constructs a new QDirIterator object.
 ///
 /// @param path const char*
 /// @param nameFilters const char**
 /// @param filters flag of enum QDir__Filter
-QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], int64_t filters);
+QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], int32_t filters);
 
 /// q_diriterator_new9 constructs a new QDirIterator object.
 ///
@@ -67,7 +67,7 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], in
 /// @param nameFilters const char**
 /// @param filters flag of enum QDir__Filter
 /// @param flags flag of enum QDirIterator__IteratorFlag
-QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[], int64_t filters, int64_t flags);
+QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[], int32_t filters, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#next)
 ///

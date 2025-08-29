@@ -139,7 +139,7 @@ void q_graphicseffect_qbase_draw(void* self, void* painter);
 ///
 /// @param self QGraphicsEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicseffect_source_changed(void* self, int64_t flags);
+void q_graphicseffect_source_changed(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
@@ -147,7 +147,7 @@ void q_graphicseffect_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsEffect*
 /// @param callback void func(QGraphicsEffect* self, flag of enum QGraphicsEffect__ChangeFlag flags)
-void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int64_t));
+void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
@@ -155,7 +155,7 @@ void q_graphicseffect_on_source_changed(void* self, void (*callback)(void*, int6
 ///
 /// @param self QGraphicsEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicseffect_qbase_source_changed(void* self, int64_t flags);
+void q_graphicseffect_qbase_source_changed(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
 ///
@@ -1544,7 +1544,7 @@ void q_graphicscolorizeeffect_on_bounding_rect_for(void* self, QRectF* (*callbac
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicscolorizeeffect_source_changed(void* self, int64_t flags);
+void q_graphicscolorizeeffect_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -1554,7 +1554,7 @@ void q_graphicscolorizeeffect_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicscolorizeeffect_qbase_source_changed(void* self, int64_t flags);
+void q_graphicscolorizeeffect_qbase_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -1564,7 +1564,7 @@ void q_graphicscolorizeeffect_qbase_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param callback void func(QGraphicsColorizeEffect* self, flag of enum QGraphicsEffect__ChangeFlag flags)
-void q_graphicscolorizeeffect_on_source_changed(void* self, void (*callback)(void*, int64_t));
+void q_graphicscolorizeeffect_on_source_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///
@@ -2132,7 +2132,7 @@ double q_graphicsblureffect_blur_radius(void* self);
 /// @param self QGraphicsBlurEffect*
 ///
 /// @return flag of enum QGraphicsBlurEffect__BlurHint
-int64_t q_graphicsblureffect_blur_hints(void* self);
+int32_t q_graphicsblureffect_blur_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#setBlurRadius)
 ///
@@ -2144,7 +2144,7 @@ void q_graphicsblureffect_set_blur_radius(void* self, double blurRadius);
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param hints flag of enum QGraphicsBlurEffect__BlurHint
-void q_graphicsblureffect_set_blur_hints(void* self, int64_t hints);
+void q_graphicsblureffect_set_blur_hints(void* self, int32_t hints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurRadiusChanged)
 ///
@@ -2162,13 +2162,13 @@ void q_graphicsblureffect_on_blur_radius_changed(void* self, void (*callback)(vo
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param hints flag of enum QGraphicsBlurEffect__BlurHint
-void q_graphicsblureffect_blur_hints_changed(void* self, int64_t hints);
+void q_graphicsblureffect_blur_hints_changed(void* self, int32_t hints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurHintsChanged)
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param callback void func(QGraphicsBlurEffect* self, flag of enum QGraphicsBlurEffect__BlurHint hints)
-void q_graphicsblureffect_on_blur_hints_changed(void* self, void (*callback)(void*, int64_t));
+void q_graphicsblureffect_on_blur_hints_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#draw)
 ///
@@ -2569,7 +2569,7 @@ void q_graphicsblureffect_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicsblureffect_source_changed(void* self, int64_t flags);
+void q_graphicsblureffect_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2579,7 +2579,7 @@ void q_graphicsblureffect_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicsblureffect_qbase_source_changed(void* self, int64_t flags);
+void q_graphicsblureffect_qbase_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2589,7 +2589,7 @@ void q_graphicsblureffect_qbase_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param callback void func(QGraphicsBlurEffect* self, flag of enum QGraphicsEffect__ChangeFlag flags)
-void q_graphicsblureffect_on_source_changed(void* self, void (*callback)(void*, int64_t));
+void q_graphicsblureffect_on_source_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///
@@ -3650,7 +3650,7 @@ void q_graphicsdropshadoweffect_on_destroyed1(void* self, void (*callback)(void*
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicsdropshadoweffect_source_changed(void* self, int64_t flags);
+void q_graphicsdropshadoweffect_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3660,7 +3660,7 @@ void q_graphicsdropshadoweffect_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int64_t flags);
+void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3670,7 +3670,7 @@ void q_graphicsdropshadoweffect_qbase_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback void func(QGraphicsDropShadowEffect* self, flag of enum QGraphicsEffect__ChangeFlag flags)
-void q_graphicsdropshadoweffect_on_source_changed(void* self, void (*callback)(void*, int64_t));
+void q_graphicsdropshadoweffect_on_source_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///
@@ -4681,7 +4681,7 @@ void q_graphicsopacityeffect_on_bounding_rect_for(void* self, QRectF* (*callback
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicsopacityeffect_source_changed(void* self, int64_t flags);
+void q_graphicsopacityeffect_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4691,7 +4691,7 @@ void q_graphicsopacityeffect_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param flags flag of enum QGraphicsEffect__ChangeFlag
-void q_graphicsopacityeffect_qbase_source_changed(void* self, int64_t flags);
+void q_graphicsopacityeffect_qbase_source_changed(void* self, int32_t flags);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4701,7 +4701,7 @@ void q_graphicsopacityeffect_qbase_source_changed(void* self, int64_t flags);
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param callback void func(QGraphicsOpacityEffect* self, flag of enum QGraphicsEffect__ChangeFlag flags)
-void q_graphicsopacityeffect_on_source_changed(void* self, void (*callback)(void*, int64_t));
+void q_graphicsopacityeffect_on_source_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

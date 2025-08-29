@@ -67,15 +67,15 @@ long long q_wavedecoder_header_length() {
     return QWaveDecoder_HeaderLength();
 }
 
-bool q_wavedecoder_open(void* self, int64_t mode) {
+bool q_wavedecoder_open(void* self, int32_t mode) {
     return QWaveDecoder_Open((QWaveDecoder*)self, mode);
 }
 
-void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QWaveDecoder_OnOpen((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-bool q_wavedecoder_qbase_open(void* self, int64_t mode) {
+bool q_wavedecoder_qbase_open(void* self, int32_t mode) {
     return QWaveDecoder_QBaseOpen((QWaveDecoder*)self, mode);
 }
 
@@ -181,7 +181,7 @@ const char* q_wavedecoder_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_wavedecoder_open_mode(void* self) {
+int32_t q_wavedecoder_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -726,15 +726,15 @@ void q_wavedecoder_on_disconnect_notify(void* self, void (*callback)(void*, void
     QWaveDecoder_OnDisconnectNotify((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-void q_wavedecoder_set_open_mode(void* self, int64_t openMode) {
+void q_wavedecoder_set_open_mode(void* self, int32_t openMode) {
     QWaveDecoder_SetOpenMode((QWaveDecoder*)self, openMode);
 }
 
-void q_wavedecoder_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_wavedecoder_qbase_set_open_mode(void* self, int32_t openMode) {
     QWaveDecoder_QBaseSetOpenMode((QWaveDecoder*)self, openMode);
 }
 
-void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QWaveDecoder_OnSetOpenMode((QWaveDecoder*)self, (intptr_t)callback);
 }
 

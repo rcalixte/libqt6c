@@ -51,7 +51,7 @@ int32_t k_process_output_channel_mode(void* self) {
     return KProcess_OutputChannelMode((KProcess*)self);
 }
 
-void k_process_set_next_open_mode(void* self, int64_t mode) {
+void k_process_set_next_open_mode(void* self, int32_t mode) {
     KProcess_SetNextOpenMode((KProcess*)self, mode);
 }
 
@@ -388,7 +388,7 @@ void k_process_set_unix_process_parameters(void* self, void* params) {
     QProcess_SetUnixProcessParameters((QProcess*)self, (QProcess__UnixProcessParameters*)params);
 }
 
-void k_process_set_unix_process_parameters2(void* self, int64_t flagsOnly) {
+void k_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly) {
     QProcess_SetUnixProcessParameters2((QProcess*)self, flagsOnly);
 }
 
@@ -552,7 +552,7 @@ void k_process_start22(void* self, const char* program, const char* arguments[])
     free(arguments_qstr);
 }
 
-void k_process_start3(void* self, const char* program, const char* arguments[], int64_t mode) {
+void k_process_start3(void* self, const char* program, const char* arguments[], int32_t mode) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -567,11 +567,11 @@ void k_process_start3(void* self, const char* program, const char* arguments[], 
     free(arguments_qstr);
 }
 
-void k_process_start1(void* self, int64_t mode) {
+void k_process_start1(void* self, int32_t mode) {
     QProcess_Start1((QProcess*)self, mode);
 }
 
-void k_process_start_command2(void* self, const char* command, int64_t mode) {
+void k_process_start_command2(void* self, const char* command, int32_t mode) {
     QProcess_StartCommand2((QProcess*)self, qstring(command), mode);
 }
 
@@ -579,11 +579,11 @@ bool k_process_start_detached1(void* self, long long* pid) {
     return QProcess_StartDetached1((QProcess*)self, pid);
 }
 
-void k_process_set_standard_output_file2(void* self, const char* fileName, int64_t mode) {
+void k_process_set_standard_output_file2(void* self, const char* fileName, int32_t mode) {
     QProcess_SetStandardOutputFile2((QProcess*)self, qstring(fileName), mode);
 }
 
-void k_process_set_standard_error_file2(void* self, const char* fileName, int64_t mode) {
+void k_process_set_standard_error_file2(void* self, const char* fileName, int32_t mode) {
     QProcess_SetStandardErrorFile2((QProcess*)self, qstring(fileName), mode);
 }
 
@@ -623,7 +623,7 @@ void k_process_on_finished2(void* self, void (*callback)(void*, int, int32_t)) {
     QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
 }
 
-int64_t k_process_open_mode(void* self) {
+int32_t k_process_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -988,15 +988,15 @@ void k_process_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_process_open(void* self, int64_t mode) {
+bool k_process_open(void* self, int32_t mode) {
     return KProcess_Open((KProcess*)self, mode);
 }
 
-bool k_process_qbase_open(void* self, int64_t mode) {
+bool k_process_qbase_open(void* self, int32_t mode) {
     return KProcess_QBaseOpen((KProcess*)self, mode);
 }
 
-void k_process_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void k_process_on_open(void* self, bool (*callback)(void*, int32_t)) {
     KProcess_OnOpen((KProcess*)self, (intptr_t)callback);
 }
 
@@ -1288,15 +1288,15 @@ void k_process_on_set_process_state(void* self, void (*callback)(void*, int32_t)
     KProcess_OnSetProcessState((KProcess*)self, (intptr_t)callback);
 }
 
-void k_process_set_open_mode(void* self, int64_t openMode) {
+void k_process_set_open_mode(void* self, int32_t openMode) {
     KProcess_SetOpenMode((KProcess*)self, openMode);
 }
 
-void k_process_qbase_set_open_mode(void* self, int64_t openMode) {
+void k_process_qbase_set_open_mode(void* self, int32_t openMode) {
     KProcess_QBaseSetOpenMode((KProcess*)self, openMode);
 }
 
-void k_process_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void k_process_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     KProcess_OnSetOpenMode((KProcess*)self, (intptr_t)callback);
 }
 

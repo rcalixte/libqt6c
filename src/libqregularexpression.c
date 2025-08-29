@@ -14,15 +14,15 @@ QRegularExpression* q_regularexpression_new3(void* re) {
     return QRegularExpression_new3((QRegularExpression*)re);
 }
 
-QRegularExpression* q_regularexpression_new4(const char* pattern, int64_t options) {
+QRegularExpression* q_regularexpression_new4(const char* pattern, int32_t options) {
     return QRegularExpression_new4(qstring(pattern), options);
 }
 
-int64_t q_regularexpression_pattern_options(void* self) {
+int32_t q_regularexpression_pattern_options(void* self) {
     return QRegularExpression_PatternOptions((QRegularExpression*)self);
 }
 
-void q_regularexpression_set_pattern_options(void* self, int64_t options) {
+void q_regularexpression_set_pattern_options(void* self, int32_t options) {
     QRegularExpression_SetPatternOptions((QRegularExpression*)self, options);
 }
 
@@ -124,7 +124,7 @@ QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subj
     return QRegularExpression_Match3((QRegularExpression*)self, qstring(subject), offset, matchType);
 }
 
-QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int64_t matchOptions) {
+QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int32_t matchOptions) {
     return QRegularExpression_Match4((QRegularExpression*)self, qstring(subject), offset, matchType, matchOptions);
 }
 
@@ -136,11 +136,11 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, c
     return QRegularExpression_GlobalMatch3((QRegularExpression*)self, qstring(subject), offset, matchType);
 }
 
-QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int64_t matchOptions) {
+QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int32_t matchOptions) {
     return QRegularExpression_GlobalMatch4((QRegularExpression*)self, qstring(subject), offset, matchType, matchOptions);
 }
 
-const char* q_regularexpression_wildcard_to_regular_expression22(const char* str, int64_t options) {
+const char* q_regularexpression_wildcard_to_regular_expression22(const char* str, int32_t options) {
     libqt_string _str = QRegularExpression_WildcardToRegularExpression22(qstring(str), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -175,7 +175,7 @@ int32_t q_regularexpressionmatch_match_type(void* self) {
     return QRegularExpressionMatch_MatchType((QRegularExpressionMatch*)self);
 }
 
-int64_t q_regularexpressionmatch_match_options(void* self) {
+int32_t q_regularexpressionmatch_match_options(void* self) {
     return QRegularExpressionMatch_MatchOptions((QRegularExpressionMatch*)self);
 }
 
@@ -323,7 +323,7 @@ int32_t q_regularexpressionmatchiterator_match_type(void* self) {
     return QRegularExpressionMatchIterator_MatchType((QRegularExpressionMatchIterator*)self);
 }
 
-int64_t q_regularexpressionmatchiterator_match_options(void* self) {
+int32_t q_regularexpressionmatchiterator_match_options(void* self) {
     return QRegularExpressionMatchIterator_MatchOptions((QRegularExpressionMatchIterator*)self);
 }
 

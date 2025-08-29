@@ -169,7 +169,7 @@ void q_modelindex_multi_data(void* self, void* roleDataSpan) {
     QModelIndex_MultiData((QModelIndex*)self, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-int64_t q_modelindex_flags(void* self) {
+int32_t q_modelindex_flags(void* self) {
     return QModelIndex_Flags((QModelIndex*)self);
 }
 
@@ -253,7 +253,7 @@ void q_persistentmodelindex_multi_data(void* self, void* roleDataSpan) {
     QPersistentModelIndex_MultiData((QPersistentModelIndex*)self, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-int64_t q_persistentmodelindex_flags(void* self) {
+int32_t q_persistentmodelindex_flags(void* self) {
     return QPersistentModelIndex_Flags((QPersistentModelIndex*)self);
 }
 
@@ -546,27 +546,27 @@ bool q_abstractitemmodel_qbase_drop_mime_data(void* self, void* data, int32_t ac
     return QAbstractItemModel_QBaseDropMimeData((QAbstractItemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int64_t q_abstractitemmodel_supported_drop_actions(void* self) {
+int32_t q_abstractitemmodel_supported_drop_actions(void* self) {
     return QAbstractItemModel_SupportedDropActions((QAbstractItemModel*)self);
 }
 
-void q_abstractitemmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_abstractitemmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QAbstractItemModel_OnSupportedDropActions((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractitemmodel_qbase_supported_drop_actions(void* self) {
+int32_t q_abstractitemmodel_qbase_supported_drop_actions(void* self) {
     return QAbstractItemModel_QBaseSupportedDropActions((QAbstractItemModel*)self);
 }
 
-int64_t q_abstractitemmodel_supported_drag_actions(void* self) {
+int32_t q_abstractitemmodel_supported_drag_actions(void* self) {
     return QAbstractItemModel_SupportedDragActions((QAbstractItemModel*)self);
 }
 
-void q_abstractitemmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_abstractitemmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QAbstractItemModel_OnSupportedDragActions((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractitemmodel_qbase_supported_drag_actions(void* self) {
+int32_t q_abstractitemmodel_qbase_supported_drag_actions(void* self) {
     return QAbstractItemModel_QBaseSupportedDragActions((QAbstractItemModel*)self);
 }
 
@@ -690,15 +690,15 @@ bool q_abstractitemmodel_qbase_can_fetch_more(void* self, void* parent) {
     return QAbstractItemModel_QBaseCanFetchMore((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-int64_t q_abstractitemmodel_flags(void* self, void* index) {
+int32_t q_abstractitemmodel_flags(void* self, void* index) {
     return QAbstractItemModel_Flags((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractitemmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_abstractitemmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QAbstractItemModel_OnFlags((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractitemmodel_qbase_flags(void* self, void* index) {
+int32_t q_abstractitemmodel_qbase_flags(void* self, void* index) {
     return QAbstractItemModel_QBaseFlags((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
@@ -726,16 +726,16 @@ QModelIndex* q_abstractitemmodel_qbase_buddy(void* self, void* index) {
     return QAbstractItemModel_QBaseBuddy((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-libqt_list /* of QModelIndex* */ q_abstractitemmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstractitemmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractItemModel_Match((QAbstractItemModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_abstractitemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_abstractitemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QAbstractItemModel_OnMatch((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_abstractitemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstractitemmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractItemModel_QBaseMatch((QAbstractItemModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
@@ -1136,7 +1136,7 @@ bool q_abstractitemmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_abstractitemmodel_check_index2(void* self, void* index, int64_t options) {
+bool q_abstractitemmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -1626,15 +1626,15 @@ bool q_abstracttablemodel_qbase_drop_mime_data(void* self, void* data, int32_t a
     return QAbstractTableModel_QBaseDropMimeData((QAbstractTableModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int64_t q_abstracttablemodel_flags(void* self, void* index) {
+int32_t q_abstracttablemodel_flags(void* self, void* index) {
     return QAbstractTableModel_Flags((QAbstractTableModel*)self, (QModelIndex*)index);
 }
 
-void q_abstracttablemodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_abstracttablemodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QAbstractTableModel_OnFlags((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstracttablemodel_qbase_flags(void* self, void* index) {
+int32_t q_abstracttablemodel_qbase_flags(void* self, void* index) {
     return QAbstractTableModel_QBaseFlags((QAbstractTableModel*)self, (QModelIndex*)index);
 }
 
@@ -1760,7 +1760,7 @@ bool q_abstracttablemodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_abstracttablemodel_check_index2(void* self, void* index, int64_t options) {
+bool q_abstracttablemodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -2145,27 +2145,27 @@ void q_abstracttablemodel_on_can_drop_mime_data(void* self, bool (*callback)(voi
     QAbstractTableModel_OnCanDropMimeData((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstracttablemodel_supported_drop_actions(void* self) {
+int32_t q_abstracttablemodel_supported_drop_actions(void* self) {
     return QAbstractTableModel_SupportedDropActions((QAbstractTableModel*)self);
 }
 
-int64_t q_abstracttablemodel_qbase_supported_drop_actions(void* self) {
+int32_t q_abstracttablemodel_qbase_supported_drop_actions(void* self) {
     return QAbstractTableModel_QBaseSupportedDropActions((QAbstractTableModel*)self);
 }
 
-void q_abstracttablemodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_abstracttablemodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QAbstractTableModel_OnSupportedDropActions((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstracttablemodel_supported_drag_actions(void* self) {
+int32_t q_abstracttablemodel_supported_drag_actions(void* self) {
     return QAbstractTableModel_SupportedDragActions((QAbstractTableModel*)self);
 }
 
-int64_t q_abstracttablemodel_qbase_supported_drag_actions(void* self) {
+int32_t q_abstracttablemodel_qbase_supported_drag_actions(void* self) {
     return QAbstractTableModel_QBaseSupportedDragActions((QAbstractTableModel*)self);
 }
 
-void q_abstracttablemodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_abstracttablemodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QAbstractTableModel_OnSupportedDragActions((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -2289,17 +2289,17 @@ void q_abstracttablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, v
     QAbstractTableModel_OnBuddy((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_abstracttablemodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstracttablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractTableModel_Match((QAbstractTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_abstracttablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstracttablemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractTableModel_QBaseMatch((QAbstractTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_abstracttablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_abstracttablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QAbstractTableModel_OnMatch((QAbstractTableModel*)self, (intptr_t)callback);
 }
 
@@ -2884,15 +2884,15 @@ bool q_abstractlistmodel_qbase_drop_mime_data(void* self, void* data, int32_t ac
     return QAbstractListModel_QBaseDropMimeData((QAbstractListModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int64_t q_abstractlistmodel_flags(void* self, void* index) {
+int32_t q_abstractlistmodel_flags(void* self, void* index) {
     return QAbstractListModel_Flags((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
-void q_abstractlistmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+void q_abstractlistmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     QAbstractListModel_OnFlags((QAbstractListModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractlistmodel_qbase_flags(void* self, void* index) {
+int32_t q_abstractlistmodel_qbase_flags(void* self, void* index) {
     return QAbstractListModel_QBaseFlags((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
@@ -3030,7 +3030,7 @@ bool q_abstractlistmodel_remove_column2(void* self, int column, void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_abstractlistmodel_check_index2(void* self, void* index, int64_t options) {
+bool q_abstractlistmodel_check_index2(void* self, void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
@@ -3403,27 +3403,27 @@ void q_abstractlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void
     QAbstractListModel_OnCanDropMimeData((QAbstractListModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractlistmodel_supported_drop_actions(void* self) {
+int32_t q_abstractlistmodel_supported_drop_actions(void* self) {
     return QAbstractListModel_SupportedDropActions((QAbstractListModel*)self);
 }
 
-int64_t q_abstractlistmodel_qbase_supported_drop_actions(void* self) {
+int32_t q_abstractlistmodel_qbase_supported_drop_actions(void* self) {
     return QAbstractListModel_QBaseSupportedDropActions((QAbstractListModel*)self);
 }
 
-void q_abstractlistmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+void q_abstractlistmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     QAbstractListModel_OnSupportedDropActions((QAbstractListModel*)self, (intptr_t)callback);
 }
 
-int64_t q_abstractlistmodel_supported_drag_actions(void* self) {
+int32_t q_abstractlistmodel_supported_drag_actions(void* self) {
     return QAbstractListModel_SupportedDragActions((QAbstractListModel*)self);
 }
 
-int64_t q_abstractlistmodel_qbase_supported_drag_actions(void* self) {
+int32_t q_abstractlistmodel_qbase_supported_drag_actions(void* self) {
     return QAbstractListModel_QBaseSupportedDragActions((QAbstractListModel*)self);
 }
 
-void q_abstractlistmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+void q_abstractlistmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
     QAbstractListModel_OnSupportedDragActions((QAbstractListModel*)self, (intptr_t)callback);
 }
 
@@ -3547,17 +3547,17 @@ void q_abstractlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, vo
     QAbstractListModel_OnBuddy((QAbstractListModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_abstractlistmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstractlistmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractListModel_Match((QAbstractListModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_abstractlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
+libqt_list /* of QModelIndex* */ q_abstractlistmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractListModel_QBaseMatch((QAbstractListModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_abstractlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+void q_abstractlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
     QAbstractListModel_OnMatch((QAbstractListModel*)self, (intptr_t)callback);
 }
 

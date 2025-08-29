@@ -169,7 +169,7 @@ const char* k_titlewidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_titlewidget_set_text22(void* self, const char* text, int64_t alignment) {
+void k_titlewidget_set_text22(void* self, const char* text, int32_t alignment) {
     KTitleWidget_SetText22((KTitleWidget*)self, qstring(text), alignment);
 }
 
@@ -990,15 +990,15 @@ bool k_titlewidget_is_full_screen(void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int64_t k_titlewidget_window_state(void* self) {
+int32_t k_titlewidget_window_state(void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
-void k_titlewidget_set_window_state(void* self, int64_t state) {
+void k_titlewidget_set_window_state(void* self, int32_t state) {
     QWidget_SetWindowState((QWidget*)self, state);
 }
 
-void k_titlewidget_override_window_state(void* self, int64_t state) {
+void k_titlewidget_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
@@ -1255,7 +1255,7 @@ void k_titlewidget_render3(void* self, void* target, void* targetOffset, void* s
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_titlewidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_titlewidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1267,7 +1267,7 @@ void k_titlewidget_render32(void* self, void* painter, void* targetOffset, void*
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_titlewidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags) {
+void k_titlewidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
@@ -1275,7 +1275,7 @@ QPixmap* k_titlewidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_titlewidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void k_titlewidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 

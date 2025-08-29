@@ -193,39 +193,39 @@ void q_itemselectionmodel_set_model(void* self, void* model) {
     QItemSelectionModel_SetModel((QItemSelectionModel*)self, (QAbstractItemModel*)model);
 }
 
-void q_itemselectionmodel_set_current_index(void* self, void* index, int64_t command) {
+void q_itemselectionmodel_set_current_index(void* self, void* index, int32_t command) {
     QItemSelectionModel_SetCurrentIndex((QItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_itemselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t)) {
     QItemSelectionModel_OnSetCurrentIndex((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void q_itemselectionmodel_qbase_set_current_index(void* self, void* index, int64_t command) {
+void q_itemselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command) {
     QItemSelectionModel_QBaseSetCurrentIndex((QItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void q_itemselectionmodel_select(void* self, void* index, int64_t command) {
+void q_itemselectionmodel_select(void* self, void* index, int32_t command) {
     QItemSelectionModel_Select((QItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_itemselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t)) {
     QItemSelectionModel_OnSelect((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void q_itemselectionmodel_qbase_select(void* self, void* index, int64_t command) {
+void q_itemselectionmodel_qbase_select(void* self, void* index, int32_t command) {
     QItemSelectionModel_QBaseSelect((QItemSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void q_itemselectionmodel_select2(void* self, void* selection, int64_t command) {
+void q_itemselectionmodel_select2(void* self, void* selection, int32_t command) {
     QItemSelectionModel_Select2((QItemSelectionModel*)self, (QItemSelection*)selection, command);
 }
 
-void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_itemselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t)) {
     QItemSelectionModel_OnSelect2((QItemSelectionModel*)self, (intptr_t)callback);
 }
 
-void q_itemselectionmodel_qbase_select2(void* self, void* selection, int64_t command) {
+void q_itemselectionmodel_qbase_select2(void* self, void* selection, int32_t command) {
     QItemSelectionModel_QBaseSelect2((QItemSelectionModel*)self, (QItemSelection*)selection, command);
 }
 
@@ -699,7 +699,7 @@ libqt_list /* of QModelIndex* */ q_itemselection_indexes(void* self) {
     return _arr;
 }
 
-void q_itemselection_merge(void* self, void* other, int64_t command) {
+void q_itemselection_merge(void* self, void* other, int32_t command) {
     QItemSelection_Merge((QItemSelection*)self, (QItemSelection*)other, command);
 }
 

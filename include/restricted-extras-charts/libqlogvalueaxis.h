@@ -638,7 +638,7 @@ int32_t q_logvalueaxis_orientation(void* self);
 /// @param self QLogValueAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_logvalueaxis_alignment(void* self);
+int32_t q_logvalueaxis_alignment(void* self);
 
 /// Inherited from QAbstractAxis
 ///

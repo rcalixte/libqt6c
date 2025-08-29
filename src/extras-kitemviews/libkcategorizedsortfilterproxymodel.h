@@ -714,7 +714,7 @@ bool k_categorizedsortfilterproxymodel_remove_column2(void* self, int column, vo
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool k_categorizedsortfilterproxymodel_check_index2(void* self, void* index, int64_t options);
+bool k_categorizedsortfilterproxymodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1912,7 +1912,7 @@ void k_categorizedsortfilterproxymodel_on_can_fetch_more(void* self, bool (*call
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t k_categorizedsortfilterproxymodel_flags(void* self, void* index);
+int32_t k_categorizedsortfilterproxymodel_flags(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1924,7 +1924,7 @@ int64_t k_categorizedsortfilterproxymodel_flags(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t k_categorizedsortfilterproxymodel_qbase_flags(void* self, void* index);
+int32_t k_categorizedsortfilterproxymodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1933,8 +1933,8 @@ int64_t k_categorizedsortfilterproxymodel_qbase_flags(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int64_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
-void k_categorizedsortfilterproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
+void k_categorizedsortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1978,7 +1978,7 @@ void k_categorizedsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callb
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1992,7 +1992,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_match(void* s
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2002,7 +2002,7 @@ libqt_list /* of QModelIndex* */ k_categorizedsortfilterproxymodel_qbase_match(v
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(KCategorizedSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void k_categorizedsortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void k_categorizedsortfilterproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2075,7 +2075,7 @@ void k_categorizedsortfilterproxymodel_on_mime_types(void* self, const char** (*
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_categorizedsortfilterproxymodel_supported_drop_actions(void* self);
+int32_t k_categorizedsortfilterproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2086,7 +2086,7 @@ int64_t k_categorizedsortfilterproxymodel_supported_drop_actions(void* self);
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_categorizedsortfilterproxymodel_qbase_supported_drop_actions(void* self);
+int32_t k_categorizedsortfilterproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2095,8 +2095,8 @@ int64_t k_categorizedsortfilterproxymodel_qbase_supported_drop_actions(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int64_t func()
-void k_categorizedsortfilterproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void k_categorizedsortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2293,7 +2293,7 @@ void k_categorizedsortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_categorizedsortfilterproxymodel_supported_drag_actions(void* self);
+int32_t k_categorizedsortfilterproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2304,7 +2304,7 @@ int64_t k_categorizedsortfilterproxymodel_supported_drag_actions(void* self);
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_categorizedsortfilterproxymodel_qbase_supported_drag_actions(void* self);
+int32_t k_categorizedsortfilterproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2313,8 +2313,8 @@ int64_t k_categorizedsortfilterproxymodel_qbase_supported_drag_actions(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedSortFilterProxyModel*
-/// @param callback int64_t func()
-void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void k_categorizedsortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///

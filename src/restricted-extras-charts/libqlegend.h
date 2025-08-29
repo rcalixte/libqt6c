@@ -124,14 +124,14 @@ QColor* q_legend_label_color(void* self);
 ///
 /// @param self QLegend*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_legend_set_alignment(void* self, int64_t alignment);
+void q_legend_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#alignment)
 ///
 /// @param self QLegend*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_legend_alignment(void* self);
+int32_t q_legend_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#detachFromChart)
 ///
@@ -1071,7 +1071,7 @@ void q_legend_on_height_changed(void* self, void (*callback)(void*));
 /// @param self QLegend*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_legend_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_legend_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -1517,7 +1517,7 @@ void q_legend_set_group(void* self, void* group);
 /// @param self QLegend*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
-int64_t q_legend_flags(void* self);
+int32_t q_legend_flags(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1533,7 +1533,7 @@ void q_legend_set_flag(void* self, int32_t flag);
 ///
 /// @param self QLegend*
 /// @param flags flag of enum QGraphicsItem__GraphicsItemFlag
-void q_legend_set_flags(void* self, int64_t flags);
+void q_legend_set_flags(void* self, int32_t flags);
 
 /// Inherited from QGraphicsItem
 ///

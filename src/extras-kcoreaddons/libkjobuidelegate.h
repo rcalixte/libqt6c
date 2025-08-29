@@ -20,7 +20,7 @@ KJobUiDelegate* k_jobuidelegate_new();
 /// k_jobuidelegate_new2 constructs a new KJobUiDelegate object.
 ///
 /// @param flags flag of enum KJobUiDelegate__Flag
-KJobUiDelegate* k_jobuidelegate_new2(int64_t flags);
+KJobUiDelegate* k_jobuidelegate_new2(int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
 ///

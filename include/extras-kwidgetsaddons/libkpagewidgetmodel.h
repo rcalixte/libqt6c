@@ -1034,15 +1034,15 @@ bool k_pagewidgetmodel_qbase_set_data(void* self, void* index, void* value, int 
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t k_pagewidgetmodel_flags(void* self, void* index);
+int32_t k_pagewidgetmodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int64_t func(KPageWidgetModel* self, QModelIndex* index)
-void k_pagewidgetmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* index)
+void k_pagewidgetmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#flags)
 ///
@@ -1052,7 +1052,7 @@ void k_pagewidgetmodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t k_pagewidgetmodel_qbase_flags(void* self, void* index);
+int32_t k_pagewidgetmodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#index)
 ///
@@ -1355,7 +1355,7 @@ bool k_pagewidgetmodel_remove_column2(void* self, int column, void* parent);
 /// @param self KPageWidgetModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool k_pagewidgetmodel_check_index2(void* self, void* index, int64_t options);
+bool k_pagewidgetmodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2114,7 +2114,7 @@ void k_pagewidgetmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
 /// @param self KPageWidgetModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_pagewidgetmodel_supported_drop_actions(void* self);
+int32_t k_pagewidgetmodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2125,7 +2125,7 @@ int64_t k_pagewidgetmodel_supported_drop_actions(void* self);
 /// @param self KPageWidgetModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_pagewidgetmodel_qbase_supported_drop_actions(void* self);
+int32_t k_pagewidgetmodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2134,8 +2134,8 @@ int64_t k_pagewidgetmodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int64_t func()
-void k_pagewidgetmodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void k_pagewidgetmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2146,7 +2146,7 @@ void k_pagewidgetmodel_on_supported_drop_actions(void* self, int64_t (*callback)
 /// @param self KPageWidgetModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_pagewidgetmodel_supported_drag_actions(void* self);
+int32_t k_pagewidgetmodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2157,7 +2157,7 @@ int64_t k_pagewidgetmodel_supported_drag_actions(void* self);
 /// @param self KPageWidgetModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t k_pagewidgetmodel_qbase_supported_drag_actions(void* self);
+int32_t k_pagewidgetmodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2166,8 +2166,8 @@ int64_t k_pagewidgetmodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback int64_t func()
-void k_pagewidgetmodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void k_pagewidgetmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2515,7 +2515,7 @@ void k_pagewidgetmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ k_pagewidgetmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ k_pagewidgetmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2529,7 +2529,7 @@ libqt_list /* of QModelIndex* */ k_pagewidgetmodel_match(void* self, void* start
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2539,7 +2539,7 @@ libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void*
 ///
 /// @param self KPageWidgetModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(KPageWidgetModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void k_pagewidgetmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void k_pagewidgetmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

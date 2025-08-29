@@ -134,7 +134,7 @@ KPageWidgetItem* k_pagedialog_current_page(void* self);
 ///
 /// @param self KPageDialog*
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
-void k_pagedialog_set_standard_buttons(void* self, int64_t buttons);
+void k_pagedialog_set_standard_buttons(void* self, int32_t buttons);
 
 /// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#button)
 ///
@@ -1898,7 +1898,7 @@ bool k_pagedialog_is_full_screen(void* self);
 /// @param self KPageDialog*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_pagedialog_window_state(void* self);
+int32_t k_pagedialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1906,7 +1906,7 @@ int64_t k_pagedialog_window_state(void* self);
 ///
 /// @param self KPageDialog*
 /// @param state flag of enum Qt__WindowState
-void k_pagedialog_set_window_state(void* self, int64_t state);
+void k_pagedialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1914,7 +1914,7 @@ void k_pagedialog_set_window_state(void* self, int64_t state);
 ///
 /// @param self KPageDialog*
 /// @param state flag of enum Qt__WindowState
-void k_pagedialog_override_window_state(void* self, int64_t state);
+void k_pagedialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2431,7 +2431,7 @@ void k_pagedialog_render3(void* self, void* target, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_pagedialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_pagedialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2461,7 +2461,7 @@ void k_pagedialog_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_pagedialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_pagedialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2478,7 +2478,7 @@ QPixmap* k_pagedialog_grab1(void* self, void* rectangle);
 /// @param self KPageDialog*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_pagedialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_pagedialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

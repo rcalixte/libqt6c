@@ -20,15 +20,15 @@ QGesture* q_gesturerecognizer_qbase_create(void* self, void* target) {
     return QGestureRecognizer_QBaseCreate((QGestureRecognizer*)self, (QObject*)target);
 }
 
-int64_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, void* event) {
+int32_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, void* event) {
     return QGestureRecognizer_Recognize((QGestureRecognizer*)self, (QGesture*)state, (QObject*)watched, (QEvent*)event);
 }
 
-void q_gesturerecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*)) {
+void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*)) {
     QGestureRecognizer_OnRecognize((QGestureRecognizer*)self, (intptr_t)callback);
 }
 
-int64_t q_gesturerecognizer_qbase_recognize(void* self, void* state, void* watched, void* event) {
+int32_t q_gesturerecognizer_qbase_recognize(void* self, void* state, void* watched, void* event) {
     return QGestureRecognizer_QBaseRecognize((QGestureRecognizer*)self, (QGesture*)state, (QObject*)watched, (QEvent*)event);
 }
 

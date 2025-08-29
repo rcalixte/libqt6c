@@ -71,15 +71,15 @@ const char* q_buffer_data(void* self) {
     return _ret;
 }
 
-bool q_buffer_open(void* self, int64_t openMode) {
+bool q_buffer_open(void* self, int32_t openMode) {
     return QBuffer_Open((QBuffer*)self, openMode);
 }
 
-void q_buffer_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_buffer_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QBuffer_OnOpen((QBuffer*)self, (intptr_t)callback);
 }
 
-bool q_buffer_qbase_open(void* self, int64_t openMode) {
+bool q_buffer_qbase_open(void* self, int32_t openMode) {
     return QBuffer_QBaseOpen((QBuffer*)self, openMode);
 }
 
@@ -217,7 +217,7 @@ const char* q_buffer_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_buffer_open_mode(void* self) {
+int32_t q_buffer_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -738,15 +738,15 @@ void q_buffer_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QBuffer_OnCustomEvent((QBuffer*)self, (intptr_t)callback);
 }
 
-void q_buffer_set_open_mode(void* self, int64_t openMode) {
+void q_buffer_set_open_mode(void* self, int32_t openMode) {
     QBuffer_SetOpenMode((QBuffer*)self, openMode);
 }
 
-void q_buffer_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_buffer_qbase_set_open_mode(void* self, int32_t openMode) {
     QBuffer_QBaseSetOpenMode((QBuffer*)self, openMode);
 }
 
-void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QBuffer_OnSetOpenMode((QBuffer*)self, (intptr_t)callback);
 }
 

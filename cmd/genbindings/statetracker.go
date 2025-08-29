@@ -47,14 +47,19 @@ func registerChildClasses(class CppClass, packageName string) {
 	}
 }
 
-func (e CppEnum) getEnumTypeC() string {
+func (e CppEnum) getEnumTypeC() (string, string) {
+	flagType := "int64_t"
 	if len(e.Entries) > 0 {
 		// perform a lazy analysis of the enum entries
 		num, err := strconv.Atoi(e.Entries[len(e.Entries)-1].EntryValue)
 		if err == nil {
 			if float64(num) > math.MaxInt32 || float64(num) < math.MinInt32 {
 				// need to use int64_t to avoid overflow
-				return "int64_t"
+				return "int64_t", "int64_t"
+			}
+			if float64(num) > math.MinInt16 || float64(num) < math.MaxUint16 {
+				// it should be safe to use int32_t
+				flagType = "int32_t"
 			}
 		}
 	}
@@ -62,19 +67,19 @@ func (e CppEnum) getEnumTypeC() string {
 	switch e.UnderlyingType.ParameterType {
 	// signed types
 	case "char", "qint8", "signed char":
-		return "int8_t"
+		return "int8_t", "int8_t"
 	case "int", "qint32":
-		return "int32_t"
+		return "int32_t", flagType
 
 	// unsigned types
 	case "uchar", "quint8", "uint8_t", "unsigned char":
-		return "uint8_t"
+		return "uint8_t", "uint8_t"
 	case "ushort", "quint16":
-		return "uint16_t"
+		return "uint16_t", "uint16_t"
 	case "quint32", "unsigned int":
-		return "uint32_t"
+		return "uint32_t", "uint32_t"
 	case "quint64":
-		return "uint64_t"
+		return "uint64_t", "uint64_t"
 
 	default:
 		panic("UNHANDLED ENUM TYPE: " + e.UnderlyingType.ParameterType + " for " + e.EnumName)
@@ -118,7 +123,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 		for _, en := range c.ChildEnums {
 			enumClass := en.EnumClassName()
 			enumCABI := en.UnderlyingType.RenderTypeCabi(false)
-			enumC := en.getEnumTypeC()
+			enumC, enumFlagC := en.getEnumTypeC()
 
 			// Register enum with fully qualified name
 			KnownEnums[en.EnumName] = lookupResultEnum{packageName, en, enumCABI, enumC}
@@ -128,8 +133,8 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 			// Flags version
 			flagsEnum := en // copy
 			flagsEnum.EnumName = "QFlags<" + en.EnumName + ">"
-			KnownEnums[flagsEnum.EnumName] = lookupResultEnum{packageName, flagsEnum, "int64_t", "int64_t"}
-			KnownEnums[enumClass+"s"] = lookupResultEnum{packageName, flagsEnum, "int64_t", "int64_t"}
+			KnownEnums[flagsEnum.EnumName] = lookupResultEnum{packageName, flagsEnum, enumFlagC, enumFlagC}
+			KnownEnums[enumClass+"s"] = lookupResultEnum{packageName, flagsEnum, enumFlagC, enumFlagC}
 		}
 	}
 
@@ -144,7 +149,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 		}
 
 		enumCABI := en.UnderlyingType.RenderTypeCabi(false)
-		enumC := en.getEnumTypeC()
+		enumC, enumFlagC := en.getEnumTypeC()
 
 		KnownEnums[en.EnumName] = lookupResultEnum{packageName, en /* copy */, enumCABI, enumC}
 
@@ -157,9 +162,9 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 		// Flags version
 		flagsEnum := en // copy
 		flagsEnum.EnumName = "QFlags<" + en.EnumName + ">"
-		KnownEnums[flagsEnum.EnumName] = lookupResultEnum{packageName, flagsEnum, "int64_t", "int64_t"}
+		KnownEnums[flagsEnum.EnumName] = lookupResultEnum{packageName, flagsEnum, enumFlagC, enumFlagC}
 		if strings.Contains(en.EnumName, "::") {
-			KnownEnums[en.EnumClassName()+"s"] = lookupResultEnum{packageName, flagsEnum, "int64_t", "int64_t"}
+			KnownEnums[en.EnumClassName()+"s"] = lookupResultEnum{packageName, flagsEnum, enumFlagC, enumFlagC}
 		}
 	}
 
@@ -169,23 +174,6 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 			// We also need to check for enums in scoped classes
 			includeName := en.EnumValueName()
 			KnownIncludes[includeName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
-		}
-	}
-
-	// Register detected flags
-	for flagName, flagInfo := range parsed.DetectedFlags {
-		// Create flag enum entry
-		flagEnum := CppEnum{
-			EnumName:       flagInfo.PropertyName,
-			UnderlyingType: flagInfo.PropertyType,
-		}
-
-		// Register with fully qualified name
-		KnownEnums[flagInfo.PropertyName] = lookupResultEnum{packageName, flagEnum, "int64_t", "int64_t"}
-
-		// Register with short name
-		if strings.Contains(flagInfo.PropertyName, "::") {
-			KnownEnums[flagName] = lookupResultEnum{packageName, flagEnum, "int64_t", "int64_t"}
 		}
 	}
 }

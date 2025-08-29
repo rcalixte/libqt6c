@@ -147,14 +147,14 @@ bool q_printdialog_test_option(void* self, int32_t option);
 ///
 /// @param self QPrintDialog*
 /// @param options flag of enum QAbstractPrintDialog__PrintDialogOption
-void q_printdialog_set_options(void* self, int64_t options);
+void q_printdialog_set_options(void* self, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#options)
 ///
 /// @param self QPrintDialog*
 ///
 /// @return flag of enum QAbstractPrintDialog__PrintDialogOption
-int64_t q_printdialog_options(void* self);
+int32_t q_printdialog_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#setVisible)
 ///
@@ -1855,7 +1855,7 @@ bool q_printdialog_is_full_screen(void* self);
 /// @param self QPrintDialog*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_printdialog_window_state(void* self);
+int32_t q_printdialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1863,7 +1863,7 @@ int64_t q_printdialog_window_state(void* self);
 ///
 /// @param self QPrintDialog*
 /// @param state flag of enum Qt__WindowState
-void q_printdialog_set_window_state(void* self, int64_t state);
+void q_printdialog_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1871,7 +1871,7 @@ void q_printdialog_set_window_state(void* self, int64_t state);
 ///
 /// @param self QPrintDialog*
 /// @param state flag of enum Qt__WindowState
-void q_printdialog_override_window_state(void* self, int64_t state);
+void q_printdialog_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2388,7 +2388,7 @@ void q_printdialog_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_printdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_printdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2418,7 +2418,7 @@ void q_printdialog_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_printdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_printdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2435,7 +2435,7 @@ QPixmap* q_printdialog_grab1(void* self, void* rectangle);
 /// @param self QPrintDialog*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_printdialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_printdialog_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

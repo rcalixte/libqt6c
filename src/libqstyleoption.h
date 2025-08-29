@@ -60,13 +60,13 @@ void q_styleoption_set_type(void* self, int _type);
 /// @param self QStyleOption*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoption_state(void* self);
+int32_t q_styleoption_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
 /// @param self QStyleOption*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoption_set_state(void* self, int64_t state);
+void q_styleoption_set_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
@@ -203,7 +203,7 @@ void q_styleoptionfocusrect_set_type(void* self, int _type);
 /// @param self QStyleOptionFocusRect*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionfocusrect_state(void* self);
+int32_t q_styleoptionfocusrect_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -211,7 +211,7 @@ int64_t q_styleoptionfocusrect_state(void* self);
 ///
 /// @param self QStyleOptionFocusRect*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionfocusrect_set_state(void* self, int64_t state);
+void q_styleoptionfocusrect_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -351,13 +351,13 @@ void q_styleoptionframe_set_mid_line_width(void* self, int midLineWidth);
 /// @param self QStyleOptionFrame*
 ///
 /// @return flag of enum QStyleOptionFrame__FrameFeature
-int64_t q_styleoptionframe_features(void* self);
+int32_t q_styleoptionframe_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionframe.html#features-var)
 ///
 /// @param self QStyleOptionFrame*
 /// @param features flag of enum QStyleOptionFrame__FrameFeature
-void q_styleoptionframe_set_features(void* self, int64_t features);
+void q_styleoptionframe_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionframe.html#frameShape-var)
 ///
@@ -409,7 +409,7 @@ void q_styleoptionframe_set_type(void* self, int _type);
 /// @param self QStyleOptionFrame*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionframe_state(void* self);
+int32_t q_styleoptionframe_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -417,7 +417,7 @@ int64_t q_styleoptionframe_state(void* self);
 ///
 /// @param self QStyleOptionFrame*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionframe_set_state(void* self, int64_t state);
+void q_styleoptionframe_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -657,7 +657,7 @@ void q_styleoptiontabwidgetframe_set_type(void* self, int _type);
 /// @param self QStyleOptionTabWidgetFrame*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontabwidgetframe_state(void* self);
+int32_t q_styleoptiontabwidgetframe_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -665,7 +665,7 @@ int64_t q_styleoptiontabwidgetframe_state(void* self);
 ///
 /// @param self QStyleOptionTabWidgetFrame*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontabwidgetframe_set_state(void* self, int64_t state);
+void q_styleoptiontabwidgetframe_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -861,7 +861,7 @@ void q_styleoptiontabbarbase_set_type(void* self, int _type);
 /// @param self QStyleOptionTabBarBase*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontabbarbase_state(void* self);
+int32_t q_styleoptiontabbarbase_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -869,7 +869,7 @@ int64_t q_styleoptiontabbarbase_state(void* self);
 ///
 /// @param self QStyleOptionTabBarBase*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontabbarbase_set_state(void* self, int64_t state);
+void q_styleoptiontabbarbase_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -1011,13 +1011,13 @@ void q_styleoptionheader_set_text(void* self, const char* text);
 /// @param self QStyleOptionHeader*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionheader_text_alignment(void* self);
+int32_t q_styleoptionheader_text_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheader.html#textAlignment-var)
 ///
 /// @param self QStyleOptionHeader*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionheader_set_text_alignment(void* self, int64_t textAlignment);
+void q_styleoptionheader_set_text_alignment(void* self, int32_t textAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheader.html#icon-var)
 ///
@@ -1035,13 +1035,13 @@ void q_styleoptionheader_set_icon(void* self, void* icon);
 /// @param self QStyleOptionHeader*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionheader_icon_alignment(void* self);
+int32_t q_styleoptionheader_icon_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheader.html#iconAlignment-var)
 ///
 /// @param self QStyleOptionHeader*
 /// @param iconAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionheader_set_icon_alignment(void* self, int64_t iconAlignment);
+void q_styleoptionheader_set_icon_alignment(void* self, int32_t iconAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheader.html#position-var)
 ///
@@ -1132,7 +1132,7 @@ void q_styleoptionheader_set_type(void* self, int _type);
 /// @param self QStyleOptionHeader*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionheader_state(void* self);
+int32_t q_styleoptionheader_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1140,7 +1140,7 @@ int64_t q_styleoptionheader_state(void* self);
 ///
 /// @param self QStyleOptionHeader*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionheader_set_state(void* self, int64_t state);
+void q_styleoptionheader_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -1327,7 +1327,7 @@ void q_styleoptionheaderv2_set_text(void* self, const char* text);
 /// @param self QStyleOptionHeaderV2*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionheaderv2_text_alignment(void* self);
+int32_t q_styleoptionheaderv2_text_alignment(void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1335,7 +1335,7 @@ int64_t q_styleoptionheaderv2_text_alignment(void* self);
 ///
 /// @param self QStyleOptionHeaderV2*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionheaderv2_set_text_alignment(void* self, int64_t textAlignment);
+void q_styleoptionheaderv2_set_text_alignment(void* self, int32_t textAlignment);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1359,7 +1359,7 @@ void q_styleoptionheaderv2_set_icon(void* self, void* icon);
 /// @param self QStyleOptionHeaderV2*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionheaderv2_icon_alignment(void* self);
+int32_t q_styleoptionheaderv2_icon_alignment(void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1367,7 +1367,7 @@ int64_t q_styleoptionheaderv2_icon_alignment(void* self);
 ///
 /// @param self QStyleOptionHeaderV2*
 /// @param iconAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionheaderv2_set_icon_alignment(void* self, int64_t iconAlignment);
+void q_styleoptionheaderv2_set_icon_alignment(void* self, int32_t iconAlignment);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1474,7 +1474,7 @@ void q_styleoptionheaderv2_set_type(void* self, int _type);
 /// @param self QStyleOptionHeaderV2*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionheaderv2_state(void* self);
+int32_t q_styleoptionheaderv2_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1482,7 +1482,7 @@ int64_t q_styleoptionheaderv2_state(void* self);
 ///
 /// @param self QStyleOptionHeaderV2*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionheaderv2_set_state(void* self, int64_t state);
+void q_styleoptionheaderv2_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -1600,13 +1600,13 @@ QStyleOptionButton* q_styleoptionbutton_new2(void* other);
 /// @param self QStyleOptionButton*
 ///
 /// @return flag of enum QStyleOptionButton__ButtonFeature
-int64_t q_styleoptionbutton_features(void* self);
+int32_t q_styleoptionbutton_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionbutton.html#features-var)
 ///
 /// @param self QStyleOptionButton*
 /// @param features flag of enum QStyleOptionButton__ButtonFeature
-void q_styleoptionbutton_set_features(void* self, int64_t features);
+void q_styleoptionbutton_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionbutton.html#text-var)
 ///
@@ -1680,7 +1680,7 @@ void q_styleoptionbutton_set_type(void* self, int _type);
 /// @param self QStyleOptionButton*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionbutton_state(void* self);
+int32_t q_styleoptionbutton_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1688,7 +1688,7 @@ int64_t q_styleoptionbutton_state(void* self);
 ///
 /// @param self QStyleOptionButton*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionbutton_set_state(void* self, int64_t state);
+void q_styleoptionbutton_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -1880,13 +1880,13 @@ void q_styleoptiontab_set_selected_position(void* self, int32_t selectedPosition
 /// @param self QStyleOptionTab*
 ///
 /// @return flag of enum QStyleOptionTab__CornerWidget
-int64_t q_styleoptiontab_corner_widgets(void* self);
+int32_t q_styleoptiontab_corner_widgets(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontab.html#cornerWidgets-var)
 ///
 /// @param self QStyleOptionTab*
 /// @param cornerWidgets flag of enum QStyleOptionTab__CornerWidget
-void q_styleoptiontab_set_corner_widgets(void* self, int64_t cornerWidgets);
+void q_styleoptiontab_set_corner_widgets(void* self, int32_t cornerWidgets);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontab.html#iconSize-var)
 ///
@@ -1937,13 +1937,13 @@ void q_styleoptiontab_set_right_button_size(void* self, void* rightButtonSize);
 /// @param self QStyleOptionTab*
 ///
 /// @return flag of enum QStyleOptionTab__TabFeature
-int64_t q_styleoptiontab_features(void* self);
+int32_t q_styleoptiontab_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontab.html#features-var)
 ///
 /// @param self QStyleOptionTab*
 /// @param features flag of enum QStyleOptionTab__TabFeature
-void q_styleoptiontab_set_features(void* self, int64_t features);
+void q_styleoptiontab_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontab.html#tabIndex-var)
 ///
@@ -1993,7 +1993,7 @@ void q_styleoptiontab_set_type(void* self, int _type);
 /// @param self QStyleOptionTab*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontab_state(void* self);
+int32_t q_styleoptiontab_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2001,7 +2001,7 @@ int64_t q_styleoptiontab_state(void* self);
 ///
 /// @param self QStyleOptionTab*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontab_set_state(void* self, int64_t state);
+void q_styleoptiontab_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -2158,13 +2158,13 @@ void q_styleoptiontoolbar_set_tool_bar_area(void* self, int32_t toolBarArea);
 /// @param self QStyleOptionToolBar*
 ///
 /// @return flag of enum QStyleOptionToolBar__ToolBarFeature
-int64_t q_styleoptiontoolbar_features(void* self);
+int32_t q_styleoptiontoolbar_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#features-var)
 ///
 /// @param self QStyleOptionToolBar*
 /// @param features flag of enum QStyleOptionToolBar__ToolBarFeature
-void q_styleoptiontoolbar_set_features(void* self, int64_t features);
+void q_styleoptiontoolbar_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#lineWidth-var)
 ///
@@ -2225,7 +2225,7 @@ void q_styleoptiontoolbar_set_type(void* self, int _type);
 /// @param self QStyleOptionToolBar*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontoolbar_state(void* self);
+int32_t q_styleoptiontoolbar_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2233,7 +2233,7 @@ int64_t q_styleoptiontoolbar_state(void* self);
 ///
 /// @param self QStyleOptionToolBar*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontoolbar_set_state(void* self, int64_t state);
+void q_styleoptiontoolbar_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -2397,13 +2397,13 @@ void q_styleoptionprogressbar_set_text(void* self, const char* text);
 /// @param self QStyleOptionProgressBar*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionprogressbar_text_alignment(void* self);
+int32_t q_styleoptionprogressbar_text_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#textAlignment-var)
 ///
 /// @param self QStyleOptionProgressBar*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionprogressbar_set_text_alignment(void* self, int64_t textAlignment);
+void q_styleoptionprogressbar_set_text_alignment(void* self, int32_t textAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#textVisible-var)
 ///
@@ -2475,7 +2475,7 @@ void q_styleoptionprogressbar_set_type(void* self, int _type);
 /// @param self QStyleOptionProgressBar*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionprogressbar_state(void* self);
+int32_t q_styleoptionprogressbar_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2483,7 +2483,7 @@ int64_t q_styleoptionprogressbar_state(void* self);
 ///
 /// @param self QStyleOptionProgressBar*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionprogressbar_set_state(void* self, int64_t state);
+void q_styleoptionprogressbar_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -2749,7 +2749,7 @@ void q_styleoptionmenuitem_set_type(void* self, int _type);
 /// @param self QStyleOptionMenuItem*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionmenuitem_state(void* self);
+int32_t q_styleoptionmenuitem_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2757,7 +2757,7 @@ int64_t q_styleoptionmenuitem_state(void* self);
 ///
 /// @param self QStyleOptionMenuItem*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionmenuitem_set_state(void* self, int64_t state);
+void q_styleoptionmenuitem_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -2964,7 +2964,7 @@ void q_styleoptiondockwidget_set_type(void* self, int _type);
 /// @param self QStyleOptionDockWidget*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiondockwidget_state(void* self);
+int32_t q_styleoptiondockwidget_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2972,7 +2972,7 @@ int64_t q_styleoptiondockwidget_state(void* self);
 ///
 /// @param self QStyleOptionDockWidget*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiondockwidget_set_state(void* self, int64_t state);
+void q_styleoptiondockwidget_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -3090,26 +3090,26 @@ QStyleOptionViewItem* q_styleoptionviewitem_new2(void* other);
 /// @param self QStyleOptionViewItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionviewitem_display_alignment(void* self);
+int32_t q_styleoptionviewitem_display_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#displayAlignment-var)
 ///
 /// @param self QStyleOptionViewItem*
 /// @param displayAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionviewitem_set_display_alignment(void* self, int64_t displayAlignment);
+void q_styleoptionviewitem_set_display_alignment(void* self, int32_t displayAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationAlignment-var)
 ///
 /// @param self QStyleOptionViewItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptionviewitem_decoration_alignment(void* self);
+int32_t q_styleoptionviewitem_decoration_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationAlignment-var)
 ///
 /// @param self QStyleOptionViewItem*
 /// @param decorationAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptionviewitem_set_decoration_alignment(void* self, int64_t decorationAlignment);
+void q_styleoptionviewitem_set_decoration_alignment(void* self, int32_t decorationAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#textElideMode-var)
 ///
@@ -3175,13 +3175,13 @@ void q_styleoptionviewitem_set_show_decoration_selected(void* self, bool showDec
 /// @param self QStyleOptionViewItem*
 ///
 /// @return flag of enum QStyleOptionViewItem__ViewItemFeature
-int64_t q_styleoptionviewitem_features(void* self);
+int32_t q_styleoptionviewitem_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#features-var)
 ///
 /// @param self QStyleOptionViewItem*
 /// @param features flag of enum QStyleOptionViewItem__ViewItemFeature
-void q_styleoptionviewitem_set_features(void* self, int64_t features);
+void q_styleoptionviewitem_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#locale-var)
 ///
@@ -3314,7 +3314,7 @@ void q_styleoptionviewitem_set_type(void* self, int _type);
 /// @param self QStyleOptionViewItem*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionviewitem_state(void* self);
+int32_t q_styleoptionviewitem_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3322,7 +3322,7 @@ int64_t q_styleoptionviewitem_state(void* self);
 ///
 /// @param self QStyleOptionViewItem*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionviewitem_set_state(void* self, int64_t state);
+void q_styleoptionviewitem_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -3522,7 +3522,7 @@ void q_styleoptiontoolbox_set_type(void* self, int _type);
 /// @param self QStyleOptionToolBox*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontoolbox_state(void* self);
+int32_t q_styleoptiontoolbox_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3530,7 +3530,7 @@ int64_t q_styleoptiontoolbox_state(void* self);
 ///
 /// @param self QStyleOptionToolBox*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontoolbox_set_state(void* self, int64_t state);
+void q_styleoptiontoolbox_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -3704,7 +3704,7 @@ void q_styleoptionrubberband_set_type(void* self, int _type);
 /// @param self QStyleOptionRubberBand*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionrubberband_state(void* self);
+int32_t q_styleoptionrubberband_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3712,7 +3712,7 @@ int64_t q_styleoptionrubberband_state(void* self);
 ///
 /// @param self QStyleOptionRubberBand*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionrubberband_set_state(void* self, int64_t state);
+void q_styleoptionrubberband_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -3899,7 +3899,7 @@ void q_styleoptioncomplex_set_type(void* self, int _type);
 /// @param self QStyleOptionComplex*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptioncomplex_state(void* self);
+int32_t q_styleoptioncomplex_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3907,7 +3907,7 @@ int64_t q_styleoptioncomplex_state(void* self);
 ///
 /// @param self QStyleOptionComplex*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptioncomplex_set_state(void* self, int64_t state);
+void q_styleoptioncomplex_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -4240,7 +4240,7 @@ void q_styleoptionslider_set_type(void* self, int _type);
 /// @param self QStyleOptionSlider*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionslider_state(void* self);
+int32_t q_styleoptionslider_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4248,7 +4248,7 @@ int64_t q_styleoptionslider_state(void* self);
 ///
 /// @param self QStyleOptionSlider*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionslider_set_state(void* self, int64_t state);
+void q_styleoptionslider_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -4379,13 +4379,13 @@ void q_styleoptionspinbox_set_button_symbols(void* self, int32_t buttonSymbols);
 /// @param self QStyleOptionSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
-int64_t q_styleoptionspinbox_step_enabled(void* self);
+int32_t q_styleoptionspinbox_step_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#stepEnabled-var)
 ///
 /// @param self QStyleOptionSpinBox*
 /// @param stepEnabled flag of enum QAbstractSpinBox__StepEnabledFlag
-void q_styleoptionspinbox_set_step_enabled(void* self, int64_t stepEnabled);
+void q_styleoptionspinbox_set_step_enabled(void* self, int32_t stepEnabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#frame-var)
 ///
@@ -4469,7 +4469,7 @@ void q_styleoptionspinbox_set_type(void* self, int _type);
 /// @param self QStyleOptionSpinBox*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionspinbox_state(void* self);
+int32_t q_styleoptionspinbox_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4477,7 +4477,7 @@ int64_t q_styleoptionspinbox_state(void* self);
 ///
 /// @param self QStyleOptionSpinBox*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionspinbox_set_state(void* self, int64_t state);
+void q_styleoptionspinbox_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -4595,13 +4595,13 @@ QStyleOptionToolButton* q_styleoptiontoolbutton_new2(void* other);
 /// @param self QStyleOptionToolButton*
 ///
 /// @return flag of enum QStyleOptionToolButton__ToolButtonFeature
-int64_t q_styleoptiontoolbutton_features(void* self);
+int32_t q_styleoptiontoolbutton_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#features-var)
 ///
 /// @param self QStyleOptionToolButton*
 /// @param features flag of enum QStyleOptionToolButton__ToolButtonFeature
-void q_styleoptiontoolbutton_set_features(void* self, int64_t features);
+void q_styleoptiontoolbutton_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#icon-var)
 ///
@@ -4757,7 +4757,7 @@ void q_styleoptiontoolbutton_set_type(void* self, int _type);
 /// @param self QStyleOptionToolButton*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontoolbutton_state(void* self);
+int32_t q_styleoptiontoolbutton_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4765,7 +4765,7 @@ int64_t q_styleoptiontoolbutton_state(void* self);
 ///
 /// @param self QStyleOptionToolButton*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontoolbutton_set_state(void* self, int64_t state);
+void q_styleoptiontoolbutton_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -4951,13 +4951,13 @@ void q_styleoptioncombobox_set_icon_size(void* self, void* iconSize);
 /// @param self QStyleOptionComboBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptioncombobox_text_alignment(void* self);
+int32_t q_styleoptioncombobox_text_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#textAlignment-var)
 ///
 /// @param self QStyleOptionComboBox*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptioncombobox_set_text_alignment(void* self, int64_t textAlignment);
+void q_styleoptioncombobox_set_text_alignment(void* self, int32_t textAlignment);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5030,7 +5030,7 @@ void q_styleoptioncombobox_set_type(void* self, int _type);
 /// @param self QStyleOptionComboBox*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptioncombobox_state(void* self);
+int32_t q_styleoptioncombobox_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5038,7 +5038,7 @@ int64_t q_styleoptioncombobox_state(void* self);
 ///
 /// @param self QStyleOptionComboBox*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptioncombobox_set_state(void* self, int64_t state);
+void q_styleoptioncombobox_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -5270,7 +5270,7 @@ void q_styleoptiontitlebar_set_type(void* self, int _type);
 /// @param self QStyleOptionTitleBar*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiontitlebar_state(void* self);
+int32_t q_styleoptiontitlebar_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5278,7 +5278,7 @@ int64_t q_styleoptiontitlebar_state(void* self);
 ///
 /// @param self QStyleOptionTitleBar*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiontitlebar_set_state(void* self, int64_t state);
+void q_styleoptiontitlebar_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -5396,13 +5396,13 @@ QStyleOptionGroupBox* q_styleoptiongroupbox_new2(void* other);
 /// @param self QStyleOptionGroupBox*
 ///
 /// @return flag of enum QStyleOptionFrame__FrameFeature
-int64_t q_styleoptiongroupbox_features(void* self);
+int32_t q_styleoptiongroupbox_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#features-var)
 ///
 /// @param self QStyleOptionGroupBox*
 /// @param features flag of enum QStyleOptionFrame__FrameFeature
-void q_styleoptiongroupbox_set_features(void* self, int64_t features);
+void q_styleoptiongroupbox_set_features(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#text-var)
 ///
@@ -5422,13 +5422,13 @@ void q_styleoptiongroupbox_set_text(void* self, const char* text);
 /// @param self QStyleOptionGroupBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_styleoptiongroupbox_text_alignment(void* self);
+int32_t q_styleoptiongroupbox_text_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#textAlignment-var)
 ///
 /// @param self QStyleOptionGroupBox*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
-void q_styleoptiongroupbox_set_text_alignment(void* self, int64_t textAlignment);
+void q_styleoptiongroupbox_set_text_alignment(void* self, int32_t textAlignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#textColor-var)
 ///
@@ -5534,7 +5534,7 @@ void q_styleoptiongroupbox_set_type(void* self, int _type);
 /// @param self QStyleOptionGroupBox*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiongroupbox_state(void* self);
+int32_t q_styleoptiongroupbox_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5542,7 +5542,7 @@ int64_t q_styleoptiongroupbox_state(void* self);
 ///
 /// @param self QStyleOptionGroupBox*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiongroupbox_set_state(void* self, int64_t state);
+void q_styleoptiongroupbox_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -5739,7 +5739,7 @@ void q_styleoptionsizegrip_set_type(void* self, int _type);
 /// @param self QStyleOptionSizeGrip*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptionsizegrip_state(void* self);
+int32_t q_styleoptionsizegrip_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5747,7 +5747,7 @@ int64_t q_styleoptionsizegrip_state(void* self);
 ///
 /// @param self QStyleOptionSizeGrip*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptionsizegrip_set_state(void* self, int64_t state);
+void q_styleoptionsizegrip_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///
@@ -5913,7 +5913,7 @@ void q_styleoptiongraphicsitem_set_type(void* self, int _type);
 /// @param self QStyleOptionGraphicsItem*
 ///
 /// @return flag of enum QStyle__StateFlag
-int64_t q_styleoptiongraphicsitem_state(void* self);
+int32_t q_styleoptiongraphicsitem_state(void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5921,7 +5921,7 @@ int64_t q_styleoptiongraphicsitem_state(void* self);
 ///
 /// @param self QStyleOptionGraphicsItem*
 /// @param state flag of enum QStyle__StateFlag
-void q_styleoptiongraphicsitem_set_state(void* self, int64_t state);
+void q_styleoptiongraphicsitem_set_state(void* self, int32_t state);
 
 /// Inherited from QStyleOption
 ///

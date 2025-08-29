@@ -73,15 +73,15 @@ void q_savefile_set_file_name(void* self, const char* name) {
     QSaveFile_SetFileName((QSaveFile*)self, qstring(name));
 }
 
-bool q_savefile_open(void* self, int64_t flags) {
+bool q_savefile_open(void* self, int32_t flags) {
     return QSaveFile_Open((QSaveFile*)self, flags);
 }
 
-void q_savefile_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_savefile_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QSaveFile_OnOpen((QSaveFile*)self, (intptr_t)callback);
 }
 
-bool q_savefile_qbase_open(void* self, int64_t flags) {
+bool q_savefile_qbase_open(void* self, int32_t flags) {
     return QSaveFile_QBaseOpen((QSaveFile*)self, flags);
 }
 
@@ -163,11 +163,11 @@ bool q_savefile_set_file_time(void* self, void* newDate, int32_t fileTime) {
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
-unsigned char* q_savefile_map3(void* self, long long offset, long long size, int64_t flags) {
+unsigned char* q_savefile_map3(void* self, long long offset, long long size, int32_t flags) {
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
-int64_t q_savefile_open_mode(void* self) {
+int32_t q_savefile_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -604,27 +604,27 @@ void q_savefile_on_resize(void* self, bool (*callback)(void*, long long)) {
     QSaveFile_OnResize((QSaveFile*)self, (intptr_t)callback);
 }
 
-int64_t q_savefile_permissions(void* self) {
+int32_t q_savefile_permissions(void* self) {
     return QSaveFile_Permissions((QSaveFile*)self);
 }
 
-int64_t q_savefile_qbase_permissions(void* self) {
+int32_t q_savefile_qbase_permissions(void* self) {
     return QSaveFile_QBasePermissions((QSaveFile*)self);
 }
 
-void q_savefile_on_permissions(void* self, int64_t (*callback)()) {
+void q_savefile_on_permissions(void* self, int32_t (*callback)()) {
     QSaveFile_OnPermissions((QSaveFile*)self, (intptr_t)callback);
 }
 
-bool q_savefile_set_permissions(void* self, int64_t permissionSpec) {
+bool q_savefile_set_permissions(void* self, int32_t permissionSpec) {
     return QSaveFile_SetPermissions((QSaveFile*)self, permissionSpec);
 }
 
-bool q_savefile_qbase_set_permissions(void* self, int64_t permissionSpec) {
+bool q_savefile_qbase_set_permissions(void* self, int32_t permissionSpec) {
     return QSaveFile_QBaseSetPermissions((QSaveFile*)self, permissionSpec);
 }
 
-void q_savefile_on_set_permissions(void* self, bool (*callback)(void*, int64_t)) {
+void q_savefile_on_set_permissions(void* self, bool (*callback)(void*, int32_t)) {
     QSaveFile_OnSetPermissions((QSaveFile*)self, (intptr_t)callback);
 }
 
@@ -820,15 +820,15 @@ void q_savefile_on_disconnect_notify(void* self, void (*callback)(void*, void*))
     QSaveFile_OnDisconnectNotify((QSaveFile*)self, (intptr_t)callback);
 }
 
-void q_savefile_set_open_mode(void* self, int64_t openMode) {
+void q_savefile_set_open_mode(void* self, int32_t openMode) {
     QSaveFile_SetOpenMode((QSaveFile*)self, openMode);
 }
 
-void q_savefile_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_savefile_qbase_set_open_mode(void* self, int32_t openMode) {
     QSaveFile_QBaseSetOpenMode((QSaveFile*)self, openMode);
 }
 
-void q_savefile_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_savefile_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QSaveFile_OnSetOpenMode((QSaveFile*)self, (intptr_t)callback);
 }
 

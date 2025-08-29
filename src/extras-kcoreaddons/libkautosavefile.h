@@ -104,7 +104,7 @@ void k_autosavefile_qbase_release_lock(void* self);
 ///
 /// @param self KAutoSaveFile*
 /// @param openmode flag of enum QIODeviceBase__OpenModeFlag
-bool k_autosavefile_open(void* self, int64_t openmode);
+bool k_autosavefile_open(void* self, int32_t openmode);
 
 /// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#open)
 ///
@@ -112,7 +112,7 @@ bool k_autosavefile_open(void* self, int64_t openmode);
 ///
 /// @param self KAutoSaveFile*
 /// @param callback bool func(KAutoSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag openmode)
-void k_autosavefile_on_open(void* self, bool (*callback)(void*, int64_t));
+void k_autosavefile_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#open)
 ///
@@ -120,7 +120,7 @@ void k_autosavefile_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self KAutoSaveFile*
 /// @param openmode flag of enum QIODeviceBase__OpenModeFlag
-bool k_autosavefile_qbase_open(void* self, int64_t openmode);
+bool k_autosavefile_qbase_open(void* self, int32_t openmode);
 
 /// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#staleFiles)
 ///
@@ -309,7 +309,7 @@ bool k_autosavefile_copy2(const char* fileName, const char* newName);
 /// @param self KAutoSaveFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
 /// @param permissions flag of enum QFileDevice__Permission
-bool k_autosavefile_open2(void* self, int64_t flags, int64_t permissions);
+bool k_autosavefile_open2(void* self, int32_t flags, int32_t permissions);
 
 /// Inherited from QFile
 ///
@@ -318,7 +318,7 @@ bool k_autosavefile_open2(void* self, int64_t flags, int64_t permissions);
 /// @param self KAutoSaveFile*
 /// @param fd int
 /// @param ioFlags flag of enum QIODeviceBase__OpenModeFlag
-bool k_autosavefile_open4(void* self, int fd, int64_t ioFlags);
+bool k_autosavefile_open4(void* self, int fd, int32_t ioFlags);
 
 /// Inherited from QFile
 ///
@@ -335,7 +335,7 @@ bool k_autosavefile_resize2(const char* filename, long long sz);
 /// @param filename const char*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t k_autosavefile_permissions2(const char* filename);
+int32_t k_autosavefile_permissions2(const char* filename);
 
 /// Inherited from QFile
 ///
@@ -343,7 +343,7 @@ int64_t k_autosavefile_permissions2(const char* filename);
 ///
 /// @param filename const char*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool k_autosavefile_set_permissions2(const char* filename, int64_t permissionSpec);
+bool k_autosavefile_set_permissions2(const char* filename, int32_t permissionSpec);
 
 /// Inherited from QFile
 ///
@@ -353,7 +353,7 @@ bool k_autosavefile_set_permissions2(const char* filename, int64_t permissionSpe
 /// @param fd int
 /// @param ioFlags flag of enum QIODeviceBase__OpenModeFlag
 /// @param handleFlags flag of enum QFileDevice__FileHandleFlag
-bool k_autosavefile_open33(void* self, int fd, int64_t ioFlags, int64_t handleFlags);
+bool k_autosavefile_open33(void* self, int fd, int32_t ioFlags, int32_t handleFlags);
 
 /// Inherited from QFileDevice
 ///
@@ -427,7 +427,7 @@ bool k_autosavefile_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// @param offset long long
 /// @param size long long
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
-unsigned char* k_autosavefile_map3(void* self, long long offset, long long size, int64_t flags);
+unsigned char* k_autosavefile_map3(void* self, long long offset, long long size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -436,7 +436,7 @@ unsigned char* k_autosavefile_map3(void* self, long long offset, long long size,
 /// @param self KAutoSaveFile*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t k_autosavefile_open_mode(void* self);
+int32_t k_autosavefile_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1187,7 +1187,7 @@ void k_autosavefile_on_resize(void* self, bool (*callback)(void*, long long));
 /// @param self KAutoSaveFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t k_autosavefile_permissions(void* self);
+int32_t k_autosavefile_permissions(void* self);
 
 /// Inherited from QFile
 ///
@@ -1198,7 +1198,7 @@ int64_t k_autosavefile_permissions(void* self);
 /// @param self KAutoSaveFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t k_autosavefile_qbase_permissions(void* self);
+int32_t k_autosavefile_qbase_permissions(void* self);
 
 /// Inherited from QFile
 ///
@@ -1207,8 +1207,8 @@ int64_t k_autosavefile_qbase_permissions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback int64_t func()
-void k_autosavefile_on_permissions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void k_autosavefile_on_permissions(void* self, int32_t (*callback)());
 
 /// Inherited from QFile
 ///
@@ -1218,7 +1218,7 @@ void k_autosavefile_on_permissions(void* self, int64_t (*callback)());
 ///
 /// @param self KAutoSaveFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool k_autosavefile_set_permissions(void* self, int64_t permissionSpec);
+bool k_autosavefile_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFile
 ///
@@ -1228,7 +1228,7 @@ bool k_autosavefile_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self KAutoSaveFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool k_autosavefile_qbase_set_permissions(void* self, int64_t permissionSpec);
+bool k_autosavefile_qbase_set_permissions(void* self, int32_t permissionSpec);
 
 /// Inherited from QFile
 ///
@@ -1238,7 +1238,7 @@ bool k_autosavefile_qbase_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self KAutoSaveFile*
 /// @param callback bool func(KAutoSaveFile* self, flag of enum QFileDevice__Permission permissionSpec)
-void k_autosavefile_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
+void k_autosavefile_on_set_permissions(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1900,7 +1900,7 @@ void k_autosavefile_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// @param self KAutoSaveFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void k_autosavefile_set_open_mode(void* self, int64_t openMode);
+void k_autosavefile_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1910,7 +1910,7 @@ void k_autosavefile_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self KAutoSaveFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void k_autosavefile_qbase_set_open_mode(void* self, int64_t openMode);
+void k_autosavefile_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1920,7 +1920,7 @@ void k_autosavefile_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self KAutoSaveFile*
 /// @param callback void func(KAutoSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void k_autosavefile_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void k_autosavefile_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

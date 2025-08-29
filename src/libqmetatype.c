@@ -54,7 +54,7 @@ int32_t q_metatype_size_of(int typeVal) {
     return QMetaType_SizeOf(typeVal);
 }
 
-int64_t q_metatype_type_flags(int typeVal) {
+int32_t q_metatype_type_flags(int typeVal) {
     return QMetaType_TypeFlags(typeVal);
 }
 
@@ -106,7 +106,7 @@ int64_t q_metatype_align_of(void* self) {
     return QMetaType_AlignOf((QMetaType*)self);
 }
 
-int64_t q_metatype_flags(void* self) {
+int32_t q_metatype_flags(void* self) {
     return QMetaType_Flags((QMetaType*)self);
 }
 

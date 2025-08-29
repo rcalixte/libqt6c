@@ -202,7 +202,7 @@ bool q_file_copy2(const char* fileName, const char* newName);
 ///
 /// @param self QFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_file_open(void* self, int64_t flags);
+bool q_file_open(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#open)
 ///
@@ -210,7 +210,7 @@ bool q_file_open(void* self, int64_t flags);
 ///
 /// @param self QFile*
 /// @param callback bool func(QFile* self, flag of enum QIODeviceBase__OpenModeFlag flags)
-void q_file_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_file_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#open)
 ///
@@ -218,21 +218,21 @@ void q_file_on_open(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
-bool q_file_qbase_open(void* self, int64_t flags);
+bool q_file_qbase_open(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#open)
 ///
 /// @param self QFile*
 /// @param flags flag of enum QIODeviceBase__OpenModeFlag
 /// @param permissions flag of enum QFileDevice__Permission
-bool q_file_open2(void* self, int64_t flags, int64_t permissions);
+bool q_file_open2(void* self, int32_t flags, int32_t permissions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#open)
 ///
 /// @param self QFile*
 /// @param fd int
 /// @param ioFlags flag of enum QIODeviceBase__OpenModeFlag
-bool q_file_open4(void* self, int fd, int64_t ioFlags);
+bool q_file_open4(void* self, int fd, int32_t ioFlags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#size)
 ///
@@ -287,15 +287,15 @@ bool q_file_resize2(const char* filename, long long sz);
 /// @param self QFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_file_permissions(void* self);
+int32_t q_file_permissions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QFile*
-/// @param callback int64_t func()
-void q_file_on_permissions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_file_on_permissions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
 ///
@@ -304,20 +304,20 @@ void q_file_on_permissions(void* self, int64_t (*callback)());
 /// @param self QFile*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_file_qbase_permissions(void* self);
+int32_t q_file_qbase_permissions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
 ///
 /// @param filename const char*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_file_permissions2(const char* filename);
+int32_t q_file_permissions2(const char* filename);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
 ///
 /// @param self QFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_file_set_permissions(void* self, int64_t permissionSpec);
+bool q_file_set_permissions(void* self, int32_t permissionSpec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
 ///
@@ -325,7 +325,7 @@ bool q_file_set_permissions(void* self, int64_t permissionSpec);
 ///
 /// @param self QFile*
 /// @param callback bool func(QFile* self, flag of enum QFileDevice__Permission permissionSpec)
-void q_file_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
+void q_file_on_set_permissions(void* self, bool (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
 ///
@@ -333,13 +333,13 @@ void q_file_on_set_permissions(void* self, bool (*callback)(void*, int64_t));
 ///
 /// @param self QFile*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_file_qbase_set_permissions(void* self, int64_t permissionSpec);
+bool q_file_qbase_set_permissions(void* self, int32_t permissionSpec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
 ///
 /// @param filename const char*
 /// @param permissionSpec flag of enum QFileDevice__Permission
-bool q_file_set_permissions2(const char* filename, int64_t permissionSpec);
+bool q_file_set_permissions2(const char* filename, int32_t permissionSpec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -364,7 +364,7 @@ const char* q_file_tr3(const char* s, const char* c, int n);
 /// @param fd int
 /// @param ioFlags flag of enum QIODeviceBase__OpenModeFlag
 /// @param handleFlags flag of enum QFileDevice__FileHandleFlag
-bool q_file_open33(void* self, int fd, int64_t ioFlags, int64_t handleFlags);
+bool q_file_open33(void* self, int fd, int32_t ioFlags, int32_t handleFlags);
 
 /// Inherited from QFileDevice
 ///
@@ -438,7 +438,7 @@ bool q_file_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// @param offset long long
 /// @param size long long
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
-unsigned char* q_file_map3(void* self, long long offset, long long size, int64_t flags);
+unsigned char* q_file_map3(void* self, long long offset, long long size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -447,7 +447,7 @@ unsigned char* q_file_map3(void* self, long long offset, long long size, int64_t
 /// @param self QFile*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_file_open_mode(void* self);
+int32_t q_file_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1759,7 +1759,7 @@ void q_file_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_file_set_open_mode(void* self, int64_t openMode);
+void q_file_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1769,7 +1769,7 @@ void q_file_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QFile*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_file_qbase_set_open_mode(void* self, int64_t openMode);
+void q_file_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1779,7 +1779,7 @@ void q_file_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QFile*
 /// @param callback void func(QFile* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_file_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_file_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

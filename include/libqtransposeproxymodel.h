@@ -739,7 +739,7 @@ bool q_transposeproxymodel_remove_column2(void* self, int column, void* parent);
 /// @param self QTransposeProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
-bool q_transposeproxymodel_check_index2(void* self, void* index, int64_t options);
+bool q_transposeproxymodel_check_index2(void* self, void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1283,7 +1283,7 @@ void q_transposeproxymodel_on_data(void* self, QVariant* (*callback)(void*, void
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_transposeproxymodel_flags(void* self, void* index);
+int32_t q_transposeproxymodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1295,7 +1295,7 @@ int64_t q_transposeproxymodel_flags(void* self, void* index);
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_transposeproxymodel_qbase_flags(void* self, void* index);
+int32_t q_transposeproxymodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1304,8 +1304,8 @@ int64_t q_transposeproxymodel_qbase_flags(void* self, void* index);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback int64_t func(QTransposeProxyModel* self, QModelIndex* index)
-void q_transposeproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t func(QTransposeProxyModel* self, QModelIndex* index)
+void q_transposeproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1672,7 +1672,7 @@ void q_transposeproxymodel_on_mime_types(void* self, const char** (*callback)())
 /// @param self QTransposeProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_transposeproxymodel_supported_drag_actions(void* self);
+int32_t q_transposeproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1683,7 +1683,7 @@ int64_t q_transposeproxymodel_supported_drag_actions(void* self);
 /// @param self QTransposeProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_transposeproxymodel_qbase_supported_drag_actions(void* self);
+int32_t q_transposeproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1692,8 +1692,8 @@ int64_t q_transposeproxymodel_qbase_supported_drag_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback int64_t func()
-void q_transposeproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_transposeproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1704,7 +1704,7 @@ void q_transposeproxymodel_on_supported_drag_actions(void* self, int64_t (*callb
 /// @param self QTransposeProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_transposeproxymodel_supported_drop_actions(void* self);
+int32_t q_transposeproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1715,7 +1715,7 @@ int64_t q_transposeproxymodel_supported_drop_actions(void* self);
 /// @param self QTransposeProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_transposeproxymodel_qbase_supported_drop_actions(void* self);
+int32_t q_transposeproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1724,8 +1724,8 @@ int64_t q_transposeproxymodel_qbase_supported_drop_actions(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback int64_t func()
-void q_transposeproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_transposeproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1767,7 +1767,7 @@ void q_transposeproxymodel_on_role_names(void* self, libqt_map /* of int to char
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_transposeproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_transposeproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1781,7 +1781,7 @@ libqt_list /* of QModelIndex* */ q_transposeproxymodel_match(void* self, void* s
 /// @param value QVariant*
 /// @param hits int
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
+libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1791,7 +1791,7 @@ libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_match(void* self, v
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback libqt_list /* of QModelIndex* */ func(QTransposeProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_transposeproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
+void q_transposeproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///

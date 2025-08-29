@@ -219,7 +219,7 @@ void k_modifierkeyinfoprovider_on_key_removed(void* self, void (*callback)(void*
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param state flag of enum KModifierKeyInfoProvider__ModifierState
-void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int64_t state);
+void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int32_t state);
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
 ///
@@ -227,7 +227,7 @@ void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int64_t st
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key, flag of enum KModifierKeyInfoProvider__ModifierState state)
-void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(void*, int32_t, int64_t));
+void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
 ///
@@ -236,7 +236,7 @@ void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(voi
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param state flag of enum KModifierKeyInfoProvider__ModifierState
-void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int64_t state);
+void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int32_t state);
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
 ///

@@ -243,7 +243,7 @@ const char* k_titlewidget_tr3(const char* s, const char* c, int n);
 /// @param self KTitleWidget*
 /// @param text const char*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void k_titlewidget_set_text22(void* self, const char* text, int64_t alignment);
+void k_titlewidget_set_text22(void* self, const char* text, int32_t alignment);
 
 /// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setComment)
 ///
@@ -1766,7 +1766,7 @@ bool k_titlewidget_is_full_screen(void* self);
 /// @param self KTitleWidget*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_titlewidget_window_state(void* self);
+int32_t k_titlewidget_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1774,7 +1774,7 @@ int64_t k_titlewidget_window_state(void* self);
 ///
 /// @param self KTitleWidget*
 /// @param state flag of enum Qt__WindowState
-void k_titlewidget_set_window_state(void* self, int64_t state);
+void k_titlewidget_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1782,7 +1782,7 @@ void k_titlewidget_set_window_state(void* self, int64_t state);
 ///
 /// @param self KTitleWidget*
 /// @param state flag of enum Qt__WindowState
-void k_titlewidget_override_window_state(void* self, int64_t state);
+void k_titlewidget_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2299,7 +2299,7 @@ void k_titlewidget_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_titlewidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_titlewidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2329,7 +2329,7 @@ void k_titlewidget_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_titlewidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_titlewidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2346,7 +2346,7 @@ QPixmap* k_titlewidget_grab1(void* self, void* rectangle);
 /// @param self KTitleWidget*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_titlewidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_titlewidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

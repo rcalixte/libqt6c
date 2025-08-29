@@ -290,27 +290,27 @@ QSize* q_icon_actual_size4(void* self, void* window, void* size, int32_t mode, i
     return QIcon_ActualSize4((QIcon*)self, (QWindow*)window, (QSize*)size, mode, state);
 }
 
-void q_icon_paint3(void* self, void* painter, void* rect, int64_t alignment) {
+void q_icon_paint3(void* self, void* painter, void* rect, int32_t alignment) {
     QIcon_Paint3((QIcon*)self, (QPainter*)painter, (QRect*)rect, alignment);
 }
 
-void q_icon_paint4(void* self, void* painter, void* rect, int64_t alignment, int32_t mode) {
+void q_icon_paint4(void* self, void* painter, void* rect, int32_t alignment, int32_t mode) {
     QIcon_Paint4((QIcon*)self, (QPainter*)painter, (QRect*)rect, alignment, mode);
 }
 
-void q_icon_paint5(void* self, void* painter, void* rect, int64_t alignment, int32_t mode, int32_t state) {
+void q_icon_paint5(void* self, void* painter, void* rect, int32_t alignment, int32_t mode, int32_t state) {
     QIcon_Paint5((QIcon*)self, (QPainter*)painter, (QRect*)rect, alignment, mode, state);
 }
 
-void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int64_t alignment) {
+void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int32_t alignment) {
     QIcon_Paint6((QIcon*)self, (QPainter*)painter, x, y, w, h, alignment);
 }
 
-void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int32_t mode) {
+void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode) {
     QIcon_Paint7((QIcon*)self, (QPainter*)painter, x, y, w, h, alignment, mode);
 }
 
-void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int32_t mode, int32_t state) {
+void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int32_t alignment, int32_t mode, int32_t state) {
     QIcon_Paint8((QIcon*)self, (QPainter*)painter, x, y, w, h, alignment, mode, state);
 }
 

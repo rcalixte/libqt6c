@@ -76,7 +76,7 @@ KJobUiDelegate* k_listopenfilesjob_ui_delegate(void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int64_t k_listopenfilesjob_capabilities(void* self) {
+int32_t k_listopenfilesjob_capabilities(void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
@@ -528,15 +528,15 @@ void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*,
     KListOpenFilesJob_OnDisconnectNotify((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_set_capabilities(void* self, int64_t capabilities) {
+void k_listopenfilesjob_set_capabilities(void* self, int32_t capabilities) {
     KListOpenFilesJob_SetCapabilities((KListOpenFilesJob*)self, capabilities);
 }
 
-void k_listopenfilesjob_qbase_set_capabilities(void* self, int64_t capabilities) {
+void k_listopenfilesjob_qbase_set_capabilities(void* self, int32_t capabilities) {
     KListOpenFilesJob_QBaseSetCapabilities((KListOpenFilesJob*)self, capabilities);
 }
 
-void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, int64_t)) {
+void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
     KListOpenFilesJob_OnSetCapabilities((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 

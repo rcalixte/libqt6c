@@ -118,14 +118,14 @@ const char* k_configskeletonitem_whats_this(void* self);
 ///
 /// @param self KConfigSkeletonItem*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_configskeletonitem_set_write_flags(void* self, int64_t flags);
+void k_configskeletonitem_set_write_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#writeFlags)
 ///
 /// @param self KConfigSkeletonItem*
 ///
 /// @return flag of enum KConfigBase__WriteConfigFlag
-int64_t k_configskeletonitem_write_flags(void* self);
+int32_t k_configskeletonitem_write_flags(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigskeletonitem.html#readConfig)
 ///
@@ -694,7 +694,7 @@ const char* k_propertyskeletonitem_whats_this(void* self);
 ///
 /// @param self KPropertySkeletonItem*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_propertyskeletonitem_set_write_flags(void* self, int64_t flags);
+void k_propertyskeletonitem_set_write_flags(void* self, int32_t flags);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -703,7 +703,7 @@ void k_propertyskeletonitem_set_write_flags(void* self, int64_t flags);
 /// @param self KPropertySkeletonItem*
 ///
 /// @return flag of enum KConfigBase__WriteConfigFlag
-int64_t k_propertyskeletonitem_write_flags(void* self);
+int32_t k_propertyskeletonitem_write_flags(void* self);
 
 /// Inherited from KConfigSkeletonItem
 ///
@@ -887,14 +887,14 @@ void k_configcompilersignallingitem_swap_default(void* self);
 ///
 /// @param self KConfigCompilerSignallingItem*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_configcompilersignallingitem_set_write_flags(void* self, int64_t flags);
+void k_configcompilersignallingitem_set_write_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigcompilersignallingitem.html#writeFlags)
 ///
 /// @param self KConfigCompilerSignallingItem*
 ///
 /// @return flag of enum KConfigBase__WriteConfigFlag
-int64_t k_configcompilersignallingitem_write_flags(void* self);
+int32_t k_configcompilersignallingitem_write_flags(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kconfigcompilersignallingitem.html#setGroup)
 ///

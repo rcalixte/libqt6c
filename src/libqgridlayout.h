@@ -320,15 +320,15 @@ int32_t q_gridlayout_qbase_minimum_height_for_width(void* self, int param1);
 /// @param self QGridLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_gridlayout_expanding_directions(void* self);
+int32_t q_gridlayout_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGridLayout*
-/// @param callback int64_t func()
-void q_gridlayout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_gridlayout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#expandingDirections)
 ///
@@ -337,7 +337,7 @@ void q_gridlayout_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QGridLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_gridlayout_qbase_expanding_directions(void* self);
+int32_t q_gridlayout_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#invalidate)
 ///
@@ -578,7 +578,7 @@ const char* q_gridlayout_tr3(const char* s, const char* c, int n);
 /// @param row int
 /// @param column int
 /// @param param4 flag of enum Qt__AlignmentFlag
-void q_gridlayout_add_widget4(void* self, void* param1, int row, int column, int64_t param4);
+void q_gridlayout_add_widget4(void* self, void* param1, int row, int column, int32_t param4);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#addWidget)
 ///
@@ -589,7 +589,7 @@ void q_gridlayout_add_widget4(void* self, void* param1, int row, int column, int
 /// @param rowSpan int
 /// @param columnSpan int
 /// @param param6 flag of enum Qt__AlignmentFlag
-void q_gridlayout_add_widget6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int64_t param6);
+void q_gridlayout_add_widget6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int32_t param6);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#addLayout)
 ///
@@ -598,7 +598,7 @@ void q_gridlayout_add_widget6(void* self, void* param1, int row, int column, int
 /// @param row int
 /// @param column int
 /// @param param4 flag of enum Qt__AlignmentFlag
-void q_gridlayout_add_layout4(void* self, void* param1, int row, int column, int64_t param4);
+void q_gridlayout_add_layout4(void* self, void* param1, int row, int column, int32_t param4);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#addLayout)
 ///
@@ -609,7 +609,7 @@ void q_gridlayout_add_layout4(void* self, void* param1, int row, int column, int
 /// @param rowSpan int
 /// @param columnSpan int
 /// @param param6 flag of enum Qt__AlignmentFlag
-void q_gridlayout_add_layout6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int64_t param6);
+void q_gridlayout_add_layout6(void* self, void* param1, int row, int column, int rowSpan, int columnSpan, int32_t param6);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#addItem)
 ///
@@ -639,7 +639,7 @@ void q_gridlayout_add_item5(void* self, void* item, int row, int column, int row
 /// @param rowSpan int
 /// @param columnSpan int
 /// @param param6 flag of enum Qt__AlignmentFlag
-void q_gridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int64_t param6);
+void q_gridlayout_add_item6(void* self, void* item, int row, int column, int rowSpan, int columnSpan, int32_t param6);
 
 /// Inherited from QLayout
 ///
@@ -699,7 +699,7 @@ QRect* q_gridlayout_contents_rect(void* self);
 /// @param self QGridLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_gridlayout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_gridlayout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -708,7 +708,7 @@ bool q_gridlayout_set_alignment(void* self, void* w, int64_t alignment);
 /// @param self QGridLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_gridlayout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_gridlayout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// Inherited from QLayout
 ///
@@ -1181,7 +1181,7 @@ void q_gridlayout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QGridLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_gridlayout_alignment(void* self);
+int32_t q_gridlayout_alignment(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1278,7 +1278,7 @@ void q_gridlayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QGridLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_gridlayout_control_types(void* self);
+int32_t q_gridlayout_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1289,7 +1289,7 @@ int64_t q_gridlayout_control_types(void* self);
 /// @param self QGridLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_gridlayout_qbase_control_types(void* self);
+int32_t q_gridlayout_qbase_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1298,8 +1298,8 @@ int64_t q_gridlayout_qbase_control_types(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGridLayout*
-/// @param callback int64_t func()
-void q_gridlayout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_gridlayout_on_control_types(void* self, int32_t (*callback)());
 
 /// Inherited from QLayout
 ///
@@ -1311,7 +1311,7 @@ void q_gridlayout_on_control_types(void* self, int64_t (*callback)());
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1323,7 +1323,7 @@ QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int64
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_gridlayout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_gridlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1333,7 +1333,7 @@ QLayoutItem* q_gridlayout_qbase_replace_widget(void* self, void* from, void* to,
 ///
 /// @param self QGridLayout*
 /// @param callback QLayoutItem* func(QGridLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_gridlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_gridlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// Inherited from QLayout
 ///

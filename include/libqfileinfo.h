@@ -312,14 +312,14 @@ uint32_t q_fileinfo_group_id(void* self);
 ///
 /// @param self QFileInfo*
 /// @param permissions flag of enum QFileDevice__Permission
-bool q_fileinfo_permission(void* self, int64_t permissions);
+bool q_fileinfo_permission(void* self, int32_t permissions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#permissions)
 ///
 /// @param self QFileInfo*
 ///
 /// @return flag of enum QFileDevice__Permission
-int64_t q_fileinfo_permissions(void* self);
+int32_t q_fileinfo_permissions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#size)
 ///

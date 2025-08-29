@@ -202,7 +202,7 @@ const char* k_desktopfile_name(void* self);
 /// @param self KDesktopFile*
 ///
 /// @return flag of enum KConfig__OpenFlag
-int64_t k_desktopfile_open_flags(void* self);
+int32_t k_desktopfile_open_flags(void* self);
 
 /// Inherited from KConfig
 ///
@@ -370,7 +370,7 @@ bool k_desktopfile_is_group_immutable(void* self, const char* group);
 /// @param self KDesktopFile*
 /// @param group const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_desktopfile_delete_group2(void* self, const char* group, int64_t flags);
+void k_desktopfile_delete_group2(void* self, const char* group, int32_t flags);
 
 /// Inherited from KConfig
 ///
@@ -589,7 +589,7 @@ void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
 /// @param self KDesktopFile*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_desktopfile_delete_group_impl(void* self, const char* groupName, int64_t flags);
+void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// Inherited from KConfig
 ///
@@ -600,7 +600,7 @@ void k_desktopfile_delete_group_impl(void* self, const char* groupName, int64_t 
 /// @param self KDesktopFile*
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
-void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, int64_t flags);
+void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// Inherited from KConfig
 ///
@@ -610,7 +610,7 @@ void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, in
 ///
 /// @param self KDesktopFile*
 /// @param callback void func(KDesktopFile* self, const char* groupName, flag of enum KConfigBase__WriteConfigFlag flags)
-void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int64_t));
+void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
 /// Inherited from KConfig
 ///

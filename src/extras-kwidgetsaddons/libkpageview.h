@@ -190,15 +190,15 @@ bool k_pageview_qbase_show_page_header(void* self);
 /// @param self KPageView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_pageview_view_position(void* self);
+int32_t k_pageview_view_position(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#viewPosition)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KPageView*
-/// @param callback int64_t func()
-void k_pageview_on_view_position(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void k_pageview_on_view_position(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://api-staging.kde.org/kpageview.html#viewPosition)
 ///
@@ -207,7 +207,7 @@ void k_pageview_on_view_position(void* self, int64_t (*callback)());
 /// @param self KPageView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_pageview_qbase_view_position(void* self);
+int32_t k_pageview_qbase_view_position(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
 ///
@@ -1726,7 +1726,7 @@ bool k_pageview_is_full_screen(void* self);
 /// @param self KPageView*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_pageview_window_state(void* self);
+int32_t k_pageview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1734,7 +1734,7 @@ int64_t k_pageview_window_state(void* self);
 ///
 /// @param self KPageView*
 /// @param state flag of enum Qt__WindowState
-void k_pageview_set_window_state(void* self, int64_t state);
+void k_pageview_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1742,7 +1742,7 @@ void k_pageview_set_window_state(void* self, int64_t state);
 ///
 /// @param self KPageView*
 /// @param state flag of enum Qt__WindowState
-void k_pageview_override_window_state(void* self, int64_t state);
+void k_pageview_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2259,7 +2259,7 @@ void k_pageview_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_pageview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_pageview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2289,7 +2289,7 @@ void k_pageview_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_pageview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_pageview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2306,7 +2306,7 @@ QPixmap* k_pageview_grab1(void* self, void* rectangle);
 /// @param self KPageView*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_pageview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_pageview_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

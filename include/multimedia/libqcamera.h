@@ -136,7 +136,7 @@ const char* q_camera_error_string(void* self);
 /// @param self QCamera*
 ///
 /// @return flag of enum QCamera__Feature
-int64_t q_camera_supported_features(void* self);
+int32_t q_camera_supported_features(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusMode)
 ///

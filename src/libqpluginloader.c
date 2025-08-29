@@ -98,11 +98,11 @@ const char* q_pluginloader_error_string(void* self) {
     return _ret;
 }
 
-void q_pluginloader_set_load_hints(void* self, int64_t loadHints) {
+void q_pluginloader_set_load_hints(void* self, int32_t loadHints) {
     QPluginLoader_SetLoadHints((QPluginLoader*)self, loadHints);
 }
 
-int64_t q_pluginloader_load_hints(void* self) {
+int32_t q_pluginloader_load_hints(void* self) {
     return QPluginLoader_LoadHints((QPluginLoader*)self);
 }
 

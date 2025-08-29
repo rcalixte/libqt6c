@@ -21,7 +21,7 @@
 /// @param param2 flag of enum KTextToHTML__Option
 /// @param param3 int
 /// @param param4 int
-const char* k_texttohtml_convert_to_html(const char* param1, const int64_t* param2, int param3, int param4);
+const char* k_texttohtml_convert_to_html(const char* param1, const int32_t* param2, int param3, int param4);
 
 /// https://api-staging.kde.org/ktexttohtml.html#types
 

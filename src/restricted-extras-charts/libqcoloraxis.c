@@ -383,7 +383,7 @@ int32_t q_coloraxis_orientation(void* self) {
     return QAbstractAxis_Orientation((QAbstractAxis*)self);
 }
 
-int64_t q_coloraxis_alignment(void* self) {
+int32_t q_coloraxis_alignment(void* self) {
     return QAbstractAxis_Alignment((QAbstractAxis*)self);
 }
 

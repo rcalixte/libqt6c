@@ -153,14 +153,14 @@ const char* q_library_error_string(void* self);
 ///
 /// @param self QLibrary*
 /// @param hints flag of enum QLibrary__LoadHint
-void q_library_set_load_hints(void* self, int64_t hints);
+void q_library_set_load_hints(void* self, int32_t hints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#loadHints)
 ///
 /// @param self QLibrary*
 ///
 /// @return flag of enum QLibrary__LoadHint
-int64_t q_library_load_hints(void* self);
+int32_t q_library_load_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

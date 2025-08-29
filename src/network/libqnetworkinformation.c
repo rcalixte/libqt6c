@@ -46,11 +46,11 @@ const char* q_networkinformation_backend_name(void* self) {
     return _ret;
 }
 
-bool q_networkinformation_supports(void* self, int64_t features) {
+bool q_networkinformation_supports(void* self, int32_t features) {
     return QNetworkInformation_Supports((QNetworkInformation*)self, features);
 }
 
-int64_t q_networkinformation_supported_features(void* self) {
+int32_t q_networkinformation_supported_features(void* self) {
     return QNetworkInformation_SupportedFeatures((QNetworkInformation*)self);
 }
 
@@ -58,11 +58,11 @@ bool q_networkinformation_load_default_backend() {
     return QNetworkInformation_LoadDefaultBackend();
 }
 
-bool q_networkinformation_load_backend_by_features(int64_t features) {
+bool q_networkinformation_load_backend_by_features(int32_t features) {
     return QNetworkInformation_LoadBackendByFeatures(features);
 }
 
-bool q_networkinformation_load2(int64_t features) {
+bool q_networkinformation_load2(int32_t features) {
     return QNetworkInformation_Load2(features);
 }
 

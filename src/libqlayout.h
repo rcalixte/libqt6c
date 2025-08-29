@@ -144,14 +144,14 @@ QRect* q_layout_contents_rect(void* self);
 /// @param self QLayout*
 /// @param w QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_layout_set_alignment(void* self, void* w, int64_t alignment);
+bool q_layout_set_alignment(void* self, void* w, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setAlignment)
 ///
 /// @param self QLayout*
 /// @param l QLayout*
 /// @param alignment flag of enum Qt__AlignmentFlag
-bool q_layout_set_alignment2(void* self, void* l, int64_t alignment);
+bool q_layout_set_alignment2(void* self, void* l, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setSizeConstraint)
 ///
@@ -277,15 +277,15 @@ void q_layout_remove_item(void* self, void* param1);
 /// @param self QLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_layout_expanding_directions(void* self);
+int32_t q_layout_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLayout*
-/// @param callback int64_t func()
-void q_layout_on_expanding_directions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_layout_on_expanding_directions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
 ///
@@ -294,7 +294,7 @@ void q_layout_on_expanding_directions(void* self, int64_t (*callback)());
 /// @param self QLayout*
 ///
 /// @return flag of enum Qt__Orientation
-int64_t q_layout_qbase_expanding_directions(void* self);
+int32_t q_layout_qbase_expanding_directions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#minimumSize)
 ///
@@ -491,15 +491,15 @@ bool q_layout_qbase_is_empty(void* self);
 /// @param self QLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_layout_control_types(void* self);
+int32_t q_layout_control_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLayout*
-/// @param callback int64_t func()
-void q_layout_on_control_types(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_layout_on_control_types(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
 ///
@@ -508,7 +508,7 @@ void q_layout_on_control_types(void* self, int64_t (*callback)());
 /// @param self QLayout*
 ///
 /// @return flag of enum QSizePolicy__ControlType
-int64_t q_layout_qbase_control_types(void* self);
+int32_t q_layout_qbase_control_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
 ///
@@ -516,7 +516,7 @@ int64_t q_layout_qbase_control_types(void* self);
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_layout_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_layout_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
 ///
@@ -524,7 +524,7 @@ QLayoutItem* q_layout_replace_widget(void* self, void* from, void* to, int64_t o
 ///
 /// @param self QLayout*
 /// @param callback QLayoutItem* func(QLayout* self, QWidget* from, QWidget* to, flag of enum Qt__FindChildOption options)
-void q_layout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t));
+void q_layout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
 ///
@@ -534,7 +534,7 @@ void q_layout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void
 /// @param from QWidget*
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
-QLayoutItem* q_layout_qbase_replace_widget(void* self, void* from, void* to, int64_t options);
+QLayoutItem* q_layout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#totalMinimumHeightForWidth)
 ///
@@ -1063,7 +1063,7 @@ void q_layout_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QLayout*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_layout_alignment(void* self);
+int32_t q_layout_alignment(void* self);
 
 /// Inherited from QObject
 ///

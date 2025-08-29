@@ -219,7 +219,7 @@ const char* q_imageioplugin_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_imageioplugin_capabilities(void* self, void* device, const char* format) {
+int32_t q_imageioplugin_capabilities(void* self, void* device, const char* format) {
     return QImageIOPlugin_Capabilities((QImageIOPlugin*)self, (QIODevice*)device, qstring(format));
 }
 

@@ -73,27 +73,27 @@ void q_sslsocket_connect_to_host_encrypted2(void* self, const char* hostName, un
     QSslSocket_ConnectToHostEncrypted2((QSslSocket*)self, qstring(hostName), port, qstring(sslPeerName));
 }
 
-bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
+bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
     return QSslSocket_SetSocketDescriptor((QSslSocket*)self, socketDescriptor, state, openMode);
 }
 
-void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t)) {
+void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t)) {
     QSslSocket_OnSetSocketDescriptor((QSslSocket*)self, (intptr_t)callback);
 }
 
-bool q_sslsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
+bool q_sslsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
     return QSslSocket_QBaseSetSocketDescriptor((QSslSocket*)self, socketDescriptor, state, openMode);
 }
 
-void q_sslsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t openMode, int32_t protocol) {
+void q_sslsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t openMode, int32_t protocol) {
     QSslSocket_ConnectToHost((QSslSocket*)self, qstring(hostName), port, openMode, protocol);
 }
 
-void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t)) {
+void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t)) {
     QSslSocket_OnConnectToHost((QSslSocket*)self, (intptr_t)callback);
 }
 
-void q_sslsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t openMode, int32_t protocol) {
+void q_sslsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t openMode, int32_t protocol) {
     QSslSocket_QBaseConnectToHost((QSslSocket*)self, qstring(hostName), port, openMode, protocol);
 }
 
@@ -609,19 +609,19 @@ const char* q_sslsocket_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_sslsocket_connect_to_host_encrypted3(void* self, const char* hostName, unsigned short port, int64_t mode) {
+void q_sslsocket_connect_to_host_encrypted3(void* self, const char* hostName, unsigned short port, int32_t mode) {
     QSslSocket_ConnectToHostEncrypted3((QSslSocket*)self, qstring(hostName), port, mode);
 }
 
-void q_sslsocket_connect_to_host_encrypted4(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
+void q_sslsocket_connect_to_host_encrypted4(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
     QSslSocket_ConnectToHostEncrypted4((QSslSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_sslsocket_connect_to_host_encrypted42(void* self, const char* hostName, unsigned short port, const char* sslPeerName, int64_t mode) {
+void q_sslsocket_connect_to_host_encrypted42(void* self, const char* hostName, unsigned short port, const char* sslPeerName, int32_t mode) {
     QSslSocket_ConnectToHostEncrypted42((QSslSocket*)self, qstring(hostName), port, qstring(sslPeerName), mode);
 }
 
-void q_sslsocket_connect_to_host_encrypted5(void* self, const char* hostName, unsigned short port, const char* sslPeerName, int64_t mode, int32_t protocol) {
+void q_sslsocket_connect_to_host_encrypted5(void* self, const char* hostName, unsigned short port, const char* sslPeerName, int32_t mode, int32_t protocol) {
     QSslSocket_ConnectToHostEncrypted5((QSslSocket*)self, qstring(hostName), port, qstring(sslPeerName), mode, protocol);
 }
 
@@ -676,15 +676,15 @@ bool q_sslsocket_bind2(void* self, int32_t addr, unsigned short port) {
     return QTcpSocket_Bind2((QTcpSocket*)self, addr, port);
 }
 
-bool q_sslsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode) {
+bool q_sslsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode) {
     return QTcpSocket_Bind3((QTcpSocket*)self, addr, port, mode);
 }
 
-int64_t q_sslsocket_pause_mode(void* self) {
+int32_t q_sslsocket_pause_mode(void* self) {
     return QAbstractSocket_PauseMode((QAbstractSocket*)self);
 }
 
-void q_sslsocket_set_pause_mode(void* self, int64_t pauseMode) {
+void q_sslsocket_set_pause_mode(void* self, int32_t pauseMode) {
     QAbstractSocket_SetPauseMode((QAbstractSocket*)self, pauseMode);
 }
 
@@ -814,15 +814,15 @@ bool q_sslsocket_bind1(void* self, unsigned short port) {
     return QAbstractSocket_Bind1((QAbstractSocket*)self, port);
 }
 
-bool q_sslsocket_bind22(void* self, unsigned short port, int64_t mode) {
+bool q_sslsocket_bind22(void* self, unsigned short port, int32_t mode) {
     return QAbstractSocket_Bind22((QAbstractSocket*)self, port, mode);
 }
 
-void q_sslsocket_connect_to_host3(void* self, void* address, unsigned short port, int64_t mode) {
+void q_sslsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode) {
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-int64_t q_sslsocket_open_mode(void* self) {
+int32_t q_sslsocket_open_mode(void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -1187,15 +1187,15 @@ void q_sslsocket_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool q_sslsocket_bind(void* self, void* address, unsigned short port, int64_t mode) {
+bool q_sslsocket_bind(void* self, void* address, unsigned short port, int32_t mode) {
     return QSslSocket_Bind((QSslSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-bool q_sslsocket_qbase_bind(void* self, void* address, unsigned short port, int64_t mode) {
+bool q_sslsocket_qbase_bind(void* self, void* address, unsigned short port, int32_t mode) {
     return QSslSocket_QBaseBind((QSslSocket*)self, (QHostAddress*)address, port, mode);
 }
 
-void q_sslsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t)) {
+void q_sslsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t)) {
     QSslSocket_OnBind((QSslSocket*)self, (intptr_t)callback);
 }
 
@@ -1235,15 +1235,15 @@ void q_sslsocket_on_read_line_data(void* self, long long (*callback)(void*, char
     QSslSocket_OnReadLineData((QSslSocket*)self, (intptr_t)callback);
 }
 
-bool q_sslsocket_open(void* self, int64_t mode) {
+bool q_sslsocket_open(void* self, int32_t mode) {
     return QSslSocket_Open((QSslSocket*)self, mode);
 }
 
-bool q_sslsocket_qbase_open(void* self, int64_t mode) {
+bool q_sslsocket_qbase_open(void* self, int32_t mode) {
     return QSslSocket_QBaseOpen((QSslSocket*)self, mode);
 }
 
-void q_sslsocket_on_open(void* self, bool (*callback)(void*, int64_t)) {
+void q_sslsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QSslSocket_OnOpen((QSslSocket*)self, (intptr_t)callback);
 }
 
@@ -1463,15 +1463,15 @@ void q_sslsocket_on_set_peer_name(void* self, void (*callback)(void*, const char
     QSslSocket_OnSetPeerName((QSslSocket*)self, (intptr_t)callback);
 }
 
-void q_sslsocket_set_open_mode(void* self, int64_t openMode) {
+void q_sslsocket_set_open_mode(void* self, int32_t openMode) {
     QSslSocket_SetOpenMode((QSslSocket*)self, openMode);
 }
 
-void q_sslsocket_qbase_set_open_mode(void* self, int64_t openMode) {
+void q_sslsocket_qbase_set_open_mode(void* self, int32_t openMode) {
     QSslSocket_QBaseSetOpenMode((QSslSocket*)self, openMode);
 }
 
-void q_sslsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+void q_sslsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
     QSslSocket_OnSetOpenMode((QSslSocket*)self, (intptr_t)callback);
 }
 

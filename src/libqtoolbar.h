@@ -84,14 +84,14 @@ bool q_toolbar_is_movable(void* self);
 ///
 /// @param self QToolBar*
 /// @param areas flag of enum Qt__ToolBarArea
-void q_toolbar_set_allowed_areas(void* self, int64_t areas);
+void q_toolbar_set_allowed_areas(void* self, int32_t areas);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#allowedAreas)
 ///
 /// @param self QToolBar*
 ///
 /// @return flag of enum Qt__ToolBarArea
-int64_t q_toolbar_allowed_areas(void* self);
+int32_t q_toolbar_allowed_areas(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#isAreaAllowed)
 ///
@@ -239,13 +239,13 @@ void q_toolbar_on_movable_changed(void* self, void (*callback)(void*, bool));
 ///
 /// @param self QToolBar*
 /// @param allowedAreas flag of enum Qt__ToolBarArea
-void q_toolbar_allowed_areas_changed(void* self, int64_t allowedAreas);
+void q_toolbar_allowed_areas_changed(void* self, int32_t allowedAreas);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#allowedAreasChanged)
 ///
 /// @param self QToolBar*
 /// @param callback void func(QToolBar* self, flag of enum Qt__ToolBarArea allowedAreas)
-void q_toolbar_on_allowed_areas_changed(void* self, void (*callback)(void*, int64_t));
+void q_toolbar_on_allowed_areas_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#orientationChanged)
 ///
@@ -1934,7 +1934,7 @@ bool q_toolbar_is_full_screen(void* self);
 /// @param self QToolBar*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_toolbar_window_state(void* self);
+int32_t q_toolbar_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1942,7 +1942,7 @@ int64_t q_toolbar_window_state(void* self);
 ///
 /// @param self QToolBar*
 /// @param state flag of enum Qt__WindowState
-void q_toolbar_set_window_state(void* self, int64_t state);
+void q_toolbar_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1950,7 +1950,7 @@ void q_toolbar_set_window_state(void* self, int64_t state);
 ///
 /// @param self QToolBar*
 /// @param state flag of enum Qt__WindowState
-void q_toolbar_override_window_state(void* self, int64_t state);
+void q_toolbar_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2467,7 +2467,7 @@ void q_toolbar_render3(void* self, void* target, void* targetOffset, void* sourc
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_toolbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_toolbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2497,7 +2497,7 @@ void q_toolbar_render32(void* self, void* painter, void* targetOffset, void* sou
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_toolbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_toolbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2514,7 +2514,7 @@ QPixmap* q_toolbar_grab1(void* self, void* rectangle);
 /// @param self QToolBar*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_toolbar_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_toolbar_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

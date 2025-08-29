@@ -20,7 +20,7 @@ QTextOption* q_textoption_new();
 /// q_textoption_new2 constructs a new QTextOption object.
 ///
 /// @param alignment flag of enum Qt__AlignmentFlag
-QTextOption* q_textoption_new2(int64_t alignment);
+QTextOption* q_textoption_new2(int32_t alignment);
 
 /// q_textoption_new3 constructs a new QTextOption object.
 ///
@@ -37,14 +37,14 @@ void q_textoption_operator_assign(void* self, void* o);
 ///
 /// @param self QTextOption*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_textoption_set_alignment(void* self, int64_t alignment);
+void q_textoption_set_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#alignment)
 ///
 /// @param self QTextOption*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_textoption_alignment(void* self);
+int32_t q_textoption_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#setTextDirection)
 ///

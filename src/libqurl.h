@@ -387,7 +387,7 @@ QUrl* q_url_from_user_input2(const char* userInput, const char* workingDirectory
 /// @param userInput const char*
 /// @param workingDirectory const char*
 /// @param options flag of enum QUrl__UserInputResolutionOption
-QUrl* q_url_from_user_input3(const char* userInput, const char* workingDirectory, int64_t options);
+QUrl* q_url_from_user_input3(const char* userInput, const char* workingDirectory, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setAuthority)
 ///
@@ -402,7 +402,7 @@ void q_url_set_authority2(void* self, const char* authority, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_url_authority1(void* self, int64_t options);
+const char* q_url_authority1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setUserInfo)
 ///
@@ -417,7 +417,7 @@ void q_url_set_user_info2(void* self, const char* userInfo, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_url_user_info1(void* self, int64_t options);
+const char* q_url_user_info1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setUserName)
 ///
@@ -432,7 +432,7 @@ void q_url_set_user_name2(void* self, const char* userName, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_url_user_name1(void* self, int64_t options);
+const char* q_url_user_name1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setPassword)
 ///
@@ -447,7 +447,7 @@ void q_url_set_password2(void* self, const char* password, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param param1 flag of enum QUrl__ComponentFormattingOption
-const char* q_url_password1(void* self, int64_t param1);
+const char* q_url_password1(void* self, uint32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setHost)
 ///
@@ -462,7 +462,7 @@ void q_url_set_host2(void* self, const char* host, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param param1 flag of enum QUrl__ComponentFormattingOption
-const char* q_url_host1(void* self, int64_t param1);
+const char* q_url_host1(void* self, uint32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#port)
 ///
@@ -483,7 +483,7 @@ void q_url_set_path2(void* self, const char* path, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_url_path1(void* self, int64_t options);
+const char* q_url_path1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fileName)
 ///
@@ -491,7 +491,7 @@ const char* q_url_path1(void* self, int64_t options);
 ///
 /// @param self QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_url_file_name1(void* self, int64_t options);
+const char* q_url_file_name1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setQuery)
 ///
@@ -506,7 +506,7 @@ void q_url_set_query22(void* self, const char* query, int32_t mode);
 ///
 /// @param self QUrl*
 /// @param param1 flag of enum QUrl__ComponentFormattingOption
-const char* q_url_query1(void* self, int64_t param1);
+const char* q_url_query1(void* self, uint32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fragment)
 ///
@@ -514,7 +514,7 @@ const char* q_url_query1(void* self, int64_t param1);
 ///
 /// @param self QUrl*
 /// @param options flag of enum QUrl__ComponentFormattingOption
-const char* q_url_fragment1(void* self, int64_t options);
+const char* q_url_fragment1(void* self, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setFragment)
 ///
@@ -546,7 +546,7 @@ char* q_url_to_percent_encoding3(const char* param1, const char* exclude, const 
 ///
 /// @param domain const char*
 /// @param options flag of enum QUrl__AceProcessingOption
-const char* q_url_from_ace2(const char* domain, int64_t options);
+const char* q_url_from_ace2(const char* domain, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#toAce)
 ///
@@ -554,7 +554,7 @@ const char* q_url_from_ace2(const char* domain, int64_t options);
 ///
 /// @param domain const char*
 /// @param options flag of enum QUrl__AceProcessingOption
-char* q_url_to_ace2(const char* domain, int64_t options);
+char* q_url_to_ace2(const char* domain, uint32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#fromStringList)
 ///

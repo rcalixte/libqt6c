@@ -141,13 +141,13 @@ void q_svgrenderer_set_aspect_ratio_mode(void* self, int32_t mode);
 /// @param self QSvgRenderer*
 ///
 /// @return flag of enum QtSvg__Option
-int64_t q_svgrenderer_options(void* self);
+uint32_t q_svgrenderer_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#setOptions)
 ///
 /// @param self QSvgRenderer*
 /// @param flags flag of enum QtSvg__Option
-void q_svgrenderer_set_options(void* self, int64_t flags);
+void q_svgrenderer_set_options(void* self, uint32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#animated)
 ///
@@ -213,7 +213,7 @@ QTransform* q_svgrenderer_transform_for_element(void* self, const char* id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#setDefaultOptions)
 ///
 /// @param flags flag of enum QtSvg__Option
-void q_svgrenderer_set_default_options(int64_t flags);
+void q_svgrenderer_set_default_options(uint32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#load)
 ///

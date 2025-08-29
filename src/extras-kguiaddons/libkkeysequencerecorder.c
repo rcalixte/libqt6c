@@ -90,11 +90,11 @@ bool k_keysequencerecorder_modifier_only_allowed(void* self) {
     return KKeySequenceRecorder_ModifierOnlyAllowed((KKeySequenceRecorder*)self);
 }
 
-void k_keysequencerecorder_set_patterns(void* self, int64_t patterns) {
+void k_keysequencerecorder_set_patterns(void* self, int32_t patterns) {
     KKeySequenceRecorder_SetPatterns((KKeySequenceRecorder*)self, patterns);
 }
 
-int64_t k_keysequencerecorder_patterns(void* self) {
+int32_t k_keysequencerecorder_patterns(void* self) {
     return KKeySequenceRecorder_Patterns((KKeySequenceRecorder*)self);
 }
 

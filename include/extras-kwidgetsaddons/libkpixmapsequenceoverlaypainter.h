@@ -89,7 +89,7 @@ QRect* k_pixmapsequenceoverlaypainter_rect(void* self);
 /// @param self KPixmapSequenceOverlayPainter*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t k_pixmapsequenceoverlaypainter_alignment(void* self);
+int32_t k_pixmapsequenceoverlaypainter_alignment(void* self);
 
 /// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#offset)
 ///
@@ -124,7 +124,7 @@ void k_pixmapsequenceoverlaypainter_set_rect(void* self, void* rect);
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param align flag of enum Qt__AlignmentFlag
-void k_pixmapsequenceoverlaypainter_set_alignment(void* self, int64_t align);
+void k_pixmapsequenceoverlaypainter_set_alignment(void* self, int32_t align);
 
 /// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setOffset)
 ///

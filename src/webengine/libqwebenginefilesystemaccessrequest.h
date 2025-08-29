@@ -62,7 +62,7 @@ int32_t q_webenginefilesystemaccessrequest_handle_type(void* self);
 /// @param self QWebEngineFileSystemAccessRequest*
 ///
 /// @return flag of enum QWebEngineFileSystemAccessRequest__AccessFlag
-int64_t q_webenginefilesystemaccessrequest_access_flags(void* self);
+int32_t q_webenginefilesystemaccessrequest_access_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#dtor.QWebEngineFileSystemAccessRequest)
 ///

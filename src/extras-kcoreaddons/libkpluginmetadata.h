@@ -42,13 +42,13 @@ KPluginMetaData* k_pluginmetadata_new5(void* param1);
 ///
 /// @param loader QPluginLoader*
 /// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
-KPluginMetaData* k_pluginmetadata_new6(void* loader, int64_t options);
+KPluginMetaData* k_pluginmetadata_new6(void* loader, int32_t options);
 
 /// k_pluginmetadata_new7 constructs a new KPluginMetaData object.
 ///
 /// @param pluginFile const char*
 /// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
-KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int64_t options);
+KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int32_t options);
 
 /// [Qt documentation](https://api-staging.kde.org/kpluginmetadata.html#operator-eq)
 ///
@@ -259,7 +259,7 @@ bool k_pluginmetadata_is_static_plugin(void* self);
 /// @param directory const char*
 /// @param pluginId const char*
 /// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
-KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, const char* pluginId, int64_t options);
+KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, const char* pluginId, int32_t options);
 
 /// [Qt documentation](https://api-staging.kde.org/kpluginmetadata.html#value)
 ///

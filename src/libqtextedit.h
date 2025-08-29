@@ -119,14 +119,14 @@ void q_textedit_set_read_only(void* self, bool ro);
 ///
 /// @param self QTextEdit*
 /// @param flags flag of enum Qt__TextInteractionFlag
-void q_textedit_set_text_interaction_flags(void* self, int64_t flags);
+void q_textedit_set_text_interaction_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textInteractionFlags)
 ///
 /// @param self QTextEdit*
 ///
 /// @return flag of enum Qt__TextInteractionFlag
-int64_t q_textedit_text_interaction_flags(void* self);
+int32_t q_textedit_text_interaction_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#fontPointSize)
 ///
@@ -175,7 +175,7 @@ QFont* q_textedit_current_font(void* self);
 /// @param self QTextEdit*
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_textedit_alignment(void* self);
+int32_t q_textedit_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mergeCurrentCharFormat)
 ///
@@ -530,7 +530,7 @@ void q_textedit_set_current_font(void* self, void* f);
 ///
 /// @param self QTextEdit*
 /// @param a flag of enum Qt__AlignmentFlag
-void q_textedit_set_alignment(void* self, int64_t a);
+void q_textedit_set_alignment(void* self, int32_t a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setPlainText)
 ///
@@ -1344,14 +1344,14 @@ const char* q_textedit_tr3(const char* s, const char* c, int n);
 /// @param self QTextEdit*
 /// @param exp const char*
 /// @param options flag of enum QTextDocument__FindFlag
-bool q_textedit_find22(void* self, const char* exp, int64_t options);
+bool q_textedit_find22(void* self, const char* exp, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#find)
 ///
 /// @param self QTextEdit*
 /// @param exp QRegularExpression*
 /// @param options flag of enum QTextDocument__FindFlag
-bool q_textedit_find23(void* self, void* exp, int64_t options);
+bool q_textedit_find23(void* self, void* exp, int32_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#toMarkdown)
 ///
@@ -1359,7 +1359,7 @@ bool q_textedit_find23(void* self, void* exp, int64_t options);
 ///
 /// @param self QTextEdit*
 /// @param features flag of enum QTextDocument__MarkdownFeature
-const char* q_textedit_to_markdown1(void* self, int64_t features);
+const char* q_textedit_to_markdown1(void* self, int32_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#moveCursor)
 ///
@@ -1466,7 +1466,7 @@ void q_textedit_set_corner_widget(void* self, void* widget);
 /// @param self QTextEdit*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_textedit_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_textedit_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1474,7 +1474,7 @@ void q_textedit_add_scroll_bar_widget(void* self, void* widget, int64_t alignmen
 ///
 /// @param self QTextEdit*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_textedit_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_textedit_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3116,7 +3116,7 @@ bool q_textedit_is_full_screen(void* self);
 /// @param self QTextEdit*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_textedit_window_state(void* self);
+int32_t q_textedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3124,7 +3124,7 @@ int64_t q_textedit_window_state(void* self);
 ///
 /// @param self QTextEdit*
 /// @param state flag of enum Qt__WindowState
-void q_textedit_set_window_state(void* self, int64_t state);
+void q_textedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3132,7 +3132,7 @@ void q_textedit_set_window_state(void* self, int64_t state);
 ///
 /// @param self QTextEdit*
 /// @param state flag of enum Qt__WindowState
-void q_textedit_override_window_state(void* self, int64_t state);
+void q_textedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3642,7 +3642,7 @@ void q_textedit_render3(void* self, void* target, void* targetOffset, void* sour
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_textedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_textedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3672,7 +3672,7 @@ void q_textedit_render32(void* self, void* painter, void* targetOffset, void* so
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_textedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_textedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3689,7 +3689,7 @@ QPixmap* q_textedit_grab1(void* self, void* rectangle);
 /// @param self QTextEdit*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_textedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_textedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

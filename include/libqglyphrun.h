@@ -146,14 +146,14 @@ void q_glyphrun_set_flag(void* self, int32_t flag);
 ///
 /// @param self QGlyphRun*
 /// @param flags flag of enum QGlyphRun__GlyphRunFlag
-void q_glyphrun_set_flags(void* self, int64_t flags);
+void q_glyphrun_set_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#flags)
 ///
 /// @param self QGlyphRun*
 ///
 /// @return flag of enum QGlyphRun__GlyphRunFlag
-int64_t q_glyphrun_flags(void* self);
+int32_t q_glyphrun_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#setBoundingRect)
 ///

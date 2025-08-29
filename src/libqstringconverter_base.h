@@ -57,7 +57,7 @@ QStringConverterBase__State* q_stringconverterbase__state_new();
 /// q_stringconverterbase__state_new2 constructs a new QStringConverterBase::State object.
 ///
 /// @param f flag of enum QStringConverterBase__Flag
-QStringConverterBase__State* q_stringconverterbase__state_new2(int64_t f);
+QStringConverterBase__State* q_stringconverterbase__state_new2(int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#clear)
 ///
@@ -74,13 +74,13 @@ void q_stringconverterbase__state_reset(void* self);
 /// @param self QStringConverterBase__State*
 ///
 /// @return flag of enum QStringConverterBase__Flag
-int64_t q_stringconverterbase__state_flags(void* self);
+int32_t q_stringconverterbase__state_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
 ///
 /// @param self QStringConverterBase__State*
 /// @param flags flag of enum QStringConverterBase__Flag
-void q_stringconverterbase__state_set_flags(void* self, int64_t flags);
+void q_stringconverterbase__state_set_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
 ///

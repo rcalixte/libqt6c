@@ -96,11 +96,11 @@ QColor* q_legend_label_color(void* self) {
     return QLegend_LabelColor((QLegend*)self);
 }
 
-void q_legend_set_alignment(void* self, int64_t alignment) {
+void q_legend_set_alignment(void* self, int32_t alignment) {
     QLegend_SetAlignment((QLegend*)self, alignment);
 }
 
-int64_t q_legend_alignment(void* self) {
+int32_t q_legend_alignment(void* self) {
     return QLegend_Alignment((QLegend*)self);
 }
 
@@ -624,7 +624,7 @@ void q_legend_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_legend_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
+void q_legend_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
     QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
 }
 
@@ -872,7 +872,7 @@ void q_legend_set_group(void* self, void* group) {
     QGraphicsItem_SetGroup((QGraphicsItem*)self, (QGraphicsItemGroup*)group);
 }
 
-int64_t q_legend_flags(void* self) {
+int32_t q_legend_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
@@ -880,7 +880,7 @@ void q_legend_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
-void q_legend_set_flags(void* self, int64_t flags) {
+void q_legend_set_flags(void* self, int32_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 

@@ -207,7 +207,7 @@ bool q_sctpsocket_bind2(void* self, int32_t addr, unsigned short port);
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode);
+bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -216,7 +216,7 @@ bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t m
 /// @param self QSctpSocket*
 ///
 /// @return flag of enum QAbstractSocket__PauseMode
-int64_t q_sctpsocket_pause_mode(void* self);
+int32_t q_sctpsocket_pause_mode(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -224,7 +224,7 @@ int64_t q_sctpsocket_pause_mode(void* self);
 ///
 /// @param self QSctpSocket*
 /// @param pauseMode flag of enum QAbstractSocket__PauseMode
-void q_sctpsocket_set_pause_mode(void* self, int64_t pauseMode);
+void q_sctpsocket_set_pause_mode(void* self, int32_t pauseMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -468,7 +468,7 @@ bool q_sctpsocket_bind1(void* self, unsigned short port);
 /// @param self QSctpSocket*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_sctpsocket_bind22(void* self, unsigned short port, int64_t mode);
+bool q_sctpsocket_bind22(void* self, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -478,7 +478,7 @@ bool q_sctpsocket_bind22(void* self, unsigned short port, int64_t mode);
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short port, int64_t mode);
+void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -487,7 +487,7 @@ void q_sctpsocket_connect_to_host3(void* self, void* address, unsigned short por
 /// @param self QSctpSocket*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_sctpsocket_open_mode(void* self);
+int32_t q_sctpsocket_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1177,7 +1177,7 @@ void q_sctpsocket_on_resume(void* self, void (*callback)());
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int64_t mode);
+bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1189,7 +1189,7 @@ bool q_sctpsocket_bind(void* self, void* address, unsigned short port, int64_t m
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int64_t mode);
+bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1199,7 +1199,7 @@ bool q_sctpsocket_qbase_bind(void* self, void* address, unsigned short port, int
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, QHostAddress* address, unsigned short port, flag of enum QAbstractSocket__BindFlag mode)
-void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t));
+void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1212,7 +1212,7 @@ void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned sh
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
+void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1225,7 +1225,7 @@ void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned sho
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
+void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1235,7 +1235,7 @@ void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsign
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
-void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
+void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1361,7 +1361,7 @@ void q_sctpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
+bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1373,7 +1373,7 @@ bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, i
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
+bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1383,7 +1383,7 @@ bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescrip
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
+void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1665,7 +1665,7 @@ void q_sctpsocket_on_write_data(void* self, long long (*callback)(void*, const c
 ///
 /// @param self QSctpSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_sctpsocket_open(void* self, int64_t mode);
+bool q_sctpsocket_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1675,7 +1675,7 @@ bool q_sctpsocket_open(void* self, int64_t mode);
 ///
 /// @param self QSctpSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_sctpsocket_qbase_open(void* self, int64_t mode);
+bool q_sctpsocket_qbase_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1685,7 +1685,7 @@ bool q_sctpsocket_qbase_open(void* self, int64_t mode);
 ///
 /// @param self QSctpSocket*
 /// @param callback bool func(QSctpSocket* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void q_sctpsocket_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_sctpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///
@@ -2287,7 +2287,7 @@ void q_sctpsocket_on_set_peer_name(void* self, void (*callback)(void*, const cha
 ///
 /// @param self QSctpSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_sctpsocket_set_open_mode(void* self, int64_t openMode);
+void q_sctpsocket_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2297,7 +2297,7 @@ void q_sctpsocket_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QSctpSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_sctpsocket_qbase_set_open_mode(void* self, int64_t openMode);
+void q_sctpsocket_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2307,7 +2307,7 @@ void q_sctpsocket_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QSctpSocket*
 /// @param callback void func(QSctpSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_sctpsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_sctpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///

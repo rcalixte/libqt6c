@@ -31,13 +31,13 @@ QStringEncoder* q_stringencoder_new3(char* name);
 ///
 /// @param encoding enum QStringConverter__Encoding
 /// @param flags flag of enum QStringConverterBase__Flag
-QStringEncoder* q_stringencoder_new4(int32_t encoding, int64_t flags);
+QStringEncoder* q_stringencoder_new4(int32_t encoding, int32_t flags);
 
 /// q_stringencoder_new5 constructs a new QStringEncoder object.
 ///
 /// @param name char*
 /// @param flags flag of enum QStringConverterBase__Flag
-QStringEncoder* q_stringencoder_new5(char* name, int64_t flags);
+QStringEncoder* q_stringencoder_new5(char* name, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
 ///
@@ -119,13 +119,13 @@ QStringDecoder* q_stringdecoder_new3(char* name);
 ///
 /// @param encoding enum QStringConverter__Encoding
 /// @param flags flag of enum QStringConverterBase__Flag
-QStringDecoder* q_stringdecoder_new4(int32_t encoding, int64_t flags);
+QStringDecoder* q_stringdecoder_new4(int32_t encoding, int32_t flags);
 
 /// q_stringdecoder_new5 constructs a new QStringDecoder object.
 ///
 /// @param name char*
 /// @param f flag of enum QStringConverterBase__Flag
-QStringDecoder* q_stringdecoder_new5(char* name, int64_t f);
+QStringDecoder* q_stringdecoder_new5(char* name, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
 ///

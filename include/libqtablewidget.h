@@ -175,13 +175,13 @@ bool q_tablewidgetitem_is_selected(void* self);
 /// @param self QTableWidgetItem*
 ///
 /// @return flag of enum Qt__ItemFlag
-int64_t q_tablewidgetitem_flags(void* self);
+int32_t q_tablewidgetitem_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#setFlags)
 ///
 /// @param self QTableWidgetItem*
 /// @param flags flag of enum Qt__ItemFlag
-void q_tablewidgetitem_set_flags(void* self, int64_t flags);
+void q_tablewidgetitem_set_flags(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#text)
 ///
@@ -278,7 +278,7 @@ void q_tablewidgetitem_set_text_alignment2(void* self, int32_t alignment);
 ///
 /// @param self QTableWidgetItem*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_tablewidgetitem_set_text_alignment3(void* self, int64_t alignment);
+void q_tablewidgetitem_set_text_alignment3(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#background)
 ///
@@ -666,7 +666,7 @@ void q_tablewidget_set_current_item(void* self, void* item);
 /// @param self QTableWidget*
 /// @param item QTableWidgetItem*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_tablewidget_set_current_item2(void* self, void* item, int64_t command);
+void q_tablewidget_set_current_item2(void* self, void* item, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#setCurrentCell)
 ///
@@ -681,7 +681,7 @@ void q_tablewidget_set_current_cell(void* self, int row, int column);
 /// @param row int
 /// @param column int
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_tablewidget_set_current_cell2(void* self, int row, int column, int64_t command);
+void q_tablewidget_set_current_cell2(void* self, int row, int column, int32_t command);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#sortItems)
 ///
@@ -768,7 +768,7 @@ libqt_list /* of QTableWidgetItem* */ q_tablewidget_selected_items(void* self);
 /// @param self QTableWidget*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
-libqt_list /* of QTableWidgetItem* */ q_tablewidget_find_items(void* self, const char* text, int64_t flags);
+libqt_list /* of QTableWidgetItem* */ q_tablewidget_find_items(void* self, const char* text, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#visualRow)
 ///
@@ -1140,15 +1140,15 @@ bool q_tablewidget_qbase_drop_mime_data(void* self, int row, int column, void* d
 /// @param self QTableWidget*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_tablewidget_supported_drop_actions(void* self);
+int32_t q_tablewidget_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback int64_t func()
-void q_tablewidget_on_supported_drop_actions(void* self, int64_t (*callback)());
+/// @param callback int32_t func()
+void q_tablewidget_on_supported_drop_actions(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#supportedDropActions)
 ///
@@ -1157,7 +1157,7 @@ void q_tablewidget_on_supported_drop_actions(void* self, int64_t (*callback)());
 /// @param self QTableWidget*
 ///
 /// @return flag of enum Qt__DropAction
-int64_t q_tablewidget_qbase_supported_drop_actions(void* self);
+int32_t q_tablewidget_qbase_supported_drop_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#dropEvent)
 ///
@@ -1638,7 +1638,7 @@ QModelIndex* q_tablewidget_root_index(void* self);
 ///
 /// @param self QTableWidget*
 /// @param triggers flag of enum QAbstractItemView__EditTrigger
-void q_tablewidget_set_edit_triggers(void* self, int64_t triggers);
+void q_tablewidget_set_edit_triggers(void* self, int32_t triggers);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1647,7 +1647,7 @@ void q_tablewidget_set_edit_triggers(void* self, int64_t triggers);
 /// @param self QTableWidget*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
-int64_t q_tablewidget_edit_triggers(void* self);
+int32_t q_tablewidget_edit_triggers(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2177,7 +2177,7 @@ void q_tablewidget_set_corner_widget(void* self, void* widget);
 /// @param self QTableWidget*
 /// @param widget QWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-void q_tablewidget_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
+void q_tablewidget_add_scroll_bar_widget(void* self, void* widget, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2185,7 +2185,7 @@ void q_tablewidget_add_scroll_bar_widget(void* self, void* widget, int64_t align
 ///
 /// @param self QTableWidget*
 /// @param alignment flag of enum Qt__AlignmentFlag
-libqt_list /* of QWidget* */ q_tablewidget_scroll_bar_widgets(void* self, int64_t alignment);
+libqt_list /* of QWidget* */ q_tablewidget_scroll_bar_widgets(void* self, int32_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3820,7 +3820,7 @@ bool q_tablewidget_is_full_screen(void* self);
 /// @param self QTableWidget*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t q_tablewidget_window_state(void* self);
+int32_t q_tablewidget_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3828,7 +3828,7 @@ int64_t q_tablewidget_window_state(void* self);
 ///
 /// @param self QTableWidget*
 /// @param state flag of enum Qt__WindowState
-void q_tablewidget_set_window_state(void* self, int64_t state);
+void q_tablewidget_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -3836,7 +3836,7 @@ void q_tablewidget_set_window_state(void* self, int64_t state);
 ///
 /// @param self QTableWidget*
 /// @param state flag of enum Qt__WindowState
-void q_tablewidget_override_window_state(void* self, int64_t state);
+void q_tablewidget_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -4353,7 +4353,7 @@ void q_tablewidget_render3(void* self, void* target, void* targetOffset, void* s
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_tablewidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_tablewidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4383,7 +4383,7 @@ void q_tablewidget_render32(void* self, void* painter, void* targetOffset, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void q_tablewidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void q_tablewidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4400,7 +4400,7 @@ QPixmap* q_tablewidget_grab1(void* self, void* rectangle);
 /// @param self QTableWidget*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_tablewidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void q_tablewidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -5253,7 +5253,7 @@ void q_tablewidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, in
 /// @param self QTableWidget*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_tablewidget_set_selection(void* self, void* rect, int64_t command);
+void q_tablewidget_set_selection(void* self, void* rect, int32_t command);
 
 /// Inherited from QTableView
 ///
@@ -5264,7 +5264,7 @@ void q_tablewidget_set_selection(void* self, void* rect, int64_t command);
 /// @param self QTableWidget*
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
-void q_tablewidget_qbase_set_selection(void* self, void* rect, int64_t command);
+void q_tablewidget_qbase_set_selection(void* self, void* rect, int32_t command);
 
 /// Inherited from QTableView
 ///
@@ -5274,7 +5274,7 @@ void q_tablewidget_qbase_set_selection(void* self, void* rect, int64_t command);
 ///
 /// @param self QTableWidget*
 /// @param callback void func(QTableWidget* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
-void q_tablewidget_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
+void q_tablewidget_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QTableView
 ///
@@ -6105,7 +6105,7 @@ void q_tablewidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, 
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_tablewidget_selection_command(void* self, void* index, void* event);
+int32_t q_tablewidget_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6118,7 +6118,7 @@ int64_t q_tablewidget_selection_command(void* self, void* index, void* event);
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
-int64_t q_tablewidget_qbase_selection_command(void* self, void* index, void* event);
+int32_t q_tablewidget_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6127,8 +6127,8 @@ int64_t q_tablewidget_qbase_selection_command(void* self, void* index, void* eve
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback int64_t func(QTableWidget* self, QModelIndex* index, QEvent* event)
-void q_tablewidget_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
+/// @param callback int32_t func(QTableWidget* self, QModelIndex* index, QEvent* event)
+void q_tablewidget_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6138,7 +6138,7 @@ void q_tablewidget_on_selection_command(void* self, int64_t (*callback)(void*, v
 ///
 /// @param self QTableWidget*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_tablewidget_start_drag(void* self, int64_t supportedActions);
+void q_tablewidget_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6148,7 +6148,7 @@ void q_tablewidget_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QTableWidget*
 /// @param supportedActions flag of enum Qt__DropAction
-void q_tablewidget_qbase_start_drag(void* self, int64_t supportedActions);
+void q_tablewidget_qbase_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6158,7 +6158,7 @@ void q_tablewidget_qbase_start_drag(void* self, int64_t supportedActions);
 ///
 /// @param self QTableWidget*
 /// @param callback void func(QTableWidget* self, flag of enum Qt__DropAction supportedActions)
-void q_tablewidget_on_start_drag(void* self, void (*callback)(void*, int64_t));
+void q_tablewidget_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///

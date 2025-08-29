@@ -1686,7 +1686,7 @@ bool k_passwordlineedit_is_full_screen(void* self);
 /// @param self KPasswordLineEdit*
 ///
 /// @return flag of enum Qt__WindowState
-int64_t k_passwordlineedit_window_state(void* self);
+int32_t k_passwordlineedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1694,7 +1694,7 @@ int64_t k_passwordlineedit_window_state(void* self);
 ///
 /// @param self KPasswordLineEdit*
 /// @param state flag of enum Qt__WindowState
-void k_passwordlineedit_set_window_state(void* self, int64_t state);
+void k_passwordlineedit_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -1702,7 +1702,7 @@ void k_passwordlineedit_set_window_state(void* self, int64_t state);
 ///
 /// @param self KPasswordLineEdit*
 /// @param state flag of enum Qt__WindowState
-void k_passwordlineedit_override_window_state(void* self, int64_t state);
+void k_passwordlineedit_override_window_state(void* self, int32_t state);
 
 /// Inherited from QWidget
 ///
@@ -2219,7 +2219,7 @@ void k_passwordlineedit_render3(void* self, void* target, void* targetOffset, vo
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_passwordlineedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_passwordlineedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2249,7 +2249,7 @@ void k_passwordlineedit_render32(void* self, void* painter, void* targetOffset, 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
-void k_passwordlineedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
+void k_passwordlineedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2266,7 +2266,7 @@ QPixmap* k_passwordlineedit_grab1(void* self, void* rectangle);
 /// @param self KPasswordLineEdit*
 /// @param typeVal enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_passwordlineedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
+void k_passwordlineedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
 
 /// Inherited from QWidget
 ///

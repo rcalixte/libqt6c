@@ -80,13 +80,13 @@ void q_abstractsocket_qbase_resume(void* self);
 /// @param self QAbstractSocket*
 ///
 /// @return flag of enum QAbstractSocket__PauseMode
-int64_t q_abstractsocket_pause_mode(void* self);
+int32_t q_abstractsocket_pause_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setPauseMode)
 ///
 /// @param self QAbstractSocket*
 /// @param pauseMode flag of enum QAbstractSocket__PauseMode
-void q_abstractsocket_set_pause_mode(void* self, int64_t pauseMode);
+void q_abstractsocket_set_pause_mode(void* self, int32_t pauseMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
@@ -94,7 +94,7 @@ void q_abstractsocket_set_pause_mode(void* self, int64_t pauseMode);
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int64_t mode);
+bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
@@ -102,7 +102,7 @@ bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int64
 ///
 /// @param self QAbstractSocket*
 /// @param callback bool func(QAbstractSocket* self, QHostAddress* address, unsigned short port, flag of enum QAbstractSocket__BindFlag mode)
-void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int64_t));
+void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
@@ -112,7 +112,7 @@ void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigne
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_abstractsocket_qbase_bind(void* self, void* address, unsigned short port, int64_t mode);
+bool q_abstractsocket_qbase_bind(void* self, void* address, unsigned short port, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
@@ -126,7 +126,7 @@ bool q_abstractsocket_bind2(void* self);
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
+void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -134,7 +134,7 @@ void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned
 ///
 /// @param self QAbstractSocket*
 /// @param callback void func(QAbstractSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
-void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
+void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -145,7 +145,7 @@ void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, con
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_abstractsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
+void q_abstractsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -304,7 +304,7 @@ intptr_t q_abstractsocket_qbase_socket_descriptor(void* self);
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
+bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
 ///
@@ -312,7 +312,7 @@ bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescripto
 ///
 /// @param self QAbstractSocket*
 /// @param callback bool func(QAbstractSocket* self, intptr_t socketDescriptor, enum QAbstractSocket__SocketState state, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
+void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
 ///
@@ -322,7 +322,7 @@ void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
+bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
 ///
@@ -894,7 +894,7 @@ bool q_abstractsocket_bind1(void* self, unsigned short port);
 /// @param self QAbstractSocket*
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_abstractsocket_bind22(void* self, unsigned short port, int64_t mode);
+bool q_abstractsocket_bind22(void* self, unsigned short port, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -902,7 +902,7 @@ bool q_abstractsocket_bind22(void* self, unsigned short port, int64_t mode);
 /// @param address QHostAddress*
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_abstractsocket_connect_to_host3(void* self, void* address, unsigned short port, int64_t mode);
+void q_abstractsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -911,7 +911,7 @@ void q_abstractsocket_connect_to_host3(void* self, void* address, unsigned short
 /// @param self QAbstractSocket*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
-int64_t q_abstractsocket_open_mode(void* self);
+int32_t q_abstractsocket_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1571,7 +1571,7 @@ void q_abstractsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QAbstractSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_abstractsocket_open(void* self, int64_t mode);
+bool q_abstractsocket_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1581,7 +1581,7 @@ bool q_abstractsocket_open(void* self, int64_t mode);
 ///
 /// @param self QAbstractSocket*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-bool q_abstractsocket_qbase_open(void* self, int64_t mode);
+bool q_abstractsocket_qbase_open(void* self, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1591,7 +1591,7 @@ bool q_abstractsocket_qbase_open(void* self, int64_t mode);
 ///
 /// @param self QAbstractSocket*
 /// @param callback bool func(QAbstractSocket* self, flag of enum QIODeviceBase__OpenModeFlag mode)
-void q_abstractsocket_on_open(void* self, bool (*callback)(void*, int64_t));
+void q_abstractsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///
@@ -1983,7 +1983,7 @@ void q_abstractsocket_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// @param self QAbstractSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_abstractsocket_set_open_mode(void* self, int64_t openMode);
+void q_abstractsocket_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1993,7 +1993,7 @@ void q_abstractsocket_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QAbstractSocket*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-void q_abstractsocket_qbase_set_open_mode(void* self, int64_t openMode);
+void q_abstractsocket_qbase_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -2003,7 +2003,7 @@ void q_abstractsocket_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// @param self QAbstractSocket*
 /// @param callback void func(QAbstractSocket* self, flag of enum QIODeviceBase__OpenModeFlag openMode)
-void q_abstractsocket_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
+void q_abstractsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QIODevice
 ///
