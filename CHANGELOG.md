@@ -1,11 +1,15 @@
 
+### 6.8.2 rev20 (30 August 2025)
+
+* Add [KColorScheme](https://api-staging.kde.org/kcolorscheme-index.html) and [KConfigWidgets](https://api-staging.kde.org/kconfigwidgets-index.html) (#45)
+
 ### 6.8.2 rev19 (29 August 2025)
 
 * **BREAKING CHANGE:** Use more precise flag types, fix signed char, and handle extra conditions (#44)
 
 ### 6.8.2 rev18 (29 August 2025)
 
-* Update to Zig 0.15
+* **BREAKING CHANGE:** Update to Zig 0.15
 * Ensure proper callback structure (#43)
 
 ### 6.8.2 rev17 (28 August 2025)
