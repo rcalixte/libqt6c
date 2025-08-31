@@ -57,7 +57,7 @@ func (e CppEnum) getEnumTypeC() (string, string) {
 				// need to use int64_t to avoid overflow
 				return "int64_t", "int64_t"
 			}
-			if float64(num) > math.MinInt16 || float64(num) < math.MaxUint16 {
+			if float64(num) >= math.MinInt16 && float64(num) <= math.MaxInt32 {
 				// it should be safe to use int32_t
 				flagType = "int32_t"
 			}
