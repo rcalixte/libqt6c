@@ -1,4 +1,8 @@
 
+### 6.8.2 rev21 (31 August 2025)
+
+* Add [KPlotting](https://api-staging.kde.org/kplotting-index.html) (#46)
+
 ### 6.8.2 rev20 (30 August 2025)
 
 * Add [KColorScheme](https://api-staging.kde.org/kcolorscheme-index.html) and [KConfigWidgets](https://api-staging.kde.org/kconfigwidgets-index.html) (#45)
