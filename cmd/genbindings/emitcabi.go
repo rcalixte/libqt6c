@@ -84,16 +84,6 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 
 	ret := p.ParameterType
 
-	// Handle QFlags types
-	if qflag, ok := p.QFlagsOf(); ok {
-		flagType := "QFlags<" + qflag.UnderlyingEnum.ParameterType + ">"
-		if flagType == p.ParameterType {
-			return qflag.CABIType
-		}
-	} else if e, ok := KnownEnums[p.ParameterType]; ok {
-		ret = e.Enum.UnderlyingType.RenderTypeCabi(false)
-	}
-
 	switch p.ParameterType {
 	case "uchar":
 		ret = "unsigned char"
@@ -136,12 +126,9 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 		ret = "const " + ret
 	}
 
+	// Handle QFlags types
 	if ft, ok := p.QFlagsOf(); ok {
-		if e, ok := KnownEnums[ft.UnderlyingEnum.ParameterType]; ok {
-			ret = e.EnumTypeCABI
-		} else {
-			ret = "int"
-		}
+		ret = ft.CABIType
 
 	} else if e, ok := KnownEnums[p.ParameterType]; ok {
 		ret = e.EnumTypeCABI
