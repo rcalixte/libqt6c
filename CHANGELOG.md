@@ -1,4 +1,8 @@
 
+### 6.8.2 rev22 (1 September 2025)
+
+* Add [KCompletion](https://api-staging.kde.org/kcompletion-index.html) (#47)
+
 ### 6.8.2 rev21 (31 August 2025)
 
 * Add [KPlotting](https://api-staging.kde.org/kplotting-index.html) (#46)
