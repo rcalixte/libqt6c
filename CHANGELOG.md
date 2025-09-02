@@ -1,4 +1,8 @@
 
+### 6.8.2 rev23 (2 September 2025)
+
+* Add [KTextWidgets](https://api-staging.kde.org/ktextwidgets-index.html) (#48)
+
 ### 6.8.2 rev22 (1 September 2025)
 
 * Add [KCompletion](https://api-staging.kde.org/kcompletion-index.html) (#47)
