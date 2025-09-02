@@ -328,7 +328,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	if p.ByRef || p.Pointer {
 		if isReturnType {
 			if !strings.HasSuffix(ret, "*") {
-				ret += "*"
+				ret += "*" + ifv(p.ByRef && p.Pointer, "*", "")
 			}
 		}
 	}
@@ -359,7 +359,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 
 	if !strings.HasSuffix(ret, "*") {
 		if p.Pointer {
-			ret += strings.Repeat("*", p.PointerCount)
+			ret += strings.Repeat("*", p.PointerCount) + ifv(p.ByRef && p.Pointer, "*", "")
 		} else if p.ByRef || IsKnownClass(p.ParameterType) {
 			ret += "*"
 		}
@@ -533,7 +533,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			}
 			if IsKnownClass(p.ParameterType) && strings.HasSuffix(pType, "*") &&
 				!strings.Contains(pType, "char*") {
-				pType = "void*"
+				pType = "void*" + ifv(p.ByRef && p.Pointer, "*", "")
 			}
 			if isSlot {
 				if strings.Contains(pName, "[]") && strings.Contains(pType, "char*") {
@@ -694,6 +694,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 	shouldReturn := assignExpr
 	afterword := ""
 	namePrefix := makeNamePrefix(rt.ParameterName)
+	maybePointer := ifv(rt.Pointer && rt.ByRef, "*", "")
 
 	if rt.Void() {
 		var maybeCleanups string
@@ -703,7 +704,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		}
 		return rvalue + ";" + maybeCleanups
 	} else if rt.ParameterType == "void" && rt.Pointer {
-		return assignExpr + rvalue + ";"
+		return assignExpr + maybePointer + rvalue + ";"
 	} else if rt.ParameterType == "QString" ||
 		rt.ParameterType == "QStringView" || rt.ParameterType == "QByteArray" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
@@ -814,7 +815,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 		if rt.Pointer || rt.ByRef {
 			// Cast
-			return shouldReturn + "(" + rt.RenderTypeC(cfs, true, false) + ")" + rvalue + ";"
+			return shouldReturn + "(" + rt.RenderTypeC(cfs, true, false) + maybePointer + ")" + rvalue + ";"
 		}
 
 		maybeAllocCleanup := cfs.checkAndClearAllocCleanups(false)
@@ -1121,9 +1122,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			mSafeMethodName := m.SafeMethodName()
 
 			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
-				if m.InheritedFrom == "" {
-					continue
-				}
+				continue
 			}
 
 			var showHiddenParams bool
@@ -1289,9 +1288,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			mSafeMethodName := m.SafeMethodName()
 
 			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
-				if m.InheritedFrom == "" {
-					continue
-				}
+				continue
 			}
 
 			var showHiddenParams bool
@@ -1749,9 +1746,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			mSafeMethodName := m.SafeMethodName()
 
 			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
-				if m.InheritedFrom == "" {
-					continue
-				}
+				continue
 			}
 
 			var showHiddenParams bool
@@ -1893,9 +1888,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			mSafeMethodName := m.SafeMethodName()
 
 			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
-				if m.InheritedFrom == "" {
-					continue
-				}
+				continue
 			}
 
 			var showHiddenParams bool

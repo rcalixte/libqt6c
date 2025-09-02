@@ -136,6 +136,7 @@ pub fn build(b: *std.Build) !void {
         .dragonfly, .freebsd, .netbsd, .openbsd => &.{
             "/usr/local/include/qt6",
             "/usr/local/include/KF6",
+            "/usr/local/include",
             "/usr/include",
         },
         .linux => &.{
@@ -208,6 +209,8 @@ pub fn build(b: *std.Build) !void {
         "SonnetCore/sonnet",
         "SonnetUi",
         "SonnetUi/sonnet",
+        // Qt 6 KTextWidgets
+        "KTextWidgets",
         // Qt 6 KWidgetsAddons
         "KWidgetsAddons",
         // Qt 6 KColorScheme
