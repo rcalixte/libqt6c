@@ -101,12 +101,12 @@ void KConfigDialog_Connect_SettingsChanged(KConfigDialog* self, intptr_t slot) {
         const QString dialogName_ret = dialogName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray dialogName_b = dialogName_ret.toUtf8();
-        const char* dialogName_str = static_cast<const char*>(malloc(dialogName_b.length() + 1));
-        memcpy((void*)dialogName_str, dialogName_b.data(), dialogName_b.length());
-        ((char*)dialogName_str)[dialogName_b.length()] = '\0';
+        char* dialogName_str = static_cast<char*>(malloc(dialogName_b.length() + 1));
+        memcpy(dialogName_str, dialogName_b.data(), dialogName_b.length());
+        dialogName_str[dialogName_b.length()] = '\0';
         const char* sigval1 = dialogName_str;
         slotFunc(self, sigval1);
-        libqt_free(dialogName_str);
+        free(dialogName_str);
     });
 }
 

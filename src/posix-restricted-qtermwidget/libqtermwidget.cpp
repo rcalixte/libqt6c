@@ -968,12 +968,12 @@ void QTermWidget_Connect_Bell(QTermWidget* self, intptr_t slot) {
         const QString message_ret = message;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray message_b = message_ret.toUtf8();
-        const char* message_str = static_cast<const char*>(malloc(message_b.length() + 1));
-        memcpy((void*)message_str, message_b.data(), message_b.length());
-        ((char*)message_str)[message_b.length()] = '\0';
+        char* message_str = static_cast<char*>(malloc(message_b.length() + 1));
+        memcpy(message_str, message_b.data(), message_b.length());
+        message_str[message_b.length()] = '\0';
         const char* sigval1 = message_str;
         slotFunc(self, sigval1);
-        libqt_free(message_str);
+        free(message_str);
     });
 }
 
@@ -1023,12 +1023,12 @@ void QTermWidget_Connect_ProfileChanged(QTermWidget* self, intptr_t slot) {
         const QString profile_ret = profile;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray profile_b = profile_ret.toUtf8();
-        const char* profile_str = static_cast<const char*>(malloc(profile_b.length() + 1));
-        memcpy((void*)profile_str, profile_b.data(), profile_b.length());
-        ((char*)profile_str)[profile_b.length()] = '\0';
+        char* profile_str = static_cast<char*>(malloc(profile_b.length() + 1));
+        memcpy(profile_str, profile_b.data(), profile_b.length());
+        profile_str[profile_b.length()] = '\0';
         const char* sigval1 = profile_str;
         slotFunc(self, sigval1);
-        libqt_free(profile_str);
+        free(profile_str);
     });
 }
 
@@ -1054,12 +1054,12 @@ void QTermWidget_Connect_ReceivedData(QTermWidget* self, intptr_t slot) {
         const QString text_ret = text;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray text_b = text_ret.toUtf8();
-        const char* text_str = static_cast<const char*>(malloc(text_b.length() + 1));
-        memcpy((void*)text_str, text_b.data(), text_b.length());
-        ((char*)text_str)[text_b.length()] = '\0';
+        char* text_str = static_cast<char*>(malloc(text_b.length() + 1));
+        memcpy(text_str, text_b.data(), text_b.length());
+        text_str[text_b.length()] = '\0';
         const char* sigval1 = text_str;
         slotFunc(self, sigval1);
-        libqt_free(text_str);
+        free(text_str);
     });
 }
 

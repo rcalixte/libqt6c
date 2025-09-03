@@ -782,12 +782,12 @@ void QListWidget_Connect_CurrentTextChanged(QListWidget* self, intptr_t slot) {
         const QString currentText_ret = currentText;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray currentText_b = currentText_ret.toUtf8();
-        const char* currentText_str = static_cast<const char*>(malloc(currentText_b.length() + 1));
-        memcpy((void*)currentText_str, currentText_b.data(), currentText_b.length());
-        ((char*)currentText_str)[currentText_b.length()] = '\0';
+        char* currentText_str = static_cast<char*>(malloc(currentText_b.length() + 1));
+        memcpy(currentText_str, currentText_b.data(), currentText_b.length());
+        currentText_str[currentText_b.length()] = '\0';
         const char* sigval1 = currentText_str;
         slotFunc(self, sigval1);
-        libqt_free(currentText_str);
+        free(currentText_str);
     });
 }
 

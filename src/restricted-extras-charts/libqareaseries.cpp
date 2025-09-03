@@ -295,12 +295,12 @@ void QAreaSeries_Connect_PointLabelsFormatChanged(QAreaSeries* self, intptr_t sl
         const QString format_ret = format;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray format_b = format_ret.toUtf8();
-        const char* format_str = static_cast<const char*>(malloc(format_b.length() + 1));
-        memcpy((void*)format_str, format_b.data(), format_b.length());
-        ((char*)format_str)[format_b.length()] = '\0';
+        char* format_str = static_cast<char*>(malloc(format_b.length() + 1));
+        memcpy(format_str, format_b.data(), format_b.length());
+        format_str[format_b.length()] = '\0';
         const char* sigval1 = format_str;
         slotFunc(self, sigval1);
-        libqt_free(format_str);
+        free(format_str);
     });
 }
 

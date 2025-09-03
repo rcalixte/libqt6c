@@ -221,50 +221,46 @@ bool KLocalizedString_IsApplicationTranslatedInto(const libqt_string language) {
     return KLocalizedString::isApplicationTranslatedInto(language_QString);
 }
 
-libqt_list /* set of libqt_string */ KLocalizedString_AvailableApplicationTranslations() {
+libqt_list /* set of const char* */ KLocalizedString_AvailableApplicationTranslations() {
     QSet<QString> _ret = KLocalizedString::availableApplicationTranslations();
     // Convert QSet<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
-    int _ctr = 0;
+    const char** _arr = static_cast<const char**>(malloc(sizeof(const char*) * _ret.size()));
+    int _sctr = 0;
     QSetIterator<QString> _itr(_ret);
     while (_itr.hasNext()) {
         QString _sv_ret = _itr.next();
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray _sv_b = _sv_ret.toUtf8();
-        libqt_string _sv_str;
-        _sv_str.len = _sv_b.length();
-        _sv_str.data = static_cast<const char*>(malloc(_sv_str.len + 1));
-        memcpy((void*)_sv_str.data, _sv_b.data(), _sv_str.len);
-        ((char*)_sv_str.data)[_sv_str.len] = '\0';
-        _arr[_ctr++] = _sv_str;
+        char* _sv_str = static_cast<char*>(malloc(_sv_b.length() + 1));
+        memcpy(_sv_str, _sv_b.data(), _sv_b.length());
+        _sv_str[_sv_b.length()] = '\0';
+        _arr[_sctr++] = _sv_str;
     }
     libqt_list _out;
     _out.len = _ret.size();
-    _out.data.ptr = static_cast<void*>(_arr);
+    _out.data.chars = (char*)_arr;
     return _out;
 }
 
-libqt_list /* set of libqt_string */ KLocalizedString_AvailableDomainTranslations(const libqt_string domain) {
+libqt_list /* set of const char* */ KLocalizedString_AvailableDomainTranslations(const libqt_string domain) {
     QByteArray domain_QByteArray(domain.data, domain.len);
     QSet<QString> _ret = KLocalizedString::availableDomainTranslations(domain_QByteArray);
     // Convert QSet<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
-    int _ctr = 0;
+    const char** _arr = static_cast<const char**>(malloc(sizeof(const char*) * _ret.size()));
+    int _sctr = 0;
     QSetIterator<QString> _itr(_ret);
     while (_itr.hasNext()) {
         QString _sv_ret = _itr.next();
-        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray _sv_b = _sv_ret.toUtf8();
-        libqt_string _sv_str;
-        _sv_str.len = _sv_b.length();
-        _sv_str.data = static_cast<const char*>(malloc(_sv_str.len + 1));
-        memcpy((void*)_sv_str.data, _sv_b.data(), _sv_str.len);
-        ((char*)_sv_str.data)[_sv_str.len] = '\0';
-        _arr[_ctr++] = _sv_str;
+        char* _sv_str = static_cast<char*>(malloc(_sv_b.length() + 1));
+        memcpy(_sv_str, _sv_b.data(), _sv_b.length());
+        _sv_str[_sv_b.length()] = '\0';
+        _arr[_sctr++] = _sv_str;
     }
     libqt_list _out;
     _out.len = _ret.size();
-    _out.data.ptr = static_cast<void*>(_arr);
+    _out.data.chars = (char*)_arr;
     return _out;
 }
 
