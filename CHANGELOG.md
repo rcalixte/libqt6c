@@ -1,4 +1,8 @@
 
+### 6.8.2 rev24 (3 September 2025)
+
+* Add [KIconThemes](https://api-staging.kde.org/kiconthemes-index.html) (#49)
+
 ### 6.8.2 rev23 (2 September 2025)
 
 * Add [KTextWidgets](https://api-staging.kde.org/ktextwidgets-index.html) (#48)
