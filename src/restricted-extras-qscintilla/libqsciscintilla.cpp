@@ -1825,12 +1825,12 @@ void QsciScintilla_Connect_UserListActivated(QsciScintilla* self, intptr_t slot)
         const QString stringVal_ret = stringVal;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray stringVal_b = stringVal_ret.toUtf8();
-        const char* stringVal_str = static_cast<const char*>(malloc(stringVal_b.length() + 1));
-        memcpy((void*)stringVal_str, stringVal_b.data(), stringVal_b.length());
-        ((char*)stringVal_str)[stringVal_b.length()] = '\0';
+        char* stringVal_str = static_cast<char*>(malloc(stringVal_b.length() + 1));
+        memcpy(stringVal_str, stringVal_b.data(), stringVal_b.length());
+        stringVal_str[stringVal_b.length()] = '\0';
         const char* sigval2 = stringVal_str;
         slotFunc(self, sigval1, sigval2);
-        libqt_free(stringVal_str);
+        free(stringVal_str);
     });
 }
 

@@ -138,12 +138,12 @@ void Sonnet__DictionaryComboBox_Connect_DictionaryChanged(Sonnet__DictionaryComb
         const QString dictionary_ret = dictionary;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray dictionary_b = dictionary_ret.toUtf8();
-        const char* dictionary_str = static_cast<const char*>(malloc(dictionary_b.length() + 1));
-        memcpy((void*)dictionary_str, dictionary_b.data(), dictionary_b.length());
-        ((char*)dictionary_str)[dictionary_b.length()] = '\0';
+        char* dictionary_str = static_cast<char*>(malloc(dictionary_b.length() + 1));
+        memcpy(dictionary_str, dictionary_b.data(), dictionary_b.length());
+        dictionary_str[dictionary_b.length()] = '\0';
         const char* sigval1 = dictionary_str;
         slotFunc(self, sigval1);
-        libqt_free(dictionary_str);
+        free(dictionary_str);
     });
 }
 
@@ -158,12 +158,12 @@ void Sonnet__DictionaryComboBox_Connect_DictionaryNameChanged(Sonnet__Dictionary
         const QString dictionaryName_ret = dictionaryName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray dictionaryName_b = dictionaryName_ret.toUtf8();
-        const char* dictionaryName_str = static_cast<const char*>(malloc(dictionaryName_b.length() + 1));
-        memcpy((void*)dictionaryName_str, dictionaryName_b.data(), dictionaryName_b.length());
-        ((char*)dictionaryName_str)[dictionaryName_b.length()] = '\0';
+        char* dictionaryName_str = static_cast<char*>(malloc(dictionaryName_b.length() + 1));
+        memcpy(dictionaryName_str, dictionaryName_b.data(), dictionaryName_b.length());
+        dictionaryName_str[dictionaryName_b.length()] = '\0';
         const char* sigval1 = dictionaryName_str;
         slotFunc(self, sigval1);
-        libqt_free(dictionaryName_str);
+        free(dictionaryName_str);
     });
 }
 

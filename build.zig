@@ -217,6 +217,9 @@ pub fn build(b: *std.Build) !void {
         "KColorScheme",
         // Qt 6 KConfigWidgets
         "KConfigWidgets",
+        // Qt 6 KIconThemes
+        "KIconThemes",
+        "KIconWidgets",
         // Qt 6 QScintilla
         "Qsci",
         // Qt 6 QTermWidget

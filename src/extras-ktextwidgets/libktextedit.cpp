@@ -215,12 +215,12 @@ void KTextEdit_Connect_SpellCheckStatus(KTextEdit* self, intptr_t slot) {
         const QString param1_ret = param1;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray param1_b = param1_ret.toUtf8();
-        const char* param1_str = static_cast<const char*>(malloc(param1_b.length() + 1));
-        memcpy((void*)param1_str, param1_b.data(), param1_b.length());
-        ((char*)param1_str)[param1_b.length()] = '\0';
+        char* param1_str = static_cast<char*>(malloc(param1_b.length() + 1));
+        memcpy(param1_str, param1_b.data(), param1_b.length());
+        param1_str[param1_b.length()] = '\0';
         const char* sigval1 = param1_str;
         slotFunc(self, sigval1);
-        libqt_free(param1_str);
+        free(param1_str);
     });
 }
 
@@ -235,12 +235,12 @@ void KTextEdit_Connect_LanguageChanged(KTextEdit* self, intptr_t slot) {
         const QString language_ret = language;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray language_b = language_ret.toUtf8();
-        const char* language_str = static_cast<const char*>(malloc(language_b.length() + 1));
-        memcpy((void*)language_str, language_b.data(), language_b.length());
-        ((char*)language_str)[language_b.length()] = '\0';
+        char* language_str = static_cast<char*>(malloc(language_b.length() + 1));
+        memcpy(language_str, language_b.data(), language_b.length());
+        language_str[language_b.length()] = '\0';
         const char* sigval1 = language_str;
         slotFunc(self, sigval1);
-        libqt_free(language_str);
+        free(language_str);
     });
 }
 
@@ -268,20 +268,20 @@ void KTextEdit_Connect_SpellCheckerAutoCorrect(KTextEdit* self, intptr_t slot) {
         const QString currentWord_ret = currentWord;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray currentWord_b = currentWord_ret.toUtf8();
-        const char* currentWord_str = static_cast<const char*>(malloc(currentWord_b.length() + 1));
-        memcpy((void*)currentWord_str, currentWord_b.data(), currentWord_b.length());
-        ((char*)currentWord_str)[currentWord_b.length()] = '\0';
+        char* currentWord_str = static_cast<char*>(malloc(currentWord_b.length() + 1));
+        memcpy(currentWord_str, currentWord_b.data(), currentWord_b.length());
+        currentWord_str[currentWord_b.length()] = '\0';
         const char* sigval1 = currentWord_str;
         const QString autoCorrectWord_ret = autoCorrectWord;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray autoCorrectWord_b = autoCorrectWord_ret.toUtf8();
-        const char* autoCorrectWord_str = static_cast<const char*>(malloc(autoCorrectWord_b.length() + 1));
-        memcpy((void*)autoCorrectWord_str, autoCorrectWord_b.data(), autoCorrectWord_b.length());
-        ((char*)autoCorrectWord_str)[autoCorrectWord_b.length()] = '\0';
+        char* autoCorrectWord_str = static_cast<char*>(malloc(autoCorrectWord_b.length() + 1));
+        memcpy(autoCorrectWord_str, autoCorrectWord_b.data(), autoCorrectWord_b.length());
+        autoCorrectWord_str[autoCorrectWord_b.length()] = '\0';
         const char* sigval2 = autoCorrectWord_str;
         slotFunc(self, sigval1, sigval2);
-        libqt_free(currentWord_str);
-        libqt_free(autoCorrectWord_str);
+        free(currentWord_str);
+        free(autoCorrectWord_str);
     });
 }
 

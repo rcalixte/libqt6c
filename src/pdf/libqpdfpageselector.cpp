@@ -140,12 +140,12 @@ void QPdfPageSelector_Connect_CurrentPageLabelChanged(QPdfPageSelector* self, in
         const QString label_ret = label;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray label_b = label_ret.toUtf8();
-        const char* label_str = static_cast<const char*>(malloc(label_b.length() + 1));
-        memcpy((void*)label_str, label_b.data(), label_b.length());
-        ((char*)label_str)[label_b.length()] = '\0';
+        char* label_str = static_cast<char*>(malloc(label_b.length() + 1));
+        memcpy(label_str, label_b.data(), label_b.length());
+        label_str[label_b.length()] = '\0';
         const char* sigval1 = label_str;
         slotFunc(self, sigval1);
-        libqt_free(label_str);
+        free(label_str);
     });
 }
 

@@ -333,12 +333,12 @@ void KCompletion_Connect_Match(KCompletion* self, intptr_t slot) {
         const QString item_ret = item;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray item_b = item_ret.toUtf8();
-        const char* item_str = static_cast<const char*>(malloc(item_b.length() + 1));
-        memcpy((void*)item_str, item_b.data(), item_b.length());
-        ((char*)item_str)[item_b.length()] = '\0';
+        char* item_str = static_cast<char*>(malloc(item_b.length() + 1));
+        memcpy(item_str, item_b.data(), item_b.length());
+        item_str[item_b.length()] = '\0';
         const char* sigval1 = item_str;
         slotFunc(self, sigval1);
-        libqt_free(item_str);
+        free(item_str);
     });
 }
 

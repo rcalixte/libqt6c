@@ -648,12 +648,12 @@ void QDnsLookup_Connect_NameChanged(QDnsLookup* self, intptr_t slot) {
         const QString name_ret = name;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray name_b = name_ret.toUtf8();
-        const char* name_str = static_cast<const char*>(malloc(name_b.length() + 1));
-        memcpy((void*)name_str, name_b.data(), name_b.length());
-        ((char*)name_str)[name_b.length()] = '\0';
+        char* name_str = static_cast<char*>(malloc(name_b.length() + 1));
+        memcpy(name_str, name_b.data(), name_b.length());
+        name_str[name_b.length()] = '\0';
         const char* sigval1 = name_str;
         slotFunc(self, sigval1);
-        libqt_free(name_str);
+        free(name_str);
     });
 }
 

@@ -190,13 +190,13 @@ void Sonnet__BackgroundChecker_Connect_Misspelling(Sonnet__BackgroundChecker* se
         const QString word_ret = word;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray word_b = word_ret.toUtf8();
-        const char* word_str = static_cast<const char*>(malloc(word_b.length() + 1));
-        memcpy((void*)word_str, word_b.data(), word_b.length());
-        ((char*)word_str)[word_b.length()] = '\0';
+        char* word_str = static_cast<char*>(malloc(word_b.length() + 1));
+        memcpy(word_str, word_b.data(), word_b.length());
+        word_str[word_b.length()] = '\0';
         const char* sigval1 = word_str;
         int sigval2 = start;
         slotFunc(self, sigval1, sigval2);
-        libqt_free(word_str);
+        free(word_str);
     });
 }
 

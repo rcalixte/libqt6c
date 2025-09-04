@@ -155,12 +155,12 @@ void QSslServer_Connect_AlertSent(QSslServer* self, intptr_t slot) {
         const QString description_ret = description;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray description_b = description_ret.toUtf8();
-        const char* description_str = static_cast<const char*>(malloc(description_b.length() + 1));
-        memcpy((void*)description_str, description_b.data(), description_b.length());
-        ((char*)description_str)[description_b.length()] = '\0';
+        char* description_str = static_cast<char*>(malloc(description_b.length() + 1));
+        memcpy(description_str, description_b.data(), description_b.length());
+        description_str[description_b.length()] = '\0';
         const char* sigval4 = description_str;
         slotFunc(self, sigval1, sigval2, sigval3, sigval4);
-        libqt_free(description_str);
+        free(description_str);
     });
 }
 
@@ -178,12 +178,12 @@ void QSslServer_Connect_AlertReceived(QSslServer* self, intptr_t slot) {
         const QString description_ret = description;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray description_b = description_ret.toUtf8();
-        const char* description_str = static_cast<const char*>(malloc(description_b.length() + 1));
-        memcpy((void*)description_str, description_b.data(), description_b.length());
-        ((char*)description_str)[description_b.length()] = '\0';
+        char* description_str = static_cast<char*>(malloc(description_b.length() + 1));
+        memcpy(description_str, description_b.data(), description_b.length());
+        description_str[description_b.length()] = '\0';
         const char* sigval4 = description_str;
         slotFunc(self, sigval1, sigval2, sigval3, sigval4);
-        libqt_free(description_str);
+        free(description_str);
     });
 }
 

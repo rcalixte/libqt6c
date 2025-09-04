@@ -236,12 +236,12 @@ void QFutureWatcherBase_Connect_ProgressTextChanged(QFutureWatcherBase* self, in
         const QString progressText_ret = progressText;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray progressText_b = progressText_ret.toUtf8();
-        const char* progressText_str = static_cast<const char*>(malloc(progressText_b.length() + 1));
-        memcpy((void*)progressText_str, progressText_b.data(), progressText_b.length());
-        ((char*)progressText_str)[progressText_b.length()] = '\0';
+        char* progressText_str = static_cast<char*>(malloc(progressText_b.length() + 1));
+        memcpy(progressText_str, progressText_b.data(), progressText_b.length());
+        progressText_str[progressText_b.length()] = '\0';
         const char* sigval1 = progressText_str;
         slotFunc(self, sigval1);
-        libqt_free(progressText_str);
+        free(progressText_str);
     });
 }
 

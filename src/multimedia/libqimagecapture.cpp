@@ -192,12 +192,12 @@ void QImageCapture_Connect_ErrorOccurred(QImageCapture* self, intptr_t slot) {
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();
-        const char* errorString_str = static_cast<const char*>(malloc(errorString_b.length() + 1));
-        memcpy((void*)errorString_str, errorString_b.data(), errorString_b.length());
-        ((char*)errorString_str)[errorString_b.length()] = '\0';
+        char* errorString_str = static_cast<char*>(malloc(errorString_b.length() + 1));
+        memcpy(errorString_str, errorString_b.data(), errorString_b.length());
+        errorString_str[errorString_b.length()] = '\0';
         const char* sigval3 = errorString_str;
         slotFunc(self, sigval1, sigval2, sigval3);
-        libqt_free(errorString_str);
+        free(errorString_str);
     });
 }
 
@@ -326,12 +326,12 @@ void QImageCapture_Connect_ImageSaved(QImageCapture* self, intptr_t slot) {
         const QString fileName_ret = fileName;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray fileName_b = fileName_ret.toUtf8();
-        const char* fileName_str = static_cast<const char*>(malloc(fileName_b.length() + 1));
-        memcpy((void*)fileName_str, fileName_b.data(), fileName_b.length());
-        ((char*)fileName_str)[fileName_b.length()] = '\0';
+        char* fileName_str = static_cast<char*>(malloc(fileName_b.length() + 1));
+        memcpy(fileName_str, fileName_b.data(), fileName_b.length());
+        fileName_str[fileName_b.length()] = '\0';
         const char* sigval2 = fileName_str;
         slotFunc(self, sigval1, sigval2);
-        libqt_free(fileName_str);
+        free(fileName_str);
     });
 }
 

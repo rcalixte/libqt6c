@@ -311,12 +311,12 @@ void KLocalizedQmlContext_Connect_TranslationDomainChanged(KLocalizedQmlContext*
         const QString translationDomain_ret = translationDomain;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray translationDomain_b = translationDomain_ret.toUtf8();
-        const char* translationDomain_str = static_cast<const char*>(malloc(translationDomain_b.length() + 1));
-        memcpy((void*)translationDomain_str, translationDomain_b.data(), translationDomain_b.length());
-        ((char*)translationDomain_str)[translationDomain_b.length()] = '\0';
+        char* translationDomain_str = static_cast<char*>(malloc(translationDomain_b.length() + 1));
+        memcpy(translationDomain_str, translationDomain_b.data(), translationDomain_b.length());
+        translationDomain_str[translationDomain_b.length()] = '\0';
         const char* sigval1 = translationDomain_str;
         slotFunc(self, sigval1);
-        libqt_free(translationDomain_str);
+        free(translationDomain_str);
     });
 }
 
