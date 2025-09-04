@@ -1,4 +1,8 @@
 
+### 6.8.2 rev25 (4 September 2025)
+
+* Add [Qt D-Bus](https://doc.qt.io/qt-6/qtdbus-index.html) (#50)
+
 ### 6.8.2 rev24 (3 September 2025)
 
 * Add [KIconThemes](https://api-staging.kde.org/kiconthemes-index.html) (#49)
