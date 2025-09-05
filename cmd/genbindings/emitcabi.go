@@ -984,7 +984,8 @@ var (
 	}
 
 	skippedMethods = map[string]struct{}{
-		"QHostAddress_IsInSubnet2": {}, // linker error
+		"QHostAddress_IsInSubnet2":  {}, // linker error
+		"KXmlGuiWindow_VirtualHook": {}, // this method is found in multiple base classes of different types and undocumented
 	}
 
 	cTypes = map[string]struct{}{

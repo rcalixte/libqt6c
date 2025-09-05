@@ -185,6 +185,8 @@ pub fn build(b: *std.Build) !void {
         // Qt 6 WebEngine
         "QtWebEngineCore",
         "QtWebEngineWidgets",
+        // Qt 6 XML
+        "QtXml",
         // Qt 6 KCodecs
         "KCodecs",
         // Qt 6 KCompletion
@@ -222,6 +224,10 @@ pub fn build(b: *std.Build) !void {
         // Qt 6 KIconThemes
         "KIconThemes",
         "KIconWidgets",
+        // Qt 6 KXmlGui
+        "KXmlGui",
+        // Qt 6 KGlobalAccel
+        "KGlobalAccel",
         // Qt 6 QScintilla
         "Qsci",
         // Qt 6 QTermWidget
