@@ -16,7 +16,7 @@ For previous libqt6c versions supporting Qt 6.4+, there are branches correspondi
 
 This library is designed to be used as a dependency in a larger application and not as a standalone library. The versioning scheme used by this library is based on the Qt version used as a base to generate the bindings with an additional nod to the library revision number. Any breaking changes to the library will be reflected in the changelog.
 
-These bindings are based on the [MIQT bindings for Go](https://github.com/mappu/miqt) that were released in 2024. The bindings are complete for QtCore, QtGui, QtWidgets, QtCharts, QtMultimedia, QtMultimediaWidgets, QtNetwork, QtPrintSupport, QtSpatialAudio, QtSvg, QtWebChannel, QtWebEngine, QScintilla, and others. There is support for slots/signals, subclassing, custom widgets, async via Qt, etc., but the bindings may be immature or unstable in some ways. It is fairly easy to encounter segmentation faults with improper handling. Q3 of the [FAQ](#faq) is a decent entry point for newcomers. Please try out the library and start a [discussion](https://github.com/rcalixte/libqt6c/discussions) if you have any questions or issues relevant to this library.
+These bindings are based on the [MIQT bindings for Go](https://github.com/mappu/miqt) that were released in August 2024. This library features support for Qt Core, GUI, Widgets, and Network as well as [additional Qt modules](https://doc.qt.io/qt-6/qt-additional-modules.html) such as Multimedia, Print Support, Spatial Audio, SQL, SVG, WebChannel, WebEngine, and more. In addition to Qt modules, this library also features support for third-party libraries such as [QScintilla](https://riverbankcomputing.com/software/qscintilla), various [KDE Frameworks](https://api-staging.kde.org), and others. This library has support for slots/signals, subclassing, custom widgets, async via Qt, etc. In addition, there is library tooling that provides native support for Qt Creator/Designer forms and the Qt Resource System. With improper handling, it is fairly easy to encounter segmentation faults or errors. Q3 of the [FAQ](#faq) is a decent entry point for newcomers in addition to the [examples](https://github.com/rcalixte/libqt6c-examples). Please try out the library and start a [discussion](https://github.com/rcalixte/libqt6c/discussions) if you have any questions or issues directly relevant to this library.
 
 ---
 
@@ -128,11 +128,11 @@ FreeBSD (native)
 For dynamic linking with the Qt 6 system libraries:
 
 ```bash
-sudo pkg install llvm qt6-base qt6-charts qt6-multimedia qt6-pdf qt6-svg qt6-webchannel qt6-webengine kf6-kcodecs kf6-kcolorscheme kf6-kcompletion kf6-kconfig kf6-kconfigwidgets kf6-kcoreaddons kf6-kcrash kf6-kguiaddons kf6-ki18n kf6-kiconthemes kf6-kitemviews kf6-kplotting kf6-sonnet kf6-ktextwidgets kf6-kwidgetsaddons qscintilla2-qt6 qtermwidget zig
+sudo pkg install llvm qt6-base qt6-charts qt6-multimedia qt6-pdf qt6-svg qt6-webchannel qt6-webengine kf6-kcodecs kf6-kcolorscheme kf6-kcompletion kf6-kconfig kf6-kconfigwidgets kf6-kcoreaddons kf6-kcrash kf6-kglobalaccel kf6-kguiaddons kf6-ki18n kf6-kiconthemes kf6-kitemviews kf6-kplotting kf6-sonnet kf6-ktextwidgets kf6-kwidgetsaddons kf6-kxmlgui qscintilla2-qt6 qtermwidget
 ```
 
 > [!NOTE]
-> The `zig` package may need to be downloaded or compiled and installed separately if the latest stable version is not available in the default repositories.
+> The `zig` package will need to be downloaded and installed separately if the latest stable version is not available in the default repositories.
 
 Linux (native)
 --------------
@@ -152,7 +152,7 @@ For dynamic linking with the Qt 6 system libraries:
 - __Debian-based distributions__:
 
 ```bash
-sudo apt install clang-format qt6-base-dev qt6-base-private-dev qt6-charts-dev qt6-multimedia-dev qt6-pdf-dev qt6-svg-dev qt6-webchannel-dev qt6-webengine-dev libkf6codecs-dev libkf6colorscheme-dev libkf6completion-dev libkf6config-dev libkf6configwidgets-dev libkf6coreaddons-dev libkf6crash-dev libkf6guiaddons-dev libkf6i18n-dev libkf6iconthemes-dev libkf6itemviews-dev libkf6plotting-dev libkf6sonnet-dev libkf6textwidgets-dev libkf6widgetsaddons-dev libqscintilla2-qt6-dev libqtermwidget-dev sonnet6-plugins
+sudo apt install clang-format qt6-base-dev qt6-base-private-dev qt6-charts-dev qt6-multimedia-dev qt6-pdf-dev qt6-svg-dev qt6-webchannel-dev qt6-webengine-dev libkf6codecs-dev libkf6colorscheme-dev libkf6completion-dev libkf6config-dev libkf6configwidgets-dev libkf6coreaddons-dev libkf6crash-dev libkf6globalaccel-dev libkf6guiaddons-dev libkf6i18n-dev libkf6iconthemes-dev libkf6itemviews-dev libkf6plotting-dev libkf6sonnet-dev libkf6textwidgets-dev libkf6widgetsaddons-dev libkf6xmlgui-dev libqscintilla2-qt6-dev libqtermwidget-dev sonnet6-plugins
 ```
 
 > [!NOTE]
@@ -161,7 +161,7 @@ sudo apt install clang-format qt6-base-dev qt6-base-private-dev qt6-charts-dev q
 - __Fedora-based distributions__:
 
 ```bash
-sudo dnf install clang-tools-extra qt6-qtbase-devel qt6-qtcharts-devel qt6-qtmultimedia-devel qt6-qtpdf-devel qt6-qtsvg-devel qt6-qtwebchannel-devel qt6-qtwebengine-devel kf6-kcodecs-devel kf6-kcolorscheme-devel kf6-kcompletion-devel kf6-kconfig-devel kf6-kconfigwidgets-devel kf6-kcoreaddons-devel kf6-kcrash-devel kf6-kguiaddons-devel kf6-ki18n-devel kf6-kiconthemes-devel kf6-kitemviews-devel kf6-kplotting-devel kf6-sonnet-devel kf6-ktextwidgets-devel kf6-kwidgetsaddons-devel qscintilla-qt6-devel qtermwidget-devel kf6-sonnet-aspell zig
+sudo dnf install clang-tools-extra qt6-qtbase-devel qt6-qtcharts-devel qt6-qtmultimedia-devel qt6-qtpdf-devel qt6-qtsvg-devel qt6-qtwebchannel-devel qt6-qtwebengine-devel kf6-kcodecs-devel kf6-kcolorscheme-devel kf6-kcompletion-devel kf6-kconfig-devel kf6-kconfigwidgets-devel kf6-kcoreaddons-devel kf6-kcrash-devel kf6-kglobalaccel-devel kf6-kguiaddons-devel kf6-ki18n-devel kf6-kiconthemes-devel kf6-kitemviews-devel kf6-kplotting-devel kf6-sonnet-devel kf6-ktextwidgets-devel kf6-kwidgetsaddons-devel kf6-kxmlgui-devel qscintilla-qt6-devel qtermwidget-devel kf6-sonnet-aspell
 ```
 
 > [!NOTE]
@@ -170,8 +170,11 @@ sudo dnf install clang-tools-extra qt6-qtbase-devel qt6-qtcharts-devel qt6-qtmul
 - __Arch-based distributions__:
 
 ```bash
-sudo pacman -S clang qt6-base qt6-charts qt6-multimedia qt6-svg qt6-webchannel qt6-webengine kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kguiaddons ki18n kiconthemes kitemviews kplotting ktextwidgets kwidgetsaddons qscintilla-qt6 qtermwidget sonnet zig
+sudo pacman -S clang qt6-base qt6-charts qt6-multimedia qt6-svg qt6-webchannel qt6-webengine kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kglobalaccel kguiaddons ki18n kiconthemes kitemviews kplotting ktextwidgets kwidgetsaddons kxmlgui qscintilla-qt6 qtermwidget sonnet
 ```
+
+> [!NOTE]
+> The `zig` package will need to be downloaded and installed separately if the latest stable version is not available in the default repositories.
 
 Once the required packages are installed, the library can be built from the root of the repository:
 
@@ -294,7 +297,7 @@ Qt expects fixed OS threads to be used for each QObject. When you first call `q_
 
 - When accessing Qt objects from inside another thread, it's safest to use `q_threading_async` to access the Qt objects from Qt's main thread. The [Threading library](https://github.com/rcalixte/libqt6c/tree/master/src/threading/libqt6cthreading.h) documents additional available strategies within the header code.
 
-Qt C++ enums are projected as PascalCase C typedef enums, replacing namespace indicators from C++ (`::`) with underscores and where the C enum values are represented by the uppercase equivalent of the Qt C++ class name, enum name, and enum value, with casing exceptions for the values for `Qt::Key` and `QsciLexerRuby::PercentString*`. For example, `Qt::AlignmentFlag` is projected as a C enum typedef of `Qt__AlignmentFlag` with values prefixed by `QT_ALIGNMENTFLAG`. Enum values are typed in their definitions as `int8_t`, `int32_t`, `int64_t`, `uint8_t`, `uint16_t`, `uint32_t`, or `uint64_t` by the C API when expected as a parameter or returned as a type. Qt C++ [QFlags](https://doc.qt.io/qt-6/qflags.html) are projected as `int64_t` when expected as a parameter or returned as a type by the C API due to their bitmask usage and the potential to overflow.
+Qt C++ enums are projected as PascalCase C typedef enums, replacing namespace indicators from C++ (`::`) with underscores and where the C enum values are represented by the uppercase equivalent of the Qt C++ class name, enum name, and enum value, with casing exceptions for the values for `Qt::Key` and `QsciLexerRuby::PercentString*`. For example, `Qt::AlignmentFlag` is projected as a C enum typedef of `Qt__AlignmentFlag` with values prefixed by `QT_ALIGNMENTFLAG`. Enum values are typed in their definitions as `int8_t`, `int32_t`, `int64_t`, `uint8_t`, `uint16_t`, `uint32_t`, or `uint64_t` by the C API when expected as a parameter or returned as a type. Qt C++ [QFlags](https://doc.qt.io/qt-6/qflags.html) are projected as `int32_t`, `uint8_t`, `uint16_t`, `uint32_t` where possible when expected as a parameter or returned as a type by the C API or `int64_t` due to their bitmask usage and the potential to overflow.
 
 #### API at a glance
 
