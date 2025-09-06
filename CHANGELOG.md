@@ -1,4 +1,8 @@
 
+### 6.8.2 rev27 (6 September 2025)
+
+* Add a build option for passing extra paths
+
 ### 6.8.2 rev26 (5 September 2025)
 
 * Add [Qt XML](https://doc.qt.io/qt-6/qtxml-index.html), [KGlobalAccel](https://api-staging.kde.org/kglobalaccel-index.html), and [KXmlGui](https://api-staging.kde.org/kxmlgui-index.html) (#51)
