@@ -33,7 +33,7 @@ KAutoSaveFile* k_autosavefile_new3(void* filename, void* parent);
 /// @param parent QObject*
 KAutoSaveFile* k_autosavefile_new4(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KAutoSaveFile*
 const QMetaObject* k_autosavefile_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_autosavefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t k_autosavefile_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -131,7 +131,7 @@ libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files(void* url);
 ///
 libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -139,7 +139,7 @@ libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files();
 /// @param c const char*
 const char* k_autosavefile_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

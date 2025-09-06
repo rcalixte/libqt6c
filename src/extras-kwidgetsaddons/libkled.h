@@ -50,7 +50,7 @@ KLed* k_led_new5(void* color, void* parent);
 /// @param parent QWidget*
 KLed* k_led_new6(void* color, int32_t state, int32_t look, int32_t shape, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KLed*
 const QMetaObject* k_led_meta_object(void* self);
@@ -79,7 +79,7 @@ void k_led_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void
 /// @param param3 void*
 int32_t k_led_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -246,7 +246,7 @@ void k_led_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QResizeEvent*
 void k_led_qbase_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -254,7 +254,7 @@ void k_led_qbase_resize_event(void* self, void* param1);
 /// @param c const char*
 const char* k_led_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

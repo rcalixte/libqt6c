@@ -33,7 +33,7 @@ KMultiTabBar* k_multitabbar_new3(int32_t pos);
 /// @param parent QWidget*
 KMultiTabBar* k_multitabbar_new4(int32_t pos, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KMultiTabBar*
 const QMetaObject* k_multitabbar_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_multitabbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t k_multitabbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -208,7 +208,7 @@ void k_multitabbar_on_update_separator(void* self, void (*callback)());
 /// @param self KMultiTabBar*
 void k_multitabbar_qbase_update_separator(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -216,7 +216,7 @@ void k_multitabbar_qbase_update_separator(void* self);
 /// @param c const char*
 const char* k_multitabbar_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4471,7 +4471,7 @@ void k_multitabbar_delete(void* self);
 
 /// https://api-staging.kde.org/kmultitabbarbutton.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KMultiTabBarButton*
 const QMetaObject* k_multitabbarbutton_meta_object(void* self);
@@ -4486,7 +4486,7 @@ void* k_multitabbarbutton_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_multitabbarbutton_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4516,7 +4516,7 @@ void k_multitabbarbutton_clicked(void* self, int id);
 /// @param callback void func(KMultiTabBarButton* self, int id)
 void k_multitabbarbutton_on_clicked(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4524,7 +4524,7 @@ void k_multitabbarbutton_on_clicked(void* self, void (*callback)(void*, int));
 /// @param c const char*
 const char* k_multitabbarbutton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -7470,7 +7470,7 @@ void k_multitabbarbutton_delete(void* self);
 
 /// https://api-staging.kde.org/kmultitabbartab.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KMultiTabBarTab*
 const QMetaObject* k_multitabbartab_meta_object(void* self);
@@ -7485,7 +7485,7 @@ void* k_multitabbartab_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_multitabbartab_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -7520,7 +7520,7 @@ void k_multitabbartab_set_style(void* self, int32_t style);
 /// @param state bool
 void k_multitabbartab_set_state(void* self, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -7528,7 +7528,7 @@ void k_multitabbartab_set_state(void* self, bool state);
 /// @param c const char*
 const char* k_multitabbartab_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

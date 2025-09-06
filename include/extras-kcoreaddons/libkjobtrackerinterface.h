@@ -22,7 +22,7 @@ KJobTrackerInterface* k_jobtrackerinterface_new();
 /// @param parent QObject*
 KJobTrackerInterface* k_jobtrackerinterface_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KJobTrackerInterface*
 const QMetaObject* k_jobtrackerinterface_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_jobtrackerinterface_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_jobtrackerinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -344,7 +344,7 @@ void k_jobtrackerinterface_on_speed(void* self, void (*callback)(void*, void*, u
 /// @param value uint64_t
 void k_jobtrackerinterface_qbase_speed(void* self, void* job, uint64_t value);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -352,7 +352,7 @@ void k_jobtrackerinterface_qbase_speed(void* self, void* job, uint64_t value);
 /// @param c const char*
 const char* k_jobtrackerinterface_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

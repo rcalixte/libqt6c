@@ -22,7 +22,7 @@ KColumnResizer* k_columnresizer_new();
 /// @param parent QObject*
 KColumnResizer* k_columnresizer_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KColumnResizer*
 const QMetaObject* k_columnresizer_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_columnresizer_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_columnresizer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -100,7 +100,7 @@ void k_columnresizer_on_event_filter(void* self, bool (*callback)(void*, void*, 
 /// @param event QEvent*
 bool k_columnresizer_qbase_event_filter(void* self, void* param1, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -108,7 +108,7 @@ bool k_columnresizer_qbase_event_filter(void* self, void* param1, void* event);
 /// @param c const char*
 const char* k_columnresizer_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

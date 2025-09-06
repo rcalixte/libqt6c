@@ -22,7 +22,7 @@ KTitleWidget* k_titlewidget_new(void* parent);
 ///
 KTitleWidget* k_titlewidget_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTitleWidget*
 const QMetaObject* k_titlewidget_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_titlewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t k_titlewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -221,7 +221,7 @@ void k_titlewidget_on_event_filter(void* self, bool (*callback)(void*, void*, vo
 /// @param event QEvent*
 bool k_titlewidget_qbase_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -229,7 +229,7 @@ bool k_titlewidget_qbase_event_filter(void* self, void* object, void* event);
 /// @param c const char*
 const char* k_titlewidget_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

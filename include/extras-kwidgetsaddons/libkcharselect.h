@@ -37,7 +37,7 @@ KCharSelect* k_charselect_new3(void* parent, const int32_t controls);
 /// @param controls flag of enum KCharSelect__Control
 KCharSelect* k_charselect_new4(void* parent, void* actionParent, const int32_t controls);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCharSelect*
 const QMetaObject* k_charselect_meta_object(void* self);
@@ -66,7 +66,7 @@ void k_charselect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_charselect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -218,7 +218,7 @@ void k_charselect_code_point_selected(void* self, uint32_t codePoint);
 /// @param callback void func(KCharSelect* self, uint32_t codePoint)
 void k_charselect_on_code_point_selected(void* self, void (*callback)(void*, uint32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -226,7 +226,7 @@ void k_charselect_on_code_point_selected(void* self, void (*callback)(void*, uin
 /// @param c const char*
 const char* k_charselect_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

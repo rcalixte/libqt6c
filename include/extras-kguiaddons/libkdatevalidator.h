@@ -22,7 +22,7 @@ KDateValidator* k_datevalidator_new();
 /// @param parent QObject*
 KDateValidator* k_datevalidator_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KDateValidator*
 const QMetaObject* k_datevalidator_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_datevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_datevalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -117,7 +117,7 @@ void k_datevalidator_qbase_fixup(void* self, const char* input);
 /// @return enum QValidator__State
 int32_t k_datevalidator_date(void* self, const char* text, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -125,7 +125,7 @@ int32_t k_datevalidator_date(void* self, const char* text, void* date);
 /// @param c const char*
 const char* k_datevalidator_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -33,7 +33,7 @@ KHistoryComboBox* k_historycombobox_new3(bool useCompletion);
 /// @param parent QWidget*
 KHistoryComboBox* k_historycombobox_new4(bool useCompletion, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KHistoryComboBox*
 const QMetaObject* k_historycombobox_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_historycombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_historycombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -208,7 +208,7 @@ void k_historycombobox_on_use_completion(void* self, bool (*callback)());
 /// @param self KHistoryComboBox*
 bool k_historycombobox_qbase_use_completion(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -216,7 +216,7 @@ bool k_historycombobox_qbase_use_completion(void* self);
 /// @param c const char*
 const char* k_historycombobox_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

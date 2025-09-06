@@ -18,7 +18,7 @@
 /// @param parent QWidget*
 KCommandBar* k_commandbar_new(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCommandBar*
 const QMetaObject* k_commandbar_meta_object(void* self);
@@ -47,7 +47,7 @@ void k_commandbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_commandbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -89,7 +89,7 @@ void k_commandbar_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 /// @param event QEvent*
 bool k_commandbar_qbase_event_filter(void* self, void* obj, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -97,7 +97,7 @@ bool k_commandbar_qbase_event_filter(void* self, void* obj, void* event);
 /// @param c const char*
 const char* k_commandbar_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

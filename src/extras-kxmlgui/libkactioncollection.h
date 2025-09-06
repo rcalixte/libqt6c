@@ -24,7 +24,7 @@ KActionCollection* k_actioncollection_new(void* parent);
 /// @param cName const char*
 KActionCollection* k_actioncollection_new2(void* parent, const char* cName);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KActionCollection*
 const QMetaObject* k_actioncollection_meta_object(void* self);
@@ -53,7 +53,7 @@ void k_actioncollection_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_actioncollection_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -364,7 +364,7 @@ bool k_actioncollection_is_shortcuts_configurable(void* action);
 /// @param configurable bool
 void k_actioncollection_set_shortcuts_configurable(void* action, bool configurable);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -372,7 +372,7 @@ void k_actioncollection_set_shortcuts_configurable(void* action, bool configurab
 /// @param c const char*
 const char* k_actioncollection_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

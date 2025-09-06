@@ -18,7 +18,7 @@
 /// @param parent QObject*
 KToolBarSpacerAction* k_toolbarspaceraction_new(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KToolBarSpacerAction*
 const QMetaObject* k_toolbarspaceraction_meta_object(void* self);
@@ -47,7 +47,7 @@ void k_toolbarspaceraction_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_toolbarspaceraction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -76,7 +76,7 @@ void k_toolbarspaceraction_on_create_widget(void* self, QWidget* (*callback)(voi
 /// @param parent QWidget*
 QWidget* k_toolbarspaceraction_qbase_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -84,7 +84,7 @@ QWidget* k_toolbarspaceraction_qbase_create_widget(void* self, void* parent);
 /// @param c const char*
 const char* k_toolbarspaceraction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

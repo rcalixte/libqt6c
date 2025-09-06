@@ -13,7 +13,7 @@
 
 /// https://api-staging.kde.org/kglobalaccel.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KGlobalAccel*
 const QMetaObject* k_globalaccel_meta_object(void* self);
@@ -28,7 +28,7 @@ void* k_globalaccel_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_globalaccel_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -154,7 +154,7 @@ void k_globalaccel_global_shortcut_active_changed(void* self, void* action, bool
 /// @param callback void func(KGlobalAccel* self, QAction* action, bool active)
 void k_globalaccel_on_global_shortcut_active_changed(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -162,7 +162,7 @@ void k_globalaccel_on_global_shortcut_active_changed(void* self, void (*callback
 /// @param c const char*
 const char* k_globalaccel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

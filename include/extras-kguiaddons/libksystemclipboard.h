@@ -13,7 +13,7 @@
 
 /// https://api-staging.kde.org/ksystemclipboard.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSystemClipboard*
 const QMetaObject* k_systemclipboard_meta_object(void* self);
@@ -28,7 +28,7 @@ void* k_systemclipboard_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_systemclipboard_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -78,7 +78,7 @@ void k_systemclipboard_changed(void* self, int32_t mode);
 /// @param callback void func(KSystemClipboard* self, enum QClipboard__Mode mode)
 void k_systemclipboard_on_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -86,7 +86,7 @@ void k_systemclipboard_on_changed(void* self, void (*callback)(void*, int32_t));
 /// @param c const char*
 const char* k_systemclipboard_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

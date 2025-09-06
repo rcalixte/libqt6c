@@ -33,7 +33,7 @@ KSqueezedTextLabel* k_squeezedtextlabel_new3(const char* text);
 /// @param parent QWidget*
 KSqueezedTextLabel* k_squeezedtextlabel_new4(const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSqueezedTextLabel*
 const QMetaObject* k_squeezedtextlabel_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_squeezedtextlabel_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t k_squeezedtextlabel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -270,7 +270,7 @@ void k_squeezedtextlabel_on_squeeze_text_to_label(void* self, void (*callback)()
 /// @param self KSqueezedTextLabel*
 void k_squeezedtextlabel_qbase_squeeze_text_to_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -278,7 +278,7 @@ void k_squeezedtextlabel_qbase_squeeze_text_to_label(void* self);
 /// @param c const char*
 const char* k_squeezedtextlabel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

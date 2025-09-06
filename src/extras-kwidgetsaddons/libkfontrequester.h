@@ -28,7 +28,7 @@ KFontRequester* k_fontrequester_new2();
 /// @param onlyFixed bool
 KFontRequester* k_fontrequester_new3(void* parent, bool onlyFixed);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFontRequester*
 const QMetaObject* k_fontrequester_meta_object(void* self);
@@ -57,7 +57,7 @@ void k_fontrequester_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_fontrequester_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -202,7 +202,7 @@ void k_fontrequester_on_event_filter(void* self, bool (*callback)(void*, void*, 
 /// @param event QEvent*
 bool k_fontrequester_qbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -210,7 +210,7 @@ bool k_fontrequester_qbase_event_filter(void* self, void* watched, void* event);
 /// @param c const char*
 const char* k_fontrequester_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

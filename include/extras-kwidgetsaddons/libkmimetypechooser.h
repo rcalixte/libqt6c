@@ -62,7 +62,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
 /// @param parent QWidget*
 KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KMimeTypeChooser*
 const QMetaObject* k_mimetypechooser_meta_object(void* self);
@@ -91,7 +91,7 @@ void k_mimetypechooser_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_mimetypechooser_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -112,7 +112,7 @@ const char** k_mimetypechooser_mime_types(void* self);
 /// @param self KMimeTypeChooser*
 const char** k_mimetypechooser_patterns(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -120,7 +120,7 @@ const char** k_mimetypechooser_patterns(void* self);
 /// @param c const char*
 const char* k_mimetypechooser_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4451,7 +4451,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
 /// @param parent QWidget*
 KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KMimeTypeChooserDialog*
 const QMetaObject* k_mimetypechooserdialog_meta_object(void* self);
@@ -4480,7 +4480,7 @@ void k_mimetypechooserdialog_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param3 void*
 int32_t k_mimetypechooserdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4512,7 +4512,7 @@ void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)());
 /// @param self KMimeTypeChooserDialog*
 QSize* k_mimetypechooserdialog_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4520,7 +4520,7 @@ QSize* k_mimetypechooserdialog_qbase_size_hint(void* self);
 /// @param c const char*
 const char* k_mimetypechooserdialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

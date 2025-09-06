@@ -19,7 +19,7 @@
 /// @param conf KCoreConfigSkeleton*
 KConfigDialogManager* k_configdialogmanager_new(void* parent, void* conf);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigDialogManager*
 const QMetaObject* k_configdialogmanager_meta_object(void* self);
@@ -48,7 +48,7 @@ void k_configdialogmanager_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_configdialogmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -350,7 +350,7 @@ void k_configdialogmanager_on_init_maps(void* self, void (*callback)());
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_qbase_init_maps(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -358,7 +358,7 @@ void k_configdialogmanager_qbase_init_maps(void* self);
 /// @param c const char*
 const char* k_configdialogmanager_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

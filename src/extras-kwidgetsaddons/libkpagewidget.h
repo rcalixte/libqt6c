@@ -22,7 +22,7 @@ KPageWidget* k_pagewidget_new(void* parent);
 ///
 KPageWidget* k_pagewidget_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPageWidget*
 const QMetaObject* k_pagewidget_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_pagewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_pagewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -156,7 +156,7 @@ void k_pagewidget_page_removed(void* self, void* page);
 /// @param callback void func(KPageWidget* self, KPageWidgetItem* page)
 void k_pagewidget_on_page_removed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -164,7 +164,7 @@ void k_pagewidget_on_page_removed(void* self, void (*callback)(void*, void*));
 /// @param c const char*
 const char* k_pagewidget_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

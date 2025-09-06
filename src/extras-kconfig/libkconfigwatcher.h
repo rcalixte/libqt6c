@@ -13,7 +13,7 @@
 
 /// https://api-staging.kde.org/kconfigwatcher.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigWatcher*
 const QMetaObject* k_configwatcher_meta_object(void* self);
@@ -28,7 +28,7 @@ void* k_configwatcher_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_configwatcher_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -48,7 +48,7 @@ void k_configwatcher_config_changed(void* self, void* group, const char* names[]
 /// @param callback void func(KConfigWatcher* self, KConfigGroup* group, const char** names)
 void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*, const char**));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -56,7 +56,7 @@ void k_configwatcher_on_config_changed(void* self, void (*callback)(void*, void*
 /// @param c const char*
 const char* k_configwatcher_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

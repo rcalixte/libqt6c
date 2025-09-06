@@ -33,7 +33,7 @@ KRecentFilesMenu* k_recentfilesmenu_new3();
 /// @param parent QWidget*
 KRecentFilesMenu* k_recentfilesmenu_new4(const char* title, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KRecentFilesMenu*
 const QMetaObject* k_recentfilesmenu_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_recentfilesmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_recentfilesmenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -138,7 +138,7 @@ void k_recentfilesmenu_recent_files_changed(void* self);
 /// @param callback void func(KRecentFilesMenu* self)
 void k_recentfilesmenu_on_recent_files_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -146,7 +146,7 @@ void k_recentfilesmenu_on_recent_files_changed(void* self, void (*callback)(void
 /// @param c const char*
 const char* k_recentfilesmenu_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

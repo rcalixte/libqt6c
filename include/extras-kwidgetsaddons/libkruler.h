@@ -61,7 +61,7 @@ KRuler* k_ruler_new7(int32_t orient, int widgetWidth, void* parent);
 /// @param f flag of enum Qt__WindowType
 KRuler* k_ruler_new8(int32_t orient, int widgetWidth, void* parent, int64_t f);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KRuler*
 const QMetaObject* k_ruler_meta_object(void* self);
@@ -90,7 +90,7 @@ void k_ruler_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
 /// @param param3 void*
 int32_t k_ruler_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -336,7 +336,7 @@ void k_ruler_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QPaintEvent*
 void k_ruler_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -344,7 +344,7 @@ void k_ruler_qbase_paint_event(void* self, void* param1);
 /// @param c const char*
 const char* k_ruler_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

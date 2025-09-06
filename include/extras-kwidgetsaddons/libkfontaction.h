@@ -37,7 +37,7 @@ KFontAction* k_fontaction_new3(const char* text, void* parent);
 /// @param parent QObject*
 KFontAction* k_fontaction_new4(void* icon, const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFontAction*
 const QMetaObject* k_fontaction_meta_object(void* self);
@@ -66,7 +66,7 @@ void k_fontaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_fontaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -108,7 +108,7 @@ void k_fontaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*
 /// @param parent QWidget*
 QWidget* k_fontaction_qbase_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -116,7 +116,7 @@ QWidget* k_fontaction_qbase_create_widget(void* self, void* parent);
 /// @param c const char*
 const char* k_fontaction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

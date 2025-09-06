@@ -37,7 +37,7 @@ KReplace* k_replace_new2(const char* pattern, const char* replacement, int64_t o
 /// @param parent QWidget*
 KReplace* k_replace_new3(const char* pattern, const char* replacement, int64_t options, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KReplace*
 const QMetaObject* k_replace_meta_object(void* self);
@@ -66,7 +66,7 @@ void k_replace_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
 /// @param param3 void*
 int32_t k_replace_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -184,7 +184,7 @@ void k_replace_text_replaced(void* self, const char* text, int replacementIndex,
 /// @param callback void func(KReplace* self, const char* text, int replacementIndex, int replacedLength, int matchedLength)
 void k_replace_on_text_replaced(void* self, void (*callback)(void*, const char*, int, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -192,7 +192,7 @@ void k_replace_on_text_replaced(void* self, void (*callback)(void*, const char*,
 /// @param c const char*
 const char* k_replace_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

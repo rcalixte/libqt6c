@@ -18,7 +18,7 @@
 /// @param parent QAbstractItemView*
 KExtendableItemDelegate* k_extendableitemdelegate_new(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KExtendableItemDelegate*
 const QMetaObject* k_extendableitemdelegate_meta_object(void* self);
@@ -47,7 +47,7 @@ void k_extendableitemdelegate_on_metacall(void* self, int32_t (*callback)(void*,
 /// @param param3 void*
 int32_t k_extendableitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -290,7 +290,7 @@ void k_extendableitemdelegate_on_contract_pixmap(void* self, QPixmap* (*callback
 /// @param self KExtendableItemDelegate*
 QPixmap* k_extendableitemdelegate_qbase_contract_pixmap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -298,7 +298,7 @@ QPixmap* k_extendableitemdelegate_qbase_contract_pixmap(void* self);
 /// @param c const char*
 const char* k_extendableitemdelegate_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

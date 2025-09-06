@@ -22,7 +22,7 @@ KIconButton* k_iconbutton_new(void* parent);
 ///
 KIconButton* k_iconbutton_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIconButton*
 const QMetaObject* k_iconbutton_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_iconbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_iconbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -134,7 +134,7 @@ void k_iconbutton_icon_changed(void* self, const char* icon);
 /// @param callback void func(KIconButton* self, const char* icon)
 void k_iconbutton_on_icon_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -142,7 +142,7 @@ void k_iconbutton_on_icon_changed(void* self, void (*callback)(void*, const char
 /// @param c const char*
 const char* k_iconbutton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

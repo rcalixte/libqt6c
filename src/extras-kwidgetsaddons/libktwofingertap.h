@@ -22,7 +22,7 @@ KTwoFingerTap* k_twofingertap_new();
 /// @param parent QObject*
 KTwoFingerTap* k_twofingertap_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTwoFingerTap*
 const QMetaObject* k_twofingertap_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_twofingertap_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t k_twofingertap_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -91,7 +91,7 @@ QPointF* k_twofingertap_scene_pos(void* self);
 /// @param scenePos QPointF*
 void k_twofingertap_set_scene_pos(void* self, void* scenePos);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -99,7 +99,7 @@ void k_twofingertap_set_scene_pos(void* self, void* scenePos);
 /// @param c const char*
 const char* k_twofingertap_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

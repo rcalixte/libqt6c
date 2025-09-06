@@ -40,7 +40,7 @@ KShortcutsDialog* k_shortcutsdialog_new4(int64_t actionTypes, int32_t allowLette
 /// @param parent QWidget*
 KShortcutsDialog* k_shortcutsdialog_new5(int64_t actionTypes, int32_t allowLetterShortcuts, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KShortcutsDialog*
 const QMetaObject* k_shortcutsdialog_meta_object(void* self);
@@ -69,7 +69,7 @@ void k_shortcutsdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_shortcutsdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -171,7 +171,7 @@ void k_shortcutsdialog_saved(void* self);
 /// @param callback void func(KShortcutsDialog* self)
 void k_shortcutsdialog_on_saved(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -179,7 +179,7 @@ void k_shortcutsdialog_on_saved(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* k_shortcutsdialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

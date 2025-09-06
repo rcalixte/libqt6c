@@ -33,7 +33,7 @@ KRichTextEdit* k_richtextedit_new3();
 /// @param parent QWidget*
 KRichTextEdit* k_richtextedit_new4(const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KRichTextEdit*
 const QMetaObject* k_richtextedit_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_richtextedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t k_richtextedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -310,7 +310,7 @@ void k_richtextedit_on_key_press_event(void* self, void (*callback)(void*, void*
 /// @param event QKeyEvent*
 void k_richtextedit_qbase_key_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -318,7 +318,7 @@ void k_richtextedit_qbase_key_press_event(void* self, void* event);
 /// @param c const char*
 const char* k_richtextedit_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

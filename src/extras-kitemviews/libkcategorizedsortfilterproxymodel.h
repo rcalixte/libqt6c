@@ -22,7 +22,7 @@ KCategorizedSortFilterProxyModel* k_categorizedsortfilterproxymodel_new();
 /// @param parent QObject*
 KCategorizedSortFilterProxyModel* k_categorizedsortfilterproxymodel_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 const QMetaObject* k_categorizedsortfilterproxymodel_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_categorizedsortfilterproxymodel_on_metacall(void* self, int32_t (*callbac
 /// @param param3 void*
 int32_t k_categorizedsortfilterproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -188,7 +188,7 @@ void k_categorizedsortfilterproxymodel_on_compare_categories(void* self, int32_t
 /// @param right QModelIndex*
 int32_t k_categorizedsortfilterproxymodel_qbase_compare_categories(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ int32_t k_categorizedsortfilterproxymodel_qbase_compare_categories(void* self, v
 /// @param c const char*
 const char* k_categorizedsortfilterproxymodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

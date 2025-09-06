@@ -22,7 +22,7 @@ KPixmapRegionSelectorDialog* k_pixmapregionselectordialog_new(void* parent);
 ///
 KPixmapRegionSelectorDialog* k_pixmapregionselectordialog_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 const QMetaObject* k_pixmapregionselectordialog_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_pixmapregionselectordialog_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param3 void*
 int32_t k_pixmapregionselectordialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -92,7 +92,7 @@ QImage* k_pixmapregionselectordialog_get_selected_image2(void* pixmap, int aspec
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_adjust_region_selector_widget_size_to_fit_screen(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -100,7 +100,7 @@ void k_pixmapregionselectordialog_adjust_region_selector_widget_size_to_fit_scre
 /// @param c const char*
 const char* k_pixmapregionselectordialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

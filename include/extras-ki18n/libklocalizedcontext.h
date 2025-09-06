@@ -22,7 +22,7 @@ KLocalizedContext* k_localizedcontext_new();
 /// @param parent QObject*
 KLocalizedContext* k_localizedcontext_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KLocalizedContext*
 const QMetaObject* k_localizedcontext_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_localizedcontext_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_localizedcontext_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -235,7 +235,7 @@ void k_localizedcontext_translation_domain_changed(void* self, const char* trans
 /// @param callback void func(KLocalizedContext* self, const char* translationDomain)
 void k_localizedcontext_on_translation_domain_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -243,7 +243,7 @@ void k_localizedcontext_on_translation_domain_changed(void* self, void (*callbac
 /// @param c const char*
 const char* k_localizedcontext_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

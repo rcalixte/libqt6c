@@ -33,7 +33,7 @@ KSelector* k_selector_new3(int32_t o);
 /// @param parent QWidget*
 KSelector* k_selector_new4(int32_t o, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSelector*
 const QMetaObject* k_selector_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_selector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param3 void*
 int32_t k_selector_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -254,7 +254,7 @@ void k_selector_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QWheelEvent*
 void k_selector_qbase_wheel_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -262,7 +262,7 @@ void k_selector_qbase_wheel_event(void* self, void* param1);
 /// @param c const char*
 const char* k_selector_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4750,7 +4750,7 @@ KGradientSelector* k_gradientselector_new3(int32_t o);
 /// @param parent QWidget*
 KGradientSelector* k_gradientselector_new4(int32_t o, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KGradientSelector*
 const QMetaObject* k_gradientselector_meta_object(void* self);
@@ -4779,7 +4779,7 @@ void k_gradientselector_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_gradientselector_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4901,7 +4901,7 @@ void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)());
 /// @param self KGradientSelector*
 QSize* k_gradientselector_qbase_minimum_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4909,7 +4909,7 @@ QSize* k_gradientselector_qbase_minimum_size(void* self);
 /// @param c const char*
 const char* k_gradientselector_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

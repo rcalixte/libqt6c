@@ -22,7 +22,7 @@ KColorSchemeWatcher* k_colorschemewatcher_new();
 /// @param parent QObject*
 KColorSchemeWatcher* k_colorschemewatcher_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KColorSchemeWatcher*
 const QMetaObject* k_colorschemewatcher_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_colorschemewatcher_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_colorschemewatcher_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -76,7 +76,7 @@ void k_colorschemewatcher_system_preference_changed(void* self);
 /// @param callback void func(KColorSchemeWatcher* self)
 void k_colorschemewatcher_on_system_preference_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -84,7 +84,7 @@ void k_colorschemewatcher_on_system_preference_changed(void* self, void (*callba
 /// @param c const char*
 const char* k_colorschemewatcher_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

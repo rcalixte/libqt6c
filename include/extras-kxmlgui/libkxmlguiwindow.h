@@ -28,7 +28,7 @@ KXmlGuiWindow* k_xmlguiwindow_new2();
 /// @param flags flag of enum Qt__WindowType
 KXmlGuiWindow* k_xmlguiwindow_new3(void* parent, int64_t flags);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KXmlGuiWindow*
 const QMetaObject* k_xmlguiwindow_meta_object(void* self);
@@ -57,7 +57,7 @@ void k_xmlguiwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t k_xmlguiwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -306,7 +306,7 @@ void k_xmlguiwindow_on_save_new_toolbar_config(void* self, void (*callback)());
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_qbase_save_new_toolbar_config(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -314,7 +314,7 @@ void k_xmlguiwindow_qbase_save_new_toolbar_config(void* self);
 /// @param c const char*
 const char* k_xmlguiwindow_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

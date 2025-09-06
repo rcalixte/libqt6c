@@ -40,7 +40,7 @@ KUrlLabel* k_urllabel_new4(const char* url, const char* text);
 /// @param parent QWidget*
 KUrlLabel* k_urllabel_new5(const char* url, const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KUrlLabel*
 const QMetaObject* k_urllabel_meta_object(void* self);
@@ -69,7 +69,7 @@ void k_urllabel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param3 void*
 int32_t k_urllabel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -348,7 +348,7 @@ void k_urllabel_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_urllabel_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -356,7 +356,7 @@ bool k_urllabel_qbase_event(void* self, void* param1);
 /// @param c const char*
 const char* k_urllabel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

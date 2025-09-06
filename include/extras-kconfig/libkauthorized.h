@@ -13,7 +13,7 @@
 
 /// https://api-staging.kde.org/kauthorized.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KAuthorized*
 const QMetaObject* k_authorized_meta_object(void* self);
@@ -28,7 +28,7 @@ void* k_authorized_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_authorized_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -60,7 +60,7 @@ bool k_authorized_authorize_action2(int32_t action);
 /// @param pluginId const char*
 bool k_authorized_authorize_control_module(const char* pluginId);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -68,7 +68,7 @@ bool k_authorized_authorize_control_module(const char* pluginId);
 /// @param c const char*
 const char* k_authorized_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

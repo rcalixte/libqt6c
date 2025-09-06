@@ -17,7 +17,7 @@
 ///
 KModifierKeyInfoProvider* k_modifierkeyinfoprovider_new();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KModifierKeyInfoProvider*
 const QMetaObject* k_modifierkeyinfoprovider_meta_object(void* self);
@@ -46,7 +46,7 @@ void k_modifierkeyinfoprovider_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param3 void*
 int32_t k_modifierkeyinfoprovider_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -238,7 +238,7 @@ void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(voi
 /// @param state flag of enum KModifierKeyInfoProvider__ModifierState
 void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -246,7 +246,7 @@ void k_modifierkeyinfoprovider_qbase_state_updated(void* self, int32_t key, int3
 /// @param c const char*
 const char* k_modifierkeyinfoprovider_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

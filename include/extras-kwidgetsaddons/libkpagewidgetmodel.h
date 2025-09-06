@@ -24,7 +24,7 @@ KPageWidgetItem* k_pagewidgetitem_new(void* widget);
 /// @param name const char*
 KPageWidgetItem* k_pagewidgetitem_new2(void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPageWidgetItem*
 const QMetaObject* k_pagewidgetitem_meta_object(void* self);
@@ -53,7 +53,7 @@ void k_pagewidgetitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_pagewidgetitem_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -191,7 +191,7 @@ void k_pagewidgetitem_actions_changed(void* self);
 /// @param callback void func(KPageWidgetItem* self)
 void k_pagewidgetitem_on_actions_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -199,7 +199,7 @@ void k_pagewidgetitem_on_actions_changed(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* k_pagewidgetitem_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -871,7 +871,7 @@ KPageWidgetModel* k_pagewidgetmodel_new();
 /// @param parent QObject*
 KPageWidgetModel* k_pagewidgetmodel_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPageWidgetModel*
 const QMetaObject* k_pagewidgetmodel_meta_object(void* self);
@@ -900,7 +900,7 @@ void k_pagewidgetmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_pagewidgetmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1149,7 +1149,7 @@ void k_pagewidgetmodel_toggled(void* self, void* page, bool checked);
 /// @param callback void func(KPageWidgetModel* self, KPageWidgetItem* page, bool checked)
 void k_pagewidgetmodel_on_toggled(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1157,7 +1157,7 @@ void k_pagewidgetmodel_on_toggled(void* self, void (*callback)(void*, void*, boo
 /// @param c const char*
 const char* k_pagewidgetmodel_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

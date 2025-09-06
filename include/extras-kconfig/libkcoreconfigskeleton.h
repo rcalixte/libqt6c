@@ -1062,7 +1062,7 @@ KCoreConfigSkeleton* k_coreconfigskeleton_new2(const char* configname);
 /// @param parent QObject*
 KCoreConfigSkeleton* k_coreconfigskeleton_new3(const char* configname, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCoreConfigSkeleton*
 const QMetaObject* k_coreconfigskeleton_meta_object(void* self);
@@ -1091,7 +1091,7 @@ void k_coreconfigskeleton_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_coreconfigskeleton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1329,7 +1329,7 @@ void k_coreconfigskeleton_on_usr_save(void* self, bool (*callback)());
 /// @param self KCoreConfigSkeleton*
 bool k_coreconfigskeleton_qbase_usr_save(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1337,7 +1337,7 @@ bool k_coreconfigskeleton_qbase_usr_save(void* self);
 /// @param c const char*
 const char* k_coreconfigskeleton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

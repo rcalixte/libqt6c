@@ -52,7 +52,7 @@ KCodecAction* k_codecaction_new5(const char* text, void* parent, bool showAutoOp
 /// @param showAutoOptions bool
 KCodecAction* k_codecaction_new6(void* icon, const char* text, void* parent, bool showAutoOptions);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCodecAction*
 const QMetaObject* k_codecaction_meta_object(void* self);
@@ -81,7 +81,7 @@ void k_codecaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t k_codecaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -146,7 +146,7 @@ void k_codecaction_on_slot_action_triggered(void* self, void (*callback)(void*, 
 /// @param param1 QAction*
 void k_codecaction_qbase_slot_action_triggered(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -154,7 +154,7 @@ void k_codecaction_qbase_slot_action_triggered(void* self, void* param1);
 /// @param c const char*
 const char* k_codecaction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

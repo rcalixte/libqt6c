@@ -18,7 +18,7 @@
 /// @param path const char*
 KListOpenFilesJob* k_listopenfilesjob_new(const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KListOpenFilesJob*
 const QMetaObject* k_listopenfilesjob_meta_object(void* self);
@@ -47,7 +47,7 @@ void k_listopenfilesjob_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_listopenfilesjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -79,7 +79,7 @@ void k_listopenfilesjob_qbase_start(void* self);
 /// @param self KListOpenFilesJob*
 libqt_list /* of KProcessList__KProcessInfo* */ k_listopenfilesjob_process_info_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -87,7 +87,7 @@ libqt_list /* of KProcessList__KProcessInfo* */ k_listopenfilesjob_process_info_
 /// @param c const char*
 const char* k_listopenfilesjob_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

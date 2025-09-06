@@ -35,7 +35,7 @@ KEditToolBar* k_edittoolbar_new3(void* collection, void* parent);
 /// @param parent QWidget*
 KEditToolBar* k_edittoolbar_new4(void* factory, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KEditToolBar*
 const QMetaObject* k_edittoolbar_meta_object(void* self);
@@ -64,7 +64,7 @@ void k_edittoolbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t k_edittoolbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -143,7 +143,7 @@ void k_edittoolbar_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param event QHideEvent*
 void k_edittoolbar_qbase_hide_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -151,7 +151,7 @@ void k_edittoolbar_qbase_hide_event(void* self, void* event);
 /// @param c const char*
 const char* k_edittoolbar_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

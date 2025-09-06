@@ -22,7 +22,7 @@ KColorCombo* k_colorcombo_new(void* parent);
 ///
 KColorCombo* k_colorcombo_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KColorCombo*
 const QMetaObject* k_colorcombo_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_colorcombo_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_colorcombo_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -136,7 +136,7 @@ void k_colorcombo_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 void k_colorcombo_qbase_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -144,7 +144,7 @@ void k_colorcombo_qbase_paint_event(void* self, void* event);
 /// @param c const char*
 const char* k_colorcombo_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
