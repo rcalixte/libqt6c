@@ -18,6 +18,7 @@ pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode for libqt6c") orelse .static;
     const enable_workaround = b.option(bool, "enable-workaround", "Enable workaround for missing Qt C++ headers") orelse false;
+    const extra_paths = b.option([]const []const u8, "extra-paths", "Extra library header search paths") orelse &.{};
     const optimize = standardOptimizeOption(b, .{});
 
     const is_macos = target.result.os.tag == .macos or host_os == .macos;
@@ -132,7 +133,7 @@ pub fn build(b: *std.Build) !void {
     if (cpp_sources.items.len != c_sources.count())
         @panic("Number of C sources does not match number of C++ sources.\n");
 
-    const qt_include_path: []const []const u8 = switch (host_os) {
+    const os_include_path: []const []const u8 = switch (host_os) {
         .dragonfly, .freebsd, .netbsd, .openbsd => &.{
             "/usr/local/include/qt6",
             "/usr/local/include/KF6",
@@ -149,9 +150,21 @@ pub fn build(b: *std.Build) !void {
             "/usr/local/opt/qt6/include",
             "/opt/homebrew/include",
         },
-        .windows => try generateWindowsBuildPaths(allocator),
+        .windows => &.{
+            "C:/Qt/6.8.2/mingw_64/include",
+            "C:/Qt/6.8.2/msvc2022_64/include",
+        },
         else => @panic("Unsupported OS"),
     };
+
+    var qt_include_path: std.ArrayListUnmanaged([]const u8) = .empty;
+    for (extra_paths) |extra_path| {
+        if (std.mem.eql(u8, extra_path, "")) continue;
+        try qt_include_path.append(b.allocator, b.dupe(extra_path));
+    }
+    for (os_include_path) |os_path| {
+        try qt_include_path.append(b.allocator, b.dupe(os_path));
+    }
 
     const qt_modules = &.{
         // Qt 6 Core, GUI, Widgets
@@ -238,24 +251,24 @@ pub fn build(b: *std.Build) !void {
         "-O2",
     };
 
-    var cpp_flags: [][]const u8 = try allocator.alloc([]const u8, base_cpp_flags.len + qt_include_path.len + (qt_modules.len * qt_include_path.len));
+    var cpp_flags: [][]const u8 = try allocator.alloc([]const u8, base_cpp_flags.len + extra_paths.len + os_include_path.len + (qt_modules.len * (os_include_path.len + extra_paths.len)));
 
     // Add base flags
     var flags_index: usize = 0;
     inline for (base_cpp_flags) |flag| {
-        cpp_flags[flags_index] = b.fmt("{s}", .{flag});
+        cpp_flags[flags_index] = b.dupe(flag);
         flags_index += 1;
     }
 
     // Add include paths
-    inline for (qt_include_path) |qt_path| {
+    for (qt_include_path.items) |qt_path| {
         cpp_flags[flags_index] = b.fmt("-I{s}", .{qt_path});
         flags_index += 1;
     }
 
     // Add Qt module include paths
     inline for (qt_modules) |module| {
-        inline for (qt_include_path) |qt_path| {
+        for (qt_include_path.items) |qt_path| {
             cpp_flags[flags_index] = b.fmt("-I{s}/{s}", .{ qt_path, module });
             flags_index += 1;
         }
@@ -346,26 +359,4 @@ fn workaroundNeeded(workaround: bool, basename: []const u8) bool {
     }
 
     return false;
-}
-
-fn generateWindowsBuildPaths(allocator: std.mem.Allocator) ![]const []const u8 {
-    var qt_win_paths: std.ArrayListUnmanaged([]const u8) = .empty;
-
-    const qt_win_versions = &.{
-        "6.8.2",
-        "6.9.1",
-    };
-
-    const win_compilers = &.{
-        "mingw_64",
-        "msvc2022_64",
-    };
-
-    inline for (qt_win_versions) |ver| {
-        inline for (win_compilers) |wc| {
-            try qt_win_paths.append(allocator, "C:/Qt/" ++ ver ++ "/" ++ wc ++ "/include");
-        }
-    }
-
-    return qt_win_paths.items;
 }
