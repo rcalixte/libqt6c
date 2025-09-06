@@ -33,7 +33,7 @@ KCapacityBar* k_capacitybar_new3(int32_t drawTextMode);
 /// @param parent QWidget*
 KCapacityBar* k_capacitybar_new4(int32_t drawTextMode, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCapacityBar*
 const QMetaObject* k_capacitybar_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_capacitybar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param param3 void*
 int32_t k_capacitybar_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -231,7 +231,7 @@ void k_capacitybar_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 void k_capacitybar_qbase_change_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -239,7 +239,7 @@ void k_capacitybar_qbase_change_event(void* self, void* event);
 /// @param c const char*
 const char* k_capacitybar_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

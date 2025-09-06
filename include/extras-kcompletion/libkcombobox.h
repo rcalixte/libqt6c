@@ -33,7 +33,7 @@ KComboBox* k_combobox_new3(bool rw);
 /// @param parent QWidget*
 KComboBox* k_combobox_new4(bool rw, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KComboBox*
 const QMetaObject* k_combobox_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_combobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param3 void*
 int32_t k_combobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -406,7 +406,7 @@ void k_combobox_on_set_completed_text2(void* self, void (*callback)(void*, const
 /// @param marked bool
 void k_combobox_qbase_set_completed_text2(void* self, const char* text, bool marked);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -414,7 +414,7 @@ void k_combobox_qbase_set_completed_text2(void* self, const char* text, bool mar
 /// @param c const char*
 const char* k_combobox_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

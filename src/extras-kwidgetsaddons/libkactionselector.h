@@ -22,7 +22,7 @@ KActionSelector* k_actionselector_new(void* parent);
 ///
 KActionSelector* k_actionselector_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KActionSelector*
 const QMetaObject* k_actionselector_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_actionselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_actionselector_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -280,7 +280,7 @@ void k_actionselector_on_event_filter(void* self, bool (*callback)(void*, void*,
 /// @param param2 QEvent*
 bool k_actionselector_qbase_event_filter(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -288,7 +288,7 @@ bool k_actionselector_qbase_event_filter(void* self, void* param1, void* param2)
 /// @param c const char*
 const char* k_actionselector_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

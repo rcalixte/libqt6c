@@ -22,7 +22,7 @@ KPasswordLineEdit* k_passwordlineedit_new(void* parent);
 ///
 KPasswordLineEdit* k_passwordlineedit_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPasswordLineEdit*
 const QMetaObject* k_passwordlineedit_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_passwordlineedit_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_passwordlineedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -169,7 +169,7 @@ void k_passwordlineedit_password_changed(void* self, const char* password);
 /// @param callback void func(KPasswordLineEdit* self, const char* password)
 void k_passwordlineedit_on_password_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -177,7 +177,7 @@ void k_passwordlineedit_on_password_changed(void* self, void (*callback)(void*, 
 /// @param c const char*
 const char* k_passwordlineedit_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

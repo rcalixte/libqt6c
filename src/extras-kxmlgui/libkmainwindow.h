@@ -28,7 +28,7 @@ KMainWindow* k_mainwindow_new2();
 /// @param flags flag of enum Qt__WindowType
 KMainWindow* k_mainwindow_new3(void* parent, int64_t flags);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KMainWindow*
 const QMetaObject* k_mainwindow_meta_object(void* self);
@@ -57,7 +57,7 @@ void k_mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -520,7 +520,7 @@ void k_mainwindow_on_save_auto_save_settings(void* self, void (*callback)());
 /// @param self KMainWindow*
 void k_mainwindow_qbase_save_auto_save_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -528,7 +528,7 @@ void k_mainwindow_qbase_save_auto_save_settings(void* self);
 /// @param c const char*
 const char* k_mainwindow_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

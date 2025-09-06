@@ -52,7 +52,7 @@ KShortcutsEditor* k_shortcutseditor_new5(void* parent, int64_t actionTypes);
 /// @param allowLetterShortcuts enum KShortcutsEditor__LetterShortcuts
 KShortcutsEditor* k_shortcutseditor_new6(void* parent, int64_t actionTypes, int32_t allowLetterShortcuts);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KShortcutsEditor*
 const QMetaObject* k_shortcutseditor_meta_object(void* self);
@@ -81,7 +81,7 @@ void k_shortcutseditor_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_shortcutseditor_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -143,7 +143,7 @@ void k_shortcutseditor_on_key_change(void* self, void (*callback)(void*));
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_all_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -151,7 +151,7 @@ void k_shortcutseditor_all_default(void* self);
 /// @param c const char*
 const char* k_shortcutseditor_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

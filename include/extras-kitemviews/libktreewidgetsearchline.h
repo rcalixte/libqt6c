@@ -34,7 +34,7 @@ KTreeWidgetSearchLine* k_treewidgetsearchline_new3(void* parent, libqt_list tree
 /// @param treeWidget QTreeWidget*
 KTreeWidgetSearchLine* k_treewidgetsearchline_new4(void* parent, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KTreeWidgetSearchLine*
 const QMetaObject* k_treewidgetsearchline_meta_object(void* self);
@@ -63,7 +63,7 @@ void k_treewidgetsearchline_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_treewidgetsearchline_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -364,7 +364,7 @@ void k_treewidgetsearchline_on_event(void* self, bool (*callback)(void*, void*))
 /// @param event QEvent*
 bool k_treewidgetsearchline_qbase_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -372,7 +372,7 @@ bool k_treewidgetsearchline_qbase_event(void* self, void* event);
 /// @param c const char*
 const char* k_treewidgetsearchline_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

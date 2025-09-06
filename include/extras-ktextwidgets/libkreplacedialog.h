@@ -52,7 +52,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* 
 /// @param hasSelection bool
 KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[], const char* replaceStrings[], bool hasSelection);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KReplaceDialog*
 const QMetaObject* k_replacedialog_meta_object(void* self);
@@ -81,7 +81,7 @@ void k_replacedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_replacedialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -146,7 +146,7 @@ void k_replacedialog_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QShowEvent*
 void k_replacedialog_qbase_show_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -154,7 +154,7 @@ void k_replacedialog_qbase_show_event(void* self, void* param1);
 /// @param c const char*
 const char* k_replacedialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

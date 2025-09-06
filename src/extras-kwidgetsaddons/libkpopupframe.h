@@ -22,7 +22,7 @@ KPopupFrame* k_popupframe_new(void* parent);
 ///
 KPopupFrame* k_popupframe_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPopupFrame*
 const QMetaObject* k_popupframe_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_popupframe_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_popupframe_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -166,7 +166,7 @@ void k_popupframe_leave_modality(void* self);
 /// @param callback void func(KPopupFrame* self)
 void k_popupframe_on_leave_modality(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -174,7 +174,7 @@ void k_popupframe_on_leave_modality(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* k_popupframe_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

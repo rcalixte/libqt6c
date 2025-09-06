@@ -24,7 +24,7 @@ KXMLGUIFactory* k_xmlguifactory_new(void* builder);
 /// @param parent QObject*
 KXMLGUIFactory* k_xmlguifactory_new2(void* builder, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KXMLGUIFactory*
 const QMetaObject* k_xmlguifactory_meta_object(void* self);
@@ -53,7 +53,7 @@ void k_xmlguifactory_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_xmlguifactory_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -204,7 +204,7 @@ void k_xmlguifactory_shortcuts_saved(void* self);
 /// @param callback void func(KXMLGUIFactory* self)
 void k_xmlguifactory_on_shortcuts_saved(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -212,7 +212,7 @@ void k_xmlguifactory_on_shortcuts_saved(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* k_xmlguifactory_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

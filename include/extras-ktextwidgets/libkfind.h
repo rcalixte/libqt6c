@@ -28,7 +28,7 @@ KFind* k_find_new(const char* pattern, int64_t options, void* parent);
 /// @param findDialog QWidget*
 KFind* k_find_new2(const char* pattern, int64_t options, void* parent, void* findDialog);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFind*
 const QMetaObject* k_find_meta_object(void* self);
@@ -57,7 +57,7 @@ void k_find_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, voi
 /// @param param3 void*
 int32_t k_find_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -350,7 +350,7 @@ void k_find_on_dialogs_parent(void* self, QWidget* (*callback)());
 /// @param self KFind*
 QWidget* k_find_qbase_dialogs_parent(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -358,7 +358,7 @@ QWidget* k_find_qbase_dialogs_parent(void* self);
 /// @param c const char*
 const char* k_find_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

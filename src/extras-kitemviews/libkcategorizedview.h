@@ -22,7 +22,7 @@ KCategorizedView* k_categorizedview_new(void* parent);
 ///
 KCategorizedView* k_categorizedview_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCategorizedView*
 const QMetaObject* k_categorizedview_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_categorizedview_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param3 void*
 int32_t k_categorizedview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -680,7 +680,7 @@ void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)());
 /// @param self KCategorizedView*
 void k_categorizedview_qbase_slot_layout_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -688,7 +688,7 @@ void k_categorizedview_qbase_slot_layout_changed(void* self);
 /// @param c const char*
 const char* k_categorizedview_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

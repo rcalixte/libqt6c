@@ -22,7 +22,7 @@ KViewStateSerializer* k_viewstateserializer_new();
 /// @param parent QObject*
 KViewStateSerializer* k_viewstateserializer_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KViewStateSerializer*
 const QMetaObject* k_viewstateserializer_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_viewstateserializer_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_viewstateserializer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -199,7 +199,7 @@ void k_viewstateserializer_on_restore_state(void* self, void (*callback)());
 /// @param self KViewStateSerializer*
 void k_viewstateserializer_qbase_restore_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -207,7 +207,7 @@ void k_viewstateserializer_qbase_restore_state(void* self);
 /// @param c const char*
 const char* k_viewstateserializer_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

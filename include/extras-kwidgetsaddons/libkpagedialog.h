@@ -28,7 +28,7 @@ KPageDialog* k_pagedialog_new2();
 /// @param flags flag of enum Qt__WindowType
 KPageDialog* k_pagedialog_new3(void* parent, int64_t flags);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPageDialog*
 const QMetaObject* k_pagedialog_meta_object(void* self);
@@ -57,7 +57,7 @@ void k_pagedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_pagedialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -297,7 +297,7 @@ void k_pagedialog_on_set_button_box(void* self, void (*callback)(void*, void*));
 /// @param box QDialogButtonBox*
 void k_pagedialog_qbase_set_button_box(void* self, void* box);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -305,7 +305,7 @@ void k_pagedialog_qbase_set_button_box(void* self, void* box);
 /// @param c const char*
 const char* k_pagedialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

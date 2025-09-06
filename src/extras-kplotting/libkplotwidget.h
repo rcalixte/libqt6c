@@ -22,7 +22,7 @@ KPlotWidget* k_plotwidget_new(void* parent);
 ///
 KPlotWidget* k_plotwidget_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPlotWidget*
 const QMetaObject* k_plotwidget_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_plotwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_plotwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -464,7 +464,7 @@ void k_plotwidget_on_points_under_point(void* self, libqt_list /* of KPlotPoint*
 /// @param p QPoint*
 libqt_list /* of KPlotPoint* */ k_plotwidget_qbase_points_under_point(void* self, void* p);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -472,7 +472,7 @@ libqt_list /* of KPlotPoint* */ k_plotwidget_qbase_points_under_point(void* self
 /// @param c const char*
 const char* k_plotwidget_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

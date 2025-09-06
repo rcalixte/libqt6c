@@ -19,7 +19,7 @@
 /// @param splitter QSplitter*
 KSplitterCollapserButton* k_splittercollapserbutton_new(void* childWidget, void* splitter);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KSplitterCollapserButton*
 const QMetaObject* k_splittercollapserbutton_meta_object(void* self);
@@ -48,7 +48,7 @@ void k_splittercollapserbutton_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param3 void*
 int32_t k_splittercollapserbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -208,7 +208,7 @@ void k_splittercollapserbutton_on_show_event(void* self, void (*callback)(void*,
 /// @param event QShowEvent*
 void k_splittercollapserbutton_qbase_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -216,7 +216,7 @@ void k_splittercollapserbutton_qbase_show_event(void* self, void* event);
 /// @param c const char*
 const char* k_splittercollapserbutton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

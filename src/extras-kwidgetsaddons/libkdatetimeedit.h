@@ -22,7 +22,7 @@ KDateTimeEdit* k_datetimeedit_new(void* parent);
 ///
 KDateTimeEdit* k_datetimeedit_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KDateTimeEdit*
 const QMetaObject* k_datetimeedit_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t k_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -604,7 +604,7 @@ void k_datetimeedit_on_assign_time_zone(void* self, void (*callback)(void*, void
 /// @param zone QTimeZone*
 void k_datetimeedit_qbase_assign_time_zone(void* self, void* zone);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -612,7 +612,7 @@ void k_datetimeedit_qbase_assign_time_zone(void* self, void* zone);
 /// @param c const char*
 const char* k_datetimeedit_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

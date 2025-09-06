@@ -48,7 +48,7 @@ KHelpMenu* k_helpmenu_new5(void* parent, void* aboutData);
 /// @param showWhatsThis bool
 KHelpMenu* k_helpmenu_new6(void* parent, const char* unused, bool showWhatsThis);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KHelpMenu*
 const QMetaObject* k_helpmenu_meta_object(void* self);
@@ -77,7 +77,7 @@ void k_helpmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param3 void*
 int32_t k_helpmenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -147,7 +147,7 @@ void k_helpmenu_show_about_application(void* self);
 /// @param callback void func(KHelpMenu* self)
 void k_helpmenu_on_show_about_application(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -155,7 +155,7 @@ void k_helpmenu_on_show_about_application(void* self, void (*callback)(void*));
 /// @param c const char*
 const char* k_helpmenu_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

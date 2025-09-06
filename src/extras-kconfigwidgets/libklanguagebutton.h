@@ -33,7 +33,7 @@ KLanguageButton* k_languagebutton_new3(const char* text);
 /// @param parent QWidget*
 KLanguageButton* k_languagebutton_new4(const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KLanguageButton*
 const QMetaObject* k_languagebutton_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_languagebutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_languagebutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -156,7 +156,7 @@ void k_languagebutton_highlighted(void* self, const char* languageCode);
 /// @param callback void func(KLanguageButton* self, const char* languageCode)
 void k_languagebutton_on_highlighted(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -164,7 +164,7 @@ void k_languagebutton_on_highlighted(void* self, void (*callback)(void*, const c
 /// @param c const char*
 const char* k_languagebutton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

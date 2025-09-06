@@ -29,7 +29,7 @@ KContextualHelpButton* k_contextualhelpbutton_new2(const char* contextualHelpTex
 ///
 KContextualHelpButton* k_contextualhelpbutton_new3();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KContextualHelpButton*
 const QMetaObject* k_contextualhelpbutton_meta_object(void* self);
@@ -58,7 +58,7 @@ void k_contextualhelpbutton_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_contextualhelpbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -121,7 +121,7 @@ void k_contextualhelpbutton_contextual_help_text_changed(void* self, const char*
 /// @param callback void func(KContextualHelpButton* self, const char* newContextualHelpText)
 void k_contextualhelpbutton_on_contextual_help_text_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -129,7 +129,7 @@ void k_contextualhelpbutton_on_contextual_help_text_changed(void* self, void (*c
 /// @param c const char*
 const char* k_contextualhelpbutton_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

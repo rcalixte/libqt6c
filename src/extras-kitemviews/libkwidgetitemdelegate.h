@@ -24,7 +24,7 @@ KWidgetItemDelegate* k_widgetitemdelegate_new(void* itemView);
 /// @param parent QObject*
 KWidgetItemDelegate* k_widgetitemdelegate_new2(void* itemView, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KWidgetItemDelegate*
 const QMetaObject* k_widgetitemdelegate_meta_object(void* self);
@@ -53,7 +53,7 @@ void k_widgetitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_widgetitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -173,7 +173,7 @@ void k_widgetitemdelegate_on_blocked_event_types(void* self, int* (*callback)(vo
 /// @return libqt_list of enum QEvent__Type
 libqt_list /* of int32_t */ k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -181,7 +181,7 @@ libqt_list /* of int32_t */ k_widgetitemdelegate_qbase_blocked_event_types(void*
 /// @param c const char*
 const char* k_widgetitemdelegate_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

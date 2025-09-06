@@ -31,7 +31,7 @@ KFontSizeAction* k_fontsizeaction_new2(const char* text, void* parent);
 /// @param parent QObject*
 KFontSizeAction* k_fontsizeaction_new3(void* icon, const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFontSizeAction*
 const QMetaObject* k_fontsizeaction_meta_object(void* self);
@@ -60,7 +60,7 @@ void k_fontsizeaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_fontsizeaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -112,7 +112,7 @@ void k_fontsizeaction_on_slot_action_triggered(void* self, void (*callback)(void
 /// @param action QAction*
 void k_fontsizeaction_qbase_slot_action_triggered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -120,7 +120,7 @@ void k_fontsizeaction_qbase_slot_action_triggered(void* self, void* action);
 /// @param c const char*
 const char* k_fontsizeaction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

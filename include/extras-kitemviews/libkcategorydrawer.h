@@ -18,7 +18,7 @@
 /// @param view KCategorizedView*
 KCategoryDrawer* k_categorydrawer_new(void* view);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KCategoryDrawer*
 const QMetaObject* k_categorydrawer_meta_object(void* self);
@@ -47,7 +47,7 @@ void k_categorydrawer_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_categorydrawer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -304,7 +304,7 @@ void k_categorydrawer_on_mouse_left(void* self, void (*callback)(void*, void*, v
 /// @param blockRect QRect*
 void k_categorydrawer_qbase_mouse_left(void* self, void* index, void* blockRect);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -312,7 +312,7 @@ void k_categorydrawer_qbase_mouse_left(void* self, void* index, void* blockRect)
 /// @param c const char*
 const char* k_categorydrawer_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -28,7 +28,7 @@ KFontChooserDialog* k_fontchooserdialog_new2(const int32_t* flags);
 /// @param parent QWidget*
 KFontChooserDialog* k_fontchooserdialog_new3(const int32_t* flags, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KFontChooserDialog*
 const QMetaObject* k_fontchooserdialog_meta_object(void* self);
@@ -57,7 +57,7 @@ void k_fontchooserdialog_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t k_fontchooserdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -98,7 +98,7 @@ void k_fontchooserdialog_font_selected(void* self, void* font);
 /// @param callback void func(KFontChooserDialog* self, QFont* font)
 void k_fontchooserdialog_on_font_selected(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -106,7 +106,7 @@ void k_fontchooserdialog_on_font_selected(void* self, void (*callback)(void*, vo
 /// @param c const char*
 const char* k_fontchooserdialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

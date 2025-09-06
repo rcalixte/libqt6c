@@ -13,7 +13,7 @@
 
 /// https://api-staging.kde.org/knetworkmounts.html
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KNetworkMounts*
 const QMetaObject* k_networkmounts_meta_object(void* self);
@@ -28,7 +28,7 @@ void* k_networkmounts_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_networkmounts_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -115,7 +115,7 @@ void k_networkmounts_clear_cache(void* self);
 /// @param self KNetworkMounts*
 void k_networkmounts_sync(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -123,7 +123,7 @@ void k_networkmounts_sync(void* self);
 /// @param c const char*
 const char* k_networkmounts_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

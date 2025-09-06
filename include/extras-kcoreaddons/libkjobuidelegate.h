@@ -22,7 +22,7 @@ KJobUiDelegate* k_jobuidelegate_new();
 /// @param flags flag of enum KJobUiDelegate__Flag
 KJobUiDelegate* k_jobuidelegate_new2(int32_t flags);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KJobUiDelegate*
 const QMetaObject* k_jobuidelegate_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_jobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param3 void*
 int32_t k_jobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -166,7 +166,7 @@ void k_jobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, 
 /// @param message const char*
 void k_jobuidelegate_qbase_slot_warning(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -174,7 +174,7 @@ void k_jobuidelegate_qbase_slot_warning(void* self, void* job, const char* messa
 /// @param c const char*
 const char* k_jobuidelegate_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -33,7 +33,7 @@ KPixmapSequenceWidget* k_pixmapsequencewidget_new3(void* seq);
 /// @param parent QWidget*
 KPixmapSequenceWidget* k_pixmapsequencewidget_new4(void* seq, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPixmapSequenceWidget*
 const QMetaObject* k_pixmapsequencewidget_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_pixmapsequencewidget_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_pixmapsequencewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -111,7 +111,7 @@ void k_pixmapsequencewidget_set_sequence(void* self, void* seq);
 /// @param msecs int
 void k_pixmapsequencewidget_set_interval(void* self, int msecs);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -119,7 +119,7 @@ void k_pixmapsequencewidget_set_interval(void* self, int msecs);
 /// @param c const char*
 const char* k_pixmapsequencewidget_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

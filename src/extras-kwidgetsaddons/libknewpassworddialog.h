@@ -22,7 +22,7 @@ KNewPasswordDialog* k_newpassworddialog_new(void* parent);
 ///
 KNewPasswordDialog* k_newpassworddialog_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KNewPasswordDialog*
 const QMetaObject* k_newpassworddialog_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_newpassworddialog_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t k_newpassworddialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -233,7 +233,7 @@ void k_newpassworddialog_new_password(void* self, const char* password);
 /// @param callback void func(KNewPasswordDialog* self, const char* password)
 void k_newpassworddialog_on_new_password(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -241,7 +241,7 @@ void k_newpassworddialog_on_new_password(void* self, void (*callback)(void*, con
 /// @param c const char*
 const char* k_newpassworddialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -22,7 +22,7 @@ KPageView* k_pageview_new(void* parent);
 ///
 KPageView* k_pageview_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KPageView*
 const QMetaObject* k_pageview_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_pageview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param3 void*
 int32_t k_pageview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -209,7 +209,7 @@ void k_pageview_on_view_position(void* self, int32_t (*callback)());
 /// @return flag of enum Qt__AlignmentFlag
 int32_t k_pageview_qbase_view_position(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -217,7 +217,7 @@ int32_t k_pageview_qbase_view_position(void* self);
 /// @param c const char*
 const char* k_pageview_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

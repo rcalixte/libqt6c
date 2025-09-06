@@ -26,7 +26,7 @@ KToolBarLabelAction* k_toolbarlabelaction_new(const char* text, void* parent);
 /// @param parent QObject*
 KToolBarLabelAction* k_toolbarlabelaction_new2(void* buddy, const char* text, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KToolBarLabelAction*
 const QMetaObject* k_toolbarlabelaction_meta_object(void* self);
@@ -55,7 +55,7 @@ void k_toolbarlabelaction_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_toolbarlabelaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -153,7 +153,7 @@ void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, vo
 /// @param event QEvent*
 bool k_toolbarlabelaction_qbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -161,7 +161,7 @@ bool k_toolbarlabelaction_qbase_event_filter(void* self, void* watched, void* ev
 /// @param c const char*
 const char* k_toolbarlabelaction_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

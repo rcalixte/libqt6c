@@ -22,7 +22,7 @@ KKeySequenceWidget* k_keysequencewidget_new(void* parent);
 ///
 KKeySequenceWidget* k_keysequencewidget_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KKeySequenceWidget*
 const QMetaObject* k_keysequencewidget_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_keysequencewidget_on_metacall(void* self, int32_t (*callback)(void*, int3
 /// @param param3 void*
 int32_t k_keysequencewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -208,7 +208,7 @@ void k_keysequencewidget_clear_key_sequence(void* self);
 /// @param self KKeySequenceWidget*
 void k_keysequencewidget_apply_steal_shortcut(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -216,7 +216,7 @@ void k_keysequencewidget_apply_steal_shortcut(void* self);
 /// @param c const char*
 const char* k_keysequencewidget_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

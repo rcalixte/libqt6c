@@ -25,7 +25,7 @@ KWindowStateSaver* k_windowstatesaver_new(void* window, void* configGroup);
 /// @param configGroupName const char*
 KWindowStateSaver* k_windowstatesaver_new2(void* window, const char* configGroupName);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KWindowStateSaver*
 const QMetaObject* k_windowstatesaver_meta_object(void* self);
@@ -54,14 +54,14 @@ void k_windowstatesaver_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_windowstatesaver_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_windowstatesaver_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -69,7 +69,7 @@ const char* k_windowstatesaver_tr(const char* s);
 /// @param c const char*
 const char* k_windowstatesaver_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

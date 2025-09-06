@@ -20,7 +20,7 @@
 /// @param config KCoreConfigSkeleton*
 KConfigDialog* k_configdialog_new(void* parent, const char* name, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigDialog*
 const QMetaObject* k_configdialog_meta_object(void* self);
@@ -49,7 +49,7 @@ void k_configdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param3 void*
 int32_t k_configdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -308,7 +308,7 @@ void k_configdialog_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param e QShowEvent*
 void k_configdialog_qbase_show_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -316,7 +316,7 @@ void k_configdialog_qbase_show_event(void* self, void* e);
 /// @param c const char*
 const char* k_configdialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

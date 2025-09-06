@@ -35,7 +35,7 @@ KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths
 /// @param parent QObject*
 KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths[], void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KIconLoader*
 const QMetaObject* k_iconloader_meta_object(void* self);
@@ -64,7 +64,7 @@ void k_iconloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param3 void*
 int32_t k_iconloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -278,7 +278,7 @@ void k_iconloader_icon_changed(void* self, int group);
 /// @param callback void func(KIconLoader* self, int group)
 void k_iconloader_on_icon_changed(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -286,7 +286,7 @@ void k_iconloader_on_icon_changed(void* self, void (*callback)(void*, int));
 /// @param c const char*
 const char* k_iconloader_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -93,7 +93,7 @@ bool k_configloader_qbase_usr_save(void* self);
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KConfigLoader*
 const QMetaObject* k_configloader_meta_object(void* self);
@@ -106,7 +106,7 @@ void* k_configloader_metacast(void* self, const char* param1);
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -115,7 +115,7 @@ const char* k_configloader_tr(const char* s);
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -125,7 +125,7 @@ const char* k_configloader_tr2(const char* s, const char* c);
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

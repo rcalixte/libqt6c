@@ -17,7 +17,7 @@
 ///
 KEMailSettings* k_emailsettings_new();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -65,7 +65,7 @@ const char* k_emailsettings_get_setting(void* self, int32_t s);
 /// @param v const char*
 void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -73,7 +73,7 @@ void k_emailsettings_set_setting(void* self, int32_t s, const char* v);
 /// @param disambiguation const char*
 const char* k_emailsettings_tr2(const char* sourceText, const char* disambiguation);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

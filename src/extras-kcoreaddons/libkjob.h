@@ -22,7 +22,7 @@ KJob* k_job_new();
 /// @param parent QObject*
 KJob* k_job_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KJob*
 const QMetaObject* k_job_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_job_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void
 /// @param param3 void*
 int32_t k_job_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -605,7 +605,7 @@ void k_job_on_start_elapsed_timer(void* self, void (*callback)());
 /// @param self KJob*
 void k_job_qbase_start_elapsed_timer(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -613,7 +613,7 @@ void k_job_qbase_start_elapsed_timer(void* self);
 /// @param c const char*
 const char* k_job_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

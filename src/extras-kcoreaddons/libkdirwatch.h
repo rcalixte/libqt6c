@@ -22,7 +22,7 @@ KDirWatch* k_dirwatch_new();
 /// @param parent QObject*
 KDirWatch* k_dirwatch_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self KDirWatch*
 const QMetaObject* k_dirwatch_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_dirwatch_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param3 void*
 int32_t k_dirwatch_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -212,7 +212,7 @@ void k_dirwatch_deleted(void* self, const char* path);
 /// @param callback void func(KDirWatch* self, const char* path)
 void k_dirwatch_on_deleted(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -220,7 +220,7 @@ void k_dirwatch_on_deleted(void* self, void (*callback)(void*, const char*));
 /// @param c const char*
 const char* k_dirwatch_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
