@@ -81,7 +81,8 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return ""
 	}
 
-	if strings.HasPrefix(pageName, "qtermwidget") || strings.HasPrefix(className, "Konsole") {
+	if strings.HasPrefix(pageName, "qtermwidget") || strings.HasPrefix(className, "Keyboard") ||
+		strings.HasPrefix(className, "Konsole") {
 		return "https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api"
 	}
 
@@ -89,7 +90,7 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	if len(className) > 0 && pageName != "qobject" &&
 		className[0] == 'K' || className[0] == 'k' ||
 		strings.HasPrefix(className, "Sonnet") || strings.HasPrefix(pageName, "sonnet") {
-		qtUrl = "https://api-staging.kde.org/"
+		qtUrl = "https://api.kde.org/"
 	}
 
 	pageName = strings.ReplaceAll(pageName, "__", "-")
@@ -1017,7 +1018,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
-		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 {
+		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
+			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}})) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
 			pageName := getPageName(cStructName) + maybeCharts
 			ret.WriteString("\n\n/// " + getPageUrl(QtPage, pageName, "", cStructName) + "\n")
