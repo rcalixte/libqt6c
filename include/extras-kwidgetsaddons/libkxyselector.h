@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kxyselector.html
+/// https://api.kde.org/kxyselector.html
 
 /// k_xyselector_new constructs a new KXYSelector object.
 ///
@@ -58,26 +58,26 @@ int32_t k_xyselector_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_xyselector_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#setValues)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#setValues)
 ///
 /// @param self KXYSelector*
 /// @param xPos int
 /// @param yPos int
 void k_xyselector_set_values(void* self, int xPos, int yPos);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#setXValue)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#setXValue)
 ///
 /// @param self KXYSelector*
 /// @param xPos int
 void k_xyselector_set_x_value(void* self, int xPos);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#setYValue)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#setYValue)
 ///
 /// @param self KXYSelector*
 /// @param yPos int
 void k_xyselector_set_y_value(void* self, int yPos);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#setRange)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#setRange)
 ///
 /// @param self KXYSelector*
 /// @param minX int
@@ -86,33 +86,33 @@ void k_xyselector_set_y_value(void* self, int yPos);
 /// @param maxY int
 void k_xyselector_set_range(void* self, int minX, int minY, int maxX, int maxY);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#setMarkerColor)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#setMarkerColor)
 ///
 /// @param self KXYSelector*
 /// @param col QColor*
 void k_xyselector_set_marker_color(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#xValue)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#xValue)
 ///
 /// @param self KXYSelector*
 int32_t k_xyselector_x_value(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#yValue)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#yValue)
 ///
 /// @param self KXYSelector*
 int32_t k_xyselector_y_value(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#contentsRect)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#contentsRect)
 ///
 /// @param self KXYSelector*
 QRect* k_xyselector_contents_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#minimumSizeHint)
 ///
 /// @param self KXYSelector*
 QSize* k_xyselector_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -120,33 +120,33 @@ QSize* k_xyselector_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_xyselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KXYSelector*
 QSize* k_xyselector_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valueChanged)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#valueChanged)
 ///
 /// @param self KXYSelector*
 /// @param x int
 /// @param y int
 void k_xyselector_value_changed(void* self, int x, int y);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valueChanged)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#valueChanged)
 ///
 /// @param self KXYSelector*
 /// @param callback void func(KXYSelector* self, int x, int y)
 void k_xyselector_on_value_changed(void* self, void (*callback)(void*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#drawContents)
 ///
 /// @param self KXYSelector*
 /// @param param1 QPainter*
 void k_xyselector_draw_contents(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#drawContents)
 ///
 /// Allows for overriding the related default method
 ///
@@ -154,7 +154,7 @@ void k_xyselector_draw_contents(void* self, void* param1);
 /// @param callback void func(KXYSelector* self, QPainter* param1)
 void k_xyselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#drawContents)
 ///
 /// Base class method implementation
 ///
@@ -162,7 +162,7 @@ void k_xyselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 /// @param param1 QPainter*
 void k_xyselector_qbase_draw_contents(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawMarker)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#drawMarker)
 ///
 /// @param self KXYSelector*
 /// @param p QPainter*
@@ -170,7 +170,7 @@ void k_xyselector_qbase_draw_contents(void* self, void* param1);
 /// @param yp int
 void k_xyselector_draw_marker(void* self, void* p, int xp, int yp);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawMarker)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#drawMarker)
 ///
 /// Allows for overriding the related default method
 ///
@@ -178,7 +178,7 @@ void k_xyselector_draw_marker(void* self, void* p, int xp, int yp);
 /// @param callback void func(KXYSelector* self, QPainter* p, int xp, int yp)
 void k_xyselector_on_draw_marker(void* self, void (*callback)(void*, void*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#drawMarker)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#drawMarker)
 ///
 /// Base class method implementation
 ///
@@ -188,13 +188,13 @@ void k_xyselector_on_draw_marker(void* self, void (*callback)(void*, void*, int,
 /// @param yp int
 void k_xyselector_qbase_draw_marker(void* self, void* p, int xp, int yp);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#paintEvent)
 ///
 /// @param self KXYSelector*
 /// @param e QPaintEvent*
 void k_xyselector_paint_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -202,7 +202,7 @@ void k_xyselector_paint_event(void* self, void* e);
 /// @param callback void func(KXYSelector* self, QPaintEvent* e)
 void k_xyselector_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -210,13 +210,13 @@ void k_xyselector_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param e QPaintEvent*
 void k_xyselector_qbase_paint_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#mousePressEvent)
 ///
 /// @param self KXYSelector*
 /// @param e QMouseEvent*
 void k_xyselector_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -224,7 +224,7 @@ void k_xyselector_mouse_press_event(void* self, void* e);
 /// @param callback void func(KXYSelector* self, QMouseEvent* e)
 void k_xyselector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -232,13 +232,13 @@ void k_xyselector_on_mouse_press_event(void* self, void (*callback)(void*, void*
 /// @param e QMouseEvent*
 void k_xyselector_qbase_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#mouseMoveEvent)
 ///
 /// @param self KXYSelector*
 /// @param e QMouseEvent*
 void k_xyselector_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -246,7 +246,7 @@ void k_xyselector_mouse_move_event(void* self, void* e);
 /// @param callback void func(KXYSelector* self, QMouseEvent* e)
 void k_xyselector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -254,13 +254,13 @@ void k_xyselector_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 /// @param e QMouseEvent*
 void k_xyselector_qbase_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#wheelEvent)
 ///
 /// @param self KXYSelector*
 /// @param param1 QWheelEvent*
 void k_xyselector_wheel_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -268,7 +268,7 @@ void k_xyselector_wheel_event(void* self, void* param1);
 /// @param callback void func(KXYSelector* self, QWheelEvent* param1)
 void k_xyselector_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
@@ -276,7 +276,7 @@ void k_xyselector_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QWheelEvent*
 void k_xyselector_qbase_wheel_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valuesFromPosition)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#valuesFromPosition)
 ///
 /// @param self KXYSelector*
 /// @param x int
@@ -285,7 +285,7 @@ void k_xyselector_qbase_wheel_event(void* self, void* param1);
 /// @param yVal int*
 void k_xyselector_values_from_position(void* self, int x, int y, int* xVal, int* yVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valuesFromPosition)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#valuesFromPosition)
 ///
 /// Allows for overriding the related default method
 ///
@@ -293,7 +293,7 @@ void k_xyselector_values_from_position(void* self, int x, int y, int* xVal, int*
 /// @param callback void func(KXYSelector* self, int x, int y, int* xVal, int* yVal)
 void k_xyselector_on_values_from_position(void* self, void (*callback)(void*, int, int, int*, int*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#valuesFromPosition)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#valuesFromPosition)
 ///
 /// Base class method implementation
 ///
@@ -4402,7 +4402,7 @@ void k_xyselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KXYSelector* self, const char* objectName)
 void k_xyselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxyselector.html#dtor.KXYSelector)
+/// [Qt documentation](https://api.kde.org/kxyselector.html#dtor.KXYSelector)
 ///
 /// Delete this object from C++ memory.
 ///

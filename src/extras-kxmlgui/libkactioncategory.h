@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kactioncategory.html
+/// https://api.kde.org/kactioncategory.html
 
 /// k_actioncategory_new constructs a new KActionCategory object.
 ///
@@ -60,37 +60,37 @@ int32_t k_actioncategory_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_actioncategory_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#addAction)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#addAction)
 ///
 /// @param self KActionCategory*
 /// @param name const char*
 /// @param action QAction*
 QAction* k_actioncategory_add_action(void* self, const char* name, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#addAction)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#addAction)
 ///
 /// @param self KActionCategory*
 /// @param actionType enum KStandardActions__StandardAction
 QAction* k_actioncategory_add_action2(void* self, int32_t actionType);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#actions)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#actions)
 ///
 /// @param self KActionCategory*
 libqt_list /* of QAction* */ k_actioncategory_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#collection)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#collection)
 ///
 /// @param self KActionCategory*
 KActionCollection* k_actioncategory_collection(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#text)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCategory*
 const char* k_actioncategory_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#setText)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#setText)
 ///
 /// @param self KActionCategory*
 /// @param text const char*
@@ -758,7 +758,7 @@ void k_actioncategory_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KActionCategory* self, const char* objectName)
 void k_actioncategory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncategory.html#dtor.KActionCategory)
+/// [Qt documentation](https://api.kde.org/kactioncategory.html#dtor.KActionCategory)
 ///
 /// Delete this object from C++ memory.
 ///

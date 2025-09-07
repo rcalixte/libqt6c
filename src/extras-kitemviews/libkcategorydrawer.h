@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcategorydrawer.html
+/// https://api.kde.org/kcategorydrawer.html
 
 /// k_categorydrawer_new constructs a new KCategoryDrawer object.
 ///
@@ -54,12 +54,12 @@ int32_t k_categorydrawer_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_categorydrawer_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#view)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#view)
 ///
 /// @param self KCategoryDrawer*
 KCategorizedView* k_categorydrawer_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#drawCategory)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#drawCategory)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
@@ -68,7 +68,7 @@ KCategorizedView* k_categorydrawer_view(void* self);
 /// @param painter QPainter*
 void k_categorydrawer_draw_category(void* self, void* index, int sortRole, void* option, void* painter);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#drawCategory)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#drawCategory)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,7 +76,7 @@ void k_categorydrawer_draw_category(void* self, void* index, int sortRole, void*
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index, int sortRole, QStyleOption* option, QPainter* painter)
 void k_categorydrawer_on_draw_category(void* self, void (*callback)(void*, void*, int, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#drawCategory)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#drawCategory)
 ///
 /// Base class method implementation
 ///
@@ -87,14 +87,14 @@ void k_categorydrawer_on_draw_category(void* self, void (*callback)(void*, void*
 /// @param painter QPainter*
 void k_categorydrawer_qbase_draw_category(void* self, void* index, int sortRole, void* option, void* painter);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#categoryHeight)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#categoryHeight)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
 /// @param option QStyleOption*
 int32_t k_categorydrawer_category_height(void* self, void* index, void* option);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#categoryHeight)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#categoryHeight)
 ///
 /// Allows for overriding the related default method
 ///
@@ -102,7 +102,7 @@ int32_t k_categorydrawer_category_height(void* self, void* index, void* option);
 /// @param callback int32_t func(KCategoryDrawer* self, QModelIndex* index, QStyleOption* option)
 void k_categorydrawer_on_category_height(void* self, int32_t (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#categoryHeight)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#categoryHeight)
 ///
 /// Base class method implementation
 ///
@@ -111,12 +111,12 @@ void k_categorydrawer_on_category_height(void* self, int32_t (*callback)(void*, 
 /// @param option QStyleOption*
 int32_t k_categorydrawer_qbase_category_height(void* self, void* index, void* option);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#leftMargin)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#leftMargin)
 ///
 /// @param self KCategoryDrawer*
 int32_t k_categorydrawer_left_margin(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#leftMargin)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#leftMargin)
 ///
 /// Allows for overriding the related default method
 ///
@@ -124,19 +124,19 @@ int32_t k_categorydrawer_left_margin(void* self);
 /// @param callback int32_t func()
 void k_categorydrawer_on_left_margin(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#leftMargin)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#leftMargin)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategoryDrawer*
 int32_t k_categorydrawer_qbase_left_margin(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#rightMargin)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#rightMargin)
 ///
 /// @param self KCategoryDrawer*
 int32_t k_categorydrawer_right_margin(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#rightMargin)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#rightMargin)
 ///
 /// Allows for overriding the related default method
 ///
@@ -144,39 +144,39 @@ int32_t k_categorydrawer_right_margin(void* self);
 /// @param callback int32_t func()
 void k_categorydrawer_on_right_margin(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#rightMargin)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#rightMargin)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategoryDrawer*
 int32_t k_categorydrawer_qbase_right_margin(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#collapseOrExpandClicked)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#collapseOrExpandClicked)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
 void k_categorydrawer_collapse_or_expand_clicked(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#collapseOrExpandClicked)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#collapseOrExpandClicked)
 ///
 /// @param self KCategoryDrawer*
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index)
 void k_categorydrawer_on_collapse_or_expand_clicked(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#actionRequested)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#actionRequested)
 ///
 /// @param self KCategoryDrawer*
 /// @param action int
 /// @param index QModelIndex*
 void k_categorydrawer_action_requested(void* self, int action, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#actionRequested)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#actionRequested)
 ///
 /// @param self KCategoryDrawer*
 /// @param callback void func(KCategoryDrawer* self, int action, QModelIndex* index)
 void k_categorydrawer_on_action_requested(void* self, void (*callback)(void*, int, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonPressed)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonPressed)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
@@ -184,7 +184,7 @@ void k_categorydrawer_on_action_requested(void* self, void (*callback)(void*, in
 /// @param event QMouseEvent*
 void k_categorydrawer_mouse_button_pressed(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonPressed)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonPressed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -192,7 +192,7 @@ void k_categorydrawer_mouse_button_pressed(void* self, void* index, void* blockR
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index, QRect* blockRect, QMouseEvent* event)
 void k_categorydrawer_on_mouse_button_pressed(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonPressed)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonPressed)
 ///
 /// Base class method implementation
 ///
@@ -202,7 +202,7 @@ void k_categorydrawer_on_mouse_button_pressed(void* self, void (*callback)(void*
 /// @param event QMouseEvent*
 void k_categorydrawer_qbase_mouse_button_pressed(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonReleased)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonReleased)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
@@ -210,7 +210,7 @@ void k_categorydrawer_qbase_mouse_button_pressed(void* self, void* index, void* 
 /// @param event QMouseEvent*
 void k_categorydrawer_mouse_button_released(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonReleased)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonReleased)
 ///
 /// Allows for overriding the related default method
 ///
@@ -218,7 +218,7 @@ void k_categorydrawer_mouse_button_released(void* self, void* index, void* block
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index, QRect* blockRect, QMouseEvent* event)
 void k_categorydrawer_on_mouse_button_released(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonReleased)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonReleased)
 ///
 /// Base class method implementation
 ///
@@ -228,7 +228,7 @@ void k_categorydrawer_on_mouse_button_released(void* self, void (*callback)(void
 /// @param event QMouseEvent*
 void k_categorydrawer_qbase_mouse_button_released(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseMoved)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseMoved)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
@@ -236,7 +236,7 @@ void k_categorydrawer_qbase_mouse_button_released(void* self, void* index, void*
 /// @param event QMouseEvent*
 void k_categorydrawer_mouse_moved(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseMoved)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseMoved)
 ///
 /// Allows for overriding the related default method
 ///
@@ -244,7 +244,7 @@ void k_categorydrawer_mouse_moved(void* self, void* index, void* blockRect, void
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index, QRect* blockRect, QMouseEvent* event)
 void k_categorydrawer_on_mouse_moved(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseMoved)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseMoved)
 ///
 /// Base class method implementation
 ///
@@ -254,7 +254,7 @@ void k_categorydrawer_on_mouse_moved(void* self, void (*callback)(void*, void*, 
 /// @param event QMouseEvent*
 void k_categorydrawer_qbase_mouse_moved(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonDoubleClicked)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonDoubleClicked)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
@@ -262,7 +262,7 @@ void k_categorydrawer_qbase_mouse_moved(void* self, void* index, void* blockRect
 /// @param event QMouseEvent*
 void k_categorydrawer_mouse_button_double_clicked(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonDoubleClicked)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonDoubleClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -270,7 +270,7 @@ void k_categorydrawer_mouse_button_double_clicked(void* self, void* index, void*
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index, QRect* blockRect, QMouseEvent* event)
 void k_categorydrawer_on_mouse_button_double_clicked(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseButtonDoubleClicked)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseButtonDoubleClicked)
 ///
 /// Base class method implementation
 ///
@@ -280,14 +280,14 @@ void k_categorydrawer_on_mouse_button_double_clicked(void* self, void (*callback
 /// @param event QMouseEvent*
 void k_categorydrawer_qbase_mouse_button_double_clicked(void* self, void* index, void* blockRect, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseLeft)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseLeft)
 ///
 /// @param self KCategoryDrawer*
 /// @param index QModelIndex*
 /// @param blockRect QRect*
 void k_categorydrawer_mouse_left(void* self, void* index, void* blockRect);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseLeft)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseLeft)
 ///
 /// Allows for overriding the related default method
 ///
@@ -295,7 +295,7 @@ void k_categorydrawer_mouse_left(void* self, void* index, void* blockRect);
 /// @param callback void func(KCategoryDrawer* self, QModelIndex* index, QRect* blockRect)
 void k_categorydrawer_on_mouse_left(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#mouseLeft)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#mouseLeft)
 ///
 /// Base class method implementation
 ///
@@ -966,7 +966,7 @@ void k_categorydrawer_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KCategoryDrawer* self, const char* objectName)
 void k_categorydrawer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorydrawer.html#dtor.KCategoryDrawer)
+/// [Qt documentation](https://api.kde.org/kcategorydrawer.html#dtor.KCategoryDrawer)
 ///
 /// Delete this object from C++ memory.
 ///

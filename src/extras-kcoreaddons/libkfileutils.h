@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfileutils.html
+/// https://api.kde.org/kfileutils.html
 
-/// [Qt documentation](https://api-staging.kde.org/kfileutils.html#suggestName)
+/// [Qt documentation](https://api.kde.org/kfileutils.html#suggestName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -21,14 +21,14 @@
 /// @param param2 const char*
 const char* k_fileutils_suggest_name(void* param1, const char* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kfileutils.html#makeSuggestedName)
+/// [Qt documentation](https://api.kde.org/kfileutils.html#makeSuggestedName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_fileutils_make_suggested_name(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kfileutils.html#findAllUniqueFiles)
+/// [Qt documentation](https://api.kde.org/kfileutils.html#findAllUniqueFiles)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

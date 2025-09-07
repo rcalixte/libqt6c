@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdatecombobox.html
+/// https://api.kde.org/kdatecombobox.html
 
 /// k_datecombobox_new constructs a new KDateComboBox object.
 ///
@@ -58,152 +58,152 @@ int32_t k_datecombobox_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_datecombobox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#date)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#date)
 ///
 /// @param self KDateComboBox*
 QDate* k_datecombobox_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#isValid)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#isValid)
 ///
 /// @param self KDateComboBox*
 bool k_datecombobox_is_valid(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#isNull)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#isNull)
 ///
 /// @param self KDateComboBox*
 bool k_datecombobox_is_null(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#options)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#options)
 ///
 /// @param self KDateComboBox*
 ///
 /// @return flag of enum KDateComboBox__Option
 int32_t k_datecombobox_options(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#displayFormat)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#displayFormat)
 ///
 /// @param self KDateComboBox*
 ///
 /// @return enum QLocale__FormatType
 int32_t k_datecombobox_display_format(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#minimumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#minimumDate)
 ///
 /// @param self KDateComboBox*
 QDate* k_datecombobox_minimum_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#maximumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#maximumDate)
 ///
 /// @param self KDateComboBox*
 QDate* k_datecombobox_maximum_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateMap)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateMap)
 ///
 /// @param self KDateComboBox*
 libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEntered)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateEntered)
 ///
 /// @param self KDateComboBox*
 /// @param date QDate*
 void k_datecombobox_date_entered(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEntered)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateEntered)
 ///
 /// @param self KDateComboBox*
 /// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_date_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateChanged)
 ///
 /// @param self KDateComboBox*
 /// @param date QDate*
 void k_datecombobox_date_changed(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateChanged)
 ///
 /// @param self KDateComboBox*
 /// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_date_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEdited)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateEdited)
 ///
 /// @param self KDateComboBox*
 /// @param date QDate*
 void k_datecombobox_date_edited(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dateEdited)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dateEdited)
 ///
 /// @param self KDateComboBox*
 /// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_date_edited(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setDate)
 ///
 /// @param self KDateComboBox*
 /// @param date QDate*
 void k_datecombobox_set_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setOptions)
 ///
 /// @param self KDateComboBox*
 /// @param options flag of enum KDateComboBox__Option
 void k_datecombobox_set_options(void* self, int32_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDisplayFormat)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setDisplayFormat)
 ///
 /// @param self KDateComboBox*
 /// @param format enum QLocale__FormatType
 void k_datecombobox_set_display_format(void* self, int32_t format);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDateRange)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setDateRange)
 ///
 /// @param self KDateComboBox*
 /// @param minDate QDate*
 /// @param maxDate QDate*
 void k_datecombobox_set_date_range(void* self, void* minDate, void* maxDate);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resetDateRange)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#resetDateRange)
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_reset_date_range(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setMinimumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setMinimumDate)
 ///
 /// @param self KDateComboBox*
 /// @param minDate QDate*
 void k_datecombobox_set_minimum_date(void* self, void* minDate);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resetMinimumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#resetMinimumDate)
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_reset_minimum_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setMaximumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setMaximumDate)
 ///
 /// @param self KDateComboBox*
 /// @param maxDate QDate*
 void k_datecombobox_set_maximum_date(void* self, void* maxDate);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resetMaximumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#resetMaximumDate)
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_reset_maximum_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDateMap)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setDateMap)
 ///
 /// @param self KDateComboBox*
 /// @param dateMap libqt_map /* of QDate* to const char* */
 void k_datecombobox_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#eventFilter)
 ///
 /// @param self KDateComboBox*
 /// @param object QObject*
 /// @param event QEvent*
 bool k_datecombobox_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -211,7 +211,7 @@ bool k_datecombobox_event_filter(void* self, void* object, void* event);
 /// @param callback bool func(KDateComboBox* self, QObject* object, QEvent* event)
 void k_datecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -220,12 +220,12 @@ void k_datecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, v
 /// @param event QEvent*
 bool k_datecombobox_qbase_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#showPopup)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#showPopup)
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_show_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#showPopup)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#showPopup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -233,19 +233,19 @@ void k_datecombobox_show_popup(void* self);
 /// @param callback void func()
 void k_datecombobox_on_show_popup(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#showPopup)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#showPopup)
 ///
 /// Base class method implementation
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_qbase_show_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#hidePopup)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#hidePopup)
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_hide_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#hidePopup)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#hidePopup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -253,20 +253,20 @@ void k_datecombobox_hide_popup(void* self);
 /// @param callback void func()
 void k_datecombobox_on_hide_popup(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#hidePopup)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#hidePopup)
 ///
 /// Base class method implementation
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_qbase_hide_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#mousePressEvent)
 ///
 /// @param self KDateComboBox*
 /// @param event QMouseEvent*
 void k_datecombobox_mouse_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -274,7 +274,7 @@ void k_datecombobox_mouse_press_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QMouseEvent* event)
 void k_datecombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -282,13 +282,13 @@ void k_datecombobox_on_mouse_press_event(void* self, void (*callback)(void*, voi
 /// @param event QMouseEvent*
 void k_datecombobox_qbase_mouse_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#wheelEvent)
 ///
 /// @param self KDateComboBox*
 /// @param event QWheelEvent*
 void k_datecombobox_wheel_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -296,7 +296,7 @@ void k_datecombobox_wheel_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QWheelEvent* event)
 void k_datecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
@@ -304,13 +304,13 @@ void k_datecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QWheelEvent*
 void k_datecombobox_qbase_wheel_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#keyPressEvent)
 ///
 /// @param self KDateComboBox*
 /// @param event QKeyEvent*
 void k_datecombobox_key_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -318,7 +318,7 @@ void k_datecombobox_key_press_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QKeyEvent* event)
 void k_datecombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -326,13 +326,13 @@ void k_datecombobox_on_key_press_event(void* self, void (*callback)(void*, void*
 /// @param event QKeyEvent*
 void k_datecombobox_qbase_key_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#focusInEvent)
 ///
 /// @param self KDateComboBox*
 /// @param event QFocusEvent*
 void k_datecombobox_focus_in_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#focusInEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -340,7 +340,7 @@ void k_datecombobox_focus_in_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QFocusEvent* event)
 void k_datecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#focusInEvent)
 ///
 /// Base class method implementation
 ///
@@ -348,13 +348,13 @@ void k_datecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param event QFocusEvent*
 void k_datecombobox_qbase_focus_in_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#focusOutEvent)
 ///
 /// @param self KDateComboBox*
 /// @param event QFocusEvent*
 void k_datecombobox_focus_out_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#focusOutEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -362,7 +362,7 @@ void k_datecombobox_focus_out_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QFocusEvent* event)
 void k_datecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#focusOutEvent)
 ///
 /// Base class method implementation
 ///
@@ -370,13 +370,13 @@ void k_datecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 void k_datecombobox_qbase_focus_out_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#resizeEvent)
 ///
 /// @param self KDateComboBox*
 /// @param event QResizeEvent*
 void k_datecombobox_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -384,7 +384,7 @@ void k_datecombobox_resize_event(void* self, void* event);
 /// @param callback void func(KDateComboBox* self, QResizeEvent* event)
 void k_datecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -392,13 +392,13 @@ void k_datecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 void k_datecombobox_qbase_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#assignDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#assignDate)
 ///
 /// @param self KDateComboBox*
 /// @param date QDate*
 void k_datecombobox_assign_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#assignDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#assignDate)
 ///
 /// Allows for overriding the related default method
 ///
@@ -406,7 +406,7 @@ void k_datecombobox_assign_date(void* self, void* date);
 /// @param callback void func(KDateComboBox* self, QDate* date)
 void k_datecombobox_on_assign_date(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#assignDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#assignDate)
 ///
 /// Base class method implementation
 ///
@@ -431,7 +431,7 @@ const char* k_datecombobox_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_datecombobox_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDateRange)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setDateRange)
 ///
 /// @param self KDateComboBox*
 /// @param minDate QDate*
@@ -439,7 +439,7 @@ const char* k_datecombobox_tr3(const char* s, const char* c, int n);
 /// @param minWarnMsg const char*
 void k_datecombobox_set_date_range3(void* self, void* minDate, void* maxDate, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setDateRange)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setDateRange)
 ///
 /// @param self KDateComboBox*
 /// @param minDate QDate*
@@ -448,14 +448,14 @@ void k_datecombobox_set_date_range3(void* self, void* minDate, void* maxDate, co
 /// @param maxWarnMsg const char*
 void k_datecombobox_set_date_range4(void* self, void* minDate, void* maxDate, const char* minWarnMsg, const char* maxWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setMinimumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setMinimumDate)
 ///
 /// @param self KDateComboBox*
 /// @param minDate QDate*
 /// @param minWarnMsg const char*
 void k_datecombobox_set_minimum_date2(void* self, void* minDate, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#setMaximumDate)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#setMaximumDate)
 ///
 /// @param self KDateComboBox*
 /// @param maxDate QDate*
@@ -5236,14 +5236,14 @@ void k_datecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// @param callback void func(KDateComboBox* self, const char* objectName)
 void k_datecombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatecombobox.html#dtor.KDateComboBox)
+/// [Qt documentation](https://api.kde.org/kdatecombobox.html#dtor.KDateComboBox)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KDateComboBox*
 void k_datecombobox_delete(void* self);
 
-/// https://api-staging.kde.org/kdatecombobox.html#types
+/// https://api.kde.org/kdatecombobox.html#types
 
 typedef enum {
     KDATECOMBOBOX_OPTION_EDITDATE = 1,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kled.html
+/// https://api.kde.org/kled.html
 
 /// k_led_new constructs a new KLed object.
 ///
@@ -86,73 +86,73 @@ int32_t k_led_qbase_metacall(void* self, int32_t param1, int param2, void* param
 /// @param s const char*
 const char* k_led_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#color)
+/// [Qt documentation](https://api.kde.org/kled.html#color)
 ///
 /// @param self KLed*
 QColor* k_led_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#state)
+/// [Qt documentation](https://api.kde.org/kled.html#state)
 ///
 /// @param self KLed*
 ///
 /// @return enum KLed__State
 int32_t k_led_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#look)
+/// [Qt documentation](https://api.kde.org/kled.html#look)
 ///
 /// @param self KLed*
 ///
 /// @return enum KLed__Look
 int32_t k_led_look(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#shape)
+/// [Qt documentation](https://api.kde.org/kled.html#shape)
 ///
 /// @param self KLed*
 ///
 /// @return enum KLed__Shape
 int32_t k_led_shape(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#darkFactor)
+/// [Qt documentation](https://api.kde.org/kled.html#darkFactor)
 ///
 /// @param self KLed*
 int32_t k_led_dark_factor(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#setColor)
+/// [Qt documentation](https://api.kde.org/kled.html#setColor)
 ///
 /// @param self KLed*
 /// @param color QColor*
 void k_led_set_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#setState)
+/// [Qt documentation](https://api.kde.org/kled.html#setState)
 ///
 /// @param self KLed*
 /// @param state enum KLed__State
 void k_led_set_state(void* self, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#setLook)
+/// [Qt documentation](https://api.kde.org/kled.html#setLook)
 ///
 /// @param self KLed*
 /// @param look enum KLed__Look
 void k_led_set_look(void* self, int32_t look);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#setShape)
+/// [Qt documentation](https://api.kde.org/kled.html#setShape)
 ///
 /// @param self KLed*
 /// @param shape enum KLed__Shape
 void k_led_set_shape(void* self, int32_t shape);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#setDarkFactor)
+/// [Qt documentation](https://api.kde.org/kled.html#setDarkFactor)
 ///
 /// @param self KLed*
 /// @param darkFactor int
 void k_led_set_dark_factor(void* self, int darkFactor);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kled.html#sizeHint)
 ///
 /// @param self KLed*
 QSize* k_led_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kled.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -160,19 +160,19 @@ QSize* k_led_size_hint(void* self);
 /// @param callback QSize* func()
 void k_led_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kled.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KLed*
 QSize* k_led_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kled.html#minimumSizeHint)
 ///
 /// @param self KLed*
 QSize* k_led_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kled.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,35 +180,35 @@ QSize* k_led_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_led_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kled.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KLed*
 QSize* k_led_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#toggle)
+/// [Qt documentation](https://api.kde.org/kled.html#toggle)
 ///
 /// @param self KLed*
 void k_led_toggle(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#on)
+/// [Qt documentation](https://api.kde.org/kled.html#on)
 ///
 /// @param self KLed*
 void k_led_on(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#off)
+/// [Qt documentation](https://api.kde.org/kled.html#off)
 ///
 /// @param self KLed*
 void k_led_off(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kled.html#paintEvent)
 ///
 /// @param self KLed*
 /// @param param1 QPaintEvent*
 void k_led_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kled.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -216,7 +216,7 @@ void k_led_paint_event(void* self, void* param1);
 /// @param callback void func(KLed* self, QPaintEvent* param1)
 void k_led_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kled.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -224,13 +224,13 @@ void k_led_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QPaintEvent*
 void k_led_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kled.html#resizeEvent)
 ///
 /// @param self KLed*
 /// @param param1 QResizeEvent*
 void k_led_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kled.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -238,7 +238,7 @@ void k_led_resize_event(void* self, void* param1);
 /// @param callback void func(KLed* self, QResizeEvent* param1)
 void k_led_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kled.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -4383,14 +4383,14 @@ void k_led_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t
 /// @param callback void func(KLed* self, const char* objectName)
 void k_led_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kled.html#dtor.KLed)
+/// [Qt documentation](https://api.kde.org/kled.html#dtor.KLed)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KLed*
 void k_led_delete(void* self);
 
-/// https://api-staging.kde.org/kled.html#types
+/// https://api.kde.org/kled.html#types
 
 typedef enum {
     KLED_STATE_OFF = 0,

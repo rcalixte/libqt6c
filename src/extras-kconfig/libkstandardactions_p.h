@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kstandardactions-rawstringdata.html
+/// https://api.kde.org/kstandardactions-rawstringdata.html
 
 /// k_standardactions__rawstringdata_new constructs a new KStandardActions::RawStringData object.
 ///
@@ -32,7 +32,7 @@ KStandardActions__RawStringData* k_standardactions__rawstringdata_new3();
 /// @param param1 KStandardActions__RawStringData*
 KStandardActions__RawStringData* k_standardactions__rawstringdata_new4(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-rawstringdata.html#toString)
+/// [Qt documentation](https://api.kde.org/kstandardactions-rawstringdata.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -44,60 +44,60 @@ const char* k_standardactions__rawstringdata_to_string(void* self);
 /// @param self KStandardActions__RawStringData*
 void k_standardactions__rawstringdata_delete(void* self);
 
-/// https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html
+/// https://api.kde.org/kstandardactions-kstandardactionsinfo.html
 
 /// k_standardactions__kstandardactionsinfo_new constructs a new KStandardActions::KStandardActionsInfo object.
 ///
 /// @param param1 KStandardActions__KStandardActionsInfo*
 KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#id-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#id-var)
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 ///
 /// @return enum KStandardActions__StandardAction
 int32_t k_standardactions__kstandardactionsinfo_id(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#id-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#id-var)
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 /// @param id enum KStandardActions__StandardAction
 void k_standardactions__kstandardactionsinfo_set_id(void* self, int32_t id);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#idAccel-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#idAccel-var)
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 ///
 /// @return enum KStandardShortcut__StandardShortcut
 int32_t k_standardactions__kstandardactionsinfo_id_accel(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#idAccel-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#idAccel-var)
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 /// @param idAccel enum KStandardShortcut__StandardShortcut
 void k_standardactions__kstandardactionsinfo_set_id_accel(void* self, int32_t idAccel);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#psLabel-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psLabel-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 const char* k_standardactions__kstandardactionsinfo_ps_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#psLabel-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psLabel-var)
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 /// @param psLabel const char*
 void k_standardactions__kstandardactionsinfo_set_ps_label(void* self, const char* psLabel);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#psToolTip-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psToolTip-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 const char* k_standardactions__kstandardactionsinfo_ps_tool_tip(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions-kstandardactionsinfo.html#psToolTip-var)
+/// [Qt documentation](https://api.kde.org/kstandardactions-kstandardactionsinfo.html#psToolTip-var)
 ///
 /// @param self KStandardActions__KStandardActionsInfo*
 /// @param psToolTip const char*
@@ -108,14 +108,14 @@ void k_standardactions__kstandardactionsinfo_set_ps_tool_tip(void* self, const c
 /// @param self KStandardActions__KStandardActionsInfo*
 void k_standardactions__kstandardactionsinfo_delete(void* self);
 
-/// https://api-staging.kde.org/kstandardactions.html
+/// https://api.kde.org/kstandardactions.html
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions.html#infoPtr)
+/// [Qt documentation](https://api.kde.org/kstandardactions.html#infoPtr)
 ///
 /// @param param1 enum KStandardActions__StandardAction
 const KStandardActions__KStandardActionsInfo* k_standardactions_info_ptr(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardactions.html#internal_stdNames)
+/// [Qt documentation](https://api.kde.org/kstandardactions.html#internal_stdNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

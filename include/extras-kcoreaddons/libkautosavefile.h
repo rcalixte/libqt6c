@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kautosavefile.html
+/// https://api.kde.org/kautosavefile.html
 
 /// k_autosavefile_new constructs a new KAutoSaveFile object.
 ///
@@ -69,23 +69,23 @@ int32_t k_autosavefile_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_autosavefile_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#managedFile)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#managedFile)
 ///
 /// @param self KAutoSaveFile*
 QUrl* k_autosavefile_managed_file(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#setManagedFile)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#setManagedFile)
 ///
 /// @param self KAutoSaveFile*
 /// @param filename QUrl*
 void k_autosavefile_set_managed_file(void* self, void* filename);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#releaseLock)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#releaseLock)
 ///
 /// @param self KAutoSaveFile*
 void k_autosavefile_release_lock(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#releaseLock)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#releaseLock)
 ///
 /// Allows for overriding the related default method
 ///
@@ -93,20 +93,20 @@ void k_autosavefile_release_lock(void* self);
 /// @param callback void func()
 void k_autosavefile_on_release_lock(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#releaseLock)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#releaseLock)
 ///
 /// Base class method implementation
 ///
 /// @param self KAutoSaveFile*
 void k_autosavefile_qbase_release_lock(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#open)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#open)
 ///
 /// @param self KAutoSaveFile*
 /// @param openmode flag of enum QIODeviceBase__OpenModeFlag
 bool k_autosavefile_open(void* self, int32_t openmode);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#open)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#open)
 ///
 /// Allows for overriding the related default method
 ///
@@ -114,7 +114,7 @@ bool k_autosavefile_open(void* self, int32_t openmode);
 /// @param callback bool func(KAutoSaveFile* self, flag of enum QIODeviceBase__OpenModeFlag openmode)
 void k_autosavefile_on_open(void* self, bool (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#open)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#open)
 ///
 /// Base class method implementation
 ///
@@ -122,12 +122,12 @@ void k_autosavefile_on_open(void* self, bool (*callback)(void*, int32_t));
 /// @param openmode flag of enum QIODeviceBase__OpenModeFlag
 bool k_autosavefile_qbase_open(void* self, int32_t openmode);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#staleFiles)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#staleFiles)
 ///
 /// @param url QUrl*
 libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files(void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#allStaleFiles)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#allStaleFiles)
 ///
 libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files();
 
@@ -148,13 +148,13 @@ const char* k_autosavefile_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_autosavefile_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#staleFiles)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#staleFiles)
 ///
 /// @param url QUrl*
 /// @param applicationName const char*
 libqt_list /* of KAutoSaveFile* */ k_autosavefile_stale_files2(void* url, const char* applicationName);
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#allStaleFiles)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#allStaleFiles)
 ///
 /// @param applicationName const char*
 libqt_list /* of KAutoSaveFile* */ k_autosavefile_all_stale_files1(const char* applicationName);
@@ -2078,7 +2078,7 @@ void k_autosavefile_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param callback void func(KAutoSaveFile* self, const char* objectName)
 void k_autosavefile_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kautosavefile.html#dtor.KAutoSaveFile)
+/// [Qt documentation](https://api.kde.org/kautosavefile.html#dtor.KAutoSaveFile)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcompletion.html
+/// https://api.kde.org/kcompletion.html
 
 /// k_completion_new constructs a new KCompletion object.
 ///
@@ -53,7 +53,7 @@ int32_t k_completion_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_completion_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#substringCompletion)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#substringCompletion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -61,14 +61,14 @@ const char* k_completion_tr(const char* s);
 /// @param stringVal const char*
 const char** k_completion_substring_completion(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#lastMatch)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#lastMatch)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char* k_completion_last_match(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#lastMatch)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#lastMatch)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,32 +76,32 @@ const char* k_completion_last_match(void* self);
 /// @param callback const char* func()
 void k_completion_on_last_match(void* self, const char* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#lastMatch)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#lastMatch)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletion*
 const char* k_completion_qbase_last_match(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#items)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char** k_completion_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#isEmpty)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#isEmpty)
 ///
 /// @param self KCompletion*
 bool k_completion_is_empty(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setCompletionMode)
 ///
 /// @param self KCompletion*
 /// @param mode enum KCompletion__CompletionMode
 void k_completion_set_completion_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setCompletionMode)
 ///
 /// Allows for overriding the related default method
 ///
@@ -109,7 +109,7 @@ void k_completion_set_completion_mode(void* self, int32_t mode);
 /// @param callback void func(KCompletion* self, enum KCompletion__CompletionMode mode)
 void k_completion_on_set_completion_mode(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setCompletionMode)
 ///
 /// Base class method implementation
 ///
@@ -117,20 +117,20 @@ void k_completion_on_set_completion_mode(void* self, void (*callback)(void*, int
 /// @param mode enum KCompletion__CompletionMode
 void k_completion_qbase_set_completion_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#completionMode)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#completionMode)
 ///
 /// @param self KCompletion*
 ///
 /// @return enum KCompletion__CompletionMode
 int32_t k_completion_completion_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setOrder)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setOrder)
 ///
 /// @param self KCompletion*
 /// @param order enum KCompletion__CompOrder
 void k_completion_set_order(void* self, int32_t order);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setOrder)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setOrder)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_completion_set_order(void* self, int32_t order);
 /// @param callback void func(KCompletion* self, enum KCompletion__CompOrder order)
 void k_completion_on_set_order(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setOrder)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setOrder)
 ///
 /// Base class method implementation
 ///
@@ -146,20 +146,20 @@ void k_completion_on_set_order(void* self, void (*callback)(void*, int32_t));
 /// @param order enum KCompletion__CompOrder
 void k_completion_qbase_set_order(void* self, int32_t order);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#order)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#order)
 ///
 /// @param self KCompletion*
 ///
 /// @return enum KCompletion__CompOrder
 int32_t k_completion_order(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setIgnoreCase)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setIgnoreCase)
 ///
 /// @param self KCompletion*
 /// @param ignoreCase bool
 void k_completion_set_ignore_case(void* self, bool ignoreCase);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setIgnoreCase)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setIgnoreCase)
 ///
 /// Allows for overriding the related default method
 ///
@@ -167,7 +167,7 @@ void k_completion_set_ignore_case(void* self, bool ignoreCase);
 /// @param callback void func(KCompletion* self, bool ignoreCase)
 void k_completion_on_set_ignore_case(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setIgnoreCase)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setIgnoreCase)
 ///
 /// Base class method implementation
 ///
@@ -175,24 +175,24 @@ void k_completion_on_set_ignore_case(void* self, void (*callback)(void*, bool));
 /// @param ignoreCase bool
 void k_completion_qbase_set_ignore_case(void* self, bool ignoreCase);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#ignoreCase)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#ignoreCase)
 ///
 /// @param self KCompletion*
 bool k_completion_ignore_case(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#shouldAutoSuggest)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#shouldAutoSuggest)
 ///
 /// @param self KCompletion*
 bool k_completion_should_auto_suggest(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#allMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allMatches)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char** k_completion_all_matches(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#allMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allMatches)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,13 +200,13 @@ const char** k_completion_all_matches(void* self);
 /// @param stringVal const char*
 const char** k_completion_all_matches2(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setSoundsEnabled)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// @param self KCompletion*
 /// @param enable bool
 void k_completion_set_sounds_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setSoundsEnabled)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -214,7 +214,7 @@ void k_completion_set_sounds_enabled(void* self, bool enable);
 /// @param callback void func(KCompletion* self, bool enable)
 void k_completion_on_set_sounds_enabled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setSoundsEnabled)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// Base class method implementation
 ///
@@ -222,17 +222,17 @@ void k_completion_on_set_sounds_enabled(void* self, void (*callback)(void*, bool
 /// @param enable bool
 void k_completion_qbase_set_sounds_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#soundsEnabled)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#soundsEnabled)
 ///
 /// @param self KCompletion*
 bool k_completion_sounds_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#hasMultipleMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#hasMultipleMatches)
 ///
 /// @param self KCompletion*
 bool k_completion_has_multiple_matches(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -240,7 +240,7 @@ bool k_completion_has_multiple_matches(void* self);
 /// @param stringVal const char*
 const char* k_completion_make_completion(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Allows for overriding the related default method
 ///
@@ -248,7 +248,7 @@ const char* k_completion_make_completion(void* self, const char* stringVal);
 /// @param callback const char* func(KCompletion* self, const char* stringVal)
 void k_completion_on_make_completion(void* self, const char* (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Base class method implementation
 ///
@@ -256,33 +256,33 @@ void k_completion_on_make_completion(void* self, const char* (*callback)(void*, 
 /// @param stringVal const char*
 const char* k_completion_qbase_make_completion(void* self, const char* stringVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#previousMatch)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#previousMatch)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char* k_completion_previous_match(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#nextMatch)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#nextMatch)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletion*
 const char* k_completion_next_match(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#insertItems)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#insertItems)
 ///
 /// @param self KCompletion*
 /// @param items const char**
 void k_completion_insert_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setItems)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// @param self KCompletion*
 /// @param itemList const char**
 void k_completion_set_items(void* self, const char* itemList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setItems)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// Allows for overriding the related default method
 ///
@@ -290,7 +290,7 @@ void k_completion_set_items(void* self, const char* itemList[]);
 /// @param callback void func(KCompletion* self, const char** itemList)
 void k_completion_on_set_items(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setItems)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// Base class method implementation
 ///
@@ -298,31 +298,31 @@ void k_completion_on_set_items(void* self, void (*callback)(void*, const char**)
 /// @param itemList const char**
 void k_completion_qbase_set_items(void* self, const char* itemList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#addItem)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#addItem)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 void k_completion_add_item(void* self, const char* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#addItem)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#addItem)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 /// @param weight uint32_t
 void k_completion_add_item2(void* self, const char* item, uint32_t weight);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#removeItem)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#removeItem)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 void k_completion_remove_item(void* self, const char* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#clear)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#clear)
 ///
 /// @param self KCompletion*
 void k_completion_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#clear)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#clear)
 ///
 /// Allows for overriding the related default method
 ///
@@ -330,55 +330,55 @@ void k_completion_clear(void* self);
 /// @param callback void func()
 void k_completion_on_clear(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#clear)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#clear)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletion*
 void k_completion_qbase_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#match)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#match)
 ///
 /// @param self KCompletion*
 /// @param item const char*
 void k_completion_match(void* self, const char* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#match)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#match)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char* item)
 void k_completion_on_match(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#matches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#matches)
 ///
 /// @param self KCompletion*
 /// @param matchlist const char**
 void k_completion_matches(void* self, const char* matchlist[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#matches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#matches)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self, const char** matchlist)
 void k_completion_on_matches(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#multipleMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#multipleMatches)
 ///
 /// @param self KCompletion*
 void k_completion_multiple_matches(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#multipleMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#multipleMatches)
 ///
 /// @param self KCompletion*
 /// @param callback void func(KCompletion* self)
 void k_completion_on_multiple_matches(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#postProcessMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// @param self KCompletion*
 /// @param matchList const char**
 void k_completion_post_process_matches(void* self, const char* matchList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#postProcessMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// Allows for overriding the related default method
 ///
@@ -386,7 +386,7 @@ void k_completion_post_process_matches(void* self, const char* matchList[]);
 /// @param callback void func(KCompletion* self, const char** matchList)
 void k_completion_on_post_process_matches(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#postProcessMatches)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
 /// Base class method implementation
 ///
@@ -394,13 +394,13 @@ void k_completion_on_post_process_matches(void* self, void (*callback)(void*, co
 /// @param matchList const char**
 void k_completion_qbase_post_process_matches(void* self, const char* matchList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setShouldAutoSuggest)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///
 /// @param self KCompletion*
 /// @param shouldAutosuggest bool
 void k_completion_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setShouldAutoSuggest)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///
 /// Allows for overriding the related default method
 ///
@@ -408,7 +408,7 @@ void k_completion_set_should_auto_suggest(void* self, bool shouldAutosuggest);
 /// @param callback void func(KCompletion* self, bool shouldAutosuggest)
 void k_completion_on_set_should_auto_suggest(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#setShouldAutoSuggest)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///
 /// Base class method implementation
 ///
@@ -1078,14 +1078,14 @@ void k_completion_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param callback void func(KCompletion* self, const char* objectName)
 void k_completion_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletion.html#dtor.KCompletion)
+/// [Qt documentation](https://api.kde.org/kcompletion.html#dtor.KCompletion)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KCompletion*
 void k_completion_delete(void* self);
 
-/// https://api-staging.kde.org/kcompletion.html#types
+/// https://api.kde.org/kcompletion.html#types
 
 typedef enum {
     KCOMPLETION_COMPLETIONMODE_COMPLETIONNONE = 1,

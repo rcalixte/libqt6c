@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/khistorycombobox.html
+/// https://api.kde.org/khistorycombobox.html
 
 /// k_historycombobox_new constructs a new KHistoryComboBox object.
 ///
@@ -69,66 +69,66 @@ int32_t k_historycombobox_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_historycombobox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#setHistoryItems)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#setHistoryItems)
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
 void k_historycombobox_set_history_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#setHistoryItems)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#setHistoryItems)
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
 /// @param setCompletionList bool
 void k_historycombobox_set_history_items2(void* self, const char* items[], bool setCompletionList);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#historyItems)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#historyItems)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KHistoryComboBox*
 const char** k_historycombobox_history_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#removeFromHistory)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#removeFromHistory)
 ///
 /// @param self KHistoryComboBox*
 /// @param item const char*
 bool k_historycombobox_remove_from_history(void* self, const char* item);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#addToHistory)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#addToHistory)
 ///
 /// @param self KHistoryComboBox*
 /// @param item const char*
 void k_historycombobox_add_to_history(void* self, const char* item);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#clearHistory)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#clearHistory)
 ///
 /// @param self KHistoryComboBox*
 void k_historycombobox_clear_history(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#reset)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#reset)
 ///
 /// @param self KHistoryComboBox*
 void k_historycombobox_reset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#cleared)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#cleared)
 ///
 /// @param self KHistoryComboBox*
 void k_historycombobox_cleared(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#cleared)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#cleared)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self)
 void k_historycombobox_on_cleared(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#keyPressEvent)
 ///
 /// @param self KHistoryComboBox*
 /// @param param1 QKeyEvent*
 void k_historycombobox_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -136,7 +136,7 @@ void k_historycombobox_key_press_event(void* self, void* param1);
 /// @param callback void func(KHistoryComboBox* self, QKeyEvent* param1)
 void k_historycombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -144,13 +144,13 @@ void k_historycombobox_on_key_press_event(void* self, void (*callback)(void*, vo
 /// @param param1 QKeyEvent*
 void k_historycombobox_qbase_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#wheelEvent)
 ///
 /// @param self KHistoryComboBox*
 /// @param ev QWheelEvent*
 void k_historycombobox_wheel_event(void* self, void* ev);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,7 +158,7 @@ void k_historycombobox_wheel_event(void* self, void* ev);
 /// @param callback void func(KHistoryComboBox* self, QWheelEvent* ev)
 void k_historycombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
@@ -166,13 +166,13 @@ void k_historycombobox_on_wheel_event(void* self, void (*callback)(void*, void*)
 /// @param ev QWheelEvent*
 void k_historycombobox_qbase_wheel_event(void* self, void* ev);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#insertItems)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
 void k_historycombobox_insert_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#insertItems)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,7 +180,7 @@ void k_historycombobox_insert_items(void* self, const char* items[]);
 /// @param callback void func(KHistoryComboBox* self, const char** items)
 void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const char**));
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#insertItems)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
 /// Base class method implementation
 ///
@@ -188,12 +188,12 @@ void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const
 /// @param items const char**
 void k_historycombobox_qbase_insert_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#useCompletion)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#useCompletion)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_use_completion(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#useCompletion)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#useCompletion)
 ///
 /// Allows for overriding the related default method
 ///
@@ -201,7 +201,7 @@ bool k_historycombobox_use_completion(void* self);
 /// @param callback bool func()
 void k_historycombobox_on_use_completion(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#useCompletion)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#useCompletion)
 ///
 /// Base class method implementation
 ///
@@ -227,7 +227,7 @@ const char* k_historycombobox_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setEditUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setEditUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param url QUrl*
@@ -235,7 +235,7 @@ void k_historycombobox_set_edit_url(void* self, void* url);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#addUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#addUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param url QUrl*
@@ -243,7 +243,7 @@ void k_historycombobox_add_url(void* self, void* url);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#addUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#addUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param icon QIcon*
@@ -252,7 +252,7 @@ void k_historycombobox_add_url2(void* self, void* icon, void* url);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#insertUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#insertUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param index int
@@ -261,7 +261,7 @@ void k_historycombobox_insert_url(void* self, int index, void* url);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#insertUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#insertUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param index int
@@ -271,7 +271,7 @@ void k_historycombobox_insert_url2(void* self, int index, void* icon, void* url)
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#changeUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#changeUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param index int
@@ -280,7 +280,7 @@ void k_historycombobox_change_url(void* self, int index, void* url);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#changeUrl)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#changeUrl)
 ///
 /// @param self KHistoryComboBox*
 /// @param index int
@@ -290,28 +290,28 @@ void k_historycombobox_change_url2(void* self, int index, void* icon, void* url)
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#cursorPosition)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#cursorPosition)
 ///
 /// @param self KHistoryComboBox*
 int32_t k_historycombobox_cursor_position(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#autoCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#autoCompletion)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_auto_completion(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#urlDropsEnabled)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#urlDropsEnabled)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_url_drops_enabled(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#contains)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#contains)
 ///
 /// @param self KHistoryComboBox*
 /// @param text const char*
@@ -319,7 +319,7 @@ bool k_historycombobox_contains(void* self, const char* text);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setTrapReturnKey)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setTrapReturnKey)
 ///
 /// @param self KHistoryComboBox*
 /// @param trap bool
@@ -327,21 +327,21 @@ void k_historycombobox_set_trap_return_key(void* self, bool trap);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#trapReturnKey)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#trapReturnKey)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_trap_return_key(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#completionBox)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#completionBox)
 ///
 /// @param self KHistoryComboBox*
 KCompletionBox* k_historycombobox_completion_box(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setEditable)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setEditable)
 ///
 /// @param self KHistoryComboBox*
 /// @param editable bool
@@ -349,14 +349,14 @@ void k_historycombobox_set_editable(void* self, bool editable);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#contextMenu)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#contextMenu)
 ///
 /// @param self KHistoryComboBox*
 QMenu* k_historycombobox_context_menu(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#returnPressed)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#returnPressed)
 ///
 /// @param self KHistoryComboBox*
 /// @param text const char*
@@ -364,7 +364,7 @@ void k_historycombobox_return_pressed(void* self, const char* text);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#returnPressed)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#returnPressed)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char* text)
@@ -372,7 +372,7 @@ void k_historycombobox_on_return_pressed(void* self, void (*callback)(void*, con
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#completion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#completion)
 ///
 /// @param self KHistoryComboBox*
 /// @param param1 const char*
@@ -380,7 +380,7 @@ void k_historycombobox_completion(void* self, const char* param1);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#completion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#completion)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char* param1)
@@ -388,7 +388,7 @@ void k_historycombobox_on_completion(void* self, void (*callback)(void*, const c
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#substringCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#substringCompletion)
 ///
 /// @param self KHistoryComboBox*
 /// @param param1 const char*
@@ -396,7 +396,7 @@ void k_historycombobox_substring_completion(void* self, const char* param1);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#substringCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#substringCompletion)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, const char* param1)
@@ -404,7 +404,7 @@ void k_historycombobox_on_substring_completion(void* self, void (*callback)(void
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#textRotation)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#textRotation)
 ///
 /// @param self KHistoryComboBox*
 /// @param param1 enum KCompletionBase__KeyBindingType
@@ -412,7 +412,7 @@ void k_historycombobox_text_rotation(void* self, int32_t param1);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#textRotation)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#textRotation)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, enum KCompletionBase__KeyBindingType param1)
@@ -420,7 +420,7 @@ void k_historycombobox_on_text_rotation(void* self, void (*callback)(void*, int3
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#completionModeChanged)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#completionModeChanged)
 ///
 /// @param self KHistoryComboBox*
 /// @param param1 enum KCompletion__CompletionMode
@@ -428,7 +428,7 @@ void k_historycombobox_completion_mode_changed(void* self, int32_t param1);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#completionModeChanged)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#completionModeChanged)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, enum KCompletion__CompletionMode param1)
@@ -436,7 +436,7 @@ void k_historycombobox_on_completion_mode_changed(void* self, void (*callback)(v
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#aboutToShowContextMenu)
 ///
 /// @param self KHistoryComboBox*
 /// @param contextMenu QMenu*
@@ -444,7 +444,7 @@ void k_historycombobox_about_to_show_context_menu(void* self, void* contextMenu)
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#aboutToShowContextMenu)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback void func(KHistoryComboBox* self, QMenu* contextMenu)
@@ -452,7 +452,7 @@ void k_historycombobox_on_about_to_show_context_menu(void* self, void (*callback
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#rotateText)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#rotateText)
 ///
 /// @param self KHistoryComboBox*
 /// @param typeVal enum KCompletionBase__KeyBindingType
@@ -460,7 +460,7 @@ void k_historycombobox_rotate_text(void* self, int32_t typeVal);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCurrentItem)
 ///
 /// @param self KHistoryComboBox*
 /// @param item const char*
@@ -468,7 +468,7 @@ void k_historycombobox_set_current_item(void* self, const char* item);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#completionBox)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#completionBox)
 ///
 /// @param self KHistoryComboBox*
 /// @param create bool
@@ -476,7 +476,7 @@ KCompletionBox* k_historycombobox_completion_box1(void* self, bool create);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCurrentItem)
 ///
 /// @param self KHistoryComboBox*
 /// @param item const char*
@@ -485,7 +485,7 @@ void k_historycombobox_set_current_item2(void* self, const char* item, bool inse
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCurrentItem)
 ///
 /// @param self KHistoryComboBox*
 /// @param item const char*
@@ -3694,21 +3694,21 @@ int32_t k_historycombobox_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#completionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#completionObject)
 ///
 /// @param self KHistoryComboBox*
 KCompletion* k_historycombobox_completion_object(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_is_completion_object_auto_deleted(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setAutoDeleteCompletionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setAutoDeleteCompletionObject)
 ///
 /// @param self KHistoryComboBox*
 /// @param autoDelete bool
@@ -3716,7 +3716,7 @@ void k_historycombobox_set_auto_delete_completion_object(void* self, bool autoDe
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setEnableSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setEnableSignals)
 ///
 /// @param self KHistoryComboBox*
 /// @param enable bool
@@ -3724,21 +3724,21 @@ void k_historycombobox_set_enable_signals(void* self, bool enable);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#handleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#handleSignals)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_handle_signals(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#emitSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#emitSignals)
 ///
 /// @param self KHistoryComboBox*
 bool k_historycombobox_emit_signals(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setEmitSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setEmitSignals)
 ///
 /// @param self KHistoryComboBox*
 /// @param emitRotationSignals bool
@@ -3746,7 +3746,7 @@ void k_historycombobox_set_emit_signals(void* self, bool emitRotationSignals);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#completionMode)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#completionMode)
 ///
 /// @param self KHistoryComboBox*
 ///
@@ -3755,7 +3755,7 @@ int32_t k_historycombobox_completion_mode(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBinding)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBinding)
 ///
 /// @param self KHistoryComboBox*
 /// @param item enum KCompletionBase__KeyBindingType
@@ -3764,7 +3764,7 @@ bool k_historycombobox_set_key_binding(void* self, int32_t item, libqt_list key)
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBinding)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBinding)
 ///
 /// @param self KHistoryComboBox*
 /// @param item enum KCompletionBase__KeyBindingType
@@ -3772,21 +3772,21 @@ libqt_list /* of QKeySequence* */ k_historycombobox_key_binding(void* self, int3
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#useGlobalKeyBindings)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#useGlobalKeyBindings)
 ///
 /// @param self KHistoryComboBox*
 void k_historycombobox_use_global_key_bindings(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#compObj)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#compObj)
 ///
 /// @param self KHistoryComboBox*
 KCompletion* k_historycombobox_comp_obj(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#completionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#completionObject)
 ///
 /// @param self KHistoryComboBox*
 /// @param handleSignals bool
@@ -3794,7 +3794,7 @@ KCompletion* k_historycombobox_completion_object1(void* self, bool handleSignals
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setAutoCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setAutoCompletion)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3804,7 +3804,7 @@ void k_historycombobox_set_auto_completion(void* self, bool autocomplete);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setAutoCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setAutoCompletion)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3814,7 +3814,7 @@ void k_historycombobox_qbase_set_auto_completion(void* self, bool autocomplete);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setAutoCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setAutoCompletion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3824,7 +3824,7 @@ void k_historycombobox_on_set_auto_completion(void* self, void (*callback)(void*
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setLineEdit)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setLineEdit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3834,7 +3834,7 @@ void k_historycombobox_set_line_edit(void* self, void* lineEdit);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setLineEdit)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setLineEdit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3844,7 +3844,7 @@ void k_historycombobox_qbase_set_line_edit(void* self, void* lineEdit);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setLineEdit)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setLineEdit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3854,7 +3854,7 @@ void k_historycombobox_on_set_line_edit(void* self, void (*callback)(void*, void
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3863,7 +3863,7 @@ QSize* k_historycombobox_minimum_size_hint(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#minimumSizeHint)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3872,7 +3872,7 @@ QSize* k_historycombobox_qbase_minimum_size_hint(void* self);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#minimumSizeHint)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3882,7 +3882,7 @@ void k_historycombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3892,7 +3892,7 @@ void k_historycombobox_set_completed_text(void* self, const char* completedText)
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3902,7 +3902,7 @@ void k_historycombobox_qbase_set_completed_text(void* self, const char* complete
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3912,7 +3912,7 @@ void k_historycombobox_on_set_completed_text(void* self, void (*callback)(void*,
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCompletedItems)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedItems)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3923,7 +3923,7 @@ void k_historycombobox_set_completed_items(void* self, const char* items[], bool
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCompletedItems)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedItems)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3934,7 +3934,7 @@ void k_historycombobox_qbase_set_completed_items(void* self, const char* items[]
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#setCompletedItems)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedItems)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3944,7 +3944,7 @@ void k_historycombobox_on_set_completed_items(void* self, void (*callback)(void*
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#makeCompletion)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3954,7 +3954,7 @@ void k_historycombobox_make_completion(void* self, const char* param1);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#makeCompletion)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3964,7 +3964,7 @@ void k_historycombobox_qbase_make_completion(void* self, const char* param1);
 
 /// Inherited from KComboBox
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcombobox.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/kcombobox.html#makeCompletion)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5406,7 +5406,7 @@ void k_historycombobox_on_disconnect_notify(void* self, void (*callback)(void*, 
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setCompletionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletionObject)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5417,7 +5417,7 @@ void k_historycombobox_set_completion_object(void* self, void* completionObject,
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setCompletionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletionObject)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5428,7 +5428,7 @@ void k_historycombobox_qbase_set_completion_object(void* self, void* completionO
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setCompletionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletionObject)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5438,7 +5438,7 @@ void k_historycombobox_on_set_completion_object(void* self, void (*callback)(voi
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setHandleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5448,7 +5448,7 @@ void k_historycombobox_set_handle_signals(void* self, bool handle);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setHandleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5458,7 +5458,7 @@ void k_historycombobox_qbase_set_handle_signals(void* self, bool handle);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setHandleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5468,7 +5468,7 @@ void k_historycombobox_on_set_handle_signals(void* self, void (*callback)(void*,
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletionMode)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5478,7 +5478,7 @@ void k_historycombobox_set_completion_mode(void* self, int32_t mode);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletionMode)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5488,7 +5488,7 @@ void k_historycombobox_qbase_set_completion_mode(void* self, int32_t mode);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletionMode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5498,7 +5498,7 @@ void k_historycombobox_on_set_completion_mode(void* self, void (*callback)(void*
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#virtual_hook)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5509,7 +5509,7 @@ void k_historycombobox_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#virtual_hook)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5520,7 +5520,7 @@ void k_historycombobox_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#virtual_hook)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5818,7 +5818,7 @@ void k_historycombobox_on_get_decoded_metric_f(void* self, double (*callback)(vo
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5827,7 +5827,7 @@ libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_historycombobox_ke
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5836,7 +5836,7 @@ libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_historycombobox_qb
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5846,7 +5846,7 @@ void k_historycombobox_on_key_binding_map(void* self, libqt_map /* of int32_t to
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5856,7 +5856,7 @@ void k_historycombobox_set_key_binding_map(void* self, libqt_map /* of int32_t t
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5866,7 +5866,7 @@ void k_historycombobox_qbase_set_key_binding_map(void* self, libqt_map /* of int
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5876,7 +5876,7 @@ void k_historycombobox_on_set_key_binding_map(void* self, void (*callback)(void*
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setDelegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5886,7 +5886,7 @@ void k_historycombobox_set_delegate(void* self, void* delegate);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setDelegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5896,7 +5896,7 @@ void k_historycombobox_qbase_set_delegate(void* self, void* delegate);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setDelegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5906,7 +5906,7 @@ void k_historycombobox_on_set_delegate(void* self, void (*callback)(void*, void*
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#delegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#delegate)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5915,7 +5915,7 @@ KCompletionBase* k_historycombobox_delegate(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#delegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#delegate)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5924,7 +5924,7 @@ KCompletionBase* k_historycombobox_qbase_delegate(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#delegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#delegate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5942,7 +5942,7 @@ void k_historycombobox_on_delegate(void* self, KCompletionBase* (*callback)());
 /// @param callback void func(KHistoryComboBox* self, const char* objectName)
 void k_historycombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/khistorycombobox.html#dtor.KHistoryComboBox)
+/// [Qt documentation](https://api.kde.org/khistorycombobox.html#dtor.KHistoryComboBox)
 ///
 /// Delete this object from C++ memory.
 ///

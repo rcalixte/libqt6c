@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kshortcutseditor.html
+/// https://api.kde.org/kshortcutseditor.html
 
 /// k_shortcutseditor_new constructs a new KShortcutsEditor object.
 ///
@@ -88,57 +88,57 @@ int32_t k_shortcutseditor_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_shortcutseditor_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#isModified)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#isModified)
 ///
 /// @param self KShortcutsEditor*
 bool k_shortcutseditor_is_modified(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#clearCollections)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#clearCollections)
 ///
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_clear_collections(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#addCollection)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#addCollection)
 ///
 /// @param self KShortcutsEditor*
 /// @param param1 KActionCollection*
 void k_shortcutseditor_add_collection(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#undo)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#undo)
 ///
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_undo(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#save)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#save)
 ///
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_save(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#setActionTypes)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#setActionTypes)
 ///
 /// @param self KShortcutsEditor*
 /// @param actionTypes flag of enum KShortcutsEditor__ActionType
 void k_shortcutseditor_set_action_types(void* self, int64_t actionTypes);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#actionTypes)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#actionTypes)
 ///
 /// @param self KShortcutsEditor*
 ///
 /// @return flag of enum KShortcutsEditor__ActionType
 int64_t k_shortcutseditor_action_types(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#keyChange)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#keyChange)
 ///
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_key_change(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#keyChange)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#keyChange)
 ///
 /// @param self KShortcutsEditor*
 /// @param callback void func(KShortcutsEditor* self)
 void k_shortcutseditor_on_key_change(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#allDefault)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#allDefault)
 ///
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_all_default(void* self);
@@ -160,7 +160,7 @@ const char* k_shortcutseditor_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_shortcutseditor_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#addCollection)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#addCollection)
 ///
 /// @param self KShortcutsEditor*
 /// @param param1 KActionCollection*
@@ -4403,14 +4403,14 @@ void k_shortcutseditor_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KShortcutsEditor* self, const char* objectName)
 void k_shortcutseditor_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutseditor.html#dtor.KShortcutsEditor)
+/// [Qt documentation](https://api.kde.org/kshortcutseditor.html#dtor.KShortcutsEditor)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KShortcutsEditor*
 void k_shortcutseditor_delete(void* self);
 
-/// https://api-staging.kde.org/kshortcutseditor.html#types
+/// https://api.kde.org/kshortcutseditor.html#types
 
 typedef enum {
     KSHORTCUTSEDITOR_ACTIONTYPE_WIDGETACTION = 0,

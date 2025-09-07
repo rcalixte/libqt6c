@@ -11,6 +11,8 @@
 
 #include "../qtlibc.h"
 
+/// https://doc.qt.io/qt-6/qdbuspendingreplybase.html
+
 /// Inherited from QDBusPendingCall
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuspendingcall.html#operator-eq)

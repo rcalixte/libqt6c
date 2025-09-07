@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html
+/// https://api.kde.org/kpixmapsequenceoverlaypainter.html
 
 /// k_pixmapsequenceoverlaypainter_new constructs a new KPixmapSequenceOverlayPainter object.
 ///
@@ -69,87 +69,87 @@ int32_t k_pixmapsequenceoverlaypainter_qbase_metacall(void* self, int32_t param1
 /// @param s const char*
 const char* k_pixmapsequenceoverlaypainter_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#sequence)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#sequence)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 KPixmapSequence* k_pixmapsequenceoverlaypainter_sequence(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#interval)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#interval)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 int32_t k_pixmapsequenceoverlaypainter_interval(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#rect)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#rect)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 QRect* k_pixmapsequenceoverlaypainter_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#alignment)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#alignment)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 int32_t k_pixmapsequenceoverlaypainter_alignment(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#offset)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#offset)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 QPoint* k_pixmapsequenceoverlaypainter_offset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setSequence)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#setSequence)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param seq KPixmapSequence*
 void k_pixmapsequenceoverlaypainter_set_sequence(void* self, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setInterval)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#setInterval)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param msecs int
 void k_pixmapsequenceoverlaypainter_set_interval(void* self, int msecs);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setWidget)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#setWidget)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param w QWidget*
 void k_pixmapsequenceoverlaypainter_set_widget(void* self, void* w);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setRect)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#setRect)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param rect QRect*
 void k_pixmapsequenceoverlaypainter_set_rect(void* self, void* rect);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setAlignment)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#setAlignment)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param align flag of enum Qt__AlignmentFlag
 void k_pixmapsequenceoverlaypainter_set_alignment(void* self, int32_t align);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#setOffset)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#setOffset)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param offset QPoint*
 void k_pixmapsequenceoverlaypainter_set_offset(void* self, void* offset);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#start)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#start)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 void k_pixmapsequenceoverlaypainter_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#stop)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#stop)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 void k_pixmapsequenceoverlaypainter_stop(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
 ///
 /// @param self KPixmapSequenceOverlayPainter*
 /// @param obj QObject*
 /// @param event QEvent*
 bool k_pixmapsequenceoverlaypainter_event_filter(void* self, void* obj, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -157,7 +157,7 @@ bool k_pixmapsequenceoverlaypainter_event_filter(void* self, void* obj, void* ev
 /// @param callback bool func(KPixmapSequenceOverlayPainter* self, QObject* obj, QEvent* event)
 void k_pixmapsequenceoverlaypainter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -796,7 +796,7 @@ void k_pixmapsequenceoverlaypainter_on_is_signal_connected(void* self, bool (*ca
 /// @param callback void func(KPixmapSequenceOverlayPainter* self, const char* objectName)
 void k_pixmapsequenceoverlaypainter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceoverlaypainter.html#dtor.KPixmapSequenceOverlayPainter)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceoverlaypainter.html#dtor.KPixmapSequenceOverlayPainter)
 ///
 /// Delete this object from C++ memory.
 ///

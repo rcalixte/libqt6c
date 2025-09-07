@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfigloader.html
+/// https://api.kde.org/kconfigloader.html
 
 /// k_configloader_new constructs a new KConfigLoader object.
 ///
@@ -39,44 +39,44 @@ KConfigLoader* k_configloader_new3(const char* configFile, void* xml, void* pare
 /// @param parent QObject*
 KConfigLoader* k_configloader_new4(void* config, void* xml, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#findItem)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#findItem)
 ///
 /// @param self KConfigLoader*
 /// @param group const char*
 /// @param key const char*
 KConfigSkeletonItem* k_configloader_find_item(void* self, const char* group, const char* key);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#findItemByName)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#findItemByName)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
 KConfigSkeletonItem* k_configloader_find_item_by_name(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#property)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#property)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
 QVariant* k_configloader_property(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#hasGroup)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#hasGroup)
 ///
 /// @param self KConfigLoader*
 /// @param group const char*
 bool k_configloader_has_group(void* self, const char* group);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#groupList)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#groupList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KConfigLoader*
 const char** k_configloader_group_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#usrSave)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#usrSave)
 ///
 /// @param self KConfigLoader*
 bool k_configloader_usr_save(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#usrSave)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#usrSave)
 ///
 /// Allows for overriding the related default method
 ///
@@ -84,7 +84,7 @@ bool k_configloader_usr_save(void* self);
 /// @param callback bool func()
 void k_configloader_on_usr_save(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#usrSave)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#usrSave)
 ///
 /// Base class method implementation
 ///
@@ -136,35 +136,35 @@ const char* k_configloader_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#load)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#load)
 ///
 /// @param self KConfigLoader*
 void k_configloader_load(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#read)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#read)
 ///
 /// @param self KConfigLoader*
 void k_configloader_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#isDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#isDefaults)
 ///
 /// @param self KConfigLoader*
 bool k_configloader_is_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
 ///
 /// @param self KConfigLoader*
 bool k_configloader_is_save_needed(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#setCurrentGroup)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setCurrentGroup)
 ///
 /// @param self KConfigLoader*
 /// @param group const char*
@@ -172,7 +172,7 @@ void k_configloader_set_current_group(void* self, const char* group);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#currentGroup)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#currentGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -181,7 +181,7 @@ const char* k_configloader_current_group(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItem)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItem)
 ///
 /// @param self KConfigLoader*
 /// @param item KConfigSkeletonItem*
@@ -189,7 +189,7 @@ void k_configloader_add_item(void* self, void* item);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItemPassword)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -198,7 +198,7 @@ KCoreConfigSkeleton__ItemPassword* k_configloader_add_item_password(void* self, 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItemPath)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -207,28 +207,28 @@ KCoreConfigSkeleton__ItemPath* k_configloader_add_item_path(void* self, const ch
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#config)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
 /// @param self KConfigLoader*
 KConfig* k_configloader_config(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#config)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
 /// @param self KConfigLoader*
 const KConfig* k_configloader_config2(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#items)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#items)
 ///
 /// @param self KConfigLoader*
 libqt_list /* of KConfigSkeletonItem* */ k_configloader_items(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#removeItem)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#removeItem)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -236,14 +236,14 @@ void k_configloader_remove_item(void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#clearItems)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#clearItems)
 ///
 /// @param self KConfigLoader*
 void k_configloader_clear_items(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#isImmutable)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#isImmutable)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -251,21 +251,21 @@ bool k_configloader_is_immutable(void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#save)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#save)
 ///
 /// @param self KConfigLoader*
 bool k_configloader_save(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#configChanged)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KConfigLoader*
 void k_configloader_config_changed(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#configChanged)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#configChanged)
 ///
 /// @param self KConfigLoader*
 /// @param callback void func(KConfigLoader* self)
@@ -273,7 +273,7 @@ void k_configloader_on_config_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItem)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItem)
 ///
 /// @param self KConfigLoader*
 /// @param item KConfigSkeletonItem*
@@ -282,7 +282,7 @@ void k_configloader_add_item2(void* self, void* item, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItemPassword)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -292,7 +292,7 @@ KCoreConfigSkeleton__ItemPassword* k_configloader_add_item_password3(void* self,
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItemPassword)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -303,7 +303,7 @@ KCoreConfigSkeleton__ItemPassword* k_configloader_add_item_password4(void* self,
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItemPath)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -313,7 +313,7 @@ KCoreConfigSkeleton__ItemPath* k_configloader_add_item_path3(void* self, const c
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#addItemPath)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPath)
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
@@ -623,7 +623,7 @@ void k_configloader_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kconfigskeleton.html#qt_metacall)
+/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#qt_metacall)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -635,7 +635,7 @@ int32_t k_configloader_metacall(void* self, int32_t param1, int param2, void* pa
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kconfigskeleton.html#qt_metacall)
+/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#qt_metacall)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -647,7 +647,7 @@ int32_t k_configloader_qbase_metacall(void* self, int32_t param1, int param2, vo
 
 /// Inherited from KConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kconfigskeleton.html#qt_metacall)
+/// [Qt documentation](https://api.kde.org/kconfigskeleton.html#qt_metacall)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -657,7 +657,7 @@ void k_configloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#setDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -666,7 +666,7 @@ void k_configloader_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#setDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -675,7 +675,7 @@ void k_configloader_qbase_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#setDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#setDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -685,7 +685,7 @@ void k_configloader_on_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#useDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -695,7 +695,7 @@ bool k_configloader_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#useDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -705,7 +705,7 @@ bool k_configloader_qbase_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#useDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#useDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -715,7 +715,7 @@ void k_configloader_on_use_defaults(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -725,7 +725,7 @@ bool k_configloader_usr_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -735,7 +735,7 @@ bool k_configloader_qbase_usr_use_defaults(void* self, bool b);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrUseDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -745,7 +745,7 @@ void k_configloader_on_usr_use_defaults(void* self, bool (*callback)(void*, bool
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -754,7 +754,7 @@ void k_configloader_usr_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -763,7 +763,7 @@ void k_configloader_qbase_usr_set_defaults(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrSetDefaults)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -773,7 +773,7 @@ void k_configloader_on_usr_set_defaults(void* self, void (*callback)());
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrRead)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -782,7 +782,7 @@ void k_configloader_usr_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrRead)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -791,7 +791,7 @@ void k_configloader_qbase_usr_read(void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcoreconfigskeleton.html#usrRead)
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#usrRead)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1137,7 +1137,7 @@ void k_configloader_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param callback void func(KConfigLoader* self, const char* objectName)
 void k_configloader_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigloader.html#dtor.KConfigLoader)
+/// [Qt documentation](https://api.kde.org/kconfigloader.html#dtor.KConfigLoader)
 ///
 /// Delete this object from C++ memory.
 ///

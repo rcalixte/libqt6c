@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdatetimeedit.html
+/// https://api.kde.org/kdatetimeedit.html
 
 /// k_datetimeedit_new constructs a new KDateTimeEdit object.
 ///
@@ -58,382 +58,382 @@ int32_t k_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_datetimeedit_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#options)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#options)
 ///
 /// @param self KDateTimeEdit*
 ///
 /// @return flag of enum KDateTimeEdit__Option
 int32_t k_datetimeedit_options(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTime)
 ///
 /// @param self KDateTimeEdit*
 QDateTime* k_datetimeedit_date_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#date)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#date)
 ///
 /// @param self KDateTimeEdit*
 QDate* k_datetimeedit_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#time)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#time)
 ///
 /// @param self KDateTimeEdit*
 QTime* k_datetimeedit_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeZone)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeZone)
 ///
 /// @param self KDateTimeEdit*
 QTimeZone* k_datetimeedit_time_zone(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#calendarLocalesList)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#calendarLocalesList)
 ///
 /// @param self KDateTimeEdit*
 libqt_list /* of QLocale* */ k_datetimeedit_calendar_locales_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#minimumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#minimumDateTime)
 ///
 /// @param self KDateTimeEdit*
 QDateTime* k_datetimeedit_minimum_date_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#maximumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#maximumDateTime)
 ///
 /// @param self KDateTimeEdit*
 QDateTime* k_datetimeedit_maximum_date_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateDisplayFormat)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateDisplayFormat)
 ///
 /// @param self KDateTimeEdit*
 ///
 /// @return enum QLocale__FormatType
 int32_t k_datetimeedit_date_display_format(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateMap)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateMap)
 ///
 /// @param self KDateTimeEdit*
 libqt_map /* of QDate* to const char* */ k_datetimeedit_date_map(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeDisplayFormat)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeDisplayFormat)
 ///
 /// @param self KDateTimeEdit*
 ///
 /// @return enum QLocale__FormatType
 int32_t k_datetimeedit_time_display_format(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeListInterval)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeListInterval)
 ///
 /// @param self KDateTimeEdit*
 int32_t k_datetimeedit_time_list_interval(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeList)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeList)
 ///
 /// @param self KDateTimeEdit*
 libqt_list /* of QTime* */ k_datetimeedit_time_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeZones)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeZones)
 ///
 /// @param self KDateTimeEdit*
 libqt_list /* of QTimeZone* */ k_datetimeedit_time_zones(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#isValid)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#isValid)
 ///
 /// @param self KDateTimeEdit*
 bool k_datetimeedit_is_valid(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#isNull)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#isNull)
 ///
 /// @param self KDateTimeEdit*
 bool k_datetimeedit_is_null(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#isValidDate)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#isValidDate)
 ///
 /// @param self KDateTimeEdit*
 bool k_datetimeedit_is_valid_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#isNullDate)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#isNullDate)
 ///
 /// @param self KDateTimeEdit*
 bool k_datetimeedit_is_null_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#isValidTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#isValidTime)
 ///
 /// @param self KDateTimeEdit*
 bool k_datetimeedit_is_valid_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#isNullTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#isNullTime)
 ///
 /// @param self KDateTimeEdit*
 bool k_datetimeedit_is_null_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTimeEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTimeEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param dateTime QDateTime*
 void k_datetimeedit_date_time_entered(void* self, void* dateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTimeEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTimeEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QDateTime* dateTime)
 void k_datetimeedit_on_date_time_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTimeChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTimeChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param dateTime QDateTime*
 void k_datetimeedit_date_time_changed(void* self, void* dateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTimeChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTimeChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QDateTime* dateTime)
 void k_datetimeedit_on_date_time_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTimeEdited)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTimeEdited)
 ///
 /// @param self KDateTimeEdit*
 /// @param dateTime QDateTime*
 void k_datetimeedit_date_time_edited(void* self, void* dateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateTimeEdited)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateTimeEdited)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QDateTime* dateTime)
 void k_datetimeedit_on_date_time_edited(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#calendarEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#calendarEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param calendarLocale QLocale*
 void k_datetimeedit_calendar_entered(void* self, void* calendarLocale);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#calendarEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#calendarEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QLocale* calendarLocale)
 void k_datetimeedit_on_calendar_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#calendarChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#calendarChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param calendarLocale QLocale*
 void k_datetimeedit_calendar_changed(void* self, void* calendarLocale);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#calendarChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#calendarChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QLocale* calendarLocale)
 void k_datetimeedit_on_calendar_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param date QDate*
 void k_datetimeedit_date_entered(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QDate* date)
 void k_datetimeedit_on_date_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param date QDate*
 void k_datetimeedit_date_changed(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QDate* date)
 void k_datetimeedit_on_date_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateEdited)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateEdited)
 ///
 /// @param self KDateTimeEdit*
 /// @param date QDate*
 void k_datetimeedit_date_edited(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dateEdited)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dateEdited)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QDate* date)
 void k_datetimeedit_on_date_edited(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param time QTime*
 void k_datetimeedit_time_entered(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QTime* time)
 void k_datetimeedit_on_time_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param time QTime*
 void k_datetimeedit_time_changed(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QTime* time)
 void k_datetimeedit_on_time_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeEdited)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeEdited)
 ///
 /// @param self KDateTimeEdit*
 /// @param time QTime*
 void k_datetimeedit_time_edited(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeEdited)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeEdited)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QTime* time)
 void k_datetimeedit_on_time_edited(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeZoneEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeZoneEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param zone QTimeZone*
 void k_datetimeedit_time_zone_entered(void* self, void* zone);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeZoneEntered)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeZoneEntered)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QTimeZone* zone)
 void k_datetimeedit_on_time_zone_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeZoneChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeZoneChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param zone QTimeZone*
 void k_datetimeedit_time_zone_changed(void* self, void* zone);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#timeZoneChanged)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#timeZoneChanged)
 ///
 /// @param self KDateTimeEdit*
 /// @param callback void func(KDateTimeEdit* self, QTimeZone* zone)
 void k_datetimeedit_on_time_zone_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setOptions)
 ///
 /// @param self KDateTimeEdit*
 /// @param options flag of enum KDateTimeEdit__Option
 void k_datetimeedit_set_options(void* self, int32_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDateTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param dateTime QDateTime*
 void k_datetimeedit_set_date_time(void* self, void* dateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDate)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDate)
 ///
 /// @param self KDateTimeEdit*
 /// @param date QDate*
 void k_datetimeedit_set_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param time QTime*
 void k_datetimeedit_set_time(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeZone)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeZone)
 ///
 /// @param self KDateTimeEdit*
 /// @param zone QTimeZone*
 void k_datetimeedit_set_time_zone(void* self, void* zone);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDateTimeRange)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDateTimeRange)
 ///
 /// @param self KDateTimeEdit*
 /// @param minDateTime QDateTime*
 /// @param maxDateTime QDateTime*
 void k_datetimeedit_set_date_time_range(void* self, void* minDateTime, void* maxDateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#resetDateTimeRange)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#resetDateTimeRange)
 ///
 /// @param self KDateTimeEdit*
 void k_datetimeedit_reset_date_time_range(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setMinimumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setMinimumDateTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param minDateTime QDateTime*
 void k_datetimeedit_set_minimum_date_time(void* self, void* minDateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#resetMinimumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#resetMinimumDateTime)
 ///
 /// @param self KDateTimeEdit*
 void k_datetimeedit_reset_minimum_date_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setMaximumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setMaximumDateTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param maxDateTime QDateTime*
 void k_datetimeedit_set_maximum_date_time(void* self, void* maxDateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#resetMaximumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#resetMaximumDateTime)
 ///
 /// @param self KDateTimeEdit*
 void k_datetimeedit_reset_maximum_date_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDateDisplayFormat)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDateDisplayFormat)
 ///
 /// @param self KDateTimeEdit*
 /// @param format enum QLocale__FormatType
 void k_datetimeedit_set_date_display_format(void* self, int32_t format);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setCalendarLocalesList)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setCalendarLocalesList)
 ///
 /// @param self KDateTimeEdit*
 /// @param calendarLocales libqt_list /* of QLocale* */
 void k_datetimeedit_set_calendar_locales_list(void* self, libqt_list calendarLocales);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDateMap)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDateMap)
 ///
 /// @param self KDateTimeEdit*
 /// @param dateMap libqt_map /* of QDate* to const char* */
 void k_datetimeedit_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeDisplayFormat)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeDisplayFormat)
 ///
 /// @param self KDateTimeEdit*
 /// @param format enum QLocale__FormatType
 void k_datetimeedit_set_time_display_format(void* self, int32_t format);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeListInterval)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeListInterval)
 ///
 /// @param self KDateTimeEdit*
 /// @param minutes int
 void k_datetimeedit_set_time_list_interval(void* self, int minutes);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeList)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
 /// @param self KDateTimeEdit*
 /// @param timeList libqt_list /* of QTime* */
 void k_datetimeedit_set_time_list(void* self, libqt_list timeList);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeZones)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeZones)
 ///
 /// @param self KDateTimeEdit*
 /// @param zones libqt_list /* of QTimeZone* */
 void k_datetimeedit_set_time_zones(void* self, libqt_list zones);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#eventFilter)
 ///
 /// @param self KDateTimeEdit*
 /// @param object QObject*
 /// @param event QEvent*
 bool k_datetimeedit_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -441,7 +441,7 @@ bool k_datetimeedit_event_filter(void* self, void* object, void* event);
 /// @param callback bool func(KDateTimeEdit* self, QObject* object, QEvent* event)
 void k_datetimeedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -450,13 +450,13 @@ void k_datetimeedit_on_event_filter(void* self, bool (*callback)(void*, void*, v
 /// @param event QEvent*
 bool k_datetimeedit_qbase_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#focusInEvent)
 ///
 /// @param self KDateTimeEdit*
 /// @param event QFocusEvent*
 void k_datetimeedit_focus_in_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#focusInEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -464,7 +464,7 @@ void k_datetimeedit_focus_in_event(void* self, void* event);
 /// @param callback void func(KDateTimeEdit* self, QFocusEvent* event)
 void k_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#focusInEvent)
 ///
 /// Base class method implementation
 ///
@@ -472,13 +472,13 @@ void k_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param event QFocusEvent*
 void k_datetimeedit_qbase_focus_in_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#focusOutEvent)
 ///
 /// @param self KDateTimeEdit*
 /// @param event QFocusEvent*
 void k_datetimeedit_focus_out_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#focusOutEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -486,7 +486,7 @@ void k_datetimeedit_focus_out_event(void* self, void* event);
 /// @param callback void func(KDateTimeEdit* self, QFocusEvent* event)
 void k_datetimeedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#focusOutEvent)
 ///
 /// Base class method implementation
 ///
@@ -494,13 +494,13 @@ void k_datetimeedit_on_focus_out_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 void k_datetimeedit_qbase_focus_out_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#resizeEvent)
 ///
 /// @param self KDateTimeEdit*
 /// @param event QResizeEvent*
 void k_datetimeedit_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -508,7 +508,7 @@ void k_datetimeedit_resize_event(void* self, void* event);
 /// @param callback void func(KDateTimeEdit* self, QResizeEvent* event)
 void k_datetimeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -516,13 +516,13 @@ void k_datetimeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 void k_datetimeedit_qbase_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignDateTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param dateTime QDateTime*
 void k_datetimeedit_assign_date_time(void* self, void* dateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignDateTime)
 ///
 /// Allows for overriding the related default method
 ///
@@ -530,7 +530,7 @@ void k_datetimeedit_assign_date_time(void* self, void* dateTime);
 /// @param callback void func(KDateTimeEdit* self, QDateTime* dateTime)
 void k_datetimeedit_on_assign_date_time(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignDateTime)
 ///
 /// Base class method implementation
 ///
@@ -538,13 +538,13 @@ void k_datetimeedit_on_assign_date_time(void* self, void (*callback)(void*, void
 /// @param dateTime QDateTime*
 void k_datetimeedit_qbase_assign_date_time(void* self, void* dateTime);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignDate)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignDate)
 ///
 /// @param self KDateTimeEdit*
 /// @param date QDate*
 void k_datetimeedit_assign_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignDate)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignDate)
 ///
 /// Allows for overriding the related default method
 ///
@@ -552,7 +552,7 @@ void k_datetimeedit_assign_date(void* self, void* date);
 /// @param callback void func(KDateTimeEdit* self, QDate* date)
 void k_datetimeedit_on_assign_date(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignDate)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignDate)
 ///
 /// Base class method implementation
 ///
@@ -560,13 +560,13 @@ void k_datetimeedit_on_assign_date(void* self, void (*callback)(void*, void*));
 /// @param date QDate*
 void k_datetimeedit_qbase_assign_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param time QTime*
 void k_datetimeedit_assign_time(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignTime)
 ///
 /// Allows for overriding the related default method
 ///
@@ -574,7 +574,7 @@ void k_datetimeedit_assign_time(void* self, void* time);
 /// @param callback void func(KDateTimeEdit* self, QTime* time)
 void k_datetimeedit_on_assign_time(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignTime)
 ///
 /// Base class method implementation
 ///
@@ -582,13 +582,13 @@ void k_datetimeedit_on_assign_time(void* self, void (*callback)(void*, void*));
 /// @param time QTime*
 void k_datetimeedit_qbase_assign_time(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignTimeZone)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignTimeZone)
 ///
 /// @param self KDateTimeEdit*
 /// @param zone QTimeZone*
 void k_datetimeedit_assign_time_zone(void* self, void* zone);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignTimeZone)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignTimeZone)
 ///
 /// Allows for overriding the related default method
 ///
@@ -596,7 +596,7 @@ void k_datetimeedit_assign_time_zone(void* self, void* zone);
 /// @param callback void func(KDateTimeEdit* self, QTimeZone* zone)
 void k_datetimeedit_on_assign_time_zone(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#assignTimeZone)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#assignTimeZone)
 ///
 /// Base class method implementation
 ///
@@ -621,7 +621,7 @@ const char* k_datetimeedit_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_datetimeedit_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDateTimeRange)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDateTimeRange)
 ///
 /// @param self KDateTimeEdit*
 /// @param minDateTime QDateTime*
@@ -629,7 +629,7 @@ const char* k_datetimeedit_tr3(const char* s, const char* c, int n);
 /// @param minWarnMsg const char*
 void k_datetimeedit_set_date_time_range3(void* self, void* minDateTime, void* maxDateTime, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setDateTimeRange)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setDateTimeRange)
 ///
 /// @param self KDateTimeEdit*
 /// @param minDateTime QDateTime*
@@ -638,28 +638,28 @@ void k_datetimeedit_set_date_time_range3(void* self, void* minDateTime, void* ma
 /// @param maxWarnMsg const char*
 void k_datetimeedit_set_date_time_range4(void* self, void* minDateTime, void* maxDateTime, const char* minWarnMsg, const char* maxWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setMinimumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setMinimumDateTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param minDateTime QDateTime*
 /// @param minWarnMsg const char*
 void k_datetimeedit_set_minimum_date_time2(void* self, void* minDateTime, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setMaximumDateTime)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setMaximumDateTime)
 ///
 /// @param self KDateTimeEdit*
 /// @param maxDateTime QDateTime*
 /// @param maxWarnMsg const char*
 void k_datetimeedit_set_maximum_date_time2(void* self, void* maxDateTime, const char* maxWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeList)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
 /// @param self KDateTimeEdit*
 /// @param timeList libqt_list /* of QTime* */
 /// @param minWarnMsg const char*
 void k_datetimeedit_set_time_list2(void* self, libqt_list timeList, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#setTimeList)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#setTimeList)
 ///
 /// @param self KDateTimeEdit*
 /// @param timeList libqt_list /* of QTime* */
@@ -4781,14 +4781,14 @@ void k_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// @param callback void func(KDateTimeEdit* self, const char* objectName)
 void k_datetimeedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatetimeedit.html#dtor.KDateTimeEdit)
+/// [Qt documentation](https://api.kde.org/kdatetimeedit.html#dtor.KDateTimeEdit)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KDateTimeEdit*
 void k_datetimeedit_delete(void* self);
 
-/// https://api-staging.kde.org/kdatetimeedit.html#types
+/// https://api.kde.org/kdatetimeedit.html#types
 
 typedef enum {
     KDATETIMEEDIT_OPTION_SHOWCALENDAR = 1,

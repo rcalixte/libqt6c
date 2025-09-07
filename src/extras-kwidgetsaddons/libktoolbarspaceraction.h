@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktoolbarspaceraction.html
+/// https://api.kde.org/ktoolbarspaceraction.html
 
 /// k_toolbarspaceraction_new constructs a new KToolBarSpacerAction object.
 ///
@@ -54,13 +54,13 @@ int32_t k_toolbarspaceraction_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_toolbarspaceraction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarspaceraction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarspaceraction.html#createWidget)
 ///
 /// @param self KToolBarSpacerAction*
 /// @param parent QWidget*
 QWidget* k_toolbarspaceraction_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarspaceraction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarspaceraction.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -68,7 +68,7 @@ QWidget* k_toolbarspaceraction_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KToolBarSpacerAction* self, QWidget* parent)
 void k_toolbarspaceraction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarspaceraction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarspaceraction.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -1371,7 +1371,7 @@ void k_toolbarspaceraction_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KToolBarSpacerAction* self, const char* objectName)
 void k_toolbarspaceraction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarspaceraction.html#dtor.KToolBarSpacerAction)
+/// [Qt documentation](https://api.kde.org/ktoolbarspaceraction.html#dtor.KToolBarSpacerAction)
 ///
 /// Delete this object from C++ memory.
 ///

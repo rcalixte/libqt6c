@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kselectaction.html
+/// https://api.kde.org/kselectaction.html
 
 /// k_selectaction_new constructs a new KSelectAction object.
 ///
@@ -67,115 +67,115 @@ int32_t k_selectaction_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_selectaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolBarMode)
 ///
 /// @param self KSelectAction*
 ///
 /// @return enum KSelectAction__ToolBarMode
 int32_t k_selectaction_tool_bar_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolBarMode)
 ///
 /// @param self KSelectAction*
 /// @param mode enum KSelectAction__ToolBarMode
 void k_selectaction_set_tool_bar_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolButtonPopupMode)
 ///
 /// @param self KSelectAction*
 ///
 /// @return enum QToolButton__ToolButtonPopupMode
 int32_t k_selectaction_tool_button_popup_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolButtonPopupMode)
 ///
 /// @param self KSelectAction*
 /// @param mode enum QToolButton__ToolButtonPopupMode
 void k_selectaction_set_tool_button_popup_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#selectableActionGroup)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#selectableActionGroup)
 ///
 /// @param self KSelectAction*
 QActionGroup* k_selectaction_selectable_action_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentAction)
 ///
 /// @param self KSelectAction*
 QAction* k_selectaction_current_action(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentItem)
 ///
 /// @param self KSelectAction*
 int32_t k_selectaction_current_item(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentText)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSelectAction*
 const char* k_selectaction_current_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actions)
 ///
 /// @param self KSelectAction*
 libqt_list /* of QAction* */ k_selectaction_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KSelectAction*
 /// @param index int
 QAction* k_selectaction_action(void* self, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KSelectAction*
 /// @param text const char*
 QAction* k_selectaction_action2(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KSelectAction*
 /// @param action QAction*
 bool k_selectaction_set_current_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentItem)
 ///
 /// @param self KSelectAction*
 /// @param index int
 bool k_selectaction_set_current_item(void* self, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KSelectAction*
 /// @param text const char*
 bool k_selectaction_set_current_action2(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KSelectAction*
 /// @param action QAction*
 void k_selectaction_add_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KSelectAction*
 /// @param text const char*
 QAction* k_selectaction_add_action2(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KSelectAction*
 /// @param icon QIcon*
 /// @param text const char*
 QAction* k_selectaction_add_action3(void* self, void* icon, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// @param self KSelectAction*
 /// @param action QAction*
 QAction* k_selectaction_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Allows for overriding the related default method
 ///
@@ -183,7 +183,7 @@ QAction* k_selectaction_remove_action(void* self, void* action);
 /// @param callback QAction* func(KSelectAction* self, QAction* action)
 void k_selectaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Base class method implementation
 ///
@@ -191,14 +191,14 @@ void k_selectaction_on_remove_action(void* self, QAction* (*callback)(void*, voi
 /// @param action QAction*
 QAction* k_selectaction_qbase_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// @param self KSelectAction*
 /// @param before QAction*
 /// @param action QAction*
 void k_selectaction_insert_action(void* self, void* before, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Allows for overriding the related default method
 ///
@@ -206,7 +206,7 @@ void k_selectaction_insert_action(void* self, void* before, void* action);
 /// @param callback void func(KSelectAction* self, QAction* before, QAction* action)
 void k_selectaction_on_insert_action(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Base class method implementation
 ///
@@ -215,118 +215,118 @@ void k_selectaction_on_insert_action(void* self, void (*callback)(void*, void*, 
 /// @param action QAction*
 void k_selectaction_qbase_insert_action(void* self, void* before, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setItems)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setItems)
 ///
 /// @param self KSelectAction*
 /// @param lst const char**
 void k_selectaction_set_items(void* self, const char* lst[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#items)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSelectAction*
 const char** k_selectaction_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#isEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#isEditable)
 ///
 /// @param self KSelectAction*
 bool k_selectaction_is_editable(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setEditable)
 ///
 /// @param self KSelectAction*
 /// @param editable bool
 void k_selectaction_set_editable(void* self, bool editable);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#comboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#comboWidth)
 ///
 /// @param self KSelectAction*
 int32_t k_selectaction_combo_width(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setComboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setComboWidth)
 ///
 /// @param self KSelectAction*
 /// @param width int
 void k_selectaction_set_combo_width(void* self, int width);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMaxComboViewCount)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMaxComboViewCount)
 ///
 /// @param self KSelectAction*
 /// @param n int
 void k_selectaction_set_max_combo_view_count(void* self, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#clear)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#clear)
 ///
 /// @param self KSelectAction*
 void k_selectaction_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAllActions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAllActions)
 ///
 /// @param self KSelectAction*
 void k_selectaction_remove_all_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMenuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMenuAccelsEnabled)
 ///
 /// @param self KSelectAction*
 /// @param b bool
 void k_selectaction_set_menu_accels_enabled(void* self, bool b);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#menuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#menuAccelsEnabled)
 ///
 /// @param self KSelectAction*
 bool k_selectaction_menu_accels_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#changeItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#changeItem)
 ///
 /// @param self KSelectAction*
 /// @param index int
 /// @param text const char*
 void k_selectaction_change_item(void* self, int index, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KSelectAction*
 /// @param action QAction*
 void k_selectaction_action_triggered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KSelectAction*
 /// @param callback void func(KSelectAction* self, QAction* action)
 void k_selectaction_on_action_triggered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KSelectAction*
 /// @param index int
 void k_selectaction_index_triggered(void* self, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KSelectAction*
 /// @param callback void func(KSelectAction* self, int index)
 void k_selectaction_on_index_triggered(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KSelectAction*
 /// @param text const char*
 void k_selectaction_text_triggered(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KSelectAction*
 /// @param callback void func(KSelectAction* self, const char* text)
 void k_selectaction_on_text_triggered(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// @param self KSelectAction*
 /// @param action QAction*
 void k_selectaction_slot_action_triggered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// Allows for overriding the related default method
 ///
@@ -334,7 +334,7 @@ void k_selectaction_slot_action_triggered(void* self, void* action);
 /// @param callback void func(KSelectAction* self, QAction* action)
 void k_selectaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// Base class method implementation
 ///
@@ -342,13 +342,13 @@ void k_selectaction_on_slot_action_triggered(void* self, void (*callback)(void*,
 /// @param action QAction*
 void k_selectaction_qbase_slot_action_triggered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// @param self KSelectAction*
 /// @param param1 bool
 void k_selectaction_slot_toggled(void* self, bool param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -356,7 +356,7 @@ void k_selectaction_slot_toggled(void* self, bool param1);
 /// @param callback void func(KSelectAction* self, bool param1)
 void k_selectaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Base class method implementation
 ///
@@ -364,13 +364,13 @@ void k_selectaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 /// @param param1 bool
 void k_selectaction_qbase_slot_toggled(void* self, bool param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// @param self KSelectAction*
 /// @param parent QWidget*
 QWidget* k_selectaction_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -378,7 +378,7 @@ QWidget* k_selectaction_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KSelectAction* self, QWidget* parent)
 void k_selectaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -386,13 +386,13 @@ void k_selectaction_on_create_widget(void* self, QWidget* (*callback)(void*, voi
 /// @param parent QWidget*
 QWidget* k_selectaction_qbase_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// @param self KSelectAction*
 /// @param widget QWidget*
 void k_selectaction_delete_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -400,7 +400,7 @@ void k_selectaction_delete_widget(void* self, void* widget);
 /// @param callback void func(KSelectAction* self, QWidget* widget)
 void k_selectaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Base class method implementation
 ///
@@ -408,13 +408,13 @@ void k_selectaction_on_delete_widget(void* self, void (*callback)(void*, void*))
 /// @param widget QWidget*
 void k_selectaction_qbase_delete_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// @param self KSelectAction*
 /// @param event QEvent*
 bool k_selectaction_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -422,7 +422,7 @@ bool k_selectaction_event(void* self, void* event);
 /// @param callback bool func(KSelectAction* self, QEvent* event)
 void k_selectaction_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Base class method implementation
 ///
@@ -430,14 +430,14 @@ void k_selectaction_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 bool k_selectaction_qbase_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// @param self KSelectAction*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_selectaction_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -445,7 +445,7 @@ bool k_selectaction_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KSelectAction* self, QObject* watched, QEvent* event)
 void k_selectaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -471,14 +471,14 @@ const char* k_selectaction_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_selectaction_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KSelectAction*
 /// @param text const char*
 /// @param cs enum Qt__CaseSensitivity
 QAction* k_selectaction_action22(void* self, const char* text, int32_t cs);
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KSelectAction*
 /// @param text const char*
@@ -1671,14 +1671,14 @@ void k_selectaction_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param callback void func(KSelectAction* self, const char* objectName)
 void k_selectaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#dtor.KSelectAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#dtor.KSelectAction)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KSelectAction*
 void k_selectaction_delete(void* self);
 
-/// https://api-staging.kde.org/kselectaction.html#types
+/// https://api.kde.org/kselectaction.html#types
 
 typedef enum {
     KSELECTACTION_TOOLBARMODE_MENUMODE = 0,

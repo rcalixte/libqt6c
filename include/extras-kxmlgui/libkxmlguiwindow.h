@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kxmlguiwindow.html
+/// https://api.kde.org/kxmlguiwindow.html
 
 /// k_xmlguiwindow_new constructs a new KXmlGuiWindow object.
 ///
@@ -64,22 +64,22 @@ int32_t k_xmlguiwindow_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_xmlguiwindow_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_set_help_menu_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#isHelpMenuEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isHelpMenuEnabled)
 ///
 /// @param self KXmlGuiWindow*
 bool k_xmlguiwindow_is_help_menu_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#guiFactory)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// @param self KXmlGuiWindow*
 KXMLGUIFactory* k_xmlguiwindow_gui_factory(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#guiFactory)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// Allows for overriding the related default method
 ///
@@ -87,75 +87,75 @@ KXMLGUIFactory* k_xmlguiwindow_gui_factory(void* self);
 /// @param callback KXMLGUIFactory* func()
 void k_xmlguiwindow_on_gui_factory(void* self, KXMLGUIFactory* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#guiFactory)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 KXMLGUIFactory* k_xmlguiwindow_qbase_gui_factory(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#createGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#createGUI)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_create_g_u_i(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setStandardToolBarMenuEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setStandardToolBarMenuEnabled)
 ///
 /// @param self KXmlGuiWindow*
 /// @param showToolBarMenu bool
 void k_xmlguiwindow_set_standard_tool_bar_menu_enabled(void* self, bool showToolBarMenu);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#isStandardToolBarMenuEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isStandardToolBarMenuEnabled)
 ///
 /// @param self KXmlGuiWindow*
 bool k_xmlguiwindow_is_standard_tool_bar_menu_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#createStandardStatusBarAction)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#createStandardStatusBarAction)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_create_standard_status_bar_action(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_setup_g_u_i(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param defaultSize QSize*
 void k_xmlguiwindow_setup_g_u_i2(void* self, void* defaultSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#toolBarMenuAction)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#toolBarMenuAction)
 ///
 /// @param self KXmlGuiWindow*
 QAction* k_xmlguiwindow_tool_bar_menu_action(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupToolbarMenuActions)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupToolbarMenuActions)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_setup_toolbar_menu_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#toolBarNames)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#toolBarNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KXmlGuiWindow*
 const char** k_xmlguiwindow_tool_bar_names(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#finalizeGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#finalizeGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param force bool
 void k_xmlguiwindow_finalize_g_u_i(void* self, bool force);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// @param self KXmlGuiWindow*
 /// @param config KConfigGroup*
 void k_xmlguiwindow_apply_main_window_settings(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,7 +163,7 @@ void k_xmlguiwindow_apply_main_window_settings(void* self, void* config);
 /// @param callback void func(KXmlGuiWindow* self, KConfigGroup* config)
 void k_xmlguiwindow_on_apply_main_window_settings(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// Base class method implementation
 ///
@@ -171,23 +171,23 @@ void k_xmlguiwindow_on_apply_main_window_settings(void* self, void (*callback)(v
 /// @param config KConfigGroup*
 void k_xmlguiwindow_qbase_apply_main_window_settings(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setCommandBarEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setCommandBarEnabled)
 ///
 /// @param self KXmlGuiWindow*
 /// @param showCommandBar bool
 void k_xmlguiwindow_set_command_bar_enabled(void* self, bool showCommandBar);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#isCommandBarEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isCommandBarEnabled)
 ///
 /// @param self KXmlGuiWindow*
 bool k_xmlguiwindow_is_command_bar_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#configureToolbars)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#configureToolbars)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_configure_toolbars(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#configureToolbars)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#configureToolbars)
 ///
 /// Allows for overriding the related default method
 ///
@@ -195,20 +195,20 @@ void k_xmlguiwindow_configure_toolbars(void* self);
 /// @param callback void func()
 void k_xmlguiwindow_on_configure_toolbars(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#configureToolbars)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#configureToolbars)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_qbase_configure_toolbars(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// @param self KXmlGuiWindow*
 /// @param newstate const char*
 void k_xmlguiwindow_slot_state_changed(void* self, const char* newstate);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// Allows for overriding the related default method
 ///
@@ -216,7 +216,7 @@ void k_xmlguiwindow_slot_state_changed(void* self, const char* newstate);
 /// @param callback void func(KXmlGuiWindow* self, const char* newstate)
 void k_xmlguiwindow_on_slot_state_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// Base class method implementation
 ///
@@ -224,33 +224,33 @@ void k_xmlguiwindow_on_slot_state_changed(void* self, void (*callback)(void*, co
 /// @param newstate const char*
 void k_xmlguiwindow_qbase_slot_state_changed(void* self, const char* newstate);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#slotStateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// @param self KXmlGuiWindow*
 /// @param newstate const char*
 /// @param reverse bool
 void k_xmlguiwindow_slot_state_changed2(void* self, const char* newstate, bool reverse);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#isToolBarVisible)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#isToolBarVisible)
 ///
 /// @param self KXmlGuiWindow*
 /// @param name const char*
 bool k_xmlguiwindow_is_tool_bar_visible(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setToolBarVisible)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setToolBarVisible)
 ///
 /// @param self KXmlGuiWindow*
 /// @param name const char*
 /// @param visible bool
 void k_xmlguiwindow_set_tool_bar_visible(void* self, const char* name, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#event)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// @param self KXmlGuiWindow*
 /// @param event QEvent*
 bool k_xmlguiwindow_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#event)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -258,7 +258,7 @@ bool k_xmlguiwindow_event(void* self, void* event);
 /// @param callback bool func(KXmlGuiWindow* self, QEvent* event)
 void k_xmlguiwindow_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#event)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// Base class method implementation
 ///
@@ -266,12 +266,12 @@ void k_xmlguiwindow_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 bool k_xmlguiwindow_qbase_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_check_ambiguous_shortcuts(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// Allows for overriding the related default method
 ///
@@ -279,19 +279,19 @@ void k_xmlguiwindow_check_ambiguous_shortcuts(void* self);
 /// @param callback void func()
 void k_xmlguiwindow_on_check_ambiguous_shortcuts(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_qbase_check_ambiguous_shortcuts(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_save_new_toolbar_config(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
 ///
 /// Allows for overriding the related default method
 ///
@@ -299,7 +299,7 @@ void k_xmlguiwindow_save_new_toolbar_config(void* self);
 /// @param callback void func()
 void k_xmlguiwindow_on_save_new_toolbar_config(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
 ///
 /// Base class method implementation
 ///
@@ -323,39 +323,39 @@ const char* k_xmlguiwindow_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_xmlguiwindow_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setHelpMenuEnabled)
 ///
 /// @param self KXmlGuiWindow*
 /// @param showHelpMenu bool
 void k_xmlguiwindow_set_help_menu_enabled1(void* self, bool showHelpMenu);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#createGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#createGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param xmlfile const char*
 void k_xmlguiwindow_create_g_u_i1(void* self, const char* xmlfile);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param options flag of enum KXmlGuiWindow__StandardWindowOption
 void k_xmlguiwindow_setup_g_u_i1(void* self, int32_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param options flag of enum KXmlGuiWindow__StandardWindowOption
 /// @param xmlfile const char*
 void k_xmlguiwindow_setup_g_u_i22(void* self, int32_t options, const char* xmlfile);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param defaultSize QSize*
 /// @param options flag of enum KXmlGuiWindow__StandardWindowOption
 void k_xmlguiwindow_setup_g_u_i23(void* self, void* defaultSize, int32_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#setupGUI)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#setupGUI)
 ///
 /// @param self KXmlGuiWindow*
 /// @param defaultSize QSize*
@@ -365,14 +365,14 @@ void k_xmlguiwindow_setup_g_u_i3(void* self, void* defaultSize, int32_t options,
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#canBeRestored)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#canBeRestored)
 ///
 /// @param numberOfInstances int
 bool k_xmlguiwindow_can_be_restored(int numberOfInstances);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#classNameOfToplevel)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#classNameOfToplevel)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -381,7 +381,7 @@ const char* k_xmlguiwindow_class_name_of_toplevel(int instanceNumber);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#restore)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#restore)
 ///
 /// @param self KXmlGuiWindow*
 /// @param numberOfInstances int
@@ -389,41 +389,41 @@ bool k_xmlguiwindow_restore(void* self, int numberOfInstances);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#hasMenuBar)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#hasMenuBar)
 ///
 /// @param self KXmlGuiWindow*
 bool k_xmlguiwindow_has_menu_bar(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#memberList)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#memberList)
 ///
 libqt_list /* of KMainWindow* */ k_xmlguiwindow_member_list();
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#toolBar)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBar)
 ///
 /// @param self KXmlGuiWindow*
 KToolBar* k_xmlguiwindow_tool_bar(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#toolBars)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBars)
 ///
 /// @param self KXmlGuiWindow*
 libqt_list /* of KToolBar* */ k_xmlguiwindow_tool_bars(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_set_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 /// @param group KConfigGroup*
@@ -431,21 +431,21 @@ void k_xmlguiwindow_set_auto_save_settings2(void* self, void* group);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#resetAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#resetAutoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_reset_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#autoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 bool k_xmlguiwindow_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#autoSaveGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -454,14 +454,14 @@ const char* k_xmlguiwindow_auto_save_group(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#autoSaveConfigGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveConfigGroup)
 ///
 /// @param self KXmlGuiWindow*
 KConfigGroup* k_xmlguiwindow_auto_save_config_group(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setStateConfigGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setStateConfigGroup)
 ///
 /// @param self KXmlGuiWindow*
 /// @param configGroup const char*
@@ -469,14 +469,14 @@ void k_xmlguiwindow_set_state_config_group(void* self, const char* configGroup);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#stateConfigGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#stateConfigGroup)
 ///
 /// @param self KXmlGuiWindow*
 KConfigGroup* k_xmlguiwindow_state_config_group(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveMainWindowSettings)
 ///
 /// @param self KXmlGuiWindow*
 /// @param config KConfigGroup*
@@ -484,7 +484,7 @@ void k_xmlguiwindow_save_main_window_settings(void* self, void* config);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#dbusName)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#dbusName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -493,7 +493,7 @@ const char* k_xmlguiwindow_dbus_name(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// @param self KXmlGuiWindow*
 /// @param caption const char*
@@ -502,7 +502,7 @@ void k_xmlguiwindow_set_caption2(void* self, const char* caption, bool modified)
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Allows for overriding the related default method
 ///
@@ -512,7 +512,7 @@ void k_xmlguiwindow_on_set_caption2(void* self, void (*callback)(void*, const ch
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Base class method implementation
 ///
@@ -523,21 +523,21 @@ void k_xmlguiwindow_qbase_set_caption2(void* self, const char* caption, bool mod
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#appHelpActivated)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#appHelpActivated)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_app_help_activated(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setSettingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setSettingsDirty)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_set_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#restore)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#restore)
 ///
 /// @param self KXmlGuiWindow*
 /// @param numberOfInstances int
@@ -546,7 +546,7 @@ bool k_xmlguiwindow_restore2(void* self, int numberOfInstances, bool show);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#toolBar)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBar)
 ///
 /// @param self KXmlGuiWindow*
 /// @param name const char*
@@ -554,7 +554,7 @@ KToolBar* k_xmlguiwindow_tool_bar1(void* self, const char* name);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 /// @param groupName const char*
@@ -562,7 +562,7 @@ void k_xmlguiwindow_set_auto_save_settings1(void* self, const char* groupName);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 /// @param groupName const char*
@@ -571,7 +571,7 @@ void k_xmlguiwindow_set_auto_save_settings22(void* self, const char* groupName, 
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KXmlGuiWindow*
 /// @param group KConfigGroup*
@@ -3610,14 +3610,14 @@ int32_t k_xmlguiwindow_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#builderClient)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#builderClient)
 ///
 /// @param self KXmlGuiWindow*
 KXMLGUIClient* k_xmlguiwindow_builder_client(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#setBuilderClient)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#setBuilderClient)
 ///
 /// @param self KXmlGuiWindow*
 /// @param client KXMLGUIClient*
@@ -3625,14 +3625,14 @@ void k_xmlguiwindow_set_builder_client(void* self, void* client);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#widget)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#widget)
 ///
 /// @param self KXmlGuiWindow*
 QWidget* k_xmlguiwindow_widget(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#action)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// @param self KXmlGuiWindow*
 /// @param name const char*
@@ -3640,7 +3640,7 @@ QAction* k_xmlguiwindow_action(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
 ///
 /// @param self KXmlGuiWindow*
 /// @param doc QDomDocument*
@@ -3648,14 +3648,14 @@ void k_xmlguiwindow_set_x_m_l_g_u_i_build_document(void* self, void* doc);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
 /// @param self KXmlGuiWindow*
 QDomDocument* k_xmlguiwindow_xmlgui_build_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setFactory)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setFactory)
 ///
 /// @param self KXmlGuiWindow*
 /// @param factory KXMLGUIFactory*
@@ -3663,21 +3663,21 @@ void k_xmlguiwindow_set_factory(void* self, void* factory);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#factory)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#factory)
 ///
 /// @param self KXmlGuiWindow*
 KXMLGUIFactory* k_xmlguiwindow_factory(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#parentClient)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
 /// @param self KXmlGuiWindow*
 KXMLGUIClient* k_xmlguiwindow_parent_client(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#insertChildClient)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#insertChildClient)
 ///
 /// @param self KXmlGuiWindow*
 /// @param child KXMLGUIClient*
@@ -3685,7 +3685,7 @@ void k_xmlguiwindow_insert_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#removeChildClient)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#removeChildClient)
 ///
 /// @param self KXmlGuiWindow*
 /// @param child KXMLGUIClient*
@@ -3693,14 +3693,14 @@ void k_xmlguiwindow_remove_child_client(void* self, void* child);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#childClients)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#childClients)
 ///
 /// @param self KXmlGuiWindow*
 libqt_list /* of KXMLGUIClient* */ k_xmlguiwindow_child_clients(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setClientBuilder)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setClientBuilder)
 ///
 /// @param self KXmlGuiWindow*
 /// @param builder KXMLGUIBuilder*
@@ -3708,21 +3708,21 @@ void k_xmlguiwindow_set_client_builder(void* self, void* builder);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#clientBuilder)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
 /// @param self KXmlGuiWindow*
 KXMLGUIBuilder* k_xmlguiwindow_client_builder(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#reloadXML)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#reloadXML)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_reload_x_m_l(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#plugActionList)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#plugActionList)
 ///
 /// @param self KXmlGuiWindow*
 /// @param name const char*
@@ -3731,7 +3731,7 @@ void k_xmlguiwindow_plug_action_list(void* self, const char* name, libqt_list ac
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#unplugActionList)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#unplugActionList)
 ///
 /// @param self KXmlGuiWindow*
 /// @param name const char*
@@ -3739,7 +3739,7 @@ void k_xmlguiwindow_unplug_action_list(void* self, const char* name);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findMostRecentXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3749,7 +3749,7 @@ const char* k_xmlguiwindow_find_most_recent_x_m_l_file(const char* files[], cons
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#addStateActionEnabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
 ///
 /// @param self KXmlGuiWindow*
 /// @param state const char*
@@ -3758,7 +3758,7 @@ void k_xmlguiwindow_add_state_action_enabled(void* self, const char* state, cons
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#addStateActionDisabled)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionDisabled)
 ///
 /// @param self KXmlGuiWindow*
 /// @param state const char*
@@ -3767,7 +3767,7 @@ void k_xmlguiwindow_add_state_action_disabled(void* self, const char* state, con
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#getActionsToChangeForState)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#getActionsToChangeForState)
 ///
 /// @param self KXmlGuiWindow*
 /// @param state const char*
@@ -3775,7 +3775,7 @@ KXMLGUIClient__StateChange* k_xmlguiwindow_get_actions_to_change_for_state(void*
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#beginXMLPlug)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#beginXMLPlug)
 ///
 /// @param self KXmlGuiWindow*
 /// @param param1 QWidget*
@@ -3783,14 +3783,14 @@ void k_xmlguiwindow_begin_x_m_l_plug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#endXMLPlug)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#endXMLPlug)
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_end_x_m_l_plug(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#prepareXMLUnplug)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#prepareXMLUnplug)
 ///
 /// @param self KXmlGuiWindow*
 /// @param param1 QWidget*
@@ -3798,7 +3798,7 @@ void k_xmlguiwindow_prepare_x_m_l_unplug(void* self, void* param1);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KXmlGuiWindow*
 /// @param xmlfile const char*
@@ -3807,7 +3807,7 @@ void k_xmlguiwindow_replace_x_m_l_file(void* self, const char* xmlfile, const ch
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#findVersionNumber)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#findVersionNumber)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3816,7 +3816,7 @@ const char* k_xmlguiwindow_find_version_number(const char* xml);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#replaceXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KXmlGuiWindow*
 /// @param xmlfile const char*
@@ -3826,7 +3826,7 @@ void k_xmlguiwindow_replace_x_m_l_file3(void* self, const char* xmlfile, const c
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3836,7 +3836,7 @@ void k_xmlguiwindow_set_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3846,7 +3846,7 @@ void k_xmlguiwindow_qbase_set_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3856,7 +3856,7 @@ void k_xmlguiwindow_on_set_caption(void* self, void (*callback)(void*, const cha
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setPlainCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3866,7 +3866,7 @@ void k_xmlguiwindow_set_plain_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setPlainCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3876,7 +3876,7 @@ void k_xmlguiwindow_qbase_set_plain_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setPlainCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3886,7 +3886,7 @@ void k_xmlguiwindow_on_set_plain_caption(void* self, void (*callback)(void*, con
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3896,7 +3896,7 @@ void k_xmlguiwindow_key_press_event(void* self, void* keyEvent);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3906,7 +3906,7 @@ void k_xmlguiwindow_qbase_key_press_event(void* self, void* keyEvent);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3916,7 +3916,7 @@ void k_xmlguiwindow_on_key_press_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#closeEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3926,7 +3926,7 @@ void k_xmlguiwindow_close_event(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#closeEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3936,7 +3936,7 @@ void k_xmlguiwindow_qbase_close_event(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#closeEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3946,7 +3946,7 @@ void k_xmlguiwindow_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#queryClose)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3955,7 +3955,7 @@ bool k_xmlguiwindow_query_close(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#queryClose)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3964,7 +3964,7 @@ bool k_xmlguiwindow_qbase_query_close(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#queryClose)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -3974,7 +3974,7 @@ void k_xmlguiwindow_on_query_close(void* self, bool (*callback)());
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -3984,7 +3984,7 @@ void k_xmlguiwindow_save_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -3994,7 +3994,7 @@ void k_xmlguiwindow_qbase_save_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4004,7 +4004,7 @@ void k_xmlguiwindow_on_save_properties(void* self, void (*callback)(void*, void*
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4014,7 +4014,7 @@ void k_xmlguiwindow_read_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4024,7 +4024,7 @@ void k_xmlguiwindow_qbase_read_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4034,7 +4034,7 @@ void k_xmlguiwindow_on_read_properties(void* self, void (*callback)(void*, void*
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4044,7 +4044,7 @@ void k_xmlguiwindow_save_global_properties(void* self, void* sessionConfig);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4054,7 +4054,7 @@ void k_xmlguiwindow_qbase_save_global_properties(void* self, void* sessionConfig
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4064,7 +4064,7 @@ void k_xmlguiwindow_on_save_global_properties(void* self, void (*callback)(void*
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4074,7 +4074,7 @@ void k_xmlguiwindow_read_global_properties(void* self, void* sessionConfig);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4084,7 +4084,7 @@ void k_xmlguiwindow_qbase_read_global_properties(void* self, void* sessionConfig
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5436,7 +5436,7 @@ void k_xmlguiwindow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#containerTags)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5447,7 +5447,7 @@ const char** k_xmlguiwindow_container_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#containerTags)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5458,7 +5458,7 @@ const char** k_xmlguiwindow_qbase_container_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#containerTags)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5468,7 +5468,7 @@ void k_xmlguiwindow_on_container_tags(void* self, const char** (*callback)());
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#createContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5481,7 +5481,7 @@ QWidget* k_xmlguiwindow_create_container(void* self, void* parent, int index, vo
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#createContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5494,7 +5494,7 @@ QWidget* k_xmlguiwindow_qbase_create_container(void* self, void* parent, int ind
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#createContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5504,7 +5504,7 @@ void k_xmlguiwindow_on_create_container(void* self, QWidget* (*callback)(void*, 
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#removeContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5517,7 +5517,7 @@ void k_xmlguiwindow_remove_container(void* self, void* container, void* parent, 
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#removeContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5530,7 +5530,7 @@ void k_xmlguiwindow_qbase_remove_container(void* self, void* container, void* pa
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#removeContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5540,7 +5540,7 @@ void k_xmlguiwindow_on_remove_container(void* self, void (*callback)(void*, void
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#customTags)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5551,7 +5551,7 @@ const char** k_xmlguiwindow_custom_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#customTags)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5562,7 +5562,7 @@ const char** k_xmlguiwindow_qbase_custom_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#customTags)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5572,7 +5572,7 @@ void k_xmlguiwindow_on_custom_tags(void* self, const char** (*callback)());
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#createCustomElement)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5584,7 +5584,7 @@ QAction* k_xmlguiwindow_create_custom_element(void* self, void* parent, int inde
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#createCustomElement)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5596,7 +5596,7 @@ QAction* k_xmlguiwindow_qbase_create_custom_element(void* self, void* parent, in
 
 /// Inherited from KXMLGUIBuilder
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguibuilder.html#createCustomElement)
+/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5606,7 +5606,7 @@ void k_xmlguiwindow_on_create_custom_element(void* self, QAction* (*callback)(vo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#action)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5616,7 +5616,7 @@ QAction* k_xmlguiwindow_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#action)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5626,7 +5626,7 @@ QAction* k_xmlguiwindow_qbase_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#action)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5636,7 +5636,7 @@ void k_xmlguiwindow_on_action2(void* self, QAction* (*callback)(void*, void*));
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#actionCollection)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5645,7 +5645,7 @@ KActionCollection* k_xmlguiwindow_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#actionCollection)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5654,7 +5654,7 @@ KActionCollection* k_xmlguiwindow_qbase_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#actionCollection)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5664,7 +5664,7 @@ void k_xmlguiwindow_on_action_collection(void* self, KActionCollection* (*callba
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#componentName)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5675,7 +5675,7 @@ const char* k_xmlguiwindow_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#componentName)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5686,7 +5686,7 @@ const char* k_xmlguiwindow_qbase_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#componentName)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5696,7 +5696,7 @@ void k_xmlguiwindow_on_component_name(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#domDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5705,7 +5705,7 @@ QDomDocument* k_xmlguiwindow_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#domDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5714,7 +5714,7 @@ QDomDocument* k_xmlguiwindow_qbase_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#domDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5724,7 +5724,7 @@ void k_xmlguiwindow_on_dom_document(void* self, QDomDocument* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#xmlFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5735,7 +5735,7 @@ const char* k_xmlguiwindow_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#xmlFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5746,7 +5746,7 @@ const char* k_xmlguiwindow_qbase_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#xmlFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5756,7 +5756,7 @@ void k_xmlguiwindow_on_xml_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5767,7 +5767,7 @@ const char* k_xmlguiwindow_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -5778,7 +5778,7 @@ const char* k_xmlguiwindow_qbase_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#localXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5788,7 +5788,7 @@ void k_xmlguiwindow_on_local_x_m_l_file(void* self, const char* (*callback)());
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setComponentName)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5799,7 +5799,7 @@ void k_xmlguiwindow_set_component_name(void* self, const char* componentName, co
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setComponentName)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5810,7 +5810,7 @@ void k_xmlguiwindow_qbase_set_component_name(void* self, const char* componentNa
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setComponentName)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setComponentName)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5820,7 +5820,7 @@ void k_xmlguiwindow_on_set_component_name(void* self, void (*callback)(void*, co
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5832,7 +5832,7 @@ void k_xmlguiwindow_set_x_m_l_file(void* self, const char* file, bool merge, boo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5844,7 +5844,7 @@ void k_xmlguiwindow_qbase_set_x_m_l_file(void* self, const char* file, bool merg
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5854,7 +5854,7 @@ void k_xmlguiwindow_on_set_x_m_l_file(void* self, void (*callback)(void*, const 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5864,7 +5864,7 @@ void k_xmlguiwindow_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5874,7 +5874,7 @@ void k_xmlguiwindow_qbase_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setLocalXMLFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5884,7 +5884,7 @@ void k_xmlguiwindow_on_set_local_x_m_l_file(void* self, void (*callback)(void*, 
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXML)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5895,7 +5895,7 @@ void k_xmlguiwindow_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXML)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5906,7 +5906,7 @@ void k_xmlguiwindow_qbase_set_x_m_l(void* self, const char* document, bool merge
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setXML)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setXML)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5916,7 +5916,7 @@ void k_xmlguiwindow_on_set_x_m_l(void* self, void (*callback)(void*, const char*
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5927,7 +5927,7 @@ void k_xmlguiwindow_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5938,7 +5938,7 @@ void k_xmlguiwindow_qbase_set_d_o_m_document(void* self, void* document, bool me
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#setDOMDocument)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5948,7 +5948,7 @@ void k_xmlguiwindow_on_set_d_o_m_document(void* self, void (*callback)(void*, vo
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#stateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5959,7 +5959,7 @@ void k_xmlguiwindow_state_changed(void* self, const char* newstate, int32_t reve
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#stateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5970,7 +5970,7 @@ void k_xmlguiwindow_qbase_state_changed(void* self, const char* newstate, int32_
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#stateChanged)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5980,7 +5980,7 @@ void k_xmlguiwindow_on_state_changed(void* self, void (*callback)(void*, const c
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5991,7 +5991,7 @@ void k_xmlguiwindow_save_properties_internal(void* self, void* param1, int param
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6002,7 +6002,7 @@ void k_xmlguiwindow_qbase_save_properties_internal(void* self, void* param1, int
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6012,7 +6012,7 @@ void k_xmlguiwindow_on_save_properties_internal(void* self, void (*callback)(voi
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6023,7 +6023,7 @@ bool k_xmlguiwindow_read_properties_internal(void* self, void* param1, int param
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6034,7 +6034,7 @@ bool k_xmlguiwindow_qbase_read_properties_internal(void* self, void* param1, int
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6044,7 +6044,7 @@ void k_xmlguiwindow_on_read_properties_internal(void* self, bool (*callback)(voi
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#settingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6053,7 +6053,7 @@ bool k_xmlguiwindow_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#settingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6062,7 +6062,7 @@ bool k_xmlguiwindow_qbase_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#settingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6072,7 +6072,7 @@ void k_xmlguiwindow_on_settings_dirty(void* self, bool (*callback)());
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6081,7 +6081,7 @@ void k_xmlguiwindow_save_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6090,7 +6090,7 @@ void k_xmlguiwindow_qbase_save_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6388,7 +6388,7 @@ void k_xmlguiwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -6399,7 +6399,7 @@ const char* k_xmlguiwindow_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -6410,7 +6410,7 @@ const char* k_xmlguiwindow_qbase_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6420,7 +6420,7 @@ void k_xmlguiwindow_on_standards_xml_file_location(void* self, const char* (*cal
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6429,7 +6429,7 @@ void k_xmlguiwindow_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6438,7 +6438,7 @@ void k_xmlguiwindow_qbase_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
+/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6456,14 +6456,14 @@ void k_xmlguiwindow_on_load_standards_xml_file(void* self, void (*callback)());
 /// @param callback void func(KXmlGuiWindow* self, const char* objectName)
 void k_xmlguiwindow_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguiwindow.html#dtor.KXmlGuiWindow)
+/// [Qt documentation](https://api.kde.org/kxmlguiwindow.html#dtor.KXmlGuiWindow)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KXmlGuiWindow*
 void k_xmlguiwindow_delete(void* self);
 
-/// https://api-staging.kde.org/kxmlguiwindow.html#types
+/// https://api.kde.org/kxmlguiwindow.html#types
 
 typedef enum {
     KXMLGUIWINDOW_STANDARDWINDOWOPTION_TOOLBAR = 1,

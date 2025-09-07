@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kextendableitemdelegate.html
+/// https://api.kde.org/kextendableitemdelegate.html
 
 /// k_extendableitemdelegate_new constructs a new KExtendableItemDelegate object.
 ///
@@ -54,14 +54,14 @@ int32_t k_extendableitemdelegate_qbase_metacall(void* self, int32_t param1, int 
 /// @param s const char*
 const char* k_extendableitemdelegate_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#sizeHint)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 QSize* k_extendableitemdelegate_size_hint(void* self, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -69,7 +69,7 @@ QSize* k_extendableitemdelegate_size_hint(void* self, void* option, void* index)
 /// @param callback QSize* func(KExtendableItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 void k_extendableitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#sizeHint)
 ///
 /// Base class method implementation
 ///
@@ -78,7 +78,7 @@ void k_extendableitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*,
 /// @param index QModelIndex*
 QSize* k_extendableitemdelegate_qbase_size_hint(void* self, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#paint)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#paint)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param painter QPainter*
@@ -86,7 +86,7 @@ QSize* k_extendableitemdelegate_qbase_size_hint(void* self, void* option, void* 
 /// @param index QModelIndex*
 void k_extendableitemdelegate_paint(void* self, void* painter, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#paint)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#paint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ void k_extendableitemdelegate_paint(void* self, void* painter, void* option, voi
 /// @param callback void func(KExtendableItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 void k_extendableitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#paint)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#paint)
 ///
 /// Base class method implementation
 ///
@@ -104,31 +104,31 @@ void k_extendableitemdelegate_on_paint(void* self, void (*callback)(void*, void*
 /// @param index QModelIndex*
 void k_extendableitemdelegate_qbase_paint(void* self, void* painter, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extendItem)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extendItem)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param extender QWidget*
 /// @param index QModelIndex*
 void k_extendableitemdelegate_extend_item(void* self, void* extender, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#contractItem)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#contractItem)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param index QModelIndex*
 void k_extendableitemdelegate_contract_item(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#contractAll)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#contractAll)
 ///
 /// @param self KExtendableItemDelegate*
 void k_extendableitemdelegate_contract_all(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#isExtended)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#isExtended)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param index QModelIndex*
 bool k_extendableitemdelegate_is_extended(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param extender QWidget*
@@ -136,7 +136,7 @@ bool k_extendableitemdelegate_is_extended(void* self, void* index);
 /// @param index QModelIndex*
 void k_extendableitemdelegate_update_extender_geometry(void* self, void* extender, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
 ///
 /// Allows for overriding the related default method
 ///
@@ -144,7 +144,7 @@ void k_extendableitemdelegate_update_extender_geometry(void* self, void* extende
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* extender, QStyleOptionViewItem* option, QModelIndex* index)
 void k_extendableitemdelegate_on_update_extender_geometry(void* self, void (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#updateExtenderGeometry)
 ///
 /// Base class method implementation
 ///
@@ -154,33 +154,33 @@ void k_extendableitemdelegate_on_update_extender_geometry(void* self, void (*cal
 /// @param index QModelIndex*
 void k_extendableitemdelegate_qbase_update_extender_geometry(void* self, void* extender, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderCreated)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderCreated)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param extender QWidget*
 /// @param index QModelIndex*
 void k_extendableitemdelegate_extender_created(void* self, void* extender, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderCreated)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderCreated)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* extender, QModelIndex* index)
 void k_extendableitemdelegate_on_extender_created(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderDestroyed)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderDestroyed)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param extender QWidget*
 /// @param index QModelIndex*
 void k_extendableitemdelegate_extender_destroyed(void* self, void* extender, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderDestroyed)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderDestroyed)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param callback void func(KExtendableItemDelegate* self, QWidget* extender, QModelIndex* index)
 void k_extendableitemdelegate_on_extender_destroyed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderRect)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderRect)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param extender QWidget*
@@ -188,7 +188,7 @@ void k_extendableitemdelegate_on_extender_destroyed(void* self, void (*callback)
 /// @param index QModelIndex*
 QRect* k_extendableitemdelegate_extender_rect(void* self, void* extender, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderRect)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderRect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -196,7 +196,7 @@ QRect* k_extendableitemdelegate_extender_rect(void* self, void* extender, void* 
 /// @param callback QRect* func(KExtendableItemDelegate* self, QWidget* extender, QStyleOptionViewItem* option, QModelIndex* index)
 void k_extendableitemdelegate_on_extender_rect(void* self, QRect* (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extenderRect)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extenderRect)
 ///
 /// Base class method implementation
 ///
@@ -206,13 +206,13 @@ void k_extendableitemdelegate_on_extender_rect(void* self, QRect* (*callback)(vo
 /// @param index QModelIndex*
 QRect* k_extendableitemdelegate_qbase_extender_rect(void* self, void* extender, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#setExtendPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#setExtendPixmap)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param pixmap QPixmap*
 void k_extendableitemdelegate_set_extend_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#setExtendPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#setExtendPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -220,7 +220,7 @@ void k_extendableitemdelegate_set_extend_pixmap(void* self, void* pixmap);
 /// @param callback void func(KExtendableItemDelegate* self, QPixmap* pixmap)
 void k_extendableitemdelegate_on_set_extend_pixmap(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#setExtendPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#setExtendPixmap)
 ///
 /// Base class method implementation
 ///
@@ -228,13 +228,13 @@ void k_extendableitemdelegate_on_set_extend_pixmap(void* self, void (*callback)(
 /// @param pixmap QPixmap*
 void k_extendableitemdelegate_qbase_set_extend_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#setContractPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#setContractPixmap)
 ///
 /// @param self KExtendableItemDelegate*
 /// @param pixmap QPixmap*
 void k_extendableitemdelegate_set_contract_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#setContractPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#setContractPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -242,7 +242,7 @@ void k_extendableitemdelegate_set_contract_pixmap(void* self, void* pixmap);
 /// @param callback void func(KExtendableItemDelegate* self, QPixmap* pixmap)
 void k_extendableitemdelegate_on_set_contract_pixmap(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#setContractPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#setContractPixmap)
 ///
 /// Base class method implementation
 ///
@@ -250,12 +250,12 @@ void k_extendableitemdelegate_on_set_contract_pixmap(void* self, void (*callback
 /// @param pixmap QPixmap*
 void k_extendableitemdelegate_qbase_set_contract_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extendPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extendPixmap)
 ///
 /// @param self KExtendableItemDelegate*
 QPixmap* k_extendableitemdelegate_extend_pixmap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extendPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extendPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -263,19 +263,19 @@ QPixmap* k_extendableitemdelegate_extend_pixmap(void* self);
 /// @param callback QPixmap* func()
 void k_extendableitemdelegate_on_extend_pixmap(void* self, QPixmap* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#extendPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#extendPixmap)
 ///
 /// Base class method implementation
 ///
 /// @param self KExtendableItemDelegate*
 QPixmap* k_extendableitemdelegate_qbase_extend_pixmap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#contractPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#contractPixmap)
 ///
 /// @param self KExtendableItemDelegate*
 QPixmap* k_extendableitemdelegate_contract_pixmap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#contractPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#contractPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -283,7 +283,7 @@ QPixmap* k_extendableitemdelegate_contract_pixmap(void* self);
 /// @param callback QPixmap* func()
 void k_extendableitemdelegate_on_contract_pixmap(void* self, QPixmap* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#contractPixmap)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#contractPixmap)
 ///
 /// Base class method implementation
 ///
@@ -1366,14 +1366,14 @@ void k_extendableitemdelegate_on_is_signal_connected(void* self, bool (*callback
 /// @param callback void func(KExtendableItemDelegate* self, const char* objectName)
 void k_extendableitemdelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kextendableitemdelegate.html#dtor.KExtendableItemDelegate)
+/// [Qt documentation](https://api.kde.org/kextendableitemdelegate.html#dtor.KExtendableItemDelegate)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KExtendableItemDelegate*
 void k_extendableitemdelegate_delete(void* self);
 
-/// https://api-staging.kde.org/kextendableitemdelegate.html#types
+/// https://api.kde.org/kextendableitemdelegate.html#types
 
 typedef enum {
     KEXTENDABLEITEMDELEGATE_AUXDATAROLES_SHOWEXTENSIONINDICATORROLE = 456

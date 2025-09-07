@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/knetworkmounts.html
+/// https://api.kde.org/knetworkmounts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,69 +35,69 @@ int32_t k_networkmounts_metacall(void* self, int32_t param1, int param2, void* p
 /// @param s const char*
 const char* k_networkmounts_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#self)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#self)
 ///
 KNetworkMounts* k_networkmounts_self();
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#isSlowPath)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#isSlowPath)
 ///
 /// @param self KNetworkMounts*
 /// @param path const char*
 bool k_networkmounts_is_slow_path(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#isOptionEnabledForPath)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#isOptionEnabledForPath)
 ///
 /// @param self KNetworkMounts*
 /// @param path const char*
 /// @param option enum KNetworkMounts__KNetworkMountOption
 bool k_networkmounts_is_option_enabled_for_path(void* self, const char* path, int32_t option);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#isEnabled)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#isEnabled)
 ///
 /// @param self KNetworkMounts*
 bool k_networkmounts_is_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#setEnabled)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#setEnabled)
 ///
 /// @param self KNetworkMounts*
 /// @param value bool
 void k_networkmounts_set_enabled(void* self, bool value);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#isOptionEnabled)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#isOptionEnabled)
 ///
 /// @param self KNetworkMounts*
 /// @param option enum KNetworkMounts__KNetworkMountOption
 bool k_networkmounts_is_option_enabled(void* self, int32_t option);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#setOption)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#setOption)
 ///
 /// @param self KNetworkMounts*
 /// @param option enum KNetworkMounts__KNetworkMountOption
 /// @param value bool
 void k_networkmounts_set_option(void* self, int32_t option, bool value);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#paths)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#paths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNetworkMounts*
 const char** k_networkmounts_paths(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#setPaths)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#setPaths)
 ///
 /// @param self KNetworkMounts*
 /// @param paths const char**
 /// @param typeVal enum KNetworkMounts__KNetworkMountsType
 void k_networkmounts_set_paths(void* self, const char* paths[], int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#addPath)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#addPath)
 ///
 /// @param self KNetworkMounts*
 /// @param path const char*
 /// @param typeVal enum KNetworkMounts__KNetworkMountsType
 void k_networkmounts_add_path(void* self, const char* path, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#canonicalSymlinkPath)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#canonicalSymlinkPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -105,12 +105,12 @@ void k_networkmounts_add_path(void* self, const char* path, int32_t typeVal);
 /// @param path const char*
 const char* k_networkmounts_canonical_symlink_path(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#clearCache)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#clearCache)
 ///
 /// @param self KNetworkMounts*
 void k_networkmounts_clear_cache(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#sync)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#sync)
 ///
 /// @param self KNetworkMounts*
 void k_networkmounts_sync(void* self);
@@ -132,21 +132,21 @@ const char* k_networkmounts_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_networkmounts_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#isSlowPath)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#isSlowPath)
 ///
 /// @param self KNetworkMounts*
 /// @param path const char*
 /// @param typeVal enum KNetworkMounts__KNetworkMountsType
 bool k_networkmounts_is_slow_path2(void* self, const char* path, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#isOptionEnabled)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#isOptionEnabled)
 ///
 /// @param self KNetworkMounts*
 /// @param option enum KNetworkMounts__KNetworkMountOption
 /// @param defaultValue bool
 bool k_networkmounts_is_option_enabled2(void* self, int32_t option, bool defaultValue);
 
-/// [Qt documentation](https://api-staging.kde.org/knetworkmounts.html#paths)
+/// [Qt documentation](https://api.kde.org/knetworkmounts.html#paths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -488,7 +488,7 @@ void k_networkmounts_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(KNetworkMounts* self, const char* objectName)
 void k_networkmounts_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// https://api-staging.kde.org/knetworkmounts.html#types
+/// https://api.kde.org/knetworkmounts.html#types
 
 typedef enum {
     KNETWORKMOUNTS_KNETWORKMOUNTOPTION_LOWSIDEEFFECTSOPTIMIZATIONS = 0,

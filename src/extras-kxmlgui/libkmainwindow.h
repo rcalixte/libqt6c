@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmainwindow.html
+/// https://api.kde.org/kmainwindow.html
 
 /// k_mainwindow_new constructs a new KMainWindow object.
 ///
@@ -64,94 +64,94 @@ int32_t k_mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_mainwindow_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#canBeRestored)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#canBeRestored)
 ///
 /// @param numberOfInstances int
 bool k_mainwindow_can_be_restored(int numberOfInstances);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#classNameOfToplevel)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#classNameOfToplevel)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param instanceNumber int
 const char* k_mainwindow_class_name_of_toplevel(int instanceNumber);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#restore)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#restore)
 ///
 /// @param self KMainWindow*
 /// @param numberOfInstances int
 bool k_mainwindow_restore(void* self, int numberOfInstances);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#hasMenuBar)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#hasMenuBar)
 ///
 /// @param self KMainWindow*
 bool k_mainwindow_has_menu_bar(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#memberList)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#memberList)
 ///
 libqt_list /* of KMainWindow* */ k_mainwindow_member_list();
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#toolBar)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBar)
 ///
 /// @param self KMainWindow*
 KToolBar* k_mainwindow_tool_bar(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#toolBars)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBars)
 ///
 /// @param self KMainWindow*
 libqt_list /* of KToolBar* */ k_mainwindow_tool_bars(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 void k_mainwindow_set_auto_save_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 /// @param group KConfigGroup*
 void k_mainwindow_set_auto_save_settings2(void* self, void* group);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#resetAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#resetAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 void k_mainwindow_reset_auto_save_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#autoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveSettings)
 ///
 /// @param self KMainWindow*
 bool k_mainwindow_auto_save_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#autoSaveGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMainWindow*
 const char* k_mainwindow_auto_save_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#autoSaveConfigGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#autoSaveConfigGroup)
 ///
 /// @param self KMainWindow*
 KConfigGroup* k_mainwindow_auto_save_config_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setStateConfigGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setStateConfigGroup)
 ///
 /// @param self KMainWindow*
 /// @param configGroup const char*
 void k_mainwindow_set_state_config_group(void* self, const char* configGroup);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#stateConfigGroup)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#stateConfigGroup)
 ///
 /// @param self KMainWindow*
 KConfigGroup* k_mainwindow_state_config_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#applyMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#applyMainWindowSettings)
 ///
 /// @param self KMainWindow*
 /// @param config KConfigGroup*
 void k_mainwindow_apply_main_window_settings(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#applyMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#applyMainWindowSettings)
 ///
 /// Allows for overriding the related default method
 ///
@@ -159,7 +159,7 @@ void k_mainwindow_apply_main_window_settings(void* self, void* config);
 /// @param callback void func(KMainWindow* self, KConfigGroup* config)
 void k_mainwindow_on_apply_main_window_settings(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#applyMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#applyMainWindowSettings)
 ///
 /// Base class method implementation
 ///
@@ -167,26 +167,26 @@ void k_mainwindow_on_apply_main_window_settings(void* self, void (*callback)(voi
 /// @param config KConfigGroup*
 void k_mainwindow_qbase_apply_main_window_settings(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveMainWindowSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveMainWindowSettings)
 ///
 /// @param self KMainWindow*
 /// @param config KConfigGroup*
 void k_mainwindow_save_main_window_settings(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#dbusName)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#dbusName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMainWindow*
 const char* k_mainwindow_dbus_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// @param self KMainWindow*
 /// @param caption const char*
 void k_mainwindow_set_caption(void* self, const char* caption);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Allows for overriding the related default method
 ///
@@ -194,7 +194,7 @@ void k_mainwindow_set_caption(void* self, const char* caption);
 /// @param callback void func(KMainWindow* self, const char* caption)
 void k_mainwindow_on_set_caption(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Base class method implementation
 ///
@@ -202,14 +202,14 @@ void k_mainwindow_on_set_caption(void* self, void (*callback)(void*, const char*
 /// @param caption const char*
 void k_mainwindow_qbase_set_caption(void* self, const char* caption);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// @param self KMainWindow*
 /// @param caption const char*
 /// @param modified bool
 void k_mainwindow_set_caption2(void* self, const char* caption, bool modified);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Allows for overriding the related default method
 ///
@@ -217,7 +217,7 @@ void k_mainwindow_set_caption2(void* self, const char* caption, bool modified);
 /// @param callback void func(KMainWindow* self, const char* caption, bool modified)
 void k_mainwindow_on_set_caption2(void* self, void (*callback)(void*, const char*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setCaption)
 ///
 /// Base class method implementation
 ///
@@ -226,13 +226,13 @@ void k_mainwindow_on_set_caption2(void* self, void (*callback)(void*, const char
 /// @param modified bool
 void k_mainwindow_qbase_set_caption2(void* self, const char* caption, bool modified);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setPlainCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// @param self KMainWindow*
 /// @param caption const char*
 void k_mainwindow_set_plain_caption(void* self, const char* caption);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setPlainCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Allows for overriding the related default method
 ///
@@ -240,7 +240,7 @@ void k_mainwindow_set_plain_caption(void* self, const char* caption);
 /// @param callback void func(KMainWindow* self, const char* caption)
 void k_mainwindow_on_set_plain_caption(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setPlainCaption)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setPlainCaption)
 ///
 /// Base class method implementation
 ///
@@ -248,23 +248,23 @@ void k_mainwindow_on_set_plain_caption(void* self, void (*callback)(void*, const
 /// @param caption const char*
 void k_mainwindow_qbase_set_plain_caption(void* self, const char* caption);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#appHelpActivated)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#appHelpActivated)
 ///
 /// @param self KMainWindow*
 void k_mainwindow_app_help_activated(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setSettingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setSettingsDirty)
 ///
 /// @param self KMainWindow*
 void k_mainwindow_set_settings_dirty(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#event)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#event)
 ///
 /// @param self KMainWindow*
 /// @param event QEvent*
 bool k_mainwindow_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#event)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -272,7 +272,7 @@ bool k_mainwindow_event(void* self, void* event);
 /// @param callback bool func(KMainWindow* self, QEvent* event)
 void k_mainwindow_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#event)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#event)
 ///
 /// Base class method implementation
 ///
@@ -280,13 +280,13 @@ void k_mainwindow_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 bool k_mainwindow_qbase_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// @param self KMainWindow*
 /// @param keyEvent QKeyEvent*
 void k_mainwindow_key_press_event(void* self, void* keyEvent);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -294,7 +294,7 @@ void k_mainwindow_key_press_event(void* self, void* keyEvent);
 /// @param callback void func(KMainWindow* self, QKeyEvent* keyEvent)
 void k_mainwindow_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -302,13 +302,13 @@ void k_mainwindow_on_key_press_event(void* self, void (*callback)(void*, void*))
 /// @param keyEvent QKeyEvent*
 void k_mainwindow_qbase_key_press_event(void* self, void* keyEvent);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#closeEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// @param self KMainWindow*
 /// @param param1 QCloseEvent*
 void k_mainwindow_close_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#closeEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -316,7 +316,7 @@ void k_mainwindow_close_event(void* self, void* param1);
 /// @param callback void func(KMainWindow* self, QCloseEvent* param1)
 void k_mainwindow_on_close_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#closeEvent)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#closeEvent)
 ///
 /// Base class method implementation
 ///
@@ -324,12 +324,12 @@ void k_mainwindow_on_close_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QCloseEvent*
 void k_mainwindow_qbase_close_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#queryClose)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// @param self KMainWindow*
 bool k_mainwindow_query_close(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#queryClose)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Allows for overriding the related default method
 ///
@@ -337,20 +337,20 @@ bool k_mainwindow_query_close(void* self);
 /// @param callback bool func()
 void k_mainwindow_on_query_close(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#queryClose)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#queryClose)
 ///
 /// Base class method implementation
 ///
 /// @param self KMainWindow*
 bool k_mainwindow_qbase_query_close(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// @param self KMainWindow*
 /// @param param1 KConfigGroup*
 void k_mainwindow_save_properties(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Allows for overriding the related default method
 ///
@@ -358,7 +358,7 @@ void k_mainwindow_save_properties(void* self, void* param1);
 /// @param callback void func(KMainWindow* self, KConfigGroup* param1)
 void k_mainwindow_on_save_properties(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveProperties)
 ///
 /// Base class method implementation
 ///
@@ -366,13 +366,13 @@ void k_mainwindow_on_save_properties(void* self, void (*callback)(void*, void*))
 /// @param param1 KConfigGroup*
 void k_mainwindow_qbase_save_properties(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// @param self KMainWindow*
 /// @param param1 KConfigGroup*
 void k_mainwindow_read_properties(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Allows for overriding the related default method
 ///
@@ -380,7 +380,7 @@ void k_mainwindow_read_properties(void* self, void* param1);
 /// @param callback void func(KMainWindow* self, KConfigGroup* param1)
 void k_mainwindow_on_read_properties(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readProperties)
 ///
 /// Base class method implementation
 ///
@@ -388,13 +388,13 @@ void k_mainwindow_on_read_properties(void* self, void (*callback)(void*, void*))
 /// @param param1 KConfigGroup*
 void k_mainwindow_qbase_read_properties(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// @param self KMainWindow*
 /// @param sessionConfig KConfig*
 void k_mainwindow_save_global_properties(void* self, void* sessionConfig);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Allows for overriding the related default method
 ///
@@ -402,7 +402,7 @@ void k_mainwindow_save_global_properties(void* self, void* sessionConfig);
 /// @param callback void func(KMainWindow* self, KConfig* sessionConfig)
 void k_mainwindow_on_save_global_properties(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
 ///
 /// Base class method implementation
 ///
@@ -410,13 +410,13 @@ void k_mainwindow_on_save_global_properties(void* self, void (*callback)(void*, 
 /// @param sessionConfig KConfig*
 void k_mainwindow_qbase_save_global_properties(void* self, void* sessionConfig);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// @param self KMainWindow*
 /// @param sessionConfig KConfig*
 void k_mainwindow_read_global_properties(void* self, void* sessionConfig);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Allows for overriding the related default method
 ///
@@ -424,7 +424,7 @@ void k_mainwindow_read_global_properties(void* self, void* sessionConfig);
 /// @param callback void func(KMainWindow* self, KConfig* sessionConfig)
 void k_mainwindow_on_read_global_properties(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readGlobalProperties)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readGlobalProperties)
 ///
 /// Base class method implementation
 ///
@@ -432,14 +432,14 @@ void k_mainwindow_on_read_global_properties(void* self, void (*callback)(void*, 
 /// @param sessionConfig KConfig*
 void k_mainwindow_qbase_read_global_properties(void* self, void* sessionConfig);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// @param self KMainWindow*
 /// @param param1 KConfig*
 /// @param param2 int
 void k_mainwindow_save_properties_internal(void* self, void* param1, int param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Allows for overriding the related default method
 ///
@@ -447,7 +447,7 @@ void k_mainwindow_save_properties_internal(void* self, void* param1, int param2)
 /// @param callback void func(KMainWindow* self, KConfig* param1, int param2)
 void k_mainwindow_on_save_properties_internal(void* self, void (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#savePropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
 ///
 /// Base class method implementation
 ///
@@ -456,14 +456,14 @@ void k_mainwindow_on_save_properties_internal(void* self, void (*callback)(void*
 /// @param param2 int
 void k_mainwindow_qbase_save_properties_internal(void* self, void* param1, int param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// @param self KMainWindow*
 /// @param param1 KConfig*
 /// @param param2 int
 bool k_mainwindow_read_properties_internal(void* self, void* param1, int param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Allows for overriding the related default method
 ///
@@ -471,7 +471,7 @@ bool k_mainwindow_read_properties_internal(void* self, void* param1, int param2)
 /// @param callback bool func(KMainWindow* self, KConfig* param1, int param2)
 void k_mainwindow_on_read_properties_internal(void* self, bool (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#readPropertiesInternal)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
 ///
 /// Base class method implementation
 ///
@@ -480,12 +480,12 @@ void k_mainwindow_on_read_properties_internal(void* self, bool (*callback)(void*
 /// @param param2 int
 bool k_mainwindow_qbase_read_properties_internal(void* self, void* param1, int param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#settingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// @param self KMainWindow*
 bool k_mainwindow_settings_dirty(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#settingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -493,19 +493,19 @@ bool k_mainwindow_settings_dirty(void* self);
 /// @param callback bool func()
 void k_mainwindow_on_settings_dirty(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#settingsDirty)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#settingsDirty)
 ///
 /// Base class method implementation
 ///
 /// @param self KMainWindow*
 bool k_mainwindow_qbase_settings_dirty(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 void k_mainwindow_save_auto_save_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Allows for overriding the related default method
 ///
@@ -513,7 +513,7 @@ void k_mainwindow_save_auto_save_settings(void* self);
 /// @param callback void func()
 void k_mainwindow_on_save_auto_save_settings(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#saveAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
 ///
 /// Base class method implementation
 ///
@@ -537,33 +537,33 @@ const char* k_mainwindow_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_mainwindow_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#restore)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#restore)
 ///
 /// @param self KMainWindow*
 /// @param numberOfInstances int
 /// @param show bool
 bool k_mainwindow_restore2(void* self, int numberOfInstances, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#toolBar)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#toolBar)
 ///
 /// @param self KMainWindow*
 /// @param name const char*
 KToolBar* k_mainwindow_tool_bar1(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 /// @param groupName const char*
 void k_mainwindow_set_auto_save_settings1(void* self, const char* groupName);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 /// @param groupName const char*
 /// @param saveWindowSize bool
 void k_mainwindow_set_auto_save_settings22(void* self, const char* groupName, bool saveWindowSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#setAutoSaveSettings)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#setAutoSaveSettings)
 ///
 /// @param self KMainWindow*
 /// @param group KConfigGroup*
@@ -5240,7 +5240,7 @@ void k_mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KMainWindow* self, const char* objectName)
 void k_mainwindow_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmainwindow.html#dtor.KMainWindow)
+/// [Qt documentation](https://api.kde.org/kmainwindow.html#dtor.KMainWindow)
 ///
 /// Delete this object from C++ memory.
 ///

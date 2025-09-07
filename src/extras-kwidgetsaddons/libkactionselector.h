@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kactionselector.html
+/// https://api.kde.org/kactionselector.html
 
 /// k_actionselector_new constructs a new KActionSelector object.
 ///
@@ -58,189 +58,189 @@ int32_t k_actionselector_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_actionselector_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#availableListWidget)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#availableListWidget)
 ///
 /// @param self KActionSelector*
 QListWidget* k_actionselector_available_list_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#selectedListWidget)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#selectedListWidget)
 ///
 /// @param self KActionSelector*
 QListWidget* k_actionselector_selected_list_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#moveOnDoubleClick)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#moveOnDoubleClick)
 ///
 /// @param self KActionSelector*
 bool k_actionselector_move_on_double_click(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setMoveOnDoubleClick)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setMoveOnDoubleClick)
 ///
 /// @param self KActionSelector*
 /// @param enable bool
 void k_actionselector_set_move_on_double_click(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#keyboardEnabled)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#keyboardEnabled)
 ///
 /// @param self KActionSelector*
 bool k_actionselector_keyboard_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setKeyboardEnabled)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setKeyboardEnabled)
 ///
 /// @param self KActionSelector*
 /// @param enable bool
 void k_actionselector_set_keyboard_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#availableLabel)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#availableLabel)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionSelector*
 const char* k_actionselector_available_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setAvailableLabel)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setAvailableLabel)
 ///
 /// @param self KActionSelector*
 /// @param text const char*
 void k_actionselector_set_available_label(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#selectedLabel)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#selectedLabel)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionSelector*
 const char* k_actionselector_selected_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setSelectedLabel)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setSelectedLabel)
 ///
 /// @param self KActionSelector*
 /// @param text const char*
 void k_actionselector_set_selected_label(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#availableInsertionPolicy)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#availableInsertionPolicy)
 ///
 /// @param self KActionSelector*
 ///
 /// @return enum KActionSelector__InsertionPolicy
 int32_t k_actionselector_available_insertion_policy(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setAvailableInsertionPolicy)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setAvailableInsertionPolicy)
 ///
 /// @param self KActionSelector*
 /// @param policy enum KActionSelector__InsertionPolicy
 void k_actionselector_set_available_insertion_policy(void* self, int32_t policy);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#selectedInsertionPolicy)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#selectedInsertionPolicy)
 ///
 /// @param self KActionSelector*
 ///
 /// @return enum KActionSelector__InsertionPolicy
 int32_t k_actionselector_selected_insertion_policy(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setSelectedInsertionPolicy)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setSelectedInsertionPolicy)
 ///
 /// @param self KActionSelector*
 /// @param policy enum KActionSelector__InsertionPolicy
 void k_actionselector_set_selected_insertion_policy(void* self, int32_t policy);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#showUpDownButtons)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#showUpDownButtons)
 ///
 /// @param self KActionSelector*
 bool k_actionselector_show_up_down_buttons(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setShowUpDownButtons)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setShowUpDownButtons)
 ///
 /// @param self KActionSelector*
 /// @param show bool
 void k_actionselector_set_show_up_down_buttons(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setButtonIcon)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setButtonIcon)
 ///
 /// @param self KActionSelector*
 /// @param icon const char*
 /// @param button enum KActionSelector__MoveButton
 void k_actionselector_set_button_icon(void* self, const char* icon, int32_t button);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setButtonIconSet)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setButtonIconSet)
 ///
 /// @param self KActionSelector*
 /// @param iconset QIcon*
 /// @param button enum KActionSelector__MoveButton
 void k_actionselector_set_button_icon_set(void* self, void* iconset, int32_t button);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setButtonTooltip)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setButtonTooltip)
 ///
 /// @param self KActionSelector*
 /// @param tip const char*
 /// @param button enum KActionSelector__MoveButton
 void k_actionselector_set_button_tooltip(void* self, const char* tip, int32_t button);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setButtonWhatsThis)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setButtonWhatsThis)
 ///
 /// @param self KActionSelector*
 /// @param text const char*
 /// @param button enum KActionSelector__MoveButton
 void k_actionselector_set_button_whats_this(void* self, const char* text, int32_t button);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#added)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#added)
 ///
 /// @param self KActionSelector*
 /// @param item QListWidgetItem*
 void k_actionselector_added(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#added)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#added)
 ///
 /// @param self KActionSelector*
 /// @param callback void func(KActionSelector* self, QListWidgetItem* item)
 void k_actionselector_on_added(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#removed)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#removed)
 ///
 /// @param self KActionSelector*
 /// @param item QListWidgetItem*
 void k_actionselector_removed(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#removed)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#removed)
 ///
 /// @param self KActionSelector*
 /// @param callback void func(KActionSelector* self, QListWidgetItem* item)
 void k_actionselector_on_removed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#movedUp)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#movedUp)
 ///
 /// @param self KActionSelector*
 /// @param item QListWidgetItem*
 void k_actionselector_moved_up(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#movedUp)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#movedUp)
 ///
 /// @param self KActionSelector*
 /// @param callback void func(KActionSelector* self, QListWidgetItem* item)
 void k_actionselector_on_moved_up(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#movedDown)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#movedDown)
 ///
 /// @param self KActionSelector*
 /// @param item QListWidgetItem*
 void k_actionselector_moved_down(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#movedDown)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#movedDown)
 ///
 /// @param self KActionSelector*
 /// @param callback void func(KActionSelector* self, QListWidgetItem* item)
 void k_actionselector_on_moved_down(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#setButtonsEnabled)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#setButtonsEnabled)
 ///
 /// @param self KActionSelector*
 void k_actionselector_set_buttons_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#keyPressEvent)
 ///
 /// @param self KActionSelector*
 /// @param param1 QKeyEvent*
 void k_actionselector_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -248,7 +248,7 @@ void k_actionselector_key_press_event(void* self, void* param1);
 /// @param callback void func(KActionSelector* self, QKeyEvent* param1)
 void k_actionselector_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -256,14 +256,14 @@ void k_actionselector_on_key_press_event(void* self, void (*callback)(void*, voi
 /// @param param1 QKeyEvent*
 void k_actionselector_qbase_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#eventFilter)
 ///
 /// @param self KActionSelector*
 /// @param param1 QObject*
 /// @param param2 QEvent*
 bool k_actionselector_event_filter(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -271,7 +271,7 @@ bool k_actionselector_event_filter(void* self, void* param1, void* param2);
 /// @param callback bool func(KActionSelector* self, QObject* param1, QEvent* param2)
 void k_actionselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -4471,14 +4471,14 @@ void k_actionselector_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// @param callback void func(KActionSelector* self, const char* objectName)
 void k_actionselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionselector.html#dtor.KActionSelector)
+/// [Qt documentation](https://api.kde.org/kactionselector.html#dtor.KActionSelector)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KActionSelector*
 void k_actionselector_delete(void* self);
 
-/// https://api-staging.kde.org/kactionselector.html#types
+/// https://api.kde.org/kactionselector.html#types
 
 typedef enum {
     KACTIONSELECTOR_MOVEBUTTON_BUTTONADD = 0,

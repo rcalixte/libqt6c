@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kglobalaccel.html
+/// https://api.kde.org/kglobalaccel.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,120 +35,120 @@ int32_t k_globalaccel_metacall(void* self, int32_t param1, int param2, void* par
 /// @param s const char*
 const char* k_globalaccel_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#self)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#self)
 ///
 KGlobalAccel* k_globalaccel_self();
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#stealShortcutSystemwide)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#stealShortcutSystemwide)
 ///
 /// @param seq QKeySequence*
 void k_globalaccel_steal_shortcut_systemwide(void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#cleanComponent)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#cleanComponent)
 ///
 /// @param componentUnique const char*
 bool k_globalaccel_clean_component(const char* componentUnique);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#isComponentActive)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#isComponentActive)
 ///
 /// @param componentName const char*
 bool k_globalaccel_is_component_active(const char* componentName);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcutsByKey)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcutsByKey)
 ///
 /// @param seq QKeySequence*
 libqt_list /* of KGlobalShortcutInfo* */ k_globalaccel_global_shortcuts_by_key(void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#isGlobalShortcutAvailable)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#isGlobalShortcutAvailable)
 ///
 /// @param seq QKeySequence*
 bool k_globalaccel_is_global_shortcut_available(void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#promptStealShortcutSystemwide)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#promptStealShortcutSystemwide)
 ///
 /// @param parent QWidget*
 /// @param shortcuts libqt_list /* of KGlobalShortcutInfo* */
 /// @param seq QKeySequence*
 bool k_globalaccel_prompt_steal_shortcut_systemwide(void* parent, libqt_list shortcuts, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#setDefaultShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#setDefaultShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 /// @param shortcut libqt_list /* of QKeySequence* */
 bool k_globalaccel_set_default_shortcut(void* self, void* action, libqt_list shortcut);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#setShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#setShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 /// @param shortcut libqt_list /* of QKeySequence* */
 bool k_globalaccel_set_shortcut(void* self, void* action, libqt_list shortcut);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#setGlobalShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#setGlobalShortcut)
 ///
 /// @param action QAction*
 /// @param shortcut libqt_list /* of QKeySequence* */
 bool k_globalaccel_set_global_shortcut(void* action, libqt_list shortcut);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#setGlobalShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#setGlobalShortcut)
 ///
 /// @param action QAction*
 /// @param shortcut QKeySequence*
 bool k_globalaccel_set_global_shortcut2(void* action, void* shortcut);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#defaultShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#defaultShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 libqt_list /* of QKeySequence* */ k_globalaccel_default_shortcut(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#shortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#shortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 libqt_list /* of QKeySequence* */ k_globalaccel_shortcut(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param componentName const char*
 /// @param actionId const char*
 libqt_list /* of QKeySequence* */ k_globalaccel_global_shortcut(void* self, const char* componentName, const char* actionId);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#removeAllShortcuts)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#removeAllShortcuts)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 void k_globalaccel_remove_all_shortcuts(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#hasShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#hasShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 bool k_globalaccel_has_shortcut(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcutChanged)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcutChanged)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 /// @param seq QKeySequence*
 void k_globalaccel_global_shortcut_changed(void* self, void* action, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcutChanged)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcutChanged)
 ///
 /// @param self KGlobalAccel*
 /// @param callback void func(KGlobalAccel* self, QAction* action, QKeySequence* seq)
 void k_globalaccel_on_global_shortcut_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcutActiveChanged)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcutActiveChanged)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
 /// @param active bool
 void k_globalaccel_global_shortcut_active_changed(void* self, void* action, bool active);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcutActiveChanged)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcutActiveChanged)
 ///
 /// @param self KGlobalAccel*
 /// @param callback void func(KGlobalAccel* self, QAction* action, bool active)
@@ -171,19 +171,19 @@ const char* k_globalaccel_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_globalaccel_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#globalShortcutsByKey)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#globalShortcutsByKey)
 ///
 /// @param seq QKeySequence*
 /// @param typeVal enum KGlobalAccel__MatchType
 libqt_list /* of KGlobalShortcutInfo* */ k_globalaccel_global_shortcuts_by_key2(void* seq, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#isGlobalShortcutAvailable)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#isGlobalShortcutAvailable)
 ///
 /// @param seq QKeySequence*
 /// @param component const char*
 bool k_globalaccel_is_global_shortcut_available2(void* seq, const char* component);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#setDefaultShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#setDefaultShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
@@ -191,7 +191,7 @@ bool k_globalaccel_is_global_shortcut_available2(void* seq, const char* componen
 /// @param loadFlag enum KGlobalAccel__GlobalShortcutLoading
 bool k_globalaccel_set_default_shortcut3(void* self, void* action, libqt_list shortcut, int32_t loadFlag);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalaccel.html#setShortcut)
+/// [Qt documentation](https://api.kde.org/kglobalaccel.html#setShortcut)
 ///
 /// @param self KGlobalAccel*
 /// @param action QAction*
@@ -533,7 +533,7 @@ void k_globalaccel_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(KGlobalAccel* self, const char* objectName)
 void k_globalaccel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// https://api-staging.kde.org/kglobalaccel.html#types
+/// https://api.kde.org/kglobalaccel.html#types
 
 typedef enum {
     KGLOBALACCEL_GLOBALSHORTCUTLOADING_AUTOLOADING = 0,

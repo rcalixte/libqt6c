@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kkeysequencewidget.html
+/// https://api.kde.org/kkeysequencewidget.html
 
 /// k_keysequencewidget_new constructs a new KKeySequenceWidget object.
 ///
@@ -58,152 +58,152 @@ int32_t k_keysequencewidget_qbase_metacall(void* self, int32_t param1, int param
 /// @param s const char*
 const char* k_keysequencewidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setCheckForConflictsAgainst)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setCheckForConflictsAgainst)
 ///
 /// @param self KKeySequenceWidget*
 /// @param types flag of enum KKeySequenceWidget__ShortcutType
 void k_keysequencewidget_set_check_for_conflicts_against(void* self, int32_t types);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#checkForConflictsAgainst)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#checkForConflictsAgainst)
 ///
 /// @param self KKeySequenceWidget*
 ///
 /// @return flag of enum KKeySequenceWidget__ShortcutType
 int32_t k_keysequencewidget_check_for_conflicts_against(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setMultiKeyShortcutsAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setMultiKeyShortcutsAllowed)
 ///
 /// @param self KKeySequenceWidget*
 /// @param multiKeyShortcutsAllowed bool
 void k_keysequencewidget_set_multi_key_shortcuts_allowed(void* self, bool multiKeyShortcutsAllowed);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#multiKeyShortcutsAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#multiKeyShortcutsAllowed)
 ///
 /// @param self KKeySequenceWidget*
 bool k_keysequencewidget_multi_key_shortcuts_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setModifierlessAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setModifierlessAllowed)
 ///
 /// @param self KKeySequenceWidget*
 /// @param allow bool
 void k_keysequencewidget_set_modifierless_allowed(void* self, bool allow);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#isModifierlessAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#isModifierlessAllowed)
 ///
 /// @param self KKeySequenceWidget*
 bool k_keysequencewidget_is_modifierless_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setModifierOnlyAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setModifierOnlyAllowed)
 ///
 /// @param self KKeySequenceWidget*
 /// @param allow bool
 void k_keysequencewidget_set_modifier_only_allowed(void* self, bool allow);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#modifierOnlyAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#modifierOnlyAllowed)
 ///
 /// @param self KKeySequenceWidget*
 bool k_keysequencewidget_modifier_only_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setClearButtonShown)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setClearButtonShown)
 ///
 /// @param self KKeySequenceWidget*
 /// @param show bool
 void k_keysequencewidget_set_clear_button_shown(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#isKeySequenceAvailable)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#isKeySequenceAvailable)
 ///
 /// @param self KKeySequenceWidget*
 /// @param seq QKeySequence*
 bool k_keysequencewidget_is_key_sequence_available(void* self, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#keySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#keySequence)
 ///
 /// @param self KKeySequenceWidget*
 QKeySequence* k_keysequencewidget_key_sequence(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setCheckActionCollections)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setCheckActionCollections)
 ///
 /// @param self KKeySequenceWidget*
 /// @param actionCollections libqt_list /* of KActionCollection* */
 void k_keysequencewidget_set_check_action_collections(void* self, libqt_list actionCollections);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setComponentName)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setComponentName)
 ///
 /// @param self KKeySequenceWidget*
 /// @param componentName const char*
 void k_keysequencewidget_set_component_name(void* self, const char* componentName);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#isRecording)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#isRecording)
 ///
 /// @param self KKeySequenceWidget*
 bool k_keysequencewidget_is_recording(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setPatterns)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setPatterns)
 ///
 /// @param self KKeySequenceWidget*
 /// @param patterns flag of enum KKeySequenceRecorder__Pattern
 void k_keysequencewidget_set_patterns(void* self, int32_t patterns);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#patterns)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#patterns)
 ///
 /// @param self KKeySequenceWidget*
 ///
 /// @return flag of enum KKeySequenceRecorder__Pattern
 int32_t k_keysequencewidget_patterns(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#keySequenceChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#keySequenceChanged)
 ///
 /// @param self KKeySequenceWidget*
 /// @param seq QKeySequence*
 void k_keysequencewidget_key_sequence_changed(void* self, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#keySequenceChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#keySequenceChanged)
 ///
 /// @param self KKeySequenceWidget*
 /// @param callback void func(KKeySequenceWidget* self, QKeySequence* seq)
 void k_keysequencewidget_on_key_sequence_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#stealShortcut)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#stealShortcut)
 ///
 /// @param self KKeySequenceWidget*
 /// @param seq QKeySequence*
 /// @param action QAction*
 void k_keysequencewidget_steal_shortcut(void* self, void* seq, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#stealShortcut)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#stealShortcut)
 ///
 /// @param self KKeySequenceWidget*
 /// @param callback void func(KKeySequenceWidget* self, QKeySequence* seq, QAction* action)
 void k_keysequencewidget_on_steal_shortcut(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#recordingChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#recordingChanged)
 ///
 /// @param self KKeySequenceWidget*
 void k_keysequencewidget_recording_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#recordingChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#recordingChanged)
 ///
 /// @param self KKeySequenceWidget*
 /// @param callback void func(KKeySequenceWidget* self)
 void k_keysequencewidget_on_recording_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#captureKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#captureKeySequence)
 ///
 /// @param self KKeySequenceWidget*
 void k_keysequencewidget_capture_key_sequence(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setKeySequence)
 ///
 /// @param self KKeySequenceWidget*
 /// @param seq QKeySequence*
 void k_keysequencewidget_set_key_sequence(void* self, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#clearKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#clearKeySequence)
 ///
 /// @param self KKeySequenceWidget*
 void k_keysequencewidget_clear_key_sequence(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#applyStealShortcut)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#applyStealShortcut)
 ///
 /// @param self KKeySequenceWidget*
 void k_keysequencewidget_apply_steal_shortcut(void* self);
@@ -225,7 +225,7 @@ const char* k_keysequencewidget_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_keysequencewidget_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#setKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#setKeySequence)
 ///
 /// @param self KKeySequenceWidget*
 /// @param seq QKeySequence*
@@ -4438,14 +4438,14 @@ void k_keysequencewidget_on_get_decoded_metric_f(void* self, double (*callback)(
 /// @param callback void func(KKeySequenceWidget* self, const char* objectName)
 void k_keysequencewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencewidget.html#dtor.KKeySequenceWidget)
+/// [Qt documentation](https://api.kde.org/kkeysequencewidget.html#dtor.KKeySequenceWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KKeySequenceWidget*
 void k_keysequencewidget_delete(void* self);
 
-/// https://api-staging.kde.org/kkeysequencewidget.html#types
+/// https://api.kde.org/kkeysequencewidget.html#types
 
 typedef enum {
     KKEYSEQUENCEWIDGET_VALIDATION_VALIDATE = 0,

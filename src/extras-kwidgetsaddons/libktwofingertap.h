@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktwofingertap.html
+/// https://api.kde.org/ktwofingertap.html
 
 /// k_twofingertap_new constructs a new KTwoFingerTap object.
 ///
@@ -58,34 +58,34 @@ int32_t k_twofingertap_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_twofingertap_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#pos)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#pos)
 ///
 /// @param self KTwoFingerTap*
 QPointF* k_twofingertap_pos(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#setPos)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#setPos)
 ///
 /// @param self KTwoFingerTap*
 /// @param pos QPointF*
 void k_twofingertap_set_pos(void* self, void* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#screenPos)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#screenPos)
 ///
 /// @param self KTwoFingerTap*
 QPointF* k_twofingertap_screen_pos(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#setScreenPos)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#setScreenPos)
 ///
 /// @param self KTwoFingerTap*
 /// @param screenPos QPointF*
 void k_twofingertap_set_screen_pos(void* self, void* screenPos);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#scenePos)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#scenePos)
 ///
 /// @param self KTwoFingerTap*
 QPointF* k_twofingertap_scene_pos(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#setScenePos)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#setScenePos)
 ///
 /// @param self KTwoFingerTap*
 /// @param scenePos QPointF*
@@ -817,26 +817,26 @@ void k_twofingertap_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param callback void func(KTwoFingerTap* self, const char* objectName)
 void k_twofingertap_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertap.html#dtor.KTwoFingerTap)
+/// [Qt documentation](https://api.kde.org/ktwofingertap.html#dtor.KTwoFingerTap)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KTwoFingerTap*
 void k_twofingertap_delete(void* self);
 
-/// https://api-staging.kde.org/ktwofingertaprecognizer.html
+/// https://api.kde.org/ktwofingertaprecognizer.html
 
 /// k_twofingertaprecognizer_new constructs a new KTwoFingerTapRecognizer object.
 ///
 KTwoFingerTapRecognizer* k_twofingertaprecognizer_new();
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#create)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#create)
 ///
 /// @param self KTwoFingerTapRecognizer*
 /// @param target QObject*
 QGesture* k_twofingertaprecognizer_create(void* self, void* target);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#create)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#create)
 ///
 /// Allows for overriding the related default method
 ///
@@ -844,7 +844,7 @@ QGesture* k_twofingertaprecognizer_create(void* self, void* target);
 /// @param callback QGesture* func(KTwoFingerTapRecognizer* self, QObject* target)
 void k_twofingertaprecognizer_on_create(void* self, QGesture* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#create)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#create)
 ///
 /// Base class method implementation
 ///
@@ -852,7 +852,7 @@ void k_twofingertaprecognizer_on_create(void* self, QGesture* (*callback)(void*,
 /// @param target QObject*
 QGesture* k_twofingertaprecognizer_qbase_create(void* self, void* target);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#recognize)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#recognize)
 ///
 /// @param self KTwoFingerTapRecognizer*
 /// @param gesture QGesture*
@@ -862,7 +862,7 @@ QGesture* k_twofingertaprecognizer_qbase_create(void* self, void* target);
 /// @return flag of enum QGestureRecognizer__ResultFlag
 int32_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#recognize)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#recognize)
 ///
 /// Allows for overriding the related default method
 ///
@@ -870,7 +870,7 @@ int32_t k_twofingertaprecognizer_recognize(void* self, void* gesture, void* watc
 /// @param callback int32_t func(KTwoFingerTapRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
 void k_twofingertaprecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#recognize)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#recognize)
 ///
 /// Base class method implementation
 ///
@@ -882,12 +882,12 @@ void k_twofingertaprecognizer_on_recognize(void* self, int32_t (*callback)(void*
 /// @return flag of enum QGestureRecognizer__ResultFlag
 int32_t k_twofingertaprecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#tapRadius)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#tapRadius)
 ///
 /// @param self KTwoFingerTapRecognizer*
 int32_t k_twofingertaprecognizer_tap_radius(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#setTapRadius)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#setTapRadius)
 ///
 /// @param self KTwoFingerTapRecognizer*
 /// @param i int
@@ -947,7 +947,7 @@ void k_twofingertaprecognizer_qbase_reset(void* self, void* state);
 /// @param callback void func(KTwoFingerTapRecognizer* self, QGesture* state)
 void k_twofingertaprecognizer_on_reset(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingertaprecognizer.html#dtor.KTwoFingerTapRecognizer)
+/// [Qt documentation](https://api.kde.org/ktwofingertaprecognizer.html#dtor.KTwoFingerTapRecognizer)
 ///
 /// Delete this object from C++ memory.
 ///

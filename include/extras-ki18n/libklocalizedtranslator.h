@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klocalizedtranslator.html
+/// https://api.kde.org/klocalizedtranslator.html
 
 /// k_localizedtranslator_new constructs a new KLocalizedTranslator object.
 ///
@@ -58,7 +58,7 @@ int32_t k_localizedtranslator_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_localizedtranslator_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#translate)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#translate)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -69,7 +69,7 @@ const char* k_localizedtranslator_tr(const char* s);
 /// @param n int
 const char* k_localizedtranslator_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#translate)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#translate)
 ///
 /// Allows for overriding the related default method
 ///
@@ -77,7 +77,7 @@ const char* k_localizedtranslator_translate(void* self, const char* context, con
 /// @param callback const char* func(KLocalizedTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n)
 void k_localizedtranslator_on_translate(void* self, const char* (*callback)(void*, const char*, const char*, const char*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#translate)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#translate)
 ///
 /// Base class method implementation
 ///
@@ -88,19 +88,19 @@ void k_localizedtranslator_on_translate(void* self, const char* (*callback)(void
 /// @param n int
 const char* k_localizedtranslator_qbase_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#setTranslationDomain)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#setTranslationDomain)
 ///
 /// @param self KLocalizedTranslator*
 /// @param translationDomain const char*
 void k_localizedtranslator_set_translation_domain(void* self, const char* translationDomain);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#addContextToMonitor)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#addContextToMonitor)
 ///
 /// @param self KLocalizedTranslator*
 /// @param context const char*
 void k_localizedtranslator_add_context_to_monitor(void* self, const char* context);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#removeContextToMonitor)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#removeContextToMonitor)
 ///
 /// @param self KLocalizedTranslator*
 /// @param context const char*
@@ -913,7 +913,7 @@ void k_localizedtranslator_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KLocalizedTranslator* self, const char* objectName)
 void k_localizedtranslator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedtranslator.html#dtor.KLocalizedTranslator)
+/// [Qt documentation](https://api.kde.org/klocalizedtranslator.html#dtor.KLocalizedTranslator)
 ///
 /// Delete this object from C++ memory.
 ///

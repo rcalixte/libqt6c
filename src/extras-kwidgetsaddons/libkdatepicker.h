@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdatepicker.html
+/// https://api.kde.org/kdatepicker.html
 
 /// k_datepicker_new constructs a new KDatePicker object.
 ///
@@ -69,12 +69,12 @@ int32_t k_datepicker_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_datepicker_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#sizeHint)
 ///
 /// @param self KDatePicker*
 QSize* k_datepicker_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -82,60 +82,60 @@ QSize* k_datepicker_size_hint(void* self);
 /// @param callback QSize* func()
 void k_datepicker_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 QSize* k_datepicker_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#setDate)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#setDate)
 ///
 /// @param self KDatePicker*
 /// @param date QDate*
 bool k_datepicker_set_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#date)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#date)
 ///
 /// @param self KDatePicker*
 const QDate* k_datepicker_date(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#setFontSize)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#setFontSize)
 ///
 /// @param self KDatePicker*
 /// @param fontSize int
 void k_datepicker_set_font_size(void* self, int fontSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#fontSize)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#fontSize)
 ///
 /// @param self KDatePicker*
 int32_t k_datepicker_font_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#setCloseButton)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#setCloseButton)
 ///
 /// @param self KDatePicker*
 /// @param enable bool
 void k_datepicker_set_close_button(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#hasCloseButton)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#hasCloseButton)
 ///
 /// @param self KDatePicker*
 bool k_datepicker_has_close_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#setDateRange)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#setDateRange)
 ///
 /// @param self KDatePicker*
 /// @param minDate QDate*
 void k_datepicker_set_date_range(void* self, void* minDate);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#eventFilter)
 ///
 /// @param self KDatePicker*
 /// @param o QObject*
 /// @param e QEvent*
 bool k_datepicker_event_filter(void* self, void* o, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -143,7 +143,7 @@ bool k_datepicker_event_filter(void* self, void* o, void* e);
 /// @param callback bool func(KDatePicker* self, QObject* o, QEvent* e)
 void k_datepicker_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -152,13 +152,13 @@ void k_datepicker_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 /// @param e QEvent*
 bool k_datepicker_qbase_event_filter(void* self, void* o, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#resizeEvent)
 ///
 /// @param self KDatePicker*
 /// @param param1 QResizeEvent*
 void k_datepicker_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -166,7 +166,7 @@ void k_datepicker_resize_event(void* self, void* param1);
 /// @param callback void func(KDatePicker* self, QResizeEvent* param1)
 void k_datepicker_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -174,13 +174,13 @@ void k_datepicker_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QResizeEvent*
 void k_datepicker_qbase_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#changeEvent)
 ///
 /// @param self KDatePicker*
 /// @param event QEvent*
 void k_datepicker_change_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -188,7 +188,7 @@ void k_datepicker_change_event(void* self, void* event);
 /// @param callback void func(KDatePicker* self, QEvent* event)
 void k_datepicker_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#changeEvent)
 ///
 /// Base class method implementation
 ///
@@ -196,13 +196,13 @@ void k_datepicker_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param event QEvent*
 void k_datepicker_qbase_change_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChangedSlot)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateChangedSlot)
 ///
 /// @param self KDatePicker*
 /// @param date QDate*
 void k_datepicker_date_changed_slot(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChangedSlot)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateChangedSlot)
 ///
 /// Allows for overriding the related default method
 ///
@@ -210,7 +210,7 @@ void k_datepicker_date_changed_slot(void* self, void* date);
 /// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_changed_slot(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChangedSlot)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateChangedSlot)
 ///
 /// Base class method implementation
 ///
@@ -218,12 +218,12 @@ void k_datepicker_on_date_changed_slot(void* self, void (*callback)(void*, void*
 /// @param date QDate*
 void k_datepicker_qbase_date_changed_slot(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClickedSlot)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#tableClickedSlot)
 ///
 /// @param self KDatePicker*
 void k_datepicker_table_clicked_slot(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClickedSlot)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#tableClickedSlot)
 ///
 /// Allows for overriding the related default method
 ///
@@ -231,19 +231,19 @@ void k_datepicker_table_clicked_slot(void* self);
 /// @param callback void func()
 void k_datepicker_on_table_clicked_slot(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClickedSlot)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#tableClickedSlot)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_table_clicked_slot(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthForwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#monthForwardClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_month_forward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthForwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#monthForwardClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -251,19 +251,19 @@ void k_datepicker_month_forward_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_month_forward_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthForwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#monthForwardClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_month_forward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthBackwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#monthBackwardClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_month_backward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthBackwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#monthBackwardClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -271,19 +271,19 @@ void k_datepicker_month_backward_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_month_backward_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#monthBackwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#monthBackwardClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_month_backward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearForwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#yearForwardClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_year_forward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearForwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#yearForwardClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -291,19 +291,19 @@ void k_datepicker_year_forward_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_year_forward_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearForwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#yearForwardClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_year_forward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearBackwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#yearBackwardClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_year_backward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearBackwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#yearBackwardClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -311,19 +311,19 @@ void k_datepicker_year_backward_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_year_backward_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#yearBackwardClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#yearBackwardClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_year_backward_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectMonthClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#selectMonthClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_select_month_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectMonthClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#selectMonthClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -331,19 +331,19 @@ void k_datepicker_select_month_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_select_month_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectMonthClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#selectMonthClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_select_month_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectYearClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#selectYearClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_select_year_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectYearClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#selectYearClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -351,19 +351,19 @@ void k_datepicker_select_year_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_select_year_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#selectYearClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#selectYearClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_select_year_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#uncheckYearSelector)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#uncheckYearSelector)
 ///
 /// @param self KDatePicker*
 void k_datepicker_uncheck_year_selector(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#uncheckYearSelector)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#uncheckYearSelector)
 ///
 /// Allows for overriding the related default method
 ///
@@ -371,19 +371,19 @@ void k_datepicker_uncheck_year_selector(void* self);
 /// @param callback void func()
 void k_datepicker_on_uncheck_year_selector(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#uncheckYearSelector)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#uncheckYearSelector)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_uncheck_year_selector(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#lineEnterPressed)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#lineEnterPressed)
 ///
 /// @param self KDatePicker*
 void k_datepicker_line_enter_pressed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#lineEnterPressed)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#lineEnterPressed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -391,19 +391,19 @@ void k_datepicker_line_enter_pressed(void* self);
 /// @param callback void func()
 void k_datepicker_on_line_enter_pressed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#lineEnterPressed)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#lineEnterPressed)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_line_enter_pressed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#todayButtonClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#todayButtonClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_today_button_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#todayButtonClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#todayButtonClicked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -411,20 +411,20 @@ void k_datepicker_today_button_clicked(void* self);
 /// @param callback void func()
 void k_datepicker_on_today_button_clicked(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#todayButtonClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#todayButtonClicked)
 ///
 /// Base class method implementation
 ///
 /// @param self KDatePicker*
 void k_datepicker_qbase_today_button_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#weekSelected)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#weekSelected)
 ///
 /// @param self KDatePicker*
 /// @param param1 int
 void k_datepicker_week_selected(void* self, int param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#weekSelected)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#weekSelected)
 ///
 /// Allows for overriding the related default method
 ///
@@ -432,7 +432,7 @@ void k_datepicker_week_selected(void* self, int param1);
 /// @param callback void func(KDatePicker* self, int param1)
 void k_datepicker_on_week_selected(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#weekSelected)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#weekSelected)
 ///
 /// Base class method implementation
 ///
@@ -440,48 +440,48 @@ void k_datepicker_on_week_selected(void* self, void (*callback)(void*, int));
 /// @param param1 int
 void k_datepicker_qbase_week_selected(void* self, int param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateChanged)
 ///
 /// @param self KDatePicker*
 /// @param date QDate*
 void k_datepicker_date_changed(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateChanged)
 ///
 /// @param self KDatePicker*
 /// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateSelected)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateSelected)
 ///
 /// @param self KDatePicker*
 /// @param date QDate*
 void k_datepicker_date_selected(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateSelected)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateSelected)
 ///
 /// @param self KDatePicker*
 /// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_selected(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateEntered)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateEntered)
 ///
 /// @param self KDatePicker*
 /// @param date QDate*
 void k_datepicker_date_entered(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dateEntered)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dateEntered)
 ///
 /// @param self KDatePicker*
 /// @param callback void func(KDatePicker* self, QDate* date)
 void k_datepicker_on_date_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#tableClicked)
 ///
 /// @param self KDatePicker*
 void k_datepicker_table_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#tableClicked)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#tableClicked)
 ///
 /// @param self KDatePicker*
 /// @param callback void func(KDatePicker* self)
@@ -504,7 +504,7 @@ const char* k_datepicker_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_datepicker_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#setDateRange)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#setDateRange)
 ///
 /// @param self KDatePicker*
 /// @param minDate QDate*
@@ -4788,7 +4788,7 @@ void k_datepicker_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KDatePicker* self, const char* objectName)
 void k_datepicker_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepicker.html#dtor.KDatePicker)
+/// [Qt documentation](https://api.kde.org/kdatepicker.html#dtor.KDatePicker)
 ///
 /// Delete this object from C++ memory.
 ///

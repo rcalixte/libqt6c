@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klineedit.html
+/// https://api.kde.org/klineedit.html
 
 /// k_lineedit_new constructs a new KLineEdit object.
 ///
@@ -69,19 +69,19 @@ int32_t k_lineedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_lineedit_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setUrl)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setUrl)
 ///
 /// @param self KLineEdit*
 /// @param url QUrl*
 void k_lineedit_set_url(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionMode)
 ///
 /// @param self KLineEdit*
 /// @param mode enum KCompletion__CompletionMode
 void k_lineedit_set_completion_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionMode)
 ///
 /// Allows for overriding the related default method
 ///
@@ -89,7 +89,7 @@ void k_lineedit_set_completion_mode(void* self, int32_t mode);
 /// @param callback void func(KLineEdit* self, enum KCompletion__CompletionMode mode)
 void k_lineedit_on_set_completion_mode(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionMode)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionMode)
 ///
 /// Base class method implementation
 ///
@@ -97,35 +97,35 @@ void k_lineedit_on_set_completion_mode(void* self, void (*callback)(void*, int32
 /// @param mode enum KCompletion__CompletionMode
 void k_lineedit_qbase_set_completion_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionModeDisabled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionModeDisabled)
 ///
 /// @param self KLineEdit*
 /// @param mode enum KCompletion__CompletionMode
 void k_lineedit_set_completion_mode_disabled(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#urlDropsEnabled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#urlDropsEnabled)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_url_drops_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setTrapReturnKey)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setTrapReturnKey)
 ///
 /// @param self KLineEdit*
 /// @param trap bool
 void k_lineedit_set_trap_return_key(void* self, bool trap);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#trapReturnKey)
+/// [Qt documentation](https://api.kde.org/klineedit.html#trapReturnKey)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_trap_return_key(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionBox)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionBox)
 ///
 /// @param self KLineEdit*
 /// @param create bool
 KCompletionBox* k_lineedit_completion_box(void* self, bool create);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionBox)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionBox)
 ///
 /// Allows for overriding the related default method
 ///
@@ -133,7 +133,7 @@ KCompletionBox* k_lineedit_completion_box(void* self, bool create);
 /// @param callback KCompletionBox* func(KLineEdit* self, bool create)
 void k_lineedit_on_completion_box(void* self, KCompletionBox* (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionBox)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionBox)
 ///
 /// Base class method implementation
 ///
@@ -141,14 +141,14 @@ void k_lineedit_on_completion_box(void* self, KCompletionBox* (*callback)(void*,
 /// @param create bool
 KCompletionBox* k_lineedit_qbase_completion_box(void* self, bool create);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionObject)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionObject)
 ///
 /// @param self KLineEdit*
 /// @param param1 KCompletion*
 /// @param handle bool
 void k_lineedit_set_completion_object(void* self, void* param1, bool handle);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionObject)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionObject)
 ///
 /// Allows for overriding the related default method
 ///
@@ -156,7 +156,7 @@ void k_lineedit_set_completion_object(void* self, void* param1, bool handle);
 /// @param callback void func(KLineEdit* self, KCompletion* param1, bool handle)
 void k_lineedit_on_set_completion_object(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionObject)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionObject)
 ///
 /// Base class method implementation
 ///
@@ -165,12 +165,12 @@ void k_lineedit_on_set_completion_object(void* self, void (*callback)(void*, voi
 /// @param handle bool
 void k_lineedit_qbase_set_completion_object(void* self, void* param1, bool handle);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#copy)
+/// [Qt documentation](https://api.kde.org/klineedit.html#copy)
 ///
 /// @param self KLineEdit*
 void k_lineedit_copy(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#copy)
+/// [Qt documentation](https://api.kde.org/klineedit.html#copy)
 ///
 /// Allows for overriding the related default method
 ///
@@ -178,157 +178,157 @@ void k_lineedit_copy(void* self);
 /// @param callback void func()
 void k_lineedit_on_copy(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#copy)
+/// [Qt documentation](https://api.kde.org/klineedit.html#copy)
 ///
 /// Base class method implementation
 ///
 /// @param self KLineEdit*
 void k_lineedit_qbase_copy(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setSqueezedTextEnabled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setSqueezedTextEnabled)
 ///
 /// @param self KLineEdit*
 /// @param enable bool
 void k_lineedit_set_squeezed_text_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#isSqueezedTextEnabled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#isSqueezedTextEnabled)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_is_squeezed_text_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#originalText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#originalText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KLineEdit*
 const char* k_lineedit_original_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#userText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#userText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KLineEdit*
 const char* k_lineedit_user_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionBox)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionBox)
 ///
 /// @param self KLineEdit*
 /// @param box KCompletionBox*
 void k_lineedit_set_completion_box(void* self, void* box);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#clearButtonUsedSize)
+/// [Qt documentation](https://api.kde.org/klineedit.html#clearButtonUsedSize)
 ///
 /// @param self KLineEdit*
 QSize* k_lineedit_clear_button_used_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#doCompletion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#doCompletion)
 ///
 /// @param self KLineEdit*
 /// @param text const char*
 void k_lineedit_do_completion(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionBoxActivated)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionBoxActivated)
 ///
 /// @param self KLineEdit*
 /// @param param1 const char*
 void k_lineedit_completion_box_activated(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionBoxActivated)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionBoxActivated)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, const char* param1)
 void k_lineedit_on_completion_box_activated(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#returnKeyPressed)
+/// [Qt documentation](https://api.kde.org/klineedit.html#returnKeyPressed)
 ///
 /// @param self KLineEdit*
 /// @param text const char*
 void k_lineedit_return_key_pressed(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#returnKeyPressed)
+/// [Qt documentation](https://api.kde.org/klineedit.html#returnKeyPressed)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, const char* text)
 void k_lineedit_on_return_key_pressed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completion)
 ///
 /// @param self KLineEdit*
 /// @param param1 const char*
 void k_lineedit_completion(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completion)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, const char* param1)
 void k_lineedit_on_completion(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#substringCompletion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#substringCompletion)
 ///
 /// @param self KLineEdit*
 /// @param param1 const char*
 void k_lineedit_substring_completion(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#substringCompletion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#substringCompletion)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, const char* param1)
 void k_lineedit_on_substring_completion(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#textRotation)
+/// [Qt documentation](https://api.kde.org/klineedit.html#textRotation)
 ///
 /// @param self KLineEdit*
 /// @param param1 enum KCompletionBase__KeyBindingType
 void k_lineedit_text_rotation(void* self, int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#textRotation)
+/// [Qt documentation](https://api.kde.org/klineedit.html#textRotation)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, enum KCompletionBase__KeyBindingType param1)
 void k_lineedit_on_text_rotation(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionModeChanged)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionModeChanged)
 ///
 /// @param self KLineEdit*
 /// @param param1 enum KCompletion__CompletionMode
 void k_lineedit_completion_mode_changed(void* self, int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#completionModeChanged)
+/// [Qt documentation](https://api.kde.org/klineedit.html#completionModeChanged)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, enum KCompletion__CompletionMode param1)
 void k_lineedit_on_completion_mode_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/klineedit.html#aboutToShowContextMenu)
 ///
 /// @param self KLineEdit*
 /// @param contextMenu QMenu*
 void k_lineedit_about_to_show_context_menu(void* self, void* contextMenu);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/klineedit.html#aboutToShowContextMenu)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self, QMenu* contextMenu)
 void k_lineedit_on_about_to_show_context_menu(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#clearButtonClicked)
+/// [Qt documentation](https://api.kde.org/klineedit.html#clearButtonClicked)
 ///
 /// @param self KLineEdit*
 void k_lineedit_clear_button_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#clearButtonClicked)
+/// [Qt documentation](https://api.kde.org/klineedit.html#clearButtonClicked)
 ///
 /// @param self KLineEdit*
 /// @param callback void func(KLineEdit* self)
 void k_lineedit_on_clear_button_clicked(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setReadOnly)
 ///
 /// @param self KLineEdit*
 /// @param readOnly bool
 void k_lineedit_set_read_only(void* self, bool readOnly);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setReadOnly)
 ///
 /// Allows for overriding the related default method
 ///
@@ -336,7 +336,7 @@ void k_lineedit_set_read_only(void* self, bool readOnly);
 /// @param callback void func(KLineEdit* self, bool readOnly)
 void k_lineedit_on_set_read_only(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setReadOnly)
 ///
 /// Base class method implementation
 ///
@@ -344,19 +344,19 @@ void k_lineedit_on_set_read_only(void* self, void (*callback)(void*, bool));
 /// @param readOnly bool
 void k_lineedit_qbase_set_read_only(void* self, bool readOnly);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#rotateText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#rotateText)
 ///
 /// @param self KLineEdit*
 /// @param typeVal enum KCompletionBase__KeyBindingType
 void k_lineedit_rotate_text(void* self, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// @param self KLineEdit*
 /// @param completedText const char*
 void k_lineedit_set_completed_text(void* self, const char* completedText);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -364,7 +364,7 @@ void k_lineedit_set_completed_text(void* self, const char* completedText);
 /// @param callback void func(KLineEdit* self, const char* completedText)
 void k_lineedit_on_set_completed_text(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// Base class method implementation
 ///
@@ -372,14 +372,14 @@ void k_lineedit_on_set_completed_text(void* self, void (*callback)(void*, const 
 /// @param completedText const char*
 void k_lineedit_qbase_set_completed_text(void* self, const char* completedText);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedItems)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedItems)
 ///
 /// @param self KLineEdit*
 /// @param items const char**
 /// @param autoSuggest bool
 void k_lineedit_set_completed_items(void* self, const char* items[], bool autoSuggest);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedItems)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedItems)
 ///
 /// Allows for overriding the related default method
 ///
@@ -387,7 +387,7 @@ void k_lineedit_set_completed_items(void* self, const char* items[], bool autoSu
 /// @param callback void func(KLineEdit* self, const char** items, bool autoSuggest)
 void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const char**, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedItems)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedItems)
 ///
 /// Base class method implementation
 ///
@@ -396,19 +396,19 @@ void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const
 /// @param autoSuggest bool
 void k_lineedit_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setSqueezedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setSqueezedText)
 ///
 /// @param self KLineEdit*
 /// @param text const char*
 void k_lineedit_set_squeezed_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setText)
 ///
 /// @param self KLineEdit*
 /// @param text const char*
 void k_lineedit_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -416,7 +416,7 @@ void k_lineedit_set_text(void* self, const char* text);
 /// @param callback void func(KLineEdit* self, const char* text)
 void k_lineedit_on_set_text(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setText)
 ///
 /// Base class method implementation
 ///
@@ -424,13 +424,13 @@ void k_lineedit_on_set_text(void* self, void (*callback)(void*, const char*));
 /// @param text const char*
 void k_lineedit_qbase_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#makeCompletion)
 ///
 /// @param self KLineEdit*
 /// @param param1 const char*
 void k_lineedit_make_completion(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#makeCompletion)
 ///
 /// Allows for overriding the related default method
 ///
@@ -438,7 +438,7 @@ void k_lineedit_make_completion(void* self, const char* param1);
 /// @param callback void func(KLineEdit* self, const char* param1)
 void k_lineedit_on_make_completion(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#makeCompletion)
+/// [Qt documentation](https://api.kde.org/klineedit.html#makeCompletion)
 ///
 /// Base class method implementation
 ///
@@ -446,13 +446,13 @@ void k_lineedit_on_make_completion(void* self, void (*callback)(void*, const cha
 /// @param param1 const char*
 void k_lineedit_qbase_make_completion(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#userCancelled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#userCancelled)
 ///
 /// @param self KLineEdit*
 /// @param cancelText const char*
 void k_lineedit_user_cancelled(void* self, const char* cancelText);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#userCancelled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#userCancelled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -460,7 +460,7 @@ void k_lineedit_user_cancelled(void* self, const char* cancelText);
 /// @param callback void func(KLineEdit* self, const char* cancelText)
 void k_lineedit_on_user_cancelled(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#userCancelled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#userCancelled)
 ///
 /// Base class method implementation
 ///
@@ -468,13 +468,13 @@ void k_lineedit_on_user_cancelled(void* self, void (*callback)(void*, const char
 /// @param cancelText const char*
 void k_lineedit_qbase_user_cancelled(void* self, const char* cancelText);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#event)
+/// [Qt documentation](https://api.kde.org/klineedit.html#event)
 ///
 /// @param self KLineEdit*
 /// @param param1 QEvent*
 bool k_lineedit_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#event)
+/// [Qt documentation](https://api.kde.org/klineedit.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -482,7 +482,7 @@ bool k_lineedit_event(void* self, void* param1);
 /// @param callback bool func(KLineEdit* self, QEvent* param1)
 void k_lineedit_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#event)
+/// [Qt documentation](https://api.kde.org/klineedit.html#event)
 ///
 /// Base class method implementation
 ///
@@ -490,13 +490,13 @@ void k_lineedit_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_lineedit_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#resizeEvent)
 ///
 /// @param self KLineEdit*
 /// @param param1 QResizeEvent*
 void k_lineedit_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -504,7 +504,7 @@ void k_lineedit_resize_event(void* self, void* param1);
 /// @param callback void func(KLineEdit* self, QResizeEvent* param1)
 void k_lineedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -512,13 +512,13 @@ void k_lineedit_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QResizeEvent*
 void k_lineedit_qbase_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#keyPressEvent)
 ///
 /// @param self KLineEdit*
 /// @param param1 QKeyEvent*
 void k_lineedit_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -526,7 +526,7 @@ void k_lineedit_key_press_event(void* self, void* param1);
 /// @param callback void func(KLineEdit* self, QKeyEvent* param1)
 void k_lineedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -534,13 +534,13 @@ void k_lineedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QKeyEvent*
 void k_lineedit_qbase_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mousePressEvent)
 ///
 /// @param self KLineEdit*
 /// @param param1 QMouseEvent*
 void k_lineedit_mouse_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -548,7 +548,7 @@ void k_lineedit_mouse_press_event(void* self, void* param1);
 /// @param callback void func(KLineEdit* self, QMouseEvent* param1)
 void k_lineedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -556,13 +556,13 @@ void k_lineedit_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 /// @param param1 QMouseEvent*
 void k_lineedit_qbase_mouse_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mouseReleaseEvent)
 ///
 /// @param self KLineEdit*
 /// @param param1 QMouseEvent*
 void k_lineedit_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -570,7 +570,7 @@ void k_lineedit_mouse_release_event(void* self, void* param1);
 /// @param callback void func(KLineEdit* self, QMouseEvent* param1)
 void k_lineedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -578,13 +578,13 @@ void k_lineedit_on_mouse_release_event(void* self, void (*callback)(void*, void*
 /// @param param1 QMouseEvent*
 void k_lineedit_qbase_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mouseDoubleClickEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mouseDoubleClickEvent)
 ///
 /// @param self KLineEdit*
 /// @param param1 QMouseEvent*
 void k_lineedit_mouse_double_click_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mouseDoubleClickEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mouseDoubleClickEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -592,7 +592,7 @@ void k_lineedit_mouse_double_click_event(void* self, void* param1);
 /// @param callback void func(KLineEdit* self, QMouseEvent* param1)
 void k_lineedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#mouseDoubleClickEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
 ///
@@ -600,13 +600,13 @@ void k_lineedit_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 /// @param param1 QMouseEvent*
 void k_lineedit_qbase_mouse_double_click_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#contextMenuEvent)
 ///
 /// @param self KLineEdit*
 /// @param param1 QContextMenuEvent*
 void k_lineedit_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -614,7 +614,7 @@ void k_lineedit_context_menu_event(void* self, void* param1);
 /// @param callback void func(KLineEdit* self, QContextMenuEvent* param1)
 void k_lineedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
@@ -622,12 +622,12 @@ void k_lineedit_on_context_menu_event(void* self, void (*callback)(void*, void*)
 /// @param param1 QContextMenuEvent*
 void k_lineedit_qbase_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#createStandardContextMenu)
+/// [Qt documentation](https://api.kde.org/klineedit.html#createStandardContextMenu)
 ///
 /// @param self KLineEdit*
 QMenu* k_lineedit_create_standard_context_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#createStandardContextMenu)
+/// [Qt documentation](https://api.kde.org/klineedit.html#createStandardContextMenu)
 ///
 /// Allows for overriding the related default method
 ///
@@ -635,21 +635,21 @@ QMenu* k_lineedit_create_standard_context_menu(void* self);
 /// @param callback QMenu* func()
 void k_lineedit_on_create_standard_context_menu(void* self, QMenu* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#createStandardContextMenu)
+/// [Qt documentation](https://api.kde.org/klineedit.html#createStandardContextMenu)
 ///
 /// Base class method implementation
 ///
 /// @param self KLineEdit*
 QMenu* k_lineedit_qbase_create_standard_context_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// @param self KLineEdit*
 /// @param param1 const char*
 /// @param param2 bool
 void k_lineedit_set_completed_text2(void* self, const char* param1, bool param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -657,7 +657,7 @@ void k_lineedit_set_completed_text2(void* self, const char* param1, bool param2)
 /// @param callback void func(KLineEdit* self, const char* param1, bool param2)
 void k_lineedit_on_set_completed_text2(void* self, void (*callback)(void*, const char*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletedText)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedText)
 ///
 /// Base class method implementation
 ///
@@ -666,13 +666,13 @@ void k_lineedit_on_set_completed_text2(void* self, void (*callback)(void*, const
 /// @param param2 bool
 void k_lineedit_qbase_set_completed_text2(void* self, const char* param1, bool param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setUserSelection)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setUserSelection)
 ///
 /// @param self KLineEdit*
 /// @param userSelection bool
 void k_lineedit_set_user_selection(void* self, bool userSelection);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setUserSelection)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setUserSelection)
 ///
 /// Allows for overriding the related default method
 ///
@@ -680,7 +680,7 @@ void k_lineedit_set_user_selection(void* self, bool userSelection);
 /// @param callback void func(KLineEdit* self, bool userSelection)
 void k_lineedit_on_set_user_selection(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setUserSelection)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setUserSelection)
 ///
 /// Base class method implementation
 ///
@@ -688,12 +688,12 @@ void k_lineedit_on_set_user_selection(void* self, void (*callback)(void*, bool))
 /// @param userSelection bool
 void k_lineedit_qbase_set_user_selection(void* self, bool userSelection);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#autoSuggest)
+/// [Qt documentation](https://api.kde.org/klineedit.html#autoSuggest)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_auto_suggest(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#autoSuggest)
+/// [Qt documentation](https://api.kde.org/klineedit.html#autoSuggest)
 ///
 /// Allows for overriding the related default method
 ///
@@ -701,20 +701,20 @@ bool k_lineedit_auto_suggest(void* self);
 /// @param callback bool func()
 void k_lineedit_on_auto_suggest(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#autoSuggest)
+/// [Qt documentation](https://api.kde.org/klineedit.html#autoSuggest)
 ///
 /// Base class method implementation
 ///
 /// @param self KLineEdit*
 bool k_lineedit_qbase_auto_suggest(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#paintEvent)
 ///
 /// @param self KLineEdit*
 /// @param ev QPaintEvent*
 void k_lineedit_paint_event(void* self, void* ev);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -722,7 +722,7 @@ void k_lineedit_paint_event(void* self, void* ev);
 /// @param callback void func(KLineEdit* self, QPaintEvent* ev)
 void k_lineedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/klineedit.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -747,7 +747,7 @@ const char* k_lineedit_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_lineedit_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#setCompletionModeDisabled)
+/// [Qt documentation](https://api.kde.org/klineedit.html#setCompletionModeDisabled)
 ///
 /// @param self KLineEdit*
 /// @param mode enum KCompletion__CompletionMode
@@ -3878,21 +3878,21 @@ int32_t k_lineedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#completionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#completionObject)
 ///
 /// @param self KLineEdit*
 KCompletion* k_lineedit_completion_object(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#isCompletionObjectAutoDeleted)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_is_completion_object_auto_deleted(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setAutoDeleteCompletionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setAutoDeleteCompletionObject)
 ///
 /// @param self KLineEdit*
 /// @param autoDelete bool
@@ -3900,7 +3900,7 @@ void k_lineedit_set_auto_delete_completion_object(void* self, bool autoDelete);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setEnableSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setEnableSignals)
 ///
 /// @param self KLineEdit*
 /// @param enable bool
@@ -3908,21 +3908,21 @@ void k_lineedit_set_enable_signals(void* self, bool enable);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#handleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#handleSignals)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_handle_signals(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#emitSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#emitSignals)
 ///
 /// @param self KLineEdit*
 bool k_lineedit_emit_signals(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setEmitSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setEmitSignals)
 ///
 /// @param self KLineEdit*
 /// @param emitRotationSignals bool
@@ -3930,7 +3930,7 @@ void k_lineedit_set_emit_signals(void* self, bool emitRotationSignals);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#completionMode)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#completionMode)
 ///
 /// @param self KLineEdit*
 ///
@@ -3939,7 +3939,7 @@ int32_t k_lineedit_completion_mode(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBinding)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBinding)
 ///
 /// @param self KLineEdit*
 /// @param item enum KCompletionBase__KeyBindingType
@@ -3948,7 +3948,7 @@ bool k_lineedit_set_key_binding(void* self, int32_t item, libqt_list key);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBinding)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBinding)
 ///
 /// @param self KLineEdit*
 /// @param item enum KCompletionBase__KeyBindingType
@@ -3956,21 +3956,21 @@ libqt_list /* of QKeySequence* */ k_lineedit_key_binding(void* self, int32_t ite
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#useGlobalKeyBindings)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#useGlobalKeyBindings)
 ///
 /// @param self KLineEdit*
 void k_lineedit_use_global_key_bindings(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#compObj)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#compObj)
 ///
 /// @param self KLineEdit*
 KCompletion* k_lineedit_comp_obj(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#completionObject)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#completionObject)
 ///
 /// @param self KLineEdit*
 /// @param handleSignals bool
@@ -5172,7 +5172,7 @@ void k_lineedit_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setHandleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5182,7 +5182,7 @@ void k_lineedit_set_handle_signals(void* self, bool handle);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setHandleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5192,7 +5192,7 @@ void k_lineedit_qbase_set_handle_signals(void* self, bool handle);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setHandleSignals)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setHandleSignals)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5202,7 +5202,7 @@ void k_lineedit_on_set_handle_signals(void* self, void (*callback)(void*, bool))
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#virtual_hook)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5213,7 +5213,7 @@ void k_lineedit_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#virtual_hook)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5224,7 +5224,7 @@ void k_lineedit_qbase_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#virtual_hook)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#virtual_hook)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5550,7 +5550,7 @@ void k_lineedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5559,7 +5559,7 @@ libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_lineedit_key_bindi
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5568,7 +5568,7 @@ libqt_map /* of int32_t to libqt_list  of QKeySequence*  */ k_lineedit_qbase_key
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#keyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#keyBindingMap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5578,7 +5578,7 @@ void k_lineedit_on_key_binding_map(void* self, libqt_map /* of int32_t to libqt_
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5588,7 +5588,7 @@ void k_lineedit_set_key_binding_map(void* self, libqt_map /* of int32_t to QKeyS
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5598,7 +5598,7 @@ void k_lineedit_qbase_set_key_binding_map(void* self, libqt_map /* of int32_t to
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setKeyBindingMap)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5608,7 +5608,7 @@ void k_lineedit_on_set_key_binding_map(void* self, void (*callback)(void*, libqt
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setDelegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5618,7 +5618,7 @@ void k_lineedit_set_delegate(void* self, void* delegate);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setDelegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5628,7 +5628,7 @@ void k_lineedit_qbase_set_delegate(void* self, void* delegate);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#setDelegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#setDelegate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5638,7 +5638,7 @@ void k_lineedit_on_set_delegate(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#delegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#delegate)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -5647,7 +5647,7 @@ KCompletionBase* k_lineedit_delegate(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#delegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#delegate)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -5656,7 +5656,7 @@ KCompletionBase* k_lineedit_qbase_delegate(void* self);
 
 /// Inherited from KCompletionBase
 ///
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbase.html#delegate)
+/// [Qt documentation](https://api.kde.org/kcompletionbase.html#delegate)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5674,7 +5674,7 @@ void k_lineedit_on_delegate(void* self, KCompletionBase* (*callback)());
 /// @param callback void func(KLineEdit* self, const char* objectName)
 void k_lineedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineedit.html#dtor.KLineEdit)
+/// [Qt documentation](https://api.kde.org/klineedit.html#dtor.KLineEdit)
 ///
 /// Delete this object from C++ memory.
 ///

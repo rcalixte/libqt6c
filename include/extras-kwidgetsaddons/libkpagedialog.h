@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpagedialog.html
+/// https://api.kde.org/kpagedialog.html
 
 /// k_pagedialog_new constructs a new KPageDialog object.
 ///
@@ -64,26 +64,26 @@ int32_t k_pagedialog_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_pagedialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setFaceType)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setFaceType)
 ///
 /// @param self KPageDialog*
 /// @param faceType enum KPageDialog__FaceType
 void k_pagedialog_set_face_type(void* self, int32_t faceType);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addPage)
 ///
 /// @param self KPageDialog*
 /// @param widget QWidget*
 /// @param name const char*
 KPageWidgetItem* k_pagedialog_add_page(void* self, void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addPage)
 ///
 /// @param self KPageDialog*
 /// @param item KPageWidgetItem*
 void k_pagedialog_add_page2(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#insertPage)
 ///
 /// @param self KPageDialog*
 /// @param before KPageWidgetItem*
@@ -91,14 +91,14 @@ void k_pagedialog_add_page2(void* self, void* item);
 /// @param name const char*
 KPageWidgetItem* k_pagedialog_insert_page(void* self, void* before, void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#insertPage)
 ///
 /// @param self KPageDialog*
 /// @param before KPageWidgetItem*
 /// @param item KPageWidgetItem*
 void k_pagedialog_insert_page2(void* self, void* before, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addSubPage)
 ///
 /// @param self KPageDialog*
 /// @param parent KPageWidgetItem*
@@ -106,79 +106,79 @@ void k_pagedialog_insert_page2(void* self, void* before, void* item);
 /// @param name const char*
 KPageWidgetItem* k_pagedialog_add_sub_page(void* self, void* parent, void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addSubPage)
 ///
 /// @param self KPageDialog*
 /// @param parent KPageWidgetItem*
 /// @param item KPageWidgetItem*
 void k_pagedialog_add_sub_page2(void* self, void* parent, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#removePage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#removePage)
 ///
 /// @param self KPageDialog*
 /// @param item KPageWidgetItem*
 void k_pagedialog_remove_page(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setCurrentPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setCurrentPage)
 ///
 /// @param self KPageDialog*
 /// @param item KPageWidgetItem*
 void k_pagedialog_set_current_page(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPage)
 ///
 /// @param self KPageDialog*
 KPageWidgetItem* k_pagedialog_current_page(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setStandardButtons)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setStandardButtons)
 ///
 /// @param self KPageDialog*
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
 void k_pagedialog_set_standard_buttons(void* self, int32_t buttons);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#button)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#button)
 ///
 /// @param self KPageDialog*
 /// @param which enum QDialogButtonBox__StandardButton
 QPushButton* k_pagedialog_button(void* self, int32_t which);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addActionButton)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addActionButton)
 ///
 /// @param self KPageDialog*
 /// @param button QAbstractButton*
 void k_pagedialog_add_action_button(void* self, void* button);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KPageDialog*
 /// @param current KPageWidgetItem*
 /// @param before KPageWidgetItem*
 void k_pagedialog_current_page_changed(void* self, void* current, void* before);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KPageDialog*
 /// @param callback void func(KPageDialog* self, KPageWidgetItem* current, KPageWidgetItem* before)
 void k_pagedialog_on_current_page_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KPageDialog*
 /// @param page KPageWidgetItem*
 void k_pagedialog_page_removed(void* self, void* page);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KPageDialog*
 /// @param callback void func(KPageDialog* self, KPageWidgetItem* page)
 void k_pagedialog_on_page_removed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// @param self KPageDialog*
 KPageWidget* k_pagedialog_page_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -186,19 +186,19 @@ KPageWidget* k_pagedialog_page_widget(void* self);
 /// @param callback KPageWidget* func()
 void k_pagedialog_on_page_widget(void* self, KPageWidget* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Base class method implementation
 ///
 /// @param self KPageDialog*
 KPageWidget* k_pagedialog_qbase_page_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// @param self KPageDialog*
 const KPageWidget* k_pagedialog_page_widget2(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -206,20 +206,20 @@ const KPageWidget* k_pagedialog_page_widget2(void* self);
 /// @param callback const KPageWidget* func()
 void k_pagedialog_on_page_widget2(void* self, const KPageWidget* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Base class method implementation
 ///
 /// @param self KPageDialog*
 const KPageWidget* k_pagedialog_qbase_page_widget2(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// @param self KPageDialog*
 /// @param widget KPageWidget*
 void k_pagedialog_set_page_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -227,7 +227,7 @@ void k_pagedialog_set_page_widget(void* self, void* widget);
 /// @param callback void func(KPageDialog* self, KPageWidget* widget)
 void k_pagedialog_on_set_page_widget(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Base class method implementation
 ///
@@ -235,12 +235,12 @@ void k_pagedialog_on_set_page_widget(void* self, void (*callback)(void*, void*))
 /// @param widget KPageWidget*
 void k_pagedialog_qbase_set_page_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// @param self KPageDialog*
 QDialogButtonBox* k_pagedialog_button_box(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Allows for overriding the related default method
 ///
@@ -248,19 +248,19 @@ QDialogButtonBox* k_pagedialog_button_box(void* self);
 /// @param callback QDialogButtonBox* func()
 void k_pagedialog_on_button_box(void* self, QDialogButtonBox* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Base class method implementation
 ///
 /// @param self KPageDialog*
 QDialogButtonBox* k_pagedialog_qbase_button_box(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// @param self KPageDialog*
 const QDialogButtonBox* k_pagedialog_button_box2(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Allows for overriding the related default method
 ///
@@ -268,20 +268,20 @@ const QDialogButtonBox* k_pagedialog_button_box2(void* self);
 /// @param callback const QDialogButtonBox* func()
 void k_pagedialog_on_button_box2(void* self, const QDialogButtonBox* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Base class method implementation
 ///
 /// @param self KPageDialog*
 const QDialogButtonBox* k_pagedialog_qbase_button_box2(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// @param self KPageDialog*
 /// @param box QDialogButtonBox*
 void k_pagedialog_set_button_box(void* self, void* box);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Allows for overriding the related default method
 ///
@@ -289,7 +289,7 @@ void k_pagedialog_set_button_box(void* self, void* box);
 /// @param callback void func(KPageDialog* self, QDialogButtonBox* box)
 void k_pagedialog_on_set_button_box(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Base class method implementation
 ///
@@ -4806,14 +4806,14 @@ void k_pagedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KPageDialog* self, const char* objectName)
 void k_pagedialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#dtor.KPageDialog)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#dtor.KPageDialog)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPageDialog*
 void k_pagedialog_delete(void* self);
 
-/// https://api-staging.kde.org/kpagedialog.html#types
+/// https://api.kde.org/kpagedialog.html#types
 
 typedef enum {
     KPAGEDIALOG_FACETYPE_AUTO = 0,

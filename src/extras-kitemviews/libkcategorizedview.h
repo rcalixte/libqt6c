@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcategorizedview.html
+/// https://api.kde.org/kcategorizedview.html
 
 /// k_categorizedview_new constructs a new KCategorizedView object.
 ///
@@ -58,13 +58,13 @@ int32_t k_categorizedview_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_categorizedview_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setModel)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setModel)
 ///
 /// @param self KCategorizedView*
 /// @param model QAbstractItemModel*
 void k_categorizedview_set_model(void* self, void* model);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setModel)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setModel)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ void k_categorizedview_set_model(void* self, void* model);
 /// @param callback void func(KCategorizedView* self, QAbstractItemModel* model)
 void k_categorizedview_on_set_model(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setModel)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setModel)
 ///
 /// Base class method implementation
 ///
@@ -80,25 +80,25 @@ void k_categorizedview_on_set_model(void* self, void (*callback)(void*, void*));
 /// @param model QAbstractItemModel*
 void k_categorizedview_qbase_set_model(void* self, void* model);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setGridSize)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setGridSize)
 ///
 /// @param self KCategorizedView*
 /// @param size QSize*
 void k_categorizedview_set_grid_size(void* self, void* size);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setGridSizeOwn)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setGridSizeOwn)
 ///
 /// @param self KCategorizedView*
 /// @param size QSize*
 void k_categorizedview_set_grid_size_own(void* self, void* size);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#visualRect)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 QRect* k_categorizedview_visual_rect(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#visualRect)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -106,7 +106,7 @@ QRect* k_categorizedview_visual_rect(void* self, void* index);
 /// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
 void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#visualRect)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
 /// Base class method implementation
 ///
@@ -114,69 +114,69 @@ void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void
 /// @param index QModelIndex*
 QRect* k_categorizedview_qbase_visual_rect(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#categoryDrawer)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#categoryDrawer)
 ///
 /// @param self KCategorizedView*
 KCategoryDrawer* k_categorizedview_category_drawer(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setCategoryDrawer)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setCategoryDrawer)
 ///
 /// @param self KCategorizedView*
 /// @param categoryDrawer KCategoryDrawer*
 void k_categorizedview_set_category_drawer(void* self, void* categoryDrawer);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#categorySpacing)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#categorySpacing)
 ///
 /// @param self KCategorizedView*
 int32_t k_categorizedview_category_spacing(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setCategorySpacing)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setCategorySpacing)
 ///
 /// @param self KCategorizedView*
 /// @param categorySpacing int
 void k_categorizedview_set_category_spacing(void* self, int categorySpacing);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#alternatingBlockColors)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#alternatingBlockColors)
 ///
 /// @param self KCategorizedView*
 bool k_categorizedview_alternating_block_colors(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setAlternatingBlockColors)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setAlternatingBlockColors)
 ///
 /// @param self KCategorizedView*
 /// @param enable bool
 void k_categorizedview_set_alternating_block_colors(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#collapsibleBlocks)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#collapsibleBlocks)
 ///
 /// @param self KCategorizedView*
 bool k_categorizedview_collapsible_blocks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setCollapsibleBlocks)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setCollapsibleBlocks)
 ///
 /// @param self KCategorizedView*
 /// @param enable bool
 void k_categorizedview_set_collapsible_blocks(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#block)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#block)
 ///
 /// @param self KCategorizedView*
 /// @param category const char*
 libqt_list /* of QModelIndex* */ k_categorizedview_block(void* self, const char* category);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#block)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#block)
 ///
 /// @param self KCategorizedView*
 /// @param representative QModelIndex*
 libqt_list /* of QModelIndex* */ k_categorizedview_block2(void* self, void* representative);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#indexAt)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
 /// @param self KCategorizedView*
 /// @param point QPoint*
 QModelIndex* k_categorizedview_index_at(void* self, void* point);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#indexAt)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
 /// Allows for overriding the related default method
 ///
@@ -184,7 +184,7 @@ QModelIndex* k_categorizedview_index_at(void* self, void* point);
 /// @param callback QModelIndex* func(KCategorizedView* self, QPoint* point)
 void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#indexAt)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
 /// Base class method implementation
 ///
@@ -192,12 +192,12 @@ void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, v
 /// @param point QPoint*
 QModelIndex* k_categorizedview_qbase_index_at(void* self, void* point);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#reset)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#reset)
 ///
 /// @param self KCategorizedView*
 void k_categorizedview_reset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#reset)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#reset)
 ///
 /// Allows for overriding the related default method
 ///
@@ -205,56 +205,56 @@ void k_categorizedview_reset(void* self);
 /// @param callback void func()
 void k_categorizedview_on_reset(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#reset)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#reset)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 void k_categorizedview_qbase_reset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#categorySpacingChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#categorySpacingChanged)
 ///
 /// @param self KCategorizedView*
 /// @param spacing int
 void k_categorizedview_category_spacing_changed(void* self, int spacing);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#categorySpacingChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#categorySpacingChanged)
 ///
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, int spacing)
 void k_categorizedview_on_category_spacing_changed(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#alternatingBlockColorsChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#alternatingBlockColorsChanged)
 ///
 /// @param self KCategorizedView*
 /// @param enable bool
 void k_categorizedview_alternating_block_colors_changed(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#alternatingBlockColorsChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#alternatingBlockColorsChanged)
 ///
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, bool enable)
 void k_categorizedview_on_alternating_block_colors_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#collapsibleBlocksChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#collapsibleBlocksChanged)
 ///
 /// @param self KCategorizedView*
 /// @param enable bool
 void k_categorizedview_collapsible_blocks_changed(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#collapsibleBlocksChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#collapsibleBlocksChanged)
 ///
 /// @param self KCategorizedView*
 /// @param callback void func(KCategorizedView* self, bool enable)
 void k_categorizedview_on_collapsible_blocks_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#paintEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QPaintEvent*
 void k_categorizedview_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -262,7 +262,7 @@ void k_categorizedview_paint_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QPaintEvent* event)
 void k_categorizedview_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -270,13 +270,13 @@ void k_categorizedview_on_paint_event(void* self, void (*callback)(void*, void*)
 /// @param event QPaintEvent*
 void k_categorizedview_qbase_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#resizeEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QResizeEvent*
 void k_categorizedview_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -284,7 +284,7 @@ void k_categorizedview_resize_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QResizeEvent* event)
 void k_categorizedview_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -292,14 +292,14 @@ void k_categorizedview_on_resize_event(void* self, void (*callback)(void*, void*
 /// @param event QResizeEvent*
 void k_categorizedview_qbase_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setSelection)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
 /// @param self KCategorizedView*
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
 void k_categorizedview_set_selection(void* self, void* rect, int32_t flags);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setSelection)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
 /// Allows for overriding the related default method
 ///
@@ -307,7 +307,7 @@ void k_categorizedview_set_selection(void* self, void* rect, int32_t flags);
 /// @param callback void func(KCategorizedView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag flags)
 void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#setSelection)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
 /// Base class method implementation
 ///
@@ -316,13 +316,13 @@ void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
 void k_categorizedview_qbase_set_selection(void* self, void* rect, int32_t flags);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 void k_categorizedview_mouse_move_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -330,7 +330,7 @@ void k_categorizedview_mouse_move_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -338,13 +338,13 @@ void k_categorizedview_on_mouse_move_event(void* self, void (*callback)(void*, v
 /// @param event QMouseEvent*
 void k_categorizedview_qbase_mouse_move_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mousePressEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 void k_categorizedview_mouse_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -352,7 +352,7 @@ void k_categorizedview_mouse_press_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -360,13 +360,13 @@ void k_categorizedview_on_mouse_press_event(void* self, void (*callback)(void*, 
 /// @param event QMouseEvent*
 void k_categorizedview_qbase_mouse_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mouseReleaseEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 void k_categorizedview_mouse_release_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -374,7 +374,7 @@ void k_categorizedview_mouse_release_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QMouseEvent* event)
 void k_categorizedview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -382,13 +382,13 @@ void k_categorizedview_on_mouse_release_event(void* self, void (*callback)(void*
 /// @param event QMouseEvent*
 void k_categorizedview_qbase_mouse_release_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#leaveEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QEvent*
 void k_categorizedview_leave_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#leaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -396,7 +396,7 @@ void k_categorizedview_leave_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QEvent* event)
 void k_categorizedview_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#leaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -404,13 +404,13 @@ void k_categorizedview_on_leave_event(void* self, void (*callback)(void*, void*)
 /// @param event QEvent*
 void k_categorizedview_qbase_leave_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#startDrag)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#startDrag)
 ///
 /// @param self KCategorizedView*
 /// @param supportedActions flag of enum Qt__DropAction
 void k_categorizedview_start_drag(void* self, int32_t supportedActions);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#startDrag)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#startDrag)
 ///
 /// Allows for overriding the related default method
 ///
@@ -418,7 +418,7 @@ void k_categorizedview_start_drag(void* self, int32_t supportedActions);
 /// @param callback void func(KCategorizedView* self, flag of enum Qt__DropAction supportedActions)
 void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#startDrag)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#startDrag)
 ///
 /// Base class method implementation
 ///
@@ -426,13 +426,13 @@ void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t
 /// @param supportedActions flag of enum Qt__DropAction
 void k_categorizedview_qbase_start_drag(void* self, int32_t supportedActions);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragMoveEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QDragMoveEvent*
 void k_categorizedview_drag_move_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -440,7 +440,7 @@ void k_categorizedview_drag_move_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QDragMoveEvent* event)
 void k_categorizedview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -448,13 +448,13 @@ void k_categorizedview_on_drag_move_event(void* self, void (*callback)(void*, vo
 /// @param event QDragMoveEvent*
 void k_categorizedview_qbase_drag_move_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragEnterEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QDragEnterEvent*
 void k_categorizedview_drag_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragEnterEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -462,7 +462,7 @@ void k_categorizedview_drag_enter_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QDragEnterEvent* event)
 void k_categorizedview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragEnterEvent)
 ///
 /// Base class method implementation
 ///
@@ -470,13 +470,13 @@ void k_categorizedview_on_drag_enter_event(void* self, void (*callback)(void*, v
 /// @param event QDragEnterEvent*
 void k_categorizedview_qbase_drag_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragLeaveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragLeaveEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QDragLeaveEvent*
 void k_categorizedview_drag_leave_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragLeaveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragLeaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -484,7 +484,7 @@ void k_categorizedview_drag_leave_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QDragLeaveEvent* event)
 void k_categorizedview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dragLeaveEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dragLeaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -492,13 +492,13 @@ void k_categorizedview_on_drag_leave_event(void* self, void (*callback)(void*, v
 /// @param event QDragLeaveEvent*
 void k_categorizedview_qbase_drag_leave_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dropEvent)
 ///
 /// @param self KCategorizedView*
 /// @param event QDropEvent*
 void k_categorizedview_drop_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dropEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -506,7 +506,7 @@ void k_categorizedview_drop_event(void* self, void* event);
 /// @param callback void func(KCategorizedView* self, QDropEvent* event)
 void k_categorizedview_on_drop_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dropEvent)
 ///
 /// Base class method implementation
 ///
@@ -514,14 +514,14 @@ void k_categorizedview_on_drop_event(void* self, void (*callback)(void*, void*))
 /// @param event QDropEvent*
 void k_categorizedview_qbase_drop_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#moveCursor)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#moveCursor)
 ///
 /// @param self KCategorizedView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 QModelIndex* k_categorizedview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#moveCursor)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#moveCursor)
 ///
 /// Allows for overriding the related default method
 ///
@@ -529,7 +529,7 @@ QModelIndex* k_categorizedview_move_cursor(void* self, int32_t cursorAction, int
 /// @param callback QModelIndex* func(KCategorizedView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#moveCursor)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#moveCursor)
 ///
 /// Base class method implementation
 ///
@@ -538,7 +538,7 @@ void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 QModelIndex* k_categorizedview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
 /// @param self KCategorizedView*
 /// @param parent QModelIndex*
@@ -546,7 +546,7 @@ QModelIndex* k_categorizedview_qbase_move_cursor(void* self, int32_t cursorActio
 /// @param end int
 void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
 /// Allows for overriding the related default method
 ///
@@ -554,7 +554,7 @@ void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int st
 /// @param callback void func(KCategorizedView* self, QModelIndex* parent, int start, int end)
 void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
 /// Base class method implementation
 ///
@@ -564,12 +564,12 @@ void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(
 /// @param end int
 void k_categorizedview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#updateGeometries)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
 /// @param self KCategorizedView*
 void k_categorizedview_update_geometries(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#updateGeometries)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
 /// Allows for overriding the related default method
 ///
@@ -577,21 +577,21 @@ void k_categorizedview_update_geometries(void* self);
 /// @param callback void func()
 void k_categorizedview_on_update_geometries(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#updateGeometries)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 void k_categorizedview_qbase_update_geometries(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#currentChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
 /// @param self KCategorizedView*
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 void k_categorizedview_current_changed(void* self, void* current, void* previous);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#currentChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
 /// Allows for overriding the related default method
 ///
@@ -599,7 +599,7 @@ void k_categorizedview_current_changed(void* self, void* current, void* previous
 /// @param callback void func(KCategorizedView* self, QModelIndex* current, QModelIndex* previous)
 void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#currentChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
 /// Base class method implementation
 ///
@@ -608,7 +608,7 @@ void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, vo
 /// @param previous QModelIndex*
 void k_categorizedview_qbase_current_changed(void* self, void* current, void* previous);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dataChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
 /// @param self KCategorizedView*
 /// @param topLeft QModelIndex*
@@ -616,7 +616,7 @@ void k_categorizedview_qbase_current_changed(void* self, void* current, void* pr
 /// @param roles libqt_list /* of int */
 void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dataChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
 /// Allows for overriding the related default method
 ///
@@ -624,7 +624,7 @@ void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight
 /// @param callback void func(KCategorizedView* self, QModelIndex* topLeft, QModelIndex* bottomRight, int* /* of int */)
 void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dataChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
 /// Base class method implementation
 ///
@@ -634,7 +634,7 @@ void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param roles libqt_list /* of int */
 void k_categorizedview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsInserted)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
 /// @param self KCategorizedView*
 /// @param parent QModelIndex*
@@ -642,7 +642,7 @@ void k_categorizedview_qbase_data_changed(void* self, void* topLeft, void* botto
 /// @param end int
 void k_categorizedview_rows_inserted(void* self, void* parent, int start, int end);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsInserted)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
 /// Allows for overriding the related default method
 ///
@@ -650,7 +650,7 @@ void k_categorizedview_rows_inserted(void* self, void* parent, int start, int en
 /// @param callback void func(KCategorizedView* self, QModelIndex* parent, int start, int end)
 void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#rowsInserted)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
 /// Base class method implementation
 ///
@@ -660,12 +660,12 @@ void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void
 /// @param end int
 void k_categorizedview_qbase_rows_inserted(void* self, void* parent, int start, int end);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#slotLayoutChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
 /// @param self KCategorizedView*
 void k_categorizedview_slot_layout_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#slotLayoutChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
 /// Allows for overriding the related default method
 ///
@@ -673,7 +673,7 @@ void k_categorizedview_slot_layout_changed(void* self);
 /// @param callback void func()
 void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#slotLayoutChanged)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
 /// Base class method implementation
 ///
@@ -7178,7 +7178,7 @@ void k_categorizedview_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KCategorizedView* self, const char* objectName)
 void k_categorizedview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedview.html#dtor.KCategorizedView)
+/// [Qt documentation](https://api.kde.org/kcategorizedview.html#dtor.KCategorizedView)
 ///
 /// Delete this object from C++ memory.
 ///

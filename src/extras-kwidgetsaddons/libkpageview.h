@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpageview.html
+/// https://api.kde.org/kpageview.html
 
 /// k_pageview_new constructs a new KPageView object.
 ///
@@ -58,99 +58,99 @@ int32_t k_pageview_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_pageview_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setModel)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setModel)
 ///
 /// @param self KPageView*
 /// @param model QAbstractItemModel*
 void k_pageview_set_model(void* self, void* model);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#model)
+/// [Qt documentation](https://api.kde.org/kpageview.html#model)
 ///
 /// @param self KPageView*
 QAbstractItemModel* k_pageview_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setFaceType)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setFaceType)
 ///
 /// @param self KPageView*
 /// @param faceType enum KPageView__FaceType
 void k_pageview_set_face_type(void* self, int32_t faceType);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#faceType)
+/// [Qt documentation](https://api.kde.org/kpageview.html#faceType)
 ///
 /// @param self KPageView*
 ///
 /// @return enum KPageView__FaceType
 int32_t k_pageview_face_type(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setCurrentPage)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setCurrentPage)
 ///
 /// @param self KPageView*
 /// @param index QModelIndex*
 void k_pageview_set_current_page(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#currentPage)
+/// [Qt documentation](https://api.kde.org/kpageview.html#currentPage)
 ///
 /// @param self KPageView*
 QModelIndex* k_pageview_current_page(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setItemDelegate)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setItemDelegate)
 ///
 /// @param self KPageView*
 /// @param delegate QAbstractItemDelegate*
 void k_pageview_set_item_delegate(void* self, void* delegate);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#itemDelegate)
+/// [Qt documentation](https://api.kde.org/kpageview.html#itemDelegate)
 ///
 /// @param self KPageView*
 QAbstractItemDelegate* k_pageview_item_delegate(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setDefaultWidget)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setDefaultWidget)
 ///
 /// @param self KPageView*
 /// @param widget QWidget*
 void k_pageview_set_default_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setPageHeader)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setPageHeader)
 ///
 /// @param self KPageView*
 /// @param header QWidget*
 void k_pageview_set_page_header(void* self, void* header);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#pageHeader)
+/// [Qt documentation](https://api.kde.org/kpageview.html#pageHeader)
 ///
 /// @param self KPageView*
 QWidget* k_pageview_page_header(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#setPageFooter)
+/// [Qt documentation](https://api.kde.org/kpageview.html#setPageFooter)
 ///
 /// @param self KPageView*
 /// @param footer QWidget*
 void k_pageview_set_page_footer(void* self, void* footer);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#pageFooter)
+/// [Qt documentation](https://api.kde.org/kpageview.html#pageFooter)
 ///
 /// @param self KPageView*
 QWidget* k_pageview_page_footer(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpageview.html#currentPageChanged)
 ///
 /// @param self KPageView*
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 void k_pageview_current_page_changed(void* self, void* current, void* previous);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpageview.html#currentPageChanged)
 ///
 /// @param self KPageView*
 /// @param callback void func(KPageView* self, QModelIndex* current, QModelIndex* previous)
 void k_pageview_on_current_page_changed(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#createView)
+/// [Qt documentation](https://api.kde.org/kpageview.html#createView)
 ///
 /// @param self KPageView*
 QAbstractItemView* k_pageview_create_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#createView)
+/// [Qt documentation](https://api.kde.org/kpageview.html#createView)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,19 +158,19 @@ QAbstractItemView* k_pageview_create_view(void* self);
 /// @param callback QAbstractItemView* func()
 void k_pageview_on_create_view(void* self, QAbstractItemView* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#createView)
+/// [Qt documentation](https://api.kde.org/kpageview.html#createView)
 ///
 /// Base class method implementation
 ///
 /// @param self KPageView*
 QAbstractItemView* k_pageview_qbase_create_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#showPageHeader)
+/// [Qt documentation](https://api.kde.org/kpageview.html#showPageHeader)
 ///
 /// @param self KPageView*
 bool k_pageview_show_page_header(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#showPageHeader)
+/// [Qt documentation](https://api.kde.org/kpageview.html#showPageHeader)
 ///
 /// Allows for overriding the related default method
 ///
@@ -178,21 +178,21 @@ bool k_pageview_show_page_header(void* self);
 /// @param callback bool func()
 void k_pageview_on_show_page_header(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#showPageHeader)
+/// [Qt documentation](https://api.kde.org/kpageview.html#showPageHeader)
 ///
 /// Base class method implementation
 ///
 /// @param self KPageView*
 bool k_pageview_qbase_show_page_header(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#viewPosition)
+/// [Qt documentation](https://api.kde.org/kpageview.html#viewPosition)
 ///
 /// @param self KPageView*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 int32_t k_pageview_view_position(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#viewPosition)
+/// [Qt documentation](https://api.kde.org/kpageview.html#viewPosition)
 ///
 /// Allows for overriding the related default method
 ///
@@ -200,7 +200,7 @@ int32_t k_pageview_view_position(void* self);
 /// @param callback int32_t func()
 void k_pageview_on_view_position(void* self, int32_t (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#viewPosition)
+/// [Qt documentation](https://api.kde.org/kpageview.html#viewPosition)
 ///
 /// Base class method implementation
 ///
@@ -4462,14 +4462,14 @@ void k_pageview_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// @param callback void func(KPageView* self, const char* objectName)
 void k_pageview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpageview.html#dtor.KPageView)
+/// [Qt documentation](https://api.kde.org/kpageview.html#dtor.KPageView)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPageView*
 void k_pageview_delete(void* self);
 
-/// https://api-staging.kde.org/kpageview.html#types
+/// https://api.kde.org/kpageview.html#types
 
 typedef enum {
     KPAGEVIEW_FACETYPE_AUTO = 0,

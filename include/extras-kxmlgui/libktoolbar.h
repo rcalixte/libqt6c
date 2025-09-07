@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktoolbar.html
+/// https://api.kde.org/ktoolbar.html
 
 /// k_toolbar_new constructs a new KToolBar object.
 ///
@@ -114,66 +114,66 @@ int32_t k_toolbar_qbase_metacall(void* self, int32_t param1, int param2, void* p
 /// @param s const char*
 const char* k_toolbar_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mainWindow)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mainWindow)
 ///
 /// @param self KToolBar*
 KMainWindow* k_toolbar_main_window(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#setIconDimensions)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#setIconDimensions)
 ///
 /// @param self KToolBar*
 /// @param size int
 void k_toolbar_set_icon_dimensions(void* self, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#iconSizeDefault)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#iconSizeDefault)
 ///
 /// @param self KToolBar*
 int32_t k_toolbar_icon_size_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#saveSettings)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#saveSettings)
 ///
 /// @param self KToolBar*
 /// @param cg KConfigGroup*
 void k_toolbar_save_settings(void* self, void* cg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#applySettings)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#applySettings)
 ///
 /// @param self KToolBar*
 /// @param cg KConfigGroup*
 void k_toolbar_apply_settings(void* self, void* cg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#addXMLGUIClient)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#addXMLGUIClient)
 ///
 /// @param self KToolBar*
 /// @param client KXMLGUIClient*
 void k_toolbar_add_x_m_l_g_u_i_client(void* self, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#removeXMLGUIClient)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#removeXMLGUIClient)
 ///
 /// @param self KToolBar*
 /// @param client KXMLGUIClient*
 void k_toolbar_remove_x_m_l_g_u_i_client(void* self, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#loadState)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#loadState)
 ///
 /// @param self KToolBar*
 /// @param element QDomElement*
 void k_toolbar_load_state(void* self, void* element);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#saveState)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#saveState)
 ///
 /// @param self KToolBar*
 /// @param element QDomElement*
 void k_toolbar_save_state(void* self, void* element);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#eventFilter)
 ///
 /// @param self KToolBar*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_toolbar_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -181,7 +181,7 @@ bool k_toolbar_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KToolBar* self, QObject* watched, QEvent* event)
 void k_toolbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -190,35 +190,35 @@ void k_toolbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*)
 /// @param event QEvent*
 bool k_toolbar_qbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#toolBarsEditable)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#toolBarsEditable)
 ///
 bool k_toolbar_tool_bars_editable();
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#setToolBarsEditable)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#setToolBarsEditable)
 ///
 /// @param editable bool
 void k_toolbar_set_tool_bars_editable(bool editable);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#toolBarsLocked)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#toolBarsLocked)
 ///
 bool k_toolbar_tool_bars_locked();
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#setToolBarsLocked)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#setToolBarsLocked)
 ///
 /// @param locked bool
 void k_toolbar_set_tool_bars_locked(bool locked);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#emitToolbarStyleChanged)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#emitToolbarStyleChanged)
 ///
 void k_toolbar_emit_toolbar_style_changed();
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#slotMovableChanged)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#slotMovableChanged)
 ///
 /// @param self KToolBar*
 /// @param movable bool
 void k_toolbar_slot_movable_changed(void* self, bool movable);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#slotMovableChanged)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#slotMovableChanged)
 ///
 /// Allows for overriding the related default method
 ///
@@ -226,7 +226,7 @@ void k_toolbar_slot_movable_changed(void* self, bool movable);
 /// @param callback void func(KToolBar* self, bool movable)
 void k_toolbar_on_slot_movable_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#slotMovableChanged)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#slotMovableChanged)
 ///
 /// Base class method implementation
 ///
@@ -234,13 +234,13 @@ void k_toolbar_on_slot_movable_changed(void* self, void (*callback)(void*, bool)
 /// @param movable bool
 void k_toolbar_qbase_slot_movable_changed(void* self, bool movable);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#contextMenuEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QContextMenuEvent*
 void k_toolbar_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -248,7 +248,7 @@ void k_toolbar_context_menu_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QContextMenuEvent* param1)
 void k_toolbar_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
@@ -256,13 +256,13 @@ void k_toolbar_on_context_menu_event(void* self, void (*callback)(void*, void*))
 /// @param param1 QContextMenuEvent*
 void k_toolbar_qbase_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#actionEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#actionEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QActionEvent*
 void k_toolbar_action_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#actionEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#actionEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -270,7 +270,7 @@ void k_toolbar_action_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QActionEvent* param1)
 void k_toolbar_on_action_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#actionEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#actionEvent)
 ///
 /// Base class method implementation
 ///
@@ -278,13 +278,13 @@ void k_toolbar_on_action_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QActionEvent*
 void k_toolbar_qbase_action_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragEnterEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QDragEnterEvent*
 void k_toolbar_drag_enter_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragEnterEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -292,7 +292,7 @@ void k_toolbar_drag_enter_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QDragEnterEvent* param1)
 void k_toolbar_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragEnterEvent)
 ///
 /// Base class method implementation
 ///
@@ -300,13 +300,13 @@ void k_toolbar_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QDragEnterEvent*
 void k_toolbar_qbase_drag_enter_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragMoveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragMoveEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QDragMoveEvent*
 void k_toolbar_drag_move_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragMoveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -314,7 +314,7 @@ void k_toolbar_drag_move_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QDragMoveEvent* param1)
 void k_toolbar_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragMoveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -322,13 +322,13 @@ void k_toolbar_on_drag_move_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QDragMoveEvent*
 void k_toolbar_qbase_drag_move_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragLeaveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragLeaveEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QDragLeaveEvent*
 void k_toolbar_drag_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragLeaveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragLeaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -336,7 +336,7 @@ void k_toolbar_drag_leave_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QDragLeaveEvent* param1)
 void k_toolbar_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dragLeaveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dragLeaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -344,13 +344,13 @@ void k_toolbar_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QDragLeaveEvent*
 void k_toolbar_qbase_drag_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dropEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QDropEvent*
 void k_toolbar_drop_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dropEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -358,7 +358,7 @@ void k_toolbar_drop_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QDropEvent* param1)
 void k_toolbar_on_drop_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dropEvent)
 ///
 /// Base class method implementation
 ///
@@ -366,13 +366,13 @@ void k_toolbar_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QDropEvent*
 void k_toolbar_qbase_drop_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mousePressEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QMouseEvent*
 void k_toolbar_mouse_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -380,7 +380,7 @@ void k_toolbar_mouse_press_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QMouseEvent* param1)
 void k_toolbar_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -388,13 +388,13 @@ void k_toolbar_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QMouseEvent*
 void k_toolbar_qbase_mouse_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mouseMoveEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QMouseEvent*
 void k_toolbar_mouse_move_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -402,7 +402,7 @@ void k_toolbar_mouse_move_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QMouseEvent* param1)
 void k_toolbar_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -410,13 +410,13 @@ void k_toolbar_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QMouseEvent*
 void k_toolbar_qbase_mouse_move_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mouseReleaseEvent)
 ///
 /// @param self KToolBar*
 /// @param param1 QMouseEvent*
 void k_toolbar_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -424,7 +424,7 @@ void k_toolbar_mouse_release_event(void* self, void* param1);
 /// @param callback void func(KToolBar* self, QMouseEvent* param1)
 void k_toolbar_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -4731,7 +4731,7 @@ void k_toolbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int
 /// @param callback void func(KToolBar* self, const char* objectName)
 void k_toolbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbar.html#dtor.KToolBar)
+/// [Qt documentation](https://api.kde.org/ktoolbar.html#dtor.KToolBar)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpagewidgetitem.html
+/// https://api.kde.org/kpagewidgetitem.html
 
 /// k_pagewidgetitem_new constructs a new KPageWidgetItem object.
 ///
@@ -60,132 +60,132 @@ int32_t k_pagewidgetitem_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_pagewidgetitem_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#widget)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#widget)
 ///
 /// @param self KPageWidgetItem*
 QWidget* k_pagewidgetitem_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setName)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setName)
 ///
 /// @param self KPageWidgetItem*
 /// @param name const char*
 void k_pagewidgetitem_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#name)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPageWidgetItem*
 const char* k_pagewidgetitem_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setHeader)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setHeader)
 ///
 /// @param self KPageWidgetItem*
 /// @param header const char*
 void k_pagewidgetitem_set_header(void* self, const char* header);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#header)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#header)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPageWidgetItem*
 const char* k_pagewidgetitem_header(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setIcon)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setIcon)
 ///
 /// @param self KPageWidgetItem*
 /// @param icon QIcon*
 void k_pagewidgetitem_set_icon(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#icon)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#icon)
 ///
 /// @param self KPageWidgetItem*
 QIcon* k_pagewidgetitem_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setCheckable)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setCheckable)
 ///
 /// @param self KPageWidgetItem*
 /// @param checkable bool
 void k_pagewidgetitem_set_checkable(void* self, bool checkable);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#isCheckable)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#isCheckable)
 ///
 /// @param self KPageWidgetItem*
 bool k_pagewidgetitem_is_checkable(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#isChecked)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#isChecked)
 ///
 /// @param self KPageWidgetItem*
 bool k_pagewidgetitem_is_checked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#isEnabled)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#isEnabled)
 ///
 /// @param self KPageWidgetItem*
 bool k_pagewidgetitem_is_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#isHeaderVisible)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#isHeaderVisible)
 ///
 /// @param self KPageWidgetItem*
 bool k_pagewidgetitem_is_header_visible(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setHeaderVisible)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setHeaderVisible)
 ///
 /// @param self KPageWidgetItem*
 /// @param visible bool
 void k_pagewidgetitem_set_header_visible(void* self, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#actions)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#actions)
 ///
 /// @param self KPageWidgetItem*
 libqt_list /* of QAction* */ k_pagewidgetitem_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setActions)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setActions)
 ///
 /// @param self KPageWidgetItem*
 /// @param actions libqt_list /* of QAction* */
 void k_pagewidgetitem_set_actions(void* self, libqt_list actions);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setEnabled)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setEnabled)
 ///
 /// @param self KPageWidgetItem*
 /// @param enabled bool
 void k_pagewidgetitem_set_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#setChecked)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#setChecked)
 ///
 /// @param self KPageWidgetItem*
 /// @param checked bool
 void k_pagewidgetitem_set_checked(void* self, bool checked);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#changed)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#changed)
 ///
 /// @param self KPageWidgetItem*
 void k_pagewidgetitem_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#changed)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#changed)
 ///
 /// @param self KPageWidgetItem*
 /// @param callback void func(KPageWidgetItem* self)
 void k_pagewidgetitem_on_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#toggled)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#toggled)
 ///
 /// @param self KPageWidgetItem*
 /// @param checked bool
 void k_pagewidgetitem_toggled(void* self, bool checked);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#toggled)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#toggled)
 ///
 /// @param self KPageWidgetItem*
 /// @param callback void func(KPageWidgetItem* self, bool checked)
 void k_pagewidgetitem_on_toggled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#actionsChanged)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#actionsChanged)
 ///
 /// @param self KPageWidgetItem*
 void k_pagewidgetitem_actions_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#actionsChanged)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#actionsChanged)
 ///
 /// @param self KPageWidgetItem*
 /// @param callback void func(KPageWidgetItem* self)
@@ -853,14 +853,14 @@ void k_pagewidgetitem_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KPageWidgetItem* self, const char* objectName)
 void k_pagewidgetitem_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetitem.html#dtor.KPageWidgetItem)
+/// [Qt documentation](https://api.kde.org/kpagewidgetitem.html#dtor.KPageWidgetItem)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPageWidgetItem*
 void k_pagewidgetitem_delete(void* self);
 
-/// https://api-staging.kde.org/kpagewidgetmodel.html
+/// https://api.kde.org/kpagewidgetmodel.html
 
 /// k_pagewidgetmodel_new constructs a new KPageWidgetModel object.
 ///
@@ -907,20 +907,20 @@ int32_t k_pagewidgetmodel_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_pagewidgetmodel_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#addPage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#addPage)
 ///
 /// @param self KPageWidgetModel*
 /// @param widget QWidget*
 /// @param name const char*
 KPageWidgetItem* k_pagewidgetmodel_add_page(void* self, void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#addPage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#addPage)
 ///
 /// @param self KPageWidgetModel*
 /// @param item KPageWidgetItem*
 void k_pagewidgetmodel_add_page2(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#insertPage)
 ///
 /// @param self KPageWidgetModel*
 /// @param before KPageWidgetItem*
@@ -928,14 +928,14 @@ void k_pagewidgetmodel_add_page2(void* self, void* item);
 /// @param name const char*
 KPageWidgetItem* k_pagewidgetmodel_insert_page(void* self, void* before, void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#insertPage)
 ///
 /// @param self KPageWidgetModel*
 /// @param before KPageWidgetItem*
 /// @param item KPageWidgetItem*
 void k_pagewidgetmodel_insert_page2(void* self, void* before, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#addSubPage)
 ///
 /// @param self KPageWidgetModel*
 /// @param parent KPageWidgetItem*
@@ -943,26 +943,26 @@ void k_pagewidgetmodel_insert_page2(void* self, void* before, void* item);
 /// @param name const char*
 KPageWidgetItem* k_pagewidgetmodel_add_sub_page(void* self, void* parent, void* widget, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#addSubPage)
 ///
 /// @param self KPageWidgetModel*
 /// @param parent KPageWidgetItem*
 /// @param item KPageWidgetItem*
 void k_pagewidgetmodel_add_sub_page2(void* self, void* parent, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#removePage)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#removePage)
 ///
 /// @param self KPageWidgetModel*
 /// @param item KPageWidgetItem*
 void k_pagewidgetmodel_remove_page(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#columnCount)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#columnCount)
 ///
 /// @param self KPageWidgetModel*
 /// @param parent QModelIndex*
 int32_t k_pagewidgetmodel_column_count(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#columnCount)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -970,7 +970,7 @@ int32_t k_pagewidgetmodel_column_count(void* self, void* parent);
 /// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#columnCount)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
@@ -978,14 +978,14 @@ void k_pagewidgetmodel_on_column_count(void* self, int32_t (*callback)(void*, vo
 /// @param parent QModelIndex*
 int32_t k_pagewidgetmodel_qbase_column_count(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#data)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#data)
 ///
 /// @param self KPageWidgetModel*
 /// @param index QModelIndex*
 /// @param role int
 QVariant* k_pagewidgetmodel_data(void* self, void* index, int role);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#data)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
@@ -993,7 +993,7 @@ QVariant* k_pagewidgetmodel_data(void* self, void* index, int role);
 /// @param callback QVariant* func(KPageWidgetModel* self, QModelIndex* index, int role)
 void k_pagewidgetmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#data)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#data)
 ///
 /// Base class method implementation
 ///
@@ -1002,7 +1002,7 @@ void k_pagewidgetmodel_on_data(void* self, QVariant* (*callback)(void*, void*, i
 /// @param role int
 QVariant* k_pagewidgetmodel_qbase_data(void* self, void* index, int role);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#setData)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#setData)
 ///
 /// @param self KPageWidgetModel*
 /// @param index QModelIndex*
@@ -1010,7 +1010,7 @@ QVariant* k_pagewidgetmodel_qbase_data(void* self, void* index, int role);
 /// @param role int
 bool k_pagewidgetmodel_set_data(void* self, void* index, void* value, int role);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#setData)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#setData)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1018,7 +1018,7 @@ bool k_pagewidgetmodel_set_data(void* self, void* index, void* value, int role);
 /// @param callback bool func(KPageWidgetModel* self, QModelIndex* index, QVariant* value, int role)
 void k_pagewidgetmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#setData)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#setData)
 ///
 /// Base class method implementation
 ///
@@ -1028,7 +1028,7 @@ void k_pagewidgetmodel_on_set_data(void* self, bool (*callback)(void*, void*, vo
 /// @param role int
 bool k_pagewidgetmodel_qbase_set_data(void* self, void* index, void* value, int role);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#flags)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#flags)
 ///
 /// @param self KPageWidgetModel*
 /// @param index QModelIndex*
@@ -1036,7 +1036,7 @@ bool k_pagewidgetmodel_qbase_set_data(void* self, void* index, void* value, int 
 /// @return flag of enum Qt__ItemFlag
 int32_t k_pagewidgetmodel_flags(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#flags)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1044,7 +1044,7 @@ int32_t k_pagewidgetmodel_flags(void* self, void* index);
 /// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#flags)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#flags)
 ///
 /// Base class method implementation
 ///
@@ -1054,7 +1054,7 @@ void k_pagewidgetmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 /// @return flag of enum Qt__ItemFlag
 int32_t k_pagewidgetmodel_qbase_flags(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#index)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#index)
 ///
 /// @param self KPageWidgetModel*
 /// @param row int
@@ -1062,7 +1062,7 @@ int32_t k_pagewidgetmodel_qbase_flags(void* self, void* index);
 /// @param parent QModelIndex*
 QModelIndex* k_pagewidgetmodel_index(void* self, int row, int column, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#index)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1070,7 +1070,7 @@ QModelIndex* k_pagewidgetmodel_index(void* self, int row, int column, void* pare
 /// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column, QModelIndex* parent)
 void k_pagewidgetmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#index)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#index)
 ///
 /// Base class method implementation
 ///
@@ -1080,13 +1080,13 @@ void k_pagewidgetmodel_on_index(void* self, QModelIndex* (*callback)(void*, int,
 /// @param parent QModelIndex*
 QModelIndex* k_pagewidgetmodel_qbase_index(void* self, int row, int column, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#parent)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#parent)
 ///
 /// @param self KPageWidgetModel*
 /// @param index QModelIndex*
 QModelIndex* k_pagewidgetmodel_parent(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#parent)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1094,7 +1094,7 @@ QModelIndex* k_pagewidgetmodel_parent(void* self, void* index);
 /// @param callback QModelIndex* func(KPageWidgetModel* self, QModelIndex* index)
 void k_pagewidgetmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#parent)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#parent)
 ///
 /// Base class method implementation
 ///
@@ -1102,13 +1102,13 @@ void k_pagewidgetmodel_on_parent(void* self, QModelIndex* (*callback)(void*, voi
 /// @param index QModelIndex*
 QModelIndex* k_pagewidgetmodel_qbase_parent(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#rowCount)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#rowCount)
 ///
 /// @param self KPageWidgetModel*
 /// @param parent QModelIndex*
 int32_t k_pagewidgetmodel_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#rowCount)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -1116,7 +1116,7 @@ int32_t k_pagewidgetmodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KPageWidgetModel* self, QModelIndex* parent)
 void k_pagewidgetmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#rowCount)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
@@ -1124,26 +1124,26 @@ void k_pagewidgetmodel_on_row_count(void* self, int32_t (*callback)(void*, void*
 /// @param parent QModelIndex*
 int32_t k_pagewidgetmodel_qbase_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#item)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#item)
 ///
 /// @param self KPageWidgetModel*
 /// @param index QModelIndex*
 KPageWidgetItem* k_pagewidgetmodel_item(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#index)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#index)
 ///
 /// @param self KPageWidgetModel*
 /// @param item KPageWidgetItem*
 QModelIndex* k_pagewidgetmodel_index2(void* self, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#toggled)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#toggled)
 ///
 /// @param self KPageWidgetModel*
 /// @param page KPageWidgetItem*
 /// @param checked bool
 void k_pagewidgetmodel_toggled(void* self, void* page, bool checked);
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#toggled)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#toggled)
 ///
 /// @param self KPageWidgetModel*
 /// @param callback void func(KPageWidgetModel* self, KPageWidgetItem* page, bool checked)
@@ -3821,7 +3821,7 @@ void k_pagewidgetmodel_on_columns_moved(void* self, void (*callback)(void*, void
 /// @param callback void func(KPageWidgetModel* self, const char* objectName)
 void k_pagewidgetmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagewidgetmodel.html#dtor.KPageWidgetModel)
+/// [Qt documentation](https://api.kde.org/kpagewidgetmodel.html#dtor.KPageWidgetModel)
 ///
 /// Delete this object from C++ memory.
 ///

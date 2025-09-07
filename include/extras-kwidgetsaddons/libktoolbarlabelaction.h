@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktoolbarlabelaction.html
+/// https://api.kde.org/ktoolbarlabelaction.html
 
 /// k_toolbarlabelaction_new constructs a new KToolBarLabelAction object.
 ///
@@ -62,24 +62,24 @@ int32_t k_toolbarlabelaction_qbase_metacall(void* self, int32_t param1, int para
 /// @param s const char*
 const char* k_toolbarlabelaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#setBuddy)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#setBuddy)
 ///
 /// @param self KToolBarLabelAction*
 /// @param buddy QAction*
 void k_toolbarlabelaction_set_buddy(void* self, void* buddy);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#buddy)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#buddy)
 ///
 /// @param self KToolBarLabelAction*
 QAction* k_toolbarlabelaction_buddy(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// @param self KToolBarLabelAction*
 /// @param parent QWidget*
 QWidget* k_toolbarlabelaction_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -87,7 +87,7 @@ QWidget* k_toolbarlabelaction_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KToolBarLabelAction* self, QWidget* parent)
 void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -95,25 +95,25 @@ void k_toolbarlabelaction_on_create_widget(void* self, QWidget* (*callback)(void
 /// @param parent QWidget*
 QWidget* k_toolbarlabelaction_qbase_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#textChanged)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#textChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param newText const char*
 void k_toolbarlabelaction_text_changed(void* self, const char* newText);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#textChanged)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#textChanged)
 ///
 /// @param self KToolBarLabelAction*
 /// @param callback void func(KToolBarLabelAction* self, const char* newText)
 void k_toolbarlabelaction_on_text_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#event)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// @param self KToolBarLabelAction*
 /// @param param1 QEvent*
 bool k_toolbarlabelaction_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#event)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -121,7 +121,7 @@ bool k_toolbarlabelaction_event(void* self, void* param1);
 /// @param callback bool func(KToolBarLabelAction* self, QEvent* param1)
 void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#event)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#event)
 ///
 /// Base class method implementation
 ///
@@ -129,14 +129,14 @@ void k_toolbarlabelaction_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_toolbarlabelaction_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
 /// @param self KToolBarLabelAction*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -144,7 +144,7 @@ bool k_toolbarlabelaction_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KToolBarLabelAction* self, QObject* watched, QEvent* event)
 void k_toolbarlabelaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -1386,7 +1386,7 @@ void k_toolbarlabelaction_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KToolBarLabelAction* self, const char* objectName)
 void k_toolbarlabelaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarlabelaction.html#dtor.KToolBarLabelAction)
+/// [Qt documentation](https://api.kde.org/ktoolbarlabelaction.html#dtor.KToolBarLabelAction)
 ///
 /// Delete this object from C++ memory.
 ///

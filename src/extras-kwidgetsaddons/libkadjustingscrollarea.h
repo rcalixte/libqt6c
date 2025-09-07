@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kadjustingscrollarea.html
+/// https://api.kde.org/kadjustingscrollarea.html
 
 /// k_adjustingscrollarea_new constructs a new KAdjustingScrollArea object.
 ///
@@ -58,12 +58,12 @@ int32_t k_adjustingscrollarea_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_adjustingscrollarea_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#minimumSizeHint)
 ///
 /// @param self KAdjustingScrollArea*
 QSize* k_adjustingscrollarea_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -71,19 +71,19 @@ QSize* k_adjustingscrollarea_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_adjustingscrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KAdjustingScrollArea*
 QSize* k_adjustingscrollarea_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#sizeHint)
 ///
 /// @param self KAdjustingScrollArea*
 QSize* k_adjustingscrollarea_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -91,20 +91,20 @@ QSize* k_adjustingscrollarea_size_hint(void* self);
 /// @param callback QSize* func()
 void k_adjustingscrollarea_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KAdjustingScrollArea*
 QSize* k_adjustingscrollarea_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#event)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#event)
 ///
 /// @param self KAdjustingScrollArea*
 /// @param event QEvent*
 bool k_adjustingscrollarea_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#event)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -112,7 +112,7 @@ bool k_adjustingscrollarea_event(void* self, void* event);
 /// @param callback bool func(KAdjustingScrollArea* self, QEvent* event)
 void k_adjustingscrollarea_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#event)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#event)
 ///
 /// Base class method implementation
 ///
@@ -4846,7 +4846,7 @@ void k_adjustingscrollarea_on_get_decoded_metric_f(void* self, double (*callback
 /// @param callback void func(KAdjustingScrollArea* self, const char* objectName)
 void k_adjustingscrollarea_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kadjustingscrollarea.html#dtor.KAdjustingScrollArea)
+/// [Qt documentation](https://api.kde.org/kadjustingscrollarea.html#dtor.KAdjustingScrollArea)
 ///
 /// Delete this object from C++ memory.
 ///

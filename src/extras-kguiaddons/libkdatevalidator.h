@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdatevalidator.html
+/// https://api.kde.org/kdatevalidator.html
 
 /// k_datevalidator_new constructs a new KDateValidator object.
 ///
@@ -58,7 +58,7 @@ int32_t k_datevalidator_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_datevalidator_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#validate)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#validate)
 ///
 /// @param self KDateValidator*
 /// @param text const char*
@@ -67,7 +67,7 @@ const char* k_datevalidator_tr(const char* s);
 /// @return enum QValidator__State
 int32_t k_datevalidator_validate(void* self, const char* text, int* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#validate)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
@@ -75,7 +75,7 @@ int32_t k_datevalidator_validate(void* self, const char* text, int* e);
 /// @param callback int32_t func(KDateValidator* self, const char* text, int* e)
 void k_datevalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#validate)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#validate)
 ///
 /// Base class method implementation
 ///
@@ -86,13 +86,13 @@ void k_datevalidator_on_validate(void* self, int32_t (*callback)(void*, const ch
 /// @return enum QValidator__State
 int32_t k_datevalidator_qbase_validate(void* self, const char* text, int* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#fixup)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#fixup)
 ///
 /// @param self KDateValidator*
 /// @param input const char*
 void k_datevalidator_fixup(void* self, const char* input);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#fixup)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -100,7 +100,7 @@ void k_datevalidator_fixup(void* self, const char* input);
 /// @param callback void func(KDateValidator* self, const char* input)
 void k_datevalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#fixup)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#fixup)
 ///
 /// Base class method implementation
 ///
@@ -108,7 +108,7 @@ void k_datevalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 /// @param input const char*
 void k_datevalidator_qbase_fixup(void* self, const char* input);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#date)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#date)
 ///
 /// @param self KDateValidator*
 /// @param text const char*
@@ -809,7 +809,7 @@ void k_datevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(KDateValidator* self, const char* objectName)
 void k_datevalidator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatevalidator.html#dtor.KDateValidator)
+/// [Qt documentation](https://api.kde.org/kdatevalidator.html#dtor.KDateValidator)
 ///
 /// Delete this object from C++ memory.
 ///

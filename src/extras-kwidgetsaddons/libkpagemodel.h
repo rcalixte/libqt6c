@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpagemodel.html
+/// https://api.kde.org/kpagemodel.html
 
 /// k_pagemodel_new constructs a new KPageModel object.
 ///
@@ -2954,14 +2954,14 @@ void k_pagemodel_on_columns_moved(void* self, void (*callback)(void*, void*, int
 /// @param callback void func(KPageModel* self, const char* objectName)
 void k_pagemodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpagemodel.html#dtor.KPageModel)
+/// [Qt documentation](https://api.kde.org/kpagemodel.html#dtor.KPageModel)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPageModel*
 void k_pagemodel_delete(void* self);
 
-/// https://api-staging.kde.org/kpagemodel.html#types
+/// https://api.kde.org/kpagemodel.html#types
 
 typedef enum {
     KPAGEMODEL_ROLE_HEADERROLE = 257,

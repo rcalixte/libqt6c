@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcompositejob.html
+/// https://api.kde.org/kcompositejob.html
 
 /// k_compositejob_new constructs a new KCompositeJob object.
 ///
@@ -58,13 +58,13 @@ int32_t k_compositejob_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_compositejob_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#addSubjob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#addSubjob)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
 bool k_compositejob_add_subjob(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#addSubjob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#addSubjob)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ bool k_compositejob_add_subjob(void* self, void* job);
 /// @param callback bool func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_add_subjob(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#addSubjob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#addSubjob)
 ///
 /// Base class method implementation
 ///
@@ -80,13 +80,13 @@ void k_compositejob_on_add_subjob(void* self, bool (*callback)(void*, void*));
 /// @param job KJob*
 bool k_compositejob_qbase_add_subjob(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#removeSubjob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#removeSubjob)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
 bool k_compositejob_remove_subjob(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#removeSubjob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#removeSubjob)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ bool k_compositejob_remove_subjob(void* self, void* job);
 /// @param callback bool func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_remove_subjob(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#removeSubjob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#removeSubjob)
 ///
 /// Base class method implementation
 ///
@@ -102,12 +102,12 @@ void k_compositejob_on_remove_subjob(void* self, bool (*callback)(void*, void*))
 /// @param job KJob*
 bool k_compositejob_qbase_remove_subjob(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#hasSubjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#hasSubjobs)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_has_subjobs(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#hasSubjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#hasSubjobs)
 ///
 /// Allows for overriding the related default method
 ///
@@ -115,19 +115,19 @@ bool k_compositejob_has_subjobs(void* self);
 /// @param callback bool func()
 void k_compositejob_on_has_subjobs(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#hasSubjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#hasSubjobs)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_qbase_has_subjobs(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#subjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
 ///
 /// @param self KCompositeJob*
 libqt_list /* of KJob* */ k_compositejob_subjobs(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#subjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
 ///
 /// Allows for overriding the related default method
 ///
@@ -135,19 +135,19 @@ libqt_list /* of KJob* */ k_compositejob_subjobs(void* self);
 /// @param callback libqt_list /* of KJob* */ func()
 void k_compositejob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#subjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompositeJob*
 libqt_list /* of KJob* */ k_compositejob_qbase_subjobs(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#clearSubjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
 /// @param self KCompositeJob*
 void k_compositejob_clear_subjobs(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#clearSubjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
 /// Allows for overriding the related default method
 ///
@@ -155,20 +155,20 @@ void k_compositejob_clear_subjobs(void* self);
 /// @param callback void func()
 void k_compositejob_on_clear_subjobs(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#clearSubjobs)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#clearSubjobs)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompositeJob*
 void k_compositejob_qbase_clear_subjobs(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotResult)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotResult)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
 void k_compositejob_slot_result(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotResult)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotResult)
 ///
 /// Allows for overriding the related default method
 ///
@@ -176,7 +176,7 @@ void k_compositejob_slot_result(void* self, void* job);
 /// @param callback void func(KCompositeJob* self, KJob* job)
 void k_compositejob_on_slot_result(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotResult)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotResult)
 ///
 /// Base class method implementation
 ///
@@ -184,14 +184,14 @@ void k_compositejob_on_slot_result(void* self, void (*callback)(void*, void*));
 /// @param job KJob*
 void k_compositejob_qbase_slot_result(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotInfoMessage)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotInfoMessage)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
 /// @param message const char*
 void k_compositejob_slot_info_message(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotInfoMessage)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotInfoMessage)
 ///
 /// Allows for overriding the related default method
 ///
@@ -199,7 +199,7 @@ void k_compositejob_slot_info_message(void* self, void* job, const char* message
 /// @param callback void func(KCompositeJob* self, KJob* job, const char* message)
 void k_compositejob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#slotInfoMessage)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#slotInfoMessage)
 ///
 /// Base class method implementation
 ///
@@ -227,7 +227,7 @@ const char* k_compositejob_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setUiDelegate)
+/// [Qt documentation](https://api.kde.org/kjob.html#setUiDelegate)
 ///
 /// @param self KCompositeJob*
 /// @param delegate KJobUiDelegate*
@@ -235,14 +235,14 @@ void k_compositejob_set_ui_delegate(void* self, void* delegate);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#uiDelegate)
+/// [Qt documentation](https://api.kde.org/kjob.html#uiDelegate)
 ///
 /// @param self KCompositeJob*
 KJobUiDelegate* k_compositejob_ui_delegate(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#capabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#capabilities)
 ///
 /// @param self KCompositeJob*
 ///
@@ -251,49 +251,49 @@ int32_t k_compositejob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isSuspended)
+/// [Qt documentation](https://api.kde.org/kjob.html#isSuspended)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_is_suspended(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#kill)
+/// [Qt documentation](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#suspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#suspend)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#resume)
+/// [Qt documentation](https://api.kde.org/kjob.html#resume)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#exec)
+/// [Qt documentation](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#error)
+/// [Qt documentation](https://api.kde.org/kjob.html#error)
 ///
 /// @param self KCompositeJob*
 int32_t k_compositejob_error(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -302,7 +302,7 @@ const char* k_compositejob_error_text(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedAmount)
 ///
 /// @param self KCompositeJob*
 /// @param unit enum KJob__Unit
@@ -310,7 +310,7 @@ uint64_t k_compositejob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KCompositeJob*
 /// @param unit enum KJob__Unit
@@ -318,14 +318,14 @@ uint64_t k_compositejob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#percent)
+/// [Qt documentation](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KCompositeJob*
 uint64_t k_compositejob_percent(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setAutoDelete)
+/// [Qt documentation](https://api.kde.org/kjob.html#setAutoDelete)
 ///
 /// @param self KCompositeJob*
 /// @param autodelete bool
@@ -333,42 +333,42 @@ void k_compositejob_set_auto_delete(void* self, bool autodelete);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isAutoDelete)
+/// [Qt documentation](https://api.kde.org/kjob.html#isAutoDelete)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_is_auto_delete(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KCompositeJob*
 void k_compositejob_set_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinishedNotificationHidden)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_is_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isStartedWithExec)
+/// [Qt documentation](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
 /// @param self KCompositeJob*
 bool k_compositejob_is_started_with_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#elapsedTime)
+/// [Qt documentation](https://api.kde.org/kjob.html#elapsedTime)
 ///
 /// @param self KCompositeJob*
 long long k_compositejob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -377,7 +377,7 @@ void k_compositejob_description(void* self, void* job, const char* title);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, const char* title)
@@ -385,7 +385,7 @@ void k_compositejob_on_description(void* self, void (*callback)(void*, void*, co
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -394,7 +394,7 @@ void k_compositejob_info_message(void* self, void* job, const char* message);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, const char* message)
@@ -402,7 +402,7 @@ void k_compositejob_on_info_message(void* self, void (*callback)(void*, void*, c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
+/// [Qt documentation](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -411,7 +411,7 @@ void k_compositejob_warning(void* self, void* job, const char* message);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
+/// [Qt documentation](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, const char* message)
@@ -419,7 +419,7 @@ void k_compositejob_on_warning(void* self, void (*callback)(void*, void*, const 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -428,7 +428,7 @@ void k_compositejob_total_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, uint64_t size)
@@ -436,7 +436,7 @@ void k_compositejob_on_total_size(void* self, void (*callback)(void*, void*, uin
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -445,7 +445,7 @@ void k_compositejob_processed_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, uint64_t size)
@@ -453,7 +453,7 @@ void k_compositejob_on_processed_size(void* self, void (*callback)(void*, void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
+/// [Qt documentation](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -462,7 +462,7 @@ void k_compositejob_speed(void* self, void* job, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
+/// [Qt documentation](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, uint64_t speed)
@@ -470,7 +470,7 @@ void k_compositejob_on_speed(void* self, void (*callback)(void*, void*, uint64_t
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#kill)
+/// [Qt documentation](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KCompositeJob*
 /// @param verbosity enum KJob__KillVerbosity
@@ -478,7 +478,7 @@ bool k_compositejob_kill1(void* self, int32_t verbosity);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KCompositeJob*
 /// @param hide bool
@@ -486,7 +486,7 @@ void k_compositejob_set_finished_notification_hidden1(void* self, bool hide);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -496,7 +496,7 @@ void k_compositejob_description3(void* self, void* job, const char* title, libqt
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
@@ -504,7 +504,7 @@ void k_compositejob_on_description3(void* self, void (*callback)(void*, void*, c
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
 /// @param job KJob*
@@ -515,7 +515,7 @@ void k_compositejob_description4(void* self, void* job, const char* title, libqt
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KCompositeJob*
 /// @param callback void func(KCompositeJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
@@ -830,7 +830,7 @@ void k_compositejob_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#start)
+/// [Qt documentation](https://api.kde.org/kjob.html#start)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -839,7 +839,7 @@ void k_compositejob_start(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#start)
+/// [Qt documentation](https://api.kde.org/kjob.html#start)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -848,7 +848,7 @@ void k_compositejob_qbase_start(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#start)
+/// [Qt documentation](https://api.kde.org/kjob.html#start)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -858,7 +858,7 @@ void k_compositejob_on_start(void* self, void (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
+/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -867,7 +867,7 @@ bool k_compositejob_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
+/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -876,7 +876,7 @@ bool k_compositejob_qbase_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
+/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -886,7 +886,7 @@ void k_compositejob_on_do_kill(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -895,7 +895,7 @@ bool k_compositejob_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -904,7 +904,7 @@ bool k_compositejob_qbase_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -914,7 +914,7 @@ void k_compositejob_on_do_suspend(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
+/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -923,7 +923,7 @@ bool k_compositejob_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
+/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -932,7 +932,7 @@ bool k_compositejob_qbase_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
+/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -942,7 +942,7 @@ void k_compositejob_on_do_resume(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -953,7 +953,7 @@ const char* k_compositejob_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -964,7 +964,7 @@ const char* k_compositejob_qbase_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1186,7 +1186,7 @@ void k_compositejob_on_disconnect_notify(void* self, void (*callback)(void*, voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1196,7 +1196,7 @@ void k_compositejob_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1206,7 +1206,7 @@ void k_compositejob_qbase_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1216,7 +1216,7 @@ void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int3
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1225,7 +1225,7 @@ bool k_compositejob_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1234,7 +1234,7 @@ bool k_compositejob_qbase_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1244,7 +1244,7 @@ void k_compositejob_on_is_finished(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
+/// [Qt documentation](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1254,7 +1254,7 @@ void k_compositejob_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
+/// [Qt documentation](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1264,7 +1264,7 @@ void k_compositejob_qbase_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
+/// [Qt documentation](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1274,7 +1274,7 @@ void k_compositejob_on_set_error(void* self, void (*callback)(void*, int));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1284,7 +1284,7 @@ void k_compositejob_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1294,7 +1294,7 @@ void k_compositejob_qbase_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1304,7 +1304,7 @@ void k_compositejob_on_set_error_text(void* self, void (*callback)(void*, const 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1315,7 +1315,7 @@ void k_compositejob_set_processed_amount(void* self, int32_t unit, uint64_t amou
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1326,7 +1326,7 @@ void k_compositejob_qbase_set_processed_amount(void* self, int32_t unit, uint64_
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1336,7 +1336,7 @@ void k_compositejob_on_set_processed_amount(void* self, void (*callback)(void*, 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1347,7 +1347,7 @@ void k_compositejob_set_total_amount(void* self, int32_t unit, uint64_t amount);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1358,7 +1358,7 @@ void k_compositejob_qbase_set_total_amount(void* self, int32_t unit, uint64_t am
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1368,7 +1368,7 @@ void k_compositejob_on_set_total_amount(void* self, void (*callback)(void*, int3
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1378,7 +1378,7 @@ void k_compositejob_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1388,7 +1388,7 @@ void k_compositejob_qbase_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1398,7 +1398,7 @@ void k_compositejob_on_set_progress_unit(void* self, void (*callback)(void*, int
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1408,7 +1408,7 @@ void k_compositejob_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1418,7 +1418,7 @@ void k_compositejob_qbase_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1428,7 +1428,7 @@ void k_compositejob_on_set_percent(void* self, void (*callback)(void*, uint64_t)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1437,7 +1437,7 @@ void k_compositejob_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1446,7 +1446,7 @@ void k_compositejob_qbase_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1456,7 +1456,7 @@ void k_compositejob_on_emit_result(void* self, void (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1467,7 +1467,7 @@ void k_compositejob_emit_percent(void* self, uint64_t processedAmount, uint64_t 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1478,7 +1478,7 @@ void k_compositejob_qbase_emit_percent(void* self, uint64_t processedAmount, uin
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1488,7 +1488,7 @@ void k_compositejob_on_emit_percent(void* self, void (*callback)(void*, uint64_t
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1498,7 +1498,7 @@ void k_compositejob_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1508,7 +1508,7 @@ void k_compositejob_qbase_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1518,7 +1518,7 @@ void k_compositejob_on_emit_speed(void* self, void (*callback)(void*, uint64_t))
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
+/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1527,7 +1527,7 @@ void k_compositejob_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
+/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1536,7 +1536,7 @@ void k_compositejob_qbase_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
+/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1662,7 +1662,7 @@ void k_compositejob_on_is_signal_connected(void* self, bool (*callback)(void*, v
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#finished)
+/// [Qt documentation](https://api.kde.org/kjob.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1672,7 +1672,7 @@ void k_compositejob_on_finished(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#suspended)
+/// [Qt documentation](https://api.kde.org/kjob.html#suspended)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1682,7 +1682,7 @@ void k_compositejob_on_suspended(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#resumed)
+/// [Qt documentation](https://api.kde.org/kjob.html#resumed)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1692,7 +1692,7 @@ void k_compositejob_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#result)
+/// [Qt documentation](https://api.kde.org/kjob.html#result)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1702,7 +1702,7 @@ void k_compositejob_on_result(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalAmountChanged)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1712,7 +1712,7 @@ void k_compositejob_on_total_amount_changed(void* self, void (*callback)(void*, 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedAmountChanged)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1722,7 +1722,7 @@ void k_compositejob_on_processed_amount_changed(void* self, void (*callback)(voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#percentChanged)
+/// [Qt documentation](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1740,7 +1740,7 @@ void k_compositejob_on_percent_changed(void* self, void (*callback)(void*, void*
 /// @param callback void func(KCompositeJob* self, const char* objectName)
 void k_compositejob_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompositejob.html#dtor.KCompositeJob)
+/// [Qt documentation](https://api.kde.org/kcompositejob.html#dtor.KCompositeJob)
 ///
 /// Delete this object from C++ memory.
 ///

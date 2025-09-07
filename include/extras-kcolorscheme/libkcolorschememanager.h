@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorschememanager.html
+/// https://api.kde.org/kcolorschememanager.html
 
 /// k_colorschememanager_new constructs a new KColorSchemeManager object.
 ///
@@ -58,54 +58,54 @@ int32_t k_colorschememanager_qbase_metacall(void* self, int32_t param1, int para
 /// @param s const char*
 const char* k_colorschememanager_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#model)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#model)
 ///
 /// @param self KColorSchemeManager*
 QAbstractItemModel* k_colorschememanager_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#indexForSchemeId)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#indexForSchemeId)
 ///
 /// @param self KColorSchemeManager*
 /// @param id const char*
 QModelIndex* k_colorschememanager_index_for_scheme_id(void* self, const char* id);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#indexForScheme)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#indexForScheme)
 ///
 /// @param self KColorSchemeManager*
 /// @param name const char*
 QModelIndex* k_colorschememanager_index_for_scheme(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#saveSchemeToConfigFile)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#saveSchemeToConfigFile)
 ///
 /// @param self KColorSchemeManager*
 /// @param schemeName const char*
 void k_colorschememanager_save_scheme_to_config_file(void* self, const char* schemeName);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#setAutosaveChanges)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#setAutosaveChanges)
 ///
 /// @param self KColorSchemeManager*
 /// @param autosaveChanges bool
 void k_colorschememanager_set_autosave_changes(void* self, bool autosaveChanges);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#activeSchemeId)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#activeSchemeId)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorSchemeManager*
 const char* k_colorschememanager_active_scheme_id(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#activeSchemeName)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#activeSchemeName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KColorSchemeManager*
 const char* k_colorschememanager_active_scheme_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#instance)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#instance)
 ///
 KColorSchemeManager* k_colorschememanager_instance();
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#activateScheme)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#activateScheme)
 ///
 /// @param self KColorSchemeManager*
 /// @param index QModelIndex*
@@ -773,7 +773,7 @@ void k_colorschememanager_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KColorSchemeManager* self, const char* objectName)
 void k_colorschememanager_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememanager.html#dtor.KColorSchemeManager)
+/// [Qt documentation](https://api.kde.org/kcolorschememanager.html#dtor.KColorSchemeManager)
 ///
 /// Delete this object from C++ memory.
 ///

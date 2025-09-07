@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-spellcheckdecorator.html
+/// https://api.kde.org/sonnet-spellcheckdecorator.html
 
 /// k_sonnet__spellcheckdecorator_new constructs a new Sonnet::SpellCheckDecorator object.
 ///
@@ -23,7 +23,7 @@ Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new(void* textEdit);
 /// @param textEdit QPlainTextEdit*
 Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new2(void* textEdit);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__SpellCheckDecorator*
 const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(void* self);
@@ -52,32 +52,32 @@ void k_sonnet__spellcheckdecorator_on_metacall(void* self, int32_t (*callback)(v
 /// @param param3 void*
 int32_t k_sonnet__spellcheckdecorator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__spellcheckdecorator_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#setHighlighter)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#setHighlighter)
 ///
 /// @param self Sonnet__SpellCheckDecorator*
 /// @param highlighter Sonnet__Highlighter*
 void k_sonnet__spellcheckdecorator_set_highlighter(void* self, void* highlighter);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#highlighter)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#highlighter)
 ///
 /// @param self Sonnet__SpellCheckDecorator*
 Sonnet__Highlighter* k_sonnet__spellcheckdecorator_highlighter(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
 ///
 /// @param self Sonnet__SpellCheckDecorator*
 /// @param obj QObject*
 /// @param event QEvent*
 bool k_sonnet__spellcheckdecorator_event_filter(void* self, void* obj, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -85,7 +85,7 @@ bool k_sonnet__spellcheckdecorator_event_filter(void* self, void* obj, void* eve
 /// @param callback bool func(Sonnet__SpellCheckDecorator* self, QObject* obj, QEvent* event)
 void k_sonnet__spellcheckdecorator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -94,13 +94,13 @@ void k_sonnet__spellcheckdecorator_on_event_filter(void* self, bool (*callback)(
 /// @param event QEvent*
 bool k_sonnet__spellcheckdecorator_qbase_event_filter(void* self, void* obj, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
 ///
 /// @param self Sonnet__SpellCheckDecorator*
 /// @param textBlock const char*
 bool k_sonnet__spellcheckdecorator_is_spell_checking_enabled_for_block(void* self, const char* textBlock);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
 ///
 /// Allows for overriding the related default method
 ///
@@ -108,7 +108,7 @@ bool k_sonnet__spellcheckdecorator_is_spell_checking_enabled_for_block(void* sel
 /// @param callback bool func(Sonnet__SpellCheckDecorator* self, const char* textBlock)
 void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(void* self, bool (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
+/// [Qt documentation](https://api.kde.org/sonnet-spellcheckdecorator.html#isSpellCheckingEnabledForBlock)
 ///
 /// Base class method implementation
 ///
@@ -116,7 +116,7 @@ void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(void* 
 /// @param textBlock const char*
 bool k_sonnet__spellcheckdecorator_qbase_is_spell_checking_enabled_for_block(void* self, const char* textBlock);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -124,7 +124,7 @@ bool k_sonnet__spellcheckdecorator_qbase_is_spell_checking_enabled_for_block(voi
 /// @param c const char*
 const char* k_sonnet__spellcheckdecorator_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

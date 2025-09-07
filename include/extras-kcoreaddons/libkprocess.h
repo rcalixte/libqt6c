@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kprocess.html
+/// https://api.kde.org/kprocess.html
 
 /// k_process_new constructs a new KProcess object.
 ///
@@ -58,116 +58,116 @@ int32_t k_process_qbase_metacall(void* self, int32_t param1, int param2, void* p
 /// @param s const char*
 const char* k_process_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setOutputChannelMode)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setOutputChannelMode)
 ///
 /// @param self KProcess*
 /// @param mode enum KProcess__OutputChannelMode
 void k_process_set_output_channel_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#outputChannelMode)
+/// [Qt documentation](https://api.kde.org/kprocess.html#outputChannelMode)
 ///
 /// @param self KProcess*
 ///
 /// @return enum KProcess__OutputChannelMode
 int32_t k_process_output_channel_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setNextOpenMode)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setNextOpenMode)
 ///
 /// @param self KProcess*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 void k_process_set_next_open_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setEnv)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setEnv)
 ///
 /// @param self KProcess*
 /// @param name const char*
 /// @param value const char*
 void k_process_set_env(void* self, const char* name, const char* value);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#unsetEnv)
+/// [Qt documentation](https://api.kde.org/kprocess.html#unsetEnv)
 ///
 /// @param self KProcess*
 /// @param name const char*
 void k_process_unset_env(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#clearEnvironment)
+/// [Qt documentation](https://api.kde.org/kprocess.html#clearEnvironment)
 ///
 /// @param self KProcess*
 void k_process_clear_environment(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setProgram)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setProgram)
 ///
 /// @param self KProcess*
 /// @param exe const char*
 void k_process_set_program(void* self, const char* exe);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setProgram)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setProgram)
 ///
 /// @param self KProcess*
 /// @param argv const char**
 void k_process_set_program2(void* self, const char* argv[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#operator-lt-lt)
+/// [Qt documentation](https://api.kde.org/kprocess.html#operator-lt-lt)
 ///
 /// @param self KProcess*
 /// @param arg const char*
 KProcess* k_process_operator_shift_left(void* self, const char* arg);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#operator-lt-lt)
+/// [Qt documentation](https://api.kde.org/kprocess.html#operator-lt-lt)
 ///
 /// @param self KProcess*
 /// @param args const char**
 KProcess* k_process_operator_shift_left2(void* self, const char* args[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#clearProgram)
+/// [Qt documentation](https://api.kde.org/kprocess.html#clearProgram)
 ///
 /// @param self KProcess*
 void k_process_clear_program(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setShellCommand)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setShellCommand)
 ///
 /// @param self KProcess*
 /// @param cmd const char*
 void k_process_set_shell_command(void* self, const char* cmd);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#program)
+/// [Qt documentation](https://api.kde.org/kprocess.html#program)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KProcess*
 const char** k_process_program(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#start)
+/// [Qt documentation](https://api.kde.org/kprocess.html#start)
 ///
 /// @param self KProcess*
 void k_process_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param self KProcess*
 int32_t k_process_execute(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param exe const char*
 int32_t k_process_execute2(const char* exe);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param argv const char**
 int32_t k_process_execute3(const char* argv[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#startDetached)
+/// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
 /// @param self KProcess*
 int32_t k_process_start_detached(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#startDetached)
+/// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
 /// @param exe const char*
 int32_t k_process_start_detached2(const char* exe);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#startDetached)
+/// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
 /// @param argv const char**
 int32_t k_process_start_detached3(const char* argv[]);
@@ -189,7 +189,7 @@ const char* k_process_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_process_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setEnv)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setEnv)
 ///
 /// @param self KProcess*
 /// @param name const char*
@@ -197,39 +197,39 @@ const char* k_process_tr3(const char* s, const char* c, int n);
 /// @param overwrite bool
 void k_process_set_env3(void* self, const char* name, const char* value, bool overwrite);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#setProgram)
+/// [Qt documentation](https://api.kde.org/kprocess.html#setProgram)
 ///
 /// @param self KProcess*
 /// @param exe const char*
 /// @param args const char**
 void k_process_set_program22(void* self, const char* exe, const char* args[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param self KProcess*
 /// @param msecs int
 int32_t k_process_execute1(void* self, int msecs);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param exe const char*
 /// @param args const char**
 int32_t k_process_execute22(const char* exe, const char* args[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param exe const char*
 /// @param args const char**
 /// @param msecs int
 int32_t k_process_execute32(const char* exe, const char* args[], int msecs);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#execute)
+/// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param argv const char**
 /// @param msecs int
 int32_t k_process_execute23(const char* argv[], int msecs);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#startDetached)
+/// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
 /// @param exe const char*
 /// @param args const char**
@@ -2319,14 +2319,14 @@ void k_process_on_ready_read_standard_error(void* self, void (*callback)(void*))
 /// @param callback void func(KProcess* self, const char* objectName)
 void k_process_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kprocess.html#dtor.KProcess)
+/// [Qt documentation](https://api.kde.org/kprocess.html#dtor.KProcess)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KProcess*
 void k_process_delete(void* self);
 
-/// https://api-staging.kde.org/kprocess.html#types
+/// https://api.kde.org/kprocess.html#types
 
 typedef enum {
     KPROCESS_OUTPUTCHANNELMODE_SEPARATECHANNELS = 0,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpluralhandlingspinbox.html
+/// https://api.kde.org/kpluralhandlingspinbox.html
 
 /// k_pluralhandlingspinbox_new constructs a new KPluralHandlingSpinBox object.
 ///
@@ -58,7 +58,7 @@ int32_t k_pluralhandlingspinbox_qbase_metacall(void* self, int32_t param1, int p
 /// @param s const char*
 const char* k_pluralhandlingspinbox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpluralhandlingspinbox.html#setSuffix)
+/// [Qt documentation](https://api.kde.org/kpluralhandlingspinbox.html#setSuffix)
 ///
 /// @param self KPluralHandlingSpinBox*
 /// @param suffix KLocalizedString*
@@ -5010,7 +5010,7 @@ void k_pluralhandlingspinbox_on_get_decoded_metric_f(void* self, double (*callba
 /// @param callback void func(KPluralHandlingSpinBox* self, const char* objectName)
 void k_pluralhandlingspinbox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpluralhandlingspinbox.html#dtor.KPluralHandlingSpinBox)
+/// [Qt documentation](https://api.kde.org/kpluralhandlingspinbox.html#dtor.KPluralHandlingSpinBox)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktooltiphelper.html
+/// https://api.kde.org/ktooltiphelper.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,18 +35,18 @@ int32_t k_tooltiphelper_metacall(void* self, int32_t param1, int param2, void* p
 /// @param s const char*
 const char* k_tooltiphelper_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltiphelper.html#instance)
+/// [Qt documentation](https://api.kde.org/ktooltiphelper.html#instance)
 ///
 KToolTipHelper* k_tooltiphelper_instance();
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltiphelper.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktooltiphelper.html#eventFilter)
 ///
 /// @param self KToolTipHelper*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_tooltiphelper_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltiphelper.html#whatsThisHintOnly)
+/// [Qt documentation](https://api.kde.org/ktooltiphelper.html#whatsThisHintOnly)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

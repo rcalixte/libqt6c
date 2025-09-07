@@ -11,16 +11,16 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kuit.html
+/// https://api.kde.org/kuit.html
 
-/// [Qt documentation](https://api-staging.kde.org/kuit.html#setupForDomain)
+/// [Qt documentation](https://api.kde.org/kuit.html#setupForDomain)
 ///
 /// @param param1 const char*
 KuitSetup* k_uit_setup_for_domain(const char* param1);
 
-/// https://api-staging.kde.org/kuitsetup.html
+/// https://api.kde.org/kuitsetup.html
 
-/// [Qt documentation](https://api-staging.kde.org/kuitsetup.html#setTagPattern)
+/// [Qt documentation](https://api.kde.org/kuitsetup.html#setTagPattern)
 ///
 /// @param self KuitSetup*
 /// @param tagName const char*
@@ -29,28 +29,28 @@ KuitSetup* k_uit_setup_for_domain(const char* param1);
 /// @param pattern KLocalizedString*
 void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[], int32_t format, void* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/kuitsetup.html#setTagClass)
+/// [Qt documentation](https://api.kde.org/kuitsetup.html#setTagClass)
 ///
 /// @param self KuitSetup*
 /// @param tagName const char*
 /// @param aClass enum Kuit__TagClass
 void k_uitsetup_set_tag_class(void* self, const char* tagName, int32_t aClass);
 
-/// [Qt documentation](https://api-staging.kde.org/kuitsetup.html#setFormatForMarker)
+/// [Qt documentation](https://api.kde.org/kuitsetup.html#setFormatForMarker)
 ///
 /// @param self KuitSetup*
 /// @param marker const char*
 /// @param format enum Kuit__VisualFormat
 void k_uitsetup_set_format_for_marker(void* self, const char* marker, int32_t format);
 
-/// [Qt documentation](https://api-staging.kde.org/kuitsetup.html#dtor.KuitSetup)
+/// [Qt documentation](https://api.kde.org/kuitsetup.html#dtor.KuitSetup)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KuitSetup*
 void k_uitsetup_delete(void* self);
 
-/// https://api-staging.kde.org/kuitsetup.html#types
+/// https://api.kde.org/kuitsetup.html#types
 
 typedef enum {
     KUIT_VISUALFORMAT_UNDEFINEDFORMAT = 0,

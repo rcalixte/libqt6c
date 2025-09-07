@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kshell.html
+/// https://api.kde.org/kshell.html
 
-/// [Qt documentation](https://api-staging.kde.org/kshell.html#splitArgs)
+/// [Qt documentation](https://api.kde.org/kshell.html#splitArgs)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -22,35 +22,35 @@
 /// @param param3 enum KShell__Errors*
 const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kshell.html#joinArgs)
+/// [Qt documentation](https://api.kde.org/kshell.html#joinArgs)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char**
 const char* k_shell_join_args(const char* param1[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kshell.html#quoteArg)
+/// [Qt documentation](https://api.kde.org/kshell.html#quoteArg)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_shell_quote_arg(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kshell.html#tildeExpand)
+/// [Qt documentation](https://api.kde.org/kshell.html#tildeExpand)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_shell_tilde_expand(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kshell.html#tildeCollapse)
+/// [Qt documentation](https://api.kde.org/kshell.html#tildeCollapse)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char*
 const char* k_shell_tilde_collapse(const char* param1);
 
-/// https://api-staging.kde.org/kshell.html#types
+/// https://api.kde.org/kshell.html#types
 
 typedef enum {
     KSHELL_OPTION_NOOPTIONS = 0,

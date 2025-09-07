@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klanguagebutton.html
+/// https://api.kde.org/klanguagebutton.html
 
 /// k_languagebutton_new constructs a new KLanguageButton object.
 ///
@@ -69,88 +69,88 @@ int32_t k_languagebutton_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_languagebutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#setLocale)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#setLocale)
 ///
 /// @param self KLanguageButton*
 /// @param locale const char*
 void k_languagebutton_set_locale(void* self, const char* locale);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#setText)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#setText)
 ///
 /// @param self KLanguageButton*
 /// @param text const char*
 void k_languagebutton_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#showLanguageCodes)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#showLanguageCodes)
 ///
 /// @param self KLanguageButton*
 /// @param show bool
 void k_languagebutton_show_language_codes(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#loadAllLanguages)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#loadAllLanguages)
 ///
 /// @param self KLanguageButton*
 void k_languagebutton_load_all_languages(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#insertLanguage)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#insertLanguage)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
 void k_languagebutton_insert_language(void* self, const char* languageCode);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#insertSeparator)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#insertSeparator)
 ///
 /// @param self KLanguageButton*
 void k_languagebutton_insert_separator(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#count)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#count)
 ///
 /// @param self KLanguageButton*
 int32_t k_languagebutton_count(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#clear)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#clear)
 ///
 /// @param self KLanguageButton*
 void k_languagebutton_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#current)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#current)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KLanguageButton*
 const char* k_languagebutton_current(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#contains)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#contains)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
 bool k_languagebutton_contains(void* self, const char* languageCode);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#setCurrentItem)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
 void k_languagebutton_set_current_item(void* self, const char* languageCode);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#activated)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#activated)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
 void k_languagebutton_activated(void* self, const char* languageCode);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#activated)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#activated)
 ///
 /// @param self KLanguageButton*
 /// @param callback void func(KLanguageButton* self, const char* languageCode)
 void k_languagebutton_on_activated(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#highlighted)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#highlighted)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
 void k_languagebutton_highlighted(void* self, const char* languageCode);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#highlighted)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#highlighted)
 ///
 /// @param self KLanguageButton*
 /// @param callback void func(KLanguageButton* self, const char* languageCode)
@@ -173,14 +173,14 @@ const char* k_languagebutton_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_languagebutton_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#insertLanguage)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#insertLanguage)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
 /// @param name const char*
 void k_languagebutton_insert_language2(void* self, const char* languageCode, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#insertLanguage)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#insertLanguage)
 ///
 /// @param self KLanguageButton*
 /// @param languageCode const char*
@@ -188,7 +188,7 @@ void k_languagebutton_insert_language2(void* self, const char* languageCode, con
 /// @param index int
 void k_languagebutton_insert_language3(void* self, const char* languageCode, const char* name, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#insertSeparator)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#insertSeparator)
 ///
 /// @param self KLanguageButton*
 /// @param index int
@@ -4422,7 +4422,7 @@ void k_languagebutton_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// @param callback void func(KLanguageButton* self, const char* objectName)
 void k_languagebutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klanguagebutton.html#dtor.KLanguageButton)
+/// [Qt documentation](https://api.kde.org/klanguagebutton.html#dtor.KLanguageButton)
 ///
 /// Delete this object from C++ memory.
 ///

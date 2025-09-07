@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcollapsiblegroupbox.html
+/// https://api.kde.org/kcollapsiblegroupbox.html
 
 /// k_collapsiblegroupbox_new constructs a new KCollapsibleGroupBox object.
 ///
@@ -58,36 +58,36 @@ int32_t k_collapsiblegroupbox_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_collapsiblegroupbox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#setTitle)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#setTitle)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param title const char*
 void k_collapsiblegroupbox_set_title(void* self, const char* title);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#title)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#title)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCollapsibleGroupBox*
 const char* k_collapsiblegroupbox_title(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#setExpanded)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#setExpanded)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param expanded bool
 void k_collapsiblegroupbox_set_expanded(void* self, bool expanded);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#isExpanded)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#isExpanded)
 ///
 /// @param self KCollapsibleGroupBox*
 bool k_collapsiblegroupbox_is_expanded(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#sizeHint)
 ///
 /// @param self KCollapsibleGroupBox*
 QSize* k_collapsiblegroupbox_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -95,19 +95,19 @@ QSize* k_collapsiblegroupbox_size_hint(void* self);
 /// @param callback QSize* func()
 void k_collapsiblegroupbox_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCollapsibleGroupBox*
 QSize* k_collapsiblegroupbox_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#minimumSizeHint)
 ///
 /// @param self KCollapsibleGroupBox*
 QSize* k_collapsiblegroupbox_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -115,57 +115,57 @@ QSize* k_collapsiblegroupbox_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_collapsiblegroupbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCollapsibleGroupBox*
 QSize* k_collapsiblegroupbox_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#toggle)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#toggle)
 ///
 /// @param self KCollapsibleGroupBox*
 void k_collapsiblegroupbox_toggle(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#expand)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#expand)
 ///
 /// @param self KCollapsibleGroupBox*
 void k_collapsiblegroupbox_expand(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#collapse)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#collapse)
 ///
 /// @param self KCollapsibleGroupBox*
 void k_collapsiblegroupbox_collapse(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#titleChanged)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#titleChanged)
 ///
 /// @param self KCollapsibleGroupBox*
 void k_collapsiblegroupbox_title_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#titleChanged)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#titleChanged)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param callback void func(KCollapsibleGroupBox* self)
 void k_collapsiblegroupbox_on_title_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#expandedChanged)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#expandedChanged)
 ///
 /// @param self KCollapsibleGroupBox*
 void k_collapsiblegroupbox_expanded_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#expandedChanged)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#expandedChanged)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param callback void func(KCollapsibleGroupBox* self)
 void k_collapsiblegroupbox_on_expanded_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#paintEvent)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QPaintEvent*
 void k_collapsiblegroupbox_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -173,7 +173,7 @@ void k_collapsiblegroupbox_paint_event(void* self, void* param1);
 /// @param callback void func(KCollapsibleGroupBox* self, QPaintEvent* param1)
 void k_collapsiblegroupbox_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -181,13 +181,13 @@ void k_collapsiblegroupbox_on_paint_event(void* self, void (*callback)(void*, vo
 /// @param param1 QPaintEvent*
 void k_collapsiblegroupbox_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#event)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#event)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QEvent*
 bool k_collapsiblegroupbox_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#event)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -195,7 +195,7 @@ bool k_collapsiblegroupbox_event(void* self, void* param1);
 /// @param callback bool func(KCollapsibleGroupBox* self, QEvent* param1)
 void k_collapsiblegroupbox_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#event)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#event)
 ///
 /// Base class method implementation
 ///
@@ -203,13 +203,13 @@ void k_collapsiblegroupbox_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_collapsiblegroupbox_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#mousePressEvent)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QMouseEvent*
 void k_collapsiblegroupbox_mouse_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -217,7 +217,7 @@ void k_collapsiblegroupbox_mouse_press_event(void* self, void* param1);
 /// @param callback void func(KCollapsibleGroupBox* self, QMouseEvent* param1)
 void k_collapsiblegroupbox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -225,13 +225,13 @@ void k_collapsiblegroupbox_on_mouse_press_event(void* self, void (*callback)(voi
 /// @param param1 QMouseEvent*
 void k_collapsiblegroupbox_qbase_mouse_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#mouseMoveEvent)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QMouseEvent*
 void k_collapsiblegroupbox_mouse_move_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -239,7 +239,7 @@ void k_collapsiblegroupbox_mouse_move_event(void* self, void* param1);
 /// @param callback void func(KCollapsibleGroupBox* self, QMouseEvent* param1)
 void k_collapsiblegroupbox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -247,13 +247,13 @@ void k_collapsiblegroupbox_on_mouse_move_event(void* self, void (*callback)(void
 /// @param param1 QMouseEvent*
 void k_collapsiblegroupbox_qbase_mouse_move_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#leaveEvent)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QEvent*
 void k_collapsiblegroupbox_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#leaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -261,7 +261,7 @@ void k_collapsiblegroupbox_leave_event(void* self, void* param1);
 /// @param callback void func(KCollapsibleGroupBox* self, QEvent* param1)
 void k_collapsiblegroupbox_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#leaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -269,13 +269,13 @@ void k_collapsiblegroupbox_on_leave_event(void* self, void (*callback)(void*, vo
 /// @param param1 QEvent*
 void k_collapsiblegroupbox_qbase_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#keyPressEvent)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QKeyEvent*
 void k_collapsiblegroupbox_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -283,7 +283,7 @@ void k_collapsiblegroupbox_key_press_event(void* self, void* param1);
 /// @param callback void func(KCollapsibleGroupBox* self, QKeyEvent* param1)
 void k_collapsiblegroupbox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -291,13 +291,13 @@ void k_collapsiblegroupbox_on_key_press_event(void* self, void (*callback)(void*
 /// @param param1 QKeyEvent*
 void k_collapsiblegroupbox_qbase_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#resizeEvent)
 ///
 /// @param self KCollapsibleGroupBox*
 /// @param param1 QResizeEvent*
 void k_collapsiblegroupbox_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -305,7 +305,7 @@ void k_collapsiblegroupbox_resize_event(void* self, void* param1);
 /// @param callback void func(KCollapsibleGroupBox* self, QResizeEvent* param1)
 void k_collapsiblegroupbox_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -4300,7 +4300,7 @@ void k_collapsiblegroupbox_on_get_decoded_metric_f(void* self, double (*callback
 /// @param callback void func(KCollapsibleGroupBox* self, const char* objectName)
 void k_collapsiblegroupbox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcollapsiblegroupbox.html#dtor.KCollapsibleGroupBox)
+/// [Qt documentation](https://api.kde.org/kcollapsiblegroupbox.html#dtor.KCollapsibleGroupBox)
 ///
 /// Delete this object from C++ memory.
 ///

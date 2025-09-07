@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/krecentfilesaction.html
+/// https://api.kde.org/krecentfilesaction.html
 
 /// k_recentfilesaction_new constructs a new KRecentFilesAction object.
 ///
@@ -67,7 +67,7 @@ int32_t k_recentfilesaction_qbase_metacall(void* self, int32_t param1, int param
 /// @param s const char*
 const char* k_recentfilesaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#addAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param action QAction*
@@ -75,13 +75,13 @@ const char* k_recentfilesaction_tr(const char* s);
 /// @param name const char*
 void k_recentfilesaction_add_action(void* self, void* action, void* url, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#removeAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param action QAction*
 QAction* k_recentfilesaction_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#removeAction)
 ///
 /// Allows for overriding the related default method
 ///
@@ -89,7 +89,7 @@ QAction* k_recentfilesaction_remove_action(void* self, void* action);
 /// @param callback QAction* func(KRecentFilesAction* self, QAction* action)
 void k_recentfilesaction_on_remove_action(void* self, QAction* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#removeAction)
 ///
 /// Base class method implementation
 ///
@@ -97,36 +97,36 @@ void k_recentfilesaction_on_remove_action(void* self, QAction* (*callback)(void*
 /// @param action QAction*
 QAction* k_recentfilesaction_qbase_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#maxItems)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#maxItems)
 ///
 /// @param self KRecentFilesAction*
 int32_t k_recentfilesaction_max_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#setMaxItems)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#setMaxItems)
 ///
 /// @param self KRecentFilesAction*
 /// @param maxItems int
 void k_recentfilesaction_set_max_items(void* self, int maxItems);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#loadEntries)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#loadEntries)
 ///
 /// @param self KRecentFilesAction*
 /// @param config KConfigGroup*
 void k_recentfilesaction_load_entries(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#saveEntries)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#saveEntries)
 ///
 /// @param self KRecentFilesAction*
 /// @param config KConfigGroup*
 void k_recentfilesaction_save_entries(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#addUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#addUrl)
 ///
 /// @param self KRecentFilesAction*
 /// @param url QUrl*
 void k_recentfilesaction_add_url(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#addUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#addUrl)
 ///
 /// @param self KRecentFilesAction*
 /// @param url QUrl*
@@ -134,23 +134,23 @@ void k_recentfilesaction_add_url(void* self, void* url);
 /// @param mimeType const char*
 void k_recentfilesaction_add_url2(void* self, void* url, const char* name, const char* mimeType);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#removeUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#removeUrl)
 ///
 /// @param self KRecentFilesAction*
 /// @param url QUrl*
 void k_recentfilesaction_remove_url(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#urls)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#urls)
 ///
 /// @param self KRecentFilesAction*
 libqt_list /* of QUrl* */ k_recentfilesaction_urls(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#clear)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#clear)
 ///
 /// @param self KRecentFilesAction*
 void k_recentfilesaction_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#clear)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#clear)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,31 +158,31 @@ void k_recentfilesaction_clear(void* self);
 /// @param callback void func()
 void k_recentfilesaction_on_clear(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#clear)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#clear)
 ///
 /// Base class method implementation
 ///
 /// @param self KRecentFilesAction*
 void k_recentfilesaction_qbase_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#urlSelected)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#urlSelected)
 ///
 /// @param self KRecentFilesAction*
 /// @param url QUrl*
 void k_recentfilesaction_url_selected(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#urlSelected)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#urlSelected)
 ///
 /// @param self KRecentFilesAction*
 /// @param callback void func(KRecentFilesAction* self, QUrl* url)
 void k_recentfilesaction_on_url_selected(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#recentListCleared)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#recentListCleared)
 ///
 /// @param self KRecentFilesAction*
 void k_recentfilesaction_recent_list_cleared(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#recentListCleared)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#recentListCleared)
 ///
 /// @param self KRecentFilesAction*
 /// @param callback void func(KRecentFilesAction* self)
@@ -205,7 +205,7 @@ const char* k_recentfilesaction_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_recentfilesaction_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#addAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param action QAction*
@@ -214,7 +214,7 @@ const char* k_recentfilesaction_tr3(const char* s, const char* c, int n);
 /// @param mimeType QMimeType*
 void k_recentfilesaction_add_action4(void* self, void* action, void* url, const char* name, void* mimeType);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#addUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#addUrl)
 ///
 /// @param self KRecentFilesAction*
 /// @param url QUrl*
@@ -223,7 +223,7 @@ void k_recentfilesaction_add_url22(void* self, void* url, const char* name);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolBarMode)
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -232,7 +232,7 @@ int32_t k_recentfilesaction_tool_bar_mode(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolBarMode)
 ///
 /// @param self KRecentFilesAction*
 /// @param mode enum KSelectAction__ToolBarMode
@@ -240,7 +240,7 @@ void k_recentfilesaction_set_tool_bar_mode(void* self, int32_t mode);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolButtonPopupMode)
 ///
 /// @param self KRecentFilesAction*
 ///
@@ -249,7 +249,7 @@ int32_t k_recentfilesaction_tool_button_popup_mode(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolButtonPopupMode)
 ///
 /// @param self KRecentFilesAction*
 /// @param mode enum QToolButton__ToolButtonPopupMode
@@ -257,28 +257,28 @@ void k_recentfilesaction_set_tool_button_popup_mode(void* self, int32_t mode);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#selectableActionGroup)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#selectableActionGroup)
 ///
 /// @param self KRecentFilesAction*
 QActionGroup* k_recentfilesaction_selectable_action_group(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentAction)
 ///
 /// @param self KRecentFilesAction*
 QAction* k_recentfilesaction_current_action(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentItem)
 ///
 /// @param self KRecentFilesAction*
 int32_t k_recentfilesaction_current_item(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentText)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -287,14 +287,14 @@ const char* k_recentfilesaction_current_text(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actions)
 ///
 /// @param self KRecentFilesAction*
 libqt_list /* of QAction* */ k_recentfilesaction_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KRecentFilesAction*
 /// @param index int
@@ -302,7 +302,7 @@ QAction* k_recentfilesaction_action(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KRecentFilesAction*
 /// @param text const char*
@@ -310,7 +310,7 @@ QAction* k_recentfilesaction_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param action QAction*
@@ -318,7 +318,7 @@ bool k_recentfilesaction_set_current_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentItem)
 ///
 /// @param self KRecentFilesAction*
 /// @param index int
@@ -326,7 +326,7 @@ bool k_recentfilesaction_set_current_item(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param text const char*
@@ -334,7 +334,7 @@ bool k_recentfilesaction_set_current_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param text const char*
@@ -342,7 +342,7 @@ QAction* k_recentfilesaction_add_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param icon QIcon*
@@ -351,7 +351,7 @@ QAction* k_recentfilesaction_add_action3(void* self, void* icon, const char* tex
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setItems)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setItems)
 ///
 /// @param self KRecentFilesAction*
 /// @param lst const char**
@@ -359,7 +359,7 @@ void k_recentfilesaction_set_items(void* self, const char* lst[]);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#items)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -368,14 +368,14 @@ const char** k_recentfilesaction_items(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#isEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#isEditable)
 ///
 /// @param self KRecentFilesAction*
 bool k_recentfilesaction_is_editable(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setEditable)
 ///
 /// @param self KRecentFilesAction*
 /// @param editable bool
@@ -383,14 +383,14 @@ void k_recentfilesaction_set_editable(void* self, bool editable);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#comboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#comboWidth)
 ///
 /// @param self KRecentFilesAction*
 int32_t k_recentfilesaction_combo_width(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setComboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setComboWidth)
 ///
 /// @param self KRecentFilesAction*
 /// @param width int
@@ -398,7 +398,7 @@ void k_recentfilesaction_set_combo_width(void* self, int width);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMaxComboViewCount)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMaxComboViewCount)
 ///
 /// @param self KRecentFilesAction*
 /// @param n int
@@ -406,14 +406,14 @@ void k_recentfilesaction_set_max_combo_view_count(void* self, int n);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAllActions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAllActions)
 ///
 /// @param self KRecentFilesAction*
 void k_recentfilesaction_remove_all_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMenuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMenuAccelsEnabled)
 ///
 /// @param self KRecentFilesAction*
 /// @param b bool
@@ -421,14 +421,14 @@ void k_recentfilesaction_set_menu_accels_enabled(void* self, bool b);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#menuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#menuAccelsEnabled)
 ///
 /// @param self KRecentFilesAction*
 bool k_recentfilesaction_menu_accels_enabled(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#changeItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#changeItem)
 ///
 /// @param self KRecentFilesAction*
 /// @param index int
@@ -437,7 +437,7 @@ void k_recentfilesaction_change_item(void* self, int index, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KRecentFilesAction*
 /// @param action QAction*
@@ -445,7 +445,7 @@ void k_recentfilesaction_action_triggered(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KRecentFilesAction*
 /// @param callback void func(KRecentFilesAction* self, QAction* action)
@@ -453,7 +453,7 @@ void k_recentfilesaction_on_action_triggered(void* self, void (*callback)(void*,
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KRecentFilesAction*
 /// @param index int
@@ -461,7 +461,7 @@ void k_recentfilesaction_index_triggered(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KRecentFilesAction*
 /// @param callback void func(KRecentFilesAction* self, int index)
@@ -469,7 +469,7 @@ void k_recentfilesaction_on_index_triggered(void* self, void (*callback)(void*, 
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KRecentFilesAction*
 /// @param text const char*
@@ -477,7 +477,7 @@ void k_recentfilesaction_text_triggered(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KRecentFilesAction*
 /// @param callback void func(KRecentFilesAction* self, const char* text)
@@ -485,7 +485,7 @@ void k_recentfilesaction_on_text_triggered(void* self, void (*callback)(void*, c
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KRecentFilesAction*
 /// @param text const char*
@@ -494,7 +494,7 @@ QAction* k_recentfilesaction_action22(void* self, const char* text, int32_t cs);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KRecentFilesAction*
 /// @param text const char*
@@ -1385,7 +1385,7 @@ void k_recentfilesaction_on_destroyed1(void* self, void (*callback)(void*, void*
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1396,7 +1396,7 @@ void k_recentfilesaction_insert_action(void* self, void* before, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1407,7 +1407,7 @@ void k_recentfilesaction_qbase_insert_action(void* self, void* before, void* act
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1417,7 +1417,7 @@ void k_recentfilesaction_on_insert_action(void* self, void (*callback)(void*, vo
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1427,7 +1427,7 @@ void k_recentfilesaction_slot_action_triggered(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1437,7 +1437,7 @@ void k_recentfilesaction_qbase_slot_action_triggered(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotActionTriggered)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1447,7 +1447,7 @@ void k_recentfilesaction_on_slot_action_triggered(void* self, void (*callback)(v
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1457,7 +1457,7 @@ QWidget* k_recentfilesaction_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1467,7 +1467,7 @@ QWidget* k_recentfilesaction_qbase_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1477,7 +1477,7 @@ void k_recentfilesaction_on_create_widget(void* self, QWidget* (*callback)(void*
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1487,7 +1487,7 @@ void k_recentfilesaction_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1497,7 +1497,7 @@ void k_recentfilesaction_qbase_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1507,7 +1507,7 @@ void k_recentfilesaction_on_delete_widget(void* self, void (*callback)(void*, vo
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1517,7 +1517,7 @@ bool k_recentfilesaction_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1527,7 +1527,7 @@ bool k_recentfilesaction_qbase_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1537,7 +1537,7 @@ void k_recentfilesaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1548,7 +1548,7 @@ bool k_recentfilesaction_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1559,7 +1559,7 @@ bool k_recentfilesaction_qbase_event_filter(void* self, void* watched, void* eve
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1719,7 +1719,7 @@ void k_recentfilesaction_on_disconnect_notify(void* self, void (*callback)(void*
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1729,7 +1729,7 @@ void k_recentfilesaction_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1739,7 +1739,7 @@ void k_recentfilesaction_qbase_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1901,7 +1901,7 @@ void k_recentfilesaction_on_is_signal_connected(void* self, bool (*callback)(voi
 /// @param callback void func(KRecentFilesAction* self, const char* objectName)
 void k_recentfilesaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesaction.html#dtor.KRecentFilesAction)
+/// [Qt documentation](https://api.kde.org/krecentfilesaction.html#dtor.KRecentFilesAction)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/krecentfilesmenu.html
+/// https://api.kde.org/krecentfilesmenu.html
 
 /// k_recentfilesmenu_new constructs a new KRecentFilesMenu object.
 ///
@@ -69,70 +69,70 @@ int32_t k_recentfilesmenu_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_recentfilesmenu_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#group)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#group)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KRecentFilesMenu*
 const char* k_recentfilesmenu_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#setGroup)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#setGroup)
 ///
 /// @param self KRecentFilesMenu*
 /// @param group const char*
 void k_recentfilesmenu_set_group(void* self, const char* group);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#addUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#addUrl)
 ///
 /// @param self KRecentFilesMenu*
 /// @param url QUrl*
 void k_recentfilesmenu_add_url(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#removeUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#removeUrl)
 ///
 /// @param self KRecentFilesMenu*
 /// @param url QUrl*
 void k_recentfilesmenu_remove_url(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#maximumItems)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#maximumItems)
 ///
 /// @param self KRecentFilesMenu*
 int32_t k_recentfilesmenu_maximum_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#setMaximumItems)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#setMaximumItems)
 ///
 /// @param self KRecentFilesMenu*
 /// @param maximumItems uint64_t
 void k_recentfilesmenu_set_maximum_items(void* self, uint64_t maximumItems);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#recentFiles)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#recentFiles)
 ///
 /// @param self KRecentFilesMenu*
 libqt_list /* of QUrl* */ k_recentfilesmenu_recent_files(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#clearRecentFiles)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#clearRecentFiles)
 ///
 /// @param self KRecentFilesMenu*
 void k_recentfilesmenu_clear_recent_files(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#urlTriggered)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#urlTriggered)
 ///
 /// @param self KRecentFilesMenu*
 /// @param url QUrl*
 void k_recentfilesmenu_url_triggered(void* self, void* url);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#urlTriggered)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#urlTriggered)
 ///
 /// @param self KRecentFilesMenu*
 /// @param callback void func(KRecentFilesMenu* self, QUrl* url)
 void k_recentfilesmenu_on_url_triggered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#recentFilesChanged)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#recentFilesChanged)
 ///
 /// @param self KRecentFilesMenu*
 void k_recentfilesmenu_recent_files_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#recentFilesChanged)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#recentFilesChanged)
 ///
 /// @param self KRecentFilesMenu*
 /// @param callback void func(KRecentFilesMenu* self)
@@ -155,7 +155,7 @@ const char* k_recentfilesmenu_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_recentfilesmenu_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#addUrl)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#addUrl)
 ///
 /// @param self KRecentFilesMenu*
 /// @param url QUrl*
@@ -4861,7 +4861,7 @@ void k_recentfilesmenu_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KRecentFilesMenu* self, const char* objectName)
 void k_recentfilesmenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/krecentfilesmenu.html#dtor.KRecentFilesMenu)
+/// [Qt documentation](https://api.kde.org/krecentfilesmenu.html#dtor.KRecentFilesMenu)
 ///
 /// Delete this object from C++ memory.
 ///

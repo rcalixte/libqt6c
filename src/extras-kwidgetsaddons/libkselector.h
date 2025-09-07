@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kselector.html
+/// https://api.kde.org/kselector.html
 
 /// k_selector_new constructs a new KSelector object.
 ///
@@ -69,42 +69,42 @@ int32_t k_selector_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_selector_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#contentsRect)
+/// [Qt documentation](https://api.kde.org/kselector.html#contentsRect)
 ///
 /// @param self KSelector*
 QRect* k_selector_contents_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#setIndent)
+/// [Qt documentation](https://api.kde.org/kselector.html#setIndent)
 ///
 /// @param self KSelector*
 /// @param i bool
 void k_selector_set_indent(void* self, bool i);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#indent)
+/// [Qt documentation](https://api.kde.org/kselector.html#indent)
 ///
 /// @param self KSelector*
 bool k_selector_indent(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#setArrowDirection)
+/// [Qt documentation](https://api.kde.org/kselector.html#setArrowDirection)
 ///
 /// @param self KSelector*
 /// @param direction enum Qt__ArrowType
 void k_selector_set_arrow_direction(void* self, int32_t direction);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#arrowDirection)
+/// [Qt documentation](https://api.kde.org/kselector.html#arrowDirection)
 ///
 /// @param self KSelector*
 ///
 /// @return enum Qt__ArrowType
 int32_t k_selector_arrow_direction(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawContents)
 ///
 /// @param self KSelector*
 /// @param param1 QPainter*
 void k_selector_draw_contents(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawContents)
 ///
 /// Allows for overriding the related default method
 ///
@@ -112,7 +112,7 @@ void k_selector_draw_contents(void* self, void* param1);
 /// @param callback void func(KSelector* self, QPainter* param1)
 void k_selector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawContents)
 ///
 /// Base class method implementation
 ///
@@ -120,14 +120,14 @@ void k_selector_on_draw_contents(void* self, void (*callback)(void*, void*));
 /// @param param1 QPainter*
 void k_selector_qbase_draw_contents(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawArrow)
 ///
 /// @param self KSelector*
 /// @param painter QPainter*
 /// @param pos QPoint*
 void k_selector_draw_arrow(void* self, void* painter, void* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawArrow)
 ///
 /// Allows for overriding the related default method
 ///
@@ -135,7 +135,7 @@ void k_selector_draw_arrow(void* self, void* painter, void* pos);
 /// @param callback void func(KSelector* self, QPainter* painter, QPoint* pos)
 void k_selector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawArrow)
 ///
 /// Base class method implementation
 ///
@@ -144,13 +144,13 @@ void k_selector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*))
 /// @param pos QPoint*
 void k_selector_qbase_draw_arrow(void* self, void* painter, void* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// @param self KSelector*
 /// @param param1 QPaintEvent*
 void k_selector_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,7 +158,7 @@ void k_selector_paint_event(void* self, void* param1);
 /// @param callback void func(KSelector* self, QPaintEvent* param1)
 void k_selector_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -166,13 +166,13 @@ void k_selector_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QPaintEvent*
 void k_selector_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mousePressEvent)
 ///
 /// @param self KSelector*
 /// @param e QMouseEvent*
 void k_selector_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,7 +180,7 @@ void k_selector_mouse_press_event(void* self, void* e);
 /// @param callback void func(KSelector* self, QMouseEvent* e)
 void k_selector_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -188,13 +188,13 @@ void k_selector_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 /// @param e QMouseEvent*
 void k_selector_qbase_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// @param self KSelector*
 /// @param e QMouseEvent*
 void k_selector_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -202,7 +202,7 @@ void k_selector_mouse_move_event(void* self, void* e);
 /// @param callback void func(KSelector* self, QMouseEvent* e)
 void k_selector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -210,13 +210,13 @@ void k_selector_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 /// @param e QMouseEvent*
 void k_selector_qbase_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// @param self KSelector*
 /// @param e QMouseEvent*
 void k_selector_mouse_release_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -224,7 +224,7 @@ void k_selector_mouse_release_event(void* self, void* e);
 /// @param callback void func(KSelector* self, QMouseEvent* e)
 void k_selector_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -232,13 +232,13 @@ void k_selector_on_mouse_release_event(void* self, void (*callback)(void*, void*
 /// @param e QMouseEvent*
 void k_selector_qbase_mouse_release_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#wheelEvent)
 ///
 /// @param self KSelector*
 /// @param param1 QWheelEvent*
 void k_selector_wheel_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -246,7 +246,7 @@ void k_selector_wheel_event(void* self, void* param1);
 /// @param callback void func(KSelector* self, QWheelEvent* param1)
 void k_selector_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
@@ -4721,14 +4721,14 @@ void k_selector_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// @param callback void func(KSelector* self, const char* objectName)
 void k_selector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#dtor.KSelector)
+/// [Qt documentation](https://api.kde.org/kselector.html#dtor.KSelector)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KSelector*
 void k_selector_delete(void* self);
 
-/// https://api-staging.kde.org/kgradientselector.html
+/// https://api.kde.org/kgradientselector.html
 
 /// k_gradientselector_new constructs a new KGradientSelector object.
 ///
@@ -4786,86 +4786,86 @@ int32_t k_gradientselector_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_gradientselector_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setStops)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setStops)
 ///
 /// @param self KGradientSelector*
 /// @param stops libqt_list /* of libqt_pair  tuple of double and QColor*  */
 void k_gradientselector_set_stops(void* self, libqt_list /* of libqt_pair  tuple of double and QColor*  */ stops);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#stops)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#stops)
 ///
 /// @param self KGradientSelector*
 libqt_list /* of libqt_pair  tuple of double and QColor*  */ k_gradientselector_stops(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setColors)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setColors)
 ///
 /// @param self KGradientSelector*
 /// @param col1 QColor*
 /// @param col2 QColor*
 void k_gradientselector_set_colors(void* self, void* col1, void* col2);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setText)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setText)
 ///
 /// @param self KGradientSelector*
 /// @param t1 const char*
 /// @param t2 const char*
 void k_gradientselector_set_text(void* self, const char* t1, const char* t2);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setFirstColor)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setFirstColor)
 ///
 /// @param self KGradientSelector*
 /// @param col QColor*
 void k_gradientselector_set_first_color(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setSecondColor)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setSecondColor)
 ///
 /// @param self KGradientSelector*
 /// @param col QColor*
 void k_gradientselector_set_second_color(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setFirstText)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setFirstText)
 ///
 /// @param self KGradientSelector*
 /// @param t const char*
 void k_gradientselector_set_first_text(void* self, const char* t);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#setSecondText)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#setSecondText)
 ///
 /// @param self KGradientSelector*
 /// @param t const char*
 void k_gradientselector_set_second_text(void* self, const char* t);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#firstColor)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#firstColor)
 ///
 /// @param self KGradientSelector*
 QColor* k_gradientselector_first_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#secondColor)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#secondColor)
 ///
 /// @param self KGradientSelector*
 QColor* k_gradientselector_second_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#firstText)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#firstText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGradientSelector*
 const char* k_gradientselector_first_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#secondText)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#secondText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGradientSelector*
 const char* k_gradientselector_second_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#drawContents)
 ///
 /// @param self KGradientSelector*
 /// @param param1 QPainter*
 void k_gradientselector_draw_contents(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#drawContents)
 ///
 /// Allows for overriding the related default method
 ///
@@ -4873,7 +4873,7 @@ void k_gradientselector_draw_contents(void* self, void* param1);
 /// @param callback void func(KGradientSelector* self, QPainter* param1)
 void k_gradientselector_on_draw_contents(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#drawContents)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#drawContents)
 ///
 /// Base class method implementation
 ///
@@ -4881,12 +4881,12 @@ void k_gradientselector_on_draw_contents(void* self, void (*callback)(void*, voi
 /// @param param1 QPainter*
 void k_gradientselector_qbase_draw_contents(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#minimumSize)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#minimumSize)
 ///
 /// @param self KGradientSelector*
 QSize* k_gradientselector_minimum_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#minimumSize)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#minimumSize)
 ///
 /// Allows for overriding the related default method
 ///
@@ -4894,7 +4894,7 @@ QSize* k_gradientselector_minimum_size(void* self);
 /// @param callback QSize* func()
 void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#minimumSize)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#minimumSize)
 ///
 /// Base class method implementation
 ///
@@ -4920,14 +4920,14 @@ const char* k_gradientselector_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#contentsRect)
+/// [Qt documentation](https://api.kde.org/kselector.html#contentsRect)
 ///
 /// @param self KGradientSelector*
 QRect* k_gradientselector_contents_rect(void* self);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#setIndent)
+/// [Qt documentation](https://api.kde.org/kselector.html#setIndent)
 ///
 /// @param self KGradientSelector*
 /// @param i bool
@@ -4935,14 +4935,14 @@ void k_gradientselector_set_indent(void* self, bool i);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#indent)
+/// [Qt documentation](https://api.kde.org/kselector.html#indent)
 ///
 /// @param self KGradientSelector*
 bool k_gradientselector_indent(void* self);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#setArrowDirection)
+/// [Qt documentation](https://api.kde.org/kselector.html#setArrowDirection)
 ///
 /// @param self KGradientSelector*
 /// @param direction enum Qt__ArrowType
@@ -4950,7 +4950,7 @@ void k_gradientselector_set_arrow_direction(void* self, int32_t direction);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#arrowDirection)
+/// [Qt documentation](https://api.kde.org/kselector.html#arrowDirection)
 ///
 /// @param self KGradientSelector*
 ///
@@ -7758,7 +7758,7 @@ int32_t k_gradientselector_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawArrow)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -7769,7 +7769,7 @@ void k_gradientselector_draw_arrow(void* self, void* painter, void* pos);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawArrow)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -7780,7 +7780,7 @@ void k_gradientselector_qbase_draw_arrow(void* self, void* painter, void* pos);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#drawArrow)
+/// [Qt documentation](https://api.kde.org/kselector.html#drawArrow)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7790,7 +7790,7 @@ void k_gradientselector_on_draw_arrow(void* self, void (*callback)(void*, void*,
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -7800,7 +7800,7 @@ void k_gradientselector_paint_event(void* self, void* param1);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -7810,7 +7810,7 @@ void k_gradientselector_qbase_paint_event(void* self, void* param1);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#paintEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7820,7 +7820,7 @@ void k_gradientselector_on_paint_event(void* self, void (*callback)(void*, void*
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mousePressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -7830,7 +7830,7 @@ void k_gradientselector_mouse_press_event(void* self, void* e);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mousePressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -7840,7 +7840,7 @@ void k_gradientselector_qbase_mouse_press_event(void* self, void* e);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mousePressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7850,7 +7850,7 @@ void k_gradientselector_on_mouse_press_event(void* self, void (*callback)(void*,
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -7860,7 +7860,7 @@ void k_gradientselector_mouse_move_event(void* self, void* e);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -7870,7 +7870,7 @@ void k_gradientselector_qbase_mouse_move_event(void* self, void* e);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseMoveEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7880,7 +7880,7 @@ void k_gradientselector_on_mouse_move_event(void* self, void (*callback)(void*, 
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -7890,7 +7890,7 @@ void k_gradientselector_mouse_release_event(void* self, void* e);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -7900,7 +7900,7 @@ void k_gradientselector_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#mouseReleaseEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -7910,7 +7910,7 @@ void k_gradientselector_on_mouse_release_event(void* self, void (*callback)(void
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#wheelEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -7920,7 +7920,7 @@ void k_gradientselector_wheel_event(void* self, void* param1);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#wheelEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -7930,7 +7930,7 @@ void k_gradientselector_qbase_wheel_event(void* self, void* param1);
 
 /// Inherited from KSelector
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselector.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/kselector.html#wheelEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -9582,7 +9582,7 @@ void k_gradientselector_on_get_decoded_metric_f(void* self, double (*callback)(v
 /// @param callback void func(KGradientSelector* self, const char* objectName)
 void k_gradientselector_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kgradientselector.html#dtor.KGradientSelector)
+/// [Qt documentation](https://api.kde.org/kgradientselector.html#dtor.KGradientSelector)
 ///
 /// Delete this object from C++ memory.
 ///

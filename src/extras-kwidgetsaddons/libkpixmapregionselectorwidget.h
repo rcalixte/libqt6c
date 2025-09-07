@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpixmapregionselectorwidget.html
+/// https://api.kde.org/kpixmapregionselectorwidget.html
 
 /// k_pixmapregionselectorwidget_new constructs a new KPixmapRegionSelectorWidget object.
 ///
@@ -58,95 +58,95 @@ int32_t k_pixmapregionselectorwidget_qbase_metacall(void* self, int32_t param1, 
 /// @param s const char*
 const char* k_pixmapregionselectorwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#setPixmap)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#setPixmap)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param pixmap QPixmap*
 void k_pixmapregionselectorwidget_set_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#pixmap)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#pixmap)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 QPixmap* k_pixmapregionselectorwidget_pixmap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#setSelectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#setSelectedRegion)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param rect QRect*
 void k_pixmapregionselectorwidget_set_selected_region(void* self, void* rect);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#selectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#selectedRegion)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 QRect* k_pixmapregionselectorwidget_selected_region(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#unzoomedSelectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#unzoomedSelectedRegion)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 QRect* k_pixmapregionselectorwidget_unzoomed_selected_region(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#resetSelection)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#resetSelection)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 void k_pixmapregionselectorwidget_reset_selection(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#selectedImage)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#selectedImage)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 QImage* k_pixmapregionselectorwidget_selected_image(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#setSelectionAspectRatio)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#setSelectionAspectRatio)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param width int
 /// @param height int
 void k_pixmapregionselectorwidget_set_selection_aspect_ratio(void* self, int width, int height);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#setFreeSelectionAspectRatio)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#setFreeSelectionAspectRatio)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 void k_pixmapregionselectorwidget_set_free_selection_aspect_ratio(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#setMaximumWidgetSize)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#setMaximumWidgetSize)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param width int
 /// @param height int
 void k_pixmapregionselectorwidget_set_maximum_widget_size(void* self, int width, int height);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#rotate)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#rotate)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param direction enum KPixmapRegionSelectorWidget__RotateDirection
 void k_pixmapregionselectorwidget_rotate(void* self, int32_t direction);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#rotateClockwise)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#rotateClockwise)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 void k_pixmapregionselectorwidget_rotate_clockwise(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#rotateCounterclockwise)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#rotateCounterclockwise)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 void k_pixmapregionselectorwidget_rotate_counterclockwise(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#pixmapRotated)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#pixmapRotated)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 void k_pixmapregionselectorwidget_pixmap_rotated(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#pixmapRotated)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#pixmapRotated)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param callback void func(KPixmapRegionSelectorWidget* self)
 void k_pixmapregionselectorwidget_on_pixmap_rotated(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#createPopupMenu)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#createPopupMenu)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 QMenu* k_pixmapregionselectorwidget_create_popup_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#createPopupMenu)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#createPopupMenu)
 ///
 /// Allows for overriding the related default method
 ///
@@ -154,21 +154,21 @@ QMenu* k_pixmapregionselectorwidget_create_popup_menu(void* self);
 /// @param callback QMenu* func()
 void k_pixmapregionselectorwidget_on_create_popup_menu(void* self, QMenu* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#createPopupMenu)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#createPopupMenu)
 ///
 /// Base class method implementation
 ///
 /// @param self KPixmapRegionSelectorWidget*
 QMenu* k_pixmapregionselectorwidget_qbase_create_popup_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#eventFilter)
 ///
 /// @param self KPixmapRegionSelectorWidget*
 /// @param obj QObject*
 /// @param ev QEvent*
 bool k_pixmapregionselectorwidget_event_filter(void* self, void* obj, void* ev);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -176,7 +176,7 @@ bool k_pixmapregionselectorwidget_event_filter(void* self, void* obj, void* ev);
 /// @param callback bool func(KPixmapRegionSelectorWidget* self, QObject* obj, QEvent* ev)
 void k_pixmapregionselectorwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -4406,14 +4406,14 @@ void k_pixmapregionselectorwidget_on_get_decoded_metric_f(void* self, double (*c
 /// @param callback void func(KPixmapRegionSelectorWidget* self, const char* objectName)
 void k_pixmapregionselectorwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectorwidget.html#dtor.KPixmapRegionSelectorWidget)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectorwidget.html#dtor.KPixmapRegionSelectorWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPixmapRegionSelectorWidget*
 void k_pixmapregionselectorwidget_delete(void* self);
 
-/// https://api-staging.kde.org/kpixmapregionselectorwidget.html#types
+/// https://api.kde.org/kpixmapregionselectorwidget.html#types
 
 typedef enum {
     KPIXMAPREGIONSELECTORWIDGET_ROTATEDIRECTION_ROTATE90 = 0,

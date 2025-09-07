@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktreewidgetsearchlinewidget.html
+/// https://api.kde.org/ktreewidgetsearchlinewidget.html
 
 /// k_treewidgetsearchlinewidget_new constructs a new KTreeWidgetSearchLineWidget object.
 ///
@@ -64,17 +64,17 @@ int32_t k_treewidgetsearchlinewidget_qbase_metacall(void* self, int32_t param1, 
 /// @param s const char*
 const char* k_treewidgetsearchlinewidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#searchLine)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#searchLine)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 KTreeWidgetSearchLine* k_treewidgetsearchlinewidget_search_line(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 void k_treewidgetsearchlinewidget_create_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
 ///
 /// Allows for overriding the related default method
 ///
@@ -82,20 +82,20 @@ void k_treewidgetsearchlinewidget_create_widgets(void* self);
 /// @param callback void func()
 void k_treewidgetsearchlinewidget_on_create_widgets(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#createWidgets)
 ///
 /// Base class method implementation
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 void k_treewidgetsearchlinewidget_qbase_create_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 /// @param treeWidget QTreeWidget*
 KTreeWidgetSearchLine* k_treewidgetsearchlinewidget_create_search_line(void* self, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
 ///
 /// Allows for overriding the related default method
 ///
@@ -103,7 +103,7 @@ KTreeWidgetSearchLine* k_treewidgetsearchlinewidget_create_search_line(void* sel
 /// @param callback KTreeWidgetSearchLine* func(KTreeWidgetSearchLineWidget* self, QTreeWidget* treeWidget)
 void k_treewidgetsearchlinewidget_on_create_search_line(void* self, KTreeWidgetSearchLine* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#createSearchLine)
 ///
 /// Base class method implementation
 ///
@@ -4364,7 +4364,7 @@ void k_treewidgetsearchlinewidget_on_get_decoded_metric_f(void* self, double (*c
 /// @param callback void func(KTreeWidgetSearchLineWidget* self, const char* objectName)
 void k_treewidgetsearchlinewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchlinewidget.html#dtor.KTreeWidgetSearchLineWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchlinewidget.html#dtor.KTreeWidgetSearchLineWidget)
 ///
 /// Delete this object from C++ memory.
 ///

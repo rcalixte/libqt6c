@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolumnresizer.html
+/// https://api.kde.org/kcolumnresizer.html
 
 /// k_columnresizer_new constructs a new KColumnResizer object.
 ///
@@ -58,32 +58,32 @@ int32_t k_columnresizer_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_columnresizer_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#addWidgetsFromLayout)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#addWidgetsFromLayout)
 ///
 /// @param self KColumnResizer*
 /// @param layout QLayout*
 void k_columnresizer_add_widgets_from_layout(void* self, void* layout);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#addWidget)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#addWidget)
 ///
 /// @param self KColumnResizer*
 /// @param widget QWidget*
 void k_columnresizer_add_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#removeWidget)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#removeWidget)
 ///
 /// @param self KColumnResizer*
 /// @param widget QWidget*
 void k_columnresizer_remove_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#eventFilter)
 ///
 /// @param self KColumnResizer*
 /// @param param1 QObject*
 /// @param event QEvent*
 bool k_columnresizer_event_filter(void* self, void* param1, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -91,7 +91,7 @@ bool k_columnresizer_event_filter(void* self, void* param1, void* event);
 /// @param callback bool func(KColumnResizer* self, QObject* param1, QEvent* event)
 void k_columnresizer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -117,7 +117,7 @@ const char* k_columnresizer_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_columnresizer_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#addWidgetsFromLayout)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#addWidgetsFromLayout)
 ///
 /// @param self KColumnResizer*
 /// @param layout QLayout*
@@ -737,7 +737,7 @@ void k_columnresizer_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(KColumnResizer* self, const char* objectName)
 void k_columnresizer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolumnresizer.html#dtor.KColumnResizer)
+/// [Qt documentation](https://api.kde.org/kcolumnresizer.html#dtor.KColumnResizer)
 ///
 /// Delete this object from C++ memory.
 ///

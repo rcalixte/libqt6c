@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/khelpmenu.html
+/// https://api.kde.org/khelpmenu.html
 
 /// k_helpmenu_new constructs a new KHelpMenu object.
 ///
@@ -84,64 +84,64 @@ int32_t k_helpmenu_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_helpmenu_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#setShowWhatsThis)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#setShowWhatsThis)
 ///
 /// @param self KHelpMenu*
 /// @param showWhatsThis bool
 void k_helpmenu_set_show_whats_this(void* self, bool showWhatsThis);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#menu)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#menu)
 ///
 /// @param self KHelpMenu*
 QMenu* k_helpmenu_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#action)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#action)
 ///
 /// @param self KHelpMenu*
 /// @param id enum KHelpMenu__MenuId
 QAction* k_helpmenu_action(void* self, int32_t id);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#appHelpActivated)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#appHelpActivated)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_app_help_activated(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#contextHelpActivated)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#contextHelpActivated)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_context_help_activated(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#aboutApplication)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#aboutApplication)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_about_application(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#aboutKDE)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#aboutKDE)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_about_k_d_e(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#reportBug)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#reportBug)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_report_bug(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#switchApplicationLanguage)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#switchApplicationLanguage)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_switch_application_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#donate)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#donate)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_donate(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#showAboutApplication)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#showAboutApplication)
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_show_about_application(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#showAboutApplication)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#showAboutApplication)
 ///
 /// @param self KHelpMenu*
 /// @param callback void func(KHelpMenu* self)
@@ -809,14 +809,14 @@ void k_helpmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param callback void func(KHelpMenu* self, const char* objectName)
 void k_helpmenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/khelpmenu.html#dtor.KHelpMenu)
+/// [Qt documentation](https://api.kde.org/khelpmenu.html#dtor.KHelpMenu)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KHelpMenu*
 void k_helpmenu_delete(void* self);
 
-/// https://api-staging.kde.org/khelpmenu.html#types
+/// https://api.kde.org/khelpmenu.html#types
 
 typedef enum {
     KHELPMENU_MENUID_MENUHELPCONTENTS = 0,

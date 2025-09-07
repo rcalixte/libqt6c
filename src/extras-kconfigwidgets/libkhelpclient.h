@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/khelpclient.html
+/// https://api.kde.org/khelpclient.html
 
-/// [Qt documentation](https://api-staging.kde.org/khelpclient.html#invokeHelp)
+/// [Qt documentation](https://api.kde.org/khelpclient.html#invokeHelp)
 ///
 /// @param param1 const char*
 /// @param param2 const char*

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kiconbutton.html
+/// https://api.kde.org/kiconbutton.html
 
 /// k_iconbutton_new constructs a new KIconButton object.
 ///
@@ -58,77 +58,77 @@ int32_t k_iconbutton_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_iconbutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setStrictIconSize)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setStrictIconSize)
 ///
 /// @param self KIconButton*
 /// @param b bool
 void k_iconbutton_set_strict_icon_size(void* self, bool b);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#strictIconSize)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#strictIconSize)
 ///
 /// @param self KIconButton*
 bool k_iconbutton_strict_icon_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setIconType)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setIconType)
 ///
 /// @param self KIconButton*
 /// @param group enum KIconLoader__Group
 /// @param context enum KIconLoader__Context
 void k_iconbutton_set_icon_type(void* self, int32_t group, int32_t context);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setIcon)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setIcon)
 ///
 /// @param self KIconButton*
 /// @param icon const char*
 void k_iconbutton_set_icon(void* self, const char* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setIcon)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setIcon)
 ///
 /// @param self KIconButton*
 /// @param icon QIcon*
 void k_iconbutton_set_icon2(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#resetIcon)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#resetIcon)
 ///
 /// @param self KIconButton*
 void k_iconbutton_reset_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#icon)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#icon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconButton*
 const char* k_iconbutton_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setIconSize)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setIconSize)
 ///
 /// @param self KIconButton*
 /// @param size int
 void k_iconbutton_set_icon_size(void* self, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#iconSize)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#iconSize)
 ///
 /// @param self KIconButton*
 int32_t k_iconbutton_icon_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setButtonIconSize)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setButtonIconSize)
 ///
 /// @param self KIconButton*
 /// @param size int
 void k_iconbutton_set_button_icon_size(void* self, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#buttonIconSize)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#buttonIconSize)
 ///
 /// @param self KIconButton*
 int32_t k_iconbutton_button_icon_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#iconChanged)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#iconChanged)
 ///
 /// @param self KIconButton*
 /// @param icon const char*
 void k_iconbutton_icon_changed(void* self, const char* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#iconChanged)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#iconChanged)
 ///
 /// @param self KIconButton*
 /// @param callback void func(KIconButton* self, const char* icon)
@@ -151,7 +151,7 @@ const char* k_iconbutton_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_iconbutton_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#setIconType)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#setIconType)
 ///
 /// @param self KIconButton*
 /// @param group enum KIconLoader__Group
@@ -4820,7 +4820,7 @@ void k_iconbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KIconButton* self, const char* objectName)
 void k_iconbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kiconbutton.html#dtor.KIconButton)
+/// [Qt documentation](https://api.kde.org/kiconbutton.html#dtor.KIconButton)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kwidgetitemdelegate.html
+/// https://api.kde.org/kwidgetitemdelegate.html
 
 /// k_widgetitemdelegate_new constructs a new KWidgetItemDelegate object.
 ///
@@ -60,28 +60,28 @@ int32_t k_widgetitemdelegate_qbase_metacall(void* self, int32_t param1, int para
 /// @param s const char*
 const char* k_widgetitemdelegate_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#itemView)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#itemView)
 ///
 /// @param self KWidgetItemDelegate*
 QAbstractItemView* k_widgetitemdelegate_item_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#focusedIndex)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#focusedIndex)
 ///
 /// @param self KWidgetItemDelegate*
 QPersistentModelIndex* k_widgetitemdelegate_focused_index(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#resetModel)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#resetModel)
 ///
 /// @param self KWidgetItemDelegate*
 void k_widgetitemdelegate_reset_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#createItemWidgets)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param index QModelIndex*
 libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#createItemWidgets)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// Allows for overriding the related default method
 ///
@@ -89,7 +89,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self
 /// @param callback libqt_list /* of QWidget* */ func(KWidgetItemDelegate* self, QModelIndex* index)
 void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list /* of QWidget* */ (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#createItemWidgets)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
 /// Base class method implementation
 ///
@@ -97,7 +97,7 @@ void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list /* of QW
 /// @param index QModelIndex*
 libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widgets libqt_list /* of QWidget* */
@@ -105,7 +105,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void
 /// @param index QPersistentModelIndex*
 void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// Allows for overriding the related default method
 ///
@@ -113,7 +113,7 @@ void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, vo
 /// @param callback void func(KWidgetItemDelegate* self, libqt_list /* of QWidget* */ /* of QWidget* */, QStyleOptionViewItem* option, QPersistentModelIndex* index)
 void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, libqt_list, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///
 /// Base class method implementation
 ///
@@ -123,14 +123,14 @@ void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(vo
 /// @param index QPersistentModelIndex*
 void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list widgets, void* option, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widget QWidget*
 /// @param types libqt_list /* of enum QEvent__Type */
 void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list types);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libq
 /// @param callback void func(KWidgetItemDelegate* self, QWidget* widget, libqt_list /* of enum QEvent__Type */ /* of enum QEvent__Type */)
 void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback)(void*, void*, libqt_list));
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#setBlockedEventTypes)
 ///
 /// Base class method implementation
 ///
@@ -147,7 +147,7 @@ void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback
 /// @param types libqt_list /* of enum QEvent__Type */
 void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list types);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// @param self KWidgetItemDelegate*
 /// @param widget QWidget*
@@ -155,7 +155,7 @@ void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget
 /// @return libqt_list of enum QEvent__Type
 libqt_list /* of int32_t */ k_widgetitemdelegate_blocked_event_types(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,7 +163,7 @@ libqt_list /* of int32_t */ k_widgetitemdelegate_blocked_event_types(void* self,
 /// @param callback int* func(KWidgetItemDelegate* self, QWidget* widget)
 void k_widgetitemdelegate_on_blocked_event_types(void* self, int* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#blockedEventTypes)
 ///
 /// Base class method implementation
 ///
@@ -1232,7 +1232,7 @@ void k_widgetitemdelegate_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KWidgetItemDelegate* self, const char* objectName)
 void k_widgetitemdelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwidgetitemdelegate.html#dtor.KWidgetItemDelegate)
+/// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#dtor.KWidgetItemDelegate)
 ///
 /// Delete this object from C++ memory.
 ///

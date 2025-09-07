@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcontextualhelpbutton.html
+/// https://api.kde.org/kcontextualhelpbutton.html
 
 /// k_contextualhelpbutton_new constructs a new KContextualHelpButton object.
 ///
@@ -65,36 +65,36 @@ int32_t k_contextualhelpbutton_qbase_metacall(void* self, int32_t param1, int pa
 /// @param s const char*
 const char* k_contextualhelpbutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#setContextualHelpText)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#setContextualHelpText)
 ///
 /// @param self KContextualHelpButton*
 /// @param contextualHelpText const char*
 void k_contextualhelpbutton_set_contextual_help_text(void* self, const char* contextualHelpText);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#contextualHelpText)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#contextualHelpText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KContextualHelpButton*
 const char* k_contextualhelpbutton_contextual_help_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#setHeightHintWidget)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#setHeightHintWidget)
 ///
 /// @param self KContextualHelpButton*
 /// @param heightHintWidget QWidget*
 void k_contextualhelpbutton_set_height_hint_widget(void* self, void* heightHintWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#heightHintWidget)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#heightHintWidget)
 ///
 /// @param self KContextualHelpButton*
 const QWidget* k_contextualhelpbutton_height_hint_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#sizeHint)
 ///
 /// @param self KContextualHelpButton*
 QSize* k_contextualhelpbutton_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -102,20 +102,20 @@ QSize* k_contextualhelpbutton_size_hint(void* self);
 /// @param callback QSize* func()
 void k_contextualhelpbutton_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KContextualHelpButton*
 QSize* k_contextualhelpbutton_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#contextualHelpTextChanged)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#contextualHelpTextChanged)
 ///
 /// @param self KContextualHelpButton*
 /// @param newContextualHelpText const char*
 void k_contextualhelpbutton_contextual_help_text_changed(void* self, const char* newContextualHelpText);
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#contextualHelpTextChanged)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#contextualHelpTextChanged)
 ///
 /// @param self KContextualHelpButton*
 /// @param callback void func(KContextualHelpButton* self, const char* newContextualHelpText)
@@ -4853,7 +4853,7 @@ void k_contextualhelpbutton_on_get_decoded_metric_f(void* self, double (*callbac
 /// @param callback void func(KContextualHelpButton* self, const char* objectName)
 void k_contextualhelpbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcontextualhelpbutton.html#dtor.KContextualHelpButton)
+/// [Qt documentation](https://api.kde.org/kcontextualhelpbutton.html#dtor.KContextualHelpButton)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpopupframe.html
+/// https://api.kde.org/kpopupframe.html
 
 /// k_popupframe_new constructs a new KPopupFrame object.
 ///
@@ -58,13 +58,13 @@ int32_t k_popupframe_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_popupframe_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#keyPressEvent)
 ///
 /// @param self KPopupFrame*
 /// @param e QKeyEvent*
 void k_popupframe_key_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ void k_popupframe_key_press_event(void* self, void* e);
 /// @param callback void func(KPopupFrame* self, QKeyEvent* e)
 void k_popupframe_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -80,13 +80,13 @@ void k_popupframe_on_key_press_event(void* self, void (*callback)(void*, void*))
 /// @param e QKeyEvent*
 void k_popupframe_qbase_key_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#hideEvent)
 ///
 /// @param self KPopupFrame*
 /// @param e QHideEvent*
 void k_popupframe_hide_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#hideEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ void k_popupframe_hide_event(void* self, void* e);
 /// @param callback void func(KPopupFrame* self, QHideEvent* e)
 void k_popupframe_on_hide_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#hideEvent)
 ///
 /// Base class method implementation
 ///
@@ -102,25 +102,25 @@ void k_popupframe_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param e QHideEvent*
 void k_popupframe_qbase_hide_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#close)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#close)
 ///
 /// @param self KPopupFrame*
 /// @param r int
 void k_popupframe_close(void* self, int r);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#setMainWidget)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#setMainWidget)
 ///
 /// @param self KPopupFrame*
 /// @param m QWidget*
 void k_popupframe_set_main_widget(void* self, void* m);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#resizeEvent)
 ///
 /// @param self KPopupFrame*
 /// @param resize QResizeEvent*
 void k_popupframe_resize_event(void* self, void* resize);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -128,7 +128,7 @@ void k_popupframe_resize_event(void* self, void* resize);
 /// @param callback void func(KPopupFrame* self, QResizeEvent* resize)
 void k_popupframe_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -136,31 +136,31 @@ void k_popupframe_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param resize QResizeEvent*
 void k_popupframe_qbase_resize_event(void* self, void* resize);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#popup)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#popup)
 ///
 /// @param self KPopupFrame*
 /// @param pos QPoint*
 void k_popupframe_popup(void* self, void* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#exec)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#exec)
 ///
 /// @param self KPopupFrame*
 /// @param p QPoint*
 int32_t k_popupframe_exec(void* self, void* p);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#exec)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#exec)
 ///
 /// @param self KPopupFrame*
 /// @param x int
 /// @param y int
 int32_t k_popupframe_exec2(void* self, int x, int y);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#leaveModality)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#leaveModality)
 ///
 /// @param self KPopupFrame*
 void k_popupframe_leave_modality(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#leaveModality)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#leaveModality)
 ///
 /// @param self KPopupFrame*
 /// @param callback void func(KPopupFrame* self)
@@ -4483,7 +4483,7 @@ void k_popupframe_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KPopupFrame* self, const char* objectName)
 void k_popupframe_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpopupframe.html#dtor.KPopupFrame)
+/// [Qt documentation](https://api.kde.org/kpopupframe.html#dtor.KPopupFrame)
 ///
 /// Delete this object from C++ memory.
 ///

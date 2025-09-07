@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/krichtextwidget.html
+/// https://api.kde.org/krichtextwidget.html
 
 /// k_richtextwidget_new constructs a new KRichTextWidget object.
 ///
@@ -65,12 +65,12 @@ int32_t k_richtextwidget_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_richtextwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#createActions)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#createActions)
 ///
 /// @param self KRichTextWidget*
 libqt_list /* of QAction* */ k_richtextwidget_create_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#createActions)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#createActions)
 ///
 /// Allows for overriding the related default method
 ///
@@ -78,38 +78,38 @@ libqt_list /* of QAction* */ k_richtextwidget_create_actions(void* self);
 /// @param callback libqt_list /* of QAction* */ func()
 void k_richtextwidget_on_create_actions(void* self, libqt_list /* of QAction* */ (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#createActions)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#createActions)
 ///
 /// Base class method implementation
 ///
 /// @param self KRichTextWidget*
 libqt_list /* of QAction* */ k_richtextwidget_qbase_create_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#richTextSupport)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#richTextSupport)
 ///
 /// @param self KRichTextWidget*
 ///
 /// @return flag of enum KRichTextWidget__RichTextSupportValues
 int64_t k_richtextwidget_rich_text_support(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#updateActionStates)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#updateActionStates)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_update_action_states(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#setActionsEnabled)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#setActionsEnabled)
 ///
 /// @param self KRichTextWidget*
 /// @param enabled bool
 void k_richtextwidget_set_actions_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#mouseReleaseEvent)
 ///
 /// @param self KRichTextWidget*
 /// @param event QMouseEvent*
 void k_richtextwidget_mouse_release_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -117,7 +117,7 @@ void k_richtextwidget_mouse_release_event(void* self, void* event);
 /// @param callback void func(KRichTextWidget* self, QMouseEvent* event)
 void k_richtextwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -144,14 +144,14 @@ const char* k_richtextwidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#enableRichTextMode)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#enableRichTextMode)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_enable_rich_text_mode(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#textMode)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#textMode)
 ///
 /// @param self KRichTextWidget*
 ///
@@ -160,7 +160,7 @@ int32_t k_richtextwidget_text_mode(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#textOrHtml)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#textOrHtml)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -169,7 +169,7 @@ const char* k_richtextwidget_text_or_html(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextOrHtml)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextOrHtml)
 ///
 /// @param self KRichTextWidget*
 /// @param text const char*
@@ -177,7 +177,7 @@ void k_richtextwidget_set_text_or_html(void* self, const char* text);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#currentLinkText)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#currentLinkText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -186,7 +186,7 @@ const char* k_richtextwidget_current_link_text(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#currentLinkUrl)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#currentLinkUrl)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -195,7 +195,7 @@ const char* k_richtextwidget_current_link_url(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#selectLinkText)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#selectLinkText)
 ///
 /// @param self KRichTextWidget*
 /// @param cursor QTextCursor*
@@ -203,14 +203,14 @@ void k_richtextwidget_select_link_text(void* self, void* cursor);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#selectLinkText)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#selectLinkText)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_select_link_text2(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#updateLink)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#updateLink)
 ///
 /// @param self KRichTextWidget*
 /// @param linkUrl const char*
@@ -219,63 +219,63 @@ void k_richtextwidget_update_link(void* self, const char* linkUrl, const char* l
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#canIndentList)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#canIndentList)
 ///
 /// @param self KRichTextWidget*
 bool k_richtextwidget_can_indent_list(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#canDedentList)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#canDedentList)
 ///
 /// @param self KRichTextWidget*
 bool k_richtextwidget_can_dedent_list(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#alignLeft)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#alignLeft)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_align_left(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#alignCenter)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#alignCenter)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_align_center(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#alignRight)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#alignRight)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_align_right(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#alignJustify)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#alignJustify)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_align_justify(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#makeRightToLeft)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#makeRightToLeft)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_make_right_to_left(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#makeLeftToRight)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#makeLeftToRight)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_make_left_to_right(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setListStyle)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setListStyle)
 ///
 /// @param self KRichTextWidget*
 /// @param _styleIndex int
@@ -283,21 +283,21 @@ void k_richtextwidget_set_list_style(void* self, int _styleIndex);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#indentListMore)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#indentListMore)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_indent_list_more(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#indentListLess)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#indentListLess)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_indent_list_less(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setFontFamily)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setFontFamily)
 ///
 /// @param self KRichTextWidget*
 /// @param fontFamily const char*
@@ -305,7 +305,7 @@ void k_richtextwidget_set_font_family(void* self, const char* fontFamily);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setFontSize)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setFontSize)
 ///
 /// @param self KRichTextWidget*
 /// @param size int
@@ -313,7 +313,7 @@ void k_richtextwidget_set_font_size(void* self, int size);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setFont)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setFont)
 ///
 /// @param self KRichTextWidget*
 /// @param font QFont*
@@ -321,7 +321,7 @@ void k_richtextwidget_set_font(void* self, void* font);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextBold)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextBold)
 ///
 /// @param self KRichTextWidget*
 /// @param bold bool
@@ -329,7 +329,7 @@ void k_richtextwidget_set_text_bold(void* self, bool bold);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextItalic)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextItalic)
 ///
 /// @param self KRichTextWidget*
 /// @param italic bool
@@ -337,7 +337,7 @@ void k_richtextwidget_set_text_italic(void* self, bool italic);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextUnderline)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextUnderline)
 ///
 /// @param self KRichTextWidget*
 /// @param underline bool
@@ -345,7 +345,7 @@ void k_richtextwidget_set_text_underline(void* self, bool underline);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextStrikeOut)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextStrikeOut)
 ///
 /// @param self KRichTextWidget*
 /// @param strikeOut bool
@@ -353,7 +353,7 @@ void k_richtextwidget_set_text_strike_out(void* self, bool strikeOut);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextForegroundColor)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextForegroundColor)
 ///
 /// @param self KRichTextWidget*
 /// @param color QColor*
@@ -361,7 +361,7 @@ void k_richtextwidget_set_text_foreground_color(void* self, void* color);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextBackgroundColor)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextBackgroundColor)
 ///
 /// @param self KRichTextWidget*
 /// @param color QColor*
@@ -369,21 +369,21 @@ void k_richtextwidget_set_text_background_color(void* self, void* color);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#insertHorizontalRule)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#insertHorizontalRule)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_insert_horizontal_rule(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#switchToPlainText)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#switchToPlainText)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_switch_to_plain_text(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#toCleanHtml)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#toCleanHtml)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -392,7 +392,7 @@ const char* k_richtextwidget_to_clean_html(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextSuperScript)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextSuperScript)
 ///
 /// @param self KRichTextWidget*
 /// @param superscript bool
@@ -400,7 +400,7 @@ void k_richtextwidget_set_text_super_script(void* self, bool superscript);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setTextSubScript)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setTextSubScript)
 ///
 /// @param self KRichTextWidget*
 /// @param subscript bool
@@ -408,7 +408,7 @@ void k_richtextwidget_set_text_sub_script(void* self, bool subscript);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#setHeadingLevel)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#setHeadingLevel)
 ///
 /// @param self KRichTextWidget*
 /// @param level int
@@ -416,14 +416,14 @@ void k_richtextwidget_set_heading_level(void* self, int level);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#insertPlainTextImplementation)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#insertPlainTextImplementation)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_insert_plain_text_implementation(void* self);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#textModeChanged)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#textModeChanged)
 ///
 /// @param self KRichTextWidget*
 /// @param mode enum KRichTextEdit__Mode
@@ -431,7 +431,7 @@ void k_richtextwidget_text_mode_changed(void* self, int32_t mode);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#textModeChanged)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#textModeChanged)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, enum KRichTextEdit__Mode mode)
@@ -439,7 +439,7 @@ void k_richtextwidget_on_text_mode_changed(void* self, void (*callback)(void*, i
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#highlightWord)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#highlightWord)
 ///
 /// @param self KRichTextWidget*
 /// @param length int
@@ -448,14 +448,14 @@ void k_richtextwidget_highlight_word(void* self, int length, int pos);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#highlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#highlighter)
 ///
 /// @param self KRichTextWidget*
 Sonnet__Highlighter* k_richtextwidget_highlighter(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setHighlighter)
 ///
 /// @param self KRichTextWidget*
 /// @param _highLighter Sonnet__Highlighter*
@@ -463,7 +463,7 @@ void k_richtextwidget_set_highlighter(void* self, void* _highLighter);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#enableFindReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#enableFindReplace)
 ///
 /// @param self KRichTextWidget*
 /// @param enabled bool
@@ -471,7 +471,7 @@ void k_richtextwidget_enable_find_replace(void* self, bool enabled);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingLanguage)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingLanguage)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -480,7 +480,7 @@ const char* k_richtextwidget_spell_checking_language(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showTabAction)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showTabAction)
 ///
 /// @param self KRichTextWidget*
 /// @param show bool
@@ -488,7 +488,7 @@ void k_richtextwidget_show_tab_action(void* self, bool show);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showAutoCorrectButton)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showAutoCorrectButton)
 ///
 /// @param self KRichTextWidget*
 /// @param show bool
@@ -496,14 +496,14 @@ void k_richtextwidget_show_auto_correct_button(void* self, bool show);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#forceSpellChecking)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#forceSpellChecking)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_force_spell_checking(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingChanged)
 ///
 /// @param self KRichTextWidget*
 /// @param param1 bool
@@ -511,7 +511,7 @@ void k_richtextwidget_check_spelling_changed(void* self, bool param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingChanged)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, bool param1)
@@ -519,7 +519,7 @@ void k_richtextwidget_on_check_spelling_changed(void* self, void (*callback)(voi
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckStatus)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckStatus)
 ///
 /// @param self KRichTextWidget*
 /// @param param1 const char*
@@ -527,7 +527,7 @@ void k_richtextwidget_spell_check_status(void* self, const char* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckStatus)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckStatus)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, const char* param1)
@@ -535,7 +535,7 @@ void k_richtextwidget_on_spell_check_status(void* self, void (*callback)(void*, 
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#languageChanged)
 ///
 /// @param self KRichTextWidget*
 /// @param language const char*
@@ -543,7 +543,7 @@ void k_richtextwidget_language_changed(void* self, const char* language);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#languageChanged)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, const char* language)
@@ -551,7 +551,7 @@ void k_richtextwidget_on_language_changed(void* self, void (*callback)(void*, co
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#aboutToShowContextMenu)
 ///
 /// @param self KRichTextWidget*
 /// @param menu QMenu*
@@ -559,7 +559,7 @@ void k_richtextwidget_about_to_show_context_menu(void* self, void* menu);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#aboutToShowContextMenu)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, QMenu* menu)
@@ -567,7 +567,7 @@ void k_richtextwidget_on_about_to_show_context_menu(void* self, void (*callback)
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckerAutoCorrect)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckerAutoCorrect)
 ///
 /// @param self KRichTextWidget*
 /// @param currentWord const char*
@@ -576,7 +576,7 @@ void k_richtextwidget_spell_checker_auto_correct(void* self, const char* current
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckerAutoCorrect)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckerAutoCorrect)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self, const char* currentWord, const char* autoCorrectWord)
@@ -584,14 +584,14 @@ void k_richtextwidget_on_spell_checker_auto_correct(void* self, void (*callback)
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingFinished)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingFinished)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_spell_checking_finished(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingFinished)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingFinished)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self)
@@ -599,14 +599,14 @@ void k_richtextwidget_on_spell_checking_finished(void* self, void (*callback)(vo
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingCanceled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingCanceled)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_spell_checking_canceled(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingCanceled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingCanceled)
 ///
 /// @param self KRichTextWidget*
 /// @param callback void func(KRichTextWidget* self)
@@ -614,7 +614,7 @@ void k_richtextwidget_on_spell_checking_canceled(void* self, void (*callback)(vo
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setSpellCheckingLanguage)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setSpellCheckingLanguage)
 ///
 /// @param self KRichTextWidget*
 /// @param language const char*
@@ -622,28 +622,28 @@ void k_richtextwidget_set_spell_checking_language(void* self, const char* langua
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpelling)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpelling)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_check_spelling(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showSpellConfigDialog)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showSpellConfigDialog)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_show_spell_config_dialog(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#replace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#replace)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_replace(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#addTextDecorator)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#addTextDecorator)
 ///
 /// @param self KRichTextWidget*
 /// @param decorator Sonnet__SpellCheckDecorator*
@@ -651,14 +651,14 @@ void k_richtextwidget_add_text_decorator(void* self, void* decorator);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#clearDecorator)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#clearDecorator)
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_clear_decorator(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showSpellConfigDialog)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showSpellConfigDialog)
 ///
 /// @param self KRichTextWidget*
 /// @param windowIcon const char*
@@ -4245,7 +4245,7 @@ int32_t k_richtextwidget_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#keyPressEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4255,7 +4255,7 @@ void k_richtextwidget_key_press_event(void* self, void* event);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#keyPressEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4265,7 +4265,7 @@ void k_richtextwidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from KRichTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/krichtextedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/krichtextedit.html#keyPressEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4275,7 +4275,7 @@ void k_richtextwidget_on_key_press_event(void* self, void (*callback)(void*, voi
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4285,7 +4285,7 @@ void k_richtextwidget_set_read_only(void* self, bool readOnly);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4295,7 +4295,7 @@ void k_richtextwidget_qbase_set_read_only(void* self, bool readOnly);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4305,7 +4305,7 @@ void k_richtextwidget_on_set_read_only(void* self, void (*callback)(void*, bool)
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setCheckSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4315,7 +4315,7 @@ void k_richtextwidget_set_check_spelling_enabled(void* self, bool check);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setCheckSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4325,7 +4325,7 @@ void k_richtextwidget_qbase_set_check_spelling_enabled(void* self, bool check);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setCheckSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4335,7 +4335,7 @@ void k_richtextwidget_on_set_check_spelling_enabled(void* self, void (*callback)
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4344,7 +4344,7 @@ bool k_richtextwidget_check_spelling_enabled(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4353,7 +4353,7 @@ bool k_richtextwidget_qbase_check_spelling_enabled(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4363,7 +4363,7 @@ void k_richtextwidget_on_check_spelling_enabled(void* self, bool (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4373,7 +4373,7 @@ bool k_richtextwidget_should_block_be_spell_checked(void* self, const char* bloc
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4383,7 +4383,7 @@ bool k_richtextwidget_qbase_should_block_be_spell_checked(void* self, const char
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4393,7 +4393,7 @@ void k_richtextwidget_on_should_block_be_spell_checked(void* self, bool (*callba
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#createHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4402,7 +4402,7 @@ void k_richtextwidget_create_highlighter(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#createHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4411,7 +4411,7 @@ void k_richtextwidget_qbase_create_highlighter(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#createHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4421,7 +4421,7 @@ void k_richtextwidget_on_create_highlighter(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#mousePopupMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4430,7 +4430,7 @@ QMenu* k_richtextwidget_mouse_popup_menu(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#mousePopupMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4439,7 +4439,7 @@ QMenu* k_richtextwidget_qbase_mouse_popup_menu(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#mousePopupMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4449,7 +4449,7 @@ void k_richtextwidget_on_mouse_popup_menu(void* self, QMenu* (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#event)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4459,7 +4459,7 @@ bool k_richtextwidget_event(void* self, void* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#event)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4469,7 +4469,7 @@ bool k_richtextwidget_qbase_event(void* self, void* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#event)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4479,7 +4479,7 @@ void k_richtextwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4489,7 +4489,7 @@ void k_richtextwidget_focus_in_event(void* self, void* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4499,7 +4499,7 @@ void k_richtextwidget_qbase_focus_in_event(void* self, void* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4509,7 +4509,7 @@ void k_richtextwidget_on_focus_in_event(void* self, void (*callback)(void*, void
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4518,7 +4518,7 @@ void k_richtextwidget_delete_word_back(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4527,7 +4527,7 @@ void k_richtextwidget_qbase_delete_word_back(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4537,7 +4537,7 @@ void k_richtextwidget_on_delete_word_back(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4546,7 +4546,7 @@ void k_richtextwidget_delete_word_forward(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4555,7 +4555,7 @@ void k_richtextwidget_qbase_delete_word_forward(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4565,7 +4565,7 @@ void k_richtextwidget_on_delete_word_forward(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4575,7 +4575,7 @@ void k_richtextwidget_context_menu_event(void* self, void* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4585,7 +4585,7 @@ void k_richtextwidget_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6149,7 +6149,7 @@ void k_richtextwidget_on_disconnect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6158,7 +6158,7 @@ void k_richtextwidget_slot_do_replace(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6167,7 +6167,7 @@ void k_richtextwidget_qbase_slot_do_replace(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6177,7 +6177,7 @@ void k_richtextwidget_on_slot_do_replace(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplaceNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6186,7 +6186,7 @@ void k_richtextwidget_slot_replace_next(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplaceNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6195,7 +6195,7 @@ void k_richtextwidget_qbase_slot_replace_next(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplaceNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6205,7 +6205,7 @@ void k_richtextwidget_on_slot_replace_next(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6214,7 +6214,7 @@ void k_richtextwidget_slot_do_find(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6223,7 +6223,7 @@ void k_richtextwidget_qbase_slot_do_find(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6233,7 +6233,7 @@ void k_richtextwidget_on_slot_do_find(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6242,7 +6242,7 @@ void k_richtextwidget_slot_find(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6251,7 +6251,7 @@ void k_richtextwidget_qbase_slot_find(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6261,7 +6261,7 @@ void k_richtextwidget_on_slot_find(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6270,7 +6270,7 @@ void k_richtextwidget_slot_find_next(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6279,7 +6279,7 @@ void k_richtextwidget_qbase_slot_find_next(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6289,7 +6289,7 @@ void k_richtextwidget_on_slot_find_next(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindPrevious)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6298,7 +6298,7 @@ void k_richtextwidget_slot_find_previous(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindPrevious)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6307,7 +6307,7 @@ void k_richtextwidget_qbase_slot_find_previous(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindPrevious)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6317,7 +6317,7 @@ void k_richtextwidget_on_slot_find_previous(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6326,7 +6326,7 @@ void k_richtextwidget_slot_replace(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6335,7 +6335,7 @@ void k_richtextwidget_qbase_slot_replace(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6345,7 +6345,7 @@ void k_richtextwidget_on_slot_replace(void* self, void (*callback)());
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotSpeakText)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -6354,7 +6354,7 @@ void k_richtextwidget_slot_speak_text(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotSpeakText)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -6363,7 +6363,7 @@ void k_richtextwidget_qbase_slot_speak_text(void* self);
 
 /// Inherited from KTextEdit
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotSpeakText)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -6793,14 +6793,14 @@ void k_richtextwidget_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// @param callback void func(KRichTextWidget* self, const char* objectName)
 void k_richtextwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/krichtextwidget.html#dtor.KRichTextWidget)
+/// [Qt documentation](https://api.kde.org/krichtextwidget.html#dtor.KRichTextWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KRichTextWidget*
 void k_richtextwidget_delete(void* self);
 
-/// https://api-staging.kde.org/krichtextwidget.html#types
+/// https://api.kde.org/krichtextwidget.html#types
 
 typedef enum {
     KRICHTEXTWIDGET_RICHTEXTSUPPORTVALUES_DISABLERICHTEXT = 0,

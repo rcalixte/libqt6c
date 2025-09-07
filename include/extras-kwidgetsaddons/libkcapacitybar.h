@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcapacitybar.html
+/// https://api.kde.org/kcapacitybar.html
 
 /// k_capacitybar_new constructs a new KCapacityBar object.
 ///
@@ -69,97 +69,97 @@ int32_t k_capacitybar_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_capacitybar_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setValue)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setValue)
 ///
 /// @param self KCapacityBar*
 /// @param value int
 void k_capacitybar_set_value(void* self, int value);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#value)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#value)
 ///
 /// @param self KCapacityBar*
 int32_t k_capacitybar_value(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setText)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setText)
 ///
 /// @param self KCapacityBar*
 /// @param text const char*
 void k_capacitybar_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#text)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCapacityBar*
 const char* k_capacitybar_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setFillFullBlocks)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setFillFullBlocks)
 ///
 /// @param self KCapacityBar*
 /// @param fillFullBlocks bool
 void k_capacitybar_set_fill_full_blocks(void* self, bool fillFullBlocks);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#fillFullBlocks)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#fillFullBlocks)
 ///
 /// @param self KCapacityBar*
 bool k_capacitybar_fill_full_blocks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setContinuous)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setContinuous)
 ///
 /// @param self KCapacityBar*
 /// @param continuous bool
 void k_capacitybar_set_continuous(void* self, bool continuous);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#continuous)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#continuous)
 ///
 /// @param self KCapacityBar*
 bool k_capacitybar_continuous(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setBarHeight)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setBarHeight)
 ///
 /// @param self KCapacityBar*
 /// @param barHeight int
 void k_capacitybar_set_bar_height(void* self, int barHeight);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#barHeight)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#barHeight)
 ///
 /// @param self KCapacityBar*
 int32_t k_capacitybar_bar_height(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setHorizontalTextAlignment)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setHorizontalTextAlignment)
 ///
 /// @param self KCapacityBar*
 /// @param textAlignment flag of enum Qt__AlignmentFlag
 void k_capacitybar_set_horizontal_text_alignment(void* self, int32_t textAlignment);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#horizontalTextAlignment)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#horizontalTextAlignment)
 ///
 /// @param self KCapacityBar*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 int32_t k_capacitybar_horizontal_text_alignment(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#setDrawTextMode)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#setDrawTextMode)
 ///
 /// @param self KCapacityBar*
 /// @param mode enum KCapacityBar__DrawTextMode
 void k_capacitybar_set_draw_text_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#drawTextMode)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#drawTextMode)
 ///
 /// @param self KCapacityBar*
 ///
 /// @return enum KCapacityBar__DrawTextMode
 int32_t k_capacitybar_draw_text_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#drawCapacityBar)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#drawCapacityBar)
 ///
 /// @param self KCapacityBar*
 /// @param p QPainter*
 /// @param rect QRect*
 void k_capacitybar_draw_capacity_bar(void* self, void* p, void* rect);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#drawCapacityBar)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#drawCapacityBar)
 ///
 /// @param self KCapacityBar*
 /// @param p QPainter*
@@ -167,12 +167,12 @@ void k_capacitybar_draw_capacity_bar(void* self, void* p, void* rect);
 /// @param state flag of enum QStyle__StateFlag
 void k_capacitybar_draw_capacity_bar2(void* self, void* p, void* rect, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#minimumSizeHint)
 ///
 /// @param self KCapacityBar*
 QSize* k_capacitybar_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,20 +180,20 @@ QSize* k_capacitybar_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_capacitybar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCapacityBar*
 QSize* k_capacitybar_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#paintEvent)
 ///
 /// @param self KCapacityBar*
 /// @param event QPaintEvent*
 void k_capacitybar_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -201,7 +201,7 @@ void k_capacitybar_paint_event(void* self, void* event);
 /// @param callback void func(KCapacityBar* self, QPaintEvent* event)
 void k_capacitybar_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -209,13 +209,13 @@ void k_capacitybar_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 void k_capacitybar_qbase_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#changeEvent)
 ///
 /// @param self KCapacityBar*
 /// @param event QEvent*
 void k_capacitybar_change_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -223,7 +223,7 @@ void k_capacitybar_change_event(void* self, void* event);
 /// @param callback void func(KCapacityBar* self, QEvent* event)
 void k_capacitybar_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#changeEvent)
 ///
 /// Base class method implementation
 ///
@@ -4396,14 +4396,14 @@ void k_capacitybar_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// @param callback void func(KCapacityBar* self, const char* objectName)
 void k_capacitybar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcapacitybar.html#dtor.KCapacityBar)
+/// [Qt documentation](https://api.kde.org/kcapacitybar.html#dtor.KCapacityBar)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KCapacityBar*
 void k_capacitybar_delete(void* self);
 
-/// https://api-staging.kde.org/kcapacitybar.html#types
+/// https://api.kde.org/kcapacitybar.html#types
 
 typedef enum {
     KCAPACITYBAR_DRAWTEXTMODE_DRAWTEXTINLINE = 0,

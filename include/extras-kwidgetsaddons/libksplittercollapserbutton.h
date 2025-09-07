@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ksplittercollapserbutton.html
+/// https://api.kde.org/ksplittercollapserbutton.html
 
 /// k_splittercollapserbutton_new constructs a new KSplitterCollapserButton object.
 ///
@@ -55,17 +55,17 @@ int32_t k_splittercollapserbutton_qbase_metacall(void* self, int32_t param1, int
 /// @param s const char*
 const char* k_splittercollapserbutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#isWidgetCollapsed)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#isWidgetCollapsed)
 ///
 /// @param self KSplitterCollapserButton*
 bool k_splittercollapserbutton_is_widget_collapsed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#sizeHint)
 ///
 /// @param self KSplitterCollapserButton*
 QSize* k_splittercollapserbutton_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,37 +73,37 @@ QSize* k_splittercollapserbutton_size_hint(void* self);
 /// @param callback QSize* func()
 void k_splittercollapserbutton_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KSplitterCollapserButton*
 QSize* k_splittercollapserbutton_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#collapse)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#collapse)
 ///
 /// @param self KSplitterCollapserButton*
 void k_splittercollapserbutton_collapse(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#restore)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#restore)
 ///
 /// @param self KSplitterCollapserButton*
 void k_splittercollapserbutton_restore(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#setCollapsed)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#setCollapsed)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param collapsed bool
 void k_splittercollapserbutton_set_collapsed(void* self, bool collapsed);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#eventFilter)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QObject*
 /// @param param2 QEvent*
 bool k_splittercollapserbutton_event_filter(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -111,7 +111,7 @@ bool k_splittercollapserbutton_event_filter(void* self, void* param1, void* para
 /// @param callback bool func(KSplitterCollapserButton* self, QObject* param1, QEvent* param2)
 void k_splittercollapserbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -120,13 +120,13 @@ void k_splittercollapserbutton_on_event_filter(void* self, bool (*callback)(void
 /// @param param2 QEvent*
 bool k_splittercollapserbutton_qbase_event_filter(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#paintEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param param1 QPaintEvent*
 void k_splittercollapserbutton_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -134,7 +134,7 @@ void k_splittercollapserbutton_paint_event(void* self, void* param1);
 /// @param callback void func(KSplitterCollapserButton* self, QPaintEvent* param1)
 void k_splittercollapserbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -142,13 +142,13 @@ void k_splittercollapserbutton_on_paint_event(void* self, void (*callback)(void*
 /// @param param1 QPaintEvent*
 void k_splittercollapserbutton_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#enterEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEnterEvent*
 void k_splittercollapserbutton_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#enterEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -156,7 +156,7 @@ void k_splittercollapserbutton_enter_event(void* self, void* event);
 /// @param callback void func(KSplitterCollapserButton* self, QEnterEvent* event)
 void k_splittercollapserbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#enterEvent)
 ///
 /// Base class method implementation
 ///
@@ -164,13 +164,13 @@ void k_splittercollapserbutton_on_enter_event(void* self, void (*callback)(void*
 /// @param event QEnterEvent*
 void k_splittercollapserbutton_qbase_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#leaveEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QEvent*
 void k_splittercollapserbutton_leave_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#leaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -178,7 +178,7 @@ void k_splittercollapserbutton_leave_event(void* self, void* event);
 /// @param callback void func(KSplitterCollapserButton* self, QEvent* event)
 void k_splittercollapserbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#leaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -186,13 +186,13 @@ void k_splittercollapserbutton_on_leave_event(void* self, void (*callback)(void*
 /// @param event QEvent*
 void k_splittercollapserbutton_qbase_leave_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#showEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#showEvent)
 ///
 /// @param self KSplitterCollapserButton*
 /// @param event QShowEvent*
 void k_splittercollapserbutton_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#showEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -200,7 +200,7 @@ void k_splittercollapserbutton_show_event(void* self, void* event);
 /// @param callback void func(KSplitterCollapserButton* self, QShowEvent* event)
 void k_splittercollapserbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#showEvent)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -4788,7 +4788,7 @@ void k_splittercollapserbutton_on_get_decoded_metric_f(void* self, double (*call
 /// @param callback void func(KSplitterCollapserButton* self, const char* objectName)
 void k_splittercollapserbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksplittercollapserbutton.html#dtor.KSplitterCollapserButton)
+/// [Qt documentation](https://api.kde.org/ksplittercollapserbutton.html#dtor.KSplitterCollapserButton)
 ///
 /// Delete this object from C++ memory.
 ///

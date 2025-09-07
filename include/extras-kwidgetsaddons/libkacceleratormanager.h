@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kacceleratormanager.html
+/// https://api.kde.org/kacceleratormanager.html
 
 /// k_acceleratormanager_new constructs a new KAcceleratorManager object.
 ///
@@ -35,35 +35,35 @@ void k_acceleratormanager_copy_assign(void* self, void* other);
 /// @param other KAcceleratorManager*
 void k_acceleratormanager_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://api-staging.kde.org/kacceleratormanager.html#manage)
+/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#manage)
 ///
 /// @param widget QWidget*
 void k_acceleratormanager_manage(void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kacceleratormanager.html#last_manage)
+/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#last_manage)
 ///
 /// @param added const char*
 /// @param changed const char*
 /// @param removed const char*
 void k_acceleratormanager_last_manage(const char* added, const char* changed, const char* removed);
 
-/// [Qt documentation](https://api-staging.kde.org/kacceleratormanager.html#setNoAccel)
+/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#setNoAccel)
 ///
 /// @param widget QWidget*
 void k_acceleratormanager_set_no_accel(void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kacceleratormanager.html#addStandardActionNames)
+/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#addStandardActionNames)
 ///
 /// @param names const char**
 void k_acceleratormanager_add_standard_action_names(const char* names[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kacceleratormanager.html#manage)
+/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#manage)
 ///
 /// @param widget QWidget*
 /// @param programmers_mode bool
 void k_acceleratormanager_manage2(void* widget, bool programmers_mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kacceleratormanager.html#dtor.KAcceleratorManager)
+/// [Qt documentation](https://api.kde.org/kacceleratormanager.html#dtor.KAcceleratorManager)
 ///
 /// Delete this object from C++ memory.
 ///

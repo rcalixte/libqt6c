@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcharselect.html
+/// https://api.kde.org/kcharselect.html
 
 /// k_charselect_new constructs a new KCharSelect object.
 ///
@@ -73,12 +73,12 @@ int32_t k_charselect_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_charselect_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#sizeHint)
 ///
 /// @param self KCharSelect*
 QSize* k_charselect_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -86,133 +86,133 @@ QSize* k_charselect_size_hint(void* self);
 /// @param callback QSize* func()
 void k_charselect_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCharSelect*
 QSize* k_charselect_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#setAllPlanesEnabled)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#setAllPlanesEnabled)
 ///
 /// @param self KCharSelect*
 /// @param all bool
 void k_charselect_set_all_planes_enabled(void* self, bool all);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#allPlanesEnabled)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#allPlanesEnabled)
 ///
 /// @param self KCharSelect*
 bool k_charselect_all_planes_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentChar)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentChar)
 ///
 /// @param self KCharSelect*
 QChar* k_charselect_current_char(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentCodePoint)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentCodePoint)
 ///
 /// @param self KCharSelect*
 uint32_t k_charselect_current_code_point(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentFont)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentFont)
 ///
 /// @param self KCharSelect*
 QFont* k_charselect_current_font(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#displayedChars)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#displayedChars)
 ///
 /// @param self KCharSelect*
 libqt_list /* of QChar* */ k_charselect_displayed_chars(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#displayedCodePoints)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#displayedCodePoints)
 ///
 /// @param self KCharSelect*
 libqt_list /* of uint32_t */ k_charselect_displayed_code_points(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#setCurrentChar)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#setCurrentChar)
 ///
 /// @param self KCharSelect*
 /// @param c QChar*
 void k_charselect_set_current_char(void* self, void* c);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#setCurrentCodePoint)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#setCurrentCodePoint)
 ///
 /// @param self KCharSelect*
 /// @param codePoint uint32_t
 void k_charselect_set_current_code_point(void* self, uint32_t codePoint);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#setCurrentFont)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#setCurrentFont)
 ///
 /// @param self KCharSelect*
 /// @param font QFont*
 void k_charselect_set_current_font(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentFontChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentFontChanged)
 ///
 /// @param self KCharSelect*
 /// @param font QFont*
 void k_charselect_current_font_changed(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentFontChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentFontChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QFont* font)
 void k_charselect_on_current_font_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentCharChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentCharChanged)
 ///
 /// @param self KCharSelect*
 /// @param c QChar*
 void k_charselect_current_char_changed(void* self, void* c);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentCharChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentCharChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QChar* c)
 void k_charselect_on_current_char_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentCodePointChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentCodePointChanged)
 ///
 /// @param self KCharSelect*
 /// @param codePoint uint32_t
 void k_charselect_current_code_point_changed(void* self, uint32_t codePoint);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#currentCodePointChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#currentCodePointChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, uint32_t codePoint)
 void k_charselect_on_current_code_point_changed(void* self, void (*callback)(void*, uint32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#displayedCharsChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#displayedCharsChanged)
 ///
 /// @param self KCharSelect*
 void k_charselect_displayed_chars_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#displayedCharsChanged)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#displayedCharsChanged)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self)
 void k_charselect_on_displayed_chars_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#charSelected)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#charSelected)
 ///
 /// @param self KCharSelect*
 /// @param c QChar*
 void k_charselect_char_selected(void* self, void* c);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#charSelected)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#charSelected)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, QChar* c)
 void k_charselect_on_char_selected(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#codePointSelected)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#codePointSelected)
 ///
 /// @param self KCharSelect*
 /// @param codePoint uint32_t
 void k_charselect_code_point_selected(void* self, uint32_t codePoint);
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#codePointSelected)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#codePointSelected)
 ///
 /// @param self KCharSelect*
 /// @param callback void func(KCharSelect* self, uint32_t codePoint)
@@ -4443,14 +4443,14 @@ void k_charselect_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KCharSelect* self, const char* objectName)
 void k_charselect_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcharselect.html#dtor.KCharSelect)
+/// [Qt documentation](https://api.kde.org/kcharselect.html#dtor.KCharSelect)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KCharSelect*
 void k_charselect_delete(void* self);
 
-/// https://api-staging.kde.org/kcharselect.html#types
+/// https://api.kde.org/kcharselect.html#types
 
 typedef enum {
     KCHARSELECT_CONTROL_SEARCHLINE = 1,

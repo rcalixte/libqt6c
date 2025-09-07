@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-dictionarycombobox.html
+/// https://api.kde.org/sonnet-dictionarycombobox.html
 
 /// k_sonnet__dictionarycombobox_new constructs a new Sonnet::DictionaryComboBox object.
 ///
@@ -22,7 +22,7 @@ Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new(void* parent);
 ///
 Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 const QMetaObject* k_sonnet__dictionarycombobox_meta_object(void* self);
@@ -51,81 +51,81 @@ void k_sonnet__dictionarycombobox_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param3 void*
 int32_t k_sonnet__dictionarycombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__dictionarycombobox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#reloadCombo)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#reloadCombo)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 void k_sonnet__dictionarycombobox_reload_combo(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#currentDictionaryName)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#currentDictionaryName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__DictionaryComboBox*
 const char* k_sonnet__dictionarycombobox_current_dictionary_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#currentDictionary)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#currentDictionary)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__DictionaryComboBox*
 const char* k_sonnet__dictionarycombobox_current_dictionary(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#setCurrentByDictionaryName)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#setCurrentByDictionaryName)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param dictionaryName const char*
 void k_sonnet__dictionarycombobox_set_current_by_dictionary_name(void* self, const char* dictionaryName);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#assignByDictionnary)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#assignByDictionnary)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param dictionary const char*
 bool k_sonnet__dictionarycombobox_assign_by_dictionnary(void* self, const char* dictionary);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#assignDictionnaryName)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#assignDictionnaryName)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param name const char*
 bool k_sonnet__dictionarycombobox_assign_dictionnary_name(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#setCurrentByDictionary)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#setCurrentByDictionary)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param dictionary const char*
 void k_sonnet__dictionarycombobox_set_current_by_dictionary(void* self, const char* dictionary);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#dictionaryChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#dictionaryChanged)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param dictionary const char*
 void k_sonnet__dictionarycombobox_dictionary_changed(void* self, const char* dictionary);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#dictionaryChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#dictionaryChanged)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, const char* dictionary)
 void k_sonnet__dictionarycombobox_on_dictionary_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#dictionaryNameChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#dictionaryNameChanged)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param dictionaryName const char*
 void k_sonnet__dictionarycombobox_dictionary_name_changed(void* self, const char* dictionaryName);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dictionarycombobox.html#dictionaryNameChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-dictionarycombobox.html#dictionaryNameChanged)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, const char* dictionaryName)
 void k_sonnet__dictionarycombobox_on_dictionary_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -133,7 +133,7 @@ void k_sonnet__dictionarycombobox_on_dictionary_name_changed(void* self, void (*
 /// @param c const char*
 const char* k_sonnet__dictionarycombobox_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

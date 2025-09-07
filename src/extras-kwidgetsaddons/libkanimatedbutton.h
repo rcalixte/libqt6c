@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kanimatedbutton.html
+/// https://api.kde.org/kanimatedbutton.html
 
 /// k_animatedbutton_new constructs a new KAnimatedButton object.
 ///
@@ -58,25 +58,25 @@ int32_t k_animatedbutton_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_animatedbutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kanimatedbutton.html#animationPath)
+/// [Qt documentation](https://api.kde.org/kanimatedbutton.html#animationPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KAnimatedButton*
 const char* k_animatedbutton_animation_path(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kanimatedbutton.html#setAnimationPath)
+/// [Qt documentation](https://api.kde.org/kanimatedbutton.html#setAnimationPath)
 ///
 /// @param self KAnimatedButton*
 /// @param path const char*
 void k_animatedbutton_set_animation_path(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kanimatedbutton.html#start)
+/// [Qt documentation](https://api.kde.org/kanimatedbutton.html#start)
 ///
 /// @param self KAnimatedButton*
 void k_animatedbutton_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kanimatedbutton.html#stop)
+/// [Qt documentation](https://api.kde.org/kanimatedbutton.html#stop)
 ///
 /// @param self KAnimatedButton*
 void k_animatedbutton_stop(void* self);
@@ -4841,7 +4841,7 @@ void k_animatedbutton_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// @param callback void func(KAnimatedButton* self, const char* objectName)
 void k_animatedbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kanimatedbutton.html#dtor.KAnimatedButton)
+/// [Qt documentation](https://api.kde.org/kanimatedbutton.html#dtor.KAnimatedButton)
 ///
 /// Delete this object from C++ memory.
 ///

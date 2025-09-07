@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktogglefullscreenaction.html
+/// https://api.kde.org/ktogglefullscreenaction.html
 
 /// k_togglefullscreenaction_new constructs a new KToggleFullScreenAction object.
 ///
@@ -60,26 +60,26 @@ int32_t k_togglefullscreenaction_qbase_metacall(void* self, int32_t param1, int 
 /// @param s const char*
 const char* k_togglefullscreenaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#setWindow)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#setWindow)
 ///
 /// @param self KToggleFullScreenAction*
 /// @param window QWidget*
 void k_togglefullscreenaction_set_window(void* self, void* window);
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#setFullScreen)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#setFullScreen)
 ///
 /// @param window QWidget*
 /// @param set bool
 void k_togglefullscreenaction_set_full_screen(void* window, bool set);
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#eventFilter)
 ///
 /// @param self KToggleFullScreenAction*
 /// @param object QObject*
 /// @param event QEvent*
 bool k_togglefullscreenaction_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -87,7 +87,7 @@ bool k_togglefullscreenaction_event_filter(void* self, void* object, void* event
 /// @param callback bool func(KToggleFullScreenAction* self, QObject* object, QEvent* event)
 void k_togglefullscreenaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -96,13 +96,13 @@ void k_togglefullscreenaction_on_event_filter(void* self, bool (*callback)(void*
 /// @param event QEvent*
 bool k_togglefullscreenaction_qbase_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#slotToggled)
 ///
 /// @param self KToggleFullScreenAction*
 /// @param checked bool
 void k_togglefullscreenaction_slot_toggled(void* self, bool checked);
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#slotToggled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -110,7 +110,7 @@ void k_togglefullscreenaction_slot_toggled(void* self, bool checked);
 /// @param callback void func(KToggleFullScreenAction* self, bool checked)
 void k_togglefullscreenaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#slotToggled)
 ///
 /// Base class method implementation
 ///
@@ -137,7 +137,7 @@ const char* k_togglefullscreenaction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KToggleAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#setCheckedState)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#setCheckedState)
 ///
 /// @param self KToggleFullScreenAction*
 /// @param checkedItem KGuiItem*
@@ -1300,7 +1300,7 @@ void k_togglefullscreenaction_on_is_signal_connected(void* self, bool (*callback
 /// @param callback void func(KToggleFullScreenAction* self, const char* objectName)
 void k_togglefullscreenaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktogglefullscreenaction.html#dtor.KToggleFullScreenAction)
+/// [Qt documentation](https://api.kde.org/ktogglefullscreenaction.html#dtor.KToggleFullScreenAction)
 ///
 /// Delete this object from C++ memory.
 ///

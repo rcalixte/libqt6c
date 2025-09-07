@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktoolbarpopupaction.html
+/// https://api.kde.org/ktoolbarpopupaction.html
 
 /// k_toolbarpopupaction_new constructs a new KToolBarPopupAction object.
 ///
@@ -56,31 +56,31 @@ int32_t k_toolbarpopupaction_qbase_metacall(void* self, int32_t param1, int para
 /// @param s const char*
 const char* k_toolbarpopupaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#popupMenu)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#popupMenu)
 ///
 /// @param self KToolBarPopupAction*
 QMenu* k_toolbarpopupaction_popup_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#popupMode)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#popupMode)
 ///
 /// @param self KToolBarPopupAction*
 ///
 /// @return enum KToolBarPopupAction__PopupMode
 int32_t k_toolbarpopupaction_popup_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#setPopupMode)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#setPopupMode)
 ///
 /// @param self KToolBarPopupAction*
 /// @param popupMode enum KToolBarPopupAction__PopupMode
 void k_toolbarpopupaction_set_popup_mode(void* self, int32_t popupMode);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
 ///
 /// @param self KToolBarPopupAction*
 /// @param parent QWidget*
 QWidget* k_toolbarpopupaction_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -88,7 +88,7 @@ QWidget* k_toolbarpopupaction_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KToolBarPopupAction* self, QWidget* parent)
 void k_toolbarpopupaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -1391,14 +1391,14 @@ void k_toolbarpopupaction_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KToolBarPopupAction* self, const char* objectName)
 void k_toolbarpopupaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoolbarpopupaction.html#dtor.KToolBarPopupAction)
+/// [Qt documentation](https://api.kde.org/ktoolbarpopupaction.html#dtor.KToolBarPopupAction)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KToolBarPopupAction*
 void k_toolbarpopupaction_delete(void* self);
 
-/// https://api-staging.kde.org/ktoolbarpopupaction.html#types
+/// https://api.kde.org/ktoolbarpopupaction.html#types
 
 typedef enum {
     KTOOLBARPOPUPACTION_POPUPMODE_NOPOPUP = -1,

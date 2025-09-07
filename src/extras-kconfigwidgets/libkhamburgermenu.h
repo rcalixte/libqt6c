@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/khamburgermenu.html
+/// https://api.kde.org/khamburgermenu.html
 
 /// k_hamburgermenu_new constructs a new KHamburgerMenu object.
 ///
@@ -54,77 +54,77 @@ int32_t k_hamburgermenu_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_hamburgermenu_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#setMenuBar)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#setMenuBar)
 ///
 /// @param self KHamburgerMenu*
 /// @param menuBar QMenuBar*
 void k_hamburgermenu_set_menu_bar(void* self, void* menuBar);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#menuBar)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#menuBar)
 ///
 /// @param self KHamburgerMenu*
 QMenuBar* k_hamburgermenu_menu_bar(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#setMenuBarAdvertised)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#setMenuBarAdvertised)
 ///
 /// @param self KHamburgerMenu*
 /// @param advertise bool
 void k_hamburgermenu_set_menu_bar_advertised(void* self, bool advertise);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#menuBarAdvertised)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#menuBarAdvertised)
 ///
 /// @param self KHamburgerMenu*
 bool k_hamburgermenu_menu_bar_advertised(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#setShowMenuBarAction)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#setShowMenuBarAction)
 ///
 /// @param self KHamburgerMenu*
 /// @param showMenuBarAction QAction*
 void k_hamburgermenu_set_show_menu_bar_action(void* self, void* showMenuBarAction);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#addToMenu)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#addToMenu)
 ///
 /// @param self KHamburgerMenu*
 /// @param menu QMenu*
 void k_hamburgermenu_add_to_menu(void* self, void* menu);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#insertIntoMenuBefore)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#insertIntoMenuBefore)
 ///
 /// @param self KHamburgerMenu*
 /// @param menu QMenu*
 /// @param before QAction*
 void k_hamburgermenu_insert_into_menu_before(void* self, void* menu, void* before);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#hideActionsOf)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#hideActionsOf)
 ///
 /// @param self KHamburgerMenu*
 /// @param widget QWidget*
 void k_hamburgermenu_hide_actions_of(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#showActionsOf)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#showActionsOf)
 ///
 /// @param self KHamburgerMenu*
 /// @param widget QWidget*
 void k_hamburgermenu_show_actions_of(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#aboutToShowMenu)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#aboutToShowMenu)
 ///
 /// @param self KHamburgerMenu*
 void k_hamburgermenu_about_to_show_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#aboutToShowMenu)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#aboutToShowMenu)
 ///
 /// @param self KHamburgerMenu*
 /// @param callback void func(KHamburgerMenu* self)
 void k_hamburgermenu_on_about_to_show_menu(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#createWidget)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#createWidget)
 ///
 /// @param self KHamburgerMenu*
 /// @param parent QWidget*
 QWidget* k_hamburgermenu_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#createWidget)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -132,7 +132,7 @@ QWidget* k_hamburgermenu_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KHamburgerMenu* self, QWidget* parent)
 void k_hamburgermenu_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#createWidget)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -1435,7 +1435,7 @@ void k_hamburgermenu_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(KHamburgerMenu* self, const char* objectName)
 void k_hamburgermenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/khamburgermenu.html#dtor.KHamburgerMenu)
+/// [Qt documentation](https://api.kde.org/khamburgermenu.html#dtor.KHamburgerMenu)
 ///
 /// Delete this object from C++ memory.
 ///

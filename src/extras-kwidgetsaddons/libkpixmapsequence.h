@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpixmapsequence.html
+/// https://api.kde.org/kpixmapsequence.html
 
 /// k_pixmapsequence_new constructs a new KPixmapSequence object.
 ///
@@ -39,39 +39,39 @@ KPixmapSequence* k_pixmapsequence_new4(const char* fullPath, int size);
 /// @param frameSize QSize*
 KPixmapSequence* k_pixmapsequence_new5(void* pixmap, void* frameSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#operator-eq)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#operator-eq)
 ///
 /// @param self KPixmapSequence*
 /// @param other KPixmapSequence*
 void k_pixmapsequence_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#isValid)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#isValid)
 ///
 /// @param self KPixmapSequence*
 bool k_pixmapsequence_is_valid(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#isEmpty)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#isEmpty)
 ///
 /// @param self KPixmapSequence*
 bool k_pixmapsequence_is_empty(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#frameSize)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#frameSize)
 ///
 /// @param self KPixmapSequence*
 QSize* k_pixmapsequence_frame_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#frameCount)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#frameCount)
 ///
 /// @param self KPixmapSequence*
 int32_t k_pixmapsequence_frame_count(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#frameAt)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#frameAt)
 ///
 /// @param self KPixmapSequence*
 /// @param index int
 QPixmap* k_pixmapsequence_frame_at(void* self, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequence.html#dtor.KPixmapSequence)
+/// [Qt documentation](https://api.kde.org/kpixmapsequence.html#dtor.KPixmapSequence)
 ///
 /// Delete this object from C++ memory.
 ///

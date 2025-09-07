@@ -11,32 +11,32 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ksandbox.html
+/// https://api.kde.org/ksandbox.html
 
-/// [Qt documentation](https://api-staging.kde.org/ksandbox.html#isInside)
+/// [Qt documentation](https://api.kde.org/ksandbox.html#isInside)
 ///
 bool k_sandbox_is_inside();
 
-/// [Qt documentation](https://api-staging.kde.org/ksandbox.html#isFlatpak)
+/// [Qt documentation](https://api.kde.org/ksandbox.html#isFlatpak)
 ///
 bool k_sandbox_is_flatpak();
 
-/// [Qt documentation](https://api-staging.kde.org/ksandbox.html#isSnap)
+/// [Qt documentation](https://api.kde.org/ksandbox.html#isSnap)
 ///
 bool k_sandbox_is_snap();
 
-/// [Qt documentation](https://api-staging.kde.org/ksandbox.html#makeHostContext)
+/// [Qt documentation](https://api.kde.org/ksandbox.html#makeHostContext)
 ///
 /// @param param1 QProcess*
 KSandbox__ProcessContext* k_sandbox_make_host_context(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksandbox.html#startHostProcess)
+/// [Qt documentation](https://api.kde.org/ksandbox.html#startHostProcess)
 ///
 /// @param param1 QProcess*
 /// @param param2 flag of enum QIODeviceBase__OpenModeFlag
 void k_sandbox_start_host_process(void* param1, int32_t param2);
 
-/// https://api-staging.kde.org/ksandbox-processcontext.html
+/// https://api.kde.org/ksandbox-processcontext.html
 
 /// k_sandbox__processcontext_new constructs a new KSandbox::ProcessContext object.
 ///

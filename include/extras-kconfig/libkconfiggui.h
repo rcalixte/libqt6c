@@ -11,19 +11,19 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfiggui.html
+/// https://api.kde.org/kconfiggui.html
 
-/// [Qt documentation](https://api-staging.kde.org/kconfiggui.html#sessionConfig)
+/// [Qt documentation](https://api.kde.org/kconfiggui.html#sessionConfig)
 ///
 KConfig* k_configgui_session_config();
 
-/// [Qt documentation](https://api-staging.kde.org/kconfiggui.html#setSessionConfig)
+/// [Qt documentation](https://api.kde.org/kconfiggui.html#setSessionConfig)
 ///
 /// @param param1 const char*
 /// @param param2 const char*
 void k_configgui_set_session_config(const char* param1, const char* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfiggui.html#hasSessionConfig)
+/// [Qt documentation](https://api.kde.org/kconfiggui.html#hasSessionConfig)
 ///
 bool k_configgui_has_session_config();
 #endif

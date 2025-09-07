@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-settings.html
+/// https://api.kde.org/sonnet-settings.html
 
 /// k_sonnet__settings_new constructs a new Sonnet::Settings object.
 ///
@@ -22,7 +22,7 @@ Sonnet__Settings* k_sonnet__settings_new();
 /// @param parent QObject*
 Sonnet__Settings* k_sonnet__settings_new2(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__Settings*
 const QMetaObject* k_sonnet__settings_meta_object(void* self);
@@ -51,291 +51,291 @@ void k_sonnet__settings_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param3 void*
 int32_t k_sonnet__settings_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__settings_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setDefaultLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setDefaultLanguage)
 ///
 /// @param self Sonnet__Settings*
 /// @param lang const char*
 void k_sonnet__settings_set_default_language(void* self, const char* lang);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultLanguage)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 const char* k_sonnet__settings_default_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setPreferredLanguages)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setPreferredLanguages)
 ///
 /// @param self Sonnet__Settings*
 /// @param lang const char**
 void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[]);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#preferredLanguages)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#preferredLanguages)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 const char** k_sonnet__settings_preferred_languages(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setDefaultClient)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setDefaultClient)
 ///
 /// @param self Sonnet__Settings*
 /// @param client const char*
 void k_sonnet__settings_set_default_client(void* self, const char* client);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultClient)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultClient)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 const char* k_sonnet__settings_default_client(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setSkipUppercase)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setSkipUppercase)
 ///
 /// @param self Sonnet__Settings*
 /// @param skipUppercase bool
 void k_sonnet__settings_set_skip_uppercase(void* self, bool skipUppercase);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#skipUppercase)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#skipUppercase)
 ///
 /// @param self Sonnet__Settings*
 bool k_sonnet__settings_skip_uppercase(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setAutodetectLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setAutodetectLanguage)
 ///
 /// @param self Sonnet__Settings*
 /// @param autodetectLanguage bool
 void k_sonnet__settings_set_autodetect_language(void* self, bool autodetectLanguage);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#autodetectLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#autodetectLanguage)
 ///
 /// @param self Sonnet__Settings*
 bool k_sonnet__settings_autodetect_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setSkipRunTogether)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setSkipRunTogether)
 ///
 /// @param self Sonnet__Settings*
 /// @param skipRunTogether bool
 void k_sonnet__settings_set_skip_run_together(void* self, bool skipRunTogether);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#skipRunTogether)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#skipRunTogether)
 ///
 /// @param self Sonnet__Settings*
 bool k_sonnet__settings_skip_run_together(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setBackgroundCheckerEnabled)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setBackgroundCheckerEnabled)
 ///
 /// @param self Sonnet__Settings*
 /// @param backgroundCheckerEnabled bool
 void k_sonnet__settings_set_background_checker_enabled(void* self, bool backgroundCheckerEnabled);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#backgroundCheckerEnabled)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#backgroundCheckerEnabled)
 ///
 /// @param self Sonnet__Settings*
 bool k_sonnet__settings_background_checker_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setCheckerEnabledByDefault)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setCheckerEnabledByDefault)
 ///
 /// @param self Sonnet__Settings*
 /// @param checkerEnabledByDefault bool
 void k_sonnet__settings_set_checker_enabled_by_default(void* self, bool checkerEnabledByDefault);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#checkerEnabledByDefault)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#checkerEnabledByDefault)
 ///
 /// @param self Sonnet__Settings*
 bool k_sonnet__settings_checker_enabled_by_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#setCurrentIgnoreList)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#setCurrentIgnoreList)
 ///
 /// @param self Sonnet__Settings*
 /// @param ignores const char**
 void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[]);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#currentIgnoreList)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#currentIgnoreList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 const char** k_sonnet__settings_current_ignore_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#clients)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#clients)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Settings*
 const char** k_sonnet__settings_clients(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#modified)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#modified)
 ///
 /// @param self Sonnet__Settings*
 bool k_sonnet__settings_modified(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#dictionaryModel)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#dictionaryModel)
 ///
 /// @param self Sonnet__Settings*
 QAbstractListModel* k_sonnet__settings_dictionary_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#save)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#save)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_save(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultIgnoreList)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultIgnoreList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** k_sonnet__settings_default_ignore_list();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultSkipUppercase)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultSkipUppercase)
 ///
 bool k_sonnet__settings_default_skip_uppercase();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultAutodetectLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultAutodetectLanguage)
 ///
 bool k_sonnet__settings_default_autodetect_language();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultBackgroundCheckerEnabled)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultBackgroundCheckerEnabled)
 ///
 bool k_sonnet__settings_default_background_checker_enabled();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultCheckerEnabledByDefault)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultCheckerEnabledByDefault)
 ///
 bool k_sonnet__settings_default_checker_enabled_by_default();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defauktSkipRunTogether)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defauktSkipRunTogether)
 ///
 bool k_sonnet__settings_defaukt_skip_run_together();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultDefaultLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultDefaultLanguage)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* k_sonnet__settings_default_default_language();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultPreferredLanguages)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultPreferredLanguages)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** k_sonnet__settings_default_preferred_languages();
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#skipUppercaseChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#skipUppercaseChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_skip_uppercase_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#skipUppercaseChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#skipUppercaseChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_skip_uppercase_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#autodetectLanguageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#autodetectLanguageChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_autodetect_language_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#autodetectLanguageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#autodetectLanguageChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_autodetect_language_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#backgroundCheckerEnabledChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#backgroundCheckerEnabledChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_background_checker_enabled_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#backgroundCheckerEnabledChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#backgroundCheckerEnabledChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_background_checker_enabled_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultClientChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultClientChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_default_client_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultClientChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultClientChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_default_client_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultLanguageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultLanguageChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_default_language_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#defaultLanguageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#defaultLanguageChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_default_language_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#preferredLanguagesChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#preferredLanguagesChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_preferred_languages_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#preferredLanguagesChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#preferredLanguagesChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_preferred_languages_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#skipRunTogetherChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#skipRunTogetherChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_skip_run_together_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#skipRunTogetherChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#skipRunTogetherChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_skip_run_together_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#checkerEnabledByDefaultChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#checkerEnabledByDefaultChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_checker_enabled_by_default_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#checkerEnabledByDefaultChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#checkerEnabledByDefaultChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_checker_enabled_by_default_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#currentIgnoreListChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#currentIgnoreListChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_current_ignore_list_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#currentIgnoreListChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#currentIgnoreListChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_current_ignore_list_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#modifiedChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#modifiedChanged)
 ///
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_modified_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-settings.html#modifiedChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-settings.html#modifiedChanged)
 ///
 /// @param self Sonnet__Settings*
 /// @param callback void func(Sonnet__Settings* self)
 void k_sonnet__settings_on_modified_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -343,7 +343,7 @@ void k_sonnet__settings_on_modified_changed(void* self, void (*callback)(void*))
 /// @param c const char*
 const char* k_sonnet__settings_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1002,7 +1002,7 @@ void k_sonnet__settings_on_object_name_changed(void* self, void (*callback)(void
 /// @param self Sonnet__Settings*
 void k_sonnet__settings_delete(void* self);
 
-/// https://api-staging.kde.org/sonnet-settings.html#types
+/// https://api.kde.org/sonnet-settings.html#types
 
 typedef enum {
     SONNET_SETTINGS_DICTIONARYROLES_LANGUAGECODEROLE = 257,

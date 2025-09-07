@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klocalizedcontext.html
+/// https://api.kde.org/klocalizedcontext.html
 
 /// k_localizedcontext_new constructs a new KLocalizedContext object.
 ///
@@ -58,20 +58,20 @@ int32_t k_localizedcontext_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_localizedcontext_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#translationDomain)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#translationDomain)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KLocalizedContext*
 const char* k_localizedcontext_translation_domain(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#setTranslationDomain)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#setTranslationDomain)
 ///
 /// @param self KLocalizedContext*
 /// @param domain const char*
 void k_localizedcontext_set_translation_domain(void* self, const char* domain);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -79,7 +79,7 @@ void k_localizedcontext_set_translation_domain(void* self, const char* domain);
 /// @param message const char*
 const char* k_localizedcontext_i18n(void* self, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -88,7 +88,7 @@ const char* k_localizedcontext_i18n(void* self, const char* message);
 /// @param message const char*
 const char* k_localizedcontext_i18nc(void* self, const char* context, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -97,7 +97,7 @@ const char* k_localizedcontext_i18nc(void* self, const char* context, const char
 /// @param plural const char*
 const char* k_localizedcontext_i18np(void* self, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -107,7 +107,7 @@ const char* k_localizedcontext_i18np(void* self, const char* singular, const cha
 /// @param plural const char*
 const char* k_localizedcontext_i18ncp(void* self, const char* context, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -116,7 +116,7 @@ const char* k_localizedcontext_i18ncp(void* self, const char* context, const cha
 /// @param message const char*
 const char* k_localizedcontext_i18nd(void* self, const char* domain, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -126,7 +126,7 @@ const char* k_localizedcontext_i18nd(void* self, const char* domain, const char*
 /// @param message const char*
 const char* k_localizedcontext_i18ndc(void* self, const char* domain, const char* context, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -136,7 +136,7 @@ const char* k_localizedcontext_i18ndc(void* self, const char* domain, const char
 /// @param plural const char*
 const char* k_localizedcontext_i18ndp(void* self, const char* domain, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -147,7 +147,7 @@ const char* k_localizedcontext_i18ndp(void* self, const char* domain, const char
 /// @param plural const char*
 const char* k_localizedcontext_i18ndcp(void* self, const char* domain, const char* context, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -155,7 +155,7 @@ const char* k_localizedcontext_i18ndcp(void* self, const char* domain, const cha
 /// @param message const char*
 const char* k_localizedcontext_xi18n(void* self, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -164,7 +164,7 @@ const char* k_localizedcontext_xi18n(void* self, const char* message);
 /// @param message const char*
 const char* k_localizedcontext_xi18nc(void* self, const char* context, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -173,7 +173,7 @@ const char* k_localizedcontext_xi18nc(void* self, const char* context, const cha
 /// @param plural const char*
 const char* k_localizedcontext_xi18np(void* self, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -183,7 +183,7 @@ const char* k_localizedcontext_xi18np(void* self, const char* singular, const ch
 /// @param plural const char*
 const char* k_localizedcontext_xi18ncp(void* self, const char* context, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -192,7 +192,7 @@ const char* k_localizedcontext_xi18ncp(void* self, const char* context, const ch
 /// @param message const char*
 const char* k_localizedcontext_xi18nd(void* self, const char* domain, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -202,7 +202,7 @@ const char* k_localizedcontext_xi18nd(void* self, const char* domain, const char
 /// @param message const char*
 const char* k_localizedcontext_xi18ndc(void* self, const char* domain, const char* context, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -212,7 +212,7 @@ const char* k_localizedcontext_xi18ndc(void* self, const char* domain, const cha
 /// @param plural const char*
 const char* k_localizedcontext_xi18ndp(void* self, const char* domain, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -223,13 +223,13 @@ const char* k_localizedcontext_xi18ndp(void* self, const char* domain, const cha
 /// @param plural const char*
 const char* k_localizedcontext_xi18ndcp(void* self, const char* domain, const char* context, const char* singular, const char* plural);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#translationDomainChanged)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#translationDomainChanged)
 ///
 /// @param self KLocalizedContext*
 /// @param translationDomain const char*
 void k_localizedcontext_translation_domain_changed(void* self, const char* translationDomain);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#translationDomainChanged)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#translationDomainChanged)
 ///
 /// @param self KLocalizedContext*
 /// @param callback void func(KLocalizedContext* self, const char* translationDomain)
@@ -252,7 +252,7 @@ const char* k_localizedcontext_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_localizedcontext_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -261,7 +261,7 @@ const char* k_localizedcontext_tr3(const char* s, const char* c, int n);
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18n2(void* self, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -271,7 +271,7 @@ const char* k_localizedcontext_i18n2(void* self, const char* message, void* para
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18n3(void* self, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -282,7 +282,7 @@ const char* k_localizedcontext_i18n3(void* self, const char* message, void* para
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18n4(void* self, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -294,7 +294,7 @@ const char* k_localizedcontext_i18n4(void* self, const char* message, void* para
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18n5(void* self, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -307,7 +307,7 @@ const char* k_localizedcontext_i18n5(void* self, const char* message, void* para
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18n6(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -321,7 +321,7 @@ const char* k_localizedcontext_i18n6(void* self, const char* message, void* para
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18n7(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -336,7 +336,7 @@ const char* k_localizedcontext_i18n7(void* self, const char* message, void* para
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18n8(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -352,7 +352,7 @@ const char* k_localizedcontext_i18n8(void* self, const char* message, void* para
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18n9(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -369,7 +369,7 @@ const char* k_localizedcontext_i18n9(void* self, const char* message, void* para
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18n10(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -387,7 +387,7 @@ const char* k_localizedcontext_i18n10(void* self, const char* message, void* par
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18n11(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -397,7 +397,7 @@ const char* k_localizedcontext_i18n11(void* self, const char* message, void* par
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18nc3(void* self, const char* context, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -408,7 +408,7 @@ const char* k_localizedcontext_i18nc3(void* self, const char* context, const cha
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18nc4(void* self, const char* context, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -420,7 +420,7 @@ const char* k_localizedcontext_i18nc4(void* self, const char* context, const cha
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18nc5(void* self, const char* context, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -433,7 +433,7 @@ const char* k_localizedcontext_i18nc5(void* self, const char* context, const cha
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18nc6(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -447,7 +447,7 @@ const char* k_localizedcontext_i18nc6(void* self, const char* context, const cha
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18nc7(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -462,7 +462,7 @@ const char* k_localizedcontext_i18nc7(void* self, const char* context, const cha
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18nc8(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -478,7 +478,7 @@ const char* k_localizedcontext_i18nc8(void* self, const char* context, const cha
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18nc9(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -495,7 +495,7 @@ const char* k_localizedcontext_i18nc9(void* self, const char* context, const cha
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18nc10(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -513,7 +513,7 @@ const char* k_localizedcontext_i18nc10(void* self, const char* context, const ch
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18nc11(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -532,7 +532,7 @@ const char* k_localizedcontext_i18nc11(void* self, const char* context, const ch
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18nc12(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -542,7 +542,7 @@ const char* k_localizedcontext_i18nc12(void* self, const char* context, const ch
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18np3(void* self, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -553,7 +553,7 @@ const char* k_localizedcontext_i18np3(void* self, const char* singular, const ch
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18np4(void* self, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -565,7 +565,7 @@ const char* k_localizedcontext_i18np4(void* self, const char* singular, const ch
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18np5(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -578,7 +578,7 @@ const char* k_localizedcontext_i18np5(void* self, const char* singular, const ch
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18np6(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -592,7 +592,7 @@ const char* k_localizedcontext_i18np6(void* self, const char* singular, const ch
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18np7(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -607,7 +607,7 @@ const char* k_localizedcontext_i18np7(void* self, const char* singular, const ch
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18np8(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -623,7 +623,7 @@ const char* k_localizedcontext_i18np8(void* self, const char* singular, const ch
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18np9(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -640,7 +640,7 @@ const char* k_localizedcontext_i18np9(void* self, const char* singular, const ch
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18np10(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -658,7 +658,7 @@ const char* k_localizedcontext_i18np10(void* self, const char* singular, const c
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18np11(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -677,7 +677,7 @@ const char* k_localizedcontext_i18np11(void* self, const char* singular, const c
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18np12(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -688,7 +688,7 @@ const char* k_localizedcontext_i18np12(void* self, const char* singular, const c
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18ncp4(void* self, const char* context, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -700,7 +700,7 @@ const char* k_localizedcontext_i18ncp4(void* self, const char* context, const ch
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18ncp5(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -713,7 +713,7 @@ const char* k_localizedcontext_i18ncp5(void* self, const char* context, const ch
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18ncp6(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -727,7 +727,7 @@ const char* k_localizedcontext_i18ncp6(void* self, const char* context, const ch
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18ncp7(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -742,7 +742,7 @@ const char* k_localizedcontext_i18ncp7(void* self, const char* context, const ch
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18ncp8(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -758,7 +758,7 @@ const char* k_localizedcontext_i18ncp8(void* self, const char* context, const ch
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18ncp9(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -775,7 +775,7 @@ const char* k_localizedcontext_i18ncp9(void* self, const char* context, const ch
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18ncp10(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -793,7 +793,7 @@ const char* k_localizedcontext_i18ncp10(void* self, const char* context, const c
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18ncp11(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -812,7 +812,7 @@ const char* k_localizedcontext_i18ncp11(void* self, const char* context, const c
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18ncp12(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -832,7 +832,7 @@ const char* k_localizedcontext_i18ncp12(void* self, const char* context, const c
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18ncp13(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -842,7 +842,7 @@ const char* k_localizedcontext_i18ncp13(void* self, const char* context, const c
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18nd3(void* self, const char* domain, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -853,7 +853,7 @@ const char* k_localizedcontext_i18nd3(void* self, const char* domain, const char
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18nd4(void* self, const char* domain, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -865,7 +865,7 @@ const char* k_localizedcontext_i18nd4(void* self, const char* domain, const char
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18nd5(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -878,7 +878,7 @@ const char* k_localizedcontext_i18nd5(void* self, const char* domain, const char
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18nd6(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -892,7 +892,7 @@ const char* k_localizedcontext_i18nd6(void* self, const char* domain, const char
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18nd7(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -907,7 +907,7 @@ const char* k_localizedcontext_i18nd7(void* self, const char* domain, const char
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18nd8(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -923,7 +923,7 @@ const char* k_localizedcontext_i18nd8(void* self, const char* domain, const char
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18nd9(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -940,7 +940,7 @@ const char* k_localizedcontext_i18nd9(void* self, const char* domain, const char
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18nd10(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -958,7 +958,7 @@ const char* k_localizedcontext_i18nd10(void* self, const char* domain, const cha
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18nd11(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -977,7 +977,7 @@ const char* k_localizedcontext_i18nd11(void* self, const char* domain, const cha
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18nd12(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -988,7 +988,7 @@ const char* k_localizedcontext_i18nd12(void* self, const char* domain, const cha
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18ndc4(void* self, const char* domain, const char* context, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1000,7 +1000,7 @@ const char* k_localizedcontext_i18ndc4(void* self, const char* domain, const cha
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18ndc5(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1013,7 +1013,7 @@ const char* k_localizedcontext_i18ndc5(void* self, const char* domain, const cha
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18ndc6(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1027,7 +1027,7 @@ const char* k_localizedcontext_i18ndc6(void* self, const char* domain, const cha
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18ndc7(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1042,7 +1042,7 @@ const char* k_localizedcontext_i18ndc7(void* self, const char* domain, const cha
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18ndc8(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1058,7 +1058,7 @@ const char* k_localizedcontext_i18ndc8(void* self, const char* domain, const cha
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18ndc9(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1075,7 +1075,7 @@ const char* k_localizedcontext_i18ndc9(void* self, const char* domain, const cha
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18ndc10(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1093,7 +1093,7 @@ const char* k_localizedcontext_i18ndc10(void* self, const char* domain, const ch
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18ndc11(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1112,7 +1112,7 @@ const char* k_localizedcontext_i18ndc11(void* self, const char* domain, const ch
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18ndc12(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1132,7 +1132,7 @@ const char* k_localizedcontext_i18ndc12(void* self, const char* domain, const ch
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18ndc13(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1143,7 +1143,7 @@ const char* k_localizedcontext_i18ndc13(void* self, const char* domain, const ch
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18ndp4(void* self, const char* domain, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1155,7 +1155,7 @@ const char* k_localizedcontext_i18ndp4(void* self, const char* domain, const cha
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18ndp5(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1168,7 +1168,7 @@ const char* k_localizedcontext_i18ndp5(void* self, const char* domain, const cha
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18ndp6(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1182,7 +1182,7 @@ const char* k_localizedcontext_i18ndp6(void* self, const char* domain, const cha
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18ndp7(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1197,7 +1197,7 @@ const char* k_localizedcontext_i18ndp7(void* self, const char* domain, const cha
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18ndp8(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1213,7 +1213,7 @@ const char* k_localizedcontext_i18ndp8(void* self, const char* domain, const cha
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18ndp9(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1230,7 +1230,7 @@ const char* k_localizedcontext_i18ndp9(void* self, const char* domain, const cha
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18ndp10(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1248,7 +1248,7 @@ const char* k_localizedcontext_i18ndp10(void* self, const char* domain, const ch
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18ndp11(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1267,7 +1267,7 @@ const char* k_localizedcontext_i18ndp11(void* self, const char* domain, const ch
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18ndp12(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1287,7 +1287,7 @@ const char* k_localizedcontext_i18ndp12(void* self, const char* domain, const ch
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18ndp13(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1299,7 +1299,7 @@ const char* k_localizedcontext_i18ndp13(void* self, const char* domain, const ch
 /// @param param1 QVariant*
 const char* k_localizedcontext_i18ndcp5(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1312,7 +1312,7 @@ const char* k_localizedcontext_i18ndcp5(void* self, const char* domain, const ch
 /// @param param2 QVariant*
 const char* k_localizedcontext_i18ndcp6(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1326,7 +1326,7 @@ const char* k_localizedcontext_i18ndcp6(void* self, const char* domain, const ch
 /// @param param3 QVariant*
 const char* k_localizedcontext_i18ndcp7(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1341,7 +1341,7 @@ const char* k_localizedcontext_i18ndcp7(void* self, const char* domain, const ch
 /// @param param4 QVariant*
 const char* k_localizedcontext_i18ndcp8(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1357,7 +1357,7 @@ const char* k_localizedcontext_i18ndcp8(void* self, const char* domain, const ch
 /// @param param5 QVariant*
 const char* k_localizedcontext_i18ndcp9(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1374,7 +1374,7 @@ const char* k_localizedcontext_i18ndcp9(void* self, const char* domain, const ch
 /// @param param6 QVariant*
 const char* k_localizedcontext_i18ndcp10(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1392,7 +1392,7 @@ const char* k_localizedcontext_i18ndcp10(void* self, const char* domain, const c
 /// @param param7 QVariant*
 const char* k_localizedcontext_i18ndcp11(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1411,7 +1411,7 @@ const char* k_localizedcontext_i18ndcp11(void* self, const char* domain, const c
 /// @param param8 QVariant*
 const char* k_localizedcontext_i18ndcp12(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1431,7 +1431,7 @@ const char* k_localizedcontext_i18ndcp12(void* self, const char* domain, const c
 /// @param param9 QVariant*
 const char* k_localizedcontext_i18ndcp13(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#i18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1452,7 +1452,7 @@ const char* k_localizedcontext_i18ndcp13(void* self, const char* domain, const c
 /// @param param10 QVariant*
 const char* k_localizedcontext_i18ndcp14(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1461,7 +1461,7 @@ const char* k_localizedcontext_i18ndcp14(void* self, const char* domain, const c
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18n2(void* self, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1471,7 +1471,7 @@ const char* k_localizedcontext_xi18n2(void* self, const char* message, void* par
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18n3(void* self, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1482,7 +1482,7 @@ const char* k_localizedcontext_xi18n3(void* self, const char* message, void* par
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18n4(void* self, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1494,7 +1494,7 @@ const char* k_localizedcontext_xi18n4(void* self, const char* message, void* par
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18n5(void* self, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1507,7 +1507,7 @@ const char* k_localizedcontext_xi18n5(void* self, const char* message, void* par
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18n6(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1521,7 +1521,7 @@ const char* k_localizedcontext_xi18n6(void* self, const char* message, void* par
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18n7(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1536,7 +1536,7 @@ const char* k_localizedcontext_xi18n7(void* self, const char* message, void* par
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18n8(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1552,7 +1552,7 @@ const char* k_localizedcontext_xi18n8(void* self, const char* message, void* par
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18n9(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1569,7 +1569,7 @@ const char* k_localizedcontext_xi18n9(void* self, const char* message, void* par
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18n10(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18n)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1587,7 +1587,7 @@ const char* k_localizedcontext_xi18n10(void* self, const char* message, void* pa
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18n11(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1597,7 +1597,7 @@ const char* k_localizedcontext_xi18n11(void* self, const char* message, void* pa
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18nc3(void* self, const char* context, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1608,7 +1608,7 @@ const char* k_localizedcontext_xi18nc3(void* self, const char* context, const ch
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18nc4(void* self, const char* context, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1620,7 +1620,7 @@ const char* k_localizedcontext_xi18nc4(void* self, const char* context, const ch
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18nc5(void* self, const char* context, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1633,7 +1633,7 @@ const char* k_localizedcontext_xi18nc5(void* self, const char* context, const ch
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18nc6(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1647,7 +1647,7 @@ const char* k_localizedcontext_xi18nc6(void* self, const char* context, const ch
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18nc7(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1662,7 +1662,7 @@ const char* k_localizedcontext_xi18nc7(void* self, const char* context, const ch
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18nc8(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1678,7 +1678,7 @@ const char* k_localizedcontext_xi18nc8(void* self, const char* context, const ch
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18nc9(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1695,7 +1695,7 @@ const char* k_localizedcontext_xi18nc9(void* self, const char* context, const ch
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18nc10(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1713,7 +1713,7 @@ const char* k_localizedcontext_xi18nc10(void* self, const char* context, const c
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18nc11(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1732,7 +1732,7 @@ const char* k_localizedcontext_xi18nc11(void* self, const char* context, const c
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18nc12(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1742,7 +1742,7 @@ const char* k_localizedcontext_xi18nc12(void* self, const char* context, const c
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18np3(void* self, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1753,7 +1753,7 @@ const char* k_localizedcontext_xi18np3(void* self, const char* singular, const c
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18np4(void* self, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1765,7 +1765,7 @@ const char* k_localizedcontext_xi18np4(void* self, const char* singular, const c
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18np5(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1778,7 +1778,7 @@ const char* k_localizedcontext_xi18np5(void* self, const char* singular, const c
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18np6(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1792,7 +1792,7 @@ const char* k_localizedcontext_xi18np6(void* self, const char* singular, const c
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18np7(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1807,7 +1807,7 @@ const char* k_localizedcontext_xi18np7(void* self, const char* singular, const c
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18np8(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1823,7 +1823,7 @@ const char* k_localizedcontext_xi18np8(void* self, const char* singular, const c
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18np9(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1840,7 +1840,7 @@ const char* k_localizedcontext_xi18np9(void* self, const char* singular, const c
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18np10(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1858,7 +1858,7 @@ const char* k_localizedcontext_xi18np10(void* self, const char* singular, const 
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18np11(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18np)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1877,7 +1877,7 @@ const char* k_localizedcontext_xi18np11(void* self, const char* singular, const 
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18np12(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1888,7 +1888,7 @@ const char* k_localizedcontext_xi18np12(void* self, const char* singular, const 
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18ncp4(void* self, const char* context, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1900,7 +1900,7 @@ const char* k_localizedcontext_xi18ncp4(void* self, const char* context, const c
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18ncp5(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1913,7 +1913,7 @@ const char* k_localizedcontext_xi18ncp5(void* self, const char* context, const c
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18ncp6(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1927,7 +1927,7 @@ const char* k_localizedcontext_xi18ncp6(void* self, const char* context, const c
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18ncp7(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1942,7 +1942,7 @@ const char* k_localizedcontext_xi18ncp7(void* self, const char* context, const c
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18ncp8(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1958,7 +1958,7 @@ const char* k_localizedcontext_xi18ncp8(void* self, const char* context, const c
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18ncp9(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1975,7 +1975,7 @@ const char* k_localizedcontext_xi18ncp9(void* self, const char* context, const c
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18ncp10(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -1993,7 +1993,7 @@ const char* k_localizedcontext_xi18ncp10(void* self, const char* context, const 
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18ncp11(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2012,7 +2012,7 @@ const char* k_localizedcontext_xi18ncp11(void* self, const char* context, const 
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18ncp12(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ncp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2032,7 +2032,7 @@ const char* k_localizedcontext_xi18ncp12(void* self, const char* context, const 
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18ncp13(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2042,7 +2042,7 @@ const char* k_localizedcontext_xi18ncp13(void* self, const char* context, const 
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18nd3(void* self, const char* domain, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2053,7 +2053,7 @@ const char* k_localizedcontext_xi18nd3(void* self, const char* domain, const cha
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18nd4(void* self, const char* domain, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2065,7 +2065,7 @@ const char* k_localizedcontext_xi18nd4(void* self, const char* domain, const cha
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18nd5(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2078,7 +2078,7 @@ const char* k_localizedcontext_xi18nd5(void* self, const char* domain, const cha
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18nd6(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2092,7 +2092,7 @@ const char* k_localizedcontext_xi18nd6(void* self, const char* domain, const cha
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18nd7(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2107,7 +2107,7 @@ const char* k_localizedcontext_xi18nd7(void* self, const char* domain, const cha
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18nd8(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2123,7 +2123,7 @@ const char* k_localizedcontext_xi18nd8(void* self, const char* domain, const cha
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18nd9(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2140,7 +2140,7 @@ const char* k_localizedcontext_xi18nd9(void* self, const char* domain, const cha
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18nd10(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2158,7 +2158,7 @@ const char* k_localizedcontext_xi18nd10(void* self, const char* domain, const ch
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18nd11(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18nd)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2177,7 +2177,7 @@ const char* k_localizedcontext_xi18nd11(void* self, const char* domain, const ch
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18nd12(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2188,7 +2188,7 @@ const char* k_localizedcontext_xi18nd12(void* self, const char* domain, const ch
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18ndc4(void* self, const char* domain, const char* context, const char* message, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2200,7 +2200,7 @@ const char* k_localizedcontext_xi18ndc4(void* self, const char* domain, const ch
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18ndc5(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2213,7 +2213,7 @@ const char* k_localizedcontext_xi18ndc5(void* self, const char* domain, const ch
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18ndc6(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2227,7 +2227,7 @@ const char* k_localizedcontext_xi18ndc6(void* self, const char* domain, const ch
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18ndc7(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2242,7 +2242,7 @@ const char* k_localizedcontext_xi18ndc7(void* self, const char* domain, const ch
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18ndc8(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2258,7 +2258,7 @@ const char* k_localizedcontext_xi18ndc8(void* self, const char* domain, const ch
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18ndc9(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2275,7 +2275,7 @@ const char* k_localizedcontext_xi18ndc9(void* self, const char* domain, const ch
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18ndc10(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2293,7 +2293,7 @@ const char* k_localizedcontext_xi18ndc10(void* self, const char* domain, const c
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18ndc11(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2312,7 +2312,7 @@ const char* k_localizedcontext_xi18ndc11(void* self, const char* domain, const c
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18ndc12(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndc)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2332,7 +2332,7 @@ const char* k_localizedcontext_xi18ndc12(void* self, const char* domain, const c
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18ndc13(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2343,7 +2343,7 @@ const char* k_localizedcontext_xi18ndc13(void* self, const char* domain, const c
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18ndp4(void* self, const char* domain, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2355,7 +2355,7 @@ const char* k_localizedcontext_xi18ndp4(void* self, const char* domain, const ch
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18ndp5(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2368,7 +2368,7 @@ const char* k_localizedcontext_xi18ndp5(void* self, const char* domain, const ch
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18ndp6(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2382,7 +2382,7 @@ const char* k_localizedcontext_xi18ndp6(void* self, const char* domain, const ch
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18ndp7(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2397,7 +2397,7 @@ const char* k_localizedcontext_xi18ndp7(void* self, const char* domain, const ch
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18ndp8(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2413,7 +2413,7 @@ const char* k_localizedcontext_xi18ndp8(void* self, const char* domain, const ch
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18ndp9(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2430,7 +2430,7 @@ const char* k_localizedcontext_xi18ndp9(void* self, const char* domain, const ch
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18ndp10(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2448,7 +2448,7 @@ const char* k_localizedcontext_xi18ndp10(void* self, const char* domain, const c
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18ndp11(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2467,7 +2467,7 @@ const char* k_localizedcontext_xi18ndp11(void* self, const char* domain, const c
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18ndp12(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2487,7 +2487,7 @@ const char* k_localizedcontext_xi18ndp12(void* self, const char* domain, const c
 /// @param param10 QVariant*
 const char* k_localizedcontext_xi18ndp13(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2499,7 +2499,7 @@ const char* k_localizedcontext_xi18ndp13(void* self, const char* domain, const c
 /// @param param1 QVariant*
 const char* k_localizedcontext_xi18ndcp5(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2512,7 +2512,7 @@ const char* k_localizedcontext_xi18ndcp5(void* self, const char* domain, const c
 /// @param param2 QVariant*
 const char* k_localizedcontext_xi18ndcp6(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2526,7 +2526,7 @@ const char* k_localizedcontext_xi18ndcp6(void* self, const char* domain, const c
 /// @param param3 QVariant*
 const char* k_localizedcontext_xi18ndcp7(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2541,7 +2541,7 @@ const char* k_localizedcontext_xi18ndcp7(void* self, const char* domain, const c
 /// @param param4 QVariant*
 const char* k_localizedcontext_xi18ndcp8(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2557,7 +2557,7 @@ const char* k_localizedcontext_xi18ndcp8(void* self, const char* domain, const c
 /// @param param5 QVariant*
 const char* k_localizedcontext_xi18ndcp9(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2574,7 +2574,7 @@ const char* k_localizedcontext_xi18ndcp9(void* self, const char* domain, const c
 /// @param param6 QVariant*
 const char* k_localizedcontext_xi18ndcp10(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2592,7 +2592,7 @@ const char* k_localizedcontext_xi18ndcp10(void* self, const char* domain, const 
 /// @param param7 QVariant*
 const char* k_localizedcontext_xi18ndcp11(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2611,7 +2611,7 @@ const char* k_localizedcontext_xi18ndcp11(void* self, const char* domain, const 
 /// @param param8 QVariant*
 const char* k_localizedcontext_xi18ndcp12(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -2631,7 +2631,7 @@ const char* k_localizedcontext_xi18ndcp12(void* self, const char* domain, const 
 /// @param param9 QVariant*
 const char* k_localizedcontext_xi18ndcp13(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#xi18ndcp)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -3297,7 +3297,7 @@ void k_localizedcontext_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(KLocalizedContext* self, const char* objectName)
 void k_localizedcontext_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klocalizedcontext.html#dtor.KLocalizedContext)
+/// [Qt documentation](https://api.kde.org/klocalizedcontext.html#dtor.KLocalizedContext)
 ///
 /// Delete this object from C++ memory.
 ///

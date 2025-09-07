@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktexttohtml.html
+/// https://api.kde.org/ktexttohtml.html
 
-/// [Qt documentation](https://api-staging.kde.org/ktexttohtml.html#convertToHtml)
+/// [Qt documentation](https://api.kde.org/ktexttohtml.html#convertToHtml)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -23,7 +23,7 @@
 /// @param param4 int
 const char* k_texttohtml_convert_to_html(const char* param1, const int32_t* param2, int param3, int param4);
 
-/// https://api-staging.kde.org/ktexttohtml.html#types
+/// https://api.kde.org/ktexttohtml.html#types
 
 typedef enum {
     KTEXTTOHTML_OPTION_PRESERVESPACES = 2,

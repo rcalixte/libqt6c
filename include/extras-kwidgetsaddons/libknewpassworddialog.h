@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/knewpassworddialog.html
+/// https://api.kde.org/knewpassworddialog.html
 
 /// k_newpassworddialog_new constructs a new KNewPasswordDialog object.
 ///
@@ -58,133 +58,133 @@ int32_t k_newpassworddialog_qbase_metacall(void* self, int32_t param1, int param
 /// @param s const char*
 const char* k_newpassworddialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setPrompt)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setPrompt)
 ///
 /// @param self KNewPasswordDialog*
 /// @param prompt const char*
 void k_newpassworddialog_set_prompt(void* self, const char* prompt);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#prompt)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#prompt)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewPasswordDialog*
 const char* k_newpassworddialog_prompt(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setIcon)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setIcon)
 ///
 /// @param self KNewPasswordDialog*
 /// @param icon QIcon*
 void k_newpassworddialog_set_icon(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#icon)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#icon)
 ///
 /// @param self KNewPasswordDialog*
 QIcon* k_newpassworddialog_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setAllowEmptyPasswords)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setAllowEmptyPasswords)
 ///
 /// @param self KNewPasswordDialog*
 /// @param allowed bool
 void k_newpassworddialog_set_allow_empty_passwords(void* self, bool allowed);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#allowEmptyPasswords)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#allowEmptyPasswords)
 ///
 /// @param self KNewPasswordDialog*
 bool k_newpassworddialog_allow_empty_passwords(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setMinimumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setMinimumPasswordLength)
 ///
 /// @param self KNewPasswordDialog*
 /// @param minLength int
 void k_newpassworddialog_set_minimum_password_length(void* self, int minLength);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#minimumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#minimumPasswordLength)
 ///
 /// @param self KNewPasswordDialog*
 int32_t k_newpassworddialog_minimum_password_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setMaximumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setMaximumPasswordLength)
 ///
 /// @param self KNewPasswordDialog*
 /// @param maxLength int
 void k_newpassworddialog_set_maximum_password_length(void* self, int maxLength);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#maximumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#maximumPasswordLength)
 ///
 /// @param self KNewPasswordDialog*
 int32_t k_newpassworddialog_maximum_password_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setReasonablePasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setReasonablePasswordLength)
 ///
 /// @param self KNewPasswordDialog*
 /// @param reasonableLength int
 void k_newpassworddialog_set_reasonable_password_length(void* self, int reasonableLength);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#reasonablePasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#reasonablePasswordLength)
 ///
 /// @param self KNewPasswordDialog*
 int32_t k_newpassworddialog_reasonable_password_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setPasswordStrengthWarningLevel)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setPasswordStrengthWarningLevel)
 ///
 /// @param self KNewPasswordDialog*
 /// @param warningLevel int
 void k_newpassworddialog_set_password_strength_warning_level(void* self, int warningLevel);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#passwordStrengthWarningLevel)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#passwordStrengthWarningLevel)
 ///
 /// @param self KNewPasswordDialog*
 int32_t k_newpassworddialog_password_strength_warning_level(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setBackgroundWarningColor)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setBackgroundWarningColor)
 ///
 /// @param self KNewPasswordDialog*
 /// @param color QColor*
 void k_newpassworddialog_set_background_warning_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#backgroundWarningColor)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#backgroundWarningColor)
 ///
 /// @param self KNewPasswordDialog*
 QColor* k_newpassworddialog_background_warning_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#password)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#password)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewPasswordDialog*
 const char* k_newpassworddialog_password(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setRevealPasswordAvailable)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setRevealPasswordAvailable)
 ///
 /// @param self KNewPasswordDialog*
 /// @param reveal bool
 void k_newpassworddialog_set_reveal_password_available(void* self, bool reveal);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#isRevealPasswordAvailable)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#isRevealPasswordAvailable)
 ///
 /// @param self KNewPasswordDialog*
 bool k_newpassworddialog_is_reveal_password_available(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#revealPasswordMode)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#revealPasswordMode)
 ///
 /// @param self KNewPasswordDialog*
 ///
 /// @return enum KPassword__RevealMode
 int32_t k_newpassworddialog_reveal_password_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#setRevealPasswordMode)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#setRevealPasswordMode)
 ///
 /// @param self KNewPasswordDialog*
 /// @param revealPasswordMode enum KPassword__RevealMode
 void k_newpassworddialog_set_reveal_password_mode(void* self, int32_t revealPasswordMode);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#accept)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#accept)
 ///
 /// @param self KNewPasswordDialog*
 void k_newpassworddialog_accept(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#accept)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#accept)
 ///
 /// Allows for overriding the related default method
 ///
@@ -192,20 +192,20 @@ void k_newpassworddialog_accept(void* self);
 /// @param callback void func()
 void k_newpassworddialog_on_accept(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#accept)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#accept)
 ///
 /// Base class method implementation
 ///
 /// @param self KNewPasswordDialog*
 void k_newpassworddialog_qbase_accept(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#checkPassword)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#checkPassword)
 ///
 /// @param self KNewPasswordDialog*
 /// @param param1 const char*
 bool k_newpassworddialog_check_password(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#checkPassword)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#checkPassword)
 ///
 /// Allows for overriding the related default method
 ///
@@ -213,7 +213,7 @@ bool k_newpassworddialog_check_password(void* self, const char* param1);
 /// @param callback bool func(KNewPasswordDialog* self, const char* param1)
 void k_newpassworddialog_on_check_password(void* self, bool (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#checkPassword)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#checkPassword)
 ///
 /// Base class method implementation
 ///
@@ -221,13 +221,13 @@ void k_newpassworddialog_on_check_password(void* self, bool (*callback)(void*, c
 /// @param param1 const char*
 bool k_newpassworddialog_qbase_check_password(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#newPassword)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#newPassword)
 ///
 /// @param self KNewPasswordDialog*
 /// @param password const char*
 void k_newpassworddialog_new_password(void* self, const char* password);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#newPassword)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#newPassword)
 ///
 /// @param self KNewPasswordDialog*
 /// @param callback void func(KNewPasswordDialog* self, const char* password)
@@ -4714,7 +4714,7 @@ void k_newpassworddialog_on_get_decoded_metric_f(void* self, double (*callback)(
 /// @param callback void func(KNewPasswordDialog* self, const char* objectName)
 void k_newpassworddialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/knewpassworddialog.html#dtor.KNewPasswordDialog)
+/// [Qt documentation](https://api.kde.org/knewpassworddialog.html#dtor.KNewPasswordDialog)
 ///
 /// Delete this object from C++ memory.
 ///

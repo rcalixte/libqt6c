@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kauthorized.html
+/// https://api.kde.org/kauthorized.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,27 +35,27 @@ int32_t k_authorized_metacall(void* self, int32_t param1, int param2, void* para
 /// @param s const char*
 const char* k_authorized_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kauthorized.html#authorize)
+/// [Qt documentation](https://api.kde.org/kauthorized.html#authorize)
 ///
 /// @param action const char*
 bool k_authorized_authorize(const char* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kauthorized.html#authorize)
+/// [Qt documentation](https://api.kde.org/kauthorized.html#authorize)
 ///
 /// @param action enum KAuthorized__GenericRestriction
 bool k_authorized_authorize2(int32_t action);
 
-/// [Qt documentation](https://api-staging.kde.org/kauthorized.html#authorizeAction)
+/// [Qt documentation](https://api.kde.org/kauthorized.html#authorizeAction)
 ///
 /// @param action const char*
 bool k_authorized_authorize_action(const char* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kauthorized.html#authorizeAction)
+/// [Qt documentation](https://api.kde.org/kauthorized.html#authorizeAction)
 ///
 /// @param action enum KAuthorized__GenericAction
 bool k_authorized_authorize_action2(int32_t action);
 
-/// [Qt documentation](https://api-staging.kde.org/kauthorized.html#authorizeControlModule)
+/// [Qt documentation](https://api.kde.org/kauthorized.html#authorizeControlModule)
 ///
 /// @param pluginId const char*
 bool k_authorized_authorize_control_module(const char* pluginId);
@@ -411,14 +411,14 @@ void k_authorized_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(KAuthorized* self, const char* objectName)
 void k_authorized_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kauthorized.html#dtor.KAuthorized)
+/// [Qt documentation](https://api.kde.org/kauthorized.html#dtor.KAuthorized)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KAuthorized*
 void k_authorized_delete(void* self);
 
-/// https://api-staging.kde.org/kauthorized.html#types
+/// https://api.kde.org/kauthorized.html#types
 
 typedef enum {
     KAUTHORIZED_GENERICRESTRICTION_SHELL_ACCESS = 1,

@@ -11,25 +11,25 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kiconeffect.html
+/// https://api.kde.org/kiconeffect.html
 
 /// k_iconeffect_new constructs a new KIconEffect object.
 ///
 KIconEffect* k_iconeffect_new();
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#init)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#init)
 ///
 /// @param self KIconEffect*
 void k_iconeffect_init(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#hasEffect)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#hasEffect)
 ///
 /// @param self KIconEffect*
 /// @param group int
 /// @param state int
 bool k_iconeffect_has_effect(void* self, int group, int state);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#fingerprint)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#fingerprint)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -38,7 +38,7 @@ bool k_iconeffect_has_effect(void* self, int group, int state);
 /// @param state int
 const char* k_iconeffect_fingerprint(void* self, int group, int state);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#apply)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#apply)
 ///
 /// @param self KIconEffect*
 /// @param src QImage*
@@ -46,7 +46,7 @@ const char* k_iconeffect_fingerprint(void* self, int group, int state);
 /// @param state int
 QImage* k_iconeffect_apply(void* self, void* src, int group, int state);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#apply)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#apply)
 ///
 /// @param self KIconEffect*
 /// @param src QImage*
@@ -56,7 +56,7 @@ QImage* k_iconeffect_apply(void* self, void* src, int group, int state);
 /// @param trans bool
 QImage* k_iconeffect_apply2(void* self, void* src, int effect, float value, void* rgb, bool trans);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#apply)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#apply)
 ///
 /// @param self KIconEffect*
 /// @param src QImage*
@@ -67,7 +67,7 @@ QImage* k_iconeffect_apply2(void* self, void* src, int effect, float value, void
 /// @param trans bool
 QImage* k_iconeffect_apply3(void* self, void* src, int effect, float value, void* rgb, void* rgb2, bool trans);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#apply)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#apply)
 ///
 /// @param self KIconEffect*
 /// @param src QPixmap*
@@ -75,7 +75,7 @@ QImage* k_iconeffect_apply3(void* self, void* src, int effect, float value, void
 /// @param state int
 QPixmap* k_iconeffect_apply4(void* self, void* src, int group, int state);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#apply)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#apply)
 ///
 /// @param self KIconEffect*
 /// @param src QPixmap*
@@ -85,7 +85,7 @@ QPixmap* k_iconeffect_apply4(void* self, void* src, int group, int state);
 /// @param trans bool
 QPixmap* k_iconeffect_apply5(void* self, void* src, int effect, float value, void* rgb, bool trans);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#apply)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#apply)
 ///
 /// @param self KIconEffect*
 /// @param src QPixmap*
@@ -96,26 +96,26 @@ QPixmap* k_iconeffect_apply5(void* self, void* src, int effect, float value, voi
 /// @param trans bool
 QPixmap* k_iconeffect_apply6(void* self, void* src, int effect, float value, void* rgb, void* rgb2, bool trans);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#doublePixels)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#doublePixels)
 ///
 /// @param self KIconEffect*
 /// @param src QImage*
 QImage* k_iconeffect_double_pixels(void* self, void* src);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toGray)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toGray)
 ///
 /// @param image QImage*
 /// @param value float
 void k_iconeffect_to_gray(void* image, float value);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#colorize)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#colorize)
 ///
 /// @param image QImage*
 /// @param col QColor*
 /// @param value float
 void k_iconeffect_colorize(void* image, void* col, float value);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toMonochrome)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toMonochrome)
 ///
 /// @param image QImage*
 /// @param black QColor*
@@ -123,62 +123,62 @@ void k_iconeffect_colorize(void* image, void* col, float value);
 /// @param value float
 void k_iconeffect_to_monochrome(void* image, void* black, void* white, float value);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#deSaturate)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#deSaturate)
 ///
 /// @param image QImage*
 /// @param value float
 void k_iconeffect_de_saturate(void* image, float value);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toGamma)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toGamma)
 ///
 /// @param image QImage*
 /// @param value float
 void k_iconeffect_to_gamma(void* image, float value);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#semiTransparent)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#semiTransparent)
 ///
 /// @param image QImage*
 void k_iconeffect_semi_transparent(void* image);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#semiTransparent)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#semiTransparent)
 ///
 /// @param pixmap QPixmap*
 void k_iconeffect_semi_transparent2(void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#overlay)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#overlay)
 ///
 /// @param src QImage*
 /// @param overlay QImage*
 void k_iconeffect_overlay(void* src, void* overlay);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toDisabled)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toDisabled)
 ///
 /// @param image QImage*
 void k_iconeffect_to_disabled(void* image);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toDisabled)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toDisabled)
 ///
 /// @param pixmap QPixmap*
 void k_iconeffect_to_disabled2(void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toActive)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toActive)
 ///
 /// @param image QImage*
 void k_iconeffect_to_active(void* image);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#toActive)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#toActive)
 ///
 /// @param pixmap QPixmap*
 void k_iconeffect_to_active2(void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconeffect.html#dtor.KIconEffect)
+/// [Qt documentation](https://api.kde.org/kiconeffect.html#dtor.KIconEffect)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KIconEffect*
 void k_iconeffect_delete(void* self);
 
-/// https://api-staging.kde.org/kiconeffect.html#types
+/// https://api.kde.org/kiconeffect.html#types
 
 typedef enum {
     KICONEFFECT_EFFECTS_NOEFFECT = 0,

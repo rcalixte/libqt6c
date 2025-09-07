@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kshortcutwidget.html
+/// https://api.kde.org/kshortcutwidget.html
 
 /// k_shortcutwidget_new constructs a new KShortcutWidget object.
 ///
@@ -58,58 +58,58 @@ int32_t k_shortcutwidget_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_shortcutwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#setModifierlessAllowed)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#setModifierlessAllowed)
 ///
 /// @param self KShortcutWidget*
 /// @param allow bool
 void k_shortcutwidget_set_modifierless_allowed(void* self, bool allow);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#isModifierlessAllowed)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#isModifierlessAllowed)
 ///
 /// @param self KShortcutWidget*
 bool k_shortcutwidget_is_modifierless_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#setClearButtonsShown)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#setClearButtonsShown)
 ///
 /// @param self KShortcutWidget*
 /// @param show bool
 void k_shortcutwidget_set_clear_buttons_shown(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#shortcut)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#shortcut)
 ///
 /// @param self KShortcutWidget*
 libqt_list /* of QKeySequence* */ k_shortcutwidget_shortcut(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#setCheckActionCollections)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#setCheckActionCollections)
 ///
 /// @param self KShortcutWidget*
 /// @param actionCollections libqt_list /* of KActionCollection* */
 void k_shortcutwidget_set_check_action_collections(void* self, libqt_list actionCollections);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#shortcutChanged)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
 /// @param self KShortcutWidget*
 /// @param cut libqt_list /* of QKeySequence* */
 void k_shortcutwidget_shortcut_changed(void* self, libqt_list cut);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#shortcutChanged)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
 /// @param self KShortcutWidget*
 /// @param callback void func(KShortcutWidget* self, libqt_list /* of QKeySequence* */ /* of QKeySequence* */)
 void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, libqt_list));
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#setShortcut)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#setShortcut)
 ///
 /// @param self KShortcutWidget*
 /// @param cut libqt_list /* of QKeySequence* */
 void k_shortcutwidget_set_shortcut(void* self, libqt_list cut);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#clearShortcut)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#clearShortcut)
 ///
 /// @param self KShortcutWidget*
 void k_shortcutwidget_clear_shortcut(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#applyStealShortcut)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#applyStealShortcut)
 ///
 /// @param self KShortcutWidget*
 void k_shortcutwidget_apply_steal_shortcut(void* self);
@@ -4367,7 +4367,7 @@ void k_shortcutwidget_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// @param callback void func(KShortcutWidget* self, const char* objectName)
 void k_shortcutwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutwidget.html#dtor.KShortcutWidget)
+/// [Qt documentation](https://api.kde.org/kshortcutwidget.html#dtor.KShortcutWidget)
 ///
 /// Delete this object from C++ memory.
 ///

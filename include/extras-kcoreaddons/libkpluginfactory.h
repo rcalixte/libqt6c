@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpluginfactory.html
+/// https://api.kde.org/kpluginfactory.html
 
 /// k_pluginfactory_new constructs a new KPluginFactory object.
 ///
@@ -53,18 +53,18 @@ int32_t k_pluginfactory_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_pluginfactory_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#metaData)
+/// [Qt documentation](https://api.kde.org/kpluginfactory.html#metaData)
 ///
 /// @param self KPluginFactory*
 KPluginMetaData* k_pluginfactory_meta_data(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#setMetaData)
+/// [Qt documentation](https://api.kde.org/kpluginfactory.html#setMetaData)
 ///
 /// @param self KPluginFactory*
 /// @param metaData KPluginMetaData*
 void k_pluginfactory_set_meta_data(void* self, void* metaData);
 
-/// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#create)
+/// [Qt documentation](https://api.kde.org/kpluginfactory.html#create)
 ///
 /// @param self KPluginFactory*
 /// @param iface const char*
@@ -73,7 +73,7 @@ void k_pluginfactory_set_meta_data(void* self, void* metaData);
 /// @param args libqt_list /* of QVariant* */
 QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidget, void* parent, libqt_list args);
 
-/// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#create)
+/// [Qt documentation](https://api.kde.org/kpluginfactory.html#create)
 ///
 /// Allows for overriding the related default method
 ///
@@ -81,7 +81,7 @@ QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidge
 /// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, libqt_list /* of QVariant* */ /* of QVariant* */)
 void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, libqt_list));
 
-/// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#create)
+/// [Qt documentation](https://api.kde.org/kpluginfactory.html#create)
 ///
 /// Base class method implementation
 ///
@@ -754,14 +754,14 @@ void k_pluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(KPluginFactory* self, const char* objectName)
 void k_pluginfactory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpluginfactory.html#dtor.KPluginFactory)
+/// [Qt documentation](https://api.kde.org/kpluginfactory.html#dtor.KPluginFactory)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPluginFactory*
 void k_pluginfactory_delete(void* self);
 
-/// https://api-staging.kde.org/kpluginfactory.html#types
+/// https://api.kde.org/kpluginfactory.html#types
 
 typedef enum {
     KPLUGINFACTORY_RESULTERRORREASON_NO_PLUGIN_ERROR = 0,

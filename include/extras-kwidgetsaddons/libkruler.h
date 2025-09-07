@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kruler.html
+/// https://api.kde.org/kruler.html
 
 /// k_ruler_new constructs a new KRuler object.
 ///
@@ -97,230 +97,230 @@ int32_t k_ruler_qbase_metacall(void* self, int32_t param1, int param2, void* par
 /// @param s const char*
 const char* k_ruler_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setTinyMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#setTinyMarkDistance)
 ///
 /// @param self KRuler*
 /// @param tinyMarkDistance int
 void k_ruler_set_tiny_mark_distance(void* self, int tinyMarkDistance);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#tinyMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#tinyMarkDistance)
 ///
 /// @param self KRuler*
 int32_t k_ruler_tiny_mark_distance(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setLittleMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#setLittleMarkDistance)
 ///
 /// @param self KRuler*
 /// @param littleMarkDistance int
 void k_ruler_set_little_mark_distance(void* self, int littleMarkDistance);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#littleMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#littleMarkDistance)
 ///
 /// @param self KRuler*
 int32_t k_ruler_little_mark_distance(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setMediumMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#setMediumMarkDistance)
 ///
 /// @param self KRuler*
 /// @param mediumMarkDistance int
 void k_ruler_set_medium_mark_distance(void* self, int mediumMarkDistance);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#mediumMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#mediumMarkDistance)
 ///
 /// @param self KRuler*
 int32_t k_ruler_medium_mark_distance(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setBigMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#setBigMarkDistance)
 ///
 /// @param self KRuler*
 /// @param bigMarkDistance int
 void k_ruler_set_big_mark_distance(void* self, int bigMarkDistance);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#bigMarkDistance)
+/// [Qt documentation](https://api.kde.org/kruler.html#bigMarkDistance)
 ///
 /// @param self KRuler*
 int32_t k_ruler_big_mark_distance(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowTinyMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowTinyMarks)
 ///
 /// @param self KRuler*
 /// @param showTinyMarks bool
 void k_ruler_set_show_tiny_marks(void* self, bool showTinyMarks);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showTinyMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#showTinyMarks)
 ///
 /// @param self KRuler*
 bool k_ruler_show_tiny_marks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowLittleMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowLittleMarks)
 ///
 /// @param self KRuler*
 /// @param showLittleMarks bool
 void k_ruler_set_show_little_marks(void* self, bool showLittleMarks);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showLittleMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#showLittleMarks)
 ///
 /// @param self KRuler*
 bool k_ruler_show_little_marks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowMediumMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowMediumMarks)
 ///
 /// @param self KRuler*
 /// @param showMediumMarks bool
 void k_ruler_set_show_medium_marks(void* self, bool showMediumMarks);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showMediumMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#showMediumMarks)
 ///
 /// @param self KRuler*
 bool k_ruler_show_medium_marks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowBigMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowBigMarks)
 ///
 /// @param self KRuler*
 /// @param showBigMarks bool
 void k_ruler_set_show_big_marks(void* self, bool showBigMarks);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showBigMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#showBigMarks)
 ///
 /// @param self KRuler*
 bool k_ruler_show_big_marks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowEndMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowEndMarks)
 ///
 /// @param self KRuler*
 /// @param showEndMarks bool
 void k_ruler_set_show_end_marks(void* self, bool showEndMarks);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showEndMarks)
+/// [Qt documentation](https://api.kde.org/kruler.html#showEndMarks)
 ///
 /// @param self KRuler*
 bool k_ruler_show_end_marks(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowPointer)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowPointer)
 ///
 /// @param self KRuler*
 /// @param showPointer bool
 void k_ruler_set_show_pointer(void* self, bool showPointer);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showPointer)
+/// [Qt documentation](https://api.kde.org/kruler.html#showPointer)
 ///
 /// @param self KRuler*
 bool k_ruler_show_pointer(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setShowEndLabel)
+/// [Qt documentation](https://api.kde.org/kruler.html#setShowEndLabel)
 ///
 /// @param self KRuler*
 /// @param showEndLabel bool
 void k_ruler_set_show_end_label(void* self, bool showEndLabel);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#showEndLabel)
+/// [Qt documentation](https://api.kde.org/kruler.html#showEndLabel)
 ///
 /// @param self KRuler*
 bool k_ruler_show_end_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setEndLabel)
+/// [Qt documentation](https://api.kde.org/kruler.html#setEndLabel)
 ///
 /// @param self KRuler*
 /// @param endLabel const char*
 void k_ruler_set_end_label(void* self, const char* endLabel);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#endLabel)
+/// [Qt documentation](https://api.kde.org/kruler.html#endLabel)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KRuler*
 const char* k_ruler_end_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setRulerMetricStyle)
+/// [Qt documentation](https://api.kde.org/kruler.html#setRulerMetricStyle)
 ///
 /// @param self KRuler*
 /// @param rulerMetricStyle enum KRuler__MetricStyle
 void k_ruler_set_ruler_metric_style(void* self, int32_t rulerMetricStyle);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setPixelPerMark)
+/// [Qt documentation](https://api.kde.org/kruler.html#setPixelPerMark)
 ///
 /// @param self KRuler*
 /// @param rate double
 void k_ruler_set_pixel_per_mark(void* self, double rate);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#pixelPerMark)
+/// [Qt documentation](https://api.kde.org/kruler.html#pixelPerMark)
 ///
 /// @param self KRuler*
 double k_ruler_pixel_per_mark(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setLength)
+/// [Qt documentation](https://api.kde.org/kruler.html#setLength)
 ///
 /// @param self KRuler*
 /// @param length int
 void k_ruler_set_length(void* self, int length);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#length)
+/// [Qt documentation](https://api.kde.org/kruler.html#length)
 ///
 /// @param self KRuler*
 int32_t k_ruler_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setLengthFixed)
+/// [Qt documentation](https://api.kde.org/kruler.html#setLengthFixed)
 ///
 /// @param self KRuler*
 /// @param fix bool
 void k_ruler_set_length_fixed(void* self, bool fix);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#lengthFixed)
+/// [Qt documentation](https://api.kde.org/kruler.html#lengthFixed)
 ///
 /// @param self KRuler*
 bool k_ruler_length_fixed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slideUp)
+/// [Qt documentation](https://api.kde.org/kruler.html#slideUp)
 ///
 /// @param self KRuler*
 void k_ruler_slide_up(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slideDown)
+/// [Qt documentation](https://api.kde.org/kruler.html#slideDown)
 ///
 /// @param self KRuler*
 void k_ruler_slide_down(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#setOffset)
+/// [Qt documentation](https://api.kde.org/kruler.html#setOffset)
 ///
 /// @param self KRuler*
 /// @param offset int
 void k_ruler_set_offset(void* self, int offset);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#offset)
+/// [Qt documentation](https://api.kde.org/kruler.html#offset)
 ///
 /// @param self KRuler*
 int32_t k_ruler_offset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#endOffset)
+/// [Qt documentation](https://api.kde.org/kruler.html#endOffset)
 ///
 /// @param self KRuler*
 int32_t k_ruler_end_offset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slotNewValue)
+/// [Qt documentation](https://api.kde.org/kruler.html#slotNewValue)
 ///
 /// @param self KRuler*
 /// @param param1 int
 void k_ruler_slot_new_value(void* self, int param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slotNewOffset)
+/// [Qt documentation](https://api.kde.org/kruler.html#slotNewOffset)
 ///
 /// @param self KRuler*
 /// @param param1 int
 void k_ruler_slot_new_offset(void* self, int param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slotEndOffset)
+/// [Qt documentation](https://api.kde.org/kruler.html#slotEndOffset)
 ///
 /// @param self KRuler*
 /// @param param1 int
 void k_ruler_slot_end_offset(void* self, int param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kruler.html#paintEvent)
 ///
 /// @param self KRuler*
 /// @param param1 QPaintEvent*
 void k_ruler_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kruler.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -328,7 +328,7 @@ void k_ruler_paint_event(void* self, void* param1);
 /// @param callback void func(KRuler* self, QPaintEvent* param1)
 void k_ruler_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kruler.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -353,13 +353,13 @@ const char* k_ruler_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_ruler_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slideUp)
+/// [Qt documentation](https://api.kde.org/kruler.html#slideUp)
 ///
 /// @param self KRuler*
 /// @param count int
 void k_ruler_slide_up1(void* self, int count);
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#slideDown)
+/// [Qt documentation](https://api.kde.org/kruler.html#slideDown)
 ///
 /// @param self KRuler*
 /// @param count int
@@ -4942,14 +4942,14 @@ void k_ruler_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32
 /// @param callback void func(KRuler* self, const char* objectName)
 void k_ruler_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kruler.html#dtor.KRuler)
+/// [Qt documentation](https://api.kde.org/kruler.html#dtor.KRuler)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KRuler*
 void k_ruler_delete(void* self);
 
-/// https://api-staging.kde.org/kruler.html#types
+/// https://api.kde.org/kruler.html#types
 
 typedef enum {
     KRULER_METRICSTYLE_CUSTOM = 0,

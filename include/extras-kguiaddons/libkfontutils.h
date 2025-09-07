@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfontutils.html
+/// https://api.kde.org/kfontutils.html
 
-/// [Qt documentation](https://api-staging.kde.org/kfontutils.html#adaptFontSize)
+/// [Qt documentation](https://api.kde.org/kfontutils.html#adaptFontSize)
 ///
 /// @param param1 QPainter*
 /// @param param2 const char*
@@ -24,7 +24,7 @@
 /// @param param7 flag of enum KFontUtils__AdaptFontSizeOption
 double k_fontutils_adapt_font_size(void* param1, const char* param2, double param3, double param4, double param5, double param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontutils.html#adaptFontSize)
+/// [Qt documentation](https://api.kde.org/kfontutils.html#adaptFontSize)
 ///
 /// @param param1 QPainter*
 /// @param param2 const char*
@@ -34,7 +34,7 @@ double k_fontutils_adapt_font_size(void* param1, const char* param2, double para
 /// @param param6 flag of enum KFontUtils__AdaptFontSizeOption
 double k_fontutils_adapt_font_size2(void* param1, const char* param2, void* param3, double param4, double param5, int32_t param6);
 
-/// https://api-staging.kde.org/kfontutils.html#types
+/// https://api.kde.org/kfontutils.html#types
 
 typedef enum {
     KFONTUTILS_ADAPTFONTSIZEOPTION_NOFLAGS = 1,

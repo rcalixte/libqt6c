@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfontsizeaction.html
+/// https://api.kde.org/kfontsizeaction.html
 
 /// k_fontsizeaction_new constructs a new KFontSizeAction object.
 ///
@@ -67,36 +67,36 @@ int32_t k_fontsizeaction_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_fontsizeaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#fontSize)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#fontSize)
 ///
 /// @param self KFontSizeAction*
 int32_t k_fontsizeaction_font_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#setFontSize)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#setFontSize)
 ///
 /// @param self KFontSizeAction*
 /// @param size int
 void k_fontsizeaction_set_font_size(void* self, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#fontSizeChanged)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#fontSizeChanged)
 ///
 /// @param self KFontSizeAction*
 /// @param param1 int
 void k_fontsizeaction_font_size_changed(void* self, int param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#fontSizeChanged)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#fontSizeChanged)
 ///
 /// @param self KFontSizeAction*
 /// @param callback void func(KFontSizeAction* self, int param1)
 void k_fontsizeaction_on_font_size_changed(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#slotActionTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param action QAction*
 void k_fontsizeaction_slot_action_triggered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#slotActionTriggered)
 ///
 /// Allows for overriding the related default method
 ///
@@ -104,7 +104,7 @@ void k_fontsizeaction_slot_action_triggered(void* self, void* action);
 /// @param callback void func(KFontSizeAction* self, QAction* action)
 void k_fontsizeaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#slotActionTriggered)
 ///
 /// Base class method implementation
 ///
@@ -131,7 +131,7 @@ const char* k_fontsizeaction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolBarMode)
 ///
 /// @param self KFontSizeAction*
 ///
@@ -140,7 +140,7 @@ int32_t k_fontsizeaction_tool_bar_mode(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolBarMode)
 ///
 /// @param self KFontSizeAction*
 /// @param mode enum KSelectAction__ToolBarMode
@@ -148,7 +148,7 @@ void k_fontsizeaction_set_tool_bar_mode(void* self, int32_t mode);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolButtonPopupMode)
 ///
 /// @param self KFontSizeAction*
 ///
@@ -157,7 +157,7 @@ int32_t k_fontsizeaction_tool_button_popup_mode(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolButtonPopupMode)
 ///
 /// @param self KFontSizeAction*
 /// @param mode enum QToolButton__ToolButtonPopupMode
@@ -165,28 +165,28 @@ void k_fontsizeaction_set_tool_button_popup_mode(void* self, int32_t mode);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#selectableActionGroup)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#selectableActionGroup)
 ///
 /// @param self KFontSizeAction*
 QActionGroup* k_fontsizeaction_selectable_action_group(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentAction)
 ///
 /// @param self KFontSizeAction*
 QAction* k_fontsizeaction_current_action(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentItem)
 ///
 /// @param self KFontSizeAction*
 int32_t k_fontsizeaction_current_item(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentText)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -195,14 +195,14 @@ const char* k_fontsizeaction_current_text(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actions)
 ///
 /// @param self KFontSizeAction*
 libqt_list /* of QAction* */ k_fontsizeaction_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KFontSizeAction*
 /// @param index int
@@ -210,7 +210,7 @@ QAction* k_fontsizeaction_action(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KFontSizeAction*
 /// @param text const char*
@@ -218,7 +218,7 @@ QAction* k_fontsizeaction_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KFontSizeAction*
 /// @param action QAction*
@@ -226,7 +226,7 @@ bool k_fontsizeaction_set_current_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentItem)
 ///
 /// @param self KFontSizeAction*
 /// @param index int
@@ -234,7 +234,7 @@ bool k_fontsizeaction_set_current_item(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KFontSizeAction*
 /// @param text const char*
@@ -242,7 +242,7 @@ bool k_fontsizeaction_set_current_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KFontSizeAction*
 /// @param action QAction*
@@ -250,7 +250,7 @@ void k_fontsizeaction_add_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KFontSizeAction*
 /// @param text const char*
@@ -258,7 +258,7 @@ QAction* k_fontsizeaction_add_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KFontSizeAction*
 /// @param icon QIcon*
@@ -267,7 +267,7 @@ QAction* k_fontsizeaction_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setItems)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setItems)
 ///
 /// @param self KFontSizeAction*
 /// @param lst const char**
@@ -275,7 +275,7 @@ void k_fontsizeaction_set_items(void* self, const char* lst[]);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#items)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -284,14 +284,14 @@ const char** k_fontsizeaction_items(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#isEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#isEditable)
 ///
 /// @param self KFontSizeAction*
 bool k_fontsizeaction_is_editable(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setEditable)
 ///
 /// @param self KFontSizeAction*
 /// @param editable bool
@@ -299,14 +299,14 @@ void k_fontsizeaction_set_editable(void* self, bool editable);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#comboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#comboWidth)
 ///
 /// @param self KFontSizeAction*
 int32_t k_fontsizeaction_combo_width(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setComboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setComboWidth)
 ///
 /// @param self KFontSizeAction*
 /// @param width int
@@ -314,7 +314,7 @@ void k_fontsizeaction_set_combo_width(void* self, int width);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMaxComboViewCount)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMaxComboViewCount)
 ///
 /// @param self KFontSizeAction*
 /// @param n int
@@ -322,21 +322,21 @@ void k_fontsizeaction_set_max_combo_view_count(void* self, int n);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#clear)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#clear)
 ///
 /// @param self KFontSizeAction*
 void k_fontsizeaction_clear(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAllActions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAllActions)
 ///
 /// @param self KFontSizeAction*
 void k_fontsizeaction_remove_all_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMenuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMenuAccelsEnabled)
 ///
 /// @param self KFontSizeAction*
 /// @param b bool
@@ -344,14 +344,14 @@ void k_fontsizeaction_set_menu_accels_enabled(void* self, bool b);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#menuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#menuAccelsEnabled)
 ///
 /// @param self KFontSizeAction*
 bool k_fontsizeaction_menu_accels_enabled(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#changeItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#changeItem)
 ///
 /// @param self KFontSizeAction*
 /// @param index int
@@ -360,7 +360,7 @@ void k_fontsizeaction_change_item(void* self, int index, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param action QAction*
@@ -368,7 +368,7 @@ void k_fontsizeaction_action_triggered(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param callback void func(KFontSizeAction* self, QAction* action)
@@ -376,7 +376,7 @@ void k_fontsizeaction_on_action_triggered(void* self, void (*callback)(void*, vo
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param index int
@@ -384,7 +384,7 @@ void k_fontsizeaction_index_triggered(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param callback void func(KFontSizeAction* self, int index)
@@ -392,7 +392,7 @@ void k_fontsizeaction_on_index_triggered(void* self, void (*callback)(void*, int
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param text const char*
@@ -400,7 +400,7 @@ void k_fontsizeaction_text_triggered(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KFontSizeAction*
 /// @param callback void func(KFontSizeAction* self, const char* text)
@@ -408,7 +408,7 @@ void k_fontsizeaction_on_text_triggered(void* self, void (*callback)(void*, cons
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KFontSizeAction*
 /// @param text const char*
@@ -417,7 +417,7 @@ QAction* k_fontsizeaction_action22(void* self, const char* text, int32_t cs);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KFontSizeAction*
 /// @param text const char*
@@ -1308,7 +1308,7 @@ void k_fontsizeaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1318,7 +1318,7 @@ QAction* k_fontsizeaction_remove_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1328,7 +1328,7 @@ QAction* k_fontsizeaction_qbase_remove_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1338,7 +1338,7 @@ void k_fontsizeaction_on_remove_action(void* self, QAction* (*callback)(void*, v
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1349,7 +1349,7 @@ void k_fontsizeaction_insert_action(void* self, void* before, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1360,7 +1360,7 @@ void k_fontsizeaction_qbase_insert_action(void* self, void* before, void* action
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1370,7 +1370,7 @@ void k_fontsizeaction_on_insert_action(void* self, void (*callback)(void*, void*
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1380,7 +1380,7 @@ QWidget* k_fontsizeaction_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1390,7 +1390,7 @@ QWidget* k_fontsizeaction_qbase_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1400,7 +1400,7 @@ void k_fontsizeaction_on_create_widget(void* self, QWidget* (*callback)(void*, v
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1410,7 +1410,7 @@ void k_fontsizeaction_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1420,7 +1420,7 @@ void k_fontsizeaction_qbase_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1430,7 +1430,7 @@ void k_fontsizeaction_on_delete_widget(void* self, void (*callback)(void*, void*
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1440,7 +1440,7 @@ bool k_fontsizeaction_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1450,7 +1450,7 @@ bool k_fontsizeaction_qbase_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1460,7 +1460,7 @@ void k_fontsizeaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1471,7 +1471,7 @@ bool k_fontsizeaction_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1482,7 +1482,7 @@ bool k_fontsizeaction_qbase_event_filter(void* self, void* watched, void* event)
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1642,7 +1642,7 @@ void k_fontsizeaction_on_disconnect_notify(void* self, void (*callback)(void*, v
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1652,7 +1652,7 @@ void k_fontsizeaction_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1662,7 +1662,7 @@ void k_fontsizeaction_qbase_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1824,7 +1824,7 @@ void k_fontsizeaction_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KFontSizeAction* self, const char* objectName)
 void k_fontsizeaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontsizeaction.html#dtor.KFontSizeAction)
+/// [Qt documentation](https://api.kde.org/kfontsizeaction.html#dtor.KFontSizeAction)
 ///
 /// Delete this object from C++ memory.
 ///

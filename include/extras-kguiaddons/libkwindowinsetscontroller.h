@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kwindowinsetscontroller.html
+/// https://api.kde.org/kwindowinsetscontroller.html
 
 /// k_windowinsetscontroller_new constructs a new KWindowInsetsController object.
 ///
@@ -58,45 +58,45 @@ int32_t k_windowinsetscontroller_qbase_metacall(void* self, int32_t param1, int 
 /// @param s const char*
 const char* k_windowinsetscontroller_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#statusBarBackgroundColor)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#statusBarBackgroundColor)
 ///
 /// @param self KWindowInsetsController*
 QColor* k_windowinsetscontroller_status_bar_background_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#setStatusBarBackgroundColor)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#setStatusBarBackgroundColor)
 ///
 /// @param self KWindowInsetsController*
 /// @param color QColor*
 void k_windowinsetscontroller_set_status_bar_background_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#navigationBarBackgroundColor)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#navigationBarBackgroundColor)
 ///
 /// @param self KWindowInsetsController*
 QColor* k_windowinsetscontroller_navigation_bar_background_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#setNavigationBarBackgroundColor)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#setNavigationBarBackgroundColor)
 ///
 /// @param self KWindowInsetsController*
 /// @param color QColor*
 void k_windowinsetscontroller_set_navigation_bar_background_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#statusBarBackgroundColorChanged)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#statusBarBackgroundColorChanged)
 ///
 /// @param self KWindowInsetsController*
 void k_windowinsetscontroller_status_bar_background_color_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#statusBarBackgroundColorChanged)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#statusBarBackgroundColorChanged)
 ///
 /// @param self KWindowInsetsController*
 /// @param callback void func(KWindowInsetsController* self)
 void k_windowinsetscontroller_on_status_bar_background_color_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#navigationBarBackgroundColorChanged)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#navigationBarBackgroundColorChanged)
 ///
 /// @param self KWindowInsetsController*
 void k_windowinsetscontroller_navigation_bar_background_color_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#navigationBarBackgroundColorChanged)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#navigationBarBackgroundColorChanged)
 ///
 /// @param self KWindowInsetsController*
 /// @param callback void func(KWindowInsetsController* self)
@@ -764,7 +764,7 @@ void k_windowinsetscontroller_on_is_signal_connected(void* self, bool (*callback
 /// @param callback void func(KWindowInsetsController* self, const char* objectName)
 void k_windowinsetscontroller_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowinsetscontroller.html#dtor.KWindowInsetsController)
+/// [Qt documentation](https://api.kde.org/kwindowinsetscontroller.html#dtor.KWindowInsetsController)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfontchooserdialog.html
+/// https://api.kde.org/kfontchooserdialog.html
 
 /// k_fontchooserdialog_new constructs a new KFontChooserDialog object.
 ///
@@ -64,35 +64,35 @@ int32_t k_fontchooserdialog_qbase_metacall(void* self, int32_t param1, int param
 /// @param s const char*
 const char* k_fontchooserdialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#setFont)
 ///
 /// @param self KFontChooserDialog*
 /// @param font QFont*
 void k_fontchooserdialog_set_font(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#font)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#font)
 ///
 /// @param self KFontChooserDialog*
 QFont* k_fontchooserdialog_font(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFont)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#getFont)
 ///
 /// @param theFont QFont*
 int32_t k_fontchooserdialog_get_font(void* theFont);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFontDiff)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
 /// @param diffFlags flag of enum KFontChooser__FontDiff
 int32_t k_fontchooserdialog_get_font_diff(void* theFont, int32_t* diffFlags);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#fontSelected)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#fontSelected)
 ///
 /// @param self KFontChooserDialog*
 /// @param font QFont*
 void k_fontchooserdialog_font_selected(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#fontSelected)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#fontSelected)
 ///
 /// @param self KFontChooserDialog*
 /// @param callback void func(KFontChooserDialog* self, QFont* font)
@@ -115,34 +115,34 @@ const char* k_fontchooserdialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_fontchooserdialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#setFont)
 ///
 /// @param self KFontChooserDialog*
 /// @param font QFont*
 /// @param onlyFixed bool
 void k_fontchooserdialog_set_font2(void* self, void* font, bool onlyFixed);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFont)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#getFont)
 ///
 /// @param theFont QFont*
 /// @param flags flag of enum KFontChooser__DisplayFlag
 int32_t k_fontchooserdialog_get_font2(void* theFont, const int32_t* flags);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFont)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#getFont)
 ///
 /// @param theFont QFont*
 /// @param flags flag of enum KFontChooser__DisplayFlag
 /// @param parent QWidget*
 int32_t k_fontchooserdialog_get_font3(void* theFont, const int32_t* flags, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFontDiff)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
 /// @param diffFlags flag of enum KFontChooser__FontDiff
 /// @param flags flag of enum KFontChooser__DisplayFlag
 int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int32_t* diffFlags, const int32_t* flags);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#getFontDiff)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
 /// @param diffFlags flag of enum KFontChooser__FontDiff
@@ -4627,7 +4627,7 @@ void k_fontchooserdialog_on_get_decoded_metric_f(void* self, double (*callback)(
 /// @param callback void func(KFontChooserDialog* self, const char* objectName)
 void k_fontchooserdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooserdialog.html#dtor.KFontChooserDialog)
+/// [Qt documentation](https://api.kde.org/kfontchooserdialog.html#dtor.KFontChooserDialog)
 ///
 /// Delete this object from C++ memory.
 ///

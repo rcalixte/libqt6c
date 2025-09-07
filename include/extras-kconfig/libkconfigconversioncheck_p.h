@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfigconversioncheck-supported.html
+/// https://api.kde.org/kconfigconversioncheck-supported.html
 
 /// k_configconversioncheck__supported_new constructs a new KConfigConversionCheck::supported object.
 ///
@@ -40,7 +40,7 @@ void k_configconversioncheck__supported_move_assign(void* self, void* other);
 /// @param self KConfigConversionCheck__supported*
 void k_configconversioncheck__supported_delete(void* self);
 
-/// https://api-staging.kde.org/kconfigconversioncheck-unsupported.html
+/// https://api.kde.org/kconfigconversioncheck-unsupported.html
 
 /// k_configconversioncheck__unsupported_new constructs a new KConfigConversionCheck::unsupported object.
 ///

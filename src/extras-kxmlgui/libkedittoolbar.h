@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kedittoolbar.html
+/// https://api.kde.org/kedittoolbar.html
 
 /// k_edittoolbar_new constructs a new KEditToolBar object.
 ///
@@ -71,41 +71,41 @@ int32_t k_edittoolbar_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_edittoolbar_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#setDefaultToolBar)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#setDefaultToolBar)
 ///
 /// @param self KEditToolBar*
 /// @param toolBarName const char*
 void k_edittoolbar_set_default_tool_bar(void* self, const char* toolBarName);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#setResourceFile)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#setResourceFile)
 ///
 /// @param self KEditToolBar*
 /// @param file const char*
 void k_edittoolbar_set_resource_file(void* self, const char* file);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#setGlobalDefaultToolBar)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#setGlobalDefaultToolBar)
 ///
 /// @param toolBarName const char*
 void k_edittoolbar_set_global_default_tool_bar(const char* toolBarName);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#newToolBarConfig)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#newToolBarConfig)
 ///
 /// @param self KEditToolBar*
 void k_edittoolbar_new_tool_bar_config(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#newToolBarConfig)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#newToolBarConfig)
 ///
 /// @param self KEditToolBar*
 /// @param callback void func(KEditToolBar* self)
 void k_edittoolbar_on_new_tool_bar_config(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#showEvent)
 ///
 /// @param self KEditToolBar*
 /// @param event QShowEvent*
 void k_edittoolbar_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -113,7 +113,7 @@ void k_edittoolbar_show_event(void* self, void* event);
 /// @param callback void func(KEditToolBar* self, QShowEvent* event)
 void k_edittoolbar_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -121,13 +121,13 @@ void k_edittoolbar_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QShowEvent*
 void k_edittoolbar_qbase_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#hideEvent)
 ///
 /// @param self KEditToolBar*
 /// @param event QHideEvent*
 void k_edittoolbar_hide_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#hideEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -135,7 +135,7 @@ void k_edittoolbar_hide_event(void* self, void* event);
 /// @param callback void func(KEditToolBar* self, QHideEvent* event)
 void k_edittoolbar_on_hide_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#hideEvent)
 ///
 /// Base class method implementation
 ///
@@ -160,7 +160,7 @@ const char* k_edittoolbar_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_edittoolbar_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#setResourceFile)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#setResourceFile)
 ///
 /// @param self KEditToolBar*
 /// @param file const char*
@@ -4599,7 +4599,7 @@ void k_edittoolbar_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// @param callback void func(KEditToolBar* self, const char* objectName)
 void k_edittoolbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kedittoolbar.html#dtor.KEditToolBar)
+/// [Qt documentation](https://api.kde.org/kedittoolbar.html#dtor.KEditToolBar)
 ///
 /// Delete this object from C++ memory.
 ///

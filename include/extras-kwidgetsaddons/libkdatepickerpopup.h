@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdatepickerpopup.html
+/// https://api.kde.org/kdatepickerpopup.html
 
 /// k_datepickerpopup_new constructs a new KDatePickerPopup object.
 ///
@@ -71,55 +71,55 @@ int32_t k_datepickerpopup_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_datepickerpopup_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#modes)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#modes)
 ///
 /// @param self KDatePickerPopup*
 ///
 /// @return flag of enum KDatePickerPopup__Mode
 int32_t k_datepickerpopup_modes(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#setModes)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#setModes)
 ///
 /// @param self KDatePickerPopup*
 /// @param modes flag of enum KDatePickerPopup__Mode
 void k_datepickerpopup_set_modes(void* self, int32_t modes);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#setDateRange)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#setDateRange)
 ///
 /// @param self KDatePickerPopup*
 /// @param minDate QDate*
 /// @param maxDate QDate*
 void k_datepickerpopup_set_date_range(void* self, void* minDate, void* maxDate);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#dateMap)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#dateMap)
 ///
 /// @param self KDatePickerPopup*
 libqt_map /* of QDate* to const char* */ k_datepickerpopup_date_map(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#setDateMap)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#setDateMap)
 ///
 /// @param self KDatePickerPopup*
 /// @param dateMap libqt_map /* of QDate* to const char* */
 void k_datepickerpopup_set_date_map(void* self, libqt_map /* of QDate* to const char* */ dateMap);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#datePicker)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#datePicker)
 ///
 /// @param self KDatePickerPopup*
 KDatePicker* k_datepickerpopup_date_picker(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#setDate)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#setDate)
 ///
 /// @param self KDatePickerPopup*
 /// @param date QDate*
 void k_datepickerpopup_set_date(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#dateChanged)
 ///
 /// @param self KDatePickerPopup*
 /// @param date QDate*
 void k_datepickerpopup_date_changed(void* self, void* date);
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#dateChanged)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#dateChanged)
 ///
 /// @param self KDatePickerPopup*
 /// @param callback void func(KDatePickerPopup* self, QDate* date)
@@ -4841,14 +4841,14 @@ void k_datepickerpopup_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KDatePickerPopup* self, const char* objectName)
 void k_datepickerpopup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdatepickerpopup.html#dtor.KDatePickerPopup)
+/// [Qt documentation](https://api.kde.org/kdatepickerpopup.html#dtor.KDatePickerPopup)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KDatePickerPopup*
 void k_datepickerpopup_delete(void* self);
 
-/// https://api-staging.kde.org/kdatepickerpopup.html#types
+/// https://api.kde.org/kdatepickerpopup.html#types
 
 typedef enum {
     KDATEPICKERPOPUP_MODE_NODATE = 1,
