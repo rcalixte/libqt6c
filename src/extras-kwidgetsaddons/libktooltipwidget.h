@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktooltipwidget.html
+/// https://api.kde.org/ktooltipwidget.html
 
 /// k_tooltipwidget_new constructs a new KToolTipWidget object.
 ///
@@ -58,7 +58,7 @@ int32_t k_tooltipwidget_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_tooltipwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#showAt)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#showAt)
 ///
 /// @param self KToolTipWidget*
 /// @param pos QPoint*
@@ -66,7 +66,7 @@ const char* k_tooltipwidget_tr(const char* s);
 /// @param transientParent QWindow*
 void k_tooltipwidget_show_at(void* self, void* pos, void* content, void* transientParent);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#showBelow)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#showBelow)
 ///
 /// @param self KToolTipWidget*
 /// @param rect QRect*
@@ -74,40 +74,40 @@ void k_tooltipwidget_show_at(void* self, void* pos, void* content, void* transie
 /// @param transientParent QWindow*
 void k_tooltipwidget_show_below(void* self, void* rect, void* content, void* transientParent);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hideDelay)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hideDelay)
 ///
 /// @param self KToolTipWidget*
 int32_t k_tooltipwidget_hide_delay(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hideLater)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hideLater)
 ///
 /// @param self KToolTipWidget*
 void k_tooltipwidget_hide_later(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#setHideDelay)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#setHideDelay)
 ///
 /// @param self KToolTipWidget*
 /// @param delay int
 void k_tooltipwidget_set_hide_delay(void* self, int delay);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hidden)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hidden)
 ///
 /// @param self KToolTipWidget*
 void k_tooltipwidget_hidden(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hidden)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hidden)
 ///
 /// @param self KToolTipWidget*
 /// @param callback void func(KToolTipWidget* self)
 void k_tooltipwidget_on_hidden(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#enterEvent)
 ///
 /// @param self KToolTipWidget*
 /// @param event QEnterEvent*
 void k_tooltipwidget_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#enterEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -115,7 +115,7 @@ void k_tooltipwidget_enter_event(void* self, void* event);
 /// @param callback void func(KToolTipWidget* self, QEnterEvent* event)
 void k_tooltipwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#enterEvent)
 ///
 /// Base class method implementation
 ///
@@ -123,13 +123,13 @@ void k_tooltipwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEnterEvent*
 void k_tooltipwidget_qbase_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hideEvent)
 ///
 /// @param self KToolTipWidget*
 /// @param param1 QHideEvent*
 void k_tooltipwidget_hide_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hideEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -137,7 +137,7 @@ void k_tooltipwidget_hide_event(void* self, void* param1);
 /// @param callback void func(KToolTipWidget* self, QHideEvent* param1)
 void k_tooltipwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#hideEvent)
 ///
 /// Base class method implementation
 ///
@@ -145,13 +145,13 @@ void k_tooltipwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QHideEvent*
 void k_tooltipwidget_qbase_hide_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#leaveEvent)
 ///
 /// @param self KToolTipWidget*
 /// @param param1 QEvent*
 void k_tooltipwidget_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#leaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -159,7 +159,7 @@ void k_tooltipwidget_leave_event(void* self, void* param1);
 /// @param callback void func(KToolTipWidget* self, QEvent* param1)
 void k_tooltipwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#leaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -167,13 +167,13 @@ void k_tooltipwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QEvent*
 void k_tooltipwidget_qbase_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#paintEvent)
 ///
 /// @param self KToolTipWidget*
 /// @param event QPaintEvent*
 void k_tooltipwidget_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -181,7 +181,7 @@ void k_tooltipwidget_paint_event(void* self, void* event);
 /// @param callback void func(KToolTipWidget* self, QPaintEvent* event)
 void k_tooltipwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -4322,7 +4322,7 @@ void k_tooltipwidget_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// @param callback void func(KToolTipWidget* self, const char* objectName)
 void k_tooltipwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktooltipwidget.html#dtor.KToolTipWidget)
+/// [Qt documentation](https://api.kde.org/ktooltipwidget.html#dtor.KToolTipWidget)
 ///
 /// Delete this object from C++ memory.
 ///

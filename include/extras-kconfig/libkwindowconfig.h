@@ -11,45 +11,45 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kwindowconfig.html
+/// https://api.kde.org/kwindowconfig.html
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#saveWindowSize)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#saveWindowSize)
 ///
 /// @param param1 QWindow*
 /// @param param2 KConfigGroup*
 /// @param param3 flag of enum KConfigBase__WriteConfigFlag
 void k_windowconfig_save_window_size(void* param1, void* param2, int32_t param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#hasSavedWindowSize)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#hasSavedWindowSize)
 ///
 /// @param param1 KConfigGroup*
 bool k_windowconfig_has_saved_window_size(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#restoreWindowSize)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#restoreWindowSize)
 ///
 /// @param param1 QWindow*
 /// @param param2 KConfigGroup*
 void k_windowconfig_restore_window_size(void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#saveWindowPosition)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#saveWindowPosition)
 ///
 /// @param param1 QWindow*
 /// @param param2 KConfigGroup*
 /// @param param3 flag of enum KConfigBase__WriteConfigFlag
 void k_windowconfig_save_window_position(void* param1, void* param2, int32_t param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#hasSavedWindowPosition)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#hasSavedWindowPosition)
 ///
 /// @param param1 KConfigGroup*
 bool k_windowconfig_has_saved_window_position(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#restoreWindowPosition)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#restoreWindowPosition)
 ///
 /// @param param1 QWindow*
 /// @param param2 KConfigGroup*
 void k_windowconfig_restore_window_position(void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowconfig.html#restoreWindowScreenPosition)
+/// [Qt documentation](https://api.kde.org/kwindowconfig.html#restoreWindowScreenPosition)
 ///
 /// @param param1 QWindow*
 /// @param param2 QScreen*

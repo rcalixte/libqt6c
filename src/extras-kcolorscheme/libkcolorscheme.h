@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorscheme.html
+/// https://api.kde.org/kcolorscheme.html
 
 /// k_colorscheme_new constructs a new KColorScheme object.
 ///
@@ -33,80 +33,80 @@ KColorScheme* k_colorscheme_new3(int32_t param1);
 /// @param param2 enum KColorScheme__ColorSet
 KColorScheme* k_colorscheme_new4(int32_t param1, int32_t param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#operator-eq)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#operator-eq)
 ///
 /// @param self KColorScheme*
 /// @param param1 KColorScheme*
 void k_colorscheme_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#background)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#background)
 ///
 /// @param self KColorScheme*
 QBrush* k_colorscheme_background(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#foreground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#foreground)
 ///
 /// @param self KColorScheme*
 QBrush* k_colorscheme_foreground(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#decoration)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#decoration)
 ///
 /// @param self KColorScheme*
 /// @param param1 enum KColorScheme__DecorationRole
 QBrush* k_colorscheme_decoration(void* self, int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#shade)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#shade)
 ///
 /// @param self KColorScheme*
 /// @param param1 enum KColorScheme__ShadeRole
 QColor* k_colorscheme_shade(void* self, int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#contrastF)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#contrastF)
 ///
 double k_colorscheme_contrast_f();
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#shade)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#shade)
 ///
 /// @param param1 QColor*
 /// @param param2 enum KColorScheme__ShadeRole
 QColor* k_colorscheme_shade2(void* param1, int32_t param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#shade)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#shade)
 ///
 /// @param param1 QColor*
 /// @param param2 enum KColorScheme__ShadeRole
 /// @param contrast double
 QColor* k_colorscheme_shade3(void* param1, int32_t param2, double contrast);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustBackground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustBackground)
 ///
 /// @param param1 QPalette*
 void k_colorscheme_adjust_background(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustForeground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustForeground)
 ///
 /// @param param1 QPalette*
 void k_colorscheme_adjust_foreground(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#operator-eq-eq)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#operator-eq-eq)
 ///
 /// @param self KColorScheme*
 /// @param other KColorScheme*
 bool k_colorscheme_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#background)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#background)
 ///
 /// @param self KColorScheme*
 /// @param param1 enum KColorScheme__BackgroundRole
 QBrush* k_colorscheme_background1(void* self, int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#foreground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#foreground)
 ///
 /// @param self KColorScheme*
 /// @param param1 enum KColorScheme__ForegroundRole
 QBrush* k_colorscheme_foreground1(void* self, int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#shade)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#shade)
 ///
 /// @param param1 QColor*
 /// @param param2 enum KColorScheme__ShadeRole
@@ -114,20 +114,20 @@ QBrush* k_colorscheme_foreground1(void* self, int32_t param1);
 /// @param chromaAdjust double
 QColor* k_colorscheme_shade4(void* param1, int32_t param2, double contrast, double chromaAdjust);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustBackground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustBackground)
 ///
 /// @param param1 QPalette*
 /// @param newRole enum KColorScheme__BackgroundRole
 void k_colorscheme_adjust_background2(void* param1, int32_t newRole);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustBackground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustBackground)
 ///
 /// @param param1 QPalette*
 /// @param newRole enum KColorScheme__BackgroundRole
 /// @param color enum QPalette__ColorRole
 void k_colorscheme_adjust_background3(void* param1, int32_t newRole, int32_t color);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustBackground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustBackground)
 ///
 /// @param param1 QPalette*
 /// @param newRole enum KColorScheme__BackgroundRole
@@ -135,20 +135,20 @@ void k_colorscheme_adjust_background3(void* param1, int32_t newRole, int32_t col
 /// @param set enum KColorScheme__ColorSet
 void k_colorscheme_adjust_background4(void* param1, int32_t newRole, int32_t color, int32_t set);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustForeground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustForeground)
 ///
 /// @param param1 QPalette*
 /// @param newRole enum KColorScheme__ForegroundRole
 void k_colorscheme_adjust_foreground2(void* param1, int32_t newRole);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustForeground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustForeground)
 ///
 /// @param param1 QPalette*
 /// @param newRole enum KColorScheme__ForegroundRole
 /// @param color enum QPalette__ColorRole
 void k_colorscheme_adjust_foreground3(void* param1, int32_t newRole, int32_t color);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#adjustForeground)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#adjustForeground)
 ///
 /// @param param1 QPalette*
 /// @param newRole enum KColorScheme__ForegroundRole
@@ -156,14 +156,14 @@ void k_colorscheme_adjust_foreground3(void* param1, int32_t newRole, int32_t col
 /// @param set enum KColorScheme__ColorSet
 void k_colorscheme_adjust_foreground4(void* param1, int32_t newRole, int32_t color, int32_t set);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorscheme.html#dtor.KColorScheme)
+/// [Qt documentation](https://api.kde.org/kcolorscheme.html#dtor.KColorScheme)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KColorScheme*
 void k_colorscheme_delete(void* self);
 
-/// https://api-staging.kde.org/kcolorscheme.html#types
+/// https://api.kde.org/kcolorscheme.html#types
 
 typedef enum {
     KCOLORSCHEME_COLORSET_VIEW = 0,

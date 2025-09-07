@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kjobuidelegate.html
+/// https://api.kde.org/kjobuidelegate.html
 
 /// k_jobuidelegate_new constructs a new KJobUiDelegate object.
 ///
@@ -58,13 +58,13 @@ int32_t k_jobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_jobuidelegate_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#setJob)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#setJob)
 ///
 /// @param self KJobUiDelegate*
 /// @param job KJob*
 bool k_jobuidelegate_set_job(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#setJob)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#setJob)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ bool k_jobuidelegate_set_job(void* self, void* job);
 /// @param callback bool func(KJobUiDelegate* self, KJob* job)
 void k_jobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#setJob)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#setJob)
 ///
 /// Base class method implementation
 ///
@@ -80,12 +80,12 @@ void k_jobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*));
 /// @param job KJob*
 bool k_jobuidelegate_qbase_set_job(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#job)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#job)
 ///
 /// @param self KJobUiDelegate*
 KJob* k_jobuidelegate_job(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#job)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#job)
 ///
 /// Allows for overriding the related default method
 ///
@@ -93,19 +93,19 @@ KJob* k_jobuidelegate_job(void* self);
 /// @param callback KJob* func()
 void k_jobuidelegate_on_job(void* self, KJob* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#job)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#job)
 ///
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
 KJob* k_jobuidelegate_qbase_job(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#showErrorMessage)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#showErrorMessage)
 ///
 /// @param self KJobUiDelegate*
 void k_jobuidelegate_show_error_message(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#showErrorMessage)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#showErrorMessage)
 ///
 /// Allows for overriding the related default method
 ///
@@ -113,43 +113,43 @@ void k_jobuidelegate_show_error_message(void* self);
 /// @param callback void func()
 void k_jobuidelegate_on_show_error_message(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#showErrorMessage)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#showErrorMessage)
 ///
 /// Base class method implementation
 ///
 /// @param self KJobUiDelegate*
 void k_jobuidelegate_qbase_show_error_message(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#setAutoErrorHandlingEnabled)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#setAutoErrorHandlingEnabled)
 ///
 /// @param self KJobUiDelegate*
 /// @param enable bool
 void k_jobuidelegate_set_auto_error_handling_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#isAutoErrorHandlingEnabled)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#isAutoErrorHandlingEnabled)
 ///
 /// @param self KJobUiDelegate*
 bool k_jobuidelegate_is_auto_error_handling_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#setAutoWarningHandlingEnabled)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#setAutoWarningHandlingEnabled)
 ///
 /// @param self KJobUiDelegate*
 /// @param enable bool
 void k_jobuidelegate_set_auto_warning_handling_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#isAutoWarningHandlingEnabled)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#isAutoWarningHandlingEnabled)
 ///
 /// @param self KJobUiDelegate*
 bool k_jobuidelegate_is_auto_warning_handling_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#slotWarning)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#slotWarning)
 ///
 /// @param self KJobUiDelegate*
 /// @param job KJob*
 /// @param message const char*
 void k_jobuidelegate_slot_warning(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#slotWarning)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#slotWarning)
 ///
 /// Allows for overriding the related default method
 ///
@@ -157,7 +157,7 @@ void k_jobuidelegate_slot_warning(void* self, void* job, const char* message);
 /// @param callback void func(KJobUiDelegate* self, KJob* job, const char* message)
 void k_jobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#slotWarning)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#slotWarning)
 ///
 /// Base class method implementation
 ///
@@ -828,14 +828,14 @@ void k_jobuidelegate_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(KJobUiDelegate* self, const char* objectName)
 void k_jobuidelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobuidelegate.html#dtor.KJobUiDelegate)
+/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#dtor.KJobUiDelegate)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KJobUiDelegate*
 void k_jobuidelegate_delete(void* self);
 
-/// https://api-staging.kde.org/kjobuidelegate.html#types
+/// https://api.kde.org/kjobuidelegate.html#types
 
 typedef enum {
     KJOBUIDELEGATE_FLAG_AUTOHANDLINGDISABLED = 0,

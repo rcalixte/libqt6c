@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmodifierkeyinfoprovider.html
+/// https://api.kde.org/kmodifierkeyinfoprovider.html
 
 /// k_modifierkeyinfoprovider_new constructs a new KModifierKeyInfoProvider object.
 ///
@@ -53,26 +53,26 @@ int32_t k_modifierkeyinfoprovider_qbase_metacall(void* self, int32_t param1, int
 /// @param s const char*
 const char* k_modifierkeyinfoprovider_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#isKeyPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#isKeyPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfoprovider_is_key_pressed(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#isKeyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#isKeyLatched)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfoprovider_is_key_latched(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param latched bool
 bool k_modifierkeyinfoprovider_set_key_latched(void* self, int32_t key, bool latched);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
 ///
 /// Allows for overriding the related default method
 ///
@@ -80,7 +80,7 @@ bool k_modifierkeyinfoprovider_set_key_latched(void* self, int32_t key, bool lat
 /// @param callback bool func(KModifierKeyInfoProvider* self, enum Qt__Key key, bool latched)
 void k_modifierkeyinfoprovider_on_set_key_latched(void* self, bool (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLatched)
 ///
 /// Base class method implementation
 ///
@@ -89,20 +89,20 @@ void k_modifierkeyinfoprovider_on_set_key_latched(void* self, bool (*callback)(v
 /// @param latched bool
 bool k_modifierkeyinfoprovider_qbase_set_key_latched(void* self, int32_t key, bool latched);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#isKeyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#isKeyLocked)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfoprovider_is_key_locked(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param locked bool
 bool k_modifierkeyinfoprovider_set_key_locked(void* self, int32_t key, bool locked);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -110,7 +110,7 @@ bool k_modifierkeyinfoprovider_set_key_locked(void* self, int32_t key, bool lock
 /// @param callback bool func(KModifierKeyInfoProvider* self, enum Qt__Key key, bool locked)
 void k_modifierkeyinfoprovider_on_set_key_locked(void* self, bool (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#setKeyLocked)
 ///
 /// Base class method implementation
 ///
@@ -119,109 +119,109 @@ void k_modifierkeyinfoprovider_on_set_key_locked(void* self, bool (*callback)(vo
 /// @param locked bool
 bool k_modifierkeyinfoprovider_qbase_set_key_locked(void* self, int32_t key, bool locked);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#isButtonPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#isButtonPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param button enum Qt__MouseButton
 bool k_modifierkeyinfoprovider_is_button_pressed(void* self, int64_t button);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#knowsKey)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#knowsKey)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfoprovider_knows_key(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#knownKeys)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#knownKeys)
 ///
 /// @param self KModifierKeyInfoProvider*
 ///
 /// @return libqt_list of enum Qt__Key
 libqt_list /* of int32_t */ k_modifierkeyinfoprovider_known_keys(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyLatched)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param state bool
 void k_modifierkeyinfoprovider_key_latched(void* self, int32_t key, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyLatched)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key, bool state)
 void k_modifierkeyinfoprovider_on_key_latched(void* self, void (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyLocked)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param state bool
 void k_modifierkeyinfoprovider_key_locked(void* self, int32_t key, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyLocked)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key, bool state)
 void k_modifierkeyinfoprovider_on_key_locked(void* self, void (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param state bool
 void k_modifierkeyinfoprovider_key_pressed(void* self, int32_t key, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key, bool state)
 void k_modifierkeyinfoprovider_on_key_pressed(void* self, void (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#buttonPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param button enum Qt__MouseButton
 /// @param state bool
 void k_modifierkeyinfoprovider_button_pressed(void* self, int64_t button, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#buttonPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__MouseButton button, bool state)
 void k_modifierkeyinfoprovider_on_button_pressed(void* self, void (*callback)(void*, int64_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyAdded)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyAdded)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 void k_modifierkeyinfoprovider_key_added(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyAdded)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyAdded)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key)
 void k_modifierkeyinfoprovider_on_key_added(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyRemoved)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyRemoved)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 void k_modifierkeyinfoprovider_key_removed(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#keyRemoved)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#keyRemoved)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key)
 void k_modifierkeyinfoprovider_on_key_removed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
 ///
 /// @param self KModifierKeyInfoProvider*
 /// @param key enum Qt__Key
 /// @param state flag of enum KModifierKeyInfoProvider__ModifierState
 void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
 ///
 /// Allows for overriding the related default method
 ///
@@ -229,7 +229,7 @@ void k_modifierkeyinfoprovider_state_updated(void* self, int32_t key, int32_t st
 /// @param callback void func(KModifierKeyInfoProvider* self, enum Qt__Key key, flag of enum KModifierKeyInfoProvider__ModifierState state)
 void k_modifierkeyinfoprovider_on_state_updated(void* self, void (*callback)(void*, int32_t, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#stateUpdated)
 ///
 /// Base class method implementation
 ///
@@ -900,14 +900,14 @@ void k_modifierkeyinfoprovider_on_is_signal_connected(void* self, bool (*callbac
 /// @param callback void func(KModifierKeyInfoProvider* self, const char* objectName)
 void k_modifierkeyinfoprovider_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfoprovider.html#dtor.KModifierKeyInfoProvider)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfoprovider.html#dtor.KModifierKeyInfoProvider)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KModifierKeyInfoProvider*
 void k_modifierkeyinfoprovider_delete(void* self);
 
-/// https://api-staging.kde.org/kmodifierkeyinfoprovider_p.html#types
+/// https://api.kde.org/kmodifierkeyinfoprovider_p.html#types
 
 typedef enum {
     KMODIFIERKEYINFOPROVIDER_MODIFIERSTATE_NOTHING = 0,

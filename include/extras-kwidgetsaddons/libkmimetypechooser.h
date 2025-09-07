@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmimetypechooser.html
+/// https://api.kde.org/kmimetypechooser.html
 
 /// k_mimetypechooser_new constructs a new KMimeTypeChooser object.
 ///
@@ -98,14 +98,14 @@ int32_t k_mimetypechooser_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_mimetypechooser_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooser.html#mimeTypes)
+/// [Qt documentation](https://api.kde.org/kmimetypechooser.html#mimeTypes)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMimeTypeChooser*
 const char** k_mimetypechooser_mime_types(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooser.html#patterns)
+/// [Qt documentation](https://api.kde.org/kmimetypechooser.html#patterns)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4365,14 +4365,14 @@ void k_mimetypechooser_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KMimeTypeChooser* self, const char* objectName)
 void k_mimetypechooser_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooser.html#dtor.KMimeTypeChooser)
+/// [Qt documentation](https://api.kde.org/kmimetypechooser.html#dtor.KMimeTypeChooser)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMimeTypeChooser*
 void k_mimetypechooser_delete(void* self);
 
-/// https://api-staging.kde.org/kmimetypechooserdialog.html
+/// https://api.kde.org/kmimetypechooserdialog.html
 
 /// k_mimetypechooserdialog_new constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4487,17 +4487,17 @@ int32_t k_mimetypechooserdialog_qbase_metacall(void* self, int32_t param1, int p
 /// @param s const char*
 const char* k_mimetypechooserdialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#chooser)
+/// [Qt documentation](https://api.kde.org/kmimetypechooserdialog.html#chooser)
 ///
 /// @param self KMimeTypeChooserDialog*
 KMimeTypeChooser* k_mimetypechooserdialog_chooser(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmimetypechooserdialog.html#sizeHint)
 ///
 /// @param self KMimeTypeChooserDialog*
 QSize* k_mimetypechooserdialog_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmimetypechooserdialog.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -4505,7 +4505,7 @@ QSize* k_mimetypechooserdialog_size_hint(void* self);
 /// @param callback QSize* func()
 void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmimetypechooserdialog.html#sizeHint)
 ///
 /// Base class method implementation
 ///
@@ -8993,14 +8993,14 @@ void k_mimetypechooserdialog_on_get_decoded_metric_f(void* self, double (*callba
 /// @param callback void func(KMimeTypeChooserDialog* self, const char* objectName)
 void k_mimetypechooserdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypechooserdialog.html#dtor.KMimeTypeChooserDialog)
+/// [Qt documentation](https://api.kde.org/kmimetypechooserdialog.html#dtor.KMimeTypeChooserDialog)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMimeTypeChooserDialog*
 void k_mimetypechooserdialog_delete(void* self);
 
-/// https://api-staging.kde.org/kmimetypechooser.html#types
+/// https://api.kde.org/kmimetypechooser.html#types
 
 typedef enum {
     KMIMETYPECHOOSER_VISUALS_COMMENTS = 1,

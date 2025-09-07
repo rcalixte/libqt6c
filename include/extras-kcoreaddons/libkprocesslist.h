@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kprocesslist-kprocessinfo.html
+/// https://api.kde.org/kprocesslist-kprocessinfo.html
 
 /// k_processlist__kprocessinfo_new constructs a new KProcessList::KProcessInfo object.
 ///
@@ -37,37 +37,37 @@ KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(long long pid, cons
 /// @param other KProcessList__KProcessInfo*
 KProcessList__KProcessInfo* k_processlist__kprocessinfo_new4(void* other);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist-kprocessinfo.html#operator-eq)
+/// [Qt documentation](https://api.kde.org/kprocesslist-kprocessinfo.html#operator-eq)
 ///
 /// @param self KProcessList__KProcessInfo*
 /// @param other KProcessList__KProcessInfo*
 void k_processlist__kprocessinfo_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist-kprocessinfo.html#isValid)
+/// [Qt documentation](https://api.kde.org/kprocesslist-kprocessinfo.html#isValid)
 ///
 /// @param self KProcessList__KProcessInfo*
 bool k_processlist__kprocessinfo_is_valid(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist-kprocessinfo.html#pid)
+/// [Qt documentation](https://api.kde.org/kprocesslist-kprocessinfo.html#pid)
 ///
 /// @param self KProcessList__KProcessInfo*
 long long k_processlist__kprocessinfo_pid(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist-kprocessinfo.html#name)
+/// [Qt documentation](https://api.kde.org/kprocesslist-kprocessinfo.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KProcessList__KProcessInfo*
 const char* k_processlist__kprocessinfo_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist-kprocessinfo.html#user)
+/// [Qt documentation](https://api.kde.org/kprocesslist-kprocessinfo.html#user)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KProcessList__KProcessInfo*
 const char* k_processlist__kprocessinfo_user(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist-kprocessinfo.html#command)
+/// [Qt documentation](https://api.kde.org/kprocesslist-kprocessinfo.html#command)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -79,13 +79,13 @@ const char* k_processlist__kprocessinfo_command(void* self);
 /// @param self KProcessList__KProcessInfo*
 void k_processlist__kprocessinfo_delete(void* self);
 
-/// https://api-staging.kde.org/kprocesslist.html
+/// https://api.kde.org/kprocesslist.html
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist.html#processInfoList)
+/// [Qt documentation](https://api.kde.org/kprocesslist.html#processInfoList)
 ///
 libqt_list /* of KProcessList__KProcessInfo* */ k_processlist_process_info_list();
 
-/// [Qt documentation](https://api-staging.kde.org/kprocesslist.html#processInfo)
+/// [Qt documentation](https://api.kde.org/kprocesslist.html#processInfo)
 ///
 /// @param param1 long long
 KProcessList__KProcessInfo* k_processlist_process_info(long long param1);

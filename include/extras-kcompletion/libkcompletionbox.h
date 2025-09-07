@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcompletionbox.html
+/// https://api.kde.org/kcompletionbox.html
 
 /// k_completionbox_new constructs a new KCompletionBox object.
 ///
@@ -58,12 +58,12 @@ int32_t k_completionbox_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_completionbox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
 /// @param self KCompletionBox*
 QSize* k_completionbox_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -71,55 +71,55 @@ QSize* k_completionbox_size_hint(void* self);
 /// @param callback QSize* func()
 void k_completionbox_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 QSize* k_completionbox_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#activateOnSelect)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#activateOnSelect)
 ///
 /// @param self KCompletionBox*
 bool k_completionbox_activate_on_select(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#items)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletionBox*
 const char** k_completionbox_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#isTabHandling)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#isTabHandling)
 ///
 /// @param self KCompletionBox*
 bool k_completionbox_is_tab_handling(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#cancelledText)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#cancelledText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCompletionBox*
 const char* k_completionbox_cancelled_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#insertItems)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#insertItems)
 ///
 /// @param self KCompletionBox*
 /// @param items const char**
 void k_completionbox_insert_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setItems)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setItems)
 ///
 /// @param self KCompletionBox*
 /// @param items const char**
 void k_completionbox_set_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#popup)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#popup)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#popup)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#popup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -127,68 +127,68 @@ void k_completionbox_popup(void* self);
 /// @param callback void func()
 void k_completionbox_on_popup(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#popup)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#popup)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 void k_completionbox_qbase_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setTabHandling)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setTabHandling)
 ///
 /// @param self KCompletionBox*
 /// @param enable bool
 void k_completionbox_set_tab_handling(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setCancelledText)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setCancelledText)
 ///
 /// @param self KCompletionBox*
 /// @param text const char*
 void k_completionbox_set_cancelled_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setActivateOnSelect)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setActivateOnSelect)
 ///
 /// @param self KCompletionBox*
 /// @param doEmit bool
 void k_completionbox_set_activate_on_select(void* self, bool doEmit);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#down)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#down)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_down(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#up)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#up)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_up(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#pageDown)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#pageDown)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_page_down(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#pageUp)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#pageUp)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_page_up(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#home)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#home)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_home(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#end)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#end)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_end(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setVisible)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setVisible)
 ///
 /// @param self KCompletionBox*
 /// @param visible bool
 void k_completionbox_set_visible(void* self, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setVisible)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setVisible)
 ///
 /// Allows for overriding the related default method
 ///
@@ -196,7 +196,7 @@ void k_completionbox_set_visible(void* self, bool visible);
 /// @param callback void func(KCompletionBox* self, bool visible)
 void k_completionbox_on_set_visible(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#setVisible)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#setVisible)
 ///
 /// Base class method implementation
 ///
@@ -204,36 +204,36 @@ void k_completionbox_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param visible bool
 void k_completionbox_qbase_set_visible(void* self, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#textActivated)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#textActivated)
 ///
 /// @param self KCompletionBox*
 /// @param text const char*
 void k_completionbox_text_activated(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#textActivated)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#textActivated)
 ///
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, const char* text)
 void k_completionbox_on_text_activated(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#userCancelled)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#userCancelled)
 ///
 /// @param self KCompletionBox*
 /// @param param1 const char*
 void k_completionbox_user_cancelled(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#userCancelled)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#userCancelled)
 ///
 /// @param self KCompletionBox*
 /// @param callback void func(KCompletionBox* self, const char* param1)
 void k_completionbox_on_user_cancelled(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#calculateGeometry)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#calculateGeometry)
 ///
 /// @param self KCompletionBox*
 QRect* k_completionbox_calculate_geometry(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#calculateGeometry)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#calculateGeometry)
 ///
 /// Allows for overriding the related default method
 ///
@@ -241,19 +241,19 @@ QRect* k_completionbox_calculate_geometry(void* self);
 /// @param callback QRect* func()
 void k_completionbox_on_calculate_geometry(void* self, QRect* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#calculateGeometry)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#calculateGeometry)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 QRect* k_completionbox_qbase_calculate_geometry(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#resizeAndReposition)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
 ///
 /// @param self KCompletionBox*
 void k_completionbox_resize_and_reposition(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#resizeAndReposition)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
 ///
 /// Allows for overriding the related default method
 ///
@@ -261,21 +261,21 @@ void k_completionbox_resize_and_reposition(void* self);
 /// @param callback void func()
 void k_completionbox_on_resize_and_reposition(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#resizeAndReposition)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 void k_completionbox_qbase_resize_and_reposition(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#eventFilter)
 ///
 /// @param self KCompletionBox*
 /// @param param1 QObject*
 /// @param param2 QEvent*
 bool k_completionbox_event_filter(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -283,7 +283,7 @@ bool k_completionbox_event_filter(void* self, void* param1, void* param2);
 /// @param callback bool func(KCompletionBox* self, QObject* param1, QEvent* param2)
 void k_completionbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -292,12 +292,12 @@ void k_completionbox_on_event_filter(void* self, bool (*callback)(void*, void*, 
 /// @param param2 QEvent*
 bool k_completionbox_qbase_event_filter(void* self, void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#globalPositionHint)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
 /// @param self KCompletionBox*
 QPoint* k_completionbox_global_position_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#globalPositionHint)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -305,20 +305,20 @@ QPoint* k_completionbox_global_position_hint(void* self);
 /// @param callback QPoint* func()
 void k_completionbox_on_global_position_hint(void* self, QPoint* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#globalPositionHint)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 QPoint* k_completionbox_qbase_global_position_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#slotActivated)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#slotActivated)
 ///
 /// @param self KCompletionBox*
 /// @param param1 QListWidgetItem*
 void k_completionbox_slot_activated(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#slotActivated)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#slotActivated)
 ///
 /// Allows for overriding the related default method
 ///
@@ -326,7 +326,7 @@ void k_completionbox_slot_activated(void* self, void* param1);
 /// @param callback void func(KCompletionBox* self, QListWidgetItem* param1)
 void k_completionbox_on_slot_activated(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#slotActivated)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#slotActivated)
 ///
 /// Base class method implementation
 ///
@@ -351,7 +351,7 @@ const char* k_completionbox_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_completionbox_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#insertItems)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#insertItems)
 ///
 /// @param self KCompletionBox*
 /// @param items const char**
@@ -7982,7 +7982,7 @@ void k_completionbox_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// @param callback void func(KCompletionBox* self, const char* objectName)
 void k_completionbox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcompletionbox.html#dtor.KCompletionBox)
+/// [Qt documentation](https://api.kde.org/kcompletionbox.html#dtor.KCompletionBox)
 ///
 /// Delete this object from C++ memory.
 ///

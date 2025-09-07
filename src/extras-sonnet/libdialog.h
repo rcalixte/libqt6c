@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-dialog.html
+/// https://api.kde.org/sonnet-dialog.html
 
 /// k_sonnet__dialog_new constructs a new Sonnet::Dialog object.
 ///
@@ -19,7 +19,7 @@
 /// @param parent QWidget*
 Sonnet__Dialog* k_sonnet__dialog_new(void* checker, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__Dialog*
 const QMetaObject* k_sonnet__dialog_meta_object(void* self);
@@ -48,86 +48,86 @@ void k_sonnet__dialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_sonnet__dialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__dialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#originalBuffer)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#originalBuffer)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Dialog*
 const char* k_sonnet__dialog_original_buffer(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#buffer)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#buffer)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Dialog*
 const char* k_sonnet__dialog_buffer(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#show)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#show)
 ///
 /// @param self Sonnet__Dialog*
 void k_sonnet__dialog_show(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#activeAutoCorrect)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#activeAutoCorrect)
 ///
 /// @param self Sonnet__Dialog*
 /// @param _active bool
 void k_sonnet__dialog_active_auto_correct(void* self, bool _active);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#showProgressDialog)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#showProgressDialog)
 ///
 /// @param self Sonnet__Dialog*
 void k_sonnet__dialog_show_progress_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#showSpellCheckCompletionMessage)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#showSpellCheckCompletionMessage)
 ///
 /// @param self Sonnet__Dialog*
 void k_sonnet__dialog_show_spell_check_completion_message(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#setSpellCheckContinuedAfterReplacement)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#setSpellCheckContinuedAfterReplacement)
 ///
 /// @param self Sonnet__Dialog*
 /// @param b bool
 void k_sonnet__dialog_set_spell_check_continued_after_replacement(void* self, bool b);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#setBuffer)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#setBuffer)
 ///
 /// @param self Sonnet__Dialog*
 /// @param buffer const char*
 void k_sonnet__dialog_set_buffer(void* self, const char* buffer);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#spellCheckDone)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#spellCheckDone)
 ///
 /// @param self Sonnet__Dialog*
 /// @param newBuffer const char*
 void k_sonnet__dialog_spell_check_done(void* self, const char* newBuffer);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#spellCheckDone)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#spellCheckDone)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self, const char* newBuffer)
 void k_sonnet__dialog_on_spell_check_done(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#misspelling)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#misspelling)
 ///
 /// @param self Sonnet__Dialog*
 /// @param word const char*
 /// @param start int
 void k_sonnet__dialog_misspelling(void* self, const char* word, int start);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#misspelling)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#misspelling)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self, const char* word, int start)
 void k_sonnet__dialog_on_misspelling(void* self, void (*callback)(void*, const char*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#replace)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#replace)
 ///
 /// @param self Sonnet__Dialog*
 /// @param oldWord const char*
@@ -135,72 +135,72 @@ void k_sonnet__dialog_on_misspelling(void* self, void (*callback)(void*, const c
 /// @param newWord const char*
 void k_sonnet__dialog_replace(void* self, const char* oldWord, int start, const char* newWord);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#replace)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#replace)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self, const char* oldWord, int start, const char* newWord)
 void k_sonnet__dialog_on_replace(void* self, void (*callback)(void*, const char*, int, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#stop)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#stop)
 ///
 /// @param self Sonnet__Dialog*
 void k_sonnet__dialog_stop(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#stop)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#stop)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self)
 void k_sonnet__dialog_on_stop(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#cancel)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#cancel)
 ///
 /// @param self Sonnet__Dialog*
 void k_sonnet__dialog_cancel(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#cancel)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#cancel)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self)
 void k_sonnet__dialog_on_cancel(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#autoCorrect)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#autoCorrect)
 ///
 /// @param self Sonnet__Dialog*
 /// @param currentWord const char*
 /// @param replaceWord const char*
 void k_sonnet__dialog_auto_correct(void* self, const char* currentWord, const char* replaceWord);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#autoCorrect)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#autoCorrect)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self, const char* currentWord, const char* replaceWord)
 void k_sonnet__dialog_on_auto_correct(void* self, void (*callback)(void*, const char*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#spellCheckStatus)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#spellCheckStatus)
 ///
 /// @param self Sonnet__Dialog*
 /// @param param1 const char*
 void k_sonnet__dialog_spell_check_status(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#spellCheckStatus)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#spellCheckStatus)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self, const char* param1)
 void k_sonnet__dialog_on_spell_check_status(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#languageChanged)
 ///
 /// @param self Sonnet__Dialog*
 /// @param language const char*
 void k_sonnet__dialog_language_changed(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#languageChanged)
 ///
 /// @param self Sonnet__Dialog*
 /// @param callback void func(Sonnet__Dialog* self, const char* language)
 void k_sonnet__dialog_on_language_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -208,7 +208,7 @@ void k_sonnet__dialog_on_language_changed(void* self, void (*callback)(void*, co
 /// @param c const char*
 const char* k_sonnet__dialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -217,13 +217,13 @@ const char* k_sonnet__dialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_sonnet__dialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#showProgressDialog)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#showProgressDialog)
 ///
 /// @param self Sonnet__Dialog*
 /// @param timeout int
 void k_sonnet__dialog_show_progress_dialog1(void* self, int timeout);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-dialog.html#showSpellCheckCompletionMessage)
+/// [Qt documentation](https://api.kde.org/sonnet-dialog.html#showSpellCheckCompletionMessage)
 ///
 /// @param self Sonnet__Dialog*
 /// @param b bool

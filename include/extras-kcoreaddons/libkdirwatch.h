@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdirwatch.html
+/// https://api.kde.org/kdirwatch.html
 
 /// k_dirwatch_new constructs a new KDirWatch object.
 ///
@@ -58,91 +58,91 @@ int32_t k_dirwatch_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_dirwatch_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#addDir)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#addDir)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_add_dir(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#addFile)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#addFile)
 ///
 /// @param self KDirWatch*
 /// @param file const char*
 void k_dirwatch_add_file(void* self, const char* file);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#ctime)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#ctime)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 QDateTime* k_dirwatch_ctime(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#removeDir)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#removeDir)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_remove_dir(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#removeFile)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#removeFile)
 ///
 /// @param self KDirWatch*
 /// @param file const char*
 void k_dirwatch_remove_file(void* self, const char* file);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#stopDirScan)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#stopDirScan)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 bool k_dirwatch_stop_dir_scan(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#restartDirScan)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#restartDirScan)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 bool k_dirwatch_restart_dir_scan(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#startScan)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#startScan)
 ///
 /// @param self KDirWatch*
 void k_dirwatch_start_scan(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#stopScan)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#stopScan)
 ///
 /// @param self KDirWatch*
 void k_dirwatch_stop_scan(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#isStopped)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#isStopped)
 ///
 /// @param self KDirWatch*
 bool k_dirwatch_is_stopped(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#contains)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#contains)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 bool k_dirwatch_contains(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#internalMethod)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#internalMethod)
 ///
 /// @param self KDirWatch*
 ///
 /// @return enum KDirWatch__Method
 int32_t k_dirwatch_internal_method(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#self)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#self)
 ///
 KDirWatch* k_dirwatch_self();
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#exists)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#exists)
 ///
 bool k_dirwatch_exists();
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#event)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#event)
 ///
 /// @param self KDirWatch*
 /// @param event QEvent*
 bool k_dirwatch_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#event)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -150,7 +150,7 @@ bool k_dirwatch_event(void* self, void* event);
 /// @param callback bool func(KDirWatch* self, QEvent* event)
 void k_dirwatch_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#event)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#event)
 ///
 /// Base class method implementation
 ///
@@ -158,55 +158,55 @@ void k_dirwatch_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 bool k_dirwatch_qbase_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#setCreated)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#setCreated)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_set_created(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#setDirty)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#setDirty)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_set_dirty(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#setDeleted)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#setDeleted)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_set_deleted(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#dirty)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#dirty)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_dirty(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#dirty)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#dirty)
 ///
 /// @param self KDirWatch*
 /// @param callback void func(KDirWatch* self, const char* path)
 void k_dirwatch_on_dirty(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#created)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#created)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_created(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#created)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#created)
 ///
 /// @param self KDirWatch*
 /// @param callback void func(KDirWatch* self, const char* path)
 void k_dirwatch_on_created(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#deleted)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#deleted)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 void k_dirwatch_deleted(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#deleted)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#deleted)
 ///
 /// @param self KDirWatch*
 /// @param callback void func(KDirWatch* self, const char* path)
@@ -229,20 +229,20 @@ const char* k_dirwatch_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_dirwatch_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#addDir)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#addDir)
 ///
 /// @param self KDirWatch*
 /// @param path const char*
 /// @param watchModes flag of enum KDirWatch__WatchMode
 void k_dirwatch_add_dir2(void* self, const char* path, int32_t watchModes);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#startScan)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#startScan)
 ///
 /// @param self KDirWatch*
 /// @param notify bool
 void k_dirwatch_start_scan1(void* self, bool notify);
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#startScan)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#startScan)
 ///
 /// @param self KDirWatch*
 /// @param notify bool
@@ -864,14 +864,14 @@ void k_dirwatch_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param callback void func(KDirWatch* self, const char* objectName)
 void k_dirwatch_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdirwatch.html#dtor.KDirWatch)
+/// [Qt documentation](https://api.kde.org/kdirwatch.html#dtor.KDirWatch)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KDirWatch*
 void k_dirwatch_delete(void* self);
 
-/// https://api-staging.kde.org/kdirwatch.html#types
+/// https://api.kde.org/kdirwatch.html#types
 
 typedef enum {
     KDIRWATCH_WATCHMODE_WATCHDIRONLY = 0,

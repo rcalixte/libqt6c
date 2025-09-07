@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/krandom.html
+/// https://api.kde.org/krandom.html
 
-/// [Qt documentation](https://api-staging.kde.org/krandom.html#randomString)
+/// [Qt documentation](https://api.kde.org/krandom.html#randomString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

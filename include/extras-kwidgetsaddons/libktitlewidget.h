@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktitlewidget.html
+/// https://api.kde.org/ktitlewidget.html
 
 /// k_titlewidget_new constructs a new KTitleWidget object.
 ///
@@ -58,108 +58,108 @@ int32_t k_titlewidget_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_titlewidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setWidget)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setWidget)
 ///
 /// @param self KTitleWidget*
 /// @param widget QWidget*
 void k_titlewidget_set_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#text)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTitleWidget*
 const char* k_titlewidget_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#comment)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#comment)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTitleWidget*
 const char* k_titlewidget_comment(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#icon)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#icon)
 ///
 /// @param self KTitleWidget*
 QIcon* k_titlewidget_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#iconSize)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#iconSize)
 ///
 /// @param self KTitleWidget*
 QSize* k_titlewidget_icon_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setBuddy)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setBuddy)
 ///
 /// @param self KTitleWidget*
 /// @param buddy QWidget*
 void k_titlewidget_set_buddy(void* self, void* buddy);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#autoHideTimeout)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#autoHideTimeout)
 ///
 /// @param self KTitleWidget*
 int32_t k_titlewidget_auto_hide_timeout(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#level)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#level)
 ///
 /// @param self KTitleWidget*
 int32_t k_titlewidget_level(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setText)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setText)
 ///
 /// @param self KTitleWidget*
 /// @param text const char*
 void k_titlewidget_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setText)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setText)
 ///
 /// @param self KTitleWidget*
 /// @param text const char*
 /// @param typeVal enum KTitleWidget__MessageType
 void k_titlewidget_set_text2(void* self, const char* text, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setComment)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setComment)
 ///
 /// @param self KTitleWidget*
 /// @param comment const char*
 void k_titlewidget_set_comment(void* self, const char* comment);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setIcon)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setIcon)
 ///
 /// @param self KTitleWidget*
 /// @param icon QIcon*
 void k_titlewidget_set_icon(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setIcon)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setIcon)
 ///
 /// @param self KTitleWidget*
 /// @param typeVal enum KTitleWidget__MessageType
 void k_titlewidget_set_icon2(void* self, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setIconSize)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setIconSize)
 ///
 /// @param self KTitleWidget*
 /// @param iconSize QSize*
 void k_titlewidget_set_icon_size(void* self, void* iconSize);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setAutoHideTimeout)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setAutoHideTimeout)
 ///
 /// @param self KTitleWidget*
 /// @param msecs int
 void k_titlewidget_set_auto_hide_timeout(void* self, int msecs);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setLevel)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setLevel)
 ///
 /// @param self KTitleWidget*
 /// @param level int
 void k_titlewidget_set_level(void* self, int level);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#changeEvent)
 ///
 /// @param self KTitleWidget*
 /// @param e QEvent*
 void k_titlewidget_change_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -167,7 +167,7 @@ void k_titlewidget_change_event(void* self, void* e);
 /// @param callback void func(KTitleWidget* self, QEvent* e)
 void k_titlewidget_on_change_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#changeEvent)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#changeEvent)
 ///
 /// Base class method implementation
 ///
@@ -175,13 +175,13 @@ void k_titlewidget_on_change_event(void* self, void (*callback)(void*, void*));
 /// @param e QEvent*
 void k_titlewidget_qbase_change_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#showEvent)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#showEvent)
 ///
 /// @param self KTitleWidget*
 /// @param event QShowEvent*
 void k_titlewidget_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#showEvent)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -189,7 +189,7 @@ void k_titlewidget_show_event(void* self, void* event);
 /// @param callback void func(KTitleWidget* self, QShowEvent* event)
 void k_titlewidget_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#showEvent)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -197,14 +197,14 @@ void k_titlewidget_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QShowEvent*
 void k_titlewidget_qbase_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#eventFilter)
 ///
 /// @param self KTitleWidget*
 /// @param object QObject*
 /// @param event QEvent*
 bool k_titlewidget_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -212,7 +212,7 @@ bool k_titlewidget_event_filter(void* self, void* object, void* event);
 /// @param callback bool func(KTitleWidget* self, QObject* object, QEvent* event)
 void k_titlewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -238,28 +238,28 @@ const char* k_titlewidget_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_titlewidget_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setText)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setText)
 ///
 /// @param self KTitleWidget*
 /// @param text const char*
 /// @param alignment flag of enum Qt__AlignmentFlag
 void k_titlewidget_set_text22(void* self, const char* text, int32_t alignment);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setComment)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setComment)
 ///
 /// @param self KTitleWidget*
 /// @param comment const char*
 /// @param typeVal enum KTitleWidget__MessageType
 void k_titlewidget_set_comment2(void* self, const char* comment, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setIcon)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setIcon)
 ///
 /// @param self KTitleWidget*
 /// @param icon QIcon*
 /// @param alignment enum KTitleWidget__ImageAlignment
 void k_titlewidget_set_icon22(void* self, void* icon, int32_t alignment);
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#setIcon)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#setIcon)
 ///
 /// @param self KTitleWidget*
 /// @param typeVal enum KTitleWidget__MessageType
@@ -4410,14 +4410,14 @@ void k_titlewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// @param callback void func(KTitleWidget* self, const char* objectName)
 void k_titlewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktitlewidget.html#dtor.KTitleWidget)
+/// [Qt documentation](https://api.kde.org/ktitlewidget.html#dtor.KTitleWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KTitleWidget*
 void k_titlewidget_delete(void* self);
 
-/// https://api-staging.kde.org/ktitlewidget.html#types
+/// https://api.kde.org/ktitlewidget.html#types
 
 typedef enum {
     KTITLEWIDGET_IMAGEALIGNMENT_IMAGELEFT = 0,

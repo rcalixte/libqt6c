@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kviewstateserializer.html
+/// https://api.kde.org/kviewstateserializer.html
 
 /// k_viewstateserializer_new constructs a new KViewStateSerializer object.
 ///
@@ -58,87 +58,87 @@ int32_t k_viewstateserializer_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_viewstateserializer_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#view)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#view)
 ///
 /// @param self KViewStateSerializer*
 QAbstractItemView* k_viewstateserializer_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#setView)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#setView)
 ///
 /// @param self KViewStateSerializer*
 /// @param view QAbstractItemView*
 void k_viewstateserializer_set_view(void* self, void* view);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#selectionModel)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#selectionModel)
 ///
 /// @param self KViewStateSerializer*
 QItemSelectionModel* k_viewstateserializer_selection_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#setSelectionModel)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#setSelectionModel)
 ///
 /// @param self KViewStateSerializer*
 /// @param selectionModel QItemSelectionModel*
 void k_viewstateserializer_set_selection_model(void* self, void* selectionModel);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#selectionKeys)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#selectionKeys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 const char** k_viewstateserializer_selection_keys(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#expansionKeys)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#expansionKeys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 const char** k_viewstateserializer_expansion_keys(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#currentIndexKey)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#currentIndexKey)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KViewStateSerializer*
 const char* k_viewstateserializer_current_index_key(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#scrollState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#scrollState)
 ///
 /// @param self KViewStateSerializer*
 libqt_pair /* tuple of int and int */ k_viewstateserializer_scroll_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreSelection)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreSelection)
 ///
 /// @param self KViewStateSerializer*
 /// @param indexStrings const char**
 void k_viewstateserializer_restore_selection(void* self, const char* indexStrings[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreCurrentItem)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreCurrentItem)
 ///
 /// @param self KViewStateSerializer*
 /// @param indexString const char*
 void k_viewstateserializer_restore_current_item(void* self, const char* indexString);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreExpanded)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreExpanded)
 ///
 /// @param self KViewStateSerializer*
 /// @param indexStrings const char**
 void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreScrollState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreScrollState)
 ///
 /// @param self KViewStateSerializer*
 /// @param verticalScoll int
 /// @param horizontalScroll int
 void k_viewstateserializer_restore_scroll_state(void* self, int verticalScoll, int horizontalScroll);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexFromConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// @param self KViewStateSerializer*
 /// @param model QAbstractItemModel*
 /// @param key const char*
 QModelIndex* k_viewstateserializer_index_from_config_string(void* self, void* model, const char* key);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexFromConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// Allows for overriding the related default method
 ///
@@ -146,7 +146,7 @@ QModelIndex* k_viewstateserializer_index_from_config_string(void* self, void* mo
 /// @param callback QModelIndex* func(KViewStateSerializer* self, QAbstractItemModel* model, const char* key)
 void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexFromConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// Base class method implementation
 ///
@@ -155,7 +155,7 @@ void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* 
 /// @param key const char*
 QModelIndex* k_viewstateserializer_qbase_index_from_config_string(void* self, void* model, const char* key);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexToConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -163,7 +163,7 @@ QModelIndex* k_viewstateserializer_qbase_index_from_config_string(void* self, vo
 /// @param index QModelIndex*
 const char* k_viewstateserializer_index_to_config_string(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexToConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Allows for overriding the related default method
 ///
@@ -171,7 +171,7 @@ const char* k_viewstateserializer_index_to_config_string(void* self, void* index
 /// @param callback const char* func(KViewStateSerializer* self, QModelIndex* index)
 void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexToConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Base class method implementation
 ///
@@ -179,12 +179,12 @@ void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*c
 /// @param index QModelIndex*
 const char* k_viewstateserializer_qbase_index_to_config_string(void* self, void* index);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreState)
 ///
 /// @param self KViewStateSerializer*
 void k_viewstateserializer_restore_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreState)
 ///
 /// Allows for overriding the related default method
 ///
@@ -192,7 +192,7 @@ void k_viewstateserializer_restore_state(void* self);
 /// @param callback void func()
 void k_viewstateserializer_on_restore_state(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreState)
 ///
 /// Base class method implementation
 ///
@@ -861,7 +861,7 @@ void k_viewstateserializer_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KViewStateSerializer* self, const char* objectName)
 void k_viewstateserializer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#dtor.KViewStateSerializer)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#dtor.KViewStateSerializer)
 ///
 /// Delete this object from C++ memory.
 ///

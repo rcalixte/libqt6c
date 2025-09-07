@@ -11,13 +11,13 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmessageboxnotifyinterface.html
+/// https://api.kde.org/kmessageboxnotifyinterface.html
 
 /// k_messageboxnotifyinterface_new constructs a new KMessageBoxNotifyInterface object.
 ///
 KMessageBoxNotifyInterface* k_messageboxnotifyinterface_new();
 
-/// [Qt documentation](https://api-staging.kde.org/kmessageboxnotifyinterface.html#sendNotification)
+/// [Qt documentation](https://api.kde.org/kmessageboxnotifyinterface.html#sendNotification)
 ///
 /// @param self KMessageBoxNotifyInterface*
 /// @param notificationType enum QMessageBox__Icon
@@ -25,7 +25,7 @@ KMessageBoxNotifyInterface* k_messageboxnotifyinterface_new();
 /// @param parent QWidget*
 void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificationType, const char* message, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessageboxnotifyinterface.html#sendNotification)
+/// [Qt documentation](https://api.kde.org/kmessageboxnotifyinterface.html#sendNotification)
 ///
 /// Allows for overriding the related default method
 ///
@@ -33,7 +33,7 @@ void k_messageboxnotifyinterface_send_notification(void* self, int32_t notificat
 /// @param callback void func(KMessageBoxNotifyInterface* self, enum QMessageBox__Icon notificationType, const char* message, QWidget* parent)
 void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callback)(void*, int32_t, const char*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessageboxnotifyinterface.html#sendNotification)
+/// [Qt documentation](https://api.kde.org/kmessageboxnotifyinterface.html#sendNotification)
 ///
 /// Base class method implementation
 ///
@@ -43,13 +43,13 @@ void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callbac
 /// @param parent QWidget*
 void k_messageboxnotifyinterface_qbase_send_notification(void* self, int32_t notificationType, const char* message, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessageboxnotifyinterface.html#operator-eq)
+/// [Qt documentation](https://api.kde.org/kmessageboxnotifyinterface.html#operator-eq)
 ///
 /// @param self KMessageBoxNotifyInterface*
 /// @param param1 KMessageBoxNotifyInterface*
 void k_messageboxnotifyinterface_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessageboxnotifyinterface.html#dtor.KMessageBoxNotifyInterface)
+/// [Qt documentation](https://api.kde.org/kmessageboxnotifyinterface.html#dtor.KMessageBoxNotifyInterface)
 ///
 /// Delete this object from C++ memory.
 ///

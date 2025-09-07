@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-configview.html
+/// https://api.kde.org/sonnet-configview.html
 
 /// k_sonnet__configview_new constructs a new Sonnet::ConfigView object.
 ///
@@ -22,7 +22,7 @@ Sonnet__ConfigView* k_sonnet__configview_new(void* parent);
 ///
 Sonnet__ConfigView* k_sonnet__configview_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__ConfigView*
 const QMetaObject* k_sonnet__configview_meta_object(void* self);
@@ -51,86 +51,86 @@ void k_sonnet__configview_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param3 void*
 int32_t k_sonnet__configview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__configview_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#backgroundCheckingButtonShown)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#backgroundCheckingButtonShown)
 ///
 /// @param self Sonnet__ConfigView*
 bool k_sonnet__configview_background_checking_button_shown(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#noBackendFoundVisible)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#noBackendFoundVisible)
 ///
 /// @param self Sonnet__ConfigView*
 bool k_sonnet__configview_no_backend_found_visible(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#preferredLanguages)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#preferredLanguages)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigView*
 const char** k_sonnet__configview_preferred_languages(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#language)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#language)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigView*
 const char* k_sonnet__configview_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#ignoreList)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#ignoreList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigView*
 const char** k_sonnet__configview_ignore_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#setNoBackendFoundVisible)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#setNoBackendFoundVisible)
 ///
 /// @param self Sonnet__ConfigView*
 /// @param show bool
 void k_sonnet__configview_set_no_backend_found_visible(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#setBackgroundCheckingButtonShown)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#setBackgroundCheckingButtonShown)
 ///
 /// @param self Sonnet__ConfigView*
 /// @param backgroundCheckingButtonShown bool
 void k_sonnet__configview_set_background_checking_button_shown(void* self, bool backgroundCheckingButtonShown);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#setPreferredLanguages)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#setPreferredLanguages)
 ///
 /// @param self Sonnet__ConfigView*
 /// @param ignoreList const char**
 void k_sonnet__configview_set_preferred_languages(void* self, const char* ignoreList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#setLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#setLanguage)
 ///
 /// @param self Sonnet__ConfigView*
 /// @param language const char*
 void k_sonnet__configview_set_language(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#setIgnoreList)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#setIgnoreList)
 ///
 /// @param self Sonnet__ConfigView*
 /// @param ignoreList const char**
 void k_sonnet__configview_set_ignore_list(void* self, const char* ignoreList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#configChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#configChanged)
 ///
 /// @param self Sonnet__ConfigView*
 void k_sonnet__configview_config_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configview.html#configChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configview.html#configChanged)
 ///
 /// @param self Sonnet__ConfigView*
 /// @param callback void func(Sonnet__ConfigView* self)
 void k_sonnet__configview_on_config_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -138,7 +138,7 @@ void k_sonnet__configview_on_config_changed(void* self, void (*callback)(void*))
 /// @param c const char*
 const char* k_sonnet__configview_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kactionmenu.html
+/// https://api.kde.org/kactionmenu.html
 
 /// k_actionmenu_new constructs a new KActionMenu object.
 ///
@@ -67,56 +67,56 @@ int32_t k_actionmenu_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_actionmenu_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#addAction)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#addAction)
 ///
 /// @param self KActionMenu*
 /// @param action QAction*
 void k_actionmenu_add_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#addSeparator)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#addSeparator)
 ///
 /// @param self KActionMenu*
 QAction* k_actionmenu_add_separator(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#insertAction)
 ///
 /// @param self KActionMenu*
 /// @param before QAction*
 /// @param action QAction*
 void k_actionmenu_insert_action(void* self, void* before, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#insertSeparator)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#insertSeparator)
 ///
 /// @param self KActionMenu*
 /// @param before QAction*
 QAction* k_actionmenu_insert_separator(void* self, void* before);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#removeAction)
 ///
 /// @param self KActionMenu*
 /// @param action QAction*
 void k_actionmenu_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#popupMode)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#popupMode)
 ///
 /// @param self KActionMenu*
 ///
 /// @return enum QToolButton__ToolButtonPopupMode
 int32_t k_actionmenu_popup_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#setPopupMode)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#setPopupMode)
 ///
 /// @param self KActionMenu*
 /// @param popupMode enum QToolButton__ToolButtonPopupMode
 void k_actionmenu_set_popup_mode(void* self, int32_t popupMode);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#createWidget)
 ///
 /// @param self KActionMenu*
 /// @param parent QWidget*
 QWidget* k_actionmenu_create_widget(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#createWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -124,7 +124,7 @@ QWidget* k_actionmenu_create_widget(void* self, void* parent);
 /// @param callback QWidget* func(KActionMenu* self, QWidget* parent)
 void k_actionmenu_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#createWidget)
 ///
 /// Base class method implementation
 ///
@@ -1427,7 +1427,7 @@ void k_actionmenu_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param callback void func(KActionMenu* self, const char* objectName)
 void k_actionmenu_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactionmenu.html#dtor.KActionMenu)
+/// [Qt documentation](https://api.kde.org/kactionmenu.html#dtor.KActionMenu)
 ///
 /// Delete this object from C++ memory.
 ///

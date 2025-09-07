@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kglobalshortcutinfo.html
+/// https://api.kde.org/kglobalshortcutinfo.html
 
 /// k_globalshortcutinfo_new constructs a new KGlobalShortcutInfo object.
 ///
@@ -58,58 +58,58 @@ int32_t k_globalshortcutinfo_qbase_metacall(void* self, int32_t param1, int para
 /// @param s const char*
 const char* k_globalshortcutinfo_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#operator-eq)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#operator-eq)
 ///
 /// @param self KGlobalShortcutInfo*
 /// @param rhs KGlobalShortcutInfo*
 void k_globalshortcutinfo_operator_assign(void* self, void* rhs);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#contextFriendlyName)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#contextFriendlyName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGlobalShortcutInfo*
 const char* k_globalshortcutinfo_context_friendly_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#contextUniqueName)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#contextUniqueName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGlobalShortcutInfo*
 const char* k_globalshortcutinfo_context_unique_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#componentFriendlyName)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#componentFriendlyName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGlobalShortcutInfo*
 const char* k_globalshortcutinfo_component_friendly_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#componentUniqueName)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#componentUniqueName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGlobalShortcutInfo*
 const char* k_globalshortcutinfo_component_unique_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#defaultKeys)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#defaultKeys)
 ///
 /// @param self KGlobalShortcutInfo*
 libqt_list /* of QKeySequence* */ k_globalshortcutinfo_default_keys(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#friendlyName)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#friendlyName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KGlobalShortcutInfo*
 const char* k_globalshortcutinfo_friendly_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#keys)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#keys)
 ///
 /// @param self KGlobalShortcutInfo*
 libqt_list /* of QKeySequence* */ k_globalshortcutinfo_keys(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#uniqueName)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#uniqueName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -778,7 +778,7 @@ void k_globalshortcutinfo_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KGlobalShortcutInfo* self, const char* objectName)
 void k_globalshortcutinfo_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kglobalshortcutinfo.html#dtor.KGlobalShortcutInfo)
+/// [Qt documentation](https://api.kde.org/kglobalshortcutinfo.html#dtor.KGlobalShortcutInfo)
 ///
 /// Delete this object from C++ memory.
 ///

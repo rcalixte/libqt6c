@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpasswordlineedit.html
+/// https://api.kde.org/kpasswordlineedit.html
 
 /// k_passwordlineedit_new constructs a new KPasswordLineEdit object.
 ///
@@ -58,112 +58,112 @@ int32_t k_passwordlineedit_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_passwordlineedit_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#setPassword)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#setPassword)
 ///
 /// @param self KPasswordLineEdit*
 /// @param password const char*
 void k_passwordlineedit_set_password(void* self, const char* password);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#password)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#password)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPasswordLineEdit*
 const char* k_passwordlineedit_password(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#clear)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#clear)
 ///
 /// @param self KPasswordLineEdit*
 void k_passwordlineedit_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#setClearButtonEnabled)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#setClearButtonEnabled)
 ///
 /// @param self KPasswordLineEdit*
 /// @param clear bool
 void k_passwordlineedit_set_clear_button_enabled(void* self, bool clear);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#isClearButtonEnabled)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#isClearButtonEnabled)
 ///
 /// @param self KPasswordLineEdit*
 bool k_passwordlineedit_is_clear_button_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#setEchoMode)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#setEchoMode)
 ///
 /// @param self KPasswordLineEdit*
 /// @param mode enum QLineEdit__EchoMode
 void k_passwordlineedit_set_echo_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#echoMode)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#echoMode)
 ///
 /// @param self KPasswordLineEdit*
 ///
 /// @return enum QLineEdit__EchoMode
 int32_t k_passwordlineedit_echo_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#setReadOnly)
 ///
 /// @param self KPasswordLineEdit*
 /// @param readOnly bool
 void k_passwordlineedit_set_read_only(void* self, bool readOnly);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#isReadOnly)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#isReadOnly)
 ///
 /// @param self KPasswordLineEdit*
 bool k_passwordlineedit_is_read_only(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#revealPasswordMode)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#revealPasswordMode)
 ///
 /// @param self KPasswordLineEdit*
 ///
 /// @return enum KPassword__RevealMode
 int32_t k_passwordlineedit_reveal_password_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#setRevealPasswordMode)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#setRevealPasswordMode)
 ///
 /// @param self KPasswordLineEdit*
 /// @param revealPasswordMode enum KPassword__RevealMode
 void k_passwordlineedit_set_reveal_password_mode(void* self, int32_t revealPasswordMode);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#setRevealPasswordAvailable)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#setRevealPasswordAvailable)
 ///
 /// @param self KPasswordLineEdit*
 /// @param reveal bool
 void k_passwordlineedit_set_reveal_password_available(void* self, bool reveal);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#isRevealPasswordAvailable)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#isRevealPasswordAvailable)
 ///
 /// @param self KPasswordLineEdit*
 bool k_passwordlineedit_is_reveal_password_available(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#toggleEchoModeAction)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#toggleEchoModeAction)
 ///
 /// @param self KPasswordLineEdit*
 QAction* k_passwordlineedit_toggle_echo_mode_action(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#lineEdit)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#lineEdit)
 ///
 /// @param self KPasswordLineEdit*
 QLineEdit* k_passwordlineedit_line_edit(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#echoModeChanged)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#echoModeChanged)
 ///
 /// @param self KPasswordLineEdit*
 /// @param echoMode enum QLineEdit__EchoMode
 void k_passwordlineedit_echo_mode_changed(void* self, int32_t echoMode);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#echoModeChanged)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#echoModeChanged)
 ///
 /// @param self KPasswordLineEdit*
 /// @param callback void func(KPasswordLineEdit* self, enum QLineEdit__EchoMode echoMode)
 void k_passwordlineedit_on_echo_mode_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#passwordChanged)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#passwordChanged)
 ///
 /// @param self KPasswordLineEdit*
 /// @param password const char*
 void k_passwordlineedit_password_changed(void* self, const char* password);
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#passwordChanged)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#passwordChanged)
 ///
 /// @param self KPasswordLineEdit*
 /// @param callback void func(KPasswordLineEdit* self, const char* password)
@@ -4422,7 +4422,7 @@ void k_passwordlineedit_on_get_decoded_metric_f(void* self, double (*callback)(v
 /// @param callback void func(KPasswordLineEdit* self, const char* objectName)
 void k_passwordlineedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpasswordlineedit.html#dtor.KPasswordLineEdit)
+/// [Qt documentation](https://api.kde.org/kpasswordlineedit.html#dtor.KPasswordLineEdit)
 ///
 /// Delete this object from C++ memory.
 ///

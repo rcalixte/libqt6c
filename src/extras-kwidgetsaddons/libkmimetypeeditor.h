@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmimetypeeditor.html
+/// https://api.kde.org/kmimetypeeditor.html
 
-/// [Qt documentation](https://api-staging.kde.org/kmimetypeeditor.html#editMimeType)
+/// [Qt documentation](https://api.kde.org/kmimetypeeditor.html#editMimeType)
 ///
 /// @param param1 const char*
 /// @param param2 QWidget*

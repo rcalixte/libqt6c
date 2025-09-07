@@ -11,19 +11,19 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcountryflagemojiiconengine.html
+/// https://api.kde.org/kcountryflagemojiiconengine.html
 
 /// k_countryflagemojiiconengine_new constructs a new KCountryFlagEmojiIconEngine object.
 ///
 /// @param regionOrCountry const char*
 KCountryFlagEmojiIconEngine* k_countryflagemojiiconengine_new(const char* regionOrCountry);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#clone)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 QIconEngine* k_countryflagemojiiconengine_clone(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#clone)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
@@ -31,21 +31,21 @@ QIconEngine* k_countryflagemojiiconengine_clone(void* self);
 /// @param callback QIconEngine* func()
 void k_countryflagemojiiconengine_on_clone(void* self, QIconEngine* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#clone)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#clone)
 ///
 /// Base class method implementation
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 QIconEngine* k_countryflagemojiiconengine_qbase_clone(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#key)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 const char* k_countryflagemojiiconengine_key(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#key)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// Allows for overriding the related default method
 ///
@@ -53,14 +53,14 @@ const char* k_countryflagemojiiconengine_key(void* self);
 /// @param callback const char* func()
 void k_countryflagemojiiconengine_on_key(void* self, const char* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#key)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#key)
 ///
 /// Base class method implementation
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 const char* k_countryflagemojiiconengine_qbase_key(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#paint)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param painter QPainter*
@@ -69,7 +69,7 @@ const char* k_countryflagemojiiconengine_qbase_key(void* self);
 /// @param state enum QIcon__State
 void k_countryflagemojiiconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#paint)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -77,7 +77,7 @@ void k_countryflagemojiiconengine_paint(void* self, void* painter, void* rect, i
 /// @param callback void func(KCountryFlagEmojiIconEngine* self, QPainter* painter, QRect* rect, enum QIcon__Mode mode, enum QIcon__State state)
 void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#paint)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#paint)
 ///
 /// Base class method implementation
 ///
@@ -88,7 +88,7 @@ void k_countryflagemojiiconengine_on_paint(void* self, void (*callback)(void*, v
 /// @param state enum QIcon__State
 void k_countryflagemojiiconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#pixmap)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param size QSize*
@@ -96,7 +96,7 @@ void k_countryflagemojiiconengine_qbase_paint(void* self, void* painter, void* r
 /// @param state enum QIcon__State
 QPixmap* k_countryflagemojiiconengine_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#pixmap)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -104,7 +104,7 @@ QPixmap* k_countryflagemojiiconengine_pixmap(void* self, void* size, int32_t mod
 /// @param callback QPixmap* func(KCountryFlagEmojiIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#pixmap)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#pixmap)
 ///
 /// Base class method implementation
 ///
@@ -114,7 +114,7 @@ void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(voi
 /// @param state enum QIcon__State
 QPixmap* k_countryflagemojiiconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param size QSize*
@@ -123,7 +123,7 @@ QPixmap* k_countryflagemojiiconengine_qbase_pixmap(void* self, void* size, int32
 /// @param scale double
 QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
 /// Allows for overriding the related default method
 ///
@@ -131,7 +131,7 @@ QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, void* size, int3
 /// @param callback QPixmap* func(KCountryFlagEmojiIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state, double scale)
 void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#scaledPixmap)
 ///
 /// Base class method implementation
 ///
@@ -142,12 +142,12 @@ void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callba
 /// @param scale double
 QPixmap* k_countryflagemojiiconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#isNull)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 bool k_countryflagemojiiconengine_is_null(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#isNull)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
 /// Allows for overriding the related default method
 ///
@@ -155,14 +155,14 @@ bool k_countryflagemojiiconengine_is_null(void* self);
 /// @param callback bool func()
 void k_countryflagemojiiconengine_on_is_null(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#isNull)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#isNull)
 ///
 /// Base class method implementation
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 bool k_countryflagemojiiconengine_qbase_is_null(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#setGlobalDefaultFont)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#setGlobalDefaultFont)
 ///
 /// @param font QFont*
 void k_countryflagemojiiconengine_set_global_default_font(void* font);
@@ -427,7 +427,7 @@ void k_countryflagemojiiconengine_qbase_virtual_hook(void* self, int id, void* d
 /// @param callback void func(KCountryFlagEmojiIconEngine* self, int id, void* data)
 void k_countryflagemojiiconengine_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcountryflagemojiiconengine.html#dtor.KCountryFlagEmojiIconEngine)
+/// [Qt documentation](https://api.kde.org/kcountryflagemojiiconengine.html#dtor.KCountryFlagEmojiIconEngine)
 ///
 /// Delete this object from C++ memory.
 ///

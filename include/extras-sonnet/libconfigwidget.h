@@ -11,14 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-configwidget.html
+/// https://api.kde.org/sonnet-configwidget.html
 
 /// k_sonnet__configwidget_new constructs a new Sonnet::ConfigWidget object.
 ///
 /// @param parent QWidget*
 Sonnet__ConfigWidget* k_sonnet__configwidget_new(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__ConfigWidget*
 const QMetaObject* k_sonnet__configwidget_meta_object(void* self);
@@ -47,53 +47,53 @@ void k_sonnet__configwidget_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_sonnet__configwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__configwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#backgroundCheckingButtonShown)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#backgroundCheckingButtonShown)
 ///
 /// @param self Sonnet__ConfigWidget*
 bool k_sonnet__configwidget_background_checking_button_shown(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#setLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#setLanguage)
 ///
 /// @param self Sonnet__ConfigWidget*
 /// @param language const char*
 void k_sonnet__configwidget_set_language(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#language)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#language)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigWidget*
 const char* k_sonnet__configwidget_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#save)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#save)
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_save(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#setBackgroundCheckingButtonShown)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#setBackgroundCheckingButtonShown)
 ///
 /// @param self Sonnet__ConfigWidget*
 /// @param backgroundCheckingButtonShown bool
 void k_sonnet__configwidget_set_background_checking_button_shown(void* self, bool backgroundCheckingButtonShown);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotDefault)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotDefault)
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_slot_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_slot_ignore_word_removed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
 ///
 /// Allows for overriding the related default method
 ///
@@ -101,19 +101,19 @@ void k_sonnet__configwidget_slot_ignore_word_removed(void* self);
 /// @param callback void func()
 void k_sonnet__configwidget_on_slot_ignore_word_removed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordRemoved)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_qbase_slot_ignore_word_removed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_slot_ignore_word_added(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
 ///
 /// Allows for overriding the related default method
 ///
@@ -121,25 +121,25 @@ void k_sonnet__configwidget_slot_ignore_word_added(void* self);
 /// @param callback void func()
 void k_sonnet__configwidget_on_slot_ignore_word_added(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#slotIgnoreWordAdded)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_qbase_slot_ignore_word_added(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#configChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#configChanged)
 ///
 /// @param self Sonnet__ConfigWidget*
 void k_sonnet__configwidget_config_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configwidget.html#configChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configwidget.html#configChanged)
 ///
 /// @param self Sonnet__ConfigWidget*
 /// @param callback void func(Sonnet__ConfigWidget* self)
 void k_sonnet__configwidget_on_config_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -147,7 +147,7 @@ void k_sonnet__configwidget_on_config_changed(void* self, void (*callback)(void*
 /// @param c const char*
 const char* k_sonnet__configwidget_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kicondialog.html
+/// https://api.kde.org/kicondialog.html
 
 /// k_icondialog_new constructs a new KIconDialog object.
 ///
@@ -58,83 +58,83 @@ int32_t k_icondialog_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_icondialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setStrictIconSize)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setStrictIconSize)
 ///
 /// @param self KIconDialog*
 /// @param policy bool
 void k_icondialog_set_strict_icon_size(void* self, bool policy);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#strictIconSize)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#strictIconSize)
 ///
 /// @param self KIconDialog*
 bool k_icondialog_strict_icon_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setCustomLocation)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setCustomLocation)
 ///
 /// @param self KIconDialog*
 /// @param location const char*
 void k_icondialog_set_custom_location(void* self, const char* location);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setIconSize)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setIconSize)
 ///
 /// @param self KIconDialog*
 /// @param size int
 void k_icondialog_set_icon_size(void* self, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#iconSize)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#iconSize)
 ///
 /// @param self KIconDialog*
 int32_t k_icondialog_icon_size(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setSelectedIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setSelectedIcon)
 ///
 /// @param self KIconDialog*
 /// @param iconName const char*
 void k_icondialog_set_selected_icon(void* self, const char* iconName);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
 void k_icondialog_setup(void* self, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#openDialog)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#openDialog)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconDialog*
 const char* k_icondialog_open_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#showDialog)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#showDialog)
 ///
 /// @param self KIconDialog*
 void k_icondialog_show_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char* k_icondialog_get_icon();
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#newIconName)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#newIconName)
 ///
 /// @param self KIconDialog*
 /// @param iconName const char*
 void k_icondialog_new_icon_name(void* self, const char* iconName);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#newIconName)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#newIconName)
 ///
 /// @param self KIconDialog*
 /// @param callback void func(KIconDialog* self, const char* iconName)
 void k_icondialog_on_new_icon_name(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#showEvent)
 ///
 /// @param self KIconDialog*
 /// @param event QShowEvent*
 void k_icondialog_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -142,7 +142,7 @@ void k_icondialog_show_event(void* self, void* event);
 /// @param callback void func(KIconDialog* self, QShowEvent* event)
 void k_icondialog_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -150,12 +150,12 @@ void k_icondialog_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param event QShowEvent*
 void k_icondialog_qbase_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#slotOk)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#slotOk)
 ///
 /// @param self KIconDialog*
 void k_icondialog_slot_ok(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#slotOk)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#slotOk)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,7 +163,7 @@ void k_icondialog_slot_ok(void* self);
 /// @param callback void func()
 void k_icondialog_on_slot_ok(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#slotOk)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#slotOk)
 ///
 /// Base class method implementation
 ///
@@ -187,14 +187,14 @@ const char* k_icondialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_icondialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
 /// @param context enum KIconLoader__Context
 void k_icondialog_setup2(void* self, int32_t group, int32_t context);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
@@ -202,7 +202,7 @@ void k_icondialog_setup2(void* self, int32_t group, int32_t context);
 /// @param strictIconSize bool
 void k_icondialog_setup3(void* self, int32_t group, int32_t context, bool strictIconSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
@@ -211,7 +211,7 @@ void k_icondialog_setup3(void* self, int32_t group, int32_t context, bool strict
 /// @param iconSize int
 void k_icondialog_setup4(void* self, int32_t group, int32_t context, bool strictIconSize, int iconSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
@@ -221,7 +221,7 @@ void k_icondialog_setup4(void* self, int32_t group, int32_t context, bool strict
 /// @param user bool
 void k_icondialog_setup5(void* self, int32_t group, int32_t context, bool strictIconSize, int iconSize, bool user);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
@@ -232,7 +232,7 @@ void k_icondialog_setup5(void* self, int32_t group, int32_t context, bool strict
 /// @param lockUser bool
 void k_icondialog_setup6(void* self, int32_t group, int32_t context, bool strictIconSize, int iconSize, bool user, bool lockUser);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#setup)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#setup)
 ///
 /// @param self KIconDialog*
 /// @param group enum KIconLoader__Group
@@ -244,14 +244,14 @@ void k_icondialog_setup6(void* self, int32_t group, int32_t context, bool strict
 /// @param lockCustomDir bool
 void k_icondialog_setup7(void* self, int32_t group, int32_t context, bool strictIconSize, int iconSize, bool user, bool lockUser, bool lockCustomDir);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param group enum KIconLoader__Group
 const char* k_icondialog_get_icon1(int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -259,7 +259,7 @@ const char* k_icondialog_get_icon1(int32_t group);
 /// @param context enum KIconLoader__Context
 const char* k_icondialog_get_icon2(int32_t group, int32_t context);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -268,7 +268,7 @@ const char* k_icondialog_get_icon2(int32_t group, int32_t context);
 /// @param strictIconSize bool
 const char* k_icondialog_get_icon3(int32_t group, int32_t context, bool strictIconSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -278,7 +278,7 @@ const char* k_icondialog_get_icon3(int32_t group, int32_t context, bool strictIc
 /// @param iconSize int
 const char* k_icondialog_get_icon4(int32_t group, int32_t context, bool strictIconSize, int iconSize);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -289,7 +289,7 @@ const char* k_icondialog_get_icon4(int32_t group, int32_t context, bool strictIc
 /// @param user bool
 const char* k_icondialog_get_icon5(int32_t group, int32_t context, bool strictIconSize, int iconSize, bool user);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -301,7 +301,7 @@ const char* k_icondialog_get_icon5(int32_t group, int32_t context, bool strictIc
 /// @param parent QWidget*
 const char* k_icondialog_get_icon6(int32_t group, int32_t context, bool strictIconSize, int iconSize, bool user, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#getIcon)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#getIcon)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -4776,7 +4776,7 @@ void k_icondialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KIconDialog* self, const char* objectName)
 void k_icondialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kicondialog.html#dtor.KIconDialog)
+/// [Qt documentation](https://api.kde.org/kicondialog.html#dtor.KIconDialog)
 ///
 /// Delete this object from C++ memory.
 ///

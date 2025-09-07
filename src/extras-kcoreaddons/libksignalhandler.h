@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ksignalhandler.html
+/// https://api.kde.org/ksignalhandler.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,23 +35,23 @@ int32_t k_signalhandler_metacall(void* self, int32_t param1, int param2, void* p
 /// @param s const char*
 const char* k_signalhandler_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#watchSignal)
+/// [Qt documentation](https://api.kde.org/ksignalhandler.html#watchSignal)
 ///
 /// @param self KSignalHandler*
 /// @param signal int
 void k_signalhandler_watch_signal(void* self, int signal);
 
-/// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#self)
+/// [Qt documentation](https://api.kde.org/ksignalhandler.html#self)
 ///
 KSignalHandler* k_signalhandler_self();
 
-/// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#signalReceived)
+/// [Qt documentation](https://api.kde.org/ksignalhandler.html#signalReceived)
 ///
 /// @param self KSignalHandler*
 /// @param signal int
 void k_signalhandler_signal_received(void* self, int signal);
 
-/// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#signalReceived)
+/// [Qt documentation](https://api.kde.org/ksignalhandler.html#signalReceived)
 ///
 /// @param self KSignalHandler*
 /// @param callback void func(KSignalHandler* self, int signal)
@@ -408,7 +408,7 @@ void k_signalhandler_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(KSignalHandler* self, const char* objectName)
 void k_signalhandler_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksignalhandler.html#dtor.KSignalHandler)
+/// [Qt documentation](https://api.kde.org/ksignalhandler.html#dtor.KSignalHandler)
 ///
 /// Delete this object from C++ memory.
 ///

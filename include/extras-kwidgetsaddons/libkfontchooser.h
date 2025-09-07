@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfontchooser.html
+/// https://api.kde.org/kfontchooser.html
 
 /// k_fontchooser_new constructs a new KFontChooser object.
 ///
@@ -69,97 +69,97 @@ int32_t k_fontchooser_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_fontchooser_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#enableColumn)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#enableColumn)
 ///
 /// @param self KFontChooser*
 /// @param column int
 /// @param state bool
 void k_fontchooser_enable_column(void* self, int column, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setFont)
 ///
 /// @param self KFontChooser*
 /// @param font QFont*
 void k_fontchooser_set_font(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#fontDiffFlags)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#fontDiffFlags)
 ///
 /// @param self KFontChooser*
 ///
 /// @return flag of enum KFontChooser__FontDiff
 int32_t k_fontchooser_font_diff_flags(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#font)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#font)
 ///
 /// @param self KFontChooser*
 QFont* k_fontchooser_font(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setColor)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setColor)
 ///
 /// @param self KFontChooser*
 /// @param col QColor*
 void k_fontchooser_set_color(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#color)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#color)
 ///
 /// @param self KFontChooser*
 QColor* k_fontchooser_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setBackgroundColor)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setBackgroundColor)
 ///
 /// @param self KFontChooser*
 /// @param col QColor*
 void k_fontchooser_set_background_color(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#backgroundColor)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#backgroundColor)
 ///
 /// @param self KFontChooser*
 QColor* k_fontchooser_background_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#sampleText)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#sampleText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFontChooser*
 const char* k_fontchooser_sample_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setSampleText)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setSampleText)
 ///
 /// @param self KFontChooser*
 /// @param text const char*
 void k_fontchooser_set_sample_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setSampleBoxVisible)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setSampleBoxVisible)
 ///
 /// @param self KFontChooser*
 /// @param visible bool
 void k_fontchooser_set_sample_box_visible(void* self, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#createFontList)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#createFontList)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param fontListCriteria uint32_t
 const char** k_fontchooser_create_font_list(uint32_t fontListCriteria);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setFontListItems)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setFontListItems)
 ///
 /// @param self KFontChooser*
 /// @param fontList const char**
 void k_fontchooser_set_font_list_items(void* self, const char* fontList[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setMinVisibleItems)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setMinVisibleItems)
 ///
 /// @param self KFontChooser*
 /// @param visibleItems int
 void k_fontchooser_set_min_visible_items(void* self, int visibleItems);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#sizeHint)
 ///
 /// @param self KFontChooser*
 QSize* k_fontchooser_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -167,20 +167,20 @@ QSize* k_fontchooser_size_hint(void* self);
 /// @param callback QSize* func()
 void k_fontchooser_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KFontChooser*
 QSize* k_fontchooser_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#fontSelected)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#fontSelected)
 ///
 /// @param self KFontChooser*
 /// @param font QFont*
 void k_fontchooser_font_selected(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#fontSelected)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#fontSelected)
 ///
 /// @param self KFontChooser*
 /// @param callback void func(KFontChooser* self, QFont* font)
@@ -203,7 +203,7 @@ const char* k_fontchooser_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_fontchooser_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#setFont)
 ///
 /// @param self KFontChooser*
 /// @param font QFont*
@@ -4403,14 +4403,14 @@ void k_fontchooser_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// @param callback void func(KFontChooser* self, const char* objectName)
 void k_fontchooser_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontchooser.html#dtor.KFontChooser)
+/// [Qt documentation](https://api.kde.org/kfontchooser.html#dtor.KFontChooser)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KFontChooser*
 void k_fontchooser_delete(void* self);
 
-/// https://api-staging.kde.org/kfontchooser.html#types
+/// https://api.kde.org/kfontchooser.html#types
 
 typedef enum {
     KFONTCHOOSER_FONTCOLUMN_FAMILYLIST = 1,

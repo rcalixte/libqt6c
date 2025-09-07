@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpixmapsequencewidget.html
+/// https://api.kde.org/kpixmapsequencewidget.html
 
 /// k_pixmapsequencewidget_new constructs a new KPixmapSequenceWidget object.
 ///
@@ -69,22 +69,22 @@ int32_t k_pixmapsequencewidget_qbase_metacall(void* self, int32_t param1, int pa
 /// @param s const char*
 const char* k_pixmapsequencewidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#sequence)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#sequence)
 ///
 /// @param self KPixmapSequenceWidget*
 KPixmapSequence* k_pixmapsequencewidget_sequence(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#interval)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#interval)
 ///
 /// @param self KPixmapSequenceWidget*
 int32_t k_pixmapsequencewidget_interval(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#sizeHint)
 ///
 /// @param self KPixmapSequenceWidget*
 QSize* k_pixmapsequencewidget_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -92,20 +92,20 @@ QSize* k_pixmapsequencewidget_size_hint(void* self);
 /// @param callback QSize* func()
 void k_pixmapsequencewidget_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KPixmapSequenceWidget*
 QSize* k_pixmapsequencewidget_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#setSequence)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#setSequence)
 ///
 /// @param self KPixmapSequenceWidget*
 /// @param seq KPixmapSequence*
 void k_pixmapsequencewidget_set_sequence(void* self, void* seq);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#setInterval)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#setInterval)
 ///
 /// @param self KPixmapSequenceWidget*
 /// @param msecs int
@@ -4336,7 +4336,7 @@ void k_pixmapsequencewidget_on_get_decoded_metric_f(void* self, double (*callbac
 /// @param callback void func(KPixmapSequenceWidget* self, const char* objectName)
 void k_pixmapsequencewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequencewidget.html#dtor.KPixmapSequenceWidget)
+/// [Qt documentation](https://api.kde.org/kpixmapsequencewidget.html#dtor.KPixmapSequenceWidget)
 ///
 /// Delete this object from C++ memory.
 ///

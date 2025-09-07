@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmultitabbar.html
+/// https://api.kde.org/kmultitabbar.html
 
 /// k_multitabbar_new constructs a new KMultiTabBar object.
 ///
@@ -69,88 +69,88 @@ int32_t k_multitabbar_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_multitabbar_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendButton)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendButton)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 int32_t k_multitabbar_append_button(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#removeButton)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#removeButton)
 ///
 /// @param self KMultiTabBar*
 /// @param id int
 void k_multitabbar_remove_button(void* self, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendTab)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendTab)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 int32_t k_multitabbar_append_tab(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#removeTab)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#removeTab)
 ///
 /// @param self KMultiTabBar*
 /// @param id int
 void k_multitabbar_remove_tab(void* self, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#setTab)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#setTab)
 ///
 /// @param self KMultiTabBar*
 /// @param id int
 /// @param state bool
 void k_multitabbar_set_tab(void* self, int id, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#isTabRaised)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#isTabRaised)
 ///
 /// @param self KMultiTabBar*
 /// @param id int
 bool k_multitabbar_is_tab_raised(void* self, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#button)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#button)
 ///
 /// @param self KMultiTabBar*
 /// @param id int
 KMultiTabBarButton* k_multitabbar_button(void* self, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#tab)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#tab)
 ///
 /// @param self KMultiTabBar*
 /// @param id int
 KMultiTabBarTab* k_multitabbar_tab(void* self, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#setPosition)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#setPosition)
 ///
 /// @param self KMultiTabBar*
 /// @param pos enum KMultiTabBar__KMultiTabBarPosition
 void k_multitabbar_set_position(void* self, int32_t pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#position)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#position)
 ///
 /// @param self KMultiTabBar*
 ///
 /// @return enum KMultiTabBar__KMultiTabBarPosition
 int32_t k_multitabbar_position(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#setStyle)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#setStyle)
 ///
 /// @param self KMultiTabBar*
 /// @param style enum KMultiTabBar__KMultiTabBarStyle
 void k_multitabbar_set_style(void* self, int32_t style);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#tabStyle)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#tabStyle)
 ///
 /// @param self KMultiTabBar*
 ///
 /// @return enum KMultiTabBar__KMultiTabBarStyle
 int32_t k_multitabbar_tab_style(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#fontChange)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#fontChange)
 ///
 /// @param self KMultiTabBar*
 /// @param param1 QFont*
 void k_multitabbar_font_change(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#fontChange)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#fontChange)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,7 +158,7 @@ void k_multitabbar_font_change(void* self, void* param1);
 /// @param callback void func(KMultiTabBar* self, QFont* param1)
 void k_multitabbar_on_font_change(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#fontChange)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#fontChange)
 ///
 /// Base class method implementation
 ///
@@ -166,13 +166,13 @@ void k_multitabbar_on_font_change(void* self, void (*callback)(void*, void*));
 /// @param param1 QFont*
 void k_multitabbar_qbase_font_change(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#paintEvent)
 ///
 /// @param self KMultiTabBar*
 /// @param param1 QPaintEvent*
 void k_multitabbar_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,7 +180,7 @@ void k_multitabbar_paint_event(void* self, void* param1);
 /// @param callback void func(KMultiTabBar* self, QPaintEvent* param1)
 void k_multitabbar_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -188,12 +188,12 @@ void k_multitabbar_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QPaintEvent*
 void k_multitabbar_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#updateSeparator)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#updateSeparator)
 ///
 /// @param self KMultiTabBar*
 void k_multitabbar_update_separator(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#updateSeparator)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#updateSeparator)
 ///
 /// Allows for overriding the related default method
 ///
@@ -201,7 +201,7 @@ void k_multitabbar_update_separator(void* self);
 /// @param callback void func()
 void k_multitabbar_on_update_separator(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#updateSeparator)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#updateSeparator)
 ///
 /// Base class method implementation
 ///
@@ -225,14 +225,14 @@ const char* k_multitabbar_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_multitabbar_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendButton)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendButton)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 /// @param id int
 int32_t k_multitabbar_append_button2(void* self, void* icon, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendButton)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendButton)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
@@ -240,7 +240,7 @@ int32_t k_multitabbar_append_button2(void* self, void* icon, int id);
 /// @param popup QMenu*
 int32_t k_multitabbar_append_button3(void* self, void* icon, int id, void* popup);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendButton)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendButton)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
@@ -249,14 +249,14 @@ int32_t k_multitabbar_append_button3(void* self, void* icon, int id, void* popup
 /// @param not_used_yet const char*
 int32_t k_multitabbar_append_button4(void* self, void* icon, int id, void* popup, const char* not_used_yet);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendTab)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendTab)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 /// @param id int
 int32_t k_multitabbar_append_tab2(void* self, void* icon, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#appendTab)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#appendTab)
 ///
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
@@ -4462,14 +4462,14 @@ void k_multitabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// @param callback void func(KMultiTabBar* self, const char* objectName)
 void k_multitabbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbar.html#dtor.KMultiTabBar)
+/// [Qt documentation](https://api.kde.org/kmultitabbar.html#dtor.KMultiTabBar)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMultiTabBar*
 void k_multitabbar_delete(void* self);
 
-/// https://api-staging.kde.org/kmultitabbarbutton.html
+/// https://api.kde.org/kmultitabbarbutton.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -4493,24 +4493,24 @@ int32_t k_multitabbarbutton_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_multitabbarbutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#id)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#id)
 ///
 /// @param self KMultiTabBarButton*
 int32_t k_multitabbarbutton_id(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#setText)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#setText)
 ///
 /// @param self KMultiTabBarButton*
 /// @param text const char*
 void k_multitabbarbutton_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#clicked)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#clicked)
 ///
 /// @param self KMultiTabBarButton*
 /// @param id int
 void k_multitabbarbutton_clicked(void* self, int id);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#clicked)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#clicked)
 ///
 /// @param self KMultiTabBarButton*
 /// @param callback void func(KMultiTabBarButton* self, int id)
@@ -7461,14 +7461,14 @@ int32_t k_multitabbarbutton_encode_metric_f(int32_t metric, double value);
 /// @param callback void func(KMultiTabBarButton* self, const char* objectName)
 void k_multitabbarbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#dtor.KMultiTabBarButton)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#dtor.KMultiTabBarButton)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMultiTabBarButton*
 void k_multitabbarbutton_delete(void* self);
 
-/// https://api-staging.kde.org/kmultitabbartab.html
+/// https://api.kde.org/kmultitabbartab.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -7492,29 +7492,29 @@ int32_t k_multitabbartab_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_multitabbartab_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmultitabbartab.html#sizeHint)
 ///
 /// @param self KMultiTabBarTab*
 QSize* k_multitabbartab_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kmultitabbartab.html#minimumSizeHint)
 ///
 /// @param self KMultiTabBarTab*
 QSize* k_multitabbartab_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#setPosition)
+/// [Qt documentation](https://api.kde.org/kmultitabbartab.html#setPosition)
 ///
 /// @param self KMultiTabBarTab*
 /// @param position enum KMultiTabBar__KMultiTabBarPosition
 void k_multitabbartab_set_position(void* self, int32_t position);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#setStyle)
+/// [Qt documentation](https://api.kde.org/kmultitabbartab.html#setStyle)
 ///
 /// @param self KMultiTabBarTab*
 /// @param style enum KMultiTabBar__KMultiTabBarStyle
 void k_multitabbartab_set_style(void* self, int32_t style);
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#setState)
+/// [Qt documentation](https://api.kde.org/kmultitabbartab.html#setState)
 ///
 /// @param self KMultiTabBarTab*
 /// @param state bool
@@ -7539,14 +7539,14 @@ const char* k_multitabbartab_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KMultiTabBarButton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#id)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#id)
 ///
 /// @param self KMultiTabBarTab*
 int32_t k_multitabbartab_id(void* self);
 
 /// Inherited from KMultiTabBarButton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#setText)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#setText)
 ///
 /// @param self KMultiTabBarTab*
 /// @param text const char*
@@ -7554,7 +7554,7 @@ void k_multitabbartab_set_text(void* self, const char* text);
 
 /// Inherited from KMultiTabBarButton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#clicked)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#clicked)
 ///
 /// @param self KMultiTabBarTab*
 /// @param id int
@@ -7562,7 +7562,7 @@ void k_multitabbartab_clicked(void* self, int id);
 
 /// Inherited from KMultiTabBarButton
 ///
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbarbutton.html#clicked)
+/// [Qt documentation](https://api.kde.org/kmultitabbarbutton.html#clicked)
 ///
 /// @param self KMultiTabBarTab*
 /// @param callback void func(KMultiTabBarTab* self, int id)
@@ -10474,14 +10474,14 @@ int32_t k_multitabbartab_encode_metric_f(int32_t metric, double value);
 /// @param callback void func(KMultiTabBarTab* self, const char* objectName)
 void k_multitabbartab_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmultitabbartab.html#dtor.KMultiTabBarTab)
+/// [Qt documentation](https://api.kde.org/kmultitabbartab.html#dtor.KMultiTabBarTab)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMultiTabBarTab*
 void k_multitabbartab_delete(void* self);
 
-/// https://api-staging.kde.org/kmultitabbar.html#types
+/// https://api.kde.org/kmultitabbar.html#types
 
 typedef enum {
     KMULTITABBAR_KMULTITABBARPOSITION_LEFT = 0,

@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kstandardaction.html
+/// https://api.kde.org/kstandardaction.html
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#create)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#create)
 ///
 /// @param param1 enum KStandardAction__StandardAction
 /// @param param2 QObject*
@@ -21,407 +21,407 @@
 /// @param param4 QObject*
 QAction* k_standardaction_create(int32_t param1, void* param2, const char* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#_k_createInternal)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#_k_createInternal)
 ///
 /// @param param1 enum KStandardAction__StandardAction
 /// @param param2 QObject*
 QAction* k_standardaction_k_create_internal(int32_t param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#name)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardAction__StandardAction
 const char* k_standardaction_name(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#stdNames)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#stdNames)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 const char** k_standardaction_std_names();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#actionIds)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#actionIds)
 ///
 ///
 /// @return libqt_list of enum KStandardAction__StandardAction
 libqt_list /* of int32_t */ k_standardaction_action_ids();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#shortcutForActionId)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#shortcutForActionId)
 ///
 /// @param param1 enum KStandardAction__StandardAction
 ///
 /// @return enum KStandardShortcut__StandardShortcut
 int32_t k_standardaction_shortcut_for_action_id(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#openNew)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#openNew)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_open_new(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#open)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#open)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_open(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#openRecent)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#openRecent)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 KRecentFilesAction* k_standardaction_open_recent(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#save)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#save)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_save(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#saveAs)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#saveAs)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_save_as(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#revert)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#revert)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_revert(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#close)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#close)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_close(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#print)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#print)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_print(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#printPreview)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#printPreview)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_print_preview(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#mail)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#mail)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_mail(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#quit)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#quit)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_quit(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#undo)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#undo)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_undo(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#redo)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#redo)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_redo(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#cut)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#cut)
 ///
 /// @param param1 QObject*
 QAction* k_standardaction_cut(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#copy)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#copy)
 ///
 /// @param param1 QObject*
 QAction* k_standardaction_copy(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#paste)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#paste)
 ///
 /// @param param1 QObject*
 QAction* k_standardaction_paste(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#clear)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#clear)
 ///
 /// @param param1 QObject*
 QAction* k_standardaction_clear(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#selectAll)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#selectAll)
 ///
 /// @param param1 QObject*
 QAction* k_standardaction_select_all(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#cut)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#cut)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_cut2(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#copy)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#copy)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_copy2(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#paste)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#paste)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_paste2(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#clear)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#clear)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_clear2(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#selectAll)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#selectAll)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_select_all2(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#deselect)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#deselect)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_deselect(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#find)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#find)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_find(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#findNext)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#findNext)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_find_next(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#findPrev)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#findPrev)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_find_prev(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#replace)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#replace)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_replace(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#actualSize)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#actualSize)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_actual_size(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#fitToPage)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#fitToPage)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_fit_to_page(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#fitToWidth)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#fitToWidth)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_fit_to_width(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#fitToHeight)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#fitToHeight)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_fit_to_height(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#zoomIn)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#zoomIn)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_zoom_in(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#zoomOut)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#zoomOut)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_zoom_out(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#zoom)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#zoom)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_zoom(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#redisplay)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#redisplay)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_redisplay(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#up)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#up)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_up(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#back)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#back)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_back(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#forward)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#forward)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_forward(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#home)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#home)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_home(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#prior)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#prior)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_prior(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#next)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#next)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_next(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#goTo)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#goTo)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_go_to(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#gotoPage)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#gotoPage)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_goto_page(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#gotoLine)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#gotoLine)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_goto_line(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#firstPage)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#firstPage)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_first_page(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#lastPage)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#lastPage)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_last_page(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#documentBack)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#documentBack)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_document_back(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#documentForward)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#documentForward)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_document_forward(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#addBookmark)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#addBookmark)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_add_bookmark(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#editBookmarks)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#editBookmarks)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_edit_bookmarks(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#spelling)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#spelling)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_spelling(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#showMenubar)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#showMenubar)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 KToggleAction* k_standardaction_show_menubar(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#showStatusbar)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#showStatusbar)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 KToggleAction* k_standardaction_show_statusbar(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#fullScreen)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#fullScreen)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
@@ -429,112 +429,112 @@ KToggleAction* k_standardaction_show_statusbar(void* param1, const char* param2,
 /// @param param4 QObject*
 KToggleFullScreenAction* k_standardaction_full_screen(void* param1, const char* param2, void* param3, void* param4);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#keyBindings)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#keyBindings)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_key_bindings(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#preferences)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#preferences)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_preferences(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#configureToolbars)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#configureToolbars)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_configure_toolbars(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#configureNotifications)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#configureNotifications)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_configure_notifications(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#switchApplicationLanguage)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#switchApplicationLanguage)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_switch_application_language(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#helpContents)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#helpContents)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_help_contents(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#whatsThis)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#whatsThis)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_whats_this(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#reportBug)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#reportBug)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_report_bug(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#aboutApp)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#aboutApp)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_about_app(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#aboutKDE)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#aboutKDE)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_about_k_d_e(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#deleteFile)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#deleteFile)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_delete_file(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#renameFile)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#renameFile)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_rename_file(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#moveToTrash)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#moveToTrash)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_move_to_trash(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#donate)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#donate)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 QAction* k_standardaction_donate(void* param1, const char* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardaction.html#hamburgerMenu)
+/// [Qt documentation](https://api.kde.org/kstandardaction.html#hamburgerMenu)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 /// @param param3 QObject*
 KHamburgerMenu* k_standardaction_hamburger_menu(void* param1, const char* param2, void* param3);
 
-/// https://api-staging.kde.org/kstandardaction.html#types
+/// https://api.kde.org/kstandardaction.html#types
 
 typedef enum {
     KSTANDARDACTION_STANDARDACTION_ACTIONNONE = 0,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktwofingerswipe.html
+/// https://api.kde.org/ktwofingerswipe.html
 
 /// k_twofingerswipe_new constructs a new KTwoFingerSwipe object.
 ///
@@ -58,45 +58,45 @@ int32_t k_twofingerswipe_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_twofingerswipe_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#pos)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#pos)
 ///
 /// @param self KTwoFingerSwipe*
 QPointF* k_twofingerswipe_pos(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#setPos)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#setPos)
 ///
 /// @param self KTwoFingerSwipe*
 /// @param pos QPointF*
 void k_twofingerswipe_set_pos(void* self, void* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#screenPos)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#screenPos)
 ///
 /// @param self KTwoFingerSwipe*
 QPointF* k_twofingerswipe_screen_pos(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#setScreenPos)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#setScreenPos)
 ///
 /// @param self KTwoFingerSwipe*
 /// @param screenPos QPointF*
 void k_twofingerswipe_set_screen_pos(void* self, void* screenPos);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#scenePos)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#scenePos)
 ///
 /// @param self KTwoFingerSwipe*
 QPointF* k_twofingerswipe_scene_pos(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#setScenePos)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#setScenePos)
 ///
 /// @param self KTwoFingerSwipe*
 /// @param scenePos QPointF*
 void k_twofingerswipe_set_scene_pos(void* self, void* scenePos);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#swipeAngle)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#swipeAngle)
 ///
 /// @param self KTwoFingerSwipe*
 double k_twofingerswipe_swipe_angle(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#setSwipeAngle)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#setSwipeAngle)
 ///
 /// @param self KTwoFingerSwipe*
 /// @param swipeAngle double
@@ -828,26 +828,26 @@ void k_twofingerswipe_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KTwoFingerSwipe* self, const char* objectName)
 void k_twofingerswipe_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswipe.html#dtor.KTwoFingerSwipe)
+/// [Qt documentation](https://api.kde.org/ktwofingerswipe.html#dtor.KTwoFingerSwipe)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KTwoFingerSwipe*
 void k_twofingerswipe_delete(void* self);
 
-/// https://api-staging.kde.org/ktwofingerswiperecognizer.html
+/// https://api.kde.org/ktwofingerswiperecognizer.html
 
 /// k_twofingerswiperecognizer_new constructs a new KTwoFingerSwipeRecognizer object.
 ///
 KTwoFingerSwipeRecognizer* k_twofingerswiperecognizer_new();
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#create)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#create)
 ///
 /// @param self KTwoFingerSwipeRecognizer*
 /// @param target QObject*
 QGesture* k_twofingerswiperecognizer_create(void* self, void* target);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#create)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#create)
 ///
 /// Allows for overriding the related default method
 ///
@@ -855,7 +855,7 @@ QGesture* k_twofingerswiperecognizer_create(void* self, void* target);
 /// @param callback QGesture* func(KTwoFingerSwipeRecognizer* self, QObject* target)
 void k_twofingerswiperecognizer_on_create(void* self, QGesture* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#create)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#create)
 ///
 /// Base class method implementation
 ///
@@ -863,7 +863,7 @@ void k_twofingerswiperecognizer_on_create(void* self, QGesture* (*callback)(void
 /// @param target QObject*
 QGesture* k_twofingerswiperecognizer_qbase_create(void* self, void* target);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#recognize)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#recognize)
 ///
 /// @param self KTwoFingerSwipeRecognizer*
 /// @param gesture QGesture*
@@ -873,7 +873,7 @@ QGesture* k_twofingerswiperecognizer_qbase_create(void* self, void* target);
 /// @return flag of enum QGestureRecognizer__ResultFlag
 int32_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#recognize)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#recognize)
 ///
 /// Allows for overriding the related default method
 ///
@@ -881,7 +881,7 @@ int32_t k_twofingerswiperecognizer_recognize(void* self, void* gesture, void* wa
 /// @param callback int32_t func(KTwoFingerSwipeRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event)
 void k_twofingerswiperecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#recognize)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#recognize)
 ///
 /// Base class method implementation
 ///
@@ -893,23 +893,23 @@ void k_twofingerswiperecognizer_on_recognize(void* self, int32_t (*callback)(voi
 /// @return flag of enum QGestureRecognizer__ResultFlag
 int32_t k_twofingerswiperecognizer_qbase_recognize(void* self, void* gesture, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#maxSwipeTime)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#maxSwipeTime)
 ///
 /// @param self KTwoFingerSwipeRecognizer*
 int32_t k_twofingerswiperecognizer_max_swipe_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#setMaxSwipeTime)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#setMaxSwipeTime)
 ///
 /// @param self KTwoFingerSwipeRecognizer*
 /// @param i int
 void k_twofingerswiperecognizer_set_max_swipe_time(void* self, int i);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#minSswipeDistance)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#minSswipeDistance)
 ///
 /// @param self KTwoFingerSwipeRecognizer*
 int32_t k_twofingerswiperecognizer_min_sswipe_distance(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#setSwipeDistance)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#setSwipeDistance)
 ///
 /// @param self KTwoFingerSwipeRecognizer*
 /// @param i int
@@ -969,7 +969,7 @@ void k_twofingerswiperecognizer_qbase_reset(void* self, void* state);
 /// @param callback void func(KTwoFingerSwipeRecognizer* self, QGesture* state)
 void k_twofingerswiperecognizer_on_reset(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktwofingerswiperecognizer.html#dtor.KTwoFingerSwipeRecognizer)
+/// [Qt documentation](https://api.kde.org/ktwofingerswiperecognizer.html#dtor.KTwoFingerSwipeRecognizer)
 ///
 /// Delete this object from C++ memory.
 ///

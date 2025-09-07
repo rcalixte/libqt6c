@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kbusyindicatorwidget.html
+/// https://api.kde.org/kbusyindicatorwidget.html
 
 /// k_busyindicatorwidget_new constructs a new KBusyIndicatorWidget object.
 ///
@@ -58,12 +58,12 @@ int32_t k_busyindicatorwidget_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_busyindicatorwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
 ///
 /// @param self KBusyIndicatorWidget*
 QSize* k_busyindicatorwidget_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -71,40 +71,40 @@ QSize* k_busyindicatorwidget_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_busyindicatorwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KBusyIndicatorWidget*
 QSize* k_busyindicatorwidget_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#isRunning)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#isRunning)
 ///
 /// @param self KBusyIndicatorWidget*
 bool k_busyindicatorwidget_is_running(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#start)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#start)
 ///
 /// @param self KBusyIndicatorWidget*
 void k_busyindicatorwidget_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#stop)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#stop)
 ///
 /// @param self KBusyIndicatorWidget*
 void k_busyindicatorwidget_stop(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#setRunning)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#setRunning)
 ///
 /// @param self KBusyIndicatorWidget*
 void k_busyindicatorwidget_set_running(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#showEvent)
 ///
 /// @param self KBusyIndicatorWidget*
 /// @param event QShowEvent*
 void k_busyindicatorwidget_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -112,7 +112,7 @@ void k_busyindicatorwidget_show_event(void* self, void* event);
 /// @param callback void func(KBusyIndicatorWidget* self, QShowEvent* event)
 void k_busyindicatorwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -120,13 +120,13 @@ void k_busyindicatorwidget_on_show_event(void* self, void (*callback)(void*, voi
 /// @param event QShowEvent*
 void k_busyindicatorwidget_qbase_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#hideEvent)
 ///
 /// @param self KBusyIndicatorWidget*
 /// @param event QHideEvent*
 void k_busyindicatorwidget_hide_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#hideEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -134,7 +134,7 @@ void k_busyindicatorwidget_hide_event(void* self, void* event);
 /// @param callback void func(KBusyIndicatorWidget* self, QHideEvent* event)
 void k_busyindicatorwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#hideEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#hideEvent)
 ///
 /// Base class method implementation
 ///
@@ -142,13 +142,13 @@ void k_busyindicatorwidget_on_hide_event(void* self, void (*callback)(void*, voi
 /// @param event QHideEvent*
 void k_busyindicatorwidget_qbase_hide_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#resizeEvent)
 ///
 /// @param self KBusyIndicatorWidget*
 /// @param event QResizeEvent*
 void k_busyindicatorwidget_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -156,7 +156,7 @@ void k_busyindicatorwidget_resize_event(void* self, void* event);
 /// @param callback void func(KBusyIndicatorWidget* self, QResizeEvent* event)
 void k_busyindicatorwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -164,13 +164,13 @@ void k_busyindicatorwidget_on_resize_event(void* self, void (*callback)(void*, v
 /// @param event QResizeEvent*
 void k_busyindicatorwidget_qbase_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#paintEvent)
 ///
 /// @param self KBusyIndicatorWidget*
 /// @param param1 QPaintEvent*
 void k_busyindicatorwidget_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -178,7 +178,7 @@ void k_busyindicatorwidget_paint_event(void* self, void* param1);
 /// @param callback void func(KBusyIndicatorWidget* self, QPaintEvent* param1)
 void k_busyindicatorwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -186,13 +186,13 @@ void k_busyindicatorwidget_on_paint_event(void* self, void (*callback)(void*, vo
 /// @param param1 QPaintEvent*
 void k_busyindicatorwidget_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#event)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#event)
 ///
 /// @param self KBusyIndicatorWidget*
 /// @param event QEvent*
 bool k_busyindicatorwidget_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#event)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -200,7 +200,7 @@ bool k_busyindicatorwidget_event(void* self, void* event);
 /// @param callback bool func(KBusyIndicatorWidget* self, QEvent* event)
 void k_busyindicatorwidget_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#event)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#event)
 ///
 /// Base class method implementation
 ///
@@ -225,7 +225,7 @@ const char* k_busyindicatorwidget_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_busyindicatorwidget_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#setRunning)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#setRunning)
 ///
 /// @param self KBusyIndicatorWidget*
 /// @param enable bool
@@ -4289,7 +4289,7 @@ void k_busyindicatorwidget_on_get_decoded_metric_f(void* self, double (*callback
 /// @param callback void func(KBusyIndicatorWidget* self, const char* objectName)
 void k_busyindicatorwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbusyindicatorwidget.html#dtor.KBusyIndicatorWidget)
+/// [Qt documentation](https://api.kde.org/kbusyindicatorwidget.html#dtor.KBusyIndicatorWidget)
 ///
 /// Delete this object from C++ memory.
 ///

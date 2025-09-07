@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kruntimeplatform.html
+/// https://api.kde.org/kruntimeplatform.html
 
-/// [Qt documentation](https://api-staging.kde.org/kruntimeplatform.html#runtimePlatform)
+/// [Qt documentation](https://api.kde.org/kruntimeplatform.html#runtimePlatform)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

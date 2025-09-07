@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktoggletoolbaraction.html
+/// https://api.kde.org/ktoggletoolbaraction.html
 
 /// k_toggletoolbaraction_new constructs a new KToggleToolBarAction object.
 ///
@@ -56,19 +56,19 @@ int32_t k_toggletoolbaraction_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_toggletoolbaraction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggletoolbaraction.html#toolBar)
+/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#toolBar)
 ///
 /// @param self KToggleToolBarAction*
 KToolBar* k_toggletoolbaraction_tool_bar(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggletoolbaraction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
 ///
 /// @param self KToggleToolBarAction*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_toggletoolbaraction_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggletoolbaraction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -76,7 +76,7 @@ bool k_toggletoolbaraction_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KToggleToolBarAction* self, QObject* watched, QEvent* event)
 void k_toggletoolbaraction_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggletoolbaraction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -104,7 +104,7 @@ const char* k_toggletoolbaraction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KToggleAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#setCheckedState)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#setCheckedState)
 ///
 /// @param self KToggleToolBarAction*
 /// @param checkedItem KGuiItem*
@@ -1267,7 +1267,7 @@ void k_toggletoolbaraction_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KToggleToolBarAction* self, const char* objectName)
 void k_toggletoolbaraction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggletoolbaraction.html#dtor.KToggleToolBarAction)
+/// [Qt documentation](https://api.kde.org/ktoggletoolbaraction.html#dtor.KToggleToolBarAction)
 ///
 /// Delete this object from C++ memory.
 ///

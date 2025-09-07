@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorschemewatcher.html
+/// https://api.kde.org/kcolorschemewatcher.html
 
 /// k_colorschemewatcher_new constructs a new KColorSchemeWatcher object.
 ///
@@ -58,19 +58,19 @@ int32_t k_colorschemewatcher_qbase_metacall(void* self, int32_t param1, int para
 /// @param s const char*
 const char* k_colorschemewatcher_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschemewatcher.html#systemPreference)
+/// [Qt documentation](https://api.kde.org/kcolorschemewatcher.html#systemPreference)
 ///
 /// @param self KColorSchemeWatcher*
 ///
 /// @return enum KColorSchemeWatcher__ColorPreference
 int32_t k_colorschemewatcher_system_preference(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschemewatcher.html#systemPreferenceChanged)
+/// [Qt documentation](https://api.kde.org/kcolorschemewatcher.html#systemPreferenceChanged)
 ///
 /// @param self KColorSchemeWatcher*
 void k_colorschemewatcher_system_preference_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschemewatcher.html#systemPreferenceChanged)
+/// [Qt documentation](https://api.kde.org/kcolorschemewatcher.html#systemPreferenceChanged)
 ///
 /// @param self KColorSchemeWatcher*
 /// @param callback void func(KColorSchemeWatcher* self)
@@ -738,14 +738,14 @@ void k_colorschemewatcher_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param callback void func(KColorSchemeWatcher* self, const char* objectName)
 void k_colorschemewatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschemewatcher.html#dtor.KColorSchemeWatcher)
+/// [Qt documentation](https://api.kde.org/kcolorschemewatcher.html#dtor.KColorSchemeWatcher)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KColorSchemeWatcher*
 void k_colorschemewatcher_delete(void* self);
 
-/// https://api-staging.kde.org/kcolorschemewatcher.html#types
+/// https://api.kde.org/kcolorschemewatcher.html#types
 
 typedef enum {
     KCOLORSCHEMEWATCHER_COLORPREFERENCE_NOPREFERENCE = 0,

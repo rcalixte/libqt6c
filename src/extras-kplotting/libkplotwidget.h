@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kplotwidget.html
+/// https://api.kde.org/kplotwidget.html
 
 /// k_plotwidget_new constructs a new KPlotWidget object.
 ///
@@ -58,12 +58,12 @@ int32_t k_plotwidget_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_plotwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#minimumSizeHint)
 ///
 /// @param self KPlotWidget*
 QSize* k_plotwidget_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -71,19 +71,19 @@ QSize* k_plotwidget_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_plotwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KPlotWidget*
 QSize* k_plotwidget_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#sizeHint)
 ///
 /// @param self KPlotWidget*
 QSize* k_plotwidget_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -91,14 +91,14 @@ QSize* k_plotwidget_size_hint(void* self);
 /// @param callback QSize* func()
 void k_plotwidget_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KPlotWidget*
 QSize* k_plotwidget_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setLimits)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setLimits)
 ///
 /// @param self KPlotWidget*
 /// @param x1 double
@@ -107,7 +107,7 @@ QSize* k_plotwidget_qbase_size_hint(void* self);
 /// @param y2 double
 void k_plotwidget_set_limits(void* self, double x1, double x2, double y1, double y2);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setSecondaryLimits)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setSecondaryLimits)
 ///
 /// @param self KPlotWidget*
 /// @param x1 double
@@ -116,231 +116,231 @@ void k_plotwidget_set_limits(void* self, double x1, double x2, double y1, double
 /// @param y2 double
 void k_plotwidget_set_secondary_limits(void* self, double x1, double x2, double y1, double y2);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#clearSecondaryLimits)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#clearSecondaryLimits)
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_clear_secondary_limits(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#dataRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#dataRect)
 ///
 /// @param self KPlotWidget*
 QRectF* k_plotwidget_data_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#secondaryDataRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#secondaryDataRect)
 ///
 /// @param self KPlotWidget*
 QRectF* k_plotwidget_secondary_data_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#pixRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#pixRect)
 ///
 /// @param self KPlotWidget*
 QRect* k_plotwidget_pix_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#addPlotObject)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#addPlotObject)
 ///
 /// @param self KPlotWidget*
 /// @param object KPlotObject*
 void k_plotwidget_add_plot_object(void* self, void* object);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#addPlotObjects)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#addPlotObjects)
 ///
 /// @param self KPlotWidget*
 /// @param objects libqt_list /* of KPlotObject* */
 void k_plotwidget_add_plot_objects(void* self, libqt_list objects);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#plotObjects)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#plotObjects)
 ///
 /// @param self KPlotWidget*
 libqt_list /* of KPlotObject* */ k_plotwidget_plot_objects(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setAutoDeletePlotObjects)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setAutoDeletePlotObjects)
 ///
 /// @param self KPlotWidget*
 /// @param autoDelete bool
 void k_plotwidget_set_auto_delete_plot_objects(void* self, bool autoDelete);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#removeAllPlotObjects)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#removeAllPlotObjects)
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_remove_all_plot_objects(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#resetPlotMask)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#resetPlotMask)
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_reset_plot_mask(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#resetPlot)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#resetPlot)
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_reset_plot(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#replacePlotObject)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#replacePlotObject)
 ///
 /// @param self KPlotWidget*
 /// @param i int
 /// @param o KPlotObject*
 void k_plotwidget_replace_plot_object(void* self, int i, void* o);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#backgroundColor)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#backgroundColor)
 ///
 /// @param self KPlotWidget*
 QColor* k_plotwidget_background_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#foregroundColor)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#foregroundColor)
 ///
 /// @param self KPlotWidget*
 QColor* k_plotwidget_foreground_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#gridColor)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#gridColor)
 ///
 /// @param self KPlotWidget*
 QColor* k_plotwidget_grid_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setBackgroundColor)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setBackgroundColor)
 ///
 /// @param self KPlotWidget*
 /// @param bg QColor*
 void k_plotwidget_set_background_color(void* self, void* bg);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setForegroundColor)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setForegroundColor)
 ///
 /// @param self KPlotWidget*
 /// @param fg QColor*
 void k_plotwidget_set_foreground_color(void* self, void* fg);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setGridColor)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setGridColor)
 ///
 /// @param self KPlotWidget*
 /// @param gc QColor*
 void k_plotwidget_set_grid_color(void* self, void* gc);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#isGridShown)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#isGridShown)
 ///
 /// @param self KPlotWidget*
 bool k_plotwidget_is_grid_shown(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#isObjectToolTipShown)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#isObjectToolTipShown)
 ///
 /// @param self KPlotWidget*
 bool k_plotwidget_is_object_tool_tip_shown(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#antialiasing)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#antialiasing)
 ///
 /// @param self KPlotWidget*
 bool k_plotwidget_antialiasing(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setAntialiasing)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setAntialiasing)
 ///
 /// @param self KPlotWidget*
 /// @param b bool
 void k_plotwidget_set_antialiasing(void* self, bool b);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#leftPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#leftPadding)
 ///
 /// @param self KPlotWidget*
 int32_t k_plotwidget_left_padding(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#rightPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#rightPadding)
 ///
 /// @param self KPlotWidget*
 int32_t k_plotwidget_right_padding(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#topPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#topPadding)
 ///
 /// @param self KPlotWidget*
 int32_t k_plotwidget_top_padding(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#bottomPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#bottomPadding)
 ///
 /// @param self KPlotWidget*
 int32_t k_plotwidget_bottom_padding(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setLeftPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setLeftPadding)
 ///
 /// @param self KPlotWidget*
 /// @param padding int
 void k_plotwidget_set_left_padding(void* self, int padding);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setRightPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setRightPadding)
 ///
 /// @param self KPlotWidget*
 /// @param padding int
 void k_plotwidget_set_right_padding(void* self, int padding);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setTopPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setTopPadding)
 ///
 /// @param self KPlotWidget*
 /// @param padding int
 void k_plotwidget_set_top_padding(void* self, int padding);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setBottomPadding)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setBottomPadding)
 ///
 /// @param self KPlotWidget*
 /// @param padding int
 void k_plotwidget_set_bottom_padding(void* self, int padding);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setDefaultPaddings)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setDefaultPaddings)
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_set_default_paddings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#mapToWidget)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#mapToWidget)
 ///
 /// @param self KPlotWidget*
 /// @param p QPointF*
 QPointF* k_plotwidget_map_to_widget(void* self, void* p);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#maskRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#maskRect)
 ///
 /// @param self KPlotWidget*
 /// @param r QRectF*
 void k_plotwidget_mask_rect(void* self, void* r);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#maskAlongLine)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#maskAlongLine)
 ///
 /// @param self KPlotWidget*
 /// @param p1 QPointF*
 /// @param p2 QPointF*
 void k_plotwidget_mask_along_line(void* self, void* p1, void* p2);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#placeLabel)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#placeLabel)
 ///
 /// @param self KPlotWidget*
 /// @param painter QPainter*
 /// @param pp KPlotPoint*
 void k_plotwidget_place_label(void* self, void* painter, void* pp);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#axis)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#axis)
 ///
 /// @param self KPlotWidget*
 /// @param typeVal enum KPlotWidget__Axis
 KPlotAxis* k_plotwidget_axis(void* self, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#axis)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#axis)
 ///
 /// @param self KPlotWidget*
 /// @param typeVal enum KPlotWidget__Axis
 const KPlotAxis* k_plotwidget_axis2(void* self, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setShowGrid)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setShowGrid)
 ///
 /// @param self KPlotWidget*
 /// @param show bool
 void k_plotwidget_set_show_grid(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setObjectToolTipShown)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setObjectToolTipShown)
 ///
 /// @param self KPlotWidget*
 /// @param show bool
 void k_plotwidget_set_object_tool_tip_shown(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#event)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#event)
 ///
 /// @param self KPlotWidget*
 /// @param param1 QEvent*
 bool k_plotwidget_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#event)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -348,7 +348,7 @@ bool k_plotwidget_event(void* self, void* param1);
 /// @param callback bool func(KPlotWidget* self, QEvent* param1)
 void k_plotwidget_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#event)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#event)
 ///
 /// Base class method implementation
 ///
@@ -356,13 +356,13 @@ void k_plotwidget_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_plotwidget_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#paintEvent)
 ///
 /// @param self KPlotWidget*
 /// @param param1 QPaintEvent*
 void k_plotwidget_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -370,7 +370,7 @@ void k_plotwidget_paint_event(void* self, void* param1);
 /// @param callback void func(KPlotWidget* self, QPaintEvent* param1)
 void k_plotwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -378,13 +378,13 @@ void k_plotwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QPaintEvent*
 void k_plotwidget_qbase_paint_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#resizeEvent)
 ///
 /// @param self KPlotWidget*
 /// @param param1 QResizeEvent*
 void k_plotwidget_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -392,7 +392,7 @@ void k_plotwidget_resize_event(void* self, void* param1);
 /// @param callback void func(KPlotWidget* self, QResizeEvent* param1)
 void k_plotwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -400,13 +400,13 @@ void k_plotwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QResizeEvent*
 void k_plotwidget_qbase_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#drawAxes)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#drawAxes)
 ///
 /// @param self KPlotWidget*
 /// @param p QPainter*
 void k_plotwidget_draw_axes(void* self, void* p);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#drawAxes)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#drawAxes)
 ///
 /// Allows for overriding the related default method
 ///
@@ -414,7 +414,7 @@ void k_plotwidget_draw_axes(void* self, void* p);
 /// @param callback void func(KPlotWidget* self, QPainter* p)
 void k_plotwidget_on_draw_axes(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#drawAxes)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#drawAxes)
 ///
 /// Base class method implementation
 ///
@@ -422,12 +422,12 @@ void k_plotwidget_on_draw_axes(void* self, void (*callback)(void*, void*));
 /// @param p QPainter*
 void k_plotwidget_qbase_draw_axes(void* self, void* p);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setPixRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setPixRect)
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_set_pix_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setPixRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setPixRect)
 ///
 /// Allows for overriding the related default method
 ///
@@ -435,20 +435,20 @@ void k_plotwidget_set_pix_rect(void* self);
 /// @param callback void func()
 void k_plotwidget_on_set_pix_rect(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#setPixRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#setPixRect)
 ///
 /// Base class method implementation
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_qbase_set_pix_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#pointsUnderPoint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#pointsUnderPoint)
 ///
 /// @param self KPlotWidget*
 /// @param p QPoint*
 libqt_list /* of KPlotPoint* */ k_plotwidget_points_under_point(void* self, void* p);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#pointsUnderPoint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#pointsUnderPoint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -456,7 +456,7 @@ libqt_list /* of KPlotPoint* */ k_plotwidget_points_under_point(void* self, void
 /// @param callback libqt_list /* of KPlotPoint* */ func(KPlotWidget* self, QPoint* p)
 void k_plotwidget_on_points_under_point(void* self, libqt_list /* of KPlotPoint* */ (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#pointsUnderPoint)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#pointsUnderPoint)
 ///
 /// Base class method implementation
 ///
@@ -481,14 +481,14 @@ const char* k_plotwidget_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_plotwidget_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#maskRect)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#maskRect)
 ///
 /// @param self KPlotWidget*
 /// @param r QRectF*
 /// @param value float
 void k_plotwidget_mask_rect2(void* self, void* r, float value);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#maskAlongLine)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#maskAlongLine)
 ///
 /// @param self KPlotWidget*
 /// @param p1 QPointF*
@@ -4747,14 +4747,14 @@ void k_plotwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KPlotWidget* self, const char* objectName)
 void k_plotwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kplotwidget.html#dtor.KPlotWidget)
+/// [Qt documentation](https://api.kde.org/kplotwidget.html#dtor.KPlotWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KPlotWidget*
 void k_plotwidget_delete(void* self);
 
-/// https://api-staging.kde.org/kplotwidget.html#types
+/// https://api.kde.org/kplotwidget.html#types
 
 typedef enum {
     KPLOTWIDGET_AXIS_LEFTAXIS = 0,

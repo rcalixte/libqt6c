@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ksystemclipboard.html
+/// https://api.kde.org/ksystemclipboard.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,30 +35,30 @@ int32_t k_systemclipboard_metacall(void* self, int32_t param1, int param2, void*
 /// @param s const char*
 const char* k_systemclipboard_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#instance)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#instance)
 ///
 KSystemClipboard* k_systemclipboard_instance();
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#setMimeData)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#setMimeData)
 ///
 /// @param self KSystemClipboard*
 /// @param mime QMimeData*
 /// @param mode enum QClipboard__Mode
 void k_systemclipboard_set_mime_data(void* self, void* mime, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#clear)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#clear)
 ///
 /// @param self KSystemClipboard*
 /// @param mode enum QClipboard__Mode
 void k_systemclipboard_clear(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#mimeData)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#mimeData)
 ///
 /// @param self KSystemClipboard*
 /// @param mode enum QClipboard__Mode
 const QMimeData* k_systemclipboard_mime_data(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#text)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -66,13 +66,13 @@ const QMimeData* k_systemclipboard_mime_data(void* self, int32_t mode);
 /// @param mode enum QClipboard__Mode
 const char* k_systemclipboard_text(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#changed)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#changed)
 ///
 /// @param self KSystemClipboard*
 /// @param mode enum QClipboard__Mode
 void k_systemclipboard_changed(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#changed)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#changed)
 ///
 /// @param self KSystemClipboard*
 /// @param callback void func(KSystemClipboard* self, enum QClipboard__Mode mode)
@@ -429,7 +429,7 @@ void k_systemclipboard_on_destroyed1(void* self, void (*callback)(void*, void*))
 /// @param callback void func(KSystemClipboard* self, const char* objectName)
 void k_systemclipboard_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksystemclipboard.html#dtor.KSystemClipboard)
+/// [Qt documentation](https://api.kde.org/ksystemclipboard.html#dtor.KSystemClipboard)
 ///
 /// Delete this object from C++ memory.
 ///

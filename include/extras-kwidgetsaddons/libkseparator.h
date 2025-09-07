@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kseparator.html
+/// https://api.kde.org/kseparator.html
 
 /// k_separator_new constructs a new KSeparator object.
 ///
@@ -82,14 +82,14 @@ int32_t k_separator_qbase_metacall(void* self, int32_t param1, int param2, void*
 /// @param s const char*
 const char* k_separator_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kseparator.html#orientation)
+/// [Qt documentation](https://api.kde.org/kseparator.html#orientation)
 ///
 /// @param self KSeparator*
 ///
 /// @return enum Qt__Orientation
 int32_t k_separator_orientation(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kseparator.html#setOrientation)
+/// [Qt documentation](https://api.kde.org/kseparator.html#setOrientation)
 ///
 /// @param self KSeparator*
 /// @param orientation enum Qt__Orientation
@@ -4509,7 +4509,7 @@ void k_separator_on_get_decoded_metric_f(void* self, double (*callback)(void*, i
 /// @param callback void func(KSeparator* self, const char* objectName)
 void k_separator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kseparator.html#dtor.KSeparator)
+/// [Qt documentation](https://api.kde.org/kseparator.html#dtor.KSeparator)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfontrequester.html
+/// https://api.kde.org/kfontrequester.html
 
 /// k_fontrequester_new constructs a new KFontRequester object.
 ///
@@ -64,48 +64,48 @@ int32_t k_fontrequester_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_fontrequester_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#font)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#font)
 ///
 /// @param self KFontRequester*
 QFont* k_fontrequester_font(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#isFixedOnly)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#isFixedOnly)
 ///
 /// @param self KFontRequester*
 bool k_fontrequester_is_fixed_only(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#sampleText)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#sampleText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFontRequester*
 const char* k_fontrequester_sample_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#title)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#title)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFontRequester*
 const char* k_fontrequester_title(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#label)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#label)
 ///
 /// @param self KFontRequester*
 QLabel* k_fontrequester_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#button)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#button)
 ///
 /// @param self KFontRequester*
 QPushButton* k_fontrequester_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setFont)
 ///
 /// @param self KFontRequester*
 /// @param font QFont*
 /// @param onlyFixed bool
 void k_fontrequester_set_font(void* self, void* font, bool onlyFixed);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setFont)
 ///
 /// Allows for overriding the related default method
 ///
@@ -113,7 +113,7 @@ void k_fontrequester_set_font(void* self, void* font, bool onlyFixed);
 /// @param callback void func(KFontRequester* self, QFont* font, bool onlyFixed)
 void k_fontrequester_on_set_font(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setFont)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setFont)
 ///
 /// Base class method implementation
 ///
@@ -122,13 +122,13 @@ void k_fontrequester_on_set_font(void* self, void (*callback)(void*, void*, bool
 /// @param onlyFixed bool
 void k_fontrequester_qbase_set_font(void* self, void* font, bool onlyFixed);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setSampleText)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setSampleText)
 ///
 /// @param self KFontRequester*
 /// @param text const char*
 void k_fontrequester_set_sample_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setSampleText)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setSampleText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -136,7 +136,7 @@ void k_fontrequester_set_sample_text(void* self, const char* text);
 /// @param callback void func(KFontRequester* self, const char* text)
 void k_fontrequester_on_set_sample_text(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setSampleText)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setSampleText)
 ///
 /// Base class method implementation
 ///
@@ -144,13 +144,13 @@ void k_fontrequester_on_set_sample_text(void* self, void (*callback)(void*, cons
 /// @param text const char*
 void k_fontrequester_qbase_set_sample_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setTitle)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setTitle)
 ///
 /// @param self KFontRequester*
 /// @param title const char*
 void k_fontrequester_set_title(void* self, const char* title);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setTitle)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setTitle)
 ///
 /// Allows for overriding the related default method
 ///
@@ -158,7 +158,7 @@ void k_fontrequester_set_title(void* self, const char* title);
 /// @param callback void func(KFontRequester* self, const char* title)
 void k_fontrequester_on_set_title(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#setTitle)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#setTitle)
 ///
 /// Base class method implementation
 ///
@@ -166,26 +166,26 @@ void k_fontrequester_on_set_title(void* self, void (*callback)(void*, const char
 /// @param title const char*
 void k_fontrequester_qbase_set_title(void* self, const char* title);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#fontSelected)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#fontSelected)
 ///
 /// @param self KFontRequester*
 /// @param font QFont*
 void k_fontrequester_font_selected(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#fontSelected)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#fontSelected)
 ///
 /// @param self KFontRequester*
 /// @param callback void func(KFontRequester* self, QFont* font)
 void k_fontrequester_on_font_selected(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#eventFilter)
 ///
 /// @param self KFontRequester*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_fontrequester_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -193,7 +193,7 @@ bool k_fontrequester_event_filter(void* self, void* watched, void* event);
 /// @param callback bool func(KFontRequester* self, QObject* watched, QEvent* event)
 void k_fontrequester_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -4408,7 +4408,7 @@ void k_fontrequester_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// @param callback void func(KFontRequester* self, const char* objectName)
 void k_fontrequester_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfontrequester.html#dtor.KFontRequester)
+/// [Qt documentation](https://api.kde.org/kfontrequester.html#dtor.KFontRequester)
 ///
 /// Delete this object from C++ memory.
 ///

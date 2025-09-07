@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ksqueezedtextlabel.html
+/// https://api.kde.org/ksqueezedtextlabel.html
 
 /// k_squeezedtextlabel_new constructs a new KSqueezedTextLabel object.
 ///
@@ -69,12 +69,12 @@ int32_t k_squeezedtextlabel_qbase_metacall(void* self, int32_t param1, int param
 /// @param s const char*
 const char* k_squeezedtextlabel_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#minimumSizeHint)
 ///
 /// @param self KSqueezedTextLabel*
 QSize* k_squeezedtextlabel_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -82,19 +82,19 @@ QSize* k_squeezedtextlabel_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_squeezedtextlabel_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KSqueezedTextLabel*
 QSize* k_squeezedtextlabel_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#sizeHint)
 ///
 /// @param self KSqueezedTextLabel*
 QSize* k_squeezedtextlabel_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -102,32 +102,32 @@ QSize* k_squeezedtextlabel_size_hint(void* self);
 /// @param callback QSize* func()
 void k_squeezedtextlabel_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KSqueezedTextLabel*
 QSize* k_squeezedtextlabel_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setIndent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setIndent)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param indent int
 void k_squeezedtextlabel_set_indent(void* self, int indent);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setMargin)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setMargin)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param margin int
 void k_squeezedtextlabel_set_margin(void* self, int margin);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setAlignment)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setAlignment)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param alignment flag of enum Qt__AlignmentFlag
 void k_squeezedtextlabel_set_alignment(void* self, int32_t alignment);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setAlignment)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setAlignment)
 ///
 /// Allows for overriding the related default method
 ///
@@ -135,7 +135,7 @@ void k_squeezedtextlabel_set_alignment(void* self, int32_t alignment);
 /// @param callback void func(KSqueezedTextLabel* self, flag of enum Qt__AlignmentFlag alignment)
 void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setAlignment)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setAlignment)
 ///
 /// Base class method implementation
 ///
@@ -143,54 +143,54 @@ void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, in
 /// @param alignment flag of enum Qt__AlignmentFlag
 void k_squeezedtextlabel_qbase_set_alignment(void* self, int32_t alignment);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#textElideMode)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#textElideMode)
 ///
 /// @param self KSqueezedTextLabel*
 ///
 /// @return enum Qt__TextElideMode
 int32_t k_squeezedtextlabel_text_elide_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setTextElideMode)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setTextElideMode)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param mode enum Qt__TextElideMode
 void k_squeezedtextlabel_set_text_elide_mode(void* self, int32_t mode);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#fullText)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#fullText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KSqueezedTextLabel*
 const char* k_squeezedtextlabel_full_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#isSqueezed)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#isSqueezed)
 ///
 /// @param self KSqueezedTextLabel*
 bool k_squeezedtextlabel_is_squeezed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#contentsRect)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#contentsRect)
 ///
 /// @param self KSqueezedTextLabel*
 QRect* k_squeezedtextlabel_contents_rect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#setText)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#setText)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param text const char*
 void k_squeezedtextlabel_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#clear)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#clear)
 ///
 /// @param self KSqueezedTextLabel*
 void k_squeezedtextlabel_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#mouseReleaseEvent)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param param1 QMouseEvent*
 void k_squeezedtextlabel_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -198,7 +198,7 @@ void k_squeezedtextlabel_mouse_release_event(void* self, void* param1);
 /// @param callback void func(KSqueezedTextLabel* self, QMouseEvent* param1)
 void k_squeezedtextlabel_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -206,13 +206,13 @@ void k_squeezedtextlabel_on_mouse_release_event(void* self, void (*callback)(voi
 /// @param param1 QMouseEvent*
 void k_squeezedtextlabel_qbase_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#resizeEvent)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param param1 QResizeEvent*
 void k_squeezedtextlabel_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -220,7 +220,7 @@ void k_squeezedtextlabel_resize_event(void* self, void* param1);
 /// @param callback void func(KSqueezedTextLabel* self, QResizeEvent* param1)
 void k_squeezedtextlabel_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -228,13 +228,13 @@ void k_squeezedtextlabel_on_resize_event(void* self, void (*callback)(void*, voi
 /// @param param1 QResizeEvent*
 void k_squeezedtextlabel_qbase_resize_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#contextMenuEvent)
 ///
 /// @param self KSqueezedTextLabel*
 /// @param param1 QContextMenuEvent*
 void k_squeezedtextlabel_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -242,7 +242,7 @@ void k_squeezedtextlabel_context_menu_event(void* self, void* param1);
 /// @param callback void func(KSqueezedTextLabel* self, QContextMenuEvent* param1)
 void k_squeezedtextlabel_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
@@ -250,12 +250,12 @@ void k_squeezedtextlabel_on_context_menu_event(void* self, void (*callback)(void
 /// @param param1 QContextMenuEvent*
 void k_squeezedtextlabel_qbase_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#squeezeTextToLabel)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#squeezeTextToLabel)
 ///
 /// @param self KSqueezedTextLabel*
 void k_squeezedtextlabel_squeeze_text_to_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#squeezeTextToLabel)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#squeezeTextToLabel)
 ///
 /// Allows for overriding the related default method
 ///
@@ -263,7 +263,7 @@ void k_squeezedtextlabel_squeeze_text_to_label(void* self);
 /// @param callback void func()
 void k_squeezedtextlabel_on_squeeze_text_to_label(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#squeezeTextToLabel)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#squeezeTextToLabel)
 ///
 /// Base class method implementation
 ///
@@ -4798,7 +4798,7 @@ void k_squeezedtextlabel_on_get_decoded_metric_f(void* self, double (*callback)(
 /// @param callback void func(KSqueezedTextLabel* self, const char* objectName)
 void k_squeezedtextlabel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ksqueezedtextlabel.html#dtor.KSqueezedTextLabel)
+/// [Qt documentation](https://api.kde.org/ksqueezedtextlabel.html#dtor.KSqueezedTextLabel)
 ///
 /// Delete this object from C++ memory.
 ///

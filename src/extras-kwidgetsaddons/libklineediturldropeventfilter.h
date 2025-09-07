@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klineediturldropeventfilter.html
+/// https://api.kde.org/klineediturldropeventfilter.html
 
 /// k_lineediturldropeventfilter_new constructs a new KLineEditUrlDropEventFilter object.
 ///
@@ -58,14 +58,14 @@ int32_t k_lineediturldropeventfilter_qbase_metacall(void* self, int32_t param1, 
 /// @param s const char*
 const char* k_lineediturldropeventfilter_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klineediturldropeventfilter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/klineediturldropeventfilter.html#eventFilter)
 ///
 /// @param self KLineEditUrlDropEventFilter*
 /// @param object QObject*
 /// @param event QEvent*
 bool k_lineediturldropeventfilter_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/klineediturldropeventfilter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/klineediturldropeventfilter.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,7 +73,7 @@ bool k_lineediturldropeventfilter_event_filter(void* self, void* object, void* e
 /// @param callback bool func(KLineEditUrlDropEventFilter* self, QObject* object, QEvent* event)
 void k_lineediturldropeventfilter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineediturldropeventfilter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/klineediturldropeventfilter.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -712,7 +712,7 @@ void k_lineediturldropeventfilter_on_is_signal_connected(void* self, bool (*call
 /// @param callback void func(KLineEditUrlDropEventFilter* self, const char* objectName)
 void k_lineediturldropeventfilter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klineediturldropeventfilter.html#dtor.KLineEditUrlDropEventFilter)
+/// [Qt documentation](https://api.kde.org/klineediturldropeventfilter.html#dtor.KLineEditUrlDropEventFilter)
 ///
 /// Delete this object from C++ memory.
 ///

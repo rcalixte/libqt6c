@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html
+/// https://api.kde.org/kcategorizedsortfilterproxymodel.html
 
 /// k_categorizedsortfilterproxymodel_new constructs a new KCategorizedSortFilterProxyModel object.
 ///
@@ -58,14 +58,14 @@ int32_t k_categorizedsortfilterproxymodel_qbase_metacall(void* self, int32_t par
 /// @param s const char*
 const char* k_categorizedsortfilterproxymodel_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
 void k_categorizedsortfilterproxymodel_sort(void* self, int column, int32_t order);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,7 +73,7 @@ void k_categorizedsortfilterproxymodel_sort(void* self, int column, int32_t orde
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, int column, enum Qt__SortOrder order)
 void k_categorizedsortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sort)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sort)
 ///
 /// Base class method implementation
 ///
@@ -82,48 +82,48 @@ void k_categorizedsortfilterproxymodel_on_sort(void* self, void (*callback)(void
 /// @param order enum Qt__SortOrder
 void k_categorizedsortfilterproxymodel_qbase_sort(void* self, int column, int32_t order);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#isCategorizedModel)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#isCategorizedModel)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_is_categorized_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#setCategorizedModel)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setCategorizedModel)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param categorizedModel bool
 void k_categorizedsortfilterproxymodel_set_categorized_model(void* self, bool categorizedModel);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sortColumn)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortColumn)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 int32_t k_categorizedsortfilterproxymodel_sort_column(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sortOrder)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortOrder)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 ///
 /// @return enum Qt__SortOrder
 int32_t k_categorizedsortfilterproxymodel_sort_order(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#setSortCategoriesByNaturalComparison)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#setSortCategoriesByNaturalComparison)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param sortCategoriesByNaturalComparison bool
 void k_categorizedsortfilterproxymodel_set_sort_categories_by_natural_comparison(void* self, bool sortCategoriesByNaturalComparison);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#sortCategoriesByNaturalComparison)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#sortCategoriesByNaturalComparison)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 bool k_categorizedsortfilterproxymodel_sort_categories_by_natural_comparison(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Allows for overriding the related default method
 ///
@@ -131,7 +131,7 @@ bool k_categorizedsortfilterproxymodel_less_than(void* self, void* left, void* r
 /// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#lessThan)
 ///
 /// Base class method implementation
 ///
@@ -140,14 +140,14 @@ void k_categorizedsortfilterproxymodel_on_less_than(void* self, bool (*callback)
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_qbase_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_sub_sort_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Allows for overriding the related default method
 ///
@@ -155,7 +155,7 @@ bool k_categorizedsortfilterproxymodel_sub_sort_less_than(void* self, void* left
 /// @param callback bool func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#subSortLessThan)
 ///
 /// Base class method implementation
 ///
@@ -164,14 +164,14 @@ void k_categorizedsortfilterproxymodel_on_sub_sort_less_than(void* self, bool (*
 /// @param right QModelIndex*
 bool k_categorizedsortfilterproxymodel_qbase_sub_sort_less_than(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 int32_t k_categorizedsortfilterproxymodel_compare_categories(void* self, void* left, void* right);
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Allows for overriding the related default method
 ///
@@ -179,7 +179,7 @@ int32_t k_categorizedsortfilterproxymodel_compare_categories(void* self, void* l
 /// @param callback int32_t func(KCategorizedSortFilterProxyModel* self, QModelIndex* left, QModelIndex* right)
 void k_categorizedsortfilterproxymodel_on_compare_categories(void* self, int32_t (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#compareCategories)
 ///
 /// Base class method implementation
 ///
@@ -3714,14 +3714,14 @@ void k_categorizedsortfilterproxymodel_on_columns_moved(void* self, void (*callb
 /// @param callback void func(KCategorizedSortFilterProxyModel* self, const char* objectName)
 void k_categorizedsortfilterproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#dtor.KCategorizedSortFilterProxyModel)
+/// [Qt documentation](https://api.kde.org/kcategorizedsortfilterproxymodel.html#dtor.KCategorizedSortFilterProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 void k_categorizedsortfilterproxymodel_delete(void* self);
 
-/// https://api-staging.kde.org/kcategorizedsortfilterproxymodel.html#types
+/// https://api.kde.org/kcategorizedsortfilterproxymodel.html#types
 
 typedef enum {
     KCATEGORIZEDSORTFILTERPROXYMODEL_ADDITIONALROLES_CATEGORYDISPLAYROLE = 399415562,

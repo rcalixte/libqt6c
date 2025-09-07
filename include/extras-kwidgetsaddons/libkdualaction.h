@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdualaction.html
+/// https://api.kde.org/kdualaction.html
 
 /// k_dualaction_new constructs a new KDualAction object.
 ///
@@ -61,149 +61,149 @@ int32_t k_dualaction_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_dualaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setActiveGuiItem)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setActiveGuiItem)
 ///
 /// @param self KDualAction*
 /// @param activeGuiItem KGuiItem*
 void k_dualaction_set_active_gui_item(void* self, void* activeGuiItem);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeGuiItem)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeGuiItem)
 ///
 /// @param self KDualAction*
 KGuiItem* k_dualaction_active_gui_item(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setInactiveGuiItem)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setInactiveGuiItem)
 ///
 /// @param self KDualAction*
 /// @param inactiveGuiItem KGuiItem*
 void k_dualaction_set_inactive_gui_item(void* self, void* inactiveGuiItem);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#inactiveGuiItem)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#inactiveGuiItem)
 ///
 /// @param self KDualAction*
 KGuiItem* k_dualaction_inactive_gui_item(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setActiveIcon)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setActiveIcon)
 ///
 /// @param self KDualAction*
 /// @param activeIcon QIcon*
 void k_dualaction_set_active_icon(void* self, void* activeIcon);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeIcon)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeIcon)
 ///
 /// @param self KDualAction*
 QIcon* k_dualaction_active_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setInactiveIcon)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setInactiveIcon)
 ///
 /// @param self KDualAction*
 /// @param inactiveIcon QIcon*
 void k_dualaction_set_inactive_icon(void* self, void* inactiveIcon);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#inactiveIcon)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#inactiveIcon)
 ///
 /// @param self KDualAction*
 QIcon* k_dualaction_inactive_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setActiveText)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setActiveText)
 ///
 /// @param self KDualAction*
 /// @param activeText const char*
 void k_dualaction_set_active_text(void* self, const char* activeText);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeText)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDualAction*
 const char* k_dualaction_active_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setInactiveText)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setInactiveText)
 ///
 /// @param self KDualAction*
 /// @param inactiveText const char*
 void k_dualaction_set_inactive_text(void* self, const char* inactiveText);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#inactiveText)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#inactiveText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDualAction*
 const char* k_dualaction_inactive_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setActiveToolTip)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setActiveToolTip)
 ///
 /// @param self KDualAction*
 /// @param activeToolTip const char*
 void k_dualaction_set_active_tool_tip(void* self, const char* activeToolTip);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeToolTip)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeToolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDualAction*
 const char* k_dualaction_active_tool_tip(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setInactiveToolTip)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setInactiveToolTip)
 ///
 /// @param self KDualAction*
 /// @param inactiveToolTip const char*
 void k_dualaction_set_inactive_tool_tip(void* self, const char* inactiveToolTip);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#inactiveToolTip)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#inactiveToolTip)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KDualAction*
 const char* k_dualaction_inactive_tool_tip(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setIconForStates)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setIconForStates)
 ///
 /// @param self KDualAction*
 /// @param icon QIcon*
 void k_dualaction_set_icon_for_states(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#isActive)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#isActive)
 ///
 /// @param self KDualAction*
 bool k_dualaction_is_active(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setAutoToggle)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setAutoToggle)
 ///
 /// @param self KDualAction*
 /// @param autoToggle bool
 void k_dualaction_set_auto_toggle(void* self, bool autoToggle);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#autoToggle)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#autoToggle)
 ///
 /// @param self KDualAction*
 bool k_dualaction_auto_toggle(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#setActive)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#setActive)
 ///
 /// @param self KDualAction*
 /// @param state bool
 void k_dualaction_set_active(void* self, bool state);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChanged)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeChanged)
 ///
 /// @param self KDualAction*
 /// @param param1 bool
 void k_dualaction_active_changed(void* self, bool param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChanged)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeChanged)
 ///
 /// @param self KDualAction*
 /// @param callback void func(KDualAction* self, bool param1)
 void k_dualaction_on_active_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChangedByUser)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeChangedByUser)
 ///
 /// @param self KDualAction*
 /// @param param1 bool
 void k_dualaction_active_changed_by_user(void* self, bool param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#activeChangedByUser)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#activeChangedByUser)
 ///
 /// @param self KDualAction*
 /// @param callback void func(KDualAction* self, bool param1)
@@ -1415,7 +1415,7 @@ void k_dualaction_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param callback void func(KDualAction* self, const char* objectName)
 void k_dualaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdualaction.html#dtor.KDualAction)
+/// [Qt documentation](https://api.kde.org/kdualaction.html#dtor.KDualAction)
 ///
 /// Delete this object from C++ memory.
 ///

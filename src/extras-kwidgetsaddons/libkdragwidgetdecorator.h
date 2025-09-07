@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kdragwidgetdecoratorbase.html
+/// https://api.kde.org/kdragwidgetdecoratorbase.html
 
 /// k_dragwidgetdecoratorbase_new constructs a new KDragWidgetDecoratorBase object.
 ///
@@ -58,23 +58,23 @@ int32_t k_dragwidgetdecoratorbase_qbase_metacall(void* self, int32_t param1, int
 /// @param s const char*
 const char* k_dragwidgetdecoratorbase_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#setDragEnabled)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#setDragEnabled)
 ///
 /// @param self KDragWidgetDecoratorBase*
 /// @param enable bool
 void k_dragwidgetdecoratorbase_set_drag_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#isDragEnabled)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#isDragEnabled)
 ///
 /// @param self KDragWidgetDecoratorBase*
 bool k_dragwidgetdecoratorbase_is_drag_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
 ///
 /// @param self KDragWidgetDecoratorBase*
 QWidget* k_dragwidgetdecoratorbase_decorated_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -82,19 +82,19 @@ QWidget* k_dragwidgetdecoratorbase_decorated_widget(void* self);
 /// @param callback QWidget* func()
 void k_dragwidgetdecoratorbase_on_decorated_widget(void* self, QWidget* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#decoratedWidget)
 ///
 /// Base class method implementation
 ///
 /// @param self KDragWidgetDecoratorBase*
 QWidget* k_dragwidgetdecoratorbase_qbase_decorated_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#dragObject)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#dragObject)
 ///
 /// @param self KDragWidgetDecoratorBase*
 QDrag* k_dragwidgetdecoratorbase_drag_object(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#dragObject)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#dragObject)
 ///
 /// Allows for overriding the related default method
 ///
@@ -102,21 +102,21 @@ QDrag* k_dragwidgetdecoratorbase_drag_object(void* self);
 /// @param callback QDrag* func()
 void k_dragwidgetdecoratorbase_on_drag_object(void* self, QDrag* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#dragObject)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#dragObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KDragWidgetDecoratorBase*
 QDrag* k_dragwidgetdecoratorbase_qbase_drag_object(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
 ///
 /// @param self KDragWidgetDecoratorBase*
 /// @param watched QObject*
 /// @param event QEvent*
 bool k_dragwidgetdecoratorbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -124,7 +124,7 @@ bool k_dragwidgetdecoratorbase_event_filter(void* self, void* watched, void* eve
 /// @param callback bool func(KDragWidgetDecoratorBase* self, QObject* watched, QEvent* event)
 void k_dragwidgetdecoratorbase_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -133,12 +133,12 @@ void k_dragwidgetdecoratorbase_on_event_filter(void* self, bool (*callback)(void
 /// @param event QEvent*
 bool k_dragwidgetdecoratorbase_qbase_event_filter(void* self, void* watched, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#startDrag)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#startDrag)
 ///
 /// @param self KDragWidgetDecoratorBase*
 void k_dragwidgetdecoratorbase_start_drag(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#startDrag)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#startDrag)
 ///
 /// Allows for overriding the related default method
 ///
@@ -146,7 +146,7 @@ void k_dragwidgetdecoratorbase_start_drag(void* self);
 /// @param callback void func()
 void k_dragwidgetdecoratorbase_on_start_drag(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#startDrag)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#startDrag)
 ///
 /// Base class method implementation
 ///
@@ -783,7 +783,7 @@ void k_dragwidgetdecoratorbase_on_is_signal_connected(void* self, bool (*callbac
 /// @param callback void func(KDragWidgetDecoratorBase* self, const char* objectName)
 void k_dragwidgetdecoratorbase_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kdragwidgetdecoratorbase.html#dtor.KDragWidgetDecoratorBase)
+/// [Qt documentation](https://api.kde.org/kdragwidgetdecoratorbase.html#dtor.KDragWidgetDecoratorBase)
 ///
 /// Delete this object from C++ memory.
 ///

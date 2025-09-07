@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kassistantdialog.html
+/// https://api.kde.org/kassistantdialog.html
 
 /// k_assistantdialog_new constructs a new KAssistantDialog object.
 ///
@@ -64,53 +64,53 @@ int32_t k_assistantdialog_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_assistantdialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#setValid)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#setValid)
 ///
 /// @param self KAssistantDialog*
 /// @param page KPageWidgetItem*
 /// @param enable bool
 void k_assistantdialog_set_valid(void* self, void* page, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#isValid)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#isValid)
 ///
 /// @param self KAssistantDialog*
 /// @param page KPageWidgetItem*
 bool k_assistantdialog_is_valid(void* self, void* page);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#setAppropriate)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#setAppropriate)
 ///
 /// @param self KAssistantDialog*
 /// @param page KPageWidgetItem*
 /// @param appropriate bool
 void k_assistantdialog_set_appropriate(void* self, void* page, bool appropriate);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#isAppropriate)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#isAppropriate)
 ///
 /// @param self KAssistantDialog*
 /// @param page KPageWidgetItem*
 bool k_assistantdialog_is_appropriate(void* self, void* page);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#nextButton)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#nextButton)
 ///
 /// @param self KAssistantDialog*
 QPushButton* k_assistantdialog_next_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#backButton)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#backButton)
 ///
 /// @param self KAssistantDialog*
 QPushButton* k_assistantdialog_back_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#finishButton)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#finishButton)
 ///
 /// @param self KAssistantDialog*
 QPushButton* k_assistantdialog_finish_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#back)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#back)
 ///
 /// @param self KAssistantDialog*
 void k_assistantdialog_back(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#back)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#back)
 ///
 /// Allows for overriding the related default method
 ///
@@ -118,19 +118,19 @@ void k_assistantdialog_back(void* self);
 /// @param callback void func()
 void k_assistantdialog_on_back(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#back)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#back)
 ///
 /// Base class method implementation
 ///
 /// @param self KAssistantDialog*
 void k_assistantdialog_qbase_back(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#next)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#next)
 ///
 /// @param self KAssistantDialog*
 void k_assistantdialog_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#next)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#next)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,20 +138,20 @@ void k_assistantdialog_next(void* self);
 /// @param callback void func()
 void k_assistantdialog_on_next(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#next)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#next)
 ///
 /// Base class method implementation
 ///
 /// @param self KAssistantDialog*
 void k_assistantdialog_qbase_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#showEvent)
 ///
 /// @param self KAssistantDialog*
 /// @param event QShowEvent*
 void k_assistantdialog_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -159,7 +159,7 @@ void k_assistantdialog_show_event(void* self, void* event);
 /// @param callback void func(KAssistantDialog* self, QShowEvent* event)
 void k_assistantdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -186,7 +186,7 @@ const char* k_assistantdialog_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setFaceType)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setFaceType)
 ///
 /// @param self KAssistantDialog*
 /// @param faceType enum KPageDialog__FaceType
@@ -194,7 +194,7 @@ void k_assistantdialog_set_face_type(void* self, int32_t faceType);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addPage)
 ///
 /// @param self KAssistantDialog*
 /// @param widget QWidget*
@@ -203,7 +203,7 @@ KPageWidgetItem* k_assistantdialog_add_page(void* self, void* widget, const char
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addPage)
 ///
 /// @param self KAssistantDialog*
 /// @param item KPageWidgetItem*
@@ -211,7 +211,7 @@ void k_assistantdialog_add_page2(void* self, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#insertPage)
 ///
 /// @param self KAssistantDialog*
 /// @param before KPageWidgetItem*
@@ -221,7 +221,7 @@ KPageWidgetItem* k_assistantdialog_insert_page(void* self, void* before, void* w
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#insertPage)
 ///
 /// @param self KAssistantDialog*
 /// @param before KPageWidgetItem*
@@ -230,7 +230,7 @@ void k_assistantdialog_insert_page2(void* self, void* before, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addSubPage)
 ///
 /// @param self KAssistantDialog*
 /// @param parent KPageWidgetItem*
@@ -240,7 +240,7 @@ KPageWidgetItem* k_assistantdialog_add_sub_page(void* self, void* parent, void* 
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addSubPage)
 ///
 /// @param self KAssistantDialog*
 /// @param parent KPageWidgetItem*
@@ -249,7 +249,7 @@ void k_assistantdialog_add_sub_page2(void* self, void* parent, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#removePage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#removePage)
 ///
 /// @param self KAssistantDialog*
 /// @param item KPageWidgetItem*
@@ -257,7 +257,7 @@ void k_assistantdialog_remove_page(void* self, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setCurrentPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setCurrentPage)
 ///
 /// @param self KAssistantDialog*
 /// @param item KPageWidgetItem*
@@ -265,14 +265,14 @@ void k_assistantdialog_set_current_page(void* self, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPage)
 ///
 /// @param self KAssistantDialog*
 KPageWidgetItem* k_assistantdialog_current_page(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setStandardButtons)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setStandardButtons)
 ///
 /// @param self KAssistantDialog*
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
@@ -280,7 +280,7 @@ void k_assistantdialog_set_standard_buttons(void* self, int32_t buttons);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#button)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#button)
 ///
 /// @param self KAssistantDialog*
 /// @param which enum QDialogButtonBox__StandardButton
@@ -288,7 +288,7 @@ QPushButton* k_assistantdialog_button(void* self, int32_t which);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addActionButton)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addActionButton)
 ///
 /// @param self KAssistantDialog*
 /// @param button QAbstractButton*
@@ -296,7 +296,7 @@ void k_assistantdialog_add_action_button(void* self, void* button);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KAssistantDialog*
 /// @param current KPageWidgetItem*
@@ -305,7 +305,7 @@ void k_assistantdialog_current_page_changed(void* self, void* current, void* bef
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, KPageWidgetItem* current, KPageWidgetItem* before)
@@ -313,7 +313,7 @@ void k_assistantdialog_on_current_page_changed(void* self, void (*callback)(void
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KAssistantDialog*
 /// @param page KPageWidgetItem*
@@ -321,7 +321,7 @@ void k_assistantdialog_page_removed(void* self, void* page);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KAssistantDialog*
 /// @param callback void func(KAssistantDialog* self, KPageWidgetItem* page)
@@ -4463,7 +4463,7 @@ void k_assistantdialog_on_disconnect_notify(void* self, void (*callback)(void*, 
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4472,7 +4472,7 @@ KPageWidget* k_assistantdialog_page_widget(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4481,7 +4481,7 @@ KPageWidget* k_assistantdialog_qbase_page_widget(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4491,7 +4491,7 @@ void k_assistantdialog_on_page_widget(void* self, KPageWidget* (*callback)());
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4501,7 +4501,7 @@ void k_assistantdialog_set_page_widget(void* self, void* widget);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4511,7 +4511,7 @@ void k_assistantdialog_qbase_set_page_widget(void* self, void* widget);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4521,7 +4521,7 @@ void k_assistantdialog_on_set_page_widget(void* self, void (*callback)(void*, vo
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4530,7 +4530,7 @@ QDialogButtonBox* k_assistantdialog_button_box(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4539,7 +4539,7 @@ QDialogButtonBox* k_assistantdialog_qbase_button_box(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4549,7 +4549,7 @@ void k_assistantdialog_on_button_box(void* self, QDialogButtonBox* (*callback)()
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4559,7 +4559,7 @@ void k_assistantdialog_set_button_box(void* self, void* box);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4569,7 +4569,7 @@ void k_assistantdialog_qbase_set_button_box(void* self, void* box);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4905,7 +4905,7 @@ void k_assistantdialog_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KAssistantDialog* self, const char* objectName)
 void k_assistantdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kassistantdialog.html#dtor.KAssistantDialog)
+/// [Qt documentation](https://api.kde.org/kassistantdialog.html#dtor.KAssistantDialog)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorschememodel.html
+/// https://api.kde.org/kcolorschememodel.html
 
 /// k_colorschememodel_new constructs a new KColorSchemeModel object.
 ///
@@ -58,14 +58,14 @@ int32_t k_colorschememodel_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_colorschememodel_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#data)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#data)
 ///
 /// @param self KColorSchemeModel*
 /// @param index QModelIndex*
 /// @param role int
 QVariant* k_colorschememodel_data(void* self, void* index, int role);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#data)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,7 +73,7 @@ QVariant* k_colorschememodel_data(void* self, void* index, int role);
 /// @param callback QVariant* func(KColorSchemeModel* self, QModelIndex* index, int role)
 void k_colorschememodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#data)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#data)
 ///
 /// Base class method implementation
 ///
@@ -82,13 +82,13 @@ void k_colorschememodel_on_data(void* self, QVariant* (*callback)(void*, void*, 
 /// @param role int
 QVariant* k_colorschememodel_qbase_data(void* self, void* index, int role);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#rowCount)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#rowCount)
 ///
 /// @param self KColorSchemeModel*
 /// @param parent QModelIndex*
 int32_t k_colorschememodel_row_count(void* self, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#rowCount)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -96,7 +96,7 @@ int32_t k_colorschememodel_row_count(void* self, void* parent);
 /// @param callback int32_t func(KColorSchemeModel* self, QModelIndex* parent)
 void k_colorschememodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#rowCount)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
@@ -2932,14 +2932,14 @@ void k_colorschememodel_on_columns_moved(void* self, void (*callback)(void*, voi
 /// @param callback void func(KColorSchemeModel* self, const char* objectName)
 void k_colorschememodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorschememodel.html#dtor.KColorSchemeModel)
+/// [Qt documentation](https://api.kde.org/kcolorschememodel.html#dtor.KColorSchemeModel)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KColorSchemeModel*
 void k_colorschememodel_delete(void* self);
 
-/// https://api-staging.kde.org/kcolorschememodel.html#types
+/// https://api.kde.org/kcolorschememodel.html#types
 
 typedef enum {
     KCOLORSCHEMEMODEL_ROLES_NAMEROLE = 0,

@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmessagebox.html
+/// https://api.kde.org/kmessagebox.html
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#questionTwoActions)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#questionTwoActions)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -26,7 +26,7 @@
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_question_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#questionTwoActionsCancel)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#questionTwoActionsCancel)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -40,7 +40,7 @@ int32_t k_messagebox_question_two_actions(void* param1, const char* param2, cons
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_question_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#questionTwoActionsList)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#questionTwoActionsList)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -54,7 +54,7 @@ int32_t k_messagebox_question_two_actions_cancel(void* param1, const char* param
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActions)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActions)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -67,7 +67,7 @@ int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2,
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsList)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsList)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -81,7 +81,7 @@ int32_t k_messagebox_warning_two_actions(void* param1, const char* param2, const
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningContinueCancel)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningContinueCancel)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -94,7 +94,7 @@ int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, 
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_continue_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningContinueCancelDetailed)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningContinueCancelDetailed)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -108,7 +108,7 @@ int32_t k_messagebox_warning_continue_cancel(void* param1, const char* param2, c
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_continue_cancel_detailed(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7, const char* param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningContinueCancelList)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningContinueCancelList)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -122,7 +122,7 @@ int32_t k_messagebox_warning_continue_cancel_detailed(void* param1, const char* 
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsCancel)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsCancel)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -136,7 +136,7 @@ int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* para
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsCancelList)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsCancelList)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -151,7 +151,7 @@ int32_t k_messagebox_warning_two_actions_cancel(void* param1, const char* param2
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#error)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#error)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -159,7 +159,7 @@ int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* p
 /// @param param4 flag of enum KMessageBox__Option
 void k_messagebox_error(void* param1, const char* param2, const char* param3, int32_t param4);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#error)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#error)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -168,7 +168,7 @@ void k_messagebox_error(void* param1, const char* param2, const char* param3, in
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_error2(void* param1, const char* param2, const char* param3, void* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#errorList)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#errorList)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -177,7 +177,7 @@ void k_messagebox_error2(void* param1, const char* param2, const char* param3, v
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_error_list(void* param1, const char* param2, const char* param3[], const char* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#detailedError)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#detailedError)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -186,7 +186,7 @@ void k_messagebox_error_list(void* param1, const char* param2, const char* param
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_detailed_error(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#detailedError)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#detailedError)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -196,7 +196,7 @@ void k_messagebox_detailed_error(void* param1, const char* param2, const char* p
 /// @param param6 flag of enum KMessageBox__Option
 void k_messagebox_detailed_error2(void* param1, const char* param2, const char* param3, const char* param4, void* param5, int32_t param6);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#information)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#information)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -205,7 +205,7 @@ void k_messagebox_detailed_error2(void* param1, const char* param2, const char* 
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_information(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#informationList)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#informationList)
 ///
 /// @param param1 QWidget*
 /// @param param2 const char*
@@ -215,16 +215,16 @@ void k_messagebox_information(void* param1, const char* param2, const char* para
 /// @param param6 flag of enum KMessageBox__Option
 void k_messagebox_information_list(void* param1, const char* param2, const char* param3[], const char* param4, const char* param5, int32_t param6);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#enableAllMessages)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#enableAllMessages)
 ///
 void k_messagebox_enable_all_messages();
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#enableMessage)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#enableMessage)
 ///
 /// @param param1 const char*
 void k_messagebox_enable_message(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#messageBox)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#messageBox)
 ///
 /// @param param1 QWidget*
 /// @param param2 enum KMessageBox__DialogType
@@ -239,44 +239,44 @@ void k_messagebox_enable_message(const char* param1);
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_message_box(void* param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#shouldBeShownTwoActions)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#shouldBeShownTwoActions)
 ///
 /// @param param1 const char*
 /// @param param2 enum KMessageBox__ButtonCode*
 bool k_messagebox_should_be_shown_two_actions(const char* param1, int32_t* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#shouldBeShownContinue)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#shouldBeShownContinue)
 ///
 /// @param param1 const char*
 bool k_messagebox_should_be_shown_continue(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#saveDontShowAgainTwoActions)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#saveDontShowAgainTwoActions)
 ///
 /// @param param1 const char*
 /// @param param2 enum KMessageBox__ButtonCode
 void k_messagebox_save_dont_show_again_two_actions(const char* param1, int32_t param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#saveDontShowAgainContinue)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#saveDontShowAgainContinue)
 ///
 /// @param param1 const char*
 void k_messagebox_save_dont_show_again_continue(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#setDontShowAgainConfig)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#setDontShowAgainConfig)
 ///
 /// @param param1 KConfig*
 void k_messagebox_set_dont_show_again_config(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#setDontShowAgainInterface)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#setDontShowAgainInterface)
 ///
 /// @param param1 KMessageBoxDontAskAgainInterface*
 void k_messagebox_set_dont_show_again_interface(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#setNotifyInterface)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#setNotifyInterface)
 ///
 /// @param param1 KMessageBoxNotifyInterface*
 void k_messagebox_set_notify_interface(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#createKMessageBox)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#createKMessageBox)
 ///
 /// @param param1 QDialog*
 /// @param param2 QDialogButtonBox*
@@ -291,7 +291,7 @@ void k_messagebox_set_notify_interface(void* param1);
 /// @return enum QDialogButtonBox__StandardButton
 int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t param3, const char* param4, const char* param5[], const char* param6, bool* param7, int32_t param8, const char* param9);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#createKMessageBox)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#createKMessageBox)
 ///
 /// @param param1 QDialog*
 /// @param param2 QDialogButtonBox*
@@ -307,7 +307,7 @@ int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t pa
 /// @return enum QDialogButtonBox__StandardButton
 int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* param3, const char* param4, const char* param5[], const char* param6, bool* param7, int32_t param8, const char* param9, int32_t param10);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#questionTwoActionsWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#questionTwoActionsWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -320,7 +320,7 @@ int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* par
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_question_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#questionTwoActionsCancelWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#questionTwoActionsCancelWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -334,7 +334,7 @@ int32_t k_messagebox_question_two_actions_w_id(uintptr_t param1, const char* par
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#questionTwoActionsListWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#questionTwoActionsListWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -348,7 +348,7 @@ int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t param1, const ch
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -361,7 +361,7 @@ int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsListWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsListWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -375,7 +375,7 @@ int32_t k_messagebox_warning_two_actions_w_id(uintptr_t param1, const char* para
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningContinueCancelWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningContinueCancelWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -388,7 +388,7 @@ int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char*
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningContinueCancelListWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningContinueCancelListWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -402,7 +402,7 @@ int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t param1, const char* 
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsCancelWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsCancelWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -416,7 +416,7 @@ int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const c
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#warningTwoActionsCancelListWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#warningTwoActionsCancelListWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -431,7 +431,7 @@ int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t param1, const cha
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#errorWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#errorWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -439,7 +439,7 @@ int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, cons
 /// @param param4 flag of enum KMessageBox__Option
 void k_messagebox_error_w_id(uintptr_t param1, const char* param2, const char* param3, int32_t param4);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#errorListWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#errorListWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -448,7 +448,7 @@ void k_messagebox_error_w_id(uintptr_t param1, const char* param2, const char* p
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#detailedErrorWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#detailedErrorWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -457,7 +457,7 @@ void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const ch
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_detailed_error_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#detailedErrorWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#detailedErrorWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -467,7 +467,7 @@ void k_messagebox_detailed_error_w_id(uintptr_t param1, const char* param2, cons
 /// @param param6 flag of enum KMessageBox__Option
 void k_messagebox_detailed_error_w_id2(uintptr_t param1, const char* param2, const char* param3, const char* param4, void* param5, int32_t param6);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#informationWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#informationWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -476,7 +476,7 @@ void k_messagebox_detailed_error_w_id2(uintptr_t param1, const char* param2, con
 /// @param param5 flag of enum KMessageBox__Option
 void k_messagebox_information_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int32_t param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#informationListWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#informationListWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 const char*
@@ -486,7 +486,7 @@ void k_messagebox_information_w_id(uintptr_t param1, const char* param2, const c
 /// @param param6 flag of enum KMessageBox__Option
 void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, const char* param3[], const char* param4, const char* param5, int32_t param6);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagebox.html#messageBoxWId)
+/// [Qt documentation](https://api.kde.org/kmessagebox.html#messageBoxWId)
 ///
 /// @param param1 uintptr_t
 /// @param param2 enum KMessageBox__DialogType
@@ -501,7 +501,7 @@ void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, co
 /// @return enum KMessageBox__ButtonCode
 int32_t k_messagebox_message_box_w_id(uintptr_t param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9);
 
-/// https://api-staging.kde.org/kmessagebox.html#types
+/// https://api.kde.org/kmessagebox.html#types
 
 typedef enum {
     KMESSAGEBOX_BUTTONCODE_OK = 1,

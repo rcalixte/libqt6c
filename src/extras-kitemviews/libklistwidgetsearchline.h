@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klistwidgetsearchline.html
+/// https://api.kde.org/klistwidgetsearchline.html
 
 /// k_listwidgetsearchline_new constructs a new KListWidgetSearchLine object.
 ///
@@ -64,25 +64,25 @@ int32_t k_listwidgetsearchline_qbase_metacall(void* self, int32_t param1, int pa
 /// @param s const char*
 const char* k_listwidgetsearchline_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#caseSensitive)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#caseSensitive)
 ///
 /// @param self KListWidgetSearchLine*
 ///
 /// @return enum Qt__CaseSensitivity
 int32_t k_listwidgetsearchline_case_sensitive(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#listWidget)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#listWidget)
 ///
 /// @param self KListWidgetSearchLine*
 QListWidget* k_listwidgetsearchline_list_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#updateSearch)
 ///
 /// @param self KListWidgetSearchLine*
 /// @param s const char*
 void k_listwidgetsearchline_update_search(void* self, const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#updateSearch)
 ///
 /// Allows for overriding the related default method
 ///
@@ -90,7 +90,7 @@ void k_listwidgetsearchline_update_search(void* self, const char* s);
 /// @param callback void func(KListWidgetSearchLine* self, const char* s)
 void k_listwidgetsearchline_on_update_search(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#updateSearch)
 ///
 /// Base class method implementation
 ///
@@ -98,31 +98,31 @@ void k_listwidgetsearchline_on_update_search(void* self, void (*callback)(void*,
 /// @param s const char*
 void k_listwidgetsearchline_qbase_update_search(void* self, const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#setCaseSensitivity)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#setCaseSensitivity)
 ///
 /// @param self KListWidgetSearchLine*
 /// @param cs enum Qt__CaseSensitivity
 void k_listwidgetsearchline_set_case_sensitivity(void* self, int32_t cs);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#setListWidget)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#setListWidget)
 ///
 /// @param self KListWidgetSearchLine*
 /// @param lv QListWidget*
 void k_listwidgetsearchline_set_list_widget(void* self, void* lv);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#clear)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#clear)
 ///
 /// @param self KListWidgetSearchLine*
 void k_listwidgetsearchline_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#itemMatches)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#itemMatches)
 ///
 /// @param self KListWidgetSearchLine*
 /// @param item QListWidgetItem*
 /// @param s const char*
 bool k_listwidgetsearchline_item_matches(void* self, void* item, const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#itemMatches)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#itemMatches)
 ///
 /// Allows for overriding the related default method
 ///
@@ -130,7 +130,7 @@ bool k_listwidgetsearchline_item_matches(void* self, void* item, const char* s);
 /// @param callback bool func(KListWidgetSearchLine* self, QListWidgetItem* item, const char* s)
 void k_listwidgetsearchline_on_item_matches(void* self, bool (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#itemMatches)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#itemMatches)
 ///
 /// Base class method implementation
 ///
@@ -139,13 +139,13 @@ void k_listwidgetsearchline_on_item_matches(void* self, bool (*callback)(void*, 
 /// @param s const char*
 bool k_listwidgetsearchline_qbase_item_matches(void* self, void* item, const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#event)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#event)
 ///
 /// @param self KListWidgetSearchLine*
 /// @param event QEvent*
 bool k_listwidgetsearchline_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#event)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -153,7 +153,7 @@ bool k_listwidgetsearchline_event(void* self, void* event);
 /// @param callback bool func(KListWidgetSearchLine* self, QEvent* event)
 void k_listwidgetsearchline_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#event)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#event)
 ///
 /// Base class method implementation
 ///
@@ -5053,7 +5053,7 @@ void k_listwidgetsearchline_on_get_decoded_metric_f(void* self, double (*callbac
 /// @param callback void func(KListWidgetSearchLine* self, const char* objectName)
 void k_listwidgetsearchline_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klistwidgetsearchline.html#dtor.KListWidgetSearchLine)
+/// [Qt documentation](https://api.kde.org/klistwidgetsearchline.html#dtor.KListWidgetSearchLine)
 ///
 /// Delete this object from C++ memory.
 ///

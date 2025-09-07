@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kaboutplugindialog.html
+/// https://api.kde.org/kaboutplugindialog.html
 
 /// k_aboutplugindialog_new constructs a new KAboutPluginDialog object.
 ///
@@ -4582,14 +4582,14 @@ void k_aboutplugindialog_on_get_decoded_metric_f(void* self, double (*callback)(
 /// @param callback void func(KAboutPluginDialog* self, const char* objectName)
 void k_aboutplugindialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kaboutplugindialog.html#dtor.KAboutPluginDialog)
+/// [Qt documentation](https://api.kde.org/kaboutplugindialog.html#dtor.KAboutPluginDialog)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KAboutPluginDialog*
 void k_aboutplugindialog_delete(void* self);
 
-/// https://api-staging.kde.org/kaboutplugindialog.html#types
+/// https://api.kde.org/kaboutplugindialog.html#types
 
 typedef enum {
     KABOUTPLUGINDIALOG_OPTION_NOOPTIONS = 0,

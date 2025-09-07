@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kwindowstatesaver.html
+/// https://api.kde.org/kwindowstatesaver.html
 
 /// k_windowstatesaver_new constructs a new KWindowStateSaver object.
 ///
@@ -691,7 +691,7 @@ void k_windowstatesaver_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(KWindowStateSaver* self, const char* objectName)
 void k_windowstatesaver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kwindowstatesaver.html#dtor.KWindowStateSaver)
+/// [Qt documentation](https://api.kde.org/kwindowstatesaver.html#dtor.KWindowStateSaver)
 ///
 /// Delete this object from C++ memory.
 ///

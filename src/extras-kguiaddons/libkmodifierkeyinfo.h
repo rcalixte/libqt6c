@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmodifierkeyinfo.html
+/// https://api.kde.org/kmodifierkeyinfo.html
 
 /// k_modifierkeyinfo_new constructs a new KModifierKeyInfo object.
 ///
@@ -58,128 +58,128 @@ int32_t k_modifierkeyinfo_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_modifierkeyinfo_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#knowsKey)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#knowsKey)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfo_knows_key(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#knownKeys)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#knownKeys)
 ///
 /// @param self KModifierKeyInfo*
 ///
 /// @return libqt_list of enum Qt__Key
 libqt_list /* of int32_t */ k_modifierkeyinfo_known_keys(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#isKeyPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#isKeyPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfo_is_key_pressed(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#isKeyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#isKeyLatched)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfo_is_key_latched(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#setKeyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#setKeyLatched)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 /// @param latched bool
 bool k_modifierkeyinfo_set_key_latched(void* self, int32_t key, bool latched);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#isKeyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#isKeyLocked)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 bool k_modifierkeyinfo_is_key_locked(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#setKeyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#setKeyLocked)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 /// @param locked bool
 bool k_modifierkeyinfo_set_key_locked(void* self, int32_t key, bool locked);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#isButtonPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#isButtonPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param button enum Qt__MouseButton
 bool k_modifierkeyinfo_is_button_pressed(void* self, int64_t button);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 /// @param pressed bool
 void k_modifierkeyinfo_key_pressed(void* self, int32_t key, bool pressed);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key, bool pressed)
 void k_modifierkeyinfo_on_key_pressed(void* self, void (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyLatched)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 /// @param latched bool
 void k_modifierkeyinfo_key_latched(void* self, int32_t key, bool latched);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLatched)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyLatched)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key, bool latched)
 void k_modifierkeyinfo_on_key_latched(void* self, void (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyLocked)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 /// @param locked bool
 void k_modifierkeyinfo_key_locked(void* self, int32_t key, bool locked);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyLocked)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyLocked)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key, bool locked)
 void k_modifierkeyinfo_on_key_locked(void* self, void (*callback)(void*, int32_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#buttonPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param button enum Qt__MouseButton
 /// @param pressed bool
 void k_modifierkeyinfo_button_pressed(void* self, int64_t button, bool pressed);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#buttonPressed)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#buttonPressed)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__MouseButton button, bool pressed)
 void k_modifierkeyinfo_on_button_pressed(void* self, void (*callback)(void*, int64_t, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyAdded)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyAdded)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 void k_modifierkeyinfo_key_added(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyAdded)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyAdded)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key)
 void k_modifierkeyinfo_on_key_added(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyRemoved)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyRemoved)
 ///
 /// @param self KModifierKeyInfo*
 /// @param key enum Qt__Key
 void k_modifierkeyinfo_key_removed(void* self, int32_t key);
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#keyRemoved)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#keyRemoved)
 ///
 /// @param self KModifierKeyInfo*
 /// @param callback void func(KModifierKeyInfo* self, enum Qt__Key key)
@@ -847,7 +847,7 @@ void k_modifierkeyinfo_on_is_signal_connected(void* self, bool (*callback)(void*
 /// @param callback void func(KModifierKeyInfo* self, const char* objectName)
 void k_modifierkeyinfo_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmodifierkeyinfo.html#dtor.KModifierKeyInfo)
+/// [Qt documentation](https://api.kde.org/kmodifierkeyinfo.html#dtor.KModifierKeyInfo)
 ///
 /// Delete this object from C++ memory.
 ///

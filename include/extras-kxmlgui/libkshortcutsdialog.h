@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kshortcutsdialog.html
+/// https://api.kde.org/kshortcutsdialog.html
 
 /// k_shortcutsdialog_new constructs a new KShortcutsDialog object.
 ///
@@ -76,28 +76,28 @@ int32_t k_shortcutsdialog_qbase_metacall(void* self, int32_t param1, int param2,
 /// @param s const char*
 const char* k_shortcutsdialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#addCollection)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#addCollection)
 ///
 /// @param self KShortcutsDialog*
 /// @param collection KActionCollection*
 void k_shortcutsdialog_add_collection(void* self, void* collection);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#actionCollections)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#actionCollections)
 ///
 /// @param self KShortcutsDialog*
 libqt_list /* of KActionCollection* */ k_shortcutsdialog_action_collections(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#configure)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#configure)
 ///
 /// @param self KShortcutsDialog*
 bool k_shortcutsdialog_configure(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#sizeHint)
 ///
 /// @param self KShortcutsDialog*
 QSize* k_shortcutsdialog_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -105,47 +105,47 @@ QSize* k_shortcutsdialog_size_hint(void* self);
 /// @param callback QSize* func()
 void k_shortcutsdialog_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KShortcutsDialog*
 QSize* k_shortcutsdialog_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#showDialog)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#showDialog)
 ///
 /// @param collection KActionCollection*
 void k_shortcutsdialog_show_dialog(void* collection);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#importConfiguration)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#importConfiguration)
 ///
 /// @param self KShortcutsDialog*
 /// @param path const char*
 void k_shortcutsdialog_import_configuration(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#exportConfiguration)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#exportConfiguration)
 ///
 /// @param self KShortcutsDialog*
 /// @param path const char*
 void k_shortcutsdialog_export_configuration(void* self, const char* path);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#refreshSchemes)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#refreshSchemes)
 ///
 /// @param self KShortcutsDialog*
 void k_shortcutsdialog_refresh_schemes(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#addActionToSchemesMoreButton)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#addActionToSchemesMoreButton)
 ///
 /// @param self KShortcutsDialog*
 /// @param action QAction*
 void k_shortcutsdialog_add_action_to_schemes_more_button(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#accept)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#accept)
 ///
 /// @param self KShortcutsDialog*
 void k_shortcutsdialog_accept(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#accept)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#accept)
 ///
 /// Allows for overriding the related default method
 ///
@@ -153,19 +153,19 @@ void k_shortcutsdialog_accept(void* self);
 /// @param callback void func()
 void k_shortcutsdialog_on_accept(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#accept)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#accept)
 ///
 /// Base class method implementation
 ///
 /// @param self KShortcutsDialog*
 void k_shortcutsdialog_qbase_accept(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#saved)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#saved)
 ///
 /// @param self KShortcutsDialog*
 void k_shortcutsdialog_saved(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#saved)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#saved)
 ///
 /// @param self KShortcutsDialog*
 /// @param callback void func(KShortcutsDialog* self)
@@ -188,26 +188,26 @@ const char* k_shortcutsdialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_shortcutsdialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#addCollection)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#addCollection)
 ///
 /// @param self KShortcutsDialog*
 /// @param collection KActionCollection*
 /// @param title const char*
 void k_shortcutsdialog_add_collection2(void* self, void* collection, const char* title);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#configure)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#configure)
 ///
 /// @param self KShortcutsDialog*
 /// @param saveSettings bool
 bool k_shortcutsdialog_configure1(void* self, bool saveSettings);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#showDialog)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#showDialog)
 ///
 /// @param collection KActionCollection*
 /// @param allowLetterShortcuts enum KShortcutsEditor__LetterShortcuts
 void k_shortcutsdialog_show_dialog2(void* collection, int32_t allowLetterShortcuts);
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#showDialog)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#showDialog)
 ///
 /// @param collection KActionCollection*
 /// @param allowLetterShortcuts enum KShortcutsEditor__LetterShortcuts
@@ -4650,7 +4650,7 @@ void k_shortcutsdialog_on_get_decoded_metric_f(void* self, double (*callback)(vo
 /// @param callback void func(KShortcutsDialog* self, const char* objectName)
 void k_shortcutsdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kshortcutsdialog.html#dtor.KShortcutsDialog)
+/// [Qt documentation](https://api.kde.org/kshortcutsdialog.html#dtor.KShortcutsDialog)
 ///
 /// Delete this object from C++ memory.
 ///

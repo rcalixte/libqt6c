@@ -405,7 +405,7 @@ const char* k_onsole__keyboardtranslator__entry_result_to_string2(void* self, bo
 /// @param self Konsole__KeyboardTranslator__Entry*
 void k_onsole__keyboardtranslator__entry_delete(void* self);
 
-/// https://api-staging.kde.org/keyboardtranslator.html#types
+/// https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api
 
 typedef enum {
     KONSOLE_KEYBOARDTRANSLATOR_STATE_NOSTATE = 0,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kkeysequencerecorder.html
+/// https://api.kde.org/kkeysequencerecorder.html
 
 /// k_keysequencerecorder_new constructs a new KKeySequenceRecorder object.
 ///
@@ -60,173 +60,173 @@ int32_t k_keysequencerecorder_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_keysequencerecorder_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#startRecording)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#startRecording)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_start_recording(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#isRecording)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#isRecording)
 ///
 /// @param self KKeySequenceRecorder*
 bool k_keysequencerecorder_is_recording(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#currentKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#currentKeySequence)
 ///
 /// @param self KKeySequenceRecorder*
 QKeySequence* k_keysequencerecorder_current_key_sequence(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#setCurrentKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#setCurrentKeySequence)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param sequence QKeySequence*
 void k_keysequencerecorder_set_current_key_sequence(void* self, void* sequence);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#window)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#window)
 ///
 /// @param self KKeySequenceRecorder*
 QWindow* k_keysequencerecorder_window(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#setWindow)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#setWindow)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param window QWindow*
 void k_keysequencerecorder_set_window(void* self, void* window);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#multiKeyShortcutsAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#multiKeyShortcutsAllowed)
 ///
 /// @param self KKeySequenceRecorder*
 bool k_keysequencerecorder_multi_key_shortcuts_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#setMultiKeyShortcutsAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#setMultiKeyShortcutsAllowed)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param allowed bool
 void k_keysequencerecorder_set_multi_key_shortcuts_allowed(void* self, bool allowed);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#setModifierlessAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#setModifierlessAllowed)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param allowed bool
 void k_keysequencerecorder_set_modifierless_allowed(void* self, bool allowed);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#modifierlessAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#modifierlessAllowed)
 ///
 /// @param self KKeySequenceRecorder*
 bool k_keysequencerecorder_modifierless_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#setModifierOnlyAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#setModifierOnlyAllowed)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param allowed bool
 void k_keysequencerecorder_set_modifier_only_allowed(void* self, bool allowed);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#modifierOnlyAllowed)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#modifierOnlyAllowed)
 ///
 /// @param self KKeySequenceRecorder*
 bool k_keysequencerecorder_modifier_only_allowed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#setPatterns)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#setPatterns)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param patterns flag of enum KKeySequenceRecorder__Pattern
 void k_keysequencerecorder_set_patterns(void* self, int32_t patterns);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#patterns)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#patterns)
 ///
 /// @param self KKeySequenceRecorder*
 ///
 /// @return flag of enum KKeySequenceRecorder__Pattern
 int32_t k_keysequencerecorder_patterns(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#cancelRecording)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#cancelRecording)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_cancel_recording(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#gotKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#gotKeySequence)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param keySequence QKeySequence*
 void k_keysequencerecorder_got_key_sequence(void* self, void* keySequence);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#gotKeySequence)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#gotKeySequence)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self, QKeySequence* keySequence)
 void k_keysequencerecorder_on_got_key_sequence(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#recordingChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#recordingChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_recording_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#recordingChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#recordingChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
 void k_keysequencerecorder_on_recording_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#windowChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#windowChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_window_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#windowChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#windowChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
 void k_keysequencerecorder_on_window_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#currentKeySequenceChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#currentKeySequenceChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_current_key_sequence_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#currentKeySequenceChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#currentKeySequenceChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
 void k_keysequencerecorder_on_current_key_sequence_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#multiKeyShortcutsAllowedChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#multiKeyShortcutsAllowedChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_multi_key_shortcuts_allowed_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#multiKeyShortcutsAllowedChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#multiKeyShortcutsAllowedChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
 void k_keysequencerecorder_on_multi_key_shortcuts_allowed_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#modifierlessAllowedChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#modifierlessAllowedChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_modifierless_allowed_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#modifierlessAllowedChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#modifierlessAllowedChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
 void k_keysequencerecorder_on_modifierless_allowed_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#modifierOnlyAllowedChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#modifierOnlyAllowedChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_modifier_only_allowed_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#modifierOnlyAllowedChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#modifierOnlyAllowedChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
 void k_keysequencerecorder_on_modifier_only_allowed_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#patternsChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#patternsChanged)
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_patterns_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#patternsChanged)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#patternsChanged)
 ///
 /// @param self KKeySequenceRecorder*
 /// @param callback void func(KKeySequenceRecorder* self)
@@ -894,14 +894,14 @@ void k_keysequencerecorder_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KKeySequenceRecorder* self, const char* objectName)
 void k_keysequencerecorder_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kkeysequencerecorder.html#dtor.KKeySequenceRecorder)
+/// [Qt documentation](https://api.kde.org/kkeysequencerecorder.html#dtor.KKeySequenceRecorder)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KKeySequenceRecorder*
 void k_keysequencerecorder_delete(void* self);
 
-/// https://api-staging.kde.org/kkeysequencerecorder.html#types
+/// https://api.kde.org/kkeysequencerecorder.html#types
 
 typedef enum {
     KKEYSEQUENCERECORDER_PATTERN_MODIFIER = 1,

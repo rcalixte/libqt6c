@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kratingwidget.html
+/// https://api.kde.org/kratingwidget.html
 
 /// k_ratingwidget_new constructs a new KRatingWidget object.
 ///
@@ -58,41 +58,41 @@ int32_t k_ratingwidget_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_ratingwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#rating)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#rating)
 ///
 /// @param self KRatingWidget*
 int32_t k_ratingwidget_rating(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#maxRating)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#maxRating)
 ///
 /// @param self KRatingWidget*
 int32_t k_ratingwidget_max_rating(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#alignment)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#alignment)
 ///
 /// @param self KRatingWidget*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 int32_t k_ratingwidget_alignment(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#layoutDirection)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#layoutDirection)
 ///
 /// @param self KRatingWidget*
 ///
 /// @return enum Qt__LayoutDirection
 int32_t k_ratingwidget_layout_direction(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#spacing)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#spacing)
 ///
 /// @param self KRatingWidget*
 int32_t k_ratingwidget_spacing(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#sizeHint)
 ///
 /// @param self KRatingWidget*
 QSize* k_ratingwidget_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -100,96 +100,96 @@ QSize* k_ratingwidget_size_hint(void* self);
 /// @param callback QSize* func()
 void k_ratingwidget_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KRatingWidget*
 QSize* k_ratingwidget_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#halfStepsEnabled)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#halfStepsEnabled)
 ///
 /// @param self KRatingWidget*
 bool k_ratingwidget_half_steps_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#icon)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#icon)
 ///
 /// @param self KRatingWidget*
 QIcon* k_ratingwidget_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#ratingChanged)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#ratingChanged)
 ///
 /// @param self KRatingWidget*
 /// @param rating int
 void k_ratingwidget_rating_changed(void* self, int rating);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#ratingChanged)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#ratingChanged)
 ///
 /// @param self KRatingWidget*
 /// @param callback void func(KRatingWidget* self, int rating)
 void k_ratingwidget_on_rating_changed(void* self, void (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setRating)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setRating)
 ///
 /// @param self KRatingWidget*
 /// @param rating int
 void k_ratingwidget_set_rating(void* self, int rating);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setMaxRating)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setMaxRating)
 ///
 /// @param self KRatingWidget*
 /// @param max int
 void k_ratingwidget_set_max_rating(void* self, int max);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setHalfStepsEnabled)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setHalfStepsEnabled)
 ///
 /// @param self KRatingWidget*
 /// @param enabled bool
 void k_ratingwidget_set_half_steps_enabled(void* self, bool enabled);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setSpacing)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setSpacing)
 ///
 /// @param self KRatingWidget*
 /// @param spacing int
 void k_ratingwidget_set_spacing(void* self, int spacing);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setAlignment)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setAlignment)
 ///
 /// @param self KRatingWidget*
 /// @param align flag of enum Qt__AlignmentFlag
 void k_ratingwidget_set_alignment(void* self, int32_t align);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setLayoutDirection)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setLayoutDirection)
 ///
 /// @param self KRatingWidget*
 /// @param direction enum Qt__LayoutDirection
 void k_ratingwidget_set_layout_direction(void* self, int32_t direction);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setIcon)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setIcon)
 ///
 /// @param self KRatingWidget*
 /// @param icon QIcon*
 void k_ratingwidget_set_icon(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setCustomPixmap)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setCustomPixmap)
 ///
 /// @param self KRatingWidget*
 /// @param pixmap QPixmap*
 void k_ratingwidget_set_custom_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#setPixmapSize)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#setPixmapSize)
 ///
 /// @param self KRatingWidget*
 /// @param size int
 void k_ratingwidget_set_pixmap_size(void* self, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#mousePressEvent)
 ///
 /// @param self KRatingWidget*
 /// @param e QMouseEvent*
 void k_ratingwidget_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -197,7 +197,7 @@ void k_ratingwidget_mouse_press_event(void* self, void* e);
 /// @param callback void func(KRatingWidget* self, QMouseEvent* e)
 void k_ratingwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -205,13 +205,13 @@ void k_ratingwidget_on_mouse_press_event(void* self, void (*callback)(void*, voi
 /// @param e QMouseEvent*
 void k_ratingwidget_qbase_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#mouseMoveEvent)
 ///
 /// @param self KRatingWidget*
 /// @param e QMouseEvent*
 void k_ratingwidget_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -219,7 +219,7 @@ void k_ratingwidget_mouse_move_event(void* self, void* e);
 /// @param callback void func(KRatingWidget* self, QMouseEvent* e)
 void k_ratingwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -227,13 +227,13 @@ void k_ratingwidget_on_mouse_move_event(void* self, void (*callback)(void*, void
 /// @param e QMouseEvent*
 void k_ratingwidget_qbase_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#leaveEvent)
 ///
 /// @param self KRatingWidget*
 /// @param e QEvent*
 void k_ratingwidget_leave_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#leaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -241,7 +241,7 @@ void k_ratingwidget_leave_event(void* self, void* e);
 /// @param callback void func(KRatingWidget* self, QEvent* e)
 void k_ratingwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#leaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -249,13 +249,13 @@ void k_ratingwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param e QEvent*
 void k_ratingwidget_qbase_leave_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#paintEvent)
 ///
 /// @param self KRatingWidget*
 /// @param e QPaintEvent*
 void k_ratingwidget_paint_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -263,7 +263,7 @@ void k_ratingwidget_paint_event(void* self, void* e);
 /// @param callback void func(KRatingWidget* self, QPaintEvent* e)
 void k_ratingwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -271,13 +271,13 @@ void k_ratingwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param e QPaintEvent*
 void k_ratingwidget_qbase_paint_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#resizeEvent)
 ///
 /// @param self KRatingWidget*
 /// @param e QResizeEvent*
 void k_ratingwidget_resize_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -285,7 +285,7 @@ void k_ratingwidget_resize_event(void* self, void* e);
 /// @param callback void func(KRatingWidget* self, QResizeEvent* e)
 void k_ratingwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -4512,7 +4512,7 @@ void k_ratingwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// @param callback void func(KRatingWidget* self, const char* objectName)
 void k_ratingwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kratingwidget.html#dtor.KRatingWidget)
+/// [Qt documentation](https://api.kde.org/kratingwidget.html#dtor.KRatingWidget)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcommandbar.html
+/// https://api.kde.org/kcommandbar.html
 
 /// k_commandbar_new constructs a new KCommandBar object.
 ///
@@ -54,25 +54,25 @@ int32_t k_commandbar_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_commandbar_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar.html#setActions)
+/// [Qt documentation](https://api.kde.org/kcommandbar.html#setActions)
 ///
 /// @param self KCommandBar*
 /// @param actions libqt_list /* of KCommandBar__ActionGroup* */
 void k_commandbar_set_actions(void* self, libqt_list actions);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar.html#show)
+/// [Qt documentation](https://api.kde.org/kcommandbar.html#show)
 ///
 /// @param self KCommandBar*
 void k_commandbar_show(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcommandbar.html#eventFilter)
 ///
 /// @param self KCommandBar*
 /// @param obj QObject*
 /// @param event QEvent*
 bool k_commandbar_event_filter(void* self, void* obj, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcommandbar.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -80,7 +80,7 @@ bool k_commandbar_event_filter(void* self, void* obj, void* event);
 /// @param callback bool func(KCommandBar* self, QObject* obj, QEvent* event)
 void k_commandbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kcommandbar.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -4464,14 +4464,14 @@ void k_commandbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KCommandBar* self, const char* objectName)
 void k_commandbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar.html#dtor.KCommandBar)
+/// [Qt documentation](https://api.kde.org/kcommandbar.html#dtor.KCommandBar)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KCommandBar*
 void k_commandbar_delete(void* self);
 
-/// https://api-staging.kde.org/kcommandbar-actiongroup.html
+/// https://api.kde.org/kcommandbar-actiongroup.html
 
 /// k_commandbar__actiongroup_new constructs a new KCommandBar::ActionGroup object.
 ///
@@ -4482,31 +4482,31 @@ KCommandBar__ActionGroup* k_commandbar__actiongroup_new(void* param1);
 ///
 KCommandBar__ActionGroup* k_commandbar__actiongroup_new2();
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar-actiongroup.html#name-var)
+/// [Qt documentation](https://api.kde.org/kcommandbar-actiongroup.html#name-var)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCommandBar__ActionGroup*
 const char* k_commandbar__actiongroup_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar-actiongroup.html#name-var)
+/// [Qt documentation](https://api.kde.org/kcommandbar-actiongroup.html#name-var)
 ///
 /// @param self KCommandBar__ActionGroup*
 /// @param name const char*
 void k_commandbar__actiongroup_set_name(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar-actiongroup.html#actions-var)
+/// [Qt documentation](https://api.kde.org/kcommandbar-actiongroup.html#actions-var)
 ///
 /// @param self KCommandBar__ActionGroup*
 libqt_list /* of QAction* */ k_commandbar__actiongroup_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar-actiongroup.html#actions-var)
+/// [Qt documentation](https://api.kde.org/kcommandbar-actiongroup.html#actions-var)
 ///
 /// @param self KCommandBar__ActionGroup*
 /// @param actions libqt_list /* of QAction* */
 void k_commandbar__actiongroup_set_actions(void* self, libqt_list actions);
 
-/// [Qt documentation](https://api-staging.kde.org/kcommandbar-actiongroup.html#operator-eq)
+/// [Qt documentation](https://api.kde.org/kcommandbar-actiongroup.html#operator-eq)
 ///
 /// @param self KCommandBar__ActionGroup*
 /// @param param1 KCommandBar__ActionGroup*

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kactioncollection.html
+/// https://api.kde.org/kactioncollection.html
 
 /// k_actioncollection_new constructs a new KActionCollection object.
 ///
@@ -60,211 +60,211 @@ int32_t k_actioncollection_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_actioncollection_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#allCollections)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#allCollections)
 ///
 libqt_list /* of KActionCollection* */ k_actioncollection_all_collections();
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#clear)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#clear)
 ///
 /// @param self KActionCollection*
 void k_actioncollection_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#associateWidget)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#associateWidget)
 ///
 /// @param self KActionCollection*
 /// @param widget QWidget*
 void k_actioncollection_associate_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#addAssociatedWidget)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#addAssociatedWidget)
 ///
 /// @param self KActionCollection*
 /// @param widget QWidget*
 void k_actioncollection_add_associated_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#removeAssociatedWidget)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#removeAssociatedWidget)
 ///
 /// @param self KActionCollection*
 /// @param widget QWidget*
 void k_actioncollection_remove_associated_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#associatedWidgets)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#associatedWidgets)
 ///
 /// @param self KActionCollection*
 libqt_list /* of QWidget* */ k_actioncollection_associated_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#clearAssociatedWidgets)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#clearAssociatedWidgets)
 ///
 /// @param self KActionCollection*
 void k_actioncollection_clear_associated_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#configGroup)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#configGroup)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 const char* k_actioncollection_config_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#configIsGlobal)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#configIsGlobal)
 ///
 /// @param self KActionCollection*
 bool k_actioncollection_config_is_global(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setConfigGroup)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setConfigGroup)
 ///
 /// @param self KActionCollection*
 /// @param group const char*
 void k_actioncollection_set_config_group(void* self, const char* group);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setConfigGlobal)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setConfigGlobal)
 ///
 /// @param self KActionCollection*
 /// @param global bool
 void k_actioncollection_set_config_global(void* self, bool global);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#readSettings)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#readSettings)
 ///
 /// @param self KActionCollection*
 void k_actioncollection_read_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#importGlobalShortcuts)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#importGlobalShortcuts)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
 void k_actioncollection_import_global_shortcuts(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#exportGlobalShortcuts)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#exportGlobalShortcuts)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
 void k_actioncollection_export_global_shortcuts(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#writeSettings)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
 /// @param self KActionCollection*
 void k_actioncollection_write_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#count)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#count)
 ///
 /// @param self KActionCollection*
 int32_t k_actioncollection_count(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#isEmpty)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#isEmpty)
 ///
 /// @param self KActionCollection*
 bool k_actioncollection_is_empty(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#action)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#action)
 ///
 /// @param self KActionCollection*
 /// @param index int
 QAction* k_actioncollection_action(void* self, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#action)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#action)
 ///
 /// @param self KActionCollection*
 /// @param name const char*
 QAction* k_actioncollection_action2(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actions)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actions)
 ///
 /// @param self KActionCollection*
 libqt_list /* of QAction* */ k_actioncollection_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actionsWithoutGroup)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actionsWithoutGroup)
 ///
 /// @param self KActionCollection*
 libqt_list /* of QAction* */ k_actioncollection_actions_without_group(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actionGroups)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actionGroups)
 ///
 /// @param self KActionCollection*
 libqt_list /* of QActionGroup* */ k_actioncollection_action_groups(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setComponentName)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setComponentName)
 ///
 /// @param self KActionCollection*
 /// @param componentName const char*
 void k_actioncollection_set_component_name(void* self, const char* componentName);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#componentName)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#componentName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 const char* k_actioncollection_component_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setComponentDisplayName)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setComponentDisplayName)
 ///
 /// @param self KActionCollection*
 /// @param displayName const char*
 void k_actioncollection_set_component_display_name(void* self, const char* displayName);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#componentDisplayName)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#componentDisplayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KActionCollection*
 const char* k_actioncollection_component_display_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#parentGUIClient)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#parentGUIClient)
 ///
 /// @param self KActionCollection*
 const KXMLGUIClient* k_actioncollection_parent_g_u_i_client(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#inserted)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#inserted)
 ///
 /// @param self KActionCollection*
 /// @param action QAction*
 void k_actioncollection_inserted(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#inserted)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#inserted)
 ///
 /// @param self KActionCollection*
 /// @param callback void func(KActionCollection* self, QAction* action)
 void k_actioncollection_on_inserted(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#changed)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#changed)
 ///
 /// @param self KActionCollection*
 void k_actioncollection_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#changed)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#changed)
 ///
 /// @param self KActionCollection*
 /// @param callback void func(KActionCollection* self)
 void k_actioncollection_on_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actionHovered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actionHovered)
 ///
 /// @param self KActionCollection*
 /// @param action QAction*
 void k_actioncollection_action_hovered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actionHovered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actionHovered)
 ///
 /// @param self KActionCollection*
 /// @param callback void func(KActionCollection* self, QAction* action)
 void k_actioncollection_on_action_hovered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actionTriggered)
 ///
 /// @param self KActionCollection*
 /// @param action QAction*
 void k_actioncollection_action_triggered(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#actionTriggered)
 ///
 /// @param self KActionCollection*
 /// @param callback void func(KActionCollection* self, QAction* action)
 void k_actioncollection_on_action_triggered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#connectNotify)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#connectNotify)
 ///
 /// @param self KActionCollection*
 /// @param signal QMetaMethod*
 void k_actioncollection_connect_notify(void* self, void* signal);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#connectNotify)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#connectNotify)
 ///
 /// Allows for overriding the related default method
 ///
@@ -272,7 +272,7 @@ void k_actioncollection_connect_notify(void* self, void* signal);
 /// @param callback void func(KActionCollection* self, QMetaMethod* signal)
 void k_actioncollection_on_connect_notify(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#connectNotify)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#connectNotify)
 ///
 /// Base class method implementation
 ///
@@ -280,12 +280,12 @@ void k_actioncollection_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param signal QMetaMethod*
 void k_actioncollection_qbase_connect_notify(void* self, void* signal);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#slotActionTriggered)
 ///
 /// @param self KActionCollection*
 void k_actioncollection_slot_action_triggered(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#slotActionTriggered)
 ///
 /// Allows for overriding the related default method
 ///
@@ -293,72 +293,72 @@ void k_actioncollection_slot_action_triggered(void* self);
 /// @param callback void func()
 void k_actioncollection_on_slot_action_triggered(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#slotActionTriggered)
 ///
 /// Base class method implementation
 ///
 /// @param self KActionCollection*
 void k_actioncollection_qbase_slot_action_triggered(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#addAction)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#addAction)
 ///
 /// @param self KActionCollection*
 /// @param name const char*
 /// @param action QAction*
 QAction* k_actioncollection_add_action(void* self, const char* name, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#addActions)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#addActions)
 ///
 /// @param self KActionCollection*
 /// @param actions libqt_list /* of QAction* */
 void k_actioncollection_add_actions(void* self, libqt_list actions);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#removeAction)
 ///
 /// @param self KActionCollection*
 /// @param action QAction*
 void k_actioncollection_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#takeAction)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#takeAction)
 ///
 /// @param self KActionCollection*
 /// @param action QAction*
 QAction* k_actioncollection_take_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#addAction)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#addAction)
 ///
 /// @param self KActionCollection*
 /// @param actionType enum KStandardActions__StandardAction
 QAction* k_actioncollection_add_action2(void* self, int32_t actionType);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#defaultShortcut)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#defaultShortcut)
 ///
 /// @param action QAction*
 QKeySequence* k_actioncollection_default_shortcut(void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#defaultShortcuts)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#defaultShortcuts)
 ///
 /// @param action QAction*
 libqt_list /* of QKeySequence* */ k_actioncollection_default_shortcuts(void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setDefaultShortcut)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setDefaultShortcut)
 ///
 /// @param action QAction*
 /// @param shortcut QKeySequence*
 void k_actioncollection_set_default_shortcut(void* action, void* shortcut);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setDefaultShortcuts)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setDefaultShortcuts)
 ///
 /// @param action QAction*
 /// @param shortcuts libqt_list /* of QKeySequence* */
 void k_actioncollection_set_default_shortcuts(void* action, libqt_list shortcuts);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#isShortcutsConfigurable)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#isShortcutsConfigurable)
 ///
 /// @param action QAction*
 bool k_actioncollection_is_shortcuts_configurable(void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#setShortcutsConfigurable)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#setShortcutsConfigurable)
 ///
 /// @param action QAction*
 /// @param configurable bool
@@ -381,33 +381,33 @@ const char* k_actioncollection_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_actioncollection_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#readSettings)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#readSettings)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
 void k_actioncollection_read_settings1(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#exportGlobalShortcuts)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#exportGlobalShortcuts)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
 /// @param writeDefaults bool
 void k_actioncollection_export_global_shortcuts2(void* self, void* config, bool writeDefaults);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#writeSettings)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
 void k_actioncollection_write_settings1(void* self, void* config);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#writeSettings)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
 /// @param writeDefaults bool
 void k_actioncollection_write_settings2(void* self, void* config, bool writeDefaults);
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#writeSettings)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#writeSettings)
 ///
 /// @param self KActionCollection*
 /// @param config KConfigGroup*
@@ -1030,7 +1030,7 @@ void k_actioncollection_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param callback void func(KActionCollection* self, const char* objectName)
 void k_actioncollection_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kactioncollection.html#dtor.KActionCollection)
+/// [Qt documentation](https://api.kde.org/kactioncollection.html#dtor.KActionCollection)
 ///
 /// Delete this object from C++ memory.
 ///

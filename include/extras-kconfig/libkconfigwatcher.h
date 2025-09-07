@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfigwatcher.html
+/// https://api.kde.org/kconfigwatcher.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,14 +35,14 @@ int32_t k_configwatcher_metacall(void* self, int32_t param1, int param2, void* p
 /// @param s const char*
 const char* k_configwatcher_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigwatcher.html#configChanged)
+/// [Qt documentation](https://api.kde.org/kconfigwatcher.html#configChanged)
 ///
 /// @param self KConfigWatcher*
 /// @param group KConfigGroup*
 /// @param names const char**
 void k_configwatcher_config_changed(void* self, void* group, const char* names[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigwatcher.html#configChanged)
+/// [Qt documentation](https://api.kde.org/kconfigwatcher.html#configChanged)
 ///
 /// @param self KConfigWatcher*
 /// @param callback void func(KConfigWatcher* self, KConfigGroup* group, const char** names)
@@ -399,7 +399,7 @@ void k_configwatcher_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param callback void func(KConfigWatcher* self, const char* objectName)
 void k_configwatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigwatcher.html#dtor.KConfigWatcher)
+/// [Qt documentation](https://api.kde.org/kconfigwatcher.html#dtor.KConfigWatcher)
 ///
 /// Delete this object from C++ memory.
 ///

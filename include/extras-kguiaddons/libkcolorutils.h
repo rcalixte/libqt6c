@@ -11,24 +11,24 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorutils.html
+/// https://api.kde.org/kcolorutils.html
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#hue)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#hue)
 ///
 /// @param param1 QColor*
 double k_colorutils_hue(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#chroma)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#chroma)
 ///
 /// @param param1 QColor*
 double k_colorutils_chroma(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#luma)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#luma)
 ///
 /// @param param1 QColor*
 double k_colorutils_luma(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#getHcy)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#getHcy)
 ///
 /// @param param1 QColor*
 /// @param param2 double*
@@ -37,7 +37,7 @@ double k_colorutils_luma(void* param1);
 /// @param param5 double*
 void k_colorutils_get_hcy(void* param1, double* param2, double* param3, double* param4, double* param5);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#hcyColor)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#hcyColor)
 ///
 /// @param param1 double
 /// @param param2 double
@@ -45,48 +45,48 @@ void k_colorutils_get_hcy(void* param1, double* param2, double* param3, double* 
 /// @param param4 double
 QColor* k_colorutils_hcy_color(double param1, double param2, double param3, double param4);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#contrastRatio)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#contrastRatio)
 ///
 /// @param param1 QColor*
 /// @param param2 QColor*
 double k_colorutils_contrast_ratio(void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#lighten)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#lighten)
 ///
 /// @param param1 QColor*
 /// @param param2 double
 /// @param param3 double
 QColor* k_colorutils_lighten(void* param1, double param2, double param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#darken)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#darken)
 ///
 /// @param param1 QColor*
 /// @param param2 double
 /// @param param3 double
 QColor* k_colorutils_darken(void* param1, double param2, double param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#shade)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#shade)
 ///
 /// @param param1 QColor*
 /// @param param2 double
 /// @param param3 double
 QColor* k_colorutils_shade(void* param1, double param2, double param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#tint)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#tint)
 ///
 /// @param param1 QColor*
 /// @param param2 QColor*
 /// @param param3 double
 QColor* k_colorutils_tint(void* param1, void* param2, double param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#mix)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#mix)
 ///
 /// @param param1 QColor*
 /// @param param2 QColor*
 /// @param param3 double
 QColor* k_colorutils_mix(void* param1, void* param2, double param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorutils.html#overlayColors)
+/// [Qt documentation](https://api.kde.org/kcolorutils.html#overlayColors)
 ///
 /// @param param1 QColor*
 /// @param param2 QColor*

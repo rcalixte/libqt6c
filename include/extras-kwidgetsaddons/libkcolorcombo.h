@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorcombo.html
+/// https://api.kde.org/kcolorcombo.html
 
 /// k_colorcombo_new constructs a new KColorCombo object.
 ///
@@ -58,69 +58,69 @@ int32_t k_colorcombo_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_colorcombo_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#setColor)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#setColor)
 ///
 /// @param self KColorCombo*
 /// @param col QColor*
 void k_colorcombo_set_color(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#color)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#color)
 ///
 /// @param self KColorCombo*
 QColor* k_colorcombo_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#isCustomColor)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#isCustomColor)
 ///
 /// @param self KColorCombo*
 bool k_colorcombo_is_custom_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#setColors)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#setColors)
 ///
 /// @param self KColorCombo*
 /// @param colors libqt_list /* of QColor* */
 void k_colorcombo_set_colors(void* self, libqt_list colors);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#colors)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#colors)
 ///
 /// @param self KColorCombo*
 libqt_list /* of QColor* */ k_colorcombo_colors(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#showEmptyList)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#showEmptyList)
 ///
 /// @param self KColorCombo*
 void k_colorcombo_show_empty_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#activated)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#activated)
 ///
 /// @param self KColorCombo*
 /// @param col QColor*
 void k_colorcombo_activated(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#activated)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#activated)
 ///
 /// @param self KColorCombo*
 /// @param callback void func(KColorCombo* self, QColor* col)
 void k_colorcombo_on_activated(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#highlighted)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#highlighted)
 ///
 /// @param self KColorCombo*
 /// @param col QColor*
 void k_colorcombo_highlighted(void* self, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#highlighted)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#highlighted)
 ///
 /// @param self KColorCombo*
 /// @param callback void func(KColorCombo* self, QColor* col)
 void k_colorcombo_on_highlighted(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#paintEvent)
 ///
 /// @param self KColorCombo*
 /// @param event QPaintEvent*
 void k_colorcombo_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -128,7 +128,7 @@ void k_colorcombo_paint_event(void* self, void* event);
 /// @param callback void func(KColorCombo* self, QPaintEvent* event)
 void k_colorcombo_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -5133,7 +5133,7 @@ void k_colorcombo_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KColorCombo* self, const char* objectName)
 void k_colorcombo_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorcombo.html#dtor.KColorCombo)
+/// [Qt documentation](https://api.kde.org/kcolorcombo.html#dtor.KColorCombo)
 ///
 /// Delete this object from C++ memory.
 ///

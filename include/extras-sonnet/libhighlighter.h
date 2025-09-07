@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-highlighter.html
+/// https://api.kde.org/sonnet-highlighter.html
 
 /// k_sonnet__highlighter_new constructs a new Sonnet::Highlighter object.
 ///
@@ -35,7 +35,7 @@ Sonnet__Highlighter* k_sonnet__highlighter_new3(void* textEdit, void* col);
 /// @param col QColor*
 Sonnet__Highlighter* k_sonnet__highlighter_new4(void* textEdit, void* col);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__Highlighter*
 const QMetaObject* k_sonnet__highlighter_meta_object(void* self);
@@ -64,71 +64,71 @@ void k_sonnet__highlighter_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_sonnet__highlighter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__highlighter_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#spellCheckerFound)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#spellCheckerFound)
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_spell_checker_found(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#currentLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#currentLanguage)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__Highlighter*
 const char* k_sonnet__highlighter_current_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setActive)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setActive)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param active bool
 void k_sonnet__highlighter_set_active(void* self, bool active);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#isActive)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#isActive)
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_is_active(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#automatic)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#automatic)
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_automatic(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setAutomatic)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setAutomatic)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param automatic bool
 void k_sonnet__highlighter_set_automatic(void* self, bool automatic);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#autoDetectLanguageDisabled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#autoDetectLanguageDisabled)
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_auto_detect_language_disabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setAutoDetectLanguageDisabled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setAutoDetectLanguageDisabled)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param autoDetectDisabled bool
 void k_sonnet__highlighter_set_auto_detect_language_disabled(void* self, bool autoDetectDisabled);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#addWordToDictionary)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#addWordToDictionary)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
 void k_sonnet__highlighter_add_word_to_dictionary(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#ignoreWord)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#ignoreWord)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
 void k_sonnet__highlighter_ignore_word(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#suggestionsForWord)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -136,7 +136,7 @@ void k_sonnet__highlighter_ignore_word(void* self, const char* word);
 /// @param word const char*
 const char** k_sonnet__highlighter_suggestions_for_word(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#suggestionsForWord)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -145,48 +145,48 @@ const char** k_sonnet__highlighter_suggestions_for_word(void* self, const char* 
 /// @param cursor QTextCursor*
 const char** k_sonnet__highlighter_suggestions_for_word2(void* self, const char* word, void* cursor);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#isWordMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#isWordMisspelled)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param word const char*
 bool k_sonnet__highlighter_is_word_misspelled(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setMisspelledColor)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setMisspelledColor)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param color QColor*
 void k_sonnet__highlighter_set_misspelled_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#checkerEnabledByDefault)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#checkerEnabledByDefault)
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_checker_enabled_by_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setDocument)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setDocument)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param document QTextDocument*
 void k_sonnet__highlighter_set_document(void* self, void* document);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#activeChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#activeChanged)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param description const char*
 void k_sonnet__highlighter_active_changed(void* self, const char* description);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#activeChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#activeChanged)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param callback void func(Sonnet__Highlighter* self, const char* description)
 void k_sonnet__highlighter_on_active_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#highlightBlock)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#highlightBlock)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param text const char*
 void k_sonnet__highlighter_highlight_block(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#highlightBlock)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#highlightBlock)
 ///
 /// Allows for overriding the related default method
 ///
@@ -194,7 +194,7 @@ void k_sonnet__highlighter_highlight_block(void* self, const char* text);
 /// @param callback void func(Sonnet__Highlighter* self, const char* text)
 void k_sonnet__highlighter_on_highlight_block(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#highlightBlock)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#highlightBlock)
 ///
 /// Base class method implementation
 ///
@@ -202,14 +202,14 @@ void k_sonnet__highlighter_on_highlight_block(void* self, void (*callback)(void*
 /// @param text const char*
 void k_sonnet__highlighter_qbase_highlight_block(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setMisspelled)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param start int
 /// @param count int
 void k_sonnet__highlighter_set_misspelled(void* self, int start, int count);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setMisspelled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -217,7 +217,7 @@ void k_sonnet__highlighter_set_misspelled(void* self, int start, int count);
 /// @param callback void func(Sonnet__Highlighter* self, int start, int count)
 void k_sonnet__highlighter_on_set_misspelled(void* self, void (*callback)(void*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setMisspelled)
 ///
 /// Base class method implementation
 ///
@@ -226,14 +226,14 @@ void k_sonnet__highlighter_on_set_misspelled(void* self, void (*callback)(void*,
 /// @param count int
 void k_sonnet__highlighter_qbase_set_misspelled(void* self, int start, int count);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#unsetMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#unsetMisspelled)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param start int
 /// @param count int
 void k_sonnet__highlighter_unset_misspelled(void* self, int start, int count);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#unsetMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#unsetMisspelled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -241,7 +241,7 @@ void k_sonnet__highlighter_unset_misspelled(void* self, int start, int count);
 /// @param callback void func(Sonnet__Highlighter* self, int start, int count)
 void k_sonnet__highlighter_on_unset_misspelled(void* self, void (*callback)(void*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#unsetMisspelled)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#unsetMisspelled)
 ///
 /// Base class method implementation
 ///
@@ -250,14 +250,14 @@ void k_sonnet__highlighter_on_unset_misspelled(void* self, void (*callback)(void
 /// @param count int
 void k_sonnet__highlighter_qbase_unset_misspelled(void* self, int start, int count);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#eventFilter)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param o QObject*
 /// @param e QEvent*
 bool k_sonnet__highlighter_event_filter(void* self, void* o, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -265,7 +265,7 @@ bool k_sonnet__highlighter_event_filter(void* self, void* o, void* e);
 /// @param callback bool func(Sonnet__Highlighter* self, QObject* o, QEvent* e)
 void k_sonnet__highlighter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -274,12 +274,12 @@ void k_sonnet__highlighter_on_event_filter(void* self, bool (*callback)(void*, v
 /// @param e QEvent*
 bool k_sonnet__highlighter_qbase_event_filter(void* self, void* o, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#intraWordEditing)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#intraWordEditing)
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_intra_word_editing(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#intraWordEditing)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#intraWordEditing)
 ///
 /// Allows for overriding the related default method
 ///
@@ -287,20 +287,20 @@ bool k_sonnet__highlighter_intra_word_editing(void* self);
 /// @param callback bool func()
 void k_sonnet__highlighter_on_intra_word_editing(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#intraWordEditing)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#intraWordEditing)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__Highlighter*
 bool k_sonnet__highlighter_qbase_intra_word_editing(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setIntraWordEditing)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setIntraWordEditing)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param editing bool
 void k_sonnet__highlighter_set_intra_word_editing(void* self, bool editing);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setIntraWordEditing)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setIntraWordEditing)
 ///
 /// Allows for overriding the related default method
 ///
@@ -308,7 +308,7 @@ void k_sonnet__highlighter_set_intra_word_editing(void* self, bool editing);
 /// @param callback void func(Sonnet__Highlighter* self, bool editing)
 void k_sonnet__highlighter_on_set_intra_word_editing(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setIntraWordEditing)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setIntraWordEditing)
 ///
 /// Base class method implementation
 ///
@@ -316,23 +316,23 @@ void k_sonnet__highlighter_on_set_intra_word_editing(void* self, void (*callback
 /// @param editing bool
 void k_sonnet__highlighter_qbase_set_intra_word_editing(void* self, bool editing);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#setCurrentLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#setCurrentLanguage)
 ///
 /// @param self Sonnet__Highlighter*
 /// @param language const char*
 void k_sonnet__highlighter_set_current_language(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#slotAutoDetection)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#slotAutoDetection)
 ///
 /// @param self Sonnet__Highlighter*
 void k_sonnet__highlighter_slot_auto_detection(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#slotRehighlight)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#slotRehighlight)
 ///
 /// @param self Sonnet__Highlighter*
 void k_sonnet__highlighter_slot_rehighlight(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -340,7 +340,7 @@ void k_sonnet__highlighter_slot_rehighlight(void* self);
 /// @param c const char*
 const char* k_sonnet__highlighter_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -349,7 +349,7 @@ const char* k_sonnet__highlighter_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_sonnet__highlighter_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#suggestionsForWord)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -358,7 +358,7 @@ const char* k_sonnet__highlighter_tr3(const char* s, const char* c, int n);
 /// @param max int
 const char** k_sonnet__highlighter_suggestions_for_word22(void* self, const char* word, int max);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-highlighter.html#suggestionsForWord)
+/// [Qt documentation](https://api.kde.org/sonnet-highlighter.html#suggestionsForWord)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

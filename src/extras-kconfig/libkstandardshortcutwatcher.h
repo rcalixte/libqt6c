@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kstandardshortcut-standardshortcutwatcher.html
+/// https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -35,14 +35,14 @@ int32_t k_standardshortcut__standardshortcutwatcher_metacall(void* self, int32_t
 /// @param s const char*
 const char* k_standardshortcut__standardshortcutwatcher_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param id enum KStandardShortcut__StandardShortcut
 /// @param shortcut libqt_list /* of QKeySequence* */
 void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, int32_t id, libqt_list shortcut);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 /// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, enum KStandardShortcut__StandardShortcut id, libqt_list /* of QKeySequence* */ /* of QKeySequence* */)
@@ -404,9 +404,9 @@ void k_standardshortcut__standardshortcutwatcher_on_object_name_changed(void* se
 /// @param self KStandardShortcut__StandardShortcutWatcher*
 void k_standardshortcut__standardshortcutwatcher_delete(void* self);
 
-/// https://api-staging.kde.org/kstandardshortcut.html
+/// https://api.kde.org/kstandardshortcut.html
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#shortcutWatcher)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#shortcutWatcher)
 ///
 KStandardShortcut__StandardShortcutWatcher* k_standardshortcut_shortcut_watcher();
 #endif

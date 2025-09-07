@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktimecombobox.html
+/// https://api.kde.org/ktimecombobox.html
 
 /// k_timecombobox_new constructs a new KTimeComboBox object.
 ///
@@ -58,163 +58,163 @@ int32_t k_timecombobox_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_timecombobox_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#time)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#time)
 ///
 /// @param self KTimeComboBox*
 QTime* k_timecombobox_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#isValid)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#isValid)
 ///
 /// @param self KTimeComboBox*
 bool k_timecombobox_is_valid(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#isNull)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#isNull)
 ///
 /// @param self KTimeComboBox*
 bool k_timecombobox_is_null(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#options)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#options)
 ///
 /// @param self KTimeComboBox*
 ///
 /// @return flag of enum KTimeComboBox__Option
 int32_t k_timecombobox_options(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#displayFormat)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#displayFormat)
 ///
 /// @param self KTimeComboBox*
 ///
 /// @return enum QLocale__FormatType
 int32_t k_timecombobox_display_format(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#minimumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#minimumTime)
 ///
 /// @param self KTimeComboBox*
 QTime* k_timecombobox_minimum_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resetMinimumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#resetMinimumTime)
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_reset_minimum_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#maximumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#maximumTime)
 ///
 /// @param self KTimeComboBox*
 QTime* k_timecombobox_maximum_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resetMaximumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#resetMaximumTime)
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_reset_maximum_time(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeRange)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeRange)
 ///
 /// @param self KTimeComboBox*
 /// @param minTime QTime*
 /// @param maxTime QTime*
 void k_timecombobox_set_time_range(void* self, void* minTime, void* maxTime);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resetTimeRange)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#resetTimeRange)
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_reset_time_range(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeListInterval)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeListInterval)
 ///
 /// @param self KTimeComboBox*
 int32_t k_timecombobox_time_list_interval(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeList)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeList)
 ///
 /// @param self KTimeComboBox*
 libqt_list /* of QTime* */ k_timecombobox_time_list(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEntered)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeEntered)
 ///
 /// @param self KTimeComboBox*
 /// @param time QTime*
 void k_timecombobox_time_entered(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEntered)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeEntered)
 ///
 /// @param self KTimeComboBox*
 /// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_time_entered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeChanged)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeChanged)
 ///
 /// @param self KTimeComboBox*
 /// @param time QTime*
 void k_timecombobox_time_changed(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeChanged)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeChanged)
 ///
 /// @param self KTimeComboBox*
 /// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_time_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEdited)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeEdited)
 ///
 /// @param self KTimeComboBox*
 /// @param time QTime*
 void k_timecombobox_time_edited(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#timeEdited)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#timeEdited)
 ///
 /// @param self KTimeComboBox*
 /// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_time_edited(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTime)
 ///
 /// @param self KTimeComboBox*
 /// @param time QTime*
 void k_timecombobox_set_time(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setOptions)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setOptions)
 ///
 /// @param self KTimeComboBox*
 /// @param options flag of enum KTimeComboBox__Option
 void k_timecombobox_set_options(void* self, int32_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setDisplayFormat)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setDisplayFormat)
 ///
 /// @param self KTimeComboBox*
 /// @param format enum QLocale__FormatType
 void k_timecombobox_set_display_format(void* self, int32_t format);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setMinimumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setMinimumTime)
 ///
 /// @param self KTimeComboBox*
 /// @param minTime QTime*
 void k_timecombobox_set_minimum_time(void* self, void* minTime);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setMaximumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setMaximumTime)
 ///
 /// @param self KTimeComboBox*
 /// @param maxTime QTime*
 void k_timecombobox_set_maximum_time(void* self, void* maxTime);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeListInterval)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeListInterval)
 ///
 /// @param self KTimeComboBox*
 /// @param minutes int
 void k_timecombobox_set_time_list_interval(void* self, int minutes);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeList)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeList)
 ///
 /// @param self KTimeComboBox*
 /// @param timeList libqt_list /* of QTime* */
 void k_timecombobox_set_time_list(void* self, libqt_list timeList);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#eventFilter)
 ///
 /// @param self KTimeComboBox*
 /// @param object QObject*
 /// @param event QEvent*
 bool k_timecombobox_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -222,7 +222,7 @@ bool k_timecombobox_event_filter(void* self, void* object, void* event);
 /// @param callback bool func(KTimeComboBox* self, QObject* object, QEvent* event)
 void k_timecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -231,12 +231,12 @@ void k_timecombobox_on_event_filter(void* self, bool (*callback)(void*, void*, v
 /// @param event QEvent*
 bool k_timecombobox_qbase_event_filter(void* self, void* object, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#showPopup)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#showPopup)
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_show_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#showPopup)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#showPopup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -244,19 +244,19 @@ void k_timecombobox_show_popup(void* self);
 /// @param callback void func()
 void k_timecombobox_on_show_popup(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#showPopup)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#showPopup)
 ///
 /// Base class method implementation
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_qbase_show_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#hidePopup)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#hidePopup)
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_hide_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#hidePopup)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#hidePopup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -264,20 +264,20 @@ void k_timecombobox_hide_popup(void* self);
 /// @param callback void func()
 void k_timecombobox_on_hide_popup(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#hidePopup)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#hidePopup)
 ///
 /// Base class method implementation
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_qbase_hide_popup(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#mousePressEvent)
 ///
 /// @param self KTimeComboBox*
 /// @param event QMouseEvent*
 void k_timecombobox_mouse_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -285,7 +285,7 @@ void k_timecombobox_mouse_press_event(void* self, void* event);
 /// @param callback void func(KTimeComboBox* self, QMouseEvent* event)
 void k_timecombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -293,13 +293,13 @@ void k_timecombobox_on_mouse_press_event(void* self, void (*callback)(void*, voi
 /// @param event QMouseEvent*
 void k_timecombobox_qbase_mouse_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#wheelEvent)
 ///
 /// @param self KTimeComboBox*
 /// @param event QWheelEvent*
 void k_timecombobox_wheel_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -307,7 +307,7 @@ void k_timecombobox_wheel_event(void* self, void* event);
 /// @param callback void func(KTimeComboBox* self, QWheelEvent* event)
 void k_timecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#wheelEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
@@ -315,13 +315,13 @@ void k_timecombobox_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param event QWheelEvent*
 void k_timecombobox_qbase_wheel_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#keyPressEvent)
 ///
 /// @param self KTimeComboBox*
 /// @param event QKeyEvent*
 void k_timecombobox_key_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -329,7 +329,7 @@ void k_timecombobox_key_press_event(void* self, void* event);
 /// @param callback void func(KTimeComboBox* self, QKeyEvent* event)
 void k_timecombobox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -337,13 +337,13 @@ void k_timecombobox_on_key_press_event(void* self, void (*callback)(void*, void*
 /// @param event QKeyEvent*
 void k_timecombobox_qbase_key_press_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#focusInEvent)
 ///
 /// @param self KTimeComboBox*
 /// @param event QFocusEvent*
 void k_timecombobox_focus_in_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#focusInEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -351,7 +351,7 @@ void k_timecombobox_focus_in_event(void* self, void* event);
 /// @param callback void func(KTimeComboBox* self, QFocusEvent* event)
 void k_timecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#focusInEvent)
 ///
 /// Base class method implementation
 ///
@@ -359,13 +359,13 @@ void k_timecombobox_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param event QFocusEvent*
 void k_timecombobox_qbase_focus_in_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#focusOutEvent)
 ///
 /// @param self KTimeComboBox*
 /// @param event QFocusEvent*
 void k_timecombobox_focus_out_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#focusOutEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -373,7 +373,7 @@ void k_timecombobox_focus_out_event(void* self, void* event);
 /// @param callback void func(KTimeComboBox* self, QFocusEvent* event)
 void k_timecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#focusOutEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#focusOutEvent)
 ///
 /// Base class method implementation
 ///
@@ -381,13 +381,13 @@ void k_timecombobox_on_focus_out_event(void* self, void (*callback)(void*, void*
 /// @param event QFocusEvent*
 void k_timecombobox_qbase_focus_out_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#resizeEvent)
 ///
 /// @param self KTimeComboBox*
 /// @param event QResizeEvent*
 void k_timecombobox_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -395,7 +395,7 @@ void k_timecombobox_resize_event(void* self, void* event);
 /// @param callback void func(KTimeComboBox* self, QResizeEvent* event)
 void k_timecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -403,13 +403,13 @@ void k_timecombobox_on_resize_event(void* self, void (*callback)(void*, void*));
 /// @param event QResizeEvent*
 void k_timecombobox_qbase_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#assignTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#assignTime)
 ///
 /// @param self KTimeComboBox*
 /// @param time QTime*
 void k_timecombobox_assign_time(void* self, void* time);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#assignTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#assignTime)
 ///
 /// Allows for overriding the related default method
 ///
@@ -417,7 +417,7 @@ void k_timecombobox_assign_time(void* self, void* time);
 /// @param callback void func(KTimeComboBox* self, QTime* time)
 void k_timecombobox_on_assign_time(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#assignTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#assignTime)
 ///
 /// Base class method implementation
 ///
@@ -442,7 +442,7 @@ const char* k_timecombobox_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_timecombobox_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeRange)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeRange)
 ///
 /// @param self KTimeComboBox*
 /// @param minTime QTime*
@@ -450,7 +450,7 @@ const char* k_timecombobox_tr3(const char* s, const char* c, int n);
 /// @param minWarnMsg const char*
 void k_timecombobox_set_time_range3(void* self, void* minTime, void* maxTime, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeRange)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeRange)
 ///
 /// @param self KTimeComboBox*
 /// @param minTime QTime*
@@ -459,28 +459,28 @@ void k_timecombobox_set_time_range3(void* self, void* minTime, void* maxTime, co
 /// @param maxWarnMsg const char*
 void k_timecombobox_set_time_range4(void* self, void* minTime, void* maxTime, const char* minWarnMsg, const char* maxWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setMinimumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setMinimumTime)
 ///
 /// @param self KTimeComboBox*
 /// @param minTime QTime*
 /// @param minWarnMsg const char*
 void k_timecombobox_set_minimum_time2(void* self, void* minTime, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setMaximumTime)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setMaximumTime)
 ///
 /// @param self KTimeComboBox*
 /// @param maxTime QTime*
 /// @param maxWarnMsg const char*
 void k_timecombobox_set_maximum_time2(void* self, void* maxTime, const char* maxWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeList)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeList)
 ///
 /// @param self KTimeComboBox*
 /// @param timeList libqt_list /* of QTime* */
 /// @param minWarnMsg const char*
 void k_timecombobox_set_time_list2(void* self, libqt_list timeList, const char* minWarnMsg);
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#setTimeList)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#setTimeList)
 ///
 /// @param self KTimeComboBox*
 /// @param timeList libqt_list /* of QTime* */
@@ -5262,14 +5262,14 @@ void k_timecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// @param callback void func(KTimeComboBox* self, const char* objectName)
 void k_timecombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktimecombobox.html#dtor.KTimeComboBox)
+/// [Qt documentation](https://api.kde.org/ktimecombobox.html#dtor.KTimeComboBox)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KTimeComboBox*
 void k_timecombobox_delete(void* self);
 
-/// https://api-staging.kde.org/ktimecombobox.html#types
+/// https://api.kde.org/ktimecombobox.html#types
 
 typedef enum {
     KTIMECOMBOBOX_OPTION_EDITTIME = 1,

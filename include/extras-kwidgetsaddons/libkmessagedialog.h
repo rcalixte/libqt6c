@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmessagedialog.html
+/// https://api.kde.org/kmessagedialog.html
 
 /// k_messagedialog_new constructs a new KMessageDialog object.
 ///
@@ -69,81 +69,81 @@ int32_t k_messagedialog_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_messagedialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setCaption)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setCaption)
 ///
 /// @param self KMessageDialog*
 /// @param caption const char*
 void k_messagedialog_set_caption(void* self, const char* caption);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setIcon)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setIcon)
 ///
 /// @param self KMessageDialog*
 /// @param icon QIcon*
 void k_messagedialog_set_icon(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setListWidgetItems)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setListWidgetItems)
 ///
 /// @param self KMessageDialog*
 /// @param strlist const char**
 void k_messagedialog_set_list_widget_items(void* self, const char* strlist[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setDetails)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setDetails)
 ///
 /// @param self KMessageDialog*
 /// @param details const char*
 void k_messagedialog_set_details(void* self, const char* details);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setDontAskAgainText)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setDontAskAgainText)
 ///
 /// @param self KMessageDialog*
 /// @param dontAskAgainText const char*
 void k_messagedialog_set_dont_ask_again_text(void* self, const char* dontAskAgainText);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setDontAskAgainChecked)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setDontAskAgainChecked)
 ///
 /// @param self KMessageDialog*
 /// @param isChecked bool
 void k_messagedialog_set_dont_ask_again_checked(void* self, bool isChecked);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#isDontAskAgainChecked)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#isDontAskAgainChecked)
 ///
 /// @param self KMessageDialog*
 bool k_messagedialog_is_dont_ask_again_checked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setOpenExternalLinks)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setOpenExternalLinks)
 ///
 /// @param self KMessageDialog*
 /// @param isAllowed bool
 void k_messagedialog_set_open_external_links(void* self, bool isAllowed);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#isNotifyEnabled)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#isNotifyEnabled)
 ///
 /// @param self KMessageDialog*
 bool k_messagedialog_is_notify_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setNotifyEnabled)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setNotifyEnabled)
 ///
 /// @param self KMessageDialog*
 /// @param enable bool
 void k_messagedialog_set_notify_enabled(void* self, bool enable);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setButtons)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setButtons)
 ///
 /// @param self KMessageDialog*
 void k_messagedialog_set_buttons(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#beep)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#beep)
 ///
 /// @param typeVal enum KMessageDialog__Type
 void k_messagedialog_beep(int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#showEvent)
 ///
 /// @param self KMessageDialog*
 /// @param event QShowEvent*
 void k_messagedialog_show_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -151,7 +151,7 @@ void k_messagedialog_show_event(void* self, void* event);
 /// @param callback void func(KMessageDialog* self, QShowEvent* event)
 void k_messagedialog_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -176,20 +176,20 @@ const char* k_messagedialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_messagedialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setButtons)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setButtons)
 ///
 /// @param self KMessageDialog*
 /// @param primaryAction KGuiItem*
 void k_messagedialog_set_buttons1(void* self, void* primaryAction);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setButtons)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setButtons)
 ///
 /// @param self KMessageDialog*
 /// @param primaryAction KGuiItem*
 /// @param secondaryAction KGuiItem*
 void k_messagedialog_set_buttons2(void* self, void* primaryAction, void* secondaryAction);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#setButtons)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#setButtons)
 ///
 /// @param self KMessageDialog*
 /// @param primaryAction KGuiItem*
@@ -197,13 +197,13 @@ void k_messagedialog_set_buttons2(void* self, void* primaryAction, void* seconda
 /// @param cancelAction KGuiItem*
 void k_messagedialog_set_buttons3(void* self, void* primaryAction, void* secondaryAction, void* cancelAction);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#beep)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#beep)
 ///
 /// @param typeVal enum KMessageDialog__Type
 /// @param text const char*
 void k_messagedialog_beep2(int32_t typeVal, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#beep)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#beep)
 ///
 /// @param typeVal enum KMessageDialog__Type
 /// @param text const char*
@@ -4672,14 +4672,14 @@ void k_messagedialog_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// @param callback void func(KMessageDialog* self, const char* objectName)
 void k_messagedialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagedialog.html#dtor.KMessageDialog)
+/// [Qt documentation](https://api.kde.org/kmessagedialog.html#dtor.KMessageDialog)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMessageDialog*
 void k_messagedialog_delete(void* self);
 
-/// https://api-staging.kde.org/kmessagedialog.html#types
+/// https://api.kde.org/kmessagedialog.html#types
 
 typedef enum {
     KMESSAGEDIALOG_BUTTONTYPE_OK = 1,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcolorbutton.html
+/// https://api.kde.org/kcolorbutton.html
 
 /// k_colorbutton_new constructs a new KColorButton object.
 ///
@@ -82,45 +82,45 @@ int32_t k_colorbutton_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_colorbutton_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#color)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#color)
 ///
 /// @param self KColorButton*
 QColor* k_colorbutton_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#setColor)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#setColor)
 ///
 /// @param self KColorButton*
 /// @param c QColor*
 void k_colorbutton_set_color(void* self, void* c);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#setAlphaChannelEnabled)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#setAlphaChannelEnabled)
 ///
 /// @param self KColorButton*
 /// @param alpha bool
 void k_colorbutton_set_alpha_channel_enabled(void* self, bool alpha);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#isAlphaChannelEnabled)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#isAlphaChannelEnabled)
 ///
 /// @param self KColorButton*
 bool k_colorbutton_is_alpha_channel_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#defaultColor)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#defaultColor)
 ///
 /// @param self KColorButton*
 QColor* k_colorbutton_default_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#setDefaultColor)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#setDefaultColor)
 ///
 /// @param self KColorButton*
 /// @param c QColor*
 void k_colorbutton_set_default_color(void* self, void* c);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#sizeHint)
 ///
 /// @param self KColorButton*
 QSize* k_colorbutton_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -128,19 +128,19 @@ QSize* k_colorbutton_size_hint(void* self);
 /// @param callback QSize* func()
 void k_colorbutton_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KColorButton*
 QSize* k_colorbutton_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#minimumSizeHint)
 ///
 /// @param self KColorButton*
 QSize* k_colorbutton_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -148,32 +148,32 @@ QSize* k_colorbutton_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_colorbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KColorButton*
 QSize* k_colorbutton_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#changed)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#changed)
 ///
 /// @param self KColorButton*
 /// @param newColor QColor*
 void k_colorbutton_changed(void* self, void* newColor);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#changed)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#changed)
 ///
 /// @param self KColorButton*
 /// @param callback void func(KColorButton* self, QColor* newColor)
 void k_colorbutton_on_changed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#paintEvent)
 ///
 /// @param self KColorButton*
 /// @param pe QPaintEvent*
 void k_colorbutton_paint_event(void* self, void* pe);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -181,7 +181,7 @@ void k_colorbutton_paint_event(void* self, void* pe);
 /// @param callback void func(KColorButton* self, QPaintEvent* pe)
 void k_colorbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -189,13 +189,13 @@ void k_colorbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param pe QPaintEvent*
 void k_colorbutton_qbase_paint_event(void* self, void* pe);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dragEnterEvent)
 ///
 /// @param self KColorButton*
 /// @param param1 QDragEnterEvent*
 void k_colorbutton_drag_enter_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dragEnterEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -203,7 +203,7 @@ void k_colorbutton_drag_enter_event(void* self, void* param1);
 /// @param callback void func(KColorButton* self, QDragEnterEvent* param1)
 void k_colorbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dragEnterEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dragEnterEvent)
 ///
 /// Base class method implementation
 ///
@@ -211,13 +211,13 @@ void k_colorbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*
 /// @param param1 QDragEnterEvent*
 void k_colorbutton_qbase_drag_enter_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dropEvent)
 ///
 /// @param self KColorButton*
 /// @param param1 QDropEvent*
 void k_colorbutton_drop_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dropEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -225,7 +225,7 @@ void k_colorbutton_drop_event(void* self, void* param1);
 /// @param callback void func(KColorButton* self, QDropEvent* param1)
 void k_colorbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dropEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dropEvent)
 ///
 /// Base class method implementation
 ///
@@ -233,13 +233,13 @@ void k_colorbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QDropEvent*
 void k_colorbutton_qbase_drop_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#mousePressEvent)
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
 void k_colorbutton_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -247,7 +247,7 @@ void k_colorbutton_mouse_press_event(void* self, void* e);
 /// @param callback void func(KColorButton* self, QMouseEvent* e)
 void k_colorbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mousePressEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
@@ -255,13 +255,13 @@ void k_colorbutton_on_mouse_press_event(void* self, void (*callback)(void*, void
 /// @param e QMouseEvent*
 void k_colorbutton_qbase_mouse_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#mouseMoveEvent)
 ///
 /// @param self KColorButton*
 /// @param e QMouseEvent*
 void k_colorbutton_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -269,7 +269,7 @@ void k_colorbutton_mouse_move_event(void* self, void* e);
 /// @param callback void func(KColorButton* self, QMouseEvent* e)
 void k_colorbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#mouseMoveEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
@@ -277,13 +277,13 @@ void k_colorbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*
 /// @param e QMouseEvent*
 void k_colorbutton_qbase_mouse_move_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#keyPressEvent)
 ///
 /// @param self KColorButton*
 /// @param e QKeyEvent*
 void k_colorbutton_key_press_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -291,7 +291,7 @@ void k_colorbutton_key_press_event(void* self, void* e);
 /// @param callback void func(KColorButton* self, QKeyEvent* e)
 void k_colorbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -4771,7 +4771,7 @@ void k_colorbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*,
 /// @param callback void func(KColorButton* self, const char* objectName)
 void k_colorbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcolorbutton.html#dtor.KColorButton)
+/// [Qt documentation](https://api.kde.org/kcolorbutton.html#dtor.KColorButton)
 ///
 /// Delete this object from C++ memory.
 ///

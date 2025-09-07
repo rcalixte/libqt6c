@@ -11,14 +11,14 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-configdialog.html
+/// https://api.kde.org/sonnet-configdialog.html
 
 /// k_sonnet__configdialog_new constructs a new Sonnet::ConfigDialog object.
 ///
 /// @param parent QWidget*
 Sonnet__ConfigDialog* k_sonnet__configdialog_new(void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__ConfigDialog*
 const QMetaObject* k_sonnet__configdialog_meta_object(void* self);
@@ -47,32 +47,32 @@ void k_sonnet__configdialog_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_sonnet__configdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__configdialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#setLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#setLanguage)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param language const char*
 void k_sonnet__configdialog_set_language(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#language)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#language)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__ConfigDialog*
 const char* k_sonnet__configdialog_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#slotOk)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#slotOk)
 ///
 /// @param self Sonnet__ConfigDialog*
 void k_sonnet__configdialog_slot_ok(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#slotOk)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#slotOk)
 ///
 /// Allows for overriding the related default method
 ///
@@ -80,19 +80,19 @@ void k_sonnet__configdialog_slot_ok(void* self);
 /// @param callback void func()
 void k_sonnet__configdialog_on_slot_ok(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#slotOk)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#slotOk)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__ConfigDialog*
 void k_sonnet__configdialog_qbase_slot_ok(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#slotApply)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#slotApply)
 ///
 /// @param self Sonnet__ConfigDialog*
 void k_sonnet__configdialog_slot_apply(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#slotApply)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#slotApply)
 ///
 /// Allows for overriding the related default method
 ///
@@ -100,37 +100,37 @@ void k_sonnet__configdialog_slot_apply(void* self);
 /// @param callback void func()
 void k_sonnet__configdialog_on_slot_apply(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#slotApply)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#slotApply)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__ConfigDialog*
 void k_sonnet__configdialog_qbase_slot_apply(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#languageChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param language const char*
 void k_sonnet__configdialog_language_changed(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#languageChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self, const char* language)
 void k_sonnet__configdialog_on_language_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#configChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#configChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 void k_sonnet__configdialog_config_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-configdialog.html#configChanged)
+/// [Qt documentation](https://api.kde.org/sonnet-configdialog.html#configChanged)
 ///
 /// @param self Sonnet__ConfigDialog*
 /// @param callback void func(Sonnet__ConfigDialog* self)
 void k_sonnet__configdialog_on_config_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -138,7 +138,7 @@ void k_sonnet__configdialog_on_config_changed(void* self, void (*callback)(void*
 /// @param c const char*
 const char* k_sonnet__configdialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

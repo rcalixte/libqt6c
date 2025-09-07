@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kxmlguifactory.html
+/// https://api.kde.org/kxmlguifactory.html
 
 /// k_xmlguifactory_new constructs a new KXMLGUIFactory object.
 ///
@@ -60,44 +60,44 @@ int32_t k_xmlguifactory_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_xmlguifactory_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#readConfigFile)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#readConfigFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param filename const char*
 const char* k_xmlguifactory_read_config_file(const char* filename);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#saveConfigFile)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#saveConfigFile)
 ///
 /// @param doc QDomDocument*
 /// @param filename const char*
 bool k_xmlguifactory_save_config_file(void* doc, const char* filename);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#actionPropertiesElement)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#actionPropertiesElement)
 ///
 /// @param doc QDomDocument*
 QDomElement* k_xmlguifactory_action_properties_element(void* doc);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#findActionByName)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#findActionByName)
 ///
 /// @param elem QDomElement*
 /// @param sName const char*
 /// @param create bool
 QDomElement* k_xmlguifactory_find_action_by_name(void* elem, const char* sName, bool create);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#addClient)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#addClient)
 ///
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
 void k_xmlguifactory_add_client(void* self, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#removeClient)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#removeClient)
 ///
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
 void k_xmlguifactory_remove_client(void* self, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#plugActionList)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#plugActionList)
 ///
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
@@ -105,100 +105,100 @@ void k_xmlguifactory_remove_client(void* self, void* client);
 /// @param actionList libqt_list /* of QAction* */
 void k_xmlguifactory_plug_action_list(void* self, void* client, const char* name, libqt_list actionList);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#unplugActionList)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#unplugActionList)
 ///
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
 /// @param name const char*
 void k_xmlguifactory_unplug_action_list(void* self, void* client, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#clients)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#clients)
 ///
 /// @param self KXMLGUIFactory*
 libqt_list /* of KXMLGUIClient* */ k_xmlguifactory_clients(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#container)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#container)
 ///
 /// @param self KXMLGUIFactory*
 /// @param containerName const char*
 /// @param client KXMLGUIClient*
 QWidget* k_xmlguifactory_container(void* self, const char* containerName, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#containers)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#containers)
 ///
 /// @param self KXMLGUIFactory*
 /// @param tagName const char*
 libqt_list /* of QWidget* */ k_xmlguifactory_containers(void* self, const char* tagName);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#reset)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#reset)
 ///
 /// @param self KXMLGUIFactory*
 void k_xmlguifactory_reset(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#resetContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#resetContainer)
 ///
 /// @param self KXMLGUIFactory*
 /// @param containerName const char*
 void k_xmlguifactory_reset_container(void* self, const char* containerName);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#refreshActionProperties)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#refreshActionProperties)
 ///
 /// @param self KXMLGUIFactory*
 void k_xmlguifactory_refresh_action_properties(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#showConfigureShortcutsDialog)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#showConfigureShortcutsDialog)
 ///
 /// @param self KXMLGUIFactory*
 void k_xmlguifactory_show_configure_shortcuts_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#changeShortcutScheme)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#changeShortcutScheme)
 ///
 /// @param self KXMLGUIFactory*
 /// @param scheme const char*
 void k_xmlguifactory_change_shortcut_scheme(void* self, const char* scheme);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#clientAdded)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#clientAdded)
 ///
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
 void k_xmlguifactory_client_added(void* self, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#clientAdded)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#clientAdded)
 ///
 /// @param self KXMLGUIFactory*
 /// @param callback void func(KXMLGUIFactory* self, KXMLGUIClient* client)
 void k_xmlguifactory_on_client_added(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#clientRemoved)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#clientRemoved)
 ///
 /// @param self KXMLGUIFactory*
 /// @param client KXMLGUIClient*
 void k_xmlguifactory_client_removed(void* self, void* client);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#clientRemoved)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#clientRemoved)
 ///
 /// @param self KXMLGUIFactory*
 /// @param callback void func(KXMLGUIFactory* self, KXMLGUIClient* client)
 void k_xmlguifactory_on_client_removed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#makingChanges)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#makingChanges)
 ///
 /// @param self KXMLGUIFactory*
 /// @param param1 bool
 void k_xmlguifactory_making_changes(void* self, bool param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#makingChanges)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#makingChanges)
 ///
 /// @param self KXMLGUIFactory*
 /// @param callback void func(KXMLGUIFactory* self, bool param1)
 void k_xmlguifactory_on_making_changes(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#shortcutsSaved)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#shortcutsSaved)
 ///
 /// @param self KXMLGUIFactory*
 void k_xmlguifactory_shortcuts_saved(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#shortcutsSaved)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#shortcutsSaved)
 ///
 /// @param self KXMLGUIFactory*
 /// @param callback void func(KXMLGUIFactory* self)
@@ -221,7 +221,7 @@ const char* k_xmlguifactory_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_xmlguifactory_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#readConfigFile)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#readConfigFile)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -229,14 +229,14 @@ const char* k_xmlguifactory_tr3(const char* s, const char* c, int n);
 /// @param componentName const char*
 const char* k_xmlguifactory_read_config_file2(const char* filename, const char* componentName);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#saveConfigFile)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#saveConfigFile)
 ///
 /// @param doc QDomDocument*
 /// @param filename const char*
 /// @param componentName const char*
 bool k_xmlguifactory_save_config_file3(void* doc, const char* filename, const char* componentName);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#container)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#container)
 ///
 /// @param self KXMLGUIFactory*
 /// @param containerName const char*
@@ -244,7 +244,7 @@ bool k_xmlguifactory_save_config_file3(void* doc, const char* filename, const ch
 /// @param useTagName bool
 QWidget* k_xmlguifactory_container3(void* self, const char* containerName, void* client, bool useTagName);
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#resetContainer)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#resetContainer)
 ///
 /// @param self KXMLGUIFactory*
 /// @param containerName const char*
@@ -896,7 +896,7 @@ void k_xmlguifactory_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param callback void func(KXMLGUIFactory* self, const char* objectName)
 void k_xmlguifactory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kxmlguifactory.html#dtor.KXMLGUIFactory)
+/// [Qt documentation](https://api.kde.org/kxmlguifactory.html#dtor.KXMLGUIFactory)
 ///
 /// Delete this object from C++ memory.
 ///

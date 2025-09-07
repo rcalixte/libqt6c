@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kiconloader.html
+/// https://api.kde.org/kiconloader.html
 
 /// k_iconloader_new constructs a new KIconLoader object.
 ///
@@ -71,31 +71,31 @@ int32_t k_iconloader_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_iconloader_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#global)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#global)
 ///
 KIconLoader* k_iconloader_global();
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#addAppDir)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#addAppDir)
 ///
 /// @param self KIconLoader*
 /// @param appname const char*
 void k_iconloader_add_app_dir(void* self, const char* appname);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadIcon)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
 /// @param group enum KIconLoader__Group
 QPixmap* k_iconloader_load_icon(void* self, const char* name, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMimeTypeIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///
 /// @param self KIconLoader*
 /// @param iconName const char*
 /// @param group enum KIconLoader__Group
 QPixmap* k_iconloader_load_mime_type_icon(void* self, const char* iconName, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconPath)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -104,7 +104,7 @@ QPixmap* k_iconloader_load_mime_type_icon(void* self, const char* iconName, int3
 /// @param group_or_size int
 const char* k_iconloader_icon_path(void* self, const char* name, int group_or_size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconPath)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -115,14 +115,14 @@ const char* k_iconloader_icon_path(void* self, const char* name, int group_or_si
 /// @param scale double
 const char* k_iconloader_icon_path2(void* self, const char* name, int group_or_size, bool canReturnNull, double scale);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMovie)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMovie)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
 /// @param group enum KIconLoader__Group
 QMovie* k_iconloader_load_movie(void* self, const char* name, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#moviePath)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#moviePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -131,7 +131,7 @@ QMovie* k_iconloader_load_movie(void* self, const char* name, int32_t group);
 /// @param group enum KIconLoader__Group
 const char* k_iconloader_movie_path(void* self, const char* name, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadAnimated)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadAnimated)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -140,14 +140,14 @@ const char* k_iconloader_movie_path(void* self, const char* name, int32_t group)
 /// @param group enum KIconLoader__Group
 const char** k_iconloader_load_animated(void* self, const char* name, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#queryIcons)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#queryIcons)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconLoader*
 const char** k_iconloader_query_icons(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#queryIcons)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#queryIcons)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -155,7 +155,7 @@ const char** k_iconloader_query_icons(void* self);
 /// @param group_or_size int
 const char** k_iconloader_query_icons2(void* self, int group_or_size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#queryIconsByContext)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#queryIconsByContext)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -163,13 +163,13 @@ const char** k_iconloader_query_icons2(void* self, int group_or_size);
 /// @param group_or_size int
 const char** k_iconloader_query_icons_by_context(void* self, int group_or_size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#hasContext)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#hasContext)
 ///
 /// @param self KIconLoader*
 /// @param context enum KIconLoader__Context
 bool k_iconloader_has_context(void* self, int32_t context);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#queryIconsByDir)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#queryIconsByDir)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -177,40 +177,40 @@ bool k_iconloader_has_context(void* self, int32_t context);
 /// @param iconsDir const char*
 const char** k_iconloader_query_icons_by_dir(void* self, const char* iconsDir);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#searchPaths)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#searchPaths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KIconLoader*
 const char** k_iconloader_search_paths(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#currentSize)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#currentSize)
 ///
 /// @param self KIconLoader*
 /// @param group enum KIconLoader__Group
 int32_t k_iconloader_current_size(void* self, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#theme)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#theme)
 ///
 /// @param self KIconLoader*
 KIconTheme* k_iconloader_theme(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconEffect)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconEffect)
 ///
 /// @param self KIconLoader*
 KIconEffect* k_iconloader_icon_effect(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#reconfigure)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#reconfigure)
 ///
 /// @param self KIconLoader*
 /// @param appname const char*
 void k_iconloader_reconfigure(void* self, const char* appname);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#unknown)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#unknown)
 ///
 QPixmap* k_iconloader_unknown();
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#drawOverlays)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#drawOverlays)
 ///
 /// @param self KIconLoader*
 /// @param overlays const char**
@@ -218,61 +218,61 @@ QPixmap* k_iconloader_unknown();
 /// @param group enum KIconLoader__Group
 void k_iconloader_draw_overlays(void* self, const char* overlays[], void* pixmap, int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#hasIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#hasIcon)
 ///
 /// @param self KIconLoader*
 /// @param iconName const char*
 bool k_iconloader_has_icon(void* self, const char* iconName);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#setCustomPalette)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#setCustomPalette)
 ///
 /// @param self KIconLoader*
 /// @param palette QPalette*
 void k_iconloader_set_custom_palette(void* self, void* palette);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#customPalette)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#customPalette)
 ///
 /// @param self KIconLoader*
 QPalette* k_iconloader_custom_palette(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#resetPalette)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#resetPalette)
 ///
 /// @param self KIconLoader*
 void k_iconloader_reset_palette(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#hasCustomPalette)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#hasCustomPalette)
 ///
 /// @param self KIconLoader*
 bool k_iconloader_has_custom_palette(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#newIconLoader)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#newIconLoader)
 ///
 /// @param self KIconLoader*
 void k_iconloader_new_icon_loader(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#emitChange)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#emitChange)
 ///
 /// @param group enum KIconLoader__Group
 void k_iconloader_emit_change(int32_t group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconLoaderSettingsChanged)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconLoaderSettingsChanged)
 ///
 /// @param self KIconLoader*
 void k_iconloader_icon_loader_settings_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconLoaderSettingsChanged)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconLoaderSettingsChanged)
 ///
 /// @param self KIconLoader*
 /// @param callback void func(KIconLoader* self)
 void k_iconloader_on_icon_loader_settings_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconChanged)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconChanged)
 ///
 /// @param self KIconLoader*
 /// @param group int
 void k_iconloader_icon_changed(void* self, int group);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconChanged)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconChanged)
 ///
 /// @param self KIconLoader*
 /// @param callback void func(KIconLoader* self, int group)
@@ -295,14 +295,14 @@ const char* k_iconloader_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_iconloader_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#addAppDir)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#addAppDir)
 ///
 /// @param self KIconLoader*
 /// @param appname const char*
 /// @param themeBaseDir const char*
 void k_iconloader_add_app_dir2(void* self, const char* appname, const char* themeBaseDir);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadIcon)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -310,7 +310,7 @@ void k_iconloader_add_app_dir2(void* self, const char* appname, const char* them
 /// @param size int
 QPixmap* k_iconloader_load_icon3(void* self, const char* name, int32_t group, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadIcon)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -319,7 +319,7 @@ QPixmap* k_iconloader_load_icon3(void* self, const char* name, int32_t group, in
 /// @param state int
 QPixmap* k_iconloader_load_icon4(void* self, const char* name, int32_t group, int size, int state);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadIcon)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -329,7 +329,7 @@ QPixmap* k_iconloader_load_icon4(void* self, const char* name, int32_t group, in
 /// @param overlays const char**
 QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, int size, int state, const char* overlays[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMimeTypeIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///
 /// @param self KIconLoader*
 /// @param iconName const char*
@@ -337,7 +337,7 @@ QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, in
 /// @param size int
 QPixmap* k_iconloader_load_mime_type_icon3(void* self, const char* iconName, int32_t group, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMimeTypeIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///
 /// @param self KIconLoader*
 /// @param iconName const char*
@@ -346,7 +346,7 @@ QPixmap* k_iconloader_load_mime_type_icon3(void* self, const char* iconName, int
 /// @param state int
 QPixmap* k_iconloader_load_mime_type_icon4(void* self, const char* iconName, int32_t group, int size, int state);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMimeTypeIcon)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///
 /// @param self KIconLoader*
 /// @param iconName const char*
@@ -356,7 +356,7 @@ QPixmap* k_iconloader_load_mime_type_icon4(void* self, const char* iconName, int
 /// @param overlays const char**
 QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int32_t group, int size, int state, const char* overlays[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#iconPath)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#iconPath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -366,7 +366,7 @@ QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int
 /// @param canReturnNull bool
 const char* k_iconloader_icon_path3(void* self, const char* name, int group_or_size, bool canReturnNull);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMovie)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMovie)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -374,7 +374,7 @@ const char* k_iconloader_icon_path3(void* self, const char* name, int group_or_s
 /// @param size int
 QMovie* k_iconloader_load_movie3(void* self, const char* name, int32_t group, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadMovie)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadMovie)
 ///
 /// @param self KIconLoader*
 /// @param name const char*
@@ -383,7 +383,7 @@ QMovie* k_iconloader_load_movie3(void* self, const char* name, int32_t group, in
 /// @param parent QObject*
 QMovie* k_iconloader_load_movie4(void* self, const char* name, int32_t group, int size, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#moviePath)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#moviePath)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -393,7 +393,7 @@ QMovie* k_iconloader_load_movie4(void* self, const char* name, int32_t group, in
 /// @param size int
 const char* k_iconloader_movie_path3(void* self, const char* name, int32_t group, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#loadAnimated)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#loadAnimated)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -403,7 +403,7 @@ const char* k_iconloader_movie_path3(void* self, const char* name, int32_t group
 /// @param size int
 const char** k_iconloader_load_animated3(void* self, const char* name, int32_t group, int size);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#queryIcons)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#queryIcons)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -412,7 +412,7 @@ const char** k_iconloader_load_animated3(void* self, const char* name, int32_t g
 /// @param context enum KIconLoader__Context
 const char** k_iconloader_query_icons22(void* self, int group_or_size, int32_t context);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#queryIconsByContext)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#queryIconsByContext)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -421,14 +421,14 @@ const char** k_iconloader_query_icons22(void* self, int group_or_size, int32_t c
 /// @param context enum KIconLoader__Context
 const char** k_iconloader_query_icons_by_context2(void* self, int group_or_size, int32_t context);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#reconfigure)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#reconfigure)
 ///
 /// @param self KIconLoader*
 /// @param appname const char*
 /// @param extraSearchPaths const char**
 void k_iconloader_reconfigure2(void* self, const char* appname, const char* extraSearchPaths[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#drawOverlays)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#drawOverlays)
 ///
 /// @param self KIconLoader*
 /// @param overlays const char**
@@ -1082,36 +1082,36 @@ void k_iconloader_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param callback void func(KIconLoader* self, const char* objectName)
 void k_iconloader_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kiconloader.html#dtor.KIconLoader)
+/// [Qt documentation](https://api.kde.org/kiconloader.html#dtor.KIconLoader)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KIconLoader*
 void k_iconloader_delete(void* self);
 
-/// https://api-staging.kde.org/kde.html
+/// https://api.kde.org/kde.html
 
-/// [Qt documentation](https://api-staging.kde.org/kde.html#icon)
+/// [Qt documentation](https://api.kde.org/kde.html#icon)
 ///
 /// @param param1 const char*
 /// @param param2 KIconLoader*
 QIcon* k_de_icon(const char* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kde.html#icon)
+/// [Qt documentation](https://api.kde.org/kde.html#icon)
 ///
 /// @param param1 const char*
 /// @param param2 KIconColors*
 /// @param param3 KIconLoader*
 QIcon* k_de_icon2(const char* param1, void* param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/kde.html#icon)
+/// [Qt documentation](https://api.kde.org/kde.html#icon)
 ///
 /// @param param1 const char*
 /// @param param2 const char**
 /// @param param3 KIconLoader*
 QIcon* k_de_icon3(const char* param1, const char* param2[], void* param3);
 
-/// https://api-staging.kde.org/kiconloader.html#types
+/// https://api.kde.org/kiconloader.html#types
 
 typedef enum {
     KICONLOADER_CONTEXT_ANY = 0,

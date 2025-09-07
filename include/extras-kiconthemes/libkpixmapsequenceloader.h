@@ -11,9 +11,9 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpixmapsequenceloader.html
+/// https://api.kde.org/kpixmapsequenceloader.html
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapsequenceloader.html#load)
+/// [Qt documentation](https://api.kde.org/kpixmapsequenceloader.html#load)
 ///
 /// @param param1 const char*
 /// @param param2 int

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kemailvalidator.html
+/// https://api.kde.org/kemailvalidator.html
 
 /// k_emailvalidator_new constructs a new KEmailValidator object.
 ///
@@ -58,7 +58,7 @@ int32_t k_emailvalidator_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_emailvalidator_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#validate)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#validate)
 ///
 /// @param self KEmailValidator*
 /// @param str const char*
@@ -67,7 +67,7 @@ const char* k_emailvalidator_tr(const char* s);
 /// @return enum QValidator__State
 int32_t k_emailvalidator_validate(void* self, const char* str, int* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#validate)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
@@ -75,7 +75,7 @@ int32_t k_emailvalidator_validate(void* self, const char* str, int* pos);
 /// @param callback int32_t func(KEmailValidator* self, const char* str, int* pos)
 void k_emailvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#validate)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#validate)
 ///
 /// Base class method implementation
 ///
@@ -86,13 +86,13 @@ void k_emailvalidator_on_validate(void* self, int32_t (*callback)(void*, const c
 /// @return enum QValidator__State
 int32_t k_emailvalidator_qbase_validate(void* self, const char* str, int* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#fixup)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#fixup)
 ///
 /// @param self KEmailValidator*
 /// @param str const char*
 void k_emailvalidator_fixup(void* self, const char* str);
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#fixup)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
@@ -100,7 +100,7 @@ void k_emailvalidator_fixup(void* self, const char* str);
 /// @param callback void func(KEmailValidator* self, const char* str)
 void k_emailvalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#fixup)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#fixup)
 ///
 /// Base class method implementation
 ///
@@ -800,7 +800,7 @@ void k_emailvalidator_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param callback void func(KEmailValidator* self, const char* objectName)
 void k_emailvalidator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kemailvalidator.html#dtor.KEmailValidator)
+/// [Qt documentation](https://api.kde.org/kemailvalidator.html#dtor.KEmailValidator)
 ///
 /// Delete this object from C++ memory.
 ///

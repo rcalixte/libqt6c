@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfigdialog.html
+/// https://api.kde.org/kconfigdialog.html
 
 /// k_configdialog_new constructs a new KConfigDialog object.
 ///
@@ -56,37 +56,37 @@ int32_t k_configdialog_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_configdialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#widgetModified)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#widgetModified)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_widget_modified(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#widgetModified)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#widgetModified)
 ///
 /// @param self KConfigDialog*
 /// @param callback void func(KConfigDialog* self)
 void k_configdialog_on_widget_modified(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#settingsChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#settingsChanged)
 ///
 /// @param self KConfigDialog*
 /// @param dialogName const char*
 void k_configdialog_settings_changed(void* self, const char* dialogName);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#settingsChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#settingsChanged)
 ///
 /// @param self KConfigDialog*
 /// @param callback void func(KConfigDialog* self, const char* dialogName)
 void k_configdialog_on_settings_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
 /// @param itemName const char*
 KPageWidgetItem* k_configdialog_add_page(void* self, void* page, const char* itemName);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
@@ -94,22 +94,22 @@ KPageWidgetItem* k_configdialog_add_page(void* self, void* page, const char* ite
 /// @param itemName const char*
 KPageWidgetItem* k_configdialog_add_page2(void* self, void* page, void* config, const char* itemName);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#exists)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#exists)
 ///
 /// @param name const char*
 KConfigDialog* k_configdialog_exists(const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showDialog)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showDialog)
 ///
 /// @param name const char*
 bool k_configdialog_show_dialog(const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateSettings)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateSettings)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_update_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateSettings)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateSettings)
 ///
 /// Allows for overriding the related default method
 ///
@@ -117,19 +117,19 @@ void k_configdialog_update_settings(void* self);
 /// @param callback void func()
 void k_configdialog_on_update_settings(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateSettings)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateSettings)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 void k_configdialog_qbase_update_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateWidgets)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateWidgets)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_update_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateWidgets)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateWidgets)
 ///
 /// Allows for overriding the related default method
 ///
@@ -137,19 +137,19 @@ void k_configdialog_update_widgets(void* self);
 /// @param callback void func()
 void k_configdialog_on_update_widgets(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateWidgets)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateWidgets)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 void k_configdialog_qbase_update_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateWidgetsDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateWidgetsDefault)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_update_widgets_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateWidgetsDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateWidgetsDefault)
 ///
 /// Allows for overriding the related default method
 ///
@@ -157,19 +157,19 @@ void k_configdialog_update_widgets_default(void* self);
 /// @param callback void func()
 void k_configdialog_on_update_widgets_default(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateWidgetsDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateWidgetsDefault)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 void k_configdialog_qbase_update_widgets_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateButtons)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateButtons)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_update_buttons(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateButtons)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateButtons)
 ///
 /// Allows for overriding the related default method
 ///
@@ -177,19 +177,19 @@ void k_configdialog_update_buttons(void* self);
 /// @param callback void func()
 void k_configdialog_on_update_buttons(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#updateButtons)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#updateButtons)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 void k_configdialog_qbase_update_buttons(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#settingsChangedSlot)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#settingsChangedSlot)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_settings_changed_slot(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#settingsChangedSlot)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#settingsChangedSlot)
 ///
 /// Allows for overriding the related default method
 ///
@@ -197,20 +197,20 @@ void k_configdialog_settings_changed_slot(void* self);
 /// @param callback void func()
 void k_configdialog_on_settings_changed_slot(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#settingsChangedSlot)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#settingsChangedSlot)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 void k_configdialog_qbase_settings_changed_slot(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#setHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#setHelp)
 ///
 /// @param self KConfigDialog*
 /// @param anchor const char*
 void k_configdialog_set_help(void* self, const char* anchor);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#setHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#setHelp)
 ///
 /// Allows for overriding the related default method
 ///
@@ -218,7 +218,7 @@ void k_configdialog_set_help(void* self, const char* anchor);
 /// @param callback void func(KConfigDialog* self, const char* anchor)
 void k_configdialog_on_set_help(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#setHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#setHelp)
 ///
 /// Base class method implementation
 ///
@@ -226,12 +226,12 @@ void k_configdialog_on_set_help(void* self, void (*callback)(void*, const char*)
 /// @param anchor const char*
 void k_configdialog_qbase_set_help(void* self, const char* anchor);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showHelp)
 ///
 /// @param self KConfigDialog*
 void k_configdialog_show_help(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showHelp)
 ///
 /// Allows for overriding the related default method
 ///
@@ -239,19 +239,19 @@ void k_configdialog_show_help(void* self);
 /// @param callback void func()
 void k_configdialog_on_show_help(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showHelp)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 void k_configdialog_qbase_show_help(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#hasChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#hasChanged)
 ///
 /// @param self KConfigDialog*
 bool k_configdialog_has_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#hasChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#hasChanged)
 ///
 /// Allows for overriding the related default method
 ///
@@ -259,19 +259,19 @@ bool k_configdialog_has_changed(void* self);
 /// @param callback bool func()
 void k_configdialog_on_has_changed(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#hasChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#hasChanged)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 bool k_configdialog_qbase_has_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#isDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#isDefault)
 ///
 /// @param self KConfigDialog*
 bool k_configdialog_is_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#isDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#isDefault)
 ///
 /// Allows for overriding the related default method
 ///
@@ -279,20 +279,20 @@ bool k_configdialog_is_default(void* self);
 /// @param callback bool func()
 void k_configdialog_on_is_default(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#isDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#isDefault)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialog*
 bool k_configdialog_qbase_is_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showEvent)
 ///
 /// @param self KConfigDialog*
 /// @param e QShowEvent*
 void k_configdialog_show_event(void* self, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -300,7 +300,7 @@ void k_configdialog_show_event(void* self, void* e);
 /// @param callback void func(KConfigDialog* self, QShowEvent* e)
 void k_configdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -325,7 +325,7 @@ const char* k_configdialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_configdialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
@@ -333,7 +333,7 @@ const char* k_configdialog_tr3(const char* s, const char* c, int n);
 /// @param pixmapName const char*
 KPageWidgetItem* k_configdialog_add_page3(void* self, void* page, const char* itemName, const char* pixmapName);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
@@ -342,7 +342,7 @@ KPageWidgetItem* k_configdialog_add_page3(void* self, void* page, const char* it
 /// @param header const char*
 KPageWidgetItem* k_configdialog_add_page4(void* self, void* page, const char* itemName, const char* pixmapName, const char* header);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
@@ -352,7 +352,7 @@ KPageWidgetItem* k_configdialog_add_page4(void* self, void* page, const char* it
 /// @param manage bool
 KPageWidgetItem* k_configdialog_add_page5(void* self, void* page, const char* itemName, const char* pixmapName, const char* header, bool manage);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
@@ -361,7 +361,7 @@ KPageWidgetItem* k_configdialog_add_page5(void* self, void* page, const char* it
 /// @param pixmapName const char*
 KPageWidgetItem* k_configdialog_add_page42(void* self, void* page, void* config, const char* itemName, const char* pixmapName);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#addPage)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#addPage)
 ///
 /// @param self KConfigDialog*
 /// @param page QWidget*
@@ -371,14 +371,14 @@ KPageWidgetItem* k_configdialog_add_page42(void* self, void* page, void* config,
 /// @param header const char*
 KPageWidgetItem* k_configdialog_add_page52(void* self, void* page, void* config, const char* itemName, const char* pixmapName, const char* header);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#setHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#setHelp)
 ///
 /// @param self KConfigDialog*
 /// @param anchor const char*
 /// @param appname const char*
 void k_configdialog_set_help2(void* self, const char* anchor, const char* appname);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#setHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#setHelp)
 ///
 /// Allows for overriding the related default method
 ///
@@ -386,7 +386,7 @@ void k_configdialog_set_help2(void* self, const char* anchor, const char* appnam
 /// @param callback void func(KConfigDialog* self, const char* anchor, const char* appname)
 void k_configdialog_on_set_help2(void* self, void (*callback)(void*, const char*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#setHelp)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#setHelp)
 ///
 /// Base class method implementation
 ///
@@ -397,7 +397,7 @@ void k_configdialog_qbase_set_help2(void* self, const char* anchor, const char* 
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setFaceType)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setFaceType)
 ///
 /// @param self KConfigDialog*
 /// @param faceType enum KPageDialog__FaceType
@@ -405,7 +405,7 @@ void k_configdialog_set_face_type(void* self, int32_t faceType);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#insertPage)
 ///
 /// @param self KConfigDialog*
 /// @param before KPageWidgetItem*
@@ -415,7 +415,7 @@ KPageWidgetItem* k_configdialog_insert_page(void* self, void* before, void* widg
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#insertPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#insertPage)
 ///
 /// @param self KConfigDialog*
 /// @param before KPageWidgetItem*
@@ -424,7 +424,7 @@ void k_configdialog_insert_page2(void* self, void* before, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addSubPage)
 ///
 /// @param self KConfigDialog*
 /// @param parent KPageWidgetItem*
@@ -434,7 +434,7 @@ KPageWidgetItem* k_configdialog_add_sub_page(void* self, void* parent, void* wid
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addSubPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addSubPage)
 ///
 /// @param self KConfigDialog*
 /// @param parent KPageWidgetItem*
@@ -443,7 +443,7 @@ void k_configdialog_add_sub_page2(void* self, void* parent, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#removePage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#removePage)
 ///
 /// @param self KConfigDialog*
 /// @param item KPageWidgetItem*
@@ -451,7 +451,7 @@ void k_configdialog_remove_page(void* self, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setCurrentPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setCurrentPage)
 ///
 /// @param self KConfigDialog*
 /// @param item KPageWidgetItem*
@@ -459,14 +459,14 @@ void k_configdialog_set_current_page(void* self, void* item);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPage)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPage)
 ///
 /// @param self KConfigDialog*
 KPageWidgetItem* k_configdialog_current_page(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setStandardButtons)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setStandardButtons)
 ///
 /// @param self KConfigDialog*
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
@@ -474,7 +474,7 @@ void k_configdialog_set_standard_buttons(void* self, int32_t buttons);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#button)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#button)
 ///
 /// @param self KConfigDialog*
 /// @param which enum QDialogButtonBox__StandardButton
@@ -482,7 +482,7 @@ QPushButton* k_configdialog_button(void* self, int32_t which);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#addActionButton)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#addActionButton)
 ///
 /// @param self KConfigDialog*
 /// @param button QAbstractButton*
@@ -490,7 +490,7 @@ void k_configdialog_add_action_button(void* self, void* button);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KConfigDialog*
 /// @param current KPageWidgetItem*
@@ -499,7 +499,7 @@ void k_configdialog_current_page_changed(void* self, void* current, void* before
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#currentPageChanged)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#currentPageChanged)
 ///
 /// @param self KConfigDialog*
 /// @param callback void func(KConfigDialog* self, KPageWidgetItem* current, KPageWidgetItem* before)
@@ -507,7 +507,7 @@ void k_configdialog_on_current_page_changed(void* self, void (*callback)(void*, 
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KConfigDialog*
 /// @param page KPageWidgetItem*
@@ -515,7 +515,7 @@ void k_configdialog_page_removed(void* self, void* page);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageRemoved)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageRemoved)
 ///
 /// @param self KConfigDialog*
 /// @param callback void func(KConfigDialog* self, KPageWidgetItem* page)
@@ -4657,7 +4657,7 @@ void k_configdialog_on_disconnect_notify(void* self, void (*callback)(void*, voi
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4666,7 +4666,7 @@ KPageWidget* k_configdialog_page_widget(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4675,7 +4675,7 @@ KPageWidget* k_configdialog_qbase_page_widget(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#pageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#pageWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4685,7 +4685,7 @@ void k_configdialog_on_page_widget(void* self, KPageWidget* (*callback)());
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4695,7 +4695,7 @@ void k_configdialog_set_page_widget(void* self, void* widget);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4705,7 +4705,7 @@ void k_configdialog_qbase_set_page_widget(void* self, void* widget);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setPageWidget)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setPageWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4715,7 +4715,7 @@ void k_configdialog_on_set_page_widget(void* self, void (*callback)(void*, void*
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4724,7 +4724,7 @@ QDialogButtonBox* k_configdialog_button_box(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4733,7 +4733,7 @@ QDialogButtonBox* k_configdialog_qbase_button_box(void* self);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#buttonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#buttonBox)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -4743,7 +4743,7 @@ void k_configdialog_on_button_box(void* self, QDialogButtonBox* (*callback)());
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -4753,7 +4753,7 @@ void k_configdialog_set_button_box(void* self, void* box);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -4763,7 +4763,7 @@ void k_configdialog_qbase_set_button_box(void* self, void* box);
 
 /// Inherited from KPageDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kpagedialog.html#setButtonBox)
+/// [Qt documentation](https://api.kde.org/kpagedialog.html#setButtonBox)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -5099,7 +5099,7 @@ void k_configdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*
 /// @param callback void func(KConfigDialog* self, const char* objectName)
 void k_configdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialog.html#dtor.KConfigDialog)
+/// [Qt documentation](https://api.kde.org/kconfigdialog.html#dtor.KConfigDialog)
 ///
 /// Delete this object from C++ memory.
 ///

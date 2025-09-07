@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfind.html
+/// https://api.kde.org/kfind.html
 
 /// k_find_new constructs a new KFind object.
 ///
@@ -64,43 +64,43 @@ int32_t k_find_qbase_metacall(void* self, int32_t param1, int param2, void* para
 /// @param s const char*
 const char* k_find_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#needData)
+/// [Qt documentation](https://api.kde.org/kfind.html#needData)
 ///
 /// @param self KFind*
 bool k_find_need_data(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setData)
+/// [Qt documentation](https://api.kde.org/kfind.html#setData)
 ///
 /// @param self KFind*
 /// @param data const char*
 void k_find_set_data(void* self, const char* data);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setData)
+/// [Qt documentation](https://api.kde.org/kfind.html#setData)
 ///
 /// @param self KFind*
 /// @param id int
 /// @param data const char*
 void k_find_set_data2(void* self, int id, const char* data);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#find)
+/// [Qt documentation](https://api.kde.org/kfind.html#find)
 ///
 /// @param self KFind*
 ///
 /// @return enum KFind__Result
 int32_t k_find_find(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#options)
+/// [Qt documentation](https://api.kde.org/kfind.html#options)
 ///
 /// @param self KFind*
 int64_t k_find_options(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kfind.html#setOptions)
 ///
 /// @param self KFind*
 /// @param options int64_t
 void k_find_set_options(void* self, int64_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kfind.html#setOptions)
 ///
 /// Allows for overriding the related default method
 ///
@@ -108,7 +108,7 @@ void k_find_set_options(void* self, int64_t options);
 /// @param callback void func(KFind* self, int64_t options)
 void k_find_on_set_options(void* self, void (*callback)(void*, int64_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kfind.html#setOptions)
 ///
 /// Base class method implementation
 ///
@@ -116,30 +116,30 @@ void k_find_on_set_options(void* self, void (*callback)(void*, int64_t));
 /// @param options int64_t
 void k_find_qbase_set_options(void* self, int64_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#pattern)
+/// [Qt documentation](https://api.kde.org/kfind.html#pattern)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFind*
 const char* k_find_pattern(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setPattern)
+/// [Qt documentation](https://api.kde.org/kfind.html#setPattern)
 ///
 /// @param self KFind*
 /// @param pattern const char*
 void k_find_set_pattern(void* self, const char* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#numMatches)
+/// [Qt documentation](https://api.kde.org/kfind.html#numMatches)
 ///
 /// @param self KFind*
 int32_t k_find_num_matches(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#resetCounts)
+/// [Qt documentation](https://api.kde.org/kfind.html#resetCounts)
 ///
 /// @param self KFind*
 void k_find_reset_counts(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#resetCounts)
+/// [Qt documentation](https://api.kde.org/kfind.html#resetCounts)
 ///
 /// Allows for overriding the related default method
 ///
@@ -147,14 +147,14 @@ void k_find_reset_counts(void* self);
 /// @param callback void func()
 void k_find_on_reset_counts(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#resetCounts)
+/// [Qt documentation](https://api.kde.org/kfind.html#resetCounts)
 ///
 /// Base class method implementation
 ///
 /// @param self KFind*
 void k_find_qbase_reset_counts(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#validateMatch)
+/// [Qt documentation](https://api.kde.org/kfind.html#validateMatch)
 ///
 /// @param self KFind*
 /// @param text const char*
@@ -162,7 +162,7 @@ void k_find_qbase_reset_counts(void* self);
 /// @param matchedlength int
 bool k_find_validate_match(void* self, const char* text, int index, int matchedlength);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#validateMatch)
+/// [Qt documentation](https://api.kde.org/kfind.html#validateMatch)
 ///
 /// Allows for overriding the related default method
 ///
@@ -170,7 +170,7 @@ bool k_find_validate_match(void* self, const char* text, int index, int matchedl
 /// @param callback bool func(KFind* self, const char* text, int index, int matchedlength)
 void k_find_on_validate_match(void* self, bool (*callback)(void*, const char*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#validateMatch)
+/// [Qt documentation](https://api.kde.org/kfind.html#validateMatch)
 ///
 /// Base class method implementation
 ///
@@ -180,14 +180,14 @@ void k_find_on_validate_match(void* self, bool (*callback)(void*, const char*, i
 /// @param matchedlength int
 bool k_find_qbase_validate_match(void* self, const char* text, int index, int matchedlength);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#shouldRestart)
+/// [Qt documentation](https://api.kde.org/kfind.html#shouldRestart)
 ///
 /// @param self KFind*
 /// @param forceAsking bool
 /// @param showNumMatches bool
 bool k_find_should_restart(void* self, bool forceAsking, bool showNumMatches);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#shouldRestart)
+/// [Qt documentation](https://api.kde.org/kfind.html#shouldRestart)
 ///
 /// Allows for overriding the related default method
 ///
@@ -195,7 +195,7 @@ bool k_find_should_restart(void* self, bool forceAsking, bool showNumMatches);
 /// @param callback bool func(KFind* self, bool forceAsking, bool showNumMatches)
 void k_find_on_should_restart(void* self, bool (*callback)(void*, bool, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#shouldRestart)
+/// [Qt documentation](https://api.kde.org/kfind.html#shouldRestart)
 ///
 /// Base class method implementation
 ///
@@ -204,7 +204,7 @@ void k_find_on_should_restart(void* self, bool (*callback)(void*, bool, bool));
 /// @param showNumMatches bool
 bool k_find_qbase_should_restart(void* self, bool forceAsking, bool showNumMatches);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#find)
+/// [Qt documentation](https://api.kde.org/kfind.html#find)
 ///
 /// @param text const char*
 /// @param pattern const char*
@@ -214,12 +214,12 @@ bool k_find_qbase_should_restart(void* self, bool forceAsking, bool showNumMatch
 /// @param rmatch QRegularExpressionMatch*
 int32_t k_find_find2(const char* text, const char* pattern, int index, int64_t options, int* matchedLength, void* rmatch);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#displayFinalDialog)
+/// [Qt documentation](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
 /// @param self KFind*
 void k_find_display_final_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#displayFinalDialog)
+/// [Qt documentation](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
 /// Allows for overriding the related default method
 ///
@@ -227,29 +227,29 @@ void k_find_display_final_dialog(void* self);
 /// @param callback void func()
 void k_find_on_display_final_dialog(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#displayFinalDialog)
+/// [Qt documentation](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
 /// Base class method implementation
 ///
 /// @param self KFind*
 void k_find_qbase_display_final_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#findNextDialog)
+/// [Qt documentation](https://api.kde.org/kfind.html#findNextDialog)
 ///
 /// @param self KFind*
 QDialog* k_find_find_next_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#closeFindNextDialog)
+/// [Qt documentation](https://api.kde.org/kfind.html#closeFindNextDialog)
 ///
 /// @param self KFind*
 void k_find_close_find_next_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#index)
+/// [Qt documentation](https://api.kde.org/kfind.html#index)
 ///
 /// @param self KFind*
 int32_t k_find_index(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#textFound)
+/// [Qt documentation](https://api.kde.org/kfind.html#textFound)
 ///
 /// @param self KFind*
 /// @param text const char*
@@ -257,13 +257,13 @@ int32_t k_find_index(void* self);
 /// @param matchedLength int
 void k_find_text_found(void* self, const char* text, int matchingIndex, int matchedLength);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#textFound)
+/// [Qt documentation](https://api.kde.org/kfind.html#textFound)
 ///
 /// @param self KFind*
 /// @param callback void func(KFind* self, const char* text, int matchingIndex, int matchedLength)
 void k_find_on_text_found(void* self, void (*callback)(void*, const char*, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#textFoundAtId)
+/// [Qt documentation](https://api.kde.org/kfind.html#textFoundAtId)
 ///
 /// @param self KFind*
 /// @param id int
@@ -271,51 +271,51 @@ void k_find_on_text_found(void* self, void (*callback)(void*, const char*, int, 
 /// @param matchedLength int
 void k_find_text_found_at_id(void* self, int id, int matchingIndex, int matchedLength);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#textFoundAtId)
+/// [Qt documentation](https://api.kde.org/kfind.html#textFoundAtId)
 ///
 /// @param self KFind*
 /// @param callback void func(KFind* self, int id, int matchingIndex, int matchedLength)
 void k_find_on_text_found_at_id(void* self, void (*callback)(void*, int, int, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#findNext)
+/// [Qt documentation](https://api.kde.org/kfind.html#findNext)
 ///
 /// @param self KFind*
 void k_find_find_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#findNext)
+/// [Qt documentation](https://api.kde.org/kfind.html#findNext)
 ///
 /// @param self KFind*
 /// @param callback void func(KFind* self)
 void k_find_on_find_next(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#optionsChanged)
+/// [Qt documentation](https://api.kde.org/kfind.html#optionsChanged)
 ///
 /// @param self KFind*
 void k_find_options_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#optionsChanged)
+/// [Qt documentation](https://api.kde.org/kfind.html#optionsChanged)
 ///
 /// @param self KFind*
 /// @param callback void func(KFind* self)
 void k_find_on_options_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#dialogClosed)
+/// [Qt documentation](https://api.kde.org/kfind.html#dialogClosed)
 ///
 /// @param self KFind*
 void k_find_dialog_closed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#dialogClosed)
+/// [Qt documentation](https://api.kde.org/kfind.html#dialogClosed)
 ///
 /// @param self KFind*
 /// @param callback void func(KFind* self)
 void k_find_on_dialog_closed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#parentWidget)
+/// [Qt documentation](https://api.kde.org/kfind.html#parentWidget)
 ///
 /// @param self KFind*
 QWidget* k_find_parent_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#parentWidget)
+/// [Qt documentation](https://api.kde.org/kfind.html#parentWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -323,19 +323,19 @@ QWidget* k_find_parent_widget(void* self);
 /// @param callback QWidget* func()
 void k_find_on_parent_widget(void* self, QWidget* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#parentWidget)
+/// [Qt documentation](https://api.kde.org/kfind.html#parentWidget)
 ///
 /// Base class method implementation
 ///
 /// @param self KFind*
 QWidget* k_find_qbase_parent_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#dialogsParent)
+/// [Qt documentation](https://api.kde.org/kfind.html#dialogsParent)
 ///
 /// @param self KFind*
 QWidget* k_find_dialogs_parent(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#dialogsParent)
+/// [Qt documentation](https://api.kde.org/kfind.html#dialogsParent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -343,7 +343,7 @@ QWidget* k_find_dialogs_parent(void* self);
 /// @param callback QWidget* func()
 void k_find_on_dialogs_parent(void* self, QWidget* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#dialogsParent)
+/// [Qt documentation](https://api.kde.org/kfind.html#dialogsParent)
 ///
 /// Base class method implementation
 ///
@@ -367,14 +367,14 @@ const char* k_find_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_find_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setData)
+/// [Qt documentation](https://api.kde.org/kfind.html#setData)
 ///
 /// @param self KFind*
 /// @param data const char*
 /// @param startPos int
 void k_find_set_data22(void* self, const char* data, int startPos);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#setData)
+/// [Qt documentation](https://api.kde.org/kfind.html#setData)
 ///
 /// @param self KFind*
 /// @param id int
@@ -382,7 +382,7 @@ void k_find_set_data22(void* self, const char* data, int startPos);
 /// @param startPos int
 void k_find_set_data3(void* self, int id, const char* data, int startPos);
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#findNextDialog)
+/// [Qt documentation](https://api.kde.org/kfind.html#findNextDialog)
 ///
 /// @param self KFind*
 /// @param create bool
@@ -1033,14 +1033,14 @@ void k_find_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 /// @param callback void func(KFind* self, const char* objectName)
 void k_find_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfind.html#dtor.KFind)
+/// [Qt documentation](https://api.kde.org/kfind.html#dtor.KFind)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KFind*
 void k_find_delete(void* self);
 
-/// https://api-staging.kde.org/kfind.html#types
+/// https://api.kde.org/kfind.html#types
 
 typedef enum {
     KFIND_OPTIONS_WHOLEWORDSONLY = 1,

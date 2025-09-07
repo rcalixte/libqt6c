@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktextedit.html
+/// https://api.kde.org/ktextedit.html
 
 /// k_textedit_new constructs a new KTextEdit object.
 ///
@@ -69,13 +69,13 @@ int32_t k_textedit_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_textedit_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// @param self KTextEdit*
 /// @param readOnly bool
 void k_textedit_set_read_only(void* self, bool readOnly);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// Allows for overriding the related default method
 ///
@@ -83,7 +83,7 @@ void k_textedit_set_read_only(void* self, bool readOnly);
 /// @param callback void func(KTextEdit* self, bool readOnly)
 void k_textedit_on_set_read_only(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setReadOnly)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setReadOnly)
 ///
 /// Base class method implementation
 ///
@@ -91,13 +91,13 @@ void k_textedit_on_set_read_only(void* self, void (*callback)(void*, bool));
 /// @param readOnly bool
 void k_textedit_qbase_set_read_only(void* self, bool readOnly);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setCheckSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// @param self KTextEdit*
 /// @param check bool
 void k_textedit_set_check_spelling_enabled(void* self, bool check);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setCheckSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -105,7 +105,7 @@ void k_textedit_set_check_spelling_enabled(void* self, bool check);
 /// @param callback void func(KTextEdit* self, bool check)
 void k_textedit_on_set_check_spelling_enabled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setCheckSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setCheckSpellingEnabled)
 ///
 /// Base class method implementation
 ///
@@ -113,12 +113,12 @@ void k_textedit_on_set_check_spelling_enabled(void* self, void (*callback)(void*
 /// @param check bool
 void k_textedit_qbase_set_check_spelling_enabled(void* self, bool check);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// @param self KTextEdit*
 bool k_textedit_check_spelling_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -126,20 +126,20 @@ bool k_textedit_check_spelling_enabled(void* self);
 /// @param callback bool func()
 void k_textedit_on_check_spelling_enabled(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingEnabled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingEnabled)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 bool k_textedit_qbase_check_spelling_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// @param self KTextEdit*
 /// @param block const char*
 bool k_textedit_should_block_be_spell_checked(void* self, const char* block);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// Allows for overriding the related default method
 ///
@@ -147,7 +147,7 @@ bool k_textedit_should_block_be_spell_checked(void* self, const char* block);
 /// @param callback bool func(KTextEdit* self, const char* block)
 void k_textedit_on_should_block_be_spell_checked(void* self, bool (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#shouldBlockBeSpellChecked)
 ///
 /// Base class method implementation
 ///
@@ -155,19 +155,19 @@ void k_textedit_on_should_block_be_spell_checked(void* self, bool (*callback)(vo
 /// @param block const char*
 bool k_textedit_qbase_should_block_be_spell_checked(void* self, const char* block);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#highlightWord)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#highlightWord)
 ///
 /// @param self KTextEdit*
 /// @param length int
 /// @param pos int
 void k_textedit_highlight_word(void* self, int length, int pos);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#createHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// @param self KTextEdit*
 void k_textedit_create_highlighter(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#createHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -175,30 +175,30 @@ void k_textedit_create_highlighter(void* self);
 /// @param callback void func()
 void k_textedit_on_create_highlighter(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#createHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#createHighlighter)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_create_highlighter(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#highlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#highlighter)
 ///
 /// @param self KTextEdit*
 Sonnet__Highlighter* k_textedit_highlighter(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setHighlighter)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setHighlighter)
 ///
 /// @param self KTextEdit*
 /// @param _highLighter Sonnet__Highlighter*
 void k_textedit_set_highlighter(void* self, void* _highLighter);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#mousePopupMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// @param self KTextEdit*
 QMenu* k_textedit_mouse_popup_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#mousePopupMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// Allows for overriding the related default method
 ///
@@ -206,164 +206,164 @@ QMenu* k_textedit_mouse_popup_menu(void* self);
 /// @param callback QMenu* func()
 void k_textedit_on_mouse_popup_menu(void* self, QMenu* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#mousePopupMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#mousePopupMenu)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 QMenu* k_textedit_qbase_mouse_popup_menu(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#enableFindReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#enableFindReplace)
 ///
 /// @param self KTextEdit*
 /// @param enabled bool
 void k_textedit_enable_find_replace(void* self, bool enabled);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingLanguage)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingLanguage)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KTextEdit*
 const char* k_textedit_spell_checking_language(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showTabAction)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showTabAction)
 ///
 /// @param self KTextEdit*
 /// @param show bool
 void k_textedit_show_tab_action(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showAutoCorrectButton)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showAutoCorrectButton)
 ///
 /// @param self KTextEdit*
 /// @param show bool
 void k_textedit_show_auto_correct_button(void* self, bool show);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#forceSpellChecking)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#forceSpellChecking)
 ///
 /// @param self KTextEdit*
 void k_textedit_force_spell_checking(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingChanged)
 ///
 /// @param self KTextEdit*
 /// @param param1 bool
 void k_textedit_check_spelling_changed(void* self, bool param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpellingChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpellingChanged)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, bool param1)
 void k_textedit_on_check_spelling_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckStatus)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckStatus)
 ///
 /// @param self KTextEdit*
 /// @param param1 const char*
 void k_textedit_spell_check_status(void* self, const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckStatus)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckStatus)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* param1)
 void k_textedit_on_spell_check_status(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#languageChanged)
 ///
 /// @param self KTextEdit*
 /// @param language const char*
 void k_textedit_language_changed(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#languageChanged)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#languageChanged)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* language)
 void k_textedit_on_language_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#aboutToShowContextMenu)
 ///
 /// @param self KTextEdit*
 /// @param menu QMenu*
 void k_textedit_about_to_show_context_menu(void* self, void* menu);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#aboutToShowContextMenu)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#aboutToShowContextMenu)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, QMenu* menu)
 void k_textedit_on_about_to_show_context_menu(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckerAutoCorrect)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckerAutoCorrect)
 ///
 /// @param self KTextEdit*
 /// @param currentWord const char*
 /// @param autoCorrectWord const char*
 void k_textedit_spell_checker_auto_correct(void* self, const char* currentWord, const char* autoCorrectWord);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckerAutoCorrect)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckerAutoCorrect)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self, const char* currentWord, const char* autoCorrectWord)
 void k_textedit_on_spell_checker_auto_correct(void* self, void (*callback)(void*, const char*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingFinished)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingFinished)
 ///
 /// @param self KTextEdit*
 void k_textedit_spell_checking_finished(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingFinished)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingFinished)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
 void k_textedit_on_spell_checking_finished(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingCanceled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingCanceled)
 ///
 /// @param self KTextEdit*
 void k_textedit_spell_checking_canceled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#spellCheckingCanceled)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#spellCheckingCanceled)
 ///
 /// @param self KTextEdit*
 /// @param callback void func(KTextEdit* self)
 void k_textedit_on_spell_checking_canceled(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#setSpellCheckingLanguage)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#setSpellCheckingLanguage)
 ///
 /// @param self KTextEdit*
 /// @param language const char*
 void k_textedit_set_spell_checking_language(void* self, const char* language);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#checkSpelling)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#checkSpelling)
 ///
 /// @param self KTextEdit*
 void k_textedit_check_spelling(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showSpellConfigDialog)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showSpellConfigDialog)
 ///
 /// @param self KTextEdit*
 void k_textedit_show_spell_config_dialog(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#replace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#replace)
 ///
 /// @param self KTextEdit*
 void k_textedit_replace(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#addTextDecorator)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#addTextDecorator)
 ///
 /// @param self KTextEdit*
 /// @param decorator Sonnet__SpellCheckDecorator*
 void k_textedit_add_text_decorator(void* self, void* decorator);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#clearDecorator)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#clearDecorator)
 ///
 /// @param self KTextEdit*
 void k_textedit_clear_decorator(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_do_replace(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// Allows for overriding the related default method
 ///
@@ -371,19 +371,19 @@ void k_textedit_slot_do_replace(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_do_replace(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoReplace)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_do_replace(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplaceNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_replace_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplaceNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// Allows for overriding the related default method
 ///
@@ -391,19 +391,19 @@ void k_textedit_slot_replace_next(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_replace_next(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplaceNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplaceNext)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_replace_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_do_find(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// Allows for overriding the related default method
 ///
@@ -411,19 +411,19 @@ void k_textedit_slot_do_find(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_do_find(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotDoFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotDoFind)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_do_find(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_find(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// Allows for overriding the related default method
 ///
@@ -431,19 +431,19 @@ void k_textedit_slot_find(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_find(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFind)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFind)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_find(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_find_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// Allows for overriding the related default method
 ///
@@ -451,19 +451,19 @@ void k_textedit_slot_find_next(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_find_next(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindNext)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindNext)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_find_next(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindPrevious)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_find_previous(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindPrevious)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// Allows for overriding the related default method
 ///
@@ -471,19 +471,19 @@ void k_textedit_slot_find_previous(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_find_previous(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotFindPrevious)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotFindPrevious)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_find_previous(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_replace(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// Allows for overriding the related default method
 ///
@@ -491,19 +491,19 @@ void k_textedit_slot_replace(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_replace(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotReplace)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotReplace)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_replace(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotSpeakText)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// @param self KTextEdit*
 void k_textedit_slot_speak_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotSpeakText)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -511,20 +511,20 @@ void k_textedit_slot_speak_text(void* self);
 /// @param callback void func()
 void k_textedit_on_slot_speak_text(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#slotSpeakText)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#slotSpeakText)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_slot_speak_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#event)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#event)
 ///
 /// @param self KTextEdit*
 /// @param param1 QEvent*
 bool k_textedit_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#event)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -532,7 +532,7 @@ bool k_textedit_event(void* self, void* param1);
 /// @param callback bool func(KTextEdit* self, QEvent* param1)
 void k_textedit_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#event)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#event)
 ///
 /// Base class method implementation
 ///
@@ -540,13 +540,13 @@ void k_textedit_on_event(void* self, bool (*callback)(void*, void*));
 /// @param param1 QEvent*
 bool k_textedit_qbase_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#keyPressEvent)
 ///
 /// @param self KTextEdit*
 /// @param param1 QKeyEvent*
 void k_textedit_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -554,7 +554,7 @@ void k_textedit_key_press_event(void* self, void* param1);
 /// @param callback void func(KTextEdit* self, QKeyEvent* param1)
 void k_textedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#keyPressEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
@@ -562,13 +562,13 @@ void k_textedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QKeyEvent*
 void k_textedit_qbase_key_press_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// @param self KTextEdit*
 /// @param param1 QFocusEvent*
 void k_textedit_focus_in_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -576,7 +576,7 @@ void k_textedit_focus_in_event(void* self, void* param1);
 /// @param callback void func(KTextEdit* self, QFocusEvent* param1)
 void k_textedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#focusInEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#focusInEvent)
 ///
 /// Base class method implementation
 ///
@@ -584,12 +584,12 @@ void k_textedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QFocusEvent*
 void k_textedit_qbase_focus_in_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// @param self KTextEdit*
 void k_textedit_delete_word_back(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// Allows for overriding the related default method
 ///
@@ -597,19 +597,19 @@ void k_textedit_delete_word_back(void* self);
 /// @param callback void func()
 void k_textedit_on_delete_word_back(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordBack)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_delete_word_back(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// @param self KTextEdit*
 void k_textedit_delete_word_forward(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// Allows for overriding the related default method
 ///
@@ -617,20 +617,20 @@ void k_textedit_delete_word_forward(void* self);
 /// @param callback void func()
 void k_textedit_on_delete_word_forward(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#deleteWordForward)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEdit*
 void k_textedit_qbase_delete_word_forward(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// @param self KTextEdit*
 /// @param param1 QContextMenuEvent*
 void k_textedit_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -638,7 +638,7 @@ void k_textedit_context_menu_event(void* self, void* param1);
 /// @param callback void func(KTextEdit* self, QContextMenuEvent* param1)
 void k_textedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
@@ -663,7 +663,7 @@ const char* k_textedit_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_textedit_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#showSpellConfigDialog)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#showSpellConfigDialog)
 ///
 /// @param self KTextEdit*
 /// @param windowIcon const char*
@@ -6278,7 +6278,7 @@ void k_textedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// @param callback void func(KTextEdit* self, const char* objectName)
 void k_textedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktextedit.html#dtor.KTextEdit)
+/// [Qt documentation](https://api.kde.org/ktextedit.html#dtor.KTextEdit)
 ///
 /// Delete this object from C++ memory.
 ///

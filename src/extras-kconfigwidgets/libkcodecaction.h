@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcodecaction.html
+/// https://api.kde.org/kcodecaction.html
 
 /// k_codecaction_new constructs a new KCodecAction object.
 ///
@@ -88,49 +88,49 @@ int32_t k_codecaction_qbase_metacall(void* self, int32_t param1, int param2, voi
 /// @param s const char*
 const char* k_codecaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#currentCodecName)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#currentCodecName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KCodecAction*
 const char* k_codecaction_current_codec_name(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#setCurrentCodec)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#setCurrentCodec)
 ///
 /// @param self KCodecAction*
 /// @param codecName const char*
 bool k_codecaction_set_current_codec(void* self, const char* codecName);
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#codecNameTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#codecNameTriggered)
 ///
 /// @param self KCodecAction*
 /// @param name const char*
 void k_codecaction_codec_name_triggered(void* self, const char* name);
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#codecNameTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#codecNameTriggered)
 ///
 /// @param self KCodecAction*
 /// @param callback void func(KCodecAction* self, const char* name)
 void k_codecaction_on_codec_name_triggered(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#defaultItemTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#defaultItemTriggered)
 ///
 /// @param self KCodecAction*
 void k_codecaction_default_item_triggered(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#defaultItemTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#defaultItemTriggered)
 ///
 /// @param self KCodecAction*
 /// @param callback void func(KCodecAction* self)
 void k_codecaction_on_default_item_triggered(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#slotActionTriggered)
 ///
 /// @param self KCodecAction*
 /// @param param1 QAction*
 void k_codecaction_slot_action_triggered(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#slotActionTriggered)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_codecaction_slot_action_triggered(void* self, void* param1);
 /// @param callback void func(KCodecAction* self, QAction* param1)
 void k_codecaction_on_slot_action_triggered(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#slotActionTriggered)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#slotActionTriggered)
 ///
 /// Base class method implementation
 ///
@@ -165,7 +165,7 @@ const char* k_codecaction_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolBarMode)
 ///
 /// @param self KCodecAction*
 ///
@@ -174,7 +174,7 @@ int32_t k_codecaction_tool_bar_mode(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolBarMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolBarMode)
 ///
 /// @param self KCodecAction*
 /// @param mode enum KSelectAction__ToolBarMode
@@ -182,7 +182,7 @@ void k_codecaction_set_tool_bar_mode(void* self, int32_t mode);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#toolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#toolButtonPopupMode)
 ///
 /// @param self KCodecAction*
 ///
@@ -191,7 +191,7 @@ int32_t k_codecaction_tool_button_popup_mode(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setToolButtonPopupMode)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setToolButtonPopupMode)
 ///
 /// @param self KCodecAction*
 /// @param mode enum QToolButton__ToolButtonPopupMode
@@ -199,28 +199,28 @@ void k_codecaction_set_tool_button_popup_mode(void* self, int32_t mode);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#selectableActionGroup)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#selectableActionGroup)
 ///
 /// @param self KCodecAction*
 QActionGroup* k_codecaction_selectable_action_group(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentAction)
 ///
 /// @param self KCodecAction*
 QAction* k_codecaction_current_action(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentItem)
 ///
 /// @param self KCodecAction*
 int32_t k_codecaction_current_item(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#currentText)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#currentText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -229,14 +229,14 @@ const char* k_codecaction_current_text(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actions)
 ///
 /// @param self KCodecAction*
 libqt_list /* of QAction* */ k_codecaction_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KCodecAction*
 /// @param index int
@@ -244,7 +244,7 @@ QAction* k_codecaction_action(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KCodecAction*
 /// @param text const char*
@@ -252,7 +252,7 @@ QAction* k_codecaction_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KCodecAction*
 /// @param action QAction*
@@ -260,7 +260,7 @@ bool k_codecaction_set_current_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentItem)
 ///
 /// @param self KCodecAction*
 /// @param index int
@@ -268,7 +268,7 @@ bool k_codecaction_set_current_item(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KCodecAction*
 /// @param text const char*
@@ -276,7 +276,7 @@ bool k_codecaction_set_current_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KCodecAction*
 /// @param action QAction*
@@ -284,7 +284,7 @@ void k_codecaction_add_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KCodecAction*
 /// @param text const char*
@@ -292,7 +292,7 @@ QAction* k_codecaction_add_action2(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#addAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#addAction)
 ///
 /// @param self KCodecAction*
 /// @param icon QIcon*
@@ -301,7 +301,7 @@ QAction* k_codecaction_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setItems)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setItems)
 ///
 /// @param self KCodecAction*
 /// @param lst const char**
@@ -309,7 +309,7 @@ void k_codecaction_set_items(void* self, const char* lst[]);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#items)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -318,14 +318,14 @@ const char** k_codecaction_items(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#isEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#isEditable)
 ///
 /// @param self KCodecAction*
 bool k_codecaction_is_editable(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setEditable)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setEditable)
 ///
 /// @param self KCodecAction*
 /// @param editable bool
@@ -333,14 +333,14 @@ void k_codecaction_set_editable(void* self, bool editable);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#comboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#comboWidth)
 ///
 /// @param self KCodecAction*
 int32_t k_codecaction_combo_width(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setComboWidth)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setComboWidth)
 ///
 /// @param self KCodecAction*
 /// @param width int
@@ -348,7 +348,7 @@ void k_codecaction_set_combo_width(void* self, int width);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMaxComboViewCount)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMaxComboViewCount)
 ///
 /// @param self KCodecAction*
 /// @param n int
@@ -356,21 +356,21 @@ void k_codecaction_set_max_combo_view_count(void* self, int n);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#clear)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#clear)
 ///
 /// @param self KCodecAction*
 void k_codecaction_clear(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAllActions)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAllActions)
 ///
 /// @param self KCodecAction*
 void k_codecaction_remove_all_actions(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setMenuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setMenuAccelsEnabled)
 ///
 /// @param self KCodecAction*
 /// @param b bool
@@ -378,14 +378,14 @@ void k_codecaction_set_menu_accels_enabled(void* self, bool b);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#menuAccelsEnabled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#menuAccelsEnabled)
 ///
 /// @param self KCodecAction*
 bool k_codecaction_menu_accels_enabled(void* self);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#changeItem)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#changeItem)
 ///
 /// @param self KCodecAction*
 /// @param index int
@@ -394,7 +394,7 @@ void k_codecaction_change_item(void* self, int index, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KCodecAction*
 /// @param action QAction*
@@ -402,7 +402,7 @@ void k_codecaction_action_triggered(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#actionTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#actionTriggered)
 ///
 /// @param self KCodecAction*
 /// @param callback void func(KCodecAction* self, QAction* action)
@@ -410,7 +410,7 @@ void k_codecaction_on_action_triggered(void* self, void (*callback)(void*, void*
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KCodecAction*
 /// @param index int
@@ -418,7 +418,7 @@ void k_codecaction_index_triggered(void* self, int index);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#indexTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#indexTriggered)
 ///
 /// @param self KCodecAction*
 /// @param callback void func(KCodecAction* self, int index)
@@ -426,7 +426,7 @@ void k_codecaction_on_index_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KCodecAction*
 /// @param text const char*
@@ -434,7 +434,7 @@ void k_codecaction_text_triggered(void* self, const char* text);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#textTriggered)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#textTriggered)
 ///
 /// @param self KCodecAction*
 /// @param callback void func(KCodecAction* self, const char* text)
@@ -442,7 +442,7 @@ void k_codecaction_on_text_triggered(void* self, void (*callback)(void*, const c
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#action)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#action)
 ///
 /// @param self KCodecAction*
 /// @param text const char*
@@ -451,7 +451,7 @@ QAction* k_codecaction_action22(void* self, const char* text, int32_t cs);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#setCurrentAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#setCurrentAction)
 ///
 /// @param self KCodecAction*
 /// @param text const char*
@@ -1342,7 +1342,7 @@ void k_codecaction_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1352,7 +1352,7 @@ QAction* k_codecaction_remove_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1362,7 +1362,7 @@ QAction* k_codecaction_qbase_remove_action(void* self, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#removeAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1372,7 +1372,7 @@ void k_codecaction_on_remove_action(void* self, QAction* (*callback)(void*, void
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1383,7 +1383,7 @@ void k_codecaction_insert_action(void* self, void* before, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1394,7 +1394,7 @@ void k_codecaction_qbase_insert_action(void* self, void* before, void* action);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#insertAction)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#insertAction)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1404,7 +1404,7 @@ void k_codecaction_on_insert_action(void* self, void (*callback)(void*, void*, v
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1414,7 +1414,7 @@ QWidget* k_codecaction_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1424,7 +1424,7 @@ QWidget* k_codecaction_qbase_create_widget(void* self, void* parent);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#createWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#createWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1434,7 +1434,7 @@ void k_codecaction_on_create_widget(void* self, QWidget* (*callback)(void*, void
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1444,7 +1444,7 @@ void k_codecaction_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1454,7 +1454,7 @@ void k_codecaction_qbase_delete_widget(void* self, void* widget);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#deleteWidget)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#deleteWidget)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1464,7 +1464,7 @@ void k_codecaction_on_delete_widget(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1474,7 +1474,7 @@ bool k_codecaction_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1484,7 +1484,7 @@ bool k_codecaction_qbase_event(void* self, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#event)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1494,7 +1494,7 @@ void k_codecaction_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1505,7 +1505,7 @@ bool k_codecaction_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1516,7 +1516,7 @@ bool k_codecaction_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1676,7 +1676,7 @@ void k_codecaction_on_disconnect_notify(void* self, void (*callback)(void*, void
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1686,7 +1686,7 @@ void k_codecaction_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1696,7 +1696,7 @@ void k_codecaction_qbase_slot_toggled(void* self, bool param1);
 
 /// Inherited from KSelectAction
 ///
-/// [Qt documentation](https://api-staging.kde.org/kselectaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/kselectaction.html#slotToggled)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1858,7 +1858,7 @@ void k_codecaction_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param callback void func(KCodecAction* self, const char* objectName)
 void k_codecaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kcodecaction.html#dtor.KCodecAction)
+/// [Qt documentation](https://api.kde.org/kcodecaction.html#dtor.KCodecAction)
 ///
 /// Delete this object from C++ memory.
 ///

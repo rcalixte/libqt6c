@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kreplacedialog.html
+/// https://api.kde.org/kreplacedialog.html
 
 /// k_replacedialog_new constructs a new KReplaceDialog object.
 ///
@@ -88,49 +88,49 @@ int32_t k_replacedialog_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_replacedialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#setReplacementHistory)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#setReplacementHistory)
 ///
 /// @param self KReplaceDialog*
 /// @param history const char**
 void k_replacedialog_set_replacement_history(void* self, const char* history[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#replacementHistory)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#replacementHistory)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KReplaceDialog*
 const char** k_replacedialog_replacement_history(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#setOptions)
 ///
 /// @param self KReplaceDialog*
 /// @param options int64_t
 void k_replacedialog_set_options(void* self, int64_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#options)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#options)
 ///
 /// @param self KReplaceDialog*
 int64_t k_replacedialog_options(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#replacement)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#replacement)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KReplaceDialog*
 const char* k_replacedialog_replacement(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#replaceExtension)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#replaceExtension)
 ///
 /// @param self KReplaceDialog*
 QWidget* k_replacedialog_replace_extension(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#showEvent)
 ///
 /// @param self KReplaceDialog*
 /// @param param1 QShowEvent*
 void k_replacedialog_show_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_replacedialog_show_event(void* self, void* param1);
 /// @param callback void func(KReplaceDialog* self, QShowEvent* param1)
 void k_replacedialog_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -165,7 +165,7 @@ const char* k_replacedialog_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setFindHistory)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setFindHistory)
 ///
 /// @param self KReplaceDialog*
 /// @param history const char**
@@ -173,7 +173,7 @@ void k_replacedialog_set_find_history(void* self, const char* history[]);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#findHistory)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#findHistory)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -182,7 +182,7 @@ const char** k_replacedialog_find_history(void* self);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setHasSelection)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setHasSelection)
 ///
 /// @param self KReplaceDialog*
 /// @param hasSelection bool
@@ -190,7 +190,7 @@ void k_replacedialog_set_has_selection(void* self, bool hasSelection);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setHasCursor)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setHasCursor)
 ///
 /// @param self KReplaceDialog*
 /// @param hasCursor bool
@@ -198,7 +198,7 @@ void k_replacedialog_set_has_cursor(void* self, bool hasCursor);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsBackwardsFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsBackwardsFind)
 ///
 /// @param self KReplaceDialog*
 /// @param supports bool
@@ -206,7 +206,7 @@ void k_replacedialog_set_supports_backwards_find(void* self, bool supports);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsCaseSensitiveFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsCaseSensitiveFind)
 ///
 /// @param self KReplaceDialog*
 /// @param supports bool
@@ -214,7 +214,7 @@ void k_replacedialog_set_supports_case_sensitive_find(void* self, bool supports)
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsWholeWordsFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsWholeWordsFind)
 ///
 /// @param self KReplaceDialog*
 /// @param supports bool
@@ -222,7 +222,7 @@ void k_replacedialog_set_supports_whole_words_find(void* self, bool supports);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsRegularExpressionFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsRegularExpressionFind)
 ///
 /// @param self KReplaceDialog*
 /// @param supports bool
@@ -230,7 +230,7 @@ void k_replacedialog_set_supports_regular_expression_find(void* self, bool suppo
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#pattern)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#pattern)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -239,7 +239,7 @@ const char* k_replacedialog_pattern(void* self);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setPattern)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setPattern)
 ///
 /// @param self KReplaceDialog*
 /// @param pattern const char*
@@ -247,21 +247,21 @@ void k_replacedialog_set_pattern(void* self, const char* pattern);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#findExtension)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#findExtension)
 ///
 /// @param self KReplaceDialog*
 QWidget* k_replacedialog_find_extension(void* self);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#optionsChanged)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#optionsChanged)
 ///
 /// @param self KReplaceDialog*
 void k_replacedialog_options_changed(void* self);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#optionsChanged)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#optionsChanged)
 ///
 /// @param self KReplaceDialog*
 /// @param callback void func(KReplaceDialog* self)
@@ -269,14 +269,14 @@ void k_replacedialog_on_options_changed(void* self, void (*callback)(void*));
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#okClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#okClicked)
 ///
 /// @param self KReplaceDialog*
 void k_replacedialog_ok_clicked(void* self);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#okClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#okClicked)
 ///
 /// @param self KReplaceDialog*
 /// @param callback void func(KReplaceDialog* self)
@@ -284,14 +284,14 @@ void k_replacedialog_on_ok_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#cancelClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#cancelClicked)
 ///
 /// @param self KReplaceDialog*
 void k_replacedialog_cancel_clicked(void* self);
 
 /// Inherited from KFindDialog
 ///
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#cancelClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#cancelClicked)
 ///
 /// @param self KReplaceDialog*
 /// @param callback void func(KReplaceDialog* self)
@@ -4759,14 +4759,14 @@ void k_replacedialog_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// @param callback void func(KReplaceDialog* self, const char* objectName)
 void k_replacedialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kreplacedialog.html#dtor.KReplaceDialog)
+/// [Qt documentation](https://api.kde.org/kreplacedialog.html#dtor.KReplaceDialog)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KReplaceDialog*
 void k_replacedialog_delete(void* self);
 
-/// https://api-staging.kde.org/kreplacedialog.html#types
+/// https://api.kde.org/kreplacedialog.html#types
 
 typedef enum {
     KREPLACEDIALOG_OPTIONS_PROMPTONREPLACE = 256,

@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/sonnet-backgroundchecker.html
+/// https://api.kde.org/sonnet-backgroundchecker.html
 
 /// k_sonnet__backgroundchecker_new constructs a new Sonnet::BackgroundChecker object.
 ///
@@ -33,7 +33,7 @@ Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new3(void* parent);
 /// @param parent QObject*
 Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new4(void* speller, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
 ///
 /// @param self Sonnet__BackgroundChecker*
 const QMetaObject* k_sonnet__backgroundchecker_meta_object(void* self);
@@ -62,51 +62,51 @@ void k_sonnet__backgroundchecker_on_metacall(void* self, int32_t (*callback)(voi
 /// @param param3 void*
 int32_t k_sonnet__backgroundchecker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param s const char*
 const char* k_sonnet__backgroundchecker_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#setText)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#setText)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param text const char*
 void k_sonnet__backgroundchecker_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#text)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__BackgroundChecker*
 const char* k_sonnet__backgroundchecker_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#currentContext)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#currentContext)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__BackgroundChecker*
 const char* k_sonnet__backgroundchecker_current_context(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#speller)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#speller)
 ///
 /// @param self Sonnet__BackgroundChecker*
 Sonnet__Speller* k_sonnet__backgroundchecker_speller(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#setSpeller)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#setSpeller)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param speller Sonnet__Speller*
 void k_sonnet__backgroundchecker_set_speller(void* self, void* speller);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#checkWord)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#checkWord)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param word const char*
 bool k_sonnet__backgroundchecker_check_word(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#suggest)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#suggest)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -114,35 +114,35 @@ bool k_sonnet__backgroundchecker_check_word(void* self, const char* word);
 /// @param word const char*
 const char** k_sonnet__backgroundchecker_suggest(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#addWordToPersonal)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#addWordToPersonal)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param word const char*
 bool k_sonnet__backgroundchecker_add_word_to_personal(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#addWordToSession)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#addWordToSession)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param word const char*
 bool k_sonnet__backgroundchecker_add_word_to_session(void* self, const char* word);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#autoDetectLanguageDisabled)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#autoDetectLanguageDisabled)
 ///
 /// @param self Sonnet__BackgroundChecker*
 bool k_sonnet__backgroundchecker_auto_detect_language_disabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#setAutoDetectLanguageDisabled)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#setAutoDetectLanguageDisabled)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param autoDetectDisabled bool
 void k_sonnet__backgroundchecker_set_auto_detect_language_disabled(void* self, bool autoDetectDisabled);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#start)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#start)
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#start)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#start)
 ///
 /// Allows for overriding the related default method
 ///
@@ -150,19 +150,19 @@ void k_sonnet__backgroundchecker_start(void* self);
 /// @param callback void func()
 void k_sonnet__backgroundchecker_on_start(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#start)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_qbase_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#stop)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#stop)
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_stop(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#stop)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#stop)
 ///
 /// Allows for overriding the related default method
 ///
@@ -170,14 +170,14 @@ void k_sonnet__backgroundchecker_stop(void* self);
 /// @param callback void func()
 void k_sonnet__backgroundchecker_on_stop(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#stop)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#stop)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_qbase_stop(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#replace)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#replace)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param start int
@@ -185,18 +185,18 @@ void k_sonnet__backgroundchecker_qbase_stop(void* self);
 /// @param newText const char*
 void k_sonnet__backgroundchecker_replace(void* self, int start, const char* oldText, const char* newText);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#changeLanguage)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#changeLanguage)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param lang const char*
 void k_sonnet__backgroundchecker_change_language(void* self, const char* lang);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#continueChecking)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#continueChecking)
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_continue_checking(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#continueChecking)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#continueChecking)
 ///
 /// Allows for overriding the related default method
 ///
@@ -204,45 +204,45 @@ void k_sonnet__backgroundchecker_continue_checking(void* self);
 /// @param callback void func()
 void k_sonnet__backgroundchecker_on_continue_checking(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#continueChecking)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#continueChecking)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_qbase_continue_checking(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#misspelling)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#misspelling)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param word const char*
 /// @param start int
 void k_sonnet__backgroundchecker_misspelling(void* self, const char* word, int start);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#misspelling)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#misspelling)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param callback void func(Sonnet__BackgroundChecker* self, const char* word, int start)
 void k_sonnet__backgroundchecker_on_misspelling(void* self, void (*callback)(void*, const char*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#done)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#done)
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_done(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#done)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#done)
 ///
 /// @param self Sonnet__BackgroundChecker*
 /// @param callback void func(Sonnet__BackgroundChecker* self)
 void k_sonnet__backgroundchecker_on_done(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self Sonnet__BackgroundChecker*
 const char* k_sonnet__backgroundchecker_fetch_more_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
 ///
 /// Allows for overriding the related default method
 ///
@@ -250,19 +250,19 @@ const char* k_sonnet__backgroundchecker_fetch_more_text(void* self);
 /// @param callback const char* func()
 void k_sonnet__backgroundchecker_on_fetch_more_text(void* self, const char* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#fetchMoreText)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__BackgroundChecker*
 const char* k_sonnet__backgroundchecker_qbase_fetch_more_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#finishedCurrentFeed)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#finishedCurrentFeed)
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_finished_current_feed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#finishedCurrentFeed)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#finishedCurrentFeed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -270,19 +270,19 @@ void k_sonnet__backgroundchecker_finished_current_feed(void* self);
 /// @param callback void func()
 void k_sonnet__backgroundchecker_on_finished_current_feed(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#finishedCurrentFeed)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#finishedCurrentFeed)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_qbase_finished_current_feed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#slotEngineDone)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#slotEngineDone)
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_slot_engine_done(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#slotEngineDone)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#slotEngineDone)
 ///
 /// Allows for overriding the related default method
 ///
@@ -290,14 +290,14 @@ void k_sonnet__backgroundchecker_slot_engine_done(void* self);
 /// @param callback void func()
 void k_sonnet__backgroundchecker_on_slot_engine_done(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/sonnet-backgroundchecker.html#slotEngineDone)
+/// [Qt documentation](https://api.kde.org/sonnet-backgroundchecker.html#slotEngineDone)
 ///
 /// Base class method implementation
 ///
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_qbase_slot_engine_done(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -305,7 +305,7 @@ void k_sonnet__backgroundchecker_qbase_slot_engine_done(void* self);
 /// @param c const char*
 const char* k_sonnet__backgroundchecker_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api-staging.kde.org/qobject.html#tr)
+/// [Qt documentation](https://api.kde.org/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

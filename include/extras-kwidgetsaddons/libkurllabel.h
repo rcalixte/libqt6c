@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kurllabel.html
+/// https://api.kde.org/kurllabel.html
 
 /// k_urllabel_new constructs a new KUrlLabel object.
 ///
@@ -76,63 +76,63 @@ int32_t k_urllabel_qbase_metacall(void* self, int32_t param1, int param2, void* 
 /// @param s const char*
 const char* k_urllabel_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#url)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#url)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlLabel*
 const char* k_urllabel_url(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#tipText)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#tipText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KUrlLabel*
 const char* k_urllabel_tip_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#useTips)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#useTips)
 ///
 /// @param self KUrlLabel*
 bool k_urllabel_use_tips(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#useCursor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#useCursor)
 ///
 /// @param self KUrlLabel*
 bool k_urllabel_use_cursor(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#isGlowEnabled)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#isGlowEnabled)
 ///
 /// @param self KUrlLabel*
 bool k_urllabel_is_glow_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#isFloatEnabled)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#isFloatEnabled)
 ///
 /// @param self KUrlLabel*
 bool k_urllabel_is_float_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#alternatePixmap)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#alternatePixmap)
 ///
 /// @param self KUrlLabel*
 const QPixmap* k_urllabel_alternate_pixmap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUnderline)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUnderline)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_set_underline(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUrl)
 ///
 /// @param self KUrlLabel*
 /// @param url const char*
 void k_urllabel_set_url(void* self, const char* url);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setFont)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setFont)
 ///
 /// @param self KUrlLabel*
 /// @param font QFont*
 void k_urllabel_set_font(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setFont)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setFont)
 ///
 /// Allows for overriding the related default method
 ///
@@ -140,7 +140,7 @@ void k_urllabel_set_font(void* self, void* font);
 /// @param callback void func(KUrlLabel* self, QFont* font)
 void k_urllabel_on_set_font(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setFont)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setFont)
 ///
 /// Base class method implementation
 ///
@@ -148,125 +148,125 @@ void k_urllabel_on_set_font(void* self, void (*callback)(void*, void*));
 /// @param font QFont*
 void k_urllabel_qbase_set_font(void* self, void* font);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUseTips)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUseTips)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_set_use_tips(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setTipText)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setTipText)
 ///
 /// @param self KUrlLabel*
 /// @param tip const char*
 void k_urllabel_set_tip_text(void* self, const char* tip);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setHighlightedColor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setHighlightedColor)
 ///
 /// @param self KUrlLabel*
 /// @param highcolor QColor*
 void k_urllabel_set_highlighted_color(void* self, void* highcolor);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setHighlightedColor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setHighlightedColor)
 ///
 /// @param self KUrlLabel*
 /// @param highcolor const char*
 void k_urllabel_set_highlighted_color2(void* self, const char* highcolor);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setSelectedColor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setSelectedColor)
 ///
 /// @param self KUrlLabel*
 /// @param color QColor*
 void k_urllabel_set_selected_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setSelectedColor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setSelectedColor)
 ///
 /// @param self KUrlLabel*
 /// @param color const char*
 void k_urllabel_set_selected_color2(void* self, const char* color);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUseCursor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUseCursor)
 ///
 /// @param self KUrlLabel*
 /// @param on bool
 void k_urllabel_set_use_cursor(void* self, bool on);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setGlowEnabled)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setGlowEnabled)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_set_glow_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setFloatEnabled)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setFloatEnabled)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_set_float_enabled(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setAlternatePixmap)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setAlternatePixmap)
 ///
 /// @param self KUrlLabel*
 /// @param pixmap QPixmap*
 void k_urllabel_set_alternate_pixmap(void* self, void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enteredUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#enteredUrl)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_entered_url(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enteredUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#enteredUrl)
 ///
 /// @param self KUrlLabel*
 /// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_entered_url(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leftUrl)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_left_url(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leftUrl)
 ///
 /// @param self KUrlLabel*
 /// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_left_url(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftClickedUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leftClickedUrl)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_left_clicked_url(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leftClickedUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leftClickedUrl)
 ///
 /// @param self KUrlLabel*
 /// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_left_clicked_url(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#rightClickedUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#rightClickedUrl)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_right_clicked_url(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#rightClickedUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#rightClickedUrl)
 ///
 /// @param self KUrlLabel*
 /// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_right_clicked_url(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#middleClickedUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#middleClickedUrl)
 ///
 /// @param self KUrlLabel*
 void k_urllabel_middle_clicked_url(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#middleClickedUrl)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#middleClickedUrl)
 ///
 /// @param self KUrlLabel*
 /// @param callback void func(KUrlLabel* self)
 void k_urllabel_on_middle_clicked_url(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#mouseReleaseEvent)
 ///
 /// @param self KUrlLabel*
 /// @param param1 QMouseEvent*
 void k_urllabel_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -274,7 +274,7 @@ void k_urllabel_mouse_release_event(void* self, void* param1);
 /// @param callback void func(KUrlLabel* self, QMouseEvent* param1)
 void k_urllabel_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#mouseReleaseEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
@@ -282,13 +282,13 @@ void k_urllabel_on_mouse_release_event(void* self, void (*callback)(void*, void*
 /// @param param1 QMouseEvent*
 void k_urllabel_qbase_mouse_release_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#enterEvent)
 ///
 /// @param self KUrlLabel*
 /// @param event QEnterEvent*
 void k_urllabel_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#enterEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -296,7 +296,7 @@ void k_urllabel_enter_event(void* self, void* event);
 /// @param callback void func(KUrlLabel* self, QEnterEvent* event)
 void k_urllabel_on_enter_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#enterEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#enterEvent)
 ///
 /// Base class method implementation
 ///
@@ -304,13 +304,13 @@ void k_urllabel_on_enter_event(void* self, void (*callback)(void*, void*));
 /// @param event QEnterEvent*
 void k_urllabel_qbase_enter_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leaveEvent)
 ///
 /// @param self KUrlLabel*
 /// @param param1 QEvent*
 void k_urllabel_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -318,7 +318,7 @@ void k_urllabel_leave_event(void* self, void* param1);
 /// @param callback void func(KUrlLabel* self, QEvent* param1)
 void k_urllabel_on_leave_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#leaveEvent)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#leaveEvent)
 ///
 /// Base class method implementation
 ///
@@ -326,13 +326,13 @@ void k_urllabel_on_leave_event(void* self, void (*callback)(void*, void*));
 /// @param param1 QEvent*
 void k_urllabel_qbase_leave_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#event)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#event)
 ///
 /// @param self KUrlLabel*
 /// @param param1 QEvent*
 bool k_urllabel_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#event)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -340,7 +340,7 @@ bool k_urllabel_event(void* self, void* param1);
 /// @param callback bool func(KUrlLabel* self, QEvent* param1)
 void k_urllabel_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#event)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#event)
 ///
 /// Base class method implementation
 ///
@@ -365,32 +365,32 @@ const char* k_urllabel_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_urllabel_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUnderline)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUnderline)
 ///
 /// @param self KUrlLabel*
 /// @param on bool
 void k_urllabel_set_underline1(void* self, bool on);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUseTips)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUseTips)
 ///
 /// @param self KUrlLabel*
 /// @param on bool
 void k_urllabel_set_use_tips1(void* self, bool on);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setUseCursor)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setUseCursor)
 ///
 /// @param self KUrlLabel*
 /// @param on bool
 /// @param cursor QCursor*
 void k_urllabel_set_use_cursor2(void* self, bool on, void* cursor);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setGlowEnabled)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setGlowEnabled)
 ///
 /// @param self KUrlLabel*
 /// @param glow bool
 void k_urllabel_set_glow_enabled1(void* self, bool glow);
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#setFloatEnabled)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#setFloatEnabled)
 ///
 /// @param self KUrlLabel*
 /// @param do_float bool
@@ -4971,7 +4971,7 @@ void k_urllabel_on_get_decoded_metric_f(void* self, double (*callback)(void*, in
 /// @param callback void func(KUrlLabel* self, const char* objectName)
 void k_urllabel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kurllabel.html#dtor.KUrlLabel)
+/// [Qt documentation](https://api.kde.org/kurllabel.html#dtor.KUrlLabel)
 ///
 /// Delete this object from C++ memory.
 ///

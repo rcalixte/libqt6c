@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kjobtrackerinterface.html
+/// https://api.kde.org/kjobtrackerinterface.html
 
 /// k_jobtrackerinterface_new constructs a new KJobTrackerInterface object.
 ///
@@ -58,13 +58,13 @@ int32_t k_jobtrackerinterface_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_jobtrackerinterface_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#registerJob)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#registerJob)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 void k_jobtrackerinterface_register_job(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#registerJob)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#registerJob)
 ///
 /// Allows for overriding the related default method
 ///
@@ -72,7 +72,7 @@ void k_jobtrackerinterface_register_job(void* self, void* job);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_register_job(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#registerJob)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#registerJob)
 ///
 /// Base class method implementation
 ///
@@ -80,13 +80,13 @@ void k_jobtrackerinterface_on_register_job(void* self, void (*callback)(void*, v
 /// @param job KJob*
 void k_jobtrackerinterface_qbase_register_job(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#unregisterJob)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#unregisterJob)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 void k_jobtrackerinterface_unregister_job(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#unregisterJob)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#unregisterJob)
 ///
 /// Allows for overriding the related default method
 ///
@@ -94,7 +94,7 @@ void k_jobtrackerinterface_unregister_job(void* self, void* job);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_unregister_job(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#unregisterJob)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#unregisterJob)
 ///
 /// Base class method implementation
 ///
@@ -102,13 +102,13 @@ void k_jobtrackerinterface_on_unregister_job(void* self, void (*callback)(void*,
 /// @param job KJob*
 void k_jobtrackerinterface_qbase_unregister_job(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#finished)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#finished)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 void k_jobtrackerinterface_finished(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#finished)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#finished)
 ///
 /// Allows for overriding the related default method
 ///
@@ -116,7 +116,7 @@ void k_jobtrackerinterface_finished(void* self, void* job);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_finished(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#finished)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#finished)
 ///
 /// Base class method implementation
 ///
@@ -124,13 +124,13 @@ void k_jobtrackerinterface_on_finished(void* self, void (*callback)(void*, void*
 /// @param job KJob*
 void k_jobtrackerinterface_qbase_finished(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#suspended)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#suspended)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 void k_jobtrackerinterface_suspended(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#suspended)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#suspended)
 ///
 /// Allows for overriding the related default method
 ///
@@ -138,7 +138,7 @@ void k_jobtrackerinterface_suspended(void* self, void* job);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_suspended(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#suspended)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#suspended)
 ///
 /// Base class method implementation
 ///
@@ -146,13 +146,13 @@ void k_jobtrackerinterface_on_suspended(void* self, void (*callback)(void*, void
 /// @param job KJob*
 void k_jobtrackerinterface_qbase_suspended(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#resumed)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#resumed)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 void k_jobtrackerinterface_resumed(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#resumed)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#resumed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -160,7 +160,7 @@ void k_jobtrackerinterface_resumed(void* self, void* job);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job)
 void k_jobtrackerinterface_on_resumed(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#resumed)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#resumed)
 ///
 /// Base class method implementation
 ///
@@ -168,7 +168,7 @@ void k_jobtrackerinterface_on_resumed(void* self, void (*callback)(void*, void*)
 /// @param job KJob*
 void k_jobtrackerinterface_qbase_resumed(void* self, void* job);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#description)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#description)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
@@ -177,7 +177,7 @@ void k_jobtrackerinterface_qbase_resumed(void* self, void* job);
 /// @param field2 libqt_pair /* tuple of const char* and const char* */
 void k_jobtrackerinterface_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#description)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#description)
 ///
 /// Allows for overriding the related default method
 ///
@@ -185,7 +185,7 @@ void k_jobtrackerinterface_description(void* self, void* job, const char* title,
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
 void k_jobtrackerinterface_on_description(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#description)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#description)
 ///
 /// Base class method implementation
 ///
@@ -196,14 +196,14 @@ void k_jobtrackerinterface_on_description(void* self, void (*callback)(void*, vo
 /// @param field2 libqt_pair /* tuple of const char* and const char* */
 void k_jobtrackerinterface_qbase_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#infoMessage)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 /// @param message const char*
 void k_jobtrackerinterface_info_message(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#infoMessage)
 ///
 /// Allows for overriding the related default method
 ///
@@ -211,7 +211,7 @@ void k_jobtrackerinterface_info_message(void* self, void* job, const char* messa
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, const char* message)
 void k_jobtrackerinterface_on_info_message(void* self, void (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#infoMessage)
 ///
 /// Base class method implementation
 ///
@@ -220,14 +220,14 @@ void k_jobtrackerinterface_on_info_message(void* self, void (*callback)(void*, v
 /// @param message const char*
 void k_jobtrackerinterface_qbase_info_message(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#warning)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#warning)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 /// @param message const char*
 void k_jobtrackerinterface_warning(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#warning)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#warning)
 ///
 /// Allows for overriding the related default method
 ///
@@ -235,7 +235,7 @@ void k_jobtrackerinterface_warning(void* self, void* job, const char* message);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, const char* message)
 void k_jobtrackerinterface_on_warning(void* self, void (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#warning)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#warning)
 ///
 /// Base class method implementation
 ///
@@ -244,7 +244,7 @@ void k_jobtrackerinterface_on_warning(void* self, void (*callback)(void*, void*,
 /// @param message const char*
 void k_jobtrackerinterface_qbase_warning(void* self, void* job, const char* message);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#totalAmount)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#totalAmount)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
@@ -252,7 +252,7 @@ void k_jobtrackerinterface_qbase_warning(void* self, void* job, const char* mess
 /// @param amount uint64_t
 void k_jobtrackerinterface_total_amount(void* self, void* job, int32_t unit, uint64_t amount);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#totalAmount)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#totalAmount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -260,7 +260,7 @@ void k_jobtrackerinterface_total_amount(void* self, void* job, int32_t unit, uin
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_jobtrackerinterface_on_total_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#totalAmount)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#totalAmount)
 ///
 /// Base class method implementation
 ///
@@ -270,7 +270,7 @@ void k_jobtrackerinterface_on_total_amount(void* self, void (*callback)(void*, v
 /// @param amount uint64_t
 void k_jobtrackerinterface_qbase_total_amount(void* self, void* job, int32_t unit, uint64_t amount);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#processedAmount)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#processedAmount)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
@@ -278,7 +278,7 @@ void k_jobtrackerinterface_qbase_total_amount(void* self, void* job, int32_t uni
 /// @param amount uint64_t
 void k_jobtrackerinterface_processed_amount(void* self, void* job, int32_t unit, uint64_t amount);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#processedAmount)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#processedAmount)
 ///
 /// Allows for overriding the related default method
 ///
@@ -286,7 +286,7 @@ void k_jobtrackerinterface_processed_amount(void* self, void* job, int32_t unit,
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
 void k_jobtrackerinterface_on_processed_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#processedAmount)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#processedAmount)
 ///
 /// Base class method implementation
 ///
@@ -296,14 +296,14 @@ void k_jobtrackerinterface_on_processed_amount(void* self, void (*callback)(void
 /// @param amount uint64_t
 void k_jobtrackerinterface_qbase_processed_amount(void* self, void* job, int32_t unit, uint64_t amount);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#percent)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#percent)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 /// @param percent uint64_t
 void k_jobtrackerinterface_percent(void* self, void* job, uint64_t percent);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#percent)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#percent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -311,7 +311,7 @@ void k_jobtrackerinterface_percent(void* self, void* job, uint64_t percent);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, uint64_t percent)
 void k_jobtrackerinterface_on_percent(void* self, void (*callback)(void*, void*, uint64_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#percent)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#percent)
 ///
 /// Base class method implementation
 ///
@@ -320,14 +320,14 @@ void k_jobtrackerinterface_on_percent(void* self, void (*callback)(void*, void*,
 /// @param percent uint64_t
 void k_jobtrackerinterface_qbase_percent(void* self, void* job, uint64_t percent);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#speed)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#speed)
 ///
 /// @param self KJobTrackerInterface*
 /// @param job KJob*
 /// @param value uint64_t
 void k_jobtrackerinterface_speed(void* self, void* job, uint64_t value);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#speed)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#speed)
 ///
 /// Allows for overriding the related default method
 ///
@@ -335,7 +335,7 @@ void k_jobtrackerinterface_speed(void* self, void* job, uint64_t value);
 /// @param callback void func(KJobTrackerInterface* self, KJob* job, uint64_t value)
 void k_jobtrackerinterface_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#speed)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#speed)
 ///
 /// Base class method implementation
 ///
@@ -1006,7 +1006,7 @@ void k_jobtrackerinterface_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KJobTrackerInterface* self, const char* objectName)
 void k_jobtrackerinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kjobtrackerinterface.html#dtor.KJobTrackerInterface)
+/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#dtor.KJobTrackerInterface)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -11,291 +11,291 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kstandardshortcut.html
+/// https://api.kde.org/kstandardshortcut.html
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#shortcut)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#shortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#name)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#name)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 const char* k_standardshortcut_name(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#label)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#label)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 const char* k_standardshortcut_label(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#whatsThis)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#whatsThis)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 const char* k_standardshortcut_whats_this(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#find)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#find)
 ///
 /// @param param1 QKeySequence*
 ///
 /// @return enum KStandardShortcut__StandardShortcut
 int32_t k_standardshortcut_find(void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#findByName)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#findByName)
 ///
 /// @param param1 const char*
 ///
 /// @return enum KStandardShortcut__StandardShortcut
 int32_t k_standardshortcut_find_by_name(const char* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#hardcodedDefaultShortcut)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#hardcodedDefaultShortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 libqt_list /* of QKeySequence* */ k_standardshortcut_hardcoded_default_shortcut(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#saveShortcut)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#saveShortcut)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 /// @param param2 libqt_list /* of QKeySequence* */
 void k_standardshortcut_save_shortcut(int32_t param1, libqt_list param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#category)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#category)
 ///
 /// @param param1 enum KStandardShortcut__StandardShortcut
 ///
 /// @return enum KStandardShortcut__Category
 int32_t k_standardshortcut_category(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#open)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#open)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_open();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#openNew)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#openNew)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_open_new();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#close)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#close)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_close();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#save)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#save)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_save();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#print)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#print)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_print();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#quit)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#quit)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_quit();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#undo)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#undo)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_undo();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#redo)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#redo)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_redo();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#cut)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#cut)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_cut();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#copy)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#copy)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_copy();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#paste)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#paste)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_paste();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#pasteSelection)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#pasteSelection)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_paste_selection();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#selectAll)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#selectAll)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_select_all();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#deleteWordBack)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#deleteWordBack)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_delete_word_back();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#deleteWordForward)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#deleteWordForward)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_delete_word_forward();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#find)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#find)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_find2();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#findNext)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#findNext)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_find_next();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#findPrev)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#findPrev)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_find_prev();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#replace)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#replace)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_replace();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#zoomIn)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#zoomIn)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_zoom_in();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#zoomOut)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#zoomOut)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_zoom_out();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#home)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#home)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_home();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#begin)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#begin)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_begin();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#end)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#end)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_end();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#beginningOfLine)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#beginningOfLine)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_beginning_of_line();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#endOfLine)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#endOfLine)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_end_of_line();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#prior)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#prior)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_prior();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#next)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#next)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_next();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#gotoLine)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#gotoLine)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_goto_line();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#addBookmark)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#addBookmark)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_add_bookmark();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#tabNext)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#tabNext)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_tab_next();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#tabPrev)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#tabPrev)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_tab_prev();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#fullScreen)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#fullScreen)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_full_screen();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#help)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#help)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_help();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#completion)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#completion)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_completion();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#prevCompletion)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#prevCompletion)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_prev_completion();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#nextCompletion)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#nextCompletion)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_next_completion();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#substringCompletion)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#substringCompletion)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_substring_completion();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#rotateUp)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#rotateUp)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_rotate_up();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#rotateDown)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#rotateDown)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_rotate_down();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#whatsThis)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#whatsThis)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_whats_this2();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#reload)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#reload)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_reload();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#up)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#up)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_up();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#back)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#back)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_back();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#forward)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#forward)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_forward();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#backwardWord)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#backwardWord)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_backward_word();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#forwardWord)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#forwardWord)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_forward_word();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#showMenubar)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#showMenubar)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_show_menubar();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#deleteFile)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#deleteFile)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_delete_file();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#renameFile)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#renameFile)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_rename_file();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#createFolder)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#createFolder)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_create_folder();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#moveToTrash)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#moveToTrash)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_move_to_trash();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#preferences)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#preferences)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_preferences();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#showHideHiddenFiles)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#showHideHiddenFiles)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_show_hide_hidden_files();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#openMainMenu)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#openMainMenu)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_open_main_menu();
 
-/// [Qt documentation](https://api-staging.kde.org/kstandardshortcut.html#openContextMenu)
+/// [Qt documentation](https://api.kde.org/kstandardshortcut.html#openContextMenu)
 ///
 libqt_list /* of QKeySequence* */ k_standardshortcut_open_context_menu();
 
-/// https://api-staging.kde.org/kstandardshortcut.html#types
+/// https://api.kde.org/kstandardshortcut.html#types
 
 typedef enum {
     KSTANDARDSHORTCUT_STANDARDSHORTCUT_ACCELNONE = 0,

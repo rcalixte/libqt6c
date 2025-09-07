@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktreewidgetsearchline.html
+/// https://api.kde.org/ktreewidgetsearchline.html
 
 /// k_treewidgetsearchline_new constructs a new KTreeWidgetSearchLine object.
 ///
@@ -70,101 +70,101 @@ int32_t k_treewidgetsearchline_qbase_metacall(void* self, int32_t param1, int pa
 /// @param s const char*
 const char* k_treewidgetsearchline_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#caseSensitivity)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#caseSensitivity)
 ///
 /// @param self KTreeWidgetSearchLine*
 ///
 /// @return enum Qt__CaseSensitivity
 int32_t k_treewidgetsearchline_case_sensitivity(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#searchColumns)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#searchColumns)
 ///
 /// @param self KTreeWidgetSearchLine*
 libqt_list /* of int */ k_treewidgetsearchline_search_columns(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#keepParentsVisible)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#keepParentsVisible)
 ///
 /// @param self KTreeWidgetSearchLine*
 bool k_treewidgetsearchline_keep_parents_visible(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#treeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#treeWidget)
 ///
 /// @param self KTreeWidgetSearchLine*
 QTreeWidget* k_treewidgetsearchline_tree_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#treeWidgets)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#treeWidgets)
 ///
 /// @param self KTreeWidgetSearchLine*
 libqt_list /* of QTreeWidget* */ k_treewidgetsearchline_tree_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#hiddenChanged)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#hiddenChanged)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 QTreeWidgetItem*
 /// @param param2 bool
 void k_treewidgetsearchline_hidden_changed(void* self, void* param1, bool param2);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#hiddenChanged)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#hiddenChanged)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param callback void func(KTreeWidgetSearchLine* self, QTreeWidgetItem* param1, bool param2)
 void k_treewidgetsearchline_on_hidden_changed(void* self, void (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#searchUpdated)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#searchUpdated)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param searchString const char*
 void k_treewidgetsearchline_search_updated(void* self, const char* searchString);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#searchUpdated)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#searchUpdated)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param callback void func(KTreeWidgetSearchLine* self, const char* searchString)
 void k_treewidgetsearchline_on_search_updated(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#caseSensitivityChanged)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#caseSensitivityChanged)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param caseSensitivity enum Qt__CaseSensitivity
 void k_treewidgetsearchline_case_sensitivity_changed(void* self, int32_t caseSensitivity);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#caseSensitivityChanged)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#caseSensitivityChanged)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param callback void func(KTreeWidgetSearchLine* self, enum Qt__CaseSensitivity caseSensitivity)
 void k_treewidgetsearchline_on_case_sensitivity_changed(void* self, void (*callback)(void*, int32_t));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#keepParentsVisibleChanged)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#keepParentsVisibleChanged)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param keepParentsVisible bool
 void k_treewidgetsearchline_keep_parents_visible_changed(void* self, bool keepParentsVisible);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#keepParentsVisibleChanged)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#keepParentsVisibleChanged)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param callback void func(KTreeWidgetSearchLine* self, bool keepParentsVisible)
 void k_treewidgetsearchline_on_keep_parents_visible_changed(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#addTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#addTreeWidget)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param treeWidget QTreeWidget*
 void k_treewidgetsearchline_add_tree_widget(void* self, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#removeTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#removeTreeWidget)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param treeWidget QTreeWidget*
 void k_treewidgetsearchline_remove_tree_widget(void* self, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#updateSearch)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param pattern const char*
 void k_treewidgetsearchline_update_search(void* self, const char* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#updateSearch)
 ///
 /// Allows for overriding the related default method
 ///
@@ -172,7 +172,7 @@ void k_treewidgetsearchline_update_search(void* self, const char* pattern);
 /// @param callback void func(KTreeWidgetSearchLine* self, const char* pattern)
 void k_treewidgetsearchline_on_update_search(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#updateSearch)
 ///
 /// Base class method implementation
 ///
@@ -180,44 +180,44 @@ void k_treewidgetsearchline_on_update_search(void* self, void (*callback)(void*,
 /// @param pattern const char*
 void k_treewidgetsearchline_qbase_update_search(void* self, const char* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#setCaseSensitivity)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#setCaseSensitivity)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param caseSensitivity enum Qt__CaseSensitivity
 void k_treewidgetsearchline_set_case_sensitivity(void* self, int32_t caseSensitivity);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#setKeepParentsVisible)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#setKeepParentsVisible)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param value bool
 void k_treewidgetsearchline_set_keep_parents_visible(void* self, bool value);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#setSearchColumns)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#setSearchColumns)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param columns libqt_list /* of int */
 void k_treewidgetsearchline_set_search_columns(void* self, libqt_list columns);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#setTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#setTreeWidget)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param treeWidget QTreeWidget*
 void k_treewidgetsearchline_set_tree_widget(void* self, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#setTreeWidgets)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#setTreeWidgets)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param treeWidgets libqt_list /* of QTreeWidget* */
 void k_treewidgetsearchline_set_tree_widgets(void* self, libqt_list treeWidgets);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#itemMatches)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#itemMatches)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param item QTreeWidgetItem*
 /// @param pattern const char*
 bool k_treewidgetsearchline_item_matches(void* self, void* item, const char* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#itemMatches)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#itemMatches)
 ///
 /// Allows for overriding the related default method
 ///
@@ -225,7 +225,7 @@ bool k_treewidgetsearchline_item_matches(void* self, void* item, const char* pat
 /// @param callback bool func(KTreeWidgetSearchLine* self, QTreeWidgetItem* item, const char* pattern)
 void k_treewidgetsearchline_on_item_matches(void* self, bool (*callback)(void*, void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#itemMatches)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#itemMatches)
 ///
 /// Base class method implementation
 ///
@@ -234,13 +234,13 @@ void k_treewidgetsearchline_on_item_matches(void* self, bool (*callback)(void*, 
 /// @param pattern const char*
 bool k_treewidgetsearchline_qbase_item_matches(void* self, void* item, const char* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#contextMenuEvent)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 QContextMenuEvent*
 void k_treewidgetsearchline_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -248,7 +248,7 @@ void k_treewidgetsearchline_context_menu_event(void* self, void* param1);
 /// @param callback void func(KTreeWidgetSearchLine* self, QContextMenuEvent* param1)
 void k_treewidgetsearchline_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#contextMenuEvent)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
@@ -256,13 +256,13 @@ void k_treewidgetsearchline_on_context_menu_event(void* self, void (*callback)(v
 /// @param param1 QContextMenuEvent*
 void k_treewidgetsearchline_qbase_context_menu_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#updateSearch)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param treeWidget QTreeWidget*
 void k_treewidgetsearchline_update_search2(void* self, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#updateSearch)
 ///
 /// Allows for overriding the related default method
 ///
@@ -270,7 +270,7 @@ void k_treewidgetsearchline_update_search2(void* self, void* treeWidget);
 /// @param callback void func(KTreeWidgetSearchLine* self, QTreeWidget* treeWidget)
 void k_treewidgetsearchline_on_update_search2(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#updateSearch)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#updateSearch)
 ///
 /// Base class method implementation
 ///
@@ -278,13 +278,13 @@ void k_treewidgetsearchline_on_update_search2(void* self, void (*callback)(void*
 /// @param treeWidget QTreeWidget*
 void k_treewidgetsearchline_qbase_update_search2(void* self, void* treeWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#connectTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#connectTreeWidget)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 QTreeWidget*
 void k_treewidgetsearchline_connect_tree_widget(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#connectTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#connectTreeWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -292,7 +292,7 @@ void k_treewidgetsearchline_connect_tree_widget(void* self, void* param1);
 /// @param callback void func(KTreeWidgetSearchLine* self, QTreeWidget* param1)
 void k_treewidgetsearchline_on_connect_tree_widget(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#connectTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#connectTreeWidget)
 ///
 /// Base class method implementation
 ///
@@ -300,13 +300,13 @@ void k_treewidgetsearchline_on_connect_tree_widget(void* self, void (*callback)(
 /// @param param1 QTreeWidget*
 void k_treewidgetsearchline_qbase_connect_tree_widget(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#disconnectTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#disconnectTreeWidget)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param param1 QTreeWidget*
 void k_treewidgetsearchline_disconnect_tree_widget(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#disconnectTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#disconnectTreeWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -314,7 +314,7 @@ void k_treewidgetsearchline_disconnect_tree_widget(void* self, void* param1);
 /// @param callback void func(KTreeWidgetSearchLine* self, QTreeWidget* param1)
 void k_treewidgetsearchline_on_disconnect_tree_widget(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#disconnectTreeWidget)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#disconnectTreeWidget)
 ///
 /// Base class method implementation
 ///
@@ -322,12 +322,12 @@ void k_treewidgetsearchline_on_disconnect_tree_widget(void* self, void (*callbac
 /// @param param1 QTreeWidget*
 void k_treewidgetsearchline_qbase_disconnect_tree_widget(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#canChooseColumnsCheck)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#canChooseColumnsCheck)
 ///
 /// @param self KTreeWidgetSearchLine*
 bool k_treewidgetsearchline_can_choose_columns_check(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#canChooseColumnsCheck)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#canChooseColumnsCheck)
 ///
 /// Allows for overriding the related default method
 ///
@@ -335,20 +335,20 @@ bool k_treewidgetsearchline_can_choose_columns_check(void* self);
 /// @param callback bool func()
 void k_treewidgetsearchline_on_can_choose_columns_check(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#canChooseColumnsCheck)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#canChooseColumnsCheck)
 ///
 /// Base class method implementation
 ///
 /// @param self KTreeWidgetSearchLine*
 bool k_treewidgetsearchline_qbase_can_choose_columns_check(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#event)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#event)
 ///
 /// @param self KTreeWidgetSearchLine*
 /// @param event QEvent*
 bool k_treewidgetsearchline_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#event)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -356,7 +356,7 @@ bool k_treewidgetsearchline_event(void* self, void* event);
 /// @param callback bool func(KTreeWidgetSearchLine* self, QEvent* event)
 void k_treewidgetsearchline_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#event)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#event)
 ///
 /// Base class method implementation
 ///
@@ -5233,7 +5233,7 @@ void k_treewidgetsearchline_on_get_decoded_metric_f(void* self, double (*callbac
 /// @param callback void func(KTreeWidgetSearchLine* self, const char* objectName)
 void k_treewidgetsearchline_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktreewidgetsearchline.html#dtor.KTreeWidgetSearchLine)
+/// [Qt documentation](https://api.kde.org/ktreewidgetsearchline.html#dtor.KTreeWidgetSearchLine)
 ///
 /// Delete this object from C++ memory.
 ///

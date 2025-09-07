@@ -11,21 +11,21 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpassword.html
+/// https://api.kde.org/kpassword.html
 
-/// [Qt documentation](https://api-staging.kde.org/kpassword.html#qt_getEnumMetaObject)
+/// [Qt documentation](https://api.kde.org/kpassword.html#qt_getEnumMetaObject)
 ///
 /// @param param1 enum KPassword__RevealMode
 const QMetaObject* k_password_get_enum_meta_object(int32_t param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kpassword.html#qt_getEnumName)
+/// [Qt documentation](https://api.kde.org/kpassword.html#qt_getEnumName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 enum KPassword__RevealMode
 const char* k_password_get_enum_name(int32_t param1);
 
-/// https://api-staging.kde.org/kpassword.html#types
+/// https://api.kde.org/kpassword.html#types
 
 typedef enum {
     KPASSWORD_REVEALMODE_ONLYNEW = 0,

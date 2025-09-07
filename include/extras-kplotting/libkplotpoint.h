@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kplotpoint.html
+/// https://api.kde.org/kplotpoint.html
 
 /// k_plotpoint_new constructs a new KPlotPoint object.
 ///
@@ -56,64 +56,64 @@ KPlotPoint* k_plotpoint_new6(void* p, const char* label);
 /// @param width double
 KPlotPoint* k_plotpoint_new7(void* p, const char* label, double width);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#position)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#position)
 ///
 /// @param self KPlotPoint*
 QPointF* k_plotpoint_position(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#setPosition)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#setPosition)
 ///
 /// @param self KPlotPoint*
 /// @param pos QPointF*
 void k_plotpoint_set_position(void* self, void* pos);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#x)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#x)
 ///
 /// @param self KPlotPoint*
 double k_plotpoint_x(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#setX)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#setX)
 ///
 /// @param self KPlotPoint*
 /// @param x double
 void k_plotpoint_set_x(void* self, double x);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#y)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#y)
 ///
 /// @param self KPlotPoint*
 double k_plotpoint_y(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#setY)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#setY)
 ///
 /// @param self KPlotPoint*
 /// @param y double
 void k_plotpoint_set_y(void* self, double y);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#label)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#label)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KPlotPoint*
 const char* k_plotpoint_label(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#setLabel)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#setLabel)
 ///
 /// @param self KPlotPoint*
 /// @param label const char*
 void k_plotpoint_set_label(void* self, const char* label);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#barWidth)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#barWidth)
 ///
 /// @param self KPlotPoint*
 double k_plotpoint_bar_width(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#setBarWidth)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#setBarWidth)
 ///
 /// @param self KPlotPoint*
 /// @param w double
 void k_plotpoint_set_bar_width(void* self, double w);
 
-/// [Qt documentation](https://api-staging.kde.org/kplotpoint.html#dtor.KPlotPoint)
+/// [Qt documentation](https://api.kde.org/kplotpoint.html#dtor.KPlotPoint)
 ///
 /// Delete this object from C++ memory.
 ///

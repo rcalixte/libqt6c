@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/ktoggleaction.html
+/// https://api.kde.org/ktoggleaction.html
 
 /// k_toggleaction_new constructs a new KToggleAction object.
 ///
@@ -67,19 +67,19 @@ int32_t k_toggleaction_qbase_metacall(void* self, int32_t param1, int param2, vo
 /// @param s const char*
 const char* k_toggleaction_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#setCheckedState)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#setCheckedState)
 ///
 /// @param self KToggleAction*
 /// @param checkedItem KGuiItem*
 void k_toggleaction_set_checked_state(void* self, void* checkedItem);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#slotToggled)
 ///
 /// @param self KToggleAction*
 /// @param checked bool
 void k_toggleaction_slot_toggled(void* self, bool checked);
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#slotToggled)
 ///
 /// Allows for overriding the related default method
 ///
@@ -87,7 +87,7 @@ void k_toggleaction_slot_toggled(void* self, bool checked);
 /// @param callback void func(KToggleAction* self, bool checked)
 void k_toggleaction_on_slot_toggled(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#slotToggled)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#slotToggled)
 ///
 /// Base class method implementation
 ///
@@ -1301,7 +1301,7 @@ void k_toggleaction_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param callback void func(KToggleAction* self, const char* objectName)
 void k_toggleaction_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/ktoggleaction.html#dtor.KToggleAction)
+/// [Qt documentation](https://api.kde.org/ktoggleaction.html#dtor.KToggleAction)
 ///
 /// Delete this object from C++ memory.
 ///

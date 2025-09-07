@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kbugreport.html
+/// https://api.kde.org/kbugreport.html
 
 /// k_bugreport_new constructs a new KBugReport object.
 ///
@@ -60,12 +60,12 @@ int32_t k_bugreport_qbase_metacall(void* self, int32_t param1, int param2, void*
 /// @param s const char*
 const char* k_bugreport_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#accept)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#accept)
 ///
 /// @param self KBugReport*
 void k_bugreport_accept(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#accept)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#accept)
 ///
 /// Allows for overriding the related default method
 ///
@@ -73,19 +73,19 @@ void k_bugreport_accept(void* self);
 /// @param callback void func()
 void k_bugreport_on_accept(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#accept)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#accept)
 ///
 /// Base class method implementation
 ///
 /// @param self KBugReport*
 void k_bugreport_qbase_accept(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#sendBugReport)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#sendBugReport)
 ///
 /// @param self KBugReport*
 bool k_bugreport_send_bug_report(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#sendBugReport)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#sendBugReport)
 ///
 /// Allows for overriding the related default method
 ///
@@ -93,7 +93,7 @@ bool k_bugreport_send_bug_report(void* self);
 /// @param callback bool func()
 void k_bugreport_on_send_bug_report(void* self, bool (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#sendBugReport)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#sendBugReport)
 ///
 /// Base class method implementation
 ///
@@ -4581,7 +4581,7 @@ void k_bugreport_on_get_decoded_metric_f(void* self, double (*callback)(void*, i
 /// @param callback void func(KBugReport* self, const char* objectName)
 void k_bugreport_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kbugreport.html#dtor.KBugReport)
+/// [Qt documentation](https://api.kde.org/kbugreport.html#dtor.KBugReport)
 ///
 /// Delete this object from C++ memory.
 ///

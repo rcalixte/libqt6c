@@ -11,19 +11,19 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kcursorsaver.html
+/// https://api.kde.org/kcursorsaver.html
 
 /// k_cursorsaver_new constructs a new KCursorSaver object.
 ///
 /// @param shape enum Qt__CursorShape
 KCursorSaver* k_cursorsaver_new(int32_t shape);
 
-/// [Qt documentation](https://api-staging.kde.org/kcursorsaver.html#restoreCursor)
+/// [Qt documentation](https://api.kde.org/kcursorsaver.html#restoreCursor)
 ///
 /// @param self KCursorSaver*
 void k_cursorsaver_restore_cursor(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kcursorsaver.html#dtor.KCursorSaver)
+/// [Qt documentation](https://api.kde.org/kcursorsaver.html#dtor.KCursorSaver)
 ///
 /// Delete this object from C++ memory.
 ///

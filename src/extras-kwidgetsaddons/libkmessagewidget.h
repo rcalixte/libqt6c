@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kmessagewidget.html
+/// https://api.kde.org/kmessagewidget.html
 
 /// k_messagewidget_new constructs a new KMessageWidget object.
 ///
@@ -69,73 +69,73 @@ int32_t k_messagewidget_qbase_metacall(void* self, int32_t param1, int param2, v
 /// @param s const char*
 const char* k_messagewidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#position)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#position)
 ///
 /// @param self KMessageWidget*
 ///
 /// @return enum KMessageWidget__Position
 int32_t k_messagewidget_position(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#text)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KMessageWidget*
 const char* k_messagewidget_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#textFormat)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#textFormat)
 ///
 /// @param self KMessageWidget*
 ///
 /// @return enum Qt__TextFormat
 int32_t k_messagewidget_text_format(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setTextFormat)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setTextFormat)
 ///
 /// @param self KMessageWidget*
 /// @param textFormat enum Qt__TextFormat
 void k_messagewidget_set_text_format(void* self, int32_t textFormat);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#wordWrap)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#wordWrap)
 ///
 /// @param self KMessageWidget*
 bool k_messagewidget_word_wrap(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#isCloseButtonVisible)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#isCloseButtonVisible)
 ///
 /// @param self KMessageWidget*
 bool k_messagewidget_is_close_button_visible(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#messageType)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#messageType)
 ///
 /// @param self KMessageWidget*
 ///
 /// @return enum KMessageWidget__MessageType
 int32_t k_messagewidget_message_type(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#addAction)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#addAction)
 ///
 /// @param self KMessageWidget*
 /// @param action QAction*
 void k_messagewidget_add_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#removeAction)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#removeAction)
 ///
 /// @param self KMessageWidget*
 /// @param action QAction*
 void k_messagewidget_remove_action(void* self, void* action);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#clearActions)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#clearActions)
 ///
 /// @param self KMessageWidget*
 void k_messagewidget_clear_actions(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#sizeHint)
 ///
 /// @param self KMessageWidget*
 QSize* k_messagewidget_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -143,19 +143,19 @@ QSize* k_messagewidget_size_hint(void* self);
 /// @param callback QSize* func()
 void k_messagewidget_on_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#sizeHint)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KMessageWidget*
 QSize* k_messagewidget_qbase_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#minimumSizeHint)
 ///
 /// @param self KMessageWidget*
 QSize* k_messagewidget_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
@@ -163,20 +163,20 @@ QSize* k_messagewidget_minimum_size_hint(void* self);
 /// @param callback QSize* func()
 void k_messagewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#minimumSizeHint)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KMessageWidget*
 QSize* k_messagewidget_qbase_minimum_size_hint(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#heightForWidth)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#heightForWidth)
 ///
 /// @param self KMessageWidget*
 /// @param width int
 int32_t k_messagewidget_height_for_width(void* self, int width);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#heightForWidth)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#heightForWidth)
 ///
 /// Allows for overriding the related default method
 ///
@@ -184,7 +184,7 @@ int32_t k_messagewidget_height_for_width(void* self, int width);
 /// @param callback int32_t func(KMessageWidget* self, int width)
 void k_messagewidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#heightForWidth)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#heightForWidth)
 ///
 /// Base class method implementation
 ///
@@ -192,120 +192,120 @@ void k_messagewidget_on_height_for_width(void* self, int32_t (*callback)(void*, 
 /// @param width int
 int32_t k_messagewidget_qbase_height_for_width(void* self, int width);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#icon)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#icon)
 ///
 /// @param self KMessageWidget*
 QIcon* k_messagewidget_icon(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#isHideAnimationRunning)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#isHideAnimationRunning)
 ///
 /// @param self KMessageWidget*
 bool k_messagewidget_is_hide_animation_running(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#isShowAnimationRunning)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#isShowAnimationRunning)
 ///
 /// @param self KMessageWidget*
 bool k_messagewidget_is_show_animation_running(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setText)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setText)
 ///
 /// @param self KMessageWidget*
 /// @param text const char*
 void k_messagewidget_set_text(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setPosition)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setPosition)
 ///
 /// @param self KMessageWidget*
 /// @param position enum KMessageWidget__Position
 void k_messagewidget_set_position(void* self, int32_t position);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setWordWrap)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setWordWrap)
 ///
 /// @param self KMessageWidget*
 /// @param wordWrap bool
 void k_messagewidget_set_word_wrap(void* self, bool wordWrap);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setCloseButtonVisible)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setCloseButtonVisible)
 ///
 /// @param self KMessageWidget*
 /// @param visible bool
 void k_messagewidget_set_close_button_visible(void* self, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setMessageType)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setMessageType)
 ///
 /// @param self KMessageWidget*
 /// @param typeVal enum KMessageWidget__MessageType
 void k_messagewidget_set_message_type(void* self, int32_t typeVal);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#animatedShow)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#animatedShow)
 ///
 /// @param self KMessageWidget*
 void k_messagewidget_animated_show(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#animatedHide)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#animatedHide)
 ///
 /// @param self KMessageWidget*
 void k_messagewidget_animated_hide(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#setIcon)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#setIcon)
 ///
 /// @param self KMessageWidget*
 /// @param icon QIcon*
 void k_messagewidget_set_icon(void* self, void* icon);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#linkActivated)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#linkActivated)
 ///
 /// @param self KMessageWidget*
 /// @param contents const char*
 void k_messagewidget_link_activated(void* self, const char* contents);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#linkActivated)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#linkActivated)
 ///
 /// @param self KMessageWidget*
 /// @param callback void func(KMessageWidget* self, const char* contents)
 void k_messagewidget_on_link_activated(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#linkHovered)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#linkHovered)
 ///
 /// @param self KMessageWidget*
 /// @param contents const char*
 void k_messagewidget_link_hovered(void* self, const char* contents);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#linkHovered)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#linkHovered)
 ///
 /// @param self KMessageWidget*
 /// @param callback void func(KMessageWidget* self, const char* contents)
 void k_messagewidget_on_link_hovered(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#hideAnimationFinished)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#hideAnimationFinished)
 ///
 /// @param self KMessageWidget*
 void k_messagewidget_hide_animation_finished(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#hideAnimationFinished)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#hideAnimationFinished)
 ///
 /// @param self KMessageWidget*
 /// @param callback void func(KMessageWidget* self)
 void k_messagewidget_on_hide_animation_finished(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#showAnimationFinished)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#showAnimationFinished)
 ///
 /// @param self KMessageWidget*
 void k_messagewidget_show_animation_finished(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#showAnimationFinished)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#showAnimationFinished)
 ///
 /// @param self KMessageWidget*
 /// @param callback void func(KMessageWidget* self)
 void k_messagewidget_on_show_animation_finished(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#paintEvent)
 ///
 /// @param self KMessageWidget*
 /// @param event QPaintEvent*
 void k_messagewidget_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -313,7 +313,7 @@ void k_messagewidget_paint_event(void* self, void* event);
 /// @param callback void func(KMessageWidget* self, QPaintEvent* event)
 void k_messagewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#paintEvent)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#paintEvent)
 ///
 /// Base class method implementation
 ///
@@ -321,13 +321,13 @@ void k_messagewidget_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param event QPaintEvent*
 void k_messagewidget_qbase_paint_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#event)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#event)
 ///
 /// @param self KMessageWidget*
 /// @param event QEvent*
 bool k_messagewidget_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#event)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#event)
 ///
 /// Allows for overriding the related default method
 ///
@@ -335,7 +335,7 @@ bool k_messagewidget_event(void* self, void* event);
 /// @param callback bool func(KMessageWidget* self, QEvent* event)
 void k_messagewidget_on_event(void* self, bool (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#event)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#event)
 ///
 /// Base class method implementation
 ///
@@ -343,13 +343,13 @@ void k_messagewidget_on_event(void* self, bool (*callback)(void*, void*));
 /// @param event QEvent*
 bool k_messagewidget_qbase_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#resizeEvent)
 ///
 /// @param self KMessageWidget*
 /// @param event QResizeEvent*
 void k_messagewidget_resize_event(void* self, void* event);
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -357,7 +357,7 @@ void k_messagewidget_resize_event(void* self, void* event);
 /// @param callback void func(KMessageWidget* self, QResizeEvent* event)
 void k_messagewidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#resizeEvent)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
@@ -4587,14 +4587,14 @@ void k_messagewidget_on_get_decoded_metric_f(void* self, double (*callback)(void
 /// @param callback void func(KMessageWidget* self, const char* objectName)
 void k_messagewidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kmessagewidget.html#dtor.KMessageWidget)
+/// [Qt documentation](https://api.kde.org/kmessagewidget.html#dtor.KMessageWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KMessageWidget*
 void k_messagewidget_delete(void* self);
 
-/// https://api-staging.kde.org/kmessagewidget.html#types
+/// https://api.kde.org/kmessagewidget.html#types
 
 typedef enum {
     KMESSAGEWIDGET_MESSAGETYPE_POSITIVE = 0,

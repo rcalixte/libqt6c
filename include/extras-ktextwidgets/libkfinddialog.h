@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kfinddialog.html
+/// https://api.kde.org/kfinddialog.html
 
 /// k_finddialog_new constructs a new KFindDialog object.
 ///
@@ -88,124 +88,124 @@ int32_t k_finddialog_qbase_metacall(void* self, int32_t param1, int param2, void
 /// @param s const char*
 const char* k_finddialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setFindHistory)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setFindHistory)
 ///
 /// @param self KFindDialog*
 /// @param history const char**
 void k_finddialog_set_find_history(void* self, const char* history[]);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#findHistory)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#findHistory)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFindDialog*
 const char** k_finddialog_find_history(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setHasSelection)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setHasSelection)
 ///
 /// @param self KFindDialog*
 /// @param hasSelection bool
 void k_finddialog_set_has_selection(void* self, bool hasSelection);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setHasCursor)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setHasCursor)
 ///
 /// @param self KFindDialog*
 /// @param hasCursor bool
 void k_finddialog_set_has_cursor(void* self, bool hasCursor);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsBackwardsFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsBackwardsFind)
 ///
 /// @param self KFindDialog*
 /// @param supports bool
 void k_finddialog_set_supports_backwards_find(void* self, bool supports);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsCaseSensitiveFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsCaseSensitiveFind)
 ///
 /// @param self KFindDialog*
 /// @param supports bool
 void k_finddialog_set_supports_case_sensitive_find(void* self, bool supports);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsWholeWordsFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsWholeWordsFind)
 ///
 /// @param self KFindDialog*
 /// @param supports bool
 void k_finddialog_set_supports_whole_words_find(void* self, bool supports);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setSupportsRegularExpressionFind)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setSupportsRegularExpressionFind)
 ///
 /// @param self KFindDialog*
 /// @param supports bool
 void k_finddialog_set_supports_regular_expression_find(void* self, bool supports);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setOptions)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setOptions)
 ///
 /// @param self KFindDialog*
 /// @param options int64_t
 void k_finddialog_set_options(void* self, int64_t options);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#options)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#options)
 ///
 /// @param self KFindDialog*
 int64_t k_finddialog_options(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#pattern)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#pattern)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KFindDialog*
 const char* k_finddialog_pattern(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#setPattern)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#setPattern)
 ///
 /// @param self KFindDialog*
 /// @param pattern const char*
 void k_finddialog_set_pattern(void* self, const char* pattern);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#findExtension)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#findExtension)
 ///
 /// @param self KFindDialog*
 QWidget* k_finddialog_find_extension(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#optionsChanged)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#optionsChanged)
 ///
 /// @param self KFindDialog*
 void k_finddialog_options_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#optionsChanged)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#optionsChanged)
 ///
 /// @param self KFindDialog*
 /// @param callback void func(KFindDialog* self)
 void k_finddialog_on_options_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#okClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#okClicked)
 ///
 /// @param self KFindDialog*
 void k_finddialog_ok_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#okClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#okClicked)
 ///
 /// @param self KFindDialog*
 /// @param callback void func(KFindDialog* self)
 void k_finddialog_on_ok_clicked(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#cancelClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#cancelClicked)
 ///
 /// @param self KFindDialog*
 void k_finddialog_cancel_clicked(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#cancelClicked)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#cancelClicked)
 ///
 /// @param self KFindDialog*
 /// @param callback void func(KFindDialog* self)
 void k_finddialog_on_cancel_clicked(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#showEvent)
 ///
 /// @param self KFindDialog*
 /// @param param1 QShowEvent*
 void k_finddialog_show_event(void* self, void* param1);
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
@@ -213,7 +213,7 @@ void k_finddialog_show_event(void* self, void* param1);
 /// @param callback void func(KFindDialog* self, QShowEvent* param1)
 void k_finddialog_on_show_event(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#showEvent)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
@@ -4700,7 +4700,7 @@ void k_finddialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, 
 /// @param callback void func(KFindDialog* self, const char* objectName)
 void k_finddialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kfinddialog.html#dtor.KFindDialog)
+/// [Qt documentation](https://api.kde.org/kfinddialog.html#dtor.KFindDialog)
 ///
 /// Delete this object from C++ memory.
 ///

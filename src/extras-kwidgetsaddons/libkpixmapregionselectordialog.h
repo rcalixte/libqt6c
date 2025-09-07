@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kpixmapregionselectordialog.html
+/// https://api.kde.org/kpixmapregionselectordialog.html
 
 /// k_pixmapregionselectordialog_new constructs a new KPixmapRegionSelectorDialog object.
 ///
@@ -58,36 +58,36 @@ int32_t k_pixmapregionselectordialog_qbase_metacall(void* self, int32_t param1, 
 /// @param s const char*
 const char* k_pixmapregionselectordialog_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#pixmapRegionSelectorWidget)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#pixmapRegionSelectorWidget)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 KPixmapRegionSelectorWidget* k_pixmapregionselectordialog_pixmap_region_selector_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 QRect* k_pixmapregionselectordialog_get_selected_region(void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
 /// @param aspectRatioHeight int
 QRect* k_pixmapregionselectordialog_get_selected_region2(void* pixmap, int aspectRatioWidth, int aspectRatioHeight);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 QImage* k_pixmapregionselectordialog_get_selected_image(void* pixmap);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
 /// @param aspectRatioHeight int
 QImage* k_pixmapregionselectordialog_get_selected_image2(void* pixmap, int aspectRatioWidth, int aspectRatioHeight);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#adjustRegionSelectorWidgetSizeToFitScreen)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#adjustRegionSelectorWidgetSizeToFitScreen)
 ///
 /// @param self KPixmapRegionSelectorDialog*
 void k_pixmapregionselectordialog_adjust_region_selector_widget_size_to_fit_screen(void* self);
@@ -109,13 +109,13 @@ const char* k_pixmapregionselectordialog_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_pixmapregionselectordialog_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 /// @param parent QWidget*
 QRect* k_pixmapregionselectordialog_get_selected_region22(void* pixmap, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedRegion)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
@@ -123,13 +123,13 @@ QRect* k_pixmapregionselectordialog_get_selected_region22(void* pixmap, void* pa
 /// @param parent QWidget*
 QRect* k_pixmapregionselectordialog_get_selected_region4(void* pixmap, int aspectRatioWidth, int aspectRatioHeight, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 /// @param parent QWidget*
 QImage* k_pixmapregionselectordialog_get_selected_image22(void* pixmap, void* parent);
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#getSelectedImage)
 ///
 /// @param pixmap QPixmap*
 /// @param aspectRatioWidth int
@@ -4629,7 +4629,7 @@ void k_pixmapregionselectordialog_on_get_decoded_metric_f(void* self, double (*c
 /// @param callback void func(KPixmapRegionSelectorDialog* self, const char* objectName)
 void k_pixmapregionselectordialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kpixmapregionselectordialog.html#dtor.KPixmapRegionSelectorDialog)
+/// [Qt documentation](https://api.kde.org/kpixmapregionselectordialog.html#dtor.KPixmapRegionSelectorDialog)
 ///
 /// Delete this object from C++ memory.
 ///

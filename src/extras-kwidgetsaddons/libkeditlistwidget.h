@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/keditlistwidget.html
+/// https://api.kde.org/keditlistwidget.html
 
 /// k_editlistwidget_new constructs a new KEditListWidget object.
 ///
@@ -84,59 +84,59 @@ int32_t k_editlistwidget_qbase_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* k_editlistwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#listView)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#listView)
 ///
 /// @param self KEditListWidget*
 QListView* k_editlistwidget_list_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#lineEdit)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#lineEdit)
 ///
 /// @param self KEditListWidget*
 QLineEdit* k_editlistwidget_line_edit(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#addButton)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#addButton)
 ///
 /// @param self KEditListWidget*
 QPushButton* k_editlistwidget_add_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#removeButton)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#removeButton)
 ///
 /// @param self KEditListWidget*
 QPushButton* k_editlistwidget_remove_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#upButton)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#upButton)
 ///
 /// @param self KEditListWidget*
 QPushButton* k_editlistwidget_up_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#downButton)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#downButton)
 ///
 /// @param self KEditListWidget*
 QPushButton* k_editlistwidget_down_button(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#count)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#count)
 ///
 /// @param self KEditListWidget*
 int32_t k_editlistwidget_count(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#insertStringList)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#insertStringList)
 ///
 /// @param self KEditListWidget*
 /// @param list const char**
 void k_editlistwidget_insert_string_list(void* self, const char* list[]);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#insertItem)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#insertItem)
 ///
 /// @param self KEditListWidget*
 /// @param text const char*
 void k_editlistwidget_insert_item(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#clear)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#clear)
 ///
 /// @param self KEditListWidget*
 void k_editlistwidget_clear(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#text)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#text)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -144,69 +144,69 @@ void k_editlistwidget_clear(void* self);
 /// @param index int
 const char* k_editlistwidget_text(void* self, int index);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#currentItem)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#currentItem)
 ///
 /// @param self KEditListWidget*
 int32_t k_editlistwidget_current_item(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#currentText)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#currentText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEditListWidget*
 const char* k_editlistwidget_current_text(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#items)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#items)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KEditListWidget*
 const char** k_editlistwidget_items(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#setItems)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#setItems)
 ///
 /// @param self KEditListWidget*
 /// @param items const char**
 void k_editlistwidget_set_items(void* self, const char* items[]);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#buttons)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#buttons)
 ///
 /// @param self KEditListWidget*
 ///
 /// @return flag of enum KEditListWidget__Button
 int32_t k_editlistwidget_buttons(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#setButtons)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#setButtons)
 ///
 /// @param self KEditListWidget*
 /// @param buttons flag of enum KEditListWidget__Button
 void k_editlistwidget_set_buttons(void* self, int32_t buttons);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#setCheckAtEntering)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#setCheckAtEntering)
 ///
 /// @param self KEditListWidget*
 /// @param check bool
 void k_editlistwidget_set_check_at_entering(void* self, bool check);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#checkAtEntering)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#checkAtEntering)
 ///
 /// @param self KEditListWidget*
 bool k_editlistwidget_check_at_entering(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#setCustomEditor)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#setCustomEditor)
 ///
 /// @param self KEditListWidget*
 /// @param editor KEditListWidget__CustomEditor*
 void k_editlistwidget_set_custom_editor(void* self, void* editor);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#eventFilter)
 ///
 /// @param self KEditListWidget*
 /// @param o QObject*
 /// @param e QEvent*
 bool k_editlistwidget_event_filter(void* self, void* o, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
@@ -214,7 +214,7 @@ bool k_editlistwidget_event_filter(void* self, void* o, void* e);
 /// @param callback bool func(KEditListWidget* self, QObject* o, QEvent* e)
 void k_editlistwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#eventFilter)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#eventFilter)
 ///
 /// Base class method implementation
 ///
@@ -223,36 +223,36 @@ void k_editlistwidget_on_event_filter(void* self, bool (*callback)(void*, void*,
 /// @param e QEvent*
 bool k_editlistwidget_qbase_event_filter(void* self, void* o, void* e);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#changed)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#changed)
 ///
 /// @param self KEditListWidget*
 void k_editlistwidget_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#changed)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#changed)
 ///
 /// @param self KEditListWidget*
 /// @param callback void func(KEditListWidget* self)
 void k_editlistwidget_on_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#added)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#added)
 ///
 /// @param self KEditListWidget*
 /// @param text const char*
 void k_editlistwidget_added(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#added)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#added)
 ///
 /// @param self KEditListWidget*
 /// @param callback void func(KEditListWidget* self, const char* text)
 void k_editlistwidget_on_added(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#removed)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#removed)
 ///
 /// @param self KEditListWidget*
 /// @param text const char*
 void k_editlistwidget_removed(void* self, const char* text);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#removed)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#removed)
 ///
 /// @param self KEditListWidget*
 /// @param callback void func(KEditListWidget* self, const char* text)
@@ -275,14 +275,14 @@ const char* k_editlistwidget_tr2(const char* s, const char* c);
 /// @param n int
 const char* k_editlistwidget_tr3(const char* s, const char* c, int n);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#insertStringList)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#insertStringList)
 ///
 /// @param self KEditListWidget*
 /// @param list const char**
 /// @param index int
 void k_editlistwidget_insert_string_list2(void* self, const char* list[], int index);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#insertItem)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#insertItem)
 ///
 /// @param self KEditListWidget*
 /// @param text const char*
@@ -4493,14 +4493,14 @@ void k_editlistwidget_on_get_decoded_metric_f(void* self, double (*callback)(voi
 /// @param callback void func(KEditListWidget* self, const char* objectName)
 void k_editlistwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget.html#dtor.KEditListWidget)
+/// [Qt documentation](https://api.kde.org/keditlistwidget.html#dtor.KEditListWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KEditListWidget*
 void k_editlistwidget_delete(void* self);
 
-/// https://api-staging.kde.org/keditlistwidget-customeditor.html
+/// https://api.kde.org/keditlistwidget-customeditor.html
 
 /// k_editlistwidget__customeditor_new constructs a new KEditListWidget::CustomEditor object.
 ///
@@ -4517,24 +4517,24 @@ KEditListWidget__CustomEditor* k_editlistwidget__customeditor_new2(void* repWidg
 /// @param combo QComboBox*
 KEditListWidget__CustomEditor* k_editlistwidget__customeditor_new3(void* combo);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#setRepresentationWidget)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#setRepresentationWidget)
 ///
 /// @param self KEditListWidget__CustomEditor*
 /// @param repWidget QWidget*
 void k_editlistwidget__customeditor_set_representation_widget(void* self, void* repWidget);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#setLineEdit)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#setLineEdit)
 ///
 /// @param self KEditListWidget__CustomEditor*
 /// @param edit QLineEdit*
 void k_editlistwidget__customeditor_set_line_edit(void* self, void* edit);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#representationWidget)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#representationWidget)
 ///
 /// @param self KEditListWidget__CustomEditor*
 QWidget* k_editlistwidget__customeditor_representation_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#representationWidget)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#representationWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -4542,19 +4542,19 @@ QWidget* k_editlistwidget__customeditor_representation_widget(void* self);
 /// @param callback QWidget* func()
 void k_editlistwidget__customeditor_on_representation_widget(void* self, QWidget* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#representationWidget)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#representationWidget)
 ///
 /// Base class method implementation
 ///
 /// @param self KEditListWidget__CustomEditor*
 QWidget* k_editlistwidget__customeditor_qbase_representation_widget(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#lineEdit)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#lineEdit)
 ///
 /// @param self KEditListWidget__CustomEditor*
 QLineEdit* k_editlistwidget__customeditor_line_edit(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#lineEdit)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#lineEdit)
 ///
 /// Allows for overriding the related default method
 ///
@@ -4562,7 +4562,7 @@ QLineEdit* k_editlistwidget__customeditor_line_edit(void* self);
 /// @param callback QLineEdit* func()
 void k_editlistwidget__customeditor_on_line_edit(void* self, QLineEdit* (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/keditlistwidget-customeditor.html#lineEdit)
+/// [Qt documentation](https://api.kde.org/keditlistwidget-customeditor.html#lineEdit)
 ///
 /// Base class method implementation
 ///
@@ -4574,7 +4574,7 @@ QLineEdit* k_editlistwidget__customeditor_qbase_line_edit(void* self);
 /// @param self KEditListWidget__CustomEditor*
 void k_editlistwidget__customeditor_delete(void* self);
 
-/// https://api-staging.kde.org/keditlistwidget.html#types
+/// https://api.kde.org/keditlistwidget.html#types
 
 typedef enum {
     KEDITLISTWIDGET_BUTTON_ADD = 1,

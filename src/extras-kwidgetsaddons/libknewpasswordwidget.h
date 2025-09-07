@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/knewpasswordwidget.html
+/// https://api.kde.org/knewpasswordwidget.html
 
 /// k_newpasswordwidget_new constructs a new KNewPasswordWidget object.
 ///
@@ -58,127 +58,127 @@ int32_t k_newpasswordwidget_qbase_metacall(void* self, int32_t param1, int param
 /// @param s const char*
 const char* k_newpasswordwidget_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#passwordStatus)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#passwordStatus)
 ///
 /// @param self KNewPasswordWidget*
 ///
 /// @return enum KNewPasswordWidget__PasswordStatus
 int32_t k_newpasswordwidget_password_status(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#allowEmptyPasswords)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#allowEmptyPasswords)
 ///
 /// @param self KNewPasswordWidget*
 bool k_newpasswordwidget_allow_empty_passwords(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#minimumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#minimumPasswordLength)
 ///
 /// @param self KNewPasswordWidget*
 int32_t k_newpasswordwidget_minimum_password_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#maximumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#maximumPasswordLength)
 ///
 /// @param self KNewPasswordWidget*
 int32_t k_newpasswordwidget_maximum_password_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#reasonablePasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#reasonablePasswordLength)
 ///
 /// @param self KNewPasswordWidget*
 int32_t k_newpasswordwidget_reasonable_password_length(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#passwordStrengthWarningLevel)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#passwordStrengthWarningLevel)
 ///
 /// @param self KNewPasswordWidget*
 int32_t k_newpasswordwidget_password_strength_warning_level(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#backgroundWarningColor)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#backgroundWarningColor)
 ///
 /// @param self KNewPasswordWidget*
 QColor* k_newpasswordwidget_background_warning_color(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#isPasswordStrengthMeterVisible)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#isPasswordStrengthMeterVisible)
 ///
 /// @param self KNewPasswordWidget*
 bool k_newpasswordwidget_is_password_strength_meter_visible(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#isRevealPasswordAvailable)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#isRevealPasswordAvailable)
 ///
 /// @param self KNewPasswordWidget*
 bool k_newpasswordwidget_is_reveal_password_available(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#revealPasswordMode)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#revealPasswordMode)
 ///
 /// @param self KNewPasswordWidget*
 ///
 /// @return enum KPassword__RevealMode
 int32_t k_newpasswordwidget_reveal_password_mode(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#password)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#password)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNewPasswordWidget*
 const char* k_newpasswordwidget_password(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setAllowEmptyPasswords)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setAllowEmptyPasswords)
 ///
 /// @param self KNewPasswordWidget*
 /// @param allowed bool
 void k_newpasswordwidget_set_allow_empty_passwords(void* self, bool allowed);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setMinimumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setMinimumPasswordLength)
 ///
 /// @param self KNewPasswordWidget*
 /// @param minLength int
 void k_newpasswordwidget_set_minimum_password_length(void* self, int minLength);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setMaximumPasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setMaximumPasswordLength)
 ///
 /// @param self KNewPasswordWidget*
 /// @param maxLength int
 void k_newpasswordwidget_set_maximum_password_length(void* self, int maxLength);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setReasonablePasswordLength)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setReasonablePasswordLength)
 ///
 /// @param self KNewPasswordWidget*
 /// @param reasonableLength int
 void k_newpasswordwidget_set_reasonable_password_length(void* self, int reasonableLength);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setPasswordStrengthWarningLevel)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setPasswordStrengthWarningLevel)
 ///
 /// @param self KNewPasswordWidget*
 /// @param warningLevel int
 void k_newpasswordwidget_set_password_strength_warning_level(void* self, int warningLevel);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setBackgroundWarningColor)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setBackgroundWarningColor)
 ///
 /// @param self KNewPasswordWidget*
 /// @param color QColor*
 void k_newpasswordwidget_set_background_warning_color(void* self, void* color);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setPasswordStrengthMeterVisible)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setPasswordStrengthMeterVisible)
 ///
 /// @param self KNewPasswordWidget*
 /// @param visible bool
 void k_newpasswordwidget_set_password_strength_meter_visible(void* self, bool visible);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setRevealPasswordAvailable)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setRevealPasswordAvailable)
 ///
 /// @param self KNewPasswordWidget*
 /// @param reveal bool
 void k_newpasswordwidget_set_reveal_password_available(void* self, bool reveal);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#setRevealPasswordMode)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#setRevealPasswordMode)
 ///
 /// @param self KNewPasswordWidget*
 /// @param revealPasswordMode enum KPassword__RevealMode
 void k_newpasswordwidget_set_reveal_password_mode(void* self, int32_t revealPasswordMode);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#passwordStatusChanged)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#passwordStatusChanged)
 ///
 /// @param self KNewPasswordWidget*
 void k_newpasswordwidget_password_status_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#passwordStatusChanged)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#passwordStatusChanged)
 ///
 /// @param self KNewPasswordWidget*
 /// @param callback void func(KNewPasswordWidget* self)
@@ -4437,14 +4437,14 @@ void k_newpasswordwidget_on_get_decoded_metric_f(void* self, double (*callback)(
 /// @param callback void func(KNewPasswordWidget* self, const char* objectName)
 void k_newpasswordwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/knewpasswordwidget.html#dtor.KNewPasswordWidget)
+/// [Qt documentation](https://api.kde.org/knewpasswordwidget.html#dtor.KNewPasswordWidget)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KNewPasswordWidget*
 void k_newpasswordwidget_delete(void* self);
 
-/// https://api-staging.kde.org/knewpasswordwidget.html#types
+/// https://api.kde.org/knewpasswordwidget.html#types
 
 typedef enum {
     KNEWPASSWORDWIDGET_PASSWORDSTATUS_EMPTYPASSWORDNOTALLOWED = 0,

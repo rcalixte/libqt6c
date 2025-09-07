@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfigdialogmanager.html
+/// https://api.kde.org/kconfigdialogmanager.html
 
 /// k_configdialogmanager_new constructs a new KConfigDialogManager object.
 ///
@@ -55,76 +55,76 @@ int32_t k_configdialogmanager_qbase_metacall(void* self, int32_t param1, int par
 /// @param s const char*
 const char* k_configdialogmanager_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#settingsChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#settingsChanged)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_settings_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#settingsChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#settingsChanged)
 ///
 /// @param self KConfigDialogManager*
 /// @param callback void func(KConfigDialogManager* self)
 void k_configdialogmanager_on_settings_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#widgetModified)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#widgetModified)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_widget_modified(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#widgetModified)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#widgetModified)
 ///
 /// @param self KConfigDialogManager*
 /// @param callback void func(KConfigDialogManager* self)
 void k_configdialogmanager_on_widget_modified(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#addWidget)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#addWidget)
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 void k_configdialogmanager_add_widget(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#hasChanged)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#hasChanged)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_has_changed(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#isDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#isDefault)
 ///
 /// @param self KConfigDialogManager*
 bool k_configdialogmanager_is_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#propertyMap)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#propertyMap)
 ///
 libqt_map* /* of const char* to char* */ k_configdialogmanager_property_map();
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#updateSettings)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#updateSettings)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_update_settings(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#updateWidgets)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#updateWidgets)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_update_widgets(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#updateWidgetsDefault)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#updateWidgetsDefault)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_update_widgets_default(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setDefaultsIndicatorsVisible)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setDefaultsIndicatorsVisible)
 ///
 /// @param self KConfigDialogManager*
 /// @param enabled bool
 void k_configdialogmanager_set_defaults_indicators_visible(void* self, bool enabled);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#init)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// @param self KConfigDialogManager*
 /// @param trackChanges bool
 void k_configdialogmanager_init(void* self, bool trackChanges);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#init)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// Allows for overriding the related default method
 ///
@@ -132,7 +132,7 @@ void k_configdialogmanager_init(void* self, bool trackChanges);
 /// @param callback void func(KConfigDialogManager* self, bool trackChanges)
 void k_configdialogmanager_on_init(void* self, void (*callback)(void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#init)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// Base class method implementation
 ///
@@ -140,14 +140,14 @@ void k_configdialogmanager_on_init(void* self, void (*callback)(void*, bool));
 /// @param trackChanges bool
 void k_configdialogmanager_qbase_init(void* self, bool trackChanges);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#parseChildren)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 /// @param trackChanges bool
 bool k_configdialogmanager_parse_children(void* self, void* widget, bool trackChanges);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#parseChildren)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// Allows for overriding the related default method
 ///
@@ -155,7 +155,7 @@ bool k_configdialogmanager_parse_children(void* self, void* widget, bool trackCh
 /// @param callback bool func(KConfigDialogManager* self, QWidget* widget, bool trackChanges)
 void k_configdialogmanager_on_parse_children(void* self, bool (*callback)(void*, void*, bool));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#parseChildren)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// Base class method implementation
 ///
@@ -164,7 +164,7 @@ void k_configdialogmanager_on_parse_children(void* self, bool (*callback)(void*,
 /// @param trackChanges bool
 bool k_configdialogmanager_qbase_parse_children(void* self, void* widget, bool trackChanges);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getUserProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -172,7 +172,7 @@ bool k_configdialogmanager_qbase_parse_children(void* self, void* widget, bool t
 /// @param widget QWidget*
 char* k_configdialogmanager_get_user_property(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getUserProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -180,7 +180,7 @@ char* k_configdialogmanager_get_user_property(void* self, void* widget);
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_user_property(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getUserProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Base class method implementation
 ///
@@ -188,7 +188,7 @@ void k_configdialogmanager_on_get_user_property(void* self, char* (*callback)(vo
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_user_property(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getCustomProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -196,7 +196,7 @@ char* k_configdialogmanager_qbase_get_user_property(void* self, void* widget);
 /// @param widget QWidget*
 char* k_configdialogmanager_get_custom_property(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getCustomProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -204,7 +204,7 @@ char* k_configdialogmanager_get_custom_property(void* self, void* widget);
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_custom_property(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getCustomProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Base class method implementation
 ///
@@ -212,7 +212,7 @@ void k_configdialogmanager_on_get_custom_property(void* self, char* (*callback)(
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_custom_property(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -220,7 +220,7 @@ char* k_configdialogmanager_qbase_get_custom_property(void* self, void* widget);
 /// @param widget QWidget*
 char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Allows for overriding the related default method
 ///
@@ -228,7 +228,7 @@ char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* w
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_user_property_changed_signal(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Base class method implementation
 ///
@@ -236,7 +236,7 @@ void k_configdialogmanager_on_get_user_property_changed_signal(void* self, char*
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_user_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -244,7 +244,7 @@ char* k_configdialogmanager_qbase_get_user_property_changed_signal(void* self, v
 /// @param widget QWidget*
 char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Allows for overriding the related default method
 ///
@@ -252,7 +252,7 @@ char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void*
 /// @param callback char* func(KConfigDialogManager* self, QWidget* widget)
 void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, char* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Base class method implementation
 ///
@@ -260,14 +260,14 @@ void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, cha
 /// @param widget QWidget*
 char* k_configdialogmanager_qbase_get_custom_property_changed_signal(void* self, void* widget);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// @param self KConfigDialogManager*
 /// @param w QWidget*
 /// @param v QVariant*
 void k_configdialogmanager_set_property(void* self, void* w, void* v);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// Allows for overriding the related default method
 ///
@@ -275,7 +275,7 @@ void k_configdialogmanager_set_property(void* self, void* w, void* v);
 /// @param callback void func(KConfigDialogManager* self, QWidget* w, QVariant* v)
 void k_configdialogmanager_on_set_property(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setProperty)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// Base class method implementation
 ///
@@ -284,13 +284,13 @@ void k_configdialogmanager_on_set_property(void* self, void (*callback)(void*, v
 /// @param v QVariant*
 void k_configdialogmanager_qbase_set_property(void* self, void* w, void* v);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#property)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// @param self KConfigDialogManager*
 /// @param w QWidget*
 QVariant* k_configdialogmanager_property(void* self, void* w);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#property)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// Allows for overriding the related default method
 ///
@@ -298,7 +298,7 @@ QVariant* k_configdialogmanager_property(void* self, void* w);
 /// @param callback QVariant* func(KConfigDialogManager* self, QWidget* w)
 void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#property)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// Base class method implementation
 ///
@@ -306,14 +306,14 @@ void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, 
 /// @param w QWidget*
 QVariant* k_configdialogmanager_qbase_property(void* self, void* w);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setupWidget)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 /// @param item KConfigSkeletonItem*
 void k_configdialogmanager_setup_widget(void* self, void* widget, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setupWidget)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// Allows for overriding the related default method
 ///
@@ -321,7 +321,7 @@ void k_configdialogmanager_setup_widget(void* self, void* widget, void* item);
 /// @param callback void func(KConfigDialogManager* self, QWidget* widget, KConfigSkeletonItem* item)
 void k_configdialogmanager_on_setup_widget(void* self, void (*callback)(void*, void*, void*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#setupWidget)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// Base class method implementation
 ///
@@ -330,12 +330,12 @@ void k_configdialogmanager_on_setup_widget(void* self, void (*callback)(void*, v
 /// @param item KConfigSkeletonItem*
 void k_configdialogmanager_qbase_setup_widget(void* self, void* widget, void* item);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#initMaps)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// @param self KConfigDialogManager*
 void k_configdialogmanager_init_maps(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#initMaps)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// Allows for overriding the related default method
 ///
@@ -343,7 +343,7 @@ void k_configdialogmanager_init_maps(void* self);
 /// @param callback void func()
 void k_configdialogmanager_on_init_maps(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#initMaps)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// Base class method implementation
 ///
@@ -995,7 +995,7 @@ void k_configdialogmanager_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param callback void func(KConfigDialogManager* self, const char* objectName)
 void k_configdialogmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigdialogmanager.html#dtor.KConfigDialogManager)
+/// [Qt documentation](https://api.kde.org/kconfigdialogmanager.html#dtor.KConfigDialogManager)
 ///
 /// Delete this object from C++ memory.
 ///

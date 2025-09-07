@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kconfigviewstatesaver.html
+/// https://api.kde.org/kconfigviewstatesaver.html
 
 /// k_configviewstatesaver_new constructs a new KConfigViewStateSaver object.
 ///
@@ -58,13 +58,13 @@ int32_t k_configviewstatesaver_qbase_metacall(void* self, int32_t param1, int pa
 /// @param s const char*
 const char* k_configviewstatesaver_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigviewstatesaver.html#saveState)
+/// [Qt documentation](https://api.kde.org/kconfigviewstatesaver.html#saveState)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param configGroup KConfigGroup*
 void k_configviewstatesaver_save_state(void* self, void* configGroup);
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigviewstatesaver.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kconfigviewstatesaver.html#restoreState)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param configGroup KConfigGroup*
@@ -89,14 +89,14 @@ const char* k_configviewstatesaver_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#view)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#view)
 ///
 /// @param self KConfigViewStateSaver*
 QAbstractItemView* k_configviewstatesaver_view(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#setView)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#setView)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param view QAbstractItemView*
@@ -104,14 +104,14 @@ void k_configviewstatesaver_set_view(void* self, void* view);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#selectionModel)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#selectionModel)
 ///
 /// @param self KConfigViewStateSaver*
 QItemSelectionModel* k_configviewstatesaver_selection_model(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#setSelectionModel)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#setSelectionModel)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param selectionModel QItemSelectionModel*
@@ -119,7 +119,7 @@ void k_configviewstatesaver_set_selection_model(void* self, void* selectionModel
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#selectionKeys)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#selectionKeys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -128,7 +128,7 @@ const char** k_configviewstatesaver_selection_keys(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#expansionKeys)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#expansionKeys)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -137,7 +137,7 @@ const char** k_configviewstatesaver_expansion_keys(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#currentIndexKey)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#currentIndexKey)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -146,14 +146,14 @@ const char* k_configviewstatesaver_current_index_key(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#scrollState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#scrollState)
 ///
 /// @param self KConfigViewStateSaver*
 libqt_pair /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* self);
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreSelection)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreSelection)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexStrings const char**
@@ -161,7 +161,7 @@ void k_configviewstatesaver_restore_selection(void* self, const char* indexStrin
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreCurrentItem)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreCurrentItem)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexString const char*
@@ -169,7 +169,7 @@ void k_configviewstatesaver_restore_current_item(void* self, const char* indexSt
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreExpanded)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreExpanded)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexStrings const char**
@@ -177,7 +177,7 @@ void k_configviewstatesaver_restore_expanded(void* self, const char* indexString
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#restoreScrollState)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreScrollState)
 ///
 /// @param self KConfigViewStateSaver*
 /// @param verticalScoll int
@@ -493,7 +493,7 @@ void k_configviewstatesaver_on_destroyed1(void* self, void (*callback)(void*, vo
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexFromConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -504,7 +504,7 @@ QModelIndex* k_configviewstatesaver_index_from_config_string(void* self, void* m
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexFromConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -515,7 +515,7 @@ QModelIndex* k_configviewstatesaver_qbase_index_from_config_string(void* self, v
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexFromConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -525,7 +525,7 @@ void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex*
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexToConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -537,7 +537,7 @@ const char* k_configviewstatesaver_index_to_config_string(void* self, void* inde
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexToConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -549,7 +549,7 @@ const char* k_configviewstatesaver_qbase_index_to_config_string(void* self, void
 
 /// Inherited from KViewStateSerializer
 ///
-/// [Qt documentation](https://api-staging.kde.org/kviewstateserializer.html#indexToConfigString)
+/// [Qt documentation](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -895,7 +895,7 @@ void k_configviewstatesaver_on_is_signal_connected(void* self, bool (*callback)(
 /// @param callback void func(KConfigViewStateSaver* self, const char* objectName)
 void k_configviewstatesaver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kconfigviewstatesaver.html#dtor.KConfigViewStateSaver)
+/// [Qt documentation](https://api.kde.org/kconfigviewstatesaver.html#dtor.KConfigViewStateSaver)
 ///
 /// Delete this object from C++ memory.
 ///

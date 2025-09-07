@@ -11,15 +11,15 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kjobwindows.html
+/// https://api.kde.org/kjobwindows.html
 
-/// [Qt documentation](https://api-staging.kde.org/kjobwindows.html#setWindow)
+/// [Qt documentation](https://api.kde.org/kjobwindows.html#setWindow)
 ///
 /// @param param1 QObject*
 /// @param param2 QWindow*
 void k_jobwindows_set_window(void* param1, void* param2);
 
-/// [Qt documentation](https://api-staging.kde.org/kjobwindows.html#window)
+/// [Qt documentation](https://api.kde.org/kjobwindows.html#window)
 ///
 /// @param param1 QObject*
 QWindow* k_jobwindows_window(void* param1);

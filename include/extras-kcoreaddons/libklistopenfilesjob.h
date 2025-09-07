@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/klistopenfilesjob.html
+/// https://api.kde.org/klistopenfilesjob.html
 
 /// k_listopenfilesjob_new constructs a new KListOpenFilesJob object.
 ///
@@ -54,12 +54,12 @@ int32_t k_listopenfilesjob_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_listopenfilesjob_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#start)
+/// [Qt documentation](https://api.kde.org/klistopenfilesjob.html#start)
 ///
 /// @param self KListOpenFilesJob*
 void k_listopenfilesjob_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#start)
+/// [Qt documentation](https://api.kde.org/klistopenfilesjob.html#start)
 ///
 /// Allows for overriding the related default method
 ///
@@ -67,14 +67,14 @@ void k_listopenfilesjob_start(void* self);
 /// @param callback void func()
 void k_listopenfilesjob_on_start(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#start)
+/// [Qt documentation](https://api.kde.org/klistopenfilesjob.html#start)
 ///
 /// Base class method implementation
 ///
 /// @param self KListOpenFilesJob*
 void k_listopenfilesjob_qbase_start(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#processInfoList)
+/// [Qt documentation](https://api.kde.org/klistopenfilesjob.html#processInfoList)
 ///
 /// @param self KListOpenFilesJob*
 libqt_list /* of KProcessList__KProcessInfo* */ k_listopenfilesjob_process_info_list(void* self);
@@ -98,7 +98,7 @@ const char* k_listopenfilesjob_tr3(const char* s, const char* c, int n);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setUiDelegate)
+/// [Qt documentation](https://api.kde.org/kjob.html#setUiDelegate)
 ///
 /// @param self KListOpenFilesJob*
 /// @param delegate KJobUiDelegate*
@@ -106,14 +106,14 @@ void k_listopenfilesjob_set_ui_delegate(void* self, void* delegate);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#uiDelegate)
+/// [Qt documentation](https://api.kde.org/kjob.html#uiDelegate)
 ///
 /// @param self KListOpenFilesJob*
 KJobUiDelegate* k_listopenfilesjob_ui_delegate(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#capabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#capabilities)
 ///
 /// @param self KListOpenFilesJob*
 ///
@@ -122,49 +122,49 @@ int32_t k_listopenfilesjob_capabilities(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isSuspended)
+/// [Qt documentation](https://api.kde.org/kjob.html#isSuspended)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_is_suspended(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#kill)
+/// [Qt documentation](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#suspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#suspend)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#resume)
+/// [Qt documentation](https://api.kde.org/kjob.html#resume)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#exec)
+/// [Qt documentation](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#error)
+/// [Qt documentation](https://api.kde.org/kjob.html#error)
 ///
 /// @param self KListOpenFilesJob*
 int32_t k_listopenfilesjob_error(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorText)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -173,7 +173,7 @@ const char* k_listopenfilesjob_error_text(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedAmount)
 ///
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
@@ -181,7 +181,7 @@ uint64_t k_listopenfilesjob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
@@ -189,14 +189,14 @@ uint64_t k_listopenfilesjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#percent)
+/// [Qt documentation](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KListOpenFilesJob*
 uint64_t k_listopenfilesjob_percent(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setAutoDelete)
+/// [Qt documentation](https://api.kde.org/kjob.html#setAutoDelete)
 ///
 /// @param self KListOpenFilesJob*
 /// @param autodelete bool
@@ -204,42 +204,42 @@ void k_listopenfilesjob_set_auto_delete(void* self, bool autodelete);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isAutoDelete)
+/// [Qt documentation](https://api.kde.org/kjob.html#isAutoDelete)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_is_auto_delete(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KListOpenFilesJob*
 void k_listopenfilesjob_set_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinishedNotificationHidden)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_is_finished_notification_hidden(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isStartedWithExec)
+/// [Qt documentation](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
 /// @param self KListOpenFilesJob*
 bool k_listopenfilesjob_is_started_with_exec(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#elapsedTime)
+/// [Qt documentation](https://api.kde.org/kjob.html#elapsedTime)
 ///
 /// @param self KListOpenFilesJob*
 long long k_listopenfilesjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -248,7 +248,7 @@ void k_listopenfilesjob_description(void* self, void* job, const char* title);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* title)
@@ -256,7 +256,7 @@ void k_listopenfilesjob_on_description(void* self, void (*callback)(void*, void*
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -265,7 +265,7 @@ void k_listopenfilesjob_info_message(void* self, void* job, const char* message)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#infoMessage)
+/// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* message)
@@ -273,7 +273,7 @@ void k_listopenfilesjob_on_info_message(void* self, void (*callback)(void*, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
+/// [Qt documentation](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -282,7 +282,7 @@ void k_listopenfilesjob_warning(void* self, void* job, const char* message);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#warning)
+/// [Qt documentation](https://api.kde.org/kjob.html#warning)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* message)
@@ -290,7 +290,7 @@ void k_listopenfilesjob_on_warning(void* self, void (*callback)(void*, void*, co
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -299,7 +299,7 @@ void k_listopenfilesjob_total_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t size)
@@ -307,7 +307,7 @@ void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -316,7 +316,7 @@ void k_listopenfilesjob_processed_size(void* self, void* job, uint64_t size);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedSize)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t size)
@@ -324,7 +324,7 @@ void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, vo
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
+/// [Qt documentation](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -333,7 +333,7 @@ void k_listopenfilesjob_speed(void* self, void* job, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#speed)
+/// [Qt documentation](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t speed)
@@ -341,7 +341,7 @@ void k_listopenfilesjob_on_speed(void* self, void (*callback)(void*, void*, uint
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#kill)
+/// [Qt documentation](https://api.kde.org/kjob.html#kill)
 ///
 /// @param self KListOpenFilesJob*
 /// @param verbosity enum KJob__KillVerbosity
@@ -349,7 +349,7 @@ bool k_listopenfilesjob_kill1(void* self, int32_t verbosity);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setFinishedNotificationHidden)
+/// [Qt documentation](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
 /// @param self KListOpenFilesJob*
 /// @param hide bool
@@ -357,7 +357,7 @@ void k_listopenfilesjob_set_finished_notification_hidden1(void* self, bool hide)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -367,7 +367,7 @@ void k_listopenfilesjob_description3(void* self, void* job, const char* title, l
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
@@ -375,7 +375,7 @@ void k_listopenfilesjob_on_description3(void* self, void (*callback)(void*, void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
@@ -386,7 +386,7 @@ void k_listopenfilesjob_description4(void* self, void* job, const char* title, l
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#description)
+/// [Qt documentation](https://api.kde.org/kjob.html#description)
 ///
 /// @param self KListOpenFilesJob*
 /// @param callback void func(KListOpenFilesJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
@@ -701,7 +701,7 @@ void k_listopenfilesjob_on_destroyed1(void* self, void (*callback)(void*, void*)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
+/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -710,7 +710,7 @@ bool k_listopenfilesjob_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
+/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -719,7 +719,7 @@ bool k_listopenfilesjob_qbase_do_kill(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doKill)
+/// [Qt documentation](https://api.kde.org/kjob.html#doKill)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -729,7 +729,7 @@ void k_listopenfilesjob_on_do_kill(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -738,7 +738,7 @@ bool k_listopenfilesjob_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -747,7 +747,7 @@ bool k_listopenfilesjob_qbase_do_suspend(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doSuspend)
+/// [Qt documentation](https://api.kde.org/kjob.html#doSuspend)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -757,7 +757,7 @@ void k_listopenfilesjob_on_do_suspend(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
+/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -766,7 +766,7 @@ bool k_listopenfilesjob_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
+/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -775,7 +775,7 @@ bool k_listopenfilesjob_qbase_do_resume(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#doResume)
+/// [Qt documentation](https://api.kde.org/kjob.html#doResume)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -785,7 +785,7 @@ void k_listopenfilesjob_on_do_resume(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -796,7 +796,7 @@ const char* k_listopenfilesjob_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -807,7 +807,7 @@ const char* k_listopenfilesjob_qbase_error_string(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#errorString)
+/// [Qt documentation](https://api.kde.org/kjob.html#errorString)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1029,7 +1029,7 @@ void k_listopenfilesjob_on_disconnect_notify(void* self, void (*callback)(void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1039,7 +1039,7 @@ void k_listopenfilesjob_set_capabilities(void* self, int32_t capabilities);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1049,7 +1049,7 @@ void k_listopenfilesjob_qbase_set_capabilities(void* self, int32_t capabilities)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setCapabilities)
+/// [Qt documentation](https://api.kde.org/kjob.html#setCapabilities)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1059,7 +1059,7 @@ void k_listopenfilesjob_on_set_capabilities(void* self, void (*callback)(void*, 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1068,7 +1068,7 @@ bool k_listopenfilesjob_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1077,7 +1077,7 @@ bool k_listopenfilesjob_qbase_is_finished(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#isFinished)
+/// [Qt documentation](https://api.kde.org/kjob.html#isFinished)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1087,7 +1087,7 @@ void k_listopenfilesjob_on_is_finished(void* self, bool (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
+/// [Qt documentation](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1097,7 +1097,7 @@ void k_listopenfilesjob_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
+/// [Qt documentation](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1107,7 +1107,7 @@ void k_listopenfilesjob_qbase_set_error(void* self, int errorCode);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setError)
+/// [Qt documentation](https://api.kde.org/kjob.html#setError)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1117,7 +1117,7 @@ void k_listopenfilesjob_on_set_error(void* self, void (*callback)(void*, int));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1127,7 +1127,7 @@ void k_listopenfilesjob_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1137,7 +1137,7 @@ void k_listopenfilesjob_qbase_set_error_text(void* self, const char* errorText);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setErrorText)
+/// [Qt documentation](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1147,7 +1147,7 @@ void k_listopenfilesjob_on_set_error_text(void* self, void (*callback)(void*, co
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1158,7 +1158,7 @@ void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uint64_t 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1169,7 +1169,7 @@ void k_listopenfilesjob_qbase_set_processed_amount(void* self, int32_t unit, uin
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProcessedAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1179,7 +1179,7 @@ void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1190,7 +1190,7 @@ void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uint64_t amou
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1201,7 +1201,7 @@ void k_listopenfilesjob_qbase_set_total_amount(void* self, int32_t unit, uint64_
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setTotalAmount)
+/// [Qt documentation](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1211,7 +1211,7 @@ void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, 
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1221,7 +1221,7 @@ void k_listopenfilesjob_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1231,7 +1231,7 @@ void k_listopenfilesjob_qbase_set_progress_unit(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setProgressUnit)
+/// [Qt documentation](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1241,7 +1241,7 @@ void k_listopenfilesjob_on_set_progress_unit(void* self, void (*callback)(void*,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1251,7 +1251,7 @@ void k_listopenfilesjob_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1261,7 +1261,7 @@ void k_listopenfilesjob_qbase_set_percent(void* self, uint64_t percentage);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#setPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1271,7 +1271,7 @@ void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uint6
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1280,7 +1280,7 @@ void k_listopenfilesjob_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1289,7 +1289,7 @@ void k_listopenfilesjob_qbase_emit_result(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitResult)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitResult)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1299,7 +1299,7 @@ void k_listopenfilesjob_on_emit_result(void* self, void (*callback)());
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1310,7 +1310,7 @@ void k_listopenfilesjob_emit_percent(void* self, uint64_t processedAmount, uint6
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1321,7 +1321,7 @@ void k_listopenfilesjob_qbase_emit_percent(void* self, uint64_t processedAmount,
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitPercent)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1331,7 +1331,7 @@ void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uint
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1341,7 +1341,7 @@ void k_listopenfilesjob_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1351,7 +1351,7 @@ void k_listopenfilesjob_qbase_emit_speed(void* self, uint64_t speed);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#emitSpeed)
+/// [Qt documentation](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1361,7 +1361,7 @@ void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uint64
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
+/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -1370,7 +1370,7 @@ void k_listopenfilesjob_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
+/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -1379,7 +1379,7 @@ void k_listopenfilesjob_qbase_start_elapsed_timer(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#startElapsedTimer)
+/// [Qt documentation](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
@@ -1505,7 +1505,7 @@ void k_listopenfilesjob_on_is_signal_connected(void* self, bool (*callback)(void
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#finished)
+/// [Qt documentation](https://api.kde.org/kjob.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1515,7 +1515,7 @@ void k_listopenfilesjob_on_finished(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#suspended)
+/// [Qt documentation](https://api.kde.org/kjob.html#suspended)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1525,7 +1525,7 @@ void k_listopenfilesjob_on_suspended(void* self, void (*callback)(void*, void*))
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#resumed)
+/// [Qt documentation](https://api.kde.org/kjob.html#resumed)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1535,7 +1535,7 @@ void k_listopenfilesjob_on_resumed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#result)
+/// [Qt documentation](https://api.kde.org/kjob.html#result)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1545,7 +1545,7 @@ void k_listopenfilesjob_on_result(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#totalAmountChanged)
+/// [Qt documentation](https://api.kde.org/kjob.html#totalAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1555,7 +1555,7 @@ void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(voi
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#processedAmountChanged)
+/// [Qt documentation](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1565,7 +1565,7 @@ void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api-staging.kde.org/kjob.html#percentChanged)
+/// [Qt documentation](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
@@ -1583,14 +1583,14 @@ void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, v
 /// @param callback void func(KListOpenFilesJob* self, const char* objectName)
 void k_listopenfilesjob_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/klistopenfilesjob.html#dtor.KListOpenFilesJob)
+/// [Qt documentation](https://api.kde.org/klistopenfilesjob.html#dtor.KListOpenFilesJob)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KListOpenFilesJob*
 void k_listopenfilesjob_delete(void* self);
 
-/// https://api-staging.kde.org/klistopenfilesjob.html#types
+/// https://api.kde.org/klistopenfilesjob.html#types
 
 typedef enum {
     KLISTOPENFILESJOB_ERROR_NOTSUPPORTED = 101,

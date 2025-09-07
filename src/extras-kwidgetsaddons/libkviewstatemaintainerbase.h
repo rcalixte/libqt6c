@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kviewstatemaintainerbase.html
+/// https://api.kde.org/kviewstatemaintainerbase.html
 
 /// k_viewstatemaintainerbase_new constructs a new KViewStateMaintainerBase object.
 ///
@@ -58,34 +58,34 @@ int32_t k_viewstatemaintainerbase_qbase_metacall(void* self, int32_t param1, int
 /// @param s const char*
 const char* k_viewstatemaintainerbase_tr(const char* s);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#setSelectionModel)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#setSelectionModel)
 ///
 /// @param self KViewStateMaintainerBase*
 /// @param selectionModel QItemSelectionModel*
 void k_viewstatemaintainerbase_set_selection_model(void* self, void* selectionModel);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#selectionModel)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#selectionModel)
 ///
 /// @param self KViewStateMaintainerBase*
 QItemSelectionModel* k_viewstatemaintainerbase_selection_model(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#setView)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#setView)
 ///
 /// @param self KViewStateMaintainerBase*
 /// @param view QAbstractItemView*
 void k_viewstatemaintainerbase_set_view(void* self, void* view);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#view)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#view)
 ///
 /// @param self KViewStateMaintainerBase*
 QAbstractItemView* k_viewstatemaintainerbase_view(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#saveState)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#saveState)
 ///
 /// @param self KViewStateMaintainerBase*
 void k_viewstatemaintainerbase_save_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#saveState)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#saveState)
 ///
 /// Allows for overriding the related default method
 ///
@@ -93,19 +93,19 @@ void k_viewstatemaintainerbase_save_state(void* self);
 /// @param callback void func()
 void k_viewstatemaintainerbase_on_save_state(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#saveState)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#saveState)
 ///
 /// Base class method implementation
 ///
 /// @param self KViewStateMaintainerBase*
 void k_viewstatemaintainerbase_qbase_save_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#restoreState)
 ///
 /// @param self KViewStateMaintainerBase*
 void k_viewstatemaintainerbase_restore_state(void* self);
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#restoreState)
 ///
 /// Allows for overriding the related default method
 ///
@@ -113,7 +113,7 @@ void k_viewstatemaintainerbase_restore_state(void* self);
 /// @param callback void func()
 void k_viewstatemaintainerbase_on_restore_state(void* self, void (*callback)());
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#restoreState)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#restoreState)
 ///
 /// Base class method implementation
 ///
@@ -782,7 +782,7 @@ void k_viewstatemaintainerbase_on_is_signal_connected(void* self, bool (*callbac
 /// @param callback void func(KViewStateMaintainerBase* self, const char* objectName)
 void k_viewstatemaintainerbase_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kviewstatemaintainerbase.html#dtor.KViewStateMaintainerBase)
+/// [Qt documentation](https://api.kde.org/kviewstatemaintainerbase.html#dtor.KViewStateMaintainerBase)
 ///
 /// Delete this object from C++ memory.
 ///

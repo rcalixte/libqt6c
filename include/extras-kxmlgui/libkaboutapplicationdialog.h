@@ -11,7 +11,7 @@
 
 #include "../qtlibc.h"
 
-/// https://api-staging.kde.org/kaboutapplicationdialog.html
+/// https://api.kde.org/kaboutapplicationdialog.html
 
 /// k_aboutapplicationdialog_new constructs a new KAboutApplicationDialog object.
 ///
@@ -4582,14 +4582,14 @@ void k_aboutapplicationdialog_on_get_decoded_metric_f(void* self, double (*callb
 /// @param callback void func(KAboutApplicationDialog* self, const char* objectName)
 void k_aboutapplicationdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api-staging.kde.org/kaboutapplicationdialog.html#dtor.KAboutApplicationDialog)
+/// [Qt documentation](https://api.kde.org/kaboutapplicationdialog.html#dtor.KAboutApplicationDialog)
 ///
 /// Delete this object from C++ memory.
 ///
 /// @param self KAboutApplicationDialog*
 void k_aboutapplicationdialog_delete(void* self);
 
-/// https://api-staging.kde.org/kaboutapplicationdialog.html#types
+/// https://api.kde.org/kaboutapplicationdialog.html#types
 
 typedef enum {
     KABOUTAPPLICATIONDIALOG_OPTION_NOOPTIONS = 0,
