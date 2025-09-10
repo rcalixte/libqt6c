@@ -1,11 +1,17 @@
 
+### 6.8.2 rev28 (10 September 2025)
+
+* Add [KBookmarks](https://api.kde.org/kbookmarks-index.html) (#54)
+* Update documentation URLs (#53)
+* Fix documentation URLs (#52)
+
 ### 6.8.2 rev27 (6 September 2025)
 
 * Add a build option for passing extra paths
 
 ### 6.8.2 rev26 (5 September 2025)
 
-* Add [Qt XML](https://doc.qt.io/qt-6/qtxml-index.html), [KGlobalAccel](https://api-staging.kde.org/kglobalaccel-index.html), and [KXmlGui](https://api-staging.kde.org/kxmlgui-index.html) (#51)
+* Add [Qt XML](https://doc.qt.io/qt-6/qtxml-index.html), [KGlobalAccel](https://api.kde.org/kglobalaccel-index.html), and [KXmlGui](https://api.kde.org/kxmlgui-index.html) (#51)
 
 ### 6.8.2 rev25 (4 September 2025)
 
@@ -13,23 +19,23 @@
 
 ### 6.8.2 rev24 (3 September 2025)
 
-* Add [KIconThemes](https://api-staging.kde.org/kiconthemes-index.html) (#49)
+* Add [KIconThemes](https://api.kde.org/kiconthemes-index.html) (#49)
 
 ### 6.8.2 rev23 (2 September 2025)
 
-* Add [KTextWidgets](https://api-staging.kde.org/ktextwidgets-index.html) (#48)
+* Add [KTextWidgets](https://api.kde.org/ktextwidgets-index.html) (#48)
 
 ### 6.8.2 rev22 (1 September 2025)
 
-* Add [KCompletion](https://api-staging.kde.org/kcompletion-index.html) (#47)
+* Add [KCompletion](https://api.kde.org/kcompletion-index.html) (#47)
 
 ### 6.8.2 rev21 (31 August 2025)
 
-* Add [KPlotting](https://api-staging.kde.org/kplotting-index.html) (#46)
+* Add [KPlotting](https://api.kde.org/kplotting-index.html) (#46)
 
 ### 6.8.2 rev20 (30 August 2025)
 
-* Add [KColorScheme](https://api-staging.kde.org/kcolorscheme-index.html) and [KConfigWidgets](https://api-staging.kde.org/kconfigwidgets-index.html) (#45)
+* Add [KColorScheme](https://api.kde.org/kcolorscheme-index.html) and [KConfigWidgets](https://api.kde.org/kconfigwidgets-index.html) (#45)
 
 ### 6.8.2 rev19 (29 August 2025)
 
@@ -42,25 +48,25 @@
 
 ### 6.8.2 rev17 (28 August 2025)
 
-* Add [Sonnet](https://api-staging.kde.org/sonnet-index.html) (#42)
+* Add [Sonnet](https://api.kde.org/sonnet-index.html) (#42)
 * Simplify override structure and update callback documentation comments (#41)
 * Fix method mismatch in C ABI (#40)
 
 ### 6.8.2 rev16 (27 August 2025)
 
-* Add [KGuiAddons](https://api-staging.kde.org/kguiaddons-index.html) (#37)
+* Add [KGuiAddons](https://api.kde.org/kguiaddons-index.html) (#37)
 
 ### 6.8.2 rev15 (26 August 2025)
 
-* Add [KCoreAddons](https://api-staging.kde.org/kcoreaddons-index.html) (#36)
+* Add [KCoreAddons](https://api.kde.org/kcoreaddons-index.html) (#36)
 
 ### 6.8.2 rev14 (25 August 2025)
 
-* Add [KItemViews](https://api-staging.kde.org/kitemviews-index.html) (#35)
+* Add [KItemViews](https://api.kde.org/kitemviews-index.html) (#35)
 
 ### 6.8.2 rev13 (24 August 2025)
 
-* Add [KConfig](https://api-staging.kde.org/kconfig-index.html) and [KWidgetsAddons](https://api-staging.kde.org/kwidgetsaddons-index.html) (#34)
+* Add [KConfig](https://api.kde.org/kconfig-index.html) and [KWidgetsAddons](https://api.kde.org/kwidgetsaddons-index.html) (#34)
 * Add support for public variables (#33)
 
 ### 6.8.2 rev12 (23 August 2025)
@@ -70,11 +76,11 @@
 ### 6.8.2 rev11 (22 August 2025)
 
 * **BREAKING CHANGE:** Fix some callback types (#31)
-* Add [KI18n](https://api-staging.kde.org/ki18n-index.html) (#30)
+* Add [KI18n](https://api.kde.org/ki18n-index.html) (#30)
 
 ### 6.8.2 rev10 (20 August 2025)
 
-* Add [KCodecs](https://api-staging.kde.org/kcodecs-index.html) and fix string-based slots (#29)
+* Add [KCodecs](https://api.kde.org/kcodecs-index.html) and fix string-based slots (#29)
 
 ### 6.8.2 rev9 (19 August 2025)
 
