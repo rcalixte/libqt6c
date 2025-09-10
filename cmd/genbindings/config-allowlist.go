@@ -129,6 +129,7 @@ func ImportHeaderForClass(className string, excludeQsci bool) bool {
 		"KLocalImageCacheImplementation", // Qt 6 klocalimagecacheimpl.h
 		"KModifierKeyInfoProvider",       // Qt 6 kmodifierkeyinfoprovider_p.h
 		"KDE",                            // Qt 6 kiconloader.h
+		"KBookmarkGroup",                 // Qt 6 KBookmarks, a legacy class
 		"____last____":
 		return false
 	}
@@ -194,6 +195,7 @@ func AllowClass(className string) bool {
 		"KUserId",                                            // Qt 6 kuser.h, inherits from KUserOrGroupId<unsigned int>
 		"KCompletionMatches",                                 // Qt 6 kcompletionmatches.h, inherits from KSortableList<QString>
 		"KQuickIconProvider",                                 // Qt 6 kquickiconprovider.h, inherits from QQuickImageProvider
+		"KBookmarkGroupTraverser",                            // Qt 6 kbookmark.h, a legacy class
 		"____last____":
 		return false
 	}
