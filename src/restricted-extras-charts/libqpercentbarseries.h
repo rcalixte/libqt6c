@@ -447,8 +447,8 @@ void q_percentbarseries_barsets_added(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void func(QPercentBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
-void q_percentbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QPercentBarSeries* self, QBarSet** sets)
+void q_percentbarseries_on_barsets_added(void* self, void (*callback)(void*, QBarSet**));
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -463,8 +463,8 @@ void q_percentbarseries_barsets_removed(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
 /// @param self QPercentBarSeries*
-/// @param callback void func(QPercentBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
-void q_percentbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QPercentBarSeries* self, QBarSet** sets)
+void q_percentbarseries_on_barsets_removed(void* self, void (*callback)(void*, QBarSet**));
 
 /// Inherited from QAbstractBarSeries
 ///

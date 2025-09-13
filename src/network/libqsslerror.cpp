@@ -11,12 +11,12 @@ QSslError* QSslError_new() {
     return new QSslError();
 }
 
-QSslError* QSslError_new2(int errorVal) {
-    return new QSslError(static_cast<QSslError::SslError>(errorVal));
+QSslError* QSslError_new2(int error) {
+    return new QSslError(static_cast<QSslError::SslError>(error));
 }
 
-QSslError* QSslError_new3(int errorVal, const QSslCertificate* certificate) {
-    return new QSslError(static_cast<QSslError::SslError>(errorVal), *certificate);
+QSslError* QSslError_new3(int error, const QSslCertificate* certificate) {
+    return new QSslError(static_cast<QSslError::SslError>(error), *certificate);
 }
 
 QSslError* QSslError_new4(const QSslError* other) {

@@ -118,7 +118,7 @@ void QMediaPlayer_ActiveTracksChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_ActiveTracksChanged(QMediaPlayer* self, intptr_t slot);
 void QMediaPlayer_ErrorChanged(QMediaPlayer* self);
 void QMediaPlayer_Connect_ErrorChanged(QMediaPlayer* self, intptr_t slot);
-void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int errorVal, const libqt_string errorString);
+void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int error, const libqt_string errorString);
 void QMediaPlayer_Connect_ErrorOccurred(QMediaPlayer* self, intptr_t slot);
 libqt_string QMediaPlayer_Tr2(const char* s, const char* c);
 libqt_string QMediaPlayer_Tr3(const char* s, const char* c, int n);

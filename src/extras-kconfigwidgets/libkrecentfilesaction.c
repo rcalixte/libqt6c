@@ -959,7 +959,7 @@ libqt_list /* of QWidget* */ k_recentfilesaction_qbase_created_widgets(void* sel
     return _arr;
 }
 
-void k_recentfilesaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
+void k_recentfilesaction_on_created_widgets(void* self, QWidget** (*callback)()) {
     KRecentFilesAction_OnCreatedWidgets((KRecentFilesAction*)self, (intptr_t)callback);
 }
 

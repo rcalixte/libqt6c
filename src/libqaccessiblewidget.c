@@ -1,3 +1,4 @@
+#include "libqaccessible_base.hpp"
 #include "libqaccessible.hpp"
 #include "libqaccessibleobject.hpp"
 #include "libqcolor.hpp"

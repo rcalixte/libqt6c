@@ -65,7 +65,7 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self
     return _arr;
 }
 
-void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list /* of QWidget* */ (*callback)(void*, void*)) {
+void k_widgetitemdelegate_on_create_item_widgets(void* self, QWidget** (*callback)(void*, void*)) {
     KWidgetItemDelegate_OnCreateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -78,7 +78,7 @@ void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, vo
     KWidgetItemDelegate_UpdateItemWidgets((KWidgetItemDelegate*)self, widgets, (QStyleOptionViewItem*)option, (QPersistentModelIndex*)index);
 }
 
-void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, libqt_list, void*, void*)) {
+void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, QWidget**, void*, void*)) {
     KWidgetItemDelegate_OnUpdateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 

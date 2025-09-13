@@ -324,14 +324,14 @@ void q_mediarecorder_on_encoder_settings_changed(void* self, void (*callback)(vo
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorOccurred)
 ///
 /// @param self QMediaRecorder*
-/// @param errorVal enum QMediaRecorder__Error
+/// @param error enum QMediaRecorder__Error
 /// @param errorString const char*
-void q_mediarecorder_error_occurred(void* self, int32_t errorVal, const char* errorString);
+void q_mediarecorder_error_occurred(void* self, int32_t error, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorOccurred)
 ///
 /// @param self QMediaRecorder*
-/// @param callback void func(QMediaRecorder* self, enum QMediaRecorder__Error errorVal, const char* errorString)
+/// @param callback void func(QMediaRecorder* self, enum QMediaRecorder__Error error, const char* errorString)
 void q_mediarecorder_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorChanged)

@@ -131,8 +131,8 @@ void q_audiodecoder_format_changed(void* self, void* format) {
     QAudioDecoder_FormatChanged((QAudioDecoder*)self, (QAudioFormat*)format);
 }
 
-void q_audiodecoder_error2(void* self, int32_t errorVal) {
-    QAudioDecoder_Error2((QAudioDecoder*)self, errorVal);
+void q_audiodecoder_error2(void* self, int32_t error) {
+    QAudioDecoder_Error2((QAudioDecoder*)self, error);
 }
 
 void q_audiodecoder_source_changed(void* self) {

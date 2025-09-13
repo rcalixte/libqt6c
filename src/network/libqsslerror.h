@@ -19,14 +19,14 @@ QSslError* q_sslerror_new();
 
 /// q_sslerror_new2 constructs a new QSslError object.
 ///
-/// @param errorVal enum QSslError__SslError
-QSslError* q_sslerror_new2(int32_t errorVal);
+/// @param error enum QSslError__SslError
+QSslError* q_sslerror_new2(int32_t error);
 
 /// q_sslerror_new3 constructs a new QSslError object.
 ///
-/// @param errorVal enum QSslError__SslError
+/// @param error enum QSslError__SslError
 /// @param certificate QSslCertificate*
-QSslError* q_sslerror_new3(int32_t errorVal, void* certificate);
+QSslError* q_sslerror_new3(int32_t error, void* certificate);
 
 /// q_sslerror_new4 constructs a new QSslError object.
 ///

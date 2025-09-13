@@ -95,8 +95,8 @@ void k_shortcutwidget_shortcut_changed(void* self, libqt_list cut);
 /// [Qt documentation](https://api.kde.org/kshortcutwidget.html#shortcutChanged)
 ///
 /// @param self KShortcutWidget*
-/// @param callback void func(KShortcutWidget* self, libqt_list /* of QKeySequence* */ /* of QKeySequence* */)
-void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(KShortcutWidget* self, QKeySequence** cut)
+void k_shortcutwidget_on_shortcut_changed(void* self, void (*callback)(void*, QKeySequence**));
 
 /// [Qt documentation](https://api.kde.org/kshortcutwidget.html#setShortcut)
 ///

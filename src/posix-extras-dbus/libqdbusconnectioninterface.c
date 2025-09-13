@@ -51,8 +51,8 @@ void q_dbusconnectioninterface_on_service_owner_changed(void* self, void (*callb
     QDBusConnectionInterface_Connect_ServiceOwnerChanged((QDBusConnectionInterface*)self, (intptr_t)callback);
 }
 
-void q_dbusconnectioninterface_call_with_callback_failed(void* self, void* errorVal, void* call) {
-    QDBusConnectionInterface_CallWithCallbackFailed((QDBusConnectionInterface*)self, (QDBusError*)errorVal, (QDBusMessage*)call);
+void q_dbusconnectioninterface_call_with_callback_failed(void* self, void* error, void* call) {
+    QDBusConnectionInterface_CallWithCallbackFailed((QDBusConnectionInterface*)self, (QDBusError*)error, (QDBusMessage*)call);
 }
 
 void q_dbusconnectioninterface_on_call_with_callback_failed(void* self, void (*callback)(void*, void*, void*)) {

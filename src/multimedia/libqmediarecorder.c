@@ -233,8 +233,8 @@ void q_mediarecorder_on_encoder_settings_changed(void* self, void (*callback)(vo
     QMediaRecorder_Connect_EncoderSettingsChanged((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-void q_mediarecorder_error_occurred(void* self, int32_t errorVal, const char* errorString) {
-    QMediaRecorder_ErrorOccurred((QMediaRecorder*)self, errorVal, qstring(errorString));
+void q_mediarecorder_error_occurred(void* self, int32_t error, const char* errorString) {
+    QMediaRecorder_ErrorOccurred((QMediaRecorder*)self, error, qstring(errorString));
 }
 
 void q_mediarecorder_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {

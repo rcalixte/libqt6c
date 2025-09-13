@@ -465,7 +465,7 @@ void q_filedialog_urls_selected(void* self, libqt_list urls) {
     QFileDialog_UrlsSelected((QFileDialog*)self, urls);
 }
 
-void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, libqt_list)) {
+void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, QUrl**)) {
     QFileDialog_Connect_UrlsSelected((QFileDialog*)self, (intptr_t)callback);
 }
 

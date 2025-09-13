@@ -111,7 +111,7 @@ void QSslSocket_StartServerEncryption(QSslSocket* self);
 void QSslSocket_IgnoreSslErrors2(QSslSocket* self);
 void QSslSocket_Encrypted(QSslSocket* self);
 void QSslSocket_Connect_Encrypted(QSslSocket* self, intptr_t slot);
-void QSslSocket_PeerVerifyError(QSslSocket* self, const QSslError* errorVal);
+void QSslSocket_PeerVerifyError(QSslSocket* self, const QSslError* error);
 void QSslSocket_Connect_PeerVerifyError(QSslSocket* self, intptr_t slot);
 void QSslSocket_SslErrors(QSslSocket* self, const libqt_list /* of QSslError* */ errors);
 void QSslSocket_Connect_SslErrors(QSslSocket* self, intptr_t slot);
@@ -127,7 +127,7 @@ void QSslSocket_AlertSent(QSslSocket* self, int level, int typeVal, const libqt_
 void QSslSocket_Connect_AlertSent(QSslSocket* self, intptr_t slot);
 void QSslSocket_AlertReceived(QSslSocket* self, int level, int typeVal, const libqt_string description);
 void QSslSocket_Connect_AlertReceived(QSslSocket* self, intptr_t slot);
-void QSslSocket_HandshakeInterruptedOnError(QSslSocket* self, const QSslError* errorVal);
+void QSslSocket_HandshakeInterruptedOnError(QSslSocket* self, const QSslError* error);
 void QSslSocket_Connect_HandshakeInterruptedOnError(QSslSocket* self, intptr_t slot);
 long long QSslSocket_ReadData(QSslSocket* self, char* data, long long maxlen);
 long long QSslSocket_SkipData(QSslSocket* self, long long maxSize);

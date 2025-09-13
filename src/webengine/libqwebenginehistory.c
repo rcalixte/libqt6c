@@ -349,7 +349,7 @@ void q_webenginehistorymodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -357,7 +357,7 @@ void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -365,7 +365,7 @@ void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, libqt_list 
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -373,7 +373,7 @@ void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list 
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 

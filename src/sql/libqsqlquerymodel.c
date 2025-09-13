@@ -11,6 +11,7 @@
 #include "libqsqlquery.hpp"
 #include "libqsqlrecord.hpp"
 #include "../libqvariant.hpp"
+#include "../libqnamespace.hpp"
 #include "libqsqlquerymodel.hpp"
 #include "libqsqlquerymodel.h"
 
@@ -349,16 +350,16 @@ QModelIndex* q_sqlquerymodel_qbase_index_in_query(void* self, void* item) {
     return QSqlQueryModel_QBaseIndexInQuery((QSqlQueryModel*)self, (QModelIndex*)item);
 }
 
-void q_sqlquerymodel_set_last_error(void* self, void* errorVal) {
-    QSqlQueryModel_SetLastError((QSqlQueryModel*)self, (QSqlError*)errorVal);
+void q_sqlquerymodel_set_last_error(void* self, void* error) {
+    QSqlQueryModel_SetLastError((QSqlQueryModel*)self, (QSqlError*)error);
 }
 
 void q_sqlquerymodel_on_set_last_error(void* self, void (*callback)(void*, void*)) {
     QSqlQueryModel_OnSetLastError((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
-void q_sqlquerymodel_qbase_set_last_error(void* self, void* errorVal) {
-    QSqlQueryModel_QBaseSetLastError((QSqlQueryModel*)self, (QSqlError*)errorVal);
+void q_sqlquerymodel_qbase_set_last_error(void* self, void* error) {
+    QSqlQueryModel_QBaseSetLastError((QSqlQueryModel*)self, (QSqlError*)error);
 }
 
 const char* q_sqlquerymodel_tr2(const char* s, const char* c) {
@@ -507,7 +508,7 @@ void q_sqlquerymodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_sqlquerymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_sqlquerymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -515,7 +516,7 @@ void q_sqlquerymodel_layout_changed2(void* self, libqt_list parents, int32_t hin
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_sqlquerymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_sqlquerymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -523,7 +524,7 @@ void q_sqlquerymodel_layout_about_to_be_changed1(void* self, libqt_list parents)
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_sqlquerymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_sqlquerymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -531,7 +532,7 @@ void q_sqlquerymodel_layout_about_to_be_changed2(void* self, libqt_list parents,
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_sqlquerymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_sqlquerymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -848,7 +849,7 @@ QMimeData* q_sqlquerymodel_qbase_mime_data(void* self, libqt_list indexes) {
     return QSqlQueryModel_QBaseMimeData((QSqlQueryModel*)self, indexes);
 }
 
-void q_sqlquerymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_sqlquerymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     QSqlQueryModel_OnMimeData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -970,7 +971,7 @@ libqt_list /* of QModelIndex* */ q_sqlquerymodel_qbase_match(void* self, void* s
     return _arr;
 }
 
-void q_sqlquerymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void q_sqlquerymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     QSqlQueryModel_OnMatch((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -1138,7 +1139,7 @@ void q_sqlquerymodel_qbase_encode_data(void* self, libqt_list indexes, void* str
     QSqlQueryModel_QBaseEncodeData((QSqlQueryModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_sqlquerymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void q_sqlquerymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     QSqlQueryModel_OnEncodeData((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -1222,7 +1223,7 @@ void q_sqlquerymodel_qbase_change_persistent_index_list(void* self, libqt_list f
     QSqlQueryModel_QBaseChangePersistentIndexList((QSqlQueryModel*)self, from, to);
 }
 
-void q_sqlquerymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void q_sqlquerymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     QSqlQueryModel_OnChangePersistentIndexList((QSqlQueryModel*)self, (intptr_t)callback);
 }
 
@@ -1236,7 +1237,7 @@ libqt_list /* of QModelIndex* */ q_sqlquerymodel_qbase_persistent_index_list(voi
     return _arr;
 }
 
-void q_sqlquerymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_sqlquerymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     QSqlQueryModel_OnPersistentIndexList((QSqlQueryModel*)self, (intptr_t)callback);
 }
 

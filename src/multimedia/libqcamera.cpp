@@ -320,15 +320,15 @@ void QCamera_Connect_ErrorChanged(QCamera* self, intptr_t slot) {
     });
 }
 
-void QCamera_ErrorOccurred(QCamera* self, int errorVal, const libqt_string errorString) {
+void QCamera_ErrorOccurred(QCamera* self, int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    self->errorOccurred(static_cast<QCamera::Error>(errorVal), errorString_QString);
+    self->errorOccurred(static_cast<QCamera::Error>(error), errorString_QString);
 }
 
 void QCamera_Connect_ErrorOccurred(QCamera* self, intptr_t slot) {
     void (*slotFunc)(QCamera*, int, const char*) = reinterpret_cast<void (*)(QCamera*, int, const char*)>(slot);
-    QCamera::connect(self, &QCamera::errorOccurred, [self, slotFunc](QCamera::Error errorVal, const QString& errorString) {
-        int sigval1 = static_cast<int>(errorVal);
+    QCamera::connect(self, &QCamera::errorOccurred, [self, slotFunc](QCamera::Error error, const QString& errorString) {
+        int sigval1 = static_cast<int>(error);
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();

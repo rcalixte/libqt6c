@@ -1,3 +1,4 @@
+#include "libFilter.hpp"
 #include "../libqaction.hpp"
 #include "../libqevent.hpp"
 #include "../libqcoreevent.hpp"
@@ -710,7 +711,7 @@ libqt_list /* of QAction* */ q_termwidget_filter_actions(void* self, void* posit
     return _arr;
 }
 
-void q_termwidget_on_filter_actions(void* self, libqt_list /* of QAction* */ (*callback)(void*, void*)) {
+void q_termwidget_on_filter_actions(void* self, QAction** (*callback)(void*, void*)) {
     QTermWidget_OnFilterActions((QTermWidget*)self, (intptr_t)callback);
 }
 

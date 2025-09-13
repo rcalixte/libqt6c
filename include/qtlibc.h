@@ -54,7 +54,9 @@ struct libqt_list {
         double* doubles;
         int* ints;
         intptr_t* ptrdiffs;
+        long long* longlongs;
         uint16_t* uint16_ts;
+        uintptr_t* uintptrs;
         unsigned char* unsignedchars;
         unsigned int* unsignedints;
         void* ptr;

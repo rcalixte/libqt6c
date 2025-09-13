@@ -487,8 +487,8 @@ void q_sslsocket_on_encrypted(void* self, void (*callback)(void*)) {
     QSslSocket_Connect_Encrypted((QSslSocket*)self, (intptr_t)callback);
 }
 
-void q_sslsocket_peer_verify_error(void* self, void* errorVal) {
-    QSslSocket_PeerVerifyError((QSslSocket*)self, (QSslError*)errorVal);
+void q_sslsocket_peer_verify_error(void* self, void* error) {
+    QSslSocket_PeerVerifyError((QSslSocket*)self, (QSslError*)error);
 }
 
 void q_sslsocket_on_peer_verify_error(void* self, void (*callback)(void*, void*)) {
@@ -499,7 +499,7 @@ void q_sslsocket_ssl_errors(void* self, libqt_list errors) {
     QSslSocket_SslErrors((QSslSocket*)self, errors);
 }
 
-void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list)) {
+void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, QSslError**)) {
     QSslSocket_Connect_SslErrors((QSslSocket*)self, (intptr_t)callback);
 }
 
@@ -551,8 +551,8 @@ void q_sslsocket_on_alert_received(void* self, void (*callback)(void*, int32_t, 
     QSslSocket_Connect_AlertReceived((QSslSocket*)self, (intptr_t)callback);
 }
 
-void q_sslsocket_handshake_interrupted_on_error(void* self, void* errorVal) {
-    QSslSocket_HandshakeInterruptedOnError((QSslSocket*)self, (QSslError*)errorVal);
+void q_sslsocket_handshake_interrupted_on_error(void* self, void* error) {
+    QSslSocket_HandshakeInterruptedOnError((QSslSocket*)self, (QSslError*)error);
 }
 
 void q_sslsocket_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*)) {

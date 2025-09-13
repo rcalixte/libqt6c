@@ -116,16 +116,16 @@ void QDBusConnectionInterface_Connect_ServiceOwnerChanged(QDBusConnectionInterfa
     });
 }
 
-void QDBusConnectionInterface_CallWithCallbackFailed(QDBusConnectionInterface* self, const QDBusError* errorVal, const QDBusMessage* call) {
-    self->callWithCallbackFailed(*errorVal, *call);
+void QDBusConnectionInterface_CallWithCallbackFailed(QDBusConnectionInterface* self, const QDBusError* error, const QDBusMessage* call) {
+    self->callWithCallbackFailed(*error, *call);
 }
 
 void QDBusConnectionInterface_Connect_CallWithCallbackFailed(QDBusConnectionInterface* self, intptr_t slot) {
     void (*slotFunc)(QDBusConnectionInterface*, QDBusError*, QDBusMessage*) = reinterpret_cast<void (*)(QDBusConnectionInterface*, QDBusError*, QDBusMessage*)>(slot);
-    QDBusConnectionInterface::connect(self, &QDBusConnectionInterface::callWithCallbackFailed, [self, slotFunc](const QDBusError& errorVal, const QDBusMessage& call) {
-        const QDBusError& errorVal_ret = errorVal;
+    QDBusConnectionInterface::connect(self, &QDBusConnectionInterface::callWithCallbackFailed, [self, slotFunc](const QDBusError& error, const QDBusMessage& call) {
+        const QDBusError& error_ret = error;
         // Cast returned reference into pointer
-        QDBusError* sigval1 = const_cast<QDBusError*>(&errorVal_ret);
+        QDBusError* sigval1 = const_cast<QDBusError*>(&error_ret);
         const QDBusMessage& call_ret = call;
         // Cast returned reference into pointer
         QDBusMessage* sigval2 = const_cast<QDBusMessage*>(&call_ret);

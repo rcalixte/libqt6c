@@ -176,8 +176,8 @@ void q_audiodecoder_format_changed(void* self, void* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiodecoder.html#error)
 ///
 /// @param self QAudioDecoder*
-/// @param errorVal enum QAudioDecoder__Error
-void q_audiodecoder_error2(void* self, int32_t errorVal);
+/// @param error enum QAudioDecoder__Error
+void q_audiodecoder_error2(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiodecoder.html#sourceChanged)
 ///

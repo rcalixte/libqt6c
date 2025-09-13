@@ -143,8 +143,8 @@ void q_imagecapture_on_error_changed(void* self, void (*callback)(void*)) {
     QImageCapture_Connect_ErrorChanged((QImageCapture*)self, (intptr_t)callback);
 }
 
-void q_imagecapture_error_occurred(void* self, int id, int32_t errorVal, const char* errorString) {
-    QImageCapture_ErrorOccurred((QImageCapture*)self, id, errorVal, qstring(errorString));
+void q_imagecapture_error_occurred(void* self, int id, int32_t error, const char* errorString) {
+    QImageCapture_ErrorOccurred((QImageCapture*)self, id, error, qstring(errorString));
 }
 
 void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int32_t, const char*)) {

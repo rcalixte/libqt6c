@@ -930,7 +930,7 @@ libqt_list /* of QWidget* */ k_codecaction_qbase_created_widgets(void* self) {
     return _arr;
 }
 
-void k_codecaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
+void k_codecaction_on_created_widgets(void* self, QWidget** (*callback)()) {
     KCodecAction_OnCreatedWidgets((KCodecAction*)self, (intptr_t)callback);
 }
 

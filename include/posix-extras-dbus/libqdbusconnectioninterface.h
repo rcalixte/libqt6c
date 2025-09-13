@@ -76,14 +76,14 @@ void q_dbusconnectioninterface_on_service_owner_changed(void* self, void (*callb
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnectioninterface.html#callWithCallbackFailed)
 ///
 /// @param self QDBusConnectionInterface*
-/// @param errorVal QDBusError*
+/// @param error QDBusError*
 /// @param call QDBusMessage*
-void q_dbusconnectioninterface_call_with_callback_failed(void* self, void* errorVal, void* call);
+void q_dbusconnectioninterface_call_with_callback_failed(void* self, void* error, void* call);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnectioninterface.html#callWithCallbackFailed)
 ///
 /// @param self QDBusConnectionInterface*
-/// @param callback void func(QDBusConnectionInterface* self, QDBusError* errorVal, QDBusMessage* call)
+/// @param callback void func(QDBusConnectionInterface* self, QDBusError* error, QDBusMessage* call)
 void q_dbusconnectioninterface_on_call_with_callback_failed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnectioninterface.html#NameAcquired)

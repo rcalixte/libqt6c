@@ -11,6 +11,7 @@
 #include "../libqsize.hpp"
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
+#include "libbackgroundchecker.hpp"
 #include "libdialog.hpp"
 #include "libdialog.h"
 

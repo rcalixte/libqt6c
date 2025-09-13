@@ -24,9 +24,9 @@ QDBusError* q_dbuserror_new2(void* msg);
 
 /// q_dbuserror_new3 constructs a new QDBusError object.
 ///
-/// @param errorVal enum QDBusError__ErrorType
+/// @param error enum QDBusError__ErrorType
 /// @param message const char*
-QDBusError* q_dbuserror_new3(int32_t errorVal, const char* message);
+QDBusError* q_dbuserror_new3(int32_t error, const char* message);
 
 /// q_dbuserror_new4 constructs a new QDBusError object.
 ///
@@ -81,8 +81,8 @@ bool q_dbuserror_is_valid(void* self);
 ///
 /// Caller is responsible for freeing the returned memory
 ///
-/// @param errorVal enum QDBusError__ErrorType
-const char* q_dbuserror_error_string(int32_t errorVal);
+/// @param error enum QDBusError__ErrorType
+const char* q_dbuserror_error_string(int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuserror.html#dtor.QDBusError)
 ///

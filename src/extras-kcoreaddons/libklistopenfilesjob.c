@@ -1,4 +1,5 @@
 #include "libkjob.hpp"
+#include "libkprocesslist.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"

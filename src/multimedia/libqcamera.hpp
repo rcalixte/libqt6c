@@ -97,7 +97,7 @@ void QCamera_ActiveChanged(QCamera* self, bool param1);
 void QCamera_Connect_ActiveChanged(QCamera* self, intptr_t slot);
 void QCamera_ErrorChanged(QCamera* self);
 void QCamera_Connect_ErrorChanged(QCamera* self, intptr_t slot);
-void QCamera_ErrorOccurred(QCamera* self, int errorVal, const libqt_string errorString);
+void QCamera_ErrorOccurred(QCamera* self, int error, const libqt_string errorString);
 void QCamera_Connect_ErrorOccurred(QCamera* self, intptr_t slot);
 void QCamera_CameraDeviceChanged(QCamera* self);
 void QCamera_Connect_CameraDeviceChanged(QCamera* self, intptr_t slot);

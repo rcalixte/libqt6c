@@ -64,7 +64,7 @@ int32_t q_jsonparseerror_error(void* self);
 ///
 /// @param self QJsonParseError*
 /// @param error enum QJsonParseError__ParseError
-void q_jsonparseerror_set_error(void* self, int32_t _error);
+void q_jsonparseerror_set_error(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#dtor.QJsonParseError)
 ///
@@ -185,8 +185,8 @@ bool q_jsondocument_is_null(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
 /// @param json const char*
-/// @param errorVal QJsonParseError*
-QJsonDocument* q_jsondocument_from_json2(const char* json, void* errorVal);
+/// @param error QJsonParseError*
+QJsonDocument* q_jsondocument_from_json2(const char* json, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///

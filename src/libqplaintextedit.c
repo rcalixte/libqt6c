@@ -22,6 +22,7 @@
 #include "libqtextformat.hpp"
 #include "libqtextcursor.hpp"
 #include "libqtextdocument.hpp"
+#include "libqtextedit.hpp"
 #include "libqtextlayout.hpp"
 #include "libqurl.hpp"
 #include "libqvariant.hpp"

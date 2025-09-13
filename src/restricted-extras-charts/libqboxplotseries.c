@@ -205,7 +205,7 @@ void q_boxplotseries_boxsets_added(void* self, libqt_list sets) {
     QBoxPlotSeries_BoxsetsAdded((QBoxPlotSeries*)self, sets);
 }
 
-void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, libqt_list)) {
+void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, QBoxSet**)) {
     QBoxPlotSeries_Connect_BoxsetsAdded((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 
@@ -213,7 +213,7 @@ void q_boxplotseries_boxsets_removed(void* self, libqt_list sets) {
     QBoxPlotSeries_BoxsetsRemoved((QBoxPlotSeries*)self, sets);
 }
 
-void q_boxplotseries_on_boxsets_removed(void* self, void (*callback)(void*, libqt_list)) {
+void q_boxplotseries_on_boxsets_removed(void* self, void (*callback)(void*, QBoxSet**)) {
     QBoxPlotSeries_Connect_BoxsetsRemoved((QBoxPlotSeries*)self, (intptr_t)callback);
 }
 

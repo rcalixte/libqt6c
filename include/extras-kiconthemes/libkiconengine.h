@@ -188,8 +188,8 @@ libqt_list /* of QSize* */ k_iconengine_available_sizes(void* self, int32_t mode
 /// Allows for overriding the related default method
 ///
 /// @param self KIconEngine*
-/// @param callback libqt_list /* of QSize* */ func(KIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
-void k_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int32_t, int32_t));
+/// @param callback QSize** func(KIconEngine* self, enum QIcon__Mode mode, enum QIcon__State state)
+void k_iconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://api.kde.org/kiconengine.html#availableSizes)
 ///

@@ -72,8 +72,8 @@ int QHostInfo_Error(const QHostInfo* self) {
     return static_cast<int>(self->error());
 }
 
-void QHostInfo_SetError(QHostInfo* self, int errorVal) {
-    self->setError(static_cast<QHostInfo::HostInfoError>(errorVal));
+void QHostInfo_SetError(QHostInfo* self, int error) {
+    self->setError(static_cast<QHostInfo::HostInfoError>(error));
 }
 
 libqt_string QHostInfo_ErrorString(const QHostInfo* self) {

@@ -381,8 +381,8 @@ void q_listview_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QListView*
-/// @param callback void func(QListView* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_listview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QListView* self, QModelIndex** indexes)
+void q_listview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#event)
 ///
@@ -960,8 +960,8 @@ libqt_list /* of QModelIndex* */ q_listview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QListView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_listview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_listview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#selectedIndexes)
 ///

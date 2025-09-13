@@ -772,8 +772,8 @@ void q_transposeproxymodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void func(QTransposeProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
-void q_transposeproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QTransposeProxyModel* self, QPersistentModelIndex** parents)
+void q_transposeproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -789,8 +789,8 @@ void q_transposeproxymodel_layout_changed2(void* self, libqt_list parents, int32
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void func(QTransposeProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
-void q_transposeproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
+/// @param callback void func(QTransposeProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+void q_transposeproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -805,8 +805,8 @@ void q_transposeproxymodel_layout_about_to_be_changed1(void* self, libqt_list pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void func(QTransposeProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
-void q_transposeproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QTransposeProxyModel* self, QPersistentModelIndex** parents)
+void q_transposeproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -822,8 +822,8 @@ void q_transposeproxymodel_layout_about_to_be_changed2(void* self, libqt_list pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void func(QTransposeProxyModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
-void q_transposeproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
+/// @param callback void func(QTransposeProxyModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+void q_transposeproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
 ///
@@ -1552,8 +1552,8 @@ QMimeData* q_transposeproxymodel_qbase_mime_data(void* self, libqt_list indexes)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback QMimeData* func(QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_transposeproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(QTransposeProxyModel* self, QModelIndex** indexes)
+void q_transposeproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1790,8 +1790,8 @@ libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_match(void* self, v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback libqt_list /* of QModelIndex* */ func(QTransposeProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_transposeproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
+/// @param callback QModelIndex** func(QTransposeProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+void q_transposeproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2160,8 +2160,8 @@ void q_transposeproxymodel_qbase_encode_data(void* self, libqt_list indexes, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void func(QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
-void q_transposeproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+/// @param callback void func(QTransposeProxyModel* self, QModelIndex** indexes, QDataStream* stream)
+void q_transposeproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2696,8 +2696,8 @@ void q_transposeproxymodel_qbase_change_persistent_index_list(void* self, libqt_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void func(QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_transposeproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
+/// @param callback void func(QTransposeProxyModel* self, QModelIndex** from, QModelIndex** to)
+void q_transposeproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2724,8 +2724,8 @@ libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_persistent_index_li
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_transposeproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_transposeproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
 ///

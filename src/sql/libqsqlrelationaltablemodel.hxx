@@ -1779,18 +1779,18 @@ class VirtualQSqlRelationalTableModel final : public QSqlRelationalTableModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void setLastError(const QSqlError& errorVal) {
+    void setLastError(const QSqlError& error) {
         if (qsqlrelationaltablemodel_setlasterror_isbase) {
             qsqlrelationaltablemodel_setlasterror_isbase = false;
-            QSqlRelationalTableModel::setLastError(errorVal);
+            QSqlRelationalTableModel::setLastError(error);
         } else if (qsqlrelationaltablemodel_setlasterror_callback != nullptr) {
-            const QSqlError& errorVal_ret = errorVal;
+            const QSqlError& error_ret = error;
             // Cast returned reference into pointer
-            QSqlError* cbval1 = const_cast<QSqlError*>(&errorVal_ret);
+            QSqlError* cbval1 = const_cast<QSqlError*>(&error_ret);
 
             qsqlrelationaltablemodel_setlasterror_callback(this, cbval1);
         } else {
-            QSqlRelationalTableModel::setLastError(errorVal);
+            QSqlRelationalTableModel::setLastError(error);
         }
     }
 
@@ -2108,8 +2108,8 @@ class VirtualQSqlRelationalTableModel final : public QSqlRelationalTableModel {
     friend void QSqlRelationalTableModel_QBaseBeginResetModel(QSqlRelationalTableModel* self);
     friend void QSqlRelationalTableModel_EndResetModel(QSqlRelationalTableModel* self);
     friend void QSqlRelationalTableModel_QBaseEndResetModel(QSqlRelationalTableModel* self);
-    friend void QSqlRelationalTableModel_SetLastError(QSqlRelationalTableModel* self, const QSqlError* errorVal);
-    friend void QSqlRelationalTableModel_QBaseSetLastError(QSqlRelationalTableModel* self, const QSqlError* errorVal);
+    friend void QSqlRelationalTableModel_SetLastError(QSqlRelationalTableModel* self, const QSqlError* error);
+    friend void QSqlRelationalTableModel_QBaseSetLastError(QSqlRelationalTableModel* self, const QSqlError* error);
     friend QModelIndex* QSqlRelationalTableModel_CreateIndex(const QSqlRelationalTableModel* self, int row, int column);
     friend QModelIndex* QSqlRelationalTableModel_QBaseCreateIndex(const QSqlRelationalTableModel* self, int row, int column);
     friend void QSqlRelationalTableModel_EncodeData(const QSqlRelationalTableModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);

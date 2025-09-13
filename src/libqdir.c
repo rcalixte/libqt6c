@@ -1,5 +1,6 @@
 #include "libqchar.hpp"
 #include "libqfileinfo.hpp"
+#include "libqnamespace.hpp"
 #include "libqdir.hpp"
 #include "libqdir.h"
 

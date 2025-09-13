@@ -318,7 +318,7 @@ QMimeData* q_abstractproxymodel_mime_data(void* self, libqt_list indexes) {
     return QAbstractProxyModel_MimeData((QAbstractProxyModel*)self, indexes);
 }
 
-void q_abstractproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_abstractproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     QAbstractProxyModel_OnMimeData((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
@@ -554,7 +554,7 @@ void q_abstractproxymodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_abstractproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_abstractproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -562,7 +562,7 @@ void q_abstractproxymodel_layout_changed2(void* self, libqt_list parents, int32_
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_abstractproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_abstractproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -570,7 +570,7 @@ void q_abstractproxymodel_layout_about_to_be_changed1(void* self, libqt_list par
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_abstractproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_abstractproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -578,7 +578,7 @@ void q_abstractproxymodel_layout_about_to_be_changed2(void* self, libqt_list par
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_abstractproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_abstractproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -879,7 +879,7 @@ libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_match(void* self, vo
     return _arr;
 }
 
-void q_abstractproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void q_abstractproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     QAbstractProxyModel_OnMatch((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1011,7 +1011,7 @@ void q_abstractproxymodel_qbase_encode_data(void* self, libqt_list indexes, void
     QAbstractProxyModel_QBaseEncodeData((QAbstractProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_abstractproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void q_abstractproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     QAbstractProxyModel_OnEncodeData((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1215,7 +1215,7 @@ void q_abstractproxymodel_qbase_change_persistent_index_list(void* self, libqt_l
     QAbstractProxyModel_QBaseChangePersistentIndexList((QAbstractProxyModel*)self, from, to);
 }
 
-void q_abstractproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void q_abstractproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     QAbstractProxyModel_OnChangePersistentIndexList((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1229,7 +1229,7 @@ libqt_list /* of QModelIndex* */ q_abstractproxymodel_qbase_persistent_index_lis
     return _arr;
 }
 
-void q_abstractproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_abstractproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     QAbstractProxyModel_OnPersistentIndexList((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 

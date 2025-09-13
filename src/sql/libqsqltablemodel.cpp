@@ -2525,23 +2525,23 @@ void QSqlTableModel_OnEndResetModel(QSqlTableModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSqlTableModel_SetLastError(QSqlTableModel* self, const QSqlError* errorVal) {
+void QSqlTableModel_SetLastError(QSqlTableModel* self, const QSqlError* error) {
     auto* vqsqltablemodel = dynamic_cast<VirtualQSqlTableModel*>(self);
     if (vqsqltablemodel && vqsqltablemodel->isVirtualQSqlTableModel) {
-        vqsqltablemodel->setLastError(*errorVal);
+        vqsqltablemodel->setLastError(*error);
     } else {
-        ((VirtualQSqlTableModel*)self)->setLastError(*errorVal);
+        ((VirtualQSqlTableModel*)self)->setLastError(*error);
     }
 }
 
 // Base class handler implementation
-void QSqlTableModel_QBaseSetLastError(QSqlTableModel* self, const QSqlError* errorVal) {
+void QSqlTableModel_QBaseSetLastError(QSqlTableModel* self, const QSqlError* error) {
     auto* vqsqltablemodel = dynamic_cast<VirtualQSqlTableModel*>(self);
     if (vqsqltablemodel && vqsqltablemodel->isVirtualQSqlTableModel) {
         vqsqltablemodel->setQSqlTableModel_SetLastError_IsBase(true);
-        vqsqltablemodel->setLastError(*errorVal);
+        vqsqltablemodel->setLastError(*error);
     } else {
-        ((VirtualQSqlTableModel*)self)->setLastError(*errorVal);
+        ((VirtualQSqlTableModel*)self)->setLastError(*error);
     }
 }
 

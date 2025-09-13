@@ -888,8 +888,8 @@ QMimeData* q_listwidget_mime_data(void* self, libqt_list items);
 /// Allows for overriding the related default method
 ///
 /// @param self QListWidget*
-/// @param callback QMimeData* func(QListWidget* self, libqt_list /* of QListWidgetItem* */ /* of QListWidgetItem* */)
-void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(QListWidget* self, QListWidgetItem** items)
+void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWidgetItem**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
@@ -1238,8 +1238,8 @@ void q_listwidget_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QListWidget*
-/// @param callback void func(QListWidget* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QListWidget* self, QModelIndex** indexes)
+void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5355,8 +5355,8 @@ libqt_list /* of QModelIndex* */ q_listwidget_qbase_selected_indexes(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_listwidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_listwidget_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QListView
 ///

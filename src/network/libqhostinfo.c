@@ -46,8 +46,8 @@ int32_t q_hostinfo_error(void* self) {
     return QHostInfo_Error((QHostInfo*)self);
 }
 
-void q_hostinfo_set_error(void* self, int32_t errorVal) {
-    QHostInfo_SetError((QHostInfo*)self, errorVal);
+void q_hostinfo_set_error(void* self, int32_t error) {
+    QHostInfo_SetError((QHostInfo*)self, error);
 }
 
 const char* q_hostinfo_error_string(void* self) {

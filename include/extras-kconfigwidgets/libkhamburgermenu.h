@@ -1306,8 +1306,8 @@ libqt_list /* of QWidget* */ k_hamburgermenu_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KHamburgerMenu*
-/// @param callback libqt_list /* of QWidget* */ func()
-void k_hamburgermenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
+/// @param callback QWidget** func()
+void k_hamburgermenu_on_created_widgets(void* self, QWidget** (*callback)());
 
 /// Inherited from QObject
 ///

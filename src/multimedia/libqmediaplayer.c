@@ -377,8 +377,8 @@ void q_mediaplayer_on_error_changed(void* self, void (*callback)(void*)) {
     QMediaPlayer_Connect_ErrorChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-void q_mediaplayer_error_occurred(void* self, int32_t errorVal, const char* errorString) {
-    QMediaPlayer_ErrorOccurred((QMediaPlayer*)self, errorVal, qstring(errorString));
+void q_mediaplayer_error_occurred(void* self, int32_t error, const char* errorString) {
+    QMediaPlayer_ErrorOccurred((QMediaPlayer*)self, error, qstring(errorString));
 }
 
 void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {

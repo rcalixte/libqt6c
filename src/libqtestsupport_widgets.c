@@ -1,5 +1,6 @@
 #include "libqeventpoint.hpp"
 #include "libqpoint.hpp"
+#include "libqtestsupport_gui.hpp"
 #include "libqwidget.hpp"
 #include "libqtestsupport_widgets.hpp"
 #include "libqtestsupport_widgets.h"

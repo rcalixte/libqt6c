@@ -82,7 +82,7 @@ void QMediaRecorder_ActualLocationChanged(QMediaRecorder* self, const QUrl* loca
 void QMediaRecorder_Connect_ActualLocationChanged(QMediaRecorder* self, intptr_t slot);
 void QMediaRecorder_EncoderSettingsChanged(QMediaRecorder* self);
 void QMediaRecorder_Connect_EncoderSettingsChanged(QMediaRecorder* self, intptr_t slot);
-void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int errorVal, const libqt_string errorString);
+void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int error, const libqt_string errorString);
 void QMediaRecorder_Connect_ErrorOccurred(QMediaRecorder* self, intptr_t slot);
 void QMediaRecorder_ErrorChanged(QMediaRecorder* self);
 void QMediaRecorder_Connect_ErrorChanged(QMediaRecorder* self, intptr_t slot);

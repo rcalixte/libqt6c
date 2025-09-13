@@ -48,8 +48,8 @@ void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* d
     QWebEngineUrlRequestJob_Reply((QWebEngineUrlRequestJob*)self, qstring(contentType), (QIODevice*)device);
 }
 
-void q_webengineurlrequestjob_fail(void* self, int32_t errorVal) {
-    QWebEngineUrlRequestJob_Fail((QWebEngineUrlRequestJob*)self, errorVal);
+void q_webengineurlrequestjob_fail(void* self, int32_t error) {
+    QWebEngineUrlRequestJob_Fail((QWebEngineUrlRequestJob*)self, error);
 }
 
 void q_webengineurlrequestjob_redirect(void* self, void* url) {

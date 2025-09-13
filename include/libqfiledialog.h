@@ -474,8 +474,8 @@ void q_filedialog_urls_selected(void* self, libqt_list urls);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#urlsSelected)
 ///
 /// @param self QFileDialog*
-/// @param callback void func(QFileDialog* self, libqt_list /* of QUrl* */ /* of QUrl* */)
-void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QFileDialog* self, QUrl** urls)
+void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, QUrl**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#currentUrlChanged)
 ///

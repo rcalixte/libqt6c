@@ -48,7 +48,7 @@ void QWindowCapture_WindowChanged(QWindowCapture* self, QCapturableWindow* windo
 void QWindowCapture_Connect_WindowChanged(QWindowCapture* self, intptr_t slot);
 void QWindowCapture_ErrorChanged(QWindowCapture* self);
 void QWindowCapture_Connect_ErrorChanged(QWindowCapture* self, intptr_t slot);
-void QWindowCapture_ErrorOccurred(QWindowCapture* self, int errorVal, const libqt_string errorString);
+void QWindowCapture_ErrorOccurred(QWindowCapture* self, int error, const libqt_string errorString);
 void QWindowCapture_Connect_ErrorOccurred(QWindowCapture* self, intptr_t slot);
 libqt_string QWindowCapture_Tr2(const char* s, const char* c);
 libqt_string QWindowCapture_Tr3(const char* s, const char* c, int n);

@@ -55,7 +55,7 @@ QCborError* q_cborparsererror_error(void* self);
 ///
 /// @param self QCborParserError*
 /// @param error QCborError*
-void q_cborparsererror_set_error(void* self, void* _error);
+void q_cborparsererror_set_error(void* self, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#errorString)
 ///
@@ -569,22 +569,22 @@ QUuid* q_cborvalue_to_uuid1(void* self, void* defaultValue);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param ba const char*
-/// @param errorVal QCborParserError*
-QCborValue* q_cborvalue_from_cbor22(const char* ba, void* errorVal);
+/// @param error QCborParserError*
+QCborValue* q_cborvalue_from_cbor22(const char* ba, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data const char*
 /// @param lenVal int64_t
-/// @param errorVal QCborParserError*
-QCborValue* q_cborvalue_from_cbor32(const char* data, int64_t lenVal, void* errorVal);
+/// @param error QCborParserError*
+QCborValue* q_cborvalue_from_cbor32(const char* data, int64_t lenVal, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data unsigned char*
 /// @param lenVal int64_t
-/// @param errorVal QCborParserError*
-QCborValue* q_cborvalue_from_cbor33(unsigned char* data, int64_t lenVal, void* errorVal);
+/// @param error QCborParserError*
+QCborValue* q_cborvalue_from_cbor33(unsigned char* data, int64_t lenVal, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///

@@ -385,8 +385,8 @@ void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list error
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sslErrors)
 ///
 /// @param self QNetworkAccessManager*
-/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, libqt_list /* of QSslError* */ /* of QSslError* */)
-void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list));
+/// @param callback void func(QNetworkAccessManager* self, QNetworkReply* reply, QSslError** errors)
+void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#preSharedKeyAuthenticationRequired)
 ///

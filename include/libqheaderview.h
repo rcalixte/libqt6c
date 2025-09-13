@@ -5347,8 +5347,8 @@ libqt_list /* of QModelIndex* */ q_headerview_qbase_selected_indexes(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_headerview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_headerview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QAbstractItemView
 ///

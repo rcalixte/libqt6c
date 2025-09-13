@@ -10,8 +10,8 @@ QDBusError* q_dbuserror_new2(void* msg) {
     return QDBusError_new2((QDBusMessage*)msg);
 }
 
-QDBusError* q_dbuserror_new3(int32_t errorVal, const char* message) {
-    return QDBusError_new3(errorVal, qstring(message));
+QDBusError* q_dbuserror_new3(int32_t error, const char* message) {
+    return QDBusError_new3(error, qstring(message));
 }
 
 QDBusError* q_dbuserror_new4(void* other) {
@@ -52,8 +52,8 @@ bool q_dbuserror_is_valid(void* self) {
     return QDBusError_IsValid((QDBusError*)self);
 }
 
-const char* q_dbuserror_error_string(int32_t errorVal) {
-    libqt_string _str = QDBusError_ErrorString(errorVal);
+const char* q_dbuserror_error_string(int32_t error) {
+    libqt_string _str = QDBusError_ErrorString(error);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

@@ -132,9 +132,9 @@ QDateTime* QCborValue_ToDateTime1(const QCborValue* self, const QDateTime* defau
 QUrl* QCborValue_ToUrl1(const QCborValue* self, const QUrl* defaultValue);
 QRegularExpression* QCborValue_ToRegularExpression1(const QCborValue* self, const QRegularExpression* defaultValue);
 QUuid* QCborValue_ToUuid1(const QCborValue* self, const QUuid* defaultValue);
-QCborValue* QCborValue_FromCbor22(const libqt_string ba, QCborParserError* errorVal);
-QCborValue* QCborValue_FromCbor32(const char* data, ptrdiff_t lenVal, QCborParserError* errorVal);
-QCborValue* QCborValue_FromCbor33(const unsigned char* data, ptrdiff_t lenVal, QCborParserError* errorVal);
+QCborValue* QCborValue_FromCbor22(const libqt_string ba, QCborParserError* error);
+QCborValue* QCborValue_FromCbor32(const char* data, ptrdiff_t lenVal, QCborParserError* error);
+QCborValue* QCborValue_FromCbor33(const unsigned char* data, ptrdiff_t lenVal, QCborParserError* error);
 libqt_string QCborValue_ToCbor1(const QCborValue* self, int opt);
 void QCborValue_ToCbor22(const QCborValue* self, QCborStreamWriter* writer, int opt);
 libqt_string QCborValue_ToDiagnosticNotation1(const QCborValue* self, int opts);

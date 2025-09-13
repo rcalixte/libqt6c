@@ -34,8 +34,8 @@ QDBusMessage* q_dbuspendingreplybase_reply(void* self) {
     return QDBusPendingCall_Reply((QDBusPendingCall*)self);
 }
 
-QDBusPendingCall* q_dbuspendingreplybase_from_error(void* errorVal) {
-    return QDBusPendingCall_FromError((QDBusError*)errorVal);
+QDBusPendingCall* q_dbuspendingreplybase_from_error(void* error) {
+    return QDBusPendingCall_FromError((QDBusError*)error);
 }
 
 QDBusPendingCall* q_dbuspendingreplybase_from_completed_call(void* message) {

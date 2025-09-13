@@ -1,3 +1,4 @@
+#include "libqaccessible_base.hpp"
 #include "libqcolor.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"

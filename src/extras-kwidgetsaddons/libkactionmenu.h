@@ -1298,8 +1298,8 @@ libqt_list /* of QWidget* */ k_actionmenu_qbase_created_widgets(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KActionMenu*
-/// @param callback libqt_list /* of QWidget* */ func()
-void k_actionmenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
+/// @param callback QWidget** func()
+void k_actionmenu_on_created_widgets(void* self, QWidget** (*callback)());
 
 /// Inherited from QObject
 ///

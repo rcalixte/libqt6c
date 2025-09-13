@@ -78,8 +78,8 @@ QObject* k_pluginfactory_create(void* self, const char* iface, void* parentWidge
 /// Allows for overriding the related default method
 ///
 /// @param self KPluginFactory*
-/// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, libqt_list /* of QVariant* */ /* of QVariant* */)
-void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, libqt_list));
+/// @param callback QObject* func(KPluginFactory* self, const char* iface, QWidget* parentWidget, QObject* parent, QVariant** args)
+void k_pluginfactory_on_create(void* self, QObject* (*callback)(void*, const char*, void*, void*, QVariant**));
 
 /// [Qt documentation](https://api.kde.org/kpluginfactory.html#create)
 ///

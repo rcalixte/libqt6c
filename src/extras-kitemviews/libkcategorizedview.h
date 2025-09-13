@@ -948,8 +948,8 @@ void k_categorizedview_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KCategorizedView*
-/// @param callback void func(KCategorizedView* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(KCategorizedView* self, QModelIndex** indexes)
+void k_categorizedview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4627,8 +4627,8 @@ libqt_list /* of QModelIndex* */ k_categorizedview_qbase_selected_indexes(void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCategorizedView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void k_categorizedview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void k_categorizedview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QListView
 ///

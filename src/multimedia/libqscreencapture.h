@@ -147,14 +147,14 @@ void q_screencapture_on_screen_changed(void* self, void (*callback)(void*, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorOccurred)
 ///
 /// @param self QScreenCapture*
-/// @param errorVal enum QScreenCapture__Error
+/// @param error enum QScreenCapture__Error
 /// @param errorString const char*
-void q_screencapture_error_occurred(void* self, int32_t errorVal, const char* errorString);
+void q_screencapture_error_occurred(void* self, int32_t error, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorOccurred)
 ///
 /// @param self QScreenCapture*
-/// @param callback void func(QScreenCapture* self, enum QScreenCapture__Error errorVal, const char* errorString)
+/// @param callback void func(QScreenCapture* self, enum QScreenCapture__Error error, const char* errorString)
 void q_screencapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)

@@ -51,8 +51,8 @@ QDBusMessage* QDBusPendingCall_Reply(const QDBusPendingCall* self) {
     return new QDBusMessage(self->reply());
 }
 
-QDBusPendingCall* QDBusPendingCall_FromError(const QDBusError* errorVal) {
-    return new QDBusPendingCall(QDBusPendingCall::fromError(*errorVal));
+QDBusPendingCall* QDBusPendingCall_FromError(const QDBusError* error) {
+    return new QDBusPendingCall(QDBusPendingCall::fromError(*error));
 }
 
 QDBusPendingCall* QDBusPendingCall_FromCompletedCall(const QDBusMessage* message) {

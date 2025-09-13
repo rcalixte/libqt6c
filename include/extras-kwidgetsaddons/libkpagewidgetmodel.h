@@ -1388,8 +1388,8 @@ void k_pagewidgetmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
-void k_pagewidgetmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(KPageWidgetModel* self, QPersistentModelIndex** parents)
+void k_pagewidgetmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1405,8 +1405,8 @@ void k_pagewidgetmodel_layout_changed2(void* self, libqt_list parents, int32_t h
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
-void k_pagewidgetmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
+/// @param callback void func(KPageWidgetModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+void k_pagewidgetmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1421,8 +1421,8 @@ void k_pagewidgetmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
-void k_pagewidgetmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(KPageWidgetModel* self, QPersistentModelIndex** parents)
+void k_pagewidgetmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1438,8 +1438,8 @@ void k_pagewidgetmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
-void k_pagewidgetmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
+/// @param callback void func(KPageWidgetModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+void k_pagewidgetmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
 ///
@@ -2026,8 +2026,8 @@ QMimeData* k_pagewidgetmodel_qbase_mime_data(void* self, libqt_list indexes);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback QMimeData* func(KPageWidgetModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void k_pagewidgetmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(KPageWidgetModel* self, QModelIndex** indexes)
+void k_pagewidgetmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2538,8 +2538,8 @@ libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_match(void* self, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback libqt_list /* of QModelIndex* */ func(KPageWidgetModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void k_pagewidgetmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
+/// @param callback QModelIndex** func(KPageWidgetModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+void k_pagewidgetmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2988,8 +2988,8 @@ void k_pagewidgetmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
-void k_pagewidgetmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+/// @param callback void func(KPageWidgetModel* self, QModelIndex** indexes, QDataStream* stream)
+void k_pagewidgetmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3524,8 +3524,8 @@ void k_pagewidgetmodel_qbase_change_persistent_index_list(void* self, libqt_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback void func(KPageWidgetModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void k_pagewidgetmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
+/// @param callback void func(KPageWidgetModel* self, QModelIndex** from, QModelIndex** to)
+void k_pagewidgetmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3552,8 +3552,8 @@ libqt_list /* of QModelIndex* */ k_pagewidgetmodel_qbase_persistent_index_list(v
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KPageWidgetModel*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void k_pagewidgetmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void k_pagewidgetmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
 ///

@@ -844,8 +844,8 @@ libqt_list /* of QModelIndex* */ q_tableview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_tableview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_tableview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///

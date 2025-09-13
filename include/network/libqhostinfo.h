@@ -73,8 +73,8 @@ int32_t q_hostinfo_error(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setError)
 ///
 /// @param self QHostInfo*
-/// @param errorVal enum QHostInfo__HostInfoError
-void q_hostinfo_set_error(void* self, int32_t errorVal);
+/// @param error enum QHostInfo__HostInfoError
+void q_hostinfo_set_error(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#errorString)
 ///

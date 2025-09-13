@@ -1,5 +1,6 @@
 #include "libkbookmark.hpp"
 #include "libkbookmarkmanager.hpp"
+#include "libkbookmarkowner.hpp"
 #include "../libqevent.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqdialog.hpp"

@@ -100,30 +100,30 @@ void QSslServer_Connect_SslErrors(QSslServer* self, intptr_t slot) {
     });
 }
 
-void QSslServer_PeerVerifyError(QSslServer* self, QSslSocket* socket, const QSslError* errorVal) {
-    self->peerVerifyError(socket, *errorVal);
+void QSslServer_PeerVerifyError(QSslServer* self, QSslSocket* socket, const QSslError* error) {
+    self->peerVerifyError(socket, *error);
 }
 
 void QSslServer_Connect_PeerVerifyError(QSslServer* self, intptr_t slot) {
     void (*slotFunc)(QSslServer*, QSslSocket*, QSslError*) = reinterpret_cast<void (*)(QSslServer*, QSslSocket*, QSslError*)>(slot);
-    QSslServer::connect(self, &QSslServer::peerVerifyError, [self, slotFunc](QSslSocket* socket, const QSslError& errorVal) {
+    QSslServer::connect(self, &QSslServer::peerVerifyError, [self, slotFunc](QSslSocket* socket, const QSslError& error) {
         QSslSocket* sigval1 = socket;
-        const QSslError& errorVal_ret = errorVal;
+        const QSslError& error_ret = error;
         // Cast returned reference into pointer
-        QSslError* sigval2 = const_cast<QSslError*>(&errorVal_ret);
+        QSslError* sigval2 = const_cast<QSslError*>(&error_ret);
         slotFunc(self, sigval1, sigval2);
     });
 }
 
-void QSslServer_ErrorOccurred(QSslServer* self, QSslSocket* socket, int errorVal) {
-    self->errorOccurred(socket, static_cast<QAbstractSocket::SocketError>(errorVal));
+void QSslServer_ErrorOccurred(QSslServer* self, QSslSocket* socket, int error) {
+    self->errorOccurred(socket, static_cast<QAbstractSocket::SocketError>(error));
 }
 
 void QSslServer_Connect_ErrorOccurred(QSslServer* self, intptr_t slot) {
     void (*slotFunc)(QSslServer*, QSslSocket*, int) = reinterpret_cast<void (*)(QSslServer*, QSslSocket*, int)>(slot);
-    QSslServer::connect(self, &QSslServer::errorOccurred, [self, slotFunc](QSslSocket* socket, QAbstractSocket::SocketError errorVal) {
+    QSslServer::connect(self, &QSslServer::errorOccurred, [self, slotFunc](QSslSocket* socket, QAbstractSocket::SocketError error) {
         QSslSocket* sigval1 = socket;
-        int sigval2 = static_cast<int>(errorVal);
+        int sigval2 = static_cast<int>(error);
         slotFunc(self, sigval1, sigval2);
     });
 }
@@ -187,17 +187,17 @@ void QSslServer_Connect_AlertReceived(QSslServer* self, intptr_t slot) {
     });
 }
 
-void QSslServer_HandshakeInterruptedOnError(QSslServer* self, QSslSocket* socket, const QSslError* errorVal) {
-    self->handshakeInterruptedOnError(socket, *errorVal);
+void QSslServer_HandshakeInterruptedOnError(QSslServer* self, QSslSocket* socket, const QSslError* error) {
+    self->handshakeInterruptedOnError(socket, *error);
 }
 
 void QSslServer_Connect_HandshakeInterruptedOnError(QSslServer* self, intptr_t slot) {
     void (*slotFunc)(QSslServer*, QSslSocket*, QSslError*) = reinterpret_cast<void (*)(QSslServer*, QSslSocket*, QSslError*)>(slot);
-    QSslServer::connect(self, &QSslServer::handshakeInterruptedOnError, [self, slotFunc](QSslSocket* socket, const QSslError& errorVal) {
+    QSslServer::connect(self, &QSslServer::handshakeInterruptedOnError, [self, slotFunc](QSslSocket* socket, const QSslError& error) {
         QSslSocket* sigval1 = socket;
-        const QSslError& errorVal_ret = errorVal;
+        const QSslError& error_ret = error;
         // Cast returned reference into pointer
-        QSslError* sigval2 = const_cast<QSslError*>(&errorVal_ret);
+        QSslError* sigval2 = const_cast<QSslError*>(&error_ret);
         slotFunc(self, sigval1, sigval2);
     });
 }

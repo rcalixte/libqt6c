@@ -232,7 +232,7 @@ QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexe
     return QConcatenateTablesProxyModel_MimeData((QConcatenateTablesProxyModel*)self, indexes);
 }
 
-void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     QConcatenateTablesProxyModel_OnMimeData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
@@ -390,7 +390,7 @@ void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parent
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -398,7 +398,7 @@ void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parent
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -406,7 +406,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -414,7 +414,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -787,7 +787,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void*
     return _arr;
 }
 
-void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void q_concatenatetablesproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     QConcatenateTablesProxyModel_OnMatch((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
@@ -955,7 +955,7 @@ void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list inde
     QConcatenateTablesProxyModel_QBaseEncodeData((QConcatenateTablesProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     QConcatenateTablesProxyModel_OnEncodeData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1159,7 +1159,7 @@ void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self
     QConcatenateTablesProxyModel_QBaseChangePersistentIndexList((QConcatenateTablesProxyModel*)self, from, to);
 }
 
-void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     QConcatenateTablesProxyModel_OnChangePersistentIndexList((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1173,7 +1173,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_persistent_
     return _arr;
 }
 
-void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     QConcatenateTablesProxyModel_OnPersistentIndexList((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 

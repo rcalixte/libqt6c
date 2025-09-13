@@ -1426,18 +1426,18 @@ class VirtualQSqlQueryModel final : public QSqlQueryModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void setLastError(const QSqlError& errorVal) {
+    void setLastError(const QSqlError& error) {
         if (qsqlquerymodel_setlasterror_isbase) {
             qsqlquerymodel_setlasterror_isbase = false;
-            QSqlQueryModel::setLastError(errorVal);
+            QSqlQueryModel::setLastError(error);
         } else if (qsqlquerymodel_setlasterror_callback != nullptr) {
-            const QSqlError& errorVal_ret = errorVal;
+            const QSqlError& error_ret = error;
             // Cast returned reference into pointer
-            QSqlError* cbval1 = const_cast<QSqlError*>(&errorVal_ret);
+            QSqlError* cbval1 = const_cast<QSqlError*>(&error_ret);
 
             qsqlquerymodel_setlasterror_callback(this, cbval1);
         } else {
-            QSqlQueryModel::setLastError(errorVal);
+            QSqlQueryModel::setLastError(error);
         }
     }
 
@@ -1741,8 +1741,8 @@ class VirtualQSqlQueryModel final : public QSqlQueryModel {
     friend void QSqlQueryModel_QBaseBeginResetModel(QSqlQueryModel* self);
     friend void QSqlQueryModel_EndResetModel(QSqlQueryModel* self);
     friend void QSqlQueryModel_QBaseEndResetModel(QSqlQueryModel* self);
-    friend void QSqlQueryModel_SetLastError(QSqlQueryModel* self, const QSqlError* errorVal);
-    friend void QSqlQueryModel_QBaseSetLastError(QSqlQueryModel* self, const QSqlError* errorVal);
+    friend void QSqlQueryModel_SetLastError(QSqlQueryModel* self, const QSqlError* error);
+    friend void QSqlQueryModel_QBaseSetLastError(QSqlQueryModel* self, const QSqlError* error);
     friend QModelIndex* QSqlQueryModel_CreateIndex(const QSqlQueryModel* self, int row, int column);
     friend QModelIndex* QSqlQueryModel_QBaseCreateIndex(const QSqlQueryModel* self, int row, int column);
     friend void QSqlQueryModel_EncodeData(const QSqlQueryModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);

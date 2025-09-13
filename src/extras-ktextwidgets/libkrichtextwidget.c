@@ -69,7 +69,7 @@ libqt_list /* of QAction* */ k_richtextwidget_create_actions(void* self) {
     return _arr;
 }
 
-void k_richtextwidget_on_create_actions(void* self, libqt_list /* of QAction* */ (*callback)()) {
+void k_richtextwidget_on_create_actions(void* self, QAction** (*callback)()) {
     KRichTextWidget_OnCreateActions((KRichTextWidget*)self, (intptr_t)callback);
 }
 

@@ -858,7 +858,7 @@ QMimeData* q_treewidget_mime_data(void* self, libqt_list items) {
     return QTreeWidget_MimeData((QTreeWidget*)self, items);
 }
 
-void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTreeWidgetItem**)) {
     QTreeWidget_OnMimeData((QTreeWidget*)self, (intptr_t)callback);
 }
 
@@ -3137,7 +3137,7 @@ libqt_list /* of QModelIndex* */ q_treewidget_qbase_selected_indexes(void* self)
     return _arr;
 }
 
-void q_treewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_treewidget_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
     QTreeWidget_OnSelectedIndexes((QTreeWidget*)self, (intptr_t)callback);
 }
 

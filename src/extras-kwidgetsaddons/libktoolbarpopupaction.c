@@ -669,7 +669,7 @@ libqt_list /* of QWidget* */ k_toolbarpopupaction_qbase_created_widgets(void* se
     return _arr;
 }
 
-void k_toolbarpopupaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
+void k_toolbarpopupaction_on_created_widgets(void* self, QWidget** (*callback)()) {
     KToolBarPopupAction_OnCreatedWidgets((KToolBarPopupAction*)self, (intptr_t)callback);
 }
 

@@ -298,8 +298,8 @@ int32_t q_webenginewebauthpinrequest_error(void* self) {
     return QWebEngineWebAuthPinRequest_Error((QWebEngineWebAuthPinRequest*)self);
 }
 
-void q_webenginewebauthpinrequest_set_error(void* self, int32_t _error) {
-    QWebEngineWebAuthPinRequest_SetError((QWebEngineWebAuthPinRequest*)self, _error);
+void q_webenginewebauthpinrequest_set_error(void* self, int32_t error) {
+    QWebEngineWebAuthPinRequest_SetError((QWebEngineWebAuthPinRequest*)self, error);
 }
 
 int32_t q_webenginewebauthpinrequest_min_pin_length(void* self) {

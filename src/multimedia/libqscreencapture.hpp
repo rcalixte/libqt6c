@@ -47,7 +47,7 @@ void QScreenCapture_ErrorChanged(QScreenCapture* self);
 void QScreenCapture_Connect_ErrorChanged(QScreenCapture* self, intptr_t slot);
 void QScreenCapture_ScreenChanged(QScreenCapture* self, QScreen* param1);
 void QScreenCapture_Connect_ScreenChanged(QScreenCapture* self, intptr_t slot);
-void QScreenCapture_ErrorOccurred(QScreenCapture* self, int errorVal, const libqt_string errorString);
+void QScreenCapture_ErrorOccurred(QScreenCapture* self, int error, const libqt_string errorString);
 void QScreenCapture_Connect_ErrorOccurred(QScreenCapture* self, intptr_t slot);
 libqt_string QScreenCapture_Tr2(const char* s, const char* c);
 libqt_string QScreenCapture_Tr3(const char* s, const char* c, int n);

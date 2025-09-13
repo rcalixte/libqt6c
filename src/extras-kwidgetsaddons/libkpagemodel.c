@@ -159,7 +159,7 @@ void k_pagemodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_pagemodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void k_pagemodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -167,7 +167,7 @@ void k_pagemodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_pagemodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void k_pagemodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -175,7 +175,7 @@ void k_pagemodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void k_pagemodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void k_pagemodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -183,7 +183,7 @@ void k_pagemodel_layout_about_to_be_changed2(void* self, libqt_list parents, int
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void k_pagemodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void k_pagemodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -560,7 +560,7 @@ QMimeData* k_pagemodel_qbase_mime_data(void* self, libqt_list indexes) {
     return KPageModel_QBaseMimeData((KPageModel*)self, indexes);
 }
 
-void k_pagemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void k_pagemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     KPageModel_OnMimeData((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -754,7 +754,7 @@ libqt_list /* of QModelIndex* */ k_pagemodel_qbase_match(void* self, void* start
     return _arr;
 }
 
-void k_pagemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_pagemodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     KPageModel_OnMatch((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -934,7 +934,7 @@ void k_pagemodel_qbase_encode_data(void* self, libqt_list indexes, void* stream)
     KPageModel_QBaseEncodeData((KPageModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_pagemodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void k_pagemodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     KPageModel_OnEncodeData((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -1138,7 +1138,7 @@ void k_pagemodel_qbase_change_persistent_index_list(void* self, libqt_list from,
     KPageModel_QBaseChangePersistentIndexList((KPageModel*)self, from, to);
 }
 
-void k_pagemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void k_pagemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     KPageModel_OnChangePersistentIndexList((KPageModel*)self, (intptr_t)callback);
 }
 
@@ -1152,7 +1152,7 @@ libqt_list /* of QModelIndex* */ k_pagemodel_qbase_persistent_index_list(void* s
     return _arr;
 }
 
-void k_pagemodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void k_pagemodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     KPageModel_OnPersistentIndexList((KPageModel*)self, (intptr_t)callback);
 }
 

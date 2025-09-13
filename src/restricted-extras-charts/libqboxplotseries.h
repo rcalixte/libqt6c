@@ -297,8 +297,8 @@ void q_boxplotseries_boxsets_added(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsAdded)
 ///
 /// @param self QBoxPlotSeries*
-/// @param callback void func(QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ /* of QBoxSet* */)
-void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QBoxPlotSeries* self, QBoxSet** sets)
+void q_boxplotseries_on_boxsets_added(void* self, void (*callback)(void*, QBoxSet**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
 ///
@@ -309,8 +309,8 @@ void q_boxplotseries_boxsets_removed(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#boxsetsRemoved)
 ///
 /// @param self QBoxPlotSeries*
-/// @param callback void func(QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ /* of QBoxSet* */)
-void q_boxplotseries_on_boxsets_removed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QBoxPlotSeries* self, QBoxSet** sets)
+void q_boxplotseries_on_boxsets_removed(void* self, void (*callback)(void*, QBoxSet**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

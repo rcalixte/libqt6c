@@ -145,8 +145,8 @@ void QAudioDecoder_FormatChanged(QAudioDecoder* self, const QAudioFormat* format
     self->formatChanged(*format);
 }
 
-void QAudioDecoder_Error2(QAudioDecoder* self, int errorVal) {
-    self->error(static_cast<QAudioDecoder::Error>(errorVal));
+void QAudioDecoder_Error2(QAudioDecoder* self, int error) {
+    self->error(static_cast<QAudioDecoder::Error>(error));
 }
 
 void QAudioDecoder_SourceChanged(QAudioDecoder* self) {

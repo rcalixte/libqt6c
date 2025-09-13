@@ -184,7 +184,7 @@ libqt_list /* of QModelIndex* */ q_identityproxymodel_match(void* self, void* st
     return _arr;
 }
 
-void q_identityproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void q_identityproxymodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     QIdentityProxyModel_OnMatch((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -427,7 +427,7 @@ void q_identityproxymodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_identityproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_identityproxymodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -435,7 +435,7 @@ void q_identityproxymodel_layout_changed2(void* self, libqt_list parents, int32_
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_identityproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_identityproxymodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -443,7 +443,7 @@ void q_identityproxymodel_layout_about_to_be_changed1(void* self, libqt_list par
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_identityproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_identityproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -451,7 +451,7 @@ void q_identityproxymodel_layout_about_to_be_changed2(void* self, libqt_list par
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -810,7 +810,7 @@ QMimeData* q_identityproxymodel_qbase_mime_data(void* self, libqt_list indexes) 
     return QIdentityProxyModel_QBaseMimeData((QIdentityProxyModel*)self, indexes);
 }
 
-void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     QIdentityProxyModel_OnMimeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1044,7 +1044,7 @@ void q_identityproxymodel_qbase_encode_data(void* self, libqt_list indexes, void
     QIdentityProxyModel_QBaseEncodeData((QIdentityProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_identityproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void q_identityproxymodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     QIdentityProxyModel_OnEncodeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1248,7 +1248,7 @@ void q_identityproxymodel_qbase_change_persistent_index_list(void* self, libqt_l
     QIdentityProxyModel_QBaseChangePersistentIndexList((QIdentityProxyModel*)self, from, to);
 }
 
-void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     QIdentityProxyModel_OnChangePersistentIndexList((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1262,7 +1262,7 @@ libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_persistent_index_lis
     return _arr;
 }
 
-void q_identityproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_identityproxymodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     QIdentityProxyModel_OnPersistentIndexList((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 

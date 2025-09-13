@@ -486,7 +486,7 @@ int32_t q_webenginewebauthpinrequest_error(void* self);
 ///
 /// @param self QWebEngineWebAuthPinRequest*
 /// @param error enum QWebEngineWebAuthUxRequest__PinEntryError
-void q_webenginewebauthpinrequest_set_error(void* self, int32_t _error);
+void q_webenginewebauthpinrequest_set_error(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#minPinLength-var)
 ///

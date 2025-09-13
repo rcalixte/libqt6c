@@ -294,13 +294,13 @@ void q_movie_on_state_changed(void* self, void (*callback)(void*, int32_t));
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
 /// @param self QMovie*
-/// @param errorVal enum QImageReader__ImageReaderError
-void q_movie_error(void* self, int32_t errorVal);
+/// @param error enum QImageReader__ImageReaderError
+void q_movie_error(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
 /// @param self QMovie*
-/// @param callback void func(QMovie* self, enum QImageReader__ImageReaderError errorVal)
+/// @param callback void func(QMovie* self, enum QImageReader__ImageReaderError error)
 void q_movie_on_error(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#finished)

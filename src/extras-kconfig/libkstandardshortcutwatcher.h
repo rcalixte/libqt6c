@@ -45,8 +45,8 @@ void k_standardshortcut__standardshortcutwatcher_shortcut_changed(void* self, in
 /// [Qt documentation](https://api.kde.org/kstandardshortcut-standardshortcutwatcher.html#shortcutChanged)
 ///
 /// @param self KStandardShortcut__StandardShortcutWatcher*
-/// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, enum KStandardShortcut__StandardShortcut id, libqt_list /* of QKeySequence* */ /* of QKeySequence* */)
-void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self, void (*callback)(void*, int32_t, libqt_list));
+/// @param callback void func(KStandardShortcut__StandardShortcutWatcher* self, enum KStandardShortcut__StandardShortcut id, QKeySequence** shortcut)
+void k_standardshortcut__standardshortcutwatcher_on_shortcut_changed(void* self, void (*callback)(void*, int32_t, QKeySequence**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

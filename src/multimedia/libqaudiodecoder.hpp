@@ -55,7 +55,7 @@ void QAudioDecoder_BufferReady(QAudioDecoder* self);
 void QAudioDecoder_Finished(QAudioDecoder* self);
 void QAudioDecoder_IsDecodingChanged(QAudioDecoder* self, bool param1);
 void QAudioDecoder_FormatChanged(QAudioDecoder* self, const QAudioFormat* format);
-void QAudioDecoder_Error2(QAudioDecoder* self, int errorVal);
+void QAudioDecoder_Error2(QAudioDecoder* self, int error);
 void QAudioDecoder_SourceChanged(QAudioDecoder* self);
 void QAudioDecoder_PositionChanged(QAudioDecoder* self, long long position);
 void QAudioDecoder_DurationChanged(QAudioDecoder* self, long long duration);

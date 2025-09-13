@@ -1066,8 +1066,8 @@ void k_completionbox_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self KCompletionBox*
-/// @param callback void func(KCompletionBox* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void k_completionbox_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(KCompletionBox* self, QModelIndex** indexes)
+void k_completionbox_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4545,8 +4545,8 @@ QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list items);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback QMimeData* func(KCompletionBox* self, libqt_list /* of QListWidgetItem* */ /* of QListWidgetItem* */)
-void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(KCompletionBox* self, QListWidgetItem** items)
+void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWidgetItem**));
 
 /// Inherited from QListWidget
 ///
@@ -5401,8 +5401,8 @@ libqt_list /* of QModelIndex* */ k_completionbox_qbase_selected_indexes(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompletionBox*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void k_completionbox_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void k_completionbox_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QListView
 ///

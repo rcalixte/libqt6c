@@ -486,15 +486,15 @@ void QMediaPlayer_Connect_ErrorChanged(QMediaPlayer* self, intptr_t slot) {
     });
 }
 
-void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int errorVal, const libqt_string errorString) {
+void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    self->errorOccurred(static_cast<QMediaPlayer::Error>(errorVal), errorString_QString);
+    self->errorOccurred(static_cast<QMediaPlayer::Error>(error), errorString_QString);
 }
 
 void QMediaPlayer_Connect_ErrorOccurred(QMediaPlayer* self, intptr_t slot) {
     void (*slotFunc)(QMediaPlayer*, int, const char*) = reinterpret_cast<void (*)(QMediaPlayer*, int, const char*)>(slot);
-    QMediaPlayer::connect(self, &QMediaPlayer::errorOccurred, [self, slotFunc](QMediaPlayer::Error errorVal, const QString& errorString) {
-        int sigval1 = static_cast<int>(errorVal);
+    QMediaPlayer::connect(self, &QMediaPlayer::errorOccurred, [self, slotFunc](QMediaPlayer::Error error, const QString& errorString) {
+        int sigval1 = static_cast<int>(error);
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();

@@ -69,8 +69,8 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_cookies_for_url(void* sel
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback libqt_list /* of QNetworkCookie* */ func(QNetworkCookieJar* self, QUrl* url)
-void q_networkcookiejar_on_cookies_for_url(void* self, libqt_list /* of QNetworkCookie* */ (*callback)(void*, void*));
+/// @param callback QNetworkCookie** func(QNetworkCookieJar* self, QUrl* url)
+void q_networkcookiejar_on_cookies_for_url(void* self, QNetworkCookie** (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#cookiesForUrl)
 ///
@@ -92,8 +92,8 @@ bool q_networkcookiejar_set_cookies_from_url(void* self, libqt_list cookieList, 
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback bool func(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ /* of QNetworkCookie* */, QUrl* url)
-void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, libqt_list, void*));
+/// @param callback bool func(QNetworkCookieJar* self, QNetworkCookie** cookieList, QUrl* url)
+void q_networkcookiejar_on_set_cookies_from_url(void* self, bool (*callback)(void*, QNetworkCookie**, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setCookiesFromUrl)
 ///
@@ -180,8 +180,8 @@ libqt_list /* of QNetworkCookie* */ q_networkcookiejar_all_cookies(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback libqt_list /* of QNetworkCookie* */ func()
-void q_networkcookiejar_on_all_cookies(void* self, libqt_list /* of QNetworkCookie* */ (*callback)());
+/// @param callback QNetworkCookie** func()
+void q_networkcookiejar_on_all_cookies(void* self, QNetworkCookie** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#allCookies)
 ///
@@ -201,8 +201,8 @@ void q_networkcookiejar_set_all_cookies(void* self, libqt_list cookieList);
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkCookieJar*
-/// @param callback void func(QNetworkCookieJar* self, libqt_list /* of QNetworkCookie* */ /* of QNetworkCookie* */)
-void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QNetworkCookieJar* self, QNetworkCookie** cookieList)
+void q_networkcookiejar_on_set_all_cookies(void* self, void (*callback)(void*, QNetworkCookie**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookiejar.html#setAllCookies)
 ///

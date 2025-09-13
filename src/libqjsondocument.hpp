@@ -54,7 +54,7 @@ void QJsonDocument_SetArray(QJsonDocument* self, const QJsonArray* array);
 QJsonValue* QJsonDocument_OperatorSubscript(const QJsonDocument* self, const libqt_string key);
 QJsonValue* QJsonDocument_OperatorSubscript4(const QJsonDocument* self, ptrdiff_t i);
 bool QJsonDocument_IsNull(const QJsonDocument* self);
-QJsonDocument* QJsonDocument_FromJson2(const libqt_string json, QJsonParseError* errorVal);
+QJsonDocument* QJsonDocument_FromJson2(const libqt_string json, QJsonParseError* error);
 libqt_string QJsonDocument_ToJson1(const QJsonDocument* self, int format);
 void QJsonDocument_Delete(QJsonDocument* self);
 

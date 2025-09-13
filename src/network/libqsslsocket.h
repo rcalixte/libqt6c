@@ -702,13 +702,13 @@ void q_sslsocket_on_encrypted(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyError)
 ///
 /// @param self QSslSocket*
-/// @param errorVal QSslError*
-void q_sslsocket_peer_verify_error(void* self, void* errorVal);
+/// @param error QSslError*
+void q_sslsocket_peer_verify_error(void* self, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyError)
 ///
 /// @param self QSslSocket*
-/// @param callback void func(QSslSocket* self, QSslError* errorVal)
+/// @param callback void func(QSslSocket* self, QSslError* error)
 void q_sslsocket_on_peer_verify_error(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
@@ -720,8 +720,8 @@ void q_sslsocket_ssl_errors(void* self, libqt_list errors);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#sslErrors)
 ///
 /// @param self QSslSocket*
-/// @param callback void func(QSslSocket* self, libqt_list /* of QSslError* */ /* of QSslError* */)
-void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QSslSocket* self, QSslError** errors)
+void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, QSslError**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#modeChanged)
 ///
@@ -801,13 +801,13 @@ void q_sslsocket_on_alert_received(void* self, void (*callback)(void*, int32_t, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#handshakeInterruptedOnError)
 ///
 /// @param self QSslSocket*
-/// @param errorVal QSslError*
-void q_sslsocket_handshake_interrupted_on_error(void* self, void* errorVal);
+/// @param error QSslError*
+void q_sslsocket_handshake_interrupted_on_error(void* self, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#handshakeInterruptedOnError)
 ///
 /// @param self QSslSocket*
-/// @param callback void func(QSslSocket* self, QSslError* errorVal)
+/// @param callback void func(QSslSocket* self, QSslError* error)
 void q_sslsocket_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#readData)

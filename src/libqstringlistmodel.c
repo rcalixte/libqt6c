@@ -419,7 +419,7 @@ void q_stringlistmodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_stringlistmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_stringlistmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -427,7 +427,7 @@ void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int32_t h
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -435,7 +435,7 @@ void q_stringlistmodel_layout_about_to_be_changed1(void* self, libqt_list parent
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -443,7 +443,7 @@ void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parent
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -712,7 +712,7 @@ QMimeData* q_stringlistmodel_qbase_mime_data(void* self, libqt_list indexes) {
     return QStringListModel_QBaseMimeData((QStringListModel*)self, indexes);
 }
 
-void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     QStringListModel_OnMimeData((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -822,7 +822,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_match(void* self, void*
     return _arr;
 }
 
-void q_stringlistmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void q_stringlistmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     QStringListModel_OnMatch((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -1002,7 +1002,7 @@ void q_stringlistmodel_qbase_encode_data(void* self, libqt_list indexes, void* s
     QStringListModel_QBaseEncodeData((QStringListModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_stringlistmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void q_stringlistmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     QStringListModel_OnEncodeData((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -1206,7 +1206,7 @@ void q_stringlistmodel_qbase_change_persistent_index_list(void* self, libqt_list
     QStringListModel_QBaseChangePersistentIndexList((QStringListModel*)self, from, to);
 }
 
-void q_stringlistmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void q_stringlistmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     QStringListModel_OnChangePersistentIndexList((QStringListModel*)self, (intptr_t)callback);
 }
 
@@ -1220,7 +1220,7 @@ libqt_list /* of QModelIndex* */ q_stringlistmodel_qbase_persistent_index_list(v
     return _arr;
 }
 
-void q_stringlistmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_stringlistmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     QStringListModel_OnPersistentIndexList((QStringListModel*)self, (intptr_t)callback);
 }
 

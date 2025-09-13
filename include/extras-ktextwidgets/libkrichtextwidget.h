@@ -75,8 +75,8 @@ libqt_list /* of QAction* */ k_richtextwidget_create_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KRichTextWidget*
-/// @param callback libqt_list /* of QAction* */ func()
-void k_richtextwidget_on_create_actions(void* self, libqt_list /* of QAction* */ (*callback)());
+/// @param callback QAction** func()
+void k_richtextwidget_on_create_actions(void* self, QAction** (*callback)());
 
 /// [Qt documentation](https://api.kde.org/krichtextwidget.html#createActions)
 ///
