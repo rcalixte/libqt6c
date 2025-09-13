@@ -1,4 +1,8 @@
 
+### 6.8.2 rev29 (13 September 2025)
+
+* **BREAKING CHANGE:** Update QList-based callbacks (#55)
+
 ### 6.8.2 rev28 (10 September 2025)
 
 * Add [KBookmarks](https://api.kde.org/kbookmarks-index.html) (#54)
