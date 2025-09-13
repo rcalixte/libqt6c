@@ -4,6 +4,7 @@
 #include "../libqobject.hpp"
 #include "../libqplaintextedit.hpp"
 #include "../libqtextedit.hpp"
+#include "libhighlighter.hpp"
 #include "libspellcheckdecorator.hpp"
 #include "libspellcheckdecorator.h"
 

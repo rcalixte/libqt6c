@@ -309,7 +309,7 @@ libqt_list /* of KPlotPoint* */ k_plotwidget_points_under_point(void* self, void
     return _arr;
 }
 
-void k_plotwidget_on_points_under_point(void* self, libqt_list /* of KPlotPoint* */ (*callback)(void*, void*)) {
+void k_plotwidget_on_points_under_point(void* self, KPlotPoint** (*callback)(void*, void*)) {
     KPlotWidget_OnPointsUnderPoint((KPlotWidget*)self, (intptr_t)callback);
 }
 

@@ -6,12 +6,12 @@ QSslError* q_sslerror_new() {
     return QSslError_new();
 }
 
-QSslError* q_sslerror_new2(int32_t errorVal) {
-    return QSslError_new2(errorVal);
+QSslError* q_sslerror_new2(int32_t error) {
+    return QSslError_new2(error);
 }
 
-QSslError* q_sslerror_new3(int32_t errorVal, void* certificate) {
-    return QSslError_new3(errorVal, (QSslCertificate*)certificate);
+QSslError* q_sslerror_new3(int32_t error, void* certificate) {
+    return QSslError_new3(error, (QSslCertificate*)certificate);
 }
 
 QSslError* q_sslerror_new4(void* other) {

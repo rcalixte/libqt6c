@@ -179,16 +179,16 @@ void QImageCapture_Connect_ErrorChanged(QImageCapture* self, intptr_t slot) {
     });
 }
 
-void QImageCapture_ErrorOccurred(QImageCapture* self, int id, int errorVal, const libqt_string errorString) {
+void QImageCapture_ErrorOccurred(QImageCapture* self, int id, int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    self->errorOccurred(static_cast<int>(id), static_cast<QImageCapture::Error>(errorVal), errorString_QString);
+    self->errorOccurred(static_cast<int>(id), static_cast<QImageCapture::Error>(error), errorString_QString);
 }
 
 void QImageCapture_Connect_ErrorOccurred(QImageCapture* self, intptr_t slot) {
     void (*slotFunc)(QImageCapture*, int, int, const char*) = reinterpret_cast<void (*)(QImageCapture*, int, int, const char*)>(slot);
-    QImageCapture::connect(self, &QImageCapture::errorOccurred, [self, slotFunc](int id, QImageCapture::Error errorVal, const QString& errorString) {
+    QImageCapture::connect(self, &QImageCapture::errorOccurred, [self, slotFunc](int id, QImageCapture::Error error, const QString& errorString) {
         int sigval1 = id;
-        int sigval2 = static_cast<int>(errorVal);
+        int sigval2 = static_cast<int>(error);
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();

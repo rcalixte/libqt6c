@@ -1018,8 +1018,8 @@ libqt_list /* of QAction* */ q_termwidget_filter_actions(void* self, void* posit
 /// Allows for overriding the related default method
 ///
 /// @param self QTermWidget*
-/// @param callback libqt_list /* of QAction* */ func(QTermWidget* self, QPoint* position)
-void q_termwidget_on_filter_actions(void* self, libqt_list /* of QAction* */ (*callback)(void*, void*));
+/// @param callback QAction** func(QTermWidget* self, QPoint* position)
+void q_termwidget_on_filter_actions(void* self, QAction** (*callback)(void*, void*));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

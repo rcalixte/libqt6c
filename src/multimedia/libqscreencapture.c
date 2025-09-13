@@ -105,8 +105,8 @@ void q_screencapture_on_screen_changed(void* self, void (*callback)(void*, void*
     QScreenCapture_Connect_ScreenChanged((QScreenCapture*)self, (intptr_t)callback);
 }
 
-void q_screencapture_error_occurred(void* self, int32_t errorVal, const char* errorString) {
-    QScreenCapture_ErrorOccurred((QScreenCapture*)self, errorVal, qstring(errorString));
+void q_screencapture_error_occurred(void* self, int32_t error, const char* errorString) {
+    QScreenCapture_ErrorOccurred((QScreenCapture*)self, error, qstring(errorString));
 }
 
 void q_screencapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {

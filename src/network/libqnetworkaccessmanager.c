@@ -291,7 +291,7 @@ void q_networkaccessmanager_ssl_errors(void* self, void* reply, libqt_list error
     QNetworkAccessManager_SslErrors((QNetworkAccessManager*)self, (QNetworkReply*)reply, errors);
 }
 
-void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list)) {
+void q_networkaccessmanager_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**)) {
     QNetworkAccessManager_Connect_SslErrors((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 

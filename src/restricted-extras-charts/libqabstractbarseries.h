@@ -295,8 +295,8 @@ void q_abstractbarseries_barsets_added(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsAdded)
 ///
 /// @param self QAbstractBarSeries*
-/// @param callback void func(QAbstractBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
-void q_abstractbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QAbstractBarSeries* self, QBarSet** sets)
+void q_abstractbarseries_on_barsets_added(void* self, void (*callback)(void*, QBarSet**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsRemoved)
 ///
@@ -307,8 +307,8 @@ void q_abstractbarseries_barsets_removed(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries-qtcharts.html#barsetsRemoved)
 ///
 /// @param self QAbstractBarSeries*
-/// @param callback void func(QAbstractBarSeries* self, libqt_list /* of QBarSet* */ /* of QBarSet* */)
-void q_abstractbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QAbstractBarSeries* self, QBarSet** sets)
+void q_abstractbarseries_on_barsets_removed(void* self, void (*callback)(void*, QBarSet**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

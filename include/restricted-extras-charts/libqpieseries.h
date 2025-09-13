@@ -237,8 +237,8 @@ void q_pieseries_added(void* self, libqt_list slices);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#added)
 ///
 /// @param self QPieSeries*
-/// @param callback void func(QPieSeries* self, libqt_list /* of QPieSlice* */ /* of QPieSlice* */)
-void q_pieseries_on_added(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QPieSeries* self, QPieSlice** slices)
+void q_pieseries_on_added(void* self, void (*callback)(void*, QPieSlice**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
@@ -249,8 +249,8 @@ void q_pieseries_removed(void* self, libqt_list slices);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#removed)
 ///
 /// @param self QPieSeries*
-/// @param callback void func(QPieSeries* self, libqt_list /* of QPieSlice* */ /* of QPieSlice* */)
-void q_pieseries_on_removed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QPieSeries* self, QPieSlice** slices)
+void q_pieseries_on_removed(void* self, void (*callback)(void*, QPieSlice**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#clicked)
 ///

@@ -958,8 +958,8 @@ libqt_list /* of QModelIndex* */ q_treeview_selected_indexes(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTreeView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_treeview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_treeview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#selectedIndexes)
 ///

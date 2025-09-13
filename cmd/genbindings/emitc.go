@@ -12,8 +12,7 @@ import (
 func reservedWordC(s string) bool {
 	switch s {
 	case "default", "const", "var", "type", "len", "new", "copy", "import",
-		"error", "string", "map", "int", "select", "ret", "suspend",
-		"null", "self":
+		"string", "map", "int", "select", "ret", "suspend", "null", "self":
 		return true
 	default:
 		return false
@@ -419,6 +418,11 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot bool) string {
 			} else if strings.Contains(ret, "of int") {
 				ret = "int*"
 			}
+			if t, _, ok := p.QListOf(); ok {
+				if IsKnownClass(t.ParameterType) {
+					ret = t.RenderTypeC(cfs, true, true) + "*"
+				}
+			}
 		}
 	}
 	return maybeConst + ret
@@ -439,7 +443,9 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			var pTypeSlot string
 
 			if t, _, ok := p.QListOf(); ok {
-				if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+				if isSlot && IsKnownClass(t.ParameterType) {
+					pType = t.RenderTypeC(cfs, false, true) + "*"
+				} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 					t.IntType() || strings.Contains(pType, "libqt_") {
 					pName = cppComment("of " + t.RenderTypeC(cfs, false, true))
 					pTypeSlot = " " + pName
@@ -509,7 +515,9 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			pName := p.ParameterName
 			pType := p.RenderTypeC(cfs, false, false)
 			if t, _, ok := p.QListOf(); ok {
-				if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+				if isSlot && IsKnownClass(t.ParameterType) {
+					pType = t.RenderTypeC(cfs, false, true) + "*"
+				} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 					t.IntType() {
 					pName = p.ParameterName
 					pType = "libqt_list"
@@ -520,11 +528,12 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 				if isSlot {
 					if pType == "libqt_list" {
 						pTypeCheck := t.RenderTypeC(cfs, false, true)
-						switch pTypeCheck {
-						case "libqt_string":
+						if pTypeCheck == "libqt_string" {
 							pType = "const char**"
-						case "int":
+						} else if pTypeCheck == "int" {
 							pType = "int*"
+						} else if IsKnownClass(pTypeCheck) {
+							pType = pTypeCheck + "**"
 						}
 					}
 				}
@@ -1526,7 +1535,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 		seenRefs[ref] = struct{}{}
 
-		if strings.Contains(ref, "::") || !ImportHeaderForClass(ref, false) {
+		if !ImportHeaderForClass(ref, false) {
 			continue
 		}
 

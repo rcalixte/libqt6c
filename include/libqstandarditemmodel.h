@@ -1546,8 +1546,8 @@ QMimeData* q_standarditemmodel_mime_data(void* self, libqt_list indexes);
 /// Allows for overriding the related default method
 ///
 /// @param self QStandardItemModel*
-/// @param callback QMimeData* func(QStandardItemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(QStandardItemModel* self, QModelIndex** indexes)
+void q_standarditemmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#mimeData)
 ///
@@ -1847,8 +1847,8 @@ void q_standarditemmodel_layout_changed1(void* self, libqt_list parents);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
-void q_standarditemmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents)
+void q_standarditemmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1864,8 +1864,8 @@ void q_standarditemmodel_layout_changed2(void* self, libqt_list parents, int32_t
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
-void q_standarditemmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
+/// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+void q_standarditemmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1880,8 +1880,8 @@ void q_standarditemmodel_layout_about_to_be_changed1(void* self, libqt_list pare
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */)
-void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents)
+void q_standarditemmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1897,8 +1897,8 @@ void q_standarditemmodel_layout_about_to_be_changed2(void* self, libqt_list pare
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
 /// @param self QStandardItemModel*
-/// @param callback void func(QStandardItemModel* self, libqt_list /* of QPersistentModelIndex* */ /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint hint)
-void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
+/// @param callback void func(QStandardItemModel* self, QPersistentModelIndex** parents, enum QAbstractItemModel__LayoutChangeHint hint)
+void q_standarditemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t));
 
 /// Inherited from QObject
 ///
@@ -2505,8 +2505,8 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_match(void* self, voi
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_list /* of QModelIndex* */ func(QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
-void q_standarditemmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t));
+/// @param callback QModelIndex** func(QStandardItemModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+void q_standarditemmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2895,8 +2895,8 @@ void q_standarditemmodel_qbase_encode_data(void* self, libqt_list indexes, void*
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void func(QStandardItemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, QDataStream* stream)
-void q_standarditemmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+/// @param callback void func(QStandardItemModel* self, QModelIndex** indexes, QDataStream* stream)
+void q_standarditemmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3431,8 +3431,8 @@ void q_standarditemmodel_qbase_change_persistent_index_list(void* self, libqt_li
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback void func(QStandardItemModel* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
+/// @param callback void func(QStandardItemModel* self, QModelIndex** from, QModelIndex** to)
+void q_standarditemmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3459,8 +3459,8 @@ libqt_list /* of QModelIndex* */ q_standarditemmodel_qbase_persistent_index_list
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStandardItemModel*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_standarditemmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_standarditemmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QObject
 ///

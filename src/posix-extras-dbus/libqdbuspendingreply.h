@@ -75,8 +75,8 @@ QDBusMessage* q_dbuspendingreplybase_reply(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromError)
 ///
-/// @param errorVal QDBusError*
-QDBusPendingCall* q_dbuspendingreplybase_from_error(void* errorVal);
+/// @param error QDBusError*
+QDBusPendingCall* q_dbuspendingreplybase_from_error(void* error);
 
 /// Inherited from QDBusPendingCall
 ///

@@ -419,14 +419,14 @@ void q_camera_on_error_changed(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorOccurred)
 ///
 /// @param self QCamera*
-/// @param errorVal enum QCamera__Error
+/// @param error enum QCamera__Error
 /// @param errorString const char*
-void q_camera_error_occurred(void* self, int32_t errorVal, const char* errorString);
+void q_camera_error_occurred(void* self, int32_t error, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorOccurred)
 ///
 /// @param self QCamera*
-/// @param callback void func(QCamera* self, enum QCamera__Error errorVal, const char* errorString)
+/// @param callback void func(QCamera* self, enum QCamera__Error error, const char* errorString)
 void q_camera_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraDeviceChanged)

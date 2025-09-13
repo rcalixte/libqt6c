@@ -1322,8 +1322,8 @@ libqt_list /* of QWidget* */ k_bookmarkactionmenu_qbase_created_widgets(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBookmarkActionMenu*
-/// @param callback libqt_list /* of QWidget* */ func()
-void k_bookmarkactionmenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
+/// @param callback QWidget** func()
+void k_bookmarkactionmenu_on_created_widgets(void* self, QWidget** (*callback)());
 
 /// Inherited from QObject
 ///

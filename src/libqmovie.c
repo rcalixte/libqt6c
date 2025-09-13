@@ -230,8 +230,8 @@ void q_movie_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QMovie_Connect_StateChanged((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_error(void* self, int32_t errorVal) {
-    QMovie_Error((QMovie*)self, errorVal);
+void q_movie_error(void* self, int32_t error) {
+    QMovie_Error((QMovie*)self, error);
 }
 
 void q_movie_on_error(void* self, void (*callback)(void*, int32_t)) {

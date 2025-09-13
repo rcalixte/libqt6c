@@ -151,14 +151,14 @@ void q_windowcapture_on_error_changed(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorOccurred)
 ///
 /// @param self QWindowCapture*
-/// @param errorVal enum QWindowCapture__Error
+/// @param error enum QWindowCapture__Error
 /// @param errorString const char*
-void q_windowcapture_error_occurred(void* self, int32_t errorVal, const char* errorString);
+void q_windowcapture_error_occurred(void* self, int32_t error, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorOccurred)
 ///
 /// @param self QWindowCapture*
-/// @param callback void func(QWindowCapture* self, enum QWindowCapture__Error errorVal, const char* errorString)
+/// @param callback void func(QWindowCapture* self, enum QWindowCapture__Error error, const char* errorString)
 void q_windowcapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)

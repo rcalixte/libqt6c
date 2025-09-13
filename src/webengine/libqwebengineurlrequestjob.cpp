@@ -63,8 +63,8 @@ void QWebEngineUrlRequestJob_Reply(QWebEngineUrlRequestJob* self, const libqt_st
     self->reply(contentType_QByteArray, device);
 }
 
-void QWebEngineUrlRequestJob_Fail(QWebEngineUrlRequestJob* self, int errorVal) {
-    self->fail(static_cast<QWebEngineUrlRequestJob::Error>(errorVal));
+void QWebEngineUrlRequestJob_Fail(QWebEngineUrlRequestJob* self, int error) {
+    self->fail(static_cast<QWebEngineUrlRequestJob::Error>(error));
 }
 
 void QWebEngineUrlRequestJob_Redirect(QWebEngineUrlRequestJob* self, const QUrl* url) {

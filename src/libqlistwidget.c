@@ -655,7 +655,7 @@ QMimeData* q_listwidget_mime_data(void* self, libqt_list items) {
     return QListWidget_MimeData((QListWidget*)self, items);
 }
 
-void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QListWidgetItem**)) {
     QListWidget_OnMimeData((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -837,7 +837,7 @@ void q_listwidget_indexes_moved(void* self, libqt_list indexes) {
     QListView_IndexesMoved((QListView*)self, indexes);
 }
 
-void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, libqt_list)) {
+void q_listwidget_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**)) {
     QListView_Connect_IndexesMoved((QListView*)self, (intptr_t)callback);
 }
 
@@ -2893,7 +2893,7 @@ libqt_list /* of QModelIndex* */ q_listwidget_qbase_selected_indexes(void* self)
     return _arr;
 }
 
-void q_listwidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_listwidget_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
     QListWidget_OnSelectedIndexes((QListWidget*)self, (intptr_t)callback);
 }
 

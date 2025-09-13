@@ -1264,8 +1264,8 @@ libqt_list /* of QModelIndex* */ q_abstractitemview_selected_indexes(void* self)
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_abstractitemview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_abstractitemview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectedIndexes)
 ///

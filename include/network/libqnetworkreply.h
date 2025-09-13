@@ -241,8 +241,8 @@ void q_networkreply_ssl_errors(void* self, libqt_list errors);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#sslErrors)
 ///
 /// @param self QNetworkReply*
-/// @param callback void func(QNetworkReply* self, libqt_list /* of QSslError* */ /* of QSslError* */)
-void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QNetworkReply* self, QSslError** errors)
+void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, QSslError**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#preSharedKeyAuthenticationRequired)
 ///

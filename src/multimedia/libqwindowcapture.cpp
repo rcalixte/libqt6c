@@ -144,15 +144,15 @@ void QWindowCapture_Connect_ErrorChanged(QWindowCapture* self, intptr_t slot) {
     });
 }
 
-void QWindowCapture_ErrorOccurred(QWindowCapture* self, int errorVal, const libqt_string errorString) {
+void QWindowCapture_ErrorOccurred(QWindowCapture* self, int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    self->errorOccurred(static_cast<QWindowCapture::Error>(errorVal), errorString_QString);
+    self->errorOccurred(static_cast<QWindowCapture::Error>(error), errorString_QString);
 }
 
 void QWindowCapture_Connect_ErrorOccurred(QWindowCapture* self, intptr_t slot) {
     void (*slotFunc)(QWindowCapture*, int, const char*) = reinterpret_cast<void (*)(QWindowCapture*, int, const char*)>(slot);
-    QWindowCapture::connect(self, &QWindowCapture::errorOccurred, [self, slotFunc](QWindowCapture::Error errorVal, const QString& errorString) {
-        int sigval1 = static_cast<int>(errorVal);
+    QWindowCapture::connect(self, &QWindowCapture::errorOccurred, [self, slotFunc](QWindowCapture::Error error, const QString& errorString) {
+        int sigval1 = static_cast<int>(error);
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();

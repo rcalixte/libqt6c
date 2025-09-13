@@ -109,7 +109,7 @@ void QProcess_Terminate(QProcess* self);
 void QProcess_Kill(QProcess* self);
 void QProcess_Finished(QProcess* self, int exitCode);
 void QProcess_Connect_Finished(QProcess* self, intptr_t slot);
-void QProcess_ErrorOccurred(QProcess* self, int errorVal);
+void QProcess_ErrorOccurred(QProcess* self, int error);
 void QProcess_Connect_ErrorOccurred(QProcess* self, intptr_t slot);
 long long QProcess_ReadData(QProcess* self, char* data, long long maxlen);
 long long QProcess_WriteData(QProcess* self, const char* data, long long lenVal);
@@ -122,7 +122,7 @@ void QProcess_StartCommand2(QProcess* self, const libqt_string command, int mode
 bool QProcess_StartDetached1(QProcess* self, long long* pid);
 void QProcess_SetStandardOutputFile2(QProcess* self, const libqt_string fileName, int mode);
 void QProcess_SetStandardErrorFile2(QProcess* self, const libqt_string fileName, int mode);
-void QProcess_FailChildProcessModifier2(QProcess* self, const char* description, int errorVal);
+void QProcess_FailChildProcessModifier2(QProcess* self, const char* description, int error);
 bool QProcess_WaitForStarted1(QProcess* self, int msecs);
 bool QProcess_WaitForFinished1(QProcess* self, int msecs);
 int QProcess_Execute2(const libqt_string program, const libqt_list /* of libqt_string */ arguments);

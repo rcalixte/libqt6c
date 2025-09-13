@@ -32,7 +32,7 @@ libqt_string QWebEngineUrlRequestJob_RequestMethod(const QWebEngineUrlRequestJob
 QUrl* QWebEngineUrlRequestJob_Initiator(const QWebEngineUrlRequestJob* self);
 QIODevice* QWebEngineUrlRequestJob_RequestBody(const QWebEngineUrlRequestJob* self);
 void QWebEngineUrlRequestJob_Reply(QWebEngineUrlRequestJob* self, const libqt_string contentType, QIODevice* device);
-void QWebEngineUrlRequestJob_Fail(QWebEngineUrlRequestJob* self, int errorVal);
+void QWebEngineUrlRequestJob_Fail(QWebEngineUrlRequestJob* self, int error);
 void QWebEngineUrlRequestJob_Redirect(QWebEngineUrlRequestJob* self, const QUrl* url);
 libqt_string QWebEngineUrlRequestJob_Tr2(const char* s, const char* c);
 libqt_string QWebEngineUrlRequestJob_Tr3(const char* s, const char* c, int n);

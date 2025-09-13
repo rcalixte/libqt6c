@@ -282,14 +282,14 @@ void QMovie_Connect_StateChanged(QMovie* self, intptr_t slot) {
     });
 }
 
-void QMovie_Error(QMovie* self, int errorVal) {
-    self->error(static_cast<QImageReader::ImageReaderError>(errorVal));
+void QMovie_Error(QMovie* self, int error) {
+    self->error(static_cast<QImageReader::ImageReaderError>(error));
 }
 
 void QMovie_Connect_Error(QMovie* self, intptr_t slot) {
     void (*slotFunc)(QMovie*, int) = reinterpret_cast<void (*)(QMovie*, int)>(slot);
-    QMovie::connect(self, &QMovie::error, [self, slotFunc](QImageReader::ImageReaderError errorVal) {
-        int sigval1 = static_cast<int>(errorVal);
+    QMovie::connect(self, &QMovie::error, [self, slotFunc](QImageReader::ImageReaderError error) {
+        int sigval1 = static_cast<int>(error);
         slotFunc(self, sigval1);
     });
 }

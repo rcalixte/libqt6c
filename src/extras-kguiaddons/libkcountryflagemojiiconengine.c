@@ -164,7 +164,7 @@ libqt_list /* of QSize* */ k_countryflagemojiiconengine_qbase_available_sizes(vo
     return _arr;
 }
 
-void k_countryflagemojiiconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int32_t, int32_t)) {
+void k_countryflagemojiiconengine_on_available_sizes(void* self, QSize** (*callback)(void*, int32_t, int32_t)) {
     KCountryFlagEmojiIconEngine_OnAvailableSizes((KCountryFlagEmojiIconEngine*)self, (intptr_t)callback);
 }
 

@@ -569,15 +569,15 @@ void k_process_on_finished(void* self, void (*callback)(void*, int));
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
 ///
 /// @param self KProcess*
-/// @param errorVal enum QProcess__ProcessError
-void k_process_error_occurred(void* self, int32_t errorVal);
+/// @param error enum QProcess__ProcessError
+void k_process_error_occurred(void* self, int32_t error);
 
 /// Inherited from QProcess
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
 ///
 /// @param self KProcess*
-/// @param callback void func(KProcess* self, enum QProcess__ProcessError errorVal)
+/// @param callback void func(KProcess* self, enum QProcess__ProcessError error)
 void k_process_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QProcess
@@ -648,8 +648,8 @@ void k_process_set_standard_error_file2(void* self, const char* fileName, int32_
 ///
 /// @param self KProcess*
 /// @param description const char*
-/// @param errorVal int
-void k_process_fail_child_process_modifier2(void* self, const char* description, int errorVal);
+/// @param error int
+void k_process_fail_child_process_modifier2(void* self, const char* description, int error);
 
 /// Inherited from QProcess
 ///

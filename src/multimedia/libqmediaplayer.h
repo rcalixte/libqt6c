@@ -516,14 +516,14 @@ void q_mediaplayer_on_error_changed(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorOccurred)
 ///
 /// @param self QMediaPlayer*
-/// @param errorVal enum QMediaPlayer__Error
+/// @param error enum QMediaPlayer__Error
 /// @param errorString const char*
-void q_mediaplayer_error_occurred(void* self, int32_t errorVal, const char* errorString);
+void q_mediaplayer_error_occurred(void* self, int32_t error, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorOccurred)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void func(QMediaPlayer* self, enum QMediaPlayer__Error errorVal, const char* errorString)
+/// @param callback void func(QMediaPlayer* self, enum QMediaPlayer__Error error, const char* errorString)
 void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)

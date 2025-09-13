@@ -62,8 +62,8 @@ QDBusMessage* q_dbuspendingcall_reply(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromError)
 ///
-/// @param errorVal QDBusError*
-QDBusPendingCall* q_dbuspendingcall_from_error(void* errorVal);
+/// @param error QDBusError*
+QDBusPendingCall* q_dbuspendingcall_from_error(void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromCompletedCall)
 ///
@@ -533,8 +533,8 @@ QDBusMessage* q_dbuspendingcallwatcher_reply(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuspendingcall.html#fromError)
 ///
-/// @param errorVal QDBusError*
-QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* errorVal);
+/// @param error QDBusError*
+QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* error);
 
 /// Inherited from QDBusPendingCall
 ///

@@ -40,8 +40,8 @@ int32_t q_jsonparseerror_error(void* self) {
     return QJsonParseError_Error((QJsonParseError*)self);
 }
 
-void q_jsonparseerror_set_error(void* self, int32_t _error) {
-    QJsonParseError_SetError((QJsonParseError*)self, _error);
+void q_jsonparseerror_set_error(void* self, int32_t error) {
+    QJsonParseError_SetError((QJsonParseError*)self, error);
 }
 
 void q_jsonparseerror_delete(void* self) {
@@ -131,8 +131,8 @@ bool q_jsondocument_is_null(void* self) {
     return QJsonDocument_IsNull((QJsonDocument*)self);
 }
 
-QJsonDocument* q_jsondocument_from_json2(const char* json, void* errorVal) {
-    return QJsonDocument_FromJson2(qstring(json), (QJsonParseError*)errorVal);
+QJsonDocument* q_jsondocument_from_json2(const char* json, void* error) {
+    return QJsonDocument_FromJson2(qstring(json), (QJsonParseError*)error);
 }
 
 char* q_jsondocument_to_json1(void* self, int32_t format) {

@@ -1028,8 +1028,8 @@ void q_graphicsscene_changed(void* self, libqt_list region);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#changed)
 ///
 /// @param self QGraphicsScene*
-/// @param callback void func(QGraphicsScene* self, libqt_list /* of QRectF* */ /* of QRectF* */)
-void q_graphicsscene_on_changed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QGraphicsScene* self, QRectF** region)
+void q_graphicsscene_on_changed(void* self, void (*callback)(void*, QRectF**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#sceneRectChanged)
 ///

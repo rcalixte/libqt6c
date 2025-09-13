@@ -1121,8 +1121,8 @@ QMimeData* q_treewidget_mime_data(void* self, libqt_list items);
 /// Allows for overriding the related default method
 ///
 /// @param self QTreeWidget*
-/// @param callback QMimeData* func(QTreeWidget* self, libqt_list /* of QTreeWidgetItem* */ /* of QTreeWidgetItem* */)
-void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(QTreeWidget* self, QTreeWidgetItem** items)
+void q_treewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTreeWidgetItem**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#mimeData)
 ///
@@ -5618,8 +5618,8 @@ libqt_list /* of QModelIndex* */ q_treewidget_qbase_selected_indexes(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTreeWidget*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_treewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_treewidget_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QTreeView
 ///

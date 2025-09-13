@@ -314,8 +314,8 @@ void q_candlestickseries_candlestick_sets_added(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsAdded)
 ///
 /// @param self QCandlestickSeries*
-/// @param callback void func(QCandlestickSeries* self, libqt_list /* of QCandlestickSet* */ /* of QCandlestickSet* */)
-void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QCandlestickSeries* self, QCandlestickSet** sets)
+void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(void*, QCandlestickSet**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsRemoved)
 ///
@@ -326,8 +326,8 @@ void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list sets);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#candlestickSetsRemoved)
 ///
 /// @param self QCandlestickSeries*
-/// @param callback void func(QCandlestickSeries* self, libqt_list /* of QCandlestickSet* */ /* of QCandlestickSet* */)
-void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QCandlestickSeries* self, QCandlestickSet** sets)
+void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*callback)(void*, QCandlestickSet**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickseries-qtcharts.html#countChanged)
 ///

@@ -19,6 +19,8 @@
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
+#include "../extras-sonnet/libhighlighter.hpp"
+#include "../extras-sonnet/libspellcheckdecorator.hpp"
 #include "libktextedit.hpp"
 #include "libktextedit.h"
 

@@ -198,7 +198,7 @@ void q_networkreply_ssl_errors(void* self, libqt_list errors) {
     QNetworkReply_SslErrors((QNetworkReply*)self, errors);
 }
 
-void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, libqt_list)) {
+void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, QSslError**)) {
     QNetworkReply_Connect_SslErrors((QNetworkReply*)self, (intptr_t)callback);
 }
 

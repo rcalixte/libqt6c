@@ -264,15 +264,15 @@ void QMediaRecorder_Connect_EncoderSettingsChanged(QMediaRecorder* self, intptr_
     });
 }
 
-void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int errorVal, const libqt_string errorString) {
+void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    self->errorOccurred(static_cast<QMediaRecorder::Error>(errorVal), errorString_QString);
+    self->errorOccurred(static_cast<QMediaRecorder::Error>(error), errorString_QString);
 }
 
 void QMediaRecorder_Connect_ErrorOccurred(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*, int, const char*) = reinterpret_cast<void (*)(QMediaRecorder*, int, const char*)>(slot);
-    QMediaRecorder::connect(self, &QMediaRecorder::errorOccurred, [self, slotFunc](QMediaRecorder::Error errorVal, const QString& errorString) {
-        int sigval1 = static_cast<int>(errorVal);
+    QMediaRecorder::connect(self, &QMediaRecorder::errorOccurred, [self, slotFunc](QMediaRecorder::Error error, const QString& errorString) {
+        int sigval1 = static_cast<int>(error);
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();

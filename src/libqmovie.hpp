@@ -76,7 +76,7 @@ void QMovie_Updated(QMovie* self, const QRect* rect);
 void QMovie_Connect_Updated(QMovie* self, intptr_t slot);
 void QMovie_StateChanged(QMovie* self, int state);
 void QMovie_Connect_StateChanged(QMovie* self, intptr_t slot);
-void QMovie_Error(QMovie* self, int errorVal);
+void QMovie_Error(QMovie* self, int error);
 void QMovie_Connect_Error(QMovie* self, intptr_t slot);
 void QMovie_Finished(QMovie* self);
 void QMovie_Connect_Finished(QMovie* self, intptr_t slot);

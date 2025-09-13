@@ -193,14 +193,14 @@ void q_imagecapture_on_error_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QImageCapture*
 /// @param id int
-/// @param errorVal enum QImageCapture__Error
+/// @param error enum QImageCapture__Error
 /// @param errorString const char*
-void q_imagecapture_error_occurred(void* self, int id, int32_t errorVal, const char* errorString);
+void q_imagecapture_error_occurred(void* self, int id, int32_t error, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorOccurred)
 ///
 /// @param self QImageCapture*
-/// @param callback void func(QImageCapture* self, int id, enum QImageCapture__Error errorVal, const char* errorString)
+/// @param callback void func(QImageCapture* self, int id, enum QImageCapture__Error error, const char* errorString)
 void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#readyForCaptureChanged)

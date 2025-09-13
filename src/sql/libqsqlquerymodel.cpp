@@ -1990,23 +1990,23 @@ void QSqlQueryModel_OnEndResetModel(QSqlQueryModel* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSqlQueryModel_SetLastError(QSqlQueryModel* self, const QSqlError* errorVal) {
+void QSqlQueryModel_SetLastError(QSqlQueryModel* self, const QSqlError* error) {
     auto* vqsqlquerymodel = dynamic_cast<VirtualQSqlQueryModel*>(self);
     if (vqsqlquerymodel && vqsqlquerymodel->isVirtualQSqlQueryModel) {
-        vqsqlquerymodel->setLastError(*errorVal);
+        vqsqlquerymodel->setLastError(*error);
     } else {
-        ((VirtualQSqlQueryModel*)self)->setLastError(*errorVal);
+        ((VirtualQSqlQueryModel*)self)->setLastError(*error);
     }
 }
 
 // Base class handler implementation
-void QSqlQueryModel_QBaseSetLastError(QSqlQueryModel* self, const QSqlError* errorVal) {
+void QSqlQueryModel_QBaseSetLastError(QSqlQueryModel* self, const QSqlError* error) {
     auto* vqsqlquerymodel = dynamic_cast<VirtualQSqlQueryModel*>(self);
     if (vqsqlquerymodel && vqsqlquerymodel->isVirtualQSqlQueryModel) {
         vqsqlquerymodel->setQSqlQueryModel_SetLastError_IsBase(true);
-        vqsqlquerymodel->setLastError(*errorVal);
+        vqsqlquerymodel->setLastError(*error);
     } else {
-        ((VirtualQSqlQueryModel*)self)->setLastError(*errorVal);
+        ((VirtualQSqlQueryModel*)self)->setLastError(*error);
     }
 }
 

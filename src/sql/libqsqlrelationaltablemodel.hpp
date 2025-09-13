@@ -275,9 +275,9 @@ void QSqlRelationalTableModel_QBaseBeginResetModel(QSqlRelationalTableModel* sel
 void QSqlRelationalTableModel_EndResetModel(QSqlRelationalTableModel* self);
 void QSqlRelationalTableModel_OnEndResetModel(QSqlRelationalTableModel* self, intptr_t slot);
 void QSqlRelationalTableModel_QBaseEndResetModel(QSqlRelationalTableModel* self);
-void QSqlRelationalTableModel_SetLastError(QSqlRelationalTableModel* self, const QSqlError* errorVal);
+void QSqlRelationalTableModel_SetLastError(QSqlRelationalTableModel* self, const QSqlError* error);
 void QSqlRelationalTableModel_OnSetLastError(QSqlRelationalTableModel* self, intptr_t slot);
-void QSqlRelationalTableModel_QBaseSetLastError(QSqlRelationalTableModel* self, const QSqlError* errorVal);
+void QSqlRelationalTableModel_QBaseSetLastError(QSqlRelationalTableModel* self, const QSqlError* error);
 QModelIndex* QSqlRelationalTableModel_CreateIndex(const QSqlRelationalTableModel* self, int row, int column);
 void QSqlRelationalTableModel_OnCreateIndex(const QSqlRelationalTableModel* self, intptr_t slot);
 QModelIndex* QSqlRelationalTableModel_QBaseCreateIndex(const QSqlRelationalTableModel* self, int row, int column);

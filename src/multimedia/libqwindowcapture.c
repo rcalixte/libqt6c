@@ -110,8 +110,8 @@ void q_windowcapture_on_error_changed(void* self, void (*callback)(void*)) {
     QWindowCapture_Connect_ErrorChanged((QWindowCapture*)self, (intptr_t)callback);
 }
 
-void q_windowcapture_error_occurred(void* self, int32_t errorVal, const char* errorString) {
-    QWindowCapture_ErrorOccurred((QWindowCapture*)self, errorVal, qstring(errorString));
+void q_windowcapture_error_occurred(void* self, int32_t error, const char* errorString) {
+    QWindowCapture_ErrorOccurred((QWindowCapture*)self, error, qstring(errorString));
 }
 
 void q_windowcapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {

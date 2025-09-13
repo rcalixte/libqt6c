@@ -57,7 +57,7 @@ int QImageCapture_CaptureToFile(QImageCapture* self);
 int QImageCapture_Capture(QImageCapture* self);
 void QImageCapture_ErrorChanged(QImageCapture* self);
 void QImageCapture_Connect_ErrorChanged(QImageCapture* self, intptr_t slot);
-void QImageCapture_ErrorOccurred(QImageCapture* self, int id, int errorVal, const libqt_string errorString);
+void QImageCapture_ErrorOccurred(QImageCapture* self, int id, int error, const libqt_string errorString);
 void QImageCapture_Connect_ErrorOccurred(QImageCapture* self, intptr_t slot);
 void QImageCapture_ReadyForCaptureChanged(QImageCapture* self, bool ready);
 void QImageCapture_Connect_ReadyForCaptureChanged(QImageCapture* self, intptr_t slot);

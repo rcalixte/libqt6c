@@ -148,9 +148,9 @@ bool QJsonDocument_IsNull(const QJsonDocument* self) {
     return self->isNull();
 }
 
-QJsonDocument* QJsonDocument_FromJson2(const libqt_string json, QJsonParseError* errorVal) {
+QJsonDocument* QJsonDocument_FromJson2(const libqt_string json, QJsonParseError* error) {
     QByteArray json_QByteArray(json.data, json.len);
-    return new QJsonDocument(QJsonDocument::fromJson(json_QByteArray, errorVal));
+    return new QJsonDocument(QJsonDocument::fromJson(json_QByteArray, error));
 }
 
 libqt_string QJsonDocument_ToJson1(const QJsonDocument* self, int format) {

@@ -692,7 +692,7 @@ libqt_list /* of QWidget* */ k_actionmenu_qbase_created_widgets(void* self) {
     return _arr;
 }
 
-void k_actionmenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
+void k_actionmenu_on_created_widgets(void* self, QWidget** (*callback)()) {
     KActionMenu_OnCreatedWidgets((KActionMenu*)self, (intptr_t)callback);
 }
 

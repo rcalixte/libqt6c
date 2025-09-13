@@ -66,20 +66,20 @@ void q_sslserver_ssl_errors(void* self, void* socket, libqt_list errors) {
     QSslServer_SslErrors((QSslServer*)self, (QSslSocket*)socket, errors);
 }
 
-void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list)) {
+void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**)) {
     QSslServer_Connect_SslErrors((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_peer_verify_error(void* self, void* socket, void* errorVal) {
-    QSslServer_PeerVerifyError((QSslServer*)self, (QSslSocket*)socket, (QSslError*)errorVal);
+void q_sslserver_peer_verify_error(void* self, void* socket, void* error) {
+    QSslServer_PeerVerifyError((QSslServer*)self, (QSslSocket*)socket, (QSslError*)error);
 }
 
 void q_sslserver_on_peer_verify_error(void* self, void (*callback)(void*, void*, void*)) {
     QSslServer_Connect_PeerVerifyError((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_error_occurred(void* self, void* socket, int32_t errorVal) {
-    QSslServer_ErrorOccurred((QSslServer*)self, (QSslSocket*)socket, errorVal);
+void q_sslserver_error_occurred(void* self, void* socket, int32_t error) {
+    QSslServer_ErrorOccurred((QSslServer*)self, (QSslSocket*)socket, error);
 }
 
 void q_sslserver_on_error_occurred(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -110,8 +110,8 @@ void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, in
     QSslServer_Connect_AlertReceived((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, void* errorVal) {
-    QSslServer_HandshakeInterruptedOnError((QSslServer*)self, (QSslSocket*)socket, (QSslError*)errorVal);
+void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, void* error) {
+    QSslServer_HandshakeInterruptedOnError((QSslServer*)self, (QSslSocket*)socket, (QSslError*)error);
 }
 
 void q_sslserver_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*, void*)) {

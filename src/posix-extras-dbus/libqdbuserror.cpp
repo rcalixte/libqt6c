@@ -15,9 +15,9 @@ QDBusError* QDBusError_new2(const QDBusMessage* msg) {
     return new QDBusError(*msg);
 }
 
-QDBusError* QDBusError_new3(int errorVal, const libqt_string message) {
+QDBusError* QDBusError_new3(int error, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
-    return new QDBusError(static_cast<QDBusError::ErrorType>(errorVal), message_QString);
+    return new QDBusError(static_cast<QDBusError::ErrorType>(error), message_QString);
 }
 
 QDBusError* QDBusError_new4(const QDBusError* other) {
@@ -68,8 +68,8 @@ bool QDBusError_IsValid(const QDBusError* self) {
     return self->isValid();
 }
 
-libqt_string QDBusError_ErrorString(int errorVal) {
-    QString _ret = QDBusError::errorString(static_cast<QDBusError::ErrorType>(errorVal));
+libqt_string QDBusError_ErrorString(int error) {
+    QString _ret = QDBusError::errorString(static_cast<QDBusError::ErrorType>(error));
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;

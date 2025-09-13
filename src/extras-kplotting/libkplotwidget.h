@@ -453,8 +453,8 @@ libqt_list /* of KPlotPoint* */ k_plotwidget_points_under_point(void* self, void
 /// Allows for overriding the related default method
 ///
 /// @param self KPlotWidget*
-/// @param callback libqt_list /* of KPlotPoint* */ func(KPlotWidget* self, QPoint* p)
-void k_plotwidget_on_points_under_point(void* self, libqt_list /* of KPlotPoint* */ (*callback)(void*, void*));
+/// @param callback KPlotPoint** func(KPlotWidget* self, QPoint* p)
+void k_plotwidget_on_points_under_point(void* self, KPlotPoint** (*callback)(void*, void*));
 
 /// [Qt documentation](https://api.kde.org/kplotwidget.html#pointsUnderPoint)
 ///

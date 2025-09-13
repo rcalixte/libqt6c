@@ -780,8 +780,8 @@ libqt_list /* of QTextBlock* */ q_textlist_qbase_block_list(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTextList*
-/// @param callback libqt_list /* of QTextBlock* */ func()
-void q_textlist_on_block_list(void* self, libqt_list /* of QTextBlock* */ (*callback)());
+/// @param callback QTextBlock** func()
+void q_textlist_on_block_list(void* self, QTextBlock** (*callback)());
 
 /// Inherited from QObject
 ///

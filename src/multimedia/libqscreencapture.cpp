@@ -130,15 +130,15 @@ void QScreenCapture_Connect_ScreenChanged(QScreenCapture* self, intptr_t slot) {
     });
 }
 
-void QScreenCapture_ErrorOccurred(QScreenCapture* self, int errorVal, const libqt_string errorString) {
+void QScreenCapture_ErrorOccurred(QScreenCapture* self, int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
-    self->errorOccurred(static_cast<QScreenCapture::Error>(errorVal), errorString_QString);
+    self->errorOccurred(static_cast<QScreenCapture::Error>(error), errorString_QString);
 }
 
 void QScreenCapture_Connect_ErrorOccurred(QScreenCapture* self, intptr_t slot) {
     void (*slotFunc)(QScreenCapture*, int, const char*) = reinterpret_cast<void (*)(QScreenCapture*, int, const char*)>(slot);
-    QScreenCapture::connect(self, &QScreenCapture::errorOccurred, [self, slotFunc](QScreenCapture::Error errorVal, const QString& errorString) {
-        int sigval1 = static_cast<int>(errorVal);
+    QScreenCapture::connect(self, &QScreenCapture::errorOccurred, [self, slotFunc](QScreenCapture::Error error, const QString& errorString) {
+        int sigval1 = static_cast<int>(error);
         const QString errorString_ret = errorString;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray errorString_b = errorString_ret.toUtf8();

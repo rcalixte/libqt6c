@@ -1821,7 +1821,7 @@ libqt_list /* of QAction* */ k_onsole__filter__hotspot_actions(void* self) {
     return _arr;
 }
 
-void k_onsole__filter__hotspot_on_actions(void* self, libqt_list /* of QAction* */ (*callback)()) {
+void k_onsole__filter__hotspot_on_actions(void* self, QAction** (*callback)()) {
     Konsole__Filter__HotSpot_OnActions((Konsole__Filter__HotSpot*)self, (intptr_t)callback);
 }
 
@@ -1930,7 +1930,7 @@ libqt_list /* of QAction* */ k_onsole__regexpfilter__hotspot_qbase_actions(void*
     return _arr;
 }
 
-void k_onsole__regexpfilter__hotspot_on_actions(void* self, libqt_list /* of QAction* */ (*callback)()) {
+void k_onsole__regexpfilter__hotspot_on_actions(void* self, QAction** (*callback)()) {
     Konsole__RegExpFilter__HotSpot_OnActions((Konsole__RegExpFilter__HotSpot*)self, (intptr_t)callback);
 }
 
@@ -1963,7 +1963,7 @@ libqt_list /* of QAction* */ k_onsole__urlfilter__hotspot_actions(void* self) {
     return _arr;
 }
 
-void k_onsole__urlfilter__hotspot_on_actions(void* self, libqt_list /* of QAction* */ (*callback)()) {
+void k_onsole__urlfilter__hotspot_on_actions(void* self, QAction** (*callback)()) {
     Konsole__UrlFilter__HotSpot_OnActions((Konsole__UrlFilter__HotSpot*)self, (intptr_t)callback);
 }
 

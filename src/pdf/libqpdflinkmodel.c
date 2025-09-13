@@ -270,7 +270,7 @@ void q_pdflinkmodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_pdflinkmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_pdflinkmodel_on_layout_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -278,7 +278,7 @@ void q_pdflinkmodel_layout_changed2(void* self, libqt_list parents, int32_t hint
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_pdflinkmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_pdflinkmodel_on_layout_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -286,7 +286,7 @@ void q_pdflinkmodel_layout_about_to_be_changed1(void* self, libqt_list parents) 
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_pdflinkmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+void q_pdflinkmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, QPersistentModelIndex**)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -294,7 +294,7 @@ void q_pdflinkmodel_layout_about_to_be_changed2(void* self, libqt_list parents, 
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_pdflinkmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
+void q_pdflinkmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, QPersistentModelIndex**, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -635,7 +635,7 @@ QMimeData* q_pdflinkmodel_qbase_mime_data(void* self, libqt_list indexes) {
     return QPdfLinkModel_QBaseMimeData((QPdfLinkModel*)self, indexes);
 }
 
-void q_pdflinkmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+void q_pdflinkmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, QModelIndex**)) {
     QPdfLinkModel_OnMimeData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -805,7 +805,7 @@ libqt_list /* of QModelIndex* */ q_pdflinkmodel_qbase_match(void* self, void* st
     return _arr;
 }
 
-void q_pdflinkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void q_pdflinkmodel_on_match(void* self, QModelIndex** (*callback)(void*, void*, int, void*, int, int32_t)) {
     QPdfLinkModel_OnMatch((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -973,7 +973,7 @@ void q_pdflinkmodel_qbase_encode_data(void* self, libqt_list indexes, void* stre
     QPdfLinkModel_QBaseEncodeData((QPdfLinkModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_pdflinkmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+void q_pdflinkmodel_on_encode_data(void* self, void (*callback)(void*, QModelIndex**, void*)) {
     QPdfLinkModel_OnEncodeData((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -1177,7 +1177,7 @@ void q_pdflinkmodel_qbase_change_persistent_index_list(void* self, libqt_list fr
     QPdfLinkModel_QBaseChangePersistentIndexList((QPdfLinkModel*)self, from, to);
 }
 
-void q_pdflinkmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+void q_pdflinkmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, QModelIndex**, QModelIndex**)) {
     QPdfLinkModel_OnChangePersistentIndexList((QPdfLinkModel*)self, (intptr_t)callback);
 }
 
@@ -1191,7 +1191,7 @@ libqt_list /* of QModelIndex* */ q_pdflinkmodel_qbase_persistent_index_list(void
     return _arr;
 }
 
-void q_pdflinkmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_pdflinkmodel_on_persistent_index_list(void* self, QModelIndex** (*callback)()) {
     QPdfLinkModel_OnPersistentIndexList((QPdfLinkModel*)self, (intptr_t)callback);
 }
 

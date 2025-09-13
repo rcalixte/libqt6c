@@ -111,8 +111,8 @@ libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_current_book
 /// Allows for overriding the related default method
 ///
 /// @param self KBookmarkOwner*
-/// @param callback libqt_list /* of KBookmarkOwner__FutureBookmark* */ func()
-void k_bookmarkowner_on_current_bookmark_list(void* self, libqt_list /* of KBookmarkOwner__FutureBookmark* */ (*callback)());
+/// @param callback KBookmarkOwner__FutureBookmark** func()
+void k_bookmarkowner_on_current_bookmark_list(void* self, KBookmarkOwner__FutureBookmark** (*callback)());
 
 /// [Qt documentation](https://api.kde.org/kbookmarkowner.html#currentBookmarkList)
 ///

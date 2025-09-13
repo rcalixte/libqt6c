@@ -584,7 +584,7 @@ libqt_list /* of QModelIndex* */ q_treeview_selected_indexes(void* self) {
     return _arr;
 }
 
-void q_treeview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+void q_treeview_on_selected_indexes(void* self, QModelIndex** (*callback)()) {
     QTreeView_OnSelectedIndexes((QTreeView*)self, (intptr_t)callback);
 }
 

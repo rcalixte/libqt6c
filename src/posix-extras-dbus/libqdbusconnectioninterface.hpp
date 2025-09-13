@@ -36,7 +36,7 @@ void QDBusConnectionInterface_ServiceUnregistered(QDBusConnectionInterface* self
 void QDBusConnectionInterface_Connect_ServiceUnregistered(QDBusConnectionInterface* self, intptr_t slot);
 void QDBusConnectionInterface_ServiceOwnerChanged(QDBusConnectionInterface* self, const libqt_string name, const libqt_string oldOwner, const libqt_string newOwner);
 void QDBusConnectionInterface_Connect_ServiceOwnerChanged(QDBusConnectionInterface* self, intptr_t slot);
-void QDBusConnectionInterface_CallWithCallbackFailed(QDBusConnectionInterface* self, const QDBusError* errorVal, const QDBusMessage* call);
+void QDBusConnectionInterface_CallWithCallbackFailed(QDBusConnectionInterface* self, const QDBusError* error, const QDBusMessage* call);
 void QDBusConnectionInterface_Connect_CallWithCallbackFailed(QDBusConnectionInterface* self, intptr_t slot);
 void QDBusConnectionInterface_NameAcquired(QDBusConnectionInterface* self, const libqt_string param1);
 void QDBusConnectionInterface_Connect_NameAcquired(QDBusConnectionInterface* self, intptr_t slot);

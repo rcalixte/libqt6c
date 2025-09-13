@@ -43,8 +43,8 @@ QDBusMessage* q_dbuspendingcall_reply(void* self) {
     return QDBusPendingCall_Reply((QDBusPendingCall*)self);
 }
 
-QDBusPendingCall* q_dbuspendingcall_from_error(void* errorVal) {
-    return QDBusPendingCall_FromError((QDBusError*)errorVal);
+QDBusPendingCall* q_dbuspendingcall_from_error(void* error) {
+    return QDBusPendingCall_FromError((QDBusError*)error);
 }
 
 QDBusPendingCall* q_dbuspendingcall_from_completed_call(void* message) {
@@ -323,8 +323,8 @@ QDBusMessage* q_dbuspendingcallwatcher_reply(void* self) {
     return QDBusPendingCall_Reply((QDBusPendingCall*)self);
 }
 
-QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* errorVal) {
-    return QDBusPendingCall_FromError((QDBusError*)errorVal);
+QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* error) {
+    return QDBusPendingCall_FromError((QDBusError*)error);
 }
 
 QDBusPendingCall* q_dbuspendingcallwatcher_from_completed_call(void* message) {

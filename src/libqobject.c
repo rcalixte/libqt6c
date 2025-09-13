@@ -5,6 +5,7 @@
 #include "libqobjectdefs.hpp"
 #include "libqthread.hpp"
 #include "libqvariant.hpp"
+#include "libqnamespace.hpp"
 #include "libqobject.hpp"
 #include "libqobject.h"
 

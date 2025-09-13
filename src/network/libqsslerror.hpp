@@ -20,8 +20,8 @@ typedef struct QSslError QSslError;
 #endif
 
 QSslError* QSslError_new();
-QSslError* QSslError_new2(int errorVal);
-QSslError* QSslError_new3(int errorVal, const QSslCertificate* certificate);
+QSslError* QSslError_new2(int error);
+QSslError* QSslError_new3(int error, const QSslCertificate* certificate);
 QSslError* QSslError_new4(const QSslError* other);
 void QSslError_Swap(QSslError* self, QSslError* other);
 void QSslError_OperatorAssign(QSslError* self, const QSslError* other);

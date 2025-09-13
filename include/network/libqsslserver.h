@@ -90,33 +90,33 @@ void q_sslserver_ssl_errors(void* self, void* socket, libqt_list errors);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#sslErrors)
 ///
 /// @param self QSslServer*
-/// @param callback void func(QSslServer* self, QSslSocket* socket, libqt_list /* of QSslError* */ /* of QSslError* */)
-void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_list));
+/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError** errors)
+void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, QSslError**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#peerVerifyError)
 ///
 /// @param self QSslServer*
 /// @param socket QSslSocket*
-/// @param errorVal QSslError*
-void q_sslserver_peer_verify_error(void* self, void* socket, void* errorVal);
+/// @param error QSslError*
+void q_sslserver_peer_verify_error(void* self, void* socket, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#peerVerifyError)
 ///
 /// @param self QSslServer*
-/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError* errorVal)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError* error)
 void q_sslserver_on_peer_verify_error(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#errorOccurred)
 ///
 /// @param self QSslServer*
 /// @param socket QSslSocket*
-/// @param errorVal enum QAbstractSocket__SocketError
-void q_sslserver_error_occurred(void* self, void* socket, int32_t errorVal);
+/// @param error enum QAbstractSocket__SocketError
+void q_sslserver_error_occurred(void* self, void* socket, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#errorOccurred)
 ///
 /// @param self QSslServer*
-/// @param callback void func(QSslServer* self, QSslSocket* socket, enum QAbstractSocket__SocketError errorVal)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, enum QAbstractSocket__SocketError error)
 void q_sslserver_on_error_occurred(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#preSharedKeyAuthenticationRequired)
@@ -166,13 +166,13 @@ void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, in
 ///
 /// @param self QSslServer*
 /// @param socket QSslSocket*
-/// @param errorVal QSslError*
-void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, void* errorVal);
+/// @param error QSslError*
+void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, void* error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#handshakeInterruptedOnError)
 ///
 /// @param self QSslServer*
-/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError* errorVal)
+/// @param callback void func(QSslServer* self, QSslSocket* socket, QSslError* error)
 void q_sslserver_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#startedEncryptionHandshake)

@@ -694,7 +694,7 @@ libqt_list /* of QWidget* */ k_bookmarkactionmenu_qbase_created_widgets(void* se
     return _arr;
 }
 
-void k_bookmarkactionmenu_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)()) {
+void k_bookmarkactionmenu_on_created_widgets(void* self, QWidget** (*callback)()) {
     KBookmarkActionMenu_OnCreatedWidgets((KBookmarkActionMenu*)self, (intptr_t)callback);
 }
 

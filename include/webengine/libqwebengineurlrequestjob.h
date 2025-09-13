@@ -67,8 +67,8 @@ void q_webengineurlrequestjob_reply(void* self, const char* contentType, void* d
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#fail)
 ///
 /// @param self QWebEngineUrlRequestJob*
-/// @param errorVal enum QWebEngineUrlRequestJob__Error
-void q_webengineurlrequestjob_fail(void* self, int32_t errorVal);
+/// @param error enum QWebEngineUrlRequestJob__Error
+void q_webengineurlrequestjob_fail(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestjob.html#redirect)
 ///

@@ -36,7 +36,7 @@ bool QDBusPendingCall_IsError(const QDBusPendingCall* self);
 bool QDBusPendingCall_IsValid(const QDBusPendingCall* self);
 QDBusError* QDBusPendingCall_Error(const QDBusPendingCall* self);
 QDBusMessage* QDBusPendingCall_Reply(const QDBusPendingCall* self);
-QDBusPendingCall* QDBusPendingCall_FromError(const QDBusError* errorVal);
+QDBusPendingCall* QDBusPendingCall_FromError(const QDBusError* error);
 QDBusPendingCall* QDBusPendingCall_FromCompletedCall(const QDBusMessage* message);
 void QDBusPendingCall_Delete(QDBusPendingCall* self);
 

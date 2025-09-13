@@ -578,13 +578,13 @@ void q_process_on_finished(void* self, void (*callback)(void*, int));
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
 ///
 /// @param self QProcess*
-/// @param errorVal enum QProcess__ProcessError
-void q_process_error_occurred(void* self, int32_t errorVal);
+/// @param error enum QProcess__ProcessError
+void q_process_error_occurred(void* self, int32_t error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
 ///
 /// @param self QProcess*
-/// @param callback void func(QProcess* self, enum QProcess__ProcessError errorVal)
+/// @param callback void func(QProcess* self, enum QProcess__ProcessError error)
 void q_process_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
@@ -726,8 +726,8 @@ void q_process_set_standard_error_file2(void* self, const char* fileName, int32_
 ///
 /// @param self QProcess*
 /// @param description const char*
-/// @param errorVal int
-void q_process_fail_child_process_modifier2(void* self, const char* description, int errorVal);
+/// @param error int
+void q_process_fail_child_process_modifier2(void* self, const char* description, int error);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#waitForStarted)
 ///

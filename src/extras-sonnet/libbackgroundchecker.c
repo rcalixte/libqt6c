@@ -2,6 +2,7 @@
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
+#include "libspeller.hpp"
 #include "libbackgroundchecker.hpp"
 #include "libbackgroundchecker.h"
 

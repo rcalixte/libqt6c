@@ -551,16 +551,16 @@ void QSslSocket_Connect_Encrypted(QSslSocket* self, intptr_t slot) {
     });
 }
 
-void QSslSocket_PeerVerifyError(QSslSocket* self, const QSslError* errorVal) {
-    self->peerVerifyError(*errorVal);
+void QSslSocket_PeerVerifyError(QSslSocket* self, const QSslError* error) {
+    self->peerVerifyError(*error);
 }
 
 void QSslSocket_Connect_PeerVerifyError(QSslSocket* self, intptr_t slot) {
     void (*slotFunc)(QSslSocket*, QSslError*) = reinterpret_cast<void (*)(QSslSocket*, QSslError*)>(slot);
-    QSslSocket::connect(self, &QSslSocket::peerVerifyError, [self, slotFunc](const QSslError& errorVal) {
-        const QSslError& errorVal_ret = errorVal;
+    QSslSocket::connect(self, &QSslSocket::peerVerifyError, [self, slotFunc](const QSslError& error) {
+        const QSslError& error_ret = error;
         // Cast returned reference into pointer
-        QSslError* sigval1 = const_cast<QSslError*>(&errorVal_ret);
+        QSslError* sigval1 = const_cast<QSslError*>(&error_ret);
         slotFunc(self, sigval1);
     });
 }
@@ -683,16 +683,16 @@ void QSslSocket_Connect_AlertReceived(QSslSocket* self, intptr_t slot) {
     });
 }
 
-void QSslSocket_HandshakeInterruptedOnError(QSslSocket* self, const QSslError* errorVal) {
-    self->handshakeInterruptedOnError(*errorVal);
+void QSslSocket_HandshakeInterruptedOnError(QSslSocket* self, const QSslError* error) {
+    self->handshakeInterruptedOnError(*error);
 }
 
 void QSslSocket_Connect_HandshakeInterruptedOnError(QSslSocket* self, intptr_t slot) {
     void (*slotFunc)(QSslSocket*, QSslError*) = reinterpret_cast<void (*)(QSslSocket*, QSslError*)>(slot);
-    QSslSocket::connect(self, &QSslSocket::handshakeInterruptedOnError, [self, slotFunc](const QSslError& errorVal) {
-        const QSslError& errorVal_ret = errorVal;
+    QSslSocket::connect(self, &QSslSocket::handshakeInterruptedOnError, [self, slotFunc](const QSslError& error) {
+        const QSslError& error_ret = error;
         // Cast returned reference into pointer
-        QSslError* sigval1 = const_cast<QSslError*>(&errorVal_ret);
+        QSslError* sigval1 = const_cast<QSslError*>(&error_ret);
         slotFunc(self, sigval1);
     });
 }

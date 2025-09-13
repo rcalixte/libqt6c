@@ -132,8 +132,8 @@ libqt_list /* of KJob* */ k_compositejob_subjobs(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KCompositeJob*
-/// @param callback libqt_list /* of KJob* */ func()
-void k_compositejob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)());
+/// @param callback KJob** func()
+void k_compositejob_on_subjobs(void* self, KJob** (*callback)());
 
 /// [Qt documentation](https://api.kde.org/kcompositejob.html#subjobs)
 ///

@@ -298,8 +298,8 @@ void q_camera_on_error_changed(void* self, void (*callback)(void*)) {
     QCamera_Connect_ErrorChanged((QCamera*)self, (intptr_t)callback);
 }
 
-void q_camera_error_occurred(void* self, int32_t errorVal, const char* errorString) {
-    QCamera_ErrorOccurred((QCamera*)self, errorVal, qstring(errorString));
+void q_camera_error_occurred(void* self, int32_t error, const char* errorString) {
+    QCamera_ErrorOccurred((QCamera*)self, error, qstring(errorString));
 }
 
 void q_camera_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {

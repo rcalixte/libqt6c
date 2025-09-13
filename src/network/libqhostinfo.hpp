@@ -29,7 +29,7 @@ void QHostInfo_SetHostName(QHostInfo* self, const libqt_string name);
 libqt_list /* of QHostAddress* */ QHostInfo_Addresses(const QHostInfo* self);
 void QHostInfo_SetAddresses(QHostInfo* self, const libqt_list /* of QHostAddress* */ addresses);
 int QHostInfo_Error(const QHostInfo* self);
-void QHostInfo_SetError(QHostInfo* self, int errorVal);
+void QHostInfo_SetError(QHostInfo* self, int error);
 libqt_string QHostInfo_ErrorString(const QHostInfo* self);
 void QHostInfo_SetErrorString(QHostInfo* self, const libqt_string errorString);
 void QHostInfo_SetLookupId(QHostInfo* self, int id);

@@ -402,8 +402,8 @@ void q_undoview_indexes_moved(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
 /// @param self QUndoView*
-/// @param callback void func(QUndoView* self, libqt_list /* of QModelIndex* */ /* of QModelIndex* */)
-void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void func(QUndoView* self, QModelIndex** indexes)
+void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, QModelIndex**));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4575,8 +4575,8 @@ libqt_list /* of QModelIndex* */ q_undoview_qbase_selected_indexes(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoView*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_undoview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_undoview_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QListView
 ///

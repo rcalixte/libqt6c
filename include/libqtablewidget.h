@@ -1096,8 +1096,8 @@ QMimeData* q_tablewidget_mime_data(void* self, libqt_list items);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableWidget*
-/// @param callback QMimeData* func(QTableWidget* self, libqt_list /* of QTableWidgetItem* */ /* of QTableWidgetItem* */)
-void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+/// @param callback QMimeData* func(QTableWidget* self, QTableWidgetItem** items)
+void q_tablewidget_on_mime_data(void* self, QMimeData* (*callback)(void*, QTableWidgetItem**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidget.html#mimeData)
 ///
@@ -5331,8 +5331,8 @@ libqt_list /* of QModelIndex* */ q_tablewidget_qbase_selected_indexes(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback libqt_list /* of QModelIndex* */ func()
-void q_tablewidget_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
+/// @param callback QModelIndex** func()
+void q_tablewidget_on_selected_indexes(void* self, QModelIndex** (*callback)());
 
 /// Inherited from QTableView
 ///

@@ -177,8 +177,8 @@ libqt_list /* of QWidget* */ q_widgetaction_created_widgets(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWidgetAction*
-/// @param callback libqt_list /* of QWidget* */ func()
-void q_widgetaction_on_created_widgets(void* self, libqt_list /* of QWidget* */ (*callback)());
+/// @param callback QWidget** func()
+void q_widgetaction_on_created_widgets(void* self, QWidget** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
 ///

@@ -86,8 +86,8 @@ libqt_list /* of QWidget* */ k_widgetitemdelegate_create_item_widgets(void* self
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback libqt_list /* of QWidget* */ func(KWidgetItemDelegate* self, QModelIndex* index)
-void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list /* of QWidget* */ (*callback)(void*, void*));
+/// @param callback QWidget** func(KWidgetItemDelegate* self, QModelIndex* index)
+void k_widgetitemdelegate_on_create_item_widgets(void* self, QWidget** (*callback)(void*, void*));
 
 /// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#createItemWidgets)
 ///
@@ -110,8 +110,8 @@ void k_widgetitemdelegate_update_item_widgets(void* self, libqt_list widgets, vo
 /// Allows for overriding the related default method
 ///
 /// @param self KWidgetItemDelegate*
-/// @param callback void func(KWidgetItemDelegate* self, libqt_list /* of QWidget* */ /* of QWidget* */, QStyleOptionViewItem* option, QPersistentModelIndex* index)
-void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, libqt_list, void*, void*));
+/// @param callback void func(KWidgetItemDelegate* self, QWidget** widgets, QStyleOptionViewItem* option, QPersistentModelIndex* index)
+void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(void*, QWidget**, void*, void*));
 
 /// [Qt documentation](https://api.kde.org/kwidgetitemdelegate.html#updateItemWidgets)
 ///

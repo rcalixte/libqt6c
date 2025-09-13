@@ -2541,23 +2541,23 @@ void QSqlRelationalTableModel_OnEndResetModel(QSqlRelationalTableModel* self, in
 }
 
 // Derived class handler implementation
-void QSqlRelationalTableModel_SetLastError(QSqlRelationalTableModel* self, const QSqlError* errorVal) {
+void QSqlRelationalTableModel_SetLastError(QSqlRelationalTableModel* self, const QSqlError* error) {
     auto* vqsqlrelationaltablemodel = dynamic_cast<VirtualQSqlRelationalTableModel*>(self);
     if (vqsqlrelationaltablemodel && vqsqlrelationaltablemodel->isVirtualQSqlRelationalTableModel) {
-        vqsqlrelationaltablemodel->setLastError(*errorVal);
+        vqsqlrelationaltablemodel->setLastError(*error);
     } else {
-        ((VirtualQSqlRelationalTableModel*)self)->setLastError(*errorVal);
+        ((VirtualQSqlRelationalTableModel*)self)->setLastError(*error);
     }
 }
 
 // Base class handler implementation
-void QSqlRelationalTableModel_QBaseSetLastError(QSqlRelationalTableModel* self, const QSqlError* errorVal) {
+void QSqlRelationalTableModel_QBaseSetLastError(QSqlRelationalTableModel* self, const QSqlError* error) {
     auto* vqsqlrelationaltablemodel = dynamic_cast<VirtualQSqlRelationalTableModel*>(self);
     if (vqsqlrelationaltablemodel && vqsqlrelationaltablemodel->isVirtualQSqlRelationalTableModel) {
         vqsqlrelationaltablemodel->setQSqlRelationalTableModel_SetLastError_IsBase(true);
-        vqsqlrelationaltablemodel->setLastError(*errorVal);
+        vqsqlrelationaltablemodel->setLastError(*error);
     } else {
-        ((VirtualQSqlRelationalTableModel*)self)->setLastError(*errorVal);
+        ((VirtualQSqlRelationalTableModel*)self)->setLastError(*error);
     }
 }
 

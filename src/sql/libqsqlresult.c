@@ -2,6 +2,7 @@
 #include "libqsqlerror.hpp"
 #include "libqsqlrecord.hpp"
 #include "../libqvariant.hpp"
+#include "../libqnamespace.hpp"
 #include "libqsqlresult.hpp"
 #include "libqsqlresult.h"
 

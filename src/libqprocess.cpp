@@ -540,14 +540,14 @@ void QProcess_Connect_Finished(QProcess* self, intptr_t slot) {
     });
 }
 
-void QProcess_ErrorOccurred(QProcess* self, int errorVal) {
-    self->errorOccurred(static_cast<QProcess::ProcessError>(errorVal));
+void QProcess_ErrorOccurred(QProcess* self, int error) {
+    self->errorOccurred(static_cast<QProcess::ProcessError>(error));
 }
 
 void QProcess_Connect_ErrorOccurred(QProcess* self, intptr_t slot) {
     void (*slotFunc)(QProcess*, int) = reinterpret_cast<void (*)(QProcess*, int)>(slot);
-    QProcess::connect(self, &QProcess::errorOccurred, [self, slotFunc](QProcess::ProcessError errorVal) {
-        int sigval1 = static_cast<int>(errorVal);
+    QProcess::connect(self, &QProcess::errorOccurred, [self, slotFunc](QProcess::ProcessError error) {
+        int sigval1 = static_cast<int>(error);
         slotFunc(self, sigval1);
     });
 }
@@ -639,8 +639,8 @@ void QProcess_SetStandardErrorFile2(QProcess* self, const libqt_string fileName,
     self->setStandardErrorFile(fileName_QString, static_cast<QProcess::OpenMode>(mode));
 }
 
-void QProcess_FailChildProcessModifier2(QProcess* self, const char* description, int errorVal) {
-    self->failChildProcessModifier(description, static_cast<int>(errorVal));
+void QProcess_FailChildProcessModifier2(QProcess* self, const char* description, int error) {
+    self->failChildProcessModifier(description, static_cast<int>(error));
 }
 
 bool QProcess_WaitForStarted1(QProcess* self, int msecs) {

@@ -529,8 +529,8 @@ void k_process_on_finished(void* self, void (*callback)(void*, int)) {
     QProcess_Connect_Finished((QProcess*)self, (intptr_t)callback);
 }
 
-void k_process_error_occurred(void* self, int32_t errorVal) {
-    QProcess_ErrorOccurred((QProcess*)self, errorVal);
+void k_process_error_occurred(void* self, int32_t error) {
+    QProcess_ErrorOccurred((QProcess*)self, error);
 }
 
 void k_process_on_error_occurred(void* self, void (*callback)(void*, int32_t)) {
@@ -587,8 +587,8 @@ void k_process_set_standard_error_file2(void* self, const char* fileName, int32_
     QProcess_SetStandardErrorFile2((QProcess*)self, qstring(fileName), mode);
 }
 
-void k_process_fail_child_process_modifier2(void* self, const char* description, int errorVal) {
-    QProcess_FailChildProcessModifier2((QProcess*)self, description, errorVal);
+void k_process_fail_child_process_modifier2(void* self, const char* description, int error) {
+    QProcess_FailChildProcessModifier2((QProcess*)self, description, error);
 }
 
 bool k_process_wait_for_started1(void* self, int msecs) {
