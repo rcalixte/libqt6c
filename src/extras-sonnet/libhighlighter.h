@@ -35,7 +35,7 @@ Sonnet__Highlighter* k_sonnet__highlighter_new3(void* textEdit, void* col);
 /// @param col QColor*
 Sonnet__Highlighter* k_sonnet__highlighter_new4(void* textEdit, void* col);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__Highlighter*
 const QMetaObject* k_sonnet__highlighter_meta_object(void* self);
@@ -64,7 +64,7 @@ void k_sonnet__highlighter_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param3 void*
 int32_t k_sonnet__highlighter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -332,7 +332,7 @@ void k_sonnet__highlighter_slot_auto_detection(void* self);
 /// @param self Sonnet__Highlighter*
 void k_sonnet__highlighter_slot_rehighlight(void* self);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -340,7 +340,7 @@ void k_sonnet__highlighter_slot_rehighlight(void* self);
 /// @param c const char*
 const char* k_sonnet__highlighter_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

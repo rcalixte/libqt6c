@@ -18,7 +18,7 @@
 /// @param parent QWidget*
 Sonnet__ConfigDialog* k_sonnet__configdialog_new(void* parent);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__ConfigDialog*
 const QMetaObject* k_sonnet__configdialog_meta_object(void* self);
@@ -47,7 +47,7 @@ void k_sonnet__configdialog_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param3 void*
 int32_t k_sonnet__configdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -130,7 +130,7 @@ void k_sonnet__configdialog_config_changed(void* self);
 /// @param callback void func(Sonnet__ConfigDialog* self)
 void k_sonnet__configdialog_on_config_changed(void* self, void (*callback)(void*));
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -138,7 +138,7 @@ void k_sonnet__configdialog_on_config_changed(void* self, void (*callback)(void*
 /// @param c const char*
 const char* k_sonnet__configdialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

@@ -19,7 +19,7 @@
 /// @param parent QWidget*
 Sonnet__Dialog* k_sonnet__dialog_new(void* checker, void* parent);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__Dialog*
 const QMetaObject* k_sonnet__dialog_meta_object(void* self);
@@ -48,7 +48,7 @@ void k_sonnet__dialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param3 void*
 int32_t k_sonnet__dialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -200,7 +200,7 @@ void k_sonnet__dialog_language_changed(void* self, const char* language);
 /// @param callback void func(Sonnet__Dialog* self, const char* language)
 void k_sonnet__dialog_on_language_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -208,7 +208,7 @@ void k_sonnet__dialog_on_language_changed(void* self, void (*callback)(void*, co
 /// @param c const char*
 const char* k_sonnet__dialog_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

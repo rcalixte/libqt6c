@@ -3945,7 +3945,7 @@ void k_onsole__urlfilter__hotspot_on_set_type(void* self, void (*callback)(void*
 /// @param self Konsole__UrlFilter__HotSpot*
 void k_onsole__urlfilter__hotspot_delete(void* self);
 
-/// https://doc.qt.io/qt-6/filter.html#types
+/// https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api
 
 typedef enum {
     KONSOLE_FILTER_HOTSPOT_TYPE_NOTSPECIFIED = 0,

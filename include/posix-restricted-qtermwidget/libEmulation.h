@@ -1271,7 +1271,7 @@ void k_onsole__emulation_on_object_name_changed(void* self, void (*callback)(voi
 /// @param self Konsole__Emulation*
 void k_onsole__emulation_delete(void* self);
 
-/// https://doc.qt.io/qt-6/emulation.html#types
+/// https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api
 
 typedef enum {
     KONSOLE__NOTIFYNORMAL = 0,

@@ -23,7 +23,7 @@ Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new(void* textEdit);
 /// @param textEdit QPlainTextEdit*
 Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new2(void* textEdit);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__SpellCheckDecorator*
 const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(void* self);
@@ -52,7 +52,7 @@ void k_sonnet__spellcheckdecorator_on_metacall(void* self, int32_t (*callback)(v
 /// @param param3 void*
 int32_t k_sonnet__spellcheckdecorator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -116,7 +116,7 @@ void k_sonnet__spellcheckdecorator_on_is_spell_checking_enabled_for_block(void* 
 /// @param textBlock const char*
 bool k_sonnet__spellcheckdecorator_qbase_is_spell_checking_enabled_for_block(void* self, const char* textBlock);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -124,7 +124,7 @@ bool k_sonnet__spellcheckdecorator_qbase_is_spell_checking_enabled_for_block(voi
 /// @param c const char*
 const char* k_sonnet__spellcheckdecorator_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
