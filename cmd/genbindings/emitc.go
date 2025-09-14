@@ -81,14 +81,13 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	}
 
 	if strings.HasPrefix(pageName, "qtermwidget") || strings.HasPrefix(className, "Keyboard") ||
-		strings.HasPrefix(className, "Konsole") {
+		strings.HasPrefix(className, "Konsole") || pageName == "emulation" || pageName == "filter" {
 		return "https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api"
 	}
 
 	qtUrl := "https://doc.qt.io/qt-6/"
-	if len(className) > 0 && pageName != "qobject" &&
-		className[0] == 'K' || className[0] == 'k' ||
-		strings.HasPrefix(className, "Sonnet") || strings.HasPrefix(pageName, "sonnet") {
+	if pageName[0] != 'q' && pageName != "disambiguated_t" &&
+		pageName != "partial_ordering" && pageName != "weak_ordering" && pageName != "strong_ordering" {
 		qtUrl = "https://api.kde.org/"
 	}
 
@@ -1005,7 +1004,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
-		} else if strings.HasPrefix(cStructName, "Sonnet") {
+		} else if strings.Contains(src.Filename, "KF6") {
 			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
@@ -1236,6 +1235,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if _, ok := noQtConnect[cmdStructName]; ok {
 					addConnect = false
 				}
+				if _, ok := skipQtConnect[cmdStructName+"_"+m.MethodName]; ok {
+					addConnect = false
+				}
 
 				if addConnect {
 					slotComma := ifv(len(m.Parameters) != 0, ", ", "")
@@ -1456,8 +1458,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	if len(src.Enums) > 0 {
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-		maybeSonnet := ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", "")
-		pageName := maybeSonnet + getPageName(cfs.currentHeaderName) + maybeCharts
+		maybeUrlPrefix := ifv(strings.Contains(src.Filename, "KIO") && !strings.HasPrefix(getPageName(cfs.currentHeaderName), "k"), "kio-", "")
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
+		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
 		pageUrl := getPageUrl(EnumPage, pageName, "", cfs.currentHeaderName)
 		maybeUrl := ifv(pageUrl != "", "\n\n/// "+pageUrl, "")
 		ret.WriteString(maybeUrl + "\n\n")
@@ -1615,7 +1619,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
-		} else if strings.HasPrefix(cStructName, "Sonnet") {
+		} else if strings.Contains(src.Filename, "KF6") {
 			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
@@ -1835,6 +1839,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if _, ok := noQtConnect[cmdStructName]; ok {
 					addConnect = false
 				}
+				if _, ok := skipQtConnect[cmdStructName+"_"+m.MethodName]; ok {
+					addConnect = false
+				}
+
 				if addConnect {
 					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
