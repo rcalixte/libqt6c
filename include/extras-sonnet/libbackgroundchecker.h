@@ -33,7 +33,7 @@ Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new3(void* parent);
 /// @param parent QObject*
 Sonnet__BackgroundChecker* k_sonnet__backgroundchecker_new4(void* speller, void* parent);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__BackgroundChecker*
 const QMetaObject* k_sonnet__backgroundchecker_meta_object(void* self);
@@ -62,7 +62,7 @@ void k_sonnet__backgroundchecker_on_metacall(void* self, int32_t (*callback)(voi
 /// @param param3 void*
 int32_t k_sonnet__backgroundchecker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -297,7 +297,7 @@ void k_sonnet__backgroundchecker_on_slot_engine_done(void* self, void (*callback
 /// @param self Sonnet__BackgroundChecker*
 void k_sonnet__backgroundchecker_qbase_slot_engine_done(void* self);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -305,7 +305,7 @@ void k_sonnet__backgroundchecker_qbase_slot_engine_done(void* self);
 /// @param c const char*
 const char* k_sonnet__backgroundchecker_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

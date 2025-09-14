@@ -22,7 +22,7 @@ Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new(void* parent);
 ///
 Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new2();
 
-/// [Qt documentation](https://api.kde.org/qobject.html#metaObject)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// @param self Sonnet__DictionaryComboBox*
 const QMetaObject* k_sonnet__dictionarycombobox_meta_object(void* self);
@@ -51,7 +51,7 @@ void k_sonnet__dictionarycombobox_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param3 void*
 int32_t k_sonnet__dictionarycombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -125,7 +125,7 @@ void k_sonnet__dictionarycombobox_dictionary_name_changed(void* self, const char
 /// @param callback void func(Sonnet__DictionaryComboBox* self, const char* dictionaryName)
 void k_sonnet__dictionarycombobox_on_dictionary_name_changed(void* self, void (*callback)(void*, const char*));
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
@@ -133,7 +133,7 @@ void k_sonnet__dictionarycombobox_on_dictionary_name_changed(void* self, void (*
 /// @param c const char*
 const char* k_sonnet__dictionarycombobox_tr2(const char* s, const char* c);
 
-/// [Qt documentation](https://api.kde.org/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///

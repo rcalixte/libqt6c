@@ -139,12 +139,14 @@ pub fn build(b: *std.Build) !void {
             "/usr/local/include/KF6",
             "/usr/local/include",
             "/usr/include",
+            "/usr/local/lib/qt6/mkspecs/common/posix",
         },
         .linux => &.{
             "/usr/include/" ++ @tagName(host_arch) ++ "-linux-gnu/qt6",
             "/usr/include/qt6",
             "/usr/include/KF6",
             "/usr/include",
+            "/usr/lib/" ++ @tagName(host_arch) ++ "-linux-gnu/qt6/mkspecs/common/posix",
         },
         .macos => &.{
             "/usr/local/opt/qt6/include",
@@ -218,8 +220,16 @@ pub fn build(b: *std.Build) !void {
         "KI18nLocaleData",
         // Qt 6 KItemViews
         "KItemViews",
+        // Qt 6 KJobWidgets
+        "KJobWidgets",
         // Qt 6 KPlotting
         "KPlotting",
+        // Qt 6 KService
+        "KService",
+        // Qt 6 Solid
+        "Solid",
+        "Solid/Solid",
+        "Solid/solid",
         // Qt 6 Sonnet
         "Sonnet",
         "SonnetCore",
@@ -237,6 +247,8 @@ pub fn build(b: *std.Build) !void {
         // Qt 6 KBookmarks
         "KBookmarks",
         "KBookmarksWidgets",
+        // Qt 6 KNotifications
+        "KNotifications",
         // Qt 6 KIconThemes
         "KIconThemes",
         "KIconWidgets",
@@ -244,6 +256,17 @@ pub fn build(b: *std.Build) !void {
         "KXmlGui",
         // Qt 6 KGlobalAccel
         "KGlobalAccel",
+        // Qt 6 KWindowSystem
+        "KWindowSystem",
+        // Qt 6 KIO
+        "KIO",
+        "KIOCore",
+        "KIOCore/kio",
+        "KIOFileWidgets",
+        "KIOGui",
+        "KIOGui/kio",
+        "KIOWidgets",
+        "KIOWidgets/kio",
         // Qt 6 QScintilla
         "Qsci",
         // Qt 6 QTermWidget
