@@ -439,8 +439,8 @@ int32_t k_onsole__filter_start_timer22(void* self, int interval, int32_t timerTy
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -450,8 +450,8 @@ QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, v
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__filter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__filter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1247,8 +1247,8 @@ int32_t k_onsole__regexpfilter_start_timer22(void* self, int interval, int32_t t
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1258,8 +1258,8 @@ QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* sig
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__regexpfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__regexpfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2158,8 +2158,8 @@ int32_t k_onsole__urlfilter_start_timer22(void* self, int interval, int32_t time
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2169,8 +2169,8 @@ QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__urlfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__urlfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3017,8 +3017,8 @@ int32_t k_onsole__filterobject_start_timer22(void* self, int interval, int32_t t
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3028,8 +3028,8 @@ QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* sig
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_onsole__filterobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_onsole__filterobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3625,15 +3625,15 @@ libqt_list /* of QAction* */ k_onsole__filter__hotspot_qbase_actions(void* self)
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param typeVal enum Konsole__Filter__HotSpot__Type
-void k_onsole__filter__hotspot_set_type(void* self, int32_t typeVal);
+/// @param type enum Konsole__Filter__HotSpot__Type
+void k_onsole__filter__hotspot_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param callback void func(Konsole__Filter__HotSpot* self, enum Konsole__Filter__HotSpot__Type typeVal)
+/// @param callback void func(Konsole__Filter__HotSpot* self, enum Konsole__Filter__HotSpot__Type type)
 void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
@@ -3641,8 +3641,8 @@ void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, i
 /// Base class method implementation
 ///
 /// @param self Konsole__Filter__HotSpot*
-/// @param typeVal enum Konsole__Filter__HotSpot__Type
-void k_onsole__filter__hotspot_qbase_set_type(void* self, int32_t typeVal);
+/// @param type enum Konsole__Filter__HotSpot__Type
+void k_onsole__filter__hotspot_qbase_set_type(void* self, int32_t type);
 
 /// Delete this object from C++ memory.
 ///
@@ -3771,8 +3771,8 @@ void k_onsole__regexpfilter__hotspot_on_actions(void* self, QAction** (*callback
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param typeVal enum Konsole__Filter__HotSpot__Type
-void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t typeVal);
+/// @param type enum Konsole__Filter__HotSpot__Type
+void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t type);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -3781,8 +3781,8 @@ void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t typeVal);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param typeVal enum Konsole__Filter__HotSpot__Type
-void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t typeVal);
+/// @param type enum Konsole__Filter__HotSpot__Type
+void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t type);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -3791,7 +3791,7 @@ void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t typeVal)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
-/// @param callback void func(Konsole__RegExpFilter__HotSpot* self, enum Konsole__Filter__HotSpot__Type typeVal)
+/// @param callback void func(Konsole__RegExpFilter__HotSpot* self, enum Konsole__Filter__HotSpot__Type type)
 void k_onsole__regexpfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
 /// Delete this object from C++ memory.
@@ -3917,8 +3917,8 @@ int32_t k_onsole__urlfilter__hotspot_type(void* self);
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param typeVal enum Konsole__Filter__HotSpot__Type
-void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t typeVal);
+/// @param type enum Konsole__Filter__HotSpot__Type
+void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t type);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -3927,8 +3927,8 @@ void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t typeVal);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param typeVal enum Konsole__Filter__HotSpot__Type
-void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t typeVal);
+/// @param type enum Konsole__Filter__HotSpot__Type
+void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t type);
 
 /// Inherited from Konsole::Filter::HotSpot
 ///
@@ -3937,7 +3937,7 @@ void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t typeVal);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
-/// @param callback void func(Konsole__UrlFilter__HotSpot* self, enum Konsole__Filter__HotSpot__Type typeVal)
+/// @param callback void func(Konsole__UrlFilter__HotSpot* self, enum Konsole__Filter__HotSpot__Type type)
 void k_onsole__urlfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t));
 
 /// Delete this object from C++ memory.

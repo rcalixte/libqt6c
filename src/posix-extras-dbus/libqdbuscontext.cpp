@@ -39,8 +39,8 @@ void QDBusContext_SendErrorReply(const QDBusContext* self, const libqt_string na
     self->sendErrorReply(name_QString);
 }
 
-void QDBusContext_SendErrorReply2(const QDBusContext* self, int typeVal) {
-    self->sendErrorReply(static_cast<QDBusError::ErrorType>(typeVal));
+void QDBusContext_SendErrorReply2(const QDBusContext* self, int type) {
+    self->sendErrorReply(static_cast<QDBusError::ErrorType>(type));
 }
 
 void QDBusContext_SendErrorReply22(const QDBusContext* self, const libqt_string name, const libqt_string msg) {
@@ -49,9 +49,9 @@ void QDBusContext_SendErrorReply22(const QDBusContext* self, const libqt_string 
     self->sendErrorReply(name_QString, msg_QString);
 }
 
-void QDBusContext_SendErrorReply23(const QDBusContext* self, int typeVal, const libqt_string msg) {
+void QDBusContext_SendErrorReply23(const QDBusContext* self, int type, const libqt_string msg) {
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
-    self->sendErrorReply(static_cast<QDBusError::ErrorType>(typeVal), msg_QString);
+    self->sendErrorReply(static_cast<QDBusError::ErrorType>(type), msg_QString);
 }
 
 void QDBusContext_Delete(QDBusContext* self) {

@@ -325,8 +325,8 @@ libqt_list /* of libqt_string */ QFontDatabase_ApplicationFallbackFontFamilies(i
     return _out;
 }
 
-QFont* QFontDatabase_SystemFont(int typeVal) {
-    return new QFont(QFontDatabase::systemFont(static_cast<QFontDatabase::SystemFont>(typeVal)));
+QFont* QFontDatabase_SystemFont(int type) {
+    return new QFont(QFontDatabase::systemFont(static_cast<QFontDatabase::SystemFont>(type)));
 }
 
 libqt_list /* of libqt_string */ QFontDatabase_Families1(int writingSystem) {

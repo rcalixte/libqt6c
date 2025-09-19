@@ -218,8 +218,8 @@ libqt_string KGlobalAccel_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-libqt_list /* of KGlobalShortcutInfo* */ KGlobalAccel_GlobalShortcutsByKey2(const QKeySequence* seq, int typeVal) {
-    QList<KGlobalShortcutInfo> _ret = KGlobalAccel::globalShortcutsByKey(*seq, static_cast<KGlobalAccel::MatchType>(typeVal));
+libqt_list /* of KGlobalShortcutInfo* */ KGlobalAccel_GlobalShortcutsByKey2(const QKeySequence* seq, int type) {
+    QList<KGlobalShortcutInfo> _ret = KGlobalAccel::globalShortcutsByKey(*seq, static_cast<KGlobalAccel::MatchType>(type));
     // Convert QList<> from C++ memory to manually-managed C memory
     KGlobalShortcutInfo** _arr = static_cast<KGlobalShortcutInfo**>(malloc(sizeof(KGlobalShortcutInfo*) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {

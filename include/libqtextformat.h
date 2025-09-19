@@ -29,9 +29,9 @@ QTextLength* q_textlength_new3();
 
 /// q_textlength_new4 constructs a new QTextLength object.
 ///
-/// @param typeVal enum QTextLength__Type
+/// @param type enum QTextLength__Type
 /// @param value double
-QTextLength* q_textlength_new4(int32_t typeVal, double value);
+QTextLength* q_textlength_new4(int32_t type, double value);
 
 /// q_textlength_new5 constructs a new QTextLength object.
 ///
@@ -100,8 +100,8 @@ QTextFormat* q_textformat_new();
 
 /// q_textformat_new2 constructs a new QTextFormat object.
 ///
-/// @param typeVal int
-QTextFormat* q_textformat_new2(int typeVal);
+/// @param type int
+QTextFormat* q_textformat_new2(int type);
 
 /// q_textformat_new3 constructs a new QTextFormat object.
 ///
@@ -253,8 +253,8 @@ int32_t q_textformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextFormat*
-/// @param typeVal int
-void q_textformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_textformat_set_object_type(void* self, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#objectType)
 ///
@@ -998,8 +998,8 @@ int32_t q_textcharformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextCharFormat*
-/// @param typeVal int
-void q_textcharformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_textcharformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///
@@ -1558,8 +1558,8 @@ int32_t q_textblockformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextBlockFormat*
-/// @param typeVal int
-void q_textblockformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_textblockformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///
@@ -2017,8 +2017,8 @@ int32_t q_textlistformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextListFormat*
-/// @param typeVal int
-void q_textlistformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_textlistformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///
@@ -3012,8 +3012,8 @@ int32_t q_textimageformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextImageFormat*
-/// @param typeVal int
-void q_textimageformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_textimageformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///
@@ -3571,8 +3571,8 @@ int32_t q_textframeformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextFrameFormat*
-/// @param typeVal int
-void q_textframeformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_textframeformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///
@@ -4270,8 +4270,8 @@ int32_t q_texttableformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextTableFormat*
-/// @param typeVal int
-void q_texttableformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_texttableformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///
@@ -5411,8 +5411,8 @@ int32_t q_texttablecellformat_property_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setObjectType)
 ///
 /// @param self QTextTableCellFormat*
-/// @param typeVal int
-void q_texttablecellformat_set_object_type(void* self, int typeVal);
+/// @param type int
+void q_texttablecellformat_set_object_type(void* self, int type);
 
 /// Inherited from QTextFormat
 ///

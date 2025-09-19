@@ -58,9 +58,9 @@ QDBusMessage* QDBusMessage_CreateError2(const QDBusError* err) {
     return new QDBusMessage(QDBusMessage::createError(*err));
 }
 
-QDBusMessage* QDBusMessage_CreateError3(int typeVal, const libqt_string msg) {
+QDBusMessage* QDBusMessage_CreateError3(int type, const libqt_string msg) {
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
-    return new QDBusMessage(QDBusMessage::createError(static_cast<QDBusError::ErrorType>(typeVal), msg_QString));
+    return new QDBusMessage(QDBusMessage::createError(static_cast<QDBusError::ErrorType>(type), msg_QString));
 }
 
 QDBusMessage* QDBusMessage_CreateReply(const QDBusMessage* self) {
@@ -81,9 +81,9 @@ QDBusMessage* QDBusMessage_CreateErrorReply2(const QDBusMessage* self, const QDB
     return new QDBusMessage(self->createErrorReply(*err));
 }
 
-QDBusMessage* QDBusMessage_CreateErrorReply3(const QDBusMessage* self, int typeVal, const libqt_string msg) {
+QDBusMessage* QDBusMessage_CreateErrorReply3(const QDBusMessage* self, int type, const libqt_string msg) {
     QString msg_QString = QString::fromUtf8(msg.data, msg.len);
-    return new QDBusMessage(self->createErrorReply(static_cast<QDBusError::ErrorType>(typeVal), msg_QString));
+    return new QDBusMessage(self->createErrorReply(static_cast<QDBusError::ErrorType>(type), msg_QString));
 }
 
 libqt_string QDBusMessage_Service(const QDBusMessage* self) {

@@ -30,15 +30,15 @@ KConfig* KConfig_new4(const libqt_string file, int mode) {
     return new VirtualKConfig(file_QString, static_cast<KConfig::OpenFlags>(mode));
 }
 
-KConfig* KConfig_new5(const libqt_string file, int mode, int typeVal) {
+KConfig* KConfig_new5(const libqt_string file, int mode, int type) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
-    return new VirtualKConfig(file_QString, static_cast<KConfig::OpenFlags>(mode), static_cast<QStandardPaths::StandardLocation>(typeVal));
+    return new VirtualKConfig(file_QString, static_cast<KConfig::OpenFlags>(mode), static_cast<QStandardPaths::StandardLocation>(type));
 }
 
-KConfig* KConfig_new6(const libqt_string file, const libqt_string backend, int typeVal) {
+KConfig* KConfig_new6(const libqt_string file, const libqt_string backend, int type) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     QString backend_QString = QString::fromUtf8(backend.data, backend.len);
-    return new VirtualKConfig(file_QString, backend_QString, static_cast<QStandardPaths::StandardLocation>(typeVal));
+    return new VirtualKConfig(file_QString, backend_QString, static_cast<QStandardPaths::StandardLocation>(type));
 }
 
 int KConfig_LocationType(const KConfig* self) {

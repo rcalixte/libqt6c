@@ -194,8 +194,8 @@ void KMessageWidget_SetCloseButtonVisible(KMessageWidget* self, bool visible) {
     self->setCloseButtonVisible(visible);
 }
 
-void KMessageWidget_SetMessageType(KMessageWidget* self, int typeVal) {
-    self->setMessageType(static_cast<KMessageWidget::MessageType>(typeVal));
+void KMessageWidget_SetMessageType(KMessageWidget* self, int type) {
+    self->setMessageType(static_cast<KMessageWidget::MessageType>(type));
 }
 
 void KMessageWidget_AnimatedShow(KMessageWidget* self) {

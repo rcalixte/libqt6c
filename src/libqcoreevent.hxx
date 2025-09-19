@@ -30,7 +30,7 @@ class VirtualQEvent final : public QEvent {
     mutable bool qevent_clone_isbase = false;
 
   public:
-    VirtualQEvent(QEvent::Type typeVal) : QEvent(typeVal) {};
+    VirtualQEvent(QEvent::Type type) : QEvent(type) {};
 
     ~VirtualQEvent() {
         qevent_setaccepted_callback = nullptr;
@@ -159,7 +159,7 @@ class VirtualQChildEvent final : public QChildEvent {
     mutable bool qchildevent_setaccepted_isbase = false;
 
   public:
-    VirtualQChildEvent(QEvent::Type typeVal, QObject* child) : QChildEvent(typeVal, child) {};
+    VirtualQChildEvent(QEvent::Type type, QObject* child) : QChildEvent(type, child) {};
 
     ~VirtualQChildEvent() {
         qchildevent_clone_callback = nullptr;

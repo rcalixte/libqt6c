@@ -111,8 +111,8 @@ double QValueAxis_TickInterval(const QValueAxis* self) {
     return static_cast<double>(self->tickInterval());
 }
 
-void QValueAxis_SetTickType(QValueAxis* self, int typeVal) {
-    self->setTickType(static_cast<QValueAxis::TickType>(typeVal));
+void QValueAxis_SetTickType(QValueAxis* self, int type) {
+    self->setTickType(static_cast<QValueAxis::TickType>(type));
 }
 
 int QValueAxis_TickType(const QValueAxis* self) {
@@ -245,14 +245,14 @@ void QValueAxis_Connect_TickAnchorChanged(QValueAxis* self, intptr_t slot) {
     });
 }
 
-void QValueAxis_TickTypeChanged(QValueAxis* self, int typeVal) {
-    self->tickTypeChanged(static_cast<QValueAxis::TickType>(typeVal));
+void QValueAxis_TickTypeChanged(QValueAxis* self, int type) {
+    self->tickTypeChanged(static_cast<QValueAxis::TickType>(type));
 }
 
 void QValueAxis_Connect_TickTypeChanged(QValueAxis* self, intptr_t slot) {
     void (*slotFunc)(QValueAxis*, int) = reinterpret_cast<void (*)(QValueAxis*, int)>(slot);
-    QValueAxis::connect(self, &QValueAxis::tickTypeChanged, [self, slotFunc](QValueAxis::TickType typeVal) {
-        int sigval1 = static_cast<int>(typeVal);
+    QValueAxis::connect(self, &QValueAxis::tickTypeChanged, [self, slotFunc](QValueAxis::TickType type) {
+        int sigval1 = static_cast<int>(type);
         slotFunc(self, sigval1);
     });
 }

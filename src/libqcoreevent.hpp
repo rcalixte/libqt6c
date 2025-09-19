@@ -22,7 +22,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QEvent* QEvent_new(int typeVal);
+QEvent* QEvent_new(int type);
 int QEvent_Type(const QEvent* self);
 bool QEvent_Spontaneous(const QEvent* self);
 void QEvent_SetAccepted(QEvent* self, bool accepted);
@@ -53,7 +53,7 @@ void QTimerEvent_OnSetAccepted(QTimerEvent* self, intptr_t slot);
 void QTimerEvent_QBaseSetAccepted(QTimerEvent* self, bool accepted);
 void QTimerEvent_Delete(QTimerEvent* self);
 
-QChildEvent* QChildEvent_new(int typeVal, QObject* child);
+QChildEvent* QChildEvent_new(int type, QObject* child);
 QChildEvent* QChildEvent_Clone(const QChildEvent* self);
 QObject* QChildEvent_Child(const QChildEvent* self);
 bool QChildEvent_Added(const QChildEvent* self);

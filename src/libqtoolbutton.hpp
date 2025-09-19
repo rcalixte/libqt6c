@@ -64,7 +64,7 @@ QSize* QToolButton_SizeHint(const QToolButton* self);
 QSize* QToolButton_MinimumSizeHint(const QToolButton* self);
 int QToolButton_ToolButtonStyle(const QToolButton* self);
 int QToolButton_ArrowType(const QToolButton* self);
-void QToolButton_SetArrowType(QToolButton* self, int typeVal);
+void QToolButton_SetArrowType(QToolButton* self, int type);
 void QToolButton_SetMenu(QToolButton* self, QMenu* menu);
 QMenu* QToolButton_Menu(const QToolButton* self);
 void QToolButton_SetPopupMode(QToolButton* self, int mode);

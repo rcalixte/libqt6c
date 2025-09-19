@@ -46,9 +46,9 @@ class VirtualQTableWidgetItem final : public QTableWidgetItem {
     VirtualQTableWidgetItem(const QString& text) : QTableWidgetItem(text) {};
     VirtualQTableWidgetItem(const QIcon& icon, const QString& text) : QTableWidgetItem(icon, text) {};
     VirtualQTableWidgetItem(const QTableWidgetItem& other) : QTableWidgetItem(other) {};
-    VirtualQTableWidgetItem(int typeVal) : QTableWidgetItem(typeVal) {};
-    VirtualQTableWidgetItem(const QString& text, int typeVal) : QTableWidgetItem(text, typeVal) {};
-    VirtualQTableWidgetItem(const QIcon& icon, const QString& text, int typeVal) : QTableWidgetItem(icon, text, typeVal) {};
+    VirtualQTableWidgetItem(int type) : QTableWidgetItem(type) {};
+    VirtualQTableWidgetItem(const QString& text, int type) : QTableWidgetItem(text, type) {};
+    VirtualQTableWidgetItem(const QIcon& icon, const QString& text, int type) : QTableWidgetItem(icon, text, type) {};
 
     ~VirtualQTableWidgetItem() {
         qtablewidgetitem_clone_callback = nullptr;

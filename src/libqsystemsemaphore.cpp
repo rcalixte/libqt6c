@@ -100,8 +100,8 @@ libqt_string QSystemSemaphore_ErrorString(const QSystemSemaphore* self) {
     return _str;
 }
 
-bool QSystemSemaphore_IsKeyTypeSupported(uint16_t typeVal) {
-    return QSystemSemaphore::isKeyTypeSupported(static_cast<QNativeIpcKey::Type>(typeVal));
+bool QSystemSemaphore_IsKeyTypeSupported(uint16_t type) {
+    return QSystemSemaphore::isKeyTypeSupported(static_cast<QNativeIpcKey::Type>(type));
 }
 
 QNativeIpcKey* QSystemSemaphore_PlatformSafeKey(const libqt_string key) {
@@ -156,9 +156,9 @@ void QSystemSemaphore_SetNativeKey32(QSystemSemaphore* self, const libqt_string 
     self->setNativeKey(key_QString, static_cast<int>(initialValue), static_cast<QSystemSemaphore::AccessMode>(mode));
 }
 
-void QSystemSemaphore_SetNativeKey4(QSystemSemaphore* self, const libqt_string key, int initialValue, int mode, uint16_t typeVal) {
+void QSystemSemaphore_SetNativeKey4(QSystemSemaphore* self, const libqt_string key, int initialValue, int mode, uint16_t type) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
-    self->setNativeKey(key_QString, static_cast<int>(initialValue), static_cast<QSystemSemaphore::AccessMode>(mode), static_cast<QNativeIpcKey::Type>(typeVal));
+    self->setNativeKey(key_QString, static_cast<int>(initialValue), static_cast<QSystemSemaphore::AccessMode>(mode), static_cast<QNativeIpcKey::Type>(type));
 }
 
 void QSystemSemaphore_SetKey2(QSystemSemaphore* self, const libqt_string key, int initialValue) {
@@ -175,14 +175,14 @@ bool QSystemSemaphore_Release1(QSystemSemaphore* self, int n) {
     return self->release(static_cast<int>(n));
 }
 
-QNativeIpcKey* QSystemSemaphore_PlatformSafeKey2(const libqt_string key, uint16_t typeVal) {
+QNativeIpcKey* QSystemSemaphore_PlatformSafeKey2(const libqt_string key, uint16_t type) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
-    return new QNativeIpcKey(QSystemSemaphore::platformSafeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal)));
+    return new QNativeIpcKey(QSystemSemaphore::platformSafeKey(key_QString, static_cast<QNativeIpcKey::Type>(type)));
 }
 
-QNativeIpcKey* QSystemSemaphore_LegacyNativeKey2(const libqt_string key, uint16_t typeVal) {
+QNativeIpcKey* QSystemSemaphore_LegacyNativeKey2(const libqt_string key, uint16_t type) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
-    return new QNativeIpcKey(QSystemSemaphore::legacyNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal)));
+    return new QNativeIpcKey(QSystemSemaphore::legacyNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(type)));
 }
 
 void QSystemSemaphore_Delete(QSystemSemaphore* self) {

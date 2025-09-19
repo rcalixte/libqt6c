@@ -10,7 +10,7 @@
 #include "../qtlibc.h"
 
 // This class is a subclass of QSqlDriver so that we can call protected methods
-class VirtualQSqlDriver final : public QSqlDriver {
+class VirtualQSqlDriver : public QSqlDriver {
 
   public:
     // Virtual class boolean flag
@@ -414,10 +414,10 @@ class VirtualQSqlDriver final : public QSqlDriver {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QString escapeIdentifier(const QString& identifier, QSqlDriver::IdentifierType typeVal) const override {
+    virtual QString escapeIdentifier(const QString& identifier, QSqlDriver::IdentifierType type) const override {
         if (qsqldriver_escapeidentifier_isbase) {
             qsqldriver_escapeidentifier_isbase = false;
-            return QSqlDriver::escapeIdentifier(identifier, typeVal);
+            return QSqlDriver::escapeIdentifier(identifier, type);
         } else if (qsqldriver_escapeidentifier_callback != nullptr) {
             const QString identifier_ret = identifier;
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -428,23 +428,23 @@ class VirtualQSqlDriver final : public QSqlDriver {
             memcpy((void*)identifier_str.data, identifier_b.data(), identifier_str.len);
             ((char*)identifier_str.data)[identifier_str.len] = '\0';
             libqt_string cbval1 = identifier_str;
-            int cbval2 = static_cast<int>(typeVal);
+            int cbval2 = static_cast<int>(type);
 
             const char* callback_ret = qsqldriver_escapeidentifier_callback(this, cbval1, cbval2);
             QString callback_ret_QString = QString::fromUtf8(callback_ret);
             return callback_ret_QString;
         } else {
-            return QSqlDriver::escapeIdentifier(identifier, typeVal);
+            return QSqlDriver::escapeIdentifier(identifier, type);
         }
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QString sqlStatement(QSqlDriver::StatementType typeVal, const QString& tableName, const QSqlRecord& rec, bool preparedStatement) const override {
+    virtual QString sqlStatement(QSqlDriver::StatementType type, const QString& tableName, const QSqlRecord& rec, bool preparedStatement) const override {
         if (qsqldriver_sqlstatement_isbase) {
             qsqldriver_sqlstatement_isbase = false;
-            return QSqlDriver::sqlStatement(typeVal, tableName, rec, preparedStatement);
+            return QSqlDriver::sqlStatement(type, tableName, rec, preparedStatement);
         } else if (qsqldriver_sqlstatement_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
             const QString tableName_ret = tableName;
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray tableName_b = tableName_ret.toUtf8();
@@ -463,7 +463,7 @@ class VirtualQSqlDriver final : public QSqlDriver {
             QString callback_ret_QString = QString::fromUtf8(callback_ret);
             return callback_ret_QString;
         } else {
-            return QSqlDriver::sqlStatement(typeVal, tableName, rec, preparedStatement);
+            return QSqlDriver::sqlStatement(type, tableName, rec, preparedStatement);
         }
     }
 
@@ -634,10 +634,10 @@ class VirtualQSqlDriver final : public QSqlDriver {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool isIdentifierEscaped(const QString& identifier, QSqlDriver::IdentifierType typeVal) const override {
+    virtual bool isIdentifierEscaped(const QString& identifier, QSqlDriver::IdentifierType type) const override {
         if (qsqldriver_isidentifierescaped_isbase) {
             qsqldriver_isidentifierescaped_isbase = false;
-            return QSqlDriver::isIdentifierEscaped(identifier, typeVal);
+            return QSqlDriver::isIdentifierEscaped(identifier, type);
         } else if (qsqldriver_isidentifierescaped_callback != nullptr) {
             const QString identifier_ret = identifier;
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -648,20 +648,20 @@ class VirtualQSqlDriver final : public QSqlDriver {
             memcpy((void*)identifier_str.data, identifier_b.data(), identifier_str.len);
             ((char*)identifier_str.data)[identifier_str.len] = '\0';
             libqt_string cbval1 = identifier_str;
-            int cbval2 = static_cast<int>(typeVal);
+            int cbval2 = static_cast<int>(type);
 
             bool callback_ret = qsqldriver_isidentifierescaped_callback(this, cbval1, cbval2);
             return callback_ret;
         } else {
-            return QSqlDriver::isIdentifierEscaped(identifier, typeVal);
+            return QSqlDriver::isIdentifierEscaped(identifier, type);
         }
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QString stripDelimiters(const QString& identifier, QSqlDriver::IdentifierType typeVal) const override {
+    virtual QString stripDelimiters(const QString& identifier, QSqlDriver::IdentifierType type) const override {
         if (qsqldriver_stripdelimiters_isbase) {
             qsqldriver_stripdelimiters_isbase = false;
-            return QSqlDriver::stripDelimiters(identifier, typeVal);
+            return QSqlDriver::stripDelimiters(identifier, type);
         } else if (qsqldriver_stripdelimiters_callback != nullptr) {
             const QString identifier_ret = identifier;
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -672,28 +672,28 @@ class VirtualQSqlDriver final : public QSqlDriver {
             memcpy((void*)identifier_str.data, identifier_b.data(), identifier_str.len);
             ((char*)identifier_str.data)[identifier_str.len] = '\0';
             libqt_string cbval1 = identifier_str;
-            int cbval2 = static_cast<int>(typeVal);
+            int cbval2 = static_cast<int>(type);
 
             const char* callback_ret = qsqldriver_stripdelimiters_callback(this, cbval1, cbval2);
             QString callback_ret_QString = QString::fromUtf8(callback_ret);
             return callback_ret_QString;
         } else {
-            return QSqlDriver::stripDelimiters(identifier, typeVal);
+            return QSqlDriver::stripDelimiters(identifier, type);
         }
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual int maximumIdentifierLength(QSqlDriver::IdentifierType typeVal) const override {
+    virtual int maximumIdentifierLength(QSqlDriver::IdentifierType type) const override {
         if (qsqldriver_maximumidentifierlength_isbase) {
             qsqldriver_maximumidentifierlength_isbase = false;
-            return QSqlDriver::maximumIdentifierLength(typeVal);
+            return QSqlDriver::maximumIdentifierLength(type);
         } else if (qsqldriver_maximumidentifierlength_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             int callback_ret = qsqldriver_maximumidentifierlength_callback(this, cbval1);
             return static_cast<int>(callback_ret);
         } else {
-            return QSqlDriver::maximumIdentifierLength(typeVal);
+            return QSqlDriver::maximumIdentifierLength(type);
         }
     }
 

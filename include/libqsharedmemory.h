@@ -184,8 +184,8 @@ const char* q_sharedmemory_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#isKeyTypeSupported)
 ///
-/// @param typeVal enum QNativeIpcKey__Type
-bool q_sharedmemory_is_key_type_supported(uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+bool q_sharedmemory_is_key_type_supported(uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#platformSafeKey)
 ///
@@ -218,8 +218,8 @@ const char* q_sharedmemory_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QSharedMemory*
 /// @param key const char*
-/// @param typeVal enum QNativeIpcKey__Type
-void q_sharedmemory_set_native_key22(void* self, const char* key, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+void q_sharedmemory_set_native_key22(void* self, const char* key, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#create)
 ///
@@ -237,14 +237,14 @@ bool q_sharedmemory_attach1(void* self, int32_t mode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#platformSafeKey)
 ///
 /// @param key const char*
-/// @param typeVal enum QNativeIpcKey__Type
-QNativeIpcKey* q_sharedmemory_platform_safe_key2(const char* key, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+QNativeIpcKey* q_sharedmemory_platform_safe_key2(const char* key, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#legacyNativeKey)
 ///
 /// @param key const char*
-/// @param typeVal enum QNativeIpcKey__Type
-QNativeIpcKey* q_sharedmemory_legacy_native_key2(const char* key, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+QNativeIpcKey* q_sharedmemory_legacy_native_key2(const char* key, uint16_t type);
 
 /// Inherited from QObject
 ///
@@ -523,8 +523,8 @@ int32_t q_sharedmemory_start_timer22(void* self, int interval, int32_t timerType
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sharedmemory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_sharedmemory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -534,8 +534,8 @@ QMetaObject__Connection* q_sharedmemory_connect5(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sharedmemory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_sharedmemory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

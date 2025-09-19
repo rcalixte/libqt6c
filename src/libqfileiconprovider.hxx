@@ -64,17 +64,17 @@ class VirtualQFileIconProvider final : public QFileIconProvider {
     inline void setQFileIconProvider_Options_IsBase(bool value) const { qfileiconprovider_options_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
-    virtual QIcon icon(QAbstractFileIconProvider::IconType typeVal) const override {
+    virtual QIcon icon(QAbstractFileIconProvider::IconType type) const override {
         if (qfileiconprovider_icon_isbase) {
             qfileiconprovider_icon_isbase = false;
-            return QFileIconProvider::icon(typeVal);
+            return QFileIconProvider::icon(type);
         } else if (qfileiconprovider_icon_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             QIcon* callback_ret = qfileiconprovider_icon_callback(this, cbval1);
             return *callback_ret;
         } else {
-            return QFileIconProvider::icon(typeVal);
+            return QFileIconProvider::icon(type);
         }
     }
 

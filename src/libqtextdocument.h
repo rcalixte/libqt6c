@@ -399,17 +399,17 @@ void q_textdocument_print(void* self, void* printer);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#resource)
 ///
 /// @param self QTextDocument*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* q_textdocument_resource(void* self, int typeVal, void* name);
+QVariant* q_textdocument_resource(void* self, int type, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#addResource)
 ///
 /// @param self QTextDocument*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
 /// @param resource QVariant*
-void q_textdocument_add_resource(void* self, int typeVal, void* name, void* resource);
+void q_textdocument_add_resource(void* self, int type, void* name, void* resource);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#allFormats)
 ///
@@ -755,16 +755,16 @@ QTextObject* q_textdocument_qbase_create_object(void* self, void* f);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
 /// @param self QTextDocument*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* q_textdocument_load_resource(void* self, int typeVal, void* name);
+QVariant* q_textdocument_load_resource(void* self, int type, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QTextDocument*
-/// @param callback QVariant* func(QTextDocument* self, int typeVal, QUrl* name)
+/// @param callback QVariant* func(QTextDocument* self, int type, QUrl* name)
 void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
@@ -772,9 +772,9 @@ void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, in
 /// Base class method implementation
 ///
 /// @param self QTextDocument*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* q_textdocument_qbase_load_resource(void* self, int typeVal, void* name);
+QVariant* q_textdocument_qbase_load_resource(void* self, int type, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1156,8 +1156,8 @@ int32_t q_textdocument_start_timer22(void* self, int interval, int32_t timerType
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1167,8 +1167,8 @@ QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

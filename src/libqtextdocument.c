@@ -301,12 +301,12 @@ void q_textdocument_print(void* self, void* printer) {
     QTextDocument_Print((QTextDocument*)self, (QPagedPaintDevice*)printer);
 }
 
-QVariant* q_textdocument_resource(void* self, int typeVal, void* name) {
-    return QTextDocument_Resource((QTextDocument*)self, typeVal, (QUrl*)name);
+QVariant* q_textdocument_resource(void* self, int type, void* name) {
+    return QTextDocument_Resource((QTextDocument*)self, type, (QUrl*)name);
 }
 
-void q_textdocument_add_resource(void* self, int typeVal, void* name, void* resource) {
-    QTextDocument_AddResource((QTextDocument*)self, typeVal, (QUrl*)name, (QVariant*)resource);
+void q_textdocument_add_resource(void* self, int type, void* name, void* resource) {
+    QTextDocument_AddResource((QTextDocument*)self, type, (QUrl*)name, (QVariant*)resource);
 }
 
 libqt_list /* of QTextFormat* */ q_textdocument_all_formats(void* self) {
@@ -549,16 +549,16 @@ QTextObject* q_textdocument_qbase_create_object(void* self, void* f) {
     return QTextDocument_QBaseCreateObject((QTextDocument*)self, (QTextFormat*)f);
 }
 
-QVariant* q_textdocument_load_resource(void* self, int typeVal, void* name) {
-    return QTextDocument_LoadResource((QTextDocument*)self, typeVal, (QUrl*)name);
+QVariant* q_textdocument_load_resource(void* self, int type, void* name) {
+    return QTextDocument_LoadResource((QTextDocument*)self, type, (QUrl*)name);
 }
 
 void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*)) {
     QTextDocument_OnLoadResource((QTextDocument*)self, (intptr_t)callback);
 }
 
-QVariant* q_textdocument_qbase_load_resource(void* self, int typeVal, void* name) {
-    return QTextDocument_QBaseLoadResource((QTextDocument*)self, typeVal, (QUrl*)name);
+QVariant* q_textdocument_qbase_load_resource(void* self, int type, void* name) {
+    return QTextDocument_QBaseLoadResource((QTextDocument*)self, type, (QUrl*)name);
 }
 
 const char* q_textdocument_tr2(const char* s, const char* c) {
@@ -781,12 +781,12 @@ int32_t q_textdocument_start_timer22(void* self, int interval, int32_t timerType
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_textdocument_destroyed1(void* self, void* param1) {

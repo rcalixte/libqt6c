@@ -26,28 +26,28 @@ QSslKey* q_sslkey_new6(const char* encoded, int32_t algorithm, int32_t format) {
     return QSslKey_new6(qstring(encoded), algorithm, format);
 }
 
-QSslKey* q_sslkey_new7(const char* encoded, int32_t algorithm, int32_t format, int32_t typeVal) {
-    return QSslKey_new7(qstring(encoded), algorithm, format, typeVal);
+QSslKey* q_sslkey_new7(const char* encoded, int32_t algorithm, int32_t format, int32_t type) {
+    return QSslKey_new7(qstring(encoded), algorithm, format, type);
 }
 
-QSslKey* q_sslkey_new8(const char* encoded, int32_t algorithm, int32_t format, int32_t typeVal, const char* passPhrase) {
-    return QSslKey_new8(qstring(encoded), algorithm, format, typeVal, qstring(passPhrase));
+QSslKey* q_sslkey_new8(const char* encoded, int32_t algorithm, int32_t format, int32_t type, const char* passPhrase) {
+    return QSslKey_new8(qstring(encoded), algorithm, format, type, qstring(passPhrase));
 }
 
 QSslKey* q_sslkey_new9(void* device, int32_t algorithm, int32_t format) {
     return QSslKey_new9((QIODevice*)device, algorithm, format);
 }
 
-QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t typeVal) {
-    return QSslKey_new10((QIODevice*)device, algorithm, format, typeVal);
+QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t type) {
+    return QSslKey_new10((QIODevice*)device, algorithm, format, type);
 }
 
-QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t typeVal, const char* passPhrase) {
-    return QSslKey_new11((QIODevice*)device, algorithm, format, typeVal, qstring(passPhrase));
+QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t type, const char* passPhrase) {
+    return QSslKey_new11((QIODevice*)device, algorithm, format, type, qstring(passPhrase));
 }
 
-QSslKey* q_sslkey_new12(void* handle, int32_t typeVal) {
-    return QSslKey_new12(handle, typeVal);
+QSslKey* q_sslkey_new12(void* handle, int32_t type) {
+    return QSslKey_new12(handle, type);
 }
 
 void q_sslkey_operator_assign(void* self, void* other) {

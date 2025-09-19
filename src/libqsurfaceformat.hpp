@@ -42,7 +42,7 @@ int QSurfaceFormat_SwapBehavior(const QSurfaceFormat* self);
 bool QSurfaceFormat_HasAlpha(const QSurfaceFormat* self);
 void QSurfaceFormat_SetProfile(QSurfaceFormat* self, int profile);
 int QSurfaceFormat_Profile(const QSurfaceFormat* self);
-void QSurfaceFormat_SetRenderableType(QSurfaceFormat* self, int typeVal);
+void QSurfaceFormat_SetRenderableType(QSurfaceFormat* self, int type);
 int QSurfaceFormat_RenderableType(const QSurfaceFormat* self);
 void QSurfaceFormat_SetMajorVersion(QSurfaceFormat* self, int majorVersion);
 int QSurfaceFormat_MajorVersion(const QSurfaceFormat* self);

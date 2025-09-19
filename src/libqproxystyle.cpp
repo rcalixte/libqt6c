@@ -123,12 +123,12 @@ void QProxyStyle_DrawItemPixmap(const QProxyStyle* self, QPainter* painter, cons
     }
 }
 
-QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int typeVal, const QStyleOption* option, const QSize* size, const QWidget* widget) {
+QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int type, const QStyleOption* option, const QSize* size, const QWidget* widget) {
     auto* vqproxystyle = dynamic_cast<const VirtualQProxyStyle*>(self);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
-        return new QSize(self->sizeFromContents(static_cast<QStyle::ContentsType>(typeVal), option, *size, widget));
+        return new QSize(self->sizeFromContents(static_cast<QStyle::ContentsType>(type), option, *size, widget));
     } else {
-        return new QSize(((VirtualQProxyStyle*)self)->sizeFromContents(static_cast<QStyle::ContentsType>(typeVal), option, *size, widget));
+        return new QSize(((VirtualQProxyStyle*)self)->sizeFromContents(static_cast<QStyle::ContentsType>(type), option, *size, widget));
     }
 }
 
@@ -434,13 +434,13 @@ void QProxyStyle_OnDrawItemPixmap(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-QSize* QProxyStyle_QBaseSizeFromContents(const QProxyStyle* self, int typeVal, const QStyleOption* option, const QSize* size, const QWidget* widget) {
+QSize* QProxyStyle_QBaseSizeFromContents(const QProxyStyle* self, int type, const QStyleOption* option, const QSize* size, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_SizeFromContents_IsBase(true);
-        return new QSize(vqproxystyle->sizeFromContents(static_cast<QStyle::ContentsType>(typeVal), option, *size, widget));
+        return new QSize(vqproxystyle->sizeFromContents(static_cast<QStyle::ContentsType>(type), option, *size, widget));
     } else {
-        return new QSize(((VirtualQProxyStyle*)self)->sizeFromContents(static_cast<QStyle::ContentsType>(typeVal), option, *size, widget));
+        return new QSize(((VirtualQProxyStyle*)self)->sizeFromContents(static_cast<QStyle::ContentsType>(type), option, *size, widget));
     }
 }
 

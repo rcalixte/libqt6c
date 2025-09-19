@@ -253,19 +253,19 @@ bool k_solid__battery_is_valid(void* self) {
     return Solid__DeviceInterface_IsValid((Solid__DeviceInterface*)self);
 }
 
-const char* k_solid__battery_type_to_string(int32_t typeVal) {
-    libqt_string _str = Solid__DeviceInterface_TypeToString(typeVal);
+const char* k_solid__battery_type_to_string(int32_t type) {
+    libqt_string _str = Solid__DeviceInterface_TypeToString(type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_solid__battery_string_to_type(const char* typeVal) {
-    return Solid__DeviceInterface_StringToType(qstring(typeVal));
+int32_t k_solid__battery_string_to_type(const char* type) {
+    return Solid__DeviceInterface_StringToType(qstring(type));
 }
 
-const char* k_solid__battery_type_description(int32_t typeVal) {
-    libqt_string _str = Solid__DeviceInterface_TypeDescription(typeVal);
+const char* k_solid__battery_type_description(int32_t type) {
+    libqt_string _str = Solid__DeviceInterface_TypeDescription(type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -434,12 +434,12 @@ int32_t k_solid__battery_start_timer22(void* self, int interval, int32_t timerTy
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_solid__battery_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_solid__battery_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_solid__battery_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_solid__battery_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_solid__battery_destroyed1(void* self, void* param1) {

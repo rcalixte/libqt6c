@@ -282,17 +282,17 @@ bool QSqlQuery_ExecBatch1(QSqlQuery* self, int mode) {
     return self->execBatch(static_cast<QSqlQuery::BatchExecutionMode>(mode));
 }
 
-void QSqlQuery_BindValue3(QSqlQuery* self, const libqt_string placeholder, const QVariant* val, int typeVal) {
+void QSqlQuery_BindValue3(QSqlQuery* self, const libqt_string placeholder, const QVariant* val, int type) {
     QString placeholder_QString = QString::fromUtf8(placeholder.data, placeholder.len);
-    self->bindValue(placeholder_QString, *val, static_cast<QSql::ParamType>(typeVal));
+    self->bindValue(placeholder_QString, *val, static_cast<QSql::ParamType>(type));
 }
 
-void QSqlQuery_BindValue32(QSqlQuery* self, int pos, const QVariant* val, int typeVal) {
-    self->bindValue(static_cast<int>(pos), *val, static_cast<QSql::ParamType>(typeVal));
+void QSqlQuery_BindValue32(QSqlQuery* self, int pos, const QVariant* val, int type) {
+    self->bindValue(static_cast<int>(pos), *val, static_cast<QSql::ParamType>(type));
 }
 
-void QSqlQuery_AddBindValue2(QSqlQuery* self, const QVariant* val, int typeVal) {
-    self->addBindValue(*val, static_cast<QSql::ParamType>(typeVal));
+void QSqlQuery_AddBindValue2(QSqlQuery* self, const QVariant* val, int type) {
+    self->addBindValue(*val, static_cast<QSql::ParamType>(type));
 }
 
 void QSqlQuery_Delete(QSqlQuery* self) {

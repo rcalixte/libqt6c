@@ -82,7 +82,7 @@ void KMessageWidget_SetText(KMessageWidget* self, const libqt_string text);
 void KMessageWidget_SetPosition(KMessageWidget* self, int position);
 void KMessageWidget_SetWordWrap(KMessageWidget* self, bool wordWrap);
 void KMessageWidget_SetCloseButtonVisible(KMessageWidget* self, bool visible);
-void KMessageWidget_SetMessageType(KMessageWidget* self, int typeVal);
+void KMessageWidget_SetMessageType(KMessageWidget* self, int type);
 void KMessageWidget_AnimatedShow(KMessageWidget* self);
 void KMessageWidget_AnimatedHide(KMessageWidget* self);
 void KMessageWidget_SetIcon(KMessageWidget* self, const QIcon* icon);

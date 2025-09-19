@@ -59,8 +59,8 @@ bool KSycoca_IsAvailable() {
     return KSycoca::isAvailable();
 }
 
-QDataStream* KSycoca_FindEntry(KSycoca* self, int offset, int* typeVal) {
-    return self->findEntry(static_cast<int>(offset), (KSycocaType&)(*typeVal));
+QDataStream* KSycoca_FindEntry(KSycoca* self, int offset, int* type) {
+    return self->findEntry(static_cast<int>(offset), (KSycocaType&)(*type));
 }
 
 QDataStream* KSycoca_FindFactory(KSycoca* self, int id) {

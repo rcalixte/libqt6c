@@ -85,7 +85,7 @@ libqt_list /* of libqt_string */ KNetworkMounts_Paths(const KNetworkMounts* self
     return _out;
 }
 
-void KNetworkMounts_SetPaths(KNetworkMounts* self, const libqt_list /* of libqt_string */ paths, int typeVal) {
+void KNetworkMounts_SetPaths(KNetworkMounts* self, const libqt_list /* of libqt_string */ paths, int type) {
     QList<QString> paths_QList;
     paths_QList.reserve(paths.len);
     libqt_string* paths_arr = static_cast<libqt_string*>(paths.data.ptr);
@@ -93,12 +93,12 @@ void KNetworkMounts_SetPaths(KNetworkMounts* self, const libqt_list /* of libqt_
         QString paths_arr_i_QString = QString::fromUtf8(paths_arr[i].data, paths_arr[i].len);
         paths_QList.push_back(paths_arr_i_QString);
     }
-    self->setPaths(paths_QList, static_cast<KNetworkMounts::KNetworkMountsType>(typeVal));
+    self->setPaths(paths_QList, static_cast<KNetworkMounts::KNetworkMountsType>(type));
 }
 
-void KNetworkMounts_AddPath(KNetworkMounts* self, const libqt_string path, int typeVal) {
+void KNetworkMounts_AddPath(KNetworkMounts* self, const libqt_string path, int type) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
-    self->addPath(path_QString, static_cast<KNetworkMounts::KNetworkMountsType>(typeVal));
+    self->addPath(path_QString, static_cast<KNetworkMounts::KNetworkMountsType>(type));
 }
 
 libqt_string KNetworkMounts_CanonicalSymlinkPath(KNetworkMounts* self, const libqt_string path) {
@@ -146,17 +146,17 @@ libqt_string KNetworkMounts_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool KNetworkMounts_IsSlowPath2(KNetworkMounts* self, const libqt_string path, int typeVal) {
+bool KNetworkMounts_IsSlowPath2(KNetworkMounts* self, const libqt_string path, int type) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
-    return self->isSlowPath(path_QString, static_cast<KNetworkMounts::KNetworkMountsType>(typeVal));
+    return self->isSlowPath(path_QString, static_cast<KNetworkMounts::KNetworkMountsType>(type));
 }
 
 bool KNetworkMounts_IsOptionEnabled2(const KNetworkMounts* self, const int option, const bool defaultValue) {
     return self->isOptionEnabled(static_cast<const KNetworkMounts::KNetworkMountOption>(option), defaultValue);
 }
 
-libqt_list /* of libqt_string */ KNetworkMounts_Paths1(const KNetworkMounts* self, int typeVal) {
-    QList<QString> _ret = self->paths(static_cast<KNetworkMounts::KNetworkMountsType>(typeVal));
+libqt_list /* of libqt_string */ KNetworkMounts_Paths1(const KNetworkMounts* self, int type) {
+    QList<QString> _ret = self->paths(static_cast<KNetworkMounts::KNetworkMountsType>(type));
     // Convert QList<> from C++ memory to manually-managed C memory
     libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {

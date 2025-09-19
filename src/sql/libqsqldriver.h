@@ -243,15 +243,15 @@ const char* q_sqldriver_qbase_format_value(void* self, void* field, bool trimStr
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
-/// @param typeVal enum QSqlDriver__IdentifierType
-const char* q_sqldriver_escape_identifier(void* self, const char* identifier, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+const char* q_sqldriver_escape_identifier(void* self, const char* identifier, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType typeVal)
+/// @param callback const char* func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
 void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(void*, const char*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#escapeIdentifier)
@@ -260,26 +260,26 @@ void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(void*,
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
-/// @param typeVal enum QSqlDriver__IdentifierType
-const char* q_sqldriver_qbase_escape_identifier(void* self, const char* identifier, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+const char* q_sqldriver_qbase_escape_identifier(void* self, const char* identifier, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlDriver*
-/// @param typeVal enum QSqlDriver__StatementType
+/// @param type enum QSqlDriver__StatementType
 /// @param tableName const char*
 /// @param rec QSqlRecord*
 /// @param preparedStatement bool
-const char* q_sqldriver_sql_statement(void* self, int32_t typeVal, const char* tableName, void* rec, bool preparedStatement);
+const char* q_sqldriver_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, enum QSqlDriver__StatementType typeVal, const char* tableName, QSqlRecord* rec, bool preparedStatement)
+/// @param callback const char* func(QSqlDriver* self, enum QSqlDriver__StatementType type, const char* tableName, QSqlRecord* rec, bool preparedStatement)
 void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(void*, int32_t, const char*, void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#sqlStatement)
@@ -287,11 +287,11 @@ void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(void*, int
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
-/// @param typeVal enum QSqlDriver__StatementType
+/// @param type enum QSqlDriver__StatementType
 /// @param tableName const char*
 /// @param rec QSqlRecord*
 /// @param preparedStatement bool
-const char* q_sqldriver_qbase_sql_statement(void* self, int32_t typeVal, const char* tableName, void* rec, bool preparedStatement);
+const char* q_sqldriver_qbase_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#lastError)
 ///
@@ -482,15 +482,15 @@ const char** q_sqldriver_qbase_subscribed_to_notifications(void* self);
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
-/// @param typeVal enum QSqlDriver__IdentifierType
-bool q_sqldriver_is_identifier_escaped(void* self, const char* identifier, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+bool q_sqldriver_is_identifier_escaped(void* self, const char* identifier, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback bool func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType typeVal)
+/// @param callback bool func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
 void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(void*, const char*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#isIdentifierEscaped)
@@ -499,8 +499,8 @@ void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(void*, co
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
-/// @param typeVal enum QSqlDriver__IdentifierType
-bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
@@ -508,15 +508,15 @@ bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier,
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
-/// @param typeVal enum QSqlDriver__IdentifierType
-const char* q_sqldriver_strip_delimiters(void* self, const char* identifier, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+const char* q_sqldriver_strip_delimiters(void* self, const char* identifier, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback const char* func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType typeVal)
+/// @param callback const char* func(QSqlDriver* self, const char* identifier, enum QSqlDriver__IdentifierType type)
 void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(void*, const char*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#stripDelimiters)
@@ -525,8 +525,8 @@ void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(void*, 
 ///
 /// @param self QSqlDriver*
 /// @param identifier const char*
-/// @param typeVal enum QSqlDriver__IdentifierType
-const char* q_sqldriver_qbase_strip_delimiters(void* self, const char* identifier, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+const char* q_sqldriver_qbase_strip_delimiters(void* self, const char* identifier, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#setNumericalPrecisionPolicy)
 ///
@@ -551,15 +551,15 @@ int32_t q_sqldriver_dbms_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
 ///
 /// @param self QSqlDriver*
-/// @param typeVal enum QSqlDriver__IdentifierType
-int32_t q_sqldriver_maximum_identifier_length(void* self, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+int32_t q_sqldriver_maximum_identifier_length(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSqlDriver*
-/// @param callback int32_t func(QSqlDriver* self, enum QSqlDriver__IdentifierType typeVal)
+/// @param callback int32_t func(QSqlDriver* self, enum QSqlDriver__IdentifierType type)
 void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#maximumIdentifierLength)
@@ -567,8 +567,8 @@ void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(vo
 /// Base class method implementation
 ///
 /// @param self QSqlDriver*
-/// @param typeVal enum QSqlDriver__IdentifierType
-int32_t q_sqldriver_qbase_maximum_identifier_length(void* self, int32_t typeVal);
+/// @param type enum QSqlDriver__IdentifierType
+int32_t q_sqldriver_qbase_maximum_identifier_length(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldriver.html#cancelQuery)
 ///
@@ -964,8 +964,8 @@ int32_t q_sqldriver_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sqldriver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_sqldriver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -975,8 +975,8 @@ QMetaObject__Connection* q_sqldriver_connect5(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sqldriver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_sqldriver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

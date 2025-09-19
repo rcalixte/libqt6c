@@ -20,15 +20,15 @@ QFileIconProvider* q_fileiconprovider_new();
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// @param self QFileIconProvider*
-/// @param typeVal enum QAbstractFileIconProvider__IconType
-QIcon* q_fileiconprovider_icon(void* self, int32_t typeVal);
+/// @param type enum QAbstractFileIconProvider__IconType
+QIcon* q_fileiconprovider_icon(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QFileIconProvider*
-/// @param callback QIcon* func(QFileIconProvider* self, enum QAbstractFileIconProvider__IconType typeVal)
+/// @param callback QIcon* func(QFileIconProvider* self, enum QAbstractFileIconProvider__IconType type)
 void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
@@ -36,8 +36,8 @@ void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 /// Base class method implementation
 ///
 /// @param self QFileIconProvider*
-/// @param typeVal enum QAbstractFileIconProvider__IconType
-QIcon* q_fileiconprovider_qbase_icon(void* self, int32_t typeVal);
+/// @param type enum QAbstractFileIconProvider__IconType
+QIcon* q_fileiconprovider_qbase_icon(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///

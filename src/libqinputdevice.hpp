@@ -26,10 +26,10 @@ typedef struct QTimerEvent QTimerEvent;
 #endif
 
 QInputDevice* QInputDevice_new();
-QInputDevice* QInputDevice_new2(const libqt_string name, long long systemId, int typeVal);
+QInputDevice* QInputDevice_new2(const libqt_string name, long long systemId, int type);
 QInputDevice* QInputDevice_new3(QObject* parent);
-QInputDevice* QInputDevice_new4(const libqt_string name, long long systemId, int typeVal, const libqt_string seatName);
-QInputDevice* QInputDevice_new5(const libqt_string name, long long systemId, int typeVal, const libqt_string seatName, QObject* parent);
+QInputDevice* QInputDevice_new4(const libqt_string name, long long systemId, int type, const libqt_string seatName);
+QInputDevice* QInputDevice_new5(const libqt_string name, long long systemId, int type, const libqt_string seatName, QObject* parent);
 QMetaObject* QInputDevice_MetaObject(const QInputDevice* self);
 void* QInputDevice_Metacast(QInputDevice* self, const char* param1);
 int QInputDevice_Metacall(QInputDevice* self, int param1, int param2, void** param3);

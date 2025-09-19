@@ -43,19 +43,19 @@
 #include "libkmessagedialog.hpp"
 #include "libkmessagedialog.hxx"
 
-KMessageDialog* KMessageDialog_new(int typeVal, const libqt_string text) {
+KMessageDialog* KMessageDialog_new(int type, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(typeVal), text_QString);
+    return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(type), text_QString);
 }
 
-KMessageDialog* KMessageDialog_new2(int typeVal, const libqt_string text, uintptr_t parent_id) {
+KMessageDialog* KMessageDialog_new2(int type, const libqt_string text, uintptr_t parent_id) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(typeVal), text_QString, static_cast<WId>(parent_id));
+    return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(type), text_QString, static_cast<WId>(parent_id));
 }
 
-KMessageDialog* KMessageDialog_new3(int typeVal, const libqt_string text, QWidget* parent) {
+KMessageDialog* KMessageDialog_new3(int type, const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(typeVal), text_QString, parent);
+    return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(type), text_QString, parent);
 }
 
 QMetaObject* KMessageDialog_MetaObject(const KMessageDialog* self) {
@@ -141,8 +141,8 @@ void KMessageDialog_SetButtons(KMessageDialog* self) {
     self->setButtons();
 }
 
-void KMessageDialog_Beep(int typeVal) {
-    KMessageDialog::beep(static_cast<KMessageDialog::Type>(typeVal));
+void KMessageDialog_Beep(int type) {
+    KMessageDialog::beep(static_cast<KMessageDialog::Type>(type));
 }
 
 void KMessageDialog_ShowEvent(KMessageDialog* self, QShowEvent* event) {
@@ -188,14 +188,14 @@ void KMessageDialog_SetButtons3(KMessageDialog* self, const KGuiItem* primaryAct
     self->setButtons(*primaryAction, *secondaryAction, *cancelAction);
 }
 
-void KMessageDialog_Beep2(int typeVal, const libqt_string text) {
+void KMessageDialog_Beep2(int type, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    KMessageDialog::beep(static_cast<KMessageDialog::Type>(typeVal), text_QString);
+    KMessageDialog::beep(static_cast<KMessageDialog::Type>(type), text_QString);
 }
 
-void KMessageDialog_Beep3(int typeVal, const libqt_string text, QWidget* dialog) {
+void KMessageDialog_Beep3(int type, const libqt_string text, QWidget* dialog) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    KMessageDialog::beep(static_cast<KMessageDialog::Type>(typeVal), text_QString, dialog);
+    KMessageDialog::beep(static_cast<KMessageDialog::Type>(type), text_QString, dialog);
 }
 
 // Base class handler implementation

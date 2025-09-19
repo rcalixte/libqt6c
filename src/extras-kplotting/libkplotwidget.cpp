@@ -267,12 +267,12 @@ void KPlotWidget_PlaceLabel(KPlotWidget* self, QPainter* painter, KPlotPoint* pp
     self->placeLabel(painter, pp);
 }
 
-KPlotAxis* KPlotWidget_Axis(KPlotWidget* self, int typeVal) {
-    return self->axis(static_cast<KPlotWidget::Axis>(typeVal));
+KPlotAxis* KPlotWidget_Axis(KPlotWidget* self, int type) {
+    return self->axis(static_cast<KPlotWidget::Axis>(type));
 }
 
-KPlotAxis* KPlotWidget_Axis2(const KPlotWidget* self, int typeVal) {
-    return (KPlotAxis*)self->axis(static_cast<KPlotWidget::Axis>(typeVal));
+KPlotAxis* KPlotWidget_Axis2(const KPlotWidget* self, int type) {
+    return (KPlotAxis*)self->axis(static_cast<KPlotWidget::Axis>(type));
 }
 
 void KPlotWidget_SetShowGrid(KPlotWidget* self, bool show) {

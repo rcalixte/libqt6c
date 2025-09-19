@@ -281,9 +281,9 @@ QDateTime* q_dirlisting__direntry_last_read(void* self, void* tz);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileTime)
 ///
 /// @param self QDirListing__DirEntry*
-/// @param typeVal enum QFileDevice__FileTime
+/// @param type enum QFileDevice__FileTime
 /// @param tz QTimeZone*
-QDateTime* q_dirlisting__direntry_file_time(void* self, int32_t typeVal, void* tz);
+QDateTime* q_dirlisting__direntry_file_time(void* self, int32_t type, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#operator-eq)
 ///

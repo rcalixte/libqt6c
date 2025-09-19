@@ -401,12 +401,12 @@ int32_t k_io__forwardingworkerbase_start_timer22(void* self, int interval, int32
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_io__forwardingworkerbase_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_io__forwardingworkerbase_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__forwardingworkerbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_io__forwardingworkerbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_io__forwardingworkerbase_destroyed1(void* self, void* param1) {
@@ -497,12 +497,12 @@ void k_io__forwardingworkerbase_info_message(void* self, const char* msg) {
     KIO__WorkerBase_InfoMessage((KIO__WorkerBase*)self, qstring(msg));
 }
 
-int32_t k_io__forwardingworkerbase_message_box(void* self, int32_t typeVal, const char* text) {
-    return KIO__WorkerBase_MessageBox((KIO__WorkerBase*)self, typeVal, qstring(text));
+int32_t k_io__forwardingworkerbase_message_box(void* self, int32_t type, const char* text) {
+    return KIO__WorkerBase_MessageBox((KIO__WorkerBase*)self, type, qstring(text));
 }
 
-int32_t k_io__forwardingworkerbase_message_box2(void* self, const char* text, int32_t typeVal) {
-    return KIO__WorkerBase_MessageBox2((KIO__WorkerBase*)self, qstring(text), typeVal);
+int32_t k_io__forwardingworkerbase_message_box2(void* self, const char* text, int32_t type) {
+    return KIO__WorkerBase_MessageBox2((KIO__WorkerBase*)self, qstring(text), type);
 }
 
 int32_t k_io__forwardingworkerbase_ssl_error(void* self, libqt_map /* of const char* to QVariant* */ sslData) {
@@ -639,32 +639,32 @@ void k_io__forwardingworkerbase_set_incoming_meta_data(void* self, void* metaDat
     KIO__WorkerBase_SetIncomingMetaData((KIO__WorkerBase*)self, (KIO__MetaData*)metaData);
 }
 
-int32_t k_io__forwardingworkerbase_message_box3(void* self, int32_t typeVal, const char* text, const char* title) {
-    return KIO__WorkerBase_MessageBox3((KIO__WorkerBase*)self, typeVal, qstring(text), qstring(title));
+int32_t k_io__forwardingworkerbase_message_box3(void* self, int32_t type, const char* text, const char* title) {
+    return KIO__WorkerBase_MessageBox3((KIO__WorkerBase*)self, type, qstring(text), qstring(title));
 }
 
-int32_t k_io__forwardingworkerbase_message_box4(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText) {
-    return KIO__WorkerBase_MessageBox4((KIO__WorkerBase*)self, typeVal, qstring(text), qstring(title), qstring(primaryActionText));
+int32_t k_io__forwardingworkerbase_message_box4(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText) {
+    return KIO__WorkerBase_MessageBox4((KIO__WorkerBase*)self, type, qstring(text), qstring(title), qstring(primaryActionText));
 }
 
-int32_t k_io__forwardingworkerbase_message_box5(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText) {
-    return KIO__WorkerBase_MessageBox5((KIO__WorkerBase*)self, typeVal, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText));
+int32_t k_io__forwardingworkerbase_message_box5(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText) {
+    return KIO__WorkerBase_MessageBox5((KIO__WorkerBase*)self, type, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText));
 }
 
-int32_t k_io__forwardingworkerbase_message_box32(void* self, const char* text, int32_t typeVal, const char* title) {
-    return KIO__WorkerBase_MessageBox32((KIO__WorkerBase*)self, qstring(text), typeVal, qstring(title));
+int32_t k_io__forwardingworkerbase_message_box32(void* self, const char* text, int32_t type, const char* title) {
+    return KIO__WorkerBase_MessageBox32((KIO__WorkerBase*)self, qstring(text), type, qstring(title));
 }
 
-int32_t k_io__forwardingworkerbase_message_box42(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText) {
-    return KIO__WorkerBase_MessageBox42((KIO__WorkerBase*)self, qstring(text), typeVal, qstring(title), qstring(primaryActionText));
+int32_t k_io__forwardingworkerbase_message_box42(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText) {
+    return KIO__WorkerBase_MessageBox42((KIO__WorkerBase*)self, qstring(text), type, qstring(title), qstring(primaryActionText));
 }
 
-int32_t k_io__forwardingworkerbase_message_box52(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText, const char* secondaryActionText) {
-    return KIO__WorkerBase_MessageBox52((KIO__WorkerBase*)self, qstring(text), typeVal, qstring(title), qstring(primaryActionText), qstring(secondaryActionText));
+int32_t k_io__forwardingworkerbase_message_box52(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText, const char* secondaryActionText) {
+    return KIO__WorkerBase_MessageBox52((KIO__WorkerBase*)self, qstring(text), type, qstring(title), qstring(primaryActionText), qstring(secondaryActionText));
 }
 
-int32_t k_io__forwardingworkerbase_message_box6(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* dontAskAgainName) {
-    return KIO__WorkerBase_MessageBox6((KIO__WorkerBase*)self, qstring(text), typeVal, qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(dontAskAgainName));
+int32_t k_io__forwardingworkerbase_message_box6(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* dontAskAgainName) {
+    return KIO__WorkerBase_MessageBox6((KIO__WorkerBase*)self, qstring(text), type, qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(dontAskAgainName));
 }
 
 const char* k_io__forwardingworkerbase_config_value22(void* self, const char* key, const char* defaultValue) {

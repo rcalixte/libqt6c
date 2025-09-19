@@ -74,7 +74,7 @@ int QFont_Stretch(const QFont* self);
 void QFont_SetStretch(QFont* self, int stretch);
 double QFont_LetterSpacing(const QFont* self);
 int QFont_LetterSpacingType(const QFont* self);
-void QFont_SetLetterSpacing(QFont* self, int typeVal, double spacing);
+void QFont_SetLetterSpacing(QFont* self, int type, double spacing);
 double QFont_WordSpacing(const QFont* self);
 void QFont_SetWordSpacing(QFont* self, double spacing);
 void QFont_SetCapitalization(QFont* self, int capitalization);

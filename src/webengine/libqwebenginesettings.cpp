@@ -27,16 +27,16 @@ void QWebEngineSettings_ResetFontFamily(QWebEngineSettings* self, int which) {
     self->resetFontFamily(static_cast<QWebEngineSettings::FontFamily>(which));
 }
 
-void QWebEngineSettings_SetFontSize(QWebEngineSettings* self, int typeVal, int size) {
-    self->setFontSize(static_cast<QWebEngineSettings::FontSize>(typeVal), static_cast<int>(size));
+void QWebEngineSettings_SetFontSize(QWebEngineSettings* self, int type, int size) {
+    self->setFontSize(static_cast<QWebEngineSettings::FontSize>(type), static_cast<int>(size));
 }
 
-int QWebEngineSettings_FontSize(const QWebEngineSettings* self, int typeVal) {
-    return self->fontSize(static_cast<QWebEngineSettings::FontSize>(typeVal));
+int QWebEngineSettings_FontSize(const QWebEngineSettings* self, int type) {
+    return self->fontSize(static_cast<QWebEngineSettings::FontSize>(type));
 }
 
-void QWebEngineSettings_ResetFontSize(QWebEngineSettings* self, int typeVal) {
-    self->resetFontSize(static_cast<QWebEngineSettings::FontSize>(typeVal));
+void QWebEngineSettings_ResetFontSize(QWebEngineSettings* self, int type) {
+    self->resetFontSize(static_cast<QWebEngineSettings::FontSize>(type));
 }
 
 void QWebEngineSettings_SetAttribute(QWebEngineSettings* self, int attr, bool on) {

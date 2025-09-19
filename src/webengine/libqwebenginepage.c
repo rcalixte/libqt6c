@@ -636,16 +636,16 @@ void q_webenginepage_on_web_auth_ux_requested(void* self, void (*callback)(void*
     QWebEnginePage_Connect_WebAuthUxRequested((QWebEnginePage*)self, (intptr_t)callback);
 }
 
-QWebEnginePage* q_webenginepage_create_window(void* self, int32_t typeVal) {
-    return QWebEnginePage_CreateWindow((QWebEnginePage*)self, typeVal);
+QWebEnginePage* q_webenginepage_create_window(void* self, int32_t type) {
+    return QWebEnginePage_CreateWindow((QWebEnginePage*)self, type);
 }
 
 void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(void*, int32_t)) {
     QWebEnginePage_OnCreateWindow((QWebEnginePage*)self, (intptr_t)callback);
 }
 
-QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t typeVal) {
-    return QWebEnginePage_QBaseCreateWindow((QWebEnginePage*)self, typeVal);
+QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t type) {
+    return QWebEnginePage_QBaseCreateWindow((QWebEnginePage*)self, type);
 }
 
 const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]) {
@@ -768,16 +768,16 @@ void q_webenginepage_qbase_java_script_console_message(void* self, int32_t level
     QWebEnginePage_QBaseJavaScriptConsoleMessage((QWebEnginePage*)self, level, qstring(message), lineNumber, qstring(sourceID));
 }
 
-bool q_webenginepage_accept_navigation_request(void* self, void* url, int32_t typeVal, bool isMainFrame) {
-    return QWebEnginePage_AcceptNavigationRequest((QWebEnginePage*)self, (QUrl*)url, typeVal, isMainFrame);
+bool q_webenginepage_accept_navigation_request(void* self, void* url, int32_t type, bool isMainFrame) {
+    return QWebEnginePage_AcceptNavigationRequest((QWebEnginePage*)self, (QUrl*)url, type, isMainFrame);
 }
 
 void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(void*, void*, int32_t, bool)) {
     QWebEnginePage_OnAcceptNavigationRequest((QWebEnginePage*)self, (intptr_t)callback);
 }
 
-bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int32_t typeVal, bool isMainFrame) {
-    return QWebEnginePage_QBaseAcceptNavigationRequest((QWebEnginePage*)self, (QUrl*)url, typeVal, isMainFrame);
+bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int32_t type, bool isMainFrame) {
+    return QWebEnginePage_QBaseAcceptNavigationRequest((QWebEnginePage*)self, (QUrl*)url, type, isMainFrame);
 }
 
 const char* q_webenginepage_tr2(const char* s, const char* c) {
@@ -981,12 +981,12 @@ int32_t q_webenginepage_start_timer22(void* self, int interval, int32_t timerTyp
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_webenginepage_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_webenginepage_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_webenginepage_destroyed1(void* self, void* param1) {

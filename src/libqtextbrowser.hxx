@@ -514,12 +514,12 @@ class VirtualQTextBrowser final : public QTextBrowser {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QVariant loadResource(int typeVal, const QUrl& name) override {
+    virtual QVariant loadResource(int type, const QUrl& name) override {
         if (qtextbrowser_loadresource_isbase) {
             qtextbrowser_loadresource_isbase = false;
-            return QTextBrowser::loadResource(typeVal, name);
+            return QTextBrowser::loadResource(type, name);
         } else if (qtextbrowser_loadresource_callback != nullptr) {
-            int cbval1 = typeVal;
+            int cbval1 = type;
             const QUrl& name_ret = name;
             // Cast returned reference into pointer
             QUrl* cbval2 = const_cast<QUrl*>(&name_ret);
@@ -527,7 +527,7 @@ class VirtualQTextBrowser final : public QTextBrowser {
             QVariant* callback_ret = qtextbrowser_loadresource_callback(this, cbval1, cbval2);
             return *callback_ret;
         } else {
-            return QTextBrowser::loadResource(typeVal, name);
+            return QTextBrowser::loadResource(type, name);
         }
     }
 
@@ -694,19 +694,19 @@ class VirtualQTextBrowser final : public QTextBrowser {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual void doSetSource(const QUrl& name, QTextDocument::ResourceType typeVal) override {
+    virtual void doSetSource(const QUrl& name, QTextDocument::ResourceType type) override {
         if (qtextbrowser_dosetsource_isbase) {
             qtextbrowser_dosetsource_isbase = false;
-            QTextBrowser::doSetSource(name, typeVal);
+            QTextBrowser::doSetSource(name, type);
         } else if (qtextbrowser_dosetsource_callback != nullptr) {
             const QUrl& name_ret = name;
             // Cast returned reference into pointer
             QUrl* cbval1 = const_cast<QUrl*>(&name_ret);
-            int cbval2 = static_cast<int>(typeVal);
+            int cbval2 = static_cast<int>(type);
 
             qtextbrowser_dosetsource_callback(this, cbval1, cbval2);
         } else {
-            QTextBrowser::doSetSource(name, typeVal);
+            QTextBrowser::doSetSource(name, type);
         }
     }
 
@@ -1610,8 +1610,8 @@ class VirtualQTextBrowser final : public QTextBrowser {
     friend bool QTextBrowser_QBaseFocusNextPrevChild(QTextBrowser* self, bool next);
     friend void QTextBrowser_PaintEvent(QTextBrowser* self, QPaintEvent* e);
     friend void QTextBrowser_QBasePaintEvent(QTextBrowser* self, QPaintEvent* e);
-    friend void QTextBrowser_DoSetSource(QTextBrowser* self, const QUrl* name, int typeVal);
-    friend void QTextBrowser_QBaseDoSetSource(QTextBrowser* self, const QUrl* name, int typeVal);
+    friend void QTextBrowser_DoSetSource(QTextBrowser* self, const QUrl* name, int type);
+    friend void QTextBrowser_QBaseDoSetSource(QTextBrowser* self, const QUrl* name, int type);
     friend void QTextBrowser_TimerEvent(QTextBrowser* self, QTimerEvent* e);
     friend void QTextBrowser_QBaseTimerEvent(QTextBrowser* self, QTimerEvent* e);
     friend void QTextBrowser_KeyReleaseEvent(QTextBrowser* self, QKeyEvent* e);

@@ -10,8 +10,8 @@ QNativeIpcKey* QNativeIpcKey_new() {
     return new QNativeIpcKey();
 }
 
-QNativeIpcKey* QNativeIpcKey_new2(uint16_t typeVal) {
-    return new QNativeIpcKey(static_cast<QNativeIpcKey::Type>(typeVal));
+QNativeIpcKey* QNativeIpcKey_new2(uint16_t type) {
+    return new QNativeIpcKey(static_cast<QNativeIpcKey::Type>(type));
 }
 
 QNativeIpcKey* QNativeIpcKey_new3(const libqt_string k) {
@@ -23,9 +23,9 @@ QNativeIpcKey* QNativeIpcKey_new4(const QNativeIpcKey* other) {
     return new QNativeIpcKey(*other);
 }
 
-QNativeIpcKey* QNativeIpcKey_new5(const libqt_string k, uint16_t typeVal) {
+QNativeIpcKey* QNativeIpcKey_new5(const libqt_string k, uint16_t type) {
     QString k_QString = QString::fromUtf8(k.data, k.len);
-    return new QNativeIpcKey(k_QString, static_cast<QNativeIpcKey::Type>(typeVal));
+    return new QNativeIpcKey(k_QString, static_cast<QNativeIpcKey::Type>(type));
 }
 
 uint16_t QNativeIpcKey_LegacyDefaultTypeForOs() {
@@ -52,8 +52,8 @@ uint16_t QNativeIpcKey_Type(const QNativeIpcKey* self) {
     return static_cast<uint16_t>(self->type());
 }
 
-void QNativeIpcKey_SetType(QNativeIpcKey* self, uint16_t typeVal) {
-    self->setType(static_cast<QNativeIpcKey::Type>(typeVal));
+void QNativeIpcKey_SetType(QNativeIpcKey* self, uint16_t type) {
+    self->setType(static_cast<QNativeIpcKey::Type>(type));
 }
 
 libqt_string QNativeIpcKey_NativeKey(const QNativeIpcKey* self) {

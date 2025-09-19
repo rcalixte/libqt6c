@@ -52,8 +52,8 @@ void q_dbuscontext_send_error_reply(void* self, const char* name);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
 /// @param self QDBusContext*
-/// @param typeVal enum QDBusError__ErrorType
-void q_dbuscontext_send_error_reply2(void* self, int32_t typeVal);
+/// @param type enum QDBusError__ErrorType
+void q_dbuscontext_send_error_reply2(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
@@ -65,9 +65,9 @@ void q_dbuscontext_send_error_reply22(void* self, const char* name, const char* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuscontext.html#sendErrorReply)
 ///
 /// @param self QDBusContext*
-/// @param typeVal enum QDBusError__ErrorType
+/// @param type enum QDBusError__ErrorType
 /// @param msg const char*
-void q_dbuscontext_send_error_reply23(void* self, int32_t typeVal, const char* msg);
+void q_dbuscontext_send_error_reply23(void* self, int32_t type, const char* msg);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbuscontext.html#dtor.QDBusContext)
 ///

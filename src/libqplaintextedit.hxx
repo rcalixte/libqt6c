@@ -516,12 +516,12 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QVariant loadResource(int typeVal, const QUrl& name) override {
+    virtual QVariant loadResource(int type, const QUrl& name) override {
         if (qplaintextedit_loadresource_isbase) {
             qplaintextedit_loadresource_isbase = false;
-            return QPlainTextEdit::loadResource(typeVal, name);
+            return QPlainTextEdit::loadResource(type, name);
         } else if (qplaintextedit_loadresource_callback != nullptr) {
-            int cbval1 = typeVal;
+            int cbval1 = type;
             const QUrl& name_ret = name;
             // Cast returned reference into pointer
             QUrl* cbval2 = const_cast<QUrl*>(&name_ret);
@@ -529,7 +529,7 @@ class VirtualQPlainTextEdit final : public QPlainTextEdit {
             QVariant* callback_ret = qplaintextedit_loadresource_callback(this, cbval1, cbval2);
             return *callback_ret;
         } else {
-            return QPlainTextEdit::loadResource(typeVal, name);
+            return QPlainTextEdit::loadResource(type, name);
         }
     }
 

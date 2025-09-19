@@ -55,7 +55,7 @@ void QFontDatabase_AddApplicationFallbackFontFamily(int script, const libqt_stri
 bool QFontDatabase_RemoveApplicationFallbackFontFamily(int script, const libqt_string familyName);
 void QFontDatabase_SetApplicationFallbackFontFamilies(int param1, const libqt_list /* of libqt_string */ familyNames);
 libqt_list /* of libqt_string */ QFontDatabase_ApplicationFallbackFontFamilies(int script);
-QFont* QFontDatabase_SystemFont(int typeVal);
+QFont* QFontDatabase_SystemFont(int type);
 libqt_list /* of libqt_string */ QFontDatabase_Families1(int writingSystem);
 libqt_list /* of int */ QFontDatabase_PointSizes2(const libqt_string family, const libqt_string style);
 bool QFontDatabase_IsBitmapScalable2(const libqt_string family, const libqt_string style);

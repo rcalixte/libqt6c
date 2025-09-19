@@ -897,10 +897,10 @@ void QWebEnginePage_Connect_WebAuthUxRequested(QWebEnginePage* self, intptr_t sl
     });
 }
 
-QWebEnginePage* QWebEnginePage_CreateWindow(QWebEnginePage* self, int typeVal) {
+QWebEnginePage* QWebEnginePage_CreateWindow(QWebEnginePage* self, int type) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
-        return vqwebenginepage->createWindow(static_cast<QWebEnginePage::WebWindowType>(typeVal));
+        return vqwebenginepage->createWindow(static_cast<QWebEnginePage::WebWindowType>(type));
     }
     return {};
 }
@@ -970,10 +970,10 @@ void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, co
     }
 }
 
-bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame) {
+bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int type, bool isMainFrame) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
-        return vqwebenginepage->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(typeVal), isMainFrame);
+        return vqwebenginepage->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(type), isMainFrame);
     }
     return {};
 }
@@ -1101,13 +1101,13 @@ void QWebEnginePage_OnEvent(QWebEnginePage* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-QWebEnginePage* QWebEnginePage_QBaseCreateWindow(QWebEnginePage* self, int typeVal) {
+QWebEnginePage* QWebEnginePage_QBaseCreateWindow(QWebEnginePage* self, int type) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_CreateWindow_IsBase(true);
-        return vqwebenginepage->createWindow(static_cast<QWebEnginePage::WebWindowType>(typeVal));
+        return vqwebenginepage->createWindow(static_cast<QWebEnginePage::WebWindowType>(type));
     } else {
-        return ((VirtualQWebEnginePage*)self)->createWindow(static_cast<QWebEnginePage::WebWindowType>(typeVal));
+        return ((VirtualQWebEnginePage*)self)->createWindow(static_cast<QWebEnginePage::WebWindowType>(type));
     }
 }
 
@@ -1248,13 +1248,13 @@ void QWebEnginePage_OnJavaScriptConsoleMessage(QWebEnginePage* self, intptr_t sl
 }
 
 // Base class handler implementation
-bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame) {
+bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int type, bool isMainFrame) {
     auto* vqwebenginepage = dynamic_cast<VirtualQWebEnginePage*>(self);
     if (vqwebenginepage && vqwebenginepage->isVirtualQWebEnginePage) {
         vqwebenginepage->setQWebEnginePage_AcceptNavigationRequest_IsBase(true);
-        return vqwebenginepage->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(typeVal), isMainFrame);
+        return vqwebenginepage->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(type), isMainFrame);
     } else {
-        return ((VirtualQWebEnginePage*)self)->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(typeVal), isMainFrame);
+        return ((VirtualQWebEnginePage*)self)->acceptNavigationRequest(*url, static_cast<QWebEnginePage::NavigationType>(type), isMainFrame);
     }
 }
 

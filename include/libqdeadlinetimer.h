@@ -56,8 +56,8 @@ QDeadlineTimer* q_deadlinetimer_new8(int32_t param1, int32_t type_);
 /// q_deadlinetimer_new9 constructs a new QDeadlineTimer object.
 ///
 /// @param msecs long long
-/// @param typeVal enum Qt__TimerType
-QDeadlineTimer* q_deadlinetimer_new9(long long msecs, int32_t typeVal);
+/// @param type enum Qt__TimerType
+QDeadlineTimer* q_deadlinetimer_new9(long long msecs, int32_t type);
 
 /// q_deadlinetimer_copy_assign shallow copies `other` into `self`.
 ///
@@ -97,8 +97,8 @@ int32_t q_deadlinetimer_timer_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#setTimerType)
 ///
 /// @param self QDeadlineTimer*
-/// @param typeVal enum Qt__TimerType
-void q_deadlinetimer_set_timer_type(void* self, int32_t typeVal);
+/// @param type enum Qt__TimerType
+void q_deadlinetimer_set_timer_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#remainingTime)
 ///
@@ -170,8 +170,8 @@ QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, long long msec
 ///
 /// @param self QDeadlineTimer*
 /// @param msecs long long
-/// @param typeVal enum Qt__TimerType
-void q_deadlinetimer_set_remaining_time2(void* self, long long msecs, int32_t typeVal);
+/// @param type enum Qt__TimerType
+void q_deadlinetimer_set_remaining_time2(void* self, long long msecs, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#setPreciseRemainingTime)
 ///
@@ -185,8 +185,8 @@ void q_deadlinetimer_set_precise_remaining_time2(void* self, long long secs, lon
 /// @param self QDeadlineTimer*
 /// @param secs long long
 /// @param nsecs long long
-/// @param typeVal enum Qt__TimerType
-void q_deadlinetimer_set_precise_remaining_time3(void* self, long long secs, long long nsecs, int32_t typeVal);
+/// @param type enum Qt__TimerType
+void q_deadlinetimer_set_precise_remaining_time3(void* self, long long secs, long long nsecs, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#setDeadline)
 ///
@@ -207,8 +207,8 @@ void q_deadlinetimer_set_precise_deadline2(void* self, long long secs, long long
 /// @param self QDeadlineTimer*
 /// @param secs long long
 /// @param nsecs long long
-/// @param typeVal enum Qt__TimerType
-void q_deadlinetimer_set_precise_deadline3(void* self, long long secs, long long nsecs, int32_t typeVal);
+/// @param type enum Qt__TimerType
+void q_deadlinetimer_set_precise_deadline3(void* self, long long secs, long long nsecs, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#current)
 ///

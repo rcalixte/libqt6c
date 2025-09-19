@@ -35,7 +35,7 @@ void QImageWriter_SetQuality(QImageWriter* self, int quality);
 int QImageWriter_Quality(const QImageWriter* self);
 void QImageWriter_SetCompression(QImageWriter* self, int compression);
 int QImageWriter_Compression(const QImageWriter* self);
-void QImageWriter_SetSubType(QImageWriter* self, const libqt_string typeVal);
+void QImageWriter_SetSubType(QImageWriter* self, const libqt_string type);
 libqt_string QImageWriter_SubType(const QImageWriter* self);
 libqt_list /* of libqt_string */ QImageWriter_SupportedSubTypes(const QImageWriter* self);
 void QImageWriter_SetOptimizedWrite(QImageWriter* self, bool optimize);

@@ -316,8 +316,8 @@ QDateTime* QDirListing__DirEntry_LastRead(const QDirListing__DirEntry* self, con
     return new QDateTime(self->lastRead(*tz));
 }
 
-QDateTime* QDirListing__DirEntry_FileTime(const QDirListing__DirEntry* self, int typeVal, const QTimeZone* tz) {
-    return new QDateTime(self->fileTime(static_cast<QFileDevice::FileTime>(typeVal), *tz));
+QDateTime* QDirListing__DirEntry_FileTime(const QDirListing__DirEntry* self, int type, const QTimeZone* tz) {
+    return new QDateTime(self->fileTime(static_cast<QFileDevice::FileTime>(type), *tz));
 }
 
 void QDirListing__DirEntry_OperatorAssign(QDirListing__DirEntry* self, const QDirListing__DirEntry* param1) {

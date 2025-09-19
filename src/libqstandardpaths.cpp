@@ -7,8 +7,8 @@
 #include "libqstandardpaths.hpp"
 #include "libqstandardpaths.hxx"
 
-libqt_string QStandardPaths_WritableLocation(int typeVal) {
-    QString _ret = QStandardPaths::writableLocation(static_cast<QStandardPaths::StandardLocation>(typeVal));
+libqt_string QStandardPaths_WritableLocation(int type) {
+    QString _ret = QStandardPaths::writableLocation(static_cast<QStandardPaths::StandardLocation>(type));
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
@@ -19,8 +19,8 @@ libqt_string QStandardPaths_WritableLocation(int typeVal) {
     return _str;
 }
 
-libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int typeVal) {
-    QList<QString> _ret = QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(typeVal));
+libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int type) {
+    QList<QString> _ret = QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(type));
     // Convert QList<> from C++ memory to manually-managed C memory
     libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -40,9 +40,9 @@ libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int typeVal) {
     return _out;
 }
 
-libqt_string QStandardPaths_Locate(int typeVal, const libqt_string fileName) {
+libqt_string QStandardPaths_Locate(int type, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
-    QString _ret = QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString);
+    QString _ret = QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(type), fileName_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
@@ -53,9 +53,9 @@ libqt_string QStandardPaths_Locate(int typeVal, const libqt_string fileName) {
     return _str;
 }
 
-libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int typeVal, const libqt_string fileName) {
+libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int type, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
-    QList<QString> _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString);
+    QList<QString> _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(type), fileName_QString);
     // Convert QList<> from C++ memory to manually-managed C memory
     libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -75,8 +75,8 @@ libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int typeVal, const lib
     return _out;
 }
 
-libqt_string QStandardPaths_DisplayName(int typeVal) {
-    QString _ret = QStandardPaths::displayName(static_cast<QStandardPaths::StandardLocation>(typeVal));
+libqt_string QStandardPaths_DisplayName(int type) {
+    QString _ret = QStandardPaths::displayName(static_cast<QStandardPaths::StandardLocation>(type));
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
@@ -108,9 +108,9 @@ bool QStandardPaths_IsTestModeEnabled() {
     return QStandardPaths::isTestModeEnabled();
 }
 
-libqt_string QStandardPaths_Locate3(int typeVal, const libqt_string fileName, int options) {
+libqt_string QStandardPaths_Locate3(int type, const libqt_string fileName, int options) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
-    QString _ret = QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
+    QString _ret = QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(type), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
@@ -121,9 +121,9 @@ libqt_string QStandardPaths_Locate3(int typeVal, const libqt_string fileName, in
     return _str;
 }
 
-libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int typeVal, const libqt_string fileName, int options) {
+libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int type, const libqt_string fileName, int options) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
-    QList<QString> _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
+    QList<QString> _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(type), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
     // Convert QList<> from C++ memory to manually-managed C memory
     libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {

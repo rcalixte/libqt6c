@@ -64,8 +64,8 @@ int32_t q_networkproxyquery_query_type(void* self) {
     return QNetworkProxyQuery_QueryType((QNetworkProxyQuery*)self);
 }
 
-void q_networkproxyquery_set_query_type(void* self, int32_t typeVal) {
-    QNetworkProxyQuery_SetQueryType((QNetworkProxyQuery*)self, typeVal);
+void q_networkproxyquery_set_query_type(void* self, int32_t type) {
+    QNetworkProxyQuery_SetQueryType((QNetworkProxyQuery*)self, type);
 }
 
 int32_t q_networkproxyquery_peer_port(void* self) {
@@ -122,28 +122,28 @@ QNetworkProxy* q_networkproxy_new() {
     return QNetworkProxy_new();
 }
 
-QNetworkProxy* q_networkproxy_new2(int32_t typeVal) {
-    return QNetworkProxy_new2(typeVal);
+QNetworkProxy* q_networkproxy_new2(int32_t type) {
+    return QNetworkProxy_new2(type);
 }
 
 QNetworkProxy* q_networkproxy_new3(void* other) {
     return QNetworkProxy_new3((QNetworkProxy*)other);
 }
 
-QNetworkProxy* q_networkproxy_new4(int32_t typeVal, const char* hostName) {
-    return QNetworkProxy_new4(typeVal, qstring(hostName));
+QNetworkProxy* q_networkproxy_new4(int32_t type, const char* hostName) {
+    return QNetworkProxy_new4(type, qstring(hostName));
 }
 
-QNetworkProxy* q_networkproxy_new5(int32_t typeVal, const char* hostName, unsigned short port) {
-    return QNetworkProxy_new5(typeVal, qstring(hostName), port);
+QNetworkProxy* q_networkproxy_new5(int32_t type, const char* hostName, unsigned short port) {
+    return QNetworkProxy_new5(type, qstring(hostName), port);
 }
 
-QNetworkProxy* q_networkproxy_new6(int32_t typeVal, const char* hostName, unsigned short port, const char* user) {
-    return QNetworkProxy_new6(typeVal, qstring(hostName), port, qstring(user));
+QNetworkProxy* q_networkproxy_new6(int32_t type, const char* hostName, unsigned short port, const char* user) {
+    return QNetworkProxy_new6(type, qstring(hostName), port, qstring(user));
 }
 
-QNetworkProxy* q_networkproxy_new7(int32_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password) {
-    return QNetworkProxy_new7(typeVal, qstring(hostName), port, qstring(user), qstring(password));
+QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, unsigned short port, const char* user, const char* password) {
+    return QNetworkProxy_new7(type, qstring(hostName), port, qstring(user), qstring(password));
 }
 
 void q_networkproxy_operator_assign(void* self, void* other) {
@@ -162,8 +162,8 @@ bool q_networkproxy_operator_not_equal(void* self, void* other) {
     return QNetworkProxy_OperatorNotEqual((QNetworkProxy*)self, (QNetworkProxy*)other);
 }
 
-void q_networkproxy_set_type(void* self, int32_t typeVal) {
-    QNetworkProxy_SetType((QNetworkProxy*)self, typeVal);
+void q_networkproxy_set_type(void* self, int32_t type) {
+    QNetworkProxy_SetType((QNetworkProxy*)self, type);
 }
 
 int32_t q_networkproxy_type(void* self) {

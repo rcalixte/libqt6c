@@ -63,54 +63,54 @@ QTreeWidgetItem* q_treewidgetitem_new9(void* other);
 
 /// q_treewidgetitem_new10 constructs a new QTreeWidgetItem object.
 ///
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new10(int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new10(int type);
 
 /// q_treewidgetitem_new11 constructs a new QTreeWidgetItem object.
 ///
 /// @param strings const char**
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[], int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[], int type);
 
 /// q_treewidgetitem_new12 constructs a new QTreeWidgetItem object.
 ///
 /// @param treeview QTreeWidget*
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new12(void* treeview, int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new12(void* treeview, int type);
 
 /// q_treewidgetitem_new13 constructs a new QTreeWidgetItem object.
 ///
 /// @param treeview QTreeWidget*
 /// @param strings const char**
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[], int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[], int type);
 
 /// q_treewidgetitem_new14 constructs a new QTreeWidgetItem object.
 ///
 /// @param treeview QTreeWidget*
 /// @param after QTreeWidgetItem*
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new14(void* treeview, void* after, int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new14(void* treeview, void* after, int type);
 
 /// q_treewidgetitem_new15 constructs a new QTreeWidgetItem object.
 ///
 /// @param parent QTreeWidgetItem*
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new15(void* parent, int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new15(void* parent, int type);
 
 /// q_treewidgetitem_new16 constructs a new QTreeWidgetItem object.
 ///
 /// @param parent QTreeWidgetItem*
 /// @param strings const char**
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[], int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[], int type);
 
 /// q_treewidgetitem_new17 constructs a new QTreeWidgetItem object.
 ///
 /// @param parent QTreeWidgetItem*
 /// @param after QTreeWidgetItem*
-/// @param typeVal int
-QTreeWidgetItem* q_treewidgetitem_new17(void* parent, void* after, int typeVal);
+/// @param type int
+QTreeWidgetItem* q_treewidgetitem_new17(void* parent, void* after, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#clone)
 ///
@@ -3247,16 +3247,16 @@ void q_treewidget_set_graphics_effect(void* self, void* effect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QTreeWidget*
-/// @param typeVal enum Qt__GestureType
-void q_treewidget_grab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_treewidget_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self QTreeWidget*
-/// @param typeVal enum Qt__GestureType
-void q_treewidget_ungrab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_treewidget_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -4282,8 +4282,8 @@ QWidget* q_treewidget_parent_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self QTreeWidget*
-/// @param typeVal flag of enum Qt__WindowType
-void q_treewidget_set_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_treewidget_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -4307,8 +4307,8 @@ void q_treewidget_set_window_flag(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self QTreeWidget*
-/// @param typeVal flag of enum Qt__WindowType
-void q_treewidget_override_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_treewidget_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -4587,9 +4587,9 @@ QPixmap* q_treewidget_grab1(void* self, void* rectangle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QTreeWidget*
-/// @param typeVal enum Qt__GestureType
+/// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_treewidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
+void q_treewidget_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4922,8 +4922,8 @@ int32_t q_treewidget_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_treewidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_treewidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4933,8 +4933,8 @@ QMetaObject__Connection* q_treewidget_connect5(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_treewidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_treewidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

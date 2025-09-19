@@ -889,15 +889,15 @@ void q_webenginepage_on_web_auth_ux_requested(void* self, void (*callback)(void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
 ///
 /// @param self QWebEnginePage*
-/// @param typeVal enum QWebEnginePage__WebWindowType
-QWebEnginePage* q_webenginepage_create_window(void* self, int32_t typeVal);
+/// @param type enum QWebEnginePage__WebWindowType
+QWebEnginePage* q_webenginepage_create_window(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEnginePage*
-/// @param callback QWebEnginePage* func(QWebEnginePage* self, enum QWebEnginePage__WebWindowType typeVal)
+/// @param callback QWebEnginePage* func(QWebEnginePage* self, enum QWebEnginePage__WebWindowType type)
 void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
@@ -905,8 +905,8 @@ void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(vo
 /// Base class method implementation
 ///
 /// @param self QWebEnginePage*
-/// @param typeVal enum QWebEnginePage__WebWindowType
-QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t typeVal);
+/// @param type enum QWebEnginePage__WebWindowType
+QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
@@ -1016,16 +1016,16 @@ void q_webenginepage_qbase_java_script_console_message(void* self, int32_t level
 ///
 /// @param self QWebEnginePage*
 /// @param url QUrl*
-/// @param typeVal enum QWebEnginePage__NavigationType
+/// @param type enum QWebEnginePage__NavigationType
 /// @param isMainFrame bool
-bool q_webenginepage_accept_navigation_request(void* self, void* url, int32_t typeVal, bool isMainFrame);
+bool q_webenginepage_accept_navigation_request(void* self, void* url, int32_t type, bool isMainFrame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEnginePage*
-/// @param callback bool func(QWebEnginePage* self, QUrl* url, enum QWebEnginePage__NavigationType typeVal, bool isMainFrame)
+/// @param callback bool func(QWebEnginePage* self, QUrl* url, enum QWebEnginePage__NavigationType type, bool isMainFrame)
 void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(void*, void*, int32_t, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
@@ -1034,9 +1034,9 @@ void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(v
 ///
 /// @param self QWebEnginePage*
 /// @param url QUrl*
-/// @param typeVal enum QWebEnginePage__NavigationType
+/// @param type enum QWebEnginePage__NavigationType
 /// @param isMainFrame bool
-bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int32_t typeVal, bool isMainFrame);
+bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int32_t type, bool isMainFrame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1390,8 +1390,8 @@ int32_t q_webenginepage_start_timer22(void* self, int interval, int32_t timerTyp
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1401,8 +1401,8 @@ QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, vo
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginepage_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_webenginepage_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

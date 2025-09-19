@@ -619,12 +619,12 @@ void q_chart_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
 }
 
-void q_chart_grab_gesture(void* self, int64_t typeVal) {
-    QGraphicsObject_GrabGesture((QGraphicsObject*)self, typeVal);
+void q_chart_grab_gesture(void* self, int64_t type) {
+    QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_chart_ungrab_gesture(void* self, int64_t typeVal) {
-    QGraphicsObject_UngrabGesture((QGraphicsObject*)self, typeVal);
+void q_chart_ungrab_gesture(void* self, int64_t type) {
+    QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
 void q_chart_parent_changed(void* self) {
@@ -723,8 +723,8 @@ void q_chart_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_chart_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
+void q_chart_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
 const char* q_chart_object_name(void* self) {
@@ -882,12 +882,12 @@ int32_t q_chart_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_chart_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_chart_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_chart_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_chart_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_chart_destroyed1(void* self, void* param1) {

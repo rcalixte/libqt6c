@@ -35,8 +35,8 @@ QDeadlineTimer* QDeadlineTimer_new8(int param1, int type_) {
     return new QDeadlineTimer(static_cast<QDeadlineTimer::ForeverConstant>(param1), static_cast<Qt::TimerType>(type_));
 }
 
-QDeadlineTimer* QDeadlineTimer_new9(long long msecs, int typeVal) {
-    return new QDeadlineTimer(static_cast<qint64>(msecs), static_cast<Qt::TimerType>(typeVal));
+QDeadlineTimer* QDeadlineTimer_new9(long long msecs, int type) {
+    return new QDeadlineTimer(static_cast<qint64>(msecs), static_cast<Qt::TimerType>(type));
 }
 
 void QDeadlineTimer_CopyAssign(QDeadlineTimer* self, QDeadlineTimer* other) {
@@ -63,8 +63,8 @@ int QDeadlineTimer_TimerType(const QDeadlineTimer* self) {
     return static_cast<int>(self->timerType());
 }
 
-void QDeadlineTimer_SetTimerType(QDeadlineTimer* self, int typeVal) {
-    self->setTimerType(static_cast<Qt::TimerType>(typeVal));
+void QDeadlineTimer_SetTimerType(QDeadlineTimer* self, int type) {
+    self->setTimerType(static_cast<Qt::TimerType>(type));
 }
 
 long long QDeadlineTimer_RemainingTime(const QDeadlineTimer* self) {
@@ -119,16 +119,16 @@ QDeadlineTimer* QDeadlineTimer_OperatorMinusAssign(QDeadlineTimer* self, long lo
     return &_ret;
 }
 
-void QDeadlineTimer_SetRemainingTime2(QDeadlineTimer* self, long long msecs, int typeVal) {
-    self->setRemainingTime(static_cast<qint64>(msecs), static_cast<Qt::TimerType>(typeVal));
+void QDeadlineTimer_SetRemainingTime2(QDeadlineTimer* self, long long msecs, int type) {
+    self->setRemainingTime(static_cast<qint64>(msecs), static_cast<Qt::TimerType>(type));
 }
 
 void QDeadlineTimer_SetPreciseRemainingTime2(QDeadlineTimer* self, long long secs, long long nsecs) {
     self->setPreciseRemainingTime(static_cast<qint64>(secs), static_cast<qint64>(nsecs));
 }
 
-void QDeadlineTimer_SetPreciseRemainingTime3(QDeadlineTimer* self, long long secs, long long nsecs, int typeVal) {
-    self->setPreciseRemainingTime(static_cast<qint64>(secs), static_cast<qint64>(nsecs), static_cast<Qt::TimerType>(typeVal));
+void QDeadlineTimer_SetPreciseRemainingTime3(QDeadlineTimer* self, long long secs, long long nsecs, int type) {
+    self->setPreciseRemainingTime(static_cast<qint64>(secs), static_cast<qint64>(nsecs), static_cast<Qt::TimerType>(type));
 }
 
 void QDeadlineTimer_SetDeadline2(QDeadlineTimer* self, long long msecs, int timerType) {
@@ -139,8 +139,8 @@ void QDeadlineTimer_SetPreciseDeadline2(QDeadlineTimer* self, long long secs, lo
     self->setPreciseDeadline(static_cast<qint64>(secs), static_cast<qint64>(nsecs));
 }
 
-void QDeadlineTimer_SetPreciseDeadline3(QDeadlineTimer* self, long long secs, long long nsecs, int typeVal) {
-    self->setPreciseDeadline(static_cast<qint64>(secs), static_cast<qint64>(nsecs), static_cast<Qt::TimerType>(typeVal));
+void QDeadlineTimer_SetPreciseDeadline3(QDeadlineTimer* self, long long secs, long long nsecs, int type) {
+    self->setPreciseDeadline(static_cast<qint64>(secs), static_cast<qint64>(nsecs), static_cast<Qt::TimerType>(type));
 }
 
 QDeadlineTimer* QDeadlineTimer_Current1(int timerType) {

@@ -49,24 +49,24 @@ QListWidgetItem* q_listwidgetitem_new5(void* listview) {
     return QListWidgetItem_new5((QListWidget*)listview);
 }
 
-QListWidgetItem* q_listwidgetitem_new6(void* listview, int typeVal) {
-    return QListWidgetItem_new6((QListWidget*)listview, typeVal);
+QListWidgetItem* q_listwidgetitem_new6(void* listview, int type) {
+    return QListWidgetItem_new6((QListWidget*)listview, type);
 }
 
 QListWidgetItem* q_listwidgetitem_new7(const char* text, void* listview) {
     return QListWidgetItem_new7(qstring(text), (QListWidget*)listview);
 }
 
-QListWidgetItem* q_listwidgetitem_new8(const char* text, void* listview, int typeVal) {
-    return QListWidgetItem_new8(qstring(text), (QListWidget*)listview, typeVal);
+QListWidgetItem* q_listwidgetitem_new8(const char* text, void* listview, int type) {
+    return QListWidgetItem_new8(qstring(text), (QListWidget*)listview, type);
 }
 
 QListWidgetItem* q_listwidgetitem_new9(void* icon, const char* text, void* listview) {
     return QListWidgetItem_new9((QIcon*)icon, qstring(text), (QListWidget*)listview);
 }
 
-QListWidgetItem* q_listwidgetitem_new10(void* icon, const char* text, void* listview, int typeVal) {
-    return QListWidgetItem_new10((QIcon*)icon, qstring(text), (QListWidget*)listview, typeVal);
+QListWidgetItem* q_listwidgetitem_new10(void* icon, const char* text, void* listview, int type) {
+    return QListWidgetItem_new10((QIcon*)icon, qstring(text), (QListWidget*)listview, type);
 }
 
 QListWidgetItem* q_listwidgetitem_clone(void* self) {
@@ -1626,12 +1626,12 @@ void q_listwidget_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_listwidget_grab_gesture(void* self, int64_t typeVal) {
-    QWidget_GrabGesture((QWidget*)self, typeVal);
+void q_listwidget_grab_gesture(void* self, int64_t type) {
+    QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_listwidget_ungrab_gesture(void* self, int64_t typeVal) {
-    QWidget_UngrabGesture((QWidget*)self, typeVal);
+void q_listwidget_ungrab_gesture(void* self, int64_t type) {
+    QWidget_UngrabGesture((QWidget*)self, type);
 }
 
 void q_listwidget_set_window_title(void* self, const char* windowTitle) {
@@ -2184,8 +2184,8 @@ QWidget* q_listwidget_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_listwidget_set_window_flags(void* self, int64_t typeVal) {
-    QWidget_SetWindowFlags((QWidget*)self, typeVal);
+void q_listwidget_set_window_flags(void* self, int64_t type) {
+    QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
 int64_t q_listwidget_window_flags(void* self) {
@@ -2196,8 +2196,8 @@ void q_listwidget_set_window_flag(void* self, int64_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_listwidget_override_window_flags(void* self, int64_t typeVal) {
-    QWidget_OverrideWindowFlags((QWidget*)self, typeVal);
+void q_listwidget_override_window_flags(void* self, int64_t type) {
+    QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
 int64_t q_listwidget_window_type(void* self) {
@@ -2332,8 +2332,8 @@ QPixmap* q_listwidget_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_listwidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
+void q_listwidget_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
 int32_t q_listwidget_grab_shortcut2(void* self, void* key, int32_t context) {
@@ -2515,12 +2515,12 @@ int32_t q_listwidget_start_timer22(void* self, int interval, int32_t timerType) 
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_listwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_listwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_listwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_listwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_listwidget_destroyed1(void* self, void* param1) {

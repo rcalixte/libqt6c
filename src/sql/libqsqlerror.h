@@ -37,16 +37,16 @@ QSqlError* q_sqlerror_new4(const char* driverText, const char* databaseText);
 ///
 /// @param driverText const char*
 /// @param databaseText const char*
-/// @param typeVal enum QSqlError__ErrorType
-QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int32_t typeVal);
+/// @param type enum QSqlError__ErrorType
+QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int32_t type);
 
 /// q_sqlerror_new6 constructs a new QSqlError object.
 ///
 /// @param driverText const char*
 /// @param databaseText const char*
-/// @param typeVal enum QSqlError__ErrorType
+/// @param type enum QSqlError__ErrorType
 /// @param errorCode const char*
-QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t typeVal, const char* errorCode);
+QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t type, const char* errorCode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq)
 ///

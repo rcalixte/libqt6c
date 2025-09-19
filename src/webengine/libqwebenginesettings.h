@@ -37,21 +37,21 @@ void q_webenginesettings_reset_font_family(void* self, int32_t which);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontSize)
 ///
 /// @param self QWebEngineSettings*
-/// @param typeVal enum QWebEngineSettings__FontSize
+/// @param type enum QWebEngineSettings__FontSize
 /// @param size int
-void q_webenginesettings_set_font_size(void* self, int32_t typeVal, int size);
+void q_webenginesettings_set_font_size(void* self, int32_t type, int size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontSize)
 ///
 /// @param self QWebEngineSettings*
-/// @param typeVal enum QWebEngineSettings__FontSize
-int32_t q_webenginesettings_font_size(void* self, int32_t typeVal);
+/// @param type enum QWebEngineSettings__FontSize
+int32_t q_webenginesettings_font_size(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontSize)
 ///
 /// @param self QWebEngineSettings*
-/// @param typeVal enum QWebEngineSettings__FontSize
-void q_webenginesettings_reset_font_size(void* self, int32_t typeVal);
+/// @param type enum QWebEngineSettings__FontSize
+void q_webenginesettings_reset_font_size(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setAttribute)
 ///

@@ -655,12 +655,12 @@ void QWidget_SetGraphicsEffect(QWidget* self, QGraphicsEffect* effect) {
     self->setGraphicsEffect(effect);
 }
 
-void QWidget_GrabGesture(QWidget* self, int typeVal) {
-    self->grabGesture(static_cast<Qt::GestureType>(typeVal));
+void QWidget_GrabGesture(QWidget* self, int type) {
+    self->grabGesture(static_cast<Qt::GestureType>(type));
 }
 
-void QWidget_UngrabGesture(QWidget* self, int typeVal) {
-    self->ungrabGesture(static_cast<Qt::GestureType>(typeVal));
+void QWidget_UngrabGesture(QWidget* self, int type) {
+    self->ungrabGesture(static_cast<Qt::GestureType>(type));
 }
 
 void QWidget_SetWindowTitle(QWidget* self, const libqt_string windowTitle) {
@@ -1350,8 +1350,8 @@ QWidget* QWidget_ParentWidget(const QWidget* self) {
     return self->parentWidget();
 }
 
-void QWidget_SetWindowFlags(QWidget* self, int typeVal) {
-    self->setWindowFlags(static_cast<Qt::WindowFlags>(typeVal));
+void QWidget_SetWindowFlags(QWidget* self, int type) {
+    self->setWindowFlags(static_cast<Qt::WindowFlags>(type));
 }
 
 int QWidget_WindowFlags(const QWidget* self) {
@@ -1362,8 +1362,8 @@ void QWidget_SetWindowFlag(QWidget* self, int param1) {
     self->setWindowFlag(static_cast<Qt::WindowType>(param1));
 }
 
-void QWidget_OverrideWindowFlags(QWidget* self, int typeVal) {
-    self->overrideWindowFlags(static_cast<Qt::WindowFlags>(typeVal));
+void QWidget_OverrideWindowFlags(QWidget* self, int type) {
+    self->overrideWindowFlags(static_cast<Qt::WindowFlags>(type));
 }
 
 int QWidget_WindowType(const QWidget* self) {
@@ -1814,8 +1814,8 @@ QPixmap* QWidget_Grab1(QWidget* self, const QRect* rectangle) {
     return new QPixmap(self->grab(*rectangle));
 }
 
-void QWidget_GrabGesture2(QWidget* self, int typeVal, int flags) {
-    self->grabGesture(static_cast<Qt::GestureType>(typeVal), static_cast<Qt::GestureFlags>(flags));
+void QWidget_GrabGesture2(QWidget* self, int type, int flags) {
+    self->grabGesture(static_cast<Qt::GestureType>(type), static_cast<Qt::GestureFlags>(flags));
 }
 
 int QWidget_GrabShortcut2(QWidget* self, const QKeySequence* key, int context) {

@@ -309,9 +309,9 @@ void Konsole__Filter__HotSpot_OnActivate(Konsole__Filter__HotSpot* self, intptr_
 void Konsole__Filter__HotSpot_QBaseActivate(Konsole__Filter__HotSpot* self, const libqt_string action);
 void Konsole__Filter__HotSpot_OnActions(Konsole__Filter__HotSpot* self, intptr_t slot);
 libqt_list /* of QAction* */ Konsole__Filter__HotSpot_QBaseActions(Konsole__Filter__HotSpot* self);
-void Konsole__Filter__HotSpot_SetType(Konsole__Filter__HotSpot* self, int typeVal);
+void Konsole__Filter__HotSpot_SetType(Konsole__Filter__HotSpot* self, int type);
 void Konsole__Filter__HotSpot_OnSetType(Konsole__Filter__HotSpot* self, intptr_t slot);
-void Konsole__Filter__HotSpot_QBaseSetType(Konsole__Filter__HotSpot* self, int typeVal);
+void Konsole__Filter__HotSpot_QBaseSetType(Konsole__Filter__HotSpot* self, int type);
 void Konsole__Filter__HotSpot_Delete(Konsole__Filter__HotSpot* self);
 
 Konsole__RegExpFilter__HotSpot* Konsole__RegExpFilter__HotSpot_new(int startLine, int startColumn, int endLine, int endColumn);
@@ -324,9 +324,9 @@ void Konsole__RegExpFilter__HotSpot_QBaseActivate(Konsole__RegExpFilter__HotSpot
 libqt_list /* of QAction* */ Konsole__RegExpFilter__HotSpot_Actions(Konsole__RegExpFilter__HotSpot* self);
 void Konsole__RegExpFilter__HotSpot_OnActions(Konsole__RegExpFilter__HotSpot* self, intptr_t slot);
 libqt_list /* of QAction* */ Konsole__RegExpFilter__HotSpot_QBaseActions(Konsole__RegExpFilter__HotSpot* self);
-void Konsole__RegExpFilter__HotSpot_SetType(Konsole__RegExpFilter__HotSpot* self, int typeVal);
+void Konsole__RegExpFilter__HotSpot_SetType(Konsole__RegExpFilter__HotSpot* self, int type);
 void Konsole__RegExpFilter__HotSpot_OnSetType(Konsole__RegExpFilter__HotSpot* self, intptr_t slot);
-void Konsole__RegExpFilter__HotSpot_QBaseSetType(Konsole__RegExpFilter__HotSpot* self, int typeVal);
+void Konsole__RegExpFilter__HotSpot_QBaseSetType(Konsole__RegExpFilter__HotSpot* self, int type);
 void Konsole__RegExpFilter__HotSpot_Delete(Konsole__RegExpFilter__HotSpot* self);
 
 Konsole__UrlFilter__HotSpot* Konsole__UrlFilter__HotSpot_new(int startLine, int startColumn, int endLine, int endColumn);
@@ -337,9 +337,9 @@ void Konsole__UrlFilter__HotSpot_OnActions(Konsole__UrlFilter__HotSpot* self, in
 libqt_list /* of QAction* */ Konsole__UrlFilter__HotSpot_QBaseActions(Konsole__UrlFilter__HotSpot* self);
 void Konsole__UrlFilter__HotSpot_OnActivate(Konsole__UrlFilter__HotSpot* self, intptr_t slot);
 void Konsole__UrlFilter__HotSpot_QBaseActivate(Konsole__UrlFilter__HotSpot* self, const libqt_string action);
-void Konsole__UrlFilter__HotSpot_SetType(Konsole__UrlFilter__HotSpot* self, int typeVal);
+void Konsole__UrlFilter__HotSpot_SetType(Konsole__UrlFilter__HotSpot* self, int type);
 void Konsole__UrlFilter__HotSpot_OnSetType(Konsole__UrlFilter__HotSpot* self, intptr_t slot);
-void Konsole__UrlFilter__HotSpot_QBaseSetType(Konsole__UrlFilter__HotSpot* self, int typeVal);
+void Konsole__UrlFilter__HotSpot_QBaseSetType(Konsole__UrlFilter__HotSpot* self, int type);
 void Konsole__UrlFilter__HotSpot_Delete(Konsole__UrlFilter__HotSpot* self);
 
 #ifdef __cplusplus

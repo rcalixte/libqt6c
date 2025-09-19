@@ -116,11 +116,11 @@ QTreeWidgetItem* QTreeWidgetItem_new9(const QTreeWidgetItem* other) {
     return new VirtualQTreeWidgetItem(*other);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new10(int typeVal) {
-    return new VirtualQTreeWidgetItem(static_cast<int>(typeVal));
+QTreeWidgetItem* QTreeWidgetItem_new10(int type) {
+    return new VirtualQTreeWidgetItem(static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new11(const libqt_list /* of libqt_string */ strings, int typeVal) {
+QTreeWidgetItem* QTreeWidgetItem_new11(const libqt_list /* of libqt_string */ strings, int type) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -128,14 +128,14 @@ QTreeWidgetItem* QTreeWidgetItem_new11(const libqt_list /* of libqt_string */ st
         QString strings_arr_i_QString = QString::fromUtf8(strings_arr[i].data, strings_arr[i].len);
         strings_QList.push_back(strings_arr_i_QString);
     }
-    return new VirtualQTreeWidgetItem(strings_QList, static_cast<int>(typeVal));
+    return new VirtualQTreeWidgetItem(strings_QList, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new12(QTreeWidget* treeview, int typeVal) {
-    return new VirtualQTreeWidgetItem(treeview, static_cast<int>(typeVal));
+QTreeWidgetItem* QTreeWidgetItem_new12(QTreeWidget* treeview, int type) {
+    return new VirtualQTreeWidgetItem(treeview, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings, int typeVal) {
+QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings, int type) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -143,18 +143,18 @@ QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, const libqt_list /
         QString strings_arr_i_QString = QString::fromUtf8(strings_arr[i].data, strings_arr[i].len);
         strings_QList.push_back(strings_arr_i_QString);
     }
-    return new VirtualQTreeWidgetItem(treeview, strings_QList, static_cast<int>(typeVal));
+    return new VirtualQTreeWidgetItem(treeview, strings_QList, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new14(QTreeWidget* treeview, QTreeWidgetItem* after, int typeVal) {
-    return new VirtualQTreeWidgetItem(treeview, after, static_cast<int>(typeVal));
+QTreeWidgetItem* QTreeWidgetItem_new14(QTreeWidget* treeview, QTreeWidgetItem* after, int type) {
+    return new VirtualQTreeWidgetItem(treeview, after, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new15(QTreeWidgetItem* parent, int typeVal) {
-    return new VirtualQTreeWidgetItem(parent, static_cast<int>(typeVal));
+QTreeWidgetItem* QTreeWidgetItem_new15(QTreeWidgetItem* parent, int type) {
+    return new VirtualQTreeWidgetItem(parent, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings, int typeVal) {
+QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings, int type) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -162,11 +162,11 @@ QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, const libqt_list
         QString strings_arr_i_QString = QString::fromUtf8(strings_arr[i].data, strings_arr[i].len);
         strings_QList.push_back(strings_arr_i_QString);
     }
-    return new VirtualQTreeWidgetItem(parent, strings_QList, static_cast<int>(typeVal));
+    return new VirtualQTreeWidgetItem(parent, strings_QList, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new17(QTreeWidgetItem* parent, QTreeWidgetItem* after, int typeVal) {
-    return new VirtualQTreeWidgetItem(parent, after, static_cast<int>(typeVal));
+QTreeWidgetItem* QTreeWidgetItem_new17(QTreeWidgetItem* parent, QTreeWidgetItem* after, int type) {
+    return new VirtualQTreeWidgetItem(parent, after, static_cast<int>(type));
 }
 
 QTreeWidgetItem* QTreeWidgetItem_Clone(const QTreeWidgetItem* self) {

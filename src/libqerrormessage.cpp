@@ -86,10 +86,10 @@ void QErrorMessage_ShowMessage(QErrorMessage* self, const libqt_string message) 
     self->showMessage(message_QString);
 }
 
-void QErrorMessage_ShowMessage2(QErrorMessage* self, const libqt_string message, const libqt_string typeVal) {
+void QErrorMessage_ShowMessage2(QErrorMessage* self, const libqt_string message, const libqt_string type) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
-    QString typeVal_QString = QString::fromUtf8(typeVal.data, typeVal.len);
-    self->showMessage(message_QString, typeVal_QString);
+    QString type_QString = QString::fromUtf8(type.data, type.len);
+    self->showMessage(message_QString, type_QString);
 }
 
 void QErrorMessage_Done(QErrorMessage* self, int param1) {

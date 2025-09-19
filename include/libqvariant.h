@@ -19,8 +19,8 @@ QVariant* q_variant_new();
 
 /// q_variant_new2 constructs a new QVariant object.
 ///
-/// @param typeVal QMetaType*
-QVariant* q_variant_new2(void* typeVal);
+/// @param type QMetaType*
+QVariant* q_variant_new2(void* type);
 
 /// q_variant_new3 constructs a new QVariant object.
 ///
@@ -154,14 +154,14 @@ QVariant* q_variant_new28(void* pt);
 
 /// q_variant_new29 constructs a new QVariant object.
 ///
-/// @param typeVal enum QVariant__Type
-QVariant* q_variant_new29(int64_t typeVal);
+/// @param type enum QVariant__Type
+QVariant* q_variant_new29(int64_t type);
 
 /// q_variant_new30 constructs a new QVariant object.
 ///
-/// @param typeVal QMetaType*
+/// @param type QMetaType*
 /// @param copyVal void*
-QVariant* q_variant_new30(void* typeVal, void* copyVal);
+QVariant* q_variant_new30(void* type, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///
@@ -206,8 +206,8 @@ bool q_variant_can_convert(void* self, void* targetType);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#convert)
 ///
 /// @param self QVariant*
-/// @param typeVal QMetaType*
-bool q_variant_convert(void* self, void* typeVal);
+/// @param type QMetaType*
+bool q_variant_convert(void* self, void* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#canView)
 ///
@@ -504,8 +504,8 @@ void q_variant_set_value(void* self, void* avalue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
 ///
-/// @param typeVal QMetaType*
-QVariant* q_variant_from_meta_type(void* typeVal);
+/// @param type QMetaType*
+QVariant* q_variant_from_meta_type(void* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#compare)
 ///
@@ -557,9 +557,9 @@ double q_variant_to_real1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
 ///
-/// @param typeVal QMetaType*
+/// @param type QMetaType*
 /// @param copyVal void*
-QVariant* q_variant_from_meta_type2(void* typeVal, void* copyVal);
+QVariant* q_variant_from_meta_type2(void* type, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#dtor.QVariant)
 ///

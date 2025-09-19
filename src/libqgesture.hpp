@@ -352,7 +352,7 @@ void QTapAndHoldGesture_Delete(QTapAndHoldGesture* self);
 QGestureEvent* QGestureEvent_new(const libqt_list /* of QGesture* */ gestures);
 QGestureEvent* QGestureEvent_new2(const QGestureEvent* param1);
 libqt_list /* of QGesture* */ QGestureEvent_Gestures(const QGestureEvent* self);
-QGesture* QGestureEvent_Gesture(const QGestureEvent* self, int typeVal);
+QGesture* QGestureEvent_Gesture(const QGestureEvent* self, int type);
 libqt_list /* of QGesture* */ QGestureEvent_ActiveGestures(const QGestureEvent* self);
 libqt_list /* of QGesture* */ QGestureEvent_CanceledGestures(const QGestureEvent* self);
 void QGestureEvent_SetAccepted(QGestureEvent* self, QGesture* param1, bool param2);

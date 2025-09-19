@@ -61,16 +61,16 @@ class VirtualQDnsLookup final : public QDnsLookup {
 
   public:
     VirtualQDnsLookup() : QDnsLookup() {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name) : QDnsLookup(typeVal, name) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver) : QDnsLookup(typeVal, name, nameserver) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, quint16 port) : QDnsLookup(typeVal, name, nameserver, port) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver) : QDnsLookup(typeVal, name, protocol, nameserver) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name) : QDnsLookup(type, name) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, const QHostAddress& nameserver) : QDnsLookup(type, name, nameserver) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, const QHostAddress& nameserver, quint16 port) : QDnsLookup(type, name, nameserver, port) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver) : QDnsLookup(type, name, protocol, nameserver) {};
     VirtualQDnsLookup(QObject* parent) : QDnsLookup(parent) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QObject* parent) : QDnsLookup(typeVal, name, parent) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, QObject* parent) : QDnsLookup(typeVal, name, nameserver, parent) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, const QHostAddress& nameserver, quint16 port, QObject* parent) : QDnsLookup(typeVal, name, nameserver, port, parent) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver, quint16 port) : QDnsLookup(typeVal, name, protocol, nameserver, port) {};
-    VirtualQDnsLookup(QDnsLookup::Type typeVal, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver, quint16 port, QObject* parent) : QDnsLookup(typeVal, name, protocol, nameserver, port, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, QObject* parent) : QDnsLookup(type, name, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, const QHostAddress& nameserver, QObject* parent) : QDnsLookup(type, name, nameserver, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, const QHostAddress& nameserver, quint16 port, QObject* parent) : QDnsLookup(type, name, nameserver, port, parent) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver, quint16 port) : QDnsLookup(type, name, protocol, nameserver, port) {};
+    VirtualQDnsLookup(QDnsLookup::Type type, const QString& name, QDnsLookup::Protocol protocol, const QHostAddress& nameserver, quint16 port, QObject* parent) : QDnsLookup(type, name, protocol, nameserver, port, parent) {};
 
     ~VirtualQDnsLookup() {
         qdnslookup_metacall_callback = nullptr;

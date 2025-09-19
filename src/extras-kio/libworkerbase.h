@@ -193,16 +193,16 @@ void k_io__workerbase_info_message(void* self, const char* msg);
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__WorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
-int32_t k_io__workerbase_message_box(void* self, int32_t typeVal, const char* text);
+int32_t k_io__workerbase_message_box(void* self, int32_t type, const char* text);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__WorkerBase*
 /// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-int32_t k_io__workerbase_message_box2(void* self, const char* text, int32_t typeVal);
+/// @param type enum KIO__WorkerBase__MessageBoxType
+int32_t k_io__workerbase_message_box2(void* self, const char* text, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#sslError)
 ///
@@ -1018,67 +1018,67 @@ void k_io__workerbase_set_incoming_meta_data(void* self, void* metaData);
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__WorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
 /// @param title const char*
-int32_t k_io__workerbase_message_box3(void* self, int32_t typeVal, const char* text, const char* title);
+int32_t k_io__workerbase_message_box3(void* self, int32_t type, const char* text, const char* title);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__WorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-/// @param text const char*
-/// @param title const char*
-/// @param primaryActionText const char*
-int32_t k_io__workerbase_message_box4(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText);
-
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
-///
-/// @param self KIO__WorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
 /// @param title const char*
 /// @param primaryActionText const char*
-/// @param secondaryActionText const char*
-int32_t k_io__workerbase_message_box5(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText);
+int32_t k_io__workerbase_message_box4(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__WorkerBase*
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-/// @param title const char*
-int32_t k_io__workerbase_message_box32(void* self, const char* text, int32_t typeVal, const char* title);
-
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
-///
-/// @param self KIO__WorkerBase*
-/// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-/// @param title const char*
-/// @param primaryActionText const char*
-int32_t k_io__workerbase_message_box42(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText);
-
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
-///
-/// @param self KIO__WorkerBase*
-/// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
 /// @param title const char*
 /// @param primaryActionText const char*
 /// @param secondaryActionText const char*
-int32_t k_io__workerbase_message_box52(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText, const char* secondaryActionText);
+int32_t k_io__workerbase_message_box5(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__WorkerBase*
 /// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
+/// @param title const char*
+int32_t k_io__workerbase_message_box32(void* self, const char* text, int32_t type, const char* title);
+
+/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+///
+/// @param self KIO__WorkerBase*
+/// @param text const char*
+/// @param type enum KIO__WorkerBase__MessageBoxType
+/// @param title const char*
+/// @param primaryActionText const char*
+int32_t k_io__workerbase_message_box42(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText);
+
+/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+///
+/// @param self KIO__WorkerBase*
+/// @param text const char*
+/// @param type enum KIO__WorkerBase__MessageBoxType
+/// @param title const char*
+/// @param primaryActionText const char*
+/// @param secondaryActionText const char*
+int32_t k_io__workerbase_message_box52(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText, const char* secondaryActionText);
+
+/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+///
+/// @param self KIO__WorkerBase*
+/// @param text const char*
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param title const char*
 /// @param primaryActionText const char*
 /// @param secondaryActionText const char*
 /// @param dontAskAgainName const char*
-int32_t k_io__workerbase_message_box6(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* dontAskAgainName);
+int32_t k_io__workerbase_message_box6(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* dontAskAgainName);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#configValue)
 ///

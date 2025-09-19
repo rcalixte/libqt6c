@@ -27,9 +27,9 @@ QDBusMessage* QDBusContext_Message(const QDBusContext* self);
 bool QDBusContext_IsDelayedReply(const QDBusContext* self);
 void QDBusContext_SetDelayedReply(const QDBusContext* self, bool enable);
 void QDBusContext_SendErrorReply(const QDBusContext* self, const libqt_string name);
-void QDBusContext_SendErrorReply2(const QDBusContext* self, int typeVal);
+void QDBusContext_SendErrorReply2(const QDBusContext* self, int type);
 void QDBusContext_SendErrorReply22(const QDBusContext* self, const libqt_string name, const libqt_string msg);
-void QDBusContext_SendErrorReply23(const QDBusContext* self, int typeVal, const libqt_string msg);
+void QDBusContext_SendErrorReply23(const QDBusContext* self, int type, const libqt_string msg);
 void QDBusContext_Delete(QDBusContext* self);
 
 #ifdef __cplusplus

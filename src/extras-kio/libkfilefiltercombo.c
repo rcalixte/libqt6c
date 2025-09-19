@@ -236,8 +236,8 @@ void k_filefiltercombo_on_about_to_show_context_menu(void* self, void (*callback
     KComboBox_Connect_AboutToShowContextMenu((KComboBox*)self, (intptr_t)callback);
 }
 
-void k_filefiltercombo_rotate_text(void* self, int32_t typeVal) {
-    KComboBox_RotateText((KComboBox*)self, typeVal);
+void k_filefiltercombo_rotate_text(void* self, int32_t type) {
+    KComboBox_RotateText((KComboBox*)self, type);
 }
 
 void k_filefiltercombo_set_current_item(void* self, const char* item) {
@@ -999,12 +999,12 @@ void k_filefiltercombo_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void k_filefiltercombo_grab_gesture(void* self, int64_t typeVal) {
-    QWidget_GrabGesture((QWidget*)self, typeVal);
+void k_filefiltercombo_grab_gesture(void* self, int64_t type) {
+    QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void k_filefiltercombo_ungrab_gesture(void* self, int64_t typeVal) {
-    QWidget_UngrabGesture((QWidget*)self, typeVal);
+void k_filefiltercombo_ungrab_gesture(void* self, int64_t type) {
+    QWidget_UngrabGesture((QWidget*)self, type);
 }
 
 void k_filefiltercombo_set_window_title(void* self, const char* windowTitle) {
@@ -1561,8 +1561,8 @@ QWidget* k_filefiltercombo_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void k_filefiltercombo_set_window_flags(void* self, int64_t typeVal) {
-    QWidget_SetWindowFlags((QWidget*)self, typeVal);
+void k_filefiltercombo_set_window_flags(void* self, int64_t type) {
+    QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
 int64_t k_filefiltercombo_window_flags(void* self) {
@@ -1573,8 +1573,8 @@ void k_filefiltercombo_set_window_flag(void* self, int64_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void k_filefiltercombo_override_window_flags(void* self, int64_t typeVal) {
-    QWidget_OverrideWindowFlags((QWidget*)self, typeVal);
+void k_filefiltercombo_override_window_flags(void* self, int64_t type) {
+    QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
 int64_t k_filefiltercombo_window_type(void* self) {
@@ -1709,8 +1709,8 @@ QPixmap* k_filefiltercombo_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void k_filefiltercombo_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
+void k_filefiltercombo_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
 int32_t k_filefiltercombo_grab_shortcut2(void* self, void* key, int32_t context) {
@@ -1892,12 +1892,12 @@ int32_t k_filefiltercombo_start_timer22(void* self, int interval, int32_t timerT
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_filefiltercombo_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_filefiltercombo_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_filefiltercombo_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_filefiltercombo_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_filefiltercombo_destroyed1(void* self, void* param1) {

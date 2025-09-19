@@ -384,8 +384,8 @@ char* q_metaobject_normalized_signature(const char* method);
 ///
 /// Caller is responsible for freeing the returned memory
 ///
-/// @param typeVal const char*
-char* q_metaobject_normalized_type(const char* typeVal);
+/// @param type const char*
+char* q_metaobject_normalized_type(const char* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#connect)
 ///
@@ -458,9 +458,9 @@ bool q_metaobject_invoke_method2(void* obj, const char* member, void* retVal);
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
-bool q_metaobject_invoke_method3(void* obj, const char* member, int32_t typeVal, void* val0);
+bool q_metaobject_invoke_method3(void* obj, const char* member, int32_t type, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
@@ -517,8 +517,8 @@ const char* q_metaobject_tr3(void* self, const char* s, const char* c, int n);
 /// @param signal_index int
 /// @param receiver QObject*
 /// @param method_index int
-/// @param typeVal int
-QMetaObject__Connection* q_metaobject_connect5(void* sender, int signal_index, void* receiver, int method_index, int typeVal);
+/// @param type int
+QMetaObject__Connection* q_metaobject_connect5(void* sender, int signal_index, void* receiver, int method_index, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#connect)
 ///
@@ -526,9 +526,9 @@ QMetaObject__Connection* q_metaobject_connect5(void* sender, int signal_index, v
 /// @param signal_index int
 /// @param receiver QObject*
 /// @param method_index int
-/// @param typeVal int
+/// @param type int
 /// @param types int*
-QMetaObject__Connection* q_metaobject_connect6(void* sender, int signal_index, void* receiver, int method_index, int typeVal, int* types);
+QMetaObject__Connection* q_metaobject_connect6(void* sender, int signal_index, void* receiver, int method_index, int type, int* types);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
@@ -794,62 +794,62 @@ bool q_metaobject_invoke_method132(void* obj, const char* member, void* retVal, 
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
-bool q_metaobject_invoke_method53(void* obj, const char* member, int32_t typeVal, void* val0, void* val1);
+bool q_metaobject_invoke_method53(void* obj, const char* member, int32_t type, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
-bool q_metaobject_invoke_method63(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2);
+bool q_metaobject_invoke_method63(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
-bool q_metaobject_invoke_method73(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3);
+bool q_metaobject_invoke_method73(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
-bool q_metaobject_invoke_method83(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3, void* val4);
+bool q_metaobject_invoke_method83(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
-bool q_metaobject_invoke_method93(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
+bool q_metaobject_invoke_method93(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -857,13 +857,13 @@ bool q_metaobject_invoke_method93(void* obj, const char* member, int32_t typeVal
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
-bool q_metaobject_invoke_method103(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
+bool q_metaobject_invoke_method103(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -872,13 +872,13 @@ bool q_metaobject_invoke_method103(void* obj, const char* member, int32_t typeVa
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
-bool q_metaobject_invoke_method113(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
+bool q_metaobject_invoke_method113(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -888,13 +888,13 @@ bool q_metaobject_invoke_method113(void* obj, const char* member, int32_t typeVa
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
-bool q_metaobject_invoke_method123(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
+bool q_metaobject_invoke_method123(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
 /// @param obj QObject*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
+/// @param type enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -905,7 +905,7 @@ bool q_metaobject_invoke_method123(void* obj, const char* member, int32_t typeVa
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
-bool q_metaobject_invoke_method133(void* obj, const char* member, int32_t typeVal, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
+bool q_metaobject_invoke_method133(void* obj, const char* member, int32_t type, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///

@@ -16,9 +16,9 @@ QSqlField* QSqlField_new2(const QSqlField* other) {
     return new QSqlField(*other);
 }
 
-QSqlField* QSqlField_new3(const libqt_string fieldName, int typeVal) {
+QSqlField* QSqlField_new3(const libqt_string fieldName, int type) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
-    return new QSqlField(fieldName_QString, static_cast<QVariant::Type>(typeVal));
+    return new QSqlField(fieldName_QString, static_cast<QVariant::Type>(type));
 }
 
 QSqlField* QSqlField_new4(const libqt_string fieldName) {
@@ -26,21 +26,21 @@ QSqlField* QSqlField_new4(const libqt_string fieldName) {
     return new QSqlField(fieldName_QString);
 }
 
-QSqlField* QSqlField_new5(const libqt_string fieldName, QMetaType* typeVal) {
+QSqlField* QSqlField_new5(const libqt_string fieldName, QMetaType* type) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
-    return new QSqlField(fieldName_QString, *typeVal);
+    return new QSqlField(fieldName_QString, *type);
 }
 
-QSqlField* QSqlField_new6(const libqt_string fieldName, QMetaType* typeVal, const libqt_string tableName) {
+QSqlField* QSqlField_new6(const libqt_string fieldName, QMetaType* type, const libqt_string tableName) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     QString tableName_QString = QString::fromUtf8(tableName.data, tableName.len);
-    return new QSqlField(fieldName_QString, *typeVal, tableName_QString);
+    return new QSqlField(fieldName_QString, *type, tableName_QString);
 }
 
-QSqlField* QSqlField_new7(const libqt_string fieldName, int typeVal, const libqt_string tableName) {
+QSqlField* QSqlField_new7(const libqt_string fieldName, int type, const libqt_string tableName) {
     QString fieldName_QString = QString::fromUtf8(fieldName.data, fieldName.len);
     QString tableName_QString = QString::fromUtf8(tableName.data, tableName.len);
-    return new QSqlField(fieldName_QString, static_cast<QVariant::Type>(typeVal), tableName_QString);
+    return new QSqlField(fieldName_QString, static_cast<QVariant::Type>(type), tableName_QString);
 }
 
 void QSqlField_OperatorAssign(QSqlField* self, const QSqlField* other) {
@@ -125,16 +125,16 @@ QMetaType* QSqlField_MetaType(const QSqlField* self) {
     return new QMetaType(self->metaType());
 }
 
-void QSqlField_SetMetaType(QSqlField* self, QMetaType* typeVal) {
-    self->setMetaType(*typeVal);
+void QSqlField_SetMetaType(QSqlField* self, QMetaType* type) {
+    self->setMetaType(*type);
 }
 
 int QSqlField_Type(const QSqlField* self) {
     return static_cast<int>(self->type());
 }
 
-void QSqlField_SetType(QSqlField* self, int typeVal) {
-    self->setType(static_cast<QVariant::Type>(typeVal));
+void QSqlField_SetType(QSqlField* self, int type) {
+    self->setType(static_cast<QVariant::Type>(type));
 }
 
 void QSqlField_SetRequiredStatus(QSqlField* self, int status) {
@@ -157,8 +157,8 @@ void QSqlField_SetDefaultValue(QSqlField* self, const QVariant* value) {
     self->setDefaultValue(*value);
 }
 
-void QSqlField_SetSqlType(QSqlField* self, int typeVal) {
-    self->setSqlType(static_cast<int>(typeVal));
+void QSqlField_SetSqlType(QSqlField* self, int type) {
+    self->setSqlType(static_cast<int>(type));
 }
 
 void QSqlField_SetGenerated(QSqlField* self, bool gen) {

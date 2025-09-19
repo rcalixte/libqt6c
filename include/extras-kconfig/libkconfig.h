@@ -38,15 +38,15 @@ KConfig* k_config_new4(const char* file, int32_t mode);
 ///
 /// @param file const char*
 /// @param mode flag of enum KConfig__OpenFlag
-/// @param typeVal enum QStandardPaths__StandardLocation
-KConfig* k_config_new5(const char* file, int32_t mode, int32_t typeVal);
+/// @param type enum QStandardPaths__StandardLocation
+KConfig* k_config_new5(const char* file, int32_t mode, int32_t type);
 
 /// k_config_new6 constructs a new KConfig object.
 ///
 /// @param file const char*
 /// @param backend const char*
-/// @param typeVal enum QStandardPaths__StandardLocation
-KConfig* k_config_new6(const char* file, const char* backend, int32_t typeVal);
+/// @param type enum QStandardPaths__StandardLocation
+KConfig* k_config_new6(const char* file, const char* backend, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/kconfig.html#locationType)
 ///

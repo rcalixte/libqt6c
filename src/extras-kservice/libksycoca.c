@@ -49,8 +49,8 @@ bool k_sycoca_is_available() {
     return KSycoca_IsAvailable();
 }
 
-QDataStream* k_sycoca_find_entry(void* self, int offset, int32_t* typeVal) {
-    return KSycoca_FindEntry((KSycoca*)self, offset, typeVal);
+QDataStream* k_sycoca_find_entry(void* self, int offset, int32_t* type) {
+    return KSycoca_FindEntry((KSycoca*)self, offset, type);
 }
 
 QDataStream* k_sycoca_find_factory(void* self, int32_t id) {
@@ -308,12 +308,12 @@ int32_t k_sycoca_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_sycoca_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_sycoca_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_sycoca_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_sycoca_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_sycoca_destroyed1(void* self, void* param1) {

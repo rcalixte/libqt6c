@@ -344,12 +344,12 @@ void QTextDocument_Print(const QTextDocument* self, QPagedPaintDevice* printer) 
     self->print(printer);
 }
 
-QVariant* QTextDocument_Resource(const QTextDocument* self, int typeVal, const QUrl* name) {
-    return new QVariant(self->resource(static_cast<int>(typeVal), *name));
+QVariant* QTextDocument_Resource(const QTextDocument* self, int type, const QUrl* name) {
+    return new QVariant(self->resource(static_cast<int>(type), *name));
 }
 
-void QTextDocument_AddResource(QTextDocument* self, int typeVal, const QUrl* name, const QVariant* resource) {
-    self->addResource(static_cast<int>(typeVal), *name, *resource);
+void QTextDocument_AddResource(QTextDocument* self, int type, const QUrl* name, const QVariant* resource) {
+    self->addResource(static_cast<int>(type), *name, *resource);
 }
 
 libqt_list /* of QTextFormat* */ QTextDocument_AllFormats(const QTextDocument* self) {
@@ -645,10 +645,10 @@ QTextObject* QTextDocument_CreateObject(QTextDocument* self, const QTextFormat* 
     return {};
 }
 
-QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, const QUrl* name) {
+QVariant* QTextDocument_LoadResource(QTextDocument* self, int type, const QUrl* name) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
-        return new QVariant(vqtextdocument->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vqtextdocument->loadResource(static_cast<int>(type), *name));
     }
     return {};
 }
@@ -795,11 +795,11 @@ void QTextDocument_OnCreateObject(QTextDocument* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int typeVal, const QUrl* name) {
+QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int type, const QUrl* name) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_LoadResource_IsBase(true);
-        return new QVariant(vqtextdocument->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vqtextdocument->loadResource(static_cast<int>(type), *name));
     }
     return {};
 }

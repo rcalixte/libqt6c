@@ -197,9 +197,9 @@ void* QDBusConnection_InternalPointer(const QDBusConnection* self) {
     return self->internalPointer();
 }
 
-QDBusConnection* QDBusConnection_ConnectToBus(int typeVal, const libqt_string name) {
+QDBusConnection* QDBusConnection_ConnectToBus(int type, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new QDBusConnection(QDBusConnection::connectToBus(static_cast<QDBusConnection::BusType>(typeVal), name_QString));
+    return new QDBusConnection(QDBusConnection::connectToBus(static_cast<QDBusConnection::BusType>(type), name_QString));
 }
 
 QDBusConnection* QDBusConnection_ConnectToBus2(const libqt_string address, const libqt_string name) {

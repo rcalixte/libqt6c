@@ -10,8 +10,8 @@ QEasingCurve* q_easingcurve_new2(void* other) {
     return QEasingCurve_new2((QEasingCurve*)other);
 }
 
-QEasingCurve* q_easingcurve_new3(int32_t typeVal) {
-    return QEasingCurve_new3(typeVal);
+QEasingCurve* q_easingcurve_new3(int32_t type) {
+    return QEasingCurve_new3(type);
 }
 
 void q_easingcurve_operator_assign(void* self, void* other) {
@@ -63,8 +63,8 @@ int32_t q_easingcurve_type(void* self) {
     return QEasingCurve_Type((QEasingCurve*)self);
 }
 
-void q_easingcurve_set_type(void* self, int32_t typeVal) {
-    QEasingCurve_SetType((QEasingCurve*)self, typeVal);
+void q_easingcurve_set_type(void* self, int32_t type) {
+    QEasingCurve_SetType((QEasingCurve*)self, type);
 }
 
 double q_easingcurve_value_for_progress(void* self, double progress) {

@@ -15,8 +15,8 @@
 
 /// q_event_new constructs a new QEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QEvent* q_event_new(int32_t typeVal);
+/// @param type enum QEvent__Type
+QEvent* q_event_new(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
@@ -274,9 +274,9 @@ void q_timerevent_delete(void* self);
 
 /// q_childevent_new constructs a new QChildEvent object.
 ///
-/// @param typeVal enum QEvent__Type
+/// @param type enum QEvent__Type
 /// @param child QObject*
-QChildEvent* q_childevent_new(int32_t typeVal, void* child);
+QChildEvent* q_childevent_new(int32_t type, void* child);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildevent.html#clone)
 ///

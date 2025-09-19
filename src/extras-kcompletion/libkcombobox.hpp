@@ -100,7 +100,7 @@ void KComboBox_CompletionModeChanged(KComboBox* self, int param1);
 void KComboBox_Connect_CompletionModeChanged(KComboBox* self, intptr_t slot);
 void KComboBox_AboutToShowContextMenu(KComboBox* self, QMenu* contextMenu);
 void KComboBox_Connect_AboutToShowContextMenu(KComboBox* self, intptr_t slot);
-void KComboBox_RotateText(KComboBox* self, int typeVal);
+void KComboBox_RotateText(KComboBox* self, int type);
 void KComboBox_SetCompletedText(KComboBox* self, const libqt_string completedText);
 void KComboBox_SetCompletedItems(KComboBox* self, const libqt_list /* of libqt_string */ items, bool autoSuggest);
 void KComboBox_SetCurrentItem(KComboBox* self, const libqt_string item);

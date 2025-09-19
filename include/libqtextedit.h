@@ -320,16 +320,16 @@ void q_textedit_ensure_cursor_visible(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#loadResource)
 ///
 /// @param self QTextEdit*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* q_textedit_load_resource(void* self, int typeVal, void* name);
+QVariant* q_textedit_load_resource(void* self, int type, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#loadResource)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QTextEdit*
-/// @param callback QVariant* func(QTextEdit* self, int typeVal, QUrl* name)
+/// @param callback QVariant* func(QTextEdit* self, int type, QUrl* name)
 void q_textedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#loadResource)
@@ -337,9 +337,9 @@ void q_textedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, v
 /// Base class method implementation
 ///
 /// @param self QTextEdit*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* q_textedit_qbase_load_resource(void* self, int typeVal, void* name);
+QVariant* q_textedit_qbase_load_resource(void* self, int type, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createStandardContextMenu)
 ///
@@ -2347,16 +2347,16 @@ void q_textedit_set_graphics_effect(void* self, void* effect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QTextEdit*
-/// @param typeVal enum Qt__GestureType
-void q_textedit_grab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_textedit_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self QTextEdit*
-/// @param typeVal enum Qt__GestureType
-void q_textedit_ungrab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_textedit_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -3389,8 +3389,8 @@ QWidget* q_textedit_parent_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self QTextEdit*
-/// @param typeVal flag of enum Qt__WindowType
-void q_textedit_set_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_textedit_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -3414,8 +3414,8 @@ void q_textedit_set_window_flag(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self QTextEdit*
-/// @param typeVal flag of enum Qt__WindowType
-void q_textedit_override_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_textedit_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -3687,9 +3687,9 @@ QPixmap* q_textedit_grab1(void* self, void* rectangle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QTextEdit*
-/// @param typeVal enum Qt__GestureType
+/// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_textedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
+void q_textedit_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4022,8 +4022,8 @@ int32_t q_textedit_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_textedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_textedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4033,8 +4033,8 @@ QMetaObject__Connection* q_textedit_connect5(void* sender, void* signal, void* r
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_textedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_textedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

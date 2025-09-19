@@ -53,7 +53,7 @@ void QProxyStyle_DrawControl(const QProxyStyle* self, int element, const QStyleO
 void QProxyStyle_DrawComplexControl(const QProxyStyle* self, int control, const QStyleOptionComplex* option, QPainter* painter, const QWidget* widget);
 void QProxyStyle_DrawItemText(const QProxyStyle* self, QPainter* painter, const QRect* rect, int flags, const QPalette* pal, bool enabled, const libqt_string text, int textRole);
 void QProxyStyle_DrawItemPixmap(const QProxyStyle* self, QPainter* painter, const QRect* rect, int alignment, const QPixmap* pixmap);
-QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int typeVal, const QStyleOption* option, const QSize* size, const QWidget* widget);
+QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int type, const QStyleOption* option, const QSize* size, const QWidget* widget);
 QRect* QProxyStyle_SubElementRect(const QProxyStyle* self, int element, const QStyleOption* option, const QWidget* widget);
 QRect* QProxyStyle_SubControlRect(const QProxyStyle* self, int cc, const QStyleOptionComplex* opt, int sc, const QWidget* widget);
 QRect* QProxyStyle_ItemTextRect(const QProxyStyle* self, const QFontMetrics* fm, const QRect* r, int flags, bool enabled, const libqt_string text);
@@ -87,7 +87,7 @@ void QProxyStyle_QBaseDrawItemText(const QProxyStyle* self, QPainter* painter, c
 void QProxyStyle_OnDrawItemPixmap(const QProxyStyle* self, intptr_t slot);
 void QProxyStyle_QBaseDrawItemPixmap(const QProxyStyle* self, QPainter* painter, const QRect* rect, int alignment, const QPixmap* pixmap);
 void QProxyStyle_OnSizeFromContents(const QProxyStyle* self, intptr_t slot);
-QSize* QProxyStyle_QBaseSizeFromContents(const QProxyStyle* self, int typeVal, const QStyleOption* option, const QSize* size, const QWidget* widget);
+QSize* QProxyStyle_QBaseSizeFromContents(const QProxyStyle* self, int type, const QStyleOption* option, const QSize* size, const QWidget* widget);
 void QProxyStyle_OnSubElementRect(const QProxyStyle* self, intptr_t slot);
 QRect* QProxyStyle_QBaseSubElementRect(const QProxyStyle* self, int element, const QStyleOption* option, const QWidget* widget);
 void QProxyStyle_OnSubControlRect(const QProxyStyle* self, intptr_t slot);

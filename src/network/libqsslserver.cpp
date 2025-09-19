@@ -141,17 +141,17 @@ void QSslServer_Connect_PreSharedKeyAuthenticationRequired(QSslServer* self, int
     });
 }
 
-void QSslServer_AlertSent(QSslServer* self, QSslSocket* socket, int level, int typeVal, const libqt_string description) {
+void QSslServer_AlertSent(QSslServer* self, QSslSocket* socket, int level, int type, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
-    self->alertSent(socket, static_cast<QSsl::AlertLevel>(level), static_cast<QSsl::AlertType>(typeVal), description_QString);
+    self->alertSent(socket, static_cast<QSsl::AlertLevel>(level), static_cast<QSsl::AlertType>(type), description_QString);
 }
 
 void QSslServer_Connect_AlertSent(QSslServer* self, intptr_t slot) {
     void (*slotFunc)(QSslServer*, QSslSocket*, int, int, const char*) = reinterpret_cast<void (*)(QSslServer*, QSslSocket*, int, int, const char*)>(slot);
-    QSslServer::connect(self, &QSslServer::alertSent, [self, slotFunc](QSslSocket* socket, QSsl::AlertLevel level, QSsl::AlertType typeVal, const QString& description) {
+    QSslServer::connect(self, &QSslServer::alertSent, [self, slotFunc](QSslSocket* socket, QSsl::AlertLevel level, QSsl::AlertType type, const QString& description) {
         QSslSocket* sigval1 = socket;
         int sigval2 = static_cast<int>(level);
-        int sigval3 = static_cast<int>(typeVal);
+        int sigval3 = static_cast<int>(type);
         const QString description_ret = description;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray description_b = description_ret.toUtf8();
@@ -164,17 +164,17 @@ void QSslServer_Connect_AlertSent(QSslServer* self, intptr_t slot) {
     });
 }
 
-void QSslServer_AlertReceived(QSslServer* self, QSslSocket* socket, int level, int typeVal, const libqt_string description) {
+void QSslServer_AlertReceived(QSslServer* self, QSslSocket* socket, int level, int type, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
-    self->alertReceived(socket, static_cast<QSsl::AlertLevel>(level), static_cast<QSsl::AlertType>(typeVal), description_QString);
+    self->alertReceived(socket, static_cast<QSsl::AlertLevel>(level), static_cast<QSsl::AlertType>(type), description_QString);
 }
 
 void QSslServer_Connect_AlertReceived(QSslServer* self, intptr_t slot) {
     void (*slotFunc)(QSslServer*, QSslSocket*, int, int, const char*) = reinterpret_cast<void (*)(QSslServer*, QSslSocket*, int, int, const char*)>(slot);
-    QSslServer::connect(self, &QSslServer::alertReceived, [self, slotFunc](QSslSocket* socket, QSsl::AlertLevel level, QSsl::AlertType typeVal, const QString& description) {
+    QSslServer::connect(self, &QSslServer::alertReceived, [self, slotFunc](QSslSocket* socket, QSsl::AlertLevel level, QSsl::AlertType type, const QString& description) {
         QSslSocket* sigval1 = socket;
         int sigval2 = static_cast<int>(level);
-        int sigval3 = static_cast<int>(typeVal);
+        int sigval3 = static_cast<int>(type);
         const QString description_ret = description;
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray description_b = description_ret.toUtf8();

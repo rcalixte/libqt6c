@@ -730,8 +730,8 @@ void QsciScintilla_SetMarginText3(QsciScintilla* self, int line, const QsciStyle
     self->setMarginText(static_cast<int>(line), *text);
 }
 
-void QsciScintilla_SetMarginType(QsciScintilla* self, int margin, int typeVal) {
-    self->setMarginType(static_cast<int>(margin), static_cast<QsciScintilla::MarginType>(typeVal));
+void QsciScintilla_SetMarginType(QsciScintilla* self, int margin, int type) {
+    self->setMarginType(static_cast<int>(margin), static_cast<QsciScintilla::MarginType>(type));
 }
 
 void QsciScintilla_ClearMarginText(QsciScintilla* self) {

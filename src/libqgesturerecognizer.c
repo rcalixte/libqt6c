@@ -48,8 +48,8 @@ int64_t q_gesturerecognizer_register_recognizer(void* recognizer) {
     return QGestureRecognizer_RegisterRecognizer((QGestureRecognizer*)recognizer);
 }
 
-void q_gesturerecognizer_unregister_recognizer(int64_t typeVal) {
-    QGestureRecognizer_UnregisterRecognizer(typeVal);
+void q_gesturerecognizer_unregister_recognizer(int64_t type) {
+    QGestureRecognizer_UnregisterRecognizer(type);
 }
 
 void q_gesturerecognizer_operator_assign(void* self, void* param1) {

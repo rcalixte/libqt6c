@@ -1,7 +1,7 @@
 #include <KConfigGroup>
 #define WORKAROUND_INNER_CLASS_DEFINITION_KIO__AuthInfo
-#define WORKAROUND_INNER_CLASS_DEFINITION_KIO__MetaData
-#define WORKAROUND_INNER_CLASS_DEFINITION_KIO__UDSEntry
+#include <KIO/MetaData>
+#include <KIO/UDSEntry>
 #define WORKAROUND_INNER_CLASS_DEFINITION_KIO__WorkerBase
 #define WORKAROUND_INNER_CLASS_DEFINITION_KIO__WorkerResult
 #include <KRemoteEncoding>
@@ -166,14 +166,14 @@ void KIO__WorkerBase_InfoMessage(KIO__WorkerBase* self, const libqt_string msg) 
     self->infoMessage(msg_QString);
 }
 
-int KIO__WorkerBase_MessageBox(KIO__WorkerBase* self, int typeVal, const libqt_string text) {
+int KIO__WorkerBase_MessageBox(KIO__WorkerBase* self, int type, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), text_QString);
+    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(type), text_QString);
 }
 
-int KIO__WorkerBase_MessageBox2(KIO__WorkerBase* self, const libqt_string text, int typeVal) {
+int KIO__WorkerBase_MessageBox2(KIO__WorkerBase* self, const libqt_string text, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(typeVal));
+    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(type));
 }
 
 int KIO__WorkerBase_SslError(KIO__WorkerBase* self, const libqt_map /* of libqt_string to QVariant* */ sslData) {
@@ -613,55 +613,55 @@ void KIO__WorkerBase_SetIncomingMetaData(KIO__WorkerBase* self, const KIO__MetaD
     self->setIncomingMetaData(*metaData);
 }
 
-int KIO__WorkerBase_MessageBox3(KIO__WorkerBase* self, int typeVal, const libqt_string text, const libqt_string title) {
+int KIO__WorkerBase_MessageBox3(KIO__WorkerBase* self, int type, const libqt_string text, const libqt_string title) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString title_QString = QString::fromUtf8(title.data, title.len);
-    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), text_QString, title_QString);
+    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(type), text_QString, title_QString);
 }
 
-int KIO__WorkerBase_MessageBox4(KIO__WorkerBase* self, int typeVal, const libqt_string text, const libqt_string title, const libqt_string primaryActionText) {
-    QString text_QString = QString::fromUtf8(text.data, text.len);
-    QString title_QString = QString::fromUtf8(title.data, title.len);
-    QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
-    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), text_QString, title_QString, primaryActionText_QString);
-}
-
-int KIO__WorkerBase_MessageBox5(KIO__WorkerBase* self, int typeVal, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText) {
+int KIO__WorkerBase_MessageBox4(KIO__WorkerBase* self, int type, const libqt_string text, const libqt_string title, const libqt_string primaryActionText) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
-    QString secondaryActionText_QString = QString::fromUtf8(secondaryActionText.data, secondaryActionText.len);
-    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString);
+    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(type), text_QString, title_QString, primaryActionText_QString);
 }
 
-int KIO__WorkerBase_MessageBox32(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title) {
-    QString text_QString = QString::fromUtf8(text.data, text.len);
-    QString title_QString = QString::fromUtf8(title.data, title.len);
-    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), title_QString);
-}
-
-int KIO__WorkerBase_MessageBox42(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title, const libqt_string primaryActionText) {
-    QString text_QString = QString::fromUtf8(text.data, text.len);
-    QString title_QString = QString::fromUtf8(title.data, title.len);
-    QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
-    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), title_QString, primaryActionText_QString);
-}
-
-int KIO__WorkerBase_MessageBox52(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText) {
+int KIO__WorkerBase_MessageBox5(KIO__WorkerBase* self, int type, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
     QString secondaryActionText_QString = QString::fromUtf8(secondaryActionText.data, secondaryActionText.len);
-    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), title_QString, primaryActionText_QString, secondaryActionText_QString);
+    return self->messageBox(static_cast<KIO::WorkerBase::MessageBoxType>(type), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString);
 }
 
-int KIO__WorkerBase_MessageBox6(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string dontAskAgainName) {
+int KIO__WorkerBase_MessageBox32(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title) {
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    QString title_QString = QString::fromUtf8(title.data, title.len);
+    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(type), title_QString);
+}
+
+int KIO__WorkerBase_MessageBox42(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title, const libqt_string primaryActionText) {
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    QString title_QString = QString::fromUtf8(title.data, title.len);
+    QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
+    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(type), title_QString, primaryActionText_QString);
+}
+
+int KIO__WorkerBase_MessageBox52(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText) {
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    QString title_QString = QString::fromUtf8(title.data, title.len);
+    QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
+    QString secondaryActionText_QString = QString::fromUtf8(secondaryActionText.data, secondaryActionText.len);
+    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(type), title_QString, primaryActionText_QString, secondaryActionText_QString);
+}
+
+int KIO__WorkerBase_MessageBox6(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string dontAskAgainName) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
     QString secondaryActionText_QString = QString::fromUtf8(secondaryActionText.data, secondaryActionText.len);
     QString dontAskAgainName_QString = QString::fromUtf8(dontAskAgainName.data, dontAskAgainName.len);
-    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(typeVal), title_QString, primaryActionText_QString, secondaryActionText_QString, dontAskAgainName_QString);
+    return self->messageBox(text_QString, static_cast<KIO::WorkerBase::MessageBoxType>(type), title_QString, primaryActionText_QString, secondaryActionText_QString, dontAskAgainName_QString);
 }
 
 libqt_string KIO__WorkerBase_ConfigValue22(const KIO__WorkerBase* self, const libqt_string key, const libqt_string defaultValue) {

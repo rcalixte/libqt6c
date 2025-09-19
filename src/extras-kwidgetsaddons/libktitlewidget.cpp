@@ -130,9 +130,9 @@ void KTitleWidget_SetText(KTitleWidget* self, const libqt_string text) {
     self->setText(text_QString);
 }
 
-void KTitleWidget_SetText2(KTitleWidget* self, const libqt_string text, int typeVal) {
+void KTitleWidget_SetText2(KTitleWidget* self, const libqt_string text, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    self->setText(text_QString, static_cast<KTitleWidget::MessageType>(typeVal));
+    self->setText(text_QString, static_cast<KTitleWidget::MessageType>(type));
 }
 
 void KTitleWidget_SetComment(KTitleWidget* self, const libqt_string comment) {
@@ -144,8 +144,8 @@ void KTitleWidget_SetIcon(KTitleWidget* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
-void KTitleWidget_SetIcon2(KTitleWidget* self, int typeVal) {
-    self->setIcon(static_cast<KTitleWidget::MessageType>(typeVal));
+void KTitleWidget_SetIcon2(KTitleWidget* self, int type) {
+    self->setIcon(static_cast<KTitleWidget::MessageType>(type));
 }
 
 void KTitleWidget_SetIconSize(KTitleWidget* self, const QSize* iconSize) {
@@ -211,17 +211,17 @@ void KTitleWidget_SetText22(KTitleWidget* self, const libqt_string text, int ali
     self->setText(text_QString, static_cast<Qt::Alignment>(alignment));
 }
 
-void KTitleWidget_SetComment2(KTitleWidget* self, const libqt_string comment, int typeVal) {
+void KTitleWidget_SetComment2(KTitleWidget* self, const libqt_string comment, int type) {
     QString comment_QString = QString::fromUtf8(comment.data, comment.len);
-    self->setComment(comment_QString, static_cast<KTitleWidget::MessageType>(typeVal));
+    self->setComment(comment_QString, static_cast<KTitleWidget::MessageType>(type));
 }
 
 void KTitleWidget_SetIcon22(KTitleWidget* self, const QIcon* icon, int alignment) {
     self->setIcon(*icon, static_cast<KTitleWidget::ImageAlignment>(alignment));
 }
 
-void KTitleWidget_SetIcon23(KTitleWidget* self, int typeVal, int alignment) {
-    self->setIcon(static_cast<KTitleWidget::MessageType>(typeVal), static_cast<KTitleWidget::ImageAlignment>(alignment));
+void KTitleWidget_SetIcon23(KTitleWidget* self, int type, int alignment) {
+    self->setIcon(static_cast<KTitleWidget::MessageType>(type), static_cast<KTitleWidget::ImageAlignment>(alignment));
 }
 
 // Base class handler implementation

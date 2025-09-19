@@ -8,16 +8,16 @@ QFileIconProvider* q_fileiconprovider_new() {
     return QFileIconProvider_new();
 }
 
-QIcon* q_fileiconprovider_icon(void* self, int32_t typeVal) {
-    return QFileIconProvider_Icon((QFileIconProvider*)self, typeVal);
+QIcon* q_fileiconprovider_icon(void* self, int32_t type) {
+    return QFileIconProvider_Icon((QFileIconProvider*)self, type);
 }
 
 void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t)) {
     QFileIconProvider_OnIcon((QFileIconProvider*)self, (intptr_t)callback);
 }
 
-QIcon* q_fileiconprovider_qbase_icon(void* self, int32_t typeVal) {
-    return QFileIconProvider_QBaseIcon((QFileIconProvider*)self, typeVal);
+QIcon* q_fileiconprovider_qbase_icon(void* self, int32_t type) {
+    return QFileIconProvider_QBaseIcon((QFileIconProvider*)self, type);
 }
 
 QIcon* q_fileiconprovider_icon2(void* self, void* info) {

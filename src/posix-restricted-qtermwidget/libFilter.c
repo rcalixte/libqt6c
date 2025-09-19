@@ -258,12 +258,12 @@ int32_t k_onsole__filter_start_timer22(void* self, int interval, int32_t timerTy
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_onsole__filter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_onsole__filter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_onsole__filter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_onsole__filter_destroyed1(void* self, void* param1) {
@@ -654,12 +654,12 @@ int32_t k_onsole__regexpfilter_start_timer22(void* self, int interval, int32_t t
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_onsole__regexpfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_onsole__regexpfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_onsole__regexpfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_onsole__regexpfilter_destroyed1(void* self, void* param1) {
@@ -1100,12 +1100,12 @@ int32_t k_onsole__urlfilter_start_timer22(void* self, int interval, int32_t time
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_onsole__urlfilter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_onsole__urlfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_onsole__urlfilter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_onsole__urlfilter_destroyed1(void* self, void* param1) {
@@ -1526,12 +1526,12 @@ int32_t k_onsole__filterobject_start_timer22(void* self, int interval, int32_t t
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_onsole__filterobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_onsole__filterobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_onsole__filterobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_onsole__filterobject_destroyed1(void* self, void* param1) {
@@ -1830,16 +1830,16 @@ libqt_list /* of QAction* */ k_onsole__filter__hotspot_qbase_actions(void* self)
     return _arr;
 }
 
-void k_onsole__filter__hotspot_set_type(void* self, int32_t typeVal) {
-    Konsole__Filter__HotSpot_SetType((Konsole__Filter__HotSpot*)self, typeVal);
+void k_onsole__filter__hotspot_set_type(void* self, int32_t type) {
+    Konsole__Filter__HotSpot_SetType((Konsole__Filter__HotSpot*)self, type);
 }
 
 void k_onsole__filter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t)) {
     Konsole__Filter__HotSpot_OnSetType((Konsole__Filter__HotSpot*)self, (intptr_t)callback);
 }
 
-void k_onsole__filter__hotspot_qbase_set_type(void* self, int32_t typeVal) {
-    Konsole__Filter__HotSpot_QBaseSetType((Konsole__Filter__HotSpot*)self, typeVal);
+void k_onsole__filter__hotspot_qbase_set_type(void* self, int32_t type) {
+    Konsole__Filter__HotSpot_QBaseSetType((Konsole__Filter__HotSpot*)self, type);
 }
 
 void k_onsole__filter__hotspot_delete(void* self) {
@@ -1934,12 +1934,12 @@ void k_onsole__regexpfilter__hotspot_on_actions(void* self, QAction** (*callback
     Konsole__RegExpFilter__HotSpot_OnActions((Konsole__RegExpFilter__HotSpot*)self, (intptr_t)callback);
 }
 
-void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t typeVal) {
-    Konsole__RegExpFilter__HotSpot_SetType((Konsole__RegExpFilter__HotSpot*)self, typeVal);
+void k_onsole__regexpfilter__hotspot_set_type(void* self, int32_t type) {
+    Konsole__RegExpFilter__HotSpot_SetType((Konsole__RegExpFilter__HotSpot*)self, type);
 }
 
-void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t typeVal) {
-    Konsole__RegExpFilter__HotSpot_QBaseSetType((Konsole__RegExpFilter__HotSpot*)self, typeVal);
+void k_onsole__regexpfilter__hotspot_qbase_set_type(void* self, int32_t type) {
+    Konsole__RegExpFilter__HotSpot_QBaseSetType((Konsole__RegExpFilter__HotSpot*)self, type);
 }
 
 void k_onsole__regexpfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t)) {
@@ -2038,12 +2038,12 @@ int32_t k_onsole__urlfilter__hotspot_type(void* self) {
     return Konsole__Filter__HotSpot_Type((Konsole__Filter__HotSpot*)self);
 }
 
-void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t typeVal) {
-    Konsole__UrlFilter__HotSpot_SetType((Konsole__UrlFilter__HotSpot*)self, typeVal);
+void k_onsole__urlfilter__hotspot_set_type(void* self, int32_t type) {
+    Konsole__UrlFilter__HotSpot_SetType((Konsole__UrlFilter__HotSpot*)self, type);
 }
 
-void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t typeVal) {
-    Konsole__UrlFilter__HotSpot_QBaseSetType((Konsole__UrlFilter__HotSpot*)self, typeVal);
+void k_onsole__urlfilter__hotspot_qbase_set_type(void* self, int32_t type) {
+    Konsole__UrlFilter__HotSpot_QBaseSetType((Konsole__UrlFilter__HotSpot*)self, type);
 }
 
 void k_onsole__urlfilter__hotspot_on_set_type(void* self, void (*callback)(void*, int32_t)) {

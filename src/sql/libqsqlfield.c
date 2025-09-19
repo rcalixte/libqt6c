@@ -11,24 +11,24 @@ QSqlField* q_sqlfield_new2(void* other) {
     return QSqlField_new2((QSqlField*)other);
 }
 
-QSqlField* q_sqlfield_new3(const char* fieldName, int64_t typeVal) {
-    return QSqlField_new3(qstring(fieldName), typeVal);
+QSqlField* q_sqlfield_new3(const char* fieldName, int64_t type) {
+    return QSqlField_new3(qstring(fieldName), type);
 }
 
 QSqlField* q_sqlfield_new4(const char* fieldName) {
     return QSqlField_new4(qstring(fieldName));
 }
 
-QSqlField* q_sqlfield_new5(const char* fieldName, void* typeVal) {
-    return QSqlField_new5(qstring(fieldName), (QMetaType*)typeVal);
+QSqlField* q_sqlfield_new5(const char* fieldName, void* type) {
+    return QSqlField_new5(qstring(fieldName), (QMetaType*)type);
 }
 
-QSqlField* q_sqlfield_new6(const char* fieldName, void* typeVal, const char* tableName) {
-    return QSqlField_new6(qstring(fieldName), (QMetaType*)typeVal, qstring(tableName));
+QSqlField* q_sqlfield_new6(const char* fieldName, void* type, const char* tableName) {
+    return QSqlField_new6(qstring(fieldName), (QMetaType*)type, qstring(tableName));
 }
 
-QSqlField* q_sqlfield_new7(const char* fieldName, int64_t typeVal, const char* tableName) {
-    return QSqlField_new7(qstring(fieldName), typeVal, qstring(tableName));
+QSqlField* q_sqlfield_new7(const char* fieldName, int64_t type, const char* tableName) {
+    return QSqlField_new7(qstring(fieldName), type, qstring(tableName));
 }
 
 void q_sqlfield_operator_assign(void* self, void* other) {
@@ -101,16 +101,16 @@ QMetaType* q_sqlfield_meta_type(void* self) {
     return QSqlField_MetaType((QSqlField*)self);
 }
 
-void q_sqlfield_set_meta_type(void* self, void* typeVal) {
-    QSqlField_SetMetaType((QSqlField*)self, (QMetaType*)typeVal);
+void q_sqlfield_set_meta_type(void* self, void* type) {
+    QSqlField_SetMetaType((QSqlField*)self, (QMetaType*)type);
 }
 
 int64_t q_sqlfield_type(void* self) {
     return QSqlField_Type((QSqlField*)self);
 }
 
-void q_sqlfield_set_type(void* self, int64_t typeVal) {
-    QSqlField_SetType((QSqlField*)self, typeVal);
+void q_sqlfield_set_type(void* self, int64_t type) {
+    QSqlField_SetType((QSqlField*)self, type);
 }
 
 void q_sqlfield_set_required_status(void* self, int32_t status) {
@@ -133,8 +133,8 @@ void q_sqlfield_set_default_value(void* self, void* value) {
     QSqlField_SetDefaultValue((QSqlField*)self, (QVariant*)value);
 }
 
-void q_sqlfield_set_sql_type(void* self, int typeVal) {
-    QSqlField_SetSqlType((QSqlField*)self, typeVal);
+void q_sqlfield_set_sql_type(void* self, int type) {
+    QSqlField_SetSqlType((QSqlField*)self, type);
 }
 
 void q_sqlfield_set_generated(void* self, bool gen) {

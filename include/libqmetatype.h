@@ -25,8 +25,8 @@ QMetaType* q_metatype_new2(void* other);
 
 /// q_metatype_new3 constructs a new QMetaType object.
 ///
-/// @param typeVal int
-QMetaType* q_metatype_new3(int typeVal);
+/// @param type int
+QMetaType* q_metatype_new3(int type);
 
 /// q_metatype_new4 constructs a new QMetaType object.
 ///
@@ -52,8 +52,8 @@ void q_metatype_move_assign(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#registerNormalizedTypedef)
 ///
 /// @param normalizedTypeName const char*
-/// @param typeVal QMetaType*
-void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* typeVal);
+/// @param type QMetaType*
+void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#type)
 ///
@@ -69,54 +69,54 @@ int32_t q_metatype_type2(const char* typeName);
 ///
 /// Caller is responsible for freeing the returned memory
 ///
-/// @param typeVal int
-const char* q_metatype_type_name(int typeVal);
+/// @param type int
+const char* q_metatype_type_name(int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#sizeOf)
 ///
-/// @param typeVal int
-int32_t q_metatype_size_of(int typeVal);
+/// @param type int
+int32_t q_metatype_size_of(int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#typeFlags)
 ///
-/// @param typeVal int
+/// @param type int
 ///
 /// @return flag of enum QMetaType__TypeFlag
-int32_t q_metatype_type_flags(int typeVal);
+int32_t q_metatype_type_flags(int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#metaObjectForType)
 ///
-/// @param typeVal int
-const QMetaObject* q_metatype_meta_object_for_type(int typeVal);
+/// @param type int
+const QMetaObject* q_metatype_meta_object_for_type(int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
-/// @param typeVal int
-void* q_metatype_create(int typeVal);
+/// @param type int
+void* q_metatype_create(int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#destroy)
 ///
-/// @param typeVal int
+/// @param type int
 /// @param data void*
-void q_metatype_destroy(int typeVal, void* data);
+void q_metatype_destroy(int type, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#construct)
 ///
-/// @param typeVal int
+/// @param type int
 /// @param where void*
 /// @param copyVal void*
-void* q_metatype_construct(int typeVal, void* where, void* copyVal);
+void* q_metatype_construct(int type, void* where, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#destruct)
 ///
-/// @param typeVal int
+/// @param type int
 /// @param where void*
-void q_metatype_destruct(int typeVal, void* where);
+void q_metatype_destruct(int type, void* where);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isRegistered)
 ///
-/// @param typeVal int
-bool q_metatype_is_registered(int typeVal);
+/// @param type int
+bool q_metatype_is_registered(int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#isValid)
 ///
@@ -256,16 +256,16 @@ bool q_metatype_has_registered_data_stream_operators(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#save)
 ///
 /// @param stream QDataStream*
-/// @param typeVal int
+/// @param type int
 /// @param data void*
-bool q_metatype_save2(void* stream, int typeVal, void* data);
+bool q_metatype_save2(void* stream, int type, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#load)
 ///
 /// @param stream QDataStream*
-/// @param typeVal int
+/// @param type int
 /// @param data void*
-bool q_metatype_load2(void* stream, int typeVal, void* data);
+bool q_metatype_load2(void* stream, int type, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#underlyingType)
 ///
@@ -379,14 +379,14 @@ void q_metatype_unregister_mutable_view_function(void* from, void* to);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#unregisterMetaType)
 ///
-/// @param typeVal QMetaType*
-void q_metatype_unregister_meta_type(void* typeVal);
+/// @param type QMetaType*
+void q_metatype_unregister_meta_type(void* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#create)
 ///
-/// @param typeVal int
+/// @param type int
 /// @param copyVal void*
-void* q_metatype_create22(int typeVal, void* copyVal);
+void* q_metatype_create22(int type, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#id)
 ///

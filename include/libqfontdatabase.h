@@ -216,8 +216,8 @@ const char** q_fontdatabase_application_fallback_font_families(int32_t script);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#systemFont)
 ///
-/// @param typeVal enum QFontDatabase__SystemFont
-QFont* q_fontdatabase_system_font(int32_t typeVal);
+/// @param type enum QFontDatabase__SystemFont
+QFont* q_fontdatabase_system_font(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///

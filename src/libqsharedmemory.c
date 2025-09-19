@@ -138,8 +138,8 @@ const char* q_sharedmemory_error_string(void* self) {
     return _ret;
 }
 
-bool q_sharedmemory_is_key_type_supported(uint16_t typeVal) {
-    return QSharedMemory_IsKeyTypeSupported(typeVal);
+bool q_sharedmemory_is_key_type_supported(uint16_t type) {
+    return QSharedMemory_IsKeyTypeSupported(type);
 }
 
 QNativeIpcKey* q_sharedmemory_platform_safe_key(const char* key) {
@@ -164,8 +164,8 @@ const char* q_sharedmemory_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_sharedmemory_set_native_key22(void* self, const char* key, uint16_t typeVal) {
-    QSharedMemory_SetNativeKey22((QSharedMemory*)self, qstring(key), typeVal);
+void q_sharedmemory_set_native_key22(void* self, const char* key, uint16_t type) {
+    QSharedMemory_SetNativeKey22((QSharedMemory*)self, qstring(key), type);
 }
 
 bool q_sharedmemory_create2(void* self, int64_t size, int32_t mode) {
@@ -176,12 +176,12 @@ bool q_sharedmemory_attach1(void* self, int32_t mode) {
     return QSharedMemory_Attach1((QSharedMemory*)self, mode);
 }
 
-QNativeIpcKey* q_sharedmemory_platform_safe_key2(const char* key, uint16_t typeVal) {
-    return QSharedMemory_PlatformSafeKey2(qstring(key), typeVal);
+QNativeIpcKey* q_sharedmemory_platform_safe_key2(const char* key, uint16_t type) {
+    return QSharedMemory_PlatformSafeKey2(qstring(key), type);
 }
 
-QNativeIpcKey* q_sharedmemory_legacy_native_key2(const char* key, uint16_t typeVal) {
-    return QSharedMemory_LegacyNativeKey2(qstring(key), typeVal);
+QNativeIpcKey* q_sharedmemory_legacy_native_key2(const char* key, uint16_t type) {
+    return QSharedMemory_LegacyNativeKey2(qstring(key), type);
 }
 
 const char* q_sharedmemory_object_name(void* self) {
@@ -339,12 +339,12 @@ int32_t q_sharedmemory_start_timer22(void* self, int interval, int32_t timerType
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sharedmemory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_sharedmemory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sharedmemory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_sharedmemory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_sharedmemory_destroyed1(void* self, void* param1) {

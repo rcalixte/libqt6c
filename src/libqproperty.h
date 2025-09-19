@@ -120,8 +120,8 @@ QPropertyBindingError* q_propertybindingerror_new();
 
 /// q_propertybindingerror_new2 constructs a new QPropertyBindingError object.
 ///
-/// @param typeVal enum QPropertyBindingError__Type
-QPropertyBindingError* q_propertybindingerror_new2(int32_t typeVal);
+/// @param type enum QPropertyBindingError__Type
+QPropertyBindingError* q_propertybindingerror_new2(int32_t type);
 
 /// q_propertybindingerror_new3 constructs a new QPropertyBindingError object.
 ///
@@ -130,9 +130,9 @@ QPropertyBindingError* q_propertybindingerror_new3(void* other);
 
 /// q_propertybindingerror_new4 constructs a new QPropertyBindingError object.
 ///
-/// @param typeVal enum QPropertyBindingError__Type
+/// @param type enum QPropertyBindingError__Type
 /// @param description const char*
-QPropertyBindingError* q_propertybindingerror_new4(int32_t typeVal, const char* description);
+QPropertyBindingError* q_propertybindingerror_new4(int32_t type, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#operator-eq)
 ///

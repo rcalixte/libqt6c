@@ -108,21 +108,21 @@ QTableWidgetItem* q_tablewidgetitem_new4(void* other);
 
 /// q_tablewidgetitem_new5 constructs a new QTableWidgetItem object.
 ///
-/// @param typeVal int
-QTableWidgetItem* q_tablewidgetitem_new5(int typeVal);
+/// @param type int
+QTableWidgetItem* q_tablewidgetitem_new5(int type);
 
 /// q_tablewidgetitem_new6 constructs a new QTableWidgetItem object.
 ///
 /// @param text const char*
-/// @param typeVal int
-QTableWidgetItem* q_tablewidgetitem_new6(const char* text, int typeVal);
+/// @param type int
+QTableWidgetItem* q_tablewidgetitem_new6(const char* text, int type);
 
 /// q_tablewidgetitem_new7 constructs a new QTableWidgetItem object.
 ///
 /// @param icon QIcon*
 /// @param text const char*
-/// @param typeVal int
-QTableWidgetItem* q_tablewidgetitem_new7(void* icon, const char* text, int typeVal);
+/// @param type int
+QTableWidgetItem* q_tablewidgetitem_new7(void* icon, const char* text, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#clone)
 ///
@@ -3058,16 +3058,16 @@ void q_tablewidget_set_graphics_effect(void* self, void* effect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QTableWidget*
-/// @param typeVal enum Qt__GestureType
-void q_tablewidget_grab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_tablewidget_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self QTableWidget*
-/// @param typeVal enum Qt__GestureType
-void q_tablewidget_ungrab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_tablewidget_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -4093,8 +4093,8 @@ QWidget* q_tablewidget_parent_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self QTableWidget*
-/// @param typeVal flag of enum Qt__WindowType
-void q_tablewidget_set_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_tablewidget_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -4118,8 +4118,8 @@ void q_tablewidget_set_window_flag(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self QTableWidget*
-/// @param typeVal flag of enum Qt__WindowType
-void q_tablewidget_override_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_tablewidget_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -4398,9 +4398,9 @@ QPixmap* q_tablewidget_grab1(void* self, void* rectangle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QTableWidget*
-/// @param typeVal enum Qt__GestureType
+/// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_tablewidget_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
+void q_tablewidget_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4733,8 +4733,8 @@ int32_t q_tablewidget_start_timer22(void* self, int interval, int32_t timerType)
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tablewidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_tablewidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4744,8 +4744,8 @@ QMetaObject__Connection* q_tablewidget_connect5(void* sender, void* signal, void
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tablewidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_tablewidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

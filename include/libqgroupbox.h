@@ -1151,16 +1151,16 @@ void q_groupbox_set_graphics_effect(void* self, void* effect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QGroupBox*
-/// @param typeVal enum Qt__GestureType
-void q_groupbox_grab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_groupbox_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self QGroupBox*
-/// @param typeVal enum Qt__GestureType
-void q_groupbox_ungrab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_groupbox_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -2193,8 +2193,8 @@ QWidget* q_groupbox_parent_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self QGroupBox*
-/// @param typeVal flag of enum Qt__WindowType
-void q_groupbox_set_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_groupbox_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -2218,8 +2218,8 @@ void q_groupbox_set_window_flag(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self QGroupBox*
-/// @param typeVal flag of enum Qt__WindowType
-void q_groupbox_override_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void q_groupbox_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -2498,9 +2498,9 @@ QPixmap* q_groupbox_grab1(void* self, void* rectangle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self QGroupBox*
-/// @param typeVal enum Qt__GestureType
+/// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_groupbox_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
+void q_groupbox_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -2833,8 +2833,8 @@ int32_t q_groupbox_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_groupbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_groupbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2844,8 +2844,8 @@ QMetaObject__Connection* q_groupbox_connect5(void* sender, void* signal, void* r
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_groupbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_groupbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

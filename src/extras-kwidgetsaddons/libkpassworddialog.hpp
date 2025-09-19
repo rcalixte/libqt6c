@@ -92,7 +92,7 @@ void KPasswordDialog_Connect_GotUsernameAndPassword(KPasswordDialog* self, intpt
 bool KPasswordDialog_CheckPassword(KPasswordDialog* self);
 libqt_string KPasswordDialog_Tr2(const char* s, const char* c);
 libqt_string KPasswordDialog_Tr3(const char* s, const char* c, int n);
-void KPasswordDialog_ShowErrorMessage2(KPasswordDialog* self, const libqt_string message, const int typeVal);
+void KPasswordDialog_ShowErrorMessage2(KPasswordDialog* self, const libqt_string message, const int type);
 void KPasswordDialog_OnMetacall(KPasswordDialog* self, intptr_t slot);
 int KPasswordDialog_QBaseMetacall(KPasswordDialog* self, int param1, int param2, void** param3);
 void KPasswordDialog_OnAccept(KPasswordDialog* self, intptr_t slot);

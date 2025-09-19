@@ -25,17 +25,17 @@ QSqlError* QSqlError_new4(const libqt_string driverText, const libqt_string data
     return new QSqlError(driverText_QString, databaseText_QString);
 }
 
-QSqlError* QSqlError_new5(const libqt_string driverText, const libqt_string databaseText, int typeVal) {
+QSqlError* QSqlError_new5(const libqt_string driverText, const libqt_string databaseText, int type) {
     QString driverText_QString = QString::fromUtf8(driverText.data, driverText.len);
     QString databaseText_QString = QString::fromUtf8(databaseText.data, databaseText.len);
-    return new QSqlError(driverText_QString, databaseText_QString, static_cast<QSqlError::ErrorType>(typeVal));
+    return new QSqlError(driverText_QString, databaseText_QString, static_cast<QSqlError::ErrorType>(type));
 }
 
-QSqlError* QSqlError_new6(const libqt_string driverText, const libqt_string databaseText, int typeVal, const libqt_string errorCode) {
+QSqlError* QSqlError_new6(const libqt_string driverText, const libqt_string databaseText, int type, const libqt_string errorCode) {
     QString driverText_QString = QString::fromUtf8(driverText.data, driverText.len);
     QString databaseText_QString = QString::fromUtf8(databaseText.data, databaseText.len);
     QString errorCode_QString = QString::fromUtf8(errorCode.data, errorCode.len);
-    return new QSqlError(driverText_QString, databaseText_QString, static_cast<QSqlError::ErrorType>(typeVal), errorCode_QString);
+    return new QSqlError(driverText_QString, databaseText_QString, static_cast<QSqlError::ErrorType>(type), errorCode_QString);
 }
 
 void QSqlError_OperatorAssign(QSqlError* self, const QSqlError* other) {

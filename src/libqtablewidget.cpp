@@ -130,18 +130,18 @@ QTableWidgetItem* QTableWidgetItem_new4(const QTableWidgetItem* other) {
     return new VirtualQTableWidgetItem(*other);
 }
 
-QTableWidgetItem* QTableWidgetItem_new5(int typeVal) {
-    return new VirtualQTableWidgetItem(static_cast<int>(typeVal));
+QTableWidgetItem* QTableWidgetItem_new5(int type) {
+    return new VirtualQTableWidgetItem(static_cast<int>(type));
 }
 
-QTableWidgetItem* QTableWidgetItem_new6(const libqt_string text, int typeVal) {
+QTableWidgetItem* QTableWidgetItem_new6(const libqt_string text, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualQTableWidgetItem(text_QString, static_cast<int>(typeVal));
+    return new VirtualQTableWidgetItem(text_QString, static_cast<int>(type));
 }
 
-QTableWidgetItem* QTableWidgetItem_new7(const QIcon* icon, const libqt_string text, int typeVal) {
+QTableWidgetItem* QTableWidgetItem_new7(const QIcon* icon, const libqt_string text, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualQTableWidgetItem(*icon, text_QString, static_cast<int>(typeVal));
+    return new VirtualQTableWidgetItem(*icon, text_QString, static_cast<int>(type));
 }
 
 QTableWidgetItem* QTableWidgetItem_Clone(const QTableWidgetItem* self) {

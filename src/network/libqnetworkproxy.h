@@ -106,8 +106,8 @@ int32_t q_networkproxyquery_query_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setQueryType)
 ///
 /// @param self QNetworkProxyQuery*
-/// @param typeVal enum QNetworkProxyQuery__QueryType
-void q_networkproxyquery_set_query_type(void* self, int32_t typeVal);
+/// @param type enum QNetworkProxyQuery__QueryType
+void q_networkproxyquery_set_query_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#peerPort)
 ///
@@ -183,8 +183,8 @@ QNetworkProxy* q_networkproxy_new();
 
 /// q_networkproxy_new2 constructs a new QNetworkProxy object.
 ///
-/// @param typeVal enum QNetworkProxy__ProxyType
-QNetworkProxy* q_networkproxy_new2(int32_t typeVal);
+/// @param type enum QNetworkProxy__ProxyType
+QNetworkProxy* q_networkproxy_new2(int32_t type);
 
 /// q_networkproxy_new3 constructs a new QNetworkProxy object.
 ///
@@ -193,33 +193,33 @@ QNetworkProxy* q_networkproxy_new3(void* other);
 
 /// q_networkproxy_new4 constructs a new QNetworkProxy object.
 ///
-/// @param typeVal enum QNetworkProxy__ProxyType
+/// @param type enum QNetworkProxy__ProxyType
 /// @param hostName const char*
-QNetworkProxy* q_networkproxy_new4(int32_t typeVal, const char* hostName);
+QNetworkProxy* q_networkproxy_new4(int32_t type, const char* hostName);
 
 /// q_networkproxy_new5 constructs a new QNetworkProxy object.
 ///
-/// @param typeVal enum QNetworkProxy__ProxyType
+/// @param type enum QNetworkProxy__ProxyType
 /// @param hostName const char*
 /// @param port unsigned short
-QNetworkProxy* q_networkproxy_new5(int32_t typeVal, const char* hostName, unsigned short port);
+QNetworkProxy* q_networkproxy_new5(int32_t type, const char* hostName, unsigned short port);
 
 /// q_networkproxy_new6 constructs a new QNetworkProxy object.
 ///
-/// @param typeVal enum QNetworkProxy__ProxyType
+/// @param type enum QNetworkProxy__ProxyType
 /// @param hostName const char*
 /// @param port unsigned short
 /// @param user const char*
-QNetworkProxy* q_networkproxy_new6(int32_t typeVal, const char* hostName, unsigned short port, const char* user);
+QNetworkProxy* q_networkproxy_new6(int32_t type, const char* hostName, unsigned short port, const char* user);
 
 /// q_networkproxy_new7 constructs a new QNetworkProxy object.
 ///
-/// @param typeVal enum QNetworkProxy__ProxyType
+/// @param type enum QNetworkProxy__ProxyType
 /// @param hostName const char*
 /// @param port unsigned short
 /// @param user const char*
 /// @param password const char*
-QNetworkProxy* q_networkproxy_new7(int32_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password);
+QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, unsigned short port, const char* user, const char* password);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-eq)
 ///
@@ -248,8 +248,8 @@ bool q_networkproxy_operator_not_equal(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#setType)
 ///
 /// @param self QNetworkProxy*
-/// @param typeVal enum QNetworkProxy__ProxyType
-void q_networkproxy_set_type(void* self, int32_t typeVal);
+/// @param type enum QNetworkProxy__ProxyType
+void q_networkproxy_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#type)
 ///

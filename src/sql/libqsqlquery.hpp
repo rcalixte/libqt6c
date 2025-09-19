@@ -78,9 +78,9 @@ void QSqlQuery_Finish(QSqlQuery* self);
 bool QSqlQuery_NextResult(QSqlQuery* self);
 bool QSqlQuery_Seek2(QSqlQuery* self, int i, bool relative);
 bool QSqlQuery_ExecBatch1(QSqlQuery* self, int mode);
-void QSqlQuery_BindValue3(QSqlQuery* self, const libqt_string placeholder, const QVariant* val, int typeVal);
-void QSqlQuery_BindValue32(QSqlQuery* self, int pos, const QVariant* val, int typeVal);
-void QSqlQuery_AddBindValue2(QSqlQuery* self, const QVariant* val, int typeVal);
+void QSqlQuery_BindValue3(QSqlQuery* self, const libqt_string placeholder, const QVariant* val, int type);
+void QSqlQuery_BindValue32(QSqlQuery* self, int pos, const QVariant* val, int type);
+void QSqlQuery_AddBindValue2(QSqlQuery* self, const QVariant* val, int type);
 void QSqlQuery_Delete(QSqlQuery* self);
 
 #ifdef __cplusplus

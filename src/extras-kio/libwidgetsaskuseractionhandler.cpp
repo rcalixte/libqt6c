@@ -92,7 +92,7 @@ void KIO__WidgetsAskUserActionHandler_AskUserDelete(KIO__WidgetsAskUserActionHan
     }
 }
 
-void KIO__WidgetsAskUserActionHandler_RequestUserMessageBox(KIO__WidgetsAskUserActionHandler* self, int typeVal, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string primaryActionIconName, const libqt_string secondaryActionIconName, const libqt_string dontAskAgainName, const libqt_string details, QWidget* parent) {
+void KIO__WidgetsAskUserActionHandler_RequestUserMessageBox(KIO__WidgetsAskUserActionHandler* self, int type, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string primaryActionIconName, const libqt_string secondaryActionIconName, const libqt_string dontAskAgainName, const libqt_string details, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString primaryActionText_QString = QString::fromUtf8(primaryActionText.data, primaryActionText.len);
@@ -103,9 +103,9 @@ void KIO__WidgetsAskUserActionHandler_RequestUserMessageBox(KIO__WidgetsAskUserA
     QString details_QString = QString::fromUtf8(details.data, details.len);
     auto* vkio__widgetsaskuseractionhandler = dynamic_cast<VirtualKIOWidgetsAskUserActionHandler*>(self);
     if (vkio__widgetsaskuseractionhandler && vkio__widgetsaskuseractionhandler->isVirtualKIOWidgetsAskUserActionHandler) {
-        self->requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(typeVal), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
+        self->requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(type), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
     } else {
-        ((VirtualKIOWidgetsAskUserActionHandler*)self)->requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(typeVal), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
+        ((VirtualKIOWidgetsAskUserActionHandler*)self)->requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(type), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
     }
 }
 
@@ -238,7 +238,7 @@ void KIO__WidgetsAskUserActionHandler_OnAskUserDelete(KIO__WidgetsAskUserActionH
 }
 
 // Base class handler implementation
-void KIO__WidgetsAskUserActionHandler_QBaseRequestUserMessageBox(KIO__WidgetsAskUserActionHandler* self, int typeVal, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string primaryActionIconName, const libqt_string secondaryActionIconName, const libqt_string dontAskAgainName, const libqt_string details, QWidget* parent) {
+void KIO__WidgetsAskUserActionHandler_QBaseRequestUserMessageBox(KIO__WidgetsAskUserActionHandler* self, int type, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string primaryActionIconName, const libqt_string secondaryActionIconName, const libqt_string dontAskAgainName, const libqt_string details, QWidget* parent) {
     auto* vkiowidgetsaskuseractionhandler = dynamic_cast<VirtualKIOWidgetsAskUserActionHandler*>(self);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString title_QString = QString::fromUtf8(title.data, title.len);
@@ -250,9 +250,9 @@ void KIO__WidgetsAskUserActionHandler_QBaseRequestUserMessageBox(KIO__WidgetsAsk
     QString details_QString = QString::fromUtf8(details.data, details.len);
     if (vkiowidgetsaskuseractionhandler && vkiowidgetsaskuseractionhandler->isVirtualKIOWidgetsAskUserActionHandler) {
         vkiowidgetsaskuseractionhandler->setKIO__WidgetsAskUserActionHandler_RequestUserMessageBox_IsBase(true);
-        vkiowidgetsaskuseractionhandler->requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(typeVal), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
+        vkiowidgetsaskuseractionhandler->requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(type), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
     } else {
-        self->KIO::WidgetsAskUserActionHandler::requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(typeVal), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
+        self->KIO::WidgetsAskUserActionHandler::requestUserMessageBox(static_cast<KIO::AskUserActionInterface::MessageDialogType>(type), text_QString, title_QString, primaryActionText_QString, secondaryActionText_QString, primaryActionIconName_QString, secondaryActionIconName_QString, dontAskAgainName_QString, details_QString, parent);
     }
 }
 

@@ -70,9 +70,9 @@ QDBusMessage* q_dbusmessage_create_error2(void* err);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmessage.html#createError)
 ///
-/// @param typeVal enum QDBusError__ErrorType
+/// @param type enum QDBusError__ErrorType
 /// @param msg const char*
-QDBusMessage* q_dbusmessage_create_error3(int32_t typeVal, const char* msg);
+QDBusMessage* q_dbusmessage_create_error3(int32_t type, const char* msg);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmessage.html#createReply)
 ///
@@ -101,9 +101,9 @@ QDBusMessage* q_dbusmessage_create_error_reply2(void* self, void* err);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmessage.html#createErrorReply)
 ///
 /// @param self QDBusMessage*
-/// @param typeVal enum QDBusError__ErrorType
+/// @param type enum QDBusError__ErrorType
 /// @param msg const char*
-QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t typeVal, const char* msg);
+QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t type, const char* msg);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmessage.html#service)
 ///

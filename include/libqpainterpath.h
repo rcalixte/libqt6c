@@ -657,7 +657,7 @@ int32_t q_painterpath__element_type(void* self);
 ///
 /// @param self QPainterPath__Element*
 /// @param type enum QPainterPath__ElementType
-void q_painterpath__element_set_type(void* self, int32_t _type);
+void q_painterpath__element_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#isMoveTo)
 ///

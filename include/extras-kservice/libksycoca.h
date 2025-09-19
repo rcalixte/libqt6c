@@ -69,8 +69,8 @@ bool k_sycoca_is_available();
 ///
 /// @param self KSycoca*
 /// @param offset int
-/// @param typeVal enum KSycoca__KSycocaType*
-QDataStream* k_sycoca_find_entry(void* self, int offset, int32_t* typeVal);
+/// @param type enum KSycoca__KSycocaType*
+QDataStream* k_sycoca_find_entry(void* self, int offset, int32_t* type);
 
 /// [Qt documentation](https://api.kde.org/ksycoca.html#findFactory)
 ///
@@ -469,8 +469,8 @@ int32_t k_sycoca_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_sycoca_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_sycoca_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -480,8 +480,8 @@ QMetaObject__Connection* k_sycoca_connect5(void* sender, void* signal, void* rec
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_sycoca_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_sycoca_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

@@ -25,8 +25,8 @@ QVariant* q_variant_new() {
     return QVariant_new();
 }
 
-QVariant* q_variant_new2(void* typeVal) {
-    return QVariant_new2((QMetaType*)typeVal);
+QVariant* q_variant_new2(void* type) {
+    return QVariant_new2((QMetaType*)type);
 }
 
 QVariant* q_variant_new3(void* other) {
@@ -146,12 +146,12 @@ QVariant* q_variant_new28(void* pt) {
     return QVariant_new28((QPoint*)pt);
 }
 
-QVariant* q_variant_new29(int64_t typeVal) {
-    return QVariant_new29(typeVal);
+QVariant* q_variant_new29(int64_t type) {
+    return QVariant_new29(type);
 }
 
-QVariant* q_variant_new30(void* typeVal, void* copyVal) {
-    return QVariant_new30((QMetaType*)typeVal, copyVal);
+QVariant* q_variant_new30(void* type, void* copyVal) {
+    return QVariant_new30((QMetaType*)type, copyVal);
 }
 
 void q_variant_operator_assign(void* self, void* other) {
@@ -182,8 +182,8 @@ bool q_variant_can_convert(void* self, void* targetType) {
     return QVariant_CanConvert((QVariant*)self, (QMetaType*)targetType);
 }
 
-bool q_variant_convert(void* self, void* typeVal) {
-    return QVariant_Convert((QVariant*)self, (QMetaType*)typeVal);
+bool q_variant_convert(void* self, void* type) {
+    return QVariant_Convert((QVariant*)self, (QMetaType*)type);
 }
 
 bool q_variant_can_view(void* self, void* targetType) {
@@ -428,8 +428,8 @@ void q_variant_set_value(void* self, void* avalue) {
     QVariant_SetValue((QVariant*)self, (QVariant*)avalue);
 }
 
-QVariant* q_variant_from_meta_type(void* typeVal) {
-    return QVariant_FromMetaType((QMetaType*)typeVal);
+QVariant* q_variant_from_meta_type(void* type) {
+    return QVariant_FromMetaType((QMetaType*)type);
 }
 
 QPartialOrdering* q_variant_compare(void* lhs, void* rhs) {
@@ -464,8 +464,8 @@ double q_variant_to_real1(void* self, bool* ok) {
     return QVariant_ToReal1((QVariant*)self, (bool*)ok);
 }
 
-QVariant* q_variant_from_meta_type2(void* typeVal, void* copyVal) {
-    return QVariant_FromMetaType2((QMetaType*)typeVal, copyVal);
+QVariant* q_variant_from_meta_type2(void* type, void* copyVal) {
+    return QVariant_FromMetaType2((QMetaType*)type, copyVal);
 }
 
 void q_variant_delete(void* self) {

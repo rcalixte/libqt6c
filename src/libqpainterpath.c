@@ -407,8 +407,8 @@ int32_t q_painterpath__element_type(void* self) {
     return QPainterPath__Element_Type((QPainterPath__Element*)self);
 }
 
-void q_painterpath__element_set_type(void* self, int32_t _type) {
-    QPainterPath__Element_SetType((QPainterPath__Element*)self, _type);
+void q_painterpath__element_set_type(void* self, int32_t type) {
+    QPainterPath__Element_SetType((QPainterPath__Element*)self, type);
 }
 
 bool q_painterpath__element_is_move_to(void* self) {

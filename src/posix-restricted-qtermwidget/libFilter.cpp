@@ -2272,23 +2272,23 @@ void Konsole__Filter__HotSpot_OnActions(Konsole__Filter__HotSpot* self, intptr_t
 }
 
 // Derived class handler implementation
-void Konsole__Filter__HotSpot_SetType(Konsole__Filter__HotSpot* self, int typeVal) {
+void Konsole__Filter__HotSpot_SetType(Konsole__Filter__HotSpot* self, int type) {
     auto* vkonsolefilterhotspot = dynamic_cast<VirtualKonsoleFilterHotSpot*>(self);
     if (vkonsolefilterhotspot && vkonsolefilterhotspot->isVirtualKonsoleFilterHotSpot) {
-        vkonsolefilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        vkonsolefilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     } else {
-        ((VirtualKonsoleFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        ((VirtualKonsoleFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     }
 }
 
 // Base class handler implementation
-void Konsole__Filter__HotSpot_QBaseSetType(Konsole__Filter__HotSpot* self, int typeVal) {
+void Konsole__Filter__HotSpot_QBaseSetType(Konsole__Filter__HotSpot* self, int type) {
     auto* vkonsolefilterhotspot = dynamic_cast<VirtualKonsoleFilterHotSpot*>(self);
     if (vkonsolefilterhotspot && vkonsolefilterhotspot->isVirtualKonsoleFilterHotSpot) {
         vkonsolefilterhotspot->setKonsole__Filter__HotSpot_SetType_IsBase(true);
-        vkonsolefilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        vkonsolefilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     } else {
-        ((VirtualKonsoleFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        ((VirtualKonsoleFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     }
 }
 
@@ -2440,23 +2440,23 @@ void Konsole__RegExpFilter__HotSpot_OnActions(Konsole__RegExpFilter__HotSpot* se
 }
 
 // Derived class handler implementation
-void Konsole__RegExpFilter__HotSpot_SetType(Konsole__RegExpFilter__HotSpot* self, int typeVal) {
+void Konsole__RegExpFilter__HotSpot_SetType(Konsole__RegExpFilter__HotSpot* self, int type) {
     auto* vkonsoleregexpfilterhotspot = dynamic_cast<VirtualKonsoleRegExpFilterHotSpot*>(self);
     if (vkonsoleregexpfilterhotspot && vkonsoleregexpfilterhotspot->isVirtualKonsoleRegExpFilterHotSpot) {
-        vkonsoleregexpfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        vkonsoleregexpfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     } else {
-        ((VirtualKonsoleRegExpFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        ((VirtualKonsoleRegExpFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     }
 }
 
 // Base class handler implementation
-void Konsole__RegExpFilter__HotSpot_QBaseSetType(Konsole__RegExpFilter__HotSpot* self, int typeVal) {
+void Konsole__RegExpFilter__HotSpot_QBaseSetType(Konsole__RegExpFilter__HotSpot* self, int type) {
     auto* vkonsoleregexpfilterhotspot = dynamic_cast<VirtualKonsoleRegExpFilterHotSpot*>(self);
     if (vkonsoleregexpfilterhotspot && vkonsoleregexpfilterhotspot->isVirtualKonsoleRegExpFilterHotSpot) {
         vkonsoleregexpfilterhotspot->setKonsole__RegExpFilter__HotSpot_SetType_IsBase(true);
-        vkonsoleregexpfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        vkonsoleregexpfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     } else {
-        ((VirtualKonsoleRegExpFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        ((VirtualKonsoleRegExpFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     }
 }
 
@@ -2575,23 +2575,23 @@ void Konsole__UrlFilter__HotSpot_OnActivate(Konsole__UrlFilter__HotSpot* self, i
 }
 
 // Derived class handler implementation
-void Konsole__UrlFilter__HotSpot_SetType(Konsole__UrlFilter__HotSpot* self, int typeVal) {
+void Konsole__UrlFilter__HotSpot_SetType(Konsole__UrlFilter__HotSpot* self, int type) {
     auto* vkonsoleurlfilterhotspot = dynamic_cast<VirtualKonsoleUrlFilterHotSpot*>(self);
     if (vkonsoleurlfilterhotspot && vkonsoleurlfilterhotspot->isVirtualKonsoleUrlFilterHotSpot) {
-        vkonsoleurlfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        vkonsoleurlfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     } else {
-        ((VirtualKonsoleUrlFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        ((VirtualKonsoleUrlFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     }
 }
 
 // Base class handler implementation
-void Konsole__UrlFilter__HotSpot_QBaseSetType(Konsole__UrlFilter__HotSpot* self, int typeVal) {
+void Konsole__UrlFilter__HotSpot_QBaseSetType(Konsole__UrlFilter__HotSpot* self, int type) {
     auto* vkonsoleurlfilterhotspot = dynamic_cast<VirtualKonsoleUrlFilterHotSpot*>(self);
     if (vkonsoleurlfilterhotspot && vkonsoleurlfilterhotspot->isVirtualKonsoleUrlFilterHotSpot) {
         vkonsoleurlfilterhotspot->setKonsole__UrlFilter__HotSpot_SetType_IsBase(true);
-        vkonsoleurlfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        vkonsoleurlfilterhotspot->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     } else {
-        ((VirtualKonsoleUrlFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(typeVal));
+        ((VirtualKonsoleUrlFilterHotSpot*)self)->setType(static_cast<Konsole::Filter::HotSpot::Type>(type));
     }
 }
 

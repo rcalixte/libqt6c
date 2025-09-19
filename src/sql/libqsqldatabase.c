@@ -199,8 +199,8 @@ QSqlDriver* q_sqldatabase_driver(void* self) {
     return QSqlDatabase_Driver((QSqlDatabase*)self);
 }
 
-QSqlDatabase* q_sqldatabase_add_database(const char* typeVal) {
-    return QSqlDatabase_AddDatabase(qstring(typeVal));
+QSqlDatabase* q_sqldatabase_add_database(const char* type) {
+    return QSqlDatabase_AddDatabase(qstring(type));
 }
 
 QSqlDatabase* q_sqldatabase_add_database2(void* driver) {
@@ -273,8 +273,8 @@ bool q_sqldatabase_is_driver_available(const char* name) {
     return QSqlDatabase_IsDriverAvailable(qstring(name));
 }
 
-const char** q_sqldatabase_tables1(void* self, int32_t typeVal) {
-    libqt_list _arr = QSqlDatabase_Tables1((QSqlDatabase*)self, typeVal);
+const char** q_sqldatabase_tables1(void* self, int32_t type) {
+    libqt_list _arr = QSqlDatabase_Tables1((QSqlDatabase*)self, type);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -300,8 +300,8 @@ void q_sqldatabase_set_connect_options1(void* self, const char* options) {
     QSqlDatabase_SetConnectOptions1((QSqlDatabase*)self, qstring(options));
 }
 
-QSqlDatabase* q_sqldatabase_add_database22(const char* typeVal, const char* connectionName) {
-    return QSqlDatabase_AddDatabase22(qstring(typeVal), qstring(connectionName));
+QSqlDatabase* q_sqldatabase_add_database22(const char* type, const char* connectionName) {
+    return QSqlDatabase_AddDatabase22(qstring(type), qstring(connectionName));
 }
 
 QSqlDatabase* q_sqldatabase_add_database23(void* driver, const char* connectionName) {

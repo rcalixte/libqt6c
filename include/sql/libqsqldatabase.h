@@ -244,8 +244,8 @@ QSqlDriver* q_sqldatabase_driver(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldatabase.html#addDatabase)
 ///
-/// @param typeVal const char*
-QSqlDatabase* q_sqldatabase_add_database(const char* typeVal);
+/// @param type const char*
+QSqlDatabase* q_sqldatabase_add_database(const char* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldatabase.html#addDatabase)
 ///
@@ -305,8 +305,8 @@ bool q_sqldatabase_is_driver_available(const char* name);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QSqlDatabase*
-/// @param typeVal enum QSql__TableType
-const char** q_sqldatabase_tables1(void* self, int32_t typeVal);
+/// @param type enum QSql__TableType
+const char** q_sqldatabase_tables1(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldatabase.html#exec)
 ///
@@ -322,9 +322,9 @@ void q_sqldatabase_set_connect_options1(void* self, const char* options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldatabase.html#addDatabase)
 ///
-/// @param typeVal const char*
+/// @param type const char*
 /// @param connectionName const char*
-QSqlDatabase* q_sqldatabase_add_database22(const char* typeVal, const char* connectionName);
+QSqlDatabase* q_sqldatabase_add_database22(const char* type, const char* connectionName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqldatabase.html#addDatabase)
 ///

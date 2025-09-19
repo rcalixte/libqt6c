@@ -81,8 +81,8 @@ QListWidgetItem* QListWidgetItem_new5(QListWidget* listview) {
     return new VirtualQListWidgetItem(listview);
 }
 
-QListWidgetItem* QListWidgetItem_new6(QListWidget* listview, int typeVal) {
-    return new VirtualQListWidgetItem(listview, static_cast<int>(typeVal));
+QListWidgetItem* QListWidgetItem_new6(QListWidget* listview, int type) {
+    return new VirtualQListWidgetItem(listview, static_cast<int>(type));
 }
 
 QListWidgetItem* QListWidgetItem_new7(const libqt_string text, QListWidget* listview) {
@@ -90,9 +90,9 @@ QListWidgetItem* QListWidgetItem_new7(const libqt_string text, QListWidget* list
     return new VirtualQListWidgetItem(text_QString, listview);
 }
 
-QListWidgetItem* QListWidgetItem_new8(const libqt_string text, QListWidget* listview, int typeVal) {
+QListWidgetItem* QListWidgetItem_new8(const libqt_string text, QListWidget* listview, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualQListWidgetItem(text_QString, listview, static_cast<int>(typeVal));
+    return new VirtualQListWidgetItem(text_QString, listview, static_cast<int>(type));
 }
 
 QListWidgetItem* QListWidgetItem_new9(const QIcon* icon, const libqt_string text, QListWidget* listview) {
@@ -100,9 +100,9 @@ QListWidgetItem* QListWidgetItem_new9(const QIcon* icon, const libqt_string text
     return new VirtualQListWidgetItem(*icon, text_QString, listview);
 }
 
-QListWidgetItem* QListWidgetItem_new10(const QIcon* icon, const libqt_string text, QListWidget* listview, int typeVal) {
+QListWidgetItem* QListWidgetItem_new10(const QIcon* icon, const libqt_string text, QListWidget* listview, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
-    return new VirtualQListWidgetItem(*icon, text_QString, listview, static_cast<int>(typeVal));
+    return new VirtualQListWidgetItem(*icon, text_QString, listview, static_cast<int>(type));
 }
 
 QListWidgetItem* QListWidgetItem_Clone(const QListWidgetItem* self) {

@@ -223,18 +223,18 @@ void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
 ///
 /// @param self QProxyStyle*
-/// @param typeVal enum QStyle__ContentsType
+/// @param type enum QStyle__ContentsType
 /// @param option QStyleOption*
 /// @param size QSize*
 /// @param widget QWidget*
-QSize* q_proxystyle_size_from_contents(void* self, int64_t typeVal, void* option, void* size, void* widget);
+QSize* q_proxystyle_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
-/// @param callback QSize* func(QProxyStyle* self, enum QStyle__ContentsType typeVal, QStyleOption* option, QSize* size, QWidget* widget)
+/// @param callback QSize* func(QProxyStyle* self, enum QStyle__ContentsType type, QStyleOption* option, QSize* size, QWidget* widget)
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
@@ -242,11 +242,11 @@ void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, in
 /// Base class method implementation
 ///
 /// @param self QProxyStyle*
-/// @param typeVal enum QStyle__ContentsType
+/// @param type enum QStyle__ContentsType
 /// @param option QStyleOption*
 /// @param size QSize*
 /// @param widget QWidget*
-QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t typeVal, void* option, void* size, void* widget);
+QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
 ///
@@ -1127,8 +1127,8 @@ int32_t q_proxystyle_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1138,8 +1138,8 @@ QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

@@ -42,11 +42,11 @@ pub fn build(b: *std.Build) !void {
     const allocator = arena.allocator();
 
     var cpp_sources: std.ArrayList([]const u8) = .empty;
-    var c_sources: std.StringHashMapUnmanaged([]const u8) = .empty;
     var prefix_options: std.StringHashMapUnmanaged(bool) = .empty;
 
-    const src_dir = b.build_root.path.?;
+    const src_dir = try std.fs.path.join(allocator, &.{ b.build_root.path.?, "src" });
     var dir = try std.fs.cwd().openDir(src_dir, .{ .iterate = true });
+    defer dir.close();
     var walker = try dir.walk(b.allocator);
     defer walker.deinit();
 
@@ -58,13 +58,13 @@ pub fn build(b: *std.Build) !void {
                 // conditional removals
                 if (workaroundNeeded(enable_workaround or workaround_os, basename))
                     continue;
-                if (is_windows and (std.mem.startsWith(u8, entry.path, "src/foss-") or std.mem.startsWith(u8, entry.path, "src/posix-")))
+                if (is_windows and (std.mem.startsWith(u8, entry.path, "foss-") or std.mem.startsWith(u8, entry.path, "posix-")))
                     continue;
-                if (is_macos and std.mem.startsWith(u8, entry.path, "src/foss-"))
+                if (is_macos and std.mem.startsWith(u8, entry.path, "foss-"))
                     continue;
 
                 inline for (prefixes) |prefix| {
-                    if (std.mem.startsWith(u8, entry.path, "src/" ++ prefix)) {
+                    if (std.mem.startsWith(u8, entry.path, prefix)) {
                         var is_enabled = true;
                         if ((host_os == .macos or host_os == .windows) and std.mem.eql(u8, prefix, "extras-")) {
                             is_enabled = false;
@@ -78,37 +78,10 @@ pub fn build(b: *std.Build) !void {
                     }
                 }
 
-                try cpp_sources.append(allocator, b.dupe(entry.path));
-            } else if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".c")) {
-                var c_basename = std.fs.path.basename(entry.path);
-                c_basename = c_basename[3 .. c_basename.len - 2];
-                // conditional removals
-                if (workaroundNeeded(enable_workaround or workaround_os, c_basename))
-                    continue;
-                if (is_windows and (std.mem.startsWith(u8, entry.path, "src/foss-") or std.mem.startsWith(u8, entry.path, "src/posix-")))
-                    continue;
-                if (is_macos and std.mem.startsWith(u8, entry.path, "src/foss-"))
-                    continue;
-
-                inline for (prefixes) |prefix| {
-                    if (std.mem.startsWith(u8, entry.path, "src/" ++ prefix)) {
-                        var is_enabled = true;
-                        if ((host_os == .macos or host_os == .windows) and std.mem.eql(u8, prefix, "extras-")) {
-                            is_enabled = false;
-                        }
-                        const path = std.fs.path.stem(std.fs.path.dirname(entry.path).?);
-                        var library = std.mem.splitBackwardsScalar(u8, path, '-');
-                        const name = library.first();
-                        const enabled = prefix_options.get(name) orelse is_enabled;
-                        if (!enabled)
-                            break :entry_loop;
-                    }
-                }
-
-                try c_sources.put(allocator, b.dupe(c_basename), b.dupe(entry.path));
+                try cpp_sources.append(allocator, try std.fs.path.join(allocator, &.{ "src", entry.path }));
             } else if (entry.kind == .directory) {
                 inline for (prefixes) |prefix| {
-                    if (std.mem.startsWith(u8, entry.path, "src/" ++ prefix)) {
+                    if (std.mem.startsWith(u8, entry.path, prefix)) {
                         const path = std.fs.path.stem(entry.path);
                         var library = std.mem.splitBackwardsScalar(u8, path, '-');
                         const name = library.first();
@@ -129,9 +102,6 @@ pub fn build(b: *std.Build) !void {
 
     if (cpp_sources.items.len == 0)
         @panic("No .cpp files found.\n");
-
-    if (cpp_sources.items.len != c_sources.count())
-        @panic("Number of C sources does not match number of C++ sources.\n");
 
     const os_include_path: []const []const u8 = switch (host_os) {
         .dragonfly, .freebsd, .netbsd, .openbsd => &.{
@@ -202,6 +172,10 @@ pub fn build(b: *std.Build) !void {
         "QtWebEngineWidgets",
         // Qt 6 XML
         "QtXml",
+        // Qt 6 Attica
+        "Attica",
+        "Attica/Attica",
+        "Attica/attica",
         // Qt 6 KCodecs
         "KCodecs",
         // Qt 6 KCompletion
@@ -325,8 +299,7 @@ pub fn build(b: *std.Build) !void {
         lib.root_module.addCSourceFiles(.{ .files = &.{source}, .flags = cpp_flags });
 
         // Add corresponding C wrapper
-        const c_source = c_sources.get(basename) orelse std.debug.panic("No C source found for {s}", .{basename});
-        lib.root_module.addCSourceFiles(.{ .files = &.{c_source}, .flags = c_flags });
+        lib.root_module.addCSourceFiles(.{ .files = &.{source[0 .. source.len - 2]}, .flags = c_flags });
 
         b.installArtifact(lib);
     }

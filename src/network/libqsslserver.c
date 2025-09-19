@@ -94,16 +94,16 @@ void q_sslserver_on_pre_shared_key_authentication_required(void* self, void (*ca
     QSslServer_Connect_PreSharedKeyAuthenticationRequired((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_alert_sent(void* self, void* socket, int32_t level, int32_t typeVal, const char* description) {
-    QSslServer_AlertSent((QSslServer*)self, (QSslSocket*)socket, level, typeVal, qstring(description));
+void q_sslserver_alert_sent(void* self, void* socket, int32_t level, int32_t type, const char* description) {
+    QSslServer_AlertSent((QSslServer*)self, (QSslSocket*)socket, level, type, qstring(description));
 }
 
 void q_sslserver_on_alert_sent(void* self, void (*callback)(void*, void*, int32_t, int32_t, const char*)) {
     QSslServer_Connect_AlertSent((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_alert_received(void* self, void* socket, int32_t level, int32_t typeVal, const char* description) {
-    QSslServer_AlertReceived((QSslServer*)self, (QSslSocket*)socket, level, typeVal, qstring(description));
+void q_sslserver_alert_received(void* self, void* socket, int32_t level, int32_t type, const char* description) {
+    QSslServer_AlertReceived((QSslServer*)self, (QSslSocket*)socket, level, type, qstring(description));
 }
 
 void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, int32_t, int32_t, const char*)) {
@@ -414,12 +414,12 @@ int32_t q_sslserver_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sslserver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_sslserver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sslserver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_sslserver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_sslserver_destroyed1(void* self, void* param1) {

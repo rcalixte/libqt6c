@@ -86,17 +86,17 @@ QPropertyBindingError* QPropertyBindingError_new() {
     return new QPropertyBindingError();
 }
 
-QPropertyBindingError* QPropertyBindingError_new2(int typeVal) {
-    return new QPropertyBindingError(static_cast<QPropertyBindingError::Type>(typeVal));
+QPropertyBindingError* QPropertyBindingError_new2(int type) {
+    return new QPropertyBindingError(static_cast<QPropertyBindingError::Type>(type));
 }
 
 QPropertyBindingError* QPropertyBindingError_new3(const QPropertyBindingError* other) {
     return new QPropertyBindingError(*other);
 }
 
-QPropertyBindingError* QPropertyBindingError_new4(int typeVal, const libqt_string description) {
+QPropertyBindingError* QPropertyBindingError_new4(int type, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
-    return new QPropertyBindingError(static_cast<QPropertyBindingError::Type>(typeVal), description_QString);
+    return new QPropertyBindingError(static_cast<QPropertyBindingError::Type>(type), description_QString);
 }
 
 void QPropertyBindingError_OperatorAssign(QPropertyBindingError* self, const QPropertyBindingError* other) {

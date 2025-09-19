@@ -1212,12 +1212,12 @@ const char* q_graphicsobject_tr(const char* s) {
     return _ret;
 }
 
-void q_graphicsobject_grab_gesture(void* self, int64_t typeVal) {
-    QGraphicsObject_GrabGesture((QGraphicsObject*)self, typeVal);
+void q_graphicsobject_grab_gesture(void* self, int64_t type) {
+    QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_graphicsobject_ungrab_gesture(void* self, int64_t typeVal) {
-    QGraphicsObject_UngrabGesture((QGraphicsObject*)self, typeVal);
+void q_graphicsobject_ungrab_gesture(void* self, int64_t type) {
+    QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
 void q_graphicsobject_update_micro_focus(void* self) {
@@ -1354,8 +1354,8 @@ const char* q_graphicsobject_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicsobject_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
+void q_graphicsobject_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
 const char* q_graphicsobject_object_name(void* self) {
@@ -1513,12 +1513,12 @@ int32_t q_graphicsobject_start_timer22(void* self, int interval, int32_t timerTy
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_graphicsobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_graphicsobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_graphicsobject_destroyed1(void* self, void* param1) {
@@ -11576,12 +11576,12 @@ const char* q_graphicstextitem_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_graphicstextitem_grab_gesture(void* self, int64_t typeVal) {
-    QGraphicsObject_GrabGesture((QGraphicsObject*)self, typeVal);
+void q_graphicstextitem_grab_gesture(void* self, int64_t type) {
+    QGraphicsObject_GrabGesture((QGraphicsObject*)self, type);
 }
 
-void q_graphicstextitem_ungrab_gesture(void* self, int64_t typeVal) {
-    QGraphicsObject_UngrabGesture((QGraphicsObject*)self, typeVal);
+void q_graphicstextitem_ungrab_gesture(void* self, int64_t type) {
+    QGraphicsObject_UngrabGesture((QGraphicsObject*)self, type);
 }
 
 void q_graphicstextitem_parent_changed(void* self) {
@@ -11680,8 +11680,8 @@ void q_graphicstextitem_on_height_changed(void* self, void (*callback)(void*)) {
     QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QGraphicsObject_GrabGesture2((QGraphicsObject*)self, typeVal, flags);
+void q_graphicstextitem_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QGraphicsObject_GrabGesture2((QGraphicsObject*)self, type, flags);
 }
 
 const char* q_graphicstextitem_object_name(void* self) {
@@ -11839,12 +11839,12 @@ int32_t q_graphicstextitem_start_timer22(void* self, int interval, int32_t timer
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_graphicstextitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_graphicstextitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_graphicstextitem_destroyed1(void* self, void* param1) {

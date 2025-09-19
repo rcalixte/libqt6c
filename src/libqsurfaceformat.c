@@ -94,8 +94,8 @@ int32_t q_surfaceformat_profile(void* self) {
     return QSurfaceFormat_Profile((QSurfaceFormat*)self);
 }
 
-void q_surfaceformat_set_renderable_type(void* self, int32_t typeVal) {
-    QSurfaceFormat_SetRenderableType((QSurfaceFormat*)self, typeVal);
+void q_surfaceformat_set_renderable_type(void* self, int32_t type) {
+    QSurfaceFormat_SetRenderableType((QSurfaceFormat*)self, type);
 }
 
 int32_t q_surfaceformat_renderable_type(void* self) {

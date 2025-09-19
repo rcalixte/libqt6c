@@ -30,8 +30,8 @@ QStyleOption* q_styleoption_new3(int version);
 /// q_styleoption_new4 constructs a new QStyleOption object.
 ///
 /// @param version int
-/// @param typeVal int
-QStyleOption* q_styleoption_new4(int version, int typeVal);
+/// @param type int
+QStyleOption* q_styleoption_new4(int version, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
@@ -53,7 +53,7 @@ int32_t q_styleoption_type(void* self);
 ///
 /// @param self QStyleOption*
 /// @param type int
-void q_styleoption_set_type(void* self, int _type);
+void q_styleoption_set_type(void* self, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
@@ -194,7 +194,7 @@ int32_t q_styleoptionfocusrect_type(void* self);
 ///
 /// @param self QStyleOptionFocusRect*
 /// @param type int
-void q_styleoptionfocusrect_set_type(void* self, int _type);
+void q_styleoptionfocusrect_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -400,7 +400,7 @@ int32_t q_styleoptionframe_type(void* self);
 ///
 /// @param self QStyleOptionFrame*
 /// @param type int
-void q_styleoptionframe_set_type(void* self, int _type);
+void q_styleoptionframe_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -648,7 +648,7 @@ int32_t q_styleoptiontabwidgetframe_type(void* self);
 ///
 /// @param self QStyleOptionTabWidgetFrame*
 /// @param type int
-void q_styleoptiontabwidgetframe_set_type(void* self, int _type);
+void q_styleoptiontabwidgetframe_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -852,7 +852,7 @@ int32_t q_styleoptiontabbarbase_type(void* self);
 ///
 /// @param self QStyleOptionTabBarBase*
 /// @param type int
-void q_styleoptiontabbarbase_set_type(void* self, int _type);
+void q_styleoptiontabbarbase_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -1123,7 +1123,7 @@ int32_t q_styleoptionheader_type(void* self);
 ///
 /// @param self QStyleOptionHeader*
 /// @param type int
-void q_styleoptionheader_set_type(void* self, int _type);
+void q_styleoptionheader_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -1465,7 +1465,7 @@ int32_t q_styleoptionheaderv2_type(void* self);
 ///
 /// @param self QStyleOptionHeaderV2*
 /// @param type int
-void q_styleoptionheaderv2_set_type(void* self, int _type);
+void q_styleoptionheaderv2_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -1671,7 +1671,7 @@ int32_t q_styleoptionbutton_type(void* self);
 ///
 /// @param self QStyleOptionButton*
 /// @param type int
-void q_styleoptionbutton_set_type(void* self, int _type);
+void q_styleoptionbutton_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -1984,7 +1984,7 @@ int32_t q_styleoptiontab_type(void* self);
 ///
 /// @param self QStyleOptionTab*
 /// @param type int
-void q_styleoptiontab_set_type(void* self, int _type);
+void q_styleoptiontab_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -2216,7 +2216,7 @@ int32_t q_styleoptiontoolbar_type(void* self);
 ///
 /// @param self QStyleOptionToolBar*
 /// @param type int
-void q_styleoptiontoolbar_set_type(void* self, int _type);
+void q_styleoptiontoolbar_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -2466,7 +2466,7 @@ int32_t q_styleoptionprogressbar_type(void* self);
 ///
 /// @param self QStyleOptionProgressBar*
 /// @param type int
-void q_styleoptionprogressbar_set_type(void* self, int _type);
+void q_styleoptionprogressbar_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -2740,7 +2740,7 @@ int32_t q_styleoptionmenuitem_type(void* self);
 ///
 /// @param self QStyleOptionMenuItem*
 /// @param type int
-void q_styleoptionmenuitem_set_type(void* self, int _type);
+void q_styleoptionmenuitem_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -2955,7 +2955,7 @@ int32_t q_styleoptiondockwidget_type(void* self);
 ///
 /// @param self QStyleOptionDockWidget*
 /// @param type int
-void q_styleoptiondockwidget_set_type(void* self, int _type);
+void q_styleoptiondockwidget_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -3305,7 +3305,7 @@ int32_t q_styleoptionviewitem_type(void* self);
 ///
 /// @param self QStyleOptionViewItem*
 /// @param type int
-void q_styleoptionviewitem_set_type(void* self, int _type);
+void q_styleoptionviewitem_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -3513,7 +3513,7 @@ int32_t q_styleoptiontoolbox_type(void* self);
 ///
 /// @param self QStyleOptionToolBox*
 /// @param type int
-void q_styleoptiontoolbox_set_type(void* self, int _type);
+void q_styleoptiontoolbox_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -3695,7 +3695,7 @@ int32_t q_styleoptionrubberband_type(void* self);
 ///
 /// @param self QStyleOptionRubberBand*
 /// @param type int
-void q_styleoptionrubberband_set_type(void* self, int _type);
+void q_styleoptionrubberband_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -3833,8 +3833,8 @@ QStyleOptionComplex* q_styleoptioncomplex_new3(int version);
 /// q_styleoptioncomplex_new4 constructs a new QStyleOptionComplex object.
 ///
 /// @param version int
-/// @param typeVal int
-QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int typeVal);
+/// @param type int
+QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
@@ -3890,7 +3890,7 @@ int32_t q_styleoptioncomplex_type(void* self);
 ///
 /// @param self QStyleOptionComplex*
 /// @param type int
-void q_styleoptioncomplex_set_type(void* self, int _type);
+void q_styleoptioncomplex_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -4231,7 +4231,7 @@ int32_t q_styleoptionslider_type(void* self);
 ///
 /// @param self QStyleOptionSlider*
 /// @param type int
-void q_styleoptionslider_set_type(void* self, int _type);
+void q_styleoptionslider_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -4460,7 +4460,7 @@ int32_t q_styleoptionspinbox_type(void* self);
 ///
 /// @param self QStyleOptionSpinBox*
 /// @param type int
-void q_styleoptionspinbox_set_type(void* self, int _type);
+void q_styleoptionspinbox_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -4748,7 +4748,7 @@ int32_t q_styleoptiontoolbutton_type(void* self);
 ///
 /// @param self QStyleOptionToolButton*
 /// @param type int
-void q_styleoptiontoolbutton_set_type(void* self, int _type);
+void q_styleoptiontoolbutton_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -5021,7 +5021,7 @@ int32_t q_styleoptioncombobox_type(void* self);
 ///
 /// @param self QStyleOptionComboBox*
 /// @param type int
-void q_styleoptioncombobox_set_type(void* self, int _type);
+void q_styleoptioncombobox_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -5261,7 +5261,7 @@ int32_t q_styleoptiontitlebar_type(void* self);
 ///
 /// @param self QStyleOptionTitleBar*
 /// @param type int
-void q_styleoptiontitlebar_set_type(void* self, int _type);
+void q_styleoptiontitlebar_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -5525,7 +5525,7 @@ int32_t q_styleoptiongroupbox_type(void* self);
 ///
 /// @param self QStyleOptionGroupBox*
 /// @param type int
-void q_styleoptiongroupbox_set_type(void* self, int _type);
+void q_styleoptiongroupbox_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -5730,7 +5730,7 @@ int32_t q_styleoptionsizegrip_type(void* self);
 ///
 /// @param self QStyleOptionSizeGrip*
 /// @param type int
-void q_styleoptionsizegrip_set_type(void* self, int _type);
+void q_styleoptionsizegrip_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -5904,7 +5904,7 @@ int32_t q_styleoptiongraphicsitem_type(void* self);
 ///
 /// @param self QStyleOptionGraphicsItem*
 /// @param type int
-void q_styleoptiongraphicsitem_set_type(void* self, int _type);
+void q_styleoptiongraphicsitem_set_type(void* self, int type);
 
 /// Inherited from QStyleOption
 ///
@@ -6042,8 +6042,8 @@ QStyleHintReturn* q_stylehintreturn_new3(int version);
 /// q_stylehintreturn_new4 constructs a new QStyleHintReturn object.
 ///
 /// @param version int
-/// @param typeVal int
-QStyleHintReturn* q_stylehintreturn_new4(int version, int typeVal);
+/// @param type int
+QStyleHintReturn* q_stylehintreturn_new4(int version, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturn.html#version-var)
 ///
@@ -6065,7 +6065,7 @@ int32_t q_stylehintreturn_type(void* self);
 ///
 /// @param self QStyleHintReturn*
 /// @param type int
-void q_stylehintreturn_set_type(void* self, int _type);
+void q_stylehintreturn_set_type(void* self, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturn.html#operator-eq)
 ///
@@ -6136,7 +6136,7 @@ int32_t q_stylehintreturnmask_type(void* self);
 ///
 /// @param self QStyleHintReturnMask*
 /// @param type int
-void q_stylehintreturnmask_set_type(void* self, int _type);
+void q_stylehintreturnmask_set_type(void* self, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnmask.html#dtor.QStyleHintReturnMask)
 ///
@@ -6201,7 +6201,7 @@ int32_t q_stylehintreturnvariant_type(void* self);
 ///
 /// @param self QStyleHintReturnVariant*
 /// @param type int
-void q_stylehintreturnvariant_set_type(void* self, int _type);
+void q_stylehintreturnvariant_set_type(void* self, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnvariant.html#dtor.QStyleHintReturnVariant)
 ///

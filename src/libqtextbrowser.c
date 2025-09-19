@@ -98,16 +98,16 @@ void q_textbrowser_set_search_paths(void* self, const char* paths[]) {
     free(paths_qstr);
 }
 
-QVariant* q_textbrowser_load_resource(void* self, int typeVal, void* name) {
-    return QTextBrowser_LoadResource((QTextBrowser*)self, typeVal, (QUrl*)name);
+QVariant* q_textbrowser_load_resource(void* self, int type, void* name) {
+    return QTextBrowser_LoadResource((QTextBrowser*)self, type, (QUrl*)name);
 }
 
 void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*)) {
     QTextBrowser_OnLoadResource((QTextBrowser*)self, (intptr_t)callback);
 }
 
-QVariant* q_textbrowser_qbase_load_resource(void* self, int typeVal, void* name) {
-    return QTextBrowser_QBaseLoadResource((QTextBrowser*)self, typeVal, (QUrl*)name);
+QVariant* q_textbrowser_qbase_load_resource(void* self, int type, void* name) {
+    return QTextBrowser_QBaseLoadResource((QTextBrowser*)self, type, (QUrl*)name);
 }
 
 bool q_textbrowser_is_backward_available(void* self) {
@@ -353,16 +353,16 @@ void q_textbrowser_qbase_paint_event(void* self, void* e) {
     QTextBrowser_QBasePaintEvent((QTextBrowser*)self, (QPaintEvent*)e);
 }
 
-void q_textbrowser_do_set_source(void* self, void* name, int32_t typeVal) {
-    QTextBrowser_DoSetSource((QTextBrowser*)self, (QUrl*)name, typeVal);
+void q_textbrowser_do_set_source(void* self, void* name, int32_t type) {
+    QTextBrowser_DoSetSource((QTextBrowser*)self, (QUrl*)name, type);
 }
 
 void q_textbrowser_on_do_set_source(void* self, void (*callback)(void*, void*, int32_t)) {
     QTextBrowser_OnDoSetSource((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_do_set_source(void* self, void* name, int32_t typeVal) {
-    QTextBrowser_QBaseDoSetSource((QTextBrowser*)self, (QUrl*)name, typeVal);
+void q_textbrowser_qbase_do_set_source(void* self, void* name, int32_t type) {
+    QTextBrowser_QBaseDoSetSource((QTextBrowser*)self, (QUrl*)name, type);
 }
 
 const char* q_textbrowser_tr2(const char* s, const char* c) {
@@ -379,8 +379,8 @@ const char* q_textbrowser_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_textbrowser_set_source2(void* self, void* name, int32_t typeVal) {
-    QTextBrowser_SetSource2((QTextBrowser*)self, (QUrl*)name, typeVal);
+void q_textbrowser_set_source2(void* self, void* name, int32_t type) {
+    QTextBrowser_SetSource2((QTextBrowser*)self, (QUrl*)name, type);
 }
 
 void q_textbrowser_set_document(void* self, void* document) {
@@ -1341,12 +1341,12 @@ void q_textbrowser_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_textbrowser_grab_gesture(void* self, int64_t typeVal) {
-    QWidget_GrabGesture((QWidget*)self, typeVal);
+void q_textbrowser_grab_gesture(void* self, int64_t type) {
+    QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_textbrowser_ungrab_gesture(void* self, int64_t typeVal) {
-    QWidget_UngrabGesture((QWidget*)self, typeVal);
+void q_textbrowser_ungrab_gesture(void* self, int64_t type) {
+    QWidget_UngrabGesture((QWidget*)self, type);
 }
 
 void q_textbrowser_set_window_title(void* self, const char* windowTitle) {
@@ -1903,8 +1903,8 @@ QWidget* q_textbrowser_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_textbrowser_set_window_flags(void* self, int64_t typeVal) {
-    QWidget_SetWindowFlags((QWidget*)self, typeVal);
+void q_textbrowser_set_window_flags(void* self, int64_t type) {
+    QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
 int64_t q_textbrowser_window_flags(void* self) {
@@ -1915,8 +1915,8 @@ void q_textbrowser_set_window_flag(void* self, int64_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_textbrowser_override_window_flags(void* self, int64_t typeVal) {
-    QWidget_OverrideWindowFlags((QWidget*)self, typeVal);
+void q_textbrowser_override_window_flags(void* self, int64_t type) {
+    QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
 int64_t q_textbrowser_window_type(void* self) {
@@ -2047,8 +2047,8 @@ QPixmap* q_textbrowser_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_textbrowser_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
+void q_textbrowser_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
 int32_t q_textbrowser_grab_shortcut2(void* self, void* key, int32_t context) {
@@ -2230,12 +2230,12 @@ int32_t q_textbrowser_start_timer22(void* self, int interval, int32_t timerType)
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_textbrowser_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_textbrowser_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_textbrowser_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_textbrowser_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_textbrowser_destroyed1(void* self, void* param1) {

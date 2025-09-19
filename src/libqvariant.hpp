@@ -46,7 +46,7 @@ typedef struct QVariant QVariant;
 #endif
 
 QVariant* QVariant_new();
-QVariant* QVariant_new2(QMetaType* typeVal);
+QVariant* QVariant_new2(QMetaType* type);
 QVariant* QVariant_new3(const QVariant* other);
 QVariant* QVariant_new4(int i);
 QVariant* QVariant_new5(unsigned int ui);
@@ -73,8 +73,8 @@ QVariant* QVariant_new25(const libqt_list /* of libqt_string */ stringlist);
 QVariant* QVariant_new26(const QUrl* url);
 QVariant* QVariant_new27(QSize* size);
 QVariant* QVariant_new28(QPoint* pt);
-QVariant* QVariant_new29(int typeVal);
-QVariant* QVariant_new30(QMetaType* typeVal, const void* copyVal);
+QVariant* QVariant_new29(int type);
+QVariant* QVariant_new30(QMetaType* type, const void* copyVal);
 void QVariant_OperatorAssign(QVariant* self, const QVariant* other);
 void QVariant_Swap(QVariant* self, QVariant* other);
 int QVariant_UserType(const QVariant* self);
@@ -82,7 +82,7 @@ int QVariant_TypeId(const QVariant* self);
 const char* QVariant_TypeName(const QVariant* self);
 QMetaType* QVariant_MetaType(const QVariant* self);
 bool QVariant_CanConvert(const QVariant* self, QMetaType* targetType);
-bool QVariant_Convert(QVariant* self, QMetaType* typeVal);
+bool QVariant_Convert(QVariant* self, QMetaType* type);
 bool QVariant_CanView(const QVariant* self, QMetaType* targetType);
 bool QVariant_CanConvert2(const QVariant* self, int targetTypeId);
 bool QVariant_Convert2(QVariant* self, int targetTypeId);
@@ -138,7 +138,7 @@ void* QVariant_Data(QVariant* self);
 const void* QVariant_ConstData(const QVariant* self);
 const void* QVariant_Data2(const QVariant* self);
 void QVariant_SetValue(QVariant* self, const QVariant* avalue);
-QVariant* QVariant_FromMetaType(QMetaType* typeVal);
+QVariant* QVariant_FromMetaType(QMetaType* type);
 QPartialOrdering* QVariant_Compare(const QVariant* lhs, const QVariant* rhs);
 int QVariant_ToInt1(const QVariant* self, bool* ok);
 unsigned int QVariant_ToUInt1(const QVariant* self, bool* ok);
@@ -147,7 +147,7 @@ unsigned long long QVariant_ToULongLong1(const QVariant* self, bool* ok);
 double QVariant_ToDouble1(const QVariant* self, bool* ok);
 float QVariant_ToFloat1(const QVariant* self, bool* ok);
 double QVariant_ToReal1(const QVariant* self, bool* ok);
-QVariant* QVariant_FromMetaType2(QMetaType* typeVal, const void* copyVal);
+QVariant* QVariant_FromMetaType2(QMetaType* type, const void* copyVal);
 void QVariant_Delete(QVariant* self);
 
 #ifdef __cplusplus

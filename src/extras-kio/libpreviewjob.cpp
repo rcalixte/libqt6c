@@ -1,6 +1,6 @@
 #include <KCompositeJob>
 #include <KFileItem>
-#define WORKAROUND_INNER_CLASS_DEFINITION_KIO__Job
+#include <KIO/Job>
 #define WORKAROUND_INNER_CLASS_DEFINITION_KIO__PreviewJob
 #include <KJob>
 #include <KPluginMetaData>
@@ -65,8 +65,8 @@ libqt_string KIO__PreviewJob_Tr(const char* s) {
     return _str;
 }
 
-void KIO__PreviewJob_SetScaleType(KIO__PreviewJob* self, int typeVal) {
-    self->setScaleType(static_cast<KIO::PreviewJob::ScaleType>(typeVal));
+void KIO__PreviewJob_SetScaleType(KIO__PreviewJob* self, int type) {
+    self->setScaleType(static_cast<KIO::PreviewJob::ScaleType>(type));
 }
 
 int KIO__PreviewJob_ScaleType(const KIO__PreviewJob* self) {

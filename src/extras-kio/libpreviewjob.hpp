@@ -14,9 +14,7 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_KIO__Job)
 typedef KIO::Job KIO__Job;
-#endif
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_KIO__PreviewJob)
 typedef KIO::PreviewJob KIO__PreviewJob;
 #endif
@@ -46,7 +44,7 @@ QMetaObject* KIO__PreviewJob_MetaObject(const KIO__PreviewJob* self);
 void* KIO__PreviewJob_Metacast(KIO__PreviewJob* self, const char* param1);
 int KIO__PreviewJob_Metacall(KIO__PreviewJob* self, int param1, int param2, void** param3);
 libqt_string KIO__PreviewJob_Tr(const char* s);
-void KIO__PreviewJob_SetScaleType(KIO__PreviewJob* self, int typeVal);
+void KIO__PreviewJob_SetScaleType(KIO__PreviewJob* self, int type);
 int KIO__PreviewJob_ScaleType(const KIO__PreviewJob* self);
 void KIO__PreviewJob_RemoveItem(KIO__PreviewJob* self, const QUrl* url);
 void KIO__PreviewJob_SetIgnoreMaximumSize(KIO__PreviewJob* self);

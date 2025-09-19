@@ -59,7 +59,7 @@ int QErrorMessage_Metacall(QErrorMessage* self, int param1, int param2, void** p
 libqt_string QErrorMessage_Tr(const char* s);
 QErrorMessage* QErrorMessage_QtHandler();
 void QErrorMessage_ShowMessage(QErrorMessage* self, const libqt_string message);
-void QErrorMessage_ShowMessage2(QErrorMessage* self, const libqt_string message, const libqt_string typeVal);
+void QErrorMessage_ShowMessage2(QErrorMessage* self, const libqt_string message, const libqt_string type);
 void QErrorMessage_Done(QErrorMessage* self, int param1);
 void QErrorMessage_ChangeEvent(QErrorMessage* self, QEvent* e);
 libqt_string QErrorMessage_Tr2(const char* s, const char* c);

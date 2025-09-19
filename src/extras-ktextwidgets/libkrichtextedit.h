@@ -2337,16 +2337,16 @@ void k_richtextedit_set_graphics_effect(void* self, void* effect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal enum Qt__GestureType
-void k_richtextedit_grab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void k_richtextedit_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal enum Qt__GestureType
-void k_richtextedit_ungrab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void k_richtextedit_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -3379,8 +3379,8 @@ QWidget* k_richtextedit_parent_widget(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal flag of enum Qt__WindowType
-void k_richtextedit_set_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void k_richtextedit_set_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -3404,8 +3404,8 @@ void k_richtextedit_set_window_flag(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal flag of enum Qt__WindowType
-void k_richtextedit_override_window_flags(void* self, int64_t typeVal);
+/// @param type flag of enum Qt__WindowType
+void k_richtextedit_override_window_flags(void* self, int64_t type);
 
 /// Inherited from QWidget
 ///
@@ -3677,9 +3677,9 @@ QPixmap* k_richtextedit_grab1(void* self, void* rectangle);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal enum Qt__GestureType
+/// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void k_richtextedit_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
+void k_richtextedit_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QWidget
 ///
@@ -4012,8 +4012,8 @@ int32_t k_richtextedit_start_timer22(void* self, int interval, int32_t timerType
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_richtextedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_richtextedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4023,8 +4023,8 @@ QMetaObject__Connection* k_richtextedit_connect5(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_richtextedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_richtextedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4460,9 +4460,9 @@ void k_richtextedit_on_context_menu_event(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* k_richtextedit_load_resource(void* self, int typeVal, void* name);
+QVariant* k_richtextedit_load_resource(void* self, int type, void* name);
 
 /// Inherited from QTextEdit
 ///
@@ -4471,9 +4471,9 @@ QVariant* k_richtextedit_load_resource(void* self, int typeVal, void* name);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KRichTextEdit*
-/// @param typeVal int
+/// @param type int
 /// @param name QUrl*
-QVariant* k_richtextedit_qbase_load_resource(void* self, int typeVal, void* name);
+QVariant* k_richtextedit_qbase_load_resource(void* self, int type, void* name);
 
 /// Inherited from QTextEdit
 ///
@@ -4482,7 +4482,7 @@ QVariant* k_richtextedit_qbase_load_resource(void* self, int typeVal, void* name
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KRichTextEdit*
-/// @param callback QVariant* func(KRichTextEdit* self, int typeVal, QUrl* name)
+/// @param callback QVariant* func(KRichTextEdit* self, int type, QUrl* name)
 void k_richtextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QTextEdit

@@ -17,8 +17,8 @@
 #include "libqgraphicssceneevent.hpp"
 #include "libqgraphicssceneevent.hxx"
 
-QGraphicsSceneEvent* QGraphicsSceneEvent_new(int typeVal) {
-    return new VirtualQGraphicsSceneEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneEvent* QGraphicsSceneEvent_new(int type) {
+    return new VirtualQGraphicsSceneEvent(static_cast<QEvent::Type>(type));
 }
 
 QWidget* QGraphicsSceneEvent_Widget(const QGraphicsSceneEvent* self) {
@@ -103,8 +103,8 @@ QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new() {
     return new VirtualQGraphicsSceneMouseEvent();
 }
 
-QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new2(int typeVal) {
-    return new VirtualQGraphicsSceneMouseEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new2(int type) {
+    return new VirtualQGraphicsSceneMouseEvent(static_cast<QEvent::Type>(type));
 }
 
 QPointF* QGraphicsSceneMouseEvent_Pos(const QGraphicsSceneMouseEvent* self) {
@@ -285,8 +285,8 @@ QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new() {
     return new VirtualQGraphicsSceneWheelEvent();
 }
 
-QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new2(int typeVal) {
-    return new VirtualQGraphicsSceneWheelEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new2(int type) {
+    return new VirtualQGraphicsSceneWheelEvent(static_cast<QEvent::Type>(type));
 }
 
 QPointF* QGraphicsSceneWheelEvent_Pos(const QGraphicsSceneWheelEvent* self) {
@@ -435,8 +435,8 @@ QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new() {
     return new VirtualQGraphicsSceneContextMenuEvent();
 }
 
-QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new2(int typeVal) {
-    return new VirtualQGraphicsSceneContextMenuEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new2(int type) {
+    return new VirtualQGraphicsSceneContextMenuEvent(static_cast<QEvent::Type>(type));
 }
 
 QPointF* QGraphicsSceneContextMenuEvent_Pos(const QGraphicsSceneContextMenuEvent* self) {
@@ -545,8 +545,8 @@ QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new() {
     return new VirtualQGraphicsSceneHoverEvent();
 }
 
-QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new2(int typeVal) {
-    return new VirtualQGraphicsSceneHoverEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new2(int type) {
+    return new VirtualQGraphicsSceneHoverEvent(static_cast<QEvent::Type>(type));
 }
 
 QPointF* QGraphicsSceneHoverEvent_Pos(const QGraphicsSceneHoverEvent* self) {
@@ -671,8 +671,8 @@ QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new() {
     return new VirtualQGraphicsSceneHelpEvent();
 }
 
-QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new2(int typeVal) {
-    return new VirtualQGraphicsSceneHelpEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new2(int type) {
+    return new VirtualQGraphicsSceneHelpEvent(static_cast<QEvent::Type>(type));
 }
 
 QPointF* QGraphicsSceneHelpEvent_ScenePos(const QGraphicsSceneHelpEvent* self) {
@@ -757,8 +757,8 @@ QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new() {
     return new VirtualQGraphicsSceneDragDropEvent();
 }
 
-QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new2(int typeVal) {
-    return new VirtualQGraphicsSceneDragDropEvent(static_cast<QEvent::Type>(typeVal));
+QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new2(int type) {
+    return new VirtualQGraphicsSceneDragDropEvent(static_cast<QEvent::Type>(type));
 }
 
 QPointF* QGraphicsSceneDragDropEvent_Pos(const QGraphicsSceneDragDropEvent* self) {

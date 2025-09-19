@@ -207,7 +207,7 @@ void QsciScintilla_SetMarginOptions(QsciScintilla* self, int options);
 void QsciScintilla_SetMarginText(QsciScintilla* self, int line, const libqt_string text, int style);
 void QsciScintilla_SetMarginText2(QsciScintilla* self, int line, const libqt_string text, const QsciStyle* style);
 void QsciScintilla_SetMarginText3(QsciScintilla* self, int line, const QsciStyledText* text);
-void QsciScintilla_SetMarginType(QsciScintilla* self, int margin, int typeVal);
+void QsciScintilla_SetMarginType(QsciScintilla* self, int margin, int type);
 void QsciScintilla_ClearMarginText(QsciScintilla* self);
 void QsciScintilla_SetMargins(QsciScintilla* self, int margins);
 void QsciScintilla_SetMarkerBackgroundColor(QsciScintilla* self, const QColor* col);
