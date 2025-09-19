@@ -251,9 +251,9 @@ QSqlDriver* QSqlDatabase_Driver(const QSqlDatabase* self) {
     return self->driver();
 }
 
-QSqlDatabase* QSqlDatabase_AddDatabase(const libqt_string typeVal) {
-    QString typeVal_QString = QString::fromUtf8(typeVal.data, typeVal.len);
-    return new QSqlDatabase(QSqlDatabase::addDatabase(typeVal_QString));
+QSqlDatabase* QSqlDatabase_AddDatabase(const libqt_string type) {
+    QString type_QString = QString::fromUtf8(type.data, type.len);
+    return new QSqlDatabase(QSqlDatabase::addDatabase(type_QString));
 }
 
 QSqlDatabase* QSqlDatabase_AddDatabase2(QSqlDriver* driver) {
@@ -336,8 +336,8 @@ bool QSqlDatabase_IsDriverAvailable(const libqt_string name) {
     return QSqlDatabase::isDriverAvailable(name_QString);
 }
 
-libqt_list /* of libqt_string */ QSqlDatabase_Tables1(const QSqlDatabase* self, int typeVal) {
-    QList<QString> _ret = self->tables(static_cast<QSql::TableType>(typeVal));
+libqt_list /* of libqt_string */ QSqlDatabase_Tables1(const QSqlDatabase* self, int type) {
+    QList<QString> _ret = self->tables(static_cast<QSql::TableType>(type));
     // Convert QList<> from C++ memory to manually-managed C memory
     libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -367,10 +367,10 @@ void QSqlDatabase_SetConnectOptions1(QSqlDatabase* self, const libqt_string opti
     self->setConnectOptions(options_QString);
 }
 
-QSqlDatabase* QSqlDatabase_AddDatabase22(const libqt_string typeVal, const libqt_string connectionName) {
-    QString typeVal_QString = QString::fromUtf8(typeVal.data, typeVal.len);
+QSqlDatabase* QSqlDatabase_AddDatabase22(const libqt_string type, const libqt_string connectionName) {
+    QString type_QString = QString::fromUtf8(type.data, type.len);
     QString connectionName_QString = QString::fromUtf8(connectionName.data, connectionName.len);
-    return new QSqlDatabase(QSqlDatabase::addDatabase(typeVal_QString, connectionName_QString));
+    return new QSqlDatabase(QSqlDatabase::addDatabase(type_QString, connectionName_QString));
 }
 
 QSqlDatabase* QSqlDatabase_AddDatabase23(QSqlDriver* driver, const libqt_string connectionName) {

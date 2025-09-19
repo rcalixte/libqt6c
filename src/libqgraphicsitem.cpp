@@ -1864,12 +1864,12 @@ libqt_string QGraphicsObject_Tr(const char* s) {
     return _str;
 }
 
-void QGraphicsObject_GrabGesture(QGraphicsObject* self, int typeVal) {
-    self->grabGesture(static_cast<Qt::GestureType>(typeVal));
+void QGraphicsObject_GrabGesture(QGraphicsObject* self, int type) {
+    self->grabGesture(static_cast<Qt::GestureType>(type));
 }
 
-void QGraphicsObject_UngrabGesture(QGraphicsObject* self, int typeVal) {
-    self->ungrabGesture(static_cast<Qt::GestureType>(typeVal));
+void QGraphicsObject_UngrabGesture(QGraphicsObject* self, int type) {
+    self->ungrabGesture(static_cast<Qt::GestureType>(type));
 }
 
 void QGraphicsObject_ParentChanged(QGraphicsObject* self) {
@@ -2036,8 +2036,8 @@ libqt_string QGraphicsObject_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QGraphicsObject_GrabGesture2(QGraphicsObject* self, int typeVal, int flags) {
-    self->grabGesture(static_cast<Qt::GestureType>(typeVal), static_cast<Qt::GestureFlags>(flags));
+void QGraphicsObject_GrabGesture2(QGraphicsObject* self, int type, int flags) {
+    self->grabGesture(static_cast<Qt::GestureType>(type), static_cast<Qt::GestureFlags>(flags));
 }
 
 // Base class handler implementation

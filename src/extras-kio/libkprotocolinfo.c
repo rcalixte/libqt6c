@@ -188,8 +188,8 @@ int32_t k_protocolinfo__extrafield_type(void* self) {
     return KProtocolInfo__ExtraField_Type((KProtocolInfo__ExtraField*)self);
 }
 
-void k_protocolinfo__extrafield_set_type(void* self, int32_t _type) {
-    KProtocolInfo__ExtraField_SetType((KProtocolInfo__ExtraField*)self, _type);
+void k_protocolinfo__extrafield_set_type(void* self, int32_t type) {
+    KProtocolInfo__ExtraField_SetType((KProtocolInfo__ExtraField*)self, type);
 }
 
 void k_protocolinfo__extrafield_operator_assign(void* self, void* param1) {

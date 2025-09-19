@@ -106,8 +106,8 @@ int QToolButton_ArrowType(const QToolButton* self) {
     return static_cast<int>(self->arrowType());
 }
 
-void QToolButton_SetArrowType(QToolButton* self, int typeVal) {
-    self->setArrowType(static_cast<Qt::ArrowType>(typeVal));
+void QToolButton_SetArrowType(QToolButton* self, int type) {
+    self->setArrowType(static_cast<Qt::ArrowType>(type));
 }
 
 void QToolButton_SetMenu(QToolButton* self, QMenu* menu) {

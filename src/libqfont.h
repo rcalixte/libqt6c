@@ -313,9 +313,9 @@ int32_t q_font_letter_spacing_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setLetterSpacing)
 ///
 /// @param self QFont*
-/// @param typeVal enum QFont__SpacingType
+/// @param type enum QFont__SpacingType
 /// @param spacing double
-void q_font_set_letter_spacing(void* self, int32_t typeVal, double spacing);
+void q_font_set_letter_spacing(void* self, int32_t type, double spacing);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#wordSpacing)
 ///

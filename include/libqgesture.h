@@ -400,8 +400,8 @@ int32_t q_gesture_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -411,8 +411,8 @@ QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* re
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1218,8 +1218,8 @@ int32_t q_pangesture_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1229,8 +1229,8 @@ QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2123,8 +2123,8 @@ int32_t q_pinchgesture_start_timer22(void* self, int interval, int32_t timerType
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2134,8 +2134,8 @@ QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2928,8 +2928,8 @@ int32_t q_swipegesture_start_timer22(void* self, int interval, int32_t timerType
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2939,8 +2939,8 @@ QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3719,8 +3719,8 @@ int32_t q_tapgesture_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3730,8 +3730,8 @@ QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4519,8 +4519,8 @@ int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int32_t time
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4530,8 +4530,8 @@ QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4914,8 +4914,8 @@ libqt_list /* of QGesture* */ q_gestureevent_gestures(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgestureevent.html#gesture)
 ///
 /// @param self QGestureEvent*
-/// @param typeVal enum Qt__GestureType
-QGesture* q_gestureevent_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+QGesture* q_gestureevent_gesture(void* self, int64_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgestureevent.html#activeGestures)
 ///

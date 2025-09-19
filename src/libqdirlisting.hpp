@@ -79,7 +79,7 @@ QDateTime* QDirListing__DirEntry_BirthTime(const QDirListing__DirEntry* self, co
 QDateTime* QDirListing__DirEntry_MetadataChangeTime(const QDirListing__DirEntry* self, const QTimeZone* tz);
 QDateTime* QDirListing__DirEntry_LastModified(const QDirListing__DirEntry* self, const QTimeZone* tz);
 QDateTime* QDirListing__DirEntry_LastRead(const QDirListing__DirEntry* self, const QTimeZone* tz);
-QDateTime* QDirListing__DirEntry_FileTime(const QDirListing__DirEntry* self, int typeVal, const QTimeZone* tz);
+QDateTime* QDirListing__DirEntry_FileTime(const QDirListing__DirEntry* self, int type, const QTimeZone* tz);
 void QDirListing__DirEntry_OperatorAssign(QDirListing__DirEntry* self, const QDirListing__DirEntry* param1);
 void QDirListing__DirEntry_Delete(QDirListing__DirEntry* self);
 

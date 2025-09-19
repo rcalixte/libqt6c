@@ -129,7 +129,7 @@ void QWebEngineView_PrintRequestedByFrame(QWebEngineView* self, QWebEngineFrame*
 void QWebEngineView_Connect_PrintRequestedByFrame(QWebEngineView* self, intptr_t slot);
 void QWebEngineView_PrintFinished(QWebEngineView* self, bool success);
 void QWebEngineView_Connect_PrintFinished(QWebEngineView* self, intptr_t slot);
-QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int typeVal);
+QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int type);
 void QWebEngineView_ContextMenuEvent(QWebEngineView* self, QContextMenuEvent* param1);
 bool QWebEngineView_Event(QWebEngineView* self, QEvent* param1);
 void QWebEngineView_ShowEvent(QWebEngineView* self, QShowEvent* param1);
@@ -152,7 +152,7 @@ int QWebEngineView_QBaseMetacall(QWebEngineView* self, int param1, int param2, v
 void QWebEngineView_OnSizeHint(const QWebEngineView* self, intptr_t slot);
 QSize* QWebEngineView_QBaseSizeHint(const QWebEngineView* self);
 void QWebEngineView_OnCreateWindow(QWebEngineView* self, intptr_t slot);
-QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int typeVal);
+QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int type);
 void QWebEngineView_OnContextMenuEvent(QWebEngineView* self, intptr_t slot);
 void QWebEngineView_QBaseContextMenuEvent(QWebEngineView* self, QContextMenuEvent* param1);
 void QWebEngineView_OnEvent(QWebEngineView* self, intptr_t slot);

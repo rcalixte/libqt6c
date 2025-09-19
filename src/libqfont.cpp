@@ -285,8 +285,8 @@ int QFont_LetterSpacingType(const QFont* self) {
     return static_cast<int>(self->letterSpacingType());
 }
 
-void QFont_SetLetterSpacing(QFont* self, int typeVal, double spacing) {
-    self->setLetterSpacing(static_cast<QFont::SpacingType>(typeVal), static_cast<qreal>(spacing));
+void QFont_SetLetterSpacing(QFont* self, int type, double spacing) {
+    self->setLetterSpacing(static_cast<QFont::SpacingType>(type), static_cast<qreal>(spacing));
 }
 
 double QFont_WordSpacing(const QFont* self) {

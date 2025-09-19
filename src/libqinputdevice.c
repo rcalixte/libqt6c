@@ -10,20 +10,20 @@ QInputDevice* q_inputdevice_new() {
     return QInputDevice_new();
 }
 
-QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int32_t typeVal) {
-    return QInputDevice_new2(qstring(name), systemId, typeVal);
+QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int32_t type) {
+    return QInputDevice_new2(qstring(name), systemId, type);
 }
 
 QInputDevice* q_inputdevice_new3(void* parent) {
     return QInputDevice_new3((QObject*)parent);
 }
 
-QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int32_t typeVal, const char* seatName) {
-    return QInputDevice_new4(qstring(name), systemId, typeVal, qstring(seatName));
+QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int32_t type, const char* seatName) {
+    return QInputDevice_new4(qstring(name), systemId, type, qstring(seatName));
 }
 
-QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t typeVal, const char* seatName, void* parent) {
-    return QInputDevice_new5(qstring(name), systemId, typeVal, qstring(seatName), (QObject*)parent);
+QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t type, const char* seatName, void* parent) {
+    return QInputDevice_new5(qstring(name), systemId, type, qstring(seatName), (QObject*)parent);
 }
 
 const QMetaObject* q_inputdevice_meta_object(void* self) {
@@ -300,12 +300,12 @@ int32_t q_inputdevice_start_timer22(void* self, int interval, int32_t timerType)
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_inputdevice_destroyed1(void* self, void* param1) {

@@ -35,8 +35,8 @@ libqt_list /* of Solid__Device* */ Solid__Device_AllDevices() {
     return _out;
 }
 
-libqt_list /* of Solid__Device* */ Solid__Device_ListFromType(const int* typeVal) {
-    QList<Solid::Device> _ret = Solid::Device::listFromType((const Solid::DeviceInterface::Type&)(*typeVal));
+libqt_list /* of Solid__Device* */ Solid__Device_ListFromType(const int* type) {
+    QList<Solid::Device> _ret = Solid::Device::listFromType((const Solid::DeviceInterface::Type&)(*type));
     // Convert QList<> from C++ memory to manually-managed C memory
     Solid__Device** _arr = static_cast<Solid__Device**>(malloc(sizeof(Solid__Device*) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -197,21 +197,21 @@ libqt_string Solid__Device_Description(const Solid__Device* self) {
     return _str;
 }
 
-bool Solid__Device_IsDeviceInterface(const Solid__Device* self, const int* typeVal) {
-    return self->isDeviceInterface((const Solid::DeviceInterface::Type&)(*typeVal));
+bool Solid__Device_IsDeviceInterface(const Solid__Device* self, const int* type) {
+    return self->isDeviceInterface((const Solid::DeviceInterface::Type&)(*type));
 }
 
-Solid__DeviceInterface* Solid__Device_AsDeviceInterface(Solid__Device* self, const int* typeVal) {
-    return self->asDeviceInterface((const Solid::DeviceInterface::Type&)(*typeVal));
+Solid__DeviceInterface* Solid__Device_AsDeviceInterface(Solid__Device* self, const int* type) {
+    return self->asDeviceInterface((const Solid::DeviceInterface::Type&)(*type));
 }
 
-Solid__DeviceInterface* Solid__Device_AsDeviceInterface2(const Solid__Device* self, const int* typeVal) {
-    return (Solid__DeviceInterface*)self->asDeviceInterface((const Solid::DeviceInterface::Type&)(*typeVal));
+Solid__DeviceInterface* Solid__Device_AsDeviceInterface2(const Solid__Device* self, const int* type) {
+    return (Solid__DeviceInterface*)self->asDeviceInterface((const Solid::DeviceInterface::Type&)(*type));
 }
 
-libqt_list /* of Solid__Device* */ Solid__Device_ListFromType2(const int* typeVal, const libqt_string parentUdi) {
+libqt_list /* of Solid__Device* */ Solid__Device_ListFromType2(const int* type, const libqt_string parentUdi) {
     QString parentUdi_QString = QString::fromUtf8(parentUdi.data, parentUdi.len);
-    QList<Solid::Device> _ret = Solid::Device::listFromType((const Solid::DeviceInterface::Type&)(*typeVal), parentUdi_QString);
+    QList<Solid::Device> _ret = Solid::Device::listFromType((const Solid::DeviceInterface::Type&)(*type), parentUdi_QString);
     // Convert QList<> from C++ memory to manually-managed C memory
     Solid__Device** _arr = static_cast<Solid__Device**>(malloc(sizeof(Solid__Device*) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {

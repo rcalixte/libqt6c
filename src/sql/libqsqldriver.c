@@ -182,8 +182,8 @@ const char* q_sqldriver_qbase_format_value(void* self, void* field, bool trimStr
     return _ret;
 }
 
-const char* q_sqldriver_escape_identifier(void* self, const char* identifier, int32_t typeVal) {
-    libqt_string _str = QSqlDriver_EscapeIdentifier((QSqlDriver*)self, qstring(identifier), typeVal);
+const char* q_sqldriver_escape_identifier(void* self, const char* identifier, int32_t type) {
+    libqt_string _str = QSqlDriver_EscapeIdentifier((QSqlDriver*)self, qstring(identifier), type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -193,15 +193,15 @@ void q_sqldriver_on_escape_identifier(void* self, const char* (*callback)(void*,
     QSqlDriver_OnEscapeIdentifier((QSqlDriver*)self, (intptr_t)callback);
 }
 
-const char* q_sqldriver_qbase_escape_identifier(void* self, const char* identifier, int32_t typeVal) {
-    libqt_string _str = QSqlDriver_QBaseEscapeIdentifier((QSqlDriver*)self, qstring(identifier), typeVal);
+const char* q_sqldriver_qbase_escape_identifier(void* self, const char* identifier, int32_t type) {
+    libqt_string _str = QSqlDriver_QBaseEscapeIdentifier((QSqlDriver*)self, qstring(identifier), type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_sqldriver_sql_statement(void* self, int32_t typeVal, const char* tableName, void* rec, bool preparedStatement) {
-    libqt_string _str = QSqlDriver_SqlStatement((QSqlDriver*)self, typeVal, qstring(tableName), (QSqlRecord*)rec, preparedStatement);
+const char* q_sqldriver_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement) {
+    libqt_string _str = QSqlDriver_SqlStatement((QSqlDriver*)self, type, qstring(tableName), (QSqlRecord*)rec, preparedStatement);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -211,8 +211,8 @@ void q_sqldriver_on_sql_statement(void* self, const char* (*callback)(void*, int
     QSqlDriver_OnSqlStatement((QSqlDriver*)self, (intptr_t)callback);
 }
 
-const char* q_sqldriver_qbase_sql_statement(void* self, int32_t typeVal, const char* tableName, void* rec, bool preparedStatement) {
-    libqt_string _str = QSqlDriver_QBaseSqlStatement((QSqlDriver*)self, typeVal, qstring(tableName), (QSqlRecord*)rec, preparedStatement);
+const char* q_sqldriver_qbase_sql_statement(void* self, int32_t type, const char* tableName, void* rec, bool preparedStatement) {
+    libqt_string _str = QSqlDriver_QBaseSqlStatement((QSqlDriver*)self, type, qstring(tableName), (QSqlRecord*)rec, preparedStatement);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -348,20 +348,20 @@ const char** q_sqldriver_qbase_subscribed_to_notifications(void* self) {
     return _ret;
 }
 
-bool q_sqldriver_is_identifier_escaped(void* self, const char* identifier, int32_t typeVal) {
-    return QSqlDriver_IsIdentifierEscaped((QSqlDriver*)self, qstring(identifier), typeVal);
+bool q_sqldriver_is_identifier_escaped(void* self, const char* identifier, int32_t type) {
+    return QSqlDriver_IsIdentifierEscaped((QSqlDriver*)self, qstring(identifier), type);
 }
 
 void q_sqldriver_on_is_identifier_escaped(void* self, bool (*callback)(void*, const char*, int32_t)) {
     QSqlDriver_OnIsIdentifierEscaped((QSqlDriver*)self, (intptr_t)callback);
 }
 
-bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier, int32_t typeVal) {
-    return QSqlDriver_QBaseIsIdentifierEscaped((QSqlDriver*)self, qstring(identifier), typeVal);
+bool q_sqldriver_qbase_is_identifier_escaped(void* self, const char* identifier, int32_t type) {
+    return QSqlDriver_QBaseIsIdentifierEscaped((QSqlDriver*)self, qstring(identifier), type);
 }
 
-const char* q_sqldriver_strip_delimiters(void* self, const char* identifier, int32_t typeVal) {
-    libqt_string _str = QSqlDriver_StripDelimiters((QSqlDriver*)self, qstring(identifier), typeVal);
+const char* q_sqldriver_strip_delimiters(void* self, const char* identifier, int32_t type) {
+    libqt_string _str = QSqlDriver_StripDelimiters((QSqlDriver*)self, qstring(identifier), type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -371,8 +371,8 @@ void q_sqldriver_on_strip_delimiters(void* self, const char* (*callback)(void*, 
     QSqlDriver_OnStripDelimiters((QSqlDriver*)self, (intptr_t)callback);
 }
 
-const char* q_sqldriver_qbase_strip_delimiters(void* self, const char* identifier, int32_t typeVal) {
-    libqt_string _str = QSqlDriver_QBaseStripDelimiters((QSqlDriver*)self, qstring(identifier), typeVal);
+const char* q_sqldriver_qbase_strip_delimiters(void* self, const char* identifier, int32_t type) {
+    libqt_string _str = QSqlDriver_QBaseStripDelimiters((QSqlDriver*)self, qstring(identifier), type);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -390,16 +390,16 @@ int32_t q_sqldriver_dbms_type(void* self) {
     return QSqlDriver_DbmsType((QSqlDriver*)self);
 }
 
-int32_t q_sqldriver_maximum_identifier_length(void* self, int32_t typeVal) {
-    return QSqlDriver_MaximumIdentifierLength((QSqlDriver*)self, typeVal);
+int32_t q_sqldriver_maximum_identifier_length(void* self, int32_t type) {
+    return QSqlDriver_MaximumIdentifierLength((QSqlDriver*)self, type);
 }
 
 void q_sqldriver_on_maximum_identifier_length(void* self, int32_t (*callback)(void*, int32_t)) {
     QSqlDriver_OnMaximumIdentifierLength((QSqlDriver*)self, (intptr_t)callback);
 }
 
-int32_t q_sqldriver_qbase_maximum_identifier_length(void* self, int32_t typeVal) {
-    return QSqlDriver_QBaseMaximumIdentifierLength((QSqlDriver*)self, typeVal);
+int32_t q_sqldriver_qbase_maximum_identifier_length(void* self, int32_t type) {
+    return QSqlDriver_QBaseMaximumIdentifierLength((QSqlDriver*)self, type);
 }
 
 bool q_sqldriver_cancel_query(void* self) {
@@ -627,12 +627,12 @@ int32_t q_sqldriver_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sqldriver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_sqldriver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sqldriver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_sqldriver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_sqldriver_destroyed1(void* self, void* param1) {

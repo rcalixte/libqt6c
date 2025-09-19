@@ -191,7 +191,7 @@ int32_t k_protocolinfo__extrafield_type(void* self);
 ///
 /// @param self KProtocolInfo__ExtraField*
 /// @param type enum KProtocolInfo__ExtraField__Type
-void k_protocolinfo__extrafield_set_type(void* self, int32_t _type);
+void k_protocolinfo__extrafield_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/kprotocolinfo-extrafield.html#operator-eq)
 ///

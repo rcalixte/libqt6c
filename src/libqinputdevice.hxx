@@ -61,10 +61,10 @@ class VirtualQInputDevice final : public QInputDevice {
 
   public:
     VirtualQInputDevice() : QInputDevice() {};
-    VirtualQInputDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType typeVal) : QInputDevice(name, systemId, typeVal) {};
+    VirtualQInputDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType type) : QInputDevice(name, systemId, type) {};
     VirtualQInputDevice(QObject* parent) : QInputDevice(parent) {};
-    VirtualQInputDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType typeVal, const QString& seatName) : QInputDevice(name, systemId, typeVal, seatName) {};
-    VirtualQInputDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType typeVal, const QString& seatName, QObject* parent) : QInputDevice(name, systemId, typeVal, seatName, parent) {};
+    VirtualQInputDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType type, const QString& seatName) : QInputDevice(name, systemId, type, seatName) {};
+    VirtualQInputDevice(const QString& name, qint64 systemId, QInputDevice::DeviceType type, const QString& seatName, QObject* parent) : QInputDevice(name, systemId, type, seatName, parent) {};
 
     ~VirtualQInputDevice() {
         qinputdevice_metacall_callback = nullptr;

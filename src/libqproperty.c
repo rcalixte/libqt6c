@@ -74,16 +74,16 @@ QPropertyBindingError* q_propertybindingerror_new() {
     return QPropertyBindingError_new();
 }
 
-QPropertyBindingError* q_propertybindingerror_new2(int32_t typeVal) {
-    return QPropertyBindingError_new2(typeVal);
+QPropertyBindingError* q_propertybindingerror_new2(int32_t type) {
+    return QPropertyBindingError_new2(type);
 }
 
 QPropertyBindingError* q_propertybindingerror_new3(void* other) {
     return QPropertyBindingError_new3((QPropertyBindingError*)other);
 }
 
-QPropertyBindingError* q_propertybindingerror_new4(int32_t typeVal, const char* description) {
-    return QPropertyBindingError_new4(typeVal, qstring(description));
+QPropertyBindingError* q_propertybindingerror_new4(int32_t type, const char* description) {
+    return QPropertyBindingError_new4(type, qstring(description));
 }
 
 void q_propertybindingerror_operator_assign(void* self, void* other) {

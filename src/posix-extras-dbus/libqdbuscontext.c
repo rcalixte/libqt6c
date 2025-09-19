@@ -31,16 +31,16 @@ void q_dbuscontext_send_error_reply(void* self, const char* name) {
     QDBusContext_SendErrorReply((QDBusContext*)self, qstring(name));
 }
 
-void q_dbuscontext_send_error_reply2(void* self, int32_t typeVal) {
-    QDBusContext_SendErrorReply2((QDBusContext*)self, typeVal);
+void q_dbuscontext_send_error_reply2(void* self, int32_t type) {
+    QDBusContext_SendErrorReply2((QDBusContext*)self, type);
 }
 
 void q_dbuscontext_send_error_reply22(void* self, const char* name, const char* msg) {
     QDBusContext_SendErrorReply22((QDBusContext*)self, qstring(name), qstring(msg));
 }
 
-void q_dbuscontext_send_error_reply23(void* self, int32_t typeVal, const char* msg) {
-    QDBusContext_SendErrorReply23((QDBusContext*)self, typeVal, qstring(msg));
+void q_dbuscontext_send_error_reply23(void* self, int32_t type, const char* msg) {
+    QDBusContext_SendErrorReply23((QDBusContext*)self, type, qstring(msg));
 }
 
 void q_dbuscontext_delete(void* self) {

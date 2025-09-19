@@ -21,10 +21,10 @@ typedef struct QTextBoundaryFinder QTextBoundaryFinder;
 
 QTextBoundaryFinder* QTextBoundaryFinder_new();
 QTextBoundaryFinder* QTextBoundaryFinder_new2(const QTextBoundaryFinder* other);
-QTextBoundaryFinder* QTextBoundaryFinder_new3(int typeVal, const libqt_string stringVal);
-QTextBoundaryFinder* QTextBoundaryFinder_new4(int typeVal, const QChar* chars, ptrdiff_t length);
-QTextBoundaryFinder* QTextBoundaryFinder_new5(int typeVal, const QChar* chars, ptrdiff_t length, unsigned char* buffer);
-QTextBoundaryFinder* QTextBoundaryFinder_new6(int typeVal, const QChar* chars, ptrdiff_t length, unsigned char* buffer, ptrdiff_t bufferSize);
+QTextBoundaryFinder* QTextBoundaryFinder_new3(int type, const libqt_string stringVal);
+QTextBoundaryFinder* QTextBoundaryFinder_new4(int type, const QChar* chars, ptrdiff_t length);
+QTextBoundaryFinder* QTextBoundaryFinder_new5(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer);
+QTextBoundaryFinder* QTextBoundaryFinder_new6(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer, ptrdiff_t bufferSize);
 void QTextBoundaryFinder_OperatorAssign(QTextBoundaryFinder* self, const QTextBoundaryFinder* other);
 bool QTextBoundaryFinder_IsValid(const QTextBoundaryFinder* self);
 int QTextBoundaryFinder_Type(const QTextBoundaryFinder* self);

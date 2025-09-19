@@ -18,25 +18,25 @@ QInputDevice* QInputDevice_new() {
     return new VirtualQInputDevice();
 }
 
-QInputDevice* QInputDevice_new2(const libqt_string name, long long systemId, int typeVal) {
+QInputDevice* QInputDevice_new2(const libqt_string name, long long systemId, int type) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(typeVal));
+    return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(type));
 }
 
 QInputDevice* QInputDevice_new3(QObject* parent) {
     return new VirtualQInputDevice(parent);
 }
 
-QInputDevice* QInputDevice_new4(const libqt_string name, long long systemId, int typeVal, const libqt_string seatName) {
+QInputDevice* QInputDevice_new4(const libqt_string name, long long systemId, int type, const libqt_string seatName) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
-    return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(typeVal), seatName_QString);
+    return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(type), seatName_QString);
 }
 
-QInputDevice* QInputDevice_new5(const libqt_string name, long long systemId, int typeVal, const libqt_string seatName, QObject* parent) {
+QInputDevice* QInputDevice_new5(const libqt_string name, long long systemId, int type, const libqt_string seatName, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
-    return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(typeVal), seatName_QString, parent);
+    return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(type), seatName_QString, parent);
 }
 
 QMetaObject* QInputDevice_MetaObject(const QInputDevice* self) {

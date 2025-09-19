@@ -251,12 +251,12 @@ int32_t q_validator_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_validator_destroyed1(void* self, void* param1) {
@@ -695,12 +695,12 @@ int32_t q_intvalidator_start_timer22(void* self, int interval, int32_t timerType
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_intvalidator_destroyed1(void* self, void* param1) {
@@ -1175,12 +1175,12 @@ int32_t q_doublevalidator_start_timer22(void* self, int interval, int32_t timerT
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_doublevalidator_destroyed1(void* self, void* param1) {
@@ -1587,12 +1587,12 @@ int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_regularexpressionvalidator_destroyed1(void* self, void* param1) {

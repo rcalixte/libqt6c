@@ -33,16 +33,16 @@ void KNetworkMounts_SetEnabled(KNetworkMounts* self, bool value);
 bool KNetworkMounts_IsOptionEnabled(const KNetworkMounts* self, const int option);
 void KNetworkMounts_SetOption(KNetworkMounts* self, const int option, const bool value);
 libqt_list /* of libqt_string */ KNetworkMounts_Paths(const KNetworkMounts* self);
-void KNetworkMounts_SetPaths(KNetworkMounts* self, const libqt_list /* of libqt_string */ paths, int typeVal);
-void KNetworkMounts_AddPath(KNetworkMounts* self, const libqt_string path, int typeVal);
+void KNetworkMounts_SetPaths(KNetworkMounts* self, const libqt_list /* of libqt_string */ paths, int type);
+void KNetworkMounts_AddPath(KNetworkMounts* self, const libqt_string path, int type);
 libqt_string KNetworkMounts_CanonicalSymlinkPath(KNetworkMounts* self, const libqt_string path);
 void KNetworkMounts_ClearCache(KNetworkMounts* self);
 void KNetworkMounts_Sync(KNetworkMounts* self);
 libqt_string KNetworkMounts_Tr2(const char* s, const char* c);
 libqt_string KNetworkMounts_Tr3(const char* s, const char* c, int n);
-bool KNetworkMounts_IsSlowPath2(KNetworkMounts* self, const libqt_string path, int typeVal);
+bool KNetworkMounts_IsSlowPath2(KNetworkMounts* self, const libqt_string path, int type);
 bool KNetworkMounts_IsOptionEnabled2(const KNetworkMounts* self, const int option, const bool defaultValue);
-libqt_list /* of libqt_string */ KNetworkMounts_Paths1(const KNetworkMounts* self, int typeVal);
+libqt_list /* of libqt_string */ KNetworkMounts_Paths1(const KNetworkMounts* self, int type);
 
 #ifdef __cplusplus
 } /* extern C */

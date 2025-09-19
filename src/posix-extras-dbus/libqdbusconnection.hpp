@@ -53,7 +53,7 @@ bool QDBusConnection_RegisterService(QDBusConnection* self, const libqt_string s
 bool QDBusConnection_UnregisterService(QDBusConnection* self, const libqt_string serviceName);
 QDBusConnectionInterface* QDBusConnection_Interface(const QDBusConnection* self);
 void* QDBusConnection_InternalPointer(const QDBusConnection* self);
-QDBusConnection* QDBusConnection_ConnectToBus(int typeVal, const libqt_string name);
+QDBusConnection* QDBusConnection_ConnectToBus(int type, const libqt_string name);
 QDBusConnection* QDBusConnection_ConnectToBus2(const libqt_string address, const libqt_string name);
 QDBusConnection* QDBusConnection_ConnectToPeer(const libqt_string address, const libqt_string name);
 void QDBusConnection_DisconnectFromBus(const libqt_string name);

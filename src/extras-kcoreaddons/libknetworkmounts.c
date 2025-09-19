@@ -70,7 +70,7 @@ const char** k_networkmounts_paths(void* self) {
     return _ret;
 }
 
-void k_networkmounts_set_paths(void* self, const char* paths[], int32_t typeVal) {
+void k_networkmounts_set_paths(void* self, const char* paths[], int32_t type) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
@@ -81,12 +81,12 @@ void k_networkmounts_set_paths(void* self, const char* paths[], int32_t typeVal)
         paths_qstr[i] = qstring(paths[i]);
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
-    KNetworkMounts_SetPaths((KNetworkMounts*)self, paths_list, typeVal);
+    KNetworkMounts_SetPaths((KNetworkMounts*)self, paths_list, type);
     free(paths_qstr);
 }
 
-void k_networkmounts_add_path(void* self, const char* path, int32_t typeVal) {
-    KNetworkMounts_AddPath((KNetworkMounts*)self, qstring(path), typeVal);
+void k_networkmounts_add_path(void* self, const char* path, int32_t type) {
+    KNetworkMounts_AddPath((KNetworkMounts*)self, qstring(path), type);
 }
 
 const char* k_networkmounts_canonical_symlink_path(void* self, const char* path) {
@@ -118,16 +118,16 @@ const char* k_networkmounts_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool k_networkmounts_is_slow_path2(void* self, const char* path, int32_t typeVal) {
-    return KNetworkMounts_IsSlowPath2((KNetworkMounts*)self, qstring(path), typeVal);
+bool k_networkmounts_is_slow_path2(void* self, const char* path, int32_t type) {
+    return KNetworkMounts_IsSlowPath2((KNetworkMounts*)self, qstring(path), type);
 }
 
 bool k_networkmounts_is_option_enabled2(void* self, int32_t option, bool defaultValue) {
     return KNetworkMounts_IsOptionEnabled2((KNetworkMounts*)self, option, defaultValue);
 }
 
-const char** k_networkmounts_paths1(void* self, int32_t typeVal) {
-    libqt_list _arr = KNetworkMounts_Paths1((KNetworkMounts*)self, typeVal);
+const char** k_networkmounts_paths1(void* self, int32_t type) {
+    libqt_list _arr = KNetworkMounts_Paths1((KNetworkMounts*)self, type);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -308,12 +308,12 @@ int32_t k_networkmounts_start_timer22(void* self, int interval, int32_t timerTyp
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_networkmounts_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_networkmounts_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_networkmounts_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_networkmounts_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_networkmounts_destroyed1(void* self, void* param1) {

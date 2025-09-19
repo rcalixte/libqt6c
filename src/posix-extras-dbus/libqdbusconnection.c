@@ -153,8 +153,8 @@ void* q_dbusconnection_internal_pointer(void* self) {
     return QDBusConnection_InternalPointer((QDBusConnection*)self);
 }
 
-QDBusConnection* q_dbusconnection_connect_to_bus(int32_t typeVal, const char* name) {
-    return QDBusConnection_ConnectToBus(typeVal, qstring(name));
+QDBusConnection* q_dbusconnection_connect_to_bus(int32_t type, const char* name) {
+    return QDBusConnection_ConnectToBus(type, qstring(name));
 }
 
 QDBusConnection* q_dbusconnection_connect_to_bus2(const char* address, const char* name) {

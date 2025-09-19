@@ -75,8 +75,8 @@ const char* q_systemsemaphore_error_string(void* self) {
     return _ret;
 }
 
-bool q_systemsemaphore_is_key_type_supported(uint16_t typeVal) {
-    return QSystemSemaphore_IsKeyTypeSupported(typeVal);
+bool q_systemsemaphore_is_key_type_supported(uint16_t type) {
+    return QSystemSemaphore_IsKeyTypeSupported(type);
 }
 
 QNativeIpcKey* q_systemsemaphore_platform_safe_key(const char* key) {
@@ -117,8 +117,8 @@ void q_systemsemaphore_set_native_key32(void* self, const char* key, int initial
     QSystemSemaphore_SetNativeKey32((QSystemSemaphore*)self, qstring(key), initialValue, mode);
 }
 
-void q_systemsemaphore_set_native_key4(void* self, const char* key, int initialValue, int32_t mode, uint16_t typeVal) {
-    QSystemSemaphore_SetNativeKey4((QSystemSemaphore*)self, qstring(key), initialValue, mode, typeVal);
+void q_systemsemaphore_set_native_key4(void* self, const char* key, int initialValue, int32_t mode, uint16_t type) {
+    QSystemSemaphore_SetNativeKey4((QSystemSemaphore*)self, qstring(key), initialValue, mode, type);
 }
 
 void q_systemsemaphore_set_key2(void* self, const char* key, int initialValue) {
@@ -133,12 +133,12 @@ bool q_systemsemaphore_release1(void* self, int n) {
     return QSystemSemaphore_Release1((QSystemSemaphore*)self, n);
 }
 
-QNativeIpcKey* q_systemsemaphore_platform_safe_key2(const char* key, uint16_t typeVal) {
-    return QSystemSemaphore_PlatformSafeKey2(qstring(key), typeVal);
+QNativeIpcKey* q_systemsemaphore_platform_safe_key2(const char* key, uint16_t type) {
+    return QSystemSemaphore_PlatformSafeKey2(qstring(key), type);
 }
 
-QNativeIpcKey* q_systemsemaphore_legacy_native_key2(const char* key, uint16_t typeVal) {
-    return QSystemSemaphore_LegacyNativeKey2(qstring(key), typeVal);
+QNativeIpcKey* q_systemsemaphore_legacy_native_key2(const char* key, uint16_t type) {
+    return QSystemSemaphore_LegacyNativeKey2(qstring(key), type);
 }
 
 void q_systemsemaphore_delete(void* self) {

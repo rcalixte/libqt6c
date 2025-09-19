@@ -184,11 +184,11 @@ libqt_string QSqlDriver_FormatValue(const QSqlDriver* self, const QSqlField* fie
     }
 }
 
-libqt_string QSqlDriver_EscapeIdentifier(const QSqlDriver* self, const libqt_string identifier, int typeVal) {
+libqt_string QSqlDriver_EscapeIdentifier(const QSqlDriver* self, const libqt_string identifier, int type) {
     QString identifier_QString = QString::fromUtf8(identifier.data, identifier.len);
     auto* vqsqldriver = dynamic_cast<const VirtualQSqlDriver*>(self);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
-        QString _ret = self->escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = self->escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -198,7 +198,7 @@ libqt_string QSqlDriver_EscapeIdentifier(const QSqlDriver* self, const libqt_str
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
     } else {
-        QString _ret = ((VirtualQSqlDriver*)self)->escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = ((VirtualQSqlDriver*)self)->escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -210,11 +210,11 @@ libqt_string QSqlDriver_EscapeIdentifier(const QSqlDriver* self, const libqt_str
     }
 }
 
-libqt_string QSqlDriver_SqlStatement(const QSqlDriver* self, int typeVal, const libqt_string tableName, const QSqlRecord* rec, bool preparedStatement) {
+libqt_string QSqlDriver_SqlStatement(const QSqlDriver* self, int type, const libqt_string tableName, const QSqlRecord* rec, bool preparedStatement) {
     QString tableName_QString = QString::fromUtf8(tableName.data, tableName.len);
     auto* vqsqldriver = dynamic_cast<const VirtualQSqlDriver*>(self);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
-        QString _ret = self->sqlStatement(static_cast<QSqlDriver::StatementType>(typeVal), tableName_QString, *rec, preparedStatement);
+        QString _ret = self->sqlStatement(static_cast<QSqlDriver::StatementType>(type), tableName_QString, *rec, preparedStatement);
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -224,7 +224,7 @@ libqt_string QSqlDriver_SqlStatement(const QSqlDriver* self, int typeVal, const 
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
     } else {
-        QString _ret = ((VirtualQSqlDriver*)self)->sqlStatement(static_cast<QSqlDriver::StatementType>(typeVal), tableName_QString, *rec, preparedStatement);
+        QString _ret = ((VirtualQSqlDriver*)self)->sqlStatement(static_cast<QSqlDriver::StatementType>(type), tableName_QString, *rec, preparedStatement);
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -353,21 +353,21 @@ libqt_list /* of libqt_string */ QSqlDriver_SubscribedToNotifications(const QSql
     }
 }
 
-bool QSqlDriver_IsIdentifierEscaped(const QSqlDriver* self, const libqt_string identifier, int typeVal) {
+bool QSqlDriver_IsIdentifierEscaped(const QSqlDriver* self, const libqt_string identifier, int type) {
     QString identifier_QString = QString::fromUtf8(identifier.data, identifier.len);
     auto* vqsqldriver = dynamic_cast<const VirtualQSqlDriver*>(self);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
-        return self->isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return self->isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
     } else {
-        return ((VirtualQSqlDriver*)self)->isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return ((VirtualQSqlDriver*)self)->isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
     }
 }
 
-libqt_string QSqlDriver_StripDelimiters(const QSqlDriver* self, const libqt_string identifier, int typeVal) {
+libqt_string QSqlDriver_StripDelimiters(const QSqlDriver* self, const libqt_string identifier, int type) {
     QString identifier_QString = QString::fromUtf8(identifier.data, identifier.len);
     auto* vqsqldriver = dynamic_cast<const VirtualQSqlDriver*>(self);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
-        QString _ret = self->stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = self->stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -377,7 +377,7 @@ libqt_string QSqlDriver_StripDelimiters(const QSqlDriver* self, const libqt_stri
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
     } else {
-        QString _ret = ((VirtualQSqlDriver*)self)->stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = ((VirtualQSqlDriver*)self)->stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -401,12 +401,12 @@ int QSqlDriver_DbmsType(const QSqlDriver* self) {
     return static_cast<int>(self->dbmsType());
 }
 
-int QSqlDriver_MaximumIdentifierLength(const QSqlDriver* self, int typeVal) {
+int QSqlDriver_MaximumIdentifierLength(const QSqlDriver* self, int type) {
     auto* vqsqldriver = dynamic_cast<const VirtualQSqlDriver*>(self);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
-        return self->maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return self->maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(type));
     } else {
-        return ((VirtualQSqlDriver*)self)->maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return ((VirtualQSqlDriver*)self)->maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(type));
     }
 }
 
@@ -712,12 +712,12 @@ void QSqlDriver_OnFormatValue(const QSqlDriver* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-libqt_string QSqlDriver_QBaseEscapeIdentifier(const QSqlDriver* self, const libqt_string identifier, int typeVal) {
+libqt_string QSqlDriver_QBaseEscapeIdentifier(const QSqlDriver* self, const libqt_string identifier, int type) {
     auto* vqsqldriver = const_cast<VirtualQSqlDriver*>(dynamic_cast<const VirtualQSqlDriver*>(self));
     QString identifier_QString = QString::fromUtf8(identifier.data, identifier.len);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
         vqsqldriver->setQSqlDriver_EscapeIdentifier_IsBase(true);
-        QString _ret = vqsqldriver->escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = vqsqldriver->escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -727,7 +727,7 @@ libqt_string QSqlDriver_QBaseEscapeIdentifier(const QSqlDriver* self, const libq
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
     } else {
-        QString _ret = self->QSqlDriver::escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = self->QSqlDriver::escapeIdentifier(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -748,12 +748,12 @@ void QSqlDriver_OnEscapeIdentifier(const QSqlDriver* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-libqt_string QSqlDriver_QBaseSqlStatement(const QSqlDriver* self, int typeVal, const libqt_string tableName, const QSqlRecord* rec, bool preparedStatement) {
+libqt_string QSqlDriver_QBaseSqlStatement(const QSqlDriver* self, int type, const libqt_string tableName, const QSqlRecord* rec, bool preparedStatement) {
     auto* vqsqldriver = const_cast<VirtualQSqlDriver*>(dynamic_cast<const VirtualQSqlDriver*>(self));
     QString tableName_QString = QString::fromUtf8(tableName.data, tableName.len);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
         vqsqldriver->setQSqlDriver_SqlStatement_IsBase(true);
-        QString _ret = vqsqldriver->sqlStatement(static_cast<QSqlDriver::StatementType>(typeVal), tableName_QString, *rec, preparedStatement);
+        QString _ret = vqsqldriver->sqlStatement(static_cast<QSqlDriver::StatementType>(type), tableName_QString, *rec, preparedStatement);
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -763,7 +763,7 @@ libqt_string QSqlDriver_QBaseSqlStatement(const QSqlDriver* self, int typeVal, c
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
     } else {
-        QString _ret = self->QSqlDriver::sqlStatement(static_cast<QSqlDriver::StatementType>(typeVal), tableName_QString, *rec, preparedStatement);
+        QString _ret = self->QSqlDriver::sqlStatement(static_cast<QSqlDriver::StatementType>(type), tableName_QString, *rec, preparedStatement);
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -977,14 +977,14 @@ void QSqlDriver_OnSubscribedToNotifications(const QSqlDriver* self, intptr_t slo
 }
 
 // Base class handler implementation
-bool QSqlDriver_QBaseIsIdentifierEscaped(const QSqlDriver* self, const libqt_string identifier, int typeVal) {
+bool QSqlDriver_QBaseIsIdentifierEscaped(const QSqlDriver* self, const libqt_string identifier, int type) {
     auto* vqsqldriver = const_cast<VirtualQSqlDriver*>(dynamic_cast<const VirtualQSqlDriver*>(self));
     QString identifier_QString = QString::fromUtf8(identifier.data, identifier.len);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
         vqsqldriver->setQSqlDriver_IsIdentifierEscaped_IsBase(true);
-        return vqsqldriver->isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return vqsqldriver->isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
     } else {
-        return self->QSqlDriver::isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return self->QSqlDriver::isIdentifierEscaped(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
     }
 }
 
@@ -997,12 +997,12 @@ void QSqlDriver_OnIsIdentifierEscaped(const QSqlDriver* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-libqt_string QSqlDriver_QBaseStripDelimiters(const QSqlDriver* self, const libqt_string identifier, int typeVal) {
+libqt_string QSqlDriver_QBaseStripDelimiters(const QSqlDriver* self, const libqt_string identifier, int type) {
     auto* vqsqldriver = const_cast<VirtualQSqlDriver*>(dynamic_cast<const VirtualQSqlDriver*>(self));
     QString identifier_QString = QString::fromUtf8(identifier.data, identifier.len);
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
         vqsqldriver->setQSqlDriver_StripDelimiters_IsBase(true);
-        QString _ret = vqsqldriver->stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = vqsqldriver->stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -1012,7 +1012,7 @@ libqt_string QSqlDriver_QBaseStripDelimiters(const QSqlDriver* self, const libqt
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
     } else {
-        QString _ret = self->QSqlDriver::stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(typeVal));
+        QString _ret = self->QSqlDriver::stripDelimiters(identifier_QString, static_cast<QSqlDriver::IdentifierType>(type));
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
@@ -1033,13 +1033,13 @@ void QSqlDriver_OnStripDelimiters(const QSqlDriver* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-int QSqlDriver_QBaseMaximumIdentifierLength(const QSqlDriver* self, int typeVal) {
+int QSqlDriver_QBaseMaximumIdentifierLength(const QSqlDriver* self, int type) {
     auto* vqsqldriver = const_cast<VirtualQSqlDriver*>(dynamic_cast<const VirtualQSqlDriver*>(self));
     if (vqsqldriver && vqsqldriver->isVirtualQSqlDriver) {
         vqsqldriver->setQSqlDriver_MaximumIdentifierLength_IsBase(true);
-        return vqsqldriver->maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return vqsqldriver->maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(type));
     } else {
-        return self->QSqlDriver::maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(typeVal));
+        return self->QSqlDriver::maximumIdentifierLength(static_cast<QSqlDriver::IdentifierType>(type));
     }
 }
 

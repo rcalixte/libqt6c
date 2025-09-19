@@ -18,16 +18,16 @@ extern "C" {
 typedef struct QStandardPaths QStandardPaths;
 #endif
 
-libqt_string QStandardPaths_WritableLocation(int typeVal);
-libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int typeVal);
-libqt_string QStandardPaths_Locate(int typeVal, const libqt_string fileName);
-libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int typeVal, const libqt_string fileName);
-libqt_string QStandardPaths_DisplayName(int typeVal);
+libqt_string QStandardPaths_WritableLocation(int type);
+libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int type);
+libqt_string QStandardPaths_Locate(int type, const libqt_string fileName);
+libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int type, const libqt_string fileName);
+libqt_string QStandardPaths_DisplayName(int type);
 libqt_string QStandardPaths_FindExecutable(const libqt_string executableName);
 void QStandardPaths_SetTestModeEnabled(bool testMode);
 bool QStandardPaths_IsTestModeEnabled();
-libqt_string QStandardPaths_Locate3(int typeVal, const libqt_string fileName, int options);
-libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int typeVal, const libqt_string fileName, int options);
+libqt_string QStandardPaths_Locate3(int type, const libqt_string fileName, int options);
+libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int type, const libqt_string fileName, int options);
 libqt_string QStandardPaths_FindExecutable2(const libqt_string executableName, const libqt_list /* of libqt_string */ paths);
 
 #ifdef __cplusplus

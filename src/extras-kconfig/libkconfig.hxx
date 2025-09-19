@@ -61,8 +61,8 @@ class VirtualKConfig final : public KConfig {
     VirtualKConfig(const QString& file, const QString& backend) : KConfig(file, backend) {};
     VirtualKConfig(const QString& file) : KConfig(file) {};
     VirtualKConfig(const QString& file, KConfig::OpenFlags mode) : KConfig(file, mode) {};
-    VirtualKConfig(const QString& file, KConfig::OpenFlags mode, QStandardPaths::StandardLocation typeVal) : KConfig(file, mode, typeVal) {};
-    VirtualKConfig(const QString& file, const QString& backend, QStandardPaths::StandardLocation typeVal) : KConfig(file, backend, typeVal) {};
+    VirtualKConfig(const QString& file, KConfig::OpenFlags mode, QStandardPaths::StandardLocation type) : KConfig(file, mode, type) {};
+    VirtualKConfig(const QString& file, const QString& backend, QStandardPaths::StandardLocation type) : KConfig(file, backend, type) {};
 
     ~VirtualKConfig() {
         kconfig_sync_callback = nullptr;

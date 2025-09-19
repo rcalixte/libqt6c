@@ -728,8 +728,8 @@ int32_t k_io__forwardingworkerbase_start_timer22(void* self, int interval, int32
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_io__forwardingworkerbase_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_io__forwardingworkerbase_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -739,8 +739,8 @@ QMetaObject__Connection* k_io__forwardingworkerbase_connect5(void* sender, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_io__forwardingworkerbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_io__forwardingworkerbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -919,9 +919,9 @@ void k_io__forwardingworkerbase_info_message(void* self, const char* msg);
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
-int32_t k_io__forwardingworkerbase_message_box(void* self, int32_t typeVal, const char* text);
+int32_t k_io__forwardingworkerbase_message_box(void* self, int32_t type, const char* text);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -929,8 +929,8 @@ int32_t k_io__forwardingworkerbase_message_box(void* self, int32_t typeVal, cons
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-int32_t k_io__forwardingworkerbase_message_box2(void* self, const char* text, int32_t typeVal);
+/// @param type enum KIO__WorkerBase__MessageBoxType
+int32_t k_io__forwardingworkerbase_message_box2(void* self, const char* text, int32_t type);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1192,66 +1192,33 @@ void k_io__forwardingworkerbase_set_incoming_meta_data(void* self, void* metaDat
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
 /// @param title const char*
-int32_t k_io__forwardingworkerbase_message_box3(void* self, int32_t typeVal, const char* text, const char* title);
+int32_t k_io__forwardingworkerbase_message_box3(void* self, int32_t type, const char* text, const char* title);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-/// @param text const char*
-/// @param title const char*
-/// @param primaryActionText const char*
-int32_t k_io__forwardingworkerbase_message_box4(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText);
-
-/// Inherited from KIO::WorkerBase
-///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
-///
-/// @param self KIO__ForwardingWorkerBase*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
 /// @param title const char*
 /// @param primaryActionText const char*
-/// @param secondaryActionText const char*
-int32_t k_io__forwardingworkerbase_message_box5(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText);
+int32_t k_io__forwardingworkerbase_message_box4(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
 ///
 /// @param self KIO__ForwardingWorkerBase*
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-/// @param title const char*
-int32_t k_io__forwardingworkerbase_message_box32(void* self, const char* text, int32_t typeVal, const char* title);
-
-/// Inherited from KIO::WorkerBase
-///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
-///
-/// @param self KIO__ForwardingWorkerBase*
-/// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
-/// @param title const char*
-/// @param primaryActionText const char*
-int32_t k_io__forwardingworkerbase_message_box42(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText);
-
-/// Inherited from KIO::WorkerBase
-///
-/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
-///
-/// @param self KIO__ForwardingWorkerBase*
-/// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
 /// @param title const char*
 /// @param primaryActionText const char*
 /// @param secondaryActionText const char*
-int32_t k_io__forwardingworkerbase_message_box52(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText, const char* secondaryActionText);
+int32_t k_io__forwardingworkerbase_message_box5(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1259,12 +1226,45 @@ int32_t k_io__forwardingworkerbase_message_box52(void* self, const char* text, i
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param text const char*
-/// @param typeVal enum KIO__WorkerBase__MessageBoxType
+/// @param type enum KIO__WorkerBase__MessageBoxType
+/// @param title const char*
+int32_t k_io__forwardingworkerbase_message_box32(void* self, const char* text, int32_t type, const char* title);
+
+/// Inherited from KIO::WorkerBase
+///
+/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+///
+/// @param self KIO__ForwardingWorkerBase*
+/// @param text const char*
+/// @param type enum KIO__WorkerBase__MessageBoxType
+/// @param title const char*
+/// @param primaryActionText const char*
+int32_t k_io__forwardingworkerbase_message_box42(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText);
+
+/// Inherited from KIO::WorkerBase
+///
+/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+///
+/// @param self KIO__ForwardingWorkerBase*
+/// @param text const char*
+/// @param type enum KIO__WorkerBase__MessageBoxType
+/// @param title const char*
+/// @param primaryActionText const char*
+/// @param secondaryActionText const char*
+int32_t k_io__forwardingworkerbase_message_box52(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText, const char* secondaryActionText);
+
+/// Inherited from KIO::WorkerBase
+///
+/// [Qt documentation](https://api.kde.org/kio-workerbase.html#messageBox)
+///
+/// @param self KIO__ForwardingWorkerBase*
+/// @param text const char*
+/// @param type enum KIO__WorkerBase__MessageBoxType
 /// @param title const char*
 /// @param primaryActionText const char*
 /// @param secondaryActionText const char*
 /// @param dontAskAgainName const char*
-int32_t k_io__forwardingworkerbase_message_box6(void* self, const char* text, int32_t typeVal, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* dontAskAgainName);
+int32_t k_io__forwardingworkerbase_message_box6(void* self, const char* text, int32_t type, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* dontAskAgainName);
 
 /// Inherited from KIO::WorkerBase
 ///

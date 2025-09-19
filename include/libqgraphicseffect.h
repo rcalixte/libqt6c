@@ -647,8 +647,8 @@ int32_t q_graphicseffect_start_timer22(void* self, int interval, int32_t timerTy
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -658,8 +658,8 @@ QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, v
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1476,8 +1476,8 @@ int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int32_t
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1487,8 +1487,8 @@ QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* s
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2531,8 +2531,8 @@ int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int32_t tim
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -2542,8 +2542,8 @@ QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signa
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3612,8 +3612,8 @@ int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int32
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -3623,8 +3623,8 @@ QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4613,8 +4613,8 @@ int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int32_t 
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -4624,8 +4624,8 @@ QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* si
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

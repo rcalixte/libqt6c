@@ -97,8 +97,8 @@ int QSurfaceFormat_Profile(const QSurfaceFormat* self) {
     return static_cast<int>(self->profile());
 }
 
-void QSurfaceFormat_SetRenderableType(QSurfaceFormat* self, int typeVal) {
-    self->setRenderableType(static_cast<QSurfaceFormat::RenderableType>(typeVal));
+void QSurfaceFormat_SetRenderableType(QSurfaceFormat* self, int type) {
+    self->setRenderableType(static_cast<QSurfaceFormat::RenderableType>(type));
 }
 
 int QSurfaceFormat_RenderableType(const QSurfaceFormat* self) {

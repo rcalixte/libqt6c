@@ -17,12 +17,12 @@ QSqlError* q_sqlerror_new4(const char* driverText, const char* databaseText) {
     return QSqlError_new4(qstring(driverText), qstring(databaseText));
 }
 
-QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int32_t typeVal) {
-    return QSqlError_new5(qstring(driverText), qstring(databaseText), typeVal);
+QSqlError* q_sqlerror_new5(const char* driverText, const char* databaseText, int32_t type) {
+    return QSqlError_new5(qstring(driverText), qstring(databaseText), type);
 }
 
-QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t typeVal, const char* errorCode) {
-    return QSqlError_new6(qstring(driverText), qstring(databaseText), typeVal, qstring(errorCode));
+QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int32_t type, const char* errorCode) {
+    return QSqlError_new6(qstring(driverText), qstring(databaseText), type, qstring(errorCode));
 }
 
 void q_sqlerror_operator_assign(void* self, void* other) {

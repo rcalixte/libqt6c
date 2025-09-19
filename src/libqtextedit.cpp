@@ -322,12 +322,12 @@ void QTextEdit_EnsureCursorVisible(QTextEdit* self) {
     self->ensureCursorVisible();
 }
 
-QVariant* QTextEdit_LoadResource(QTextEdit* self, int typeVal, const QUrl* name) {
+QVariant* QTextEdit_LoadResource(QTextEdit* self, int type, const QUrl* name) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
-        return new QVariant(self->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(self->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualQTextEdit*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualQTextEdit*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 
@@ -909,13 +909,13 @@ void QTextEdit_OnMetacall(QTextEdit* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-QVariant* QTextEdit_QBaseLoadResource(QTextEdit* self, int typeVal, const QUrl* name) {
+QVariant* QTextEdit_QBaseLoadResource(QTextEdit* self, int type, const QUrl* name) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_LoadResource_IsBase(true);
-        return new QVariant(vqtextedit->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vqtextedit->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualQTextEdit*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualQTextEdit*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 

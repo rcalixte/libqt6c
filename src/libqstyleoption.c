@@ -29,8 +29,8 @@ QStyleOption* q_styleoption_new3(int version) {
     return QStyleOption_new3(version);
 }
 
-QStyleOption* q_styleoption_new4(int version, int typeVal) {
-    return QStyleOption_new4(version, typeVal);
+QStyleOption* q_styleoption_new4(int version, int type) {
+    return QStyleOption_new4(version, type);
 }
 
 int32_t q_styleoption_version(void* self) {
@@ -45,8 +45,8 @@ int32_t q_styleoption_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoption_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoption_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoption_state(void* self) {
@@ -137,8 +137,8 @@ int32_t q_styleoptionfocusrect_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionfocusrect_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionfocusrect_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionfocusrect_state(void* self) {
@@ -253,8 +253,8 @@ int32_t q_styleoptionframe_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionframe_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionframe_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionframe_state(void* self) {
@@ -401,8 +401,8 @@ int32_t q_styleoptiontabwidgetframe_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontabwidgetframe_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontabwidgetframe_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontabwidgetframe_state(void* self) {
@@ -517,8 +517,8 @@ int32_t q_styleoptiontabbarbase_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontabbarbase_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontabbarbase_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontabbarbase_state(void* self) {
@@ -676,8 +676,8 @@ int32_t q_styleoptionheader_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionheader_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionheader_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionheader_state(void* self) {
@@ -859,8 +859,8 @@ int32_t q_styleoptionheaderv2_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionheaderv2_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionheaderv2_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionheaderv2_state(void* self) {
@@ -978,8 +978,8 @@ int32_t q_styleoptionbutton_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionbutton_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionbutton_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionbutton_state(void* self) {
@@ -1169,8 +1169,8 @@ int32_t q_styleoptiontab_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontab_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontab_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontab_state(void* self) {
@@ -1301,8 +1301,8 @@ int32_t q_styleoptiontoolbar_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontoolbar_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontoolbar_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontoolbar_state(void* self) {
@@ -1452,8 +1452,8 @@ int32_t q_styleoptionprogressbar_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionprogressbar_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionprogressbar_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionprogressbar_state(void* self) {
@@ -1619,8 +1619,8 @@ int32_t q_styleoptionmenuitem_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionmenuitem_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionmenuitem_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionmenuitem_state(void* self) {
@@ -1746,8 +1746,8 @@ int32_t q_styleoptiondockwidget_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiondockwidget_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiondockwidget_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiondockwidget_state(void* self) {
@@ -1961,8 +1961,8 @@ int32_t q_styleoptionviewitem_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionviewitem_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionviewitem_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionviewitem_state(void* self) {
@@ -2080,8 +2080,8 @@ int32_t q_styleoptiontoolbox_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontoolbox_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontoolbox_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontoolbox_state(void* self) {
@@ -2180,8 +2180,8 @@ int32_t q_styleoptionrubberband_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionrubberband_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionrubberband_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionrubberband_state(void* self) {
@@ -2256,8 +2256,8 @@ QStyleOptionComplex* q_styleoptioncomplex_new3(int version) {
     return QStyleOptionComplex_new3(version);
 }
 
-QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int typeVal) {
-    return QStyleOptionComplex_new4(version, typeVal);
+QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int type) {
+    return QStyleOptionComplex_new4(version, type);
 }
 
 int64_t q_styleoptioncomplex_sub_controls(void* self) {
@@ -2288,8 +2288,8 @@ int32_t q_styleoptioncomplex_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptioncomplex_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptioncomplex_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptioncomplex_state(void* self) {
@@ -2492,8 +2492,8 @@ int32_t q_styleoptionslider_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionslider_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionslider_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionslider_state(void* self) {
@@ -2616,8 +2616,8 @@ int32_t q_styleoptionspinbox_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionspinbox_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionspinbox_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionspinbox_state(void* self) {
@@ -2783,8 +2783,8 @@ int32_t q_styleoptiontoolbutton_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontoolbutton_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontoolbutton_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontoolbutton_state(void* self) {
@@ -2942,8 +2942,8 @@ int32_t q_styleoptioncombobox_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptioncombobox_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptioncombobox_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptioncombobox_state(void* self) {
@@ -3077,8 +3077,8 @@ int32_t q_styleoptiontitlebar_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiontitlebar_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiontitlebar_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiontitlebar_state(void* self) {
@@ -3228,8 +3228,8 @@ int32_t q_styleoptiongroupbox_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiongroupbox_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiongroupbox_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiongroupbox_state(void* self) {
@@ -3336,8 +3336,8 @@ int32_t q_styleoptionsizegrip_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptionsizegrip_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptionsizegrip_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptionsizegrip_state(void* self) {
@@ -3432,8 +3432,8 @@ int32_t q_styleoptiongraphicsitem_type(void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
-void q_styleoptiongraphicsitem_set_type(void* self, int _type) {
-    QStyleOption_SetType((QStyleOption*)self, _type);
+void q_styleoptiongraphicsitem_set_type(void* self, int type) {
+    QStyleOption_SetType((QStyleOption*)self, type);
 }
 
 int32_t q_styleoptiongraphicsitem_state(void* self) {
@@ -3508,8 +3508,8 @@ QStyleHintReturn* q_stylehintreturn_new3(int version) {
     return QStyleHintReturn_new3(version);
 }
 
-QStyleHintReturn* q_stylehintreturn_new4(int version, int typeVal) {
-    return QStyleHintReturn_new4(version, typeVal);
+QStyleHintReturn* q_stylehintreturn_new4(int version, int type) {
+    return QStyleHintReturn_new4(version, type);
 }
 
 int32_t q_stylehintreturn_version(void* self) {
@@ -3524,8 +3524,8 @@ int32_t q_stylehintreturn_type(void* self) {
     return QStyleHintReturn_Type((QStyleHintReturn*)self);
 }
 
-void q_stylehintreturn_set_type(void* self, int _type) {
-    QStyleHintReturn_SetType((QStyleHintReturn*)self, _type);
+void q_stylehintreturn_set_type(void* self, int type) {
+    QStyleHintReturn_SetType((QStyleHintReturn*)self, type);
 }
 
 void q_stylehintreturn_operator_assign(void* self, void* param1) {
@@ -3568,8 +3568,8 @@ int32_t q_stylehintreturnmask_type(void* self) {
     return QStyleHintReturn_Type((QStyleHintReturn*)self);
 }
 
-void q_stylehintreturnmask_set_type(void* self, int _type) {
-    QStyleHintReturn_SetType((QStyleHintReturn*)self, _type);
+void q_stylehintreturnmask_set_type(void* self, int type) {
+    QStyleHintReturn_SetType((QStyleHintReturn*)self, type);
 }
 
 void q_stylehintreturnmask_delete(void* self) {
@@ -3608,8 +3608,8 @@ int32_t q_stylehintreturnvariant_type(void* self) {
     return QStyleHintReturn_Type((QStyleHintReturn*)self);
 }
 
-void q_stylehintreturnvariant_set_type(void* self, int _type) {
-    QStyleHintReturn_SetType((QStyleHintReturn*)self, _type);
+void q_stylehintreturnvariant_set_type(void* self, int type) {
+    QStyleHintReturn_SetType((QStyleHintReturn*)self, type);
 }
 
 void q_stylehintreturnvariant_delete(void* self) {

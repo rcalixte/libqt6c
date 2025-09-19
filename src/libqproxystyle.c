@@ -125,16 +125,16 @@ void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, 
     QProxyStyle_QBaseDrawItemPixmap((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
 }
 
-QSize* q_proxystyle_size_from_contents(void* self, int64_t typeVal, void* option, void* size, void* widget) {
-    return QProxyStyle_SizeFromContents((QProxyStyle*)self, typeVal, (QStyleOption*)option, (QSize*)size, (QWidget*)widget);
+QSize* q_proxystyle_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget) {
+    return QProxyStyle_SizeFromContents((QProxyStyle*)self, type, (QStyleOption*)option, (QSize*)size, (QWidget*)widget);
 }
 
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*)) {
     QProxyStyle_OnSizeFromContents((QProxyStyle*)self, (intptr_t)callback);
 }
 
-QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t typeVal, void* option, void* size, void* widget) {
-    return QProxyStyle_QBaseSizeFromContents((QProxyStyle*)self, typeVal, (QStyleOption*)option, (QSize*)size, (QWidget*)widget);
+QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t type, void* option, void* size, void* widget) {
+    return QProxyStyle_QBaseSizeFromContents((QProxyStyle*)self, type, (QStyleOption*)option, (QSize*)size, (QWidget*)widget);
 }
 
 QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, void* widget) {
@@ -577,12 +577,12 @@ int32_t q_proxystyle_start_timer22(void* self, int interval, int32_t timerType) 
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_proxystyle_destroyed1(void* self, void* param1) {

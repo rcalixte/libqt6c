@@ -774,28 +774,28 @@ void q_sslsocket_on_new_session_ticket_received(void* self, void (*callback)(voi
 ///
 /// @param self QSslSocket*
 /// @param level enum QSsl__AlertLevel
-/// @param typeVal enum QSsl__AlertType
+/// @param type enum QSsl__AlertType
 /// @param description const char*
-void q_sslsocket_alert_sent(void* self, int32_t level, int32_t typeVal, const char* description);
+void q_sslsocket_alert_sent(void* self, int32_t level, int32_t type, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertSent)
 ///
 /// @param self QSslSocket*
-/// @param callback void func(QSslSocket* self, enum QSsl__AlertLevel level, enum QSsl__AlertType typeVal, const char* description)
+/// @param callback void func(QSslSocket* self, enum QSsl__AlertLevel level, enum QSsl__AlertType type, const char* description)
 void q_sslsocket_on_alert_sent(void* self, void (*callback)(void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertReceived)
 ///
 /// @param self QSslSocket*
 /// @param level enum QSsl__AlertLevel
-/// @param typeVal enum QSsl__AlertType
+/// @param type enum QSsl__AlertType
 /// @param description const char*
-void q_sslsocket_alert_received(void* self, int32_t level, int32_t typeVal, const char* description);
+void q_sslsocket_alert_received(void* self, int32_t level, int32_t type, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertReceived)
 ///
 /// @param self QSslSocket*
-/// @param callback void func(QSslSocket* self, enum QSsl__AlertLevel level, enum QSsl__AlertType typeVal, const char* description)
+/// @param callback void func(QSslSocket* self, enum QSsl__AlertLevel level, enum QSsl__AlertType type, const char* description)
 void q_sslsocket_on_alert_received(void* self, void (*callback)(void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#handshakeInterruptedOnError)
@@ -1928,8 +1928,8 @@ int32_t q_sslsocket_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1939,8 +1939,8 @@ QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sslsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_sslsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

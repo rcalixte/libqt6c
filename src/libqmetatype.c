@@ -14,8 +14,8 @@ QMetaType* q_metatype_new2(void* other) {
     return QMetaType_new2((QMetaType*)other);
 }
 
-QMetaType* q_metatype_new3(int typeVal) {
-    return QMetaType_new3(typeVal);
+QMetaType* q_metatype_new3(int type) {
+    return QMetaType_new3(type);
 }
 
 QMetaType* q_metatype_new4() {
@@ -34,8 +34,8 @@ void q_metatype_move_assign(void* self, void* other) {
     QMetaType_MoveAssign((QMetaType*)self, (QMetaType*)other);
 }
 
-void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* typeVal) {
-    QMetaType_RegisterNormalizedTypedef(qstring(normalizedTypeName), (QMetaType*)typeVal);
+void q_metatype_register_normalized_typedef(const char* normalizedTypeName, void* type) {
+    QMetaType_RegisterNormalizedTypedef(qstring(normalizedTypeName), (QMetaType*)type);
 }
 
 int32_t q_metatype_type(const char* typeName) {
@@ -46,40 +46,40 @@ int32_t q_metatype_type2(const char* typeName) {
     return QMetaType_Type2(qstring(typeName));
 }
 
-const char* q_metatype_type_name(int typeVal) {
-    return QMetaType_TypeName(typeVal);
+const char* q_metatype_type_name(int type) {
+    return QMetaType_TypeName(type);
 }
 
-int32_t q_metatype_size_of(int typeVal) {
-    return QMetaType_SizeOf(typeVal);
+int32_t q_metatype_size_of(int type) {
+    return QMetaType_SizeOf(type);
 }
 
-int32_t q_metatype_type_flags(int typeVal) {
-    return QMetaType_TypeFlags(typeVal);
+int32_t q_metatype_type_flags(int type) {
+    return QMetaType_TypeFlags(type);
 }
 
-const QMetaObject* q_metatype_meta_object_for_type(int typeVal) {
-    return QMetaType_MetaObjectForType(typeVal);
+const QMetaObject* q_metatype_meta_object_for_type(int type) {
+    return QMetaType_MetaObjectForType(type);
 }
 
-void* q_metatype_create(int typeVal) {
-    return QMetaType_Create(typeVal);
+void* q_metatype_create(int type) {
+    return QMetaType_Create(type);
 }
 
-void q_metatype_destroy(int typeVal, void* data) {
-    QMetaType_Destroy(typeVal, data);
+void q_metatype_destroy(int type, void* data) {
+    QMetaType_Destroy(type, data);
 }
 
-void* q_metatype_construct(int typeVal, void* where, void* copyVal) {
-    return QMetaType_Construct(typeVal, where, copyVal);
+void* q_metatype_construct(int type, void* where, void* copyVal) {
+    return QMetaType_Construct(type, where, copyVal);
 }
 
-void q_metatype_destruct(int typeVal, void* where) {
-    QMetaType_Destruct(typeVal, where);
+void q_metatype_destruct(int type, void* where) {
+    QMetaType_Destruct(type, where);
 }
 
-bool q_metatype_is_registered(int typeVal) {
-    return QMetaType_IsRegistered(typeVal);
+bool q_metatype_is_registered(int type) {
+    return QMetaType_IsRegistered(type);
 }
 
 bool q_metatype_is_valid(void* self) {
@@ -178,12 +178,12 @@ bool q_metatype_has_registered_data_stream_operators(void* self) {
     return QMetaType_HasRegisteredDataStreamOperators((QMetaType*)self);
 }
 
-bool q_metatype_save2(void* stream, int typeVal, void* data) {
-    return QMetaType_Save2((QDataStream*)stream, typeVal, data);
+bool q_metatype_save2(void* stream, int type, void* data) {
+    return QMetaType_Save2((QDataStream*)stream, type, data);
 }
 
-bool q_metatype_load2(void* stream, int typeVal, void* data) {
-    return QMetaType_Load2((QDataStream*)stream, typeVal, data);
+bool q_metatype_load2(void* stream, int type, void* data) {
+    return QMetaType_Load2((QDataStream*)stream, type, data);
 }
 
 QMetaType* q_metatype_underlying_type(void* self) {
@@ -255,12 +255,12 @@ void q_metatype_unregister_mutable_view_function(void* from, void* to) {
     QMetaType_UnregisterMutableViewFunction((QMetaType*)from, (QMetaType*)to);
 }
 
-void q_metatype_unregister_meta_type(void* typeVal) {
-    QMetaType_UnregisterMetaType((QMetaType*)typeVal);
+void q_metatype_unregister_meta_type(void* type) {
+    QMetaType_UnregisterMetaType((QMetaType*)type);
 }
 
-void* q_metatype_create22(int typeVal, void* copyVal) {
-    return QMetaType_Create22(typeVal, copyVal);
+void* q_metatype_create22(int type, void* copyVal) {
+    return QMetaType_Create22(type, copyVal);
 }
 
 int32_t q_metatype_id1(void* self, int param1) {

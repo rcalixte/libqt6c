@@ -423,10 +423,10 @@ void QWebEngineView_Connect_PrintFinished(QWebEngineView* self, intptr_t slot) {
     });
 }
 
-QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int typeVal) {
+QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int type) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
-        return vqwebengineview->createWindow(static_cast<QWebEnginePage::WebWindowType>(typeVal));
+        return vqwebengineview->createWindow(static_cast<QWebEnginePage::WebWindowType>(type));
     }
     return {};
 }
@@ -589,13 +589,13 @@ void QWebEngineView_OnSizeHint(const QWebEngineView* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int typeVal) {
+QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int type) {
     auto* vqwebengineview = dynamic_cast<VirtualQWebEngineView*>(self);
     if (vqwebengineview && vqwebengineview->isVirtualQWebEngineView) {
         vqwebengineview->setQWebEngineView_CreateWindow_IsBase(true);
-        return vqwebengineview->createWindow(static_cast<QWebEnginePage::WebWindowType>(typeVal));
+        return vqwebengineview->createWindow(static_cast<QWebEnginePage::WebWindowType>(type));
     } else {
-        return ((VirtualQWebEngineView*)self)->createWindow(static_cast<QWebEnginePage::WebWindowType>(typeVal));
+        return ((VirtualQWebEngineView*)self)->createWindow(static_cast<QWebEnginePage::WebWindowType>(type));
     }
 }
 

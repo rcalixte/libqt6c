@@ -294,8 +294,8 @@ double q_categoryaxis_tick_interval(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#setTickType)
 ///
 /// @param self QCategoryAxis*
-/// @param typeVal enum QValueAxis__TickType
-void q_categoryaxis_set_tick_type(void* self, int32_t typeVal);
+/// @param type enum QValueAxis__TickType
+void q_categoryaxis_set_tick_type(void* self, int32_t type);
 
 /// Inherited from QValueAxis
 ///
@@ -464,15 +464,15 @@ void q_categoryaxis_on_tick_anchor_changed(void* self, void (*callback)(void*, d
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#tickTypeChanged)
 ///
 /// @param self QCategoryAxis*
-/// @param typeVal enum QValueAxis__TickType
-void q_categoryaxis_tick_type_changed(void* self, int32_t typeVal);
+/// @param type enum QValueAxis__TickType
+void q_categoryaxis_tick_type_changed(void* self, int32_t type);
 
 /// Inherited from QValueAxis
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#tickTypeChanged)
 ///
 /// @param self QCategoryAxis*
-/// @param callback void func(QCategoryAxis* self, enum QValueAxis__TickType typeVal)
+/// @param callback void func(QCategoryAxis* self, enum QValueAxis__TickType type)
 void q_categoryaxis_on_tick_type_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAxis
@@ -1716,8 +1716,8 @@ int32_t q_categoryaxis_start_timer22(void* self, int interval, int32_t timerType
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1727,8 +1727,8 @@ QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

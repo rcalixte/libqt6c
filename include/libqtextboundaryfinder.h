@@ -24,33 +24,33 @@ QTextBoundaryFinder* q_textboundaryfinder_new2(void* other);
 
 /// q_textboundaryfinder_new3 constructs a new QTextBoundaryFinder object.
 ///
-/// @param typeVal enum QTextBoundaryFinder__BoundaryType
+/// @param type enum QTextBoundaryFinder__BoundaryType
 /// @param stringVal const char*
-QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t typeVal, const char* stringVal);
+QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* stringVal);
 
 /// q_textboundaryfinder_new4 constructs a new QTextBoundaryFinder object.
 ///
-/// @param typeVal enum QTextBoundaryFinder__BoundaryType
+/// @param type enum QTextBoundaryFinder__BoundaryType
 /// @param chars QChar*
 /// @param length int64_t
-QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t typeVal, void* chars, int64_t length);
+QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, int64_t length);
 
 /// q_textboundaryfinder_new5 constructs a new QTextBoundaryFinder object.
 ///
-/// @param typeVal enum QTextBoundaryFinder__BoundaryType
+/// @param type enum QTextBoundaryFinder__BoundaryType
 /// @param chars QChar*
 /// @param length int64_t
 /// @param buffer unsigned char*
-QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t typeVal, void* chars, int64_t length, unsigned char* buffer);
+QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, void* chars, int64_t length, unsigned char* buffer);
 
 /// q_textboundaryfinder_new6 constructs a new QTextBoundaryFinder object.
 ///
-/// @param typeVal enum QTextBoundaryFinder__BoundaryType
+/// @param type enum QTextBoundaryFinder__BoundaryType
 /// @param chars QChar*
 /// @param length int64_t
 /// @param buffer unsigned char*
 /// @param bufferSize int64_t
-QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t typeVal, void* chars, int64_t length, unsigned char* buffer, int64_t bufferSize);
+QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, int64_t length, unsigned char* buffer, int64_t bufferSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#operator-eq)
 ///

@@ -16,16 +16,16 @@ void q_webenginesettings_reset_font_family(void* self, int32_t which) {
     QWebEngineSettings_ResetFontFamily((QWebEngineSettings*)self, which);
 }
 
-void q_webenginesettings_set_font_size(void* self, int32_t typeVal, int size) {
-    QWebEngineSettings_SetFontSize((QWebEngineSettings*)self, typeVal, size);
+void q_webenginesettings_set_font_size(void* self, int32_t type, int size) {
+    QWebEngineSettings_SetFontSize((QWebEngineSettings*)self, type, size);
 }
 
-int32_t q_webenginesettings_font_size(void* self, int32_t typeVal) {
-    return QWebEngineSettings_FontSize((QWebEngineSettings*)self, typeVal);
+int32_t q_webenginesettings_font_size(void* self, int32_t type) {
+    return QWebEngineSettings_FontSize((QWebEngineSettings*)self, type);
 }
 
-void q_webenginesettings_reset_font_size(void* self, int32_t typeVal) {
-    QWebEngineSettings_ResetFontSize((QWebEngineSettings*)self, typeVal);
+void q_webenginesettings_reset_font_size(void* self, int32_t type) {
+    QWebEngineSettings_ResetFontSize((QWebEngineSettings*)self, type);
 }
 
 void q_webenginesettings_set_attribute(void* self, int32_t attr, bool on) {

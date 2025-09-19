@@ -119,8 +119,8 @@ bool k_fileplacesmodel_is_hidden(void* self, void* index);
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#isGroupHidden)
 ///
 /// @param self KFilePlacesModel*
-/// @param typeVal enum KFilePlacesModel__GroupType
-bool k_fileplacesmodel_is_group_hidden(void* self, int32_t typeVal);
+/// @param type enum KFilePlacesModel__GroupType
+bool k_fileplacesmodel_is_group_hidden(void* self, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#isGroupHidden)
 ///
@@ -163,8 +163,8 @@ int32_t k_fileplacesmodel_group_type(void* self, void* index);
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#groupIndexes)
 ///
 /// @param self KFilePlacesModel*
-/// @param typeVal enum KFilePlacesModel__GroupType
-libqt_list /* of QModelIndex* */ k_fileplacesmodel_group_indexes(void* self, int32_t typeVal);
+/// @param type enum KFilePlacesModel__GroupType
+libqt_list /* of QModelIndex* */ k_fileplacesmodel_group_indexes(void* self, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#teardownActionForIndex)
 ///
@@ -243,9 +243,9 @@ void k_fileplacesmodel_set_place_hidden(void* self, void* index, bool hidden);
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#setGroupHidden)
 ///
 /// @param self KFilePlacesModel*
-/// @param typeVal enum KFilePlacesModel__GroupType
+/// @param type enum KFilePlacesModel__GroupType
 /// @param hidden bool
-void k_fileplacesmodel_set_group_hidden(void* self, int32_t typeVal, bool hidden);
+void k_fileplacesmodel_set_group_hidden(void* self, int32_t type, bool hidden);
 
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#movePlace)
 ///
@@ -1220,8 +1220,8 @@ int32_t k_fileplacesmodel_start_timer22(void* self, int interval, int32_t timerT
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1231,8 +1231,8 @@ QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_fileplacesmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_fileplacesmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

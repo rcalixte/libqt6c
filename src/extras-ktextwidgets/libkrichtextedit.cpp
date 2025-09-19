@@ -681,23 +681,23 @@ void KRichTextEdit_OnContextMenuEvent(KRichTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* KRichTextEdit_LoadResource(KRichTextEdit* self, int typeVal, const QUrl* name) {
+QVariant* KRichTextEdit_LoadResource(KRichTextEdit* self, int type, const QUrl* name) {
     auto* vkrichtextedit = dynamic_cast<VirtualKRichTextEdit*>(self);
     if (vkrichtextedit && vkrichtextedit->isVirtualKRichTextEdit) {
-        return new QVariant(vkrichtextedit->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vkrichtextedit->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualKRichTextEdit*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualKRichTextEdit*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 
 // Base class handler implementation
-QVariant* KRichTextEdit_QBaseLoadResource(KRichTextEdit* self, int typeVal, const QUrl* name) {
+QVariant* KRichTextEdit_QBaseLoadResource(KRichTextEdit* self, int type, const QUrl* name) {
     auto* vkrichtextedit = dynamic_cast<VirtualKRichTextEdit*>(self);
     if (vkrichtextedit && vkrichtextedit->isVirtualKRichTextEdit) {
         vkrichtextedit->setKRichTextEdit_LoadResource_IsBase(true);
-        return new QVariant(vkrichtextedit->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vkrichtextedit->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualKRichTextEdit*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualKRichTextEdit*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 

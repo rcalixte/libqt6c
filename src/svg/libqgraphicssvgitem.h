@@ -203,16 +203,16 @@ const char* q_graphicssvgitem_tr3(const char* s, const char* c, int n);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
 /// @param self QGraphicsSvgItem*
-/// @param typeVal enum Qt__GestureType
-void q_graphicssvgitem_grab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_graphicssvgitem_grab_gesture(void* self, int64_t type);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#ungrabGesture)
 ///
 /// @param self QGraphicsSvgItem*
-/// @param typeVal enum Qt__GestureType
-void q_graphicssvgitem_ungrab_gesture(void* self, int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_graphicssvgitem_ungrab_gesture(void* self, int64_t type);
 
 /// Inherited from QGraphicsObject
 ///
@@ -399,9 +399,9 @@ void q_graphicssvgitem_on_height_changed(void* self, void (*callback)(void*));
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
 /// @param self QGraphicsSvgItem*
-/// @param typeVal enum Qt__GestureType
+/// @param type enum Qt__GestureType
 /// @param flags flag of enum Qt__GestureFlag
-void q_graphicssvgitem_grab_gesture2(void* self, int64_t typeVal, int32_t flags);
+void q_graphicssvgitem_grab_gesture2(void* self, int64_t type, int32_t flags);
 
 /// Inherited from QObject
 ///
@@ -680,8 +680,8 @@ int32_t q_graphicssvgitem_start_timer22(void* self, int interval, int32_t timerT
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicssvgitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicssvgitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -691,8 +691,8 @@ QMetaObject__Connection* q_graphicssvgitem_connect5(void* sender, void* signal, 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicssvgitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_graphicssvgitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

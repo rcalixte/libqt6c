@@ -33,7 +33,7 @@ libqt_string KSycoca_Tr(const char* s);
 KSycoca* KSycoca_Self();
 int KSycoca_Version();
 bool KSycoca_IsAvailable();
-QDataStream* KSycoca_FindEntry(KSycoca* self, int offset, int* typeVal);
+QDataStream* KSycoca_FindEntry(KSycoca* self, int offset, int* type);
 QDataStream* KSycoca_FindFactory(KSycoca* self, int id);
 libqt_string KSycoca_AbsoluteFilePath();
 libqt_list /* of libqt_string */ KSycoca_AllResourceDirs(KSycoca* self);

@@ -211,7 +211,7 @@ int32_t q_textoption__tab_type(void* self);
 ///
 /// @param self QTextOption__Tab*
 /// @param type enum QTextOption__TabType
-void q_textoption__tab_set_type(void* self, int32_t _type);
+void q_textoption__tab_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#delimiter-var)
 ///

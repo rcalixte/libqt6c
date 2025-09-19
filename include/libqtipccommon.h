@@ -19,8 +19,8 @@ QNativeIpcKey* q_nativeipckey_new();
 
 /// q_nativeipckey_new2 constructs a new QNativeIpcKey object.
 ///
-/// @param typeVal enum QNativeIpcKey__Type
-QNativeIpcKey* q_nativeipckey_new2(uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+QNativeIpcKey* q_nativeipckey_new2(uint16_t type);
 
 /// q_nativeipckey_new3 constructs a new QNativeIpcKey object.
 ///
@@ -35,8 +35,8 @@ QNativeIpcKey* q_nativeipckey_new4(void* other);
 /// q_nativeipckey_new5 constructs a new QNativeIpcKey object.
 ///
 /// @param k const char*
-/// @param typeVal enum QNativeIpcKey__Type
-QNativeIpcKey* q_nativeipckey_new5(const char* k, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+QNativeIpcKey* q_nativeipckey_new5(const char* k, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#legacyDefaultTypeForOs)
 ///
@@ -76,8 +76,8 @@ uint16_t q_nativeipckey_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#setType)
 ///
 /// @param self QNativeIpcKey*
-/// @param typeVal enum QNativeIpcKey__Type
-void q_nativeipckey_set_type(void* self, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+void q_nativeipckey_set_type(void* self, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#nativeKey)
 ///

@@ -123,9 +123,9 @@ void QSslSocket_PreSharedKeyAuthenticationRequired(QSslSocket* self, QSslPreShar
 void QSslSocket_Connect_PreSharedKeyAuthenticationRequired(QSslSocket* self, intptr_t slot);
 void QSslSocket_NewSessionTicketReceived(QSslSocket* self);
 void QSslSocket_Connect_NewSessionTicketReceived(QSslSocket* self, intptr_t slot);
-void QSslSocket_AlertSent(QSslSocket* self, int level, int typeVal, const libqt_string description);
+void QSslSocket_AlertSent(QSslSocket* self, int level, int type, const libqt_string description);
 void QSslSocket_Connect_AlertSent(QSslSocket* self, intptr_t slot);
-void QSslSocket_AlertReceived(QSslSocket* self, int level, int typeVal, const libqt_string description);
+void QSslSocket_AlertReceived(QSslSocket* self, int level, int type, const libqt_string description);
 void QSslSocket_Connect_AlertReceived(QSslSocket* self, intptr_t slot);
 void QSslSocket_HandshakeInterruptedOnError(QSslSocket* self, const QSslError* error);
 void QSslSocket_Connect_HandshakeInterruptedOnError(QSslSocket* self, intptr_t slot);

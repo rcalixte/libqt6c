@@ -258,8 +258,8 @@ QDateTime* q_dirlisting__direntry_last_read(void* self, void* tz) {
     return QDirListing__DirEntry_LastRead((QDirListing__DirEntry*)self, (QTimeZone*)tz);
 }
 
-QDateTime* q_dirlisting__direntry_file_time(void* self, int32_t typeVal, void* tz) {
-    return QDirListing__DirEntry_FileTime((QDirListing__DirEntry*)self, typeVal, (QTimeZone*)tz);
+QDateTime* q_dirlisting__direntry_file_time(void* self, int32_t type, void* tz) {
+    return QDirListing__DirEntry_FileTime((QDirListing__DirEntry*)self, type, (QTimeZone*)tz);
 }
 
 void q_dirlisting__direntry_operator_assign(void* self, void* param1) {

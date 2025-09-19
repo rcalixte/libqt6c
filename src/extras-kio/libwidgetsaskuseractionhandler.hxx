@@ -248,12 +248,12 @@ class VirtualKIOWidgetsAskUserActionHandler final : public KIO::WidgetsAskUserAc
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual void requestUserMessageBox(KIO::AskUserActionInterface::MessageDialogType typeVal, const QString& text, const QString& title, const QString& primaryActionText, const QString& secondaryActionText, const QString& primaryActionIconName, const QString& secondaryActionIconName, const QString& dontAskAgainName, const QString& details, QWidget* parent) override {
+    virtual void requestUserMessageBox(KIO::AskUserActionInterface::MessageDialogType type, const QString& text, const QString& title, const QString& primaryActionText, const QString& secondaryActionText, const QString& primaryActionIconName, const QString& secondaryActionIconName, const QString& dontAskAgainName, const QString& details, QWidget* parent) override {
         if (kio__widgetsaskuseractionhandler_requestusermessagebox_isbase) {
             kio__widgetsaskuseractionhandler_requestusermessagebox_isbase = false;
-            KIO__WidgetsAskUserActionHandler::requestUserMessageBox(typeVal, text, title, primaryActionText, secondaryActionText, primaryActionIconName, secondaryActionIconName, dontAskAgainName, details, parent);
+            KIO__WidgetsAskUserActionHandler::requestUserMessageBox(type, text, title, primaryActionText, secondaryActionText, primaryActionIconName, secondaryActionIconName, dontAskAgainName, details, parent);
         } else if (kio__widgetsaskuseractionhandler_requestusermessagebox_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
             const QString text_ret = text;
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray text_b = text_ret.toUtf8();
@@ -330,7 +330,7 @@ class VirtualKIOWidgetsAskUserActionHandler final : public KIO::WidgetsAskUserAc
 
             kio__widgetsaskuseractionhandler_requestusermessagebox_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5, cbval6, cbval7, cbval8, cbval9, cbval10);
         } else {
-            KIO__WidgetsAskUserActionHandler::requestUserMessageBox(typeVal, text, title, primaryActionText, secondaryActionText, primaryActionIconName, secondaryActionIconName, dontAskAgainName, details, parent);
+            KIO__WidgetsAskUserActionHandler::requestUserMessageBox(type, text, title, primaryActionText, secondaryActionText, primaryActionIconName, secondaryActionIconName, dontAskAgainName, details, parent);
         }
     }
 

@@ -62,8 +62,8 @@ QStyleOption* QStyleOption_new3(int version) {
     return new QStyleOption(static_cast<int>(version));
 }
 
-QStyleOption* QStyleOption_new4(int version, int typeVal) {
-    return new QStyleOption(static_cast<int>(version), static_cast<int>(typeVal));
+QStyleOption* QStyleOption_new4(int version, int type) {
+    return new QStyleOption(static_cast<int>(version), static_cast<int>(type));
 }
 
 int QStyleOption_Version(const QStyleOption* self) {
@@ -1182,8 +1182,8 @@ QStyleOptionComplex* QStyleOptionComplex_new3(int version) {
     return new QStyleOptionComplex(static_cast<int>(version));
 }
 
-QStyleOptionComplex* QStyleOptionComplex_new4(int version, int typeVal) {
-    return new QStyleOptionComplex(static_cast<int>(version), static_cast<int>(typeVal));
+QStyleOptionComplex* QStyleOptionComplex_new4(int version, int type) {
+    return new QStyleOptionComplex(static_cast<int>(version), static_cast<int>(type));
 }
 
 int QStyleOptionComplex_SubControls(const QStyleOptionComplex* self) {
@@ -1698,8 +1698,8 @@ QStyleHintReturn* QStyleHintReturn_new3(int version) {
     return new QStyleHintReturn(static_cast<int>(version));
 }
 
-QStyleHintReturn* QStyleHintReturn_new4(int version, int typeVal) {
-    return new QStyleHintReturn(static_cast<int>(version), static_cast<int>(typeVal));
+QStyleHintReturn* QStyleHintReturn_new4(int version, int type) {
+    return new QStyleHintReturn(static_cast<int>(version), static_cast<int>(type));
 }
 
 int QStyleHintReturn_Version(const QStyleHintReturn* self) {

@@ -30,17 +30,17 @@ bool QDBusMetaType_Demarshall(const QDBusArgument* param1, QMetaType* id, void* 
     return QDBusMetaType::demarshall(*param1, *id, data);
 }
 
-void QDBusMetaType_RegisterCustomType(QMetaType* typeVal, const libqt_string signature) {
+void QDBusMetaType_RegisterCustomType(QMetaType* type, const libqt_string signature) {
     QByteArray signature_QByteArray(signature.data, signature.len);
-    QDBusMetaType::registerCustomType(*typeVal, signature_QByteArray);
+    QDBusMetaType::registerCustomType(*type, signature_QByteArray);
 }
 
 QMetaType* QDBusMetaType_SignatureToMetaType(const char* signature) {
     return new QMetaType(QDBusMetaType::signatureToMetaType(signature));
 }
 
-const char* QDBusMetaType_TypeToSignature(QMetaType* typeVal) {
-    return (const char*)QDBusMetaType::typeToSignature(*typeVal);
+const char* QDBusMetaType_TypeToSignature(QMetaType* type) {
+    return (const char*)QDBusMetaType::typeToSignature(*type);
 }
 
 void QDBusMetaType_Delete(QDBusMetaType* self) {

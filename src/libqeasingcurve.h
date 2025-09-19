@@ -24,8 +24,8 @@ QEasingCurve* q_easingcurve_new2(void* other);
 
 /// q_easingcurve_new3 constructs a new QEasingCurve object.
 ///
-/// @param typeVal enum QEasingCurve__Type
-QEasingCurve* q_easingcurve_new3(int32_t typeVal);
+/// @param type enum QEasingCurve__Type
+QEasingCurve* q_easingcurve_new3(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator-eq)
 ///
@@ -104,8 +104,8 @@ int32_t q_easingcurve_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#setType)
 ///
 /// @param self QEasingCurve*
-/// @param typeVal enum QEasingCurve__Type
-void q_easingcurve_set_type(void* self, int32_t typeVal);
+/// @param type enum QEasingCurve__Type
+void q_easingcurve_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#valueForProgress)
 ///

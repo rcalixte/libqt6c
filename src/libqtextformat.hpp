@@ -38,7 +38,7 @@ typedef struct QVariant QVariant;
 QTextLength* QTextLength_new(const QTextLength* other);
 QTextLength* QTextLength_new2(QTextLength* other);
 QTextLength* QTextLength_new3();
-QTextLength* QTextLength_new4(int typeVal, double value);
+QTextLength* QTextLength_new4(int type, double value);
 QTextLength* QTextLength_new5(const QTextLength* param1);
 void QTextLength_CopyAssign(QTextLength* self, QTextLength* other);
 void QTextLength_MoveAssign(QTextLength* self, QTextLength* other);
@@ -51,7 +51,7 @@ QVariant* QTextLength_ToQVariant(const QTextLength* self);
 void QTextLength_Delete(QTextLength* self);
 
 QTextFormat* QTextFormat_new();
-QTextFormat* QTextFormat_new2(int typeVal);
+QTextFormat* QTextFormat_new2(int type);
 QTextFormat* QTextFormat_new3(const QTextFormat* rhs);
 void QTextFormat_OperatorAssign(QTextFormat* self, const QTextFormat* rhs);
 void QTextFormat_Swap(QTextFormat* self, QTextFormat* other);
@@ -77,7 +77,7 @@ libqt_list /* of QTextLength* */ QTextFormat_LengthVectorProperty(const QTextFor
 void QTextFormat_SetProperty2(QTextFormat* self, int propertyId, const libqt_list /* of QTextLength* */ lengths);
 libqt_map /* of int to QVariant* */ QTextFormat_Properties(const QTextFormat* self);
 int QTextFormat_PropertyCount(const QTextFormat* self);
-void QTextFormat_SetObjectType(QTextFormat* self, int typeVal);
+void QTextFormat_SetObjectType(QTextFormat* self, int type);
 int QTextFormat_ObjectType(const QTextFormat* self);
 bool QTextFormat_IsCharFormat(const QTextFormat* self);
 bool QTextFormat_IsBlockFormat(const QTextFormat* self);

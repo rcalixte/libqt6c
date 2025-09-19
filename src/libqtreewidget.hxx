@@ -54,14 +54,14 @@ class VirtualQTreeWidgetItem final : public QTreeWidgetItem {
     VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QList<QString>& strings) : QTreeWidgetItem(parent, strings) {};
     VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after) : QTreeWidgetItem(parent, after) {};
     VirtualQTreeWidgetItem(const QTreeWidgetItem& other) : QTreeWidgetItem(other) {};
-    VirtualQTreeWidgetItem(int typeVal) : QTreeWidgetItem(typeVal) {};
-    VirtualQTreeWidgetItem(const QList<QString>& strings, int typeVal) : QTreeWidgetItem(strings, typeVal) {};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, int typeVal) : QTreeWidgetItem(treeview, typeVal) {};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, const QList<QString>& strings, int typeVal) : QTreeWidgetItem(treeview, strings, typeVal) {};
-    VirtualQTreeWidgetItem(QTreeWidget* treeview, QTreeWidgetItem* after, int typeVal) : QTreeWidgetItem(treeview, after, typeVal) {};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, int typeVal) : QTreeWidgetItem(parent, typeVal) {};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QList<QString>& strings, int typeVal) : QTreeWidgetItem(parent, strings, typeVal) {};
-    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after, int typeVal) : QTreeWidgetItem(parent, after, typeVal) {};
+    VirtualQTreeWidgetItem(int type) : QTreeWidgetItem(type) {};
+    VirtualQTreeWidgetItem(const QList<QString>& strings, int type) : QTreeWidgetItem(strings, type) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, int type) : QTreeWidgetItem(treeview, type) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, const QList<QString>& strings, int type) : QTreeWidgetItem(treeview, strings, type) {};
+    VirtualQTreeWidgetItem(QTreeWidget* treeview, QTreeWidgetItem* after, int type) : QTreeWidgetItem(treeview, after, type) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, int type) : QTreeWidgetItem(parent, type) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, const QList<QString>& strings, int type) : QTreeWidgetItem(parent, strings, type) {};
+    VirtualQTreeWidgetItem(QTreeWidgetItem* parent, QTreeWidgetItem* after, int type) : QTreeWidgetItem(parent, after, type) {};
 
     ~VirtualQTreeWidgetItem() {
         qtreewidgetitem_clone_callback = nullptr;

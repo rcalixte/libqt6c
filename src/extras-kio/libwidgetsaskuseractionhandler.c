@@ -82,16 +82,16 @@ void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_l
     KIO__WidgetsAskUserActionHandler_QBaseAskUserDelete((KIO__WidgetsAskUserActionHandler*)self, urls, deletionType, confirmationType, (QWidget*)parent);
 }
 
-void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
-    KIO__WidgetsAskUserActionHandler_RequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, typeVal, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(primaryActionIconName), qstring(secondaryActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
+void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
+    KIO__WidgetsAskUserActionHandler_RequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, type, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(primaryActionIconName), qstring(secondaryActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
 }
 
 void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, void (*callback)(void*, int32_t, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, void*)) {
     KIO__WidgetsAskUserActionHandler_OnRequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, (intptr_t)callback);
 }
 
-void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
-    KIO__WidgetsAskUserActionHandler_QBaseRequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, typeVal, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(primaryActionIconName), qstring(secondaryActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
+void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
+    KIO__WidgetsAskUserActionHandler_QBaseRequestUserMessageBox((KIO__WidgetsAskUserActionHandler*)self, type, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondaryActionText), qstring(primaryActionIconName), qstring(secondaryActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
 }
 
 void k_io__widgetsaskuseractionhandler_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
@@ -319,12 +319,12 @@ int32_t k_io__widgetsaskuseractionhandler_start_timer22(void* self, int interval
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_io__widgetsaskuseractionhandler_destroyed1(void* self, void* param1) {

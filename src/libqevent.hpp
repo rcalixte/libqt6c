@@ -84,8 +84,8 @@ typedef struct QWindow QWindow;
 typedef struct QWindowStateChangeEvent QWindowStateChangeEvent;
 #endif
 
-QInputEvent* QInputEvent_new(int typeVal, const QInputDevice* m_dev);
-QInputEvent* QInputEvent_new2(int typeVal, const QInputDevice* m_dev, int modifiers);
+QInputEvent* QInputEvent_new(int type, const QInputDevice* m_dev);
+QInputEvent* QInputEvent_new2(int type, const QInputDevice* m_dev, int modifiers);
 QInputEvent* QInputEvent_Clone(const QInputEvent* self);
 QInputDevice* QInputEvent_Device(const QInputEvent* self);
 int QInputEvent_DeviceType(const QInputEvent* self);
@@ -102,9 +102,9 @@ void QInputEvent_OnSetAccepted(QInputEvent* self, intptr_t slot);
 void QInputEvent_QBaseSetAccepted(QInputEvent* self, bool accepted);
 void QInputEvent_Delete(QInputEvent* self);
 
-QPointerEvent* QPointerEvent_new(int typeVal, const QPointingDevice* dev);
-QPointerEvent* QPointerEvent_new2(int typeVal, const QPointingDevice* dev, int modifiers);
-QPointerEvent* QPointerEvent_new3(int typeVal, const QPointingDevice* dev, int modifiers, const libqt_list /* of QEventPoint* */ points);
+QPointerEvent* QPointerEvent_new(int type, const QPointingDevice* dev);
+QPointerEvent* QPointerEvent_new2(int type, const QPointingDevice* dev, int modifiers);
+QPointerEvent* QPointerEvent_new3(int type, const QPointingDevice* dev, int modifiers, const libqt_list /* of QEventPoint* */ points);
 QPointerEvent* QPointerEvent_Clone(const QPointerEvent* self);
 QPointingDevice* QPointerEvent_PointingDevice(const QPointerEvent* self);
 int QPointerEvent_PointerType(const QPointerEvent* self);
@@ -182,14 +182,14 @@ void QEnterEvent_OnSetAccepted(QEnterEvent* self, intptr_t slot);
 void QEnterEvent_QBaseSetAccepted(QEnterEvent* self, bool accepted);
 void QEnterEvent_Delete(QEnterEvent* self);
 
-QMouseEvent* QMouseEvent_new(int typeVal, const QPointF* localPos, int button, int buttons, int modifiers);
-QMouseEvent* QMouseEvent_new2(int typeVal, const QPointF* localPos, const QPointF* globalPos, int button, int buttons, int modifiers);
-QMouseEvent* QMouseEvent_new3(int typeVal, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers);
-QMouseEvent* QMouseEvent_new4(int typeVal, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers, int source);
-QMouseEvent* QMouseEvent_new5(int typeVal, const QPointF* localPos, int button, int buttons, int modifiers, const QPointingDevice* device);
-QMouseEvent* QMouseEvent_new6(int typeVal, const QPointF* localPos, const QPointF* globalPos, int button, int buttons, int modifiers, const QPointingDevice* device);
-QMouseEvent* QMouseEvent_new7(int typeVal, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers, const QPointingDevice* device);
-QMouseEvent* QMouseEvent_new8(int typeVal, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers, int source, const QPointingDevice* device);
+QMouseEvent* QMouseEvent_new(int type, const QPointF* localPos, int button, int buttons, int modifiers);
+QMouseEvent* QMouseEvent_new2(int type, const QPointF* localPos, const QPointF* globalPos, int button, int buttons, int modifiers);
+QMouseEvent* QMouseEvent_new3(int type, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers);
+QMouseEvent* QMouseEvent_new4(int type, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers, int source);
+QMouseEvent* QMouseEvent_new5(int type, const QPointF* localPos, int button, int buttons, int modifiers, const QPointingDevice* device);
+QMouseEvent* QMouseEvent_new6(int type, const QPointF* localPos, const QPointF* globalPos, int button, int buttons, int modifiers, const QPointingDevice* device);
+QMouseEvent* QMouseEvent_new7(int type, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers, const QPointingDevice* device);
+QMouseEvent* QMouseEvent_new8(int type, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, int button, int buttons, int modifiers, int source, const QPointingDevice* device);
 QMouseEvent* QMouseEvent_Clone(const QMouseEvent* self);
 QPoint* QMouseEvent_Pos(const QMouseEvent* self);
 QPoint* QMouseEvent_GlobalPos(const QMouseEvent* self);
@@ -221,12 +221,12 @@ void QMouseEvent_OnSetAccepted(QMouseEvent* self, intptr_t slot);
 void QMouseEvent_QBaseSetAccepted(QMouseEvent* self, bool accepted);
 void QMouseEvent_Delete(QMouseEvent* self);
 
-QHoverEvent* QHoverEvent_new(int typeVal, const QPointF* scenePos, const QPointF* globalPos, const QPointF* oldPos);
-QHoverEvent* QHoverEvent_new2(int typeVal, const QPointF* pos, const QPointF* oldPos);
-QHoverEvent* QHoverEvent_new3(int typeVal, const QPointF* scenePos, const QPointF* globalPos, const QPointF* oldPos, int modifiers);
-QHoverEvent* QHoverEvent_new4(int typeVal, const QPointF* scenePos, const QPointF* globalPos, const QPointF* oldPos, int modifiers, const QPointingDevice* device);
-QHoverEvent* QHoverEvent_new5(int typeVal, const QPointF* pos, const QPointF* oldPos, int modifiers);
-QHoverEvent* QHoverEvent_new6(int typeVal, const QPointF* pos, const QPointF* oldPos, int modifiers, const QPointingDevice* device);
+QHoverEvent* QHoverEvent_new(int type, const QPointF* scenePos, const QPointF* globalPos, const QPointF* oldPos);
+QHoverEvent* QHoverEvent_new2(int type, const QPointF* pos, const QPointF* oldPos);
+QHoverEvent* QHoverEvent_new3(int type, const QPointF* scenePos, const QPointF* globalPos, const QPointF* oldPos, int modifiers);
+QHoverEvent* QHoverEvent_new4(int type, const QPointF* scenePos, const QPointF* globalPos, const QPointF* oldPos, int modifiers, const QPointingDevice* device);
+QHoverEvent* QHoverEvent_new5(int type, const QPointF* pos, const QPointF* oldPos, int modifiers);
+QHoverEvent* QHoverEvent_new6(int type, const QPointF* pos, const QPointF* oldPos, int modifiers, const QPointingDevice* device);
 QHoverEvent* QHoverEvent_Clone(const QHoverEvent* self);
 QPoint* QHoverEvent_Pos(const QHoverEvent* self);
 QPointF* QHoverEvent_PosF(const QHoverEvent* self);
@@ -319,9 +319,9 @@ void QTabletEvent_OnSetAccepted(QTabletEvent* self, intptr_t slot);
 void QTabletEvent_QBaseSetAccepted(QTabletEvent* self, bool accepted);
 void QTabletEvent_Delete(QTabletEvent* self);
 
-QNativeGestureEvent* QNativeGestureEvent_new(int typeVal, const QPointingDevice* dev, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, double value, unsigned long long sequenceId, unsigned long long intArgument);
-QNativeGestureEvent* QNativeGestureEvent_new2(int typeVal, const QPointingDevice* dev, int fingerCount, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, double value, const QPointF* delta);
-QNativeGestureEvent* QNativeGestureEvent_new3(int typeVal, const QPointingDevice* dev, int fingerCount, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, double value, const QPointF* delta, unsigned long long sequenceId);
+QNativeGestureEvent* QNativeGestureEvent_new(int type, const QPointingDevice* dev, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, double value, unsigned long long sequenceId, unsigned long long intArgument);
+QNativeGestureEvent* QNativeGestureEvent_new2(int type, const QPointingDevice* dev, int fingerCount, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, double value, const QPointF* delta);
+QNativeGestureEvent* QNativeGestureEvent_new3(int type, const QPointingDevice* dev, int fingerCount, const QPointF* localPos, const QPointF* scenePos, const QPointF* globalPos, double value, const QPointF* delta, unsigned long long sequenceId);
 QNativeGestureEvent* QNativeGestureEvent_Clone(const QNativeGestureEvent* self);
 int QNativeGestureEvent_GestureType(const QNativeGestureEvent* self);
 int QNativeGestureEvent_FingerCount(const QNativeGestureEvent* self);
@@ -351,15 +351,15 @@ void QNativeGestureEvent_OnSetAccepted(QNativeGestureEvent* self, intptr_t slot)
 void QNativeGestureEvent_QBaseSetAccepted(QNativeGestureEvent* self, bool accepted);
 void QNativeGestureEvent_Delete(QNativeGestureEvent* self);
 
-QKeyEvent* QKeyEvent_new(int typeVal, int key, int modifiers);
-QKeyEvent* QKeyEvent_new2(int typeVal, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers);
-QKeyEvent* QKeyEvent_new3(int typeVal, int key, int modifiers, const libqt_string text);
-QKeyEvent* QKeyEvent_new4(int typeVal, int key, int modifiers, const libqt_string text, bool autorep);
-QKeyEvent* QKeyEvent_new5(int typeVal, int key, int modifiers, const libqt_string text, bool autorep, uint16_t count);
-QKeyEvent* QKeyEvent_new6(int typeVal, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text);
-QKeyEvent* QKeyEvent_new7(int typeVal, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text, bool autorep);
-QKeyEvent* QKeyEvent_new8(int typeVal, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text, bool autorep, uint16_t count);
-QKeyEvent* QKeyEvent_new9(int typeVal, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text, bool autorep, uint16_t count, const QInputDevice* device);
+QKeyEvent* QKeyEvent_new(int type, int key, int modifiers);
+QKeyEvent* QKeyEvent_new2(int type, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers);
+QKeyEvent* QKeyEvent_new3(int type, int key, int modifiers, const libqt_string text);
+QKeyEvent* QKeyEvent_new4(int type, int key, int modifiers, const libqt_string text, bool autorep);
+QKeyEvent* QKeyEvent_new5(int type, int key, int modifiers, const libqt_string text, bool autorep, uint16_t count);
+QKeyEvent* QKeyEvent_new6(int type, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text);
+QKeyEvent* QKeyEvent_new7(int type, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text, bool autorep);
+QKeyEvent* QKeyEvent_new8(int type, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text, bool autorep, uint16_t count);
+QKeyEvent* QKeyEvent_new9(int type, int key, int modifiers, unsigned int nativeScanCode, unsigned int nativeVirtualKey, unsigned int nativeModifiers, const libqt_string text, bool autorep, uint16_t count, const QInputDevice* device);
 QKeyEvent* QKeyEvent_Clone(const QKeyEvent* self);
 int QKeyEvent_Key(const QKeyEvent* self);
 bool QKeyEvent_Matches(const QKeyEvent* self, int key);
@@ -381,8 +381,8 @@ void QKeyEvent_OnSetAccepted(QKeyEvent* self, intptr_t slot);
 void QKeyEvent_QBaseSetAccepted(QKeyEvent* self, bool accepted);
 void QKeyEvent_Delete(QKeyEvent* self);
 
-QFocusEvent* QFocusEvent_new(int typeVal);
-QFocusEvent* QFocusEvent_new2(int typeVal, int reason);
+QFocusEvent* QFocusEvent_new(int type);
+QFocusEvent* QFocusEvent_new2(int type, int reason);
 QFocusEvent* QFocusEvent_Clone(const QFocusEvent* self);
 bool QFocusEvent_GotFocus(const QFocusEvent* self);
 bool QFocusEvent_LostFocus(const QFocusEvent* self);
@@ -536,7 +536,7 @@ void QInputMethodQueryEvent_QBaseSetAccepted(QInputMethodQueryEvent* self, bool 
 void QInputMethodQueryEvent_Delete(QInputMethodQueryEvent* self);
 
 QDropEvent* QDropEvent_new(const QPointF* pos, int actions, const QMimeData* data, int buttons, int modifiers);
-QDropEvent* QDropEvent_new2(const QPointF* pos, int actions, const QMimeData* data, int buttons, int modifiers, int typeVal);
+QDropEvent* QDropEvent_new2(const QPointF* pos, int actions, const QMimeData* data, int buttons, int modifiers, int type);
 QDropEvent* QDropEvent_Clone(const QDropEvent* self);
 QPoint* QDropEvent_Pos(const QDropEvent* self);
 QPointF* QDropEvent_PosF(const QDropEvent* self);
@@ -560,7 +560,7 @@ void QDropEvent_QBaseSetAccepted(QDropEvent* self, bool accepted);
 void QDropEvent_Delete(QDropEvent* self);
 
 QDragMoveEvent* QDragMoveEvent_new(const QPoint* pos, int actions, const QMimeData* data, int buttons, int modifiers);
-QDragMoveEvent* QDragMoveEvent_new2(const QPoint* pos, int actions, const QMimeData* data, int buttons, int modifiers, int typeVal);
+QDragMoveEvent* QDragMoveEvent_new2(const QPoint* pos, int actions, const QMimeData* data, int buttons, int modifiers, int type);
 QDragMoveEvent* QDragMoveEvent_Clone(const QDragMoveEvent* self);
 QRect* QDragMoveEvent_AnswerRect(const QDragMoveEvent* self);
 void QDragMoveEvent_Accept(QDragMoveEvent* self);
@@ -592,7 +592,7 @@ void QDragLeaveEvent_OnSetAccepted(QDragLeaveEvent* self, intptr_t slot);
 void QDragLeaveEvent_QBaseSetAccepted(QDragLeaveEvent* self, bool accepted);
 void QDragLeaveEvent_Delete(QDragLeaveEvent* self);
 
-QHelpEvent* QHelpEvent_new(int typeVal, const QPoint* pos, const QPoint* globalPos);
+QHelpEvent* QHelpEvent_new(int type, const QPoint* pos, const QPoint* globalPos);
 QHelpEvent* QHelpEvent_Clone(const QHelpEvent* self);
 int QHelpEvent_X(const QHelpEvent* self);
 int QHelpEvent_Y(const QHelpEvent* self);
@@ -627,8 +627,8 @@ void QWhatsThisClickedEvent_OnSetAccepted(QWhatsThisClickedEvent* self, intptr_t
 void QWhatsThisClickedEvent_QBaseSetAccepted(QWhatsThisClickedEvent* self, bool accepted);
 void QWhatsThisClickedEvent_Delete(QWhatsThisClickedEvent* self);
 
-QActionEvent* QActionEvent_new(int typeVal, QAction* action);
-QActionEvent* QActionEvent_new2(int typeVal, QAction* action, QAction* before);
+QActionEvent* QActionEvent_new(int type, QAction* action);
+QActionEvent* QActionEvent_new2(int type, QAction* action, QAction* before);
 QActionEvent* QActionEvent_Clone(const QActionEvent* self);
 QAction* QActionEvent_Action(const QActionEvent* self);
 QAction* QActionEvent_Before(const QActionEvent* self);
@@ -768,7 +768,7 @@ void QApplicationStateChangeEvent_OnSetAccepted(QApplicationStateChangeEvent* se
 void QApplicationStateChangeEvent_QBaseSetAccepted(QApplicationStateChangeEvent* self, bool accepted);
 void QApplicationStateChangeEvent_Delete(QApplicationStateChangeEvent* self);
 
-QChildWindowEvent* QChildWindowEvent_new(int typeVal, QWindow* childWindow);
+QChildWindowEvent* QChildWindowEvent_new(int type, QWindow* childWindow);
 QChildWindowEvent* QChildWindowEvent_Clone(const QChildWindowEvent* self);
 QWindow* QChildWindowEvent_Child(const QChildWindowEvent* self);
 void QChildWindowEvent_OnClone(const QChildWindowEvent* self, intptr_t slot);

@@ -166,8 +166,8 @@ libqt_string QSharedMemory_ErrorString(const QSharedMemory* self) {
     return _str;
 }
 
-bool QSharedMemory_IsKeyTypeSupported(uint16_t typeVal) {
-    return QSharedMemory::isKeyTypeSupported(static_cast<QNativeIpcKey::Type>(typeVal));
+bool QSharedMemory_IsKeyTypeSupported(uint16_t type) {
+    return QSharedMemory::isKeyTypeSupported(static_cast<QNativeIpcKey::Type>(type));
 }
 
 QNativeIpcKey* QSharedMemory_PlatformSafeKey(const libqt_string key) {
@@ -204,9 +204,9 @@ libqt_string QSharedMemory_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QSharedMemory_SetNativeKey22(QSharedMemory* self, const libqt_string key, uint16_t typeVal) {
+void QSharedMemory_SetNativeKey22(QSharedMemory* self, const libqt_string key, uint16_t type) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
-    self->setNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal));
+    self->setNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(type));
 }
 
 bool QSharedMemory_Create2(QSharedMemory* self, ptrdiff_t size, int mode) {
@@ -217,14 +217,14 @@ bool QSharedMemory_Attach1(QSharedMemory* self, int mode) {
     return self->attach(static_cast<QSharedMemory::AccessMode>(mode));
 }
 
-QNativeIpcKey* QSharedMemory_PlatformSafeKey2(const libqt_string key, uint16_t typeVal) {
+QNativeIpcKey* QSharedMemory_PlatformSafeKey2(const libqt_string key, uint16_t type) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
-    return new QNativeIpcKey(QSharedMemory::platformSafeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal)));
+    return new QNativeIpcKey(QSharedMemory::platformSafeKey(key_QString, static_cast<QNativeIpcKey::Type>(type)));
 }
 
-QNativeIpcKey* QSharedMemory_LegacyNativeKey2(const libqt_string key, uint16_t typeVal) {
+QNativeIpcKey* QSharedMemory_LegacyNativeKey2(const libqt_string key, uint16_t type) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
-    return new QNativeIpcKey(QSharedMemory::legacyNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal)));
+    return new QNativeIpcKey(QSharedMemory::legacyNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(type)));
 }
 
 // Base class handler implementation

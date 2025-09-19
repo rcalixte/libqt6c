@@ -47,11 +47,11 @@ class VirtualQListWidgetItem final : public QListWidgetItem {
     VirtualQListWidgetItem(const QIcon& icon, const QString& text) : QListWidgetItem(icon, text) {};
     VirtualQListWidgetItem(const QListWidgetItem& other) : QListWidgetItem(other) {};
     VirtualQListWidgetItem(QListWidget* listview) : QListWidgetItem(listview) {};
-    VirtualQListWidgetItem(QListWidget* listview, int typeVal) : QListWidgetItem(listview, typeVal) {};
+    VirtualQListWidgetItem(QListWidget* listview, int type) : QListWidgetItem(listview, type) {};
     VirtualQListWidgetItem(const QString& text, QListWidget* listview) : QListWidgetItem(text, listview) {};
-    VirtualQListWidgetItem(const QString& text, QListWidget* listview, int typeVal) : QListWidgetItem(text, listview, typeVal) {};
+    VirtualQListWidgetItem(const QString& text, QListWidget* listview, int type) : QListWidgetItem(text, listview, type) {};
     VirtualQListWidgetItem(const QIcon& icon, const QString& text, QListWidget* listview) : QListWidgetItem(icon, text, listview) {};
-    VirtualQListWidgetItem(const QIcon& icon, const QString& text, QListWidget* listview, int typeVal) : QListWidgetItem(icon, text, listview, typeVal) {};
+    VirtualQListWidgetItem(const QIcon& icon, const QString& text, QListWidget* listview, int type) : QListWidgetItem(icon, text, listview, type) {};
 
     ~VirtualQListWidgetItem() {
         qlistwidgetitem_clone_callback = nullptr;

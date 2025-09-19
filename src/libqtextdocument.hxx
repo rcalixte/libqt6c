@@ -173,12 +173,12 @@ class VirtualQTextDocument final : public QTextDocument {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QVariant loadResource(int typeVal, const QUrl& name) override {
+    virtual QVariant loadResource(int type, const QUrl& name) override {
         if (qtextdocument_loadresource_isbase) {
             qtextdocument_loadresource_isbase = false;
-            return QTextDocument::loadResource(typeVal, name);
+            return QTextDocument::loadResource(type, name);
         } else if (qtextdocument_loadresource_callback != nullptr) {
-            int cbval1 = typeVal;
+            int cbval1 = type;
             const QUrl& name_ret = name;
             // Cast returned reference into pointer
             QUrl* cbval2 = const_cast<QUrl*>(&name_ret);
@@ -186,7 +186,7 @@ class VirtualQTextDocument final : public QTextDocument {
             QVariant* callback_ret = qtextdocument_loadresource_callback(this, cbval1, cbval2);
             return *callback_ret;
         } else {
-            return QTextDocument::loadResource(typeVal, name);
+            return QTextDocument::loadResource(type, name);
         }
     }
 
@@ -356,8 +356,8 @@ class VirtualQTextDocument final : public QTextDocument {
     // Friend functions
     friend QTextObject* QTextDocument_CreateObject(QTextDocument* self, const QTextFormat* f);
     friend QTextObject* QTextDocument_QBaseCreateObject(QTextDocument* self, const QTextFormat* f);
-    friend QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, const QUrl* name);
-    friend QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int typeVal, const QUrl* name);
+    friend QVariant* QTextDocument_LoadResource(QTextDocument* self, int type, const QUrl* name);
+    friend QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int type, const QUrl* name);
     friend void QTextDocument_TimerEvent(QTextDocument* self, QTimerEvent* event);
     friend void QTextDocument_QBaseTimerEvent(QTextDocument* self, QTimerEvent* event);
     friend void QTextDocument_ChildEvent(QTextDocument* self, QChildEvent* event);

@@ -41,8 +41,8 @@ QVariant* QVariant_new() {
     return new QVariant();
 }
 
-QVariant* QVariant_new2(QMetaType* typeVal) {
-    return new QVariant(*typeVal);
+QVariant* QVariant_new2(QMetaType* type) {
+    return new QVariant(*type);
 }
 
 QVariant* QVariant_new3(const QVariant* other) {
@@ -179,12 +179,12 @@ QVariant* QVariant_new28(QPoint* pt) {
     return new QVariant(*pt);
 }
 
-QVariant* QVariant_new29(int typeVal) {
-    return new QVariant(static_cast<QVariant::Type>(typeVal));
+QVariant* QVariant_new29(int type) {
+    return new QVariant(static_cast<QVariant::Type>(type));
 }
 
-QVariant* QVariant_new30(QMetaType* typeVal, const void* copyVal) {
-    return new QVariant(*typeVal, copyVal);
+QVariant* QVariant_new30(QMetaType* type, const void* copyVal) {
+    return new QVariant(*type, copyVal);
 }
 
 void QVariant_OperatorAssign(QVariant* self, const QVariant* other) {
@@ -215,8 +215,8 @@ bool QVariant_CanConvert(const QVariant* self, QMetaType* targetType) {
     return self->canConvert(*targetType);
 }
 
-bool QVariant_Convert(QVariant* self, QMetaType* typeVal) {
-    return self->convert(*typeVal);
+bool QVariant_Convert(QVariant* self, QMetaType* type) {
+    return self->convert(*type);
 }
 
 bool QVariant_CanView(const QVariant* self, QMetaType* targetType) {
@@ -523,8 +523,8 @@ void QVariant_SetValue(QVariant* self, const QVariant* avalue) {
     self->setValue(*avalue);
 }
 
-QVariant* QVariant_FromMetaType(QMetaType* typeVal) {
-    return new QVariant(QVariant::fromMetaType(*typeVal));
+QVariant* QVariant_FromMetaType(QMetaType* type) {
+    return new QVariant(QVariant::fromMetaType(*type));
 }
 
 QPartialOrdering* QVariant_Compare(const QVariant* lhs, const QVariant* rhs) {
@@ -559,8 +559,8 @@ double QVariant_ToReal1(const QVariant* self, bool* ok) {
     return static_cast<double>(self->toReal(ok));
 }
 
-QVariant* QVariant_FromMetaType2(QMetaType* typeVal, const void* copyVal) {
-    return new QVariant(QVariant::fromMetaType(*typeVal, copyVal));
+QVariant* QVariant_FromMetaType2(QMetaType* type, const void* copyVal) {
+    return new QVariant(QVariant::fromMetaType(*type, copyVal));
 }
 
 void QVariant_Delete(QVariant* self) {

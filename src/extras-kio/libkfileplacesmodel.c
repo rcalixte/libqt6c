@@ -89,8 +89,8 @@ bool k_fileplacesmodel_is_hidden(void* self, void* index) {
     return KFilePlacesModel_IsHidden((KFilePlacesModel*)self, (QModelIndex*)index);
 }
 
-bool k_fileplacesmodel_is_group_hidden(void* self, int32_t typeVal) {
-    return KFilePlacesModel_IsGroupHidden((KFilePlacesModel*)self, typeVal);
+bool k_fileplacesmodel_is_group_hidden(void* self, int32_t type) {
+    return KFilePlacesModel_IsGroupHidden((KFilePlacesModel*)self, type);
 }
 
 bool k_fileplacesmodel_is_group_hidden2(void* self, void* index) {
@@ -117,8 +117,8 @@ int32_t k_fileplacesmodel_group_type(void* self, void* index) {
     return KFilePlacesModel_GroupType((KFilePlacesModel*)self, (QModelIndex*)index);
 }
 
-libqt_list /* of QModelIndex* */ k_fileplacesmodel_group_indexes(void* self, int32_t typeVal) {
-    libqt_list _arr = KFilePlacesModel_GroupIndexes((KFilePlacesModel*)self, typeVal);
+libqt_list /* of QModelIndex* */ k_fileplacesmodel_group_indexes(void* self, int32_t type) {
+    libqt_list _arr = KFilePlacesModel_GroupIndexes((KFilePlacesModel*)self, type);
     return _arr;
 }
 
@@ -166,8 +166,8 @@ void k_fileplacesmodel_set_place_hidden(void* self, void* index, bool hidden) {
     KFilePlacesModel_SetPlaceHidden((KFilePlacesModel*)self, (QModelIndex*)index, hidden);
 }
 
-void k_fileplacesmodel_set_group_hidden(void* self, int32_t typeVal, bool hidden) {
-    KFilePlacesModel_SetGroupHidden((KFilePlacesModel*)self, typeVal, hidden);
+void k_fileplacesmodel_set_group_hidden(void* self, int32_t type, bool hidden) {
+    KFilePlacesModel_SetGroupHidden((KFilePlacesModel*)self, type, hidden);
 }
 
 bool k_fileplacesmodel_move_place(void* self, int itemRow, int row) {
@@ -743,12 +743,12 @@ int32_t k_fileplacesmodel_start_timer22(void* self, int interval, int32_t timerT
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_fileplacesmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_fileplacesmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_fileplacesmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_fileplacesmodel_destroyed1(void* self, void* param1) {

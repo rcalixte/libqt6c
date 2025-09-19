@@ -316,23 +316,23 @@ bool q_sqlquery_exec_batch1(void* self, int32_t mode);
 /// @param self QSqlQuery*
 /// @param placeholder const char*
 /// @param val QVariant*
-/// @param typeVal flag of enum QSql__ParamTypeFlag
-void q_sqlquery_bind_value3(void* self, const char* placeholder, void* val, int32_t typeVal);
+/// @param type flag of enum QSql__ParamTypeFlag
+void q_sqlquery_bind_value3(void* self, const char* placeholder, void* val, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquery.html#bindValue)
 ///
 /// @param self QSqlQuery*
 /// @param pos int
 /// @param val QVariant*
-/// @param typeVal flag of enum QSql__ParamTypeFlag
-void q_sqlquery_bind_value32(void* self, int pos, void* val, int32_t typeVal);
+/// @param type flag of enum QSql__ParamTypeFlag
+void q_sqlquery_bind_value32(void* self, int pos, void* val, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquery.html#addBindValue)
 ///
 /// @param self QSqlQuery*
 /// @param val QVariant*
-/// @param typeVal flag of enum QSql__ParamTypeFlag
-void q_sqlquery_add_bind_value2(void* self, void* val, int32_t typeVal);
+/// @param type flag of enum QSql__ParamTypeFlag
+void q_sqlquery_add_bind_value2(void* self, void* val, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlquery.html#dtor.QSqlQuery)
 ///

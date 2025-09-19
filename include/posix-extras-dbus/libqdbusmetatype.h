@@ -51,9 +51,9 @@ bool q_dbusmetatype_demarshall(void* param1, void* id, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#registerCustomType)
 ///
-/// @param typeVal QMetaType*
+/// @param type QMetaType*
 /// @param signature const char*
-void q_dbusmetatype_register_custom_type(void* typeVal, const char* signature);
+void q_dbusmetatype_register_custom_type(void* type, const char* signature);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#signatureToMetaType)
 ///
@@ -64,8 +64,8 @@ QMetaType* q_dbusmetatype_signature_to_meta_type(const char* signature);
 ///
 /// Caller is responsible for freeing the returned memory
 ///
-/// @param typeVal QMetaType*
-const char* q_dbusmetatype_type_to_signature(void* typeVal);
+/// @param type QMetaType*
+const char* q_dbusmetatype_type_to_signature(void* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusmetatype.html#dtor.QDBusMetaType)
 ///

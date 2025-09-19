@@ -71,7 +71,7 @@ void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list urls, i
 /// [Qt documentation](https://api.kde.org/kio-askuseractioninterface.html#requestUserMessageBox)
 ///
 /// @param self KIO__AskUserActionInterface*
-/// @param typeVal enum KIO__AskUserActionInterface__MessageDialogType
+/// @param type enum KIO__AskUserActionInterface__MessageDialogType
 /// @param text const char*
 /// @param title const char*
 /// @param primaryActionText const char*
@@ -81,7 +81,7 @@ void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list urls, i
 /// @param dontAskAgainName const char*
 /// @param details const char*
 /// @param parent QWidget*
-void k_io__askuseractioninterface_request_user_message_box(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondatyActionText, const char* primaryActionIconName, const char* secondatyActionIconName, const char* dontAskAgainName, const char* details, void* parent);
+void k_io__askuseractioninterface_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondatyActionText, const char* primaryActionIconName, const char* secondatyActionIconName, const char* dontAskAgainName, const char* details, void* parent);
 
 /// [Qt documentation](https://api.kde.org/kio-askuseractioninterface.html#askIgnoreSslErrors)
 ///
@@ -467,8 +467,8 @@ int32_t k_io__askuseractioninterface_start_timer22(void* self, int interval, int
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -478,8 +478,8 @@ QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, voi
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_io__askuseractioninterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_io__askuseractioninterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

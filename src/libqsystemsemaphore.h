@@ -112,8 +112,8 @@ const char* q_systemsemaphore_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#isKeyTypeSupported)
 ///
-/// @param typeVal enum QNativeIpcKey__Type
-bool q_systemsemaphore_is_key_type_supported(uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+bool q_systemsemaphore_is_key_type_supported(uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#platformSafeKey)
 ///
@@ -178,8 +178,8 @@ void q_systemsemaphore_set_native_key32(void* self, const char* key, int initial
 /// @param key const char*
 /// @param initialValue int
 /// @param mode enum QSystemSemaphore__AccessMode
-/// @param typeVal enum QNativeIpcKey__Type
-void q_systemsemaphore_set_native_key4(void* self, const char* key, int initialValue, int32_t mode, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+void q_systemsemaphore_set_native_key4(void* self, const char* key, int initialValue, int32_t mode, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setKey)
 ///
@@ -205,14 +205,14 @@ bool q_systemsemaphore_release1(void* self, int n);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#platformSafeKey)
 ///
 /// @param key const char*
-/// @param typeVal enum QNativeIpcKey__Type
-QNativeIpcKey* q_systemsemaphore_platform_safe_key2(const char* key, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+QNativeIpcKey* q_systemsemaphore_platform_safe_key2(const char* key, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#legacyNativeKey)
 ///
 /// @param key const char*
-/// @param typeVal enum QNativeIpcKey__Type
-QNativeIpcKey* q_systemsemaphore_legacy_native_key2(const char* key, uint16_t typeVal);
+/// @param type enum QNativeIpcKey__Type
+QNativeIpcKey* q_systemsemaphore_legacy_native_key2(const char* key, uint16_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#dtor.QSystemSemaphore)
 ///

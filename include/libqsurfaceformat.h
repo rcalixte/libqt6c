@@ -144,8 +144,8 @@ int32_t q_surfaceformat_profile(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setRenderableType)
 ///
 /// @param self QSurfaceFormat*
-/// @param typeVal enum QSurfaceFormat__RenderableType
-void q_surfaceformat_set_renderable_type(void* self, int32_t typeVal);
+/// @param type enum QSurfaceFormat__RenderableType
+void q_surfaceformat_set_renderable_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#renderableType)
 ///

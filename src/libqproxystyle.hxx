@@ -367,12 +367,12 @@ class VirtualQProxyStyle final : public QProxyStyle {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QSize sizeFromContents(QStyle::ContentsType typeVal, const QStyleOption* option, const QSize& size, const QWidget* widget) const override {
+    virtual QSize sizeFromContents(QStyle::ContentsType type, const QStyleOption* option, const QSize& size, const QWidget* widget) const override {
         if (qproxystyle_sizefromcontents_isbase) {
             qproxystyle_sizefromcontents_isbase = false;
-            return QProxyStyle::sizeFromContents(typeVal, option, size, widget);
+            return QProxyStyle::sizeFromContents(type, option, size, widget);
         } else if (qproxystyle_sizefromcontents_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
             QStyleOption* cbval2 = (QStyleOption*)option;
             const QSize& size_ret = size;
             // Cast returned reference into pointer
@@ -382,7 +382,7 @@ class VirtualQProxyStyle final : public QProxyStyle {
             QSize* callback_ret = qproxystyle_sizefromcontents_callback(this, cbval1, cbval2, cbval3, cbval4);
             return *callback_ret;
         } else {
-            return QProxyStyle::sizeFromContents(typeVal, option, size, widget);
+            return QProxyStyle::sizeFromContents(type, option, size, widget);
         }
     }
 

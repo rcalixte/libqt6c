@@ -231,8 +231,8 @@ const char** q_fontdatabase_application_fallback_font_families(int32_t script) {
     return _ret;
 }
 
-QFont* q_fontdatabase_system_font(int32_t typeVal) {
-    return QFontDatabase_SystemFont(typeVal);
+QFont* q_fontdatabase_system_font(int32_t type) {
+    return QFontDatabase_SystemFont(type);
 }
 
 const char** q_fontdatabase_families1(int32_t writingSystem) {

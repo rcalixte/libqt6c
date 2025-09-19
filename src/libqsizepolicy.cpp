@@ -24,8 +24,8 @@ QSizePolicy* QSizePolicy_new5(const QSizePolicy* param1) {
     return new QSizePolicy(*param1);
 }
 
-QSizePolicy* QSizePolicy_new6(int horizontal, int vertical, int typeVal) {
-    return new QSizePolicy(static_cast<QSizePolicy::Policy>(horizontal), static_cast<QSizePolicy::Policy>(vertical), static_cast<QSizePolicy::ControlType>(typeVal));
+QSizePolicy* QSizePolicy_new6(int horizontal, int vertical, int type) {
+    return new QSizePolicy(static_cast<QSizePolicy::Policy>(horizontal), static_cast<QSizePolicy::Policy>(vertical), static_cast<QSizePolicy::ControlType>(type));
 }
 
 void QSizePolicy_CopyAssign(QSizePolicy* self, QSizePolicy* other) {
@@ -56,8 +56,8 @@ void QSizePolicy_SetVerticalPolicy(QSizePolicy* self, int d) {
     self->setVerticalPolicy(static_cast<QSizePolicy::Policy>(d));
 }
 
-void QSizePolicy_SetControlType(QSizePolicy* self, int typeVal) {
-    self->setControlType(static_cast<QSizePolicy::ControlType>(typeVal));
+void QSizePolicy_SetControlType(QSizePolicy* self, int type) {
+    self->setControlType(static_cast<QSizePolicy::ControlType>(type));
 }
 
 int QSizePolicy_ExpandingDirections(const QSizePolicy* self) {

@@ -72,8 +72,8 @@ int32_t q_imagewriter_compression(void* self) {
     return QImageWriter_Compression((QImageWriter*)self);
 }
 
-void q_imagewriter_set_sub_type(void* self, const char* typeVal) {
-    QImageWriter_SetSubType((QImageWriter*)self, qstring(typeVal));
+void q_imagewriter_set_sub_type(void* self, const char* type) {
+    QImageWriter_SetSubType((QImageWriter*)self, qstring(type));
 }
 
 char* q_imagewriter_sub_type(void* self) {

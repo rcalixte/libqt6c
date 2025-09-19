@@ -17,12 +17,8 @@ extern "C" {
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_KIO__AuthInfo)
 typedef KIO::AuthInfo KIO__AuthInfo;
 #endif
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_KIO__MetaData)
 typedef KIO::MetaData KIO__MetaData;
-#endif
-#if defined(WORKAROUND_INNER_CLASS_DEFINITION_KIO__UDSEntry)
 typedef KIO::UDSEntry KIO__UDSEntry;
-#endif
 #if defined(WORKAROUND_INNER_CLASS_DEFINITION_KIO__WorkerBase)
 typedef KIO::WorkerBase KIO__WorkerBase;
 #endif
@@ -76,8 +72,8 @@ void KIO__WorkerBase_ErrorPage(KIO__WorkerBase* self);
 void KIO__WorkerBase_MimeType(KIO__WorkerBase* self, const libqt_string _type);
 void KIO__WorkerBase_Warning(KIO__WorkerBase* self, const libqt_string msg);
 void KIO__WorkerBase_InfoMessage(KIO__WorkerBase* self, const libqt_string msg);
-int KIO__WorkerBase_MessageBox(KIO__WorkerBase* self, int typeVal, const libqt_string text);
-int KIO__WorkerBase_MessageBox2(KIO__WorkerBase* self, const libqt_string text, int typeVal);
+int KIO__WorkerBase_MessageBox(KIO__WorkerBase* self, int type, const libqt_string text);
+int KIO__WorkerBase_MessageBox2(KIO__WorkerBase* self, const libqt_string text, int type);
 int KIO__WorkerBase_SslError(KIO__WorkerBase* self, const libqt_map /* of libqt_string to QVariant* */ sslData);
 void KIO__WorkerBase_SetMetaData(KIO__WorkerBase* self, const libqt_string key, const libqt_string value);
 bool KIO__WorkerBase_HasMetaData(const KIO__WorkerBase* self, const libqt_string key);
@@ -137,13 +133,13 @@ int KIO__WorkerBase_WaitForHostInfo(KIO__WorkerBase* self, QHostInfo* info);
 int KIO__WorkerBase_RequestPrivilegeOperation(KIO__WorkerBase* self, const libqt_string operationDetails);
 void KIO__WorkerBase_AddTemporaryAuthorization(KIO__WorkerBase* self, const libqt_string action);
 void KIO__WorkerBase_SetIncomingMetaData(KIO__WorkerBase* self, const KIO__MetaData* metaData);
-int KIO__WorkerBase_MessageBox3(KIO__WorkerBase* self, int typeVal, const libqt_string text, const libqt_string title);
-int KIO__WorkerBase_MessageBox4(KIO__WorkerBase* self, int typeVal, const libqt_string text, const libqt_string title, const libqt_string primaryActionText);
-int KIO__WorkerBase_MessageBox5(KIO__WorkerBase* self, int typeVal, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText);
-int KIO__WorkerBase_MessageBox32(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title);
-int KIO__WorkerBase_MessageBox42(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title, const libqt_string primaryActionText);
-int KIO__WorkerBase_MessageBox52(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText);
-int KIO__WorkerBase_MessageBox6(KIO__WorkerBase* self, const libqt_string text, int typeVal, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string dontAskAgainName);
+int KIO__WorkerBase_MessageBox3(KIO__WorkerBase* self, int type, const libqt_string text, const libqt_string title);
+int KIO__WorkerBase_MessageBox4(KIO__WorkerBase* self, int type, const libqt_string text, const libqt_string title, const libqt_string primaryActionText);
+int KIO__WorkerBase_MessageBox5(KIO__WorkerBase* self, int type, const libqt_string text, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText);
+int KIO__WorkerBase_MessageBox32(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title);
+int KIO__WorkerBase_MessageBox42(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title, const libqt_string primaryActionText);
+int KIO__WorkerBase_MessageBox52(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText);
+int KIO__WorkerBase_MessageBox6(KIO__WorkerBase* self, const libqt_string text, int type, const libqt_string title, const libqt_string primaryActionText, const libqt_string secondaryActionText, const libqt_string dontAskAgainName);
 libqt_string KIO__WorkerBase_ConfigValue22(const KIO__WorkerBase* self, const libqt_string key, const libqt_string defaultValue);
 void KIO__WorkerBase_SetTimeoutSpecialCommand2(KIO__WorkerBase* self, int timeout, const libqt_string data);
 int KIO__WorkerBase_OpenPasswordDialog2(KIO__WorkerBase* self, KIO__AuthInfo* info, const libqt_string errorMsg);

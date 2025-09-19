@@ -25,8 +25,8 @@ QSqlField* q_sqlfield_new2(void* other);
 /// q_sqlfield_new3 constructs a new QSqlField object.
 ///
 /// @param fieldName const char*
-/// @param typeVal enum QVariant__Type
-QSqlField* q_sqlfield_new3(const char* fieldName, int64_t typeVal);
+/// @param type enum QVariant__Type
+QSqlField* q_sqlfield_new3(const char* fieldName, int64_t type);
 
 /// q_sqlfield_new4 constructs a new QSqlField object.
 ///
@@ -36,22 +36,22 @@ QSqlField* q_sqlfield_new4(const char* fieldName);
 /// q_sqlfield_new5 constructs a new QSqlField object.
 ///
 /// @param fieldName const char*
-/// @param typeVal QMetaType*
-QSqlField* q_sqlfield_new5(const char* fieldName, void* typeVal);
+/// @param type QMetaType*
+QSqlField* q_sqlfield_new5(const char* fieldName, void* type);
 
 /// q_sqlfield_new6 constructs a new QSqlField object.
 ///
 /// @param fieldName const char*
-/// @param typeVal QMetaType*
+/// @param type QMetaType*
 /// @param tableName const char*
-QSqlField* q_sqlfield_new6(const char* fieldName, void* typeVal, const char* tableName);
+QSqlField* q_sqlfield_new6(const char* fieldName, void* type, const char* tableName);
 
 /// q_sqlfield_new7 constructs a new QSqlField object.
 ///
 /// @param fieldName const char*
-/// @param typeVal enum QVariant__Type
+/// @param type enum QVariant__Type
 /// @param tableName const char*
-QSqlField* q_sqlfield_new7(const char* fieldName, int64_t typeVal, const char* tableName);
+QSqlField* q_sqlfield_new7(const char* fieldName, int64_t type, const char* tableName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#operator-eq)
 ///
@@ -148,8 +148,8 @@ QMetaType* q_sqlfield_meta_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#setMetaType)
 ///
 /// @param self QSqlField*
-/// @param typeVal QMetaType*
-void q_sqlfield_set_meta_type(void* self, void* typeVal);
+/// @param type QMetaType*
+void q_sqlfield_set_meta_type(void* self, void* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#type)
 ///
@@ -161,8 +161,8 @@ int64_t q_sqlfield_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#setType)
 ///
 /// @param self QSqlField*
-/// @param typeVal enum QVariant__Type
-void q_sqlfield_set_type(void* self, int64_t typeVal);
+/// @param type enum QVariant__Type
+void q_sqlfield_set_type(void* self, int64_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#setRequiredStatus)
 ///
@@ -197,8 +197,8 @@ void q_sqlfield_set_default_value(void* self, void* value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#setSqlType)
 ///
 /// @param self QSqlField*
-/// @param typeVal int
-void q_sqlfield_set_sql_type(void* self, int typeVal);
+/// @param type int
+void q_sqlfield_set_sql_type(void* self, int type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsqlfield.html#setGenerated)
 ///

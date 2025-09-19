@@ -15,8 +15,8 @@
 
 /// q_graphicssceneevent_new constructs a new QGraphicsSceneEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneEvent* q_graphicssceneevent_new(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneEvent* q_graphicssceneevent_new(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
@@ -184,8 +184,8 @@ QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new();
 
 /// q_graphicsscenemouseevent_new2 constructs a new QGraphicsSceneMouseEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#pos)
 ///
@@ -531,8 +531,8 @@ QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new();
 
 /// q_graphicsscenewheelevent_new2 constructs a new QGraphicsSceneWheelEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#pos)
 ///
@@ -826,8 +826,8 @@ QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new();
 
 /// q_graphicsscenecontextmenuevent_new2 constructs a new QGraphicsSceneContextMenuEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#pos)
 ///
@@ -1062,8 +1062,8 @@ QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new();
 
 /// q_graphicsscenehoverevent_new2 constructs a new QGraphicsSceneHoverEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#pos)
 ///
@@ -1318,8 +1318,8 @@ QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new();
 
 /// q_graphicsscenehelpevent_new2 constructs a new QGraphicsSceneHelpEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#scenePos)
 ///
@@ -1517,8 +1517,8 @@ QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new();
 
 /// q_graphicsscenedragdropevent_new2 constructs a new QGraphicsSceneDragDropEvent object.
 ///
-/// @param typeVal enum QEvent__Type
-QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int32_t typeVal);
+/// @param type enum QEvent__Type
+QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#pos)
 ///

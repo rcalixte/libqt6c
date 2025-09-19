@@ -54,14 +54,14 @@ int KFilePlacesModel_DeviceAccessibility(const KFilePlacesModel* self, const QMo
 QIcon* KFilePlacesModel_Icon(const KFilePlacesModel* self, const QModelIndex* index);
 libqt_string KFilePlacesModel_Text(const KFilePlacesModel* self, const QModelIndex* index);
 bool KFilePlacesModel_IsHidden(const KFilePlacesModel* self, const QModelIndex* index);
-bool KFilePlacesModel_IsGroupHidden(const KFilePlacesModel* self, const int typeVal);
+bool KFilePlacesModel_IsGroupHidden(const KFilePlacesModel* self, const int type);
 bool KFilePlacesModel_IsGroupHidden2(const KFilePlacesModel* self, const QModelIndex* index);
 bool KFilePlacesModel_IsDevice(const KFilePlacesModel* self, const QModelIndex* index);
 Solid__Device* KFilePlacesModel_DeviceForIndex(const KFilePlacesModel* self, const QModelIndex* index);
 KBookmark* KFilePlacesModel_BookmarkForIndex(const KFilePlacesModel* self, const QModelIndex* index);
 KBookmark* KFilePlacesModel_BookmarkForUrl(const KFilePlacesModel* self, const QUrl* searchUrl);
 int KFilePlacesModel_GroupType(const KFilePlacesModel* self, const QModelIndex* index);
-libqt_list /* of QModelIndex* */ KFilePlacesModel_GroupIndexes(const KFilePlacesModel* self, const int typeVal);
+libqt_list /* of QModelIndex* */ KFilePlacesModel_GroupIndexes(const KFilePlacesModel* self, const int type);
 QAction* KFilePlacesModel_TeardownActionForIndex(const KFilePlacesModel* self, const QModelIndex* index);
 QAction* KFilePlacesModel_EjectActionForIndex(const KFilePlacesModel* self, const QModelIndex* index);
 QAction* KFilePlacesModel_PartitionActionForIndex(const KFilePlacesModel* self, const QModelIndex* index);
@@ -73,7 +73,7 @@ void KFilePlacesModel_AddPlace2(KFilePlacesModel* self, const libqt_string text,
 void KFilePlacesModel_EditPlace(KFilePlacesModel* self, const QModelIndex* index, const libqt_string text, const QUrl* url);
 void KFilePlacesModel_RemovePlace(const KFilePlacesModel* self, const QModelIndex* index);
 void KFilePlacesModel_SetPlaceHidden(KFilePlacesModel* self, const QModelIndex* index, bool hidden);
-void KFilePlacesModel_SetGroupHidden(KFilePlacesModel* self, const int typeVal, bool hidden);
+void KFilePlacesModel_SetGroupHidden(KFilePlacesModel* self, const int type, bool hidden);
 bool KFilePlacesModel_MovePlace(KFilePlacesModel* self, int itemRow, int row);
 int KFilePlacesModel_HiddenCount(const KFilePlacesModel* self);
 QVariant* KFilePlacesModel_Data(const KFilePlacesModel* self, const QModelIndex* index, int role);

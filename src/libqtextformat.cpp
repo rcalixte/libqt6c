@@ -34,8 +34,8 @@ QTextLength* QTextLength_new3() {
     return new QTextLength();
 }
 
-QTextLength* QTextLength_new4(int typeVal, double value) {
-    return new QTextLength(static_cast<QTextLength::Type>(typeVal), static_cast<qreal>(value));
+QTextLength* QTextLength_new4(int type, double value) {
+    return new QTextLength(static_cast<QTextLength::Type>(type), static_cast<qreal>(value));
 }
 
 QTextLength* QTextLength_new5(const QTextLength* param1) {
@@ -82,8 +82,8 @@ QTextFormat* QTextFormat_new() {
     return new QTextFormat();
 }
 
-QTextFormat* QTextFormat_new2(int typeVal) {
-    return new QTextFormat(static_cast<int>(typeVal));
+QTextFormat* QTextFormat_new2(int type) {
+    return new QTextFormat(static_cast<int>(type));
 }
 
 QTextFormat* QTextFormat_new3(const QTextFormat* rhs) {
@@ -223,8 +223,8 @@ int QTextFormat_PropertyCount(const QTextFormat* self) {
     return self->propertyCount();
 }
 
-void QTextFormat_SetObjectType(QTextFormat* self, int typeVal) {
-    self->setObjectType(static_cast<int>(typeVal));
+void QTextFormat_SetObjectType(QTextFormat* self, int type) {
+    self->setObjectType(static_cast<int>(type));
 }
 
 int QTextFormat_ObjectType(const QTextFormat* self) {

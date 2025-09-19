@@ -33,8 +33,8 @@ QDeadlineTimer* q_deadlinetimer_new8(int32_t param1, int32_t type_) {
     return QDeadlineTimer_new8(param1, type_);
 }
 
-QDeadlineTimer* q_deadlinetimer_new9(long long msecs, int32_t typeVal) {
-    return QDeadlineTimer_new9(msecs, typeVal);
+QDeadlineTimer* q_deadlinetimer_new9(long long msecs, int32_t type) {
+    return QDeadlineTimer_new9(msecs, type);
 }
 
 void q_deadlinetimer_copy_assign(void* self, void* other) {
@@ -61,8 +61,8 @@ int32_t q_deadlinetimer_timer_type(void* self) {
     return QDeadlineTimer_TimerType((QDeadlineTimer*)self);
 }
 
-void q_deadlinetimer_set_timer_type(void* self, int32_t typeVal) {
-    QDeadlineTimer_SetTimerType((QDeadlineTimer*)self, typeVal);
+void q_deadlinetimer_set_timer_type(void* self, int32_t type) {
+    QDeadlineTimer_SetTimerType((QDeadlineTimer*)self, type);
 }
 
 long long q_deadlinetimer_remaining_time(void* self) {
@@ -113,16 +113,16 @@ QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, long long msec
     return QDeadlineTimer_OperatorMinusAssign((QDeadlineTimer*)self, msecs);
 }
 
-void q_deadlinetimer_set_remaining_time2(void* self, long long msecs, int32_t typeVal) {
-    QDeadlineTimer_SetRemainingTime2((QDeadlineTimer*)self, msecs, typeVal);
+void q_deadlinetimer_set_remaining_time2(void* self, long long msecs, int32_t type) {
+    QDeadlineTimer_SetRemainingTime2((QDeadlineTimer*)self, msecs, type);
 }
 
 void q_deadlinetimer_set_precise_remaining_time2(void* self, long long secs, long long nsecs) {
     QDeadlineTimer_SetPreciseRemainingTime2((QDeadlineTimer*)self, secs, nsecs);
 }
 
-void q_deadlinetimer_set_precise_remaining_time3(void* self, long long secs, long long nsecs, int32_t typeVal) {
-    QDeadlineTimer_SetPreciseRemainingTime3((QDeadlineTimer*)self, secs, nsecs, typeVal);
+void q_deadlinetimer_set_precise_remaining_time3(void* self, long long secs, long long nsecs, int32_t type) {
+    QDeadlineTimer_SetPreciseRemainingTime3((QDeadlineTimer*)self, secs, nsecs, type);
 }
 
 void q_deadlinetimer_set_deadline2(void* self, long long msecs, int32_t timerType) {
@@ -133,8 +133,8 @@ void q_deadlinetimer_set_precise_deadline2(void* self, long long secs, long long
     QDeadlineTimer_SetPreciseDeadline2((QDeadlineTimer*)self, secs, nsecs);
 }
 
-void q_deadlinetimer_set_precise_deadline3(void* self, long long secs, long long nsecs, int32_t typeVal) {
-    QDeadlineTimer_SetPreciseDeadline3((QDeadlineTimer*)self, secs, nsecs, typeVal);
+void q_deadlinetimer_set_precise_deadline3(void* self, long long secs, long long nsecs, int32_t type) {
+    QDeadlineTimer_SetPreciseDeadline3((QDeadlineTimer*)self, secs, nsecs, type);
 }
 
 QDeadlineTimer* q_deadlinetimer_current1(int32_t timerType) {

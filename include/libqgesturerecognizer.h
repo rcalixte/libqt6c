@@ -100,8 +100,8 @@ int64_t q_gesturerecognizer_register_recognizer(void* recognizer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#unregisterRecognizer)
 ///
-/// @param typeVal enum Qt__GestureType
-void q_gesturerecognizer_unregister_recognizer(int64_t typeVal);
+/// @param type enum Qt__GestureType
+void q_gesturerecognizer_unregister_recognizer(int64_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator-eq)
 ///

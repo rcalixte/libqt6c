@@ -2654,8 +2654,8 @@ libqt_list /* of QGesture* */ QGestureEvent_Gestures(const QGestureEvent* self) 
     return _out;
 }
 
-QGesture* QGestureEvent_Gesture(const QGestureEvent* self, int typeVal) {
-    return self->gesture(static_cast<Qt::GestureType>(typeVal));
+QGesture* QGestureEvent_Gesture(const QGestureEvent* self, int type) {
+    return self->gesture(static_cast<Qt::GestureType>(type));
 }
 
 libqt_list /* of QGesture* */ QGestureEvent_ActiveGestures(const QGestureEvent* self) {

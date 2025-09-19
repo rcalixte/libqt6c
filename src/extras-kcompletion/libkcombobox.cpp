@@ -285,8 +285,8 @@ void KComboBox_Connect_AboutToShowContextMenu(KComboBox* self, intptr_t slot) {
     });
 }
 
-void KComboBox_RotateText(KComboBox* self, int typeVal) {
-    self->rotateText(static_cast<KCompletionBase::KeyBindingType>(typeVal));
+void KComboBox_RotateText(KComboBox* self, int type) {
+    self->rotateText(static_cast<KCompletionBase::KeyBindingType>(type));
 }
 
 void KComboBox_SetCompletedText(KComboBox* self, const libqt_string completedText) {

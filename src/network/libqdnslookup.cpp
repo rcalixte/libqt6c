@@ -339,53 +339,53 @@ QDnsLookup* QDnsLookup_new() {
     return new VirtualQDnsLookup();
 }
 
-QDnsLookup* QDnsLookup_new2(int typeVal, const libqt_string name) {
+QDnsLookup* QDnsLookup_new2(int type, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString);
 }
 
-QDnsLookup* QDnsLookup_new3(int typeVal, const libqt_string name, const QHostAddress* nameserver) {
+QDnsLookup* QDnsLookup_new3(int type, const libqt_string name, const QHostAddress* nameserver) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, *nameserver);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver);
 }
 
-QDnsLookup* QDnsLookup_new4(int typeVal, const libqt_string name, const QHostAddress* nameserver, uint16_t port) {
+QDnsLookup* QDnsLookup_new4(int type, const libqt_string name, const QHostAddress* nameserver, uint16_t port) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, *nameserver, static_cast<quint16>(port));
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver, static_cast<quint16>(port));
 }
 
-QDnsLookup* QDnsLookup_new5(int typeVal, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver) {
+QDnsLookup* QDnsLookup_new5(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver);
 }
 
 QDnsLookup* QDnsLookup_new6(QObject* parent) {
     return new VirtualQDnsLookup(parent);
 }
 
-QDnsLookup* QDnsLookup_new7(int typeVal, const libqt_string name, QObject* parent) {
+QDnsLookup* QDnsLookup_new7(int type, const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, parent);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, parent);
 }
 
-QDnsLookup* QDnsLookup_new8(int typeVal, const libqt_string name, const QHostAddress* nameserver, QObject* parent) {
+QDnsLookup* QDnsLookup_new8(int type, const libqt_string name, const QHostAddress* nameserver, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, *nameserver, parent);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver, parent);
 }
 
-QDnsLookup* QDnsLookup_new9(int typeVal, const libqt_string name, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
+QDnsLookup* QDnsLookup_new9(int type, const libqt_string name, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, *nameserver, static_cast<quint16>(port), parent);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver, static_cast<quint16>(port), parent);
 }
 
-QDnsLookup* QDnsLookup_new10(int typeVal, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port) {
+QDnsLookup* QDnsLookup_new10(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver, static_cast<quint16>(port));
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver, static_cast<quint16>(port));
 }
 
-QDnsLookup* QDnsLookup_new11(int typeVal, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
+QDnsLookup* QDnsLookup_new11(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(typeVal), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver, static_cast<quint16>(port), parent);
+    return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver, static_cast<quint16>(port), parent);
 }
 
 QMetaObject* QDnsLookup_MetaObject(const QDnsLookup* self) {
@@ -462,8 +462,8 @@ int QDnsLookup_Type(const QDnsLookup* self) {
     return static_cast<int>(self->type());
 }
 
-void QDnsLookup_SetType(QDnsLookup* self, int typeVal) {
-    self->setType(static_cast<QDnsLookup::Type>(typeVal));
+void QDnsLookup_SetType(QDnsLookup* self, int type) {
+    self->setType(static_cast<QDnsLookup::Type>(type));
 }
 
 QHostAddress* QDnsLookup_Nameserver(const QDnsLookup* self) {
@@ -657,14 +657,14 @@ void QDnsLookup_Connect_NameChanged(QDnsLookup* self, intptr_t slot) {
     });
 }
 
-void QDnsLookup_TypeChanged(QDnsLookup* self, int typeVal) {
-    self->typeChanged(static_cast<QDnsLookup::Type>(typeVal));
+void QDnsLookup_TypeChanged(QDnsLookup* self, int type) {
+    self->typeChanged(static_cast<QDnsLookup::Type>(type));
 }
 
 void QDnsLookup_Connect_TypeChanged(QDnsLookup* self, intptr_t slot) {
     void (*slotFunc)(QDnsLookup*, int) = reinterpret_cast<void (*)(QDnsLookup*, int)>(slot);
-    QDnsLookup::connect(self, &QDnsLookup::typeChanged, [self, slotFunc](QDnsLookup::Type typeVal) {
-        int sigval1 = static_cast<int>(typeVal);
+    QDnsLookup::connect(self, &QDnsLookup::typeChanged, [self, slotFunc](QDnsLookup::Type type) {
+        int sigval1 = static_cast<int>(type);
         slotFunc(self, sigval1);
     });
 }

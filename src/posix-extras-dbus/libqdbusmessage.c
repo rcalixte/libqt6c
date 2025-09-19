@@ -39,8 +39,8 @@ QDBusMessage* q_dbusmessage_create_error2(void* err) {
     return QDBusMessage_CreateError2((QDBusError*)err);
 }
 
-QDBusMessage* q_dbusmessage_create_error3(int32_t typeVal, const char* msg) {
-    return QDBusMessage_CreateError3(typeVal, qstring(msg));
+QDBusMessage* q_dbusmessage_create_error3(int32_t type, const char* msg) {
+    return QDBusMessage_CreateError3(type, qstring(msg));
 }
 
 QDBusMessage* q_dbusmessage_create_reply(void* self) {
@@ -59,8 +59,8 @@ QDBusMessage* q_dbusmessage_create_error_reply2(void* self, void* err) {
     return QDBusMessage_CreateErrorReply2((QDBusMessage*)self, (QDBusError*)err);
 }
 
-QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t typeVal, const char* msg) {
-    return QDBusMessage_CreateErrorReply3((QDBusMessage*)self, typeVal, qstring(msg));
+QDBusMessage* q_dbusmessage_create_error_reply3(void* self, int32_t type, const char* msg) {
+    return QDBusMessage_CreateErrorReply3((QDBusMessage*)self, type, qstring(msg));
 }
 
 const char* q_dbusmessage_service(void* self) {

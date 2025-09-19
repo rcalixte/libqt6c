@@ -10,7 +10,7 @@
 #include "../qtlibc.h"
 
 // This class is a subclass of Konsole::Filter so that we can call protected methods
-class VirtualKonsoleFilter final : public Konsole::Filter {
+class VirtualKonsoleFilter : public Konsole::Filter {
 
   public:
     // Virtual class boolean flag
@@ -1503,7 +1503,7 @@ class VirtualKonsoleFilterObject final : public Konsole::FilterObject {
 };
 
 // This class is a subclass of Konsole::Filter::HotSpot so that we can call protected methods
-class VirtualKonsoleFilterHotSpot final : public Konsole::Filter::HotSpot {
+class VirtualKonsoleFilterHotSpot : public Konsole::Filter::HotSpot {
 
   public:
     // Virtual class boolean flag
@@ -1582,22 +1582,22 @@ class VirtualKonsoleFilterHotSpot final : public Konsole::Filter::HotSpot {
     }
 
     // Virtual method for C ABI access and custom callback
-    void setType(Konsole::Filter::HotSpot::Type typeVal) {
+    void setType(Konsole::Filter::HotSpot::Type type) {
         if (konsole__filter__hotspot_settype_isbase) {
             konsole__filter__hotspot_settype_isbase = false;
-            Konsole__Filter__HotSpot::setType(typeVal);
+            Konsole__Filter__HotSpot::setType(type);
         } else if (konsole__filter__hotspot_settype_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             konsole__filter__hotspot_settype_callback(this, cbval1);
         } else {
-            Konsole__Filter__HotSpot::setType(typeVal);
+            Konsole__Filter__HotSpot::setType(type);
         }
     }
 
     // Friend functions
-    friend void Konsole__Filter__HotSpot_SetType(Konsole::Filter::HotSpot* self, int typeVal);
-    friend void Konsole__Filter__HotSpot_QBaseSetType(Konsole::Filter::HotSpot* self, int typeVal);
+    friend void Konsole__Filter__HotSpot_SetType(Konsole::Filter::HotSpot* self, int type);
+    friend void Konsole__Filter__HotSpot_QBaseSetType(Konsole::Filter::HotSpot* self, int type);
 };
 
 // This class is a subclass of Konsole::RegExpFilter::HotSpot so that we can call protected methods
@@ -1685,22 +1685,22 @@ class VirtualKonsoleRegExpFilterHotSpot final : public Konsole::RegExpFilter::Ho
     }
 
     // Virtual method for C ABI access and custom callback
-    void setType(Konsole::Filter::HotSpot::Type typeVal) {
+    void setType(Konsole::Filter::HotSpot::Type type) {
         if (konsole__regexpfilter__hotspot_settype_isbase) {
             konsole__regexpfilter__hotspot_settype_isbase = false;
-            Konsole__RegExpFilter__HotSpot::setType(typeVal);
+            Konsole__RegExpFilter__HotSpot::setType(type);
         } else if (konsole__regexpfilter__hotspot_settype_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             konsole__regexpfilter__hotspot_settype_callback(this, cbval1);
         } else {
-            Konsole__RegExpFilter__HotSpot::setType(typeVal);
+            Konsole__RegExpFilter__HotSpot::setType(type);
         }
     }
 
     // Friend functions
-    friend void Konsole__RegExpFilter__HotSpot_SetType(Konsole::RegExpFilter::HotSpot* self, int typeVal);
-    friend void Konsole__RegExpFilter__HotSpot_QBaseSetType(Konsole::RegExpFilter::HotSpot* self, int typeVal);
+    friend void Konsole__RegExpFilter__HotSpot_SetType(Konsole::RegExpFilter::HotSpot* self, int type);
+    friend void Konsole__RegExpFilter__HotSpot_QBaseSetType(Konsole::RegExpFilter::HotSpot* self, int type);
 };
 
 // This class is a subclass of Konsole::UrlFilter::HotSpot so that we can call protected methods
@@ -1787,22 +1787,22 @@ class VirtualKonsoleUrlFilterHotSpot final : public Konsole::UrlFilter::HotSpot 
     }
 
     // Virtual method for C ABI access and custom callback
-    void setType(Konsole::Filter::HotSpot::Type typeVal) {
+    void setType(Konsole::Filter::HotSpot::Type type) {
         if (konsole__urlfilter__hotspot_settype_isbase) {
             konsole__urlfilter__hotspot_settype_isbase = false;
-            Konsole__UrlFilter__HotSpot::setType(typeVal);
+            Konsole__UrlFilter__HotSpot::setType(type);
         } else if (konsole__urlfilter__hotspot_settype_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             konsole__urlfilter__hotspot_settype_callback(this, cbval1);
         } else {
-            Konsole__UrlFilter__HotSpot::setType(typeVal);
+            Konsole__UrlFilter__HotSpot::setType(type);
         }
     }
 
     // Friend functions
-    friend void Konsole__UrlFilter__HotSpot_SetType(Konsole::UrlFilter::HotSpot* self, int typeVal);
-    friend void Konsole__UrlFilter__HotSpot_QBaseSetType(Konsole::UrlFilter::HotSpot* self, int typeVal);
+    friend void Konsole__UrlFilter__HotSpot_SetType(Konsole::UrlFilter::HotSpot* self, int type);
+    friend void Konsole__UrlFilter__HotSpot_QBaseSetType(Konsole::UrlFilter::HotSpot* self, int type);
 };
 
 #endif

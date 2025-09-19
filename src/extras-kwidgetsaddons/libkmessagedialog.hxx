@@ -216,9 +216,9 @@ class VirtualKMessageDialog final : public KMessageDialog {
     mutable bool kmessagedialog_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualKMessageDialog(KMessageDialog::Type typeVal, const QString& text) : KMessageDialog(typeVal, text) {};
-    VirtualKMessageDialog(KMessageDialog::Type typeVal, const QString& text, WId parent_id) : KMessageDialog(typeVal, text, parent_id) {};
-    VirtualKMessageDialog(KMessageDialog::Type typeVal, const QString& text, QWidget* parent) : KMessageDialog(typeVal, text, parent) {};
+    VirtualKMessageDialog(KMessageDialog::Type type, const QString& text) : KMessageDialog(type, text) {};
+    VirtualKMessageDialog(KMessageDialog::Type type, const QString& text, WId parent_id) : KMessageDialog(type, text, parent_id) {};
+    VirtualKMessageDialog(KMessageDialog::Type type, const QString& text, QWidget* parent) : KMessageDialog(type, text, parent) {};
 
     ~VirtualKMessageDialog() {
         kmessagedialog_metacall_callback = nullptr;

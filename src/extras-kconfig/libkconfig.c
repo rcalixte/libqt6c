@@ -19,12 +19,12 @@ KConfig* k_config_new4(const char* file, int32_t mode) {
     return KConfig_new4(qstring(file), mode);
 }
 
-KConfig* k_config_new5(const char* file, int32_t mode, int32_t typeVal) {
-    return KConfig_new5(qstring(file), mode, typeVal);
+KConfig* k_config_new5(const char* file, int32_t mode, int32_t type) {
+    return KConfig_new5(qstring(file), mode, type);
 }
 
-KConfig* k_config_new6(const char* file, const char* backend, int32_t typeVal) {
-    return KConfig_new6(qstring(file), qstring(backend), typeVal);
+KConfig* k_config_new6(const char* file, const char* backend, int32_t type) {
+    return KConfig_new6(qstring(file), qstring(backend), type);
 }
 
 int32_t k_config_location_type(void* self) {

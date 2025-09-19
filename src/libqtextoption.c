@@ -136,8 +136,8 @@ int32_t q_textoption__tab_type(void* self) {
     return QTextOption__Tab_Type((QTextOption__Tab*)self);
 }
 
-void q_textoption__tab_set_type(void* self, int32_t _type) {
-    QTextOption__Tab_SetType((QTextOption__Tab*)self, _type);
+void q_textoption__tab_set_type(void* self, int32_t type) {
+    QTextOption__Tab_SetType((QTextOption__Tab*)self, type);
 }
 
 QChar* q_textoption__tab_delimiter(void* self) {

@@ -157,7 +157,7 @@ void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_l
 /// [Qt documentation](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
-/// @param typeVal enum KIO__AskUserActionInterface__MessageDialogType
+/// @param type enum KIO__AskUserActionInterface__MessageDialogType
 /// @param text const char*
 /// @param title const char*
 /// @param primaryActionText const char*
@@ -167,14 +167,14 @@ void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_l
 /// @param dontAskAgainName const char*
 /// @param details const char*
 /// @param parent QWidget*
-void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent);
+void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent);
 
 /// [Qt documentation](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
-/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, enum KIO__AskUserActionInterface__MessageDialogType typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, QWidget* parent)
+/// @param callback void func(KIO__WidgetsAskUserActionHandler* self, enum KIO__AskUserActionInterface__MessageDialogType type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, QWidget* parent)
 void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, void (*callback)(void*, int32_t, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, void*));
 
 /// [Qt documentation](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
@@ -182,7 +182,7 @@ void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, v
 /// Base class method implementation
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
-/// @param typeVal enum KIO__AskUserActionInterface__MessageDialogType
+/// @param type enum KIO__AskUserActionInterface__MessageDialogType
 /// @param text const char*
 /// @param title const char*
 /// @param primaryActionText const char*
@@ -192,7 +192,7 @@ void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, v
 /// @param dontAskAgainName const char*
 /// @param details const char*
 /// @param parent QWidget*
-void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent);
+void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent);
 
 /// [Qt documentation](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askIgnoreSslErrors)
 ///
@@ -604,8 +604,8 @@ int32_t k_io__widgetsaskuseractionhandler_start_timer22(void* self, int interval
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -615,8 +615,8 @@ QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect5(void* sender
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_io__widgetsaskuseractionhandler_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

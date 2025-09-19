@@ -100,7 +100,7 @@ void KLineEdit_Connect_AboutToShowContextMenu(KLineEdit* self, intptr_t slot);
 void KLineEdit_ClearButtonClicked(KLineEdit* self);
 void KLineEdit_Connect_ClearButtonClicked(KLineEdit* self, intptr_t slot);
 void KLineEdit_SetReadOnly(KLineEdit* self, bool readOnly);
-void KLineEdit_RotateText(KLineEdit* self, int typeVal);
+void KLineEdit_RotateText(KLineEdit* self, int type);
 void KLineEdit_SetCompletedText(KLineEdit* self, const libqt_string completedText);
 void KLineEdit_SetCompletedItems(KLineEdit* self, const libqt_list /* of libqt_string */ items, bool autoSuggest);
 void KLineEdit_SetSqueezedText(KLineEdit* self, const libqt_string text);

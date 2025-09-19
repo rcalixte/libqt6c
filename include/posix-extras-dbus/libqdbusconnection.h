@@ -231,9 +231,9 @@ void* q_dbusconnection_internal_pointer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnection.html#connectToBus)
 ///
-/// @param typeVal enum QDBusConnection__BusType
+/// @param type enum QDBusConnection__BusType
 /// @param name const char*
-QDBusConnection* q_dbusconnection_connect_to_bus(int32_t typeVal, const char* name);
+QDBusConnection* q_dbusconnection_connect_to_bus(int32_t type, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnection.html#connectToBus)
 ///

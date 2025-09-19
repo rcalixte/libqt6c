@@ -44,22 +44,22 @@ bool k_solid__deviceinterface_is_valid(void* self);
 ///
 /// Caller is responsible for freeing the returned memory
 ///
-/// @param typeVal enum Solid__DeviceInterface__Type
-const char* k_solid__deviceinterface_type_to_string(int32_t typeVal);
+/// @param type enum Solid__DeviceInterface__Type
+const char* k_solid__deviceinterface_type_to_string(int32_t type);
 
 /// [Qt documentation](https://api.kde.org/solid-deviceinterface.html#stringToType)
 ///
-/// @param typeVal const char*
+/// @param type const char*
 ///
 /// @return enum Solid__DeviceInterface__Type
-int32_t k_solid__deviceinterface_string_to_type(const char* typeVal);
+int32_t k_solid__deviceinterface_string_to_type(const char* type);
 
 /// [Qt documentation](https://api.kde.org/solid-deviceinterface.html#typeDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
-/// @param typeVal enum Solid__DeviceInterface__Type
-const char* k_solid__deviceinterface_type_description(int32_t typeVal);
+/// @param type enum Solid__DeviceInterface__Type
+const char* k_solid__deviceinterface_type_description(int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -372,8 +372,8 @@ int32_t k_solid__deviceinterface_start_timer22(void* self, int interval, int32_t
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_solid__deviceinterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_solid__deviceinterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -383,8 +383,8 @@ QMetaObject__Connection* k_solid__deviceinterface_connect5(void* sender, void* s
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_solid__deviceinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_solid__deviceinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

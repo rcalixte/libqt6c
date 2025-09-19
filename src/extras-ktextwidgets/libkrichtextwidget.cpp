@@ -591,23 +591,23 @@ void KRichTextWidget_OnContextMenuEvent(KRichTextWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* KRichTextWidget_LoadResource(KRichTextWidget* self, int typeVal, const QUrl* name) {
+QVariant* KRichTextWidget_LoadResource(KRichTextWidget* self, int type, const QUrl* name) {
     auto* vkrichtextwidget = dynamic_cast<VirtualKRichTextWidget*>(self);
     if (vkrichtextwidget && vkrichtextwidget->isVirtualKRichTextWidget) {
-        return new QVariant(vkrichtextwidget->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vkrichtextwidget->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualKRichTextWidget*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualKRichTextWidget*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 
 // Base class handler implementation
-QVariant* KRichTextWidget_QBaseLoadResource(KRichTextWidget* self, int typeVal, const QUrl* name) {
+QVariant* KRichTextWidget_QBaseLoadResource(KRichTextWidget* self, int type, const QUrl* name) {
     auto* vkrichtextwidget = dynamic_cast<VirtualKRichTextWidget*>(self);
     if (vkrichtextwidget && vkrichtextwidget->isVirtualKRichTextWidget) {
         vkrichtextwidget->setKRichTextWidget_LoadResource_IsBase(true);
-        return new QVariant(vkrichtextwidget->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vkrichtextwidget->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualKRichTextWidget*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualKRichTextWidget*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 

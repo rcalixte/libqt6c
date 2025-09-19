@@ -19,8 +19,8 @@ QTextLength* q_textlength_new3() {
     return QTextLength_new3();
 }
 
-QTextLength* q_textlength_new4(int32_t typeVal, double value) {
-    return QTextLength_new4(typeVal, value);
+QTextLength* q_textlength_new4(int32_t type, double value) {
+    return QTextLength_new4(type, value);
 }
 
 QTextLength* q_textlength_new5(void* param1) {
@@ -67,8 +67,8 @@ QTextFormat* q_textformat_new() {
     return QTextFormat_new();
 }
 
-QTextFormat* q_textformat_new2(int typeVal) {
-    return QTextFormat_new2(typeVal);
+QTextFormat* q_textformat_new2(int type) {
+    return QTextFormat_new2(type);
 }
 
 QTextFormat* q_textformat_new3(void* rhs) {
@@ -175,8 +175,8 @@ int32_t q_textformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_textformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_textformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_textformat_object_type(void* self) {
@@ -709,8 +709,8 @@ int32_t q_textcharformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_textcharformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_textcharformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_textcharformat_object_type(void* self) {
@@ -1038,8 +1038,8 @@ int32_t q_textblockformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_textblockformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_textblockformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_textblockformat_object_type(void* self) {
@@ -1300,8 +1300,8 @@ int32_t q_textlistformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_textlistformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_textlistformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_textlistformat_object_type(void* self) {
@@ -1881,8 +1881,8 @@ int32_t q_textimageformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_textimageformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_textimageformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_textimageformat_object_type(void* self) {
@@ -2209,8 +2209,8 @@ int32_t q_textframeformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_textframeformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_textframeformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_textframeformat_object_type(void* self) {
@@ -2598,8 +2598,8 @@ int32_t q_texttableformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_texttableformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_texttableformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_texttableformat_object_type(void* self) {
@@ -3276,8 +3276,8 @@ int32_t q_texttablecellformat_property_count(void* self) {
     return QTextFormat_PropertyCount((QTextFormat*)self);
 }
 
-void q_texttablecellformat_set_object_type(void* self, int typeVal) {
-    QTextFormat_SetObjectType((QTextFormat*)self, typeVal);
+void q_texttablecellformat_set_object_type(void* self, int type) {
+    QTextFormat_SetObjectType((QTextFormat*)self, type);
 }
 
 int32_t q_texttablecellformat_object_type(void* self) {

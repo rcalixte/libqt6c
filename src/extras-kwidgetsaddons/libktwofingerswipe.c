@@ -276,12 +276,12 @@ int32_t k_twofingerswipe_start_timer22(void* self, int interval, int32_t timerTy
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_twofingerswipe_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_twofingerswipe_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_twofingerswipe_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_twofingerswipe_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_twofingerswipe_destroyed1(void* self, void* param1) {
@@ -480,8 +480,8 @@ int64_t k_twofingerswiperecognizer_register_recognizer(void* recognizer) {
     return QGestureRecognizer_RegisterRecognizer((QGestureRecognizer*)recognizer);
 }
 
-void k_twofingerswiperecognizer_unregister_recognizer(int64_t typeVal) {
-    QGestureRecognizer_UnregisterRecognizer(typeVal);
+void k_twofingerswiperecognizer_unregister_recognizer(int64_t type) {
+    QGestureRecognizer_UnregisterRecognizer(type);
 }
 
 void k_twofingerswiperecognizer_operator_assign(void* self, void* param1) {

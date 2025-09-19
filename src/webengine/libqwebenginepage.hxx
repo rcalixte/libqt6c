@@ -198,17 +198,17 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QWebEnginePage* createWindow(QWebEnginePage::WebWindowType typeVal) override {
+    virtual QWebEnginePage* createWindow(QWebEnginePage::WebWindowType type) override {
         if (qwebenginepage_createwindow_isbase) {
             qwebenginepage_createwindow_isbase = false;
-            return QWebEnginePage::createWindow(typeVal);
+            return QWebEnginePage::createWindow(type);
         } else if (qwebenginepage_createwindow_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             QWebEnginePage* callback_ret = qwebenginepage_createwindow_callback(this, cbval1);
             return callback_ret;
         } else {
-            return QWebEnginePage::createWindow(typeVal);
+            return QWebEnginePage::createWindow(type);
         }
     }
 
@@ -356,21 +356,21 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool acceptNavigationRequest(const QUrl& url, QWebEnginePage::NavigationType typeVal, bool isMainFrame) override {
+    virtual bool acceptNavigationRequest(const QUrl& url, QWebEnginePage::NavigationType type, bool isMainFrame) override {
         if (qwebenginepage_acceptnavigationrequest_isbase) {
             qwebenginepage_acceptnavigationrequest_isbase = false;
-            return QWebEnginePage::acceptNavigationRequest(url, typeVal, isMainFrame);
+            return QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);
         } else if (qwebenginepage_acceptnavigationrequest_callback != nullptr) {
             const QUrl& url_ret = url;
             // Cast returned reference into pointer
             QUrl* cbval1 = const_cast<QUrl*>(&url_ret);
-            int cbval2 = static_cast<int>(typeVal);
+            int cbval2 = static_cast<int>(type);
             bool cbval3 = isMainFrame;
 
             bool callback_ret = qwebenginepage_acceptnavigationrequest_callback(this, cbval1, cbval2, cbval3);
             return callback_ret;
         } else {
-            return QWebEnginePage::acceptNavigationRequest(url, typeVal, isMainFrame);
+            return QWebEnginePage::acceptNavigationRequest(url, type, isMainFrame);
         }
     }
 
@@ -523,8 +523,8 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     }
 
     // Friend functions
-    friend QWebEnginePage* QWebEnginePage_CreateWindow(QWebEnginePage* self, int typeVal);
-    friend QWebEnginePage* QWebEnginePage_QBaseCreateWindow(QWebEnginePage* self, int typeVal);
+    friend QWebEnginePage* QWebEnginePage_CreateWindow(QWebEnginePage* self, int type);
+    friend QWebEnginePage* QWebEnginePage_QBaseCreateWindow(QWebEnginePage* self, int type);
     friend libqt_list /* of libqt_string */ QWebEnginePage_ChooseFiles(QWebEnginePage* self, int mode, const libqt_list /* of libqt_string */ oldFiles, const libqt_list /* of libqt_string */ acceptedMimeTypes);
     friend libqt_list /* of libqt_string */ QWebEnginePage_QBaseChooseFiles(QWebEnginePage* self, int mode, const libqt_list /* of libqt_string */ oldFiles, const libqt_list /* of libqt_string */ acceptedMimeTypes);
     friend void QWebEnginePage_JavaScriptAlert(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg);
@@ -533,8 +533,8 @@ class VirtualQWebEnginePage final : public QWebEnginePage {
     friend bool QWebEnginePage_QBaseJavaScriptConfirm(QWebEnginePage* self, const QUrl* securityOrigin, const libqt_string msg);
     friend void QWebEnginePage_JavaScriptConsoleMessage(QWebEnginePage* self, int level, const libqt_string message, int lineNumber, const libqt_string sourceID);
     friend void QWebEnginePage_QBaseJavaScriptConsoleMessage(QWebEnginePage* self, int level, const libqt_string message, int lineNumber, const libqt_string sourceID);
-    friend bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame);
-    friend bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int typeVal, bool isMainFrame);
+    friend bool QWebEnginePage_AcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int type, bool isMainFrame);
+    friend bool QWebEnginePage_QBaseAcceptNavigationRequest(QWebEnginePage* self, const QUrl* url, int type, bool isMainFrame);
     friend void QWebEnginePage_TimerEvent(QWebEnginePage* self, QTimerEvent* event);
     friend void QWebEnginePage_QBaseTimerEvent(QWebEnginePage* self, QTimerEvent* event);
     friend void QWebEnginePage_ChildEvent(QWebEnginePage* self, QChildEvent* event);

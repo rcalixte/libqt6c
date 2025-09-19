@@ -103,8 +103,8 @@ int32_t q_imagewriter_compression(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#setSubType)
 ///
 /// @param self QImageWriter*
-/// @param typeVal const char*
-void q_imagewriter_set_sub_type(void* self, const char* typeVal);
+/// @param type const char*
+void q_imagewriter_set_sub_type(void* self, const char* type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#subType)
 ///

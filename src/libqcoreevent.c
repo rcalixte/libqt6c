@@ -2,8 +2,8 @@
 #include "libqcoreevent.hpp"
 #include "libqcoreevent.h"
 
-QEvent* q_event_new(int32_t typeVal) {
-    return QEvent_new(typeVal);
+QEvent* q_event_new(int32_t type) {
+    return QEvent_new(type);
 }
 
 int32_t q_event_type(void* self) {
@@ -158,8 +158,8 @@ void q_timerevent_delete(void* self) {
     QTimerEvent_Delete((QTimerEvent*)(self));
 }
 
-QChildEvent* q_childevent_new(int32_t typeVal, void* child) {
-    return QChildEvent_new(typeVal, (QObject*)child);
+QChildEvent* q_childevent_new(int32_t type, void* child) {
+    return QChildEvent_new(type, (QObject*)child);
 }
 
 QChildEvent* q_childevent_clone(void* self) {

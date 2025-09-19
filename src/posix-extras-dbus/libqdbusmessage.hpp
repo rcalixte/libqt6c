@@ -29,12 +29,12 @@ QDBusMessage* QDBusMessage_CreateTargetedSignal(const libqt_string service, cons
 QDBusMessage* QDBusMessage_CreateMethodCall(const libqt_string destination, const libqt_string path, const libqt_string interface, const libqt_string method);
 QDBusMessage* QDBusMessage_CreateError(const libqt_string name, const libqt_string msg);
 QDBusMessage* QDBusMessage_CreateError2(const QDBusError* err);
-QDBusMessage* QDBusMessage_CreateError3(int typeVal, const libqt_string msg);
+QDBusMessage* QDBusMessage_CreateError3(int type, const libqt_string msg);
 QDBusMessage* QDBusMessage_CreateReply(const QDBusMessage* self);
 QDBusMessage* QDBusMessage_CreateReply2(const QDBusMessage* self, const QVariant* argument);
 QDBusMessage* QDBusMessage_CreateErrorReply(const QDBusMessage* self, const libqt_string name, const libqt_string msg);
 QDBusMessage* QDBusMessage_CreateErrorReply2(const QDBusMessage* self, const QDBusError* err);
-QDBusMessage* QDBusMessage_CreateErrorReply3(const QDBusMessage* self, int typeVal, const libqt_string msg);
+QDBusMessage* QDBusMessage_CreateErrorReply3(const QDBusMessage* self, int type, const libqt_string msg);
 libqt_string QDBusMessage_Service(const QDBusMessage* self);
 libqt_string QDBusMessage_Path(const QDBusMessage* self);
 libqt_string QDBusMessage_Interface(const QDBusMessage* self);

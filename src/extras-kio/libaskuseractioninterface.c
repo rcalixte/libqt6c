@@ -40,8 +40,8 @@ void k_io__askuseractioninterface_ask_user_delete(void* self, libqt_list urls, i
     KIO__AskUserActionInterface_AskUserDelete((KIO__AskUserActionInterface*)self, urls, deletionType, confirmationType, (QWidget*)parent);
 }
 
-void k_io__askuseractioninterface_request_user_message_box(void* self, int32_t typeVal, const char* text, const char* title, const char* primaryActionText, const char* secondatyActionText, const char* primaryActionIconName, const char* secondatyActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
-    KIO__AskUserActionInterface_RequestUserMessageBox((KIO__AskUserActionInterface*)self, typeVal, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondatyActionText), qstring(primaryActionIconName), qstring(secondatyActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
+void k_io__askuseractioninterface_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondatyActionText, const char* primaryActionIconName, const char* secondatyActionIconName, const char* dontAskAgainName, const char* details, void* parent) {
+    KIO__AskUserActionInterface_RequestUserMessageBox((KIO__AskUserActionInterface*)self, type, qstring(text), qstring(title), qstring(primaryActionText), qstring(secondatyActionText), qstring(primaryActionIconName), qstring(secondatyActionIconName), qstring(dontAskAgainName), qstring(details), (QWidget*)parent);
 }
 
 void k_io__askuseractioninterface_ask_ignore_ssl_errors(void* self, libqt_map /* of const char* to QVariant* */ sslErrorData, void* parent) {
@@ -265,12 +265,12 @@ int32_t k_io__askuseractioninterface_start_timer22(void* self, int interval, int
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* k_io__askuseractioninterface_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__askuseractioninterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* k_io__askuseractioninterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void k_io__askuseractioninterface_destroyed1(void* self, void* param1) {

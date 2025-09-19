@@ -752,12 +752,12 @@ class VirtualKRichTextEdit final : public KRichTextEdit {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QVariant loadResource(int typeVal, const QUrl& name) override {
+    virtual QVariant loadResource(int type, const QUrl& name) override {
         if (krichtextedit_loadresource_isbase) {
             krichtextedit_loadresource_isbase = false;
-            return KRichTextEdit::loadResource(typeVal, name);
+            return KRichTextEdit::loadResource(type, name);
         } else if (krichtextedit_loadresource_callback != nullptr) {
-            int cbval1 = typeVal;
+            int cbval1 = type;
             const QUrl& name_ret = name;
             // Cast returned reference into pointer
             QUrl* cbval2 = const_cast<QUrl*>(&name_ret);
@@ -765,7 +765,7 @@ class VirtualKRichTextEdit final : public KRichTextEdit {
             QVariant* callback_ret = krichtextedit_loadresource_callback(this, cbval1, cbval2);
             return *callback_ret;
         } else {
-            return KRichTextEdit::loadResource(typeVal, name);
+            return KRichTextEdit::loadResource(type, name);
         }
     }
 

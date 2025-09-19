@@ -51,7 +51,7 @@ void KGlobalAccel_GlobalShortcutActiveChanged(KGlobalAccel* self, QAction* actio
 void KGlobalAccel_Connect_GlobalShortcutActiveChanged(KGlobalAccel* self, intptr_t slot);
 libqt_string KGlobalAccel_Tr2(const char* s, const char* c);
 libqt_string KGlobalAccel_Tr3(const char* s, const char* c, int n);
-libqt_list /* of KGlobalShortcutInfo* */ KGlobalAccel_GlobalShortcutsByKey2(const QKeySequence* seq, int typeVal);
+libqt_list /* of KGlobalShortcutInfo* */ KGlobalAccel_GlobalShortcutsByKey2(const QKeySequence* seq, int type);
 bool KGlobalAccel_IsGlobalShortcutAvailable2(const QKeySequence* seq, const libqt_string component);
 bool KGlobalAccel_SetDefaultShortcut3(KGlobalAccel* self, QAction* action, const libqt_list /* of QKeySequence* */ shortcut, int loadFlag);
 bool KGlobalAccel_SetShortcut3(KGlobalAccel* self, QAction* action, const libqt_list /* of QKeySequence* */ shortcut, int loadFlag);

@@ -8,8 +8,8 @@
 #include "libqcoreevent.hpp"
 #include "libqcoreevent.hxx"
 
-QEvent* QEvent_new(int typeVal) {
-    return new VirtualQEvent(static_cast<QEvent::Type>(typeVal));
+QEvent* QEvent_new(int type) {
+    return new VirtualQEvent(static_cast<QEvent::Type>(type));
 }
 
 int QEvent_Type(const QEvent* self) {
@@ -189,8 +189,8 @@ void QTimerEvent_Delete(QTimerEvent* self) {
     delete self;
 }
 
-QChildEvent* QChildEvent_new(int typeVal, QObject* child) {
-    return new VirtualQChildEvent(static_cast<QEvent::Type>(typeVal), child);
+QChildEvent* QChildEvent_new(int type, QObject* child) {
+    return new VirtualQChildEvent(static_cast<QEvent::Type>(type), child);
 }
 
 QChildEvent* QChildEvent_Clone(const QChildEvent* self) {

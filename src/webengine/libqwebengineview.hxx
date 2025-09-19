@@ -423,17 +423,17 @@ class VirtualQWebEngineView final : public QWebEngineView {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QWebEngineView* createWindow(QWebEnginePage::WebWindowType typeVal) override {
+    virtual QWebEngineView* createWindow(QWebEnginePage::WebWindowType type) override {
         if (qwebengineview_createwindow_isbase) {
             qwebengineview_createwindow_isbase = false;
-            return QWebEngineView::createWindow(typeVal);
+            return QWebEngineView::createWindow(type);
         } else if (qwebengineview_createwindow_callback != nullptr) {
-            int cbval1 = static_cast<int>(typeVal);
+            int cbval1 = static_cast<int>(type);
 
             QWebEngineView* callback_ret = qwebengineview_createwindow_callback(this, cbval1);
             return callback_ret;
         } else {
-            return QWebEngineView::createWindow(typeVal);
+            return QWebEngineView::createWindow(type);
         }
     }
 
@@ -1235,8 +1235,8 @@ class VirtualQWebEngineView final : public QWebEngineView {
     }
 
     // Friend functions
-    friend QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int typeVal);
-    friend QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int typeVal);
+    friend QWebEngineView* QWebEngineView_CreateWindow(QWebEngineView* self, int type);
+    friend QWebEngineView* QWebEngineView_QBaseCreateWindow(QWebEngineView* self, int type);
     friend void QWebEngineView_ContextMenuEvent(QWebEngineView* self, QContextMenuEvent* param1);
     friend void QWebEngineView_QBaseContextMenuEvent(QWebEngineView* self, QContextMenuEvent* param1);
     friend bool QWebEngineView_Event(QWebEngineView* self, QEvent* param1);

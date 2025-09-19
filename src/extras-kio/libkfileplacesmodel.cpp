@@ -109,8 +109,8 @@ bool KFilePlacesModel_IsHidden(const KFilePlacesModel* self, const QModelIndex* 
     return self->isHidden(*index);
 }
 
-bool KFilePlacesModel_IsGroupHidden(const KFilePlacesModel* self, const int typeVal) {
-    return self->isGroupHidden(static_cast<const KFilePlacesModel::GroupType>(typeVal));
+bool KFilePlacesModel_IsGroupHidden(const KFilePlacesModel* self, const int type) {
+    return self->isGroupHidden(static_cast<const KFilePlacesModel::GroupType>(type));
 }
 
 bool KFilePlacesModel_IsGroupHidden2(const KFilePlacesModel* self, const QModelIndex* index) {
@@ -137,8 +137,8 @@ int KFilePlacesModel_GroupType(const KFilePlacesModel* self, const QModelIndex* 
     return static_cast<int>(self->groupType(*index));
 }
 
-libqt_list /* of QModelIndex* */ KFilePlacesModel_GroupIndexes(const KFilePlacesModel* self, const int typeVal) {
-    QList<QModelIndex> _ret = self->groupIndexes(static_cast<const KFilePlacesModel::GroupType>(typeVal));
+libqt_list /* of QModelIndex* */ KFilePlacesModel_GroupIndexes(const KFilePlacesModel* self, const int type) {
+    QList<QModelIndex> _ret = self->groupIndexes(static_cast<const KFilePlacesModel::GroupType>(type));
     // Convert QList<> from C++ memory to manually-managed C memory
     QModelIndex** _arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * (_ret.size() + 1)));
     for (qsizetype i = 0; i < _ret.size(); ++i) {
@@ -199,8 +199,8 @@ void KFilePlacesModel_SetPlaceHidden(KFilePlacesModel* self, const QModelIndex* 
     self->setPlaceHidden(*index, hidden);
 }
 
-void KFilePlacesModel_SetGroupHidden(KFilePlacesModel* self, const int typeVal, bool hidden) {
-    self->setGroupHidden(static_cast<const KFilePlacesModel::GroupType>(typeVal), hidden);
+void KFilePlacesModel_SetGroupHidden(KFilePlacesModel* self, const int type, bool hidden) {
+    self->setGroupHidden(static_cast<const KFilePlacesModel::GroupType>(type), hidden);
 }
 
 bool KFilePlacesModel_MovePlace(KFilePlacesModel* self, int itemRow, int row) {

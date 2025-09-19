@@ -87,15 +87,15 @@ const char** k_networkmounts_paths(void* self);
 ///
 /// @param self KNetworkMounts*
 /// @param paths const char**
-/// @param typeVal enum KNetworkMounts__KNetworkMountsType
-void k_networkmounts_set_paths(void* self, const char* paths[], int32_t typeVal);
+/// @param type enum KNetworkMounts__KNetworkMountsType
+void k_networkmounts_set_paths(void* self, const char* paths[], int32_t type);
 
 /// [Qt documentation](https://api.kde.org/knetworkmounts.html#addPath)
 ///
 /// @param self KNetworkMounts*
 /// @param path const char*
-/// @param typeVal enum KNetworkMounts__KNetworkMountsType
-void k_networkmounts_add_path(void* self, const char* path, int32_t typeVal);
+/// @param type enum KNetworkMounts__KNetworkMountsType
+void k_networkmounts_add_path(void* self, const char* path, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/knetworkmounts.html#canonicalSymlinkPath)
 ///
@@ -136,8 +136,8 @@ const char* k_networkmounts_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KNetworkMounts*
 /// @param path const char*
-/// @param typeVal enum KNetworkMounts__KNetworkMountsType
-bool k_networkmounts_is_slow_path2(void* self, const char* path, int32_t typeVal);
+/// @param type enum KNetworkMounts__KNetworkMountsType
+bool k_networkmounts_is_slow_path2(void* self, const char* path, int32_t type);
 
 /// [Qt documentation](https://api.kde.org/knetworkmounts.html#isOptionEnabled)
 ///
@@ -151,8 +151,8 @@ bool k_networkmounts_is_option_enabled2(void* self, int32_t option, bool default
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self KNetworkMounts*
-/// @param typeVal enum KNetworkMounts__KNetworkMountsType
-const char** k_networkmounts_paths1(void* self, int32_t typeVal);
+/// @param type enum KNetworkMounts__KNetworkMountsType
+const char** k_networkmounts_paths1(void* self, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -448,8 +448,8 @@ int32_t k_networkmounts_start_timer22(void* self, int interval, int32_t timerTyp
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_networkmounts_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_networkmounts_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -459,8 +459,8 @@ QMetaObject__Connection* k_networkmounts_connect5(void* sender, void* signal, vo
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* k_networkmounts_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* k_networkmounts_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

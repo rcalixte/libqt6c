@@ -334,8 +334,8 @@ void KLineEdit_SetReadOnly(KLineEdit* self, bool readOnly) {
     }
 }
 
-void KLineEdit_RotateText(KLineEdit* self, int typeVal) {
-    self->rotateText(static_cast<KCompletionBase::KeyBindingType>(typeVal));
+void KLineEdit_RotateText(KLineEdit* self, int type) {
+    self->rotateText(static_cast<KCompletionBase::KeyBindingType>(type));
 }
 
 void KLineEdit_SetCompletedText(KLineEdit* self, const libqt_string completedText) {

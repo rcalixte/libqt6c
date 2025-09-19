@@ -352,32 +352,32 @@ QDnsLookup* q_dnslookup_new();
 
 /// q_dnslookup_new2 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
-QDnsLookup* q_dnslookup_new2(int32_t typeVal, const char* name);
+QDnsLookup* q_dnslookup_new2(int32_t type, const char* name);
 
 /// q_dnslookup_new3 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param nameserver QHostAddress*
-QDnsLookup* q_dnslookup_new3(int32_t typeVal, const char* name, void* nameserver);
+QDnsLookup* q_dnslookup_new3(int32_t type, const char* name, void* nameserver);
 
 /// q_dnslookup_new4 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param nameserver QHostAddress*
 /// @param port unsigned short
-QDnsLookup* q_dnslookup_new4(int32_t typeVal, const char* name, void* nameserver, unsigned short port);
+QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, unsigned short port);
 
 /// q_dnslookup_new5 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
-QDnsLookup* q_dnslookup_new5(int32_t typeVal, const char* name, uint8_t protocol, void* nameserver);
+QDnsLookup* q_dnslookup_new5(int32_t type, const char* name, uint8_t protocol, void* nameserver);
 
 /// q_dnslookup_new6 constructs a new QDnsLookup object.
 ///
@@ -386,46 +386,46 @@ QDnsLookup* q_dnslookup_new6(void* parent);
 
 /// q_dnslookup_new7 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param parent QObject*
-QDnsLookup* q_dnslookup_new7(int32_t typeVal, const char* name, void* parent);
+QDnsLookup* q_dnslookup_new7(int32_t type, const char* name, void* parent);
 
 /// q_dnslookup_new8 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param nameserver QHostAddress*
 /// @param parent QObject*
-QDnsLookup* q_dnslookup_new8(int32_t typeVal, const char* name, void* nameserver, void* parent);
+QDnsLookup* q_dnslookup_new8(int32_t type, const char* name, void* nameserver, void* parent);
 
 /// q_dnslookup_new9 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param nameserver QHostAddress*
 /// @param port unsigned short
 /// @param parent QObject*
-QDnsLookup* q_dnslookup_new9(int32_t typeVal, const char* name, void* nameserver, unsigned short port, void* parent);
+QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, unsigned short port, void* parent);
 
 /// q_dnslookup_new10 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
 /// @param port unsigned short
-QDnsLookup* q_dnslookup_new10(int32_t typeVal, const char* name, uint8_t protocol, void* nameserver, unsigned short port);
+QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, void* nameserver, unsigned short port);
 
 /// q_dnslookup_new11 constructs a new QDnsLookup object.
 ///
-/// @param typeVal enum QDnsLookup__Type
+/// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
 /// @param port unsigned short
 /// @param parent QObject*
-QDnsLookup* q_dnslookup_new11(int32_t typeVal, const char* name, uint8_t protocol, void* nameserver, unsigned short port, void* parent);
+QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, void* nameserver, unsigned short port, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -510,8 +510,8 @@ int32_t q_dnslookup_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setType)
 ///
 /// @param self QDnsLookup*
-/// @param typeVal enum QDnsLookup__Type
-void q_dnslookup_set_type(void* self, int32_t typeVal);
+/// @param type enum QDnsLookup__Type
+void q_dnslookup_set_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserver)
 ///
@@ -659,13 +659,13 @@ void q_dnslookup_on_name_changed(void* self, void (*callback)(void*, const char*
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#typeChanged)
 ///
 /// @param self QDnsLookup*
-/// @param typeVal enum QDnsLookup__Type
-void q_dnslookup_type_changed(void* self, int32_t typeVal);
+/// @param type enum QDnsLookup__Type
+void q_dnslookup_type_changed(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#typeChanged)
 ///
 /// @param self QDnsLookup*
-/// @param callback void func(QDnsLookup* self, enum QDnsLookup__Type typeVal)
+/// @param callback void func(QDnsLookup* self, enum QDnsLookup__Type type)
 void q_dnslookup_on_type_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverChanged)
@@ -1006,8 +1006,8 @@ int32_t q_dnslookup_start_timer22(void* self, int interval, int32_t timerType);
 /// @param signal QMetaMethod*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dnslookup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_dnslookup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type);
 
 /// Inherited from QObject
 ///
@@ -1017,8 +1017,8 @@ QMetaObject__Connection* q_dnslookup_connect5(void* sender, void* signal, void* 
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
-/// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dnslookup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
+/// @param type enum Qt__ConnectionType
+QMetaObject__Connection* q_dnslookup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///

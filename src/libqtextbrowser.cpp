@@ -125,12 +125,12 @@ void QTextBrowser_SetSearchPaths(QTextBrowser* self, const libqt_list /* of libq
     self->setSearchPaths(paths_QList);
 }
 
-QVariant* QTextBrowser_LoadResource(QTextBrowser* self, int typeVal, const QUrl* name) {
+QVariant* QTextBrowser_LoadResource(QTextBrowser* self, int type, const QUrl* name) {
     auto* vqtextbrowser = dynamic_cast<VirtualQTextBrowser*>(self);
     if (vqtextbrowser && vqtextbrowser->isVirtualQTextBrowser) {
-        return new QVariant(self->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(self->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualQTextBrowser*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualQTextBrowser*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 
@@ -361,10 +361,10 @@ void QTextBrowser_PaintEvent(QTextBrowser* self, QPaintEvent* e) {
     }
 }
 
-void QTextBrowser_DoSetSource(QTextBrowser* self, const QUrl* name, int typeVal) {
+void QTextBrowser_DoSetSource(QTextBrowser* self, const QUrl* name, int type) {
     auto* vqtextbrowser = dynamic_cast<VirtualQTextBrowser*>(self);
     if (vqtextbrowser && vqtextbrowser->isVirtualQTextBrowser) {
-        vqtextbrowser->doSetSource(*name, static_cast<QTextDocument::ResourceType>(typeVal));
+        vqtextbrowser->doSetSource(*name, static_cast<QTextDocument::ResourceType>(type));
     }
 }
 
@@ -392,8 +392,8 @@ libqt_string QTextBrowser_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QTextBrowser_SetSource2(QTextBrowser* self, const QUrl* name, int typeVal) {
-    self->setSource(*name, static_cast<QTextDocument::ResourceType>(typeVal));
+void QTextBrowser_SetSource2(QTextBrowser* self, const QUrl* name, int type) {
+    self->setSource(*name, static_cast<QTextDocument::ResourceType>(type));
 }
 
 // Base class handler implementation
@@ -416,13 +416,13 @@ void QTextBrowser_OnMetacall(QTextBrowser* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-QVariant* QTextBrowser_QBaseLoadResource(QTextBrowser* self, int typeVal, const QUrl* name) {
+QVariant* QTextBrowser_QBaseLoadResource(QTextBrowser* self, int type, const QUrl* name) {
     auto* vqtextbrowser = dynamic_cast<VirtualQTextBrowser*>(self);
     if (vqtextbrowser && vqtextbrowser->isVirtualQTextBrowser) {
         vqtextbrowser->setQTextBrowser_LoadResource_IsBase(true);
-        return new QVariant(vqtextbrowser->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(vqtextbrowser->loadResource(static_cast<int>(type), *name));
     } else {
-        return new QVariant(((VirtualQTextBrowser*)self)->loadResource(static_cast<int>(typeVal), *name));
+        return new QVariant(((VirtualQTextBrowser*)self)->loadResource(static_cast<int>(type), *name));
     }
 }
 
@@ -663,13 +663,13 @@ void QTextBrowser_OnPaintEvent(QTextBrowser* self, intptr_t slot) {
 }
 
 // Base class handler implementation
-void QTextBrowser_QBaseDoSetSource(QTextBrowser* self, const QUrl* name, int typeVal) {
+void QTextBrowser_QBaseDoSetSource(QTextBrowser* self, const QUrl* name, int type) {
     auto* vqtextbrowser = dynamic_cast<VirtualQTextBrowser*>(self);
     if (vqtextbrowser && vqtextbrowser->isVirtualQTextBrowser) {
         vqtextbrowser->setQTextBrowser_DoSetSource_IsBase(true);
-        vqtextbrowser->doSetSource(*name, static_cast<QTextDocument::ResourceType>(typeVal));
+        vqtextbrowser->doSetSource(*name, static_cast<QTextDocument::ResourceType>(type));
     } else {
-        ((VirtualQTextBrowser*)self)->doSetSource(*name, static_cast<QTextDocument::ResourceType>(typeVal));
+        ((VirtualQTextBrowser*)self)->doSetSource(*name, static_cast<QTextDocument::ResourceType>(type));
     }
 }
 

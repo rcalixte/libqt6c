@@ -697,8 +697,8 @@ void q_sciscintilla_set_margin_text3(void* self, int line, void* text) {
     QsciScintilla_SetMarginText3((QsciScintilla*)self, line, (QsciStyledText*)text);
 }
 
-void q_sciscintilla_set_margin_type(void* self, int margin, int32_t typeVal) {
-    QsciScintilla_SetMarginType((QsciScintilla*)self, margin, typeVal);
+void q_sciscintilla_set_margin_type(void* self, int margin, int32_t type) {
+    QsciScintilla_SetMarginType((QsciScintilla*)self, margin, type);
 }
 
 void q_sciscintilla_clear_margin_text(void* self) {
@@ -2793,12 +2793,12 @@ void q_sciscintilla_set_graphics_effect(void* self, void* effect) {
     QWidget_SetGraphicsEffect((QWidget*)self, (QGraphicsEffect*)effect);
 }
 
-void q_sciscintilla_grab_gesture(void* self, int64_t typeVal) {
-    QWidget_GrabGesture((QWidget*)self, typeVal);
+void q_sciscintilla_grab_gesture(void* self, int64_t type) {
+    QWidget_GrabGesture((QWidget*)self, type);
 }
 
-void q_sciscintilla_ungrab_gesture(void* self, int64_t typeVal) {
-    QWidget_UngrabGesture((QWidget*)self, typeVal);
+void q_sciscintilla_ungrab_gesture(void* self, int64_t type) {
+    QWidget_UngrabGesture((QWidget*)self, type);
 }
 
 void q_sciscintilla_set_window_title(void* self, const char* windowTitle) {
@@ -3355,8 +3355,8 @@ QWidget* q_sciscintilla_parent_widget(void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
-void q_sciscintilla_set_window_flags(void* self, int64_t typeVal) {
-    QWidget_SetWindowFlags((QWidget*)self, typeVal);
+void q_sciscintilla_set_window_flags(void* self, int64_t type) {
+    QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
 int64_t q_sciscintilla_window_flags(void* self) {
@@ -3367,8 +3367,8 @@ void q_sciscintilla_set_window_flag(void* self, int64_t param1) {
     QWidget_SetWindowFlag((QWidget*)self, param1);
 }
 
-void q_sciscintilla_override_window_flags(void* self, int64_t typeVal) {
-    QWidget_OverrideWindowFlags((QWidget*)self, typeVal);
+void q_sciscintilla_override_window_flags(void* self, int64_t type) {
+    QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
 int64_t q_sciscintilla_window_type(void* self) {
@@ -3503,8 +3503,8 @@ QPixmap* q_sciscintilla_grab1(void* self, void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
-void q_sciscintilla_grab_gesture2(void* self, int64_t typeVal, int32_t flags) {
-    QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
+void q_sciscintilla_grab_gesture2(void* self, int64_t type, int32_t flags) {
+    QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
 int32_t q_sciscintilla_grab_shortcut2(void* self, void* key, int32_t context) {
@@ -3686,12 +3686,12 @@ int32_t q_sciscintilla_start_timer22(void* self, int interval, int32_t timerType
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sciscintilla_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
-    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
+QMetaObject__Connection* q_sciscintilla_connect5(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+    return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sciscintilla_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
-    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
+QMetaObject__Connection* q_sciscintilla_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+    return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
 void q_sciscintilla_destroyed1(void* self, void* param1) {

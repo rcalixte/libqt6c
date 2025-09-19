@@ -320,9 +320,9 @@ libqt_string KPasswordDialog_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void KPasswordDialog_ShowErrorMessage2(KPasswordDialog* self, const libqt_string message, const int typeVal) {
+void KPasswordDialog_ShowErrorMessage2(KPasswordDialog* self, const libqt_string message, const int type) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
-    self->showErrorMessage(message_QString, static_cast<const KPasswordDialog::ErrorType>(typeVal));
+    self->showErrorMessage(message_QString, static_cast<const KPasswordDialog::ErrorType>(type));
 }
 
 // Base class handler implementation

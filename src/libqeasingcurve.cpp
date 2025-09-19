@@ -13,8 +13,8 @@ QEasingCurve* QEasingCurve_new2(const QEasingCurve* other) {
     return new QEasingCurve(*other);
 }
 
-QEasingCurve* QEasingCurve_new3(int typeVal) {
-    return new QEasingCurve(static_cast<QEasingCurve::Type>(typeVal));
+QEasingCurve* QEasingCurve_new3(int type) {
+    return new QEasingCurve(static_cast<QEasingCurve::Type>(type));
 }
 
 void QEasingCurve_OperatorAssign(QEasingCurve* self, const QEasingCurve* other) {
@@ -74,8 +74,8 @@ int QEasingCurve_Type(const QEasingCurve* self) {
     return static_cast<int>(self->type());
 }
 
-void QEasingCurve_SetType(QEasingCurve* self, int typeVal) {
-    self->setType(static_cast<QEasingCurve::Type>(typeVal));
+void QEasingCurve_SetType(QEasingCurve* self, int type) {
+    self->setType(static_cast<QEasingCurve::Type>(type));
 }
 
 double QEasingCurve_ValueForProgress(const QEasingCurve* self, double progress) {

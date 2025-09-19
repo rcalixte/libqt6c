@@ -42,8 +42,8 @@ QSizePolicy* q_sizepolicy_new5(void* param1);
 ///
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-/// @param typeVal enum QSizePolicy__ControlType
-QSizePolicy* q_sizepolicy_new6(int32_t horizontal, int32_t vertical, int32_t typeVal);
+/// @param type enum QSizePolicy__ControlType
+QSizePolicy* q_sizepolicy_new6(int32_t horizontal, int32_t vertical, int32_t type);
 
 /// q_sizepolicy_copy_assign shallow copies `other` into `self`.
 ///
@@ -93,8 +93,8 @@ void q_sizepolicy_set_vertical_policy(void* self, int32_t d);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#setControlType)
 ///
 /// @param self QSizePolicy*
-/// @param typeVal enum QSizePolicy__ControlType
-void q_sizepolicy_set_control_type(void* self, int32_t typeVal);
+/// @param type enum QSizePolicy__ControlType
+void q_sizepolicy_set_control_type(void* self, int32_t type);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#expandingDirections)
 ///

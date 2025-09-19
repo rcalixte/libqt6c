@@ -287,8 +287,8 @@ int32_t q_font_letter_spacing_type(void* self) {
     return QFont_LetterSpacingType((QFont*)self);
 }
 
-void q_font_set_letter_spacing(void* self, int32_t typeVal, double spacing) {
-    QFont_SetLetterSpacing((QFont*)self, typeVal, spacing);
+void q_font_set_letter_spacing(void* self, int32_t type, double spacing) {
+    QFont_SetLetterSpacing((QFont*)self, type, spacing);
 }
 
 double q_font_word_spacing(void* self) {

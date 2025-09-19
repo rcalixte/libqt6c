@@ -46,9 +46,9 @@ void QPropertyBindingSourceLocation_SetColumn(QPropertyBindingSourceLocation* se
 void QPropertyBindingSourceLocation_Delete(QPropertyBindingSourceLocation* self);
 
 QPropertyBindingError* QPropertyBindingError_new();
-QPropertyBindingError* QPropertyBindingError_new2(int typeVal);
+QPropertyBindingError* QPropertyBindingError_new2(int type);
 QPropertyBindingError* QPropertyBindingError_new3(const QPropertyBindingError* other);
-QPropertyBindingError* QPropertyBindingError_new4(int typeVal, const libqt_string description);
+QPropertyBindingError* QPropertyBindingError_new4(int type, const libqt_string description);
 void QPropertyBindingError_OperatorAssign(QPropertyBindingError* self, const QPropertyBindingError* other);
 bool QPropertyBindingError_HasError(const QPropertyBindingError* self);
 int QPropertyBindingError_Type(const QPropertyBindingError* self);

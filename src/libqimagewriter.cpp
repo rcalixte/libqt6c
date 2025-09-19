@@ -98,9 +98,9 @@ int QImageWriter_Compression(const QImageWriter* self) {
     return self->compression();
 }
 
-void QImageWriter_SetSubType(QImageWriter* self, const libqt_string typeVal) {
-    QByteArray typeVal_QByteArray(typeVal.data, typeVal.len);
-    self->setSubType(typeVal_QByteArray);
+void QImageWriter_SetSubType(QImageWriter* self, const libqt_string type) {
+    QByteArray type_QByteArray(type.data, type.len);
+    self->setSubType(type_QByteArray);
 }
 
 libqt_string QImageWriter_SubType(const QImageWriter* self) {
