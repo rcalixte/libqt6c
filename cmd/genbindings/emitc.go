@@ -11,7 +11,7 @@ import (
 // not language-reserved words, but binding-reserved words
 func reservedWordC(s string) bool {
 	switch s {
-	case "default", "const", "var", "type", "len", "new", "copy", "import",
+	case "default", "const", "var", "len", "new", "copy", "import",
 		"string", "map", "int", "select", "ret", "suspend", "null", "self":
 		return true
 	default:
@@ -1065,7 +1065,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenMethods := make(map[string]struct{})
 		baseMethods := c.Methods
 		protectedMethods := c.ProtectedMethods()
-		virtualEligible := AllowVirtualForClass(c.ClassName)
+		virtualEligible := AllowVirtualForClass(c.ClassName) && len(virtualMethods) > 0
 
 		if virtualEligible && len(virtualMethods) > 0 {
 			virtualMethods = append(virtualMethods, protectedMethods...)
@@ -1459,6 +1459,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	if len(src.Enums) > 0 {
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
 		maybeUrlPrefix := ifv(strings.Contains(src.Filename, "KIO") && !strings.HasPrefix(getPageName(cfs.currentHeaderName), "k"), "kio-", "")
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Attica"), "attica-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
 		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
@@ -1694,7 +1695,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenMethods := make(map[string]struct{})
 		baseMethods := c.Methods
 		protectedMethods := c.ProtectedMethods()
-		virtualEligible := AllowVirtualForClass(c.ClassName)
+		virtualEligible := AllowVirtualForClass(c.ClassName) && len(virtualMethods) > 0
 
 		if virtualEligible && len(virtualMethods) > 0 {
 			virtualMethods = append(virtualMethods, protectedMethods...)
