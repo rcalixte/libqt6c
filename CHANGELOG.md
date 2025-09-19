@@ -1,4 +1,8 @@
 
+### 6.8.2 rev31 (19 September 2025)
+
+* Add [Attica](https://api.kde.org/attica-index.html) (#57)
+
 ### 6.8.2 rev30 (14 September 2025)
 
 * Add [KJobWidgets](https://api.kde.org/kjobwidgets-index.html), [KService](https://api.kde.org/kservice-index.html), [Solid](https://api.kde.org/solid-index.html), [KNotifications](https://api.kde.org/knotifications-index.html), [KWindowSystem](https://api.kde.org/kwindowsystem-index.html), and [KIO](https://api.kde.org/kio-index.html) (#56)
