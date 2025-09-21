@@ -4,7 +4,7 @@
 #include "libkfileitem.hpp"
 #include "libkfilepreviewgenerator.hpp"
 #include "libdropjob.hpp"
-#include "libdeletejob.hpp"
+#include "libdeletejob_1.hpp"
 #include "libkpreviewwidgetbase.hpp"
 #include "../libqabstractitemview.hpp"
 #include "../libqaction.hpp"

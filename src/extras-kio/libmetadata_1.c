@@ -1,6 +1,6 @@
 #include "../libqvariant.hpp"
-#include "libmetadata.hpp"
-#include "libmetadata.h"
+#include "libmetadata_1.hpp"
+#include "libmetadata_1.h"
 
 KIO__MetaData* k_io__metadata_new() {
     return KIO__MetaData_new();

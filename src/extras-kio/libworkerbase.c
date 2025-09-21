@@ -1,6 +1,6 @@
 #include "../extras-kconfig/libkconfiggroup.hpp"
 #include "libauthinfo.hpp"
-#include "libmetadata.hpp"
+#include "libmetadata_1.hpp"
 #include "libudsentry.hpp"
 #include "libkremoteencoding.hpp"
 #include "../libqdatetime.hpp"
