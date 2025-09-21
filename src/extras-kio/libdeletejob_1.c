@@ -5,8 +5,8 @@
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqurl.hpp"
-#include "libdeletejob.hpp"
-#include "libdeletejob.h"
+#include "libdeletejob_1.hpp"
+#include "libdeletejob_1.h"
 
 const QMetaObject* k_io__deletejob_meta_object(void* self) {
     return KIO__DeleteJob_MetaObject((KIO__DeleteJob*)self);

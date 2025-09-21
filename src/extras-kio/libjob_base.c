@@ -1,6 +1,6 @@
 #include "../extras-kcoreaddons/libkcompositejob.hpp"
 #include "libjobuidelegateextension.hpp"
-#include "libmetadata.hpp"
+#include "libmetadata_1.hpp"
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"

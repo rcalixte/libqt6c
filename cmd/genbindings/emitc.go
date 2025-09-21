@@ -3,6 +3,7 @@ package main
 import (
 	"C"
 	"fmt"
+	"path/filepath"
 	"reflect"
 	"strings"
 	"unicode"
@@ -965,7 +966,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	ret := strings.Builder{}
 
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(headerName, ".", "_"), "-", "_"))
+	srcFilename := filepath.Base(src.Filename)
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(srcFilename, ".", "_"), "-", "_"))
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 
@@ -975,7 +977,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	cfs := cFileState{
 		imports:            map[string]struct{}{},
 		currentPackageName: dirRoot,
-		currentHeaderName:  strings.TrimSuffix(headerName, ".h"),
+		currentHeaderName:  strings.TrimSuffix(headerName[3:], ".h"),
 	}
 
 	if dirRoot != "" {
@@ -1460,6 +1462,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
 		maybeUrlPrefix := ifv(strings.Contains(src.Filename, "KIO") && !strings.HasPrefix(getPageName(cfs.currentHeaderName), "k"), "kio-", "")
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Attica"), "attica-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KNSCore"), "knscore-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
 		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
@@ -1519,16 +1522,21 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	var parentInclude string
 
+	srcFilename := filepath.Base(src.Filename)
 	dirRoot := strings.TrimPrefix(packageName, "src/")
 	dirRoot = strings.TrimPrefix(dirRoot, "src")
 
 	cfs := cFileState{
 		imports:            map[string]struct{}{},
 		currentPackageName: dirRoot,
-		currentHeaderName:  strings.TrimSuffix(headerName, ".h"),
+		currentHeaderName:  strings.TrimSuffix(headerName[3:], ".h"),
 	}
 
+	// TODO Remove this suffix hack once we have a better way to automate it
 	seenRefs := map[string]struct{}{cfs.currentHeaderName: {}}
+	if strings.HasSuffix(cfs.currentHeaderName, "_1") {
+		seenRefs[strings.TrimSuffix(cfs.currentHeaderName, "_1")] = struct{}{}
+	}
 
 	for _, ref := range getReferencedTypes(src) {
 		if cabiPreventStructDeclaration(ref) {
@@ -1567,16 +1575,23 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			parentInclude = ""
 		}
 
-		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + `.hpp"` + "\n")
+		// TODO Remove this suffix hack once we have a better way to automate it
+		maybeSuffix := ""
+		if (parentInclude == "" && strings.Contains(src.Filename, "KIO") && (refInc == "deletejob" || refInc == "metadata")) ||
+			(parentInclude == "" && strings.Contains(src.Filename, "KNS") && refInc == "provider") {
+			maybeSuffix = "_1"
+		}
+
+		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + maybeSuffix + `.hpp"` + "\n")
 	}
 
 	// workaround for qtermwidget.h
-	if headerName == "qtermwidget.h" {
+	if srcFilename == "qtermwidget.h" {
 		ret.WriteString(`#include "libqtermwidget_interface.hpp"` + "\n")
 	}
 
-	ret.WriteString(`%%_IMPORTLIBS_%%#include "lib` + headerName + `pp"
-#include "lib` + headerName + `"
+	ret.WriteString(`%%_IMPORTLIBS_%%#include "` + headerName + `pp"
+#include "` + headerName + `"
 `)
 
 	// Check if short-named enums are allowed.

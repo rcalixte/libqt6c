@@ -1,6 +1,6 @@
 #include "../extras-kcoreaddons/libkcompositejob.hpp"
 #include "libjob_base.hpp"
-#include "libmetadata.hpp"
+#include "libmetadata_1.hpp"
 #include "libsimplejob.hpp"
 #include "libtransferjob.hpp"
 #include "../extras-kcoreaddons/libkjob.hpp"

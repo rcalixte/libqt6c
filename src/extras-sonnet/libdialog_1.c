@@ -12,8 +12,8 @@
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
 #include "libbackgroundchecker.hpp"
-#include "libdialog.hpp"
-#include "libdialog.h"
+#include "libdialog_1.hpp"
+#include "libdialog_1.h"
 
 Sonnet__Dialog* k_sonnet__dialog_new(void* checker, void* parent) {
     return Sonnet__Dialog_new((Sonnet__BackgroundChecker*)checker, (QWidget*)parent);
