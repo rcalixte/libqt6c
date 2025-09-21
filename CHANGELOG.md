@@ -1,4 +1,8 @@
 
+### 6.8.2 rev32 (21 September 2025)
+
+* Add [KNewStuff](https://api.kde.org/knewstuff-index.html) and address cross-library duplicate header names (#58)
+
 ### 6.8.2 rev31 (19 September 2025)
 
 * Add [Attica](https://api.kde.org/attica-index.html) (#57)
