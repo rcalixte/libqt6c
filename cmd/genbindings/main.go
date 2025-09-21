@@ -288,6 +288,8 @@ func gatherTypes(name string, dirs []string, allowHeader func(string) bool, clan
 	// The cache should now be fully populated
 }
 
+var allHeaders = make(map[string]int)
+
 func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs, qttypedefs map[string]struct{}) *FormatBatch {
 
 	packageName := "src" + ifv(srcName != "", "/"+srcName, "")
@@ -410,15 +412,22 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 		// there are filename collisions (e.g. Qt 6 has QtWidgets/qaction.h include
 		// QtGui/qaction.h as a compatibility measure).
 		// If the path exists, disambiguate it
-		var counter = 0
+		// We also need to account for the case where multiples classes that are
+		// processed separately contain the same header name
+		counter := 0
+		if c, ok := allHeaders[libName]; ok {
+			counter = c
+		}
+		allHeaders[libName] = counter + 1
+
 		for {
 			testName := outputName
 			if counter > 0 {
-				testName += fmt.Sprintf(".%d", counter)
-				*headerList = append(*headerList, dirName+testName+".h")
-			}
-
-			if _, err := os.Stat(testName + ".cpp"); err != nil && os.IsNotExist(err) {
+				testName += fmt.Sprintf("_%d", counter)
+				*headerList = append(*headerList, dirName+filepath.Base(testName)+".h")
+				outputName = testName
+				break
+			} else if _, err := os.Stat(testName + ".cpp"); err != nil && os.IsNotExist(err) {
 				outputName = testName // Safe
 				*headerList = append(*headerList, dirName+libName+".h")
 				break
@@ -438,7 +447,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 		includeFile := filepath.Join(includeDir, filepath.Base(outputName+".h"))
 		batch.copies[outputName+".h"] = includeFile
 
-		bindingCppSrc, err := emitBindingCpp(parsed, filepath.Base(parsed.Filename))
+		bindingCppSrc, err := emitBindingCpp(parsed, filepath.Base(outputName+".h"))
 		if err != nil {
 			panic(err)
 		}
@@ -448,7 +457,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		bindingHSrc, structdefs, typedefs, err := emitBindingHeader(parsed, filepath.Base(parsed.Filename), packageName)
+		bindingHSrc, structdefs, typedefs, err := emitBindingHeader(parsed, filepath.Base(outputName+".h"), packageName)
 		if err != nil {
 			panic(err)
 		}
@@ -466,7 +475,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		bindingHxxSrc, err := emitVirtualBindingHeader(parsed, filepath.Base(parsed.Filename), packageName)
+		bindingHxxSrc, err := emitVirtualBindingHeader(parsed, filepath.Base(outputName+".h"), packageName)
 		if err != nil {
 			panic(err)
 		}
@@ -476,7 +485,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		srcC, err := emitC(parsed, filepath.Base(parsed.Filename), packageName)
+		srcC, err := emitC(parsed, filepath.Base(outputName+".h"), packageName)
 		if err != nil {
 			panic(err)
 		}
@@ -486,7 +495,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		includeH, err := emitH(parsed, filepath.Base(parsed.Filename), packageName)
+		includeH, err := emitH(parsed, filepath.Base(outputName+".h"), packageName)
 		if err != nil {
 			panic(err)
 		}
