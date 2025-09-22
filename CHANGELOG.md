@@ -1,4 +1,9 @@
 
+### 6.8.2 rev33 (22 September 2025)
+
+* **BREAKING CHANGE:** Remove `KGradientSelector::setStops` (#59)
+  * This is generating an undefined symbol error when linked during compilation.
+
 ### 6.8.2 rev32 (21 September 2025)
 
 * Add [KNewStuff](https://api.kde.org/knewstuff-index.html) and address cross-library duplicate header names (#58)
