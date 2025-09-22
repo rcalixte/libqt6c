@@ -4786,12 +4786,6 @@ int32_t k_gradientselector_qbase_metacall(void* self, int32_t param1, int param2
 /// @param s const char*
 const char* k_gradientselector_tr(const char* s);
 
-/// [Qt documentation](https://api.kde.org/kgradientselector.html#setStops)
-///
-/// @param self KGradientSelector*
-/// @param stops libqt_list /* of libqt_pair  tuple of double and QColor*  */
-void k_gradientselector_set_stops(void* self, libqt_list /* of libqt_pair  tuple of double and QColor*  */ stops);
-
 /// [Qt documentation](https://api.kde.org/kgradientselector.html#stops)
 ///
 /// @param self KGradientSelector*
