@@ -208,11 +208,6 @@ bool q_httpheaders_is_empty(void* self);
 /// @param name enum QHttpHeaders__WellKnownHeader
 const char* q_httpheaders_well_known_header_name(int32_t name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#fromListOfPairs)
-///
-/// @param headers libqt_list /* of libqt_pair  tuple of char* and char*  */
-QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair  tuple of char* and char*  */ headers);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#toListOfPairs)
 ///
 /// @param self QHttpHeaders*

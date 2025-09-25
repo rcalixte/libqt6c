@@ -346,10 +346,6 @@ void k_dirlister_on_items_deleted(void* self, void (*callback)(void*, void*)) {
     KCoreDirLister_Connect_ItemsDeleted((KCoreDirLister*)self, (intptr_t)callback);
 }
 
-void k_dirlister_refresh_items(void* self, libqt_list /* of libqt_pair  tuple of KFileItem* and KFileItem*  */ items) {
-    KCoreDirLister_RefreshItems((KCoreDirLister*)self, items);
-}
-
 void k_dirlister_info_message(void* self, const char* msg) {
     KCoreDirLister_InfoMessage((KCoreDirLister*)self, qstring(msg));
 }

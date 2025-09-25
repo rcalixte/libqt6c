@@ -118,12 +118,6 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id);
 /// @param self Attica__Metadata*
 libqt_list /* of libqt_pair  tuple of char* and char*  */ k_attica__metadata_headers(void* self);
 
-/// [Qt documentation](https://api.kde.org/attica-metadata.html#setHeaders)
-///
-/// @param self Attica__Metadata*
-/// @param headers libqt_list /* of libqt_pair  tuple of char* and char*  */
-void k_attica__metadata_set_headers(void* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers);
-
 /// Delete this object from C++ memory.
 ///
 /// @param self Attica__Metadata*

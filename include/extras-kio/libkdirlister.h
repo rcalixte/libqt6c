@@ -550,14 +550,6 @@ void k_dirlister_on_items_deleted(void* self, void (*callback)(void*, void*));
 
 /// Inherited from KCoreDirLister
 ///
-/// [Qt documentation](https://api.kde.org/kcoredirlister.html#refreshItems)
-///
-/// @param self KDirLister*
-/// @param items libqt_list /* of libqt_pair  tuple of KFileItem* and KFileItem*  */
-void k_dirlister_refresh_items(void* self, libqt_list /* of libqt_pair  tuple of KFileItem* and KFileItem*  */ items);
-
-/// Inherited from KCoreDirLister
-///
 /// [Qt documentation](https://api.kde.org/kcoredirlister.html#infoMessage)
 ///
 /// @param self KDirLister*

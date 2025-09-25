@@ -83,10 +83,6 @@ libqt_list /* of libqt_pair  tuple of char* and char*  */ k_attica__metadata_hea
     return _arr;
 }
 
-void k_attica__metadata_set_headers(void* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers) {
-    Attica__Metadata_SetHeaders((Attica__Metadata*)self, headers);
-}
-
 void k_attica__metadata_delete(void* self) {
     Attica__Metadata_Delete((Attica__Metadata*)(self));
 }
