@@ -386,12 +386,6 @@ void k_coredirlister_items_deleted(void* self, void* items);
 /// @param callback void func(KCoreDirLister* self, KFileItemList* items)
 void k_coredirlister_on_items_deleted(void* self, void (*callback)(void*, void*));
 
-/// [Qt documentation](https://api.kde.org/kcoredirlister.html#refreshItems)
-///
-/// @param self KCoreDirLister*
-/// @param items libqt_list /* of libqt_pair  tuple of KFileItem* and KFileItem*  */
-void k_coredirlister_refresh_items(void* self, libqt_list /* of libqt_pair  tuple of KFileItem* and KFileItem*  */ items);
-
 /// [Qt documentation](https://api.kde.org/kcoredirlister.html#infoMessage)
 ///
 /// @param self KCoreDirLister*

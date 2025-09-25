@@ -67,12 +67,6 @@ void q_networkcachemetadata_set_url(void* self, void* url);
 /// @param self QNetworkCacheMetaData*
 libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkcachemetadata_raw_headers(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setRawHeaders)
-///
-/// @param self QNetworkCacheMetaData*
-/// @param headers libqt_list /* of libqt_pair  tuple of char* and char*  */
-void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#headers)
 ///
 /// @param self QNetworkCacheMetaData*

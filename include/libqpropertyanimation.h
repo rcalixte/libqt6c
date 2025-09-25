@@ -236,14 +236,6 @@ libqt_list /* of libqt_pair  tuple of double and QVariant*  */ q_propertyanimati
 
 /// Inherited from QVariantAnimation
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#setKeyValues)
-///
-/// @param self QPropertyAnimation*
-/// @param values libqt_list /* of libqt_pair  tuple of double and QVariant*  */
-void q_propertyanimation_set_key_values(void* self, libqt_list /* of libqt_pair  tuple of double and QVariant*  */ values);
-
-/// Inherited from QVariantAnimation
-///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#currentValue)
 ///
 /// @param self QPropertyAnimation*

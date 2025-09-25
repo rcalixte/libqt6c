@@ -129,12 +129,6 @@ bool k_acl_set_named_user_permissions(void* self, const char* name, unsigned sho
 /// @param self KACL*
 libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */ k_acl_all_user_permissions(void* self);
 
-/// [Qt documentation](https://api.kde.org/kacl.html#setAllUserPermissions)
-///
-/// @param self KACL*
-/// @param list libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */
-bool k_acl_set_all_user_permissions(void* self, libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */ list);
-
 /// [Qt documentation](https://api.kde.org/kacl.html#namedGroupPermissions)
 ///
 /// @param self KACL*
@@ -153,12 +147,6 @@ bool k_acl_set_named_group_permissions(void* self, const char* name, unsigned sh
 ///
 /// @param self KACL*
 libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */ k_acl_all_group_permissions(void* self);
-
-/// [Qt documentation](https://api.kde.org/kacl.html#setAllGroupPermissions)
-///
-/// @param self KACL*
-/// @param allGroupPermissions libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */
-bool k_acl_set_all_group_permissions(void* self, libqt_list /* of libqt_pair  tuple of const char* and unsigned short  */ allGroupPermissions);
 
 /// [Qt documentation](https://api.kde.org/kacl.html#setACL)
 ///

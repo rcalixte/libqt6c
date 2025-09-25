@@ -69,10 +69,6 @@ QChar* q_urlquery_query_pair_delimiter(void* self) {
     return QUrlQuery_QueryPairDelimiter((QUrlQuery*)self);
 }
 
-void q_urlquery_set_query_items(void* self, libqt_list /* of libqt_pair  tuple of const char* and const char*  */ query) {
-    QUrlQuery_SetQueryItems((QUrlQuery*)self, query);
-}
-
 libqt_list /* of libqt_pair  tuple of const char* and const char*  */ q_urlquery_query_items(void* self) {
     libqt_list _arr = QUrlQuery_QueryItems((QUrlQuery*)self);
     return _arr;

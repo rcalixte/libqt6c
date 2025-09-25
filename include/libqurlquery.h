@@ -96,12 +96,6 @@ QChar* q_urlquery_query_value_delimiter(void* self);
 /// @param self QUrlQuery*
 QChar* q_urlquery_query_pair_delimiter(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#setQueryItems)
-///
-/// @param self QUrlQuery*
-/// @param query libqt_list /* of libqt_pair  tuple of const char* and const char*  */
-void q_urlquery_set_query_items(void* self, libqt_list /* of libqt_pair  tuple of const char* and const char*  */ query);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#queryItems)
 ///
 /// @param self QUrlQuery*
