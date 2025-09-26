@@ -3904,6 +3904,18 @@ void q_sciscintilla_on_input_method_event(void* self, void (*callback)(void*, vo
     QsciScintilla_OnInputMethodEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
+QVariant* q_sciscintilla_input_method_query(void* self, int64_t query) {
+    return QsciScintilla_InputMethodQuery((QsciScintilla*)self, query);
+}
+
+QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t query) {
+    return QsciScintilla_QBaseInputMethodQuery((QsciScintilla*)self, query);
+}
+
+void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QsciScintilla_OnInputMethodQuery((QsciScintilla*)self, (intptr_t)callback);
+}
+
 void q_sciscintilla_mouse_double_click_event(void* self, void* e) {
     QsciScintilla_MouseDoubleClickEvent((QsciScintilla*)self, (QMouseEvent*)e);
 }
@@ -4298,18 +4310,6 @@ QPainter* q_sciscintilla_qbase_shared_painter(void* self) {
 
 void q_sciscintilla_on_shared_painter(void* self, QPainter* (*callback)()) {
     QsciScintilla_OnSharedPainter((QsciScintilla*)self, (intptr_t)callback);
-}
-
-QVariant* q_sciscintilla_input_method_query(void* self, int64_t param1) {
-    return QsciScintilla_InputMethodQuery((QsciScintilla*)self, param1);
-}
-
-QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t param1) {
-    return QsciScintilla_QBaseInputMethodQuery((QsciScintilla*)self, param1);
-}
-
-void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
-    QsciScintilla_OnInputMethodQuery((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_timer_event(void* self, void* event) {

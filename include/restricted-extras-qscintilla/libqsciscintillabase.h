@@ -755,6 +755,28 @@ void q_sciscintillabase_qbase_input_method_event(void* self, void* event);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
+/// @param query enum Qt__InputMethodQuery
+QVariant* q_sciscintillabase_input_method_query(void* self, int64_t query);
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintillaBase*
+/// @param callback QVariant* func(QsciScintillaBase* self, enum Qt__InputMethodQuery query)
+void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Base class method implementation
+///
+/// @param self QsciScintillaBase*
+/// @param query enum Qt__InputMethodQuery
+QVariant* q_sciscintillabase_qbase_input_method_query(void* self, int64_t query);
+
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @param self QsciScintillaBase*
 /// @param e QMouseEvent*
 void q_sciscintillabase_mouse_double_click_event(void* self, void* e);
 
@@ -4585,36 +4607,6 @@ QPainter* q_sciscintillabase_qbase_shared_painter(void* self);
 /// @param self QsciScintillaBase*
 /// @param callback QPainter* func()
 void q_sciscintillabase_on_shared_painter(void* self, QPainter* (*callback)());
-
-/// Inherited from QWidget
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self QsciScintillaBase*
-/// @param param1 enum Qt__InputMethodQuery
-QVariant* q_sciscintillabase_input_method_query(void* self, int64_t param1);
-
-/// Inherited from QWidget
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self QsciScintillaBase*
-/// @param param1 enum Qt__InputMethodQuery
-QVariant* q_sciscintillabase_qbase_input_method_query(void* self, int64_t param1);
-
-/// Inherited from QWidget
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self QsciScintillaBase*
-/// @param callback QVariant* func(QsciScintillaBase* self, enum Qt__InputMethodQuery param1)
-void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///
