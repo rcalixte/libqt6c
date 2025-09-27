@@ -90,9 +90,11 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	if pageName[0] != 'q' && pageName != "disambiguated_t" &&
 		pageName != "partial_ordering" && pageName != "weak_ordering" && pageName != "strong_ordering" {
 		qtUrl = "https://api.kde.org/"
+		pageName = strings.TrimSuffix(pageName, "_1")
 	}
 
 	pageName = strings.ReplaceAll(pageName, "__", "-")
+	pageName = strings.ReplaceAll(pageName, "_", "-")
 
 	switch pageType {
 	case QtPage:
@@ -144,7 +146,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	if (p.Pointer && p.ParameterType == "char") || p.ParameterType == "QByteArray" ||
 		p.ParameterType == "QAnyStringView" {
 		if p.Const {
-			return "const char*"
+			return "const char" + strings.Repeat("*", max(p.PointerCount, 1))
 		}
 		return "char*"
 	}
@@ -186,7 +188,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 		return "libqt_pair " + cppComment("tuple of "+f+" and "+s)
 	}
 
-	if p.ParameterType == "void" && p.Pointer {
+	if (p.ParameterType == "void" || p.ParameterType == "GLvoid") && p.Pointer {
 		return "void*"
 	}
 
@@ -212,13 +214,17 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	}
 
 	switch p.ParameterType {
-	case "uchar", "quint8":
+	case "GLvoid":
+		ret += ifv((p.Pointer || p.ByRef) && fullEnumName, "*", "") + "void"
+	case "GLchar":
+		ret = "char"
+	case "uchar", "quint8", "GLboolean", "GLubyte":
 		ret += "uint8_t"
-	case "qint8":
+	case "qint8", "GLbyte":
 		ret += "signed char"
-	case "qint16":
+	case "qint16", "GLshort":
 		ret += "int16_t"
-	case "ushort", "quint16":
+	case "ushort", "quint16", "GLushort":
 		ret += "uint16_t"
 	case "long":
 		// Windows ILP32 - 32-bits
@@ -235,15 +241,17 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 			ret += "uint64_t"
 		}
 
-	case "qint32":
+	case "qint32", "GLint", "GLsizei":
 		ret += "int32_t"
-	case "quint32", "uint", "unsigned int":
+	case "quint32", "uint", "unsigned int", "GLbitfield", "GLenum", "GLuint":
 		ret += "uint32_t"
-	case "qlonglong", "qint64":
-		ret += "long"
-	case "qulonglong", "quint64", "unsigned long long":
+	case "qlonglong", "qint64", "GLint64", "GLintptr", "GLsizeiptr":
+		ret += "int64_t"
+	case "qulonglong", "quint64", "unsigned long long", "GLuint64":
 		ret += "uint64_t"
-	case "qreal":
+	case "GLclampf", "GLfloat":
+		ret += "float"
+	case "qreal", "GLdouble":
 		ret += "double"
 	case "size_t": // size_t is unsigned
 		if C.sizeof_size_t == 4 {
@@ -714,7 +722,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			cfs.allocCleanups = []string{}
 		}
 		return rvalue + ";" + maybeCleanups
-	} else if rt.ParameterType == "void" && rt.Pointer {
+	} else if (rt.ParameterType == "void" || rt.ParameterType == "GLvoid") && rt.Pointer {
 		return assignExpr + maybePointer + rvalue + ";"
 	} else if rt.ParameterType == "QString" ||
 		rt.ParameterType == "QStringView" || rt.ParameterType == "QByteArray" {
