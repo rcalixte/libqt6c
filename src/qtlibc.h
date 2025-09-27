@@ -55,10 +55,13 @@ struct libqt_list {
     union {
         char* chars;
         double* doubles;
+        float* floats;
         int* ints;
         intptr_t* ptrdiffs;
         long long* longlongs;
         uint16_t* uint16_ts;
+        uint32_t* uint32_ts;
+        uint64_t* uint64_ts;
         uintptr_t* uintptrs;
         unsigned char* unsignedchars;
         unsigned int* unsignedints;
