@@ -1,6 +1,5 @@
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../extras-kcoreaddons/libkjobuidelegate.hpp"
-#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
@@ -28,14 +27,6 @@ int32_t k_dialogjobuidelegate_metacall(void* self, int32_t param1, int param2, v
     return KDialogJobUiDelegate_Metacall((KDialogJobUiDelegate*)self, param1, param2, param3);
 }
 
-void k_dialogjobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
-    KDialogJobUiDelegate_OnMetacall((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-int32_t k_dialogjobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDialogJobUiDelegate_QBaseMetacall((KDialogJobUiDelegate*)self, param1, param2, param3);
-}
-
 const char* k_dialogjobuidelegate_tr(const char* s) {
     libqt_string _str = KDialogJobUiDelegate_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -47,24 +38,8 @@ bool k_dialogjobuidelegate_set_job(void* self, void* job) {
     return KDialogJobUiDelegate_SetJob((KDialogJobUiDelegate*)self, (KJob*)job);
 }
 
-void k_dialogjobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnSetJob((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-bool k_dialogjobuidelegate_qbase_set_job(void* self, void* job) {
-    return KDialogJobUiDelegate_QBaseSetJob((KDialogJobUiDelegate*)self, (KJob*)job);
-}
-
 void k_dialogjobuidelegate_set_window(void* self, void* window) {
     KDialogJobUiDelegate_SetWindow((KDialogJobUiDelegate*)self, (QWidget*)window);
-}
-
-void k_dialogjobuidelegate_on_set_window(void* self, void (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnSetWindow((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_qbase_set_window(void* self, void* window) {
-    KDialogJobUiDelegate_QBaseSetWindow((KDialogJobUiDelegate*)self, (QWidget*)window);
 }
 
 QWidget* k_dialogjobuidelegate_window(void* self) {
@@ -81,26 +56,6 @@ uint64_t k_dialogjobuidelegate_user_timestamp(void* self) {
 
 void k_dialogjobuidelegate_show_error_message(void* self) {
     KDialogJobUiDelegate_ShowErrorMessage((KDialogJobUiDelegate*)self);
-}
-
-void k_dialogjobuidelegate_on_show_error_message(void* self, void (*callback)()) {
-    KDialogJobUiDelegate_OnShowErrorMessage((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_qbase_show_error_message(void* self) {
-    KDialogJobUiDelegate_QBaseShowErrorMessage((KDialogJobUiDelegate*)self);
-}
-
-void k_dialogjobuidelegate_slot_warning(void* self, void* job, const char* message) {
-    KDialogJobUiDelegate_SlotWarning((KDialogJobUiDelegate*)self, (KJob*)job, qstring(message));
-}
-
-void k_dialogjobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, const char*)) {
-    KDialogJobUiDelegate_OnSlotWarning((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_qbase_slot_warning(void* self, void* job, const char* message) {
-    KDialogJobUiDelegate_QBaseSlotWarning((KDialogJobUiDelegate*)self, (KJob*)job, qstring(message));
 }
 
 const char* k_dialogjobuidelegate_tr2(const char* s, const char* c) {
@@ -131,6 +86,14 @@ void k_dialogjobuidelegate_set_auto_warning_handling_enabled(void* self, bool en
 
 bool k_dialogjobuidelegate_is_auto_warning_handling_enabled(void* self) {
     return KJobUiDelegate_IsAutoWarningHandlingEnabled((KJobUiDelegate*)self);
+}
+
+bool k_dialogjobuidelegate_event(void* self, void* event) {
+    return QObject_Event((QObject*)self, (QEvent*)event);
+}
+
+bool k_dialogjobuidelegate_event_filter(void* self, void* watched, void* event) {
+    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_dialogjobuidelegate_object_name(void* self) {
@@ -302,150 +265,6 @@ void k_dialogjobuidelegate_destroyed1(void* self, void* param1) {
 
 void k_dialogjobuidelegate_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-bool k_dialogjobuidelegate_event(void* self, void* event) {
-    return KDialogJobUiDelegate_Event((KDialogJobUiDelegate*)self, (QEvent*)event);
-}
-
-bool k_dialogjobuidelegate_qbase_event(void* self, void* event) {
-    return KDialogJobUiDelegate_QBaseEvent((KDialogJobUiDelegate*)self, (QEvent*)event);
-}
-
-void k_dialogjobuidelegate_on_event(void* self, bool (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnEvent((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-bool k_dialogjobuidelegate_event_filter(void* self, void* watched, void* event) {
-    return KDialogJobUiDelegate_EventFilter((KDialogJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
-}
-
-bool k_dialogjobuidelegate_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDialogJobUiDelegate_QBaseEventFilter((KDialogJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
-}
-
-void k_dialogjobuidelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
-    KDialogJobUiDelegate_OnEventFilter((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_timer_event(void* self, void* event) {
-    KDialogJobUiDelegate_TimerEvent((KDialogJobUiDelegate*)self, (QTimerEvent*)event);
-}
-
-void k_dialogjobuidelegate_qbase_timer_event(void* self, void* event) {
-    KDialogJobUiDelegate_QBaseTimerEvent((KDialogJobUiDelegate*)self, (QTimerEvent*)event);
-}
-
-void k_dialogjobuidelegate_on_timer_event(void* self, void (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnTimerEvent((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_child_event(void* self, void* event) {
-    KDialogJobUiDelegate_ChildEvent((KDialogJobUiDelegate*)self, (QChildEvent*)event);
-}
-
-void k_dialogjobuidelegate_qbase_child_event(void* self, void* event) {
-    KDialogJobUiDelegate_QBaseChildEvent((KDialogJobUiDelegate*)self, (QChildEvent*)event);
-}
-
-void k_dialogjobuidelegate_on_child_event(void* self, void (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnChildEvent((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_custom_event(void* self, void* event) {
-    KDialogJobUiDelegate_CustomEvent((KDialogJobUiDelegate*)self, (QEvent*)event);
-}
-
-void k_dialogjobuidelegate_qbase_custom_event(void* self, void* event) {
-    KDialogJobUiDelegate_QBaseCustomEvent((KDialogJobUiDelegate*)self, (QEvent*)event);
-}
-
-void k_dialogjobuidelegate_on_custom_event(void* self, void (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnCustomEvent((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_connect_notify(void* self, void* signal) {
-    KDialogJobUiDelegate_ConnectNotify((KDialogJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_dialogjobuidelegate_qbase_connect_notify(void* self, void* signal) {
-    KDialogJobUiDelegate_QBaseConnectNotify((KDialogJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_dialogjobuidelegate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnConnectNotify((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_dialogjobuidelegate_disconnect_notify(void* self, void* signal) {
-    KDialogJobUiDelegate_DisconnectNotify((KDialogJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_dialogjobuidelegate_qbase_disconnect_notify(void* self, void* signal) {
-    KDialogJobUiDelegate_QBaseDisconnectNotify((KDialogJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_dialogjobuidelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnDisconnectNotify((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-KJob* k_dialogjobuidelegate_job(void* self) {
-    return KDialogJobUiDelegate_Job((KDialogJobUiDelegate*)self);
-}
-
-KJob* k_dialogjobuidelegate_qbase_job(void* self) {
-    return KDialogJobUiDelegate_QBaseJob((KDialogJobUiDelegate*)self);
-}
-
-void k_dialogjobuidelegate_on_job(void* self, KJob* (*callback)()) {
-    KDialogJobUiDelegate_OnJob((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-QObject* k_dialogjobuidelegate_sender(void* self) {
-    return KDialogJobUiDelegate_Sender((KDialogJobUiDelegate*)self);
-}
-
-QObject* k_dialogjobuidelegate_qbase_sender(void* self) {
-    return KDialogJobUiDelegate_QBaseSender((KDialogJobUiDelegate*)self);
-}
-
-void k_dialogjobuidelegate_on_sender(void* self, QObject* (*callback)()) {
-    KDialogJobUiDelegate_OnSender((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-int32_t k_dialogjobuidelegate_sender_signal_index(void* self) {
-    return KDialogJobUiDelegate_SenderSignalIndex((KDialogJobUiDelegate*)self);
-}
-
-int32_t k_dialogjobuidelegate_qbase_sender_signal_index(void* self) {
-    return KDialogJobUiDelegate_QBaseSenderSignalIndex((KDialogJobUiDelegate*)self);
-}
-
-void k_dialogjobuidelegate_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KDialogJobUiDelegate_OnSenderSignalIndex((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-int32_t k_dialogjobuidelegate_receivers(void* self, const char* signal) {
-    return KDialogJobUiDelegate_Receivers((KDialogJobUiDelegate*)self, signal);
-}
-
-int32_t k_dialogjobuidelegate_qbase_receivers(void* self, const char* signal) {
-    return KDialogJobUiDelegate_QBaseReceivers((KDialogJobUiDelegate*)self, signal);
-}
-
-void k_dialogjobuidelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KDialogJobUiDelegate_OnReceivers((KDialogJobUiDelegate*)self, (intptr_t)callback);
-}
-
-bool k_dialogjobuidelegate_is_signal_connected(void* self, void* signal) {
-    return KDialogJobUiDelegate_IsSignalConnected((KDialogJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-bool k_dialogjobuidelegate_qbase_is_signal_connected(void* self, void* signal) {
-    return KDialogJobUiDelegate_QBaseIsSignalConnected((KDialogJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_dialogjobuidelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KDialogJobUiDelegate_OnIsSignalConnected((KDialogJobUiDelegate*)self, (intptr_t)callback);
 }
 
 void k_dialogjobuidelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -163,14 +163,6 @@ long long k_io__applicationlauncherjob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
-void k_io__applicationlauncherjob_description(void* self, void* job, const char* title) {
-    KJob_Description((KJob*)self, (KJob*)job, qstring(title));
-}
-
-void k_io__applicationlauncherjob_on_description(void* self, void (*callback)(void*, void*, const char*)) {
-    KJob_Connect_Description((KJob*)self, (intptr_t)callback);
-}
-
 void k_io__applicationlauncherjob_info_message(void* self, void* job, const char* message) {
     KJob_InfoMessage((KJob*)self, (KJob*)job, qstring(message));
 }
@@ -231,22 +223,6 @@ bool k_io__applicationlauncherjob_kill1(void* self, int32_t verbosity) {
 
 void k_io__applicationlauncherjob_set_finished_notification_hidden1(void* self, bool hide) {
     KJob_SetFinishedNotificationHidden1((KJob*)self, hide);
-}
-
-void k_io__applicationlauncherjob_description3(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1) {
-    KJob_Description3((KJob*)self, (KJob*)job, qstring(title), field1);
-}
-
-void k_io__applicationlauncherjob_on_description3(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */)) {
-    KJob_Connect_Description3((KJob*)self, (intptr_t)callback);
-}
-
-void k_io__applicationlauncherjob_description4(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KJob_Description4((KJob*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_io__applicationlauncherjob_on_description4(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)) {
-    KJob_Connect_Description4((KJob*)self, (intptr_t)callback);
 }
 
 const char* k_io__applicationlauncherjob_object_name(void* self) {

@@ -1,7 +1,6 @@
 #include "libkabstractwidgetjobtracker.hpp"
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../extras-kcoreaddons/libkjobtrackerinterface.hpp"
-#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
@@ -29,14 +28,6 @@ int32_t k_widgetjobtracker_metacall(void* self, int32_t param1, int param2, void
     return KWidgetJobTracker_Metacall((KWidgetJobTracker*)self, param1, param2, param3);
 }
 
-void k_widgetjobtracker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
-    KWidgetJobTracker_OnMetacall((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-int32_t k_widgetjobtracker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KWidgetJobTracker_QBaseMetacall((KWidgetJobTracker*)self, param1, param2, param3);
-}
-
 const char* k_widgetjobtracker_tr(const char* s) {
     libqt_string _str = KWidgetJobTracker_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -48,148 +39,16 @@ QWidget* k_widgetjobtracker_widget(void* self, void* job) {
     return KWidgetJobTracker_Widget((KWidgetJobTracker*)self, (KJob*)job);
 }
 
-void k_widgetjobtracker_on_widget(void* self, QWidget* (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnWidget((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-QWidget* k_widgetjobtracker_qbase_widget(void* self, void* job) {
-    return KWidgetJobTracker_QBaseWidget((KWidgetJobTracker*)self, (KJob*)job);
-}
-
 void k_widgetjobtracker_register_job(void* self, void* job) {
     KWidgetJobTracker_RegisterJob((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_register_job(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnRegisterJob((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_register_job(void* self, void* job) {
-    KWidgetJobTracker_QBaseRegisterJob((KWidgetJobTracker*)self, (KJob*)job);
 }
 
 void k_widgetjobtracker_unregister_job(void* self, void* job) {
     KWidgetJobTracker_UnregisterJob((KWidgetJobTracker*)self, (KJob*)job);
 }
 
-void k_widgetjobtracker_on_unregister_job(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnUnregisterJob((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_unregister_job(void* self, void* job) {
-    KWidgetJobTracker_QBaseUnregisterJob((KWidgetJobTracker*)self, (KJob*)job);
-}
-
 bool k_widgetjobtracker_keep_open(void* self, void* job) {
     return KWidgetJobTracker_KeepOpen((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_info_message(void* self, void* job, const char* message) {
-    KWidgetJobTracker_InfoMessage((KWidgetJobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_widgetjobtracker_on_info_message(void* self, void (*callback)(void*, void*, const char*)) {
-    KWidgetJobTracker_OnInfoMessage((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_info_message(void* self, void* job, const char* message) {
-    KWidgetJobTracker_QBaseInfoMessage((KWidgetJobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_widgetjobtracker_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KWidgetJobTracker_Description((KWidgetJobTracker*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_widgetjobtracker_on_description(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)) {
-    KWidgetJobTracker_OnDescription((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KWidgetJobTracker_QBaseDescription((KWidgetJobTracker*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_widgetjobtracker_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KWidgetJobTracker_TotalAmount((KWidgetJobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_widgetjobtracker_on_total_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
-    KWidgetJobTracker_OnTotalAmount((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KWidgetJobTracker_QBaseTotalAmount((KWidgetJobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_widgetjobtracker_processed_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KWidgetJobTracker_ProcessedAmount((KWidgetJobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_widgetjobtracker_on_processed_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
-    KWidgetJobTracker_OnProcessedAmount((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_processed_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KWidgetJobTracker_QBaseProcessedAmount((KWidgetJobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_widgetjobtracker_percent(void* self, void* job, uint64_t percent) {
-    KWidgetJobTracker_Percent((KWidgetJobTracker*)self, (KJob*)job, percent);
-}
-
-void k_widgetjobtracker_on_percent(void* self, void (*callback)(void*, void*, uint64_t)) {
-    KWidgetJobTracker_OnPercent((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_percent(void* self, void* job, uint64_t percent) {
-    KWidgetJobTracker_QBasePercent((KWidgetJobTracker*)self, (KJob*)job, percent);
-}
-
-void k_widgetjobtracker_speed(void* self, void* job, uint64_t value) {
-    KWidgetJobTracker_Speed((KWidgetJobTracker*)self, (KJob*)job, value);
-}
-
-void k_widgetjobtracker_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
-    KWidgetJobTracker_OnSpeed((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_speed(void* self, void* job, uint64_t value) {
-    KWidgetJobTracker_QBaseSpeed((KWidgetJobTracker*)self, (KJob*)job, value);
-}
-
-void k_widgetjobtracker_slot_clean(void* self, void* job) {
-    KWidgetJobTracker_SlotClean((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_slot_clean(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnSlotClean((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_slot_clean(void* self, void* job) {
-    KWidgetJobTracker_QBaseSlotClean((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_suspended(void* self, void* job) {
-    KWidgetJobTracker_Suspended((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_suspended(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnSuspended((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_suspended(void* self, void* job) {
-    KWidgetJobTracker_QBaseSuspended((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_resumed(void* self, void* job) {
-    KWidgetJobTracker_Resumed((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_resumed(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnResumed((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_qbase_resumed(void* self, void* job) {
-    KWidgetJobTracker_QBaseResumed((KWidgetJobTracker*)self, (KJob*)job);
 }
 
 const char* k_widgetjobtracker_tr2(const char* s, const char* c) {
@@ -244,6 +103,14 @@ void k_widgetjobtracker_resume(void* self, void* job) {
 
 void k_widgetjobtracker_on_resume(void* self, void (*callback)(void*, void*)) {
     KAbstractWidgetJobTracker_Connect_Resume((KAbstractWidgetJobTracker*)self, (intptr_t)callback);
+}
+
+bool k_widgetjobtracker_event(void* self, void* event) {
+    return QObject_Event((QObject*)self, (QEvent*)event);
+}
+
+bool k_widgetjobtracker_event_filter(void* self, void* watched, void* event) {
+    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_widgetjobtracker_object_name(void* self) {
@@ -415,198 +282,6 @@ void k_widgetjobtracker_destroyed1(void* self, void* param1) {
 
 void k_widgetjobtracker_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_finished(void* self, void* job) {
-    KWidgetJobTracker_Finished((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_qbase_finished(void* self, void* job) {
-    KWidgetJobTracker_QBaseFinished((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_finished(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnFinished((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_slot_stop(void* self, void* job) {
-    KWidgetJobTracker_SlotStop((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_qbase_slot_stop(void* self, void* job) {
-    KWidgetJobTracker_QBaseSlotStop((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_slot_stop(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnSlotStop((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_slot_suspend(void* self, void* job) {
-    KWidgetJobTracker_SlotSuspend((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_qbase_slot_suspend(void* self, void* job) {
-    KWidgetJobTracker_QBaseSlotSuspend((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_slot_suspend(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnSlotSuspend((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_slot_resume(void* self, void* job) {
-    KWidgetJobTracker_SlotResume((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_qbase_slot_resume(void* self, void* job) {
-    KWidgetJobTracker_QBaseSlotResume((KWidgetJobTracker*)self, (KJob*)job);
-}
-
-void k_widgetjobtracker_on_slot_resume(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnSlotResume((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_warning(void* self, void* job, const char* message) {
-    KWidgetJobTracker_Warning((KWidgetJobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_widgetjobtracker_qbase_warning(void* self, void* job, const char* message) {
-    KWidgetJobTracker_QBaseWarning((KWidgetJobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_widgetjobtracker_on_warning(void* self, void (*callback)(void*, void*, const char*)) {
-    KWidgetJobTracker_OnWarning((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-bool k_widgetjobtracker_event(void* self, void* event) {
-    return KWidgetJobTracker_Event((KWidgetJobTracker*)self, (QEvent*)event);
-}
-
-bool k_widgetjobtracker_qbase_event(void* self, void* event) {
-    return KWidgetJobTracker_QBaseEvent((KWidgetJobTracker*)self, (QEvent*)event);
-}
-
-void k_widgetjobtracker_on_event(void* self, bool (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnEvent((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-bool k_widgetjobtracker_event_filter(void* self, void* watched, void* event) {
-    return KWidgetJobTracker_EventFilter((KWidgetJobTracker*)self, (QObject*)watched, (QEvent*)event);
-}
-
-bool k_widgetjobtracker_qbase_event_filter(void* self, void* watched, void* event) {
-    return KWidgetJobTracker_QBaseEventFilter((KWidgetJobTracker*)self, (QObject*)watched, (QEvent*)event);
-}
-
-void k_widgetjobtracker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
-    KWidgetJobTracker_OnEventFilter((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_timer_event(void* self, void* event) {
-    KWidgetJobTracker_TimerEvent((KWidgetJobTracker*)self, (QTimerEvent*)event);
-}
-
-void k_widgetjobtracker_qbase_timer_event(void* self, void* event) {
-    KWidgetJobTracker_QBaseTimerEvent((KWidgetJobTracker*)self, (QTimerEvent*)event);
-}
-
-void k_widgetjobtracker_on_timer_event(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnTimerEvent((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_child_event(void* self, void* event) {
-    KWidgetJobTracker_ChildEvent((KWidgetJobTracker*)self, (QChildEvent*)event);
-}
-
-void k_widgetjobtracker_qbase_child_event(void* self, void* event) {
-    KWidgetJobTracker_QBaseChildEvent((KWidgetJobTracker*)self, (QChildEvent*)event);
-}
-
-void k_widgetjobtracker_on_child_event(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnChildEvent((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_custom_event(void* self, void* event) {
-    KWidgetJobTracker_CustomEvent((KWidgetJobTracker*)self, (QEvent*)event);
-}
-
-void k_widgetjobtracker_qbase_custom_event(void* self, void* event) {
-    KWidgetJobTracker_QBaseCustomEvent((KWidgetJobTracker*)self, (QEvent*)event);
-}
-
-void k_widgetjobtracker_on_custom_event(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnCustomEvent((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_connect_notify(void* self, void* signal) {
-    KWidgetJobTracker_ConnectNotify((KWidgetJobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_widgetjobtracker_qbase_connect_notify(void* self, void* signal) {
-    KWidgetJobTracker_QBaseConnectNotify((KWidgetJobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_widgetjobtracker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnConnectNotify((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-void k_widgetjobtracker_disconnect_notify(void* self, void* signal) {
-    KWidgetJobTracker_DisconnectNotify((KWidgetJobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_widgetjobtracker_qbase_disconnect_notify(void* self, void* signal) {
-    KWidgetJobTracker_QBaseDisconnectNotify((KWidgetJobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_widgetjobtracker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnDisconnectNotify((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-QObject* k_widgetjobtracker_sender(void* self) {
-    return KWidgetJobTracker_Sender((KWidgetJobTracker*)self);
-}
-
-QObject* k_widgetjobtracker_qbase_sender(void* self) {
-    return KWidgetJobTracker_QBaseSender((KWidgetJobTracker*)self);
-}
-
-void k_widgetjobtracker_on_sender(void* self, QObject* (*callback)()) {
-    KWidgetJobTracker_OnSender((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-int32_t k_widgetjobtracker_sender_signal_index(void* self) {
-    return KWidgetJobTracker_SenderSignalIndex((KWidgetJobTracker*)self);
-}
-
-int32_t k_widgetjobtracker_qbase_sender_signal_index(void* self) {
-    return KWidgetJobTracker_QBaseSenderSignalIndex((KWidgetJobTracker*)self);
-}
-
-void k_widgetjobtracker_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KWidgetJobTracker_OnSenderSignalIndex((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-int32_t k_widgetjobtracker_receivers(void* self, const char* signal) {
-    return KWidgetJobTracker_Receivers((KWidgetJobTracker*)self, signal);
-}
-
-int32_t k_widgetjobtracker_qbase_receivers(void* self, const char* signal) {
-    return KWidgetJobTracker_QBaseReceivers((KWidgetJobTracker*)self, signal);
-}
-
-void k_widgetjobtracker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KWidgetJobTracker_OnReceivers((KWidgetJobTracker*)self, (intptr_t)callback);
-}
-
-bool k_widgetjobtracker_is_signal_connected(void* self, void* signal) {
-    return KWidgetJobTracker_IsSignalConnected((KWidgetJobTracker*)self, (QMetaMethod*)signal);
-}
-
-bool k_widgetjobtracker_qbase_is_signal_connected(void* self, void* signal) {
-    return KWidgetJobTracker_QBaseIsSignalConnected((KWidgetJobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_widgetjobtracker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KWidgetJobTracker_OnIsSignalConnected((KWidgetJobTracker*)self, (intptr_t)callback);
 }
 
 void k_widgetjobtracker_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

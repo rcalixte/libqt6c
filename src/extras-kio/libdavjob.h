@@ -553,23 +553,6 @@ long long k_io__davjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
-/// [Qt documentation](https://api.kde.org/kjob.html#description)
-///
-/// @param self KIO__DavJob*
-/// @param job KJob*
-/// @param title const char*
-void k_io__davjob_description(void* self, void* job, const char* title);
-
-/// Inherited from KJob
-///
-/// [Qt documentation](https://api.kde.org/kjob.html#description)
-///
-/// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, const char* title)
-void k_io__davjob_on_description(void* self, void (*callback)(void*, void*, const char*));
-
-/// Inherited from KJob
-///
 /// [Qt documentation](https://api.kde.org/kjob.html#infoMessage)
 ///
 /// @param self KIO__DavJob*
@@ -668,43 +651,6 @@ bool k_io__davjob_kill1(void* self, int32_t verbosity);
 /// @param self KIO__DavJob*
 /// @param hide bool
 void k_io__davjob_set_finished_notification_hidden1(void* self, bool hide);
-
-/// Inherited from KJob
-///
-/// [Qt documentation](https://api.kde.org/kjob.html#description)
-///
-/// @param self KIO__DavJob*
-/// @param job KJob*
-/// @param title const char*
-/// @param field1 libqt_pair /* tuple of const char* and const char* */
-void k_io__davjob_description3(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1);
-
-/// Inherited from KJob
-///
-/// [Qt documentation](https://api.kde.org/kjob.html#description)
-///
-/// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
-void k_io__davjob_on_description3(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */));
-
-/// Inherited from KJob
-///
-/// [Qt documentation](https://api.kde.org/kjob.html#description)
-///
-/// @param self KIO__DavJob*
-/// @param job KJob*
-/// @param title const char*
-/// @param field1 libqt_pair /* tuple of const char* and const char* */
-/// @param field2 libqt_pair /* tuple of const char* and const char* */
-void k_io__davjob_description4(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2);
-
-/// Inherited from KJob
-///
-/// [Qt documentation](https://api.kde.org/kjob.html#description)
-///
-/// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
-void k_io__davjob_on_description4(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
 
 /// Inherited from QObject
 ///

@@ -1,5 +1,4 @@
 #include "libkjob.hpp"
-#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
@@ -26,14 +25,6 @@ int32_t k_jobtrackerinterface_metacall(void* self, int32_t param1, int param2, v
     return KJobTrackerInterface_Metacall((KJobTrackerInterface*)self, param1, param2, param3);
 }
 
-void k_jobtrackerinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
-    KJobTrackerInterface_OnMetacall((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-int32_t k_jobtrackerinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KJobTrackerInterface_QBaseMetacall((KJobTrackerInterface*)self, param1, param2, param3);
-}
-
 const char* k_jobtrackerinterface_tr(const char* s) {
     libqt_string _str = KJobTrackerInterface_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -45,144 +36,8 @@ void k_jobtrackerinterface_register_job(void* self, void* job) {
     KJobTrackerInterface_RegisterJob((KJobTrackerInterface*)self, (KJob*)job);
 }
 
-void k_jobtrackerinterface_on_register_job(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnRegisterJob((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_register_job(void* self, void* job) {
-    KJobTrackerInterface_QBaseRegisterJob((KJobTrackerInterface*)self, (KJob*)job);
-}
-
 void k_jobtrackerinterface_unregister_job(void* self, void* job) {
     KJobTrackerInterface_UnregisterJob((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_on_unregister_job(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnUnregisterJob((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_unregister_job(void* self, void* job) {
-    KJobTrackerInterface_QBaseUnregisterJob((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_finished(void* self, void* job) {
-    KJobTrackerInterface_Finished((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_on_finished(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnFinished((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_finished(void* self, void* job) {
-    KJobTrackerInterface_QBaseFinished((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_suspended(void* self, void* job) {
-    KJobTrackerInterface_Suspended((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_on_suspended(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnSuspended((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_suspended(void* self, void* job) {
-    KJobTrackerInterface_QBaseSuspended((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_resumed(void* self, void* job) {
-    KJobTrackerInterface_Resumed((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_on_resumed(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnResumed((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_resumed(void* self, void* job) {
-    KJobTrackerInterface_QBaseResumed((KJobTrackerInterface*)self, (KJob*)job);
-}
-
-void k_jobtrackerinterface_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KJobTrackerInterface_Description((KJobTrackerInterface*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_jobtrackerinterface_on_description(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)) {
-    KJobTrackerInterface_OnDescription((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KJobTrackerInterface_QBaseDescription((KJobTrackerInterface*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_jobtrackerinterface_info_message(void* self, void* job, const char* message) {
-    KJobTrackerInterface_InfoMessage((KJobTrackerInterface*)self, (KJob*)job, qstring(message));
-}
-
-void k_jobtrackerinterface_on_info_message(void* self, void (*callback)(void*, void*, const char*)) {
-    KJobTrackerInterface_OnInfoMessage((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_info_message(void* self, void* job, const char* message) {
-    KJobTrackerInterface_QBaseInfoMessage((KJobTrackerInterface*)self, (KJob*)job, qstring(message));
-}
-
-void k_jobtrackerinterface_warning(void* self, void* job, const char* message) {
-    KJobTrackerInterface_Warning((KJobTrackerInterface*)self, (KJob*)job, qstring(message));
-}
-
-void k_jobtrackerinterface_on_warning(void* self, void (*callback)(void*, void*, const char*)) {
-    KJobTrackerInterface_OnWarning((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_warning(void* self, void* job, const char* message) {
-    KJobTrackerInterface_QBaseWarning((KJobTrackerInterface*)self, (KJob*)job, qstring(message));
-}
-
-void k_jobtrackerinterface_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KJobTrackerInterface_TotalAmount((KJobTrackerInterface*)self, (KJob*)job, unit, amount);
-}
-
-void k_jobtrackerinterface_on_total_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
-    KJobTrackerInterface_OnTotalAmount((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KJobTrackerInterface_QBaseTotalAmount((KJobTrackerInterface*)self, (KJob*)job, unit, amount);
-}
-
-void k_jobtrackerinterface_processed_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KJobTrackerInterface_ProcessedAmount((KJobTrackerInterface*)self, (KJob*)job, unit, amount);
-}
-
-void k_jobtrackerinterface_on_processed_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
-    KJobTrackerInterface_OnProcessedAmount((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_processed_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KJobTrackerInterface_QBaseProcessedAmount((KJobTrackerInterface*)self, (KJob*)job, unit, amount);
-}
-
-void k_jobtrackerinterface_percent(void* self, void* job, uint64_t percent) {
-    KJobTrackerInterface_Percent((KJobTrackerInterface*)self, (KJob*)job, percent);
-}
-
-void k_jobtrackerinterface_on_percent(void* self, void (*callback)(void*, void*, uint64_t)) {
-    KJobTrackerInterface_OnPercent((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_percent(void* self, void* job, uint64_t percent) {
-    KJobTrackerInterface_QBasePercent((KJobTrackerInterface*)self, (KJob*)job, percent);
-}
-
-void k_jobtrackerinterface_speed(void* self, void* job, uint64_t value) {
-    KJobTrackerInterface_Speed((KJobTrackerInterface*)self, (KJob*)job, value);
-}
-
-void k_jobtrackerinterface_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
-    KJobTrackerInterface_OnSpeed((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_qbase_speed(void* self, void* job, uint64_t value) {
-    KJobTrackerInterface_QBaseSpeed((KJobTrackerInterface*)self, (KJob*)job, value);
 }
 
 const char* k_jobtrackerinterface_tr2(const char* s, const char* c) {
@@ -197,6 +52,14 @@ const char* k_jobtrackerinterface_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+bool k_jobtrackerinterface_event(void* self, void* event) {
+    return QObject_Event((QObject*)self, (QEvent*)event);
+}
+
+bool k_jobtrackerinterface_event_filter(void* self, void* watched, void* event) {
+    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_jobtrackerinterface_object_name(void* self) {
@@ -368,138 +231,6 @@ void k_jobtrackerinterface_destroyed1(void* self, void* param1) {
 
 void k_jobtrackerinterface_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-bool k_jobtrackerinterface_event(void* self, void* event) {
-    return KJobTrackerInterface_Event((KJobTrackerInterface*)self, (QEvent*)event);
-}
-
-bool k_jobtrackerinterface_qbase_event(void* self, void* event) {
-    return KJobTrackerInterface_QBaseEvent((KJobTrackerInterface*)self, (QEvent*)event);
-}
-
-void k_jobtrackerinterface_on_event(void* self, bool (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnEvent((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-bool k_jobtrackerinterface_event_filter(void* self, void* watched, void* event) {
-    return KJobTrackerInterface_EventFilter((KJobTrackerInterface*)self, (QObject*)watched, (QEvent*)event);
-}
-
-bool k_jobtrackerinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return KJobTrackerInterface_QBaseEventFilter((KJobTrackerInterface*)self, (QObject*)watched, (QEvent*)event);
-}
-
-void k_jobtrackerinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
-    KJobTrackerInterface_OnEventFilter((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_timer_event(void* self, void* event) {
-    KJobTrackerInterface_TimerEvent((KJobTrackerInterface*)self, (QTimerEvent*)event);
-}
-
-void k_jobtrackerinterface_qbase_timer_event(void* self, void* event) {
-    KJobTrackerInterface_QBaseTimerEvent((KJobTrackerInterface*)self, (QTimerEvent*)event);
-}
-
-void k_jobtrackerinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnTimerEvent((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_child_event(void* self, void* event) {
-    KJobTrackerInterface_ChildEvent((KJobTrackerInterface*)self, (QChildEvent*)event);
-}
-
-void k_jobtrackerinterface_qbase_child_event(void* self, void* event) {
-    KJobTrackerInterface_QBaseChildEvent((KJobTrackerInterface*)self, (QChildEvent*)event);
-}
-
-void k_jobtrackerinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnChildEvent((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_custom_event(void* self, void* event) {
-    KJobTrackerInterface_CustomEvent((KJobTrackerInterface*)self, (QEvent*)event);
-}
-
-void k_jobtrackerinterface_qbase_custom_event(void* self, void* event) {
-    KJobTrackerInterface_QBaseCustomEvent((KJobTrackerInterface*)self, (QEvent*)event);
-}
-
-void k_jobtrackerinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnCustomEvent((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_connect_notify(void* self, void* signal) {
-    KJobTrackerInterface_ConnectNotify((KJobTrackerInterface*)self, (QMetaMethod*)signal);
-}
-
-void k_jobtrackerinterface_qbase_connect_notify(void* self, void* signal) {
-    KJobTrackerInterface_QBaseConnectNotify((KJobTrackerInterface*)self, (QMetaMethod*)signal);
-}
-
-void k_jobtrackerinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnConnectNotify((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-void k_jobtrackerinterface_disconnect_notify(void* self, void* signal) {
-    KJobTrackerInterface_DisconnectNotify((KJobTrackerInterface*)self, (QMetaMethod*)signal);
-}
-
-void k_jobtrackerinterface_qbase_disconnect_notify(void* self, void* signal) {
-    KJobTrackerInterface_QBaseDisconnectNotify((KJobTrackerInterface*)self, (QMetaMethod*)signal);
-}
-
-void k_jobtrackerinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnDisconnectNotify((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-QObject* k_jobtrackerinterface_sender(void* self) {
-    return KJobTrackerInterface_Sender((KJobTrackerInterface*)self);
-}
-
-QObject* k_jobtrackerinterface_qbase_sender(void* self) {
-    return KJobTrackerInterface_QBaseSender((KJobTrackerInterface*)self);
-}
-
-void k_jobtrackerinterface_on_sender(void* self, QObject* (*callback)()) {
-    KJobTrackerInterface_OnSender((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-int32_t k_jobtrackerinterface_sender_signal_index(void* self) {
-    return KJobTrackerInterface_SenderSignalIndex((KJobTrackerInterface*)self);
-}
-
-int32_t k_jobtrackerinterface_qbase_sender_signal_index(void* self) {
-    return KJobTrackerInterface_QBaseSenderSignalIndex((KJobTrackerInterface*)self);
-}
-
-void k_jobtrackerinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KJobTrackerInterface_OnSenderSignalIndex((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-int32_t k_jobtrackerinterface_receivers(void* self, const char* signal) {
-    return KJobTrackerInterface_Receivers((KJobTrackerInterface*)self, signal);
-}
-
-int32_t k_jobtrackerinterface_qbase_receivers(void* self, const char* signal) {
-    return KJobTrackerInterface_QBaseReceivers((KJobTrackerInterface*)self, signal);
-}
-
-void k_jobtrackerinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KJobTrackerInterface_OnReceivers((KJobTrackerInterface*)self, (intptr_t)callback);
-}
-
-bool k_jobtrackerinterface_is_signal_connected(void* self, void* signal) {
-    return KJobTrackerInterface_IsSignalConnected((KJobTrackerInterface*)self, (QMetaMethod*)signal);
-}
-
-bool k_jobtrackerinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return KJobTrackerInterface_QBaseIsSignalConnected((KJobTrackerInterface*)self, (QMetaMethod*)signal);
-}
-
-void k_jobtrackerinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KJobTrackerInterface_OnIsSignalConnected((KJobTrackerInterface*)self, (intptr_t)callback);
 }
 
 void k_jobtrackerinterface_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
