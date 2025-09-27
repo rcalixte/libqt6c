@@ -907,7 +907,7 @@ void k_modifierkeyinfoprovider_on_object_name_changed(void* self, void (*callbac
 /// @param self KModifierKeyInfoProvider*
 void k_modifierkeyinfoprovider_delete(void* self);
 
-/// https://api.kde.org/kmodifierkeyinfoprovider_p.html#types
+/// https://api.kde.org/kmodifierkeyinfoprovider-p.html#types
 
 typedef enum {
     KMODIFIERKEYINFOPROVIDER_MODIFIERSTATE_NOTHING = 0,

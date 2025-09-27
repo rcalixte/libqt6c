@@ -870,7 +870,7 @@ void k_io__job_on_object_name_changed(void* self, void (*callback)(void*, const 
 /// @param self KIO__Job*
 void k_io__job_delete(void* self);
 
-/// https://api.kde.org/kio-job_base.html#types
+/// https://api.kde.org/kio-job-base.html#types
 
 typedef enum {
     KIO_JOBFLAG_DEFAULTFLAGS = 0,

@@ -18,7 +18,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	qtstructdefs := make(map[string]struct{})
 	qttypedefs := make(map[string]struct{})
 
-	arch, _ := archMap[runtime.GOARCH]
+	arch := archMap[runtime.GOARCH]
 
 	// Define our module configuration
 	type moduleConfig struct {
@@ -88,6 +88,18 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				return fname != "qtnetwork-config.h"
 			},
 			cflags: "--std=c++17 " + pkgConfigCflags("Qt6Network"),
+		},
+
+		// Qt 6 OpenGL
+		// Depends on Qt Core, GUI, Widgets
+		{
+			path: "opengl",
+			dirs: []string{
+				"/usr/include/" + arch + "-linux-gnu/qt6/QtOpenGL",
+				"/usr/include/" + arch + "-linux-gnu/qt6/QtOpenGLWidgets",
+			},
+			allowHeader: AllowAllHeaders,
+			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6OpenGLWidgets"),
 		},
 
 		// Qt 6 PDF
@@ -195,7 +207,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/Attica/attica",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/Attica -I/usr/include/KF6/Attica/Attica -I/usr/include/KF6/Attica/attica " + pkgConfigCflags("Qt6Core") + pkgConfigCflags("Qt6Network"),
+			cflags:      "--std=c++17 -I/usr/include/KF6/Attica -I/usr/include/KF6/Attica/Attica -I/usr/include/KF6/Attica/attica " + pkgConfigCflags("Qt6Network"),
 		},
 
 		// KCodecs

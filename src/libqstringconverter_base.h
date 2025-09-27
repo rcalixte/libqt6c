@@ -120,7 +120,7 @@ void q_stringconverterbase__state_set_invalid_chars(void* self, int64_t invalidC
 /// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qstringconverter_base.html#types
+/// https://doc.qt.io/qt-6/qstringconverter-base.html#types
 
 typedef enum {
     QSTRINGCONVERTERBASE_FLAG_DEFAULT = 0,

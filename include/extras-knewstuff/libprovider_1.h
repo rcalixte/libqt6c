@@ -1647,7 +1647,7 @@ void k_nscore__provider__searchpreset_operator_assign(void* self, void* param1);
 /// @param self KNSCore__Provider__SearchPreset*
 void k_nscore__provider__searchpreset_delete(void* self);
 
-/// https://api.kde.org/knscore-provider_1.html#types
+/// https://api.kde.org/knscore-provider.html#types
 
 typedef enum {
     KNSCORE_PROVIDER_SORTMODE_NEWEST = 0,

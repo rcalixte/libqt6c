@@ -652,7 +652,7 @@ int32_t k_net_timestamp_diff(uint64_t time1, uint64_t time2);
 /// @param self NET*
 void k_net_delete(void* self);
 
-/// https://api.kde.org/netwm_def.html#types
+/// https://api.kde.org/netwm-def.html#types
 
 typedef enum {
     NET_ROLE_CLIENT = 0,

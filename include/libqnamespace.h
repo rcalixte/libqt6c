@@ -11,7 +11,7 @@
 
 #include "qtlibc.h"
 
-/// https://doc.qt.io/qt-6/disambiguated_t.html
+/// https://doc.qt.io/qt-6/disambiguated-t.html
 
 /// q_disambiguated_t_new constructs a new Qt::Disambiguated_t object.
 ///
@@ -44,7 +44,7 @@ void q_disambiguated_t_copy_assign(void* self, void* other);
 /// @param other Disambiguated_t*
 void q_disambiguated_t_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/disambiguated_t.html#dtor.Disambiguated_t)
+/// [Qt documentation](https://doc.qt.io/qt-6/disambiguated-t.html#dtor.Disambiguated_t)
 ///
 /// Delete this object from C++ memory.
 ///
