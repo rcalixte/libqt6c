@@ -43,20 +43,6 @@ void* k_statusbarjobtracker_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_statusbarjobtracker_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback int32_t func(KStatusBarJobTracker* self, enum QMetaObject__Call param1, int param2, void* param3)
-void k_statusbarjobtracker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param param1 enum QMetaObject__Call
-/// @param param2 int
-/// @param param3 void*
-int32_t k_statusbarjobtracker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
@@ -70,65 +56,17 @@ const char* k_statusbarjobtracker_tr(const char* s);
 /// @param job KJob*
 void k_statusbarjobtracker_register_job(void* self, void* job);
 
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#registerJob)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_register_job(void* self, void (*callback)(void*, void*));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#registerJob)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_register_job(void* self, void* job);
-
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#unregisterJob)
 ///
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
 void k_statusbarjobtracker_unregister_job(void* self, void* job);
 
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#unregisterJob)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_unregister_job(void* self, void (*callback)(void*, void*));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#unregisterJob)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_unregister_job(void* self, void* job);
-
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#widget)
 ///
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
 QWidget* k_statusbarjobtracker_widget(void* self, void* job);
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#widget)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback QWidget* func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_widget(void* self, QWidget* (*callback)(void*, void*));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#widget)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-QWidget* k_statusbarjobtracker_qbase_widget(void* self, void* job);
 
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#setStatusBarMode)
 ///
@@ -145,25 +83,6 @@ void k_statusbarjobtracker_set_status_bar_mode(void* self, int32_t statusBarMode
 /// @param field2 libqt_pair /* tuple of const char* and const char* */
 void k_statusbarjobtracker_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2);
 
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#description)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, const char* title, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */ /* tuple of const char* and const char* */)
-void k_statusbarjobtracker_on_description(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#description)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param title const char*
-/// @param field1 libqt_pair /* tuple of const char* and const char* */
-/// @param field2 libqt_pair /* tuple of const char* and const char* */
-void k_statusbarjobtracker_qbase_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2);
-
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#totalAmount)
 ///
 /// @param self KStatusBarJobTracker*
@@ -172,47 +91,12 @@ void k_statusbarjobtracker_qbase_description(void* self, void* job, const char* 
 /// @param amount uint64_t
 void k_statusbarjobtracker_total_amount(void* self, void* job, int32_t unit, uint64_t amount);
 
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#totalAmount)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
-void k_statusbarjobtracker_on_total_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#totalAmount)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param unit enum KJob__Unit
-/// @param amount uint64_t
-void k_statusbarjobtracker_qbase_total_amount(void* self, void* job, int32_t unit, uint64_t amount);
-
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#percent)
 ///
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
 /// @param percent uint64_t
 void k_statusbarjobtracker_percent(void* self, void* job, uint64_t percent);
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#percent)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, uint64_t percent)
-void k_statusbarjobtracker_on_percent(void* self, void (*callback)(void*, void*, uint64_t));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#percent)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param percent uint64_t
-void k_statusbarjobtracker_qbase_percent(void* self, void* job, uint64_t percent);
 
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#speed)
 ///
@@ -221,44 +105,11 @@ void k_statusbarjobtracker_qbase_percent(void* self, void* job, uint64_t percent
 /// @param value uint64_t
 void k_statusbarjobtracker_speed(void* self, void* job, uint64_t value);
 
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#speed)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, uint64_t value)
-void k_statusbarjobtracker_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#speed)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param value uint64_t
-void k_statusbarjobtracker_qbase_speed(void* self, void* job, uint64_t value);
-
 /// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#slotClean)
 ///
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
 void k_statusbarjobtracker_slot_clean(void* self, void* job);
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#slotClean)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_slot_clean(void* self, void (*callback)(void*, void*));
-
-/// [Qt documentation](https://api.kde.org/kstatusbarjobtracker.html#slotClean)
-///
-/// Base class method implementation
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_slot_clean(void* self, void* job);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -358,6 +209,23 @@ void k_statusbarjobtracker_resume(void* self, void* job);
 /// @param self KStatusBarJobTracker*
 /// @param callback void func(KStatusBarJobTracker* self, KJob* job)
 void k_statusbarjobtracker_on_resume(void* self, void (*callback)(void*, void*));
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// @param self KStatusBarJobTracker*
+/// @param event QEvent*
+bool k_statusbarjobtracker_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// @param self KStatusBarJobTracker*
+/// @param watched QObject*
+/// @param event QEvent*
+bool k_statusbarjobtracker_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -665,612 +533,6 @@ void k_statusbarjobtracker_destroyed1(void* self, void* param1);
 /// @param self KStatusBarJobTracker*
 /// @param callback void func(KStatusBarJobTracker* self, QObject* param1)
 void k_statusbarjobtracker_on_destroyed1(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#finished)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_finished(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#finished)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_finished(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#finished)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_finished(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotStop)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_slot_stop(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotStop)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_slot_stop(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotStop)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_slot_stop(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotSuspend)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_slot_suspend(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotSuspend)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_slot_suspend(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotSuspend)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_slot_suspend(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotResume)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_slot_resume(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotResume)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_slot_resume(void* self, void* job);
-
-/// Inherited from KAbstractWidgetJobTracker
-///
-/// [Qt documentation](https://api.kde.org/kabstractwidgetjobtracker.html#slotResume)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_slot_resume(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#suspended)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_suspended(void* self, void* job);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#suspended)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_suspended(void* self, void* job);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#suspended)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_suspended(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#resumed)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_resumed(void* self, void* job);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#resumed)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-void k_statusbarjobtracker_qbase_resumed(void* self, void* job);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#resumed)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job)
-void k_statusbarjobtracker_on_resumed(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#infoMessage)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param message const char*
-void k_statusbarjobtracker_info_message(void* self, void* job, const char* message);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#infoMessage)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param message const char*
-void k_statusbarjobtracker_qbase_info_message(void* self, void* job, const char* message);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#infoMessage)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, const char* message)
-void k_statusbarjobtracker_on_info_message(void* self, void (*callback)(void*, void*, const char*));
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#warning)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param message const char*
-void k_statusbarjobtracker_warning(void* self, void* job, const char* message);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#warning)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param message const char*
-void k_statusbarjobtracker_qbase_warning(void* self, void* job, const char* message);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#warning)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, const char* message)
-void k_statusbarjobtracker_on_warning(void* self, void (*callback)(void*, void*, const char*));
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#processedAmount)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param unit enum KJob__Unit
-/// @param amount uint64_t
-void k_statusbarjobtracker_processed_amount(void* self, void* job, int32_t unit, uint64_t amount);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#processedAmount)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param job KJob*
-/// @param unit enum KJob__Unit
-/// @param amount uint64_t
-void k_statusbarjobtracker_qbase_processed_amount(void* self, void* job, int32_t unit, uint64_t amount);
-
-/// Inherited from KJobTrackerInterface
-///
-/// [Qt documentation](https://api.kde.org/kjobtrackerinterface.html#processedAmount)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
-void k_statusbarjobtracker_on_processed_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QEvent*
-bool k_statusbarjobtracker_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QEvent*
-bool k_statusbarjobtracker_qbase_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback bool func(KStatusBarJobTracker* self, QEvent* event)
-void k_statusbarjobtracker_on_event(void* self, bool (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param watched QObject*
-/// @param event QEvent*
-bool k_statusbarjobtracker_event_filter(void* self, void* watched, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param watched QObject*
-/// @param event QEvent*
-bool k_statusbarjobtracker_qbase_event_filter(void* self, void* watched, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback bool func(KStatusBarJobTracker* self, QObject* watched, QEvent* event)
-void k_statusbarjobtracker_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QTimerEvent*
-void k_statusbarjobtracker_timer_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QTimerEvent*
-void k_statusbarjobtracker_qbase_timer_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, QTimerEvent* event)
-void k_statusbarjobtracker_on_timer_event(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QChildEvent*
-void k_statusbarjobtracker_child_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QChildEvent*
-void k_statusbarjobtracker_qbase_child_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, QChildEvent* event)
-void k_statusbarjobtracker_on_child_event(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QEvent*
-void k_statusbarjobtracker_custom_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param event QEvent*
-void k_statusbarjobtracker_qbase_custom_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, QEvent* event)
-void k_statusbarjobtracker_on_custom_event(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal QMetaMethod*
-void k_statusbarjobtracker_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal QMetaMethod*
-void k_statusbarjobtracker_qbase_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, QMetaMethod* signal)
-void k_statusbarjobtracker_on_connect_notify(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal QMetaMethod*
-void k_statusbarjobtracker_disconnect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal QMetaMethod*
-void k_statusbarjobtracker_qbase_disconnect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback void func(KStatusBarJobTracker* self, QMetaMethod* signal)
-void k_statusbarjobtracker_on_disconnect_notify(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-QObject* k_statusbarjobtracker_sender(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-QObject* k_statusbarjobtracker_qbase_sender(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback QObject* func()
-void k_statusbarjobtracker_on_sender(void* self, QObject* (*callback)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-int32_t k_statusbarjobtracker_sender_signal_index(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-int32_t k_statusbarjobtracker_qbase_sender_signal_index(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback int32_t func()
-void k_statusbarjobtracker_on_sender_signal_index(void* self, int32_t (*callback)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal const char*
-int32_t k_statusbarjobtracker_receivers(void* self, const char* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal const char*
-int32_t k_statusbarjobtracker_qbase_receivers(void* self, const char* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback int32_t func(KStatusBarJobTracker* self, const char* signal)
-void k_statusbarjobtracker_on_receivers(void* self, int32_t (*callback)(void*, const char*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal QMetaMethod*
-bool k_statusbarjobtracker_is_signal_connected(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param signal QMetaMethod*
-bool k_statusbarjobtracker_qbase_is_signal_connected(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KStatusBarJobTracker*
-/// @param callback bool func(KStatusBarJobTracker* self, QMetaMethod* signal)
-void k_statusbarjobtracker_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///

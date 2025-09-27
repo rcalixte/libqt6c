@@ -38,20 +38,6 @@ void* k_dialogjobuidelegate_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_dialogjobuidelegate_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// Allows for overriding the related default method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback int32_t func(KDialogJobUiDelegate* self, enum QMetaObject__Call param1, int param2, void* param3)
-void k_dialogjobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
-
-/// Base class method implementation
-///
-/// @param self KDialogJobUiDelegate*
-/// @param param1 enum QMetaObject__Call
-/// @param param2 int
-/// @param param3 void*
-int32_t k_dialogjobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
@@ -65,43 +51,11 @@ const char* k_dialogjobuidelegate_tr(const char* s);
 /// @param job KJob*
 bool k_dialogjobuidelegate_set_job(void* self, void* job);
 
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#setJob)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback bool func(KDialogJobUiDelegate* self, KJob* job)
-void k_dialogjobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*));
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#setJob)
-///
-/// Base class method implementation
-///
-/// @param self KDialogJobUiDelegate*
-/// @param job KJob*
-bool k_dialogjobuidelegate_qbase_set_job(void* self, void* job);
-
 /// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#setWindow)
 ///
 /// @param self KDialogJobUiDelegate*
 /// @param window QWidget*
 void k_dialogjobuidelegate_set_window(void* self, void* window);
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#setWindow)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, QWidget* window)
-void k_dialogjobuidelegate_on_set_window(void* self, void (*callback)(void*, void*));
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#setWindow)
-///
-/// Base class method implementation
-///
-/// @param self KDialogJobUiDelegate*
-/// @param window QWidget*
-void k_dialogjobuidelegate_qbase_set_window(void* self, void* window);
 
 /// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#window)
 ///
@@ -123,45 +77,6 @@ uint64_t k_dialogjobuidelegate_user_timestamp(void* self);
 ///
 /// @param self KDialogJobUiDelegate*
 void k_dialogjobuidelegate_show_error_message(void* self);
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#showErrorMessage)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func()
-void k_dialogjobuidelegate_on_show_error_message(void* self, void (*callback)());
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#showErrorMessage)
-///
-/// Base class method implementation
-///
-/// @param self KDialogJobUiDelegate*
-void k_dialogjobuidelegate_qbase_show_error_message(void* self);
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#slotWarning)
-///
-/// @param self KDialogJobUiDelegate*
-/// @param job KJob*
-/// @param message const char*
-void k_dialogjobuidelegate_slot_warning(void* self, void* job, const char* message);
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#slotWarning)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, KJob* job, const char* message)
-void k_dialogjobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, const char*));
-
-/// [Qt documentation](https://api.kde.org/kdialogjobuidelegate.html#slotWarning)
-///
-/// Base class method implementation
-///
-/// @param self KDialogJobUiDelegate*
-/// @param job KJob*
-/// @param message const char*
-void k_dialogjobuidelegate_qbase_slot_warning(void* self, void* job, const char* message);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -209,6 +124,23 @@ void k_dialogjobuidelegate_set_auto_warning_handling_enabled(void* self, bool en
 ///
 /// @param self KDialogJobUiDelegate*
 bool k_dialogjobuidelegate_is_auto_warning_handling_enabled(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// @param self KDialogJobUiDelegate*
+/// @param event QEvent*
+bool k_dialogjobuidelegate_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// @param self KDialogJobUiDelegate*
+/// @param watched QObject*
+/// @param event QEvent*
+bool k_dialogjobuidelegate_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -516,362 +448,6 @@ void k_dialogjobuidelegate_destroyed1(void* self, void* param1);
 /// @param self KDialogJobUiDelegate*
 /// @param callback void func(KDialogJobUiDelegate* self, QObject* param1)
 void k_dialogjobuidelegate_on_destroyed1(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QEvent*
-bool k_dialogjobuidelegate_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QEvent*
-bool k_dialogjobuidelegate_qbase_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback bool func(KDialogJobUiDelegate* self, QEvent* event)
-void k_dialogjobuidelegate_on_event(void* self, bool (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param watched QObject*
-/// @param event QEvent*
-bool k_dialogjobuidelegate_event_filter(void* self, void* watched, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param watched QObject*
-/// @param event QEvent*
-bool k_dialogjobuidelegate_qbase_event_filter(void* self, void* watched, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback bool func(KDialogJobUiDelegate* self, QObject* watched, QEvent* event)
-void k_dialogjobuidelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QTimerEvent*
-void k_dialogjobuidelegate_timer_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QTimerEvent*
-void k_dialogjobuidelegate_qbase_timer_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, QTimerEvent* event)
-void k_dialogjobuidelegate_on_timer_event(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QChildEvent*
-void k_dialogjobuidelegate_child_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QChildEvent*
-void k_dialogjobuidelegate_qbase_child_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, QChildEvent* event)
-void k_dialogjobuidelegate_on_child_event(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QEvent*
-void k_dialogjobuidelegate_custom_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param event QEvent*
-void k_dialogjobuidelegate_qbase_custom_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, QEvent* event)
-void k_dialogjobuidelegate_on_custom_event(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal QMetaMethod*
-void k_dialogjobuidelegate_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal QMetaMethod*
-void k_dialogjobuidelegate_qbase_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, QMetaMethod* signal)
-void k_dialogjobuidelegate_on_connect_notify(void* self, void (*callback)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal QMetaMethod*
-void k_dialogjobuidelegate_disconnect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal QMetaMethod*
-void k_dialogjobuidelegate_qbase_disconnect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback void func(KDialogJobUiDelegate* self, QMetaMethod* signal)
-void k_dialogjobuidelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*));
-
-/// Inherited from KJobUiDelegate
-///
-/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#job)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-KJob* k_dialogjobuidelegate_job(void* self);
-
-/// Inherited from KJobUiDelegate
-///
-/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#job)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-KJob* k_dialogjobuidelegate_qbase_job(void* self);
-
-/// Inherited from KJobUiDelegate
-///
-/// [Qt documentation](https://api.kde.org/kjobuidelegate.html#job)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback KJob* func()
-void k_dialogjobuidelegate_on_job(void* self, KJob* (*callback)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-QObject* k_dialogjobuidelegate_sender(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-QObject* k_dialogjobuidelegate_qbase_sender(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback QObject* func()
-void k_dialogjobuidelegate_on_sender(void* self, QObject* (*callback)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-int32_t k_dialogjobuidelegate_sender_signal_index(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-int32_t k_dialogjobuidelegate_qbase_sender_signal_index(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback int32_t func()
-void k_dialogjobuidelegate_on_sender_signal_index(void* self, int32_t (*callback)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal const char*
-int32_t k_dialogjobuidelegate_receivers(void* self, const char* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal const char*
-int32_t k_dialogjobuidelegate_qbase_receivers(void* self, const char* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback int32_t func(KDialogJobUiDelegate* self, const char* signal)
-void k_dialogjobuidelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal QMetaMethod*
-bool k_dialogjobuidelegate_is_signal_connected(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param signal QMetaMethod*
-bool k_dialogjobuidelegate_qbase_is_signal_connected(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// @param self KDialogJobUiDelegate*
-/// @param callback bool func(KDialogJobUiDelegate* self, QMetaMethod* signal)
-void k_dialogjobuidelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///

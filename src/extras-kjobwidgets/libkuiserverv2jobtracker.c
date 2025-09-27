@@ -1,6 +1,5 @@
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../extras-kcoreaddons/libkjobtrackerinterface.hpp"
-#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
@@ -27,14 +26,6 @@ int32_t k_uiserverv2jobtracker_metacall(void* self, int32_t param1, int param2, 
     return KUiServerV2JobTracker_Metacall((KUiServerV2JobTracker*)self, param1, param2, param3);
 }
 
-void k_uiserverv2jobtracker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
-    KUiServerV2JobTracker_OnMetacall((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-int32_t k_uiserverv2jobtracker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUiServerV2JobTracker_QBaseMetacall((KUiServerV2JobTracker*)self, param1, param2, param3);
-}
-
 const char* k_uiserverv2jobtracker_tr(const char* s) {
     libqt_string _str = KUiServerV2JobTracker_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -46,132 +37,8 @@ void k_uiserverv2jobtracker_register_job(void* self, void* job) {
     KUiServerV2JobTracker_RegisterJob((KUiServerV2JobTracker*)self, (KJob*)job);
 }
 
-void k_uiserverv2jobtracker_on_register_job(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnRegisterJob((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_register_job(void* self, void* job) {
-    KUiServerV2JobTracker_QBaseRegisterJob((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
 void k_uiserverv2jobtracker_unregister_job(void* self, void* job) {
     KUiServerV2JobTracker_UnregisterJob((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_on_unregister_job(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnUnregisterJob((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_unregister_job(void* self, void* job) {
-    KUiServerV2JobTracker_QBaseUnregisterJob((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_finished(void* self, void* job) {
-    KUiServerV2JobTracker_Finished((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_on_finished(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnFinished((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_finished(void* self, void* job) {
-    KUiServerV2JobTracker_QBaseFinished((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_suspended(void* self, void* job) {
-    KUiServerV2JobTracker_Suspended((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_on_suspended(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnSuspended((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_suspended(void* self, void* job) {
-    KUiServerV2JobTracker_QBaseSuspended((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_resumed(void* self, void* job) {
-    KUiServerV2JobTracker_Resumed((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_on_resumed(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnResumed((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_resumed(void* self, void* job) {
-    KUiServerV2JobTracker_QBaseResumed((KUiServerV2JobTracker*)self, (KJob*)job);
-}
-
-void k_uiserverv2jobtracker_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KUiServerV2JobTracker_Description((KUiServerV2JobTracker*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_uiserverv2jobtracker_on_description(void* self, void (*callback)(void*, void*, const char*, libqt_pair /* tuple of const char* and const char* */, libqt_pair /* tuple of const char* and const char* */)) {
-    KUiServerV2JobTracker_OnDescription((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_description(void* self, void* job, const char* title, libqt_pair /* tuple of const char* and const char* */ field1, libqt_pair /* tuple of const char* and const char* */ field2) {
-    KUiServerV2JobTracker_QBaseDescription((KUiServerV2JobTracker*)self, (KJob*)job, qstring(title), field1, field2);
-}
-
-void k_uiserverv2jobtracker_info_message(void* self, void* job, const char* message) {
-    KUiServerV2JobTracker_InfoMessage((KUiServerV2JobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_uiserverv2jobtracker_on_info_message(void* self, void (*callback)(void*, void*, const char*)) {
-    KUiServerV2JobTracker_OnInfoMessage((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_info_message(void* self, void* job, const char* message) {
-    KUiServerV2JobTracker_QBaseInfoMessage((KUiServerV2JobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_uiserverv2jobtracker_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KUiServerV2JobTracker_TotalAmount((KUiServerV2JobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_uiserverv2jobtracker_on_total_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
-    KUiServerV2JobTracker_OnTotalAmount((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KUiServerV2JobTracker_QBaseTotalAmount((KUiServerV2JobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_uiserverv2jobtracker_processed_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KUiServerV2JobTracker_ProcessedAmount((KUiServerV2JobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_uiserverv2jobtracker_on_processed_amount(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
-    KUiServerV2JobTracker_OnProcessedAmount((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_processed_amount(void* self, void* job, int32_t unit, uint64_t amount) {
-    KUiServerV2JobTracker_QBaseProcessedAmount((KUiServerV2JobTracker*)self, (KJob*)job, unit, amount);
-}
-
-void k_uiserverv2jobtracker_percent(void* self, void* job, uint64_t percent) {
-    KUiServerV2JobTracker_Percent((KUiServerV2JobTracker*)self, (KJob*)job, percent);
-}
-
-void k_uiserverv2jobtracker_on_percent(void* self, void (*callback)(void*, void*, uint64_t)) {
-    KUiServerV2JobTracker_OnPercent((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_percent(void* self, void* job, uint64_t percent) {
-    KUiServerV2JobTracker_QBasePercent((KUiServerV2JobTracker*)self, (KJob*)job, percent);
-}
-
-void k_uiserverv2jobtracker_speed(void* self, void* job, uint64_t value) {
-    KUiServerV2JobTracker_Speed((KUiServerV2JobTracker*)self, (KJob*)job, value);
-}
-
-void k_uiserverv2jobtracker_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
-    KUiServerV2JobTracker_OnSpeed((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_qbase_speed(void* self, void* job, uint64_t value) {
-    KUiServerV2JobTracker_QBaseSpeed((KUiServerV2JobTracker*)self, (KJob*)job, value);
 }
 
 const char* k_uiserverv2jobtracker_tr2(const char* s, const char* c) {
@@ -186,6 +53,14 @@ const char* k_uiserverv2jobtracker_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+bool k_uiserverv2jobtracker_event(void* self, void* event) {
+    return QObject_Event((QObject*)self, (QEvent*)event);
+}
+
+bool k_uiserverv2jobtracker_event_filter(void* self, void* watched, void* event) {
+    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_uiserverv2jobtracker_object_name(void* self) {
@@ -357,150 +232,6 @@ void k_uiserverv2jobtracker_destroyed1(void* self, void* param1) {
 
 void k_uiserverv2jobtracker_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_warning(void* self, void* job, const char* message) {
-    KUiServerV2JobTracker_Warning((KUiServerV2JobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_uiserverv2jobtracker_qbase_warning(void* self, void* job, const char* message) {
-    KUiServerV2JobTracker_QBaseWarning((KUiServerV2JobTracker*)self, (KJob*)job, qstring(message));
-}
-
-void k_uiserverv2jobtracker_on_warning(void* self, void (*callback)(void*, void*, const char*)) {
-    KUiServerV2JobTracker_OnWarning((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-bool k_uiserverv2jobtracker_event(void* self, void* event) {
-    return KUiServerV2JobTracker_Event((KUiServerV2JobTracker*)self, (QEvent*)event);
-}
-
-bool k_uiserverv2jobtracker_qbase_event(void* self, void* event) {
-    return KUiServerV2JobTracker_QBaseEvent((KUiServerV2JobTracker*)self, (QEvent*)event);
-}
-
-void k_uiserverv2jobtracker_on_event(void* self, bool (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnEvent((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-bool k_uiserverv2jobtracker_event_filter(void* self, void* watched, void* event) {
-    return KUiServerV2JobTracker_EventFilter((KUiServerV2JobTracker*)self, (QObject*)watched, (QEvent*)event);
-}
-
-bool k_uiserverv2jobtracker_qbase_event_filter(void* self, void* watched, void* event) {
-    return KUiServerV2JobTracker_QBaseEventFilter((KUiServerV2JobTracker*)self, (QObject*)watched, (QEvent*)event);
-}
-
-void k_uiserverv2jobtracker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
-    KUiServerV2JobTracker_OnEventFilter((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_timer_event(void* self, void* event) {
-    KUiServerV2JobTracker_TimerEvent((KUiServerV2JobTracker*)self, (QTimerEvent*)event);
-}
-
-void k_uiserverv2jobtracker_qbase_timer_event(void* self, void* event) {
-    KUiServerV2JobTracker_QBaseTimerEvent((KUiServerV2JobTracker*)self, (QTimerEvent*)event);
-}
-
-void k_uiserverv2jobtracker_on_timer_event(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnTimerEvent((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_child_event(void* self, void* event) {
-    KUiServerV2JobTracker_ChildEvent((KUiServerV2JobTracker*)self, (QChildEvent*)event);
-}
-
-void k_uiserverv2jobtracker_qbase_child_event(void* self, void* event) {
-    KUiServerV2JobTracker_QBaseChildEvent((KUiServerV2JobTracker*)self, (QChildEvent*)event);
-}
-
-void k_uiserverv2jobtracker_on_child_event(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnChildEvent((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_custom_event(void* self, void* event) {
-    KUiServerV2JobTracker_CustomEvent((KUiServerV2JobTracker*)self, (QEvent*)event);
-}
-
-void k_uiserverv2jobtracker_qbase_custom_event(void* self, void* event) {
-    KUiServerV2JobTracker_QBaseCustomEvent((KUiServerV2JobTracker*)self, (QEvent*)event);
-}
-
-void k_uiserverv2jobtracker_on_custom_event(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnCustomEvent((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_connect_notify(void* self, void* signal) {
-    KUiServerV2JobTracker_ConnectNotify((KUiServerV2JobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_uiserverv2jobtracker_qbase_connect_notify(void* self, void* signal) {
-    KUiServerV2JobTracker_QBaseConnectNotify((KUiServerV2JobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_uiserverv2jobtracker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnConnectNotify((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-void k_uiserverv2jobtracker_disconnect_notify(void* self, void* signal) {
-    KUiServerV2JobTracker_DisconnectNotify((KUiServerV2JobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_uiserverv2jobtracker_qbase_disconnect_notify(void* self, void* signal) {
-    KUiServerV2JobTracker_QBaseDisconnectNotify((KUiServerV2JobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_uiserverv2jobtracker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnDisconnectNotify((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-QObject* k_uiserverv2jobtracker_sender(void* self) {
-    return KUiServerV2JobTracker_Sender((KUiServerV2JobTracker*)self);
-}
-
-QObject* k_uiserverv2jobtracker_qbase_sender(void* self) {
-    return KUiServerV2JobTracker_QBaseSender((KUiServerV2JobTracker*)self);
-}
-
-void k_uiserverv2jobtracker_on_sender(void* self, QObject* (*callback)()) {
-    KUiServerV2JobTracker_OnSender((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-int32_t k_uiserverv2jobtracker_sender_signal_index(void* self) {
-    return KUiServerV2JobTracker_SenderSignalIndex((KUiServerV2JobTracker*)self);
-}
-
-int32_t k_uiserverv2jobtracker_qbase_sender_signal_index(void* self) {
-    return KUiServerV2JobTracker_QBaseSenderSignalIndex((KUiServerV2JobTracker*)self);
-}
-
-void k_uiserverv2jobtracker_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KUiServerV2JobTracker_OnSenderSignalIndex((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-int32_t k_uiserverv2jobtracker_receivers(void* self, const char* signal) {
-    return KUiServerV2JobTracker_Receivers((KUiServerV2JobTracker*)self, signal);
-}
-
-int32_t k_uiserverv2jobtracker_qbase_receivers(void* self, const char* signal) {
-    return KUiServerV2JobTracker_QBaseReceivers((KUiServerV2JobTracker*)self, signal);
-}
-
-void k_uiserverv2jobtracker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KUiServerV2JobTracker_OnReceivers((KUiServerV2JobTracker*)self, (intptr_t)callback);
-}
-
-bool k_uiserverv2jobtracker_is_signal_connected(void* self, void* signal) {
-    return KUiServerV2JobTracker_IsSignalConnected((KUiServerV2JobTracker*)self, (QMetaMethod*)signal);
-}
-
-bool k_uiserverv2jobtracker_qbase_is_signal_connected(void* self, void* signal) {
-    return KUiServerV2JobTracker_QBaseIsSignalConnected((KUiServerV2JobTracker*)self, (QMetaMethod*)signal);
-}
-
-void k_uiserverv2jobtracker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KUiServerV2JobTracker_OnIsSignalConnected((KUiServerV2JobTracker*)self, (intptr_t)callback);
 }
 
 void k_uiserverv2jobtracker_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

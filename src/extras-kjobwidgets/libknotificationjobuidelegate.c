@@ -1,6 +1,5 @@
 #include "../extras-kcoreaddons/libkjob.hpp"
 #include "../extras-kcoreaddons/libkjobuidelegate.hpp"
-#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
@@ -27,14 +26,6 @@ int32_t k_notificationjobuidelegate_metacall(void* self, int32_t param1, int par
     return KNotificationJobUiDelegate_Metacall((KNotificationJobUiDelegate*)self, param1, param2, param3);
 }
 
-void k_notificationjobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
-    KNotificationJobUiDelegate_OnMetacall((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-int32_t k_notificationjobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNotificationJobUiDelegate_QBaseMetacall((KNotificationJobUiDelegate*)self, param1, param2, param3);
-}
-
 const char* k_notificationjobuidelegate_tr(const char* s) {
     libqt_string _str = KNotificationJobUiDelegate_Tr(s);
     char* _ret = qstring_to_char(_str);
@@ -44,38 +35,6 @@ const char* k_notificationjobuidelegate_tr(const char* s) {
 
 void k_notificationjobuidelegate_show_error_message(void* self) {
     KNotificationJobUiDelegate_ShowErrorMessage((KNotificationJobUiDelegate*)self);
-}
-
-void k_notificationjobuidelegate_on_show_error_message(void* self, void (*callback)()) {
-    KNotificationJobUiDelegate_OnShowErrorMessage((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_qbase_show_error_message(void* self) {
-    KNotificationJobUiDelegate_QBaseShowErrorMessage((KNotificationJobUiDelegate*)self);
-}
-
-bool k_notificationjobuidelegate_set_job(void* self, void* job) {
-    return KNotificationJobUiDelegate_SetJob((KNotificationJobUiDelegate*)self, (KJob*)job);
-}
-
-void k_notificationjobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnSetJob((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-bool k_notificationjobuidelegate_qbase_set_job(void* self, void* job) {
-    return KNotificationJobUiDelegate_QBaseSetJob((KNotificationJobUiDelegate*)self, (KJob*)job);
-}
-
-void k_notificationjobuidelegate_slot_warning(void* self, void* job, const char* message) {
-    KNotificationJobUiDelegate_SlotWarning((KNotificationJobUiDelegate*)self, (KJob*)job, qstring(message));
-}
-
-void k_notificationjobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, const char*)) {
-    KNotificationJobUiDelegate_OnSlotWarning((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_qbase_slot_warning(void* self, void* job, const char* message) {
-    KNotificationJobUiDelegate_QBaseSlotWarning((KNotificationJobUiDelegate*)self, (KJob*)job, qstring(message));
 }
 
 const char* k_notificationjobuidelegate_tr2(const char* s, const char* c) {
@@ -106,6 +65,14 @@ void k_notificationjobuidelegate_set_auto_warning_handling_enabled(void* self, b
 
 bool k_notificationjobuidelegate_is_auto_warning_handling_enabled(void* self) {
     return KJobUiDelegate_IsAutoWarningHandlingEnabled((KJobUiDelegate*)self);
+}
+
+bool k_notificationjobuidelegate_event(void* self, void* event) {
+    return QObject_Event((QObject*)self, (QEvent*)event);
+}
+
+bool k_notificationjobuidelegate_event_filter(void* self, void* watched, void* event) {
+    return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_notificationjobuidelegate_object_name(void* self) {
@@ -277,150 +244,6 @@ void k_notificationjobuidelegate_destroyed1(void* self, void* param1) {
 
 void k_notificationjobuidelegate_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
-}
-
-bool k_notificationjobuidelegate_event(void* self, void* event) {
-    return KNotificationJobUiDelegate_Event((KNotificationJobUiDelegate*)self, (QEvent*)event);
-}
-
-bool k_notificationjobuidelegate_qbase_event(void* self, void* event) {
-    return KNotificationJobUiDelegate_QBaseEvent((KNotificationJobUiDelegate*)self, (QEvent*)event);
-}
-
-void k_notificationjobuidelegate_on_event(void* self, bool (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnEvent((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-bool k_notificationjobuidelegate_event_filter(void* self, void* watched, void* event) {
-    return KNotificationJobUiDelegate_EventFilter((KNotificationJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
-}
-
-bool k_notificationjobuidelegate_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNotificationJobUiDelegate_QBaseEventFilter((KNotificationJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
-}
-
-void k_notificationjobuidelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
-    KNotificationJobUiDelegate_OnEventFilter((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_timer_event(void* self, void* event) {
-    KNotificationJobUiDelegate_TimerEvent((KNotificationJobUiDelegate*)self, (QTimerEvent*)event);
-}
-
-void k_notificationjobuidelegate_qbase_timer_event(void* self, void* event) {
-    KNotificationJobUiDelegate_QBaseTimerEvent((KNotificationJobUiDelegate*)self, (QTimerEvent*)event);
-}
-
-void k_notificationjobuidelegate_on_timer_event(void* self, void (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnTimerEvent((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_child_event(void* self, void* event) {
-    KNotificationJobUiDelegate_ChildEvent((KNotificationJobUiDelegate*)self, (QChildEvent*)event);
-}
-
-void k_notificationjobuidelegate_qbase_child_event(void* self, void* event) {
-    KNotificationJobUiDelegate_QBaseChildEvent((KNotificationJobUiDelegate*)self, (QChildEvent*)event);
-}
-
-void k_notificationjobuidelegate_on_child_event(void* self, void (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnChildEvent((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_custom_event(void* self, void* event) {
-    KNotificationJobUiDelegate_CustomEvent((KNotificationJobUiDelegate*)self, (QEvent*)event);
-}
-
-void k_notificationjobuidelegate_qbase_custom_event(void* self, void* event) {
-    KNotificationJobUiDelegate_QBaseCustomEvent((KNotificationJobUiDelegate*)self, (QEvent*)event);
-}
-
-void k_notificationjobuidelegate_on_custom_event(void* self, void (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnCustomEvent((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_connect_notify(void* self, void* signal) {
-    KNotificationJobUiDelegate_ConnectNotify((KNotificationJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_notificationjobuidelegate_qbase_connect_notify(void* self, void* signal) {
-    KNotificationJobUiDelegate_QBaseConnectNotify((KNotificationJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_notificationjobuidelegate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnConnectNotify((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-void k_notificationjobuidelegate_disconnect_notify(void* self, void* signal) {
-    KNotificationJobUiDelegate_DisconnectNotify((KNotificationJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_notificationjobuidelegate_qbase_disconnect_notify(void* self, void* signal) {
-    KNotificationJobUiDelegate_QBaseDisconnectNotify((KNotificationJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_notificationjobuidelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnDisconnectNotify((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-KJob* k_notificationjobuidelegate_job(void* self) {
-    return KNotificationJobUiDelegate_Job((KNotificationJobUiDelegate*)self);
-}
-
-KJob* k_notificationjobuidelegate_qbase_job(void* self) {
-    return KNotificationJobUiDelegate_QBaseJob((KNotificationJobUiDelegate*)self);
-}
-
-void k_notificationjobuidelegate_on_job(void* self, KJob* (*callback)()) {
-    KNotificationJobUiDelegate_OnJob((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-QObject* k_notificationjobuidelegate_sender(void* self) {
-    return KNotificationJobUiDelegate_Sender((KNotificationJobUiDelegate*)self);
-}
-
-QObject* k_notificationjobuidelegate_qbase_sender(void* self) {
-    return KNotificationJobUiDelegate_QBaseSender((KNotificationJobUiDelegate*)self);
-}
-
-void k_notificationjobuidelegate_on_sender(void* self, QObject* (*callback)()) {
-    KNotificationJobUiDelegate_OnSender((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-int32_t k_notificationjobuidelegate_sender_signal_index(void* self) {
-    return KNotificationJobUiDelegate_SenderSignalIndex((KNotificationJobUiDelegate*)self);
-}
-
-int32_t k_notificationjobuidelegate_qbase_sender_signal_index(void* self) {
-    return KNotificationJobUiDelegate_QBaseSenderSignalIndex((KNotificationJobUiDelegate*)self);
-}
-
-void k_notificationjobuidelegate_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KNotificationJobUiDelegate_OnSenderSignalIndex((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-int32_t k_notificationjobuidelegate_receivers(void* self, const char* signal) {
-    return KNotificationJobUiDelegate_Receivers((KNotificationJobUiDelegate*)self, signal);
-}
-
-int32_t k_notificationjobuidelegate_qbase_receivers(void* self, const char* signal) {
-    return KNotificationJobUiDelegate_QBaseReceivers((KNotificationJobUiDelegate*)self, signal);
-}
-
-void k_notificationjobuidelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KNotificationJobUiDelegate_OnReceivers((KNotificationJobUiDelegate*)self, (intptr_t)callback);
-}
-
-bool k_notificationjobuidelegate_is_signal_connected(void* self, void* signal) {
-    return KNotificationJobUiDelegate_IsSignalConnected((KNotificationJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-bool k_notificationjobuidelegate_qbase_is_signal_connected(void* self, void* signal) {
-    return KNotificationJobUiDelegate_QBaseIsSignalConnected((KNotificationJobUiDelegate*)self, (QMetaMethod*)signal);
-}
-
-void k_notificationjobuidelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KNotificationJobUiDelegate_OnIsSignalConnected((KNotificationJobUiDelegate*)self, (intptr_t)callback);
 }
 
 void k_notificationjobuidelegate_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
