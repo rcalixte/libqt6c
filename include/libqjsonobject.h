@@ -308,7 +308,7 @@ int64_t q_jsonobject__iterator_operator_minus2(void* self, void* j);
 /// @param self QJsonObject__iterator*
 void q_jsonobject__iterator_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qjsonobject-const_iterator.html
+/// https://doc.qt.io/qt-6/qjsonobject-const-iterator.html
 
 /// q_jsonobject__const_iterator_new constructs a new QJsonObject::const_iterator object.
 ///
@@ -335,87 +335,87 @@ QJsonObject__const_iterator* q_jsonobject__const_iterator_new4(void* other);
 /// @param other QJsonObject__const_iterator*
 QJsonObject__const_iterator* q_jsonobject__const_iterator_new5(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-eq)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param other QJsonObject__const_iterator*
 void q_jsonobject__const_iterator_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#key)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#key)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param self QJsonObject__const_iterator*
 const char* q_jsonobject__const_iterator_key(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#value)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#value)
 ///
 /// @param self QJsonObject__const_iterator*
 QJsonValueConstRef* q_jsonobject__const_iterator_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-2a)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-2a)
 ///
 /// @param self QJsonObject__const_iterator*
 const QJsonValueConstRef* q_jsonobject__const_iterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator--gt)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator--gt)
 ///
 /// @param self QJsonObject__const_iterator*
 const QJsonValueConstRef* q_jsonobject__const_iterator_operator_minus_greater(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-5b-5d)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-5b-5d)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param j int64_t
 QJsonValueConstRef* q_jsonobject__const_iterator_operator_subscript(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-2b-2b)
 ///
 /// @param self QJsonObject__const_iterator*
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-2b-2b)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param param1 int
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_plus_plus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator--)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator--)
 ///
 /// @param self QJsonObject__const_iterator*
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_minus_minus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator--)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator--)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param param1 int
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_minus_minus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-2b)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param j int64_t
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_plus(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param j int64_t
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_minus(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-2b-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-2b-eq)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param j int64_t
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_plus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator--eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator--eq)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param j int64_t
 QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_minus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const_iterator.html#operator-)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject-const-iterator.html#operator-)
 ///
 /// @param self QJsonObject__const_iterator*
 /// @param j QJsonObject__const_iterator*

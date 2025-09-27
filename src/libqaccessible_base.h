@@ -565,7 +565,7 @@ void q_accessible__activationobserver_operator_assign(void* self, void* param1);
 /// @param self QAccessible__ActivationObserver*
 void q_accessible__activationobserver_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qaccessible_base.html#types
+/// https://doc.qt.io/qt-6/qaccessible-base.html#types
 
 typedef enum {
     QACCESSIBLE_EVENT_SOUNDPLAYED = 1,

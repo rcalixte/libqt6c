@@ -334,7 +334,7 @@ void q_dirlisting__sentinel_move_assign(void* self, void* other);
 /// @param self QDirListing__sentinel*
 void q_dirlisting__sentinel_delete(void* self);
 
-/// https://doc.qt.io/qt-6/qdirlisting-const_iterator.html
+/// https://doc.qt.io/qt-6/qdirlisting-const-iterator.html
 
 /// q_dirlisting__const_iterator_new2 constructs a new QDirListing::const_iterator object and invalidates the source QDirListing::const_iterator object.
 ///
@@ -347,17 +347,17 @@ QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other);
 /// @param other QDirListing__const_iterator*
 void q_dirlisting__const_iterator_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const_iterator.html#operator-2a)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const-iterator.html#operator-2a)
 ///
 /// @param self QDirListing__const_iterator*
 const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const_iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const-iterator.html#operator-2b-2b)
 ///
 /// @param self QDirListing__const_iterator*
 QDirListing__const_iterator* q_dirlisting__const_iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const_iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const-iterator.html#operator-2b-2b)
 ///
 /// @param self QDirListing__const_iterator*
 /// @param param1 int
