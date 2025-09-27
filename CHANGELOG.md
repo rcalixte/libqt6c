@@ -1,4 +1,10 @@
 
+### 6.8.2 rev34 (27 September 2025)
+
+* Add [Qt OpenGL](https://doc.qt.io/qt-6/qtopengl-index.html) (#62)
+* Unblock `QsciScintillaBase::inputMethodQuery` (#61)
+* Remove methods causing linker errors (#60)
+
 ### 6.8.2 rev33 (22 September 2025)
 
 * **BREAKING CHANGE:** Remove `KGradientSelector::setStops` (#59)
