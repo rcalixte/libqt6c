@@ -386,7 +386,7 @@ In theory, any build system that supports both C and C++ should work. However, t
 
 ### Q6. Can I use Qt Creator/Designer and the Qt Resource system?
 
-There is a custom implementation of Qt's `uic` and `rcc` tools to allow using [Qt Creator](https://doc.qt.io/qtcreator/index.html) or [Qt Designer](https://doc.qt.io/qt-6/qtdesigner-manual.html) for form design and resource management with this library. The programs and their respective documentation are located at [`uic-c`](https://github.com/rcalixte/libqt6c/tree/master/cmd/uic-c) and [`qrc-c`](https://github.com/rcalixte/libqt6c/tree/master/cmd/qrc-c).
+There is a custom implementation of Qt's `uic` and `rcc` tools to allow using [Qt Creator](https://doc.qt.io/qtcreator/index.html) or [Qt Designer](https://doc.qt.io/qt-6/qtdesigner-manual.html) for form design and resource management with this library. There is full support for the additional widgets provided by the KDE Frameworks, enabled via command-line flags. The programs and their respective documentation are located at [`uic-c`](https://github.com/rcalixte/libqt6c/tree/master/cmd/uic-c) and [`qrc-c`](https://github.com/rcalixte/libqt6c/tree/master/cmd/qrc-c).
 
 > [!NOTE]
 > Only Qt Creator 16.0 (or higher) and Qt Designer 6.8.2 (or higher) are supported for use. Any existing `.ui` or `.qrc` files should be saved/exported from one of them for proper usage with these tools. Older versions can result in panics during execution and are not supported.
