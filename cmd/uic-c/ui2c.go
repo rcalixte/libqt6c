@@ -12,6 +12,7 @@ var (
 	SanitizeObjectCounter = 0
 	SanitizationFlag      = false
 	ExtendedFlag          = false
+	FlagWarnings          = []string{}
 	GlobalContext         = ""
 	DefaultGridMargin     = 11
 	DefaultChildrenMargin = -1
@@ -25,6 +26,9 @@ var (
 	VariantCounter        = 0
 	SizePolicyCounter     = 0
 	BrushCounter          = 0
+	DateCounter           = 0
+	TimeCounter           = 0
+	ColorCounter          = 0
 	SizePolicyMap         = map[string]string{}
 	BrushColorMap         = map[string]string{}
 	ButtonGroups          = map[string]*UiButtonGroup{}
@@ -72,7 +76,7 @@ func collectClassNames_Widget(u *UiWidget) []string {
 		if cw, ok := CustomWidgets[u.Class]; ok && !(ExtendedFlag && isExtendedClass(u.Class)) {
 			className = cw
 		}
-		ret = append(ret, className+"* "+u.Name+";")
+		ret = append(ret, strings.ReplaceAll(className, "::", "__")+"* "+u.Name+";")
 		WidgetMap[u.Name] = cClassMethodPrefix(className)
 	}
 
@@ -173,13 +177,13 @@ func storeAction(action, wClass, name string) {
 
 func processPaletteGroup(ret *strings.Builder, targetName string, groupName string, colorRoles []UiColorRole) {
 	for _, role := range colorRoles {
-		mapKey := role.Brush.Style + " (" + strconv.Itoa(role.Brush.Color.Red) + "," + strconv.Itoa(role.Brush.Color.Green) + "," + strconv.Itoa(role.Brush.Color.Blue) + "," + strconv.Itoa(role.Brush.Color.Alpha) + ")"
+		mapKey := role.Brush.Style + " (" + strconv.Itoa(role.Brush.Color.Red) + "," + strconv.Itoa(role.Brush.Color.Green) + "," + strconv.Itoa(role.Brush.Color.Blue) + "," + strconv.Itoa(*role.Brush.Color.Alpha) + ")"
 
 		brushNum, ok := BrushColorMap[mapKey]
 		if !ok {
 			brushNum = strconv.Itoa(BrushCounter)
 			BrushColorMap[mapKey] = brushNum
-			ret.WriteString(getNewBrush(brushNum, role.Brush.Style, strconv.Itoa(role.Brush.Color.Red), strconv.Itoa(role.Brush.Color.Green), strconv.Itoa(role.Brush.Color.Blue), strconv.Itoa(role.Brush.Color.Alpha)))
+			ret.WriteString(getNewBrush(brushNum, role.Brush.Style, strconv.Itoa(role.Brush.Color.Red), strconv.Itoa(role.Brush.Color.Green), strconv.Itoa(role.Brush.Color.Blue), strconv.Itoa(*role.Brush.Color.Alpha)))
 			BrushCounter++
 		}
 		ret.WriteString(getSetPaletteBrush(targetName, groupName, role.Role, brushNum))
@@ -211,6 +215,12 @@ func newQSize(sizeName *string, isSizeSet *bool) string {
 	SizeCounter++
 
 	return newSize
+}
+
+func writeFlagWarning(ret *strings.Builder, name, class string) {
+	warning := "Warning: Use '-e' to enable extended class support for '" + name + "' property of type '" + class + "'"
+	ret.WriteString("// " + warning + "\n")
+	FlagWarnings = append(FlagWarnings, warning)
 }
 
 func deleteQSize(sizeName string) string {
@@ -307,12 +317,22 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 	}
 	contentsMargins := [4]int{defaultMargin, defaultMargin, defaultMargin, defaultMargin} // left, top, right, bottom
 	customContentsMargins := false
-	cMethodPrefix := "q_" + cClassName(targetClass[1:])
+	targetClassPrefix := "q_"
+	targetClassIndex := 1
+
+	if targetClass[0] != 'Q' {
+		targetClassPrefix = "k_"
+	}
+	if targetClass[0] != 'Q' && targetClass[0] != 'K' {
+		targetClassIndex = 0
+	}
+	cMethodPrefix := targetClassPrefix + cClassName(strings.ReplaceAll(targetClass[targetClassIndex:], "::", "__"))
 
 	strVariantName := targetName + "_variant_str"
 	numVariantName := targetName + "_variant_num"
 	boolVariantName := targetName + "_variant_bool"
 	urlVariantName := targetName + "_variant_url"
+	enumVariantName := targetName + "_variant_enum"
 
 	for _, prop := range properties {
 		setterFunc := "_set_" + cMethodName(prop.Name)
@@ -345,10 +365,10 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			contentsMargins = [4]int{customMargin, customMargin, customMargin, customMargin}
 			customContentsMargins = true
 
-		} else if prop.Name == "pixmap" {
+		} else if prop.PixmapVal != nil {
 			ret.WriteString("QPixmap* pixmap" + strconv.Itoa(PixmapCounter) + ` = q_pixmap_new4("` + *prop.PixmapVal + `");` + "\n")
-			ret.WriteString(cMethodPrefix + "_set_pixmap(ui->" + targetName + ", pixmap" + strconv.Itoa(PixmapCounter) + ");\n")
-			ret.WriteString("q_pixmap_delete(" + "pixmap" + strconv.Itoa(PixmapCounter) + ");\n")
+			ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", pixmap" + strconv.Itoa(PixmapCounter) + ");\n")
+			ret.WriteString("q_pixmap_delete(pixmap" + strconv.Itoa(PixmapCounter) + ");\n")
 			PixmapCounter++
 
 		} else if prop.Name == "buddy" {
@@ -357,7 +377,7 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 		} else if prop.Name == "cursor" {
 			ret.WriteString("QCursor* cursor" + strconv.Itoa(CursorCounter) + "= q_cursor_new2(QT_CURSORSHAPE_" + strings.ToUpper(*prop.CursorVal) + ");\n")
 			ret.WriteString(cMethodPrefix + "_set_cursor(ui->" + targetName + ", cursor" + strconv.Itoa(CursorCounter) + ");\n")
-			ret.WriteString("q_cursor_delete(" + "cursor" + strconv.Itoa(CursorCounter) + ");\n")
+			ret.WriteString("q_cursor_delete(cursor" + strconv.Itoa(CursorCounter) + ");\n")
 			CursorCounter++
 
 		} else if prop.StringVal != nil {
@@ -371,14 +391,14 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 				ret.WriteString(cMethodPrefix + "_set_property(ui->" + targetName + ", " + strconv.Quote(prop.Name) + ", " + strVariantName + strconv.Itoa(VariantCounter) + ");" + maybeComment + "\n")
 				ret.WriteString("q_variant_delete(" + strVariantName + strconv.Itoa(VariantCounter) + ");" + maybeComment + "\n")
 				VariantCounter++
-			} else if prop.Name == "shortcut" {
+			} else if prop.Name == "shortcut" || prop.Name == "keySequence" {
 				maybeComment := " // auxiliary to q_coreapplication_translate"
 				if prop.StringVal.Notr {
 					maybeComment = ""
 				}
-				ret.WriteString(writtenString("\nQKeySequence* "+targetName+"_shortcut = q_keysequence_new2(", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
-				ret.WriteString(cMethodPrefix + "_set_shortcut(ui->" + targetName + ", " + targetName + "_shortcut);" + maybeComment + "\n")
-				ret.WriteString("q_keysequence_delete(" + targetName + "_shortcut);" + maybeComment + "\n")
+				ret.WriteString(writtenString("\nQKeySequence* "+targetName+"_key_sequence = q_keysequence_new2(", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + targetName + "_key_sequence);" + maybeComment + "\n")
+				ret.WriteString("q_keysequence_delete(" + targetName + "_key_sequence);" + maybeComment + "\n")
 			} else {
 				ret.WriteString(writtenString(cMethodPrefix+setterFunc+"(ui->"+targetName+", ", generateString(prop.StringVal), ");\n", prop.StringVal.Notr, true))
 			}
@@ -404,14 +424,20 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			} else {
 				// "tristate"
 				var overrideNum string
-				if prop.Name == "tristate" {
+				if prop.Name == "tristate" || (targetClass == "KUrlLabel" && (prop.Name == "floatEnabled" || prop.Name == "glowEnabled" || prop.Name == "underline" || prop.Name == "useTips")) {
 					overrideNum = "1"
 				}
 				ret.WriteString(cMethodPrefix + setterFunc + overrideNum + "(ui->" + targetName + ", " + strconv.FormatBool(*prop.BoolVal) + ");\n")
 			}
 
 		} else if prop.EnumVal != nil {
-			if targetClass == "QFrame" && prop.Name == "orientation" {
+			// "tabStyle"
+			if prop.StdSetVal != nil && *prop.StdSetVal != "" {
+				ret.WriteString("QVariant* " + enumVariantName + strconv.Itoa(VariantCounter) + " = q_variant_new6(" + normalizeEnumName(prop.Name, *prop.EnumVal) + ");\n")
+				ret.WriteString(cMethodPrefix + "_set_property(ui->" + targetName + ", " + strconv.Quote(prop.Name) + ", " + enumVariantName + strconv.Itoa(VariantCounter) + ");\n")
+				ret.WriteString("q_variant_delete(" + enumVariantName + strconv.Itoa(VariantCounter) + ");\n")
+				VariantCounter++
+			} else if targetClass == "QFrame" && prop.Name == "orientation" {
 				enumVal := "HLINE"
 				if strings.Contains(*prop.EnumVal, "Vertical") {
 					enumVal = "VLINE"
@@ -425,6 +451,12 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 		} else if prop.SetVal != nil {
 			// QDialogButtonBox::StandardButton::*
 			// <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Save</set>
+
+			// block KRichTextWidget::setRichTextSupport due to poor implementation
+			if prop.Name == "richTextSupport" {
+				ret.WriteString("// UIC: Property `" + prop.Name + "` is not supported for type " + targetClass + "\n")
+				continue
+			}
 
 			parts := strings.Split(*prop.SetVal, "|")
 			for i, p := range parts {
@@ -511,7 +543,13 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 				ret.WriteString("q_font_set_hinting_preference(" + fontVal + ", QFONT_HINTINGPREFERENCE_" + strings.ToUpper(*prop.FontVal.HintingPreference) + ");\n")
 			}
 
-			ret.WriteString(cMethodPrefix + "_set_font(ui->" + targetName + ", " + fontVal + ");\n")
+			var maybeOnlyFixed string
+			if ExtendedFlag && targetClass == "KFontRequester" {
+				maybeOnlyFixed = ", false"
+			} else if !ExtendedFlag && targetClass[0] == 'K' {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			}
+			ret.WriteString(cMethodPrefix + "_set_font(ui->" + targetName + ", " + fontVal + maybeOnlyFixed + ");\n")
 			ret.WriteString("q_font_delete(" + fontVal + ");\n")
 
 		} else if prop.Name == "iconSize" {
@@ -551,13 +589,13 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 			ret.WriteString("q_palette_delete(" + targetName + "_palette);\n")
 
 		} else if prop.Name == "backgroundBrush" {
-			mapKey := prop.BackgroundBrushVal.Style + " (" + strconv.Itoa(prop.BackgroundBrushVal.Color.Red) + "," + strconv.Itoa(prop.BackgroundBrushVal.Color.Green) + "," + strconv.Itoa(prop.BackgroundBrushVal.Color.Blue) + "," + strconv.Itoa(prop.BackgroundBrushVal.Color.Alpha) + ")"
+			mapKey := prop.BackgroundBrushVal.Style + " (" + strconv.Itoa(prop.BackgroundBrushVal.Color.Red) + "," + strconv.Itoa(prop.BackgroundBrushVal.Color.Green) + "," + strconv.Itoa(prop.BackgroundBrushVal.Color.Blue) + "," + strconv.Itoa(*prop.BackgroundBrushVal.Color.Alpha) + ")"
 
 			brushNum, ok := BrushColorMap[mapKey]
 			if !ok {
 				brushNum = strconv.Itoa(BrushCounter)
 				BrushColorMap[mapKey] = brushNum
-				ret.WriteString(getNewBrush(brushNum, prop.BackgroundBrushVal.Style, strconv.Itoa(prop.BackgroundBrushVal.Color.Red), strconv.Itoa(prop.BackgroundBrushVal.Color.Green), strconv.Itoa(prop.BackgroundBrushVal.Color.Blue), strconv.Itoa(prop.BackgroundBrushVal.Color.Alpha)))
+				ret.WriteString(getNewBrush(brushNum, prop.BackgroundBrushVal.Style, strconv.Itoa(prop.BackgroundBrushVal.Color.Red), strconv.Itoa(prop.BackgroundBrushVal.Color.Green), strconv.Itoa(prop.BackgroundBrushVal.Color.Blue), strconv.Itoa(*prop.BackgroundBrushVal.Color.Alpha)))
 				BrushCounter++
 			}
 			ret.WriteString(cMethodPrefix + "_set_background_brush(ui->" + targetName + ", brush" + brushNum + ");\n")
@@ -565,7 +603,83 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 		} else if prop.LocaleVal != nil {
 			ret.WriteString("QLocale* locale_" + targetName + " = q_locale_new3(QLOCALE_LANGUAGE_" + strings.ToUpper(prop.LocaleVal.Language) + ", QLOCALE_COUNTRY_" + strings.ToUpper(prop.LocaleVal.Country) + ");\n")
 			ret.WriteString(cMethodPrefix + "_set_locale(ui->" + targetName + ", locale_" + targetName + ");\n")
-			ret.WriteString("q_locale_delete(" + "locale_" + targetName + ");\n")
+			ret.WriteString("q_locale_delete(locale_" + targetName + ");\n")
+
+		} else if prop.UIntVal != nil {
+			if !ExtendedFlag {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			} else {
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + *prop.UIntVal + ");\n")
+			}
+
+		} else if prop.CharVal != nil {
+			if !ExtendedFlag {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			} else {
+				ret.WriteString("QChar* " + targetName + "_qchar = q_char_new4(" + prop.CharVal.Unicode + ");\n")
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + targetName + "_qchar);\n")
+				ret.WriteString("q_char_delete(" + targetName + "_qchar);\n")
+			}
+
+		} else if prop.DateVal != nil {
+			if !ExtendedFlag && targetClass[0] == 'K' {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			} else {
+				dateName := targetName + "_date" + strconv.Itoa(DateCounter)
+				ret.WriteString("QDate* " + dateName + " = q_date_new4(" + strconv.Itoa(prop.DateVal.Year) + ", " + strconv.Itoa(prop.DateVal.Month) + ", " + strconv.Itoa(prop.DateVal.Day) + ");\n")
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + dateName + ");\n")
+				ret.WriteString("q_date_delete(" + dateName + ");\n")
+				DateCounter++
+			}
+
+		} else if prop.TimeVal != nil {
+			if !ExtendedFlag && targetClass[0] == 'K' {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			} else {
+				timeName := targetName + "_time" + strconv.Itoa(TimeCounter)
+				ret.WriteString("QTime* " + timeName + " = q_time_new6(" + strconv.Itoa(prop.TimeVal.Hour) + ", " + strconv.Itoa(prop.TimeVal.Minute) + ", " + strconv.Itoa(prop.TimeVal.Second) + ");\n")
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + timeName + ");\n")
+				ret.WriteString("q_time_delete(" + timeName + ");\n")
+				TimeCounter++
+			}
+
+		} else if prop.ColorVal != nil {
+			if !ExtendedFlag && targetClass[0] == 'K' {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			} else {
+				colorOverload := "5"
+				var maybeAlpha string
+				if prop.ColorVal.Alpha != nil {
+					colorOverload = "13"
+					maybeAlpha = ", " + strconv.Itoa(*prop.ColorVal.Alpha)
+				}
+				colorName := targetName + "_color" + strconv.Itoa(ColorCounter)
+				ret.WriteString("QColor* " + colorName + " = q_color_new" + colorOverload + "(" + strconv.Itoa(prop.ColorVal.Red) + ", " + strconv.Itoa(prop.ColorVal.Green) + ", " + strconv.Itoa(prop.ColorVal.Blue) + maybeAlpha + ");\n")
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + colorName + ");\n")
+				ret.WriteString("q_color_delete(" + colorName + ");\n")
+				ColorCounter++
+			}
+
+		} else if prop.StringListVal != nil {
+			if !ExtendedFlag && targetClass[0] == 'K' {
+				writeFlagWarning(ret, prop.Name, targetClass)
+			} else {
+				comment := " // auxiliary to q_coreapplication_translate\n"
+				var items, strFrees []string
+				for i, s := range prop.StringListVal.Strings {
+					itemName := targetName + "_" + cMethodName(prop.Name) + strconv.Itoa(i)
+					items = append(items, itemName)
+					ret.WriteString("const char* " + itemName + " = " + generateString(&s) + ";\n")
+					strFrees = append(strFrees, "libqt_free("+itemName+");"+comment)
+				}
+
+				ret.WriteString("const char* " + targetName + "_" + cMethodName(prop.Name) + "[] = {" + strings.Join(items, ",") + ", NULL};" + comment)
+				ret.WriteString(cMethodPrefix + setterFunc + "(ui->" + targetName + ", " + targetName + "_" + cMethodName(prop.Name) + ");" + comment)
+
+				for _, strFree := range strFrees {
+					ret.WriteString(strFree + "\n")
+				}
+			}
 
 		} else {
 			ret.WriteString("/* UIC: no handler for " + targetName + " of type " + targetClass + " property '" + prop.Name + "' */\n")
@@ -646,7 +760,7 @@ func writeLayoutAttributes(ret *strings.Builder, prop, method string) {
 		propVals := strings.Split(prop, ",")
 		for i, propVal := range propVals {
 			if propVal != "0" {
-				ret.WriteString(method + strconv.Itoa(i) + ", " + propVal + ");\n")
+				ret.WriteString(method + ", " + strconv.Itoa(i) + ", " + propVal + ");\n")
 			}
 		}
 	}
@@ -661,13 +775,11 @@ func generateLayout(l *UiLayout, parentName, parentClass string, isNestedLayout 
 	if isNestedLayout {
 		ctor = wClassC + "_new2"
 
-		ret.WriteString(`
-    ui->` + l.Name + " = " + ctor + "();\n")
+		ret.WriteString("\nui->" + l.Name + " = " + ctor + "();\n")
 	} else {
 		ctor = wClassC + "_new"
 
-		ret.WriteString(`
-    ui->` + l.Name + " = " + ctor + "(" + parentName + ");\n")
+		ret.WriteString("\nui->" + l.Name + " = " + ctor + "(" + parentName + ");\n")
 	}
 
 	ret.WriteString(wClassC + "_set_object_name(ui->" + l.Name + ", " + strconv.Quote(l.Name) + ");\n")
@@ -736,7 +848,7 @@ func generateLayout(l *UiLayout, parentName, parentClass string, isNestedLayout 
 				spacerEnums[0], spacerEnums[1] = spacerEnums[1], spacerEnums[0]
 			}
 
-			ret.WriteString("\nui->" + child.Spacer.Name + " = " + "q_spaceritem_new4(" + fmt.Sprintf("%d, %d, %s, %s", width, height, spacerEnums[0], spacerEnums[1]) + ");\n")
+			ret.WriteString("\nui->" + child.Spacer.Name + " = q_spaceritem_new4(" + fmt.Sprintf("%d, %d, %s, %s", width, height, spacerEnums[0], spacerEnums[1]) + ");\n")
 			if l.Class == "QFormLayout" {
 				role := "QFORMLAYOUT_ITEMROLE_LABELROLE"
 				if *child.Column == 1 {
@@ -783,11 +895,11 @@ func generateLayout(l *UiLayout, parentName, parentClass string, isNestedLayout 
 
 	// Layout attributes
 
-	writeLayoutAttributes(&ret, l.Stretch, wClassC+"_set_stretch(ui->"+l.Name+", ")
-	writeLayoutAttributes(&ret, l.RowStretch, wClassC+"_set_row_stretch(ui->"+l.Name+", ")
-	writeLayoutAttributes(&ret, l.ColStretch, wClassC+"_set_column_stretch(ui->"+l.Name+", ")
-	writeLayoutAttributes(&ret, l.RowMinimumHeight, wClassC+"_set_row_minimum_height(ui->"+l.Name+", ")
-	writeLayoutAttributes(&ret, l.ColMinimumWidth, wClassC+"_set_column_minimum_width(ui->"+l.Name+", ")
+	writeLayoutAttributes(&ret, l.Stretch, wClassC+"_set_stretch(ui->"+l.Name)
+	writeLayoutAttributes(&ret, l.RowStretch, wClassC+"_set_row_stretch(ui->"+l.Name)
+	writeLayoutAttributes(&ret, l.ColStretch, wClassC+"_set_column_stretch(ui->"+l.Name)
+	writeLayoutAttributes(&ret, l.RowMinimumHeight, wClassC+"_set_row_minimum_height(ui->"+l.Name)
+	writeLayoutAttributes(&ret, l.ColMinimumWidth, wClassC+"_set_column_minimum_width(ui->"+l.Name)
 
 	return ret.String(), nil
 }
@@ -799,15 +911,18 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 	if cw, ok := CustomWidgets[w.Class]; ok && !(ExtendedFlag && isExtendedClass(w.Class)) {
 		wClass = cw
 	}
-	wClassC := cClassMethodPrefix(wClass)
+	wClassC := cClassMethodPrefix(strings.ReplaceAll(wClass, "::", "__"))
 	ctor := wClassC + "_new"
 
 	if parentName == "" || parentClass == "QDockWidget" || parentClass == "QScrollArea" ||
 		parentClass == "QStackedWidget" || parentClass == "QTabWidget" ||
 		parentClass == "QToolBox" || parentClass == "QWizard" {
-		ret.WriteString("\n\t\tui->" + w.Name + " = " + ctor + "2();\n")
+		ret.WriteString("\nui->" + w.Name + " = " + ctor + "2();\n")
 	} else {
-		ret.WriteString("\n\t\tui->" + w.Name + " = " + ctor + "(" + parentName + ");\n")
+		if ExtendedFlag && w.Class == "KMimeTypeChooser" {
+			parentName = ""
+		}
+		ret.WriteString("\nui->" + w.Name + " = " + ctor + "(" + parentName + ");\n")
 	}
 
 	ret.WriteString(wClassC + "_set_object_name(ui->" + w.Name + ", " + strconv.Quote(w.Name) + ");\n")
@@ -1498,7 +1613,14 @@ static ` + uClass + "Ui* new" + cMethod + `_ui() {
 		}
 	}
 
-	if SanitizeObjectCounter > 0 || SanitizationFlag || len(u.CustomWidgets.CustomWidgets) > 0 || len(u.Resources.Includes) > 0 {
+	if len(FlagWarnings) > 0 {
+		fmt.Println()
+		for _, warning := range FlagWarnings {
+			fmt.Println(warning)
+		}
+	}
+
+	if SanitizeObjectCounter > 0 || SanitizationFlag || len(u.CustomWidgets.CustomWidgets) > 0 || len(u.Resources.Includes) > 0 || len(FlagWarnings) > 0 {
 		fmt.Println()
 	}
 

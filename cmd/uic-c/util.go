@@ -29,7 +29,6 @@ func mustParseInt(s string) int {
 }
 
 var (
-	PrintOnce           = true
 	SeenWidgets         = []string{}
 	SeenExtendedClasses = []string{}
 )
@@ -41,11 +40,11 @@ func isExtendedClass(className string) bool {
 	var isExtended bool
 
 	switch {
-	case className[0] == 'Q' && unicode.IsUpper(rune(className[1])):
-		if PrintOnce && !slices.Contains(SeenExtendedClasses, className) {
+	case (className[0] == 'K' || className[0] == 'Q') && unicode.IsUpper(rune(className[1])),
+		className == "Sonnet::DictionaryComboBox":
+		if !slices.Contains(SeenExtendedClasses, className) {
 			SeenExtendedClasses = append(SeenExtendedClasses, className)
 			fmt.Println("Added extended class: " + className)
-			PrintOnce = false
 		}
 		isExtended = true
 	}
@@ -184,7 +183,10 @@ func cClassMethodPrefix(name string) string {
 	if len(name) < 2 {
 		panic("Possible invalid input or name too short: " + name)
 	}
-	return "q_" + strings.ToLower(name[1:])
+	if name[0] == 'Q' || name[0] == 'K' {
+		return strings.ToLower(name[:1]) + "_" + strings.ToLower(name[1:])
+	}
+	return "k_" + strings.ToLower(name)
 }
 
 func splitToParens(s string) string {

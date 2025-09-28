@@ -18,7 +18,8 @@ control over how the created objects are managed from within C.
 Example
 -------
 
-For a usage example, see the [`uic` example](https://github.com/rcalixte/libqt6c-examples/tree/master/src/uic)
+For usage examples, see the [`uic` example](https://github.com/rcalixte/libqt6c-examples/tree/master/src/uic)
+or the [`uic-kf6` example](https://github.com/rcalixte/libqt6c-examples/tree/master/src/libraries/extras/uic-kf6)
 folder.
 
 Building
