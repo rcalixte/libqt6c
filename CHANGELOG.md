@@ -1,4 +1,10 @@
 
+### 6.8.2 rev35 (28 September 2025)
+
+* uic-c: Add support for KDE Frameworks (#65)
+* Remove additional linker errors (#64)
+* Remove additional linker errors (#63)
+
 ### 6.8.2 rev34 (27 September 2025)
 
 * Add [Qt OpenGL](https://doc.qt.io/qt-6/qtopengl-index.html) (#62)
