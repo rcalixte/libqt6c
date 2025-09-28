@@ -28,13 +28,6 @@ void* k_encodingfiledialog_metacast(void* self, const char* param1);
 /// @param param3 void*
 int32_t k_encodingfiledialog_metacall(void* self, int32_t param1, int param2, void* param3);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
-///
-/// Caller is responsible for freeing the returned memory
-///
-/// @param s const char*
-const char* k_encodingfiledialog_tr(const char* s);
-
 /// [Qt documentation](https://api.kde.org/kencodingfiledialog.html#getOpenFileNameAndEncoding)
 ///
 KEncodingFileDialog__Result* k_encodingfiledialog_get_open_file_name_and_encoding();
@@ -63,23 +56,6 @@ KEncodingFileDialog__Result* k_encodingfiledialog_get_save_url_and_encoding();
 ///
 /// @param self KEncodingFileDialog*
 QSize* k_encodingfiledialog_size_hint(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
-///
-/// Caller is responsible for freeing the returned memory
-///
-/// @param s const char*
-/// @param c const char*
-const char* k_encodingfiledialog_tr2(const char* s, const char* c);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
-///
-/// Caller is responsible for freeing the returned memory
-///
-/// @param s const char*
-/// @param c const char*
-/// @param n int
-const char* k_encodingfiledialog_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://api.kde.org/kencodingfiledialog.html#getOpenFileNameAndEncoding)
 ///
