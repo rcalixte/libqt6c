@@ -63,11 +63,6 @@ void k_recentdocument_add3(void* url, const char* desktopEntryName);
 /// @param groups libqt_list /* of enum KRecentDocument__RecentDocumentGroup */
 void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list groups);
 
-/// [Qt documentation](https://api.kde.org/krecentdocument.html#clearEntriesOldestEntries)
-///
-/// @param maxEntries int
-bool k_recentdocument_clear_entries_oldest_entries(int maxEntries);
-
 /// [Qt documentation](https://api.kde.org/krecentdocument.html#removeFile)
 ///
 /// @param url QUrl*

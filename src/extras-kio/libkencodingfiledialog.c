@@ -22,13 +22,6 @@ int32_t k_encodingfiledialog_metacall(void* self, int32_t param1, int param2, vo
     return KEncodingFileDialog_Metacall((KEncodingFileDialog*)self, param1, param2, param3);
 }
 
-const char* k_encodingfiledialog_tr(const char* s) {
-    libqt_string _str = KEncodingFileDialog_Tr(s);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
-}
-
 KEncodingFileDialog__Result* k_encodingfiledialog_get_open_file_name_and_encoding() {
     return KEncodingFileDialog_GetOpenFileNameAndEncoding();
 }
@@ -55,20 +48,6 @@ KEncodingFileDialog__Result* k_encodingfiledialog_get_save_url_and_encoding() {
 
 QSize* k_encodingfiledialog_size_hint(void* self) {
     return KEncodingFileDialog_SizeHint((KEncodingFileDialog*)self);
-}
-
-const char* k_encodingfiledialog_tr2(const char* s, const char* c) {
-    libqt_string _str = KEncodingFileDialog_Tr2(s, c);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
-}
-
-const char* k_encodingfiledialog_tr3(const char* s, const char* c, int n) {
-    libqt_string _str = KEncodingFileDialog_Tr3(s, c, n);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
 }
 
 KEncodingFileDialog__Result* k_encodingfiledialog_get_open_file_name_and_encoding1(const char* encoding) {

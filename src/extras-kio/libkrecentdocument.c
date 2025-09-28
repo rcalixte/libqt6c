@@ -40,10 +40,6 @@ void k_recentdocument_add4(void* url, const char* desktopEntryName, libqt_list g
     KRecentDocument_Add4((QUrl*)url, qstring(desktopEntryName), groups);
 }
 
-bool k_recentdocument_clear_entries_oldest_entries(int maxEntries) {
-    return KRecentDocument_ClearEntriesOldestEntries(maxEntries);
-}
-
 void k_recentdocument_remove_file(void* url) {
     KRecentDocument_RemoveFile((QUrl*)url);
 }
