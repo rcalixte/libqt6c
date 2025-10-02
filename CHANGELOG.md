@@ -1,4 +1,8 @@
 
+### 6.8.2 rev36 (2 October 2025)
+
+* Add [KSyntaxHighlighting](https://api.kde.org/ksyntaxhighlighting-index.html) (#66)
+
 ### 6.8.2 rev35 (28 September 2025)
 
 * uic-c: Add support for KDE Frameworks (#65)
