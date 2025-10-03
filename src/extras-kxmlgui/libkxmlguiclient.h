@@ -474,30 +474,6 @@ void k_xmlguiclient_on_state_changed(void* self, void (*callback)(void*, const c
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
 void k_xmlguiclient_qbase_state_changed(void* self, const char* newstate, int32_t reverse);
 
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#virtual_hook)
-///
-/// @param self KXMLGUIClient*
-/// @param id int
-/// @param data void*
-void k_xmlguiclient_virtual_hook(void* self, int id, void* data);
-
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#virtual_hook)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KXMLGUIClient*
-/// @param callback void func(KXMLGUIClient* self, int id, void* data)
-void k_xmlguiclient_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// [Qt documentation](https://api.kde.org/kxmlguiclient.html#virtual_hook)
-///
-/// Base class method implementation
-///
-/// @param self KXMLGUIClient*
-/// @param id int
-/// @param data void*
-void k_xmlguiclient_qbase_virtual_hook(void* self, int id, void* data);
-
 /// [Qt documentation](https://api.kde.org/kxmlguiclient.html#replaceXMLFile)
 ///
 /// @param self KXMLGUIClient*
