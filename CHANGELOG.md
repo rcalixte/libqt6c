@@ -1,4 +1,8 @@
 
+### 6.8.2 rev37 (3 October 2025)
+
+* Add [KParts](https://api.kde.org/kparts-index.html) and [KTextEditor](https://api.kde.org/ktexteditor-index.html) (#67)
+
 ### 6.8.2 rev36 (2 October 2025)
 
 * Add [KSyntaxHighlighting](https://api.kde.org/ksyntaxhighlighting-index.html) (#66)
