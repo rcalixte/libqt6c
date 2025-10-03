@@ -1471,6 +1471,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeUrlPrefix := ifv(strings.Contains(src.Filename, "KIO") && !strings.HasPrefix(getPageName(cfs.currentHeaderName), "k"), "kio-", "")
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Attica"), "attica-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KNSCore"), "knscore-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KParts"), "kparts-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSyntaxHighlighting"), "ksyntaxhighlighting-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
@@ -1587,7 +1588,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		// TODO Remove this suffix hack once we have a better way to automate it
 		maybeSuffix := ""
 		if (parentInclude == "" && strings.Contains(src.Filename, "KIO") && (refInc == "deletejob" || refInc == "metadata")) ||
-			(parentInclude == "" && strings.Contains(src.Filename, "KNS") && refInc == "provider") {
+			(parentInclude == "" && strings.Contains(src.Filename, "KNS") && refInc == "provider") ||
+			(parentInclude == "" && strings.Contains(src.Filename, "KTextEditor") && (refInc == "mainwindow" || refInc == "message")) {
 			maybeSuffix = "_1"
 		}
 
