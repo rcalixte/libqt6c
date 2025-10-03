@@ -317,18 +317,6 @@ void k_xmlguiclient_qbase_state_changed(void* self, const char* newstate, int32_
     KXMLGUIClient_QBaseStateChanged((KXMLGUIClient*)self, qstring(newstate), reverse);
 }
 
-void k_xmlguiclient_virtual_hook(void* self, int id, void* data) {
-    KXMLGUIClient_VirtualHook((KXMLGUIClient*)self, id, data);
-}
-
-void k_xmlguiclient_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
-    KXMLGUIClient_OnVirtualHook((KXMLGUIClient*)self, (intptr_t)callback);
-}
-
-void k_xmlguiclient_qbase_virtual_hook(void* self, int id, void* data) {
-    KXMLGUIClient_QBaseVirtualHook((KXMLGUIClient*)self, id, data);
-}
-
 void k_xmlguiclient_replace_x_m_l_file3(void* self, const char* xmlfile, const char* localxmlfile, bool merge) {
     KXMLGUIClient_ReplaceXMLFile3((KXMLGUIClient*)self, qstring(xmlfile), qstring(localxmlfile), merge);
 }

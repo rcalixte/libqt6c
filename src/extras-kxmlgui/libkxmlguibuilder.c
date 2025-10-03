@@ -153,18 +153,6 @@ void k_xmlguibuilder_qbase_finalize_g_u_i(void* self, void* client) {
     KXMLGUIBuilder_QBaseFinalizeGUI((KXMLGUIBuilder*)self, (KXMLGUIClient*)client);
 }
 
-void k_xmlguibuilder_virtual_hook(void* self, int id, void* data) {
-    KXMLGUIBuilder_VirtualHook((KXMLGUIBuilder*)self, id, data);
-}
-
-void k_xmlguibuilder_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
-    KXMLGUIBuilder_OnVirtualHook((KXMLGUIBuilder*)self, (intptr_t)callback);
-}
-
-void k_xmlguibuilder_qbase_virtual_hook(void* self, int id, void* data) {
-    KXMLGUIBuilder_QBaseVirtualHook((KXMLGUIBuilder*)self, id, data);
-}
-
 void k_xmlguibuilder_delete(void* self) {
     KXMLGUIBuilder_Delete((KXMLGUIBuilder*)(self));
 }

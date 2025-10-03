@@ -182,30 +182,6 @@ void k_xmlguibuilder_on_finalize_g_u_i(void* self, void (*callback)(void*, void*
 /// @param client KXMLGUIClient*
 void k_xmlguibuilder_qbase_finalize_g_u_i(void* self, void* client);
 
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#virtual_hook)
-///
-/// @param self KXMLGUIBuilder*
-/// @param id int
-/// @param data void*
-void k_xmlguibuilder_virtual_hook(void* self, int id, void* data);
-
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#virtual_hook)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KXMLGUIBuilder*
-/// @param callback void func(KXMLGUIBuilder* self, int id, void* data)
-void k_xmlguibuilder_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
-
-/// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#virtual_hook)
-///
-/// Base class method implementation
-///
-/// @param self KXMLGUIBuilder*
-/// @param id int
-/// @param data void*
-void k_xmlguibuilder_qbase_virtual_hook(void* self, int id, void* data);
-
 /// [Qt documentation](https://api.kde.org/kxmlguibuilder.html#dtor.KXMLGUIBuilder)
 ///
 /// Delete this object from C++ memory.
