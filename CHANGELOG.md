@@ -1,4 +1,8 @@
 
+### 6.8.2 rev38 (7 October 2025)
+
+* Add [KCrash](https://api.kde.org/kcrash-index.html), [KItemModels](https://api.kde.org/kitemmodels-index.html), [KSvg](https://api.kde.org/ksvg-index.html), [QtKeychain](https://github.com/frankosterfeld/qtkeychain), and [LayerShellQt](https://invent.kde.org/plasma/layer-shell-qt) (#68)
+
 ### 6.8.2 rev37 (3 October 2025)
 
 * Add [KParts](https://api.kde.org/kparts-index.html) and [KTextEditor](https://api.kde.org/ktexteditor-index.html) (#67)
