@@ -1000,7 +1000,7 @@ int32_t k_io__workerbase_wait_for_host_info(void* self, void* info);
 /// @param self KIO__WorkerBase*
 /// @param operationDetails const char*
 ///
-/// @return enum KIO__WorkerBase__PrivilegeOperationStatus
+/// @return enum KIO__PrivilegeOperationStatus
 int32_t k_io__workerbase_request_privilege_operation(void* self, const char* operationDetails);
 
 /// [Qt documentation](https://api.kde.org/kio-workerbase.html#addTemporaryAuthorization)

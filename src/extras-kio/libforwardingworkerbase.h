@@ -1168,7 +1168,7 @@ int32_t k_io__forwardingworkerbase_wait_for_host_info(void* self, void* info);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param operationDetails const char*
 ///
-/// @return enum KIO__WorkerBase__PrivilegeOperationStatus
+/// @return enum KIO__PrivilegeOperationStatus
 int32_t k_io__forwardingworkerbase_request_privilege_operation(void* self, const char* operationDetails);
 
 /// Inherited from KIO::WorkerBase
