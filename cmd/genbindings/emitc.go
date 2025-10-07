@@ -77,6 +77,14 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return "https://www.riverbankcomputing.com/static/Docs/QScintilla/class" + className + ".html"
 	}
 
+	if strings.HasPrefix(pageName, "layershellqt") {
+		return "https://invent.kde.org/plasma/layer-shell-qt"
+	}
+
+	if strings.HasPrefix(pageName, "qkeychain") {
+		return "https://github.com/frankosterfeld/qtkeychain"
+	}
+
 	if pageType == DtorPage && strings.Contains(className, "__") {
 		return ""
 	}
@@ -1014,7 +1022,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
-		} else if strings.Contains(src.Filename, "KF6") {
+		} else if strings.Contains(src.Filename, "KF6") || strings.Contains(src.Filename, "LayerShellQt") {
 			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
@@ -1472,7 +1480,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Attica"), "attica-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KNSCore"), "knscore-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KParts"), "kparts-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSvg"), "ksvg-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSyntaxHighlighting"), "ksyntaxhighlighting-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "LayerShellQt"), "layershellqt-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "qt6keychain"), "qkeychain-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
 		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
@@ -1646,7 +1657,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
-		} else if strings.Contains(src.Filename, "KF6") {
+		} else if strings.Contains(src.Filename, "KF6") || strings.Contains(src.Filename, "LayerShellQt") {
 			cPrefix = "k_"
 		}
 		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
