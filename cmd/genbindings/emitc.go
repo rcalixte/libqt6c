@@ -95,10 +95,22 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	}
 
 	qtUrl := "https://doc.qt.io/qt-6/"
+	types := "types"
 	if pageName[0] != 'q' && pageName != "disambiguated_t" &&
 		pageName != "partial_ordering" && pageName != "weak_ordering" && pageName != "strong_ordering" {
 		qtUrl = "https://api.kde.org/"
 		pageName = strings.TrimSuffix(pageName, "_1")
+	}
+
+	if pageName == "qcustomplot" || strings.HasPrefix(pageName, "QCP") {
+		pageName = ifv(pageName == "qcustomplot", "QCustomPlot", pageName)
+		prefix := ifv(pageName == "QCP", "namespace", "class")
+		qtUrl = "https://www.qcustomplot.com/documentation/" + prefix
+		types = "pub-types"
+		cmdURL = ""
+		if pageType == DtorPage {
+			pageType = QtPage
+		}
 	}
 
 	pageName = strings.ReplaceAll(pageName, "__", "-")
@@ -112,7 +124,7 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 
 		return qtUrl + pageName + ".html" + ifv(cmdURL != "", "#"+cmdURL, "")
 	case EnumPage:
-		return qtUrl + pageName + ".html#types"
+		return qtUrl + pageName + ".html#" + types
 	case DtorPage:
 		return qtUrl + pageName + ".html#dtor." + className
 	}
@@ -1047,7 +1059,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
 			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}})) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			pageName := getPageName(cStructName) + maybeCharts
+			pageName := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP"), cStructName, getPageName(cStructName)) + maybeCharts
 			ret.WriteString("\n\n/// " + getPageUrl(QtPage, pageName, "", cStructName) + "\n")
 		}
 
@@ -1193,7 +1205,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			var docCommentUrl string
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			subjectURL := strings.ToLower(className)
+			subjectURL := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP"), className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1363,7 +1375,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			subjectURL := strings.ToLower(className)
+			subjectURL := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP"), className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1437,7 +1449,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			subjectURL := strings.ToLower(className)
+			subjectURL := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP"), className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1466,7 +1478,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			pageUrl := getPageUrl(DtorPage, getPageName(cStructName)+maybeCharts, "", cStructName)
+			pageUrl := getPageUrl(DtorPage, ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP"), cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
 			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n" +
