@@ -345,6 +345,28 @@ void k_urlcompletion_on_post_process_matches(void* self, void (*callback)(void*,
 /// @param matches const char**
 void k_urlcompletion_qbase_post_process_matches(void* self, const char* matches[]);
 
+/// [Qt documentation](https://api.kde.org/kurlcompletion.html#postProcessMatches)
+///
+/// @param self KUrlCompletion*
+/// @param matches KCompletionMatches*
+void k_urlcompletion_post_process_matches2(void* self, void* matches);
+
+/// [Qt documentation](https://api.kde.org/kurlcompletion.html#postProcessMatches)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KUrlCompletion*
+/// @param callback void func(KUrlCompletion* self, KCompletionMatches* matches)
+void k_urlcompletion_on_post_process_matches2(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kurlcompletion.html#postProcessMatches)
+///
+/// Base class method implementation
+///
+/// @param self KUrlCompletion*
+/// @param matches KCompletionMatches*
+void k_urlcompletion_qbase_post_process_matches2(void* self, void* matches);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
@@ -447,6 +469,21 @@ const char** k_urlcompletion_all_matches(void* self);
 /// @param self KUrlCompletion*
 /// @param stringVal const char*
 const char** k_urlcompletion_all_matches2(void* self, const char* stringVal);
+
+/// Inherited from KCompletion
+///
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+///
+/// @param self KUrlCompletion*
+KCompletionMatches* k_urlcompletion_all_weighted_matches(void* self);
+
+/// Inherited from KCompletion
+///
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+///
+/// @param self KUrlCompletion*
+/// @param stringVal const char*
+KCompletionMatches* k_urlcompletion_all_weighted_matches2(void* self, const char* stringVal);
 
 /// Inherited from KCompletion
 ///

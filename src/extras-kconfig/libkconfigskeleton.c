@@ -1,8 +1,12 @@
+#include "libkconfig.hpp"
 #include "libkcoreconfigskeleton.hpp"
 #include "../libqcoreevent.hpp"
+#include "../libqcolor.hpp"
+#include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
+#include "../libqvariant.hpp"
 #include "libkconfigskeleton.hpp"
 #include "libkconfigskeleton.h"
 
@@ -45,6 +49,14 @@ const char* k_configskeleton_tr(const char* s) {
     return _ret;
 }
 
+KConfigSkeleton__ItemColor* k_configskeleton_add_item_color(void* self, const char* name, void* reference) {
+    return KConfigSkeleton_AddItemColor((KConfigSkeleton*)self, qstring(name), (QColor*)reference);
+}
+
+KConfigSkeleton__ItemFont* k_configskeleton_add_item_font(void* self, const char* name, void* reference) {
+    return KConfigSkeleton_AddItemFont((KConfigSkeleton*)self, qstring(name), (QFont*)reference);
+}
+
 const char* k_configskeleton_tr2(const char* s, const char* c) {
     libqt_string _str = KConfigSkeleton_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -57,6 +69,22 @@ const char* k_configskeleton_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+KConfigSkeleton__ItemColor* k_configskeleton_add_item_color3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KConfigSkeleton_AddItemColor3((KConfigSkeleton*)self, qstring(name), (QColor*)reference, (QColor*)defaultValue);
+}
+
+KConfigSkeleton__ItemColor* k_configskeleton_add_item_color4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KConfigSkeleton_AddItemColor4((KConfigSkeleton*)self, qstring(name), (QColor*)reference, (QColor*)defaultValue, qstring(key));
+}
+
+KConfigSkeleton__ItemFont* k_configskeleton_add_item_font3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KConfigSkeleton_AddItemFont3((KConfigSkeleton*)self, qstring(name), (QFont*)reference, (QFont*)defaultValue);
+}
+
+KConfigSkeleton__ItemFont* k_configskeleton_add_item_font4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KConfigSkeleton_AddItemFont4((KConfigSkeleton*)self, qstring(name), (QFont*)reference, (QFont*)defaultValue, qstring(key));
 }
 
 void k_configskeleton_load(void* self) {
@@ -90,12 +118,92 @@ void k_configskeleton_add_item(void* self, void* item) {
     KCoreConfigSkeleton_AddItem((KCoreConfigSkeleton*)self, (KConfigSkeletonItem*)item);
 }
 
+KCoreConfigSkeleton__ItemString* k_configskeleton_add_item_string(void* self, const char* name, const char* reference) {
+    return KCoreConfigSkeleton_AddItemString((KCoreConfigSkeleton*)self, qstring(name), qstring(reference));
+}
+
 KCoreConfigSkeleton__ItemPassword* k_configskeleton_add_item_password(void* self, const char* name, const char* reference) {
     return KCoreConfigSkeleton_AddItemPassword((KCoreConfigSkeleton*)self, qstring(name), qstring(reference));
 }
 
 KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path(void* self, const char* name, const char* reference) {
     return KCoreConfigSkeleton_AddItemPath((KCoreConfigSkeleton*)self, qstring(name), qstring(reference));
+}
+
+KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemProperty((KCoreConfigSkeleton*)self, qstring(name), (QVariant*)reference);
+}
+
+KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool(void* self, const char* name, bool* reference) {
+    return KCoreConfigSkeleton_AddItemBool((KCoreConfigSkeleton*)self, qstring(name), (bool*)reference);
+}
+
+KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int(void* self, const char* name, int* reference) {
+    return KCoreConfigSkeleton_AddItemInt((KCoreConfigSkeleton*)self, qstring(name), reference);
+}
+
+KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int(void* self, const char* name, uint32_t* reference) {
+    return KCoreConfigSkeleton_AddItemUInt((KCoreConfigSkeleton*)self, qstring(name), reference);
+}
+
+KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long(void* self, const char* name, long long* reference) {
+    return KCoreConfigSkeleton_AddItemLongLong((KCoreConfigSkeleton*)self, qstring(name), reference);
+}
+
+KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long(void* self, const char* name, uint64_t* reference) {
+    return KCoreConfigSkeleton_AddItemULongLong((KCoreConfigSkeleton*)self, qstring(name), (unsigned long long*)reference);
+}
+
+KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double(void* self, const char* name, double* reference) {
+    return KCoreConfigSkeleton_AddItemDouble((KCoreConfigSkeleton*)self, qstring(name), reference);
+}
+
+KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemRect((KCoreConfigSkeleton*)self, qstring(name), (QRect*)reference);
+}
+
+KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemRectF((KCoreConfigSkeleton*)self, qstring(name), (QRectF*)reference);
+}
+
+KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemPoint((KCoreConfigSkeleton*)self, qstring(name), (QPoint*)reference);
+}
+
+KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemPointF((KCoreConfigSkeleton*)self, qstring(name), (QPointF*)reference);
+}
+
+KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemSize((KCoreConfigSkeleton*)self, qstring(name), (QSize*)reference);
+}
+
+KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemSizeF((KCoreConfigSkeleton*)self, qstring(name), (QSizeF*)reference);
+}
+
+KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time(void* self, const char* name, void* reference) {
+    return KCoreConfigSkeleton_AddItemDateTime((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference);
+}
+
+KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list(void* self, const char* name, const char* reference[]) {
+    size_t reference_len = libqt_strv_length(reference);
+    libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
+    if (reference_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_configskeleton_add_item_string_list");
+        abort();
+    }
+    for (size_t i = 0; i < reference_len; ++i) {
+        reference_qstr[i] = qstring(reference[i]);
+    }
+    libqt_list reference_list = qlist(reference_qstr, reference_len);
+    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton_AddItemStringList((KCoreConfigSkeleton*)self, qstring(name), reference_list);
+    free(reference_qstr);
+    return _out;
+}
+
+KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list(void* self, const char* name, libqt_list reference) {
+    return KCoreConfigSkeleton_AddItemIntList((KCoreConfigSkeleton*)self, qstring(name), reference);
 }
 
 KConfig* k_configskeleton_config(void* self) {
@@ -143,6 +251,14 @@ void k_configskeleton_add_item2(void* self, void* item, const char* name) {
     KCoreConfigSkeleton_AddItem2((KCoreConfigSkeleton*)self, (KConfigSkeletonItem*)item, qstring(name));
 }
 
+KCoreConfigSkeleton__ItemString* k_configskeleton_add_item_string3(void* self, const char* name, const char* reference, const char* defaultValue) {
+    return KCoreConfigSkeleton_AddItemString3((KCoreConfigSkeleton*)self, qstring(name), qstring(reference), qstring(defaultValue));
+}
+
+KCoreConfigSkeleton__ItemString* k_configskeleton_add_item_string4(void* self, const char* name, const char* reference, const char* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemString4((KCoreConfigSkeleton*)self, qstring(name), qstring(reference), qstring(defaultValue), qstring(key));
+}
+
 KCoreConfigSkeleton__ItemPassword* k_configskeleton_add_item_password3(void* self, const char* name, const char* reference, const char* defaultValue) {
     return KCoreConfigSkeleton_AddItemPassword3((KCoreConfigSkeleton*)self, qstring(name), qstring(reference), qstring(defaultValue));
 }
@@ -157,6 +273,180 @@ KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path3(void* self, const
 
 KCoreConfigSkeleton__ItemPath* k_configskeleton_add_item_path4(void* self, const char* name, const char* reference, const char* defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemPath4((KCoreConfigSkeleton*)self, qstring(name), qstring(reference), qstring(defaultValue), qstring(key));
+}
+
+KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemProperty3((KCoreConfigSkeleton*)self, qstring(name), (QVariant*)reference, (QVariant*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemProperty* k_configskeleton_add_item_property4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemProperty4((KCoreConfigSkeleton*)self, qstring(name), (QVariant*)reference, (QVariant*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool3(void* self, const char* name, bool* reference, bool defaultValue) {
+    return KCoreConfigSkeleton_AddItemBool3((KCoreConfigSkeleton*)self, qstring(name), (bool*)reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool4(void* self, const char* name, bool* reference, bool defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemBool4((KCoreConfigSkeleton*)self, qstring(name), (bool*)reference, defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int3(void* self, const char* name, int* reference, int defaultValue) {
+    return KCoreConfigSkeleton_AddItemInt3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int4(void* self, const char* name, int* reference, int defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemInt4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int3(void* self, const char* name, uint32_t* reference, uint32_t defaultValue) {
+    return KCoreConfigSkeleton_AddItemUInt3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int4(void* self, const char* name, uint32_t* reference, uint32_t defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemUInt4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long3(void* self, const char* name, long long* reference, long long defaultValue) {
+    return KCoreConfigSkeleton_AddItemLongLong3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long4(void* self, const char* name, long long* reference, long long defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemLongLong4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long3(void* self, const char* name, uint64_t* reference, uint64_t defaultValue) {
+    return KCoreConfigSkeleton_AddItemULongLong3((KCoreConfigSkeleton*)self, qstring(name), (unsigned long long*)reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long4(void* self, const char* name, uint64_t* reference, uint64_t defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemULongLong4((KCoreConfigSkeleton*)self, qstring(name), (unsigned long long*)reference, defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double3(void* self, const char* name, double* reference, double defaultValue) {
+    return KCoreConfigSkeleton_AddItemDouble3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemDouble* k_configskeleton_add_item_double4(void* self, const char* name, double* reference, double defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemDouble4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemRect3((KCoreConfigSkeleton*)self, qstring(name), (QRect*)reference, (QRect*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemRect* k_configskeleton_add_item_rect4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemRect4((KCoreConfigSkeleton*)self, qstring(name), (QRect*)reference, (QRect*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemRectF3((KCoreConfigSkeleton*)self, qstring(name), (QRectF*)reference, (QRectF*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemRectF* k_configskeleton_add_item_rect_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemRectF4((KCoreConfigSkeleton*)self, qstring(name), (QRectF*)reference, (QRectF*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemPoint3((KCoreConfigSkeleton*)self, qstring(name), (QPoint*)reference, (QPoint*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemPoint* k_configskeleton_add_item_point4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemPoint4((KCoreConfigSkeleton*)self, qstring(name), (QPoint*)reference, (QPoint*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemPointF3((KCoreConfigSkeleton*)self, qstring(name), (QPointF*)reference, (QPointF*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemPointF* k_configskeleton_add_item_point_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemPointF4((KCoreConfigSkeleton*)self, qstring(name), (QPointF*)reference, (QPointF*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemSize3((KCoreConfigSkeleton*)self, qstring(name), (QSize*)reference, (QSize*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemSize* k_configskeleton_add_item_size4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemSize4((KCoreConfigSkeleton*)self, qstring(name), (QSize*)reference, (QSize*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemSizeF3((KCoreConfigSkeleton*)self, qstring(name), (QSizeF*)reference, (QSizeF*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemSizeF* k_configskeleton_add_item_size_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemSizeF4((KCoreConfigSkeleton*)self, qstring(name), (QSizeF*)reference, (QSizeF*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time3(void* self, const char* name, void* reference, void* defaultValue) {
+    return KCoreConfigSkeleton_AddItemDateTime3((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference, (QDateTime*)defaultValue);
+}
+
+KCoreConfigSkeleton__ItemDateTime* k_configskeleton_add_item_date_time4(void* self, const char* name, void* reference, void* defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemDateTime4((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference, (QDateTime*)defaultValue, qstring(key));
+}
+
+KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list3(void* self, const char* name, const char* reference[], const char* defaultValue[]) {
+    size_t reference_len = libqt_strv_length(reference);
+    libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
+    if (reference_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_configskeleton_add_item_string_list3");
+        abort();
+    }
+    for (size_t i = 0; i < reference_len; ++i) {
+        reference_qstr[i] = qstring(reference[i]);
+    }
+    libqt_list reference_list = qlist(reference_qstr, reference_len);
+    size_t defaultValue_len = libqt_strv_length(defaultValue);
+    libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
+    if (defaultValue_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_configskeleton_add_item_string_list3");
+        abort();
+    }
+    for (size_t i = 0; i < defaultValue_len; ++i) {
+        defaultValue_qstr[i] = qstring(defaultValue[i]);
+    }
+    libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
+    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton_AddItemStringList3((KCoreConfigSkeleton*)self, qstring(name), reference_list, defaultValue_list);
+    free(reference_qstr);
+    free(defaultValue_qstr);
+    return _out;
+}
+
+KCoreConfigSkeleton__ItemStringList* k_configskeleton_add_item_string_list4(void* self, const char* name, const char* reference[], const char* defaultValue[], const char* key) {
+    size_t reference_len = libqt_strv_length(reference);
+    libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
+    if (reference_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_configskeleton_add_item_string_list4");
+        abort();
+    }
+    for (size_t i = 0; i < reference_len; ++i) {
+        reference_qstr[i] = qstring(reference[i]);
+    }
+    libqt_list reference_list = qlist(reference_qstr, reference_len);
+    size_t defaultValue_len = libqt_strv_length(defaultValue);
+    libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
+    if (defaultValue_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in k_configskeleton_add_item_string_list4");
+        abort();
+    }
+    for (size_t i = 0; i < defaultValue_len; ++i) {
+        defaultValue_qstr[i] = qstring(defaultValue[i]);
+    }
+    libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
+    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton_AddItemStringList4((KCoreConfigSkeleton*)self, qstring(name), reference_list, defaultValue_list, qstring(key));
+    free(reference_qstr);
+    free(defaultValue_qstr);
+    return _out;
+}
+
+KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list3(void* self, const char* name, libqt_list reference, libqt_list defaultValue) {
+    return KCoreConfigSkeleton_AddItemIntList3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
+}
+
+KCoreConfigSkeleton__ItemIntList* k_configskeleton_add_item_int_list4(void* self, const char* name, libqt_list reference, libqt_list defaultValue, const char* key) {
+    return KCoreConfigSkeleton_AddItemIntList4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
 }
 
 const char* k_configskeleton_object_name(void* self) {
@@ -540,4 +830,124 @@ void k_configskeleton_on_object_name_changed(void* self, void (*callback)(void*,
 
 void k_configskeleton_delete(void* self) {
     KConfigSkeleton_Delete((KConfigSkeleton*)(self));
+}
+
+KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new(const char* _group, const char* _key, void* reference) {
+    return KConfigSkeleton__ItemColor_new(qstring(_group), qstring(_key), (QColor*)reference);
+}
+
+KConfigSkeleton__ItemColor* k_configskeleton__itemcolor_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
+    return KConfigSkeleton__ItemColor_new2(qstring(_group), qstring(_key), (QColor*)reference, (QColor*)defaultValue);
+}
+
+void k_configskeleton__itemcolor_read_config(void* self, void* config) {
+    KConfigSkeleton__ItemColor_ReadConfig((KConfigSkeleton__ItemColor*)self, (KConfig*)config);
+}
+
+void k_configskeleton__itemcolor_on_read_config(void* self, void (*callback)(void*, void*)) {
+    KConfigSkeleton__ItemColor_OnReadConfig((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
+}
+
+void k_configskeleton__itemcolor_qbase_read_config(void* self, void* config) {
+    KConfigSkeleton__ItemColor_QBaseReadConfig((KConfigSkeleton__ItemColor*)self, (KConfig*)config);
+}
+
+void k_configskeleton__itemcolor_set_property(void* self, void* p) {
+    KConfigSkeleton__ItemColor_SetProperty((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
+}
+
+void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(void*, void*)) {
+    KConfigSkeleton__ItemColor_OnSetProperty((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
+}
+
+void k_configskeleton__itemcolor_qbase_set_property(void* self, void* p) {
+    KConfigSkeleton__ItemColor_QBaseSetProperty((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
+}
+
+bool k_configskeleton__itemcolor_is_equal(void* self, void* p) {
+    return KConfigSkeleton__ItemColor_IsEqual((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
+}
+
+void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(void*, void*)) {
+    KConfigSkeleton__ItemColor_OnIsEqual((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
+}
+
+bool k_configskeleton__itemcolor_qbase_is_equal(void* self, void* p) {
+    return KConfigSkeleton__ItemColor_QBaseIsEqual((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
+}
+
+QVariant* k_configskeleton__itemcolor_property(void* self) {
+    return KConfigSkeleton__ItemColor_Property((KConfigSkeleton__ItemColor*)self);
+}
+
+void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)()) {
+    KConfigSkeleton__ItemColor_OnProperty((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
+}
+
+QVariant* k_configskeleton__itemcolor_qbase_property(void* self) {
+    return KConfigSkeleton__ItemColor_QBaseProperty((KConfigSkeleton__ItemColor*)self);
+}
+
+void k_configskeleton__itemcolor_delete(void* self) {
+    KConfigSkeleton__ItemColor_Delete((KConfigSkeleton__ItemColor*)(self));
+}
+
+KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new(const char* _group, const char* _key, void* reference) {
+    return KConfigSkeleton__ItemFont_new(qstring(_group), qstring(_key), (QFont*)reference);
+}
+
+KConfigSkeleton__ItemFont* k_configskeleton__itemfont_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
+    return KConfigSkeleton__ItemFont_new2(qstring(_group), qstring(_key), (QFont*)reference, (QFont*)defaultValue);
+}
+
+void k_configskeleton__itemfont_read_config(void* self, void* config) {
+    KConfigSkeleton__ItemFont_ReadConfig((KConfigSkeleton__ItemFont*)self, (KConfig*)config);
+}
+
+void k_configskeleton__itemfont_on_read_config(void* self, void (*callback)(void*, void*)) {
+    KConfigSkeleton__ItemFont_OnReadConfig((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
+}
+
+void k_configskeleton__itemfont_qbase_read_config(void* self, void* config) {
+    KConfigSkeleton__ItemFont_QBaseReadConfig((KConfigSkeleton__ItemFont*)self, (KConfig*)config);
+}
+
+void k_configskeleton__itemfont_set_property(void* self, void* p) {
+    KConfigSkeleton__ItemFont_SetProperty((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
+}
+
+void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(void*, void*)) {
+    KConfigSkeleton__ItemFont_OnSetProperty((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
+}
+
+void k_configskeleton__itemfont_qbase_set_property(void* self, void* p) {
+    KConfigSkeleton__ItemFont_QBaseSetProperty((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
+}
+
+bool k_configskeleton__itemfont_is_equal(void* self, void* p) {
+    return KConfigSkeleton__ItemFont_IsEqual((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
+}
+
+void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(void*, void*)) {
+    KConfigSkeleton__ItemFont_OnIsEqual((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
+}
+
+bool k_configskeleton__itemfont_qbase_is_equal(void* self, void* p) {
+    return KConfigSkeleton__ItemFont_QBaseIsEqual((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
+}
+
+QVariant* k_configskeleton__itemfont_property(void* self) {
+    return KConfigSkeleton__ItemFont_Property((KConfigSkeleton__ItemFont*)self);
+}
+
+void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)()) {
+    KConfigSkeleton__ItemFont_OnProperty((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
+}
+
+QVariant* k_configskeleton__itemfont_qbase_property(void* self) {
+    return KConfigSkeleton__ItemFont_QBaseProperty((KConfigSkeleton__ItemFont*)self);
+}
+
+void k_configskeleton__itemfont_delete(void* self) {
+    KConfigSkeleton__ItemFont_Delete((KConfigSkeleton__ItemFont*)(self));
 }

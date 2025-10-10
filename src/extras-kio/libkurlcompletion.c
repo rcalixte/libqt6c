@@ -1,4 +1,5 @@
 #include "../extras-kcompletion/libkcompletion.hpp"
+#include "../extras-kcompletion/libkcompletionmatches.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
@@ -261,6 +262,18 @@ void k_urlcompletion_qbase_post_process_matches(void* self, const char* matches[
     KUrlCompletion_QBasePostProcessMatches((KUrlCompletion*)self, matches_list);
 }
 
+void k_urlcompletion_post_process_matches2(void* self, void* matches) {
+    KUrlCompletion_PostProcessMatches2((KUrlCompletion*)self, (KCompletionMatches*)matches);
+}
+
+void k_urlcompletion_on_post_process_matches2(void* self, void (*callback)(void*, void*)) {
+    KUrlCompletion_OnPostProcessMatches2((KUrlCompletion*)self, (intptr_t)callback);
+}
+
+void k_urlcompletion_qbase_post_process_matches2(void* self, void* matches) {
+    KUrlCompletion_QBasePostProcessMatches2((KUrlCompletion*)self, (KCompletionMatches*)matches);
+}
+
 const char* k_urlcompletion_tr2(const char* s, const char* c) {
     libqt_string _str = KUrlCompletion_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -376,6 +389,14 @@ const char** k_urlcompletion_all_matches2(void* self, const char* stringVal) {
     }
     libqt_free(_arr.data.ptr);
     return _ret;
+}
+
+KCompletionMatches* k_urlcompletion_all_weighted_matches(void* self) {
+    return KCompletion_AllWeightedMatches((KCompletion*)self);
+}
+
+KCompletionMatches* k_urlcompletion_all_weighted_matches2(void* self, const char* stringVal) {
+    return KCompletion_AllWeightedMatches2((KCompletion*)self, qstring(stringVal));
 }
 
 bool k_urlcompletion_sounds_enabled(void* self) {

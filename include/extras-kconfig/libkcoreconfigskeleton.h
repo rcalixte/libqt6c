@@ -1157,6 +1157,13 @@ const char* k_coreconfigskeleton_current_group(void* self);
 /// @param item KConfigSkeletonItem*
 void k_coreconfigskeleton_add_item(void* self, void* item);
 
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference const char*
+KCoreConfigSkeleton__ItemString* k_coreconfigskeleton_add_item_string(void* self, const char* name, const char* reference);
+
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KCoreConfigSkeleton*
@@ -1170,6 +1177,118 @@ KCoreConfigSkeleton__ItemPassword* k_coreconfigskeleton_add_item_password(void* 
 /// @param name const char*
 /// @param reference const char*
 KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton_add_item_path(void* self, const char* name, const char* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QVariant*
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference bool*
+KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton_add_item_bool(void* self, const char* name, bool* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference int*
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int(void* self, const char* name, int* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference uint32_t*
+KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton_add_item_u_int(void* self, const char* name, uint32_t* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference long long*
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long(void* self, const char* name, long long* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference uint64_t*
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long(void* self, const char* name, uint64_t* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference double*
+KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton_add_item_double(void* self, const char* name, double* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QRect*
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QRectF*
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QPoint*
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QPointF*
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QSize*
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QSizeF*
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QDateTime*
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time(void* self, const char* name, void* reference);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference const char**
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list(void* self, const char* name, const char* reference[]);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference libqt_list /* of int */
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list(void* self, const char* name, libqt_list reference);
 
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
@@ -1353,6 +1472,23 @@ const char* k_coreconfigskeleton_tr3(const char* s, const char* c, int n);
 /// @param name const char*
 void k_coreconfigskeleton_add_item2(void* self, void* item, const char* name);
 
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference const char*
+/// @param defaultValue const char*
+KCoreConfigSkeleton__ItemString* k_coreconfigskeleton_add_item_string3(void* self, const char* name, const char* reference, const char* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemString)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference const char*
+/// @param defaultValue const char*
+/// @param key const char*
+KCoreConfigSkeleton__ItemString* k_coreconfigskeleton_add_item_string4(void* self, const char* name, const char* reference, const char* defaultValue, const char* key);
+
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPassword)
 ///
 /// @param self KCoreConfigSkeleton*
@@ -1386,6 +1522,278 @@ KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton_add_item_path3(void* self, c
 /// @param defaultValue const char*
 /// @param key const char*
 KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton_add_item_path4(void* self, const char* name, const char* reference, const char* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QVariant*
+/// @param defaultValue QVariant*
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemProperty)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QVariant*
+/// @param defaultValue QVariant*
+/// @param key const char*
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton_add_item_property4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference bool*
+/// @param defaultValue bool
+KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton_add_item_bool3(void* self, const char* name, bool* reference, bool defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemBool)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference bool*
+/// @param defaultValue bool
+/// @param key const char*
+KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton_add_item_bool4(void* self, const char* name, bool* reference, bool defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference int*
+/// @param defaultValue int
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int3(void* self, const char* name, int* reference, int defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference int*
+/// @param defaultValue int
+/// @param key const char*
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int4(void* self, const char* name, int* reference, int defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference uint32_t*
+/// @param defaultValue uint32_t
+KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton_add_item_u_int3(void* self, const char* name, uint32_t* reference, uint32_t defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference uint32_t*
+/// @param defaultValue uint32_t
+/// @param key const char*
+KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton_add_item_u_int4(void* self, const char* name, uint32_t* reference, uint32_t defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference long long*
+/// @param defaultValue long long
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long3(void* self, const char* name, long long* reference, long long defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference long long*
+/// @param defaultValue long long
+/// @param key const char*
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long4(void* self, const char* name, long long* reference, long long defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference uint64_t*
+/// @param defaultValue uint64_t
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long3(void* self, const char* name, uint64_t* reference, uint64_t defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference uint64_t*
+/// @param defaultValue uint64_t
+/// @param key const char*
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long4(void* self, const char* name, uint64_t* reference, uint64_t defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference double*
+/// @param defaultValue double
+KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton_add_item_double3(void* self, const char* name, double* reference, double defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference double*
+/// @param defaultValue double
+/// @param key const char*
+KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton_add_item_double4(void* self, const char* name, double* reference, double defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QRect*
+/// @param defaultValue QRect*
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRect)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QRect*
+/// @param defaultValue QRect*
+/// @param key const char*
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton_add_item_rect4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QRectF*
+/// @param defaultValue QRectF*
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemRectF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QRectF*
+/// @param defaultValue QRectF*
+/// @param key const char*
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton_add_item_rect_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QPoint*
+/// @param defaultValue QPoint*
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPoint)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QPoint*
+/// @param defaultValue QPoint*
+/// @param key const char*
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton_add_item_point4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QPointF*
+/// @param defaultValue QPointF*
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemPointF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QPointF*
+/// @param defaultValue QPointF*
+/// @param key const char*
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton_add_item_point_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QSize*
+/// @param defaultValue QSize*
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSize)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QSize*
+/// @param defaultValue QSize*
+/// @param key const char*
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton_add_item_size4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QSizeF*
+/// @param defaultValue QSizeF*
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemSizeF)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QSizeF*
+/// @param defaultValue QSizeF*
+/// @param key const char*
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton_add_item_size_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QDateTime*
+/// @param defaultValue QDateTime*
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time3(void* self, const char* name, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemDateTime)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference QDateTime*
+/// @param defaultValue QDateTime*
+/// @param key const char*
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference const char**
+/// @param defaultValue const char**
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list3(void* self, const char* name, const char* reference[], const char* defaultValue[]);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference const char**
+/// @param defaultValue const char**
+/// @param key const char*
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list4(void* self, const char* name, const char* reference[], const char* defaultValue[], const char* key);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference libqt_list /* of int */
+/// @param defaultValue libqt_list /* of int */
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list3(void* self, const char* name, libqt_list reference, libqt_list defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
+///
+/// @param self KCoreConfigSkeleton*
+/// @param name const char*
+/// @param reference libqt_list /* of int */
+/// @param defaultValue libqt_list /* of int */
+/// @param key const char*
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton_add_item_int_list4(void* self, const char* name, libqt_list reference, libqt_list defaultValue, const char* key);
 
 /// Inherited from QObject
 ///
@@ -2039,6 +2447,145 @@ void k_coreconfigskeleton_on_object_name_changed(void* self, void (*callback)(vo
 /// @param self KCoreConfigSkeleton*
 void k_coreconfigskeleton_delete(void* self);
 
+/// https://api.kde.org/kcoreconfigskeleton-itemstring.html
+
+/// k_coreconfigskeleton__itemstring_new constructs a new KCoreConfigSkeleton::ItemString object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference const char*
+KCoreConfigSkeleton__ItemString* k_coreconfigskeleton__itemstring_new(const char* _group, const char* _key, const char* reference);
+
+/// k_coreconfigskeleton__itemstring_new2 constructs a new KCoreConfigSkeleton::ItemString object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference const char*
+/// @param defaultValue const char*
+KCoreConfigSkeleton__ItemString* k_coreconfigskeleton__itemstring_new2(const char* _group, const char* _key, const char* reference, const char* defaultValue);
+
+/// k_coreconfigskeleton__itemstring_new3 constructs a new KCoreConfigSkeleton::ItemString object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference const char*
+/// @param defaultValue const char*
+/// @param type enum KCoreConfigSkeleton__ItemString__Type
+KCoreConfigSkeleton__ItemString* k_coreconfigskeleton__itemstring_new3(const char* _group, const char* _key, const char* reference, const char* defaultValue, int32_t type);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#writeConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemstring_write_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#writeConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param callback void func(KCoreConfigSkeleton__ItemString* self, KConfig* config)
+void k_coreconfigskeleton__itemstring_on_write_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#writeConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemstring_qbase_write_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemstring_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param callback void func(KCoreConfigSkeleton__ItemString* self, KConfig* config)
+void k_coreconfigskeleton__itemstring_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemstring_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemstring_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param callback void func(KCoreConfigSkeleton__ItemString* self, QVariant* p)
+void k_coreconfigskeleton__itemstring_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemstring_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemstring_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param callback bool func(KCoreConfigSkeleton__ItemString* self, QVariant* p)
+void k_coreconfigskeleton__itemstring_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemstring_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+QVariant* k_coreconfigskeleton__itemstring_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemstring_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstring.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+QVariant* k_coreconfigskeleton__itemstring_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemString*
+void k_coreconfigskeleton__itemstring_delete(void* self);
+
 /// https://api.kde.org/kcoreconfigskeleton-itempassword.html
 
 /// k_coreconfigskeleton__itempassword_new constructs a new KCoreConfigSkeleton::ItemPassword object.
@@ -2379,6 +2926,660 @@ void k_coreconfigskeleton__itempath_on_property(void* self, QVariant* (*callback
 /// @param self KCoreConfigSkeleton__ItemPath*
 void k_coreconfigskeleton__itempath_delete(void* self);
 
+/// https://api.kde.org/kcoreconfigskeleton-itemurl.html
+
+/// k_coreconfigskeleton__itemurl_new constructs a new KCoreConfigSkeleton::ItemUrl object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QUrl*
+KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemurl_new2 constructs a new KCoreConfigSkeleton::ItemUrl object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QUrl*
+/// @param defaultValue QUrl*
+KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#writeConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurl_write_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#writeConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param callback void func(KCoreConfigSkeleton__ItemUrl* self, KConfig* config)
+void k_coreconfigskeleton__itemurl_on_write_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#writeConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurl_qbase_write_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurl_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param callback void func(KCoreConfigSkeleton__ItemUrl* self, KConfig* config)
+void k_coreconfigskeleton__itemurl_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurl_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemurl_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param callback void func(KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
+void k_coreconfigskeleton__itemurl_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemurl_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemurl_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param callback bool func(KCoreConfigSkeleton__ItemUrl* self, QVariant* p)
+void k_coreconfigskeleton__itemurl_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemurl_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+QVariant* k_coreconfigskeleton__itemurl_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemurl_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurl.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+QVariant* k_coreconfigskeleton__itemurl_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemUrl*
+void k_coreconfigskeleton__itemurl_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemproperty.html
+
+/// k_coreconfigskeleton__itemproperty_new constructs a new KCoreConfigSkeleton::ItemProperty object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QVariant*
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemproperty_new2 constructs a new KCoreConfigSkeleton::ItemProperty object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QVariant*
+/// @param defaultValue QVariant*
+KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemproperty_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param callback void func(KCoreConfigSkeleton__ItemProperty* self, KConfig* config)
+void k_coreconfigskeleton__itemproperty_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemproperty_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemproperty_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param callback void func(KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
+void k_coreconfigskeleton__itemproperty_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemproperty_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemproperty_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param callback bool func(KCoreConfigSkeleton__ItemProperty* self, QVariant* p)
+void k_coreconfigskeleton__itemproperty_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemproperty_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+QVariant* k_coreconfigskeleton__itemproperty_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemproperty_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemproperty.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+QVariant* k_coreconfigskeleton__itemproperty_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemProperty*
+void k_coreconfigskeleton__itemproperty_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itembool.html
+
+/// k_coreconfigskeleton__itembool_new constructs a new KCoreConfigSkeleton::ItemBool object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference bool*
+KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton__itembool_new(const char* _group, const char* _key, bool* reference);
+
+/// k_coreconfigskeleton__itembool_new2 constructs a new KCoreConfigSkeleton::ItemBool object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference bool*
+/// @param defaultValue bool
+KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton__itembool_new2(const char* _group, const char* _key, bool* reference, bool defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param config KConfig*
+void k_coreconfigskeleton__itembool_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param callback void func(KCoreConfigSkeleton__ItemBool* self, KConfig* config)
+void k_coreconfigskeleton__itembool_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param config KConfig*
+void k_coreconfigskeleton__itembool_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param p QVariant*
+void k_coreconfigskeleton__itembool_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param callback void func(KCoreConfigSkeleton__ItemBool* self, QVariant* p)
+void k_coreconfigskeleton__itembool_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param p QVariant*
+void k_coreconfigskeleton__itembool_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itembool_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param callback bool func(KCoreConfigSkeleton__ItemBool* self, QVariant* p)
+void k_coreconfigskeleton__itembool_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itembool_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+QVariant* k_coreconfigskeleton__itembool_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itembool_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itembool.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+QVariant* k_coreconfigskeleton__itembool_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemBool*
+void k_coreconfigskeleton__itembool_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemint.html
+
+/// k_coreconfigskeleton__itemint_new constructs a new KCoreConfigSkeleton::ItemInt object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference int*
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new(const char* _group, const char* _key, int* reference);
+
+/// k_coreconfigskeleton__itemint_new2 constructs a new KCoreConfigSkeleton::ItemInt object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference int*
+/// @param defaultValue int
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new2(const char* _group, const char* _key, int* reference, int defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemint_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param callback void func(KCoreConfigSkeleton__ItemInt* self, KConfig* config)
+void k_coreconfigskeleton__itemint_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemint_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemint_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param callback void func(KCoreConfigSkeleton__ItemInt* self, QVariant* p)
+void k_coreconfigskeleton__itemint_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemint_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemint_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param callback bool func(KCoreConfigSkeleton__ItemInt* self, QVariant* p)
+void k_coreconfigskeleton__itemint_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemint_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+QVariant* k_coreconfigskeleton__itemint_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemint_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+QVariant* k_coreconfigskeleton__itemint_qbase_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+QVariant* k_coreconfigskeleton__itemint_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemint_on_min_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#minValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+QVariant* k_coreconfigskeleton__itemint_qbase_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+QVariant* k_coreconfigskeleton__itemint_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemint_on_max_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemint.html#maxValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+QVariant* k_coreconfigskeleton__itemint_qbase_max_value(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemInt*
+void k_coreconfigskeleton__itemint_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemlonglong.html
+
+/// k_coreconfigskeleton__itemlonglong_new constructs a new KCoreConfigSkeleton::ItemLongLong object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference long long*
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new(const char* _group, const char* _key, long long* reference);
+
+/// k_coreconfigskeleton__itemlonglong_new2 constructs a new KCoreConfigSkeleton::ItemLongLong object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference long long*
+/// @param defaultValue long long
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new2(const char* _group, const char* _key, long long* reference, long long defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemlonglong_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param callback void func(KCoreConfigSkeleton__ItemLongLong* self, KConfig* config)
+void k_coreconfigskeleton__itemlonglong_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemlonglong_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemlonglong_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param callback void func(KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
+void k_coreconfigskeleton__itemlonglong_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemlonglong_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemlonglong_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param callback bool func(KCoreConfigSkeleton__ItemLongLong* self, QVariant* p)
+void k_coreconfigskeleton__itemlonglong_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemlonglong_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+QVariant* k_coreconfigskeleton__itemlonglong_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemlonglong_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+QVariant* k_coreconfigskeleton__itemlonglong_qbase_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+QVariant* k_coreconfigskeleton__itemlonglong_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemlonglong_on_min_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#minValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+QVariant* k_coreconfigskeleton__itemlonglong_qbase_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+QVariant* k_coreconfigskeleton__itemlonglong_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemlonglong_on_max_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#maxValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+QVariant* k_coreconfigskeleton__itemlonglong_qbase_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setMinValue)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param minValue long long
+void k_coreconfigskeleton__itemlonglong_set_min_value(void* self, long long minValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setMaxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+/// @param maxValue long long
+void k_coreconfigskeleton__itemlonglong_set_max_value(void* self, long long maxValue);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemLongLong*
+void k_coreconfigskeleton__itemlonglong_delete(void* self);
+
 /// https://api.kde.org/kcoreconfigskeleton-itemenum-choice.html
 
 /// k_coreconfigskeleton__itemenum__choice_new constructs a new KCoreConfigSkeleton::ItemEnum::Choice object.
@@ -2698,6 +3899,1350 @@ void k_coreconfigskeleton__itemenum_on_max_value(void* self, QVariant* (*callbac
 /// @param self KCoreConfigSkeleton__ItemEnum*
 void k_coreconfigskeleton__itemenum_delete(void* self);
 
+/// https://api.kde.org/kcoreconfigskeleton-itemuint.html
+
+/// k_coreconfigskeleton__itemuint_new constructs a new KCoreConfigSkeleton::ItemUInt object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference uint32_t*
+KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton__itemuint_new(const char* _group, const char* _key, uint32_t* reference);
+
+/// k_coreconfigskeleton__itemuint_new2 constructs a new KCoreConfigSkeleton::ItemUInt object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference uint32_t*
+/// @param defaultValue uint32_t
+KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton__itemuint_new2(const char* _group, const char* _key, uint32_t* reference, uint32_t defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemuint_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param callback void func(KCoreConfigSkeleton__ItemUInt* self, KConfig* config)
+void k_coreconfigskeleton__itemuint_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemuint_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemuint_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param callback void func(KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
+void k_coreconfigskeleton__itemuint_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemuint_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemuint_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param callback bool func(KCoreConfigSkeleton__ItemUInt* self, QVariant* p)
+void k_coreconfigskeleton__itemuint_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemuint_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+QVariant* k_coreconfigskeleton__itemuint_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemuint_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+QVariant* k_coreconfigskeleton__itemuint_qbase_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+QVariant* k_coreconfigskeleton__itemuint_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemuint_on_min_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#minValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+QVariant* k_coreconfigskeleton__itemuint_qbase_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+QVariant* k_coreconfigskeleton__itemuint_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemuint_on_max_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#maxValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+QVariant* k_coreconfigskeleton__itemuint_qbase_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setMinValue)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param minValue uint32_t
+void k_coreconfigskeleton__itemuint_set_min_value(void* self, uint32_t minValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemuint.html#setMaxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+/// @param maxValue uint32_t
+void k_coreconfigskeleton__itemuint_set_max_value(void* self, uint32_t maxValue);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemUInt*
+void k_coreconfigskeleton__itemuint_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemulonglong.html
+
+/// k_coreconfigskeleton__itemulonglong_new constructs a new KCoreConfigSkeleton::ItemULongLong object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference uint64_t*
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new(const char* _group, const char* _key, uint64_t* reference);
+
+/// k_coreconfigskeleton__itemulonglong_new2 constructs a new KCoreConfigSkeleton::ItemULongLong object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference uint64_t*
+/// @param defaultValue uint64_t
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new2(const char* _group, const char* _key, uint64_t* reference, uint64_t defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemulonglong_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param callback void func(KCoreConfigSkeleton__ItemULongLong* self, KConfig* config)
+void k_coreconfigskeleton__itemulonglong_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemulonglong_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemulonglong_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param callback void func(KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
+void k_coreconfigskeleton__itemulonglong_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemulonglong_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemulonglong_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param callback bool func(KCoreConfigSkeleton__ItemULongLong* self, QVariant* p)
+void k_coreconfigskeleton__itemulonglong_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemulonglong_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+QVariant* k_coreconfigskeleton__itemulonglong_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemulonglong_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+QVariant* k_coreconfigskeleton__itemulonglong_qbase_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+QVariant* k_coreconfigskeleton__itemulonglong_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemulonglong_on_min_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#minValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+QVariant* k_coreconfigskeleton__itemulonglong_qbase_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+QVariant* k_coreconfigskeleton__itemulonglong_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemulonglong_on_max_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#maxValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+QVariant* k_coreconfigskeleton__itemulonglong_qbase_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setMinValue)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param minValue uint64_t
+void k_coreconfigskeleton__itemulonglong_set_min_value(void* self, uint64_t minValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#setMaxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+/// @param maxValue uint64_t
+void k_coreconfigskeleton__itemulonglong_set_max_value(void* self, uint64_t maxValue);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemULongLong*
+void k_coreconfigskeleton__itemulonglong_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemdouble.html
+
+/// k_coreconfigskeleton__itemdouble_new constructs a new KCoreConfigSkeleton::ItemDouble object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference double*
+KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton__itemdouble_new(const char* _group, const char* _key, double* reference);
+
+/// k_coreconfigskeleton__itemdouble_new2 constructs a new KCoreConfigSkeleton::ItemDouble object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference double*
+/// @param defaultValue double
+KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton__itemdouble_new2(const char* _group, const char* _key, double* reference, double defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemdouble_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param callback void func(KCoreConfigSkeleton__ItemDouble* self, KConfig* config)
+void k_coreconfigskeleton__itemdouble_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemdouble_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemdouble_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param callback void func(KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
+void k_coreconfigskeleton__itemdouble_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemdouble_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemdouble_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param callback bool func(KCoreConfigSkeleton__ItemDouble* self, QVariant* p)
+void k_coreconfigskeleton__itemdouble_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemdouble_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+QVariant* k_coreconfigskeleton__itemdouble_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemdouble_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+QVariant* k_coreconfigskeleton__itemdouble_qbase_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+QVariant* k_coreconfigskeleton__itemdouble_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemdouble_on_min_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#minValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+QVariant* k_coreconfigskeleton__itemdouble_qbase_min_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+QVariant* k_coreconfigskeleton__itemdouble_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemdouble_on_max_value(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#maxValue)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+QVariant* k_coreconfigskeleton__itemdouble_qbase_max_value(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setMinValue)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param minValue double
+void k_coreconfigskeleton__itemdouble_set_min_value(void* self, double minValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdouble.html#setMaxValue)
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+/// @param maxValue double
+void k_coreconfigskeleton__itemdouble_set_max_value(void* self, double maxValue);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemDouble*
+void k_coreconfigskeleton__itemdouble_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemrect.html
+
+/// k_coreconfigskeleton__itemrect_new constructs a new KCoreConfigSkeleton::ItemRect object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QRect*
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemrect_new2 constructs a new KCoreConfigSkeleton::ItemRect object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QRect*
+/// @param defaultValue QRect*
+KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemrect_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param callback void func(KCoreConfigSkeleton__ItemRect* self, KConfig* config)
+void k_coreconfigskeleton__itemrect_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemrect_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemrect_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param callback void func(KCoreConfigSkeleton__ItemRect* self, QVariant* p)
+void k_coreconfigskeleton__itemrect_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemrect_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemrect_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param callback bool func(KCoreConfigSkeleton__ItemRect* self, QVariant* p)
+void k_coreconfigskeleton__itemrect_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemrect_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+QVariant* k_coreconfigskeleton__itemrect_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemrect_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrect.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+QVariant* k_coreconfigskeleton__itemrect_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemRect*
+void k_coreconfigskeleton__itemrect_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemrectf.html
+
+/// k_coreconfigskeleton__itemrectf_new constructs a new KCoreConfigSkeleton::ItemRectF object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QRectF*
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemrectf_new2 constructs a new KCoreConfigSkeleton::ItemRectF object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QRectF*
+/// @param defaultValue QRectF*
+KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemrectf_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param callback void func(KCoreConfigSkeleton__ItemRectF* self, KConfig* config)
+void k_coreconfigskeleton__itemrectf_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemrectf_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemrectf_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param callback void func(KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
+void k_coreconfigskeleton__itemrectf_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemrectf_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemrectf_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param callback bool func(KCoreConfigSkeleton__ItemRectF* self, QVariant* p)
+void k_coreconfigskeleton__itemrectf_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemrectf_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+QVariant* k_coreconfigskeleton__itemrectf_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemrectf_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemrectf.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+QVariant* k_coreconfigskeleton__itemrectf_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemRectF*
+void k_coreconfigskeleton__itemrectf_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itempoint.html
+
+/// k_coreconfigskeleton__itempoint_new constructs a new KCoreConfigSkeleton::ItemPoint object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QPoint*
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itempoint_new2 constructs a new KCoreConfigSkeleton::ItemPoint object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QPoint*
+/// @param defaultValue QPoint*
+KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param config KConfig*
+void k_coreconfigskeleton__itempoint_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param callback void func(KCoreConfigSkeleton__ItemPoint* self, KConfig* config)
+void k_coreconfigskeleton__itempoint_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param config KConfig*
+void k_coreconfigskeleton__itempoint_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param p QVariant*
+void k_coreconfigskeleton__itempoint_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param callback void func(KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
+void k_coreconfigskeleton__itempoint_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param p QVariant*
+void k_coreconfigskeleton__itempoint_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itempoint_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param callback bool func(KCoreConfigSkeleton__ItemPoint* self, QVariant* p)
+void k_coreconfigskeleton__itempoint_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itempoint_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+QVariant* k_coreconfigskeleton__itempoint_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itempoint_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempoint.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+QVariant* k_coreconfigskeleton__itempoint_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemPoint*
+void k_coreconfigskeleton__itempoint_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itempointf.html
+
+/// k_coreconfigskeleton__itempointf_new constructs a new KCoreConfigSkeleton::ItemPointF object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QPointF*
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itempointf_new2 constructs a new KCoreConfigSkeleton::ItemPointF object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QPointF*
+/// @param defaultValue QPointF*
+KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param config KConfig*
+void k_coreconfigskeleton__itempointf_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param callback void func(KCoreConfigSkeleton__ItemPointF* self, KConfig* config)
+void k_coreconfigskeleton__itempointf_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param config KConfig*
+void k_coreconfigskeleton__itempointf_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param p QVariant*
+void k_coreconfigskeleton__itempointf_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param callback void func(KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
+void k_coreconfigskeleton__itempointf_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param p QVariant*
+void k_coreconfigskeleton__itempointf_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itempointf_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param callback bool func(KCoreConfigSkeleton__ItemPointF* self, QVariant* p)
+void k_coreconfigskeleton__itempointf_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itempointf_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+QVariant* k_coreconfigskeleton__itempointf_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itempointf_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempointf.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+QVariant* k_coreconfigskeleton__itempointf_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemPointF*
+void k_coreconfigskeleton__itempointf_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemsize.html
+
+/// k_coreconfigskeleton__itemsize_new constructs a new KCoreConfigSkeleton::ItemSize object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QSize*
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemsize_new2 constructs a new KCoreConfigSkeleton::ItemSize object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QSize*
+/// @param defaultValue QSize*
+KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemsize_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param callback void func(KCoreConfigSkeleton__ItemSize* self, KConfig* config)
+void k_coreconfigskeleton__itemsize_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemsize_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemsize_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param callback void func(KCoreConfigSkeleton__ItemSize* self, QVariant* p)
+void k_coreconfigskeleton__itemsize_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemsize_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemsize_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param callback bool func(KCoreConfigSkeleton__ItemSize* self, QVariant* p)
+void k_coreconfigskeleton__itemsize_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemsize_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+QVariant* k_coreconfigskeleton__itemsize_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemsize_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsize.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+QVariant* k_coreconfigskeleton__itemsize_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemSize*
+void k_coreconfigskeleton__itemsize_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemsizef.html
+
+/// k_coreconfigskeleton__itemsizef_new constructs a new KCoreConfigSkeleton::ItemSizeF object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QSizeF*
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemsizef_new2 constructs a new KCoreConfigSkeleton::ItemSizeF object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QSizeF*
+/// @param defaultValue QSizeF*
+KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemsizef_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param callback void func(KCoreConfigSkeleton__ItemSizeF* self, KConfig* config)
+void k_coreconfigskeleton__itemsizef_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemsizef_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemsizef_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param callback void func(KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
+void k_coreconfigskeleton__itemsizef_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemsizef_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemsizef_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param callback bool func(KCoreConfigSkeleton__ItemSizeF* self, QVariant* p)
+void k_coreconfigskeleton__itemsizef_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemsizef_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+QVariant* k_coreconfigskeleton__itemsizef_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemsizef_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemsizef.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+QVariant* k_coreconfigskeleton__itemsizef_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemSizeF*
+void k_coreconfigskeleton__itemsizef_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemdatetime.html
+
+/// k_coreconfigskeleton__itemdatetime_new constructs a new KCoreConfigSkeleton::ItemDateTime object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QDateTime*
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new(const char* _group, const char* _key, void* reference);
+
+/// k_coreconfigskeleton__itemdatetime_new2 constructs a new KCoreConfigSkeleton::ItemDateTime object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference QDateTime*
+/// @param defaultValue QDateTime*
+KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new2(const char* _group, const char* _key, void* reference, void* defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemdatetime_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param callback void func(KCoreConfigSkeleton__ItemDateTime* self, KConfig* config)
+void k_coreconfigskeleton__itemdatetime_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemdatetime_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemdatetime_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param callback void func(KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
+void k_coreconfigskeleton__itemdatetime_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemdatetime_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemdatetime_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param callback bool func(KCoreConfigSkeleton__ItemDateTime* self, QVariant* p)
+void k_coreconfigskeleton__itemdatetime_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemdatetime_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+QVariant* k_coreconfigskeleton__itemdatetime_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemdatetime_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemdatetime.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+QVariant* k_coreconfigskeleton__itemdatetime_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemDateTime*
+void k_coreconfigskeleton__itemdatetime_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemstringlist.html
+
+/// k_coreconfigskeleton__itemstringlist_new constructs a new KCoreConfigSkeleton::ItemStringList object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference const char**
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new(const char* _group, const char* _key, const char* reference[]);
+
+/// k_coreconfigskeleton__itemstringlist_new2 constructs a new KCoreConfigSkeleton::ItemStringList object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference const char**
+/// @param defaultValue const char**
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new2(const char* _group, const char* _key, const char* reference[], const char* defaultValue[]);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemstringlist_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param callback void func(KCoreConfigSkeleton__ItemStringList* self, KConfig* config)
+void k_coreconfigskeleton__itemstringlist_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemstringlist_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemstringlist_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param callback void func(KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
+void k_coreconfigskeleton__itemstringlist_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemstringlist_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemstringlist_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param callback bool func(KCoreConfigSkeleton__ItemStringList* self, QVariant* p)
+void k_coreconfigskeleton__itemstringlist_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemstringlist_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+QVariant* k_coreconfigskeleton__itemstringlist_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemstringlist_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+QVariant* k_coreconfigskeleton__itemstringlist_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemStringList*
+void k_coreconfigskeleton__itemstringlist_delete(void* self);
+
 /// https://api.kde.org/kcoreconfigskeleton-itempathlist.html
 
 /// k_coreconfigskeleton__itempathlist_new constructs a new KCoreConfigSkeleton::ItemPathList object.
@@ -2851,6 +5396,244 @@ void k_coreconfigskeleton__itempathlist_on_property(void* self, QVariant* (*call
 ///
 /// @param self KCoreConfigSkeleton__ItemPathList*
 void k_coreconfigskeleton__itempathlist_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemurllist.html
+
+/// k_coreconfigskeleton__itemurllist_new constructs a new KCoreConfigSkeleton::ItemUrlList object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference libqt_list /* of QUrl* */
+KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new(const char* _group, const char* _key, libqt_list reference);
+
+/// k_coreconfigskeleton__itemurllist_new2 constructs a new KCoreConfigSkeleton::ItemUrlList object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference libqt_list /* of QUrl* */
+/// @param defaultValue libqt_list /* of QUrl* */
+KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new2(const char* _group, const char* _key, libqt_list reference, libqt_list defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurllist_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param callback void func(KCoreConfigSkeleton__ItemUrlList* self, KConfig* config)
+void k_coreconfigskeleton__itemurllist_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurllist_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#writeConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurllist_write_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#writeConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param callback void func(KCoreConfigSkeleton__ItemUrlList* self, KConfig* config)
+void k_coreconfigskeleton__itemurllist_on_write_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#writeConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemurllist_qbase_write_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemurllist_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param callback void func(KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
+void k_coreconfigskeleton__itemurllist_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemurllist_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemurllist_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param callback bool func(KCoreConfigSkeleton__ItemUrlList* self, QVariant* p)
+void k_coreconfigskeleton__itemurllist_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemurllist_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+QVariant* k_coreconfigskeleton__itemurllist_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemurllist_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemurllist.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+QVariant* k_coreconfigskeleton__itemurllist_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemUrlList*
+void k_coreconfigskeleton__itemurllist_delete(void* self);
+
+/// https://api.kde.org/kcoreconfigskeleton-itemintlist.html
+
+/// k_coreconfigskeleton__itemintlist_new constructs a new KCoreConfigSkeleton::ItemIntList object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference libqt_list /* of int */
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new(const char* _group, const char* _key, libqt_list reference);
+
+/// k_coreconfigskeleton__itemintlist_new2 constructs a new KCoreConfigSkeleton::ItemIntList object.
+///
+/// @param _group const char*
+/// @param _key const char*
+/// @param reference libqt_list /* of int */
+/// @param defaultValue libqt_list /* of int */
+KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new2(const char* _group, const char* _key, libqt_list reference, libqt_list defaultValue);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#readConfig)
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemintlist_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#readConfig)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param callback void func(KCoreConfigSkeleton__ItemIntList* self, KConfig* config)
+void k_coreconfigskeleton__itemintlist_on_read_config(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#readConfig)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param config KConfig*
+void k_coreconfigskeleton__itemintlist_qbase_read_config(void* self, void* config);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#setProperty)
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemintlist_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#setProperty)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param callback void func(KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
+void k_coreconfigskeleton__itemintlist_on_set_property(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#setProperty)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param p QVariant*
+void k_coreconfigskeleton__itemintlist_qbase_set_property(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemintlist_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param callback bool func(KCoreConfigSkeleton__ItemIntList* self, QVariant* p)
+void k_coreconfigskeleton__itemintlist_on_is_equal(void* self, bool (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#isEqual)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param p QVariant*
+bool k_coreconfigskeleton__itemintlist_qbase_is_equal(void* self, void* p);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+QVariant* k_coreconfigskeleton__itemintlist_property(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+/// @param callback QVariant* func()
+void k_coreconfigskeleton__itemintlist_on_property(void* self, QVariant* (*callback)());
+
+/// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemintlist.html#property)
+///
+/// Base class method implementation
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+QVariant* k_coreconfigskeleton__itemintlist_qbase_property(void* self);
+
+/// Delete this object from C++ memory.
+///
+/// @param self KCoreConfigSkeleton__ItemIntList*
+void k_coreconfigskeleton__itemintlist_delete(void* self);
 
 /// https://api.kde.org/kcoreconfigskeleton.html#types
 
