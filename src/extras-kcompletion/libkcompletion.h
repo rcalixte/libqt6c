@@ -200,6 +200,17 @@ const char** k_completion_all_matches(void* self);
 /// @param stringVal const char*
 const char** k_completion_all_matches2(void* self, const char* stringVal);
 
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+///
+/// @param self KCompletion*
+KCompletionMatches* k_completion_all_weighted_matches(void* self);
+
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+///
+/// @param self KCompletion*
+/// @param stringVal const char*
+KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* stringVal);
+
 /// [Qt documentation](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
 /// @param self KCompletion*
@@ -393,6 +404,28 @@ void k_completion_on_post_process_matches(void* self, void (*callback)(void*, co
 /// @param self KCompletion*
 /// @param matchList const char**
 void k_completion_qbase_post_process_matches(void* self, const char* matchList[]);
+
+/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+///
+/// @param self KCompletion*
+/// @param matches KCompletionMatches*
+void k_completion_post_process_matches2(void* self, void* matches);
+
+/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KCompletion*
+/// @param callback void func(KCompletion* self, KCompletionMatches* matches)
+void k_completion_on_post_process_matches2(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
+///
+/// Base class method implementation
+///
+/// @param self KCompletion*
+/// @param matches KCompletionMatches*
+void k_completion_qbase_post_process_matches2(void* self, void* matches);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#setShouldAutoSuggest)
 ///

@@ -1,3 +1,4 @@
+#include "libkcompletionmatches.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobjectdefs.hpp"
@@ -184,6 +185,14 @@ const char** k_completion_all_matches2(void* self, const char* stringVal) {
     }
     libqt_free(_arr.data.ptr);
     return _ret;
+}
+
+KCompletionMatches* k_completion_all_weighted_matches(void* self) {
+    return KCompletion_AllWeightedMatches((KCompletion*)self);
+}
+
+KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* stringVal) {
+    return KCompletion_AllWeightedMatches2((KCompletion*)self, qstring(stringVal));
 }
 
 void k_completion_set_sounds_enabled(void* self, bool enable) {
@@ -376,6 +385,18 @@ void k_completion_qbase_post_process_matches(void* self, const char* matchList[]
     }
     libqt_list matchList_list = qlist(matchList_qstr, matchList_len);
     KCompletion_QBasePostProcessMatches((KCompletion*)self, matchList_list);
+}
+
+void k_completion_post_process_matches2(void* self, void* matches) {
+    KCompletion_PostProcessMatches2((KCompletion*)self, (KCompletionMatches*)matches);
+}
+
+void k_completion_on_post_process_matches2(void* self, void (*callback)(void*, void*)) {
+    KCompletion_OnPostProcessMatches2((KCompletion*)self, (intptr_t)callback);
+}
+
+void k_completion_qbase_post_process_matches2(void* self, void* matches) {
+    KCompletion_QBasePostProcessMatches2((KCompletion*)self, (KCompletionMatches*)matches);
 }
 
 void k_completion_set_should_auto_suggest(void* self, bool shouldAutosuggest) {

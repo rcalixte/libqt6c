@@ -99,6 +99,28 @@ void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void
 /// @param matches const char**
 void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[]);
 
+/// [Qt documentation](https://api.kde.org/kshellcompletion.html#postProcessMatches)
+///
+/// @param self KShellCompletion*
+/// @param matches KCompletionMatches*
+void k_shellcompletion_post_process_matches2(void* self, void* matches);
+
+/// [Qt documentation](https://api.kde.org/kshellcompletion.html#postProcessMatches)
+///
+/// Allows for overriding the related default method
+///
+/// @param self KShellCompletion*
+/// @param callback void func(KShellCompletion* self, KCompletionMatches* matches)
+void k_shellcompletion_on_post_process_matches2(void* self, void (*callback)(void*, void*));
+
+/// [Qt documentation](https://api.kde.org/kshellcompletion.html#postProcessMatches)
+///
+/// Base class method implementation
+///
+/// @param self KShellCompletion*
+/// @param matches KCompletionMatches*
+void k_shellcompletion_qbase_post_process_matches2(void* self, void* matches);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
@@ -240,6 +262,21 @@ const char** k_shellcompletion_all_matches(void* self);
 /// @param self KShellCompletion*
 /// @param stringVal const char*
 const char** k_shellcompletion_all_matches2(void* self, const char* stringVal);
+
+/// Inherited from KCompletion
+///
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+///
+/// @param self KShellCompletion*
+KCompletionMatches* k_shellcompletion_all_weighted_matches(void* self);
+
+/// Inherited from KCompletion
+///
+/// [Qt documentation](https://api.kde.org/kcompletion.html#allWeightedMatches)
+///
+/// @param self KShellCompletion*
+/// @param stringVal const char*
+KCompletionMatches* k_shellcompletion_all_weighted_matches2(void* self, const char* stringVal);
 
 /// Inherited from KCompletion
 ///
