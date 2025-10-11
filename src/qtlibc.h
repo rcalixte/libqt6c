@@ -12,7 +12,7 @@ typedef unsigned int uid_t;
 typedef unsigned int gid_t;
 #else
 #include <unistd.h>
-#if defined(__linux__) || defined(__FreeBSD__)
+#if defined(__linux__)
 #include <xcb/xproto.h>
 #endif
 #endif
