@@ -35,11 +35,6 @@ int32_t q_webengineclienthints_metacall(void* self, int32_t param1, int param2, 
 /// @param s const char*
 const char* q_webengineclienthints_tr(const char* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclienthints.html#qt_qmlMarker_uncreatable)
-///
-/// @param self QWebEngineClientHints*
-void q_webengineclienthints_qml_marker_uncreatable(void* self);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclienthints.html#arch)
 ///
 /// Caller is responsible for freeing the returned memory
