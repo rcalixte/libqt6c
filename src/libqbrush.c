@@ -135,10 +135,6 @@ void q_brush_delete(void* self) {
     QBrush_Delete((QBrush*)(self));
 }
 
-QBrushData* q_brushdata_new(void* param1) {
-    return QBrushData_new((QBrushData*)param1);
-}
-
 int32_t q_brushdata_style(void* self) {
     return QBrushData_Style((QBrushData*)self);
 }
@@ -161,14 +157,6 @@ QTransform* q_brushdata_transform(void* self) {
 
 void q_brushdata_set_transform(void* self, void* transform) {
     QBrushData_SetTransform((QBrushData*)self, (QTransform*)transform);
-}
-
-void q_brushdata_operator_assign(void* self, void* param1) {
-    QBrushData_OperatorAssign((QBrushData*)self, (QBrushData*)param1);
-}
-
-void q_brushdata_delete(void* self) {
-    QBrushData_Delete((QBrushData*)(self));
 }
 
 QGradient* q_gradient_new() {

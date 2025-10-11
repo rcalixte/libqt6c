@@ -192,11 +192,6 @@ void q_brush_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qbrushdata.html
 
-/// q_brushdata_new constructs a new QBrushData object.
-///
-/// @param param1 QBrushData*
-QBrushData* q_brushdata_new(void* param1);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrushdata.html#style-var)
 ///
 /// @param self QBrushData*
@@ -231,19 +226,6 @@ QTransform* q_brushdata_transform(void* self);
 /// @param self QBrushData*
 /// @param transform QTransform*
 void q_brushdata_set_transform(void* self, void* transform);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrushdata.html#operator-eq)
-///
-/// @param self QBrushData*
-/// @param param1 QBrushData*
-void q_brushdata_operator_assign(void* self, void* param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrushdata.html#dtor.QBrushData)
-///
-/// Delete this object from C++ memory.
-///
-/// @param self QBrushData*
-void q_brushdata_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qgradient.html
 

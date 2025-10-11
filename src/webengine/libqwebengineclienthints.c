@@ -24,10 +24,6 @@ const char* q_webengineclienthints_tr(const char* s) {
     return _ret;
 }
 
-void q_webengineclienthints_qml_marker_uncreatable(void* self) {
-    QWebEngineClientHints_QmlMarkerUncreatable((QWebEngineClientHints*)self);
-}
-
 const char* q_webengineclienthints_arch(void* self) {
     libqt_string _str = QWebEngineClientHints_Arch((QWebEngineClientHints*)self);
     char* _ret = qstring_to_char(_str);

@@ -29,11 +29,6 @@ void* q_threadstoragedata_get(void* self);
 /// @param p void*
 void* q_threadstoragedata_set(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qthreadstoragedata.html#finish)
-///
-/// @param param1 void*
-void q_threadstoragedata_finish(void* param1);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadstoragedata.html#id-var)
 ///
 /// @param self QThreadStorageData*

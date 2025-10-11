@@ -252,30 +252,11 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self);
 /// @param nameFilters const char**
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[]);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkdir)
-///
-/// @param self QDir*
-/// @param dirName const char*
-bool q_dir_mkdir(void* self, const char* dirName);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkdir)
-///
-/// @param self QDir*
-/// @param dirName const char*
-/// @param permissions flag of enum QFileDevice__Permission
-bool q_dir_mkdir2(void* self, const char* dirName, int32_t permissions);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rmdir)
 ///
 /// @param self QDir*
 /// @param dirName const char*
 bool q_dir_rmdir(void* self, const char* dirName);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkpath)
-///
-/// @param self QDir*
-/// @param dirPath const char*
-bool q_dir_mkpath(void* self, const char* dirPath);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rmpath)
 ///
