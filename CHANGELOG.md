@@ -1,4 +1,10 @@
 
+### 6.8.2 rev39 (11 October 2025)
+
+* **BREAKING CHANGE:** Update for Qt 6.10 (#71)
+* Unblock additional types that inherit from templates (#70)
+* Add QCustomPlot (#69)
+
 ### 6.8.2 rev38 (7 October 2025)
 
 * Add [KCrash](https://api.kde.org/kcrash-index.html), [KItemModels](https://api.kde.org/kitemmodels-index.html), [KSvg](https://api.kde.org/ksvg-index.html), [QtKeychain](https://github.com/frankosterfeld/qtkeychain), and [LayerShellQt](https://invent.kde.org/plasma/layer-shell-qt) (#68)
