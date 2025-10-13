@@ -81,6 +81,14 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return "https://invent.kde.org/plasma/layer-shell-qt"
 	}
 
+	if strings.HasPrefix(pageName, "kcolorpicker") {
+		return "https://github.com/ksnip/kcolorpicker"
+	}
+
+	if strings.HasPrefix(pageName, "kimageannotator") {
+		return "https://github.com/ksnip/kImageAnnotator"
+	}
+
 	if strings.HasPrefix(pageName, "qkeychain") {
 		return "https://github.com/frankosterfeld/qtkeychain"
 	}
@@ -1031,7 +1039,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		cStructName := cabiClassName(c.ClassName)
 		nameIndex := 0
 		cPrefix := "q_"
-		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
+		if cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k' {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
 		} else if strings.Contains(src.Filename, "KF6") || strings.Contains(src.Filename, "LayerShellQt") {
@@ -1666,7 +1674,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		cStructName := cabiClassName(c.ClassName)
 		nameIndex := 0
 		cPrefix := "q_"
-		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
+		if cStructName[0] == 'Q' || cStructName[0] == 'K' || cStructName[0] == 'k' {
 			nameIndex = 1
 			cPrefix = strings.ToLower(cStructName[:1]) + "_"
 		} else if strings.Contains(src.Filename, "KF6") || strings.Contains(src.Filename, "LayerShellQt") {
