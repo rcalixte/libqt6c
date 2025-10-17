@@ -2,9 +2,6 @@ const std = @import("std");
 const host_os = @import("builtin").os.tag;
 const host_arch = @import("builtin").cpu.arch;
 
-var buffer: [512]u8 = undefined;
-var stdout_writer = std.fs.File.stdout().writer(&buffer);
-
 var cpp_sources: std.ArrayList([]const u8) = .empty;
 var prefix_options: std.StringHashMapUnmanaged(bool) = .empty;
 var qt_include_path: std.ArrayList([]const u8) = .empty;
@@ -19,6 +16,9 @@ pub fn build(b: *std.Build) !void {
     var optimize = b.standardOptimizeOption(.{});
     if (optimize == .Debug) optimize = .ReleaseFast;
 
+    var buffer: [512]u8 = undefined;
+    var stdout_writer = std.fs.File.stdout().writer(&buffer);
+
     const is_macos = target.result.os.tag == .macos or host_os == .macos;
     const is_windows = target.result.os.tag == .windows or host_os == .windows;
 
@@ -28,7 +28,7 @@ pub fn build(b: *std.Build) !void {
     };
 
     const is_bsd_family = is_bsd_host or is_bsd_target;
-    const workaround_os = is_bsd_family or is_macos;
+    const workaround_os = is_bsd_family or is_macos or is_windows;
 
     var arena = std.heap.ArenaAllocator.init(b.allocator);
     defer arena.deinit();
@@ -52,9 +52,11 @@ pub fn build(b: *std.Build) !void {
                     continue;
                 if (is_macos and std.mem.startsWith(u8, entry.path, "foss-"))
                     continue;
-                if (is_macos and std.mem.eql(u8, basename, "qopenglcontext_platform"))
+                if ((is_macos or is_windows) and std.mem.eql(u8, basename, "qopenglcontext_platform"))
                     continue;
                 if (is_macos and (std.mem.startsWith(u8, basename, "qopenglfunctions_4_4") or std.mem.startsWith(u8, basename, "qopenglfunctions_4_5")))
+                    continue;
+                if (is_windows and (std.mem.eql(u8, basename, "qhashfunctions") or std.mem.eql(u8, basename, "qprocess")))
                     continue;
                 if (is_bsd_family) {
                     const bsd_skips = [_][]const u8{
@@ -233,8 +235,7 @@ const os_include_path: []const []const u8 = switch (host_os) {
         "/opt/local/libexec/qt6/mkspecs/common/posix",
     },
     .windows => &.{
-        "C:/Qt/6.8.2/mingw_64/include",
-        "C:/Qt/6.8.2/msvc2022_64/include",
+        "C:/Qt/6.8.3/msvc2022_64/include",
     },
     else => @panic("Unsupported OS"),
 };
