@@ -73,8 +73,12 @@ void q_vector2d_set_y(void* self, float y) {
     QVector2D_SetY((QVector2D*)self, y);
 }
 
-float q_vector2d_operator_subscript(void* self, int i) {
-    return QVector2D_OperatorSubscript((QVector2D*)self, i);
+float* q_vector2d_operator_subscript(void* self, int i) {
+    return (float*)QVector2D_OperatorSubscript((QVector2D*)self, i);
+}
+
+float q_vector2d_operator_subscript2(void* self, int i) {
+    return QVector2D_OperatorSubscript2((QVector2D*)self, i);
 }
 
 float q_vector2d_length(void* self) {
@@ -233,8 +237,12 @@ void q_vector3d_set_z(void* self, float z) {
     QVector3D_SetZ((QVector3D*)self, z);
 }
 
-float q_vector3d_operator_subscript(void* self, int i) {
-    return QVector3D_OperatorSubscript((QVector3D*)self, i);
+float* q_vector3d_operator_subscript(void* self, int i) {
+    return (float*)QVector3D_OperatorSubscript((QVector3D*)self, i);
+}
+
+float q_vector3d_operator_subscript2(void* self, int i) {
+    return QVector3D_OperatorSubscript2((QVector3D*)self, i);
 }
 
 float q_vector3d_length(void* self) {
@@ -433,8 +441,12 @@ void q_vector4d_set_w(void* self, float w) {
     QVector4D_SetW((QVector4D*)self, w);
 }
 
-float q_vector4d_operator_subscript(void* self, int i) {
-    return QVector4D_OperatorSubscript((QVector4D*)self, i);
+float* q_vector4d_operator_subscript(void* self, int i) {
+    return (float*)QVector4D_OperatorSubscript((QVector4D*)self, i);
+}
+
+float q_vector4d_operator_subscript2(void* self, int i) {
+    return QVector4D_OperatorSubscript2((QVector4D*)self, i);
 }
 
 float q_vector4d_length(void* self) {

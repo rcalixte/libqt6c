@@ -255,6 +255,16 @@ double q_cpvector2d_y(void* self);
 /// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPVector2D.html)
 ///
 /// @param self QCPVector2D*
+double* q_cpvector2d_rx(void* self);
+
+/// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPVector2D.html)
+///
+/// @param self QCPVector2D*
+double* q_cpvector2d_ry(void* self);
+
+/// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPVector2D.html)
+///
+/// @param self QCPVector2D*
 /// @param x double
 void q_cpvector2d_set_x(void* self, double x);
 

@@ -91,6 +91,10 @@ bool k_texteditor__attribute_has_any_property(void* self) {
     return KTextEditor__Attribute_HasAnyProperty((KTextEditor__Attribute*)self);
 }
 
+KTextEditor__Attribute* k_texteditor__attribute_operator_plus_assign(void* self, void* a) {
+    return KTextEditor__Attribute_OperatorPlusAssign((KTextEditor__Attribute*)self, (KTextEditor__Attribute*)a);
+}
+
 void k_texteditor__attribute_operator_assign(void* self, void* a) {
     KTextEditor__Attribute_OperatorAssign((KTextEditor__Attribute*)self, (KTextEditor__Attribute*)a);
 }
