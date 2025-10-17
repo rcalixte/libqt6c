@@ -191,6 +191,14 @@ double q_cpvector2d_y(void* self) {
     return QCPVector2D_Y((QCPVector2D*)self);
 }
 
+double* q_cpvector2d_rx(void* self) {
+    return (double*)QCPVector2D_Rx((QCPVector2D*)self);
+}
+
+double* q_cpvector2d_ry(void* self) {
+    return (double*)QCPVector2D_Ry((QCPVector2D*)self);
+}
+
 void q_cpvector2d_set_x(void* self, double x) {
     QCPVector2D_SetX((QCPVector2D*)self, x);
 }

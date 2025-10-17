@@ -98,6 +98,14 @@ QSize* q_size_shrunk_by(void* self, void* m) {
     return QSize_ShrunkBy((QSize*)self, (QMargins*)m);
 }
 
+int* q_size_rwidth(void* self) {
+    return (int*)QSize_Rwidth((QSize*)self);
+}
+
+int* q_size_rheight(void* self) {
+    return (int*)QSize_Rheight((QSize*)self);
+}
+
 QSize* q_size_operator_plus_assign(void* self, void* param1) {
     return QSize_OperatorPlusAssign((QSize*)self, (QSize*)param1);
 }
@@ -220,6 +228,14 @@ QSizeF* q_sizef_grown_by(void* self, void* m) {
 
 QSizeF* q_sizef_shrunk_by(void* self, void* m) {
     return QSizeF_ShrunkBy((QSizeF*)self, (QMarginsF*)m);
+}
+
+double* q_sizef_rwidth(void* self) {
+    return (double*)QSizeF_Rwidth((QSizeF*)self);
+}
+
+double* q_sizef_rheight(void* self) {
+    return (double*)QSizeF_Rheight((QSizeF*)self);
 }
 
 QSizeF* q_sizef_operator_plus_assign(void* self, void* param1) {

@@ -151,6 +151,16 @@ QSize* q_size_grown_by(void* self, void* m);
 /// @param m QMargins*
 QSize* q_size_shrunk_by(void* self, void* m);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#rwidth)
+///
+/// @param self QSize*
+int* q_size_rwidth(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#rheight)
+///
+/// @param self QSize*
+int* q_size_rheight(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator-2b-eq)
 ///
 /// @param self QSize*
@@ -331,6 +341,16 @@ QSizeF* q_sizef_grown_by(void* self, void* m);
 /// @param self QSizeF*
 /// @param m QMarginsF*
 QSizeF* q_sizef_shrunk_by(void* self, void* m);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#rwidth)
+///
+/// @param self QSizeF*
+double* q_sizef_rwidth(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#rheight)
+///
+/// @param self QSizeF*
+double* q_sizef_rheight(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator-2b-eq)
 ///

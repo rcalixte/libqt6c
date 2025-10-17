@@ -57,6 +57,14 @@ QPoint* q_point_transposed(void* self) {
     return QPoint_Transposed((QPoint*)self);
 }
 
+int* q_point_rx(void* self) {
+    return (int*)QPoint_Rx((QPoint*)self);
+}
+
+int* q_point_ry(void* self) {
+    return (int*)QPoint_Ry((QPoint*)self);
+}
+
 QPoint* q_point_operator_plus_assign(void* self, void* p) {
     return QPoint_OperatorPlusAssign((QPoint*)self, (QPoint*)p);
 }
@@ -151,6 +159,14 @@ void q_pointf_set_y(void* self, double y) {
 
 QPointF* q_pointf_transposed(void* self) {
     return QPointF_Transposed((QPointF*)self);
+}
+
+double* q_pointf_rx(void* self) {
+    return (double*)QPointF_Rx((QPointF*)self);
+}
+
+double* q_pointf_ry(void* self) {
+    return (double*)QPointF_Ry((QPointF*)self);
 }
 
 QPointF* q_pointf_operator_plus_assign(void* self, void* p) {

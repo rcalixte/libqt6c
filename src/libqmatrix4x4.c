@@ -51,6 +51,14 @@ void q_matrix4x4_move_assign(void* self, void* other) {
     QMatrix4x4_MoveAssign((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
+const float* q_matrix4x4_operator_call(void* self, int row, int column) {
+    return (float*)QMatrix4x4_OperatorCall((QMatrix4x4*)self, row, column);
+}
+
+float* q_matrix4x4_operator_call2(void* self, int row, int column) {
+    return (float*)QMatrix4x4_OperatorCall2((QMatrix4x4*)self, row, column);
+}
+
 QVector4D* q_matrix4x4_column(void* self, int index) {
     return QMatrix4x4_Column((QMatrix4x4*)self, index);
 }

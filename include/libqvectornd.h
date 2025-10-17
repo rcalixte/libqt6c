@@ -106,7 +106,13 @@ void q_vector2d_set_y(void* self, float y);
 ///
 /// @param self QVector2D*
 /// @param i int
-float q_vector2d_operator_subscript(void* self, int i);
+float* q_vector2d_operator_subscript(void* self, int i);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-5b-5d)
+///
+/// @param self QVector2D*
+/// @param i int
+float q_vector2d_operator_subscript2(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#length)
 ///
@@ -328,7 +334,13 @@ void q_vector3d_set_z(void* self, float z);
 ///
 /// @param self QVector3D*
 /// @param i int
-float q_vector3d_operator_subscript(void* self, int i);
+float* q_vector3d_operator_subscript(void* self, int i);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-5b-5d)
+///
+/// @param self QVector3D*
+/// @param i int
+float q_vector3d_operator_subscript2(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#length)
 ///
@@ -619,7 +631,13 @@ void q_vector4d_set_w(void* self, float w);
 ///
 /// @param self QVector4D*
 /// @param i int
-float q_vector4d_operator_subscript(void* self, int i);
+float* q_vector4d_operator_subscript(void* self, int i);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-5b-5d)
+///
+/// @param self QVector4D*
+/// @param i int
+float q_vector4d_operator_subscript2(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#length)
 ///

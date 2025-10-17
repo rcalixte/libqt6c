@@ -86,6 +86,20 @@ void q_matrix4x4_copy_assign(void* self, void* other);
 /// @param other QMatrix4x4*
 void q_matrix4x4_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-28-29)
+///
+/// @param self QMatrix4x4*
+/// @param row int
+/// @param column int
+const float* q_matrix4x4_operator_call(void* self, int row, int column);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-28-29)
+///
+/// @param self QMatrix4x4*
+/// @param row int
+/// @param column int
+float* q_matrix4x4_operator_call2(void* self, int row, int column);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#column)
 ///
 /// @param self QMatrix4x4*

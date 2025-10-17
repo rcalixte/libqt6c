@@ -26,7 +26,13 @@ QIPv6Address* q_ipv6address_new2(void* param1);
 ///
 /// @param self QIPv6Address*
 /// @param index int
-unsigned char q_ipv6address_operator_subscript(void* self, int index);
+unsigned char* q_ipv6address_operator_subscript(void* self, int index);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qipv6address.html#operator-5b-5d)
+///
+/// @param self QIPv6Address*
+/// @param index int
+unsigned char q_ipv6address_operator_subscript2(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qipv6address.html#dtor.QIPv6Address)
 ///

@@ -129,6 +129,12 @@ void k_texteditor__attribute_clear(void* self);
 /// @param self KTextEditor__Attribute*
 bool k_texteditor__attribute_has_any_property(void* self);
 
+/// [Qt documentation](https://api.kde.org/ktexteditor-attribute.html#operator-2b-eq)
+///
+/// @param self KTextEditor__Attribute*
+/// @param a KTextEditor__Attribute*
+KTextEditor__Attribute* k_texteditor__attribute_operator_plus_assign(void* self, void* a);
+
 /// [Qt documentation](https://api.kde.org/ktexteditor-attribute.html#operator-eq)
 ///
 /// @param self KTextEditor__Attribute*

@@ -87,6 +87,16 @@ int32_t q_point_manhattan_length(void* self);
 /// @param self QPoint*
 QPoint* q_point_transposed(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#rx)
+///
+/// @param self QPoint*
+int* q_point_rx(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#ry)
+///
+/// @param self QPoint*
+int* q_point_ry(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2b-eq)
 ///
 /// @param self QPoint*
@@ -221,6 +231,16 @@ void q_pointf_set_y(void* self, double y);
 ///
 /// @param self QPointF*
 QPointF* q_pointf_transposed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#rx)
+///
+/// @param self QPointF*
+double* q_pointf_rx(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#ry)
+///
+/// @param self QPointF*
+double* q_pointf_ry(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2b-eq)
 ///
