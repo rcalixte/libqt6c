@@ -89,6 +89,10 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return "https://github.com/ksnip/kImageAnnotator"
 	}
 
+	if strings.HasPrefix(pageName, "packagekit") {
+		return "https://github.com/PackageKit/PackageKit-Qt"
+	}
+
 	if strings.HasPrefix(pageName, "qkeychain") {
 		return "https://github.com/frankosterfeld/qtkeychain"
 	}
@@ -1503,6 +1507,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSvg"), "ksvg-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KSyntaxHighlighting"), "ksyntaxhighlighting-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "LayerShellQt"), "layershellqt-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "PackageKit"), "packagekit-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "qt6keychain"), "qkeychain-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
@@ -1620,7 +1625,8 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeSuffix := ""
 		if (parentInclude == "" && strings.Contains(src.Filename, "KIO") && (refInc == "deletejob" || refInc == "metadata")) ||
 			(parentInclude == "" && strings.Contains(src.Filename, "KNS") && refInc == "provider") ||
-			(parentInclude == "" && strings.Contains(src.Filename, "KTextEditor") && (refInc == "mainwindow" || refInc == "message")) {
+			(parentInclude == "" && strings.Contains(src.Filename, "KTextEditor") && (refInc == "mainwindow" || refInc == "message")) ||
+			(parentInclude == "" && strings.Contains(src.Filename, "PackageKit") && refInc == "transaction") {
 			maybeSuffix = "_1"
 		}
 
