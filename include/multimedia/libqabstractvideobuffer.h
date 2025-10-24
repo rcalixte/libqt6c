@@ -23,6 +23,12 @@ void q_abstractvideobuffer_unmap(void* self);
 /// @param self QAbstractVideoBuffer*
 QVideoFrameFormat* q_abstractvideobuffer_format(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer.html#operator-eq)
+///
+/// @param self QAbstractVideoBuffer*
+/// @param param1 QAbstractVideoBuffer*
+void q_abstractvideobuffer_operator_assign(void* self, void* param1);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer.html#dtor.QAbstractVideoBuffer)
 ///
 /// Delete this object from C++ memory.

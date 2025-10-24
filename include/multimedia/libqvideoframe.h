@@ -32,6 +32,12 @@ QVideoFrame* q_videoframe_new3(void* image);
 /// @param other QVideoFrame*
 QVideoFrame* q_videoframe_new4(void* other);
 
+/// q_videoframe_new5 constructs a new QVideoFrame object.
+///
+/// @param buffer QAbstractVideoBuffer*
+/// @param format QVideoFrameFormat*
+QVideoFrame* q_videoframe_new5(void* buffer, void* format);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#swap)
 ///
 /// @param self QVideoFrame*
@@ -252,6 +258,11 @@ void q_videoframe_set_subtitle_text(void* self, const char* text);
 /// @param rect QRectF*
 /// @param options QVideoFrame__PaintOptions*
 void q_videoframe_paint(void* self, void* painter, void* rect, void* options);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#videoBuffer)
+///
+/// @param self QVideoFrame*
+QAbstractVideoBuffer* q_videoframe_video_buffer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#dtor.QVideoFrame)
 ///
