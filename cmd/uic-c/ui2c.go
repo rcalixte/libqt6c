@@ -1274,7 +1274,7 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 		// The first listed class can be the central widget.
 		// TODO should it be the first child with a layout? But need to handle windows with no layout
 		if wClass == "QMainWindow" && !setCentralWidget {
-			ret.WriteString(wClassC + "_set_central_widget(ui->" + w.Name + ", ui->" + child.Name + ");\n") // Set central widget
+			ret.WriteString("\n" + wClassC + "_set_central_widget(ui->" + w.Name + ", ui->" + child.Name + ");\n") // Set central widget
 			setCentralWidget = true
 		}
 
@@ -1504,6 +1504,7 @@ static void retranslate_` + strings.TrimPrefix(cMethod, "_") + "(" + uClass + `U
 // new` + cMethod + "_ui creates all the Qt objects for " + uClass + `Ui
 static ` + uClass + "Ui* new" + cMethod + `_ui() {
     ` + uClass + "Ui* ui = (" + uClass + "Ui*)malloc(sizeof(" + uClass + `Ui));
+if (ui == NULL) return NULL;
 `)
 
 	ret.WriteString(strings.Join(newFuncBody, ""))

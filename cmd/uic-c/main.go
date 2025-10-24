@@ -1,3 +1,5 @@
+// uic-c is a command-line tool for generating a C header file from a Qt
+// Creator or Qt Designer form (*.ui).
 package main
 
 import (
