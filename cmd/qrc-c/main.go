@@ -1,5 +1,5 @@
-// qrc-c compiles a Qt resource XML file (*.qrc) to an include header or a
-// binary resource file and creates a C header stub to load it.
+// qrc-c compiles a Qt resource XML file (*.qrc) to an include header and
+// creates a C header stub to load it.
 package main
 
 import (
