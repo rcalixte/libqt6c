@@ -1,3 +1,4 @@
+#include "libqabstractvideobuffer.hpp"
 #include "../libqcolor.hpp"
 #include "../libqimage.hpp"
 #include "../libqpainter.hpp"
@@ -21,6 +22,10 @@ QVideoFrame* q_videoframe_new3(void* image) {
 
 QVideoFrame* q_videoframe_new4(void* other) {
     return QVideoFrame_new4((QVideoFrame*)other);
+}
+
+QVideoFrame* q_videoframe_new5(void* buffer, void* format) {
+    return QVideoFrame_new5((QAbstractVideoBuffer*)buffer, (QVideoFrameFormat*)format);
 }
 
 void q_videoframe_swap(void* self, void* other) {
@@ -176,6 +181,10 @@ void q_videoframe_set_subtitle_text(void* self, const char* text) {
 
 void q_videoframe_paint(void* self, void* painter, void* rect, void* options) {
     QVideoFrame_Paint((QVideoFrame*)self, (QPainter*)painter, (QRectF*)rect, (QVideoFrame__PaintOptions*)options);
+}
+
+QAbstractVideoBuffer* q_videoframe_video_buffer(void* self) {
+    return QVideoFrame_VideoBuffer((QVideoFrame*)self);
 }
 
 void q_videoframe_delete(void* self) {
