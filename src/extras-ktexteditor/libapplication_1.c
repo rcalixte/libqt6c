@@ -6,8 +6,8 @@
 #include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqurl.hpp"
-#include "libapplication.hpp"
-#include "libapplication.h"
+#include "libapplication_1.hpp"
+#include "libapplication_1.h"
 
 KTextEditor__Application* k_texteditor__application_new(void* parent) {
     return KTextEditor__Application_new((QObject*)parent);
