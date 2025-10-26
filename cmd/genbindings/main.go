@@ -1,3 +1,4 @@
+// genbindings regenerates the Qt bindings for C
 package main
 
 import (
