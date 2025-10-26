@@ -1,7 +1,7 @@
 #include "../extras-kcoreaddons/libkaboutdata.hpp"
 #include "../extras-ksyntaxhighlighting/librepository.hpp"
 #include "../extras-ksyntaxhighlighting/libtheme.hpp"
-#include "libapplication.hpp"
+#include "libapplication_1.hpp"
 #include "libcommand.hpp"
 #include "libconfigpage.hpp"
 #include "libdocument.hpp"

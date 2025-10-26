@@ -3,6 +3,16 @@
 #include <stddef.h>
 #include <stdint.h>
 
+typedef struct Accounts__Account Accounts__Account;
+typedef struct Accounts__AccountService Accounts__AccountService;
+typedef struct Accounts__Application Accounts__Application;
+typedef struct Accounts__AuthData Accounts__AuthData;
+typedef struct Accounts__Error Accounts__Error;
+typedef struct Accounts__Manager Accounts__Manager;
+typedef struct Accounts__Provider Accounts__Provider;
+typedef struct Accounts__Service Accounts__Service;
+typedef struct Accounts__ServiceType Accounts__ServiceType;
+typedef struct Accounts__Watch Accounts__Watch;
 typedef struct Attica Attica;
 typedef struct Attica__AccountBalance Attica__AccountBalance;
 typedef struct Attica__Achievement Attica__Achievement;
