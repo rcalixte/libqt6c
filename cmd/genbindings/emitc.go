@@ -97,6 +97,10 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return "https://github.com/frankosterfeld/qtkeychain"
 	}
 
+	if strings.HasPrefix(pageName, "Accounts__") {
+		return "https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1" + strings.ToUpper(pageName[10:11]) + pageName[11:] + ".html"
+	}
+
 	if pageType == DtorPage && strings.Contains(className, "__") {
 		return ""
 	}
@@ -1071,7 +1075,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
 			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}})) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			pageName := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP"), cStructName, getPageName(cStructName)) + maybeCharts
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q')
+			pageName := ifv(isSpecialCase, cStructName, getPageName(cStructName)) + maybeCharts
 			ret.WriteString("\n\n/// " + getPageUrl(QtPage, pageName, "", cStructName) + "\n")
 		}
 
@@ -1217,7 +1222,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			var docCommentUrl string
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			subjectURL := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP"), className, strings.ToLower(className))
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q')
+			subjectURL := ifv(isSpecialCase, className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1387,7 +1393,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			subjectURL := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP"), className, strings.ToLower(className))
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q')
+			subjectURL := ifv(isSpecialCase, className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1461,7 +1468,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			subjectURL := ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP"), className, strings.ToLower(className))
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q')
+			subjectURL := ifv(isSpecialCase, className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
@@ -1490,7 +1498,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			pageUrl := getPageUrl(DtorPage, ifv(cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP"), cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q')
+			pageUrl := getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
 			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n" +
@@ -1501,6 +1510,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	if len(src.Enums) > 0 {
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
 		maybeUrlPrefix := ifv(strings.Contains(src.Filename, "KIO") && !strings.HasPrefix(getPageName(cfs.currentHeaderName), "k"), "kio-", "")
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Accounts"), "Accounts__", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Attica"), "attica-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KNSCore"), "knscore-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "KParts"), "kparts-", maybeUrlPrefix)
@@ -1625,9 +1635,12 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeSuffix := ""
 		if (parentInclude == "" && strings.Contains(src.Filename, "KIO") && (refInc == "deletejob" || refInc == "metadata")) ||
 			(parentInclude == "" && strings.Contains(src.Filename, "KNS") && refInc == "provider") ||
-			(parentInclude == "" && strings.Contains(src.Filename, "KTextEditor") && (refInc == "mainwindow" || refInc == "message")) ||
+			(parentInclude == "" && strings.Contains(src.Filename, "KTextEditor") && (refInc == "application" || refInc == "mainwindow" || refInc == "message")) ||
 			(parentInclude == "" && strings.Contains(src.Filename, "PackageKit") && refInc == "transaction") {
 			maybeSuffix = "_1"
+		}
+		if parentInclude == "" && strings.Contains(src.Filename, "Accounts") && refInc == "provider" {
+			maybeSuffix = "_2"
 		}
 
 		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + maybeSuffix + `.hpp"` + "\n")
