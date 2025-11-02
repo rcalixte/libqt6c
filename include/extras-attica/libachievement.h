@@ -147,7 +147,7 @@ QUrl* k_attica__achievement_image(void* self);
 ///
 /// @param self Attica__Achievement*
 /// @param dependencies const char**
-void k_attica__achievement_set_dependencies(void* self, const char* dependencies[]);
+void k_attica__achievement_set_dependencies(void* self, const char* dependencies[static 1]);
 
 /// [Qt documentation](https://api.kde.org/attica-achievement.html#addDependency)
 ///
@@ -198,7 +198,7 @@ int32_t k_attica__achievement_type(void* self);
 ///
 /// @param self Attica__Achievement*
 /// @param options const char**
-void k_attica__achievement_set_options(void* self, const char* options[]);
+void k_attica__achievement_set_options(void* self, const char* options[static 1]);
 
 /// [Qt documentation](https://api.kde.org/attica-achievement.html#addOption)
 ///

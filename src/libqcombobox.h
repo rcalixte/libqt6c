@@ -338,7 +338,7 @@ void q_combobox_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self QComboBox*
 /// @param texts const char**
-void q_combobox_add_items(void* self, const char* texts[]);
+void q_combobox_add_items(void* self, const char* texts[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#insertItem)
 ///
@@ -360,7 +360,7 @@ void q_combobox_insert_item2(void* self, int index, void* icon, const char* text
 /// @param self QComboBox*
 /// @param index int
 /// @param texts const char**
-void q_combobox_insert_items(void* self, int index, const char* texts[]);
+void q_combobox_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#insertSeparator)
 ///

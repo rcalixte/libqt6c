@@ -61,7 +61,7 @@ int32_t q_sessionmanager_restart_hint(void* self) {
     return QSessionManager_RestartHint((QSessionManager*)self);
 }
 
-void q_sessionmanager_set_restart_command(void* self, const char* restartCommand[]) {
+void q_sessionmanager_set_restart_command(void* self, const char* restartCommand[static 1]) {
     size_t restartCommand_len = libqt_strv_length(restartCommand);
     libqt_string* restartCommand_qstr = (libqt_string*)malloc(restartCommand_len * sizeof(libqt_string));
     if (restartCommand_qstr == NULL) {
@@ -95,7 +95,7 @@ const char** q_sessionmanager_restart_command(void* self) {
     return _ret;
 }
 
-void q_sessionmanager_set_discard_command(void* self, const char* discardCommand[]) {
+void q_sessionmanager_set_discard_command(void* self, const char* discardCommand[static 1]) {
     size_t discardCommand_len = libqt_strv_length(discardCommand);
     libqt_string* discardCommand_qstr = (libqt_string*)malloc(discardCommand_len * sizeof(libqt_string));
     if (discardCommand_qstr == NULL) {
@@ -133,7 +133,7 @@ void q_sessionmanager_set_manager_property(void* self, const char* name, const c
     QSessionManager_SetManagerProperty((QSessionManager*)self, qstring(name), qstring(value));
 }
 
-void q_sessionmanager_set_manager_property2(void* self, const char* name, const char* value[]) {
+void q_sessionmanager_set_manager_property2(void* self, const char* name, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {

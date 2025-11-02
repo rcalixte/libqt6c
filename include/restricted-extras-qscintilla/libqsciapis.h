@@ -114,7 +114,7 @@ bool q_sciapis_save_prepared(void* self);
 /// @param self QsciAPIs*
 /// @param context const char**
 /// @param list const char**
-void q_sciapis_update_auto_completion_list(void* self, const char* context[], const char* list[]);
+void q_sciapis_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -131,7 +131,7 @@ void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*
 /// @param self QsciAPIs*
 /// @param context const char**
 /// @param list const char**
-void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[], const char* list[]);
+void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -164,7 +164,7 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel);
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list /* of int */
-const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts);
+const char** q_sciapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -183,7 +183,7 @@ void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const ch
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list /* of int */
-const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts);
+const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///

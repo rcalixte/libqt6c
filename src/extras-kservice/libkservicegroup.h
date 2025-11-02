@@ -128,7 +128,7 @@ const char** k_servicegroup_suppress_generic_names(void* self);
 ///
 /// @param self KServiceGroup*
 /// @param layout const char**
-void k_servicegroup_set_layout_info(void* self, const char* layout[]);
+void k_servicegroup_set_layout_info(void* self, const char* layout[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kservicegroup.html#layoutInfo)
 ///

@@ -76,7 +76,7 @@ void q_packagekit__offline_get_prepared(void* self);
 ///
 /// @param self PackageKit__Offline*
 /// @param updates const char**
-void q_packagekit__offline_prepared_updates(void* self, const char* updates[]);
+void q_packagekit__offline_prepared_updates(void* self, const char* updates[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///

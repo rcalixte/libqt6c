@@ -17,7 +17,7 @@ QCompleter* q_completer_new2(void* model) {
     return QCompleter_new2((QAbstractItemModel*)model);
 }
 
-QCompleter* q_completer_new3(const char* completions[]) {
+QCompleter* q_completer_new3(const char* completions[static 1]) {
     size_t completions_len = libqt_strv_length(completions);
     libqt_string* completions_qstr = (libqt_string*)malloc(completions_len * sizeof(libqt_string));
     if (completions_qstr == NULL) {
@@ -42,7 +42,7 @@ QCompleter* q_completer_new5(void* model, void* parent) {
     return QCompleter_new5((QAbstractItemModel*)model, (QObject*)parent);
 }
 
-QCompleter* q_completer_new6(const char* completions[], void* parent) {
+QCompleter* q_completer_new6(const char* completions[static 1], void* parent) {
     size_t completions_len = libqt_strv_length(completions);
     libqt_string* completions_qstr = (libqt_string*)malloc(completions_len * sizeof(libqt_string));
     if (completions_qstr == NULL) {

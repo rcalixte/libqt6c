@@ -265,7 +265,7 @@ void q_webengineprofile_clear_http_cache(void* self);
 ///
 /// @param self QWebEngineProfile*
 /// @param languages const char**
-void q_webengineprofile_set_spell_check_languages(void* self, const char* languages[]);
+void q_webengineprofile_set_spell_check_languages(void* self, const char* languages[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#spellCheckLanguages)
 ///

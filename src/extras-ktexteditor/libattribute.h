@@ -192,7 +192,7 @@ const char* k_texteditor__attribute_font_family(void* self);
 ///
 /// @param self KTextEditor__Attribute*
 /// @param families const char**
-void k_texteditor__attribute_set_font_families(void* self, const char* families[]);
+void k_texteditor__attribute_set_font_families(void* self, const char* families[static 1]);
 
 /// Inherited from QTextCharFormat
 ///
@@ -630,7 +630,7 @@ const char* k_texteditor__attribute_anchor_href(void* self);
 ///
 /// @param self KTextEditor__Attribute*
 /// @param names const char**
-void k_texteditor__attribute_set_anchor_names(void* self, const char* names[]);
+void k_texteditor__attribute_set_anchor_names(void* self, const char* names[static 1]);
 
 /// Inherited from QTextCharFormat
 ///

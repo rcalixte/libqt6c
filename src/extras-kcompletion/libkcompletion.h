@@ -285,13 +285,13 @@ const char* k_completion_next_match(void* self);
 ///
 /// @param self KCompletion*
 /// @param items const char**
-void k_completion_insert_items(void* self, const char* items[]);
+void k_completion_insert_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
 ///
 /// @param self KCompletion*
 /// @param itemList const char**
-void k_completion_set_items(void* self, const char* itemList[]);
+void k_completion_set_items(void* self, const char* itemList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#setItems)
 ///
@@ -307,7 +307,7 @@ void k_completion_on_set_items(void* self, void (*callback)(void*, const char**)
 ///
 /// @param self KCompletion*
 /// @param itemList const char**
-void k_completion_qbase_set_items(void* self, const char* itemList[]);
+void k_completion_qbase_set_items(void* self, const char* itemList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#addItem)
 ///
@@ -364,7 +364,7 @@ void k_completion_on_match(void* self, void (*callback)(void*, const char*));
 ///
 /// @param self KCompletion*
 /// @param matchlist const char**
-void k_completion_matches(void* self, const char* matchlist[]);
+void k_completion_matches(void* self, const char* matchlist[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#matches)
 ///
@@ -387,7 +387,7 @@ void k_completion_on_multiple_matches(void* self, void (*callback)(void*));
 ///
 /// @param self KCompletion*
 /// @param matchList const char**
-void k_completion_post_process_matches(void* self, const char* matchList[]);
+void k_completion_post_process_matches(void* self, const char* matchList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///
@@ -403,7 +403,7 @@ void k_completion_on_post_process_matches(void* self, void (*callback)(void*, co
 ///
 /// @param self KCompletion*
 /// @param matchList const char**
-void k_completion_qbase_post_process_matches(void* self, const char* matchList[]);
+void k_completion_qbase_post_process_matches(void* self, const char* matchList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletion.html#postProcessMatches)
 ///

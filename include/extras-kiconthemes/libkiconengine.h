@@ -18,7 +18,7 @@
 /// @param iconName const char*
 /// @param iconLoader KIconLoader*
 /// @param overlays const char**
-KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char* overlays[]);
+KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char* overlays[static 1]);
 
 /// k_iconengine_new2 constructs a new KIconEngine object.
 ///
@@ -39,7 +39,7 @@ KIconEngine* k_iconengine_new3(const char* iconName, void* colors, void* iconLoa
 /// @param colors KIconColors*
 /// @param iconLoader KIconLoader*
 /// @param overlays const char**
-KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoader, const char* overlays[]);
+KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoader, const char* overlays[static 1]);
 
 /// k_iconengine_new5 constructs a new KIconEngine object.
 ///

@@ -57,7 +57,7 @@ void q_commandlineparser_clear_positional_arguments(void* self) {
     QCommandLineParser_ClearPositionalArguments((QCommandLineParser*)self);
 }
 
-void q_commandlineparser_process(void* self, const char* arguments[]) {
+void q_commandlineparser_process(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -76,7 +76,7 @@ void q_commandlineparser_process2(void* self, void* app) {
     QCommandLineParser_Process2((QCommandLineParser*)self, (QCoreApplication*)app);
 }
 
-bool q_commandlineparser_parse(void* self, const char* arguments[]) {
+bool q_commandlineparser_parse(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {

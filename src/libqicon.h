@@ -213,7 +213,7 @@ const char** q_icon_theme_search_paths();
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#setThemeSearchPaths)
 ///
 /// @param searchpath const char**
-void q_icon_set_theme_search_paths(const char* searchpath[]);
+void q_icon_set_theme_search_paths(const char* searchpath[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#fallbackSearchPaths)
 ///
@@ -224,7 +224,7 @@ const char** q_icon_fallback_search_paths();
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#setFallbackSearchPaths)
 ///
 /// @param paths const char**
-void q_icon_set_fallback_search_paths(const char* paths[]);
+void q_icon_set_fallback_search_paths(const char* paths[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#themeName)
 ///

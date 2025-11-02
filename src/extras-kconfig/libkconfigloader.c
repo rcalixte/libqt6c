@@ -224,7 +224,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time(void* self,
     return KCoreConfigSkeleton_AddItemDateTime((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference);
 }
 
-KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list(void* self, const char* name, const char* reference[]) {
+KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list(void* self, const char* name, const char* reference[static 1]) {
     size_t reference_len = libqt_strv_length(reference);
     libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
     if (reference_qstr == NULL) {
@@ -421,7 +421,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time4(void* self
     return KCoreConfigSkeleton_AddItemDateTime4((KCoreConfigSkeleton*)self, qstring(name), (QDateTime*)reference, (QDateTime*)defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* self, const char* name, const char* reference[], const char* defaultValue[]) {
+KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* self, const char* name, const char* reference[static 1], const char* defaultValue[static 1]) {
     size_t reference_len = libqt_strv_length(reference);
     libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
     if (reference_qstr == NULL) {
@@ -448,7 +448,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* 
     return _out;
 }
 
-KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list4(void* self, const char* name, const char* reference[], const char* defaultValue[], const char* key) {
+KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list4(void* self, const char* name, const char* reference[static 1], const char* defaultValue[static 1], const char* key) {
     size_t reference_len = libqt_strv_length(reference);
     libqt_string* reference_qstr = (libqt_string*)malloc(reference_len * sizeof(libqt_string));
     if (reference_qstr == NULL) {

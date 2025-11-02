@@ -22,7 +22,7 @@ QDirListing* q_dirlisting_new(const char* path);
 ///
 /// @param path const char*
 /// @param nameFilters const char**
-QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[]);
+QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[static 1]);
 
 /// q_dirlisting_new3 constructs a new QDirListing object.
 ///
@@ -35,7 +35,7 @@ QDirListing* q_dirlisting_new3(const char* path, int32_t flags);
 /// @param path const char*
 /// @param nameFilters const char**
 /// @param flags flag of enum QDirListing__IteratorFlag
-QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[], int32_t flags);
+QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[static 1], int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#swap)
 ///

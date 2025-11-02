@@ -244,7 +244,7 @@ int32_t q_coreapplication_check_permission(void* self, void* permission);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
 ///
 /// @param libraryPaths const char**
-void q_coreapplication_set_library_paths(const char* libraryPaths[]);
+void q_coreapplication_set_library_paths(const char* libraryPaths[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#libraryPaths)
 ///

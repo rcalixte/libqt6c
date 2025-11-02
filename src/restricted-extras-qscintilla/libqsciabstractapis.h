@@ -64,7 +64,7 @@ QsciLexer* q_sciabstractapis_lexer(void* self);
 /// @param self QsciAbstractAPIs*
 /// @param context const char**
 /// @param list const char**
-void q_sciabstractapis_update_auto_completion_list(void* self, const char* context[], const char* list[]);
+void q_sciabstractapis_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
@@ -81,7 +81,7 @@ void q_sciabstractapis_on_update_auto_completion_list(void* self, void (*callbac
 /// @param self QsciAbstractAPIs*
 /// @param context const char**
 /// @param list const char**
-void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char* context[], const char* list[]);
+void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
@@ -114,7 +114,7 @@ void q_sciabstractapis_qbase_auto_completion_selected(void* self, const char* se
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list /* of int */
-const char** q_sciabstractapis_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts);
+const char** q_sciabstractapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
@@ -133,7 +133,7 @@ void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, 
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list /* of int */
-const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts);
+const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

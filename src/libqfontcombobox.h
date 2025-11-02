@@ -551,7 +551,7 @@ void q_fontcombobox_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self QFontComboBox*
 /// @param texts const char**
-void q_fontcombobox_add_items(void* self, const char* texts[]);
+void q_fontcombobox_add_items(void* self, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -579,7 +579,7 @@ void q_fontcombobox_insert_item2(void* self, int index, void* icon, const char* 
 /// @param self QFontComboBox*
 /// @param index int
 /// @param texts const char**
-void q_fontcombobox_insert_items(void* self, int index, const char* texts[]);
+void q_fontcombobox_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///

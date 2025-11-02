@@ -947,7 +947,7 @@ void k_parts__readwritepart_unplug_action_list(void* self, const char* name);
 ///
 /// @param files const char**
 /// @param doc const char*
-const char* k_parts__readwritepart_find_most_recent_x_m_l_file(const char* files[], const char* doc);
+const char* k_parts__readwritepart_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc);
 
 /// Inherited from KXMLGUIClient
 ///

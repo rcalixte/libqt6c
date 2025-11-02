@@ -5,7 +5,7 @@ KFileFilter* k_filefilter_new() {
     return KFileFilter_new();
 }
 
-KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[], const char* mimePatterns[]) {
+KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[static 1], const char* mimePatterns[static 1]) {
     size_t filePatterns_len = libqt_strv_length(filePatterns);
     libqt_string* filePatterns_qstr = (libqt_string*)malloc(filePatterns_len * sizeof(libqt_string));
     if (filePatterns_qstr == NULL) {
@@ -109,7 +109,7 @@ KFileFilter* k_filefilter_from_mime_type(const char* mimeType) {
     return KFileFilter_FromMimeType(qstring(mimeType));
 }
 
-libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTypes[]) {
+libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTypes[static 1]) {
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {

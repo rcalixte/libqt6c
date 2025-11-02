@@ -261,7 +261,7 @@ bool q_sslconfiguration_ocsp_stapling_enabled(void* self) {
     return QSslConfiguration_OcspStaplingEnabled((QSslConfiguration*)self);
 }
 
-void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* protocols[]) {
+void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* protocols[static 1]) {
     size_t protocols_len = libqt_strv_length(protocols);
     libqt_string* protocols_qstr = (libqt_string*)malloc(protocols_len * sizeof(libqt_string));
     if (protocols_qstr == NULL) {

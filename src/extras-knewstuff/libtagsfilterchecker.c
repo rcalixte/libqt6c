@@ -1,7 +1,7 @@
 #include "libtagsfilterchecker.hpp"
 #include "libtagsfilterchecker.h"
 
-KNSCore__TagsFilterChecker* k_nscore__tagsfilterchecker_new(const char* tagFilter[]) {
+KNSCore__TagsFilterChecker* k_nscore__tagsfilterchecker_new(const char* tagFilter[static 1]) {
     size_t tagFilter_len = libqt_strv_length(tagFilter);
     libqt_string* tagFilter_qstr = (libqt_string*)malloc(tagFilter_len * sizeof(libqt_string));
     if (tagFilter_qstr == NULL) {
@@ -18,7 +18,7 @@ KNSCore__TagsFilterChecker* k_nscore__tagsfilterchecker_new(const char* tagFilte
     return _out;
 }
 
-bool k_nscore__tagsfilterchecker_filter_accepts(void* self, const char* tags[]) {
+bool k_nscore__tagsfilterchecker_filter_accepts(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {

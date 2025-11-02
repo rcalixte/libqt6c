@@ -162,7 +162,7 @@ void k_xmlguiclient_unplug_action_list(void* self, const char* name) {
     KXMLGUIClient_UnplugActionList((KXMLGUIClient*)self, qstring(name));
 }
 
-const char* k_xmlguiclient_find_most_recent_x_m_l_file(const char* files[], const char* doc) {
+const char* k_xmlguiclient_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -344,7 +344,7 @@ const char** k_xmlguiclient__statechange_actions_to_enable(void* self) {
     return actionsToEnable_ret;
 }
 
-void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* actionsToEnable[]) {
+void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* actionsToEnable[static 1]) {
     size_t actionsToEnable_len = libqt_strv_length(actionsToEnable);
     libqt_string* actionsToEnable_qstr = (libqt_string*)malloc(actionsToEnable_len * sizeof(libqt_string));
     if (actionsToEnable_qstr == NULL) {
@@ -378,7 +378,7 @@ const char** k_xmlguiclient__statechange_actions_to_disable(void* self) {
     return actionsToDisable_ret;
 }
 
-void k_xmlguiclient__statechange_set_actions_to_disable(void* self, const char* actionsToDisable[]) {
+void k_xmlguiclient__statechange_set_actions_to_disable(void* self, const char* actionsToDisable[static 1]) {
     size_t actionsToDisable_len = libqt_strv_length(actionsToDisable);
     libqt_string* actionsToDisable_qstr = (libqt_string*)malloc(actionsToDisable_len * sizeof(libqt_string));
     if (actionsToDisable_qstr == NULL) {

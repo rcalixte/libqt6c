@@ -235,7 +235,7 @@ void k_xmlguiclient_unplug_action_list(void* self, const char* name);
 ///
 /// @param files const char**
 /// @param doc const char*
-const char* k_xmlguiclient_find_most_recent_x_m_l_file(const char* files[], const char* doc);
+const char* k_xmlguiclient_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc);
 
 /// [Qt documentation](https://api.kde.org/kxmlguiclient.html#addStateActionEnabled)
 ///
@@ -502,7 +502,7 @@ const char** k_xmlguiclient__statechange_actions_to_enable(void* self);
 ///
 /// @param self KXMLGUIClient__StateChange*
 /// @param actionsToEnable const char**
-void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* actionsToEnable[]);
+void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* actionsToEnable[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kxmlguiclient-statechange.html#actionsToDisable-var)
 ///
@@ -515,7 +515,7 @@ const char** k_xmlguiclient__statechange_actions_to_disable(void* self);
 ///
 /// @param self KXMLGUIClient__StateChange*
 /// @param actionsToDisable const char**
-void k_xmlguiclient__statechange_set_actions_to_disable(void* self, const char* actionsToDisable[]);
+void k_xmlguiclient__statechange_set_actions_to_disable(void* self, const char* actionsToDisable[static 1]);
 
 /// Delete this object from C++ memory.
 ///

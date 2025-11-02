@@ -90,7 +90,7 @@ const char** q_dbusservicewatcher_watched_services(void* self);
 ///
 /// @param self QDBusServiceWatcher*
 /// @param services const char**
-void q_dbusservicewatcher_set_watched_services(void* self, const char* services[]);
+void q_dbusservicewatcher_set_watched_services(void* self, const char* services[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusservicewatcher.html#addWatchedService)
 ///

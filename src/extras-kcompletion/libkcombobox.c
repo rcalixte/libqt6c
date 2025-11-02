@@ -231,7 +231,7 @@ void k_combobox_qbase_set_completed_text(void* self, const char* completedText) 
     KComboBox_QBaseSetCompletedText((KComboBox*)self, qstring(completedText));
 }
 
-void k_combobox_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_combobox_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -250,7 +250,7 @@ void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const
     KComboBox_OnSetCompletedItems((KComboBox*)self, (intptr_t)callback);
 }
 
-void k_combobox_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_combobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -495,7 +495,7 @@ void k_combobox_add_item2(void* self, void* icon, const char* text) {
     QComboBox_AddItem2((QComboBox*)self, (QIcon*)icon, qstring(text));
 }
 
-void k_combobox_add_items(void* self, const char* texts[]) {
+void k_combobox_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
@@ -518,7 +518,7 @@ void k_combobox_insert_item2(void* self, int index, void* icon, const char* text
     QComboBox_InsertItem2((QComboBox*)self, index, (QIcon*)icon, qstring(text));
 }
 
-void k_combobox_insert_items(void* self, int index, const char* texts[]) {
+void k_combobox_insert_items(void* self, int index, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {

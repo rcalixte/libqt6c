@@ -262,7 +262,7 @@ void k_nscore__entry_set_preview_image(void* self, void* image);
 ///
 /// @param self KNSCore__Entry*
 /// @param files const char**
-void k_nscore__entry_set_installed_files(void* self, const char* files[]);
+void k_nscore__entry_set_installed_files(void* self, const char* files[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-entry.html#installedFiles)
 ///
@@ -391,7 +391,7 @@ const char** k_nscore__entry_tags(void* self);
 ///
 /// @param self KNSCore__Entry*
 /// @param tags const char**
-void k_nscore__entry_set_tags(void* self, const char* tags[]);
+void k_nscore__entry_set_tags(void* self, const char* tags[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-entry.html#providerId)
 ///
@@ -592,7 +592,7 @@ const char** k_nscore__entry__downloadlinkinformation_tags(void* self);
 ///
 /// @param self KNSCore__Entry__DownloadLinkInformation*
 /// @param tags const char**
-void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* tags[]);
+void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* tags[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-entry-downloadlinkinformation.html#operator-eq)
 ///

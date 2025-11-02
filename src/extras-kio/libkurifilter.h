@@ -126,7 +126,7 @@ void k_urifiltersearchprovider_qbase_set_icon_name(void* self, const char* iconN
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param keys const char**
-void k_urifiltersearchprovider_set_keys(void* self, const char* keys[]);
+void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
@@ -142,7 +142,7 @@ void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, c
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param keys const char**
-void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[]);
+void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
@@ -368,7 +368,7 @@ bool k_urifilterdata_set_absolute_path(void* self, const char* abs_path);
 ///
 /// @param self KUriFilterData*
 /// @param providers const char**
-void k_urifilterdata_set_alternate_search_providers(void* self, const char* providers[]);
+void k_urifilterdata_set_alternate_search_providers(void* self, const char* providers[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifilterdata.html#setAlternateDefaultSearchProvider)
 ///
@@ -464,28 +464,28 @@ const char** k_urifilter_plugin_names(void* self);
 /// @param self KUriFilter*
 /// @param data KUriFilterData*
 /// @param filters const char**
-bool k_urifilter_filter_uri22(void* self, void* data, const char* filters[]);
+bool k_urifilter_filter_uri22(void* self, void* data, const char* filters[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param uri QUrl*
 /// @param filters const char**
-bool k_urifilter_filter_uri23(void* self, void* uri, const char* filters[]);
+bool k_urifilter_filter_uri23(void* self, void* uri, const char* filters[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifilter.html#filterUri)
 ///
 /// @param self KUriFilter*
 /// @param uri const char*
 /// @param filters const char**
-bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[]);
+bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifilter.html#filteredUri)
 ///
 /// @param self KUriFilter*
 /// @param uri QUrl*
 /// @param filters const char**
-QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[]);
+QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifilter.html#filteredUri)
 ///
@@ -494,7 +494,7 @@ QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[]);
 /// @param self KUriFilter*
 /// @param uri const char*
 /// @param filters const char**
-const char* k_urifilter_filtered_uri23(void* self, const char* uri, const char* filters[]);
+const char* k_urifilter_filtered_uri23(void* self, const char* uri, const char* filters[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurifilter.html#dtor.KUriFilter)
 ///

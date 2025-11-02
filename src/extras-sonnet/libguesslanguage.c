@@ -16,7 +16,7 @@ const char* k_sonnet__guesslanguage_identify(void* self, const char* text) {
     return _ret;
 }
 
-const char* k_sonnet__guesslanguage_identify2(void* self, const char* text, const char* suggestions[]) {
+const char* k_sonnet__guesslanguage_identify2(void* self, const char* text, const char* suggestions[static 1]) {
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {

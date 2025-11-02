@@ -161,7 +161,7 @@ void k_imageannotator__kimageannotator_remove_tab(void* self, int index) {
     kImageAnnotator__KImageAnnotator_RemoveTab((kImageAnnotator__KImageAnnotator*)self, index);
 }
 
-void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stickerPaths[], bool keepDefault) {
+void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stickerPaths[static 1], bool keepDefault) {
     size_t stickerPaths_len = libqt_strv_length(stickerPaths);
     libqt_string* stickerPaths_qstr = (libqt_string*)malloc(stickerPaths_len * sizeof(libqt_string));
     if (stickerPaths_qstr == NULL) {

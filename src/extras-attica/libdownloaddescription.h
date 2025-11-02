@@ -215,7 +215,7 @@ void k_attica__downloaddescription_set_repository(void* self, const char* reposi
 ///
 /// @param self Attica__DownloadDescription*
 /// @param tags const char**
-void k_attica__downloaddescription_set_tags(void* self, const char* tags[]);
+void k_attica__downloaddescription_set_tags(void* self, const char* tags[static 1]);
 
 /// [Qt documentation](https://api.kde.org/attica-downloaddescription.html#version)
 ///

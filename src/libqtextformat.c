@@ -314,7 +314,7 @@ const char* q_textcharformat_font_family(void* self) {
     return _ret;
 }
 
-void q_textcharformat_set_font_families(void* self, const char* families[]) {
+void q_textcharformat_set_font_families(void* self, const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -555,7 +555,7 @@ const char* q_textcharformat_anchor_href(void* self) {
     return _ret;
 }
 
-void q_textcharformat_set_anchor_names(void* self, const char* names[]) {
+void q_textcharformat_set_anchor_names(void* self, const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
@@ -1486,7 +1486,7 @@ const char* q_textimageformat_font_family(void* self) {
     return _ret;
 }
 
-void q_textimageformat_set_font_families(void* self, const char* families[]) {
+void q_textimageformat_set_font_families(void* self, const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -1727,7 +1727,7 @@ const char* q_textimageformat_anchor_href(void* self) {
     return _ret;
 }
 
-void q_textimageformat_set_anchor_names(void* self, const char* names[]) {
+void q_textimageformat_set_anchor_names(void* self, const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
@@ -2881,7 +2881,7 @@ const char* q_texttablecellformat_font_family(void* self) {
     return _ret;
 }
 
-void q_texttablecellformat_set_font_families(void* self, const char* families[]) {
+void q_texttablecellformat_set_font_families(void* self, const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -3122,7 +3122,7 @@ const char* q_texttablecellformat_anchor_href(void* self) {
     return _ret;
 }
 
-void q_texttablecellformat_set_anchor_names(void* self, const char* names[]) {
+void q_texttablecellformat_set_anchor_names(void* self, const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {

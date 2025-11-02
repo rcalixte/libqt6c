@@ -14,7 +14,7 @@ QStringListModel* q_stringlistmodel_new() {
     return QStringListModel_new();
 }
 
-QStringListModel* q_stringlistmodel_new2(const char* strings[]) {
+QStringListModel* q_stringlistmodel_new2(const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -35,7 +35,7 @@ QStringListModel* q_stringlistmodel_new3(void* parent) {
     return QStringListModel_new3((QObject*)parent);
 }
 
-QStringListModel* q_stringlistmodel_new4(const char* strings[], void* parent) {
+QStringListModel* q_stringlistmodel_new4(const char* strings[static 1], void* parent) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -242,7 +242,7 @@ const char** q_stringlistmodel_string_list(void* self) {
     return _ret;
 }
 
-void q_stringlistmodel_set_string_list(void* self, const char* strings[]) {
+void q_stringlistmodel_set_string_list(void* self, const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {

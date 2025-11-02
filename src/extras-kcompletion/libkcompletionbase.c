@@ -100,7 +100,7 @@ void k_completionbase_qbase_set_completed_text(void* self, const char* text) {
     KCompletionBase_QBaseSetCompletedText((KCompletionBase*)self, qstring(text));
 }
 
-void k_completionbase_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_completionbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -119,7 +119,7 @@ void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*,
     KCompletionBase_OnSetCompletedItems((KCompletionBase*)self, (intptr_t)callback);
 }
 
-void k_completionbase_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_completionbase_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {

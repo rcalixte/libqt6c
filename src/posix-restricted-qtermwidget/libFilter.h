@@ -3690,7 +3690,7 @@ void k_onsole__regexpfilter__hotspot_qbase_activate(void* self, const char* acti
 ///
 /// @param self Konsole__RegExpFilter__HotSpot*
 /// @param texts const char**
-void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* texts[]);
+void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* texts[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -3862,7 +3862,7 @@ void k_onsole__urlfilter__hotspot_qbase_activate(void* self, const char* action)
 ///
 /// @param self Konsole__UrlFilter__HotSpot*
 /// @param texts const char**
-void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* texts[]);
+void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* texts[static 1]);
 
 /// Inherited from Konsole::RegExpFilter::HotSpot
 ///

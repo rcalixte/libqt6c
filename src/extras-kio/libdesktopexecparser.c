@@ -60,7 +60,7 @@ const char** k_io__desktopexecparser_supported_protocols(void* service) {
     return _ret;
 }
 
-bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char* supportedProtocols[]) {
+bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char* supportedProtocols[static 1]) {
     size_t supportedProtocols_len = libqt_strv_length(supportedProtocols);
     libqt_string* supportedProtocols_qstr = (libqt_string*)malloc(supportedProtocols_len * sizeof(libqt_string));
     if (supportedProtocols_qstr == NULL) {

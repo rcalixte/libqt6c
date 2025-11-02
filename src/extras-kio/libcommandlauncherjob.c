@@ -10,7 +10,7 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new(const char* command) {
     return KIO__CommandLauncherJob_new(qstring(command));
 }
 
-KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, const char* args[]) {
+KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -31,7 +31,7 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new3(const char* command, void
     return KIO__CommandLauncherJob_new3(qstring(command), (QObject*)parent);
 }
 
-KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, const char* args[], void* parent) {
+KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, const char* args[static 1], void* parent) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {

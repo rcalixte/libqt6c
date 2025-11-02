@@ -766,7 +766,7 @@ int32_t q_guiapplication_check_permission(void* self, void* permission);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
 ///
 /// @param libraryPaths const char**
-void q_guiapplication_set_library_paths(const char* libraryPaths[]);
+void q_guiapplication_set_library_paths(const char* libraryPaths[static 1]);
 
 /// Inherited from QCoreApplication
 ///

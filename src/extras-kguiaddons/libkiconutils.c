@@ -10,7 +10,7 @@ QIcon* k_iconutils_add_overlays(void* param1, libqt_map /* of int32_t to QIcon* 
     return KIconUtils_AddOverlays((QIcon*)param1, param2);
 }
 
-QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[]) {
+QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[static 1]) {
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {
@@ -26,7 +26,7 @@ QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[]) {
     return _out;
 }
 
-QIcon* k_iconutils_add_overlays3(const char* param1, const char* param2[]) {
+QIcon* k_iconutils_add_overlays3(const char* param1, const char* param2[static 1]) {
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {

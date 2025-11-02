@@ -62,19 +62,19 @@ const char* k_emailclientlauncherjob_tr(const char* s);
 ///
 /// @param self KEMailClientLauncherJob*
 /// @param to const char**
-void k_emailclientlauncherjob_set_to(void* self, const char* to[]);
+void k_emailclientlauncherjob_set_to(void* self, const char* to[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kemailclientlauncherjob.html#setCc)
 ///
 /// @param self KEMailClientLauncherJob*
 /// @param cc const char**
-void k_emailclientlauncherjob_set_cc(void* self, const char* cc[]);
+void k_emailclientlauncherjob_set_cc(void* self, const char* cc[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kemailclientlauncherjob.html#setBcc)
 ///
 /// @param self KEMailClientLauncherJob*
 /// @param bcc const char**
-void k_emailclientlauncherjob_set_bcc(void* self, const char* bcc[]);
+void k_emailclientlauncherjob_set_bcc(void* self, const char* bcc[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kemailclientlauncherjob.html#setSubject)
 ///

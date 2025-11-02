@@ -377,7 +377,7 @@ void k_lineedit_qbase_set_completed_text(void* self, const char* completedText);
 /// @param self KLineEdit*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_lineedit_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_lineedit_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// [Qt documentation](https://api.kde.org/klineedit.html#setCompletedItems)
 ///
@@ -394,7 +394,7 @@ void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const
 /// @param self KLineEdit*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_lineedit_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_lineedit_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// [Qt documentation](https://api.kde.org/klineedit.html#setSqueezedText)
 ///

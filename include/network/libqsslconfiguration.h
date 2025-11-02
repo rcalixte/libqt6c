@@ -350,7 +350,7 @@ bool q_sslconfiguration_ocsp_stapling_enabled(void* self);
 ///
 /// @param self QSslConfiguration*
 /// @param protocols const char**
-void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* protocols[]);
+void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* protocols[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#allowedNextProtocols)
 ///

@@ -20,7 +20,7 @@ const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* par
     return _ret;
 }
 
-const char* k_shell_join_args(const char* param1[]) {
+const char* k_shell_join_args(const char* param1[static 1]) {
     size_t param1_len = libqt_strv_length(param1);
     libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
     if (param1_qstr == NULL) {

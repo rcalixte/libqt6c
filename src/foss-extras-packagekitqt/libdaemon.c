@@ -113,7 +113,7 @@ uint32_t q_packagekit__daemon_version_micro() {
     return PackageKit__Daemon_VersionMicro();
 }
 
-void q_packagekit__daemon_set_hints(const char* hints[]) {
+void q_packagekit__daemon_set_hints(const char* hints[static 1]) {
     size_t hints_len = libqt_strv_length(hints);
     libqt_string* hints_qstr = (libqt_string*)malloc(hints_len * sizeof(libqt_string));
     if (hints_qstr == NULL) {
@@ -198,7 +198,7 @@ PackageKit__Transaction* q_packagekit__daemon_accept_eula(const char* eulaID) {
     return PackageKit__Daemon_AcceptEula(qstring(eulaID));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_download_packages(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_download_packages(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -222,7 +222,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_categories() {
     return PackageKit__Daemon_GetCategories();
 }
 
-PackageKit__Transaction* q_packagekit__daemon_depends_on(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_depends_on(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -242,7 +242,7 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on2(const char* packageID)
     return PackageKit__Daemon_DependsOn2(qstring(packageID));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_get_details(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_get_details(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -262,7 +262,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_details2(const char* packageID
     return PackageKit__Daemon_GetDetails2(qstring(packageID));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_get_details_local(const char* files[]) {
+PackageKit__Transaction* q_packagekit__daemon_get_details_local(const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -282,7 +282,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_details_local2(const char* fil
     return PackageKit__Daemon_GetDetailsLocal2(qstring(file));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_get_files(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_get_files(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -302,7 +302,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_files2(const char* packageIDs)
     return PackageKit__Daemon_GetFiles2(qstring(packageIDs));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_get_files_local(const char* files[]) {
+PackageKit__Transaction* q_packagekit__daemon_get_files_local(const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -334,7 +334,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_repo_list() {
     return PackageKit__Daemon_GetRepoList();
 }
 
-PackageKit__Transaction* q_packagekit__daemon_required_by(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_required_by(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -354,7 +354,7 @@ PackageKit__Transaction* q_packagekit__daemon_required_by2(const char* packageID
     return PackageKit__Daemon_RequiredBy2(qstring(packageID));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_get_updates_details(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_get_updates_details(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -386,7 +386,7 @@ PackageKit__Transaction* q_packagekit__daemon_upgrade_system(const char* distroI
     return PackageKit__Daemon_UpgradeSystem(qstring(distroId), kind);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_install_files(const char* files[]) {
+PackageKit__Transaction* q_packagekit__daemon_install_files(const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -406,7 +406,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_file(const char* file) {
     return PackageKit__Daemon_InstallFile(qstring(file));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_install_packages(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_install_packages(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -434,7 +434,7 @@ PackageKit__Transaction* q_packagekit__daemon_refresh_cache(bool force) {
     return PackageKit__Daemon_RefreshCache(force);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_remove_packages(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_remove_packages(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -470,7 +470,7 @@ PackageKit__Transaction* q_packagekit__daemon_repo_set_data(const char* repoId, 
     return PackageKit__Daemon_RepoSetData(qstring(repoId), qstring(parameter), qstring(value));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_resolve(const char* packageNames[]) {
+PackageKit__Transaction* q_packagekit__daemon_resolve(const char* packageNames[static 1]) {
     size_t packageNames_len = libqt_strv_length(packageNames);
     libqt_string* packageNames_qstr = (libqt_string*)malloc(packageNames_len * sizeof(libqt_string));
     if (packageNames_qstr == NULL) {
@@ -490,7 +490,7 @@ PackageKit__Transaction* q_packagekit__daemon_resolve2(const char* packageName) 
     return PackageKit__Daemon_Resolve2(qstring(packageName));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_files(const char* search[]) {
+PackageKit__Transaction* q_packagekit__daemon_search_files(const char* search[static 1]) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -510,7 +510,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_files2(const char* search) 
     return PackageKit__Daemon_SearchFiles2(qstring(search));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_details(const char* search[]) {
+PackageKit__Transaction* q_packagekit__daemon_search_details(const char* search[static 1]) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -530,7 +530,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_details2(const char* search
     return PackageKit__Daemon_SearchDetails2(qstring(search));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_groups(const char* groups[]) {
+PackageKit__Transaction* q_packagekit__daemon_search_groups(const char* groups[static 1]) {
     size_t groups_len = libqt_strv_length(groups);
     libqt_string* groups_qstr = (libqt_string*)malloc(groups_len * sizeof(libqt_string));
     if (groups_qstr == NULL) {
@@ -558,7 +558,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups2(void* group) {
     return PackageKit__Daemon_SearchGroups2((PackageKit__Bitfield*)group);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_names(const char* search[]) {
+PackageKit__Transaction* q_packagekit__daemon_search_names(const char* search[static 1]) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -578,7 +578,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_names2(const char* search) 
     return PackageKit__Daemon_SearchNames2(qstring(search));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_update_packages(const char* packageIDs[]) {
+PackageKit__Transaction* q_packagekit__daemon_update_packages(const char* packageIDs[static 1]) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -598,7 +598,7 @@ PackageKit__Transaction* q_packagekit__daemon_update_package(const char* package
     return PackageKit__Daemon_UpdatePackage(qstring(packageID));
 }
 
-PackageKit__Transaction* q_packagekit__daemon_what_provides(const char* search[]) {
+PackageKit__Transaction* q_packagekit__daemon_what_provides(const char* search[static 1]) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -658,7 +658,7 @@ void q_packagekit__daemon_on_restart_scheduled(void* self, void (*callback)(void
     PackageKit__Daemon_Connect_RestartScheduled((PackageKit__Daemon*)self, (intptr_t)callback);
 }
 
-void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[]) {
+void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[static 1]) {
     size_t tids_len = libqt_strv_length(tids);
     libqt_string* tids_qstr = (libqt_string*)malloc(tids_len * sizeof(libqt_string));
     if (tids_qstr == NULL) {
@@ -707,7 +707,7 @@ const char* q_packagekit__daemon_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-PackageKit__Transaction* q_packagekit__daemon_download_packages2(const char* packageIDs[], bool storeInCache) {
+PackageKit__Transaction* q_packagekit__daemon_download_packages2(const char* packageIDs[static 1], bool storeInCache) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -727,7 +727,7 @@ PackageKit__Transaction* q_packagekit__daemon_download_package2(const char* pack
     return PackageKit__Daemon_DownloadPackage2(qstring(packageID), storeInCache);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageIDs[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageIDs[static 1], int32_t filters) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -743,7 +743,7 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageID
     return _out;
 }
 
-PackageKit__Transaction* q_packagekit__daemon_depends_on3(const char* packageIDs[], int32_t filters, bool recursive) {
+PackageKit__Transaction* q_packagekit__daemon_depends_on3(const char* packageIDs[static 1], int32_t filters, bool recursive) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -775,7 +775,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_repo_list1(int32_t filters) {
     return PackageKit__Daemon_GetRepoList1(filters);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageIDs[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageIDs[static 1], int32_t filters) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -791,7 +791,7 @@ PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageI
     return _out;
 }
 
-PackageKit__Transaction* q_packagekit__daemon_required_by3(const char* packageIDs[], int32_t filters, bool recursive) {
+PackageKit__Transaction* q_packagekit__daemon_required_by3(const char* packageIDs[static 1], int32_t filters, bool recursive) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -823,7 +823,7 @@ PackageKit__Transaction* q_packagekit__daemon_upgrade_system3(const char* distro
     return PackageKit__Daemon_UpgradeSystem3(qstring(distroId), kind, flags);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_install_files2(const char* files[], int32_t flags) {
+PackageKit__Transaction* q_packagekit__daemon_install_files2(const char* files[static 1], int32_t flags) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -843,7 +843,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_file2(const char* file, in
     return PackageKit__Daemon_InstallFile2(qstring(file), flags);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_install_packages2(const char* packageIDs[], int32_t flags) {
+PackageKit__Transaction* q_packagekit__daemon_install_packages2(const char* packageIDs[static 1], int32_t flags) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -863,7 +863,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_package2(const char* packa
     return PackageKit__Daemon_InstallPackage2(qstring(packageID), flags);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packageIDs[], bool allowDeps) {
+PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packageIDs[static 1], bool allowDeps) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -879,7 +879,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packa
     return _out;
 }
 
-PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packageIDs[], bool allowDeps, bool autoRemove) {
+PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packageIDs[static 1], bool allowDeps, bool autoRemove) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -895,7 +895,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packa
     return _out;
 }
 
-PackageKit__Transaction* q_packagekit__daemon_remove_packages4(const char* packageIDs[], bool allowDeps, bool autoRemove, int32_t flags) {
+PackageKit__Transaction* q_packagekit__daemon_remove_packages4(const char* packageIDs[static 1], bool allowDeps, bool autoRemove, int32_t flags) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -935,7 +935,7 @@ PackageKit__Transaction* q_packagekit__daemon_repo_remove3(const char* repoId, b
     return PackageKit__Daemon_RepoRemove3(qstring(repoId), autoremove, flags);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_resolve22(const char* packageNames[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_resolve22(const char* packageNames[static 1], int32_t filters) {
     size_t packageNames_len = libqt_strv_length(packageNames);
     libqt_string* packageNames_qstr = (libqt_string*)malloc(packageNames_len * sizeof(libqt_string));
     if (packageNames_qstr == NULL) {
@@ -955,7 +955,7 @@ PackageKit__Transaction* q_packagekit__daemon_resolve23(const char* packageName,
     return PackageKit__Daemon_Resolve23(qstring(packageName), filters);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_files22(const char* search[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_search_files22(const char* search[static 1], int32_t filters) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -975,7 +975,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_files23(const char* search,
     return PackageKit__Daemon_SearchFiles23(qstring(search), filters);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_details22(const char* search[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_search_details22(const char* search[static 1], int32_t filters) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -995,7 +995,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_details23(const char* searc
     return PackageKit__Daemon_SearchDetails23(qstring(search), filters);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_groups22(const char* groups[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_search_groups22(const char* groups[static 1], int32_t filters) {
     size_t groups_len = libqt_strv_length(groups);
     libqt_string* groups_qstr = (libqt_string*)malloc(groups_len * sizeof(libqt_string));
     if (groups_qstr == NULL) {
@@ -1023,7 +1023,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups23(void* group, int32
     return PackageKit__Daemon_SearchGroups23((PackageKit__Bitfield*)group, filters);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_search_names22(const char* search[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_search_names22(const char* search[static 1], int32_t filters) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {
@@ -1043,7 +1043,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_names23(const char* search,
     return PackageKit__Daemon_SearchNames23(qstring(search), filters);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_update_packages2(const char* packageIDs[], int32_t flags) {
+PackageKit__Transaction* q_packagekit__daemon_update_packages2(const char* packageIDs[static 1], int32_t flags) {
     size_t packageIDs_len = libqt_strv_length(packageIDs);
     libqt_string* packageIDs_qstr = (libqt_string*)malloc(packageIDs_len * sizeof(libqt_string));
     if (packageIDs_qstr == NULL) {
@@ -1063,7 +1063,7 @@ PackageKit__Transaction* q_packagekit__daemon_update_package2(const char* packag
     return PackageKit__Daemon_UpdatePackage2(qstring(packageID), flags);
 }
 
-PackageKit__Transaction* q_packagekit__daemon_what_provides22(const char* search[], int32_t filters) {
+PackageKit__Transaction* q_packagekit__daemon_what_provides22(const char* search[static 1], int32_t filters) {
     size_t search_len = libqt_strv_length(search);
     libqt_string* search_qstr = (libqt_string*)malloc(search_len * sizeof(libqt_string));
     if (search_qstr == NULL) {

@@ -214,7 +214,7 @@ libqt_list /* of QVariant* */ k_configgroup_read_entry8(void* self, const char* 
     return _arr;
 }
 
-const char** k_configgroup_read_entry9(void* self, const char* key, const char* aDefault[]) {
+const char** k_configgroup_read_entry9(void* self, const char* key, const char* aDefault[static 1]) {
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
@@ -244,7 +244,7 @@ const char** k_configgroup_read_entry9(void* self, const char* key, const char* 
     return _ret;
 }
 
-const char** k_configgroup_read_entry10(void* self, const char* key, const char* aDefault[]) {
+const char** k_configgroup_read_entry10(void* self, const char* key, const char* aDefault[static 1]) {
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
@@ -326,7 +326,7 @@ const char* k_configgroup_read_path_entry2(void* self, const char* key, const ch
     return _ret;
 }
 
-const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const char* aDefault[]) {
+const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const char* aDefault[static 1]) {
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
@@ -356,7 +356,7 @@ const char** k_configgroup_read_path_entry3(void* self, const char* pKey, const 
     return _ret;
 }
 
-const char** k_configgroup_read_path_entry4(void* self, const char* key, const char* aDefault[]) {
+const char** k_configgroup_read_path_entry4(void* self, const char* key, const char* aDefault[static 1]) {
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
@@ -432,7 +432,7 @@ void k_configgroup_write_entry8(void* self, const char* key, const char* value) 
     KConfigGroup_WriteEntry8((KConfigGroup*)self, key, value);
 }
 
-void k_configgroup_write_entry9(void* self, const char* key, const char* value[]) {
+void k_configgroup_write_entry9(void* self, const char* key, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -447,7 +447,7 @@ void k_configgroup_write_entry9(void* self, const char* key, const char* value[]
     free(value_qstr);
 }
 
-void k_configgroup_write_entry10(void* self, const char* key, const char* value[]) {
+void k_configgroup_write_entry10(void* self, const char* key, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -470,7 +470,7 @@ void k_configgroup_write_entry12(void* self, const char* key, libqt_list value) 
     KConfigGroup_WriteEntry12((KConfigGroup*)self, key, value);
 }
 
-void k_configgroup_write_xdg_list_entry(void* self, const char* pKey, const char* value[]) {
+void k_configgroup_write_xdg_list_entry(void* self, const char* pKey, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -485,7 +485,7 @@ void k_configgroup_write_xdg_list_entry(void* self, const char* pKey, const char
     free(value_qstr);
 }
 
-void k_configgroup_write_xdg_list_entry2(void* self, const char* key, const char* value[]) {
+void k_configgroup_write_xdg_list_entry2(void* self, const char* key, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -508,7 +508,7 @@ void k_configgroup_write_path_entry2(void* self, const char* Key, const char* pa
     KConfigGroup_WritePathEntry2((KConfigGroup*)self, Key, qstring(path));
 }
 
-void k_configgroup_write_path_entry3(void* self, const char* pKey, const char* value[]) {
+void k_configgroup_write_path_entry3(void* self, const char* pKey, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -523,7 +523,7 @@ void k_configgroup_write_path_entry3(void* self, const char* pKey, const char* v
     free(value_qstr);
 }
 
-void k_configgroup_write_path_entry4(void* self, const char* key, const char* value[]) {
+void k_configgroup_write_path_entry4(void* self, const char* key, const char* value[static 1]) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -688,7 +688,7 @@ const char* k_configgroup_read_entry23(void* self, const char* key, const char* 
     return _ret;
 }
 
-const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, const char* aDefault[]) {
+const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, const char* aDefault[static 1]) {
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
@@ -718,7 +718,7 @@ const char** k_configgroup_read_xdg_list_entry22(void* self, const char* pKey, c
     return _ret;
 }
 
-const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, const char* aDefault[]) {
+const char** k_configgroup_read_xdg_list_entry23(void* self, const char* key, const char* aDefault[static 1]) {
     size_t aDefault_len = libqt_strv_length(aDefault);
     libqt_string* aDefault_qstr = (libqt_string*)malloc(aDefault_len * sizeof(libqt_string));
     if (aDefault_qstr == NULL) {
@@ -794,7 +794,7 @@ void k_configgroup_write_entry39(void* self, const char* key, const char* value,
     KConfigGroup_WriteEntry39((KConfigGroup*)self, key, value, pFlags);
 }
 
-void k_configgroup_write_entry310(void* self, const char* key, const char* value[], int32_t pFlags) {
+void k_configgroup_write_entry310(void* self, const char* key, const char* value[static 1], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -809,7 +809,7 @@ void k_configgroup_write_entry310(void* self, const char* key, const char* value
     free(value_qstr);
 }
 
-void k_configgroup_write_entry311(void* self, const char* key, const char* value[], int32_t pFlags) {
+void k_configgroup_write_entry311(void* self, const char* key, const char* value[static 1], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -832,7 +832,7 @@ void k_configgroup_write_entry313(void* self, const char* key, libqt_list value,
     KConfigGroup_WriteEntry313((KConfigGroup*)self, key, value, pFlags);
 }
 
-void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[], int32_t pFlags) {
+void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const char* value[static 1], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -847,7 +847,7 @@ void k_configgroup_write_xdg_list_entry3(void* self, const char* pKey, const cha
     free(value_qstr);
 }
 
-void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[], int32_t pFlags) {
+void k_configgroup_write_xdg_list_entry32(void* self, const char* key, const char* value[static 1], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -870,7 +870,7 @@ void k_configgroup_write_path_entry33(void* self, const char* Key, const char* p
     KConfigGroup_WritePathEntry33((KConfigGroup*)self, Key, qstring(path), pFlags);
 }
 
-void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[], int32_t pFlags) {
+void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* value[static 1], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {
@@ -885,7 +885,7 @@ void k_configgroup_write_path_entry34(void* self, const char* pKey, const char* 
     free(value_qstr);
 }
 
-void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[], int32_t pFlags) {
+void k_configgroup_write_path_entry35(void* self, const char* key, const char* value[static 1], int32_t pFlags) {
     size_t value_len = libqt_strv_length(value);
     libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
     if (value_qstr == NULL) {

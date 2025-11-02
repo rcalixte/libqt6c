@@ -107,7 +107,7 @@ const char* k_completionbox_cancelled_text(void* self) {
     return _ret;
 }
 
-void k_completionbox_insert_items(void* self, const char* items[]) {
+void k_completionbox_insert_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -122,7 +122,7 @@ void k_completionbox_insert_items(void* self, const char* items[]) {
     free(items_qstr);
 }
 
-void k_completionbox_set_items(void* self, const char* items[]) {
+void k_completionbox_set_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -287,7 +287,7 @@ const char* k_completionbox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_completionbox_insert_items2(void* self, const char* items[], int index) {
+void k_completionbox_insert_items2(void* self, const char* items[static 1], int index) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -326,7 +326,7 @@ void k_completionbox_add_item2(void* self, void* item) {
     QListWidget_AddItem2((QListWidget*)self, (QListWidgetItem*)item);
 }
 
-void k_completionbox_add_items(void* self, const char* labels[]) {
+void k_completionbox_add_items(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {

@@ -28,7 +28,7 @@ const char** q_webengineglobalsettings__dnsmode_server_templates(void* self) {
     return serverTemplates_ret;
 }
 
-void q_webengineglobalsettings__dnsmode_set_server_templates(void* self, const char* serverTemplates[]) {
+void q_webengineglobalsettings__dnsmode_set_server_templates(void* self, const char* serverTemplates[static 1]) {
     size_t serverTemplates_len = libqt_strv_length(serverTemplates);
     libqt_string* serverTemplates_qstr = (libqt_string*)malloc(serverTemplates_len * sizeof(libqt_string));
     if (serverTemplates_qstr == NULL) {

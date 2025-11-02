@@ -539,7 +539,7 @@ QUrl* k_fileplacesmodel_converted_url(void* url);
 ///
 /// @param self KFilePlacesModel*
 /// @param schemes const char**
-void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[]);
+void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kfileplacesmodel.html#supportedSchemes)
 ///

@@ -77,7 +77,7 @@ bool q_dbusconnection_connect2(void* self, const char* service, const char* path
     return QDBusConnection_Connect2((QDBusConnection*)self, qstring(service), qstring(path), qstring(interface), qstring(name), qstring(signature), (QObject*)receiver, slot);
 }
 
-bool q_dbusconnection_connect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[], const char* signature, void* receiver, const char* slot) {
+bool q_dbusconnection_connect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[static 1], const char* signature, void* receiver, const char* slot) {
     size_t argumentMatch_len = libqt_strv_length(argumentMatch);
     libqt_string* argumentMatch_qstr = (libqt_string*)malloc(argumentMatch_len * sizeof(libqt_string));
     if (argumentMatch_qstr == NULL) {
@@ -101,7 +101,7 @@ bool q_dbusconnection_disconnect2(void* self, const char* service, const char* p
     return QDBusConnection_Disconnect2((QDBusConnection*)self, qstring(service), qstring(path), qstring(interface), qstring(name), qstring(signature), (QObject*)receiver, slot);
 }
 
-bool q_dbusconnection_disconnect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[], const char* signature, void* receiver, const char* slot) {
+bool q_dbusconnection_disconnect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[static 1], const char* signature, void* receiver, const char* slot) {
     size_t argumentMatch_len = libqt_strv_length(argumentMatch);
     libqt_string* argumentMatch_qstr = (libqt_string*)malloc(argumentMatch_len * sizeof(libqt_string));
     if (argumentMatch_qstr == NULL) {

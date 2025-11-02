@@ -115,7 +115,7 @@ bool q_inputdialog_is_combo_box_editable(void* self) {
     return QInputDialog_IsComboBoxEditable((QInputDialog*)self);
 }
 
-void q_inputdialog_set_combo_box_items(void* self, const char* items[]) {
+void q_inputdialog_set_combo_box_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -293,7 +293,7 @@ const char* q_inputdialog_get_multi_line_text(void* parent, const char* title, c
     return _ret;
 }
 
-const char* q_inputdialog_get_item(void* parent, const char* title, const char* label, const char* items[]) {
+const char* q_inputdialog_get_item(void* parent, const char* title, const char* label, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -468,7 +468,7 @@ const char* q_inputdialog_get_multi_line_text7(void* parent, const char* title, 
     return _ret;
 }
 
-const char* q_inputdialog_get_item5(void* parent, const char* title, const char* label, const char* items[], int current) {
+const char* q_inputdialog_get_item5(void* parent, const char* title, const char* label, const char* items[static 1], int current) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -486,7 +486,7 @@ const char* q_inputdialog_get_item5(void* parent, const char* title, const char*
     return _ret;
 }
 
-const char* q_inputdialog_get_item6(void* parent, const char* title, const char* label, const char* items[], int current, bool editable) {
+const char* q_inputdialog_get_item6(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -504,7 +504,7 @@ const char* q_inputdialog_get_item6(void* parent, const char* title, const char*
     return _ret;
 }
 
-const char* q_inputdialog_get_item7(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok) {
+const char* q_inputdialog_get_item7(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable, bool* ok) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -522,7 +522,7 @@ const char* q_inputdialog_get_item7(void* parent, const char* title, const char*
     return _ret;
 }
 
-const char* q_inputdialog_get_item8(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int64_t flags) {
+const char* q_inputdialog_get_item8(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable, bool* ok, int64_t flags) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -540,7 +540,7 @@ const char* q_inputdialog_get_item8(void* parent, const char* title, const char*
     return _ret;
 }
 
-const char* q_inputdialog_get_item9(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int64_t flags, int64_t inputMethodHints) {
+const char* q_inputdialog_get_item9(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable, bool* ok, int64_t flags, int64_t inputMethodHints) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {

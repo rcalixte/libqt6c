@@ -501,7 +501,7 @@ void k_colorcombo_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self KColorCombo*
 /// @param texts const char**
-void k_colorcombo_add_items(void* self, const char* texts[]);
+void k_colorcombo_add_items(void* self, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -529,7 +529,7 @@ void k_colorcombo_insert_item2(void* self, int index, void* icon, const char* te
 /// @param self KColorCombo*
 /// @param index int
 /// @param texts const char**
-void k_colorcombo_insert_items(void* self, int index, const char* texts[]);
+void k_colorcombo_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///

@@ -81,7 +81,7 @@ const char** q_textbrowser_search_paths(void* self);
 ///
 /// @param self QTextBrowser*
 /// @param paths const char**
-void q_textbrowser_set_search_paths(void* self, const char* paths[]);
+void q_textbrowser_set_search_paths(void* self, const char* paths[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
 ///

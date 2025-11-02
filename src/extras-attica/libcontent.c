@@ -214,7 +214,7 @@ const char** k_attica__content_tags(void* self) {
     return _ret;
 }
 
-void k_attica__content_set_tags(void* self, const char* tags[]) {
+void k_attica__content_set_tags(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {

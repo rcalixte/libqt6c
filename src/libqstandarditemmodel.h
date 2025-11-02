@@ -1384,13 +1384,13 @@ void q_standarditemmodel_set_vertical_header_item(void* self, int row, void* ite
 ///
 /// @param self QStandardItemModel*
 /// @param labels const char**
-void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* labels[]);
+void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* labels[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setVerticalHeaderLabels)
 ///
 /// @param self QStandardItemModel*
 /// @param labels const char**
-void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labels[]);
+void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labels[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#setRowCount)
 ///

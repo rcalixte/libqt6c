@@ -166,7 +166,7 @@ void k_config_reparse_configuration(void* self);
 ///
 /// @param self KConfig*
 /// @param sources const char**
-void k_config_add_config_sources(void* self, const char* sources[]);
+void k_config_add_config_sources(void* self, const char* sources[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kconfig.html#additionalConfigSources)
 ///

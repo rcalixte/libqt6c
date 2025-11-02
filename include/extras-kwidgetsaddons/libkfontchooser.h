@@ -146,7 +146,7 @@ const char** k_fontchooser_create_font_list(uint32_t fontListCriteria);
 ///
 /// @param self KFontChooser*
 /// @param fontList const char**
-void k_fontchooser_set_font_list_items(void* self, const char* fontList[]);
+void k_fontchooser_set_font_list_items(void* self, const char* fontList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kfontchooser.html#setMinVisibleItems)
 ///

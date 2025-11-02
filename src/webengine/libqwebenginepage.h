@@ -916,7 +916,7 @@ QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t type);
 /// @param mode enum QWebEnginePage__FileSelectionMode
 /// @param oldFiles const char**
 /// @param acceptedMimeTypes const char**
-const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
+const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* oldFiles[static 1], const char* acceptedMimeTypes[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
@@ -934,7 +934,7 @@ void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*,
 /// @param mode enum QWebEnginePage__FileSelectionMode
 /// @param oldFiles const char**
 /// @param acceptedMimeTypes const char**
-const char** q_webenginepage_qbase_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
+const char** q_webenginepage_qbase_choose_files(void* self, int32_t mode, const char* oldFiles[static 1], const char* acceptedMimeTypes[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptAlert)
 ///

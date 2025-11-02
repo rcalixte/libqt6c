@@ -20,7 +20,7 @@ QFileSystemWatcher* q_filesystemwatcher_new();
 /// q_filesystemwatcher_new2 constructs a new QFileSystemWatcher object.
 ///
 /// @param paths const char**
-QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[]);
+QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[static 1]);
 
 /// q_filesystemwatcher_new3 constructs a new QFileSystemWatcher object.
 ///
@@ -31,7 +31,7 @@ QFileSystemWatcher* q_filesystemwatcher_new3(void* parent);
 ///
 /// @param paths const char**
 /// @param parent QObject*
-QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[], void* parent);
+QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[static 1], void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -81,7 +81,7 @@ bool q_filesystemwatcher_add_path(void* self, const char* file);
 ///
 /// @param self QFileSystemWatcher*
 /// @param files const char**
-const char** q_filesystemwatcher_add_paths(void* self, const char* files[]);
+const char** q_filesystemwatcher_add_paths(void* self, const char* files[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#removePath)
 ///
@@ -95,7 +95,7 @@ bool q_filesystemwatcher_remove_path(void* self, const char* file);
 ///
 /// @param self QFileSystemWatcher*
 /// @param files const char**
-const char** q_filesystemwatcher_remove_paths(void* self, const char* files[]);
+const char** q_filesystemwatcher_remove_paths(void* self, const char* files[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#files)
 ///

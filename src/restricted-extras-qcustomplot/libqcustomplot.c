@@ -7676,7 +7676,7 @@ void q_cpaxisticker_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -7695,7 +7695,7 @@ void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*
     QCPAxisTicker_OnGenerate((QCPAxisTicker*)self, (intptr_t)callback);
 }
 
-void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8016,7 +8016,7 @@ void q_cpaxistickerdatetime_set_tick_count(void* self, int count) {
     QCPAxisTicker_SetTickCount((QCPAxisTicker*)self, count);
 }
 
-void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8031,7 +8031,7 @@ void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8258,7 +8258,7 @@ void q_cpaxistickertime_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8273,7 +8273,7 @@ void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* fo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8469,7 +8469,7 @@ void q_cpaxistickerfixed_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8484,7 +8484,7 @@ void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* f
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8670,7 +8670,7 @@ void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const ch
     QCPAxisTickerText_SetTicks((QCPAxisTickerText*)self, ticks);
 }
 
-void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[]) {
+void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
@@ -8701,7 +8701,7 @@ void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const ch
     QCPAxisTickerText_AddTicks((QCPAxisTickerText*)self, ticks);
 }
 
-void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[]) {
+void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
@@ -8796,7 +8796,7 @@ void q_cpaxistickertext_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -8811,7 +8811,7 @@ void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* fo
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -9126,7 +9126,7 @@ void q_cpaxistickerpi_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -9141,7 +9141,7 @@ void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* form
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -9351,7 +9351,7 @@ void q_cpaxistickerlog_set_tick_origin(void* self, double origin) {
     QCPAxisTicker_SetTickOrigin((QCPAxisTicker*)self, origin);
 }
 
-void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {
@@ -9366,7 +9366,7 @@ void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* for
     free(tickLabels_qstr);
 }
 
-void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]) {
+void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]) {
     size_t tickLabels_len = libqt_strv_length(tickLabels);
     libqt_string* tickLabels_qstr = (libqt_string*)malloc(tickLabels_len * sizeof(libqt_string));
     if (tickLabels_qstr == NULL) {

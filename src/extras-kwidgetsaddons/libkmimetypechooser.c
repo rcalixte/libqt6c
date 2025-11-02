@@ -22,7 +22,7 @@ KMimeTypeChooser* k_mimetypechooser_new2(const char* text) {
     return KMimeTypeChooser_new2(qstring(text));
 }
 
-KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedMimeTypes[]) {
+KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedMimeTypes[static 1]) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -39,7 +39,7 @@ KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedM
     return _out;
 }
 
-KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedMimeTypes[], const char* defaultGroup) {
+KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -56,7 +56,7 @@ KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedM
     return _out;
 }
 
-KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[]) {
+KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1]) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -84,7 +84,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
     return _out;
 }
 
-KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals) {
+KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -112,7 +112,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
     return _out;
 }
 
-KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals, void* parent) {
+KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals, void* parent) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2256,7 +2256,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new() {
     return KMimeTypeChooserDialog_new();
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2281,7 +2281,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new4(const char* title, const ch
     return KMimeTypeChooserDialog_new4(qstring(title), qstring(text));
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const char* text, const char* selectedMimeTypes[]) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const char* text, const char* selectedMimeTypes[static 1]) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2298,7 +2298,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const ch
     return _out;
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2315,7 +2315,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const ch
     return _out;
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[]) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1]) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2343,7 +2343,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
     return _out;
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2371,7 +2371,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
     return _out;
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals, void* parent) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals, void* parent) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {
@@ -2399,7 +2399,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
     return _out;
 }
 
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, void* parent) {
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, void* parent) {
     size_t selectedMimeTypes_len = libqt_strv_length(selectedMimeTypes);
     libqt_string* selectedMimeTypes_qstr = (libqt_string*)malloc(selectedMimeTypes_len * sizeof(libqt_string));
     if (selectedMimeTypes_qstr == NULL) {

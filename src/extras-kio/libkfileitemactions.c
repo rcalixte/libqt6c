@@ -52,7 +52,7 @@ void k_fileitemactions_set_parent_widget(void* self, void* widget) {
     KFileItemActions_SetParentWidget((KFileItemActions*)self, (QWidget*)widget);
 }
 
-void k_fileitemactions_insert_open_with_actions_to(void* self, void* before, void* topMenu, const char* excludedDesktopEntryNames[]) {
+void k_fileitemactions_insert_open_with_actions_to(void* self, void* before, void* topMenu, const char* excludedDesktopEntryNames[static 1]) {
     size_t excludedDesktopEntryNames_len = libqt_strv_length(excludedDesktopEntryNames);
     libqt_string* excludedDesktopEntryNames_qstr = (libqt_string*)malloc(excludedDesktopEntryNames_len * sizeof(libqt_string));
     if (excludedDesktopEntryNames_qstr == NULL) {
@@ -113,7 +113,7 @@ void k_fileitemactions_add_actions_to3(void* self, void* menu, int32_t sources, 
     KFileItemActions_AddActionsTo3((KFileItemActions*)self, (QMenu*)menu, sources, additionalActions);
 }
 
-void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, libqt_list additionalActions, const char* excludeList[]) {
+void k_fileitemactions_add_actions_to4(void* self, void* menu, int32_t sources, libqt_list additionalActions, const char* excludeList[static 1]) {
     size_t excludeList_len = libqt_strv_length(excludeList);
     libqt_string* excludeList_qstr = (libqt_string*)malloc(excludeList_len * sizeof(libqt_string));
     if (excludeList_qstr == NULL) {

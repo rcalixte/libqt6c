@@ -836,7 +836,7 @@ void q_standarditemmodel_set_vertical_header_item(void* self, int row, void* ite
     QStandardItemModel_SetVerticalHeaderItem((QStandardItemModel*)self, row, (QStandardItem*)item);
 }
 
-void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* labels[]) {
+void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
@@ -851,7 +851,7 @@ void q_standarditemmodel_set_horizontal_header_labels(void* self, const char* la
     free(labels_qstr);
 }
 
-void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labels[]) {
+void q_standarditemmodel_set_vertical_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {

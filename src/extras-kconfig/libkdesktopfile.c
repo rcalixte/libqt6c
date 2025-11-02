@@ -205,7 +205,7 @@ void k_desktopfile_reparse_configuration(void* self) {
     KConfig_ReparseConfiguration((KConfig*)self);
 }
 
-void k_desktopfile_add_config_sources(void* self, const char* sources[]) {
+void k_desktopfile_add_config_sources(void* self, const char* sources[static 1]) {
     size_t sources_len = libqt_strv_length(sources);
     libqt_string* sources_qstr = (libqt_string*)malloc(sources_len * sizeof(libqt_string));
     if (sources_qstr == NULL) {

@@ -174,7 +174,7 @@ void k_attica__downloaddescription_set_repository(void* self, const char* reposi
     Attica__DownloadDescription_SetRepository((Attica__DownloadDescription*)self, qstring(repository));
 }
 
-void k_attica__downloaddescription_set_tags(void* self, const char* tags[]) {
+void k_attica__downloaddescription_set_tags(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {

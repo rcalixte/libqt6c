@@ -216,7 +216,7 @@ int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue) {
     return KPluginMetaData_Value6((KPluginMetaData*)self, qstring(key), defaultValue);
 }
 
-const char** k_pluginmetadata_value8(void* self, const char* key, const char* defaultValue[]) {
+const char** k_pluginmetadata_value8(void* self, const char* key, const char* defaultValue[static 1]) {
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
     if (defaultValue_qstr == NULL) {

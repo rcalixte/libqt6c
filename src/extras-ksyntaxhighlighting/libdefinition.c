@@ -232,7 +232,7 @@ const char** k_syntaxhighlighting__definition_keyword_list(void* self, const cha
     return _ret;
 }
 
-bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* name, const char* content[]) {
+bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* name, const char* content[static 1]) {
     size_t content_len = libqt_strv_length(content);
     libqt_string* content_qstr = (libqt_string*)malloc(content_len * sizeof(libqt_string));
     if (content_qstr == NULL) {

@@ -106,13 +106,13 @@ const char* k_completionbox_cancelled_text(void* self);
 ///
 /// @param self KCompletionBox*
 /// @param items const char**
-void k_completionbox_insert_items(void* self, const char* items[]);
+void k_completionbox_insert_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletionbox.html#setItems)
 ///
 /// @param self KCompletionBox*
 /// @param items const char**
-void k_completionbox_set_items(void* self, const char* items[]);
+void k_completionbox_set_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcompletionbox.html#popup)
 ///
@@ -356,7 +356,7 @@ const char* k_completionbox_tr3(const char* s, const char* c, int n);
 /// @param self KCompletionBox*
 /// @param items const char**
 /// @param index int
-void k_completionbox_insert_items2(void* self, const char* items[], int index);
+void k_completionbox_insert_items2(void* self, const char* items[static 1], int index);
 
 /// Inherited from QListWidget
 ///
@@ -414,7 +414,7 @@ void k_completionbox_add_item2(void* self, void* item);
 ///
 /// @param self KCompletionBox*
 /// @param labels const char**
-void k_completionbox_add_items(void* self, const char* labels[]);
+void k_completionbox_add_items(void* self, const char* labels[static 1]);
 
 /// Inherited from QListWidget
 ///

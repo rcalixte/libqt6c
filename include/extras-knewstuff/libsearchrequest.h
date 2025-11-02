@@ -72,7 +72,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new5(int32_t sortMode_, int32_t 
 /// @param filter_ enum KNSCore__Filter
 /// @param searchTerm_ const char*
 /// @param categories_ const char**
-KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[]);
+KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1]);
 
 /// k_nscore__searchrequest_new7 constructs a new KNSCore::SearchRequest object.
 ///
@@ -81,7 +81,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t 
 /// @param searchTerm_ const char*
 /// @param categories_ const char**
 /// @param page_ int
-KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_);
+KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_);
 
 /// k_nscore__searchrequest_new8 constructs a new KNSCore::SearchRequest object.
 ///
@@ -91,7 +91,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t 
 /// @param categories_ const char**
 /// @param page_ int
 /// @param pageSize_ int
-KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_, int pageSize_);
+KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_, int pageSize_);
 
 /// [Qt documentation](https://api.kde.org/knscore-searchrequest.html#sortMode)
 ///

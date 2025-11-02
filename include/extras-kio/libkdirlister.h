@@ -301,7 +301,7 @@ const char* k_dirlister_name_filter(void* self);
 ///
 /// @param self KDirLister*
 /// @param mimeList const char**
-void k_dirlister_set_mime_filter(void* self, const char* mimeList[]);
+void k_dirlister_set_mime_filter(void* self, const char* mimeList[static 1]);
 
 /// Inherited from KCoreDirLister
 ///
@@ -309,7 +309,7 @@ void k_dirlister_set_mime_filter(void* self, const char* mimeList[]);
 ///
 /// @param self KDirLister*
 /// @param mimeList const char**
-void k_dirlister_set_mime_exclude_filter(void* self, const char* mimeList[]);
+void k_dirlister_set_mime_exclude_filter(void* self, const char* mimeList[static 1]);
 
 /// Inherited from KCoreDirLister
 ///

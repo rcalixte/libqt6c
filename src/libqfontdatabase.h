@@ -205,7 +205,7 @@ bool q_fontdatabase_remove_application_fallback_font_family(int32_t script, cons
 ///
 /// @param param1 enum QChar__Script
 /// @param familyNames const char**
-void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const char* familyNames[]);
+void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const char* familyNames[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFallbackFontFamilies)
 ///

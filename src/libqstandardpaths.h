@@ -90,7 +90,7 @@ const char** q_standardpaths_locate_all3(int32_t type, const char* fileName, int
 ///
 /// @param executableName const char*
 /// @param paths const char**
-const char* q_standardpaths_find_executable2(const char* executableName, const char* paths[]);
+const char* q_standardpaths_find_executable2(const char* executableName, const char* paths[static 1]);
 
 /// https://doc.qt.io/qt-6/qstandardpaths.html#types
 

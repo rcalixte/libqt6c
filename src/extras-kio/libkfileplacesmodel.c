@@ -352,7 +352,7 @@ QUrl* k_fileplacesmodel_converted_url(void* url) {
     return KFilePlacesModel_ConvertedUrl((QUrl*)url);
 }
 
-void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[]) {
+void k_fileplacesmodel_set_supported_schemes(void* self, const char* schemes[static 1]) {
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {

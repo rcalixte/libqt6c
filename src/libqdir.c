@@ -61,7 +61,7 @@ const char* q_dir_canonical_path(void* self) {
     return _ret;
 }
 
-void q_dir_set_search_paths(const char* prefix, const char* searchPaths[]) {
+void q_dir_set_search_paths(const char* prefix, const char* searchPaths[static 1]) {
     size_t searchPaths_len = libqt_strv_length(searchPaths);
     libqt_string* searchPaths_qstr = (libqt_string*)malloc(searchPaths_len * sizeof(libqt_string));
     if (searchPaths_qstr == NULL) {
@@ -168,7 +168,7 @@ const char** q_dir_name_filters(void* self) {
     return _ret;
 }
 
-void q_dir_set_name_filters(void* self, const char* nameFilters[]) {
+void q_dir_set_name_filters(void* self, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -252,7 +252,7 @@ const char** q_dir_entry_list(void* self) {
     return _ret;
 }
 
-const char** q_dir_entry_list2(void* self, const char* nameFilters[]) {
+const char** q_dir_entry_list2(void* self, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -287,7 +287,7 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self) {
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[]) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -420,7 +420,7 @@ const char* q_dir_temp_path() {
     return _ret;
 }
 
-bool q_dir_match(const char* filters[], const char* fileName) {
+bool q_dir_match(const char* filters[static 1], const char* fileName) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
@@ -497,7 +497,7 @@ const char** q_dir_entry_list22(void* self, int32_t filters, int32_t sort) {
     return _ret;
 }
 
-const char** q_dir_entry_list23(void* self, const char* nameFilters[], int32_t filters) {
+const char** q_dir_entry_list23(void* self, const char* nameFilters[static 1], int32_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -527,7 +527,7 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[], int32_t f
     return _ret;
 }
 
-const char** q_dir_entry_list3(void* self, const char* nameFilters[], int32_t filters, int32_t sort) {
+const char** q_dir_entry_list3(void* self, const char* nameFilters[static 1], int32_t filters, int32_t sort) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -567,7 +567,7 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int32_t filte
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int32_t filters) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[static 1], int32_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -583,7 +583,7 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* n
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[], int32_t filters, int32_t sort) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[static 1], int32_t filters, int32_t sort) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {

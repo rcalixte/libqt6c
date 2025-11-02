@@ -30,11 +30,11 @@ QIcon* k_iconutils_add_overlays(void* param1, libqt_map /* of int32_t to QIcon* 
 ///
 /// @param param1 QIcon*
 /// @param param2 const char**
-QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[]);
+QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kiconutils.html#addOverlays)
 ///
 /// @param param1 const char*
 /// @param param2 const char**
-QIcon* k_iconutils_add_overlays3(const char* param1, const char* param2[]);
+QIcon* k_iconutils_add_overlays3(const char* param1, const char* param2[static 1]);
 #endif

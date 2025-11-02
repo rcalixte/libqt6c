@@ -21,7 +21,7 @@ QCommandLineOption* q_commandlineoption_new(const char* name);
 /// q_commandlineoption_new2 constructs a new QCommandLineOption object.
 ///
 /// @param names const char**
-QCommandLineOption* q_commandlineoption_new2(const char* names[]);
+QCommandLineOption* q_commandlineoption_new2(const char* names[static 1]);
 
 /// q_commandlineoption_new3 constructs a new QCommandLineOption object.
 ///
@@ -33,7 +33,7 @@ QCommandLineOption* q_commandlineoption_new3(const char* name, const char* descr
 ///
 /// @param names const char**
 /// @param description const char*
-QCommandLineOption* q_commandlineoption_new4(const char* names[], const char* description);
+QCommandLineOption* q_commandlineoption_new4(const char* names[static 1], const char* description);
 
 /// q_commandlineoption_new5 constructs a new QCommandLineOption object.
 ///
@@ -60,7 +60,7 @@ QCommandLineOption* q_commandlineoption_new7(const char* name, const char* descr
 /// @param names const char**
 /// @param description const char*
 /// @param valueName const char*
-QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* description, const char* valueName);
+QCommandLineOption* q_commandlineoption_new8(const char* names[static 1], const char* description, const char* valueName);
 
 /// q_commandlineoption_new9 constructs a new QCommandLineOption object.
 ///
@@ -68,7 +68,7 @@ QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* de
 /// @param description const char*
 /// @param valueName const char*
 /// @param defaultValue const char*
-QCommandLineOption* q_commandlineoption_new9(const char* names[], const char* description, const char* valueName, const char* defaultValue);
+QCommandLineOption* q_commandlineoption_new9(const char* names[static 1], const char* description, const char* valueName, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#operator-eq)
 ///
@@ -125,7 +125,7 @@ void q_commandlineoption_set_default_value(void* self, const char* defaultValue)
 ///
 /// @param self QCommandLineOption*
 /// @param defaultValues const char**
-void q_commandlineoption_set_default_values(void* self, const char* defaultValues[]);
+void q_commandlineoption_set_default_values(void* self, const char* defaultValues[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#defaultValues)
 ///

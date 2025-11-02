@@ -70,7 +70,7 @@ void k_urlcombobox_set_url(void* self, void* url) {
     KUrlComboBox_SetUrl((KUrlComboBox*)self, (QUrl*)url);
 }
 
-void k_urlcombobox_set_urls(void* self, const char* urls[]) {
+void k_urlcombobox_set_urls(void* self, const char* urls[static 1]) {
     size_t urls_len = libqt_strv_length(urls);
     libqt_string* urls_qstr = (libqt_string*)malloc(urls_len * sizeof(libqt_string));
     if (urls_qstr == NULL) {
@@ -85,7 +85,7 @@ void k_urlcombobox_set_urls(void* self, const char* urls[]) {
     free(urls_qstr);
 }
 
-void k_urlcombobox_set_urls2(void* self, const char* urls[], int32_t remove) {
+void k_urlcombobox_set_urls2(void* self, const char* urls[static 1], int32_t remove) {
     size_t urls_len = libqt_strv_length(urls);
     libqt_string* urls_qstr = (libqt_string*)malloc(urls_len * sizeof(libqt_string));
     if (urls_qstr == NULL) {
@@ -522,7 +522,7 @@ void k_urlcombobox_add_item2(void* self, void* icon, const char* text) {
     QComboBox_AddItem2((QComboBox*)self, (QIcon*)icon, qstring(text));
 }
 
-void k_urlcombobox_add_items(void* self, const char* texts[]) {
+void k_urlcombobox_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
@@ -545,7 +545,7 @@ void k_urlcombobox_insert_item2(void* self, int index, void* icon, const char* t
     QComboBox_InsertItem2((QComboBox*)self, index, (QIcon*)icon, qstring(text));
 }
 
-void k_urlcombobox_insert_items(void* self, int index, const char* texts[]) {
+void k_urlcombobox_insert_items(void* self, int index, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
@@ -2150,7 +2150,7 @@ void k_urlcombobox_on_set_completed_text(void* self, void (*callback)(void*, con
     KUrlComboBox_OnSetCompletedText((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-void k_urlcombobox_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_urlcombobox_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -2165,7 +2165,7 @@ void k_urlcombobox_set_completed_items(void* self, const char* items[], bool aut
     free(items_qstr);
 }
 
-void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {

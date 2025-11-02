@@ -201,7 +201,7 @@ void q_webengineprofile_clear_http_cache(void* self) {
     QWebEngineProfile_ClearHttpCache((QWebEngineProfile*)self);
 }
 
-void q_webengineprofile_set_spell_check_languages(void* self, const char* languages[]) {
+void q_webengineprofile_set_spell_check_languages(void* self, const char* languages[static 1]) {
     size_t languages_len = libqt_strv_length(languages);
     libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
     if (languages_qstr == NULL) {

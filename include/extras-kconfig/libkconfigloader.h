@@ -407,7 +407,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time(void* self,
 /// @param self KConfigLoader*
 /// @param name const char*
 /// @param reference const char**
-KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list(void* self, const char* name, const char* reference[]);
+KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list(void* self, const char* name, const char* reference[static 1]);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -858,7 +858,7 @@ KCoreConfigSkeleton__ItemDateTime* k_configloader_add_item_date_time4(void* self
 /// @param name const char*
 /// @param reference const char**
 /// @param defaultValue const char**
-KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* self, const char* name, const char* reference[], const char* defaultValue[]);
+KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* self, const char* name, const char* reference[static 1], const char* defaultValue[static 1]);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -869,7 +869,7 @@ KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list3(void* 
 /// @param reference const char**
 /// @param defaultValue const char**
 /// @param key const char*
-KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list4(void* self, const char* name, const char* reference[], const char* defaultValue[], const char* key);
+KCoreConfigSkeleton__ItemStringList* k_configloader_add_item_string_list4(void* self, const char* name, const char* reference[static 1], const char* defaultValue[static 1], const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///

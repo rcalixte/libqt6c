@@ -122,7 +122,7 @@ QDBusArgument* q_dbusargument_operator_shift_left14(void* self, void* arg);
 ///
 /// @param self QDBusArgument*
 /// @param arg const char**
-QDBusArgument* q_dbusargument_operator_shift_left15(void* self, const char* arg[]);
+QDBusArgument* q_dbusargument_operator_shift_left15(void* self, const char* arg[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
@@ -294,7 +294,7 @@ const QDBusArgument* q_dbusargument_operator_shift_right14(void* self, void* arg
 ///
 /// @param self QDBusArgument*
 /// @param arg const char**
-const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const char* arg[]);
+const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const char* arg[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///

@@ -81,7 +81,7 @@ bool q_sciapis_save_prepared(void* self) {
     return QsciAPIs_SavePrepared((QsciAPIs*)self);
 }
 
-void q_sciapis_update_auto_completion_list(void* self, const char* context[], const char* list[]) {
+void q_sciapis_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -112,7 +112,7 @@ void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*
     QsciAPIs_OnUpdateAutoCompletionList((QsciAPIs*)self, (intptr_t)callback);
 }
 
-void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[], const char* list[]) {
+void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -148,7 +148,7 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel) {
     QsciAPIs_QBaseAutoCompletionSelected((QsciAPIs*)self, qstring(sel));
 }
 
-const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts) {
+const char** q_sciapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -182,7 +182,7 @@ void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const ch
     QsciAPIs_OnCallTips((QsciAPIs*)self, (intptr_t)callback);
 }
 
-const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts) {
+const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {

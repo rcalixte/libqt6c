@@ -56,7 +56,7 @@ const char** k_io__desktopexecparser_supported_protocols(void* service);
 ///
 /// @param url QUrl*
 /// @param supportedProtocols const char**
-bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char* supportedProtocols[]);
+bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char* supportedProtocols[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kio-desktopexecparser.html#hasSchemeHandler)
 ///

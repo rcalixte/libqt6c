@@ -46,7 +46,7 @@ const char* k_localizedstring_to_string(void* self);
 ///
 /// @param self KLocalizedString*
 /// @param languages const char**
-const char* k_localizedstring_to_string2(void* self, const char* languages[]);
+const char* k_localizedstring_to_string2(void* self, const char* languages[static 1]);
 
 /// [Qt documentation](https://api.kde.org/klocalizedstring.html#toString)
 ///
@@ -68,7 +68,7 @@ const char* k_localizedstring_to_string4(void* self, int32_t format);
 ///
 /// @param self KLocalizedString*
 /// @param languages const char**
-KLocalizedString* k_localizedstring_with_languages(void* self, const char* languages[]);
+KLocalizedString* k_localizedstring_with_languages(void* self, const char* languages[static 1]);
 
 /// [Qt documentation](https://api.kde.org/klocalizedstring.html#withDomain)
 ///
@@ -186,7 +186,7 @@ const char** k_localizedstring_languages();
 /// [Qt documentation](https://api.kde.org/klocalizedstring.html#setLanguages)
 ///
 /// @param languages const char**
-void k_localizedstring_set_languages(const char* languages[]);
+void k_localizedstring_set_languages(const char* languages[static 1]);
 
 /// [Qt documentation](https://api.kde.org/klocalizedstring.html#clearLanguages)
 ///

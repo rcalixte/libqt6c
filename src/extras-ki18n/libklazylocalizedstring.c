@@ -42,7 +42,7 @@ const char* k_lazylocalizedstring_to_string(void* self) {
     return _ret;
 }
 
-const char* k_lazylocalizedstring_to_string2(void* self, const char* languages[]) {
+const char* k_lazylocalizedstring_to_string2(void* self, const char* languages[static 1]) {
     size_t languages_len = libqt_strv_length(languages);
     libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
     if (languages_qstr == NULL) {
@@ -74,7 +74,7 @@ const char* k_lazylocalizedstring_to_string4(void* self, int32_t format) {
     return _ret;
 }
 
-KLocalizedString* k_lazylocalizedstring_with_languages(void* self, const char* languages[]) {
+KLocalizedString* k_lazylocalizedstring_with_languages(void* self, const char* languages[static 1]) {
     size_t languages_len = libqt_strv_length(languages);
     libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
     if (languages_qstr == NULL) {

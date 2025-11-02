@@ -157,7 +157,7 @@ libqt_pair /* tuple of int and int */ k_configviewstatesaver_scroll_state(void* 
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexStrings const char**
-void k_configviewstatesaver_restore_selection(void* self, const char* indexStrings[]);
+void k_configviewstatesaver_restore_selection(void* self, const char* indexStrings[static 1]);
 
 /// Inherited from KViewStateSerializer
 ///
@@ -173,7 +173,7 @@ void k_configviewstatesaver_restore_current_item(void* self, const char* indexSt
 ///
 /// @param self KConfigViewStateSaver*
 /// @param indexStrings const char**
-void k_configviewstatesaver_restore_expanded(void* self, const char* indexStrings[]);
+void k_configviewstatesaver_restore_expanded(void* self, const char* indexStrings[static 1]);
 
 /// Inherited from KViewStateSerializer
 ///

@@ -42,7 +42,7 @@ const char* k_emailclientlauncherjob_tr(const char* s) {
     return _ret;
 }
 
-void k_emailclientlauncherjob_set_to(void* self, const char* to[]) {
+void k_emailclientlauncherjob_set_to(void* self, const char* to[static 1]) {
     size_t to_len = libqt_strv_length(to);
     libqt_string* to_qstr = (libqt_string*)malloc(to_len * sizeof(libqt_string));
     if (to_qstr == NULL) {
@@ -57,7 +57,7 @@ void k_emailclientlauncherjob_set_to(void* self, const char* to[]) {
     free(to_qstr);
 }
 
-void k_emailclientlauncherjob_set_cc(void* self, const char* cc[]) {
+void k_emailclientlauncherjob_set_cc(void* self, const char* cc[static 1]) {
     size_t cc_len = libqt_strv_length(cc);
     libqt_string* cc_qstr = (libqt_string*)malloc(cc_len * sizeof(libqt_string));
     if (cc_qstr == NULL) {
@@ -72,7 +72,7 @@ void k_emailclientlauncherjob_set_cc(void* self, const char* cc[]) {
     free(cc_qstr);
 }
 
-void k_emailclientlauncherjob_set_bcc(void* self, const char* bcc[]) {
+void k_emailclientlauncherjob_set_bcc(void* self, const char* bcc[static 1]) {
     size_t bcc_len = libqt_strv_length(bcc);
     libqt_string* bcc_qstr = (libqt_string*)malloc(bcc_len * sizeof(libqt_string));
     if (bcc_qstr == NULL) {

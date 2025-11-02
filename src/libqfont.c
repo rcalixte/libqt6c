@@ -11,7 +11,7 @@ QFont* q_font_new2(const char* family) {
     return QFont_new2(qstring(family));
 }
 
-QFont* q_font_new3(const char* families[]) {
+QFont* q_font_new3(const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -48,7 +48,7 @@ QFont* q_font_new8(const char* family, int pointSize, int weight, bool italic) {
     return QFont_new8(qstring(family), pointSize, weight, italic);
 }
 
-QFont* q_font_new9(const char* families[], int pointSize) {
+QFont* q_font_new9(const char* families[static 1], int pointSize) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -65,7 +65,7 @@ QFont* q_font_new9(const char* families[], int pointSize) {
     return _out;
 }
 
-QFont* q_font_new10(const char* families[], int pointSize, int weight) {
+QFont* q_font_new10(const char* families[static 1], int pointSize, int weight) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -82,7 +82,7 @@ QFont* q_font_new10(const char* families[], int pointSize, int weight) {
     return _out;
 }
 
-QFont* q_font_new11(const char* families[], int pointSize, int weight, bool italic) {
+QFont* q_font_new11(const char* families[static 1], int pointSize, int weight, bool italic) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -133,7 +133,7 @@ const char** q_font_families(void* self) {
     return _ret;
 }
 
-void q_font_set_families(void* self, const char* families[]) {
+void q_font_set_families(void* self, const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -460,7 +460,7 @@ void q_font_insert_substitution(const char* param1, const char* param2) {
     QFont_InsertSubstitution(qstring(param1), qstring(param2));
 }
 
-void q_font_insert_substitutions(const char* param1, const char* param2[]) {
+void q_font_insert_substitutions(const char* param1, const char* param2[static 1]) {
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {

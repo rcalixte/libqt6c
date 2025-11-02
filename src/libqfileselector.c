@@ -71,7 +71,7 @@ const char** q_fileselector_extra_selectors(void* self) {
     return _ret;
 }
 
-void q_fileselector_set_extra_selectors(void* self, const char* list[]) {
+void q_fileselector_set_extra_selectors(void* self, const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {

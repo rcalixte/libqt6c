@@ -196,7 +196,7 @@ QCborArray* q_cborarray_operator_shift_left(void* self, void* v) {
     return QCborArray_OperatorShiftLeft((QCborArray*)self, (QCborValue*)v);
 }
 
-QCborArray* q_cborarray_from_string_list(const char* list[]) {
+QCborArray* q_cborarray_from_string_list(const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {

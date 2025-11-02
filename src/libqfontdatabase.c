@@ -197,7 +197,7 @@ bool q_fontdatabase_remove_application_fallback_font_family(int32_t script, cons
     return QFontDatabase_RemoveApplicationFallbackFontFamily(script, qstring(familyName));
 }
 
-void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const char* familyNames[]) {
+void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const char* familyNames[static 1]) {
     size_t familyNames_len = libqt_strv_length(familyNames);
     libqt_string* familyNames_qstr = (libqt_string*)malloc(familyNames_len * sizeof(libqt_string));
     if (familyNames_qstr == NULL) {

@@ -55,7 +55,7 @@ void k_acceleratormanager_set_no_accel(void* widget);
 /// [Qt documentation](https://api.kde.org/kacceleratormanager.html#addStandardActionNames)
 ///
 /// @param names const char**
-void k_acceleratormanager_add_standard_action_names(const char* names[]);
+void k_acceleratormanager_add_standard_action_names(const char* names[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kacceleratormanager.html#manage)
 ///

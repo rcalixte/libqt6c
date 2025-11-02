@@ -2063,7 +2063,7 @@ void k_imagefilepreview_on_disconnect_notify(void* self, void (*callback)(void*,
     KImageFilePreview_OnDisconnectNotify((KImageFilePreview*)self, (intptr_t)callback);
 }
 
-void k_imagefilepreview_set_supported_mime_types(void* self, const char* mimeTypes[]) {
+void k_imagefilepreview_set_supported_mime_types(void* self, const char* mimeTypes[static 1]) {
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
@@ -2078,7 +2078,7 @@ void k_imagefilepreview_set_supported_mime_types(void* self, const char* mimeTyp
     free(mimeTypes_qstr);
 }
 
-void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* mimeTypes[]) {
+void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* mimeTypes[static 1]) {
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {

@@ -107,7 +107,7 @@ void k_previewwidgetbase_qbase_clear_preview(void* self);
 ///
 /// @param self KPreviewWidgetBase*
 /// @param mimeTypes const char**
-void k_previewwidgetbase_set_supported_mime_types(void* self, const char* mimeTypes[]);
+void k_previewwidgetbase_set_supported_mime_types(void* self, const char* mimeTypes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kpreviewwidgetbase.html#setSupportedMimeTypes)
 ///
@@ -123,7 +123,7 @@ void k_previewwidgetbase_on_set_supported_mime_types(void* self, void (*callback
 ///
 /// @param self KPreviewWidgetBase*
 /// @param mimeTypes const char**
-void k_previewwidgetbase_qbase_set_supported_mime_types(void* self, const char* mimeTypes[]);
+void k_previewwidgetbase_qbase_set_supported_mime_types(void* self, const char* mimeTypes[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

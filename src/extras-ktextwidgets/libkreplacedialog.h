@@ -33,7 +33,7 @@ KReplaceDialog* k_replacedialog_new3(void* parent, int64_t options);
 /// @param parent QWidget*
 /// @param options int64_t
 /// @param findStrings const char**
-KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* findStrings[]);
+KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* findStrings[static 1]);
 
 /// k_replacedialog_new5 constructs a new KReplaceDialog object.
 ///
@@ -41,7 +41,7 @@ KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* 
 /// @param options int64_t
 /// @param findStrings const char**
 /// @param replaceStrings const char**
-KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* findStrings[], const char* replaceStrings[]);
+KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1]);
 
 /// k_replacedialog_new6 constructs a new KReplaceDialog object.
 ///
@@ -50,7 +50,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* 
 /// @param findStrings const char**
 /// @param replaceStrings const char**
 /// @param hasSelection bool
-KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[], const char* replaceStrings[], bool hasSelection);
+KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1], bool hasSelection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -92,7 +92,7 @@ const char* k_replacedialog_tr(const char* s);
 ///
 /// @param self KReplaceDialog*
 /// @param history const char**
-void k_replacedialog_set_replacement_history(void* self, const char* history[]);
+void k_replacedialog_set_replacement_history(void* self, const char* history[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kreplacedialog.html#replacementHistory)
 ///
@@ -169,7 +169,7 @@ const char* k_replacedialog_tr3(const char* s, const char* c, int n);
 ///
 /// @param self KReplaceDialog*
 /// @param history const char**
-void k_replacedialog_set_find_history(void* self, const char* history[]);
+void k_replacedialog_set_find_history(void* self, const char* history[static 1]);
 
 /// Inherited from KFindDialog
 ///

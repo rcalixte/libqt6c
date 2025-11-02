@@ -126,7 +126,7 @@ const char* k_texteditor__attribute_font_family(void* self) {
     return _ret;
 }
 
-void k_texteditor__attribute_set_font_families(void* self, const char* families[]) {
+void k_texteditor__attribute_set_font_families(void* self, const char* families[static 1]) {
     size_t families_len = libqt_strv_length(families);
     libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
     if (families_qstr == NULL) {
@@ -367,7 +367,7 @@ const char* k_texteditor__attribute_anchor_href(void* self) {
     return _ret;
 }
 
-void k_texteditor__attribute_set_anchor_names(void* self, const char* names[]) {
+void k_texteditor__attribute_set_anchor_names(void* self, const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {

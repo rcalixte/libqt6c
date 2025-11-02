@@ -212,7 +212,7 @@ const char* k_texteditor__editor_tr3(const char* s, const char* c, int n);
 /// @param self KTextEditor__Editor*
 /// @param widgets libqt_list /* of QWidget* */
 /// @param variables const char**
-void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets, const char* variables[]);
+void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets, const char* variables[static 1]);
 
 /// Inherited from QObject
 ///

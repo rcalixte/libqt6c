@@ -162,7 +162,7 @@ QAction* k_fontaction_add_action3(void* self, void* icon, const char* text) {
     return KSelectAction_AddAction3((KSelectAction*)self, (QIcon*)icon, qstring(text));
 }
 
-void k_fontaction_set_items(void* self, const char* lst[]) {
+void k_fontaction_set_items(void* self, const char* lst[static 1]) {
     size_t lst_len = libqt_strv_length(lst);
     libqt_string* lst_qstr = (libqt_string*)malloc(lst_len * sizeof(libqt_string));
     if (lst_qstr == NULL) {

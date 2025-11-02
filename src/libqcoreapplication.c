@@ -210,7 +210,7 @@ int32_t q_coreapplication_check_permission(void* self, void* permission) {
     return QCoreApplication_CheckPermission((QCoreApplication*)self, (QPermission*)permission);
 }
 
-void q_coreapplication_set_library_paths(const char* libraryPaths[]) {
+void q_coreapplication_set_library_paths(const char* libraryPaths[static 1]) {
     size_t libraryPaths_len = libqt_strv_length(libraryPaths);
     libqt_string* libraryPaths_qstr = (libqt_string*)malloc(libraryPaths_len * sizeof(libqt_string));
     if (libraryPaths_qstr == NULL) {

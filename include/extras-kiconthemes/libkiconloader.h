@@ -26,14 +26,14 @@ KIconLoader* k_iconloader_new2(const char* appname);
 ///
 /// @param appname const char*
 /// @param extraSearchPaths const char**
-KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths[]);
+KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths[static 1]);
 
 /// k_iconloader_new4 constructs a new KIconLoader object.
 ///
 /// @param appname const char*
 /// @param extraSearchPaths const char**
 /// @param parent QObject*
-KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths[], void* parent);
+KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths[static 1], void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -216,7 +216,7 @@ QPixmap* k_iconloader_unknown();
 /// @param overlays const char**
 /// @param pixmap QPixmap*
 /// @param group enum KIconLoader__Group
-void k_iconloader_draw_overlays(void* self, const char* overlays[], void* pixmap, int32_t group);
+void k_iconloader_draw_overlays(void* self, const char* overlays[static 1], void* pixmap, int32_t group);
 
 /// [Qt documentation](https://api.kde.org/kiconloader.html#hasIcon)
 ///
@@ -327,7 +327,7 @@ QPixmap* k_iconloader_load_icon4(void* self, const char* name, int32_t group, in
 /// @param size int
 /// @param state int
 /// @param overlays const char**
-QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, int size, int state, const char* overlays[]);
+QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, int size, int state, const char* overlays[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kiconloader.html#loadMimeTypeIcon)
 ///
@@ -354,7 +354,7 @@ QPixmap* k_iconloader_load_mime_type_icon4(void* self, const char* iconName, int
 /// @param size int
 /// @param state int
 /// @param overlays const char**
-QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int32_t group, int size, int state, const char* overlays[]);
+QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int32_t group, int size, int state, const char* overlays[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kiconloader.html#iconPath)
 ///
@@ -426,7 +426,7 @@ const char** k_iconloader_query_icons_by_context2(void* self, int group_or_size,
 /// @param self KIconLoader*
 /// @param appname const char*
 /// @param extraSearchPaths const char**
-void k_iconloader_reconfigure2(void* self, const char* appname, const char* extraSearchPaths[]);
+void k_iconloader_reconfigure2(void* self, const char* appname, const char* extraSearchPaths[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kiconloader.html#drawOverlays)
 ///
@@ -435,7 +435,7 @@ void k_iconloader_reconfigure2(void* self, const char* appname, const char* extr
 /// @param pixmap QPixmap*
 /// @param group enum KIconLoader__Group
 /// @param state int
-void k_iconloader_draw_overlays4(void* self, const char* overlays[], void* pixmap, int32_t group, int state);
+void k_iconloader_draw_overlays4(void* self, const char* overlays[static 1], void* pixmap, int32_t group, int state);
 
 /// Inherited from QObject
 ///
@@ -1109,7 +1109,7 @@ QIcon* k_de_icon2(const char* param1, void* param2, void* param3);
 /// @param param1 const char*
 /// @param param2 const char**
 /// @param param3 KIconLoader*
-QIcon* k_de_icon3(const char* param1, const char* param2[], void* param3);
+QIcon* k_de_icon3(const char* param1, const char* param2[static 1], void* param3);
 
 /// https://api.kde.org/kiconloader.html#types
 

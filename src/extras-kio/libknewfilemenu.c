@@ -62,7 +62,7 @@ QUrl* k_newfilemenu_working_directory(void* self) {
     return KNewFileMenu_WorkingDirectory((KNewFileMenu*)self);
 }
 
-void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[]) {
+void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[static 1]) {
     size_t mime_len = libqt_strv_length(mime);
     libqt_string* mime_qstr = (libqt_string*)malloc(mime_len * sizeof(libqt_string));
     if (mime_qstr == NULL) {

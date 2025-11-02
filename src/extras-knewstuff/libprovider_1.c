@@ -290,7 +290,7 @@ void k_nscore__provider_qbase_become_fan(void* self, void* param1) {
     KNSCore__Provider_QBaseBecomeFan((KNSCore__Provider*)self, (KNSCore__Entry*)param1);
 }
 
-void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[]) {
+void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[static 1]) {
     size_t tagFilter_len = libqt_strv_length(tagFilter);
     libqt_string* tagFilter_qstr = (libqt_string*)malloc(tagFilter_len * sizeof(libqt_string));
     if (tagFilter_qstr == NULL) {
@@ -324,7 +324,7 @@ const char** k_nscore__provider_tag_filter(void* self) {
     return _ret;
 }
 
-void k_nscore__provider_set_download_tag_filter(void* self, const char* downloadTagFilter[]) {
+void k_nscore__provider_set_download_tag_filter(void* self, const char* downloadTagFilter[static 1]) {
     size_t downloadTagFilter_len = libqt_strv_length(downloadTagFilter);
     libqt_string* downloadTagFilter_qstr = (libqt_string*)malloc(downloadTagFilter_len * sizeof(libqt_string));
     if (downloadTagFilter_qstr == NULL) {
@@ -831,7 +831,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new5(int32_t
     return KNSCore__Provider__SearchRequest_new5(sortMode_, filter_, qstring(searchTerm_));
 }
 
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[]) {
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1]) {
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
@@ -848,7 +848,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t
     return _out;
 }
 
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_) {
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_) {
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
@@ -865,7 +865,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t
     return _out;
 }
 
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_, int pageSize_) {
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_, int pageSize_) {
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
@@ -928,7 +928,7 @@ const char** k_nscore__provider__searchrequest_categories(void* self) {
     return categories_ret;
 }
 
-void k_nscore__provider__searchrequest_set_categories(void* self, const char* categories[]) {
+void k_nscore__provider__searchrequest_set_categories(void* self, const char* categories[static 1]) {
     size_t categories_len = libqt_strv_length(categories);
     libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
     if (categories_qstr == NULL) {

@@ -26,7 +26,7 @@ KFindDialog* k_finddialog_new3(void* parent, int64_t options) {
     return KFindDialog_new3((QWidget*)parent, options);
 }
 
-KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findStrings[]) {
+KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findStrings[static 1]) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -43,7 +43,7 @@ KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findSt
     return _out;
 }
 
-KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findStrings[], bool hasSelection) {
+KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -60,7 +60,7 @@ KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findSt
     return _out;
 }
 
-KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findStrings[], bool hasSelection, bool replaceDialog) {
+KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection, bool replaceDialog) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -104,7 +104,7 @@ const char* k_finddialog_tr(const char* s) {
     return _ret;
 }
 
-void k_finddialog_set_find_history(void* self, const char* history[]) {
+void k_finddialog_set_find_history(void* self, const char* history[static 1]) {
     size_t history_len = libqt_strv_length(history);
     libqt_string* history_qstr = (libqt_string*)malloc(history_len * sizeof(libqt_string));
     if (history_qstr == NULL) {

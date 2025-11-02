@@ -63,7 +63,7 @@ void k_messagedialog_set_icon(void* self, void* icon) {
     KMessageDialog_SetIcon((KMessageDialog*)self, (QIcon*)icon);
 }
 
-void k_messagedialog_set_list_widget_items(void* self, const char* strlist[]) {
+void k_messagedialog_set_list_widget_items(void* self, const char* strlist[static 1]) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {

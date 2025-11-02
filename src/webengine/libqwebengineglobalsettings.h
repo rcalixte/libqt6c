@@ -37,7 +37,7 @@ const char** q_webengineglobalsettings__dnsmode_server_templates(void* self);
 ///
 /// @param self QWebEngineGlobalSettings__DnsMode*
 /// @param serverTemplates const char**
-void q_webengineglobalsettings__dnsmode_set_server_templates(void* self, const char* serverTemplates[]);
+void q_webengineglobalsettings__dnsmode_set_server_templates(void* self, const char* serverTemplates[static 1]);
 
 /// Delete this object from C++ memory.
 ///

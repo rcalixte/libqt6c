@@ -108,7 +108,7 @@ QUrl* k_attica__achievement_image(void* self) {
     return Attica__Achievement_Image((Attica__Achievement*)self);
 }
 
-void k_attica__achievement_set_dependencies(void* self, const char* dependencies[]) {
+void k_attica__achievement_set_dependencies(void* self, const char* dependencies[static 1]) {
     size_t dependencies_len = libqt_strv_length(dependencies);
     libqt_string* dependencies_qstr = (libqt_string*)malloc(dependencies_len * sizeof(libqt_string));
     if (dependencies_qstr == NULL) {
@@ -166,7 +166,7 @@ int32_t k_attica__achievement_type(void* self) {
     return Attica__Achievement_Type((Attica__Achievement*)self);
 }
 
-void k_attica__achievement_set_options(void* self, const char* options[]) {
+void k_attica__achievement_set_options(void* self, const char* options[static 1]) {
     size_t options_len = libqt_strv_length(options);
     libqt_string* options_qstr = (libqt_string*)malloc(options_len * sizeof(libqt_string));
     if (options_qstr == NULL) {

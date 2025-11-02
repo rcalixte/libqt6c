@@ -53,7 +53,7 @@ int32_t q_barcategoryaxis_qbase_type(void* self) {
     return QBarCategoryAxis_QBaseType((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_append(void* self, const char* categories[]) {
+void q_barcategoryaxis_append(void* self, const char* categories[static 1]) {
     size_t categories_len = libqt_strv_length(categories);
     libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
     if (categories_qstr == NULL) {
@@ -88,7 +88,7 @@ void q_barcategoryaxis_clear(void* self) {
     QBarCategoryAxis_Clear((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_set_categories(void* self, const char* categories[]) {
+void q_barcategoryaxis_set_categories(void* self, const char* categories[static 1]) {
     size_t categories_len = libqt_strv_length(categories);
     libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
     if (categories_qstr == NULL) {

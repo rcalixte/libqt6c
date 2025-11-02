@@ -17,7 +17,7 @@ KIO__PreviewJob* k_io__previewjob_new(void* items, void* size) {
     return KIO__PreviewJob_new((KFileItemList*)items, (QSize*)size);
 }
 
-KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enabledPlugins[]) {
+KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enabledPlugins[static 1]) {
     size_t enabledPlugins_len = libqt_strv_length(enabledPlugins);
     libqt_string* enabledPlugins_qstr = (libqt_string*)malloc(enabledPlugins_len * sizeof(libqt_string));
     if (enabledPlugins_qstr == NULL) {
@@ -1071,7 +1071,7 @@ void k_io__previewjob_delete(void* self) {
     KIO__PreviewJob_Delete((KIO__PreviewJob*)(self));
 }
 
-KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param3[]) {
+KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param3[static 1]) {
     size_t param3_len = libqt_strv_length(param3);
     libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
     if (param3_qstr == NULL) {

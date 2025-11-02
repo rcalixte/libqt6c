@@ -25,7 +25,7 @@ QFont* q_font_new2(const char* family);
 /// q_font_new3 constructs a new QFont object.
 ///
 /// @param families const char**
-QFont* q_font_new3(const char* families[]);
+QFont* q_font_new3(const char* families[static 1]);
 
 /// q_font_new4 constructs a new QFont object.
 ///
@@ -63,14 +63,14 @@ QFont* q_font_new8(const char* family, int pointSize, int weight, bool italic);
 ///
 /// @param families const char**
 /// @param pointSize int
-QFont* q_font_new9(const char* families[], int pointSize);
+QFont* q_font_new9(const char* families[static 1], int pointSize);
 
 /// q_font_new10 constructs a new QFont object.
 ///
 /// @param families const char**
 /// @param pointSize int
 /// @param weight int
-QFont* q_font_new10(const char* families[], int pointSize, int weight);
+QFont* q_font_new10(const char* families[static 1], int pointSize, int weight);
 
 /// q_font_new11 constructs a new QFont object.
 ///
@@ -78,7 +78,7 @@ QFont* q_font_new10(const char* families[], int pointSize, int weight);
 /// @param pointSize int
 /// @param weight int
 /// @param italic bool
-QFont* q_font_new11(const char* families[], int pointSize, int weight, bool italic);
+QFont* q_font_new11(const char* families[static 1], int pointSize, int weight, bool italic);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#swap)
 ///
@@ -110,7 +110,7 @@ const char** q_font_families(void* self);
 ///
 /// @param self QFont*
 /// @param families const char**
-void q_font_set_families(void* self, const char* families[]);
+void q_font_set_families(void* self, const char* families[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#styleName)
 ///
@@ -514,7 +514,7 @@ void q_font_insert_substitution(const char* param1, const char* param2);
 ///
 /// @param param1 const char*
 /// @param param2 const char**
-void q_font_insert_substitutions(const char* param1, const char* param2[]);
+void q_font_insert_substitutions(const char* param1, const char* param2[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#removeSubstitutions)
 ///

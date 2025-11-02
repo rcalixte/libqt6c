@@ -72,7 +72,7 @@ const char** q_dbusservicewatcher_watched_services(void* self) {
     return _ret;
 }
 
-void q_dbusservicewatcher_set_watched_services(void* self, const char* services[]) {
+void q_dbusservicewatcher_set_watched_services(void* self, const char* services[static 1]) {
     size_t services_len = libqt_strv_length(services);
     libqt_string* services_qstr = (libqt_string*)malloc(services_len * sizeof(libqt_string));
     if (services_qstr == NULL) {

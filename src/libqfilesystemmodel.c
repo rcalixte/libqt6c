@@ -384,7 +384,7 @@ bool q_filesystemmodel_name_filter_disables(void* self) {
     return QFileSystemModel_NameFilterDisables((QFileSystemModel*)self);
 }
 
-void q_filesystemmodel_set_name_filters(void* self, const char* filters[]) {
+void q_filesystemmodel_set_name_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {

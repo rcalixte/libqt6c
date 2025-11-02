@@ -64,7 +64,7 @@ const char* k_svg__imageset_base_path(void* self) {
     return _ret;
 }
 
-void k_svg__imageset_set_selectors(void* self, const char* selectors[]) {
+void k_svg__imageset_set_selectors(void* self, const char* selectors[static 1]) {
     size_t selectors_len = libqt_strv_length(selectors);
     libqt_string* selectors_qstr = (libqt_string*)malloc(selectors_len * sizeof(libqt_string));
     if (selectors_qstr == NULL) {

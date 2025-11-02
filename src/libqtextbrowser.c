@@ -83,7 +83,7 @@ const char** q_textbrowser_search_paths(void* self) {
     return _ret;
 }
 
-void q_textbrowser_set_search_paths(void* self, const char* paths[]) {
+void q_textbrowser_set_search_paths(void* self, const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {

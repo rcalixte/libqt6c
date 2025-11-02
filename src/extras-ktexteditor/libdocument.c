@@ -307,7 +307,7 @@ bool k_texteditor__document_set_text(void* self, const char* text) {
     return KTextEditor__Document_SetText((KTextEditor__Document*)self, qstring(text));
 }
 
-bool k_texteditor__document_set_text2(void* self, const char* text[]) {
+bool k_texteditor__document_set_text2(void* self, const char* text[static 1]) {
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
@@ -331,7 +331,7 @@ bool k_texteditor__document_insert_text(void* self, void* position, const char* 
     return KTextEditor__Document_InsertText((KTextEditor__Document*)self, (KTextEditor__Cursor*)position, qstring(text), block);
 }
 
-bool k_texteditor__document_insert_text2(void* self, void* position, const char* text[], bool block) {
+bool k_texteditor__document_insert_text2(void* self, void* position, const char* text[static 1], bool block) {
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
@@ -351,7 +351,7 @@ bool k_texteditor__document_replace_text(void* self, void* range, const char* te
     return KTextEditor__Document_ReplaceText((KTextEditor__Document*)self, (KTextEditor__Range*)range, qstring(text), block);
 }
 
-bool k_texteditor__document_replace_text2(void* self, void* range, const char* text[], bool block) {
+bool k_texteditor__document_replace_text2(void* self, void* range, const char* text[static 1], bool block) {
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
@@ -375,7 +375,7 @@ bool k_texteditor__document_insert_line(void* self, int line, const char* text) 
     return KTextEditor__Document_InsertLine((KTextEditor__Document*)self, line, qstring(text));
 }
 
-bool k_texteditor__document_insert_lines(void* self, int line, const char* text[]) {
+bool k_texteditor__document_insert_lines(void* self, int line, const char* text[static 1]) {
     size_t text_len = libqt_strv_length(text);
     libqt_string* text_qstr = (libqt_string*)malloc(text_len * sizeof(libqt_string));
     if (text_qstr == NULL) {
@@ -1298,7 +1298,7 @@ void k_texteditor__document_unplug_action_list(void* self, const char* name) {
     KXMLGUIClient_UnplugActionList((KXMLGUIClient*)self, qstring(name));
 }
 
-const char* k_texteditor__document_find_most_recent_x_m_l_file(const char* files[], const char* doc) {
+const char* k_texteditor__document_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {

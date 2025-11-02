@@ -625,7 +625,7 @@ const char* q_locale_quote_string(void* self, const char* str) {
     return _ret;
 }
 
-const char* q_locale_create_separated_list(void* self, const char* strl[]) {
+const char* q_locale_create_separated_list(void* self, const char* strl[static 1]) {
     size_t strl_len = libqt_strv_length(strl);
     libqt_string* strl_qstr = (libqt_string*)malloc(strl_len * sizeof(libqt_string));
     if (strl_qstr == NULL) {
