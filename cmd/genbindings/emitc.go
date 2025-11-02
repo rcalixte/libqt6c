@@ -567,7 +567,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 					pType = "libqt_list"
 				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
 					!strings.HasPrefix(pType, "libqt_") {
-					pName += "[]"
+					pName += "[static 1]"
 				}
 				if isSlot {
 					if pType == "libqt_list" {
@@ -591,7 +591,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 				pType = "void*" + ifv(p.ByRef && p.Pointer, "*", "")
 			}
 			if isSlot {
-				if strings.Contains(pName, "[]") && strings.Contains(pType, "char*") {
+				if strings.HasSuffix(pName, "[static 1]") {
 					pType += "*"
 				}
 				tmp = append(tmp, pType)
