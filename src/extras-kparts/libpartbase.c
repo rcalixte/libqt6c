@@ -75,7 +75,7 @@ void k_parts__partbase_unplug_action_list(void* self, const char* name) {
     KXMLGUIClient_UnplugActionList((KXMLGUIClient*)self, qstring(name));
 }
 
-const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[], const char* doc) {
+const char* k_parts__partbase_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {

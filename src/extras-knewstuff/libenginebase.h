@@ -151,7 +151,7 @@ libqt_list /* of Attica__Provider* */ k_nscore__enginebase_attica_providers(void
 ///
 /// @param self KNSCore__EngineBase*
 /// @param filter const char**
-void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[]);
+void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-enginebase.html#tagFilter)
 ///
@@ -170,7 +170,7 @@ void k_nscore__enginebase_add_tag_filter(void* self, const char* filter);
 ///
 /// @param self KNSCore__EngineBase*
 /// @param filter const char**
-void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter[]);
+void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-enginebase.html#downloadTagFilter)
 ///

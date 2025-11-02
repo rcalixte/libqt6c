@@ -83,7 +83,7 @@ const char** q_fileselector_extra_selectors(void* self);
 ///
 /// @param self QFileSelector*
 /// @param list const char**
-void q_fileselector_set_extra_selectors(void* self, const char* list[]);
+void q_fileselector_set_extra_selectors(void* self, const char* list[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileselector.html#allSelectors)
 ///

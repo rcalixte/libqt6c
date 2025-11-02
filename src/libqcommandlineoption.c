@@ -5,7 +5,7 @@ QCommandLineOption* q_commandlineoption_new(const char* name) {
     return QCommandLineOption_new(qstring(name));
 }
 
-QCommandLineOption* q_commandlineoption_new2(const char* names[]) {
+QCommandLineOption* q_commandlineoption_new2(const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
@@ -26,7 +26,7 @@ QCommandLineOption* q_commandlineoption_new3(const char* name, const char* descr
     return QCommandLineOption_new3(qstring(name), qstring(description));
 }
 
-QCommandLineOption* q_commandlineoption_new4(const char* names[], const char* description) {
+QCommandLineOption* q_commandlineoption_new4(const char* names[static 1], const char* description) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
@@ -55,7 +55,7 @@ QCommandLineOption* q_commandlineoption_new7(const char* name, const char* descr
     return QCommandLineOption_new7(qstring(name), qstring(description), qstring(valueName), qstring(defaultValue));
 }
 
-QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* description, const char* valueName) {
+QCommandLineOption* q_commandlineoption_new8(const char* names[static 1], const char* description, const char* valueName) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
@@ -72,7 +72,7 @@ QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* de
     return _out;
 }
 
-QCommandLineOption* q_commandlineoption_new9(const char* names[], const char* description, const char* valueName, const char* defaultValue) {
+QCommandLineOption* q_commandlineoption_new9(const char* names[static 1], const char* description, const char* valueName, const char* defaultValue) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {
@@ -142,7 +142,7 @@ void q_commandlineoption_set_default_value(void* self, const char* defaultValue)
     QCommandLineOption_SetDefaultValue((QCommandLineOption*)self, qstring(defaultValue));
 }
 
-void q_commandlineoption_set_default_values(void* self, const char* defaultValues[]) {
+void q_commandlineoption_set_default_values(void* self, const char* defaultValues[static 1]) {
     size_t defaultValues_len = libqt_strv_length(defaultValues);
     libqt_string* defaultValues_qstr = (libqt_string*)malloc(defaultValues_len * sizeof(libqt_string));
     if (defaultValues_qstr == NULL) {

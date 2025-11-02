@@ -15,7 +15,7 @@ QDirIterator* q_diriterator_new3(const char* path, int32_t filter) {
     return QDirIterator_new3(qstring(path), filter);
 }
 
-QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[]) {
+QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -44,7 +44,7 @@ QDirIterator* q_diriterator_new7(const char* path, int32_t filter, int32_t flags
     return QDirIterator_new7(qstring(path), filter, flags);
 }
 
-QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], int32_t filters) {
+QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[static 1], int32_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -61,7 +61,7 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], in
     return _out;
 }
 
-QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[], int32_t filters, int32_t flags) {
+QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[static 1], int32_t filters, int32_t flags) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {

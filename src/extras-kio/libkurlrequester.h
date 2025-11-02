@@ -122,7 +122,7 @@ int32_t k_urlrequester_accept_mode(void* self);
 ///
 /// @param self KUrlRequester*
 /// @param filters const char**
-void k_urlrequester_set_name_filters(void* self, const char* filters[]);
+void k_urlrequester_set_name_filters(void* self, const char* filters[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurlrequester.html#setNameFilter)
 ///
@@ -141,7 +141,7 @@ const char** k_urlrequester_name_filters(void* self);
 ///
 /// @param self KUrlRequester*
 /// @param mimeTypes const char**
-void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[]);
+void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurlrequester.html#mimeTypeFilters)
 ///
@@ -4675,7 +4675,7 @@ int32_t k_urlcomborequester_accept_mode(void* self);
 ///
 /// @param self KUrlComboRequester*
 /// @param filters const char**
-void k_urlcomborequester_set_name_filters(void* self, const char* filters[]);
+void k_urlcomborequester_set_name_filters(void* self, const char* filters[static 1]);
 
 /// Inherited from KUrlRequester
 ///
@@ -4700,7 +4700,7 @@ const char** k_urlcomborequester_name_filters(void* self);
 ///
 /// @param self KUrlComboRequester*
 /// @param mimeTypes const char**
-void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes[]);
+void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes[static 1]);
 
 /// Inherited from KUrlRequester
 ///

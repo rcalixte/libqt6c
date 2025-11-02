@@ -76,7 +76,7 @@ const char** k_sonnet__speller_suggest(void* self, const char* word);
 /// @param self Sonnet__Speller*
 /// @param word const char*
 /// @param suggestions const char**
-bool k_sonnet__speller_check_and_suggest(void* self, const char* word, const char* suggestions[]);
+bool k_sonnet__speller_check_and_suggest(void* self, const char* word, const char* suggestions[static 1]);
 
 /// [Qt documentation](https://api.kde.org/sonnet-speller.html#storeReplacement)
 ///

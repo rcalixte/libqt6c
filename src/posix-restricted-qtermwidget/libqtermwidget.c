@@ -218,7 +218,7 @@ void q_termwidget_qbase_set_terminal_background_mode(void* self, int mode) {
     QTermWidget_QBaseSetTerminalBackgroundMode((QTermWidget*)self, mode);
 }
 
-void q_termwidget_set_environment(void* self, const char* environment[]) {
+void q_termwidget_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
@@ -237,7 +237,7 @@ void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const c
     QTermWidget_OnSetEnvironment((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_environment(void* self, const char* environment[]) {
+void q_termwidget_qbase_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
@@ -293,7 +293,7 @@ const char* q_termwidget_qbase_working_directory(void* self) {
     return _ret;
 }
 
-void q_termwidget_set_args(void* self, const char* args[]) {
+void q_termwidget_set_args(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -312,7 +312,7 @@ void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**))
     QTermWidget_OnSetArgs((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_args(void* self, const char* args[]) {
+void q_termwidget_qbase_set_args(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {

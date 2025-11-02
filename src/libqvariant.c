@@ -117,7 +117,7 @@ QVariant* q_variant_new24(const char* stringVal) {
     return QVariant_new24(qstring(stringVal));
 }
 
-QVariant* q_variant_new25(const char* stringlist[]) {
+QVariant* q_variant_new25(const char* stringlist[static 1]) {
     size_t stringlist_len = libqt_strv_length(stringlist);
     libqt_string* stringlist_qstr = (libqt_string*)malloc(stringlist_len * sizeof(libqt_string));
     if (stringlist_qstr == NULL) {

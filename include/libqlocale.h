@@ -769,7 +769,7 @@ const char* q_locale_quote_string(void* self, const char* str);
 ///
 /// @param self QLocale*
 /// @param strl const char**
-const char* q_locale_create_separated_list(void* self, const char* strl[]);
+const char* q_locale_create_separated_list(void* self, const char* strl[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#name)
 ///

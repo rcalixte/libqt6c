@@ -505,7 +505,7 @@ void q_listwidget_insert_item2(void* self, int row, const char* label);
 /// @param self QListWidget*
 /// @param row int
 /// @param labels const char**
-void q_listwidget_insert_items(void* self, int row, const char* labels[]);
+void q_listwidget_insert_items(void* self, int row, const char* labels[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#addItem)
 ///
@@ -523,7 +523,7 @@ void q_listwidget_add_item2(void* self, void* item);
 ///
 /// @param self QListWidget*
 /// @param labels const char**
-void q_listwidget_add_items(void* self, const char* labels[]);
+void q_listwidget_add_items(void* self, const char* labels[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistwidget.html#takeItem)
 ///

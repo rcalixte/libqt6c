@@ -85,7 +85,7 @@ void k_messagedialog_set_icon(void* self, void* icon);
 ///
 /// @param self KMessageDialog*
 /// @param strlist const char**
-void k_messagedialog_set_list_widget_items(void* self, const char* strlist[]);
+void k_messagedialog_set_list_widget_items(void* self, const char* strlist[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kmessagedialog.html#setDetails)
 ///

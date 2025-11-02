@@ -445,7 +445,7 @@ QTableWidgetItem* q_tablewidget_take_horizontal_header_item(void* self, int colu
     return QTableWidget_TakeHorizontalHeaderItem((QTableWidget*)self, column);
 }
 
-void q_tablewidget_set_vertical_header_labels(void* self, const char* labels[]) {
+void q_tablewidget_set_vertical_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
@@ -460,7 +460,7 @@ void q_tablewidget_set_vertical_header_labels(void* self, const char* labels[]) 
     free(labels_qstr);
 }
 
-void q_tablewidget_set_horizontal_header_labels(void* self, const char* labels[]) {
+void q_tablewidget_set_horizontal_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {

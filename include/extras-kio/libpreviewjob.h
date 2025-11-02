@@ -24,7 +24,7 @@ KIO__PreviewJob* k_io__previewjob_new(void* items, void* size);
 /// @param items KFileItemList*
 /// @param size QSize*
 /// @param enabledPlugins const char**
-KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enabledPlugins[]);
+KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enabledPlugins[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -1992,7 +1992,7 @@ void k_io__previewjob_delete(void* self);
 /// @param param1 KFileItemList*
 /// @param param2 QSize*
 /// @param param3 const char**
-KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param3[]);
+KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param3[static 1]);
 
 /// https://api.kde.org/kio-previewjob.html#types
 

@@ -88,7 +88,7 @@ const char** k_networkmounts_paths(void* self);
 /// @param self KNetworkMounts*
 /// @param paths const char**
 /// @param type enum KNetworkMounts__KNetworkMountsType
-void k_networkmounts_set_paths(void* self, const char* paths[], int32_t type);
+void k_networkmounts_set_paths(void* self, const char* paths[static 1], int32_t type);
 
 /// [Qt documentation](https://api.kde.org/knetworkmounts.html#addPath)
 ///

@@ -9,7 +9,7 @@ QFileSystemWatcher* q_filesystemwatcher_new() {
     return QFileSystemWatcher_new();
 }
 
-QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[]) {
+QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
@@ -30,7 +30,7 @@ QFileSystemWatcher* q_filesystemwatcher_new3(void* parent) {
     return QFileSystemWatcher_new3((QObject*)parent);
 }
 
-QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[], void* parent) {
+QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[static 1], void* parent) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
@@ -78,7 +78,7 @@ bool q_filesystemwatcher_add_path(void* self, const char* file) {
     return QFileSystemWatcher_AddPath((QFileSystemWatcher*)self, qstring(file));
 }
 
-const char** q_filesystemwatcher_add_paths(void* self, const char* files[]) {
+const char** q_filesystemwatcher_add_paths(void* self, const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -112,7 +112,7 @@ bool q_filesystemwatcher_remove_path(void* self, const char* file) {
     return QFileSystemWatcher_RemovePath((QFileSystemWatcher*)self, qstring(file));
 }
 
-const char** q_filesystemwatcher_remove_paths(void* self, const char* files[]) {
+const char** q_filesystemwatcher_remove_paths(void* self, const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {

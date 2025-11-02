@@ -31,7 +31,7 @@ void q_jsonarray_operator_assign(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#fromStringList)
 ///
 /// @param list const char**
-QJsonArray* q_jsonarray_from_string_list(const char* list[]);
+QJsonArray* q_jsonarray_from_string_list(const char* list[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#fromVariantList)
 ///

@@ -87,7 +87,7 @@ void q_commandlineparser_clear_positional_arguments(void* self);
 ///
 /// @param self QCommandLineParser*
 /// @param arguments const char**
-void q_commandlineparser_process(void* self, const char* arguments[]);
+void q_commandlineparser_process(void* self, const char* arguments[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#process)
 ///
@@ -99,7 +99,7 @@ void q_commandlineparser_process2(void* self, void* app);
 ///
 /// @param self QCommandLineParser*
 /// @param arguments const char**
-bool q_commandlineparser_parse(void* self, const char* arguments[]);
+bool q_commandlineparser_parse(void* self, const char* arguments[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#errorText)
 ///

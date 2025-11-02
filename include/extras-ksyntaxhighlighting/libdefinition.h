@@ -193,7 +193,7 @@ const char** k_syntaxhighlighting__definition_keyword_list(void* self, const cha
 /// @param self KSyntaxHighlighting__Definition*
 /// @param name const char*
 /// @param content const char**
-bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* name, const char* content[]);
+bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* name, const char* content[static 1]);
 
 /// [Qt documentation](https://api.kde.org/ksyntaxhighlighting-definition.html#formats)
 ///

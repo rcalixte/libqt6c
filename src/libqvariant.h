@@ -135,7 +135,7 @@ QVariant* q_variant_new24(const char* stringVal);
 /// q_variant_new25 constructs a new QVariant object.
 ///
 /// @param stringlist const char**
-QVariant* q_variant_new25(const char* stringlist[]);
+QVariant* q_variant_new25(const char* stringlist[static 1]);
 
 /// q_variant_new26 constructs a new QVariant object.
 ///

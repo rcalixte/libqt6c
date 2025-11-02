@@ -75,7 +75,7 @@ bool k_filepreviewgenerator_is_preview_shown(void* self);
 ///
 /// @param self KFilePreviewGenerator*
 /// @param list const char**
-void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[]);
+void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kfilepreviewgenerator.html#enabledPlugins)
 ///

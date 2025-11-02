@@ -26,14 +26,14 @@ KMimeTypeChooser* k_mimetypechooser_new2(const char* text);
 ///
 /// @param text const char*
 /// @param selectedMimeTypes const char**
-KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedMimeTypes[]);
+KMimeTypeChooser* k_mimetypechooser_new3(const char* text, const char* selectedMimeTypes[static 1]);
 
 /// k_mimetypechooser_new4 constructs a new KMimeTypeChooser object.
 ///
 /// @param text const char*
 /// @param selectedMimeTypes const char**
 /// @param defaultGroup const char*
-KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedMimeTypes[], const char* defaultGroup);
+KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup);
 
 /// k_mimetypechooser_new5 constructs a new KMimeTypeChooser object.
 ///
@@ -41,7 +41,7 @@ KMimeTypeChooser* k_mimetypechooser_new4(const char* text, const char* selectedM
 /// @param selectedMimeTypes const char**
 /// @param defaultGroup const char*
 /// @param groupsToShow const char**
-KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[]);
+KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1]);
 
 /// k_mimetypechooser_new6 constructs a new KMimeTypeChooser object.
 ///
@@ -50,7 +50,7 @@ KMimeTypeChooser* k_mimetypechooser_new5(const char* text, const char* selectedM
 /// @param defaultGroup const char*
 /// @param groupsToShow const char**
 /// @param visuals int
-KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals);
+KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals);
 
 /// k_mimetypechooser_new7 constructs a new KMimeTypeChooser object.
 ///
@@ -60,7 +60,7 @@ KMimeTypeChooser* k_mimetypechooser_new6(const char* text, const char* selectedM
 /// @param groupsToShow const char**
 /// @param visuals int
 /// @param parent QWidget*
-KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals, void* parent);
+KMimeTypeChooser* k_mimetypechooser_new7(const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -4384,7 +4384,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new();
 /// @param text const char*
 /// @param selectedMimeTypes const char**
 /// @param defaultGroup const char*
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new2(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup);
 
 /// k_mimetypechooserdialog_new3 constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4402,7 +4402,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new4(const char* title, const ch
 /// @param title const char*
 /// @param text const char*
 /// @param selectedMimeTypes const char**
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const char* text, const char* selectedMimeTypes[]);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const char* text, const char* selectedMimeTypes[static 1]);
 
 /// k_mimetypechooserdialog_new6 constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4410,7 +4410,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new5(const char* title, const ch
 /// @param text const char*
 /// @param selectedMimeTypes const char**
 /// @param defaultGroup const char*
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup);
 
 /// k_mimetypechooserdialog_new7 constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4419,7 +4419,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new6(const char* title, const ch
 /// @param selectedMimeTypes const char**
 /// @param defaultGroup const char*
 /// @param groupsToShow const char**
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[]);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1]);
 
 /// k_mimetypechooserdialog_new8 constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4429,7 +4429,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new7(const char* title, const ch
 /// @param defaultGroup const char*
 /// @param groupsToShow const char**
 /// @param visuals int
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals);
 
 /// k_mimetypechooserdialog_new9 constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4440,7 +4440,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new8(const char* title, const ch
 /// @param groupsToShow const char**
 /// @param visuals int
 /// @param parent QWidget*
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, const char* groupsToShow[], int visuals, void* parent);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, const char* groupsToShow[static 1], int visuals, void* parent);
 
 /// k_mimetypechooserdialog_new10 constructs a new KMimeTypeChooserDialog object.
 ///
@@ -4449,7 +4449,7 @@ KMimeTypeChooserDialog* k_mimetypechooserdialog_new9(const char* title, const ch
 /// @param selectedMimeTypes const char**
 /// @param defaultGroup const char*
 /// @param parent QWidget*
-KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const char* text, const char* selectedMimeTypes[], const char* defaultGroup, void* parent);
+KMimeTypeChooserDialog* k_mimetypechooserdialog_new10(const char* title, const char* text, const char* selectedMimeTypes[static 1], const char* defaultGroup, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

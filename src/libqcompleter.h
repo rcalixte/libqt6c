@@ -25,7 +25,7 @@ QCompleter* q_completer_new2(void* model);
 /// q_completer_new3 constructs a new QCompleter object.
 ///
 /// @param completions const char**
-QCompleter* q_completer_new3(const char* completions[]);
+QCompleter* q_completer_new3(const char* completions[static 1]);
 
 /// q_completer_new4 constructs a new QCompleter object.
 ///
@@ -42,7 +42,7 @@ QCompleter* q_completer_new5(void* model, void* parent);
 ///
 /// @param completions const char**
 /// @param parent QObject*
-QCompleter* q_completer_new6(const char* completions[], void* parent);
+QCompleter* q_completer_new6(const char* completions[static 1], void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

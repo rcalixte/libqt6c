@@ -8,7 +8,7 @@
 #include "libcommand.hpp"
 #include "libcommand.h"
 
-KTextEditor__Command* k_texteditor__command_new(const char* cmds[]) {
+KTextEditor__Command* k_texteditor__command_new(const char* cmds[static 1]) {
     size_t cmds_len = libqt_strv_length(cmds);
     libqt_string* cmds_qstr = (libqt_string*)malloc(cmds_len * sizeof(libqt_string));
     if (cmds_qstr == NULL) {
@@ -25,7 +25,7 @@ KTextEditor__Command* k_texteditor__command_new(const char* cmds[]) {
     return _out;
 }
 
-KTextEditor__Command* k_texteditor__command_new2(const char* cmds[], void* parent) {
+KTextEditor__Command* k_texteditor__command_new2(const char* cmds[static 1], void* parent) {
     size_t cmds_len = libqt_strv_length(cmds);
     libqt_string* cmds_qstr = (libqt_string*)malloc(cmds_len * sizeof(libqt_string));
     if (cmds_qstr == NULL) {

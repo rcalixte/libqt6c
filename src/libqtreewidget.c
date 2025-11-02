@@ -33,7 +33,7 @@ QTreeWidgetItem* q_treewidgetitem_new() {
     return QTreeWidgetItem_new();
 }
 
-QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[]) {
+QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -54,7 +54,7 @@ QTreeWidgetItem* q_treewidgetitem_new3(void* treeview) {
     return QTreeWidgetItem_new3((QTreeWidget*)treeview);
 }
 
-QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[]) {
+QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -79,7 +79,7 @@ QTreeWidgetItem* q_treewidgetitem_new6(void* parent) {
     return QTreeWidgetItem_new6((QTreeWidgetItem*)parent);
 }
 
-QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[]) {
+QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[static 1]) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -108,7 +108,7 @@ QTreeWidgetItem* q_treewidgetitem_new10(int type) {
     return QTreeWidgetItem_new10(type);
 }
 
-QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[], int type) {
+QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[static 1], int type) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -129,7 +129,7 @@ QTreeWidgetItem* q_treewidgetitem_new12(void* treeview, int type) {
     return QTreeWidgetItem_new12((QTreeWidget*)treeview, type);
 }
 
-QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[], int type) {
+QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[static 1], int type) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -154,7 +154,7 @@ QTreeWidgetItem* q_treewidgetitem_new15(void* parent, int type) {
     return QTreeWidgetItem_new15((QTreeWidgetItem*)parent, type);
 }
 
-QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[], int type) {
+QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[static 1], int type) {
     size_t strings_len = libqt_strv_length(strings);
     libqt_string* strings_qstr = (libqt_string*)malloc(strings_len * sizeof(libqt_string));
     if (strings_qstr == NULL) {
@@ -579,7 +579,7 @@ void q_treewidget_set_header_item(void* self, void* item) {
     QTreeWidget_SetHeaderItem((QTreeWidget*)self, (QTreeWidgetItem*)item);
 }
 
-void q_treewidget_set_header_labels(void* self, const char* labels[]) {
+void q_treewidget_set_header_labels(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {

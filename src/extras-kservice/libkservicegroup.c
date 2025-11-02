@@ -106,7 +106,7 @@ const char** k_servicegroup_suppress_generic_names(void* self) {
     return _ret;
 }
 
-void k_servicegroup_set_layout_info(void* self, const char* layout[]) {
+void k_servicegroup_set_layout_info(void* self, const char* layout[static 1]) {
     size_t layout_len = libqt_strv_length(layout);
     libqt_string* layout_qstr = (libqt_string*)malloc(layout_len * sizeof(libqt_string));
     if (layout_qstr == NULL) {

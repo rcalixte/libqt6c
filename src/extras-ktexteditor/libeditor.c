@@ -174,7 +174,7 @@ const char* k_texteditor__editor_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets, const char* variables[]) {
+void k_texteditor__editor_add_variable_expansion2(void* self, libqt_list widgets, const char* variables[static 1]) {
     size_t variables_len = libqt_strv_length(variables);
     libqt_string* variables_qstr = (libqt_string*)malloc(variables_len * sizeof(libqt_string));
     if (variables_qstr == NULL) {

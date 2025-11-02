@@ -755,7 +755,7 @@ void k_filefiltercombo_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self KFileFilterCombo*
 /// @param texts const char**
-void k_filefiltercombo_add_items(void* self, const char* texts[]);
+void k_filefiltercombo_add_items(void* self, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -783,7 +783,7 @@ void k_filefiltercombo_insert_item2(void* self, int index, void* icon, const cha
 /// @param self KFileFilterCombo*
 /// @param index int
 /// @param texts const char**
-void k_filefiltercombo_insert_items(void* self, int index, const char* texts[]);
+void k_filefiltercombo_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -3858,7 +3858,7 @@ void k_filefiltercombo_on_set_completed_text(void* self, void (*callback)(void*,
 /// @param self KFileFilterCombo*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_filefiltercombo_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_filefiltercombo_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///
@@ -3869,7 +3869,7 @@ void k_filefiltercombo_set_completed_items(void* self, const char* items[], bool
 /// @param self KFileFilterCombo*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///

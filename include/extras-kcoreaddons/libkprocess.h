@@ -105,7 +105,7 @@ void k_process_set_program(void* self, const char* exe);
 ///
 /// @param self KProcess*
 /// @param argv const char**
-void k_process_set_program2(void* self, const char* argv[]);
+void k_process_set_program2(void* self, const char* argv[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#operator-lt-lt)
 ///
@@ -117,7 +117,7 @@ KProcess* k_process_operator_shift_left(void* self, const char* arg);
 ///
 /// @param self KProcess*
 /// @param args const char**
-KProcess* k_process_operator_shift_left2(void* self, const char* args[]);
+KProcess* k_process_operator_shift_left2(void* self, const char* args[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#clearProgram)
 ///
@@ -155,7 +155,7 @@ int32_t k_process_execute2(const char* exe);
 /// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param argv const char**
-int32_t k_process_execute3(const char* argv[]);
+int32_t k_process_execute3(const char* argv[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
@@ -170,7 +170,7 @@ int32_t k_process_start_detached2(const char* exe);
 /// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
 /// @param argv const char**
-int32_t k_process_start_detached3(const char* argv[]);
+int32_t k_process_start_detached3(const char* argv[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -202,7 +202,7 @@ void k_process_set_env3(void* self, const char* name, const char* value, bool ov
 /// @param self KProcess*
 /// @param exe const char*
 /// @param args const char**
-void k_process_set_program22(void* self, const char* exe, const char* args[]);
+void k_process_set_program22(void* self, const char* exe, const char* args[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
@@ -214,26 +214,26 @@ int32_t k_process_execute1(void* self, int msecs);
 ///
 /// @param exe const char*
 /// @param args const char**
-int32_t k_process_execute22(const char* exe, const char* args[]);
+int32_t k_process_execute22(const char* exe, const char* args[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param exe const char*
 /// @param args const char**
 /// @param msecs int
-int32_t k_process_execute32(const char* exe, const char* args[], int msecs);
+int32_t k_process_execute32(const char* exe, const char* args[static 1], int msecs);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#execute)
 ///
 /// @param argv const char**
 /// @param msecs int
-int32_t k_process_execute23(const char* argv[], int msecs);
+int32_t k_process_execute23(const char* argv[static 1], int msecs);
 
 /// [Qt documentation](https://api.kde.org/kprocess.html#startDetached)
 ///
 /// @param exe const char*
 /// @param args const char**
-int32_t k_process_start_detached22(const char* exe, const char* args[]);
+int32_t k_process_start_detached22(const char* exe, const char* args[static 1]);
 
 /// Inherited from QProcess
 ///
@@ -265,7 +265,7 @@ const char** k_process_arguments(void* self);
 ///
 /// @param self KProcess*
 /// @param arguments const char**
-void k_process_set_arguments(void* self, const char* arguments[]);
+void k_process_set_arguments(void* self, const char* arguments[static 1]);
 
 /// Inherited from QProcess
 ///
@@ -419,7 +419,7 @@ void k_process_set_working_directory(void* self, const char* dir);
 ///
 /// @param self KProcess*
 /// @param environment const char**
-void k_process_set_environment(void* self, const char* environment[]);
+void k_process_set_environment(void* self, const char* environment[static 1]);
 
 /// Inherited from QProcess
 ///
@@ -587,7 +587,7 @@ void k_process_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 /// @param self KProcess*
 /// @param program const char*
 /// @param arguments const char**
-void k_process_start22(void* self, const char* program, const char* arguments[]);
+void k_process_start22(void* self, const char* program, const char* arguments[static 1]);
 
 /// Inherited from QProcess
 ///
@@ -597,7 +597,7 @@ void k_process_start22(void* self, const char* program, const char* arguments[])
 /// @param program const char*
 /// @param arguments const char**
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void k_process_start3(void* self, const char* program, const char* arguments[], int32_t mode);
+void k_process_start3(void* self, const char* program, const char* arguments[static 1], int32_t mode);
 
 /// Inherited from QProcess
 ///
@@ -675,7 +675,7 @@ bool k_process_wait_for_finished1(void* self, int msecs);
 /// @param arguments const char**
 /// @param workingDirectory const char*
 /// @param pid long long*
-bool k_process_start_detached4(const char* program, const char* arguments[], const char* workingDirectory, long long* pid);
+bool k_process_start_detached4(const char* program, const char* arguments[static 1], const char* workingDirectory, long long* pid);
 
 /// Inherited from QProcess
 ///

@@ -30,7 +30,7 @@ void k_acceleratormanager_set_no_accel(void* widget) {
     KAcceleratorManager_SetNoAccel((QWidget*)widget);
 }
 
-void k_acceleratormanager_add_standard_action_names(const char* names[]) {
+void k_acceleratormanager_add_standard_action_names(const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {

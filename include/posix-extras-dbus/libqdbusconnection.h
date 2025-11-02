@@ -135,7 +135,7 @@ bool q_dbusconnection_connect2(void* self, const char* service, const char* path
 /// @param signature const char*
 /// @param receiver QObject*
 /// @param slot const char*
-bool q_dbusconnection_connect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[], const char* signature, void* receiver, const char* slot);
+bool q_dbusconnection_connect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[static 1], const char* signature, void* receiver, const char* slot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnection.html#disconnect)
 ///
@@ -171,7 +171,7 @@ bool q_dbusconnection_disconnect2(void* self, const char* service, const char* p
 /// @param signature const char*
 /// @param receiver QObject*
 /// @param slot const char*
-bool q_dbusconnection_disconnect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[], const char* signature, void* receiver, const char* slot);
+bool q_dbusconnection_disconnect3(void* self, const char* service, const char* path, const char* interface, const char* name, const char* argumentMatch[static 1], const char* signature, void* receiver, const char* slot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdbusconnection.html#registerObject)
 ///

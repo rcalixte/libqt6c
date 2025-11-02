@@ -75,7 +75,7 @@ const char* k_sonnet__settings_default_language(void* self);
 ///
 /// @param self Sonnet__Settings*
 /// @param lang const char**
-void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[]);
+void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[static 1]);
 
 /// [Qt documentation](https://api.kde.org/sonnet-settings.html#preferredLanguages)
 ///
@@ -156,7 +156,7 @@ bool k_sonnet__settings_checker_enabled_by_default(void* self);
 ///
 /// @param self Sonnet__Settings*
 /// @param ignores const char**
-void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[]);
+void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[static 1]);
 
 /// [Qt documentation](https://api.kde.org/sonnet-settings.html#currentIgnoreList)
 ///

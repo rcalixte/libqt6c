@@ -614,7 +614,7 @@ bool q_filesystemmodel_name_filter_disables(void* self);
 ///
 /// @param self QFileSystemModel*
 /// @param filters const char**
-void q_filesystemmodel_set_name_filters(void* self, const char* filters[]);
+void q_filesystemmodel_set_name_filters(void* self, const char* filters[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#nameFilters)
 ///

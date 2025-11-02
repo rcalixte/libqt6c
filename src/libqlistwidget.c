@@ -352,7 +352,7 @@ void q_listwidget_insert_item2(void* self, int row, const char* label) {
     QListWidget_InsertItem2((QListWidget*)self, row, qstring(label));
 }
 
-void q_listwidget_insert_items(void* self, int row, const char* labels[]) {
+void q_listwidget_insert_items(void* self, int row, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {
@@ -375,7 +375,7 @@ void q_listwidget_add_item2(void* self, void* item) {
     QListWidget_AddItem2((QListWidget*)self, (QListWidgetItem*)item);
 }
 
-void q_listwidget_add_items(void* self, const char* labels[]) {
+void q_listwidget_add_items(void* self, const char* labels[static 1]) {
     size_t labels_len = libqt_strv_length(labels);
     libqt_string* labels_qstr = (libqt_string*)malloc(labels_len * sizeof(libqt_string));
     if (labels_qstr == NULL) {

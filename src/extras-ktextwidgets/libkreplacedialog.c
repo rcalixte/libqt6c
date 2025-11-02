@@ -27,7 +27,7 @@ KReplaceDialog* k_replacedialog_new3(void* parent, int64_t options) {
     return KReplaceDialog_new3((QWidget*)parent, options);
 }
 
-KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* findStrings[]) {
+KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* findStrings[static 1]) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -44,7 +44,7 @@ KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* 
     return _out;
 }
 
-KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* findStrings[], const char* replaceStrings[]) {
+KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1]) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -72,7 +72,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* 
     return _out;
 }
 
-KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[], const char* replaceStrings[], bool hasSelection) {
+KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1], bool hasSelection) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -127,7 +127,7 @@ const char* k_replacedialog_tr(const char* s) {
     return _ret;
 }
 
-void k_replacedialog_set_replacement_history(void* self, const char* history[]) {
+void k_replacedialog_set_replacement_history(void* self, const char* history[static 1]) {
     size_t history_len = libqt_strv_length(history);
     libqt_string* history_qstr = (libqt_string*)malloc(history_len * sizeof(libqt_string));
     if (history_qstr == NULL) {
@@ -206,7 +206,7 @@ const char* k_replacedialog_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_replacedialog_set_find_history(void* self, const char* history[]) {
+void k_replacedialog_set_find_history(void* self, const char* history[static 1]) {
     size_t history_len = libqt_strv_length(history);
     libqt_string* history_qstr = (libqt_string*)malloc(history_len * sizeof(libqt_string));
     if (history_qstr == NULL) {

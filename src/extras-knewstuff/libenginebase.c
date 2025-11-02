@@ -149,7 +149,7 @@ libqt_list /* of Attica__Provider* */ k_nscore__enginebase_attica_providers(void
     return _arr;
 }
 
-void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[]) {
+void k_nscore__enginebase_set_tag_filter(void* self, const char* filter[static 1]) {
     size_t filter_len = libqt_strv_length(filter);
     libqt_string* filter_qstr = (libqt_string*)malloc(filter_len * sizeof(libqt_string));
     if (filter_qstr == NULL) {
@@ -187,7 +187,7 @@ void k_nscore__enginebase_add_tag_filter(void* self, const char* filter) {
     KNSCore__EngineBase_AddTagFilter((KNSCore__EngineBase*)self, qstring(filter));
 }
 
-void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter[]) {
+void k_nscore__enginebase_set_download_tag_filter(void* self, const char* filter[static 1]) {
     size_t filter_len = libqt_strv_length(filter);
     libqt_string* filter_qstr = (libqt_string*)malloc(filter_len * sizeof(libqt_string));
     if (filter_qstr == NULL) {

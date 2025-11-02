@@ -83,7 +83,7 @@ void q_termwidgetinterface_set_terminal_background_mode(void* self, int mode);
 ///
 /// @param self QTermWidgetInterface*
 /// @param environment const char**
-void q_termwidgetinterface_set_environment(void* self, const char* environment[]);
+void q_termwidgetinterface_set_environment(void* self, const char* environment[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -108,7 +108,7 @@ const char* q_termwidgetinterface_working_directory(void* self);
 ///
 /// @param self QTermWidgetInterface*
 /// @param args const char**
-void q_termwidgetinterface_set_args(void* self, const char* args[]);
+void q_termwidgetinterface_set_args(void* self, const char* args[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

@@ -77,7 +77,7 @@ QDBusArgument* q_dbusargument_operator_shift_left14(void* self, void* arg) {
     return QDBusArgument_OperatorShiftLeft14((QDBusArgument*)self, (QDBusUnixFileDescriptor*)arg);
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left15(void* self, const char* arg[]) {
+QDBusArgument* q_dbusargument_operator_shift_left15(void* self, const char* arg[static 1]) {
     size_t arg_len = libqt_strv_length(arg);
     libqt_string* arg_qstr = (libqt_string*)malloc(arg_len * sizeof(libqt_string));
     if (arg_qstr == NULL) {
@@ -208,7 +208,7 @@ const QDBusArgument* q_dbusargument_operator_shift_right14(void* self, void* arg
     return QDBusArgument_OperatorShiftRight14((QDBusArgument*)self, (QDBusUnixFileDescriptor*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const char* arg[]) {
+const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const char* arg[static 1]) {
     size_t arg_len = libqt_strv_length(arg);
     libqt_string* arg_qstr = (libqt_string*)malloc(arg_len * sizeof(libqt_string));
     if (arg_qstr == NULL) {

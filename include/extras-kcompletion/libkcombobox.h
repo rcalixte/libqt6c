@@ -335,7 +335,7 @@ void k_combobox_qbase_set_completed_text(void* self, const char* completedText);
 /// @param self KComboBox*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_combobox_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_combobox_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// [Qt documentation](https://api.kde.org/kcombobox.html#setCompletedItems)
 ///
@@ -352,7 +352,7 @@ void k_combobox_on_set_completed_items(void* self, void (*callback)(void*, const
 /// @param self KComboBox*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_combobox_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_combobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// [Qt documentation](https://api.kde.org/kcombobox.html#setCurrentItem)
 ///
@@ -776,7 +776,7 @@ void k_combobox_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self KComboBox*
 /// @param texts const char**
-void k_combobox_add_items(void* self, const char* texts[]);
+void k_combobox_add_items(void* self, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -804,7 +804,7 @@ void k_combobox_insert_item2(void* self, int index, void* icon, const char* text
 /// @param self KComboBox*
 /// @param index int
 /// @param texts const char**
-void k_combobox_insert_items(void* self, int index, const char* texts[]);
+void k_combobox_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///

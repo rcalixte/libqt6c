@@ -59,7 +59,7 @@ const char** k_sonnet__speller_suggest(void* self, const char* word) {
     return _ret;
 }
 
-bool k_sonnet__speller_check_and_suggest(void* self, const char* word, const char* suggestions[]) {
+bool k_sonnet__speller_check_and_suggest(void* self, const char* word, const char* suggestions[static 1]) {
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {

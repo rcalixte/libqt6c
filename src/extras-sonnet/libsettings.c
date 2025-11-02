@@ -52,7 +52,7 @@ const char* k_sonnet__settings_default_language(void* self) {
     return _ret;
 }
 
-void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[]) {
+void k_sonnet__settings_set_preferred_languages(void* self, const char* lang[static 1]) {
     size_t lang_len = libqt_strv_length(lang);
     libqt_string* lang_qstr = (libqt_string*)malloc(lang_len * sizeof(libqt_string));
     if (lang_qstr == NULL) {
@@ -137,7 +137,7 @@ bool k_sonnet__settings_checker_enabled_by_default(void* self) {
     return Sonnet__Settings_CheckerEnabledByDefault((Sonnet__Settings*)self);
 }
 
-void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[]) {
+void k_sonnet__settings_set_current_ignore_list(void* self, const char* ignores[static 1]) {
     size_t ignores_len = libqt_strv_length(ignores);
     libqt_string* ignores_qstr = (libqt_string*)malloc(ignores_len * sizeof(libqt_string));
     if (ignores_qstr == NULL) {

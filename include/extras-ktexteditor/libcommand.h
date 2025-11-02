@@ -16,13 +16,13 @@
 /// k_texteditor__command_new constructs a new KTextEditor::Command object.
 ///
 /// @param cmds const char**
-KTextEditor__Command* k_texteditor__command_new(const char* cmds[]);
+KTextEditor__Command* k_texteditor__command_new(const char* cmds[static 1]);
 
 /// k_texteditor__command_new2 constructs a new KTextEditor::Command object.
 ///
 /// @param cmds const char**
 /// @param parent QObject*
-KTextEditor__Command* k_texteditor__command_new2(const char* cmds[], void* parent);
+KTextEditor__Command* k_texteditor__command_new2(const char* cmds[static 1], void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

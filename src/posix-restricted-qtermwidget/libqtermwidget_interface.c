@@ -53,7 +53,7 @@ void q_termwidgetinterface_set_terminal_background_mode(void* self, int mode) {
     QTermWidgetInterface_SetTerminalBackgroundMode((QTermWidgetInterface*)self, mode);
 }
 
-void q_termwidgetinterface_set_environment(void* self, const char* environment[]) {
+void q_termwidgetinterface_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
@@ -83,7 +83,7 @@ const char* q_termwidgetinterface_working_directory(void* self) {
     return _ret;
 }
 
-void q_termwidgetinterface_set_args(void* self, const char* args[]) {
+void q_termwidgetinterface_set_args(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {

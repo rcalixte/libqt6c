@@ -846,7 +846,7 @@ void q_sciscintilla_set_auto_completion_fillups(void* self, const char* fillups)
 ///
 /// @param self QsciScintilla*
 /// @param separators const char**
-void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* separators[]);
+void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* separators[static 1]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
@@ -1187,7 +1187,7 @@ void q_sciscintilla_set_wrap_indent_mode(void* self, int32_t mode);
 /// @param self QsciScintilla*
 /// @param id int
 /// @param list const char**
-void q_sciscintilla_show_user_list(void* self, int id, const char* list[]);
+void q_sciscintilla_show_user_list(void* self, int id, const char* list[static 1]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///

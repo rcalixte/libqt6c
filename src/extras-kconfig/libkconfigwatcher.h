@@ -40,7 +40,7 @@ const char* k_configwatcher_tr(const char* s);
 /// @param self KConfigWatcher*
 /// @param group KConfigGroup*
 /// @param names const char**
-void k_configwatcher_config_changed(void* self, void* group, const char* names[]);
+void k_configwatcher_config_changed(void* self, void* group, const char* names[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kconfigwatcher.html#configChanged)
 ///

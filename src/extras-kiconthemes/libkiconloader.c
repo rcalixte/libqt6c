@@ -20,7 +20,7 @@ KIconLoader* k_iconloader_new2(const char* appname) {
     return KIconLoader_new2(qstring(appname));
 }
 
-KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths[]) {
+KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths[static 1]) {
     size_t extraSearchPaths_len = libqt_strv_length(extraSearchPaths);
     libqt_string* extraSearchPaths_qstr = (libqt_string*)malloc(extraSearchPaths_len * sizeof(libqt_string));
     if (extraSearchPaths_qstr == NULL) {
@@ -37,7 +37,7 @@ KIconLoader* k_iconloader_new3(const char* appname, const char* extraSearchPaths
     return _out;
 }
 
-KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths[], void* parent) {
+KIconLoader* k_iconloader_new4(const char* appname, const char* extraSearchPaths[static 1], void* parent) {
     size_t extraSearchPaths_len = libqt_strv_length(extraSearchPaths);
     libqt_string* extraSearchPaths_qstr = (libqt_string*)malloc(extraSearchPaths_len * sizeof(libqt_string));
     if (extraSearchPaths_qstr == NULL) {
@@ -260,7 +260,7 @@ QPixmap* k_iconloader_unknown() {
     return KIconLoader_Unknown();
 }
 
-void k_iconloader_draw_overlays(void* self, const char* overlays[], void* pixmap, int32_t group) {
+void k_iconloader_draw_overlays(void* self, const char* overlays[static 1], void* pixmap, int32_t group) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
@@ -345,7 +345,7 @@ QPixmap* k_iconloader_load_icon4(void* self, const char* name, int32_t group, in
     return KIconLoader_LoadIcon4((KIconLoader*)self, qstring(name), group, size, state);
 }
 
-QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, int size, int state, const char* overlays[]) {
+QPixmap* k_iconloader_load_icon5(void* self, const char* name, int32_t group, int size, int state, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
@@ -369,7 +369,7 @@ QPixmap* k_iconloader_load_mime_type_icon4(void* self, const char* iconName, int
     return KIconLoader_LoadMimeTypeIcon4((KIconLoader*)self, qstring(iconName), group, size, state);
 }
 
-QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int32_t group, int size, int state, const char* overlays[]) {
+QPixmap* k_iconloader_load_mime_type_icon5(void* self, const char* iconName, int32_t group, int size, int state, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
@@ -464,7 +464,7 @@ const char** k_iconloader_query_icons_by_context2(void* self, int group_or_size,
     return _ret;
 }
 
-void k_iconloader_reconfigure2(void* self, const char* appname, const char* extraSearchPaths[]) {
+void k_iconloader_reconfigure2(void* self, const char* appname, const char* extraSearchPaths[static 1]) {
     size_t extraSearchPaths_len = libqt_strv_length(extraSearchPaths);
     libqt_string* extraSearchPaths_qstr = (libqt_string*)malloc(extraSearchPaths_len * sizeof(libqt_string));
     if (extraSearchPaths_qstr == NULL) {
@@ -479,7 +479,7 @@ void k_iconloader_reconfigure2(void* self, const char* appname, const char* extr
     free(extraSearchPaths_qstr);
 }
 
-void k_iconloader_draw_overlays4(void* self, const char* overlays[], void* pixmap, int32_t group, int state) {
+void k_iconloader_draw_overlays4(void* self, const char* overlays[static 1], void* pixmap, int32_t group, int state) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
@@ -813,7 +813,7 @@ QIcon* k_de_icon2(const char* param1, void* param2, void* param3) {
     return KDE_Icon2(qstring(param1), (KIconColors*)param2, (KIconLoader*)param3);
 }
 
-QIcon* k_de_icon3(const char* param1, const char* param2[], void* param3) {
+QIcon* k_de_icon3(const char* param1, const char* param2[static 1], void* param3) {
     size_t param2_len = libqt_strv_length(param2);
     libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
     if (param2_qstr == NULL) {

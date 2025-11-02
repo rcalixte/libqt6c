@@ -500,7 +500,7 @@ void k_timecombobox_add_item2(void* self, void* icon, const char* text) {
     QComboBox_AddItem2((QComboBox*)self, (QIcon*)icon, qstring(text));
 }
 
-void k_timecombobox_add_items(void* self, const char* texts[]) {
+void k_timecombobox_add_items(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
@@ -523,7 +523,7 @@ void k_timecombobox_insert_item2(void* self, int index, void* icon, const char* 
     QComboBox_InsertItem2((QComboBox*)self, index, (QIcon*)icon, qstring(text));
 }
 
-void k_timecombobox_insert_items(void* self, int index, const char* texts[]) {
+void k_timecombobox_insert_items(void* self, int index, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {

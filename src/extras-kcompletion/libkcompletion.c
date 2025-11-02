@@ -247,7 +247,7 @@ const char* k_completion_next_match(void* self) {
     return _ret;
 }
 
-void k_completion_insert_items(void* self, const char* items[]) {
+void k_completion_insert_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -262,7 +262,7 @@ void k_completion_insert_items(void* self, const char* items[]) {
     free(items_qstr);
 }
 
-void k_completion_set_items(void* self, const char* itemList[]) {
+void k_completion_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
@@ -281,7 +281,7 @@ void k_completion_on_set_items(void* self, void (*callback)(void*, const char**)
     KCompletion_OnSetItems((KCompletion*)self, (intptr_t)callback);
 }
 
-void k_completion_qbase_set_items(void* self, const char* itemList[]) {
+void k_completion_qbase_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
@@ -327,7 +327,7 @@ void k_completion_on_match(void* self, void (*callback)(void*, const char*)) {
     KCompletion_Connect_Match((KCompletion*)self, (intptr_t)callback);
 }
 
-void k_completion_matches(void* self, const char* matchlist[]) {
+void k_completion_matches(void* self, const char* matchlist[static 1]) {
     size_t matchlist_len = libqt_strv_length(matchlist);
     libqt_string* matchlist_qstr = (libqt_string*)malloc(matchlist_len * sizeof(libqt_string));
     if (matchlist_qstr == NULL) {
@@ -354,7 +354,7 @@ void k_completion_on_multiple_matches(void* self, void (*callback)(void*)) {
     KCompletion_Connect_MultipleMatches((KCompletion*)self, (intptr_t)callback);
 }
 
-void k_completion_post_process_matches(void* self, const char* matchList[]) {
+void k_completion_post_process_matches(void* self, const char* matchList[static 1]) {
     size_t matchList_len = libqt_strv_length(matchList);
     libqt_string* matchList_qstr = (libqt_string*)malloc(matchList_len * sizeof(libqt_string));
     if (matchList_qstr == NULL) {
@@ -373,7 +373,7 @@ void k_completion_on_post_process_matches(void* self, void (*callback)(void*, co
     KCompletion_OnPostProcessMatches((KCompletion*)self, (intptr_t)callback);
 }
 
-void k_completion_qbase_post_process_matches(void* self, const char* matchList[]) {
+void k_completion_qbase_post_process_matches(void* self, const char* matchList[static 1]) {
     size_t matchList_len = libqt_strv_length(matchList);
     libqt_string* matchList_qstr = (libqt_string*)malloc(matchList_len * sizeof(libqt_string));
     if (matchList_qstr == NULL) {

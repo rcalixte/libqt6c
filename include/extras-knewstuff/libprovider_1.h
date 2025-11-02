@@ -466,7 +466,7 @@ void k_nscore__provider_qbase_become_fan(void* self, void* param1);
 ///
 /// @param self KNSCore__Provider*
 /// @param tagFilter const char**
-void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[]);
+void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-provider.html#tagFilter)
 ///
@@ -479,7 +479,7 @@ const char** k_nscore__provider_tag_filter(void* self);
 ///
 /// @param self KNSCore__Provider*
 /// @param downloadTagFilter const char**
-void k_nscore__provider_set_download_tag_filter(void* self, const char* downloadTagFilter[]);
+void k_nscore__provider_set_download_tag_filter(void* self, const char* downloadTagFilter[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-provider.html#downloadTagFilter)
 ///
@@ -1390,7 +1390,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new5(int32_t
 /// @param filter_ enum KNSCore__Provider__Filter
 /// @param searchTerm_ const char*
 /// @param categories_ const char**
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[]);
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1]);
 
 /// k_nscore__provider__searchrequest_new7 constructs a new KNSCore::Provider::SearchRequest object.
 ///
@@ -1399,7 +1399,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new6(int32_t
 /// @param searchTerm_ const char*
 /// @param categories_ const char**
 /// @param page_ int
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_);
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_);
 
 /// k_nscore__provider__searchrequest_new8 constructs a new KNSCore::Provider::SearchRequest object.
 ///
@@ -1409,7 +1409,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new7(int32_t
 /// @param categories_ const char**
 /// @param page_ int
 /// @param pageSize_ int
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_, int pageSize_);
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_, int pageSize_);
 
 /// [Qt documentation](https://api.kde.org/knscore-provider-searchrequest.html#sortMode-var)
 ///
@@ -1461,7 +1461,7 @@ const char** k_nscore__provider__searchrequest_categories(void* self);
 ///
 /// @param self KNSCore__Provider__SearchRequest*
 /// @param categories const char**
-void k_nscore__provider__searchrequest_set_categories(void* self, const char* categories[]);
+void k_nscore__provider__searchrequest_set_categories(void* self, const char* categories[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-provider-searchrequest.html#page-var)
 ///

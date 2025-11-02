@@ -181,7 +181,7 @@ const char* k_dirlister_name_filter(void* self) {
     return _ret;
 }
 
-void k_dirlister_set_mime_filter(void* self, const char* mimeList[]) {
+void k_dirlister_set_mime_filter(void* self, const char* mimeList[static 1]) {
     size_t mimeList_len = libqt_strv_length(mimeList);
     libqt_string* mimeList_qstr = (libqt_string*)malloc(mimeList_len * sizeof(libqt_string));
     if (mimeList_qstr == NULL) {
@@ -196,7 +196,7 @@ void k_dirlister_set_mime_filter(void* self, const char* mimeList[]) {
     free(mimeList_qstr);
 }
 
-void k_dirlister_set_mime_exclude_filter(void* self, const char* mimeList[]) {
+void k_dirlister_set_mime_exclude_filter(void* self, const char* mimeList[static 1]) {
     size_t mimeList_len = libqt_strv_length(mimeList);
     libqt_string* mimeList_qstr = (libqt_string*)malloc(mimeList_len * sizeof(libqt_string));
     if (mimeList_qstr == NULL) {

@@ -71,7 +71,7 @@ void k_process_set_program(void* self, const char* exe) {
     KProcess_SetProgram((KProcess*)self, qstring(exe));
 }
 
-void k_process_set_program2(void* self, const char* argv[]) {
+void k_process_set_program2(void* self, const char* argv[static 1]) {
     size_t argv_len = libqt_strv_length(argv);
     libqt_string* argv_qstr = (libqt_string*)malloc(argv_len * sizeof(libqt_string));
     if (argv_qstr == NULL) {
@@ -90,7 +90,7 @@ KProcess* k_process_operator_shift_left(void* self, const char* arg) {
     return KProcess_OperatorShiftLeft((KProcess*)self, qstring(arg));
 }
 
-KProcess* k_process_operator_shift_left2(void* self, const char* args[]) {
+KProcess* k_process_operator_shift_left2(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -145,7 +145,7 @@ int32_t k_process_execute2(const char* exe) {
     return KProcess_Execute2(qstring(exe));
 }
 
-int32_t k_process_execute3(const char* argv[]) {
+int32_t k_process_execute3(const char* argv[static 1]) {
     size_t argv_len = libqt_strv_length(argv);
     libqt_string* argv_qstr = (libqt_string*)malloc(argv_len * sizeof(libqt_string));
     if (argv_qstr == NULL) {
@@ -169,7 +169,7 @@ int32_t k_process_start_detached2(const char* exe) {
     return KProcess_StartDetached2(qstring(exe));
 }
 
-int32_t k_process_start_detached3(const char* argv[]) {
+int32_t k_process_start_detached3(const char* argv[static 1]) {
     size_t argv_len = libqt_strv_length(argv);
     libqt_string* argv_qstr = (libqt_string*)malloc(argv_len * sizeof(libqt_string));
     if (argv_qstr == NULL) {
@@ -203,7 +203,7 @@ void k_process_set_env3(void* self, const char* name, const char* value, bool ov
     KProcess_SetEnv3((KProcess*)self, qstring(name), qstring(value), overwrite);
 }
 
-void k_process_set_program22(void* self, const char* exe, const char* args[]) {
+void k_process_set_program22(void* self, const char* exe, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -222,7 +222,7 @@ int32_t k_process_execute1(void* self, int msecs) {
     return KProcess_Execute1((KProcess*)self, msecs);
 }
 
-int32_t k_process_execute22(const char* exe, const char* args[]) {
+int32_t k_process_execute22(const char* exe, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -238,7 +238,7 @@ int32_t k_process_execute22(const char* exe, const char* args[]) {
     return _out;
 }
 
-int32_t k_process_execute32(const char* exe, const char* args[], int msecs) {
+int32_t k_process_execute32(const char* exe, const char* args[static 1], int msecs) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -254,7 +254,7 @@ int32_t k_process_execute32(const char* exe, const char* args[], int msecs) {
     return _out;
 }
 
-int32_t k_process_execute23(const char* argv[], int msecs) {
+int32_t k_process_execute23(const char* argv[static 1], int msecs) {
     size_t argv_len = libqt_strv_length(argv);
     libqt_string* argv_qstr = (libqt_string*)malloc(argv_len * sizeof(libqt_string));
     if (argv_qstr == NULL) {
@@ -270,7 +270,7 @@ int32_t k_process_execute23(const char* argv[], int msecs) {
     return _out;
 }
 
-int32_t k_process_start_detached22(const char* exe, const char* args[]) {
+int32_t k_process_start_detached22(const char* exe, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -313,7 +313,7 @@ const char** k_process_arguments(void* self) {
     return _ret;
 }
 
-void k_process_set_arguments(void* self, const char* arguments[]) {
+void k_process_set_arguments(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -403,7 +403,7 @@ void k_process_set_working_directory(void* self, const char* dir) {
     QProcess_SetWorkingDirectory((QProcess*)self, qstring(dir));
 }
 
-void k_process_set_environment(void* self, const char* environment[]) {
+void k_process_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
@@ -537,7 +537,7 @@ void k_process_on_error_occurred(void* self, void (*callback)(void*, int32_t)) {
     QProcess_Connect_ErrorOccurred((QProcess*)self, (intptr_t)callback);
 }
 
-void k_process_start22(void* self, const char* program, const char* arguments[]) {
+void k_process_start22(void* self, const char* program, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -552,7 +552,7 @@ void k_process_start22(void* self, const char* program, const char* arguments[])
     free(arguments_qstr);
 }
 
-void k_process_start3(void* self, const char* program, const char* arguments[], int32_t mode) {
+void k_process_start3(void* self, const char* program, const char* arguments[static 1], int32_t mode) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -599,7 +599,7 @@ bool k_process_wait_for_finished1(void* self, int msecs) {
     return QProcess_WaitForFinished1((QProcess*)self, msecs);
 }
 
-bool k_process_start_detached4(const char* program, const char* arguments[], const char* workingDirectory, long long* pid) {
+bool k_process_start_detached4(const char* program, const char* arguments[static 1], const char* workingDirectory, long long* pid) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {

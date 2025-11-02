@@ -27,7 +27,7 @@ const char** k_shell_split_args(const char* param1, int32_t param2, int32_t* par
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char**
-const char* k_shell_join_args(const char* param1[]);
+const char* k_shell_join_args(const char* param1[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kshell.html#quoteArg)
 ///

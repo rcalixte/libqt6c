@@ -219,7 +219,7 @@ void k_selectaction_qbase_insert_action(void* self, void* before, void* action);
 ///
 /// @param self KSelectAction*
 /// @param lst const char**
-void k_selectaction_set_items(void* self, const char* lst[]);
+void k_selectaction_set_items(void* self, const char* lst[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kselectaction.html#items)
 ///

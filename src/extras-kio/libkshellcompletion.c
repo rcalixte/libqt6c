@@ -58,7 +58,7 @@ const char* k_shellcompletion_qbase_make_completion(void* self, const char* text
     return _ret;
 }
 
-void k_shellcompletion_post_process_matches(void* self, const char* matches[]) {
+void k_shellcompletion_post_process_matches(void* self, const char* matches[static 1]) {
     size_t matches_len = libqt_strv_length(matches);
     libqt_string* matches_qstr = (libqt_string*)malloc(matches_len * sizeof(libqt_string));
     if (matches_qstr == NULL) {
@@ -77,7 +77,7 @@ void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void
     KShellCompletion_OnPostProcessMatches((KShellCompletion*)self, (intptr_t)callback);
 }
 
-void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[]) {
+void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[static 1]) {
     size_t matches_len = libqt_strv_length(matches);
     libqt_string* matches_qstr = (libqt_string*)malloc(matches_len * sizeof(libqt_string));
     if (matches_qstr == NULL) {
@@ -131,7 +131,7 @@ const char* k_shellcompletion_replaced_path2(const char* text, bool replaceHome)
     return _ret;
 }
 
-void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[]) {
+void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[static 1]) {
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
@@ -298,7 +298,7 @@ const char* k_shellcompletion_next_match(void* self) {
     return _ret;
 }
 
-void k_shellcompletion_insert_items(void* self, const char* items[]) {
+void k_shellcompletion_insert_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -333,7 +333,7 @@ void k_shellcompletion_on_match(void* self, void (*callback)(void*, const char*)
     KCompletion_Connect_Match((KCompletion*)self, (intptr_t)callback);
 }
 
-void k_shellcompletion_matches(void* self, const char* matchlist[]) {
+void k_shellcompletion_matches(void* self, const char* matchlist[static 1]) {
     size_t matchlist_len = libqt_strv_length(matchlist);
     libqt_string* matchlist_qstr = (libqt_string*)malloc(matchlist_len * sizeof(libqt_string));
     if (matchlist_qstr == NULL) {
@@ -717,7 +717,7 @@ void k_shellcompletion_on_set_sounds_enabled(void* self, void (*callback)(void*,
     KShellCompletion_OnSetSoundsEnabled((KShellCompletion*)self, (intptr_t)callback);
 }
 
-void k_shellcompletion_set_items(void* self, const char* itemList[]) {
+void k_shellcompletion_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
@@ -732,7 +732,7 @@ void k_shellcompletion_set_items(void* self, const char* itemList[]) {
     free(itemList_qstr);
 }
 
-void k_shellcompletion_qbase_set_items(void* self, const char* itemList[]) {
+void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {

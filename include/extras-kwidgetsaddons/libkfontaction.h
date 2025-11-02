@@ -267,7 +267,7 @@ QAction* k_fontaction_add_action3(void* self, void* icon, const char* text);
 ///
 /// @param self KFontAction*
 /// @param lst const char**
-void k_fontaction_set_items(void* self, const char* lst[]);
+void k_fontaction_set_items(void* self, const char* lst[static 1]);
 
 /// Inherited from KSelectAction
 ///

@@ -83,14 +83,14 @@ void k_urlcombobox_set_url(void* self, void* url);
 ///
 /// @param self KUrlComboBox*
 /// @param urls const char**
-void k_urlcombobox_set_urls(void* self, const char* urls[]);
+void k_urlcombobox_set_urls(void* self, const char* urls[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurlcombobox.html#setUrls)
 ///
 /// @param self KUrlComboBox*
 /// @param urls const char**
 /// @param remove enum KUrlComboBox__OverLoadResolving
-void k_urlcombobox_set_urls2(void* self, const char* urls[], int32_t remove);
+void k_urlcombobox_set_urls2(void* self, const char* urls[static 1], int32_t remove);
 
 /// [Qt documentation](https://api.kde.org/kurlcombobox.html#urls)
 ///
@@ -853,7 +853,7 @@ void k_urlcombobox_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self KUrlComboBox*
 /// @param texts const char**
-void k_urlcombobox_add_items(void* self, const char* texts[]);
+void k_urlcombobox_add_items(void* self, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -881,7 +881,7 @@ void k_urlcombobox_insert_item2(void* self, int index, void* icon, const char* t
 /// @param self KUrlComboBox*
 /// @param index int
 /// @param texts const char**
-void k_urlcombobox_insert_items(void* self, int index, const char* texts[]);
+void k_urlcombobox_insert_items(void* self, int index, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -3956,7 +3956,7 @@ void k_urlcombobox_on_set_completed_text(void* self, void (*callback)(void*, con
 /// @param self KUrlComboBox*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_urlcombobox_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_urlcombobox_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///
@@ -3967,7 +3967,7 @@ void k_urlcombobox_set_completed_items(void* self, const char* items[], bool aut
 /// @param self KUrlComboBox*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///

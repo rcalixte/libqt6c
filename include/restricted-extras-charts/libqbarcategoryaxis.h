@@ -86,7 +86,7 @@ int32_t q_barcategoryaxis_qbase_type(void* self);
 ///
 /// @param self QBarCategoryAxis*
 /// @param categories const char**
-void q_barcategoryaxis_append(void* self, const char* categories[]);
+void q_barcategoryaxis_append(void* self, const char* categories[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#append)
 ///
@@ -123,7 +123,7 @@ void q_barcategoryaxis_clear(void* self);
 ///
 /// @param self QBarCategoryAxis*
 /// @param categories const char**
-void q_barcategoryaxis_set_categories(void* self, const char* categories[]);
+void q_barcategoryaxis_set_categories(void* self, const char* categories[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarcategoryaxis-qtcharts.html#categories)
 ///

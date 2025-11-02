@@ -586,7 +586,7 @@ void q_sciscintilla_set_auto_completion_fillups(void* self, const char* fillups)
     QsciScintilla_SetAutoCompletionFillups((QsciScintilla*)self, fillups);
 }
 
-void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* separators[]) {
+void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* separators[static 1]) {
     size_t separators_len = libqt_strv_length(separators);
     libqt_string* separators_qstr = (libqt_string*)malloc(separators_len * sizeof(libqt_string));
     if (separators_qstr == NULL) {
@@ -824,7 +824,7 @@ void q_sciscintilla_set_wrap_indent_mode(void* self, int32_t mode) {
     QsciScintilla_SetWrapIndentMode((QsciScintilla*)self, mode);
 }
 
-void q_sciscintilla_show_user_list(void* self, int id, const char* list[]) {
+void q_sciscintilla_show_user_list(void* self, int id, const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {

@@ -1866,7 +1866,7 @@ void k_onsole__regexpfilter__hotspot_qbase_activate(void* self, const char* acti
     Konsole__RegExpFilter__HotSpot_QBaseActivate((Konsole__RegExpFilter__HotSpot*)self, qstring(action));
 }
 
-void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* texts[]) {
+void k_onsole__regexpfilter__hotspot_set_captured_texts(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {
@@ -1984,7 +1984,7 @@ void k_onsole__urlfilter__hotspot_qbase_activate(void* self, const char* action)
     Konsole__UrlFilter__HotSpot_QBaseActivate((Konsole__UrlFilter__HotSpot*)self, qstring(action));
 }
 
-void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* texts[]) {
+void k_onsole__urlfilter__hotspot_set_captured_texts(void* self, const char* texts[static 1]) {
     size_t texts_len = libqt_strv_length(texts);
     libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
     if (texts_qstr == NULL) {

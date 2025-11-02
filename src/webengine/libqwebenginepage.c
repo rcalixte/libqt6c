@@ -648,7 +648,7 @@ QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t type) {
     return QWebEnginePage_QBaseCreateWindow((QWebEnginePage*)self, type);
 }
 
-const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]) {
+const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* oldFiles[static 1], const char* acceptedMimeTypes[static 1]) {
     size_t oldFiles_len = libqt_strv_length(oldFiles);
     libqt_string* oldFiles_qstr = (libqt_string*)malloc(oldFiles_len * sizeof(libqt_string));
     if (oldFiles_qstr == NULL) {
@@ -693,7 +693,7 @@ void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*,
     QWebEnginePage_OnChooseFiles((QWebEnginePage*)self, (intptr_t)callback);
 }
 
-const char** q_webenginepage_qbase_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]) {
+const char** q_webenginepage_qbase_choose_files(void* self, int32_t mode, const char* oldFiles[static 1], const char* acceptedMimeTypes[static 1]) {
     size_t oldFiles_len = libqt_strv_length(oldFiles);
     libqt_string* oldFiles_qstr = (libqt_string*)malloc(oldFiles_len * sizeof(libqt_string));
     if (oldFiles_qstr == NULL) {

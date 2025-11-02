@@ -1281,7 +1281,7 @@ KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time(void*
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
 /// @param reference const char**
-KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list(void* self, const char* name, const char* reference[]);
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list(void* self, const char* name, const char* reference[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
 ///
@@ -1767,7 +1767,7 @@ KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton_add_item_date_time4(void
 /// @param name const char*
 /// @param reference const char**
 /// @param defaultValue const char**
-KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list3(void* self, const char* name, const char* reference[], const char* defaultValue[]);
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list3(void* self, const char* name, const char* reference[static 1], const char* defaultValue[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemStringList)
 ///
@@ -1776,7 +1776,7 @@ KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list3(
 /// @param reference const char**
 /// @param defaultValue const char**
 /// @param key const char*
-KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list4(void* self, const char* name, const char* reference[], const char* defaultValue[], const char* key);
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton_add_item_string_list4(void* self, const char* name, const char* reference[static 1], const char* defaultValue[static 1], const char* key);
 
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton.html#addItemIntList)
 ///
@@ -5142,7 +5142,7 @@ void k_coreconfigskeleton__itemdatetime_delete(void* self);
 /// @param _group const char*
 /// @param _key const char*
 /// @param reference const char**
-KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new(const char* _group, const char* _key, const char* reference[]);
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new(const char* _group, const char* _key, const char* reference[static 1]);
 
 /// k_coreconfigskeleton__itemstringlist_new2 constructs a new KCoreConfigSkeleton::ItemStringList object.
 ///
@@ -5150,7 +5150,7 @@ KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new(co
 /// @param _key const char*
 /// @param reference const char**
 /// @param defaultValue const char**
-KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new2(const char* _group, const char* _key, const char* reference[], const char* defaultValue[]);
+KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new2(const char* _group, const char* _key, const char* reference[static 1], const char* defaultValue[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itemstringlist.html#readConfig)
 ///
@@ -5250,7 +5250,7 @@ void k_coreconfigskeleton__itemstringlist_delete(void* self);
 /// @param _group const char*
 /// @param _key const char*
 /// @param reference const char**
-KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new(const char* _group, const char* _key, const char* reference[]);
+KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new(const char* _group, const char* _key, const char* reference[static 1]);
 
 /// k_coreconfigskeleton__itempathlist_new2 constructs a new KCoreConfigSkeleton::ItemPathList object.
 ///
@@ -5258,7 +5258,7 @@ KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new(const 
 /// @param _key const char*
 /// @param reference const char**
 /// @param defaultValue const char**
-KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new2(const char* _group, const char* _key, const char* reference[], const char* defaultValue[]);
+KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new2(const char* _group, const char* _key, const char* reference[static 1], const char* defaultValue[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcoreconfigskeleton-itempathlist.html#readConfig)
 ///

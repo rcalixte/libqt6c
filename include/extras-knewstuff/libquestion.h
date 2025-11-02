@@ -113,7 +113,7 @@ const char* k_nscore__question_title(void* self);
 ///
 /// @param self KNSCore__Question*
 /// @param newList const char**
-void k_nscore__question_set_list(void* self, const char* newList[]);
+void k_nscore__question_set_list(void* self, const char* newList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knscore-question.html#list)
 ///

@@ -124,7 +124,7 @@ const char** k_fontchooser_create_font_list(uint32_t fontListCriteria) {
     return _ret;
 }
 
-void k_fontchooser_set_font_list_items(void* self, const char* fontList[]) {
+void k_fontchooser_set_font_list_items(void* self, const char* fontList[static 1]) {
     size_t fontList_len = libqt_strv_length(fontList);
     libqt_string* fontList_qstr = (libqt_string*)malloc(fontList_len * sizeof(libqt_string));
     if (fontList_qstr == NULL) {

@@ -163,7 +163,7 @@ const char** q_icon_theme_search_paths() {
     return _ret;
 }
 
-void q_icon_set_theme_search_paths(const char* searchpath[]) {
+void q_icon_set_theme_search_paths(const char* searchpath[static 1]) {
     size_t searchpath_len = libqt_strv_length(searchpath);
     libqt_string* searchpath_qstr = (libqt_string*)malloc(searchpath_len * sizeof(libqt_string));
     if (searchpath_qstr == NULL) {
@@ -197,7 +197,7 @@ const char** q_icon_fallback_search_paths() {
     return _ret;
 }
 
-void q_icon_set_fallback_search_paths(const char* paths[]) {
+void q_icon_set_fallback_search_paths(const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {

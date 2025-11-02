@@ -156,7 +156,7 @@ bool q_inputdialog_is_combo_box_editable(void* self);
 ///
 /// @param self QInputDialog*
 /// @param items const char**
-void q_inputdialog_set_combo_box_items(void* self, const char* items[]);
+void q_inputdialog_set_combo_box_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#comboBoxItems)
 ///
@@ -381,7 +381,7 @@ const char* q_inputdialog_get_multi_line_text(void* parent, const char* title, c
 /// @param title const char*
 /// @param label const char*
 /// @param items const char**
-const char* q_inputdialog_get_item(void* parent, const char* title, const char* label, const char* items[]);
+const char* q_inputdialog_get_item(void* parent, const char* title, const char* label, const char* items[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
@@ -641,7 +641,7 @@ const char* q_inputdialog_get_multi_line_text7(void* parent, const char* title, 
 /// @param label const char*
 /// @param items const char**
 /// @param current int
-const char* q_inputdialog_get_item5(void* parent, const char* title, const char* label, const char* items[], int current);
+const char* q_inputdialog_get_item5(void* parent, const char* title, const char* label, const char* items[static 1], int current);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
@@ -653,7 +653,7 @@ const char* q_inputdialog_get_item5(void* parent, const char* title, const char*
 /// @param items const char**
 /// @param current int
 /// @param editable bool
-const char* q_inputdialog_get_item6(void* parent, const char* title, const char* label, const char* items[], int current, bool editable);
+const char* q_inputdialog_get_item6(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
@@ -666,7 +666,7 @@ const char* q_inputdialog_get_item6(void* parent, const char* title, const char*
 /// @param current int
 /// @param editable bool
 /// @param ok bool*
-const char* q_inputdialog_get_item7(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok);
+const char* q_inputdialog_get_item7(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
@@ -680,7 +680,7 @@ const char* q_inputdialog_get_item7(void* parent, const char* title, const char*
 /// @param editable bool
 /// @param ok bool*
 /// @param flags flag of enum Qt__WindowType
-const char* q_inputdialog_get_item8(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int64_t flags);
+const char* q_inputdialog_get_item8(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable, bool* ok, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
@@ -695,7 +695,7 @@ const char* q_inputdialog_get_item8(void* parent, const char* title, const char*
 /// @param ok bool*
 /// @param flags flag of enum Qt__WindowType
 /// @param inputMethodHints flag of enum Qt__InputMethodHint
-const char* q_inputdialog_get_item9(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int64_t flags, int64_t inputMethodHints);
+const char* q_inputdialog_get_item9(void* parent, const char* title, const char* label, const char* items[static 1], int current, bool editable, bool* ok, int64_t flags, int64_t inputMethodHints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///

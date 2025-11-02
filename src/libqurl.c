@@ -318,7 +318,7 @@ const char** q_url_to_string_list(libqt_list uris) {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[]) {
+libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[static 1]) {
     size_t uris_len = libqt_strv_length(uris);
     libqt_string* uris_qstr = (libqt_string*)malloc(uris_len * sizeof(libqt_string));
     if (uris_qstr == NULL) {
@@ -334,7 +334,7 @@ libqt_list /* of QUrl* */ q_url_from_string_list(const char* uris[]) {
     return _arr;
 }
 
-void q_url_set_idn_whitelist(const char* idnWhitelist[]) {
+void q_url_set_idn_whitelist(const char* idnWhitelist[static 1]) {
     size_t idnWhitelist_len = libqt_strv_length(idnWhitelist);
     libqt_string* idnWhitelist_qstr = (libqt_string*)malloc(idnWhitelist_len * sizeof(libqt_string));
     if (idnWhitelist_qstr == NULL) {
@@ -493,7 +493,7 @@ char* q_url_to_ace2(const char* domain, uint32_t options) {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[], int32_t mode) {
+libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[static 1], int32_t mode) {
     size_t uris_len = libqt_strv_length(uris);
     libqt_string* uris_qstr = (libqt_string*)malloc(uris_len * sizeof(libqt_string));
     if (uris_qstr == NULL) {

@@ -38,7 +38,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new5(int32_t sortMode_, int32_t 
     return KNSCore__SearchRequest_new5(sortMode_, filter_, qstring(searchTerm_));
 }
 
-KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[]) {
+KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1]) {
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
@@ -55,7 +55,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new6(int32_t sortMode_, int32_t 
     return _out;
 }
 
-KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_) {
+KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_) {
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {
@@ -72,7 +72,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new7(int32_t sortMode_, int32_t 
     return _out;
 }
 
-KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[], int page_, int pageSize_) {
+KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t filter_, const char* searchTerm_, const char* categories_[static 1], int page_, int pageSize_) {
     size_t categories__len = libqt_strv_length(categories_);
     libqt_string* categories__qstr = (libqt_string*)malloc(categories__len * sizeof(libqt_string));
     if (categories__qstr == NULL) {

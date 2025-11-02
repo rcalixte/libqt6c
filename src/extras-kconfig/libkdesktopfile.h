@@ -241,7 +241,7 @@ void k_desktopfile_reparse_configuration(void* self);
 ///
 /// @param self KDesktopFile*
 /// @param sources const char**
-void k_desktopfile_add_config_sources(void* self, const char* sources[]);
+void k_desktopfile_add_config_sources(void* self, const char* sources[static 1]);
 
 /// Inherited from KConfig
 ///

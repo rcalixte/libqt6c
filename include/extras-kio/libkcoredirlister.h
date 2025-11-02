@@ -196,13 +196,13 @@ const char* k_coredirlister_name_filter(void* self);
 ///
 /// @param self KCoreDirLister*
 /// @param mimeList const char**
-void k_coredirlister_set_mime_filter(void* self, const char* mimeList[]);
+void k_coredirlister_set_mime_filter(void* self, const char* mimeList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcoredirlister.html#setMimeExcludeFilter)
 ///
 /// @param self KCoreDirLister*
 /// @param mimeList const char**
-void k_coredirlister_set_mime_exclude_filter(void* self, const char* mimeList[]);
+void k_coredirlister_set_mime_exclude_filter(void* self, const char* mimeList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcoredirlister.html#clearMimeFilter)
 ///

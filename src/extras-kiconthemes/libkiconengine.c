@@ -9,7 +9,7 @@
 #include "libkiconengine.hpp"
 #include "libkiconengine.h"
 
-KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char* overlays[]) {
+KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {
@@ -34,7 +34,7 @@ KIconEngine* k_iconengine_new3(const char* iconName, void* colors, void* iconLoa
     return KIconEngine_new3(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader);
 }
 
-KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoader, const char* overlays[]) {
+KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoader, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {

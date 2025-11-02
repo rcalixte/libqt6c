@@ -33,7 +33,7 @@ KFindDialog* k_finddialog_new3(void* parent, int64_t options);
 /// @param parent QWidget*
 /// @param options int64_t
 /// @param findStrings const char**
-KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findStrings[]);
+KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findStrings[static 1]);
 
 /// k_finddialog_new5 constructs a new KFindDialog object.
 ///
@@ -41,7 +41,7 @@ KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findSt
 /// @param options int64_t
 /// @param findStrings const char**
 /// @param hasSelection bool
-KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findStrings[], bool hasSelection);
+KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection);
 
 /// k_finddialog_new6 constructs a new KFindDialog object.
 ///
@@ -50,7 +50,7 @@ KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findSt
 /// @param findStrings const char**
 /// @param hasSelection bool
 /// @param replaceDialog bool
-KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findStrings[], bool hasSelection, bool replaceDialog);
+KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection, bool replaceDialog);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -92,7 +92,7 @@ const char* k_finddialog_tr(const char* s);
 ///
 /// @param self KFindDialog*
 /// @param history const char**
-void k_finddialog_set_find_history(void* self, const char* history[]);
+void k_finddialog_set_find_history(void* self, const char* history[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kfinddialog.html#findHistory)
 ///

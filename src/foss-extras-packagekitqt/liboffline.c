@@ -52,7 +52,7 @@ void q_packagekit__offline_get_prepared(void* self) {
     PackageKit__Offline_GetPrepared((PackageKit__Offline*)self);
 }
 
-void q_packagekit__offline_prepared_updates(void* self, const char* updates[]) {
+void q_packagekit__offline_prepared_updates(void* self, const char* updates[static 1]) {
     size_t updates_len = libqt_strv_length(updates);
     libqt_string* updates_qstr = (libqt_string*)malloc(updates_len * sizeof(libqt_string));
     if (updates_qstr == NULL) {

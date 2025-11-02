@@ -281,7 +281,7 @@ QCborArray* q_cborarray_operator_shift_left(void* self, void* v);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#fromStringList)
 ///
 /// @param list const char**
-QCborArray* q_cborarray_from_string_list(const char* list[]);
+QCborArray* q_cborarray_from_string_list(const char* list[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#fromVariantList)
 ///

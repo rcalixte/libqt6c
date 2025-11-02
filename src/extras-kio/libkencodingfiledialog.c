@@ -1630,7 +1630,7 @@ const char** k_encodingfiledialog__result_file_names(void* self) {
     return fileNames_ret;
 }
 
-void k_encodingfiledialog__result_set_file_names(void* self, const char* fileNames[]) {
+void k_encodingfiledialog__result_set_file_names(void* self, const char* fileNames[static 1]) {
     size_t fileNames_len = libqt_strv_length(fileNames);
     libqt_string* fileNames_qstr = (libqt_string*)malloc(fileNames_len * sizeof(libqt_string));
     if (fileNames_qstr == NULL) {

@@ -202,7 +202,7 @@ void k_nscore__entry_set_preview_image(void* self, void* image) {
     KNSCore__Entry_SetPreviewImage((KNSCore__Entry*)self, (QImage*)image);
 }
 
-void k_nscore__entry_set_installed_files(void* self, const char* files[]) {
+void k_nscore__entry_set_installed_files(void* self, const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -353,7 +353,7 @@ const char** k_nscore__entry_tags(void* self) {
     return _ret;
 }
 
-void k_nscore__entry_set_tags(void* self, const char* tags[]) {
+void k_nscore__entry_set_tags(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {
@@ -525,7 +525,7 @@ const char** k_nscore__entry__downloadlinkinformation_tags(void* self) {
     return tags_ret;
 }
 
-void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* tags[]) {
+void k_nscore__entry__downloadlinkinformation_set_tags(void* self, const char* tags[static 1]) {
     size_t tags_len = libqt_strv_length(tags);
     libqt_string* tags_qstr = (libqt_string*)malloc(tags_len * sizeof(libqt_string));
     if (tags_qstr == NULL) {

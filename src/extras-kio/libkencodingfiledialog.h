@@ -3001,7 +3001,7 @@ const char** k_encodingfiledialog__result_file_names(void* self);
 ///
 /// @param self KEncodingFileDialog__Result*
 /// @param fileNames const char**
-void k_encodingfiledialog__result_set_file_names(void* self, const char* fileNames[]);
+void k_encodingfiledialog__result_set_file_names(void* self, const char* fileNames[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kencodingfiledialog-result.html#URLs-var)
 ///

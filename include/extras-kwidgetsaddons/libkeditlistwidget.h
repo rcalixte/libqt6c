@@ -123,7 +123,7 @@ int32_t k_editlistwidget_count(void* self);
 ///
 /// @param self KEditListWidget*
 /// @param list const char**
-void k_editlistwidget_insert_string_list(void* self, const char* list[]);
+void k_editlistwidget_insert_string_list(void* self, const char* list[static 1]);
 
 /// [Qt documentation](https://api.kde.org/keditlistwidget.html#insertItem)
 ///
@@ -167,7 +167,7 @@ const char** k_editlistwidget_items(void* self);
 ///
 /// @param self KEditListWidget*
 /// @param items const char**
-void k_editlistwidget_set_items(void* self, const char* items[]);
+void k_editlistwidget_set_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/keditlistwidget.html#buttons)
 ///
@@ -280,7 +280,7 @@ const char* k_editlistwidget_tr3(const char* s, const char* c, int n);
 /// @param self KEditListWidget*
 /// @param list const char**
 /// @param index int
-void k_editlistwidget_insert_string_list2(void* self, const char* list[], int index);
+void k_editlistwidget_insert_string_list2(void* self, const char* list[static 1], int index);
 
 /// [Qt documentation](https://api.kde.org/keditlistwidget.html#insertItem)
 ///

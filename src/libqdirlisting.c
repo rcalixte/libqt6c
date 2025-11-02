@@ -8,7 +8,7 @@ QDirListing* q_dirlisting_new(const char* path) {
     return QDirListing_new(qstring(path));
 }
 
-QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[]) {
+QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -29,7 +29,7 @@ QDirListing* q_dirlisting_new3(const char* path, int32_t flags) {
     return QDirListing_new3(qstring(path), flags);
 }
 
-QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[], int32_t flags) {
+QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[static 1], int32_t flags) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {

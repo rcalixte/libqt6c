@@ -96,7 +96,7 @@ const char* k_diroperator_name_filter(void* self) {
     return _ret;
 }
 
-void k_diroperator_set_mime_filter(void* self, const char* mimetypes[]) {
+void k_diroperator_set_mime_filter(void* self, const char* mimetypes[static 1]) {
     size_t mimetypes_len = libqt_strv_length(mimetypes);
     libqt_string* mimetypes_qstr = (libqt_string*)malloc(mimetypes_len * sizeof(libqt_string));
     if (mimetypes_qstr == NULL) {
@@ -130,7 +130,7 @@ const char** k_diroperator_mime_filter(void* self) {
     return _ret;
 }
 
-void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char* mime[]) {
+void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char* mime[static 1]) {
     size_t mime_len = libqt_strv_length(mime);
     libqt_string* mime_qstr = (libqt_string*)malloc(mime_len * sizeof(libqt_string));
     if (mime_qstr == NULL) {
@@ -770,7 +770,7 @@ void k_diroperator_set_icon_size(void* self, int value) {
     KDirOperator_SetIconSize((KDirOperator*)self, value);
 }
 
-void k_diroperator_set_supported_schemes(void* self, const char* schemes[]) {
+void k_diroperator_set_supported_schemes(void* self, const char* schemes[static 1]) {
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {

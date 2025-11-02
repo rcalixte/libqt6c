@@ -77,7 +77,7 @@ const char** k_attica__field_options(void* self);
 ///
 /// @param self Attica__Field*
 /// @param options const char**
-void k_attica__field_set_options(void* self, const char* options[]);
+void k_attica__field_set_options(void* self, const char* options[static 1]);
 
 /// [Qt documentation](https://api.kde.org/attica-field.html#operator-eq)
 ///

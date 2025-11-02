@@ -93,7 +93,7 @@ const char* k_svg__imageset_base_path(void* self);
 ///
 /// @param self KSvg__ImageSet*
 /// @param selectors const char**
-void k_svg__imageset_set_selectors(void* self, const char* selectors[]);
+void k_svg__imageset_set_selectors(void* self, const char* selectors[static 1]);
 
 /// [Qt documentation](https://api.kde.org/ksvg-imageset.html#selectors)
 ///

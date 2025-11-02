@@ -27,7 +27,7 @@ KuitSetup* k_uit_setup_for_domain(const char* param1);
 /// @param attribNames const char**
 /// @param format enum Kuit__VisualFormat
 /// @param pattern KLocalizedString*
-void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[], int32_t format, void* pattern);
+void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[static 1], int32_t format, void* pattern);
 
 /// [Qt documentation](https://api.kde.org/kuitsetup.html#setTagClass)
 ///

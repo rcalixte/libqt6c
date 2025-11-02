@@ -34,5 +34,5 @@ const char* k_fileutils_make_suggested_name(const char* param1);
 ///
 /// @param param1 const char**
 /// @param param2 const char**
-const char** k_fileutils_find_all_unique_files(const char* param1[], const char* param2[]);
+const char** k_fileutils_find_all_unique_files(const char* param1[static 1], const char* param2[static 1]);
 #endif

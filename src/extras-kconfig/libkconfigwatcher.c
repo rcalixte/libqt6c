@@ -24,7 +24,7 @@ const char* k_configwatcher_tr(const char* s) {
     return _ret;
 }
 
-void k_configwatcher_config_changed(void* self, void* group, const char* names[]) {
+void k_configwatcher_config_changed(void* self, void* group, const char* names[static 1]) {
     size_t names_len = libqt_strv_length(names);
     libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
     if (names_qstr == NULL) {

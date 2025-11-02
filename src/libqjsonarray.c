@@ -15,7 +15,7 @@ void q_jsonarray_operator_assign(void* self, void* other) {
     QJsonArray_OperatorAssign((QJsonArray*)self, (QJsonArray*)other);
 }
 
-QJsonArray* q_jsonarray_from_string_list(const char* list[]) {
+QJsonArray* q_jsonarray_from_string_list(const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {

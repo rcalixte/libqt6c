@@ -18,7 +18,7 @@
 /// @param self TerminalInterface*
 /// @param program const char*
 /// @param args const char**
-void k_terminalinterface_start_program(void* self, const char* program, const char* args[]);
+void k_terminalinterface_start_program(void* self, const char* program, const char* args[static 1]);
 
 /// [Qt documentation](https://api.kde.org/terminalinterface.html#showShellInDir)
 ///

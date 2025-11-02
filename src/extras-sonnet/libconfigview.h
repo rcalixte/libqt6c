@@ -105,7 +105,7 @@ void k_sonnet__configview_set_background_checking_button_shown(void* self, bool 
 ///
 /// @param self Sonnet__ConfigView*
 /// @param ignoreList const char**
-void k_sonnet__configview_set_preferred_languages(void* self, const char* ignoreList[]);
+void k_sonnet__configview_set_preferred_languages(void* self, const char* ignoreList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/sonnet-configview.html#setLanguage)
 ///
@@ -117,7 +117,7 @@ void k_sonnet__configview_set_language(void* self, const char* language);
 ///
 /// @param self Sonnet__ConfigView*
 /// @param ignoreList const char**
-void k_sonnet__configview_set_ignore_list(void* self, const char* ignoreList[]);
+void k_sonnet__configview_set_ignore_list(void* self, const char* ignoreList[static 1]);
 
 /// [Qt documentation](https://api.kde.org/sonnet-configview.html#configChanged)
 ///

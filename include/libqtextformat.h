@@ -439,7 +439,7 @@ const char* q_textcharformat_font_family(void* self);
 ///
 /// @param self QTextCharFormat*
 /// @param families const char**
-void q_textcharformat_set_font_families(void* self, const char* families[]);
+void q_textcharformat_set_font_families(void* self, const char* families[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#fontFamilies)
 ///
@@ -765,7 +765,7 @@ const char* q_textcharformat_anchor_href(void* self);
 ///
 /// @param self QTextCharFormat*
 /// @param names const char**
-void q_textcharformat_set_anchor_names(void* self, const char* names[]);
+void q_textcharformat_set_anchor_names(void* self, const char* names[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#anchorNames)
 ///
@@ -2327,7 +2327,7 @@ const char* q_textimageformat_font_family(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param families const char**
-void q_textimageformat_set_font_families(void* self, const char* families[]);
+void q_textimageformat_set_font_families(void* self, const char* families[static 1]);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2765,7 +2765,7 @@ const char* q_textimageformat_anchor_href(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param names const char**
-void q_textimageformat_set_anchor_names(void* self, const char* names[]);
+void q_textimageformat_set_anchor_names(void* self, const char* names[static 1]);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4726,7 +4726,7 @@ const char* q_texttablecellformat_font_family(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param families const char**
-void q_texttablecellformat_set_font_families(void* self, const char* families[]);
+void q_texttablecellformat_set_font_families(void* self, const char* families[static 1]);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5164,7 +5164,7 @@ const char* q_texttablecellformat_anchor_href(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param names const char**
-void q_texttablecellformat_set_anchor_names(void* self, const char* names[]);
+void q_texttablecellformat_set_anchor_names(void* self, const char* names[static 1]);
 
 /// Inherited from QTextCharFormat
 ///

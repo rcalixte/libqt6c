@@ -70,7 +70,7 @@ const char** k_networkmounts_paths(void* self) {
     return _ret;
 }
 
-void k_networkmounts_set_paths(void* self, const char* paths[], int32_t type) {
+void k_networkmounts_set_paths(void* self, const char* paths[static 1], int32_t type) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {

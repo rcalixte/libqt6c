@@ -69,7 +69,7 @@ const char* k_lazylocalizedstring_to_string(void* self);
 ///
 /// @param self KLazyLocalizedString*
 /// @param languages const char**
-const char* k_lazylocalizedstring_to_string2(void* self, const char* languages[]);
+const char* k_lazylocalizedstring_to_string2(void* self, const char* languages[static 1]);
 
 /// [Qt documentation](https://api.kde.org/klazylocalizedstring.html#toString)
 ///
@@ -91,7 +91,7 @@ const char* k_lazylocalizedstring_to_string4(void* self, int32_t format);
 ///
 /// @param self KLazyLocalizedString*
 /// @param languages const char**
-KLocalizedString* k_lazylocalizedstring_with_languages(void* self, const char* languages[]);
+KLocalizedString* k_lazylocalizedstring_with_languages(void* self, const char* languages[static 1]);
 
 /// [Qt documentation](https://api.kde.org/klazylocalizedstring.html#withDomain)
 ///

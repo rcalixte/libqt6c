@@ -425,7 +425,7 @@ void q_packagekit__transaction_on_item_progress(void* self, void (*callback)(voi
 /// @param self PackageKit__Transaction*
 /// @param packageID const char*
 /// @param filenames const char**
-void q_packagekit__transaction_files(void* self, const char* packageID, const char* filenames[]);
+void q_packagekit__transaction_files(void* self, const char* packageID, const char* filenames[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -487,7 +487,7 @@ void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, vo
 /// @param state enum PackageKit__Transaction__UpdateState
 /// @param issued QDateTime*
 /// @param updated QDateTime*
-void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[], const char* obsoletes[], const char* vendorUrls[], const char* bugzillaUrls[], const char* cveUrls[], int32_t restart, const char* updateText, const char* changelog, int32_t state, void* issued, void* updated);
+void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[static 1], const char* obsoletes[static 1], const char* vendorUrls[static 1], const char* bugzillaUrls[static 1], const char* cveUrls[static 1], int32_t restart, const char* updateText, const char* changelog, int32_t state, void* issued, void* updated);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///

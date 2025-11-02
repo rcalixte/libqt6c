@@ -6,7 +6,7 @@ KuitSetup* k_uit_setup_for_domain(const char* param1) {
     return Kuit_SetupForDomain(qstring(param1));
 }
 
-void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[], int32_t format, void* pattern) {
+void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[static 1], int32_t format, void* pattern) {
     size_t attribNames_len = libqt_strv_length(attribNames);
     libqt_string* attribNames_qstr = (libqt_string*)malloc(attribNames_len * sizeof(libqt_string));
     if (attribNames_qstr == NULL) {

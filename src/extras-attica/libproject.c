@@ -90,7 +90,7 @@ const char* k_attica__project_description(void* self) {
     return _ret;
 }
 
-void k_attica__project_set_developers(void* self, const char* developers[]) {
+void k_attica__project_set_developers(void* self, const char* developers[static 1]) {
     size_t developers_len = libqt_strv_length(developers);
     libqt_string* developers_qstr = (libqt_string*)malloc(developers_len * sizeof(libqt_string));
     if (developers_qstr == NULL) {

@@ -98,7 +98,7 @@ int32_t k_urlrequester_accept_mode(void* self) {
     return KUrlRequester_AcceptMode((KUrlRequester*)self);
 }
 
-void k_urlrequester_set_name_filters(void* self, const char* filters[]) {
+void k_urlrequester_set_name_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
@@ -136,7 +136,7 @@ const char** k_urlrequester_name_filters(void* self) {
     return _ret;
 }
 
-void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[]) {
+void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[static 1]) {
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {
@@ -2404,7 +2404,7 @@ int32_t k_urlcomborequester_accept_mode(void* self) {
     return KUrlRequester_AcceptMode((KUrlRequester*)self);
 }
 
-void k_urlcomborequester_set_name_filters(void* self, const char* filters[]) {
+void k_urlcomborequester_set_name_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
@@ -2442,7 +2442,7 @@ const char** k_urlcomborequester_name_filters(void* self) {
     return _ret;
 }
 
-void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes[]) {
+void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes[static 1]) {
     size_t mimeTypes_len = libqt_strv_length(mimeTypes);
     libqt_string* mimeTypes_qstr = (libqt_string*)malloc(mimeTypes_len * sizeof(libqt_string));
     if (mimeTypes_qstr == NULL) {

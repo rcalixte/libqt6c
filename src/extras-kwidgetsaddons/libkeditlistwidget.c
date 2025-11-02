@@ -96,7 +96,7 @@ int32_t k_editlistwidget_count(void* self) {
     return KEditListWidget_Count((KEditListWidget*)self);
 }
 
-void k_editlistwidget_insert_string_list(void* self, const char* list[]) {
+void k_editlistwidget_insert_string_list(void* self, const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {
@@ -156,7 +156,7 @@ const char** k_editlistwidget_items(void* self) {
     return _ret;
 }
 
-void k_editlistwidget_set_items(void* self, const char* items[]) {
+void k_editlistwidget_set_items(void* self, const char* items[static 1]) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -241,7 +241,7 @@ const char* k_editlistwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_editlistwidget_insert_string_list2(void* self, const char* list[], int index) {
+void k_editlistwidget_insert_string_list2(void* self, const char* list[static 1], int index) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {

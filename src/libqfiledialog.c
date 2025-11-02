@@ -126,7 +126,7 @@ void q_filedialog_set_name_filter(void* self, const char* filter) {
     QFileDialog_SetNameFilter((QFileDialog*)self, qstring(filter));
 }
 
-void q_filedialog_set_name_filters(void* self, const char* filters[]) {
+void q_filedialog_set_name_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
@@ -178,7 +178,7 @@ const char* q_filedialog_selected_name_filter(void* self) {
     return _ret;
 }
 
-void q_filedialog_set_mime_type_filters(void* self, const char* filters[]) {
+void q_filedialog_set_mime_type_filters(void* self, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {
@@ -279,7 +279,7 @@ const char* q_filedialog_default_suffix(void* self) {
     return _ret;
 }
 
-void q_filedialog_set_history(void* self, const char* paths[]) {
+void q_filedialog_set_history(void* self, const char* paths[static 1]) {
     size_t paths_len = libqt_strv_length(paths);
     libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
     if (paths_qstr == NULL) {
@@ -340,7 +340,7 @@ const char* q_filedialog_label_text(void* self, int32_t label) {
     return _ret;
 }
 
-void q_filedialog_set_supported_schemes(void* self, const char* schemes[]) {
+void q_filedialog_set_supported_schemes(void* self, const char* schemes[static 1]) {
     size_t schemes_len = libqt_strv_length(schemes);
     libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
     if (schemes_qstr == NULL) {
@@ -418,7 +418,7 @@ void q_filedialog_on_file_selected(void* self, void (*callback)(void*, const cha
     QFileDialog_Connect_FileSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_files_selected(void* self, const char* files[]) {
+void q_filedialog_files_selected(void* self, const char* files[static 1]) {
     size_t files_len = libqt_strv_length(files);
     libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
     if (files_qstr == NULL) {
@@ -740,7 +740,7 @@ QUrl* q_filedialog_get_existing_directory_url4(void* parent, const char* caption
     return QFileDialog_GetExistingDirectoryUrl4((QWidget*)parent, qstring(caption), (QUrl*)dir, options);
 }
 
-QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption, void* dir, int32_t options, const char* supportedSchemes[]) {
+QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption, void* dir, int32_t options, const char* supportedSchemes[static 1]) {
     size_t supportedSchemes_len = libqt_strv_length(supportedSchemes);
     libqt_string* supportedSchemes_qstr = (libqt_string*)malloc(supportedSchemes_len * sizeof(libqt_string));
     if (supportedSchemes_qstr == NULL) {

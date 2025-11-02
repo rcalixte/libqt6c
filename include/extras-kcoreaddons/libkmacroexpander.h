@@ -58,7 +58,7 @@ QChar* k_macroexpanderbase_escape_char(void* self);
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_macroexpanderbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
 ///
@@ -76,7 +76,7 @@ void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
@@ -84,7 +84,7 @@ int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kmacroexpanderbase.html#expandEscapedMacro)
 ///
@@ -102,7 +102,7 @@ void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kmacroexpanderbase.html#dtor.KMacroExpanderBase)
 ///
@@ -128,7 +128,7 @@ KWordMacroExpander* k_wordmacroexpander_new2(void* c);
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_wordmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kwordmacroexpander.html#expandPlainMacro)
 ///
@@ -146,7 +146,7 @@ void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
@@ -154,7 +154,7 @@ int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kwordmacroexpander.html#expandEscapedMacro)
 ///
@@ -172,14 +172,14 @@ void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param retVal const char**
-bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* retVal[]);
+bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
@@ -196,7 +196,7 @@ void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, con
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param retVal const char**
-bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const char* retVal[]);
+bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const char* retVal[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///
@@ -262,7 +262,7 @@ KCharMacroExpander* k_charmacroexpander_new2(void* c);
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_charmacroexpander_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcharmacroexpander.html#expandPlainMacro)
 ///
@@ -280,7 +280,7 @@ void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
@@ -288,7 +288,7 @@ int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcharmacroexpander.html#expandEscapedMacro)
 ///
@@ -306,14 +306,14 @@ void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
 /// @param str const char*
 /// @param pos int
 /// @param retVal const char**
-int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[]);
+int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
 /// @param retVal const char**
-bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[]);
+bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
@@ -330,7 +330,7 @@ void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, voi
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
 /// @param retVal const char**
-bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* retVal[]);
+bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* retVal[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///

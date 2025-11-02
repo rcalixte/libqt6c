@@ -22,7 +22,7 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new(const char* command);
 ///
 /// @param executable const char*
 /// @param args const char**
-KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, const char* args[]);
+KIO__CommandLauncherJob* k_io__commandlauncherjob_new2(const char* executable, const char* args[static 1]);
 
 /// k_io__commandlauncherjob_new3 constructs a new KIO::CommandLauncherJob object.
 ///
@@ -35,7 +35,7 @@ KIO__CommandLauncherJob* k_io__commandlauncherjob_new3(const char* command, void
 /// @param executable const char*
 /// @param args const char**
 /// @param parent QObject*
-KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, const char* args[], void* parent);
+KIO__CommandLauncherJob* k_io__commandlauncherjob_new4(const char* executable, const char* args[static 1], void* parent);
 
 /// [Qt documentation](https://api.kde.org/kio-commandlauncherjob.html#setCommand)
 ///

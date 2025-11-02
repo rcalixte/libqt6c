@@ -22,7 +22,7 @@ KFileFilter* k_filefilter_new();
 /// @param label const char*
 /// @param filePatterns const char**
 /// @param mimePatterns const char**
-KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[], const char* mimePatterns[]);
+KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[static 1], const char* mimePatterns[static 1]);
 
 /// k_filefilter_new3 constructs a new KFileFilter object.
 ///
@@ -87,7 +87,7 @@ KFileFilter* k_filefilter_from_mime_type(const char* mimeType);
 /// [Qt documentation](https://api.kde.org/kfilefilter.html#fromMimeTypes)
 ///
 /// @param mimeTypes const char**
-libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTypes[]);
+libqt_list /* of KFileFilter* */ k_filefilter_from_mime_types(const char* mimeTypes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kfilefilter.html#dtor.KFileFilter)
 ///

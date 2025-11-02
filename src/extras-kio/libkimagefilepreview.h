@@ -4150,7 +4150,7 @@ void k_imagefilepreview_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// @param self KImageFilePreview*
 /// @param mimeTypes const char**
-void k_imagefilepreview_set_supported_mime_types(void* self, const char* mimeTypes[]);
+void k_imagefilepreview_set_supported_mime_types(void* self, const char* mimeTypes[static 1]);
 
 /// Inherited from KPreviewWidgetBase
 ///
@@ -4160,7 +4160,7 @@ void k_imagefilepreview_set_supported_mime_types(void* self, const char* mimeTyp
 ///
 /// @param self KImageFilePreview*
 /// @param mimeTypes const char**
-void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* mimeTypes[]);
+void k_imagefilepreview_qbase_set_supported_mime_types(void* self, const char* mimeTypes[static 1]);
 
 /// Inherited from KPreviewWidgetBase
 ///

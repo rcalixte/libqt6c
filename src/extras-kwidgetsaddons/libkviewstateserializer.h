@@ -110,7 +110,7 @@ libqt_pair /* tuple of int and int */ k_viewstateserializer_scroll_state(void* s
 ///
 /// @param self KViewStateSerializer*
 /// @param indexStrings const char**
-void k_viewstateserializer_restore_selection(void* self, const char* indexStrings[]);
+void k_viewstateserializer_restore_selection(void* self, const char* indexStrings[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreCurrentItem)
 ///
@@ -122,7 +122,7 @@ void k_viewstateserializer_restore_current_item(void* self, const char* indexStr
 ///
 /// @param self KViewStateSerializer*
 /// @param indexStrings const char**
-void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings[]);
+void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kviewstateserializer.html#restoreScrollState)
 ///

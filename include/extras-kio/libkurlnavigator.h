@@ -182,7 +182,7 @@ KUrlComboBox* k_urlnavigator_editor(void* self);
 ///
 /// @param self KUrlNavigator*
 /// @param schemes const char**
-void k_urlnavigator_set_supported_schemes(void* self, const char* schemes[]);
+void k_urlnavigator_set_supported_schemes(void* self, const char* schemes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kurlnavigator.html#supportedSchemes)
 ///

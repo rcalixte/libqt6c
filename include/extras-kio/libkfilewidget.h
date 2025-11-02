@@ -270,7 +270,7 @@ QSize* k_filewidget_qbase_size_hint(void* self);
 ///
 /// @param self KFileWidget*
 /// @param schemes const char**
-void k_filewidget_set_supported_schemes(void* self, const char* schemes[]);
+void k_filewidget_set_supported_schemes(void* self, const char* schemes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kfilewidget.html#supportedSchemes)
 ///

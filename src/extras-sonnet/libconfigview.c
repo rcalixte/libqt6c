@@ -109,7 +109,7 @@ void k_sonnet__configview_set_background_checking_button_shown(void* self, bool 
     Sonnet__ConfigView_SetBackgroundCheckingButtonShown((Sonnet__ConfigView*)self, backgroundCheckingButtonShown);
 }
 
-void k_sonnet__configview_set_preferred_languages(void* self, const char* ignoreList[]) {
+void k_sonnet__configview_set_preferred_languages(void* self, const char* ignoreList[static 1]) {
     size_t ignoreList_len = libqt_strv_length(ignoreList);
     libqt_string* ignoreList_qstr = (libqt_string*)malloc(ignoreList_len * sizeof(libqt_string));
     if (ignoreList_qstr == NULL) {
@@ -128,7 +128,7 @@ void k_sonnet__configview_set_language(void* self, const char* language) {
     Sonnet__ConfigView_SetLanguage((Sonnet__ConfigView*)self, qstring(language));
 }
 
-void k_sonnet__configview_set_ignore_list(void* self, const char* ignoreList[]) {
+void k_sonnet__configview_set_ignore_list(void* self, const char* ignoreList[static 1]) {
     size_t ignoreList_len = libqt_strv_length(ignoreList);
     libqt_string* ignoreList_qstr = (libqt_string*)malloc(ignoreList_len * sizeof(libqt_string));
     if (ignoreList_qstr == NULL) {

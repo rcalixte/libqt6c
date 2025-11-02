@@ -236,7 +236,7 @@ const char** q_process_arguments(void* self);
 ///
 /// @param self QProcess*
 /// @param arguments const char**
-void q_process_set_arguments(void* self, const char* arguments[]);
+void q_process_set_arguments(void* self, const char* arguments[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#processChannelMode)
 ///
@@ -352,7 +352,7 @@ void q_process_set_working_directory(void* self, const char* dir);
 ///
 /// @param self QProcess*
 /// @param environment const char**
-void q_process_set_environment(void* self, const char* environment[]);
+void q_process_set_environment(void* self, const char* environment[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#environment)
 ///
@@ -679,7 +679,7 @@ const char* q_process_tr3(const char* s, const char* c, int n);
 /// @param self QProcess*
 /// @param program const char*
 /// @param arguments const char**
-void q_process_start22(void* self, const char* program, const char* arguments[]);
+void q_process_start22(void* self, const char* program, const char* arguments[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#start)
 ///
@@ -687,7 +687,7 @@ void q_process_start22(void* self, const char* program, const char* arguments[])
 /// @param program const char*
 /// @param arguments const char**
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
-void q_process_start3(void* self, const char* program, const char* arguments[], int32_t mode);
+void q_process_start3(void* self, const char* program, const char* arguments[static 1], int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#start)
 ///
@@ -745,20 +745,20 @@ bool q_process_wait_for_finished1(void* self, int msecs);
 ///
 /// @param program const char*
 /// @param arguments const char**
-int32_t q_process_execute2(const char* program, const char* arguments[]);
+int32_t q_process_execute2(const char* program, const char* arguments[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#startDetached)
 ///
 /// @param program const char*
 /// @param arguments const char**
-bool q_process_start_detached22(const char* program, const char* arguments[]);
+bool q_process_start_detached22(const char* program, const char* arguments[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#startDetached)
 ///
 /// @param program const char*
 /// @param arguments const char**
 /// @param workingDirectory const char*
-bool q_process_start_detached3(const char* program, const char* arguments[], const char* workingDirectory);
+bool q_process_start_detached3(const char* program, const char* arguments[static 1], const char* workingDirectory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#startDetached)
 ///
@@ -766,7 +766,7 @@ bool q_process_start_detached3(const char* program, const char* arguments[], con
 /// @param arguments const char**
 /// @param workingDirectory const char*
 /// @param pid long long*
-bool q_process_start_detached4(const char* program, const char* arguments[], const char* workingDirectory, long long* pid);
+bool q_process_start_detached4(const char* program, const char* arguments[static 1], const char* workingDirectory, long long* pid);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#finished)
 ///

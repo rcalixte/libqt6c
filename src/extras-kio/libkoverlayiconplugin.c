@@ -83,7 +83,7 @@ const char** k_overlayiconplugin_qbase_get_overlays(void* self, void* item) {
     return _ret;
 }
 
-void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* overlays[]) {
+void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* overlays[static 1]) {
     size_t overlays_len = libqt_strv_length(overlays);
     libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
     if (overlays_qstr == NULL) {

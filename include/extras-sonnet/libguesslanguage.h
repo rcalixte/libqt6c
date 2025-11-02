@@ -39,7 +39,7 @@ const char* k_sonnet__guesslanguage_identify(void* self, const char* text);
 /// @param self Sonnet__GuessLanguage*
 /// @param text const char*
 /// @param suggestions const char**
-const char* k_sonnet__guesslanguage_identify2(void* self, const char* text, const char* suggestions[]);
+const char* k_sonnet__guesslanguage_identify2(void* self, const char* text, const char* suggestions[static 1]);
 
 /// Delete this object from C++ memory.
 ///

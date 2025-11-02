@@ -381,7 +381,7 @@ bool k_texteditor__document_set_text(void* self, const char* text);
 ///
 /// @param self KTextEditor__Document*
 /// @param text const char**
-bool k_texteditor__document_set_text2(void* self, const char* text[]);
+bool k_texteditor__document_set_text2(void* self, const char* text[static 1]);
 
 /// [Qt documentation](https://api.kde.org/ktexteditor-document.html#clear)
 ///
@@ -402,7 +402,7 @@ bool k_texteditor__document_insert_text(void* self, void* position, const char* 
 /// @param position KTextEditor__Cursor*
 /// @param text const char**
 /// @param block bool
-bool k_texteditor__document_insert_text2(void* self, void* position, const char* text[], bool block);
+bool k_texteditor__document_insert_text2(void* self, void* position, const char* text[static 1], bool block);
 
 /// [Qt documentation](https://api.kde.org/ktexteditor-document.html#replaceText)
 ///
@@ -418,7 +418,7 @@ bool k_texteditor__document_replace_text(void* self, void* range, const char* te
 /// @param range KTextEditor__Range*
 /// @param text const char**
 /// @param block bool
-bool k_texteditor__document_replace_text2(void* self, void* range, const char* text[], bool block);
+bool k_texteditor__document_replace_text2(void* self, void* range, const char* text[static 1], bool block);
 
 /// [Qt documentation](https://api.kde.org/ktexteditor-document.html#removeText)
 ///
@@ -439,7 +439,7 @@ bool k_texteditor__document_insert_line(void* self, int line, const char* text);
 /// @param self KTextEditor__Document*
 /// @param line int
 /// @param text const char**
-bool k_texteditor__document_insert_lines(void* self, int line, const char* text[]);
+bool k_texteditor__document_insert_lines(void* self, int line, const char* text[static 1]);
 
 /// [Qt documentation](https://api.kde.org/ktexteditor-document.html#removeLine)
 ///
@@ -1885,7 +1885,7 @@ void k_texteditor__document_unplug_action_list(void* self, const char* name);
 ///
 /// @param files const char**
 /// @param doc const char*
-const char* k_texteditor__document_find_most_recent_x_m_l_file(const char* files[], const char* doc);
+const char* k_texteditor__document_find_most_recent_x_m_l_file(const char* files[static 1], const char* doc);
 
 /// Inherited from KXMLGUIClient
 ///

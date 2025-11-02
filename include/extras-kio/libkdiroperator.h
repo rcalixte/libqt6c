@@ -113,7 +113,7 @@ const char* k_diroperator_name_filter(void* self);
 ///
 /// @param self KDirOperator*
 /// @param mimetypes const char**
-void k_diroperator_set_mime_filter(void* self, const char* mimetypes[]);
+void k_diroperator_set_mime_filter(void* self, const char* mimetypes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kdiroperator.html#mimeFilter)
 ///
@@ -126,7 +126,7 @@ const char** k_diroperator_mime_filter(void* self);
 ///
 /// @param self KDirOperator*
 /// @param mime const char**
-void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char* mime[]);
+void k_diroperator_set_new_file_menu_supported_mime_types(void* self, const char* mime[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kdiroperator.html#newFileMenuSupportedMimeTypes)
 ///
@@ -1112,7 +1112,7 @@ void k_diroperator_set_icon_size(void* self, int value);
 ///
 /// @param self KDirOperator*
 /// @param schemes const char**
-void k_diroperator_set_supported_schemes(void* self, const char* schemes[]);
+void k_diroperator_set_supported_schemes(void* self, const char* schemes[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kdiroperator.html#resetCursor)
 ///

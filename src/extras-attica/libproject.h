@@ -123,7 +123,7 @@ const char* k_attica__project_description(void* self);
 ///
 /// @param self Attica__Project*
 /// @param developers const char**
-void k_attica__project_set_developers(void* self, const char* developers[]);
+void k_attica__project_set_developers(void* self, const char* developers[static 1]);
 
 /// [Qt documentation](https://api.kde.org/attica-project.html#developers)
 ///

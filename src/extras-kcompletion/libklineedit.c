@@ -259,7 +259,7 @@ void k_lineedit_qbase_set_completed_text(void* self, const char* completedText) 
     KLineEdit_QBaseSetCompletedText((KLineEdit*)self, qstring(completedText));
 }
 
-void k_lineedit_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_lineedit_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -278,7 +278,7 @@ void k_lineedit_on_set_completed_items(void* self, void (*callback)(void*, const
     KLineEdit_OnSetCompletedItems((KLineEdit*)self, (intptr_t)callback);
 }
 
-void k_lineedit_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest) {
+void k_lineedit_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {

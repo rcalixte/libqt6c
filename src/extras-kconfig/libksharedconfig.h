@@ -108,7 +108,7 @@ void k_sharedconfig_reparse_configuration(void* self);
 ///
 /// @param self KSharedConfig*
 /// @param sources const char**
-void k_sharedconfig_add_config_sources(void* self, const char* sources[]);
+void k_sharedconfig_add_config_sources(void* self, const char* sources[static 1]);
 
 /// Inherited from KConfig
 ///

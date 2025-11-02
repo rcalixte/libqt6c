@@ -345,7 +345,7 @@ void q_termwidget_qbase_set_terminal_background_mode(void* self, int mode);
 ///
 /// @param self QTermWidget*
 /// @param environment const char**
-void q_termwidget_set_environment(void* self, const char* environment[]);
+void q_termwidget_set_environment(void* self, const char* environment[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -361,7 +361,7 @@ void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const c
 ///
 /// @param self QTermWidget*
 /// @param environment const char**
-void q_termwidget_qbase_set_environment(void* self, const char* environment[]);
+void q_termwidget_qbase_set_environment(void* self, const char* environment[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -433,7 +433,7 @@ const char* q_termwidget_qbase_working_directory(void* self);
 ///
 /// @param self QTermWidget*
 /// @param args const char**
-void q_termwidget_set_args(void* self, const char* args[]);
+void q_termwidget_set_args(void* self, const char* args[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
@@ -449,7 +449,7 @@ void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**))
 ///
 /// @param self QTermWidget*
 /// @param args const char**
-void q_termwidget_qbase_set_args(void* self, const char* args[]);
+void q_termwidget_qbase_set_args(void* self, const char* args[static 1]);
 
 /// [Qt documentation](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

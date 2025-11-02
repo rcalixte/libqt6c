@@ -51,7 +51,7 @@ bool k_filepreviewgenerator_is_preview_shown(void* self) {
     return KFilePreviewGenerator_IsPreviewShown((KFilePreviewGenerator*)self);
 }
 
-void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[]) {
+void k_filepreviewgenerator_set_enabled_plugins(void* self, const char* list[static 1]) {
     size_t list_len = libqt_strv_length(list);
     libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
     if (list_qstr == NULL) {

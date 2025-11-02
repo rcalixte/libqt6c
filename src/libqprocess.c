@@ -208,7 +208,7 @@ const char** q_process_arguments(void* self) {
     return _ret;
 }
 
-void q_process_set_arguments(void* self, const char* arguments[]) {
+void q_process_set_arguments(void* self, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -298,7 +298,7 @@ void q_process_set_working_directory(void* self, const char* dir) {
     QProcess_SetWorkingDirectory((QProcess*)self, qstring(dir));
 }
 
-void q_process_set_environment(void* self, const char* environment[]) {
+void q_process_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
@@ -550,7 +550,7 @@ const char* q_process_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_process_start22(void* self, const char* program, const char* arguments[]) {
+void q_process_start22(void* self, const char* program, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -565,7 +565,7 @@ void q_process_start22(void* self, const char* program, const char* arguments[])
     free(arguments_qstr);
 }
 
-void q_process_start3(void* self, const char* program, const char* arguments[], int32_t mode) {
+void q_process_start3(void* self, const char* program, const char* arguments[static 1], int32_t mode) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -612,7 +612,7 @@ bool q_process_wait_for_finished1(void* self, int msecs) {
     return QProcess_WaitForFinished1((QProcess*)self, msecs);
 }
 
-int32_t q_process_execute2(const char* program, const char* arguments[]) {
+int32_t q_process_execute2(const char* program, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -628,7 +628,7 @@ int32_t q_process_execute2(const char* program, const char* arguments[]) {
     return _out;
 }
 
-bool q_process_start_detached22(const char* program, const char* arguments[]) {
+bool q_process_start_detached22(const char* program, const char* arguments[static 1]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -644,7 +644,7 @@ bool q_process_start_detached22(const char* program, const char* arguments[]) {
     return _out;
 }
 
-bool q_process_start_detached3(const char* program, const char* arguments[], const char* workingDirectory) {
+bool q_process_start_detached3(const char* program, const char* arguments[static 1], const char* workingDirectory) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {
@@ -660,7 +660,7 @@ bool q_process_start_detached3(const char* program, const char* arguments[], con
     return _out;
 }
 
-bool q_process_start_detached4(const char* program, const char* arguments[], const char* workingDirectory, long long* pid) {
+bool q_process_start_detached4(const char* program, const char* arguments[static 1], const char* workingDirectory, long long* pid) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
     if (arguments_qstr == NULL) {

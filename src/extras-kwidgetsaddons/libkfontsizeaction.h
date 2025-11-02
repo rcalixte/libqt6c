@@ -271,7 +271,7 @@ QAction* k_fontsizeaction_add_action3(void* self, void* icon, const char* text);
 ///
 /// @param self KFontSizeAction*
 /// @param lst const char**
-void k_fontsizeaction_set_items(void* self, const char* lst[]);
+void k_fontsizeaction_set_items(void* self, const char* lst[static 1]);
 
 /// Inherited from KSelectAction
 ///

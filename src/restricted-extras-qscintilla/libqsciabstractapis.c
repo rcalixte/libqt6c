@@ -41,7 +41,7 @@ QsciLexer* q_sciabstractapis_lexer(void* self) {
     return QsciAbstractAPIs_Lexer((QsciAbstractAPIs*)self);
 }
 
-void q_sciabstractapis_update_auto_completion_list(void* self, const char* context[], const char* list[]) {
+void q_sciabstractapis_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -72,7 +72,7 @@ void q_sciabstractapis_on_update_auto_completion_list(void* self, void (*callbac
     QsciAbstractAPIs_OnUpdateAutoCompletionList((QsciAbstractAPIs*)self, (intptr_t)callback);
 }
 
-void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char* context[], const char* list[]) {
+void q_sciabstractapis_qbase_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -108,7 +108,7 @@ void q_sciabstractapis_qbase_auto_completion_selected(void* self, const char* se
     QsciAbstractAPIs_QBaseAutoCompletionSelected((QsciAbstractAPIs*)self, qstring(selection));
 }
 
-const char** q_sciabstractapis_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts) {
+const char** q_sciabstractapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -142,7 +142,7 @@ void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, 
     QsciAbstractAPIs_OnCallTips((QsciAbstractAPIs*)self, (intptr_t)callback);
 }
 
-const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts) {
+const char** q_sciabstractapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {

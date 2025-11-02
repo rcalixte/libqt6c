@@ -15407,7 +15407,7 @@ void q_cpaxisticker_set_tick_origin(void* self, double origin);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxisticker_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -15429,7 +15429,7 @@ void q_cpaxisticker_on_generate(void* self, void (*callback)(void*, void*, void*
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxisticker_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPAxisTicker.html)
 ///
@@ -15935,7 +15935,7 @@ void q_cpaxistickerdatetime_set_tick_count(void* self, int count);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -15951,7 +15951,7 @@ void q_cpaxistickerdatetime_generate(void* self, void* range, void* locale, void
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerdatetime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -16361,7 +16361,7 @@ void q_cpaxistickertime_set_tick_origin(void* self, double origin);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -16377,7 +16377,7 @@ void q_cpaxistickertime_generate(void* self, void* range, void* locale, void* fo
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickertime_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -16739,7 +16739,7 @@ void q_cpaxistickerfixed_set_tick_origin(void* self, double origin);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -16755,7 +16755,7 @@ void q_cpaxistickerfixed_generate(void* self, void* range, void* locale, void* f
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerfixed_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17101,7 +17101,7 @@ void q_cpaxistickertext_set_ticks(void* self, libqt_map /* of double to const ch
 /// @param self QCPAxisTickerText*
 /// @param positions libqt_list /* of double */
 /// @param labels const char**
-void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[]);
+void q_cpaxistickertext_set_ticks2(void* self, libqt_list positions, const char* labels[static 1]);
 
 /// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -17132,7 +17132,7 @@ void q_cpaxistickertext_add_ticks(void* self, libqt_map /* of double to const ch
 /// @param self QCPAxisTickerText*
 /// @param positions libqt_list /* of double */
 /// @param labels const char**
-void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[]);
+void q_cpaxistickertext_add_ticks2(void* self, libqt_list positions, const char* labels[static 1]);
 
 /// [Qt documentation](https://www.qcustomplot.com/documentation/classQCPAxisTickerText.html)
 ///
@@ -17293,7 +17293,7 @@ void q_cpaxistickertext_set_tick_origin(void* self, double origin);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17309,7 +17309,7 @@ void q_cpaxistickertext_generate(void* self, void* range, void* locale, void* fo
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickertext_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17839,7 +17839,7 @@ void q_cpaxistickerpi_set_tick_origin(void* self, double origin);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -17855,7 +17855,7 @@ void q_cpaxistickerpi_generate(void* self, void* range, void* locale, void* form
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerpi_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18239,7 +18239,7 @@ void q_cpaxistickerlog_set_tick_origin(void* self, double origin);
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///
@@ -18255,7 +18255,7 @@ void q_cpaxistickerlog_generate(void* self, void* range, void* locale, void* for
 /// @param ticks libqt_list /* of double */
 /// @param subTicks libqt_list /* of double */
 /// @param tickLabels const char**
-void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[]);
+void q_cpaxistickerlog_qbase_generate(void* self, void* range, void* locale, void* formatChar, int precision, libqt_list ticks, libqt_list subTicks, const char* tickLabels[static 1]);
 
 /// Inherited from QCPAxisTicker
 ///

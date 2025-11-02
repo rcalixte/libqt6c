@@ -73,14 +73,14 @@ const char* k_historycombobox_tr(const char* s);
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
-void k_historycombobox_set_history_items(void* self, const char* items[]);
+void k_historycombobox_set_history_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/khistorycombobox.html#setHistoryItems)
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
 /// @param setCompletionList bool
-void k_historycombobox_set_history_items2(void* self, const char* items[], bool setCompletionList);
+void k_historycombobox_set_history_items2(void* self, const char* items[static 1], bool setCompletionList);
 
 /// [Qt documentation](https://api.kde.org/khistorycombobox.html#historyItems)
 ///
@@ -170,7 +170,7 @@ void k_historycombobox_qbase_wheel_event(void* self, void* ev);
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
-void k_historycombobox_insert_items(void* self, const char* items[]);
+void k_historycombobox_insert_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/khistorycombobox.html#insertItems)
 ///
@@ -186,7 +186,7 @@ void k_historycombobox_on_insert_items(void* self, void (*callback)(void*, const
 ///
 /// @param self KHistoryComboBox*
 /// @param items const char**
-void k_historycombobox_qbase_insert_items(void* self, const char* items[]);
+void k_historycombobox_qbase_insert_items(void* self, const char* items[static 1]);
 
 /// [Qt documentation](https://api.kde.org/khistorycombobox.html#useCompletion)
 ///
@@ -825,7 +825,7 @@ void k_historycombobox_add_item2(void* self, void* icon, const char* text);
 ///
 /// @param self KHistoryComboBox*
 /// @param texts const char**
-void k_historycombobox_add_items(void* self, const char* texts[]);
+void k_historycombobox_add_items(void* self, const char* texts[static 1]);
 
 /// Inherited from QComboBox
 ///
@@ -3919,7 +3919,7 @@ void k_historycombobox_on_set_completed_text(void* self, void (*callback)(void*,
 /// @param self KHistoryComboBox*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_historycombobox_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_historycombobox_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///
@@ -3930,7 +3930,7 @@ void k_historycombobox_set_completed_items(void* self, const char* items[], bool
 /// @param self KHistoryComboBox*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_historycombobox_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_historycombobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///

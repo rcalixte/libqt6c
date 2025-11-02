@@ -87,7 +87,7 @@ const char** k_overlayiconplugin_qbase_get_overlays(void* self, void* item);
 /// @param self KOverlayIconPlugin*
 /// @param url QUrl*
 /// @param overlays const char**
-void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* overlays[]);
+void k_overlayiconplugin_overlays_changed(void* self, void* url, const char* overlays[static 1]);
 
 /// [Qt documentation](https://api.kde.org/koverlayiconplugin.html#overlaysChanged)
 ///

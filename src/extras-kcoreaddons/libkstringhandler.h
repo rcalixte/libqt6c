@@ -25,7 +25,7 @@ const char* k_stringhandler_capwords(const char* param1);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param param1 const char**
-const char** k_stringhandler_capwords2(const char* param1[]);
+const char** k_stringhandler_capwords2(const char* param1[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kstringhandler.html#lsqueeze)
 ///

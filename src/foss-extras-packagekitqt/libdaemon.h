@@ -112,7 +112,7 @@ uint32_t q_packagekit__daemon_version_micro();
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param hints const char**
-void q_packagekit__daemon_set_hints(const char* hints[]);
+void q_packagekit__daemon_set_hints(const char* hints[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -182,7 +182,7 @@ PackageKit__Transaction* q_packagekit__daemon_accept_eula(const char* eulaID);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_download_packages(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_download_packages(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -196,7 +196,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_categories();
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_depends_on(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_depends_on(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -206,7 +206,7 @@ PackageKit__Transaction* q_packagekit__daemon_depends_on2(const char* packageID)
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_get_details(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_get_details(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -216,7 +216,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_details2(const char* packageID
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param files const char**
-PackageKit__Transaction* q_packagekit__daemon_get_details_local(const char* files[]);
+PackageKit__Transaction* q_packagekit__daemon_get_details_local(const char* files[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -226,7 +226,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_details_local2(const char* fil
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_get_files(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_get_files(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -236,7 +236,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_files2(const char* packageIDs)
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param files const char**
-PackageKit__Transaction* q_packagekit__daemon_get_files_local(const char* files[]);
+PackageKit__Transaction* q_packagekit__daemon_get_files_local(const char* files[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -259,7 +259,7 @@ PackageKit__Transaction* q_packagekit__daemon_get_repo_list();
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_required_by(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_required_by(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -269,7 +269,7 @@ PackageKit__Transaction* q_packagekit__daemon_required_by2(const char* packageID
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_get_updates_details(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_get_updates_details(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -293,7 +293,7 @@ PackageKit__Transaction* q_packagekit__daemon_upgrade_system(const char* distroI
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param files const char**
-PackageKit__Transaction* q_packagekit__daemon_install_files(const char* files[]);
+PackageKit__Transaction* q_packagekit__daemon_install_files(const char* files[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -303,7 +303,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_file(const char* file);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_install_packages(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_install_packages(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -325,7 +325,7 @@ PackageKit__Transaction* q_packagekit__daemon_refresh_cache(bool force);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_remove_packages(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_remove_packages(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -357,7 +357,7 @@ PackageKit__Transaction* q_packagekit__daemon_repo_set_data(const char* repoId, 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageNames const char**
-PackageKit__Transaction* q_packagekit__daemon_resolve(const char* packageNames[]);
+PackageKit__Transaction* q_packagekit__daemon_resolve(const char* packageNames[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -367,7 +367,7 @@ PackageKit__Transaction* q_packagekit__daemon_resolve2(const char* packageName);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param search const char**
-PackageKit__Transaction* q_packagekit__daemon_search_files(const char* search[]);
+PackageKit__Transaction* q_packagekit__daemon_search_files(const char* search[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -377,7 +377,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_files2(const char* search);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param search const char**
-PackageKit__Transaction* q_packagekit__daemon_search_details(const char* search[]);
+PackageKit__Transaction* q_packagekit__daemon_search_details(const char* search[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -387,7 +387,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_details2(const char* search
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param groups const char**
-PackageKit__Transaction* q_packagekit__daemon_search_groups(const char* groups[]);
+PackageKit__Transaction* q_packagekit__daemon_search_groups(const char* groups[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -407,7 +407,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups2(void* group);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param search const char**
-PackageKit__Transaction* q_packagekit__daemon_search_names(const char* search[]);
+PackageKit__Transaction* q_packagekit__daemon_search_names(const char* search[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -417,7 +417,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_names2(const char* search);
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
-PackageKit__Transaction* q_packagekit__daemon_update_packages(const char* packageIDs[]);
+PackageKit__Transaction* q_packagekit__daemon_update_packages(const char* packageIDs[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -427,7 +427,7 @@ PackageKit__Transaction* q_packagekit__daemon_update_package(const char* package
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param search const char**
-PackageKit__Transaction* q_packagekit__daemon_what_provides(const char* search[]);
+PackageKit__Transaction* q_packagekit__daemon_what_provides(const char* search[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -493,7 +493,7 @@ void q_packagekit__daemon_on_restart_scheduled(void* self, void (*callback)(void
 ///
 /// @param self PackageKit__Daemon*
 /// @param tids const char**
-void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[]);
+void q_packagekit__daemon_transaction_list_changed(void* self, const char* tids[static 1]);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -544,7 +544,7 @@ const char* q_packagekit__daemon_tr3(const char* s, const char* c, int n);
 ///
 /// @param packageIDs const char**
 /// @param storeInCache bool
-PackageKit__Transaction* q_packagekit__daemon_download_packages2(const char* packageIDs[], bool storeInCache);
+PackageKit__Transaction* q_packagekit__daemon_download_packages2(const char* packageIDs[static 1], bool storeInCache);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -556,14 +556,14 @@ PackageKit__Transaction* q_packagekit__daemon_download_package2(const char* pack
 ///
 /// @param packageIDs const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageIDs[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_depends_on22(const char* packageIDs[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
 /// @param recursive bool
-PackageKit__Transaction* q_packagekit__daemon_depends_on3(const char* packageIDs[], int32_t filters, bool recursive);
+PackageKit__Transaction* q_packagekit__daemon_depends_on3(const char* packageIDs[static 1], int32_t filters, bool recursive);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -592,14 +592,14 @@ PackageKit__Transaction* q_packagekit__daemon_get_repo_list1(int32_t filters);
 ///
 /// @param packageIDs const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageIDs[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_required_by22(const char* packageIDs[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
 /// @param recursive bool
-PackageKit__Transaction* q_packagekit__daemon_required_by3(const char* packageIDs[], int32_t filters, bool recursive);
+PackageKit__Transaction* q_packagekit__daemon_required_by3(const char* packageIDs[static 1], int32_t filters, bool recursive);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -630,7 +630,7 @@ PackageKit__Transaction* q_packagekit__daemon_upgrade_system3(const char* distro
 ///
 /// @param files const char**
 /// @param flags flag of enum PackageKit__Transaction__TransactionFlag
-PackageKit__Transaction* q_packagekit__daemon_install_files2(const char* files[], int32_t flags);
+PackageKit__Transaction* q_packagekit__daemon_install_files2(const char* files[static 1], int32_t flags);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -642,7 +642,7 @@ PackageKit__Transaction* q_packagekit__daemon_install_file2(const char* file, in
 ///
 /// @param packageIDs const char**
 /// @param flags flag of enum PackageKit__Transaction__TransactionFlag
-PackageKit__Transaction* q_packagekit__daemon_install_packages2(const char* packageIDs[], int32_t flags);
+PackageKit__Transaction* q_packagekit__daemon_install_packages2(const char* packageIDs[static 1], int32_t flags);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -654,14 +654,14 @@ PackageKit__Transaction* q_packagekit__daemon_install_package2(const char* packa
 ///
 /// @param packageIDs const char**
 /// @param allowDeps bool
-PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packageIDs[], bool allowDeps);
+PackageKit__Transaction* q_packagekit__daemon_remove_packages2(const char* packageIDs[static 1], bool allowDeps);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param packageIDs const char**
 /// @param allowDeps bool
 /// @param autoRemove bool
-PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packageIDs[], bool allowDeps, bool autoRemove);
+PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packageIDs[static 1], bool allowDeps, bool autoRemove);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -669,7 +669,7 @@ PackageKit__Transaction* q_packagekit__daemon_remove_packages3(const char* packa
 /// @param allowDeps bool
 /// @param autoRemove bool
 /// @param flags flag of enum PackageKit__Transaction__TransactionFlag
-PackageKit__Transaction* q_packagekit__daemon_remove_packages4(const char* packageIDs[], bool allowDeps, bool autoRemove, int32_t flags);
+PackageKit__Transaction* q_packagekit__daemon_remove_packages4(const char* packageIDs[static 1], bool allowDeps, bool autoRemove, int32_t flags);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -714,7 +714,7 @@ PackageKit__Transaction* q_packagekit__daemon_repo_remove3(const char* repoId, b
 ///
 /// @param packageNames const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_resolve22(const char* packageNames[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_resolve22(const char* packageNames[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -726,7 +726,7 @@ PackageKit__Transaction* q_packagekit__daemon_resolve23(const char* packageName,
 ///
 /// @param search const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_search_files22(const char* search[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_search_files22(const char* search[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -738,7 +738,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_files23(const char* search,
 ///
 /// @param search const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_search_details22(const char* search[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_search_details22(const char* search[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -750,7 +750,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_details23(const char* searc
 ///
 /// @param groups const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_search_groups22(const char* groups[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_search_groups22(const char* groups[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -774,7 +774,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_groups23(void* group, int32
 ///
 /// @param search const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_search_names22(const char* search[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_search_names22(const char* search[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -786,7 +786,7 @@ PackageKit__Transaction* q_packagekit__daemon_search_names23(const char* search,
 ///
 /// @param packageIDs const char**
 /// @param flags flag of enum PackageKit__Transaction__TransactionFlag
-PackageKit__Transaction* q_packagekit__daemon_update_packages2(const char* packageIDs[], int32_t flags);
+PackageKit__Transaction* q_packagekit__daemon_update_packages2(const char* packageIDs[static 1], int32_t flags);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///
@@ -798,7 +798,7 @@ PackageKit__Transaction* q_packagekit__daemon_update_package2(const char* packag
 ///
 /// @param search const char**
 /// @param filters flag of enum PackageKit__Transaction__Filter
-PackageKit__Transaction* q_packagekit__daemon_what_provides22(const char* search[], int32_t filters);
+PackageKit__Transaction* q_packagekit__daemon_what_provides22(const char* search[static 1], int32_t filters);
 
 /// [Qt documentation](https://github.com/PackageKit/PackageKit-Qt)
 ///

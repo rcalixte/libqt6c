@@ -306,7 +306,7 @@ void q_packagekit__transaction_on_item_progress(void* self, void (*callback)(voi
     PackageKit__Transaction_Connect_ItemProgress((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-void q_packagekit__transaction_files(void* self, const char* packageID, const char* filenames[]) {
+void q_packagekit__transaction_files(void* self, const char* packageID, const char* filenames[static 1]) {
     size_t filenames_len = libqt_strv_length(filenames);
     libqt_string* filenames_qstr = (libqt_string*)malloc(filenames_len * sizeof(libqt_string));
     if (filenames_qstr == NULL) {
@@ -349,7 +349,7 @@ void q_packagekit__transaction_on_details(void* self, void (*callback)(void*, vo
     PackageKit__Transaction_Connect_Details((PackageKit__Transaction*)self, (intptr_t)callback);
 }
 
-void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[], const char* obsoletes[], const char* vendorUrls[], const char* bugzillaUrls[], const char* cveUrls[], int32_t restart, const char* updateText, const char* changelog, int32_t state, void* issued, void* updated) {
+void q_packagekit__transaction_update_detail(void* self, const char* packageID, const char* updates[static 1], const char* obsoletes[static 1], const char* vendorUrls[static 1], const char* bugzillaUrls[static 1], const char* cveUrls[static 1], int32_t restart, const char* updateText, const char* changelog, int32_t state, void* issued, void* updated) {
     size_t updates_len = libqt_strv_length(updates);
     libqt_string* updates_qstr = (libqt_string*)malloc(updates_len * sizeof(libqt_string));
     if (updates_qstr == NULL) {

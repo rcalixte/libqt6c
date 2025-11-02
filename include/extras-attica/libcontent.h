@@ -244,7 +244,7 @@ const char** k_attica__content_tags(void* self);
 ///
 /// @param self Attica__Content*
 /// @param tags const char**
-void k_attica__content_set_tags(void* self, const char* tags[]);
+void k_attica__content_set_tags(void* self, const char* tags[static 1]);
 
 /// [Qt documentation](https://api.kde.org/attica-content.html#addAttribute)
 ///

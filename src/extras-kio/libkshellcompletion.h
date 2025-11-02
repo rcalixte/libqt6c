@@ -81,7 +81,7 @@ const char* k_shellcompletion_qbase_make_completion(void* self, const char* text
 ///
 /// @param self KShellCompletion*
 /// @param matches const char**
-void k_shellcompletion_post_process_matches(void* self, const char* matches[]);
+void k_shellcompletion_post_process_matches(void* self, const char* matches[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -97,7 +97,7 @@ void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void
 ///
 /// @param self KShellCompletion*
 /// @param matches const char**
-void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[]);
+void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[static 1]);
 
 /// [Qt documentation](https://api.kde.org/kshellcompletion.html#postProcessMatches)
 ///
@@ -164,7 +164,7 @@ const char* k_shellcompletion_replaced_path2(const char* text, bool replaceHome)
 ///
 /// @param self KShellCompletion*
 /// @param mimeTypes const char**
-void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[]);
+void k_shellcompletion_set_mime_type_filters(void* self, const char* mimeTypes[static 1]);
 
 /// Inherited from KUrlCompletion
 ///
@@ -316,7 +316,7 @@ const char* k_shellcompletion_next_match(void* self);
 ///
 /// @param self KShellCompletion*
 /// @param items const char**
-void k_shellcompletion_insert_items(void* self, const char* items[]);
+void k_shellcompletion_insert_items(void* self, const char* items[static 1]);
 
 /// Inherited from KCompletion
 ///
@@ -365,7 +365,7 @@ void k_shellcompletion_on_match(void* self, void (*callback)(void*, const char*)
 ///
 /// @param self KShellCompletion*
 /// @param matchlist const char**
-void k_shellcompletion_matches(void* self, const char* matchlist[]);
+void k_shellcompletion_matches(void* self, const char* matchlist[static 1]);
 
 /// Inherited from KCompletion
 ///
@@ -1149,7 +1149,7 @@ void k_shellcompletion_on_set_sounds_enabled(void* self, void (*callback)(void*,
 ///
 /// @param self KShellCompletion*
 /// @param itemList const char**
-void k_shellcompletion_set_items(void* self, const char* itemList[]);
+void k_shellcompletion_set_items(void* self, const char* itemList[static 1]);
 
 /// Inherited from KCompletion
 ///
@@ -1159,7 +1159,7 @@ void k_shellcompletion_set_items(void* self, const char* itemList[]);
 ///
 /// @param self KShellCompletion*
 /// @param itemList const char**
-void k_shellcompletion_qbase_set_items(void* self, const char* itemList[]);
+void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1]);
 
 /// Inherited from KCompletion
 ///

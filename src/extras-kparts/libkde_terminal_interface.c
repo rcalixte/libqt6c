@@ -2,7 +2,7 @@
 #include "libkde_terminal_interface.hpp"
 #include "libkde_terminal_interface.h"
 
-void k_terminalinterface_start_program(void* self, const char* program, const char* args[]) {
+void k_terminalinterface_start_program(void* self, const char* program, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {

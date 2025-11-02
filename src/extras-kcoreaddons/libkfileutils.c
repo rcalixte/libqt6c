@@ -16,7 +16,7 @@ const char* k_fileutils_make_suggested_name(const char* param1) {
     return _ret;
 }
 
-const char** k_fileutils_find_all_unique_files(const char* param1[], const char* param2[]) {
+const char** k_fileutils_find_all_unique_files(const char* param1[static 1], const char* param2[static 1]) {
     size_t param1_len = libqt_strv_length(param1);
     libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
     if (param1_qstr == NULL) {

@@ -175,7 +175,7 @@ void k_completionbase_qbase_set_completed_text(void* self, const char* text);
 /// @param self KCompletionBase*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_completionbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_completionbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// [Qt documentation](https://api.kde.org/kcompletionbase.html#setCompletedItems)
 ///
@@ -192,7 +192,7 @@ void k_completionbase_on_set_completed_items(void* self, void (*callback)(void*,
 /// @param self KCompletionBase*
 /// @param items const char**
 /// @param autoSuggest bool
-void k_completionbase_qbase_set_completed_items(void* self, const char* items[], bool autoSuggest);
+void k_completionbase_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// [Qt documentation](https://api.kde.org/kcompletionbase.html#compObj)
 ///

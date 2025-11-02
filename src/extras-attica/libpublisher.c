@@ -63,7 +63,7 @@ const char** k_attica__field_options(void* self) {
     return options_ret;
 }
 
-void k_attica__field_set_options(void* self, const char* options[]) {
+void k_attica__field_set_options(void* self, const char* options[static 1]) {
     size_t options_len = libqt_strv_length(options);
     libqt_string* options_qstr = (libqt_string*)malloc(options_len * sizeof(libqt_string));
     if (options_qstr == NULL) {

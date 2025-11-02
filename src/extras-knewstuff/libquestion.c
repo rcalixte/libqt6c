@@ -79,7 +79,7 @@ const char* k_nscore__question_title(void* self) {
     return _ret;
 }
 
-void k_nscore__question_set_list(void* self, const char* newList[]) {
+void k_nscore__question_set_list(void* self, const char* newList[static 1]) {
     size_t newList_len = libqt_strv_length(newList);
     libqt_string* newList_qstr = (libqt_string*)malloc(newList_len * sizeof(libqt_string));
     if (newList_qstr == NULL) {

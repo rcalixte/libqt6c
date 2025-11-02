@@ -224,7 +224,7 @@ void k_imageannotator__kimageannotator_remove_tab(void* self, int index);
 /// @param self kImageAnnotator__KImageAnnotator*
 /// @param stickerPaths const char**
 /// @param keepDefault bool
-void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stickerPaths[], bool keepDefault);
+void k_imageannotator__kimageannotator_set_stickers(void* self, const char* stickerPaths[static 1], bool keepDefault);
 
 /// [Qt documentation](https://github.com/ksnip/kImageAnnotator)
 ///

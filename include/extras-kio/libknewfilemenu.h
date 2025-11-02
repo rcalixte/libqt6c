@@ -86,7 +86,7 @@ QUrl* k_newfilemenu_working_directory(void* self);
 ///
 /// @param self KNewFileMenu*
 /// @param mime const char**
-void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[]);
+void k_newfilemenu_set_supported_mime_types(void* self, const char* mime[static 1]);
 
 /// [Qt documentation](https://api.kde.org/knewfilemenu.html#supportedMimeTypes)
 ///

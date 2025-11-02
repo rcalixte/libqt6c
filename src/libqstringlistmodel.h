@@ -20,7 +20,7 @@ QStringListModel* q_stringlistmodel_new();
 /// q_stringlistmodel_new2 constructs a new QStringListModel object.
 ///
 /// @param strings const char**
-QStringListModel* q_stringlistmodel_new2(const char* strings[]);
+QStringListModel* q_stringlistmodel_new2(const char* strings[static 1]);
 
 /// q_stringlistmodel_new3 constructs a new QStringListModel object.
 ///
@@ -31,7 +31,7 @@ QStringListModel* q_stringlistmodel_new3(void* parent);
 ///
 /// @param strings const char**
 /// @param parent QObject*
-QStringListModel* q_stringlistmodel_new4(const char* strings[], void* parent);
+QStringListModel* q_stringlistmodel_new4(const char* strings[static 1], void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -378,7 +378,7 @@ const char** q_stringlistmodel_string_list(void* self);
 ///
 /// @param self QStringListModel*
 /// @param strings const char**
-void q_stringlistmodel_set_string_list(void* self, const char* strings[]);
+void q_stringlistmodel_set_string_list(void* self, const char* strings[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#supportedDropActions)
 ///

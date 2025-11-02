@@ -108,7 +108,7 @@ libqt_pair /* tuple of int and int */ k_viewstateserializer_scroll_state(void* s
     return KViewStateSerializer_ScrollState((KViewStateSerializer*)self);
 }
 
-void k_viewstateserializer_restore_selection(void* self, const char* indexStrings[]) {
+void k_viewstateserializer_restore_selection(void* self, const char* indexStrings[static 1]) {
     size_t indexStrings_len = libqt_strv_length(indexStrings);
     libqt_string* indexStrings_qstr = (libqt_string*)malloc(indexStrings_len * sizeof(libqt_string));
     if (indexStrings_qstr == NULL) {
@@ -127,7 +127,7 @@ void k_viewstateserializer_restore_current_item(void* self, const char* indexStr
     KViewStateSerializer_RestoreCurrentItem((KViewStateSerializer*)self, qstring(indexString));
 }
 
-void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings[]) {
+void k_viewstateserializer_restore_expanded(void* self, const char* indexStrings[static 1]) {
     size_t indexStrings_len = libqt_strv_length(indexStrings);
     libqt_string* indexStrings_qstr = (libqt_string*)malloc(indexStrings_len * sizeof(libqt_string));
     if (indexStrings_qstr == NULL) {

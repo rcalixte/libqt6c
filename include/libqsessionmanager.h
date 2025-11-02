@@ -86,7 +86,7 @@ int32_t q_sessionmanager_restart_hint(void* self);
 ///
 /// @param self QSessionManager*
 /// @param restartCommand const char**
-void q_sessionmanager_set_restart_command(void* self, const char* restartCommand[]);
+void q_sessionmanager_set_restart_command(void* self, const char* restartCommand[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#restartCommand)
 ///
@@ -99,7 +99,7 @@ const char** q_sessionmanager_restart_command(void* self);
 ///
 /// @param self QSessionManager*
 /// @param discardCommand const char**
-void q_sessionmanager_set_discard_command(void* self, const char* discardCommand[]);
+void q_sessionmanager_set_discard_command(void* self, const char* discardCommand[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#discardCommand)
 ///
@@ -120,7 +120,7 @@ void q_sessionmanager_set_manager_property(void* self, const char* name, const c
 /// @param self QSessionManager*
 /// @param name const char*
 /// @param value const char**
-void q_sessionmanager_set_manager_property2(void* self, const char* name, const char* value[]);
+void q_sessionmanager_set_manager_property2(void* self, const char* name, const char* value[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#isPhase2)
 ///

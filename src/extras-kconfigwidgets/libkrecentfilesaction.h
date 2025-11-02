@@ -355,7 +355,7 @@ QAction* k_recentfilesaction_add_action3(void* self, void* icon, const char* tex
 ///
 /// @param self KRecentFilesAction*
 /// @param lst const char**
-void k_recentfilesaction_set_items(void* self, const char* lst[]);
+void k_recentfilesaction_set_items(void* self, const char* lst[static 1]);
 
 /// Inherited from KSelectAction
 ///

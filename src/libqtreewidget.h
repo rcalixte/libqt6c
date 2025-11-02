@@ -20,7 +20,7 @@ QTreeWidgetItem* q_treewidgetitem_new();
 /// q_treewidgetitem_new2 constructs a new QTreeWidgetItem object.
 ///
 /// @param strings const char**
-QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[]);
+QTreeWidgetItem* q_treewidgetitem_new2(const char* strings[static 1]);
 
 /// q_treewidgetitem_new3 constructs a new QTreeWidgetItem object.
 ///
@@ -31,7 +31,7 @@ QTreeWidgetItem* q_treewidgetitem_new3(void* treeview);
 ///
 /// @param treeview QTreeWidget*
 /// @param strings const char**
-QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[]);
+QTreeWidgetItem* q_treewidgetitem_new4(void* treeview, const char* strings[static 1]);
 
 /// q_treewidgetitem_new5 constructs a new QTreeWidgetItem object.
 ///
@@ -48,7 +48,7 @@ QTreeWidgetItem* q_treewidgetitem_new6(void* parent);
 ///
 /// @param parent QTreeWidgetItem*
 /// @param strings const char**
-QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[]);
+QTreeWidgetItem* q_treewidgetitem_new7(void* parent, const char* strings[static 1]);
 
 /// q_treewidgetitem_new8 constructs a new QTreeWidgetItem object.
 ///
@@ -70,7 +70,7 @@ QTreeWidgetItem* q_treewidgetitem_new10(int type);
 ///
 /// @param strings const char**
 /// @param type int
-QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[], int type);
+QTreeWidgetItem* q_treewidgetitem_new11(const char* strings[static 1], int type);
 
 /// q_treewidgetitem_new12 constructs a new QTreeWidgetItem object.
 ///
@@ -83,7 +83,7 @@ QTreeWidgetItem* q_treewidgetitem_new12(void* treeview, int type);
 /// @param treeview QTreeWidget*
 /// @param strings const char**
 /// @param type int
-QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[], int type);
+QTreeWidgetItem* q_treewidgetitem_new13(void* treeview, const char* strings[static 1], int type);
 
 /// q_treewidgetitem_new14 constructs a new QTreeWidgetItem object.
 ///
@@ -103,7 +103,7 @@ QTreeWidgetItem* q_treewidgetitem_new15(void* parent, int type);
 /// @param parent QTreeWidgetItem*
 /// @param strings const char**
 /// @param type int
-QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[], int type);
+QTreeWidgetItem* q_treewidgetitem_new16(void* parent, const char* strings[static 1], int type);
 
 /// q_treewidgetitem_new17 constructs a new QTreeWidgetItem object.
 ///
@@ -743,7 +743,7 @@ void q_treewidget_set_header_item(void* self, void* item);
 ///
 /// @param self QTreeWidget*
 /// @param labels const char**
-void q_treewidget_set_header_labels(void* self, const char* labels[]);
+void q_treewidget_set_header_labels(void* self, const char* labels[static 1]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#setHeaderLabel)
 ///
