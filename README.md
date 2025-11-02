@@ -216,6 +216,9 @@ To see the full list of build options available:
 zig build --help
 ```
 
+> [!IMPORTANT]
+> Cross-compilation is not supported by this library at this time.
+
 Usage
 -----
 
@@ -259,9 +262,6 @@ __Extra options are required for building on Arch-based distributions. Refer to 
 ```
 
 Full examples of the build system and sample applications can be found in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository.
-
-> [!IMPORTANT]
-> Cross-compilation is not supported by this library at this time.
 
 FAQ
 ---
