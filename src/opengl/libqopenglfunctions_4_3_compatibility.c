@@ -362,15 +362,15 @@ void* q_openglfunctions_4_3_compatibility_gl_map_buffer(void* self, uint32_t tar
     return QOpenGLFunctions_4_3_Compatibility_GlMapBuffer((QOpenGLFunctions_4_3_Compatibility*)self, target, access);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_get_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglfunctions_4_3_compatibility_gl_get_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_4_3_Compatibility_GlGetBufferSubData((QOpenGLFunctions_4_3_Compatibility*)self, target, offset, size, data);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglfunctions_4_3_compatibility_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_4_3_Compatibility_GlBufferSubData((QOpenGLFunctions_4_3_Compatibility*)self, target, offset, size, data);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage) {
+void q_openglfunctions_4_3_compatibility_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage) {
     QOpenGLFunctions_4_3_Compatibility_GlBufferData((QOpenGLFunctions_4_3_Compatibility*)self, target, size, data, usage);
 }
 
@@ -670,11 +670,11 @@ void q_openglfunctions_4_3_compatibility_gl_bind_vertex_array(void* self, uint32
     QOpenGLFunctions_4_3_Compatibility_GlBindVertexArray((QOpenGLFunctions_4_3_Compatibility*)self, array);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_flush_mapped_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length) {
+void q_openglfunctions_4_3_compatibility_gl_flush_mapped_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length) {
     QOpenGLFunctions_4_3_Compatibility_GlFlushMappedBufferRange((QOpenGLFunctions_4_3_Compatibility*)self, target, offset, length);
 }
 
-void* q_openglfunctions_4_3_compatibility_gl_map_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length, uint32_t access) {
+void* q_openglfunctions_4_3_compatibility_gl_map_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length, uint32_t access) {
     return QOpenGLFunctions_4_3_Compatibility_GlMapBufferRange((QOpenGLFunctions_4_3_Compatibility*)self, target, offset, length, access);
 }
 
@@ -862,7 +862,7 @@ void q_openglfunctions_4_3_compatibility_gl_bind_buffer_base(void* self, uint32_
     QOpenGLFunctions_4_3_Compatibility_GlBindBufferBase((QOpenGLFunctions_4_3_Compatibility*)self, target, index, buffer);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, int64_t offset, int64_t size) {
+void q_openglfunctions_4_3_compatibility_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size) {
     QOpenGLFunctions_4_3_Compatibility_GlBindBufferRange((QOpenGLFunctions_4_3_Compatibility*)self, target, index, buffer, offset, size);
 }
 
@@ -898,7 +898,7 @@ void q_openglfunctions_4_3_compatibility_gl_color_maski(void* self, uint32_t ind
     QOpenGLFunctions_4_3_Compatibility_GlColorMaski((QOpenGLFunctions_4_3_Compatibility*)self, index, r, g, b, a);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, int64_t readOffset, int64_t writeOffset, int64_t size) {
+void q_openglfunctions_4_3_compatibility_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size) {
     QOpenGLFunctions_4_3_Compatibility_GlCopyBufferSubData((QOpenGLFunctions_4_3_Compatibility*)self, readTarget, writeTarget, readOffset, writeOffset, size);
 }
 
@@ -1806,7 +1806,7 @@ void q_openglfunctions_4_3_compatibility_gl_tex_storage2_d_multisample(void* sel
     QOpenGLFunctions_4_3_Compatibility_GlTexStorage2DMultisample((QOpenGLFunctions_4_3_Compatibility*)self, target, samples, internalformat, width, height, fixedsamplelocations);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, int64_t offset, int64_t size) {
+void q_openglfunctions_4_3_compatibility_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, intptr_t offset, intptr_t size) {
     QOpenGLFunctions_4_3_Compatibility_GlTexBufferRange((QOpenGLFunctions_4_3_Compatibility*)self, target, internalformat, buffer, offset, size);
 }
 
@@ -1846,7 +1846,7 @@ void q_openglfunctions_4_3_compatibility_gl_invalidate_buffer_data(void* self, u
     QOpenGLFunctions_4_3_Compatibility_GlInvalidateBufferData((QOpenGLFunctions_4_3_Compatibility*)self, buffer);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_invalidate_buffer_sub_data(void* self, uint32_t buffer, int64_t offset, int64_t length) {
+void q_openglfunctions_4_3_compatibility_gl_invalidate_buffer_sub_data(void* self, uint32_t buffer, intptr_t offset, intptr_t length) {
     QOpenGLFunctions_4_3_Compatibility_GlInvalidateBufferSubData((QOpenGLFunctions_4_3_Compatibility*)self, buffer, offset, length);
 }
 
@@ -1890,7 +1890,7 @@ void q_openglfunctions_4_3_compatibility_gl_vertex_attrib_format(void* self, uin
     QOpenGLFunctions_4_3_Compatibility_GlVertexAttribFormat((QOpenGLFunctions_4_3_Compatibility*)self, attribindex, size, type, normalized, relativeoffset);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, int64_t offset, int32_t stride) {
+void q_openglfunctions_4_3_compatibility_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, intptr_t offset, int32_t stride) {
     QOpenGLFunctions_4_3_Compatibility_GlBindVertexBuffer((QOpenGLFunctions_4_3_Compatibility*)self, bindingindex, buffer, offset, stride);
 }
 
@@ -1902,7 +1902,7 @@ void q_openglfunctions_4_3_compatibility_gl_copy_image_sub_data(void* self, uint
     QOpenGLFunctions_4_3_Compatibility_GlCopyImageSubData((QOpenGLFunctions_4_3_Compatibility*)self, srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName, dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_dispatch_compute_indirect(void* self, int64_t indirect) {
+void q_openglfunctions_4_3_compatibility_gl_dispatch_compute_indirect(void* self, intptr_t indirect) {
     QOpenGLFunctions_4_3_Compatibility_GlDispatchComputeIndirect((QOpenGLFunctions_4_3_Compatibility*)self, indirect);
 }
 
@@ -1910,7 +1910,7 @@ void q_openglfunctions_4_3_compatibility_gl_dispatch_compute(void* self, uint32_
     QOpenGLFunctions_4_3_Compatibility_GlDispatchCompute((QOpenGLFunctions_4_3_Compatibility*)self, num_groups_x, num_groups_y, num_groups_z);
 }
 
-void q_openglfunctions_4_3_compatibility_gl_clear_buffer_sub_data(void* self, uint32_t target, uint32_t internalformat, int64_t offset, int64_t size, uint32_t format, uint32_t type, void* data) {
+void q_openglfunctions_4_3_compatibility_gl_clear_buffer_sub_data(void* self, uint32_t target, uint32_t internalformat, intptr_t offset, intptr_t size, uint32_t format, uint32_t type, void* data) {
     QOpenGLFunctions_4_3_Compatibility_GlClearBufferSubData((QOpenGLFunctions_4_3_Compatibility*)self, target, internalformat, offset, size, format, type, data);
 }
 

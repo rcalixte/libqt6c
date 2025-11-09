@@ -354,15 +354,15 @@ void* q_openglfunctions_3_1_gl_map_buffer(void* self, uint32_t target, uint32_t 
     return QOpenGLFunctions_3_1_GlMapBuffer((QOpenGLFunctions_3_1*)self, target, access);
 }
 
-void q_openglfunctions_3_1_gl_get_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglfunctions_3_1_gl_get_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_3_1_GlGetBufferSubData((QOpenGLFunctions_3_1*)self, target, offset, size, data);
 }
 
-void q_openglfunctions_3_1_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglfunctions_3_1_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_3_1_GlBufferSubData((QOpenGLFunctions_3_1*)self, target, offset, size, data);
 }
 
-void q_openglfunctions_3_1_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage) {
+void q_openglfunctions_3_1_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage) {
     QOpenGLFunctions_3_1_GlBufferData((QOpenGLFunctions_3_1*)self, target, size, data, usage);
 }
 
@@ -662,11 +662,11 @@ void q_openglfunctions_3_1_gl_bind_vertex_array(void* self, uint32_t array) {
     QOpenGLFunctions_3_1_GlBindVertexArray((QOpenGLFunctions_3_1*)self, array);
 }
 
-void q_openglfunctions_3_1_gl_flush_mapped_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length) {
+void q_openglfunctions_3_1_gl_flush_mapped_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length) {
     QOpenGLFunctions_3_1_GlFlushMappedBufferRange((QOpenGLFunctions_3_1*)self, target, offset, length);
 }
 
-void* q_openglfunctions_3_1_gl_map_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length, uint32_t access) {
+void* q_openglfunctions_3_1_gl_map_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length, uint32_t access) {
     return QOpenGLFunctions_3_1_GlMapBufferRange((QOpenGLFunctions_3_1*)self, target, offset, length, access);
 }
 
@@ -854,7 +854,7 @@ void q_openglfunctions_3_1_gl_bind_buffer_base(void* self, uint32_t target, uint
     QOpenGLFunctions_3_1_GlBindBufferBase((QOpenGLFunctions_3_1*)self, target, index, buffer);
 }
 
-void q_openglfunctions_3_1_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, int64_t offset, int64_t size) {
+void q_openglfunctions_3_1_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size) {
     QOpenGLFunctions_3_1_GlBindBufferRange((QOpenGLFunctions_3_1*)self, target, index, buffer, offset, size);
 }
 
@@ -890,7 +890,7 @@ void q_openglfunctions_3_1_gl_color_maski(void* self, uint32_t index, uint8_t r,
     QOpenGLFunctions_3_1_GlColorMaski((QOpenGLFunctions_3_1*)self, index, r, g, b, a);
 }
 
-void q_openglfunctions_3_1_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, int64_t readOffset, int64_t writeOffset, int64_t size) {
+void q_openglfunctions_3_1_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size) {
     QOpenGLFunctions_3_1_GlCopyBufferSubData((QOpenGLFunctions_3_1*)self, readTarget, writeTarget, readOffset, writeOffset, size);
 }
 

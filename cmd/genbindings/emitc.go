@@ -101,6 +101,10 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return "https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1" + strings.ToUpper(pageName[10:11]) + pageName[11:] + ".html"
 	}
 
+	if strings.HasPrefix(pageName, "SignOn__") {
+		return "https://accounts-sso.gitlab.io/signond/classSignOn_1_1" + strings.ToUpper(pageName[8:9]) + pageName[9:] + ".html"
+	}
+
 	if pageType == DtorPage && strings.Contains(className, "__") {
 		return ""
 	}
@@ -188,12 +192,12 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	}
 
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
-		p.ParameterType == "QStringView" {
+		p.ParameterType == "QStringView" || p.ParameterType == "SignOn::MethodName" {
 		return "const char*"
 	}
 
 	if t, _, ok := p.QListOf(); ok {
-		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" {
+		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" || t.ParameterType == "SignOn::MethodName" {
 			return "const char*" + ifv(isReturnType, "*", "")
 		} else if !isReturnType {
 			if t.QtClassType() || t.IntType() {
@@ -281,7 +285,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 		ret += "int32_t"
 	case "quint32", "uint", "unsigned int", "GLbitfield", "GLenum", "GLuint":
 		ret += "uint32_t"
-	case "qlonglong", "qint64", "GLint64", "GLintptr", "GLsizeiptr":
+	case "qlonglong", "qint64", "GLint64":
 		ret += "int64_t"
 	case "qulonglong", "quint64", "unsigned long long", "GLuint64":
 		ret += "uint64_t"
@@ -302,7 +306,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 			ret += "int64_t"
 		}
 
-	case "qintptr", "QIntegerForSizeof<void *>::Signed":
+	case "qintptr", "QIntegerForSizeof<void *>::Signed", "GLintptr", "GLsizeiptr":
 		ret += "intptr_t"
 	case "quintptr", "QIntegerForSizeof<void *>::Unsigned":
 		ret += "uintptr_t"
@@ -666,7 +670,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		p.ParameterName = "_" + p.ParameterName
 	}
 
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" {
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "SignOn::MethodName" {
 		// Return the C string struct without allocation since the
 		// temporary libqt_string is passed by value
 		rvalue = "qstring(" + nameprefix + ")"
@@ -683,7 +687,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		// QList<T>
 		// Return the C list struct without allocation if we can
 
-		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" {
+		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" || t.ParameterType == "SignOn::MethodName" {
 			preamble += "size_t " + nameprefix + "_len = libqt_strv_length(" + p.ParameterName + ");\n"
 			preamble += "libqt_string* " + nameprefix + "_qstr = (libqt_string*)malloc(" + nameprefix + "_len * sizeof(libqt_string));\n"
 			preamble += "if (" + nameprefix + "_qstr == NULL) {\n"
@@ -760,7 +764,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return rvalue + ";" + maybeCleanups
 	} else if (rt.ParameterType == "void" || rt.ParameterType == "GLvoid") && rt.Pointer {
 		return assignExpr + maybePointer + rvalue + ";"
-	} else if rt.ParameterType == "QString" ||
+	} else if rt.ParameterType == "QString" || rt.ParameterType == "SignOn::MethodName" ||
 		rt.ParameterType == "QStringView" || rt.ParameterType == "QByteArray" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
 		afterword += cfs.checkAndClearAllocCleanups(false)
@@ -802,7 +806,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return shouldReturn + " " + rvalue + ";\n"
 
 	} else if t, _, ok := rt.QListOf(); ok {
-		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" {
+		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" || t.ParameterType == "SignOn::MethodName" {
 			shouldReturn = "libqt_list " + namePrefix + "_arr = "
 			afterword += "const libqt_string* " + namePrefix + "_qstr = (libqt_string*)" + namePrefix + "_arr.data.ptr;\n"
 			afterword += "const char** " + namePrefix + "_ret = (const char**)malloc((" + namePrefix + "_arr.len + 1) * sizeof(const char*));\n"
@@ -1075,7 +1079,11 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if len(c.Ctors) > 0 || len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 ||
 			(len(c.DirectInherits) > 0 && len(collectInheritedMethodsForC(c.DirectInherits[0], map[string]struct{}{c.ClassName: {}})) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q')
+
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) ||
+				(strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q') ||
+				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
+
 			pageName := ifv(isSpecialCase, cStructName, getPageName(cStructName)) + maybeCharts
 			ret.WriteString("\n\n/// " + getPageUrl(QtPage, pageName, "", cStructName) + "\n")
 		}
@@ -1222,13 +1230,17 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			var docCommentUrl string
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q')
+
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) ||
+				(strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q') ||
+				(strings.Contains(src.Filename, "signon-qt") && className[0] != 'Q')
+
 			subjectURL := ifv(isSpecialCase, className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
 			}
-			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok {
+			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok && cStructName != "QMetaObject" {
 				subjectURL = newURL
 			}
 			if m.IsVariable {
@@ -1260,16 +1272,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			commentParam := "\n/// @param self " + cStructName + "* "
 
-			mSafeName := mSafeMethodName
-			mTrim := mSafeName[:len(mSafeName)-1]
 			method := safeMethodName + "(void* self" + commaParams
 			if m.IsStatic && !m.IsProtected {
 				commentParam = ""
 				method = safeMethodName + "("
-			}
-
-			if mSafeMethodName == "Tr" || mTrim == "Tr" {
-				commentParam = ""
 			}
 
 			returnComment := cfs.emitReturnComment(m.ReturnType)
@@ -1393,7 +1399,11 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q')
+
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) ||
+				(strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q') ||
+				(strings.Contains(src.Filename, "signon-qt") && className[0] != 'Q')
+
 			subjectURL := ifv(isSpecialCase, className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
@@ -1468,7 +1478,11 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			className := ifv(m.InheritedInClass == "", cmdStructName, cabiClassName(m.InheritedInClass))
-			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q')
+
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(className, "QCP")) ||
+				(strings.Contains(src.Filename, "accounts-qt") && className[0] != 'Q') ||
+				(strings.Contains(src.Filename, "signon-qt") && className[0] != 'Q')
+
 			subjectURL := ifv(isSpecialCase, className, strings.ToLower(className))
 			cmdURL := m.MethodName
 			if m.OverrideMethodName != "" {
@@ -1498,7 +1512,11 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) || (strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q')
+
+			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) ||
+				(strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q') ||
+				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
+
 			pageUrl := getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
 			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
@@ -1519,6 +1537,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "LayerShellQt"), "layershellqt-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "PackageKit"), "packagekit-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "qt6keychain"), "qkeychain-", maybeUrlPrefix)
+		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "SignOn"), "SignOn__", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Solid"), "solid-", maybeUrlPrefix)
 		maybeUrlPrefix = ifv(strings.Contains(src.Filename, "Sonnet"), "sonnet-", maybeUrlPrefix)
 		pageName := maybeUrlPrefix + getPageName(cfs.currentHeaderName) + maybeCharts
@@ -1741,15 +1760,13 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if ctor.LinuxOnly {
-
 				ret.WriteString(cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + `) {
-        #ifdef __linux__
-            ` + ctorRet + `
-        #else
-            fprintf(stderr, "Error: Unsupported operating system\n");
+        #ifndef __linux__
+		    fprintf(stderr, "Error: Unsupported operating system\n");
             abort();
         #endif
-}` + "\n\n")
+
+` + ctorRet + "}\n\n")
 			} else {
 				preamble = ifv(preamble != "", preamble+"\n", "")
 

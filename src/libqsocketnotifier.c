@@ -418,12 +418,12 @@ QSocketDescriptor* q_socketdescriptor_new4(void* param1) {
 }
 
 QSocketDescriptor* q_socketdescriptor_new5(int descriptor) {
-#ifdef __linux__
-    return QSocketDescriptor_new5(descriptor);
-#else
+#ifndef __linux__
     fprintf(stderr, "Error: Unsupported operating system\n");
     abort();
 #endif
+
+    return QSocketDescriptor_new5(descriptor);
 }
 
 void q_socketdescriptor_copy_assign(void* self, void* other) {

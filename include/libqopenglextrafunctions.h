@@ -275,18 +275,18 @@ void q_openglextrafunctions_gl_framebuffer_texture_layer(void* self, uint32_t ta
 ///
 /// @param self QOpenGLExtraFunctions*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param length int64_t
+/// @param offset intptr_t
+/// @param length intptr_t
 /// @param access uint32_t
-void* q_openglextrafunctions_gl_map_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length, uint32_t access);
+void* q_openglextrafunctions_gl_map_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length, uint32_t access);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glFlushMappedBufferRange)
 ///
 /// @param self QOpenGLExtraFunctions*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param length int64_t
-void q_openglextrafunctions_gl_flush_mapped_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length);
+/// @param offset intptr_t
+/// @param length intptr_t
+void q_openglextrafunctions_gl_flush_mapped_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glBindVertexArray)
 ///
@@ -339,9 +339,9 @@ void q_openglextrafunctions_gl_end_transform_feedback(void* self);
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
-void q_openglextrafunctions_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, int64_t offset, int64_t size);
+/// @param offset intptr_t
+/// @param size intptr_t
+void q_openglextrafunctions_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glBindBufferBase)
 ///
@@ -537,10 +537,10 @@ const uint8_t* q_openglextrafunctions_gl_get_stringi(void* self, uint32_t name, 
 /// @param self QOpenGLExtraFunctions*
 /// @param readTarget uint32_t
 /// @param writeTarget uint32_t
-/// @param readOffset int64_t
-/// @param writeOffset int64_t
-/// @param size int64_t
-void q_openglextrafunctions_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, int64_t readOffset, int64_t writeOffset, int64_t size);
+/// @param readOffset intptr_t
+/// @param writeOffset intptr_t
+/// @param size intptr_t
+void q_openglextrafunctions_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glGetActiveUniformsiv)
 ///
@@ -806,8 +806,8 @@ void q_openglextrafunctions_gl_dispatch_compute(void* self, uint32_t num_groups_
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glDispatchComputeIndirect)
 ///
 /// @param self QOpenGLExtraFunctions*
-/// @param indirect int64_t
-void q_openglextrafunctions_gl_dispatch_compute_indirect(void* self, int64_t indirect);
+/// @param indirect intptr_t
+void q_openglextrafunctions_gl_dispatch_compute_indirect(void* self, intptr_t indirect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glDrawArraysIndirect)
 ///
@@ -1333,9 +1333,9 @@ void q_openglextrafunctions_gl_get_tex_level_parameterfv(void* self, uint32_t ta
 /// @param self QOpenGLExtraFunctions*
 /// @param bindingindex uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
+/// @param offset intptr_t
 /// @param stride int32_t
-void q_openglextrafunctions_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, int64_t offset, int32_t stride);
+void q_openglextrafunctions_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, intptr_t offset, int32_t stride);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glVertexAttribFormat)
 ///
@@ -1724,9 +1724,9 @@ void q_openglextrafunctions_gl_tex_buffer(void* self, uint32_t target, uint32_t 
 /// @param target uint32_t
 /// @param internalformat uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
-void q_openglextrafunctions_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, int64_t offset, int64_t size);
+/// @param offset intptr_t
+/// @param size intptr_t
+void q_openglextrafunctions_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, intptr_t offset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glTexStorage3DMultisample)
 ///

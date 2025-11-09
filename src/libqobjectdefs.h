@@ -226,10 +226,11 @@ QObject* q_metaobject_cast(void* self, void* obj);
 /// @param obj QObject*
 const QObject* q_metaobject_cast2(void* self, void* obj);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
+/// @param self QMetaObject*
 /// @param s const char*
 /// @param c const char*
 const char* q_metaobject_tr(void* self, const char* s, const char* c);
@@ -502,10 +503,11 @@ QMetaObject__Data* q_metaobject_d(void* self);
 /// @param d QMetaObject__Data*
 void q_metaobject_set_d(void* self, void* d);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
+/// @param self QMetaObject*
 /// @param s const char*
 /// @param c const char*
 /// @param n int
