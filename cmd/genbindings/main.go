@@ -458,7 +458,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		bindingHSrc, structdefs, typedefs, err := emitBindingHeader(parsed, filepath.Base(outputName+".h"), packageName)
+		bindingHSrc, structdefs, typedefs, err := emitBindingHeader(parsed, packageName)
 		if err != nil {
 			panic(err)
 		}
@@ -476,7 +476,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		bindingHxxSrc, err := emitVirtualBindingHeader(parsed, filepath.Base(outputName+".h"), packageName)
+		bindingHxxSrc, err := emitVirtualBindingHeader(parsed, packageName)
 		if err != nil {
 			panic(err)
 		}
