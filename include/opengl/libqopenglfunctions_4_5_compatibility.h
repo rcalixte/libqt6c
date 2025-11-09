@@ -774,28 +774,28 @@ void* q_openglfunctions_4_5_compatibility_gl_map_buffer(void* self, uint32_t tar
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
-void q_openglfunctions_4_5_compatibility_gl_get_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_4_5_compatibility_gl_get_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glBufferSubData)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
-void q_openglfunctions_4_5_compatibility_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_4_5_compatibility_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glBufferData)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
-/// @param size int64_t
+/// @param size intptr_t
 /// @param data void*
 /// @param usage uint32_t
-void q_openglfunctions_4_5_compatibility_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage);
+void q_openglfunctions_4_5_compatibility_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glIsBuffer)
 ///
@@ -1647,18 +1647,18 @@ void q_openglfunctions_4_5_compatibility_gl_bind_vertex_array(void* self, uint32
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param length int64_t
-void q_openglfunctions_4_5_compatibility_gl_flush_mapped_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length);
+/// @param offset intptr_t
+/// @param length intptr_t
+void q_openglfunctions_4_5_compatibility_gl_flush_mapped_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glMapBufferRange)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param length int64_t
+/// @param offset intptr_t
+/// @param length intptr_t
 /// @param access uint32_t
-void* q_openglfunctions_4_5_compatibility_gl_map_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length, uint32_t access);
+void* q_openglfunctions_4_5_compatibility_gl_map_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length, uint32_t access);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glFramebufferTextureLayer)
 ///
@@ -2193,9 +2193,9 @@ void q_openglfunctions_4_5_compatibility_gl_bind_buffer_base(void* self, uint32_
 /// @param target uint32_t
 /// @param index uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
-void q_openglfunctions_4_5_compatibility_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, int64_t offset, int64_t size);
+/// @param offset intptr_t
+/// @param size intptr_t
+void q_openglfunctions_4_5_compatibility_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glEndTransformFeedback)
 ///
@@ -2314,10 +2314,10 @@ void q_openglfunctions_4_5_compatibility_gl_get_active_uniformsiv(void* self, ui
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param readTarget uint32_t
 /// @param writeTarget uint32_t
-/// @param readOffset int64_t
-/// @param writeOffset int64_t
-/// @param size int64_t
-void q_openglfunctions_4_5_compatibility_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, int64_t readOffset, int64_t writeOffset, int64_t size);
+/// @param readOffset intptr_t
+/// @param writeOffset intptr_t
+/// @param size intptr_t
+void q_openglfunctions_4_5_compatibility_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glPrimitiveRestartIndex)
 ///
@@ -4061,9 +4061,9 @@ void q_openglfunctions_4_5_compatibility_gl_vertex_attrib_format(void* self, uin
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param bindingindex uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
+/// @param offset intptr_t
 /// @param stride int32_t
-void q_openglfunctions_4_5_compatibility_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, int64_t offset, int32_t stride);
+void q_openglfunctions_4_5_compatibility_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, intptr_t offset, int32_t stride);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glTextureView)
 ///
@@ -4107,9 +4107,9 @@ void q_openglfunctions_4_5_compatibility_gl_tex_storage2_d_multisample(void* sel
 /// @param target uint32_t
 /// @param internalformat uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
-void q_openglfunctions_4_5_compatibility_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, int64_t offset, int64_t size);
+/// @param offset intptr_t
+/// @param size intptr_t
+void q_openglfunctions_4_5_compatibility_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, intptr_t offset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glShaderStorageBlockBinding)
 ///
@@ -4192,9 +4192,9 @@ void q_openglfunctions_4_5_compatibility_gl_invalidate_buffer_data(void* self, u
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param length int64_t
-void q_openglfunctions_4_5_compatibility_gl_invalidate_buffer_sub_data(void* self, uint32_t buffer, int64_t offset, int64_t length);
+/// @param offset intptr_t
+/// @param length intptr_t
+void q_openglfunctions_4_5_compatibility_gl_invalidate_buffer_sub_data(void* self, uint32_t buffer, intptr_t offset, intptr_t length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glInvalidateTexImage)
 ///
@@ -4265,8 +4265,8 @@ void q_openglfunctions_4_5_compatibility_gl_copy_image_sub_data(void* self, uint
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glDispatchComputeIndirect)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
-/// @param indirect int64_t
-void q_openglfunctions_4_5_compatibility_gl_dispatch_compute_indirect(void* self, int64_t indirect);
+/// @param indirect intptr_t
+void q_openglfunctions_4_5_compatibility_gl_dispatch_compute_indirect(void* self, intptr_t indirect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glDispatchCompute)
 ///
@@ -4281,12 +4281,12 @@ void q_openglfunctions_4_5_compatibility_gl_dispatch_compute(void* self, uint32_
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
 /// @param internalformat uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param data void*
-void q_openglfunctions_4_5_compatibility_gl_clear_buffer_sub_data(void* self, uint32_t target, uint32_t internalformat, int64_t offset, int64_t size, uint32_t format, uint32_t type, void* data);
+void q_openglfunctions_4_5_compatibility_gl_clear_buffer_sub_data(void* self, uint32_t target, uint32_t internalformat, intptr_t offset, intptr_t size, uint32_t format, uint32_t type, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glClearBufferData)
 ///
@@ -4304,9 +4304,9 @@ void q_openglfunctions_4_5_compatibility_gl_clear_buffer_data(void* self, uint32
 /// @param first uint32_t
 /// @param count int32_t
 /// @param buffers uint32_t*
-/// @param offsets int64_t*
+/// @param offsets intptr_t*
 /// @param strides int32_t*
-void q_openglfunctions_4_5_compatibility_gl_bind_vertex_buffers(void* self, uint32_t first, int32_t count, uint32_t* buffers, int64_t* offsets, int32_t* strides);
+void q_openglfunctions_4_5_compatibility_gl_bind_vertex_buffers(void* self, uint32_t first, int32_t count, uint32_t* buffers, intptr_t* offsets, int32_t* strides);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glBindImageTextures)
 ///
@@ -4339,9 +4339,9 @@ void q_openglfunctions_4_5_compatibility_gl_bind_textures(void* self, uint32_t f
 /// @param first uint32_t
 /// @param count int32_t
 /// @param buffers uint32_t*
-/// @param offsets int64_t*
-/// @param sizes int64_t*
-void q_openglfunctions_4_5_compatibility_gl_bind_buffers_range(void* self, uint32_t target, uint32_t first, int32_t count, uint32_t* buffers, int64_t* offsets, int64_t* sizes);
+/// @param offsets intptr_t*
+/// @param sizes intptr_t*
+void q_openglfunctions_4_5_compatibility_gl_bind_buffers_range(void* self, uint32_t target, uint32_t first, int32_t count, uint32_t* buffers, intptr_t* offsets, intptr_t* sizes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glBindBuffersBase)
 ///
@@ -4382,10 +4382,10 @@ void q_openglfunctions_4_5_compatibility_gl_clear_tex_image(void* self, uint32_t
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param target uint32_t
-/// @param size int64_t
+/// @param size intptr_t
 /// @param data void*
 /// @param flags uint32_t
-void q_openglfunctions_4_5_compatibility_gl_buffer_storage(void* self, uint32_t target, int64_t size, void* data, uint32_t flags);
+void q_openglfunctions_4_5_compatibility_gl_buffer_storage(void* self, uint32_t target, intptr_t size, void* data, uint32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glTextureBarrier)
 ///
@@ -4601,9 +4601,9 @@ void q_openglfunctions_4_5_compatibility_gl_vertex_array_attrib_binding(void* se
 /// @param first uint32_t
 /// @param count int32_t
 /// @param buffers uint32_t*
-/// @param offsets int64_t*
+/// @param offsets intptr_t*
 /// @param strides int32_t*
-void q_openglfunctions_4_5_compatibility_gl_vertex_array_vertex_buffers(void* self, uint32_t vaobj, uint32_t first, int32_t count, uint32_t* buffers, int64_t* offsets, int32_t* strides);
+void q_openglfunctions_4_5_compatibility_gl_vertex_array_vertex_buffers(void* self, uint32_t vaobj, uint32_t first, int32_t count, uint32_t* buffers, intptr_t* offsets, int32_t* strides);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glVertexArrayVertexBuffer)
 ///
@@ -4611,9 +4611,9 @@ void q_openglfunctions_4_5_compatibility_gl_vertex_array_vertex_buffers(void* se
 /// @param vaobj uint32_t
 /// @param bindingindex uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
+/// @param offset intptr_t
 /// @param stride int32_t
-void q_openglfunctions_4_5_compatibility_gl_vertex_array_vertex_buffer(void* self, uint32_t vaobj, uint32_t bindingindex, uint32_t buffer, int64_t offset, int32_t stride);
+void q_openglfunctions_4_5_compatibility_gl_vertex_array_vertex_buffer(void* self, uint32_t vaobj, uint32_t bindingindex, uint32_t buffer, intptr_t offset, int32_t stride);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glVertexArrayElementBuffer)
 ///
@@ -4955,9 +4955,9 @@ void q_openglfunctions_4_5_compatibility_gl_texture_storage1_d(void* self, uint3
 /// @param texture uint32_t
 /// @param internalformat uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
+/// @param offset intptr_t
 /// @param size int32_t
-void q_openglfunctions_4_5_compatibility_gl_texture_buffer_range(void* self, uint32_t texture, uint32_t internalformat, uint32_t buffer, int64_t offset, int32_t size);
+void q_openglfunctions_4_5_compatibility_gl_texture_buffer_range(void* self, uint32_t texture, uint32_t internalformat, uint32_t buffer, intptr_t offset, int32_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glTextureBuffer)
 ///
@@ -5140,10 +5140,10 @@ void q_openglfunctions_4_5_compatibility_gl_create_framebuffers(void* self, int3
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
-void q_openglfunctions_4_5_compatibility_gl_get_named_buffer_sub_data(void* self, uint32_t buffer, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_4_5_compatibility_gl_get_named_buffer_sub_data(void* self, uint32_t buffer, intptr_t offset, intptr_t size, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glGetNamedBufferPointerv)
 ///
@@ -5173,9 +5173,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_named_buffer_parameteriv(void* s
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param length int64_t
-void q_openglfunctions_4_5_compatibility_gl_flush_mapped_named_buffer_range(void* self, uint32_t buffer, int64_t offset, int64_t length);
+/// @param offset intptr_t
+/// @param length intptr_t
+void q_openglfunctions_4_5_compatibility_gl_flush_mapped_named_buffer_range(void* self, uint32_t buffer, intptr_t offset, intptr_t length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glUnmapNamedBuffer)
 ///
@@ -5187,10 +5187,10 @@ uint8_t q_openglfunctions_4_5_compatibility_gl_unmap_named_buffer(void* self, ui
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param length int64_t
+/// @param offset intptr_t
+/// @param length intptr_t
 /// @param access uint32_t
-void* q_openglfunctions_4_5_compatibility_gl_map_named_buffer_range(void* self, uint32_t buffer, int64_t offset, int64_t length, uint32_t access);
+void* q_openglfunctions_4_5_compatibility_gl_map_named_buffer_range(void* self, uint32_t buffer, intptr_t offset, intptr_t length, uint32_t access);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glMapNamedBuffer)
 ///
@@ -5204,12 +5204,12 @@ void* q_openglfunctions_4_5_compatibility_gl_map_named_buffer(void* self, uint32
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
 /// @param internalformat uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param format uint32_t
 /// @param type uint32_t
 /// @param data void*
-void q_openglfunctions_4_5_compatibility_gl_clear_named_buffer_sub_data(void* self, uint32_t buffer, uint32_t internalformat, int64_t offset, int64_t size, uint32_t format, uint32_t type, void* data);
+void q_openglfunctions_4_5_compatibility_gl_clear_named_buffer_sub_data(void* self, uint32_t buffer, uint32_t internalformat, intptr_t offset, intptr_t size, uint32_t format, uint32_t type, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glClearNamedBufferData)
 ///
@@ -5226,37 +5226,37 @@ void q_openglfunctions_4_5_compatibility_gl_clear_named_buffer_data(void* self, 
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param readBuffer uint32_t
 /// @param writeBuffer uint32_t
-/// @param readOffset int64_t
-/// @param writeOffset int64_t
-/// @param size int64_t
-void q_openglfunctions_4_5_compatibility_gl_copy_named_buffer_sub_data(void* self, uint32_t readBuffer, uint32_t writeBuffer, int64_t readOffset, int64_t writeOffset, int64_t size);
+/// @param readOffset intptr_t
+/// @param writeOffset intptr_t
+/// @param size intptr_t
+void q_openglfunctions_4_5_compatibility_gl_copy_named_buffer_sub_data(void* self, uint32_t readBuffer, uint32_t writeBuffer, intptr_t readOffset, intptr_t writeOffset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glNamedBufferSubData)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
-void q_openglfunctions_4_5_compatibility_gl_named_buffer_sub_data(void* self, uint32_t buffer, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_4_5_compatibility_gl_named_buffer_sub_data(void* self, uint32_t buffer, intptr_t offset, intptr_t size, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glNamedBufferData)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param size int64_t
+/// @param size intptr_t
 /// @param data void*
 /// @param usage uint32_t
-void q_openglfunctions_4_5_compatibility_gl_named_buffer_data(void* self, uint32_t buffer, int64_t size, void* data, uint32_t usage);
+void q_openglfunctions_4_5_compatibility_gl_named_buffer_data(void* self, uint32_t buffer, intptr_t size, void* data, uint32_t usage);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glNamedBufferStorage)
 ///
 /// @param self QOpenGLFunctions_4_5_Compatibility*
 /// @param buffer uint32_t
-/// @param size int64_t
+/// @param size intptr_t
 /// @param data void*
 /// @param flags uint32_t
-void q_openglfunctions_4_5_compatibility_gl_named_buffer_storage(void* self, uint32_t buffer, int64_t size, void* data, uint32_t flags);
+void q_openglfunctions_4_5_compatibility_gl_named_buffer_storage(void* self, uint32_t buffer, intptr_t size, void* data, uint32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glCreateBuffers)
 ///
@@ -5297,9 +5297,9 @@ void q_openglfunctions_4_5_compatibility_gl_get_transform_feedbackiv(void* self,
 /// @param xfb uint32_t
 /// @param index uint32_t
 /// @param buffer uint32_t
-/// @param offset int64_t
-/// @param size int64_t
-void q_openglfunctions_4_5_compatibility_gl_transform_feedback_buffer_range(void* self, uint32_t xfb, uint32_t index, uint32_t buffer, int64_t offset, int64_t size);
+/// @param offset intptr_t
+/// @param size intptr_t
+void q_openglfunctions_4_5_compatibility_gl_transform_feedback_buffer_range(void* self, uint32_t xfb, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-4-5-compatibility.html#glTransformFeedbackBufferBase)
 ///

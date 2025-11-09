@@ -768,28 +768,28 @@ void* q_openglfunctions_2_0_gl_map_buffer(void* self, uint32_t target, uint32_t 
 ///
 /// @param self QOpenGLFunctions_2_0*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
-void q_openglfunctions_2_0_gl_get_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_2_0_gl_get_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-2-0.html#glBufferSubData)
 ///
 /// @param self QOpenGLFunctions_2_0*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
-void q_openglfunctions_2_0_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_2_0_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-2-0.html#glBufferData)
 ///
 /// @param self QOpenGLFunctions_2_0*
 /// @param target uint32_t
-/// @param size int64_t
+/// @param size intptr_t
 /// @param data void*
 /// @param usage uint32_t
-void q_openglfunctions_2_0_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage);
+void q_openglfunctions_2_0_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qopenglfunctions-2-0.html#glIsBuffer)
 ///

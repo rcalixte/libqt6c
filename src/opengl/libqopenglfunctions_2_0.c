@@ -362,15 +362,15 @@ void* q_openglfunctions_2_0_gl_map_buffer(void* self, uint32_t target, uint32_t 
     return QOpenGLFunctions_2_0_GlMapBuffer((QOpenGLFunctions_2_0*)self, target, access);
 }
 
-void q_openglfunctions_2_0_gl_get_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglfunctions_2_0_gl_get_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_2_0_GlGetBufferSubData((QOpenGLFunctions_2_0*)self, target, offset, size, data);
 }
 
-void q_openglfunctions_2_0_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglfunctions_2_0_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_2_0_GlBufferSubData((QOpenGLFunctions_2_0*)self, target, offset, size, data);
 }
 
-void q_openglfunctions_2_0_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage) {
+void q_openglfunctions_2_0_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage) {
     QOpenGLFunctions_2_0_GlBufferData((QOpenGLFunctions_2_0*)self, target, size, data, usage);
 }
 

@@ -115,11 +115,11 @@ void q_openglextrafunctions_gl_framebuffer_texture_layer(void* self, uint32_t ta
     QOpenGLExtraFunctions_GlFramebufferTextureLayer((QOpenGLExtraFunctions*)self, target, attachment, texture, level, layer);
 }
 
-void* q_openglextrafunctions_gl_map_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length, uint32_t access) {
+void* q_openglextrafunctions_gl_map_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length, uint32_t access) {
     return QOpenGLExtraFunctions_GlMapBufferRange((QOpenGLExtraFunctions*)self, target, offset, length, access);
 }
 
-void q_openglextrafunctions_gl_flush_mapped_buffer_range(void* self, uint32_t target, int64_t offset, int64_t length) {
+void q_openglextrafunctions_gl_flush_mapped_buffer_range(void* self, uint32_t target, intptr_t offset, intptr_t length) {
     QOpenGLExtraFunctions_GlFlushMappedBufferRange((QOpenGLExtraFunctions*)self, target, offset, length);
 }
 
@@ -151,7 +151,7 @@ void q_openglextrafunctions_gl_end_transform_feedback(void* self) {
     QOpenGLExtraFunctions_GlEndTransformFeedback((QOpenGLExtraFunctions*)self);
 }
 
-void q_openglextrafunctions_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, int64_t offset, int64_t size) {
+void q_openglextrafunctions_gl_bind_buffer_range(void* self, uint32_t target, uint32_t index, uint32_t buffer, intptr_t offset, intptr_t size) {
     QOpenGLExtraFunctions_GlBindBufferRange((QOpenGLExtraFunctions*)self, target, index, buffer, offset, size);
 }
 
@@ -247,7 +247,7 @@ const uint8_t* q_openglextrafunctions_gl_get_stringi(void* self, uint32_t name, 
     return (uint8_t*)QOpenGLExtraFunctions_GlGetStringi((QOpenGLExtraFunctions*)self, name, index);
 }
 
-void q_openglextrafunctions_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, int64_t readOffset, int64_t writeOffset, int64_t size) {
+void q_openglextrafunctions_gl_copy_buffer_sub_data(void* self, uint32_t readTarget, uint32_t writeTarget, intptr_t readOffset, intptr_t writeOffset, intptr_t size) {
     QOpenGLExtraFunctions_GlCopyBufferSubData((QOpenGLExtraFunctions*)self, readTarget, writeTarget, readOffset, writeOffset, size);
 }
 
@@ -383,7 +383,7 @@ void q_openglextrafunctions_gl_dispatch_compute(void* self, uint32_t num_groups_
     QOpenGLExtraFunctions_GlDispatchCompute((QOpenGLExtraFunctions*)self, num_groups_x, num_groups_y, num_groups_z);
 }
 
-void q_openglextrafunctions_gl_dispatch_compute_indirect(void* self, int64_t indirect) {
+void q_openglextrafunctions_gl_dispatch_compute_indirect(void* self, intptr_t indirect) {
     QOpenGLExtraFunctions_GlDispatchComputeIndirect((QOpenGLExtraFunctions*)self, indirect);
 }
 
@@ -623,7 +623,7 @@ void q_openglextrafunctions_gl_get_tex_level_parameterfv(void* self, uint32_t ta
     QOpenGLExtraFunctions_GlGetTexLevelParameterfv((QOpenGLExtraFunctions*)self, target, level, pname, params);
 }
 
-void q_openglextrafunctions_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, int64_t offset, int32_t stride) {
+void q_openglextrafunctions_gl_bind_vertex_buffer(void* self, uint32_t bindingindex, uint32_t buffer, intptr_t offset, int32_t stride) {
     QOpenGLExtraFunctions_GlBindVertexBuffer((QOpenGLExtraFunctions*)self, bindingindex, buffer, offset, stride);
 }
 
@@ -799,7 +799,7 @@ void q_openglextrafunctions_gl_tex_buffer(void* self, uint32_t target, uint32_t 
     QOpenGLExtraFunctions_GlTexBuffer((QOpenGLExtraFunctions*)self, target, internalformat, buffer);
 }
 
-void q_openglextrafunctions_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, int64_t offset, int64_t size) {
+void q_openglextrafunctions_gl_tex_buffer_range(void* self, uint32_t target, uint32_t internalformat, uint32_t buffer, intptr_t offset, intptr_t size) {
     QOpenGLExtraFunctions_GlTexBufferRange((QOpenGLExtraFunctions*)self, target, internalformat, buffer, offset, size);
 }
 
