@@ -75,33 +75,41 @@ bool k_startupinfo_send_startup(void* id, void* data) {
     return KStartupInfo_SendStartup((KStartupInfoId*)id, (KStartupInfoData*)data);
 }
 
+#ifdef __linux__
 bool k_startupinfo_send_startup_xcb(xcb_connection_t* conn, int screen, void* id, void* data) {
     return KStartupInfo_SendStartupXcb(conn, screen, (KStartupInfoId*)id, (KStartupInfoData*)data);
 }
+#endif
 
 bool k_startupinfo_send_change(void* id, void* data) {
     return KStartupInfo_SendChange((KStartupInfoId*)id, (KStartupInfoData*)data);
 }
 
+#ifdef __linux__
 bool k_startupinfo_send_change_xcb(xcb_connection_t* conn, int screen, void* id, void* data) {
     return KStartupInfo_SendChangeXcb(conn, screen, (KStartupInfoId*)id, (KStartupInfoData*)data);
 }
+#endif
 
 bool k_startupinfo_send_finish(void* id) {
     return KStartupInfo_SendFinish((KStartupInfoId*)id);
 }
 
+#ifdef __linux__
 bool k_startupinfo_send_finish_xcb(xcb_connection_t* conn, int screen, void* id) {
     return KStartupInfo_SendFinishXcb(conn, screen, (KStartupInfoId*)id);
 }
+#endif
 
 bool k_startupinfo_send_finish2(void* id, void* data) {
     return KStartupInfo_SendFinish2((KStartupInfoId*)id, (KStartupInfoData*)data);
 }
 
+#ifdef __linux__
 bool k_startupinfo_send_finish_xcb2(xcb_connection_t* conn, int screen, void* id, void* data) {
     return KStartupInfo_SendFinishXcb2(conn, screen, (KStartupInfoId*)id, (KStartupInfoData*)data);
 }
+#endif
 
 void k_startupinfo_reset_startup_env() {
     KStartupInfo_ResetStartupEnv();

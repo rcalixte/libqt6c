@@ -13,42 +13,52 @@
 
 /// https://api.kde.org/kselectionowner.html
 
+#ifdef __linux__
 /// k_selectionowner_new constructs a new KSelectionOwner object.
 ///
 /// @param selection xcb_atom_t
 KSelectionOwner* k_selectionowner_new(xcb_atom_t selection);
+#endif
 
 /// k_selectionowner_new2 constructs a new KSelectionOwner object.
 ///
 /// @param selection const char*
 KSelectionOwner* k_selectionowner_new2(const char* selection);
 
+#ifdef __linux__
 /// k_selectionowner_new3 constructs a new KSelectionOwner object.
 ///
 /// @param selection xcb_atom_t
 /// @param c xcb_connection_t*
 /// @param root xcb_window_t
 KSelectionOwner* k_selectionowner_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root);
+#endif
 
+#ifdef __linux__
 /// k_selectionowner_new4 constructs a new KSelectionOwner object.
 ///
 /// @param selection const char*
 /// @param c xcb_connection_t*
 /// @param root xcb_window_t
 KSelectionOwner* k_selectionowner_new4(const char* selection, xcb_connection_t* c, xcb_window_t root);
+#endif
 
+#ifdef __linux__
 /// k_selectionowner_new5 constructs a new KSelectionOwner object.
 ///
 /// @param selection xcb_atom_t
 /// @param screen int
 KSelectionOwner* k_selectionowner_new5(xcb_atom_t selection, int screen);
+#endif
 
+#ifdef __linux__
 /// k_selectionowner_new6 constructs a new KSelectionOwner object.
 ///
 /// @param selection xcb_atom_t
 /// @param screen int
 /// @param parent QObject*
 KSelectionOwner* k_selectionowner_new6(xcb_atom_t selection, int screen, void* parent);
+#endif
 
 /// k_selectionowner_new7 constructs a new KSelectionOwner object.
 ///
@@ -63,6 +73,7 @@ KSelectionOwner* k_selectionowner_new7(const char* selection, int screen);
 /// @param parent QObject*
 KSelectionOwner* k_selectionowner_new8(const char* selection, int screen, void* parent);
 
+#ifdef __linux__
 /// k_selectionowner_new9 constructs a new KSelectionOwner object.
 ///
 /// @param selection xcb_atom_t
@@ -70,7 +81,9 @@ KSelectionOwner* k_selectionowner_new8(const char* selection, int screen, void* 
 /// @param root xcb_window_t
 /// @param parent QObject*
 KSelectionOwner* k_selectionowner_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, void* parent);
+#endif
 
+#ifdef __linux__
 /// k_selectionowner_new10 constructs a new KSelectionOwner object.
 ///
 /// @param selection const char*
@@ -78,6 +91,7 @@ KSelectionOwner* k_selectionowner_new9(xcb_atom_t selection, xcb_connection_t* c
 /// @param root xcb_window_t
 /// @param parent QObject*
 KSelectionOwner* k_selectionowner_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, void* parent);
+#endif
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -126,10 +140,12 @@ void k_selectionowner_claim(void* self, bool force);
 /// @param self KSelectionOwner*
 void k_selectionowner_release(void* self);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#ownerWindow)
 ///
 /// @param self KSelectionOwner*
 xcb_window_t k_selectionowner_owner_window(void* self);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#filterEvent)
 ///
@@ -192,6 +208,7 @@ void k_selectionowner_failed_to_claim_ownership(void* self);
 /// @param callback void func(KSelectionOwner* self)
 void k_selectionowner_on_failed_to_claim_ownership(void* self, void (*callback)(void*));
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#genericReply)
 ///
 /// @param self KSelectionOwner*
@@ -199,7 +216,9 @@ void k_selectionowner_on_failed_to_claim_ownership(void* self, void (*callback)(
 /// @param property xcb_atom_t
 /// @param requestor xcb_window_t
 bool k_selectionowner_generic_reply(void* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor);
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#genericReply)
 ///
 /// Allows for overriding the related default method
@@ -207,7 +226,9 @@ bool k_selectionowner_generic_reply(void* self, xcb_atom_t target, xcb_atom_t pr
 /// @param self KSelectionOwner*
 /// @param callback bool func(KSelectionOwner* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor)
 void k_selectionowner_on_generic_reply(void* self, bool (*callback)(void*, xcb_atom_t, xcb_atom_t, xcb_window_t));
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#genericReply)
 ///
 /// Base class method implementation
@@ -217,14 +238,18 @@ void k_selectionowner_on_generic_reply(void* self, bool (*callback)(void*, xcb_a
 /// @param property xcb_atom_t
 /// @param requestor xcb_window_t
 bool k_selectionowner_qbase_generic_reply(void* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor);
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#replyTargets)
 ///
 /// @param self KSelectionOwner*
 /// @param property xcb_atom_t
 /// @param requestor xcb_window_t
 void k_selectionowner_reply_targets(void* self, xcb_atom_t property, xcb_window_t requestor);
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#replyTargets)
 ///
 /// Allows for overriding the related default method
@@ -232,7 +257,9 @@ void k_selectionowner_reply_targets(void* self, xcb_atom_t property, xcb_window_
 /// @param self KSelectionOwner*
 /// @param callback void func(KSelectionOwner* self, xcb_atom_t property, xcb_window_t requestor)
 void k_selectionowner_on_reply_targets(void* self, void (*callback)(void*, xcb_atom_t, xcb_window_t));
+#endif
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#replyTargets)
 ///
 /// Base class method implementation
@@ -241,6 +268,7 @@ void k_selectionowner_on_reply_targets(void* self, void (*callback)(void*, xcb_a
 /// @param property xcb_atom_t
 /// @param requestor xcb_window_t
 void k_selectionowner_qbase_reply_targets(void* self, xcb_atom_t property, xcb_window_t requestor);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kselectionowner.html#getAtoms)
 ///

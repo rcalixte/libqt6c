@@ -142,8 +142,7 @@ QDebug* q_debug_operator_shift_left23(void* self, const char* t) {
 }
 
 QDebug* q_debug_operator_shift_left24(void* self, const char* t) {
-    libqt_string t_string = qstring(t);
-    return QDebug_OperatorShiftLeft24((QDebug*)self, (QByteArrayView*)&t_string);
+    return QDebug_OperatorShiftLeft24((QDebug*)self, qstring(t));
 }
 
 QDebug* q_debug_operator_shift_left25(void* self, void* t) {

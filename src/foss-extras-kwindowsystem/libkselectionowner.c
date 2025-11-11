@@ -5,29 +5,39 @@
 #include "libkselectionowner.hpp"
 #include "libkselectionowner.h"
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new(xcb_atom_t selection) {
     return KSelectionOwner_new(selection);
 }
+#endif
 
 KSelectionOwner* k_selectionowner_new2(const char* selection) {
     return KSelectionOwner_new2(selection);
 }
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
     return KSelectionOwner_new3(selection, c, root);
 }
+#endif
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
     return KSelectionOwner_new4(selection, c, root);
 }
+#endif
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new5(xcb_atom_t selection, int screen) {
     return KSelectionOwner_new5(selection, screen);
 }
+#endif
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new6(xcb_atom_t selection, int screen, void* parent) {
     return KSelectionOwner_new6(selection, screen, (QObject*)parent);
 }
+#endif
 
 KSelectionOwner* k_selectionowner_new7(const char* selection, int screen) {
     return KSelectionOwner_new7(selection, screen);
@@ -37,13 +47,17 @@ KSelectionOwner* k_selectionowner_new8(const char* selection, int screen, void* 
     return KSelectionOwner_new8(selection, screen, (QObject*)parent);
 }
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
     return KSelectionOwner_new9(selection, c, root, (QObject*)parent);
 }
+#endif
 
+#ifdef __linux__
 KSelectionOwner* k_selectionowner_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, void* parent) {
     return KSelectionOwner_new10(selection, c, root, (QObject*)parent);
 }
+#endif
 
 const QMetaObject* k_selectionowner_meta_object(void* self) {
     return KSelectionOwner_MetaObject((KSelectionOwner*)self);
@@ -80,9 +94,11 @@ void k_selectionowner_release(void* self) {
     KSelectionOwner_Release((KSelectionOwner*)self);
 }
 
+#ifdef __linux__
 xcb_window_t k_selectionowner_owner_window(void* self) {
     return (int)KSelectionOwner_OwnerWindow((KSelectionOwner*)self);
 }
+#endif
 
 bool k_selectionowner_filter_event(void* self, void* ev_P) {
     return KSelectionOwner_FilterEvent((KSelectionOwner*)self, ev_P);
@@ -124,29 +140,41 @@ void k_selectionowner_on_failed_to_claim_ownership(void* self, void (*callback)(
     KSelectionOwner_Connect_FailedToClaimOwnership((KSelectionOwner*)self, (intptr_t)callback);
 }
 
+#ifdef __linux__
 bool k_selectionowner_generic_reply(void* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor) {
     return KSelectionOwner_GenericReply((KSelectionOwner*)self, target, property, requestor);
 }
+#endif
 
+#ifdef __linux__
 void k_selectionowner_on_generic_reply(void* self, bool (*callback)(void*, xcb_atom_t, xcb_atom_t, xcb_window_t)) {
     KSelectionOwner_OnGenericReply((KSelectionOwner*)self, (intptr_t)callback);
 }
+#endif
 
+#ifdef __linux__
 bool k_selectionowner_qbase_generic_reply(void* self, xcb_atom_t target, xcb_atom_t property, xcb_window_t requestor) {
     return KSelectionOwner_QBaseGenericReply((KSelectionOwner*)self, target, property, requestor);
 }
+#endif
 
+#ifdef __linux__
 void k_selectionowner_reply_targets(void* self, xcb_atom_t property, xcb_window_t requestor) {
     KSelectionOwner_ReplyTargets((KSelectionOwner*)self, property, requestor);
 }
+#endif
 
+#ifdef __linux__
 void k_selectionowner_on_reply_targets(void* self, void (*callback)(void*, xcb_atom_t, xcb_window_t)) {
     KSelectionOwner_OnReplyTargets((KSelectionOwner*)self, (intptr_t)callback);
 }
+#endif
 
+#ifdef __linux__
 void k_selectionowner_qbase_reply_targets(void* self, xcb_atom_t property, xcb_window_t requestor) {
     KSelectionOwner_QBaseReplyTargets((KSelectionOwner*)self, property, requestor);
 }
+#endif
 
 void k_selectionowner_get_atoms(void* self) {
     KSelectionOwner_GetAtoms((KSelectionOwner*)self);

@@ -99,6 +99,7 @@ char* k_startupinfo_create_new_startup_id_for_timestamp(uint32_t timestamp);
 /// @param data KStartupInfoData*
 bool k_startupinfo_send_startup(void* id, void* data);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendStartupXcb)
 ///
 /// @param conn xcb_connection_t*
@@ -106,6 +107,7 @@ bool k_startupinfo_send_startup(void* id, void* data);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 bool k_startupinfo_send_startup_xcb(xcb_connection_t* conn, int screen, void* id, void* data);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendChange)
 ///
@@ -113,6 +115,7 @@ bool k_startupinfo_send_startup_xcb(xcb_connection_t* conn, int screen, void* id
 /// @param data KStartupInfoData*
 bool k_startupinfo_send_change(void* id, void* data);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendChangeXcb)
 ///
 /// @param conn xcb_connection_t*
@@ -120,18 +123,21 @@ bool k_startupinfo_send_change(void* id, void* data);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 bool k_startupinfo_send_change_xcb(xcb_connection_t* conn, int screen, void* id, void* data);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendFinish)
 ///
 /// @param id KStartupInfoId*
 bool k_startupinfo_send_finish(void* id);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendFinishXcb)
 ///
 /// @param conn xcb_connection_t*
 /// @param screen int
 /// @param id KStartupInfoId*
 bool k_startupinfo_send_finish_xcb(xcb_connection_t* conn, int screen, void* id);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendFinish)
 ///
@@ -139,6 +145,7 @@ bool k_startupinfo_send_finish_xcb(xcb_connection_t* conn, int screen, void* id)
 /// @param data KStartupInfoData*
 bool k_startupinfo_send_finish2(void* id, void* data);
 
+#ifdef __linux__
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#sendFinishXcb)
 ///
 /// @param conn xcb_connection_t*
@@ -146,6 +153,7 @@ bool k_startupinfo_send_finish2(void* id, void* data);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 bool k_startupinfo_send_finish_xcb2(xcb_connection_t* conn, int screen, void* id, void* data);
+#endif
 
 /// [Qt documentation](https://api.kde.org/kstartupinfo.html#resetStartupEnv)
 ///

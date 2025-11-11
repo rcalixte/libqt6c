@@ -18,8 +18,7 @@ void q_formdatapartbuilder_swap(void* self, void* other) {
 }
 
 QFormDataPartBuilder* q_formdatapartbuilder_set_body(void* self, const char* data) {
-    libqt_string data_string = qstring(data);
-    return QFormDataPartBuilder_SetBody((QFormDataPartBuilder*)self, (QByteArrayView*)&data_string);
+    return QFormDataPartBuilder_SetBody((QFormDataPartBuilder*)self, qstring(data));
 }
 
 QFormDataPartBuilder* q_formdatapartbuilder_set_body_device(void* self, void* body) {
@@ -31,13 +30,11 @@ QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, void* header
 }
 
 QFormDataPartBuilder* q_formdatapartbuilder_set_body2(void* self, const char* data, char* fileName) {
-    libqt_string data_string = qstring(data);
-    return QFormDataPartBuilder_SetBody2((QFormDataPartBuilder*)self, (QByteArrayView*)&data_string, fileName);
+    return QFormDataPartBuilder_SetBody2((QFormDataPartBuilder*)self, qstring(data), fileName);
 }
 
 QFormDataPartBuilder* q_formdatapartbuilder_set_body3(void* self, const char* data, char* fileName, char* mimeType) {
-    libqt_string data_string = qstring(data);
-    return QFormDataPartBuilder_SetBody3((QFormDataPartBuilder*)self, (QByteArrayView*)&data_string, fileName, mimeType);
+    return QFormDataPartBuilder_SetBody3((QFormDataPartBuilder*)self, qstring(data), fileName, mimeType);
 }
 
 QFormDataPartBuilder* q_formdatapartbuilder_set_body_device2(void* self, void* body, char* fileName) {

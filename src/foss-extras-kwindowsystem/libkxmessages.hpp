@@ -25,17 +25,25 @@ typedef struct QTimerEvent QTimerEvent;
 #endif
 
 KXMessages* KXMessages_new();
+#ifdef __linux__
 KXMessages* KXMessages_new2(xcb_connection_t* connection, xcb_window_t rootWindow);
+#endif
 KXMessages* KXMessages_new3(const char* accept_broadcast);
 KXMessages* KXMessages_new4(const char* accept_broadcast, QObject* parent);
+#ifdef __linux__
 KXMessages* KXMessages_new5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast);
+#endif
+#ifdef __linux__
 KXMessages* KXMessages_new6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, QObject* parent);
+#endif
 QMetaObject* KXMessages_MetaObject(const KXMessages* self);
 void* KXMessages_Metacast(KXMessages* self, const char* param1);
 int KXMessages_Metacall(KXMessages* self, int param1, int param2, void** param3);
 libqt_string KXMessages_Tr(const char* s);
 void KXMessages_BroadcastMessage(KXMessages* self, const char* msg_type, const libqt_string message);
+#ifdef __linux__
 bool KXMessages_BroadcastMessageX(xcb_connection_t* c, const char* msg_type, const libqt_string message, int screenNumber);
+#endif
 void KXMessages_GotMessage(KXMessages* self, const libqt_string message);
 void KXMessages_Connect_GotMessage(KXMessages* self, intptr_t slot);
 libqt_string KXMessages_Tr2(const char* s, const char* c);

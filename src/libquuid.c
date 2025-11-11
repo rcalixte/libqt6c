@@ -77,8 +77,7 @@ QUuid* q_uuid_from_bytes(void* bytes) {
 }
 
 QUuid* q_uuid_from_rfc4122(const char* param1) {
-    libqt_string param1_string = qstring(param1);
-    return QUuid_FromRfc4122((QByteArrayView*)&param1_string);
+    return QUuid_FromRfc4122(qstring(param1));
 }
 
 bool q_uuid_is_null(void* self) {
@@ -90,13 +89,11 @@ QUuid* q_uuid_create_uuid() {
 }
 
 QUuid* q_uuid_create_uuid_v5(void* ns, const char* baseData) {
-    libqt_string baseData_string = qstring(baseData);
-    return QUuid_CreateUuidV5((QUuid*)ns, (QByteArrayView*)&baseData_string);
+    return QUuid_CreateUuidV5((QUuid*)ns, qstring(baseData));
 }
 
 QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData) {
-    libqt_string baseData_string = qstring(baseData);
-    return QUuid_CreateUuidV3((QUuid*)ns, (QByteArrayView*)&baseData_string);
+    return QUuid_CreateUuidV3((QUuid*)ns, qstring(baseData));
 }
 
 int32_t q_uuid_variant(void* self) {
@@ -166,8 +163,9 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1) {
 }
 
 const char* q_uuid__id128bytes_to_q_byte_array_view(void* self) {
-    QByteArrayView* _str = QUuid__Id128Bytes_ToQByteArrayView((QUuid__Id128Bytes*)self);
-    const char* _ret = QByteArrayView_Data(_str);
+    libqt_string _str = QUuid__Id128Bytes_ToQByteArrayView((QUuid__Id128Bytes*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
     return _ret;
 }
 

@@ -90,10 +90,14 @@ bool k_keyserver_mod_x_to_qt(uint32_t param1, int* param2) {
     return KKeyServer_ModXToQt(param1, param2);
 }
 
+#ifdef __linux__
 bool k_keyserver_xcb_key_press_event_to_qt(xcb_generic_event_t* param1, int* param2) {
     return KKeyServer_XcbKeyPressEventToQt(param1, param2);
 }
+#endif
 
+#ifdef __linux__
 bool k_keyserver_xcb_key_press_event_to_qt2(xcb_key_press_event_t* param1, int* param2) {
     return KKeyServer_XcbKeyPressEventToQt2(param1, param2);
 }
+#endif

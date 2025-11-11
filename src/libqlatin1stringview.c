@@ -24,9 +24,7 @@ QLatin1String* q_latin1string_new5(const char* s) {
 }
 
 QLatin1String* q_latin1string_new6(const char* s) {
-    libqt_string s_string = qstring(s);
-
-    return QLatin1String_new6((QByteArrayView*)&s_string);
+    return QLatin1String_new6(qstring(s));
 }
 
 void q_latin1string_copy_assign(void* self, void* other) {
